@@ -16,11 +16,11 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. Bien qu'elles aient le BT, la communication est très limitée et uni directionnelle: Pompe->App. Fin de 2021, il est prévu que la société sorte la nouvelle version appelée DOSE (1.6), ce qui permettra de définir des Bolus et des TBR à partir de leur application. Ils prévoient d'implémenter leur propre Boucle en 2022, avec leur propre application. Plus d'infos voir cette page [](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Configuration matérielle requise pour AAPS :** Aucune. Elle dispose du Bluetooth.
 
-**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
+**Commentaires:** Il y a actuellement 2 groupes qui travaillent sur le driver, donc après la sortie de la nouvelle version, nous pouvons espérer avoir le support AAPS rapidement. Un groupe est soutenu par YpsoMed et aide aux essais médicaux qui se déroulent en Australie, le 2ème travaille indépendamment par "reverse engineering" de l'application originale.
 
 * * *
 
@@ -34,7 +34,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Medtrum A6/P6/C6 ([Page d'accueil](https://www.medtrum.com/product/nanopump.html))
 
-**Etat de la boucle :** Candidat à la boucle. L'entreprise dispose de son propre système de demi-boucle limité (A6). Controllable via iPhone App. No Android app available at the moment.
+**Etat de la boucle :** Candidat à la boucle. L'entreprise dispose de son propre système de demi-boucle limité (A6). Controlable via une application iPhone. Aucune application Android disponible pour le moment.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Il semble qu'elle dispose du Bluetooth.
 
@@ -54,23 +54,23 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
+**Commentaires :** Il y a quelques développeurs qui travaillent sur le décodage du protocole, mais pour l'instant ce n'est qu'en phases préliminaires.
 
 * * *
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem : t:slim X2 ([Page d'accueil](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not yet loopable.
+**Etat de la boucle :** Non bouclable pour l'instant.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+Alors que dans le passé, la société avait décidé d'interdire le contrôle de leurs pompes par des dispositifs externes, Il semble que ces dernières années les règles du jeu aient changées. L'entreprise a décidé de mettre à jour sa pompe t:slim X2 pour pouvoir la contrôler à distance (via l'application t:connect), ce qui signifie que des pistes sont ouvertes que nous puissions être en mesure d'intégrer la pompe dans AAPS à l'avenir. Un nouveau firmware de pompe est prévu bientôt (cette année ou l'année prochaine, avant la sortie de leur pompe sans tubulure t:sport). Il n'y a pas encore de détails sur les opérations possibles à partir de t:connect (Bolus sans aucun doute, tout le reste est inconnu).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem : t:sport ([Page d'accueil](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Etat de la boucle :** Candidat à la boucle. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+**Etat de la boucle :** Candidat à la boucle. La pompe n'est pas encore sortie, mais le processus FDA est déjà en cours, donc elle devrait être disponible sans doute rapidement (aux US).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
@@ -104,7 +104,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ### Animas Vibe
 
-**Etat de la boucle :** Non bouclable. Aucune possibilité de contrôle à distance. **Remarque :** La pompe n'est plus vendue. Company stopped working in Pump business (J&J).
+**Etat de la boucle :** Non bouclable. Aucune possibilité de contrôle à distance. **Remarque :** La pompe n'est plus vendue. L'entreprise a abandonné le business de la pompe (J&J).
 
 * * *
 
