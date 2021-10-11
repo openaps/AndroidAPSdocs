@@ -19,14 +19,15 @@ Hardware and Software Requirements
 
    -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__     
+   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__
+   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
    -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
   Component that will operate AndroidAPS and send control commands to the Pod communication device.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit#gid=0>`__ with a version of AAPS 2.8 and related `components setup <https://androidaps.readthedocs.io/en/latest/EN/index.html#component-setup>`__
+      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
@@ -132,13 +133,13 @@ Activating a Pod
 
 Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ *(~30 cm away or less) but not on top of or right next to the RileyLink.  
+*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
 
 1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 85 units of insulin and listen for two beeps indicating that the pod is ready to be primed.
+2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
 
     |Activate_Pod_3|
 
@@ -314,12 +315,12 @@ View RileyLink Settings and History
 
 This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
 
-The primary use of this feature is when your RileyLink is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
 
-In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the RileyLink, please follow the additional steps below for a manual reconnection.
+In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
 
-Manually Re-establish RileyLink Bluetooth Communication
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Manually Re-establish Pod Communication Device Bluetooth Communication
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
 
@@ -329,7 +330,7 @@ Manually Re-establish RileyLink Bluetooth Communication
 
     |RileyLink_Bluetooth_Reset_3|
     
-    If the RileyLink is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+    If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
 
    * **Mute (1)** will silence this current warning.
    * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
@@ -338,14 +339,14 @@ Manually Re-establish RileyLink Bluetooth Communication
 	
 3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
 
-4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured RileyLink to AAPS!
+4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured pod communication device to AAPS!
 
     |RileyLink_Bluetooth_Reset_5|
 
-RileyLink and Active Pod Settings
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Pod Communication Device and Active Pod Settings
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This screen will provide information, status, and settings configuration information for both the currently configured RileyLink and the currently active Omnipod Eros pod. It will also allow you to manually refresh the RileyLink Bluetooth connection.
+This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod. 
 
 1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
@@ -356,23 +357,24 @@ This screen will provide information, status, and settings configuration informa
 RileyLink (3) fields
 ++++++++++++++++++++
 
-	* **Configured Address:** MAC address of the selected RileyLink defined in the Omnipod Settings.
-	* **Configured RileyLink Name:** Bluetooth identification name of the selected RileyLink defined in your phone's Bluetooth settings.
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the RileyLink (currently only eros pods work with the RileyLink
-	* **Connection Status**: The current status of the Bluetooth connection between the RileyLink and the phone running AAPS.
-	* **Connection Error:** If there is an error with the RileyLink Bluetooth connection details will be displayed here.
-	* **RL Firmware:** Current firmware version installed on the actively connected RileyLink.
+	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
+	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
+	* **Battery Level:** Displays the current battery level of the connected pod communication device
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device (currently only eros pods work with the RileyLink
+	* **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
+	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
+	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
 
 Device (4) fields - With an Active Pod
 ++++++++++++++++++++++++++++++++++++++
 
-	* **Device Type:** The type of device communicating with the RileyLink (Omnipod pod pump)
-	* **Device Model:** The model of the active device connected to the RileyLink (the current model name of the Omnipod pod, which is Eros)
+	* **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
+	* **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
 	* **Pump Serial Number:** Serial number of the currently activated pod
-	* **Pump Frequency:** Communication radio frequency the RileyLink has tuned to enable communication between itself and the pod.
-	* **Last used frequency:** Last known radio frequency the pod used to communicate with the RileyLink.
-	* **Last device contact:** Date and time of the last contact the pod made with the RileyLink.
-	* **Refresh button** to manually refresh RileyLink Bluetooth communication with the phone.
+	* **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
+	* **Last Used frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
+	* **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
+	* **Refresh button** manually refresh the settings on this page.
 
 RileyLink and Active Pod History
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -406,9 +408,9 @@ Fields
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
 
-   - *RileyLink Unreachable* - RileyLink is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-   - *RileyLink Ready* - RileyLink is powered on and actively initializing the Bluetooth connection
-   - *Connected* - RileyLink is powered on, connected and actively able to communicate via Bluetooth.
+   - *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
+   - *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
+   - *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
 
 * **Pod address:** Displays the current address in which the active pod is referenced
 * **LOT:** Displays the LOT number of the active pod
@@ -439,36 +441,38 @@ Fields
 Icons
 -----
 
-.. table:: 
+.. list-table:: 
+      
+    * - |refresh_pod_status|
+      - **REFRESH:** 
+			
+	Sends a refresh command to the active pod to update communication
+			 
+	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    * - |pod_management|  	 
+      - **POD MGMT:**
 
-   ====================  ===========================================
-   |refresh_pod_status|  **REFRESH:** 
+	Navigates to the Pod management menu   
+    * - |ack_alerts|		 
+      - **ACK ALERTS:**
    			 
-			 Sends a refresh command to the active pod to update communication
+	When pressed this will disable the pod expiration beeps and notifications. 
 			 
-			 * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-			 * See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-
-   |pod_management|   	 **POD MGMT:**
-
-			 Navigates to the Pod management menu
-   |ack_alerts|		 **ACK ALERTS:**
-   			 
-			 When pressed this will disable the pod expiration beeps and notifications. 
-			 
-			 * Button is displayed only when pod time is past expiration warning time
-			 * Upon successful dismissal, this icon will no longer appear.
-			 
-   |set_time|		 **SET TIME:**
+	* Button is displayed only when pod time is past expiration warning time
+	* Upon successful dismissal, this icon will no longer appear.			 
+    * - |set_time|	 
+      - **SET TIME:**
    
-			 When pressed this will update the time on the pod with the current time on your phone.
-   |suspend|  		 **SUSPEND:**
+	When pressed this will update the time on the pod with the current time on your phone.
+    * - |suspend|  		 
+      - **SUSPEND:**
    
-			 Suspends the active pod
-   |resume| 		 **RESUME DELIVERY:**
+	Suspends the active pod
+    * - |resume|	 
+      - **RESUME DELIVERY:**
    
-			 Resumes the currently suspended, active pod
-   ====================  ===========================================
+	Resumes the currently suspended, active pod
 
 
 Pod Management Menu
@@ -478,75 +482,74 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 
 |Omnipod_Tab_Pod_Management|
 
-.. table:: 
+.. list-table:: 
 
-   =========================  ===========================================
-   |activate_pod|	      **Activate Pod**
+    * - |activate_pod|
+      - **Activate Pod**
    
-   			      Primes and activates a new pod
-
-   |deactivate_pod|	      **Deactivate Pod**
+        Primes and activates a new pod
+    * - |deactivate_pod|
+      - **Deactivate Pod**
  
- 			      Deactivates the currently active pod.
-			 
-		   	      *  A partially paired pod ignores this command.
-			      *  Use this command to deactivate a screaming pod (error 49).
-			      *  If the button is disabled (greyed out) use the Discard Pod button.
-
-   |play_test_beep| 	      **Play test beep**
+        Deactivates the currently active pod.
+		 
+	*  A partially paired pod ignores this command.
+	*  Use this command to deactivate a screaming pod (error 49).
+	*  If the button is disabled (greyed out) use the Discard Pod button.
+    * - |play_test_beep|
+      - **Play test beep**
  
- 			      Plays a single test beep on the pod when pressed.
+ 	Plays a single test beep on the pod when pressed.
+    * - |discard_pod|
+      - **Discard pod**
 
-   |discard_pod|	      **Discard pod**
-
-			      Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Deactivates and discards the pod state of an unresponsive pod when pressed.
 			      
-			      Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
 
-			      * A **pod is not fully paired** and thus ignores deactivate commands.
-			      * A **pod is stuck** during the pairing process between steps
-	 		      * A **pod simply does not pair at all.**
-
-   |pod_history| 	      **Pod history** 
+	* A **pod is not fully paired** and thus ignores deactivate commands.
+	* A **pod is stuck** during the pairing process between steps
+	* A **pod simply does not pair at all.**
+    * - |pod_history|
+      - **Pod history** 
    
-   			      Displays the active pod activity history
-
-   |rileylink_stats| 	      **RileyLink stats:**
+   	Displays the active pod activity history
+    * - |rileylink_stats|
+      - **RileyLink stats:**
    
-   			      Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
-			      * **Settings** - displays RileyLink and active pod settings information
-			      * **History** - displays RileyLink and Pod communication history
-
-   |reset_rileylink_config|   **Reset RileyLink Config** 
+	* **Settings** - displays RileyLink and active pod settings information
+	* **History** - displays RileyLink and Pod communication history
+    * - |reset_rileylink_config|
+      - **Reset RileyLink Config** 
    
-   			      When presssed this button resets the currently connected RileyLink configuration. 
+   	When pressed this button resets the currently connected pod communication device configuration. 
 			      
-			      * When communication is started, specific data is sent to and set in the RileyLink 
+	* When communication is started, specific data is sent to and set in the RileyLink 
 			      
-			        - Memory Registers are set
-				- Communication Protocols are set
-				- Tuned Radio Frequency is set
+	    - Memory Registers are set
+	    - Communication Protocols are set
+	    - Tuned Radio Frequency is set
 				
-			      * See `addtional notes <#reset-rileylink-config-notes>`__ at the end of this table
-
-   |pulse_log|		      **Read pulse log:** 
+	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+    * - |pulse_log|
+      - **Read pulse log:** 
     
-    			      Sends the active pod pulse log to the clipboard
-   =========================  ===========================================			    
+    	Sends the active pod pulse log to the clipboard		    
 
 *Reset RileyLink Config Notes*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The primary usage of this feature is when the currently active RileyLink is not responding and communication is in a stuck state.
-* If the RileyLink is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the RileyLink configuration.
-* If this is NOT done then AAPS will need to be restarted after the RileyLink is power cycled.
-* This button **DOES NOT** need to be pressed when switching between different pod communication devices (RileyLinks)
+* The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
+* If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
+* If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
+* This button **DOES NOT** need to be pressed when switching between different pod communication devices
 
 Omnipod Settings
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayedas a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
 
 |Omnipod_Settings_1|
 
@@ -564,6 +567,14 @@ RileyLink
 ---------
 
 Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
+
+* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. It is **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
+
+	+  DOES NOT work with the original RileyLink.
+	+  May not work with RileyLink alternatives.
+	+  Enabled - Reports the current battery level for supported pod communication devices.
+	+  Disabled - Reports a value of n/a.
+* **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
 Confirmation beeps
 ------------------
@@ -607,18 +618,12 @@ Provides advanced settings to assist debugging.
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
 * **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
 * **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. We **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
-
-	+  DOES NOT work with the original RileyLink.
-	+  May not work with RileyLink alternatives.
-	+  Enabled - Reports the current battery level for supported pod communication devices.
-	+  Disabled - Reports a value of n/a.
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
 Switching or Removing an Active Pod Communication Device (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available or the need have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
 
 The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
 
@@ -643,14 +648,14 @@ This process will show how to remove the currently selected pod communication de
 
     |RileyLink_Setup_Remove_3|
     
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device (RileyLink).
+4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device.
 
     |RileyLink_Setup_Remove_4|
 
 Add Currently Selected Pod Communication Device (RileyLink)
 -----------------------------------------------------------
 
-This process will show how to add a new pod communication device (RileyLink) to the Omnipod Driver settings.
+This process will show how to add a new pod communication device to the Omnipod Driver settings.
 
 1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
 
@@ -660,7 +665,7 @@ This process will show how to add a new pod communication device (RileyLink) to 
 
     |RileyLink_Setup_Add_2|
 
-3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device (RileyLink).
+3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device.
 
     |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
     
@@ -679,11 +684,11 @@ This tab is well documented in the main AAPS documentation but there are a few i
 Levels
 ------
 
-**Insuln Level**
+**Insulin Level**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remainin in the reservoir.  
+Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
 
-  * **Abover 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
   * **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir. 
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
@@ -691,7 +696,7 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 **Battery Level**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communicaton devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communicaton device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
   * **RileyLink hardware is NOT capable of report battery level** 
   * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
@@ -701,7 +706,7 @@ Battery level reporting is a setting that can be enabled to return the current b
   * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
 
 
-문제해결
+문제 해결
 ===============
 
 Pod Failures
@@ -746,7 +751,7 @@ Pod suspended
 Informational alert that Pod has been suspended.
 
 Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
 
@@ -789,11 +794,11 @@ The image below shows the optimal way to position the RileyLink during pod activ
 Where to get help for Omnipod driver
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerateand use the following guidelines when requesting assistance:
+All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the `AndroidAPS <https://gitter.im/MilosKozak/AndroidAPS>`__ channel on **Gitter** or the *#androidaps* channel on **Discord** by using `this invite link <https://discord.com/invite/NhEUtzr>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <https://androidaps.readthedocs.io/en/latest/CROWDIN/sk/Usage/Accessing-logfiles.html>`__.
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.gg/4fQUWHZ4Mw>`__.
+-  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
 
 
@@ -837,6 +842,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
 .. |RileyLink|				image:: ../images/omnipod/RileyLink.png
+.. |DiaLink|				image:: ../images/omnipod/DiaLink.png
 .. |Android_phone|			image:: ../images/omnipod/Android_phone.png	
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	

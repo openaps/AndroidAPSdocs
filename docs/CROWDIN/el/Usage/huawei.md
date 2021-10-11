@@ -27,7 +27,7 @@
     
     ![Huawei - κλείδωμα εφαρμογής](../images/Huawei_LockApp.png)
 
-Για το xdrip +, μπορείτε επίσης να ενεργοποιήσετε τις επακόλουθες ειδοποιήσεις (εντός xdrip + εφαρμογής):
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Ρυθμίσεις / Λιγότερο κοινές ρυθμίσεις / άλλες επιλογές misc / Run Collector στο προσκήνιο
   

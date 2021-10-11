@@ -6,7 +6,7 @@ No hay problema con cambiar el huso horario en el teléfono porque la bomba no u
 
 ## DanaRv2, DanaRS
 
-Estas bombas necesitan un cuidado especial porque AndoridAPS está usando la historia de la bomba, pero los registros en la bomba no tienen marca de huso horario. **Eso significa que si se cambia el huso horario en el teléfono, los registros se leerán con un huso horario diferente y se duplicarán.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **Eso significa que si se cambia el huso horario en el teléfono, los registros se leerán con un huso horario diferente y se duplicarán.**
 
 Para evitar esto, hay dos posibilidades:
 
@@ -48,7 +48,7 @@ El Insight también registra las entradas de historial en las que se modificó e
 
 Puede provocar imprecisiones en los TDD. Pero esto no debería ser un problema.
 
-Por lo tanto, el usuario de Insight no tiene que preocuparse por los cambios de huso horario y los cambios de hora. Hay una excepción a esta regla: la bomba de Insight tiene una pequeña batería interna a la hora de encendido, etc. mientras estás cambiando la batería "real". Si el cambio de la batería tarda demasiado tiempo, esta batería interna se puede quedar sin energía, se restablecerá el reloj y se le solicitará que introduzca una nueva hora y fecha después de insertar una nueva batería. En este caso todas las entradas antes de que el cambio de batería se saltean en el cálculo en AAPS porque la hora correcta no puede ser identificado correctamente.
+Por lo tanto, el usuario de Insight no tiene que preocuparse por los cambios de huso horario y los cambios de hora. Hay una excepción a esta regla: la bomba de Insight tiene una pequeña batería interna a la hora de encendido, etc. mientras estás cambiando la batería "real". Si el cambio de la batería tarda demasiado tiempo, esta batería interna se puede quedar sin energía, se restablecerá el reloj y se le solicitará que introduzca una nueva hora y fecha después de insertar una nueva batería. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 # Ajuste horario de verano (DST)
 

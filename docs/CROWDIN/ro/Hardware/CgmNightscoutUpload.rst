@@ -1,6 +1,6 @@
-For users of other CGM uploaded to Nightscout
+Pentru utilizatorii de alte sisteme CGM încărcate în Nightscout
 **************************************************
-If you have any other CGM set up that sends your data to `Nightscout <http://www.nightscout.info>`_ then
+If you have any other CGM set up that sends your data to `Nightscout <https://nightscout.github.io/>`_ then
 
-* In AndroidAPS Preferences enter your Nightscout website and API secret.
-* Select NSClient in ConfigBuilder (setting in AndroidAPS).
+* În AndroidAPS Preferințe introduceți site-ul Nightscout și API Secret.
+* Alegeți NSClient în ConfigBuilder (setare în AndroidAPS).

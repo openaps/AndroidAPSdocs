@@ -2,15 +2,15 @@
 
 Αυτή η σελίδα προορίζεται για κλινικούς ιατρούς που έχουν εκδηλώσει ενδιαφέρον για τεχνολογία τεχνητού παγκρέατος ανοιχτού κώδικα όπως το AndroidAPS ή για ασθενείς που επιθυμούν να μοιραστούν αυτές τις πληροφορίες με τους κλινικούς γιατρούς τους.
 
-Αυτός ο οδηγός περιέχει ορισμένες πληροφορίες υψηλού επιπέδου σχετικά με το κλειστό κύκλωμα DIY και συγκεκριμένα τον τρόπο λειτουργίας του AndroidAPS. Για περισσότερες λεπτομέρειες σχετικά με όλα αυτά τα θέματα, ανατρέξτε [στην πλήρη τεκμηρίωση του AndroidAPS online ](http://androidaps.readthedocs.io/en/latest/index.html). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή αισθανθείτε ελεύθερος να απευθυνθείτε στην κοινότητα με ερώτησης. (Εάν δεν είστε σε κοινωνικά μέσα (π.χ. [ Twitter ](https://twitter.com/kozakmilos) ή Facebook), μην διστάσετε να στείλετε email στο developers@AndroidAPS.org). [ Μπορείτε επίσης να βρείτε μερικές από τις τελευταίες μελέτες & δεδομένα σχετικά με τα αποτελέσματα εδώ ](https://openaps.org/outcomes/).
+Αυτός ο οδηγός περιέχει ορισμένες πληροφορίες υψηλού επιπέδου σχετικά με το κλειστό κύκλωμα DIY και συγκεκριμένα τον τρόπο λειτουργίας του AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Εάν έχετε ερωτήσεις, ρωτήστε τον ασθενή σας για περισσότερες λεπτομέρειες ή αισθανθείτε ελεύθερος να απευθυνθείτε στην κοινότητα με ερώτησης. (Εάν δεν είστε σε κοινωνικά μέσα (π.χ. [ Twitter ](https://twitter.com/kozakmilos) ή Facebook), μην διστάσετε να στείλετε email στο developers@AndroidAPS.org). [ Μπορείτε επίσης να βρείτε μερικές από τις τελευταίες μελέτες & δεδομένα σχετικά με τα αποτελέσματα εδώ ](https://openaps.org/outcomes/).
 
 ### Τα βήματα για την οικοδόμηση ενός DIY κλειστού κυκλώματος:
 
 Για να ξεκινήσετε να χρησιμοποιείτε το AndroidAPS, ακολουθήστε τα παρακάτω βήματα:
 
-* Βρείτε μια [ συμβατή αντλία ](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), μια [ συμβατή συσκευή Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) και μια[ συμβατή πηγή CGM ](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [ Κάντε λήψη του πηγαίου κώδικα AndroidAPS και δημιουργήστε το λογισμικό ](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [ Διαμορφώστε το λογισμικό για να μιλήσετε στις συσκευές διαβήτη και καθορίστε τις ρυθμίσεις και τις προτιμήσεις ασφαλείας ](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Πώς λειτουργεί ένα κλειστό κύκλωμα DIY
 
@@ -77,11 +77,11 @@
 
 ### Βελτιστοποίηση ρυθμίσεων και πραγματοποίηση αλλαγών
 
-Ως κλινικός ιατρός που μπορεί να μην έχει εμπειρία με τους κλειστά κυκλώματα, AndroidAPS ή DIY, ίσως είναι δύσκολο να βοηθήσετε τον ασθενή να βελτιστοποιήσει τις ρυθμίσεις του ή να κάνει αλλαγές για να βελτιώσει τα αποτελέσματά του. Έχουμε πολλαπλά εργαλεία και [ οδηγούς ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) στην κοινότητα που βοηθούν τους ασθενείς να κάνουν μικρές δοκιμασμένες προσαρμογές για να βελτιώσουν τις ρυθμίσεις τους.
+Ως κλινικός ιατρός που μπορεί να μην έχει εμπειρία με τους κλειστά κυκλώματα, AndroidAPS ή DIY, ίσως είναι δύσκολο να βοηθήσετε τον ασθενή να βελτιστοποιήσει τις ρυθμίσεις του ή να κάνει αλλαγές για να βελτιώσει τα αποτελέσματά του. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Το πιο σημαντικό πράγμα που πρέπει να κάνουν οι ασθενείς είναι να κάνουν μια αλλαγή κάθε φορά και παρατηρούν τον αντίκτυπο για 2-3 ημέρες πριν επιλέξουν να αλλάξουν ή να τροποποιήσουν τις ρυθμίσεις (εκτός αν είναι προφανώς μια κακή αλλαγή που κάνει τα πράγματα χειρότερα, οπότε θα έπρεπε επαναφέρετε αμέσως την προηγούμενη ρύθμιση). Η ανθρώπινη τάση είναι να γυρίσουμε όλα τα κουμπιά και να αλλάξουμε τα πάντα με τη μία. αλλά αν κάποιος το κάνει, τότε μπορεί να καταλήξουν σε περαιτέρω κακές ρυθμίσεις για το μέλλον και να δυσκολευτεί να επιστρέψει σε μια γνωστή καλή κατάσταση.
 
-Ένα από τα πιο ισχυρά εργαλεία για την πραγματοποίηση αλλαγών στις ρυθμίσεις είναι ένα αυτοματοποιημένο εργαλείο υπολογισμού βασικών ρυθμών, ISF και υδατανθράκων. Αυτό ονομάζεται "[ Autotune ](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Είναι σχεδιασμένο να εκτελείται ανεξάρτητα / χειροκίνητα και να επιτρέπει στα δεδομένα να σας καθοδηγούν εσάς ή τον ασθενή σας για να κάνετε αυξομειώσεις στις ρυθμίσεις. Είναι η καλύτερη πρακτική στην κοινότητα να τρέχει (ή να αναθεωρεί) τις αναφορές Autotune πρώτα, προτού επιχειρήσετε να κάνει χειροκίνητες προσαρμογές στις ρυθμίσεις. Με το AndroidAPS, το Autotune θα λειτουργεί ως "εφάπαξ", αν και υπάρχουν συνεχείς προσπάθειες για την ενσωμάτωσή του απευθείας στο AndroidAPS. Καθώς αυτές οι παράμετροι είναι ένα προκαταρκτικό ζήτημα τόσο για την τυπική παροχή ινσουλίνης αντλίας όσο και για την παράδοση ινσουλίνης κλειστού κυκλώματος, η συζήτηση των αποτελεσμάτων αυτόματης λήψεως και η εμφάνιση αυτών των παραμέτρων θα ήταν η φυσική σύνδεση με τον κλινικό ιατρό.
+Ένα από τα πιο ισχυρά εργαλεία για την πραγματοποίηση αλλαγών στις ρυθμίσεις είναι ένα αυτοματοποιημένο εργαλείο υπολογισμού βασικών ρυθμών, ISF και υδατανθράκων. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Είναι σχεδιασμένο να εκτελείται ανεξάρτητα / χειροκίνητα και να επιτρέπει στα δεδομένα να σας καθοδηγούν εσάς ή τον ασθενή σας για να κάνετε αυξομειώσεις στις ρυθμίσεις. Είναι η καλύτερη πρακτική στην κοινότητα να τρέχει (ή να αναθεωρεί) τις αναφορές Autotune πρώτα, προτού επιχειρήσετε να κάνει χειροκίνητες προσαρμογές στις ρυθμίσεις. Με το AndroidAPS, το Autotune θα λειτουργεί ως "εφάπαξ", αν και υπάρχουν συνεχείς προσπάθειες για την ενσωμάτωσή του απευθείας στο AndroidAPS. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
 
 Επιπρόσθετα, η ανθρώπινη συμπεριφορά (που αντλείται από τον χειρωνακτικό τρόπο αντιμετώπισης διαβήτη) επηρεάζει συχνά τα αποτελέσματα, ακόμη και με κλειστό κύκλωμα DIY. Για παράδειγμα, εάν το BG εκτιμάται ότι θα μειωθεί και το AndroidAPS μειώνει την ινσουλίνη με κατεύθυνση προς τα κάτω, μπορεί να χρειαστεί μόνο μικρή ποσότητα υδατανθράκων (π.χ. 3-4g υδατάνθρακες) για να φθάσει το BG πάνω από 70 mg / dl (3,9 mmol). Ωστόσο, σε πολλές περιπτώσεις, κάποιος μπορεί να επιλέξει να θεραπεύσει με πολλούς περισσότερους υδατάνθρακες (π.χ. να κολλήσει στον κανόνα 15), γεγονός που θα προκαλέσει μια ταχύτερη ακίδα τόσο από την επιπλέον γλυκόζη όσο και επειδή η ινσουλίνη είχε μειωθεί στο χρονικό πλαίσιο που οδηγούσε στο χαμηλό.
 
@@ -95,7 +95,7 @@
 
 Επιπλέον προτεινόμενη ανάγνωση:
 
-* [Η πλήρης τεκμηρίωση του AndroidAPS ](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* The [full AndroidAPS documentation](../index)
 * Το [ Σχεδιασμό Αναφοράς OpenAPS ](https://OpenAPS.org/reference-design/), το οποίο εξηγεί πώς είναι σχεδιασμένο το OpenAPS για ασφάλεια: https://openaps.org/reference-design/
-* [Η πλήρης τεκμηρίωση OpenAPS ](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Περισσότερες λεπτομέρειες [ σχετικά με τους υπολογισμούς OpenAPS ](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
+  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

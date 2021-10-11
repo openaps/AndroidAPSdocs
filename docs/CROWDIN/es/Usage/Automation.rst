@@ -7,7 +7,7 @@ Para los mismos sucesos frecuentes, es posible que siempre tenga que cambiar los
 
 P.e. cuando su BG es demasiado bajo, puede decidir tener automáticamente un objetivo temporal alto. O si estás en tu centro de fitness, obtienes automáticamente un objetivo temporal. 
 
-Antes de utilizar Automatización, debe tener confianza en los `objetivos temporales <./temptarget.html>` _ o en los conmutadores de perfil. 
+Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
@@ -22,14 +22,14 @@ Nota importante
 --------------------------------------------------
 **La automatización todavía está activa cuando se inhabilita el lazo.**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. imagen:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activación y desactivación de la regla de automatización
+  :alt: Activate and deactivaten automation rule
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 General
 --------------------------------------------------
@@ -41,8 +41,8 @@ Hay algunos límites:
 
 **Por favor, tenga cuidado:**
 
-* ** menos de -2 significa: -3 e inferiores (-4, -10, etc)**
-* ** más de 2 significa: -1 y superiores (-1, 0, + 10, etc)**
+* **less than -2 means: -3 and lower (-4,-10, etc)**
+* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 
 Condición
@@ -58,7 +58,7 @@ Usted puede elegir entre varias condiciones. Aquí están algunos componentes ex
 * Tiempo vs. hora de Repetición
 
   * hora = suceso de una sola vez
-  * hora recurrente = algo que ocurre regulamente (por ejemplo. una vez a la semana, todos los días laborables, etc.)
+  * recurring time = something that happens regularly (i.e. una vez a la semana, todos los días laborables, etc.)
    
 * ubicación: en el constructor de configuración (Automatización), puede seleccionar el servicio de ubicación que desea utilizar:
 
@@ -84,18 +84,18 @@ Puede elegir una o varias acciones:
 
 Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
  
-.. imagen:: ../images/Automation_Default_V2_5.png
-  :alt: Valor por omisión de automatización frente a. valores del usuario
+.. image:: ../images/Automation_Default_V2_5.png
+  :alt: Automation default vs. valores del usuario
 
 Sort automation rules
------
+---------------------
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
 Borrar reglas de automatización
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Buenas prácticas y advertencias
 ==================================================
 * When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Cuál es el resultado de las reglas.
+* Watch the rule results.
 * Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
 
   **Doubly important if action is a profile switch!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
+* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Profile switching will not reset the profile back to your base profile
 
@@ -129,14 +129,14 @@ These are just setup examples, no advises. Don't reproduce them without being aw
 
 Objetivo temporal de glucosa baja
 --------------------------------------------------
-.. imagen:: ../images/Automation2.png
+.. image:: ../images/Automation2.png
   :alt: Automation2
 
 This is made by someone who wants to get a hypo temp target automatically when having low glucose.
 
 Objetivo temporal para hora de almuerzo
 --------------------------------------------------
-.. imagen:: ../images/Automation3.png
+.. image:: ../images/Automation3.png
   :alt: Automation3
   
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
@@ -154,4 +154,4 @@ Please be aware to use automation incorrectly. Esto podría conducir a dificulta
 Alternativas
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Algunos ejemplos se pueden encontrar `aquí <./automationwithapp.html>`_.

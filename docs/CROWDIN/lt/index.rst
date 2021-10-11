@@ -14,33 +14,40 @@ Pagrindinės sudedamosios dalys yra:
 
 Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 
-Pradėkite
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Change language
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
+
    Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
-   
-   
-What do I need? 
---------------------------------------------------
+
+.. _what-do-i-need:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: What do I need? 
+
    Moduliai <./Module/module.rst>
    Pavyzdinė Sąranka <./Getting-Started/Sample-Setup.md>
 
-   
-Kaip įdiegti AndroidAPS
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to Install AndroidAPS
 
    Android programos (APK) kūrimas <./Installing-AndroidAPS/Building-APK.md>
    Atnaujinimas į naują versiją ar atšaką <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +56,36 @@ Kaip įdiegti AndroidAPS
    * Android Studio trikčių šalinimas <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Atnaujinimų pastabos <./Installing-AndroidAPS/Releasenotes.rst>
    Kūrėjo versija <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Komponentų Nustatymas
---------------------------------------------------
+
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Component Setup
+
    Glikemijos duomenų šaltiniai <./Configuration/BG-Source.rst>
    xDrip Nustatymai <./Configuration/xdrip.md>
    Pompos <./Hardware/pumps.rst>
    Telefonai <./Hardware/Phoneconfig.rst>
    Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
    Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>
-   
 
-Konfigūracija 
---------------------------------------------------
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Configuration
+
    Konfigūratorius <./Configuration/Config-Builder.md>
    Nustatymai <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS naudojimas
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: AndroidAPS Usage
+
    AndroidAPS ekranai <./Getting-Started/Screenshots.md>
    Tikslai <./Usage/Objectives.rst>
    OpenAPS funkcijos <./Usage/Open-APS-features.md>   
@@ -94,80 +99,70 @@ AndroidAPS naudojimas
    Įkėlimas į Open Human <./Configuration/OpenHumans.rst>
    Automatizavimas su 3-ios šalies aplikacijomis <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
- 
-Bendrieji Patarimai 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: General Hints 
+
    Keliavimas per laiko zonas su pompomis <./Usage/Timezone-traveling.md>
    Žurnalų pasiekimas <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo patarimai bendram naudojimui <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Eksportuoti / Importuoti Parametrus <./Usage/ExportImportSettings.rst>
-   
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
-AndroidAPS vaikams
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS for children
+
    Nuotolinis stebėjimas <./Children/Children.rst>
    SMS komandos <./Children/SMS-Commands.rst>
+   Profile helper <./Configuration/profilehelper.rst>
    
-
-Trikčių šalinimas
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Troubleshooting
+
    Trikčių šalinimas <./Usage/troubleshooting.rst>
-   
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
-DUK 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: FAQ
+
    DUK <./Getting-Started/FAQ.md>
 
-   
-Terminų žodynas
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Terminų žodynas <./Getting-Started/Glossary.md>
-  
+   :caption: Glossary
 
-Kur ieškoti pagalbos 
---------------------------------------------------
+   Terminų žodynas <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Where to go for help 
 
    Naudingi ištekliai prieš pradedant <./Where-To-Go-For-Help/Background-reading.md>
    Kur kreiptis pagalbos <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
 
-Medikams
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: For Clinicians
+
    Medikams <./Resources/clinician-guide-to-AndroidAPS>
 
 
-Kaip padėti
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: How to help
 
    Kaip padėti <./Getting-Started/How-can-I-help.md>
    Kaip išversti programėlę ir dokumentaciją <./translations.md>
@@ -183,4 +178,4 @@ Kaip padėti
 
 	* Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-	Atkreipkite dėmesį: Šis projektas nėra susijęs su ir jam nėra pritarę: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ar `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

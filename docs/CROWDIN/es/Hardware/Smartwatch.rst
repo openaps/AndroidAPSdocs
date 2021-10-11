@@ -10,7 +10,5 @@ Más detalles aquí:
    :glob:
    
    Lista de teléfonos y smartwatches probados <../Getting-Started/Phones.md>
-   Teléfonos de base <../Getting-Started/Phones.md#phone-background>
    Relojes Wear OS <../Configuration/Watchfaces.md>
-   Troubleshooting Sony Smartwatch SW 3 <..Usage/SonySW3.rst>
-   Pebble <../Configuration/Watchfaces.md#pebble>
+   Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>

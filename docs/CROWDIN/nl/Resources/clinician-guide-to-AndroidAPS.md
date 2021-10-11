@@ -2,15 +2,15 @@
 
 Deze pagina is bedoeld voor zorgprofessionals (zoals artsen en diabetesverpleegkundigen) die meer willen weten over 'open source' kunstmatige alvleesklier-technologie zoals AndroidAPS, of voor patiënten die informatie zoeken om te delen met hun arts/diabetesverpleegkundige.
 
-We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](http://androidaps.readthedocs.io/en/latest/index.html). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
+We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](../index.rst). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
 
 ### Het bouwen van een doe-het-zelf closed loop
 
 Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
-* Vind een [geschikte insulinepomp](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), een [Android telefoon](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) en een [geschikte bloedglucose bron (CGM)](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Download de AndroidAPS broncode en bouw de app](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Vind een [geschikte insulinepomp](../Hardware/pumps.rst), een [Android telefoon](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) en een [geschikte glucosesensor (CGM of FSL)](../Configuration/BG-Source.rst).
+* [Download de AndroidAPS broncode en bouw de app](../Installing-AndroidAPS/Building-APK.md).
+* [Koppel de app aan CGM en pomp en geef alle instellingen en veiligheidsgrenzen in](../index.rst#configuration).
 
 ### Hoe een doe-het-zelf closed loop werkt
 
@@ -77,11 +77,11 @@ In dit voorbeeld ziet AndroidAPS dat de bloedglucose veel hoger is dan het stree
 
 ### Instellingen aanpassen en de behandeling optimaliseren
 
-Als arts of diabetesverpleegkundige heeft u wellicht niet veel ervaring met AndroidAPS of met andere doe-het-zelf closed loop systemen, waardoor het op het eerste gezicht lastig kan lijken om advies te geven over het aanpassen van instellingen. Gelukkig zijn er meerdere tools en [handleidingen](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) online te vinden die patiënten helpen om kleine, stapsgewijze aanpassingen te maken aan hun instellingen en zo hun uitkomsten te optimaliseren.
+Als arts of diabetesverpleegkundige heeft u wellicht niet veel ervaring met AndroidAPS of met andere doe-het-zelf closed loop systemen, waardoor het op het eerste gezicht lastig kan lijken om advies te geven over het aanpassen van instellingen. Gelukkig zijn er meerdere tools en [handleidingen](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) online te vinden die patiënten helpen om kleine, stapsgewijze aanpassingen te maken aan hun instellingen en zo hun uitkomsten te optimaliseren.
 
 Voor patiënten is het belangrijk om één verandering tegelijk te maken, en gedurende 2-3 dagen het effect ervan te bekijken voordat een er andere instelling wordt aangepast (tenzij het natuurlijk overduidelijk is dat de verandering een verslechtering is, in dat geval verander je de instelling weer terug). Een hele menselijke neiging is om aan alle knoppen tegelijk te willen draaien, maar wie dat doet kan eindigen met verdere sub-optimale instellingen, en dan is het soms lastig om de eerdere goede instellingen weer terug te vinden.
 
-Eén van de krachtigste hulpmiddelen bij het aanpassen van instellingen is een geautomatiseerd rekeninstrument voor bepaalde parameters: basaalstanden, insuline gevoeligheidsfactor en koolhydraat ratio. Dit heet "[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Het is ontworpen om handmatig te worden uitgevoerd, en de resultaten ervan kunnen een leidraad zijn bij het aanpassen van de instellingen. Autotune wordt vaak gedraaid (en bekeken) voordat iemands instellingen worden aangepast. AndroidAPS gebruikers moeten Autotune steeds handmatig draaien, als een eenmalige berekening. Er wordt nog aan gewerkt om Autotune in AndroidAPS te integreren. De parameters waarover Autotune iets zegt zijn dezelfde als die bij traditionele pomptherapie worden gebruikt: basaalstanden, insuline gevoeligheidsfactor en koolhydraat ratio. Wanneer uw patiënt gebruik maakt van Autotune, dan is het dus logisch om de uitkomsten ook mee te nemen wanneer aanpassingen aan die parameters ter sprake komen tijdens een consult.
+Eén van de krachtigste hulpmiddelen bij het aanpassen van instellingen is een geautomatiseerd rekeninstrument voor bepaalde parameters: basaalstanden, insuline gevoeligheidsfactor en koolhydraat ratio. Dit heet "[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)". Het is ontworpen om handmatig te worden uitgevoerd, en de resultaten ervan kunnen een leidraad zijn bij het aanpassen van de instellingen. Autotune wordt vaak gedraaid (en bekeken) voordat iemands instellingen worden aangepast. AndroidAPS gebruikers moeten Autotune steeds handmatig draaien, als een eenmalige berekening. Er wordt nog aan gewerkt om Autotune in AndroidAPS te integreren. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
 
 Patiënten die een doe-het-zelf closed loop gaan gebruiken (na jaren van traditionele pen- of pomptherapie), zijn vaak nog geneigd om uit gewoonte te handelen. Als er bijvoorbeeld een lage bloedglucose wordt voorspeld, dan zal AndroidAPS al minder insuline beginnen te geven wanneer die daling wordt opgemerkt. Daardoor is er slechts een kleine hoeveelheid koolhydraten (bijvoorbeeld 3-4 gram) nodig om de bloedglucose weer te doen stijgen vanaf 70 mg/dl (3,9 mmol/l). Iemand zou in zo'n geval kunnen kiezen om een stuk meer koolhydraten te eten (bijvoorbeeld de regel van 15 gram bij een hypo), met als resultaat een snellere piek doordat er relatief veel koolhydraten worden gegeten terwijl er op dat moment weinig insuline in het lichaam is. Het durven terugbrengen van de hoeveelheid koolhydraten (gedragsverandering) levert in dit geval betere waardes op.
 
@@ -95,7 +95,7 @@ We hebben geprobeerd om een overzicht te geven van de werking van AndroidAPS. Er
 
 Aanvullende aanbevolen informatie:
 
-* De [volledige AndroidAPS documentatie](http://androidaps.readthedocs.io/en/latest/EN/index.html) (kies voor Nederlands in het menu)
+* De [volledige AndroidAPS documentatie](../index)
 * Het [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), hierin wordt uitgelegd hoe OpenAPS is ontworpen rondom veiligheid
-* De [volledige OpenAPS documentatie](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Meer [details over OpenAPS berekeningen](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* De [volledige OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/index.html) 
+  * Meer [details over OpenAPS berekeningen](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

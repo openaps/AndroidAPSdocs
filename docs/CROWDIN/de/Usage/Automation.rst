@@ -29,7 +29,7 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 
 Automatisierung aufrufen
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Abhängig von deinen `Einstellungen im Konfigurationsgenerator <../Configuration/Config-Builder.html#registerkarte-tab-oder-hamburger-menu>`_ findest du `Automatisierungen <../Configuration/Config-Builder.html#automatisierung>`__ entweder im Hamburger.Menü oder als Registerkarte (Tab).
 
 Allgemein
 --------------------------------------------------
@@ -88,14 +88,14 @@ Nachdem du deine Aktionen hinzugefügt hast, **vergesse nicht die Standard-Werte
   :alt: Automation Standard-Werte vs.  eigene Werte
 
 Automation-Regeln sortieren
------
+---------------------
 Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Automation-Regeln sortieren
   
 Automation-Regeln löschen
------
+-----------------------
 Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
 .. image:: ../images/Automation_Delete.png
@@ -109,10 +109,10 @@ Empfehlungen und Vorbehalte
 
   **Doppelt wichtig, wenn die Aktion ein Profilwechsel ist!**
  
-* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`_ nicht auf 0 zurück.
+* Verwende temporäre Ziele statt Profilwechseln. Temporäre Ziele setzen `Autosens <../Usage/Open-APS-features.html#autosens>`__ nicht auf 0 zurück.
 * Setze Profilwechsel sparsam und nur als letzte Möglichkeit ein.
 
-  * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`_ für mind. 6 Stunden unbrauchbar.
+  * Durch einen Profilwechsel wird `Autosens <../Usage/Open-APS-features.html#autosens>`__ für mind. 6 Stunden unbrauchbar.
 
 * Profilwechsel setzen Dein Profil nicht automatisch auf das Standardprofil zurück.
 

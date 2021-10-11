@@ -6,7 +6,7 @@ Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij he
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Exporteer de instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
+1. `Exporteer instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
 2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
 3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
@@ -52,7 +52,7 @@ Error: buildOutput.apkData must not be null
 Misschien krijg je de volgende foutmelding bij het bouwen van de apk:
 
   `Errors while building APK` (Fouten bij het bouwen van APK)
-   
+
   `Cause: buildOutput.apkData must not be null` (Oorzaak: buildOutput.apkData mag niet leeg zijn)
 
 Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden opgelost voordat Android Studio 3.6 uitkomt. Je hebt drie opties:
@@ -103,8 +103,8 @@ Optie 3 - Controleren op updates
 * Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Plak gekopieerde tekst en druk op return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -122,7 +122,7 @@ App niet geïnstalleerd
 2. Verwijder de AndroidAPS app van jouw telefoon.
 3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
 App geïnstalleerd maar oude versie
@@ -134,11 +134,10 @@ Geen van de bovengenoemde
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
-    In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`_ beschreven.
-4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`__ beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`__ beschreven.
+4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 
 In het ergste geval
 ==================================================

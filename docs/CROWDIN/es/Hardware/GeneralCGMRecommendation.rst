@@ -25,7 +25,7 @@ Solución de problemas
 Problemas de conexión
 --------------------------------------------------
 
-La conexión Bluetooth puede ser alterada por otros dispositivos Bluetooth cercanos como, por ejemplo, medidores de glucosa en sangre, auriculares, tabletas o dispositivos de cocina tales como hornos de microondas o placas de cerámica. En este caso, xdrip no muestra ningún valor de BG. Cuando se restablece la conexión bluetooth, los datos se completan.
+La conexión Bluetooth puede ser alterada por otros dispositivos Bluetooth cercanos como, por ejemplo, medidores de glucosa en sangre, auriculares, tabletas o dispositivos de cocina tales como hornos de microondas o placas de cerámica. En este caso, xdrip no muestra ningún valor de BG. When bluetooth connection is restabilised the data is backfilled.
 
 Errores de sensor
 --------------------------------------------------
@@ -35,7 +35,7 @@ A menudo un "Error de Sensor" puede ser corregido de inmediato bebiendo líquido
 
 Valores inestables
 --------------------------------------------------
-Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Settings - Inter-App Settings - Noise Blocking), es decir,. "Bloque de Muy Alto nivel de ruido y peor".  Véase también " Suavizado datos de BG <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Puede tratar de cambiar la configuración del bloqueo de ruido en xdrip (Settings - Inter-App Settings - Noise Blocking), es decir,. "Bloque de Muy Alto nivel de ruido y peor".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
 Edad de sensor negativa
 --------------------------------------------------

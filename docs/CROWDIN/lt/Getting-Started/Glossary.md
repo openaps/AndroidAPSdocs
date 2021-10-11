@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - dirbtinės kasos sistema</td>
+ <td>AndroidAPS - artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -44,7 +44,7 @@
  <td><strong>Autosens</strong></td>
  <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>KAMŽ</strong></td>
- <td>kaniulės amžius - rodomas Nightscout, jei informacija buvo įvesta AAPS skirtuke Priežiūra arba AAPS veiksmų skirtuke "pradinis užpildymas“</td>
+ <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>KAT</strong></td>
- <td>pagrindiniame ekrane pateikiamas būsenos indikatorius, kad laiku nepakeistas kateteris</td>
+ <td>status light overdue cannula change on homescreen</td>
  <td>BAT / REZ / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nuostatos</a><br><a href="../Getting-Started/Screenshots.html">Ekrano vaizdai</a></td>
 </tr>
@@ -122,7 +122,7 @@
  <td><strong>IVT</strong></td>
  <td>insulino veikimo trukmė</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulino tipai</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -134,31 +134,31 @@
  <td><strong>iAV</strong></td>
  <td>„Ištęsti angliavandeniai“ organizme išdalinami per kelias valandas, kai maiste yra daug riebalų / baltymų. <br> Ši funkcija pakeičia ištęstą bolusą, žinomą iš klasikinio pompos naudojimo, kuris netenka prasmės, kai naudojamas uždaras ciklas</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - iAV</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">iAV naudojimo atvejai</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>SGJ</strong></td>
  <td>skanuojamas gliukozės jutiklis (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - glikemijos šaltinis</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - glikemijos šaltinis</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>versijos valdymo sistema, skirta kompiuterių failų pokyčių stebėjimui ir darbui su šiais failais koordinuoti <br> -> būtina, kai reikia atnaujinti APK</td>
+ <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - atnaujinti APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - atnaujinti APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
  <td>žiniatinklio versijos valdymo paslauga Git naudotojams<br> - šaltinio kodo saugykla</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
  <td>programa duomenų skaitymui iš Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="http://www.nightscout.info/wiki/welcome/nightscout-for-libre">Nightscout su Glimp</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout su Glimp</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Prognozės</strong></td>
- <td>glikemijos prognozės ateityje, remiantis skirtingais skaičiavimo algoritmais</td>
+ <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - glikemijos prognozavimo linijos</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
  <td><strong>Profilis</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>Jautrumo nustatymas</strong></td>
  <td>jautrumo insulinui pokyčių dėl fizinio krūvio, hormonų ir kt. nustatymas.</td>
  <td>&nbsp;</td>
- <td><a href="http://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Sensoriaus triukšmas</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>xDrip / xDrip+</strong></td>
  <td>atviro kodo programinė įranga skaityti NGJ sistemas</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="http://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
  <td><strong>Zero-temp / Laikina nulinė bazė</strong></td>

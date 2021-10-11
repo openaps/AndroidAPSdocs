@@ -8,16 +8,16 @@ Les développeurs sont des parents, des soignants, des proches et des personnes 
 
 ## Je peux écrire du code ! Comment puis-je participer ?
 
-Yeh ! Regardez les problèmes ("Issues"), demandez dans "gitter", il y a toujours beaucoup à faire ! Choisissez une petite tâche au début et faites votre première Pull Request ! :)
+Yeh ! Regardez les problèmes ("Issues"), demandez dans "discord", il y a toujours beaucoup à faire ! Choisissez une petite tâche au début et faites votre première Pull Request ! :)
 
 ## Je connais le système et je peux écrire de la documentation !
 
-Excellent, c'est une chose très appréciée et une bonne façon de contribuer en avance !
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* L'ancien canal de gitter concernant le wiki se trouve ici : [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* Le canal de discord concernant la doc se trouve ici : [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
 * Un guide sur la façon de faire des "commits" concernant le wiki anglais peut être trouvé ici : [Comment faire un PR](../make-a-PR.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
 
-## Je parle plusieurs langues et je veux traduire l'application ou la documentation
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Il suffit de vous inscrire à CROWDIN, de cliquer sur votre langue, d'attendre l
 
 ## Y a-t-il d'autres façons d'aider ?
 
-Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans gitter & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.
+Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans discord & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.

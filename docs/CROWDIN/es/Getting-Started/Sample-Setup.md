@@ -18,7 +18,7 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
 
 1. Samsung Galaxy S7
     
-    * Alternativas: véase [lista de teléfonos y relojes probados ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Sin embargo, los datos se subirán automáticamente a Nightscout "en la nube" cu
 
 4. Opcional: Sony Smartwatch 3 (SWR50)
     
-    * Alternativas: Todos los relojes [con Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) deben funcionar bien, para detalles ver la lista [de teléfonos probados y relojes](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) para AndroidAPS (OS debe ser Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout
 
@@ -104,7 +104,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* Cliente de NS activado (consulte [NS Client](../Configuration/Config-Builder#ns-profile) y [Configuración de Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Instalar xDrip+
 
@@ -144,7 +144,7 @@ With an Android Wear smartwatch life with diabetes can be made even more inconsp
 
 Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
 
-* Instale la aplicación "Android Wear" en su smartphone a través de Google Play Store y conecte el smartwatch de acuerdo con las instrucciones allí.
+* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
 * En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`
 * En tu reloj inteligente: Pulsación larga para cambiar el watchface y selecciona `AAPSv2`
 * Si es necesario reiniciar ambos dispositivos una vez.

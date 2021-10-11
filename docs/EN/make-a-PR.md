@@ -6,7 +6,7 @@ If you want to translate to other languages (thank you), please use [crowdin](ht
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 
 ## General
-For any questions, feedback or new ideas you can contact the documentation team via [gitter](https://gitter.im/AndroidAPSwiki/Lobby). 
+For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). 
 Doing a PR isn't difficult, but we can help you editing the documentation.
 
 At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
@@ -25,11 +25,11 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 
 ![Fork repo](./images/PR0.png)
 
-2. Go to http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html or similar and navigate to the page you want to edit.  Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
+2. Go to any page and navigate to the page you want to edit. Click on the black box at bottom left of page with the green word "v: latest" or similar. In the pop up window that appears, click the word "edit" for editing in GitHub.  
 
 ![edit doc](./images/PR1.png)
 
-   Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
+   Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
 
 ![RTD io](./images/PR2.png)
 
@@ -51,7 +51,7 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 
 ![create pull request](./images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have Github notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
 ![PR tracking](./images/PR7.png)
 
@@ -79,9 +79,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * images: `![alt text](../images/file.png)`
 #### Links
 * external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](.../folder/file.md)`
-* internal link to .rst page: `[alt text](.../folder/file.rst)`
-* internal link to headline: `[alt text](.../folder/file#headline)`
+* internal link to .md page: `[alt text](../folder/file.md)`
+* internal link to .rst page: `[alt text](../folder/file.rst)`
+* internal link to headline: `[alt text](../folder/file#headline)`
 
 ### .rst files
 #### Text format
@@ -128,11 +128,11 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
 * Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 * You can upload images in batches easily by:
  
- 1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+ 1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
  
  2. Click in the upper right corner where it says "Upload files"
  

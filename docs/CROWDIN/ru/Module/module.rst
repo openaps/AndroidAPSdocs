@@ -1,9 +1,9 @@
 # Обзор компонентов 
 **************************************************
-AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ. Прежде чем выбрать компоненты, было неплохо рассмотреть их также в `комплексе компонентов <https://androidaps.readthedocs.io/en/dev/EN/index.html#component-setup>`_.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Прежде чем выбрать компоненты, неплохо рассмотреть их в `комплексе компонентов <../index.html#component-setup> `_.
    
 .. изображение:../images/modules.png
-  :alt: Обзор компонентов
+  :alt: Components overview
 
 .. примечание:: 
    **ВАЖНОЕ ПРЕДОСТЕРЕЖЕНИЕ**
@@ -17,7 +17,7 @@ AndroidAPS - это не просто (самостоятельно собран
 Необходимые модули
 ==================================================
 Хороший индивидуальный алгоритм дозировки для вашей терапии диабета
---------------------------------------------------
+----------------------------------------------------------
 Хотя его нельзя сконструировать или купить, это, вероятно, самый недооцениваемый "модуль", существенно важный для системы. Когда алгоритму доверяется управлять диабетом, следует знать правильные настройки, чтобы не допустить серьезных ошибок.
 Даже если у вас еще нет других модулей, вы можете в сотрудничестве с вашим эндокринологом проверить и адаптировать свой профиль. 
 Большинство пользователей систем ИПЖ используют циркулярные суточные величины скорости базала (BR), гормональную чувствительность к инсулину ISF и соотношение инсулин-углеводы CR.
@@ -26,7 +26,7 @@ AndroidAPS - это не просто (самостоятельно собран
 
 * BR (скорость подачи базового инсулина)
 * ISF (коэффициент чувствительности к инсулину) определяет вашу величину понижения ГК в результате введения 1 единицы инсулина
-* CR (соотношение инсулин-углеводы) это количество граммов углеводов на единицу инсулина
+* CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (продолжительность действия инсулина).
 
 Не использовать SGLT-2 ингибиторы
@@ -35,8 +35,10 @@ SGLT-2 ингибиторы, которые также называются гл
 
 Телефон
 --------------------------------------------------
-The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>_`
+Текущая версия AndroidAPS требует Android-смартфона с Google Android 8.0 или выше. Так что если вы думаете о новом телефоне, рекомендуем хотя бы Android 8., но оптимально Android 9 или 10.
+Пользователям настоятельно рекомендуется постоянно поддерживать AndroidAPS в актуальном состоянии по соображениям безопасности, однако для пользователей, у которых нет Android 8.0, подходит AndroidAPS версии 2.6.1.4, находящаяся в "старом репозитории". <https://github.com/miloskozak/androidaps>`_
+ 
+Context | Edit Context`_
 
 Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
@@ -52,12 +54,22 @@ AndroidAPS **на данный момент** работает с
 - `Помпа Accu-Chek Insight <./Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 - `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `некоторые старые помпы Medtronic <./Configuration/MedtronicPump.html>`_ начиная с [предстоящей[ версии 2.4 (дополнительно необходимо: RileyLink/Gnarl аппаратное обеспечение, телефон на Android с чипом Bluetooth LE / BLE-chipset)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ 
+- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
-**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`_ странице.
+**Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на странице `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`.
 
-Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если не указан.
+Если вам нужно **купить частным образом** помпу, то вы можете найти дистрибьюторов в `этой таблице <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>_, делитесь информацией о вашем, если он еще не указан.
+
+Дополнительное устройство коммуникации
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
+
+   - |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
+   - |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+   - |EmaLink| `Сайт Emalink <https://github.com/sks01/EmaLink>`__ - `Контактная информация <mailto:getemalink@gmail.com>`__  
+   - |DiaLink| DiaLink - `Контактная информация <mailto:Boshetyn@ukr.net>`__     
+   - |LoopLink| `Сайт LoopLink  <https://www.getlooplink.org/>`__ - `Контактная информация <https://jameswedding.substack.com/>`__ - Не проверено
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -74,7 +86,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Источник данных гликемии
 --------------------------------------------------
-Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`__. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
 * ` Dexcom G6 <../Hardware/DexcomG6.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
@@ -82,20 +94,20 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 * ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
 * `Libre 1: -Нужен передатчик, такой как Bluecon или MiaoMiao (сборка или покупка) и приложение xDrip+
 * `Eversense: Он работает до сих пор только в сочетании с модифицированными приложениями ESEL и Eversense-App (не работает с Dana RS и LineageOS, но Dana RS и Android или Combo и Lineage OS работают прекрасно)
-* `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных материалов
+* `Enlite <../Hardware/MM640g.html>`_: довольно сложная система с большим количеством дополнительных устройств
 
 
 Nightscout
 --------------------------------------------------
-Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout - веб-приложение с открытым исходным кодом, которое может регистрировать/отображать данные мониторинга и AndroidAPS и создавать отчеты. Вы можете найти больше информации на сайте проекта Nightscout <http://nightscout.github.io/>`_. Вы можете создать собственный сайт Nightscout `используя Heroku <https://nightscout.github.io/nightscout/new_user/>`_, с автоматизированной установкой Nightscout на `zehn.be <https://ns.10be.de/en/index.html>`_ или разместите его на вашем собственном сервере (для IT экспертов).
 
 Nightscout не зависит от других модулей. Он понадобится для выполнения цели 1.
 
-Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`_.
+Дополнительную информацию о том, как настроить Nightscout для использования с AndroidAPS можно найти `здесь <../Installing-AndroidAPS/Nightscout.html>`__.
 
 Файл AAPS-.apk
 --------------------------------------------------
-Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции `здесь <./../Installing-AndroidAPS/Building-APK.html>`_.  
+Основной компонент системы. Перед установкой приложения необходимо создать apk-файл ( расширение имен файлов для приложений Android). Инструкции `здесь <./../Installing-AndroidAPS/Building-APK.html>`__.  
 
 Дополнительные модули
 ==================================================
@@ -103,7 +115,7 @@ Nightscout не зависит от других модулей. Он понад
 --------------------------------------------------
 Вы можете выбрать смарт-часы с Android Wear 1.x и выше. Большинство пользователей носят Sony Smartwatch 3 (SWR50), поскольку это единственные смарт-часы, которые могут получать данные от Dexcom G5/G5, когда телефон вне доступа. Некоторые другие часы могут быть пропатчены как самостоятельный коллектор (см. `эту документацию <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ подробно).
 
-Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Есть разные часы для использования с AndroidAPS, которые вы можете найти `здесь <../Configuration/Watchfaces.html>`_.
+Пользователи создают `список протестированных телефонов и часов <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. Есть разные часы для использования с AndroidAPS, которые вы можете найти `здесь <../Configuration/Watchfaces.html>`__.
 
 Для того, чтобы включить в список телефон, который не занесен в таблицу, заполните форму <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>.
 
@@ -111,7 +123,7 @@ Nightscout не зависит от других модулей. Он понад
 
 xDrip +
 --------------------------------------------------
-Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти `здесь <../Configuration/xdrip.html>`_. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
+Даже если приложение xDrip+ вам не нужно как источник данных ГК, вы все равно можете использовать его например для оповещений или хороший дисплей ГК. Вы можете иметь столько оповещений сколько хотите, указать время, когда оповещениям разрешено работать, должны ли они иметь приоритет в режиме тишины и т. п. Некоторую информацию об xDrip+ можно найти `здесь <../Configuration/xdrip.html>`__. Пожалуйста, имейте в виду, что документация к этому приложению не всегда актуальна, так как проект развивается довольно быстро.
 
 Пример настройки
 ==================================================
@@ -126,9 +138,21 @@ xDrip +
   
 Что делать во время ожидания модулей
 ==================================================
-Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. НЕОБХОДИМО проверить и (где требуется) адаптировать базальную скорость (BR), соотношение инсулин-углеводы (IC), фактор чувствительности к инсулину (ISF) и т. д. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
+Иногда требуется некоторое время, чтобы получить все модули для закрытого цикла ИПЖ. Но не беспокойтесь, можно многое сделать во время ожидания. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. И, возможно, незамкнутый цикл может быть хорошим способом проверить систему и познакомиться с AndroidAPS. В этом режиме AndroidAPS дает рекомендации, которые можно выполнить вручную.
 
-Вы можете продолжать читать документацию здесь <https://androidaps.readthedocs.io/en/dev/EN/Where-To-Go-For-Help/Background-reading.html>, общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
+Вы можете продолжать читать документацию здесь `<../Where-To-Go-For-Help/Background-reading.html>`_общаться с другими пользователями в сети или offline, узнавать мнение людей (при этом учитывая, что не все рекомендации вам подходят).
 
 **Готово?**
 Если у вас собраны все компоненты AAPS (поздравляем!) или, по крайней мере, их достаточно, чтобы начать работу в режиме незамкнутого цикла, сначала следует прочитать `Описание Целей<../Usage/Objectives.html>`_ (Обзор) перед каждой новой целью и настроить `компоненты <./index.html#component-setup>`_.
+
+..
+	Cсылки на изображения по названиям с большей гибкостью позиционирования
+
+
+..
+	Требования к аппаратному и программному обеспечению
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png
+.. |LoopLink| изображение:: ../images/omnipod/LoopLink.png
+.. |EmaLink| изображение:: ../images/omnipod/EmaLink.png		
+.. |RileyLink| изображение:: ../images/omnipod/RileyLink.png
+.. |DiaLink| изображение:: ../images/omnipod/DiaLink.png

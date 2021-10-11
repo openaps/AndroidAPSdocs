@@ -16,20 +16,7 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 
 Om een Wear OS versie van AAPS te maken, heb je de build variant "fullRelease" nodig deze is te selecteren wanneer [de APK](../Installing-AndroidAPS/Building-APK.md) bouwt (met de versie "pumpRelease" kun je de pomp wel op afstand bedienen, maar je hebt geen "closed loop").
 
-Zorg ervoor dat zowel de telefoon als de wear versies van AAPS zijn ondertekend met dezelfde "key"!
-
-Om de APK te installeren op Android Wear smartwatch, volg je de volgende stappen:
-
-1. Schakel de ontwikkelaarsmodus in op het horloge. Druk op de knop op het horloge en klik op `instellingen` dan `systeem` dan `over` en klik herhaaldelijk op het `build-nummer`, minstens 7 keer totdat een melding verschijnt dat je een ontwikkelaar bent.
-2. ADB inschakelen op horloge. Druk op de knop op het horloge en klik op `instellingen` dan `ontwikkelaar opties` dan `adb debugging` en `debug over wifi`. Noteer het IP-adres dat u hiernaast staat, dit zal in de vorm zijn van een IP-adres gevolgd door :5555.
-3. Op PC, noteer de bestandslocatie van `wear-full-release. pk` (zal in dezelfde map zitten als `app-full-release.apk` die je op je telefoon hebt geïnstalleerd).
-4. Op PC, open de opdrachtprompt (typ `commando` in het zoekvak). 
-5. In opdrachtprompt: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. In opdrachtprompt: `adb connect [geef het IP-adres op van stap 2, inclusief de: 5555]`.
-7. In opdrachtprompt: `adb install -r [geef het pad op van stap 3]\wear-full-release.apk`.
-8. Dit zal AAPS op het horloge installeren en dan zal AAPS watchfaces beschikbaar zijn om te selecteren.
-
-Wanneer je de wear versie van AAPS gebruikt, update deze altijd gelijktijdig met de telefoonversie van de app - houd hun versies gesynchroniseerd. Om dit te doen moet je de bovenstaande stappen opnieuw volgen, maar je hoeft de ontwikkelaarsmodus niet opnieuw aan te zetten.
+From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Instellen op de telefoon
 
@@ -249,15 +236,14 @@ Omdat we geen compromissen kunnen sluiten op het gebied van communicatie (we heb
 
 ## Probleemoplossing van de wear app:
 
-* Onder Android Wear 2.0 zal AndroidAPS niet meer vanzelf op je horloge worden geïnstalleerd. Om AndroidAPS op je wear horloge te installeren moet je nu naar de playstore op het horloge gaan (let op dit is niet hetzelfde als de playstore op de telefoon). Onder de categorie 'apps geinstalleerd op je telefoon' vind je een item AndroidAPS waarmee de installatie op je telefoon kan worden uitgevoerd. Schakel ook 'Automatisch bijwerken' in. 
-* Soms helpt het om de apps opnieuw te synchroniseren naar het horloge, omdat het een beetje langzaam kan zijn om dit zelf te doen: Android Wear > Tandwiel icoon > Horlogenaam > Synchroniseren apps.
-* Schakel ADB-foutopsporing in onder Ontwikkelaars Opties (op het horloge), verbind het horloge via USB en start de Wear app eenmaal in Android Studio.
-* Als gegevens van Complicaties niet ge-updatet worden - controleer eerst of de AAPS watchfaces überhaupt werken.
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* If Complications does not update data - check first if AAPS watchfaces work at all.
 
 ### Sony Smartwatch 3
 
 * De Sony Smartwach 3 is een van de meest populaire horloges om te gebruiken met AAPS. 
-* Helaas heeft Google de ondersteuning voor Wear OS 1,5 apparaten in 2020 beëindigd. Dit leidt tot problemen bij het gebruik van Sony SW3 met AndroidAPS.
+* Helaas heeft Google de ondersteuning voor Wear OS 1,5 apparaten in 2020 beëindigd. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
 * Een mogelijke workaround is te vinden op deze [probleemoplossings pagina](../Usage/SonySW3.rst).
 
 ## Bekijken van gegevens in Nightscout

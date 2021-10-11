@@ -6,10 +6,12 @@ Mocht je jouw probleem niet terugvinden in de linkjes in dit overzicht, dan vind
 
 AndroidAPS app
 ==================================================
+
 Bouwen & bijwerken
------
+-------------------
 * `Keystore kwijt <../Installing-AndroidAPS/troubleshooting_androidstudio.html#keystore-digitale-handtekening-kwijt>`_
 * `Problemen met Android Studio oplossen <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
@@ -18,12 +20,13 @@ Instellingen
     :alt: fout: Basaal profiel niet ingesteld in hele uren
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Foutmelding: Trage koolhydraten absorptie
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `Problemen met SMS Commando's <../Children/SMS-Commands.html#problemen-oplossen>`_
 
@@ -48,6 +51,6 @@ Telefoons
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & batterij optimalisatie <../Usage/huawei.html>`_
 
-Smartwaches
+Smartwatch
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

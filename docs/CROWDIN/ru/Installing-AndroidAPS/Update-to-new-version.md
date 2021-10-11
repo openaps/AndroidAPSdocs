@@ -6,21 +6,21 @@
 
 ## Важные Примечания
 
-* Пожалуйста, обновите приложение сразу же после выхода новой версии. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
+* Пожалуйста, обновите приложение сразу же после выхода новой версии. Вы получите информацию о новой версии [ на главном экране AndroidAPS ](../Installing-AndroidAPS/Releasenotes#release-notes).
 * Начиная с версии 2.3 для обновления требуется использовать git. Обновление с zip-файла больше не работает.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Please use [Android Studio Version 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
-* If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
-* If you are using Dexcom G6 with the [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* Начиная с версии 2.7 местоположение репозитория изменено на <https://github.com/nightscout/AndroidAPS>. Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
+* Используйте [](https://developer.android.com/studio/) Android Studio версии 4.1.1 или новее для построения apk.
+* [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 4.1.1.
+* Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
+* Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 
 ## Пошаговая инструкция для опытных пользователей
 
-Пропустите этот пункт, если вы обновляете в первый раз. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
+Пропустите этот раздел, если обновляете в первый раз. Пошаговая инструкция для опытных пользователей. Следующим шагом будет [ установить git ](../Installing-AndroidAPS/git-install.rst), если у вас его еще нет.
 
-Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, вы можете обновить его в четырех простых шагах:
+Если вы уже обновили AAPS в предыдущих версиях и используете Windows PC, то можете обновить приложение в четыре простых шага:
 
-1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#how-to-export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
+1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
 2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
 3. [ Создайте подписанное APK ](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Выберите 'app', а не 'wear' на своем пути!)
 4. В зависимости от источника ГК [BG source](../Configuration/BG-Source.rst) убедитесь, что [identify receiver](../Configuration/xdrip#identify-receiver) отмечен в xDrip или используйте модифицированное приложение Dexcom из [папки 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
@@ -31,22 +31,22 @@
 
 ## Обновите свою локальную копию
 
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Click: VCS -> Git -> Pull
+* Начиная с версии 2.7 местоположение репозитория изменено на <https://github.com/nightscout/AndroidAPS>. Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и [ клонировать заново](../Installing-AndroidAPS/Building-APK.md).
+* Выберите: VCS-> Git-> Pull
     
-    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
+    ![Android Studio-GIT-Pull](../images/AndroidStudio361_Update01.png)
 
-* Click Pull (no changes in dialog field)
+* Нажмите кнопку Pull (без изменений в диалоговом окне)
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
+    ![Android Studio-GIT-Pull 2](../images/AndroidStudio361_Update02a.png)
 
-* Wait while download is in progress.
+* Подождите, пока выполняется загрузка.
     
-    ![Android Studio - Pull in progress](../images/AndroidStudio361_Update03.png)
+    ![Android Studio-извлечение выполняется](../images/AndroidStudio361_Update03.png)
 
-* When done Android Studio will inform you that "all files are up-to-date".
+* По завершении Android Studio сообщит вам, что "все файлы актуальны".
     
-    ![All files up to date](../images/AndroidStudio361_Update04.png)
+    ![Все файлы в актуальном состоянии](../images/AndroidStudio361_Update04.png)
 
 ## Создание подписанного APK
 

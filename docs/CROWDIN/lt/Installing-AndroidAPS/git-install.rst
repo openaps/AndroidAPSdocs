@@ -34,7 +34,7 @@ Windows
 
 * Jei failas git.exe negali būti rastas, spustelėkite "GERAI" dialogo lange (1.) ir tada mygtuką su trimis taškais (2.).
 * Naudokite paieškos funkcija <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html> Windows explorer rasti "git.exe", jei jūs nežinote, kur jį galima rasti. Jūs ieškote git.exe, esančiame \bin\ aplanke.
-* Pasirinkite kelią į git.exe ir įsitikinkite, kad jūs pasirinkote vieną iš ** \bin\ ** aplankų (3.) ir spustelėkite "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Uždarykite nustatymų langą, paspausdami "OK" mygtuką (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
@@ -47,7 +47,7 @@ Windows
 4. Patikrinkite git parametrus Android Studio programoje
 --------------------------------------------------
 * Atidarykite Terminal langą Android Studio programoje
-* Įveskite "git - -version" (be kabučių ir be tarpų tarp dviejų [minuso ženklų]!) ir paspauskite Return (Grįžti)
+* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
   .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git - -version

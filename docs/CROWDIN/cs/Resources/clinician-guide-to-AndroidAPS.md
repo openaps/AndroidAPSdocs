@@ -2,15 +2,15 @@
 
 Tato stránka je určena lékařům, kteří projevili zájem o open source technologie umělé slinivky, jako je AndroidAPS, nebo pro pacienty, kteří chtějí sdílet tyto informace se svým lékařem.
 
-Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. Další podrobnosti o všech těchto tématech získáte v [kompletní online dokumentaci k AndroidAPS](http://androidaps.readthedocs.io/en/latest/index.html). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
+Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
 
 ### Kroky nutné pro sestavení DIY uzavřené smyčky:
 
 Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Opatřete si [kompatibilní pumpu](https://androidaps.readthedocs.io/en/latest/EN/Getting-Started/Pump-Choices.html), [kompatibilní zařízení se systémem Android](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) a [kompatibilní senzor](https://androidaps.readthedocs.io/en/latest/EN/index.html#getting-started-with-androidaps).
-* [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](https://androidaps.readthedocs.io/en/latest/EN/Installing-AndroidAPS/Building-APK.html).
-* [Nakonfigurujte software tak, aby komunikoval s ostatními zařízeními a upravte nastavení a bezpečnostní opatření](https://androidaps.readthedocs.io/en/latest/EN/index.html#configuration).
+* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
 
 ### Jak DIY uzavřená smyčka funguje
 
@@ -77,11 +77,11 @@ V tomto příkladu AndroidAPS vidí, že glykémie výrazně převyšuje cílovo
 
 ### Optimalizace nastavení a provádění změn
 
-Jakožto pro lékaře, kteří nemají zkušenosti s AndroidAPS nebo DIY uzavřenými smyčkami, pro vás může obtížné pomoci pacientovi optimalizovat jeho nastavení nebo provádět změny, které by zlepšily jeho výsledky. V komunitě máme řadu nástrojů a [příruček](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), které pomohou vašim pacientům provádět drobné, vyzkoušené změny, jež pomohou zlepšit jejich nastavení.
+Jakožto pro lékaře, kteří nemají zkušenosti s AndroidAPS nebo DIY uzavřenými smyčkami, pro vás může obtížné pomoci pacientovi optimalizovat jeho nastavení nebo provádět změny, které by zlepšily jeho výsledky. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 Pacienti musejí dbát na to, aby neprováděli více změn najednou, ale aby provedli pouze jednu změnu a po dobu 2–3 dní pozorovali, jaký bude mít efekt, Teprve potom by měli změnit nebo upravit jiné nastavení (pokud není zjevné, že změna byla špatná a situaci zhoršuje, v takovém případě by se měli okamžitě vrátit k předchozímu nastavení). Lidé mají tendenci použít všechny ovládací prvky a měnit všechno najednou; pokud to však někdo udělá, může to skončit ještě horším nastavením, které značně zkomplikuje návrat zpět k funkčnímu stavu.
 
-Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nástroj pro automatizovaný výpočet bazálních dávek, citlivosti a inzulino-sacharidového poměru. Jmenuje se „[Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)“. Je navržen tak, aby se spouštěl nezávisle/ručně a umožňuje, abyste vy nebo pacient sám prováděli drobné postupné změny v nastavení. Komunita obvykle postupuje tak, že nejdříve spustí (nebo zkontroluje) výsledky nástroje Autotune předtím, než přistoupí k manuálním zásahům do nastavení. V rámci AndroidAPS je nástroj Autotune spouštěn „jednorázově“, avšak pracuje se na tom, aby byl přímo součástí AndroidAPS. Vzhledem k tomu, že tyto parametry jsou nezbytné jak pro provoz standardní pumpy, tak pro uzavřenou smyčku, je přirozené, že byste výsledky nástroje Autotune měli konzultovat se svým lékařem a případné úpravy těchto parametrů provádět ve spolupráci s ním.
+Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nástroj pro automatizovaný výpočet bazálních dávek, citlivosti a inzulino-sacharidového poměru. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. Je navržen tak, aby se spouštěl nezávisle/ručně a umožňuje, abyste vy nebo pacient sám prováděli drobné postupné změny v nastavení. Komunita obvykle postupuje tak, že nejdříve spustí (nebo zkontroluje) výsledky nástroje Autotune předtím, než přistoupí k manuálním zásahům do nastavení. V rámci AndroidAPS je nástroj Autotune spouštěn „jednorázově“, avšak pracuje se na tom, aby byl přímo součástí AndroidAPS. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
 
 Navíc návyky pacientů (získané při ruční kompenzaci diabetu) mají často vliv na výsledky, dokonce i s DIY uzavřenou smyčkou. Například pokud existuje předpověď, že glykémie bude klesat a AndroidAPS včas sníží dávku inzulinu, pak stačí pouze velmi malé množství sacharidů (např. 3–4 g), aby se glykémie vrátila z 3,9 mmol do normálu. V mnoha případech se však pacient rozhodne řešit nízkou glykémii větším množstvím sacharidů (např. dodržuje pravidlo 15), což v důsledku povede k výraznějšímu vzestupu glykémie jednak kvůli většímu množství přijaté glukózy, jednak kvůli již snížené dávce inzulinu s ohledem na předpovídaný pokles glykémie.
 
@@ -95,7 +95,7 @@ Tento text je stručným přehledem toho, jak funguje AndroidAPS. Chcete-li se d
 
 Další doporučená literatura:
 
-* [Kompletní dokumentace k AndroidAPS](http://androidaps.readthedocs.io/en/latest/EN/index.html)
+* The [full AndroidAPS documentation](../index)
 * Dokument [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), který vysvětluje, jak je systém OpenAPS navržen z hlediska bezpečnosti: https://openaps.org/reference-design/
-* [Kompletní dokumentace k OpenAPS](http://openaps.readthedocs.io/en/latest/index.html) 
-  * Další [podrobnosti o výpočtech OpenAPS](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
+  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

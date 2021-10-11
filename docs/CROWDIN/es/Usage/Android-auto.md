@@ -30,7 +30,7 @@ Como AAPS no es oficial, las notificaciones de aplicación de Android Auto tiene
 
 ![Habilita las fuentes desconocidas](../images/AndroidAuto_03.png)
 
-* Ahora puede salir del modo de desarrollo si lo desea. Toque tres puntos en el menú de arriba a la derecha para hacerlo.
+* Now you can quit developer mode if you want. Toque tres puntos en el menú de arriba a la derecha para hacerlo.
 
 ## Mostrar notificaciones en el auto
 

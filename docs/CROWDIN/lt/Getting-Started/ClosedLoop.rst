@@ -23,7 +23,7 @@ Panašiai, kaip autopilotas priklauso nuo jutiklių ir pilotų nustatytų parame
 
 
 Atvirojo kodo Dirbtinės kasos Uždaro ciklo sistemos
-==================================================
+===================================================
 Šiuo metu yra trys pagrindinės atvirojo kodo uždaro ciklo sistemos:
 
 AndroidAPS (AAPS)

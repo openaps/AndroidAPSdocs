@@ -1,29 +1,69 @@
-# Building the APK
+# Construir o ficheiro APK
 
-## Build yourself instead of download
+## Construa você em vez de fazer download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**A AndroidAPS não está disponível para download devido à regulamentação para dispositivos médicos. É legal criar o aplicativo para o seu próprio uso, mas não deve dar uma cópia aos outros! Consulte a [página de perguntas frequentes-FAQ](../Getting-Started/FAQ.md) para mais detalhes.**
 
-## ## Important notes
+## Notas importantes
 
-* Please use **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 4.1.1.
+* Por favor, use o **[Android Studio Version 4.1.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
+* [Sistemas Windows 10 32-bit](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) não são suportados pelo Android Studio 4.1.1.
 
-**Configuration on demand** is not supported by the current version of the Android Gradle plugin!
+**A configuração sob demanda** não é suportada pela versão atual do plugin Android Gradle!
 
-If your build fails with an error regarding "on demand configuration" you can do the following:
+Se a construção falhar com um erro em relação à "on demand configuration" pode fazer o seguinte:
 
-* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-* In the left pane, click Build, Execution, Deployment > Compiler.
-* Uncheck the Configure on demand checkbox.
-* Click Apply or OK.
+* Abra a janela Preferências clicando em Arquivo> Configurações (no Mac, Android Studio> Preferências).
+* No painel esquerdo, clique em Build, Execution, Deployment > Compiler.
+* Desmarque a caixa de opção Configure on demand.
+* Clique em Apply ou OK.
+
+## Recommended specification of computer for building apk file
+
+<table class="tg">
+  
+<thead>
+  <tr>
+    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">Windows 8 or higher</th>
+    <th class="tg-baqh">Mac OS 10.14 or higher</th>
+    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Disk</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Resolution</td>
+    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+  </tr>
+</tbody>
+</table>
+
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file if you can spend a long time ALONE to complete the build.
 
 * * *
 
-### This article is divided into two parts.
+### Este artigo é dividido em duas partes.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Gitter chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) or [AndroidAPSwiki](https://gitter.im/AndroidAPSwiki/Lobby) so that we can have a look at this.
+* Na parte de visão geral há uma explicação sobre quais os passos necessários para construir o arquivo APK.
+* No passo a passo pode encontrar as capturas de ecrã de uma instalação real. Como as versões do Android Studio - o ambiente de desenvolvimento de software que utilizaremos para construir o APK-mudarão muito rapidamente isso não será idêntico à sua instalação mas dará um bom ponto de partida. O Android Studio também "corre" em Windows, Mac OS X e Linux e pode haver pequenas diferenças em alguns aspectos entre cada plataforma. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## Visão Geral
 
@@ -31,12 +71,12 @@ In general, the steps necessary to build the APK file:
 
 1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar o Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+3. [Definir o caminho git nas preferências do Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Baixar o código da AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Download do Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Construir a app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (gerar o apk assinado)
+7. [Transferir o arquivo apk para o seu telefone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Identificar o receptor de estiver a utilizar o xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
 ## Step by step walkthrough
 
@@ -92,111 +132,111 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ### Windows
 
-* Click the small triangle next to Version Control (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Clique no pequeno triângulo próximo ao Version Control (1.) para abrir o sub-menu.
+* Clicar em Git (2.).
+* Assegure-se que o método de update "Merge" (3.) está seleccionado.
+* Confira se o Android Studio pode localizar o caminho para git.exe automaticamente clicando no botão "Test" (4.)
     
-    ![Android Studio settings](../images/AndroidStudio361_09.png)
+    ![Configurações do Android Studio](../images/AndroidStudio361_09.png)
 
-* If automatic setting is successful git version will be displayed.
+* Se a configuração for bem-sucedida, a versão do Git será exibida.
 
-* Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+* Clique em "OK" na caixa de diálogo (1.) e "OK" na janela de configurações (2.).
     
-    ![Automatic git installation succeeded](../images/AndroidStudio361_10.png)
+    ![Git Automático instalado com sucesso](../images/AndroidStudio361_10.png)
 
-* In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+* No caso do arquivo git.exe não puder ser encontrado, clique em "OK" na caixa de diálogo (1.) e, em seguida, no botão com os três pontos (2.).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in \bin\ folder.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
-* Close settings window by clicking "OK" button (5.).
+* Use [a função de pesquisa](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) no windows explorer para encontrar o ficheiro "git.exe" se não souber da sua localização. You are looking for git.exe located in \bin\ folder.
+* Selecione o caminho para o ficheiro git.exe e certifique-se de selecionar o que se encontra na pasta ** \bin\ ** (3.) e clique em "OK" (4.).
+* Feche a janela de configurações clicando no botão "OK" (5.).
     
-    ![Automatic git installation failed](../images/AndroidStudio361_11.png)
+    ![Instalação automática do git falhou](../images/AndroidStudio361_11.png)
 
-* **Reboot your computer to update system environment.**
+* **Reinicie o seu computador para atualizar o sistema.**
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* Qualquer versão Git deve funcionar. Por exemplo <https://git-scm.com/download/mac>.
+* Use o homebrew para instalar o git: ```$ brew install git```.
+* Para obter detalhes sobre a instalação do Git, [ver a documentação oficial do Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+* Se instalou o Git via homebrew não há necessidade de alterar nenhuma preferência. Just in case: They can be found here: Android Studio - Preferences.
 
-## Download AndroidAPS code
+## Baixar o código da AndroidAPS
 
-* **If you haven't already rebooted your computer after setting git path in preferences do it now. System environment must be updated.**
+* **Se ainda não reiniciou o computador após configurar o caminho do git nas preferências, faça-o agora. O sistema deve ser atualizado.**
 
-* There are two options to start a new project:
+* Há duas opções para iniciar um novo projeto:
     
-    * On the Android Studio welcome screen click "Get from version control"
+    * No ecrã de boas-vindas do Android Studio, clique em "Get from Version Control"
         
-        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+        ![Confira o projeto do controle de versão a partir da tela de boas-vindas](../images/AndroidStudio_GetFromVersionControl.PNG)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+    * Se já abriu o Android Studio e não conseguiu ver o ecrã de boas vindas selecione File (1.)> New (2.)> Project from Version Control... (3.)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Confira o projeto a partir do controle de versão dentro do Android Studio](../images/AndroidStudio_FileNew.PNG)
 
-* Fill in the URL to the main AndroidAPS repository (https://github.com/nightscout/AndroidAPS) (1.).
+* Preencha o URL para o repositório principal da AndroidAPS (https: //github.com/nightscout/AndroidAPS) (1.).
 
-* Choose the directory where you want to save the cloned code. (2.)
-* Click button "Clone" (3.).
+* Escolha o destino para onde deseja salvar o código clonado. (2.)
+* Clique no botão "Clone" (3.).
     
-    ![Clone repository](../images/AndroidStudio_NewURL.PNG)
+    ![Clonar repositório](../images/AndroidStudio_NewURL.PNG)
 
-* Do not click "Background" while repository is cloned!
+* NÃO CLIQUE em "Background" enquanto o repositório é clonado!
     
-    ![No background action](../images/AndroidStudio_NoBackground.png)
+    ![Nenhuma ação de segundo Plano](../images/AndroidStudio361_15.png)
 
-* After repository is cloned successfully open your local copy by clicking "Yes".
+* Após o repositório ser copiado/clonado com sucesso, abra a cópia clicando em "Yes".
     
-    ![Open repository](../images/AndroidStudio361_16.png)
+    ![Abrir repositório](../images/AndroidStudio361_16.png)
 
-* In the lower right corner you will see the information that Android Studio is running background tasks.
+* No canto inferior direito irá encontrar a informação de que o Android Studio está a executar tarefas em ecrã de fundo (background).
     
-    ![Background tasks](../images/AndroidStudio361_17.png)
+    ![Tarefas de background](../images/AndroidStudio361_17.png)
 
-* Grant access if your firewall is asking for permission.
+* Conceda o acesso se a sua firewall estiver a pedir permissão.
     
-    ![Firewall permission java](../images/AndroidStudio361_18.png)
+    ![Permissão do Firewall](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see the following error message:
+* Uma vez concluídas as tarefas provavelmente irá encontrar a seguinte mensagem de erro:
     
-    ![SDK licence](../images/AndroidStudio361_19.png)
+    ![Licença de SDK](../images/AndroidStudio361_19.png)
 
-## Download Android SDK
+## Download do Android SDK
 
-* Click File > Settings.
+* Clique em File > Settings.
     
-    ![Open settings](../images/AndroidStudio361_20.png)
+    ![Abrir definições](../images/AndroidStudio361_20.png)
 
-* Click the small triangle next to Appearance & Behaviour (1.).
+* Clique no pequeno triângulo a seguir a Appearence & Behaviour (1.).
 
-* Click the small triangle next to System Settings (2.) and select Android SDK (3.)
-* Check the box left of "Android 9.0 (Pie)" (4.) (API Level 28).
+* Clique no pequeno triângulo a seguir a System Settings (2.) e selecione Android SDK (3.)
+* Seleccione a caixa à esquerda de "Android 9,0 (Pie)" (4.) (API Level 28).
     
-    ![SDK settings](../images/AndroidStudio361_21.png)
+    ![Definições do SDK](../images/AndroidStudio361_21.png)
 
-* Confirm changes by clicking OK.
+* Confirme as alterações clicando em OK.
     
-    ![Confirm SDK changes](../images/AndroidStudio361_22.png)
+    ![Confirmar alterações do SDK](../images/AndroidStudio361_22.png)
 
-* Accept licence agreement (1.) and click "Next" (2.).
+* Aceite o acordo da licença (1.) e clique em "Next" (2.).
     
-    ![Accept SDK licence](../images/AndroidStudio361_23.png)
+    ![Aceitar Licença SDK](../images/AndroidStudio361_23.png)
 
-* Wait until installation is finished.
+* Aguardar até a instalação terminar.
     
-    ![Wait during SDK installation](../images/AndroidStudio361_24.png)
+    ![Esperar durante a instalação do SDK](../images/AndroidStudio361_24.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* Quando a instalação do SDK for concluída o botão "Finish" ficará azul. Clique neste botão.
     
-    ![Finish SDK installation](../images/AndroidStudio361_25.png)
+    ![Finalizar a instalação do SDK](../images/AndroidStudio361_25.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This might lead to difficulties!
+* O Android Studio pode recomendar para atualizar o "gradle system". **NUNCA ATUALIZAR O GRADLE!** Isso pode levar a dificuldades de instalação!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1.) and in the dialog box on "Don't remind me again for this project" (2.).
+* Se vir uma informação do canto inferior-direito na janela do Android Studio, que o Android Gradle Plugin está pronto para atualizar, clique no texto "update" (1.) e na caixa de diálogo clique em "Don't remind me again for this project" (2.).
     
-    ![No cradle update](../images/AndroidStudio361_26.png)
+    ![Nenhuma atualização no cradle](../images/AndroidStudio361_26.png)
 
 ## Generate signed APK
 
@@ -204,59 +244,59 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
     
-    ![Build apk](../images/AndroidStudio361_27.png)
+    ![Construir a apk](../images/AndroidStudio361_27.png)
 
 * Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
     
     ![APK instead of bundle](../images/AndroidStudio361_28.png)
 
-* Make sure that module is set to "app" (1.).
+* Certifique-se de que o módulo está configurado como "app" (1.).
 
-* Click "Create new..." (2.) to start creating your key store.
+* Clique em "Create new ..." (2.) para começar a criar sua chave digital.
     
-    A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    Uma chave digital, neste caso, não é nada mais do que um arquivo no qual as informações para assinatura de aplicações são armazenadas. Esta é encriptada e a informação é protegida por palavra-passe.
     
-    ![Create key store](../images/AndroidStudio361_29.png)
+    ![Criar armazenamento de chaves](../images/AndroidStudio361_29.png)
 
-* Click the folder symbol (1.) to select your key store path.
+* Clique no símbolo da pasta (1.) para selecionar o caminho de armazenamento da chave digital.
 
-* Select the path where your key store shall be saved (2.). **Do not save in same folder as project. You must use a different directory!** One option might be your home folder.
-* Type a file name for your key store (3.).
-* Click "OK" (4.).
-* Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future you see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Enter (5.) and confirm (6.) the password for your key store.
-* Do the same for your key (7. + 8.).
-* Validity (9.) is 25 years by default. You do not have to change the default value.
-* First and last name must be entered (10.). All other information is optional.
-* Click "OK" (11.) when you are done.
+* Selecione o caminho para onde a sua chave digital deve ser guardada(2.). **Não guarde na mesma pasta que o projecto. Deve selecionar uma pasta diferente!** Sugestão: ambiente de trabalho.
+* Escreva um nome para a sua chave digital (3.).
+* Clique "OK" (4.).
+* As palavras-passe das chaves digitais não têm de ser muito sofisticadas. Certifique-se que se lembra das mesmas ou tome uma nota num lugar seguro. Caso não se lembre da sua palavra-passe no futuro, por favor ver [resolução de problemas com chaves digitais perdidas](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+* Introduza (5.) e confirme (6.) a password da sua chave digital.
+* Faça o mesmo para a chave digital (7. + 8.).
+* Validade (9.) é de 25 anos por defeito. Não precisa de mudar este valor pré-definido.
+* Primeiro e último nome deve ser introduzido (10.). Todas as outras informações são opcionais.
+* Clique em "OK" (11.) e está feito.
     
-    ![Key store path](../images/AndroidStudio361_30.png)
+    ![Caminho para armazenamento das chaves](../images/AndroidStudio361_30.png)
 
-* Make sure the box to remember passwords is checked (1.). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Certifique-se de que a caixa para lembrar senhas está seleccionada (1.). Assim não tem que digitar as mesmas da próxima vez que construir o APK (ex: atualizar para uma nova versão da AndroidAPS).
 
-* Click "Next" (2.).
+* Clique em "Next" (2.).
     
-    ![Remember passwords](../images/AndroidStudio361_31.png)
+    ![Lembrar palavras-passe](../images/AndroidStudio361_31.png)
 
-* Select build variant "fullRelease" (1.).
+* Selecione Build Variants "fullRelease" (1.).
 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Verifique as caixas V1 e V2 para versões de assinatura (2.).
+* Clica em "Finish". (3.)
     
-    ![Finish build](../images/AndroidStudio361_32.png)
+    ![Finalizar construção](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* O Android Studio exibirá as informações "APK(s) generated successfully..." após a conclusão da compilação.
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* Caso a compilação não tenha sido bem-sucedida, consulte a [seção de solução de problemas](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* A maneira mais fácil de encontrar o ficheiro apk é clicar em "Event log".
     
     ![Build successfully - event log](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* Na seção de registo de eventos clique em "locate".
     
     ![Event log - locate apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* app-full-release.apk é o arquivo que procura.
     
     ![File location apk](../images/AndroidStudio361_35.png)
 
@@ -266,7 +306,7 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Identify receiver if using xDrip+
+## Identificar o receptor de estiver a utilizar o xDrip+
 
 [See xDrip+ page](../Configuration/xdrip#identify-receiver)
 

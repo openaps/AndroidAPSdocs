@@ -1,4 +1,4 @@
-문제해결
+문제 해결
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -6,10 +6,12 @@ Additional useful information might also be available in the `FAQ <../Getting-St
 
 AndroidAPS app
 ==================================================
+
 Building & updating
------
+-------------------
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Settings
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
@@ -18,12 +20,13 @@ Settings
     :alt: Error: Basal not aligned to hours
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 사용.
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: Slow carb absorbtion
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `SMS commands <../Children/SMS-Commands.html#troubleshooting>`_
 
@@ -39,7 +42,7 @@ Pumps
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
@@ -48,6 +51,6 @@ Pumps
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
 
-Smartwaches
+Smartwatches
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

@@ -3,7 +3,7 @@ Konfiguration Insulinpumpe
 
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
    
    Dana-R Pumpe <../Configuration/DanaR-Insulin-Pump.md>
    Dana-RS Pumpe <../Configuration/DanaRS-Insulin-Pump.md>

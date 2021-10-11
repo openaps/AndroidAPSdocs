@@ -32,7 +32,7 @@ Die SMB-Funktion arbeitet mit einigen Sicherheitsmechanismen:
 
 **Du musst [Ziel (objective) 10](../Usage/Objectives#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb) begonnen haben, um SMB nutzen zu können.**
 
-Siehe dazu auch (beides in Englisch): [OpenAPS Dokumentation zu oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) und [Tim's Info zu SMB](http://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
+Siehe dazu auch (beides in Englisch): [OpenAPS Dokumentation zu oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) und [Tim's Info zu SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
 ### Max IE/h, die als TBR gesetzt werden können (OpenAPS “max-basal”)
 
@@ -52,7 +52,7 @@ AndroidAPS beschränkt den Wert wie folgt:
 * Insulinresistenter Erwachsener: 12
 * Schwangere: 25
 
-*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features#ubersicht-der-fest-programmierten-limits).*
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf (OpenAPS “max-iob”)
 
@@ -63,7 +63,7 @@ Wenn du OpenAPS SMB verwendest, wird max-IOB anders berechnet, als in OpenAPS AM
     maxIOB = mittlerer Mahlzeitenbolus + 3x höchste tägliche Basalrate
     
 
-Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das “hard limit” für maxIOB ist höher als in [AMA](../Usage/Open-APS-features.html#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das ist sehr individuell und hängt stark vom durchschnittlichen Gesamtinsulinbedarf ab (total daily dose = TDD). Zur Sicherheit gibt es ein Limit, das auf dem Patientenalter basiert. Das “hard limit” für maxIOB ist höher als in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Kind: 3
 * Jugendlicher: 7
@@ -71,7 +71,7 @@ Sei jedoch vorsichtig und passe deine Einstellungen in kleinen Schritten an. Das
 * Insulinresistenter Erwachsener: 25
 * Schwangere: 40
 
-*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features#ubersicht-der-fest-programmierten-limits).*
 
 Siehe auch [OpenAPS-Dokumentation zu SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -119,7 +119,7 @@ Standardwert: 30 Min.
 
 ### Aktiviere UAM
 
-Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen signifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
+Wenn du diese Option aktivierst, dann kann der SMB unangekündigte Mahlzeiten erkennen. Das ist besonders dann hilfreich, wenn du vergisst sie in AndroidAPS einzugeben, dich verschätzt und eine zu geringe KH-Menge eingegeben hast oder wenn eine fett-eiweisslastige Mahlzeit länger wirkt als gedacht. UAM kann also auch ohne manuelle Kohlenhydrat-Eingaben des Nutzers automatisch erkennen, dass die Glukosewerte auf Grund von Mahlzeiten, Adrenalin oder anderen Einflüssen siginifikant steigen und versuchen, dies mit SMB abzufangen. Dies funktioniert aber auch andersherum: wenn der Glukosewert schnell sinkt, wird der SMB früher gestoppt.
 
 **Deshalb sollte UAM bei SMB auch immer aktiv sein.**
 
@@ -149,7 +149,7 @@ Standardwert: 4 (sollte nur in Ausnahmefällen geändert werden und wenn du wei�
 
 AMA steht für “advanced meal assist” und ist eine OpenAPS-Funktion aus 2017 (Oref0). Nachdem du dir einen Bolus gegeben hast, darf AMA schneller eine höhere temporäre Basalrate wählen, vorausgesetzt du gibst die Kohlenhydrate verlässlich ein.
 
-Siehe auch: [OpenAPS-Dokumentation (englisch)](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Siehe auch: [OpenAPS-Dokumentation (englisch)](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
 ### Max IE/h, die als temporäre Basalrate gesetzt werden können (OpenAPS “max-basal”)
 
@@ -165,7 +165,7 @@ AndroidAPS hat folgende "hard limits":
 * Insulinresistenter Erwachsener: 12
 * Schwangere: 25
 
-*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features#ubersicht-der-fest-programmierten-limits).*
 
 ### Maximales Basal-IOB, das OpenAPS abgeben darf \[IE\] (OpenAPS “max-iob”)
 
@@ -179,7 +179,7 @@ Der Standardwert ist 2, aber du solltest diesen Parameter in kleinen Schritten e
 * Insulinresistenter Erwachsener: 12
 * Schwangere: 25
 
-*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits).*
+*Siehe dazu auch die [Übersicht der fest programmierten Limits](../Usage/Open-APS-features#ubersicht-der-fest-programmierten-limits).*
 
 ### Verwende AMA Autosense
 

@@ -6,13 +6,13 @@ Wenn Du beim Update von AndroidAPS den selben keystore verwendest, musst Du die 
 
 Falls Du Deinen bisherigen keystore nicht mehr findest, kannst Du wie folgt vorgehen:
 
-1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportiere-die-einstellungen>`_ auf Deinem Smartphone.
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportiere-die-einstellungen>`__ auf Deinem Smartphone.
 2. Kopiere die Datei mit den Einstellungen von Deinem Smartphone auf einen externen Speicherort (z.B. Dein Computer, einen Cloud-Speicher-Dienst...).
 3. Stelle sicher, dass die Datei "AndroidAPS Preferences" sicher gespeichert ist.
 4. Erstelle die signierte apk-Datei der neuen Version wie auf der `Update Seite <../Installing-AndroidAPS/Update-to-new-version.html>`_ beschrieben.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportieren-der-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
+7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#importiere-die-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
 8. Loope weiter!
 
 Kotlin Compiler Warnung
@@ -51,9 +51,9 @@ Fehler: buildOutput.apkData must not be null
 ==================================================
 Manchmal kann es sein, dass Du beim Erstellen der APK-Datei folgende Fehlermeldung bekommst:
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst in Android Studio 3.6 behoben. Drei mögliche Vorgehensweisen:
 
@@ -103,8 +103,8 @@ Option 3 - Prüfe den Code auf Aktualisierungen
 * Wechsle zum Terminal in Android Studio (linke untere Seite des Android Studio-Fensters)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Paste copied text and press return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -118,27 +118,26 @@ App not installed / Installation fehlgeschlagen
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
   
-1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`__ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Deinstalliere AAPS auf Deinem Smartphone.
 3. Aktiviere den Flugmodus & schalte Bluetooth aus.
 4. Installiere die neue Version ("app-full-release.apk").
-5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`_
+5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`__
 6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
 App installiert, aber weiter die alte Version auf dem Smartphone
 ==================================================
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`.
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Installing-AndroidAPS/Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`_.
 
 Keiner der oben genannten Lösungsvorschläge funktioniert
 ==================================================
 Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
-2. Halte Dein key Passwort und Dein key store Passwort bereit.
-    Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` _ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
-3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK.html#androidaps-code-herunterladen>`_ beschrieben.
-4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
-5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`_
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`__ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+2. Halte Dein key Passwort und Dein key store Passwort bereit. Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` __ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
+3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK.html#androidaps-code-herunterladen>`__ beschrieben.
+4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
+5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`__
 
 Worst case scenario
 ==================================================

@@ -1,174 +1,174 @@
-# Medtronic Pumps
+# Bombas Medtronic
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> O controlador para a bomba Medtronic está incluído na AndroidAPS (mestre) desde a versão 2.5. Apesar disso, o controlador da Medtronic ainda deve ser considerado como software versão beta. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+Funciona apenas com bombas Medtronic mais antigas (ver detalhes abaixo). Não funciona com Medtronic 640G ou 670G.
+
+* * *
+
+Se começou a utilizar o controlador Medtronic por favor adicione-se a esta [lista](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). Isto é simplesmente para que possamos ter um registo de quais os telefones que funcionam bem e os que funcionam menos bem (ou não funcionam) com este controlador. Existe uma coluna identificada como "BT restart". Esta coluna é para verificar se o telefone suporta activar/desativar BlueTooth (BT), que pode ser utilizado quando a bomba não é mais capaz de se conectar, o que pode acontecer de tempos em tempos. Caso note qualquer outro problema, por favor, registe-o na coluna "Comments".
 
 * * *
 
 ## Requisitos de hardware e software
 
-- **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
-- **RileyLink/Gnarl:** For communication with Pump you need device that converts BT commands from Phone into RF commands that Pump understands. Device that does is called RileyLink (you can get it here [getrileylink.org](https://getrileylink.org/)). You need stable version of device, which is for older models firmware 0.9 (older versions might not work correctly) or for newer models 2.2 (there are options to upgrade available on RL site). If you are feeling adventurous you can also try Gnarl ([here](https://github.com/ecc1/gnarl)), which is sort-of RileyLink-clone. 
-- **Pump:** Driver works only with following models and firmware versions: 
+- **Telefone:** O controlador para a Medtronic deverá funcionar com qualquer telefone que suporte BLE. **IMPORTANTE: apesar do controlador funcionar corretamente em todos os telefones, a activação/desactivação do Bluetooth nem sempre funciona (necessária quando se perde a conexão com o RileyLink e o sistema não consegue recuperar automaticamente - poderá acontecer de quando em vez). É necessário um dispositivo com o Android 7.0 ou superior. Na pior das hipóteses poderá ser instalado no telefone o LineageOS 15.1 (requerido 15.1 ou inferior). Em telefones com Android 9 poderão existir alguns problemas de recuperar a ligação para o qual ainda não foi encontrada uma solução (a ativação/desativação do Bluetooth não parece funcionar em todos os modelos de telefone).**
+- For communication with your pump you need an additional device that converts BT commands from phone into RF commands that pump understands. See list of [additional communication devices](../Module/module#additional-communication-device). Para um funcionamento correto, o RileyLink terá de ter a versão de firmware 0.9 ou superior (versões anteriores poderão não funcionar corretamente). Para o RileyLink/OrangeLink existem atualizações da versão de firmware disponíveis no site. Se pretender construir o seu Módulo BT/RF poderá tentar o Gnarl ([aqui](https://github.com/ecc1/gnarl)), que é um clone do RileyLink. 
+- **Bomba:** O controlador funciona apenas com os seguintes modelos e versões de firmware: 
     - 512/712
     - 515/715
     - 522/722
-    - 523/723 (firmware 2.4A or lower)
-    - 554/754 EU release (firmware 2.6A or lower)
-    - 554/754 Canada release (firmware 2.7A or lower)
-- Check for firmware is described in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) and [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+    - 523/723 (firmware 2.4A ou inferior)
+    - 554/754 versão UE (firmware 2.6A ou inferior)
+    - 554/754 versão Canadá (firmware 2.7A ou inferior)
+- Verifique o firmware como descrito em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) e [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
-## Configuration of the pump
+## Configuração da bomba
 
-- **Enable remote mode on Pump** (Utilities -> Remote Options, Select Yes, and on next screen do Add ID and add dummy id (111111 or something). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
-- **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
-- **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable.
-- **Set TBR type** to Absolute (not Percent)
+- **Ative o modo remoto na bomba** (Utilitários-> Ligar dispositivos->Opção Remoto, Seleccione Act e no próximo ecrã seleccione Acrescentar ID e introduza um número (111111 ou qualquer outro). Precisa de pelo menos um identificador na lista de ID Remoto. As opções acima podem parecer de forma diferente para modelos diferentes de bomba. A etapa acima descrita é importante, pois quando configurado, a bomba vai "escutar" mais frequentemente a o canal de comunicação remota.
+- **Configure Índice Basal máximo** na sua bomba insira como "Índice de Basal máximo" o valor de Basal máximo por hora do seu perfil padrão de Basal multiplicado por 4 (no caso de pretender 400% DBT como máximo). O valor deve ser inferior a 35 (valor máximo permitido pela bomba).
+- **Configure Bólus máximo** na sua bomba (máximo permitido é 25)
+- **Seleccione o perfil de Basal Standard**. Este será o único perfil que será utilizado. Este perfil de Basal também poderá ser desativado.
+- **Configure o tipo de DBT** (em "tipo basal temp") para Índice insulina (e não Percentagem de Basal)
 
-## Configuration of Phone/AndroidAPS
+## Configuração do Telefone / AndroidAPS
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- **Não emparelhe o RileyLink com o seu telefone.** Se emparelhar o seu RileyLink com o telefone, a AndroidAPS não será capaz de encontrá-lo durante a configuração.
+- Desative a rotação automática no seu telefone (em alguns dispositivos a rotação automática reinicia as sessões de BT, o que não é desejável).
+- Poderá configurar a bomba no AndroidAPS de duas formas: 
 
-1. Use of Wizard (on new install)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+1. Utilizando o Assistente (numa nova instalação)
+2. Diretamente nas Configurações (seleccionando configuração do controlador Medtronic)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Se fizer uma nova instalação o Assistente iniciar-se-à automaticamente. Por vezes, se a conexão BT não estiver a funcionar correctamente (incapaz de se conectar à bomba), poderá não ser possível concluir a configuração. Neste caso selecione bomba virtual e, após o Assistente terminar, utilize a opção 2 para conectar a AndroidAPS à bomba.
 
-![MDT Settings](../images/Medtronic01a.png)
+![Definições do MDT](../images/Medtronic01a.png)
 
-You need to set following items: (see picture above)
+Necessita configurar os seguintes itens: (ver foto acima)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
-- **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
-- **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Canceling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
-- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
+- **Número de Série da Bomba**: O número de série pode ser encontrado na parte de trás da bomba a seguir a SN. Necessita apenas de obter os 6 números do número de série.
+- **Modelo de Bomba**: O modelo de bomba que vai ser utilizada (por exemplo 522). 
+- **Frequência da Bomba**: Existem duas versões de cada modelo de bomba Medtronic que transmitem em duas frequências distintas (se não tem certeza qual a frequência utilizada pela sua bomba, veja [FAQ](../Configuration/MedtronicPump#faq)): 
+    - para os EUA & Canadá, a frequência utilizada é 916 Mhz
+    - para o resto do mundo, Internacional, a frequência utilizada é 868 Mhz
+- **Máximo Bólus na Bomba (U)** (numa hora): Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de insulina do Bólus por hora. Caso tente administrar uma quantidade superior ao máximo definido, o Bólus não será administrado e um erro será retornado. O valor máximo admissível é 25. Por favor, defina o valor correcto para evitar o risco de sobredosagem.
+- **Máxima Basal na Bomba (U/h)**: Configure com o mesmo valor que foi inserido na bomba. Limita a quantidade de Basal por hora. Por exemplo, se pretender ter o máximo DBT configurado para 500% e o valor mais alto de Basal é de 1.5 U/h, então necessita de configurar a Máxima Basal de pelo menos 7.5 U/h. Se esta configuração não estiver correcta, i. e., se um dos valores de Basal for superior ao valor máximo definido a bomba retorna um erro.
+- **Tempo de espera para iniciar Bólus (s)**: Tempo de espera antes do valor do Bólus ser comunicado à bomba, para que possa ser cancelado se necessário. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
+- **Codificação Medtronic**: Esta é configuração que determina, se a codificação 4b6b utilizada para enviar comandos para a bomba será feita na AndroidAPS ou no RileyLink. Se tiver um RileyLink com uma versão firmware 2.x, por defeito será usada a codificação por Hardware (dispositivo conversor). No caso de versões de firmware 0.x esta configuração será ignorada.
+- **Tipo de Bateria (Visualização detalhada)**: Para visualizar tensão e a percentagem de energia na bateria da sua bomba, seleccione o tipo de bateria em utilização (atualmente são suportadas baterias de lítio, Alcalinas, NiZn e NiMH).
+- **Configuração do RileyLink**: Permite procurar e emparelhar a AndroidAPS com o RileyLink.
+- **Configure Basal temporária neutra** activar para prevenir um sinal sonoro e/ou vibração. Quando ativada, cancela a basal temporária antes de perfazer uma hora para evitar que as bombas Medtronic emitam um sinal sonoro e/ou vibrem quando a basal temporária se estende por mais de uma hora.
 
-## MEDTRONIC (MDT) Tab
+## Separador MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png)
+![Separador MDT](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+No separador MEDTRONIC encontram-se várias linhas que mostram o estado actual da bomba e respectiva conexão.
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is beeing executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depening on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Estado RileyLink**: Mostra o estado da conexão entre a AndroidAPS, o RileyLink e a bomba. O telefone deve estar conectado o tempo todo ao Módulo BT/RF.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. Um símbolo "bateria" mostra a quantidade de energia na bateria (o símbolo é apresentado a vermelho para valores de energia inferiores a 20%).
+- **Última conexão**: Mostra o tempo decorrido desde a última conexão bem-sucedida com a bomba.
+- **Último Bólus**: Mostra o tempo decorrido desde o último bólus.
+- **Dose de Basal de Base**: É a dose de basal de base actual utilizada pela bomba.
+- **Basal temporária**: Apresenta o valor da basal temporária quando activa.
+- **Reservatório**: Quantidade de insulina no reservatório (atualizada no mínimo a cada hora).
+- **Erros**: mensagem de erro em caso de problemas (mostra principalmente a existência de erros na configuração).
 
-On lower end we have 3 buttons:
+Na parte inferior do ecrã existem 3 botões:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Atualizar** para atualizar o estado da bomba e do RileyLink. Deve ser utilizado somente após uma longa falha na conexão, uma vez que esta ação irá redefinir o estado da bomba (recuperar o histórico, obter ou definir hora, obter perfil, obter estado da bateria, etc).
+- **Histórico da bomba**: Mostra o histórico da bomba (veja [abaixo](../Configuration/MedtronicPump#pump-history))
+- **Estatísticas RL**: Informação da conexão RileyLink (ver [abaixo](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
-## Pump History
+## Histórico da Bomba
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Histórico da Bomba](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. O histórico é mantido por 24 horas. As entradas mais recentes são adicionadas em detrimento das entradas mais antigas. Algumas entradas do histórico da bomba podem não ser exibidas, por não serem relevantes (como por exemplo configuração de funções que não são utilizadas pela AndroidAPS).
 
-## RL Status (RileyLink Status)
+## Estatísticas RL (Estado do RileyLink)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![Estado do RileyLink - Definições](../images/Medtronic04.png) ![Estado do RileyLink - Histórico](../images/Medtronic05.png)
 
-Dialog has two tabs:
+A caixa de diálogo tem dois separadores:
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Configurações**: Mostra as configurações do RileyLink, tais como Endereço (MAC), Nome (do RileyLink conectado), Nível da Bateria, Estado da Conexão, Erro de Conexão e Versões de Firmware (do RileyLink); Mostra as configurações da bomba, tais como Tipo de Bomba (always Medtronic Pump), Modelo de Bomba Configurado, Modelo de Bomba Conectado, Número de Série da Bomba, Frequência da Bomba, Última Frequência Utilizada (mostra o valor da frequência), Último Contacto com a Bomba.
+- **Histórico**: Mostra o histórico de comunicação entre o RileyLink e a Bomba, entre os quais os comandos enviados para a bomba.
 
 ## Ações
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Quando o controlador Medtronic é selecionado, 3 ações possíveis podem ser adicionadas ao separador Ações:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Acordar e Sintonizar** - Se a AndroidAPS não comunicou com a bomba por mais de 5 minutos (a comunicação entre a AndroidAPS e a bomba ocorre a cada 5 minutos), a comunicação pode ser forçada utilizando a ação Acordar e Sintonizar. Esta ação tentará comunicar com a bomba, procurando todas as sub-frequências conhecidas. No caso conseguir comunicar com a bomba configura a frequência utilizada como frequência padrão. 
+- **Reiniciar configuração RileyLink ** - Utilize esta ação para reiniciar e reconfigurar o RileyLink (define frequência, tipo de frequência e codificação).
+- **Limpar Bloqueio de Bólus** - Ao iniciar o Bólus, o estado Bloqueio de Bólus é activado para impedir que outros comandos sejam enviados para a bomba. Ao suspender a bomba e retomar (para cancelar bolus), o bloqueio é removido. Esta opção só visível durante a ação Bólus. 
 
-## Important notes
+## Notas importantes
 
-### OpenAPS users
+### Utilizadores de OpenAPS
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+Ao utilizar a AndroidAPS, o controlador primário é a AndroidAPS e todos os comandos devem ser acionados através da AndroidAPS. Os Bólus devem ser acionados na AAPS e não na bomba. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Com exceção da mudança de reservatório, não é necessário aceder à bomba para a utilizar.
 
-### Logging
+### Registo
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Uma vez que o controlador Medtronic é recente, é aconselhado activar o registo para que seja possível depurar e corrigir eventuais problemas e erros. Click on icon on upper left corner, select Maintenance and Log Settings. As opções Pump, PumpComm, PumpBTComm precisam de ser selecionadas.
 
-### RileyLink/GNARL
+### RileyLink/OrangeLink/Emalink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+Quando o RileyLink é reiniciado, é necessário re-sintonizar (ação "Acordar e Sintonizar") ou reenviar os parâmetros de comunicação (ação "Reiniciar configuração RileyLink"), para restabelecer a comunicação com a bomba.
 
-### CGMS
+### MCGs
 
-Medtronic CGMS is currently NOT supported.
+Atualmente, os MCGs Medtronic NÃO são suportados.
 
-### Manual use of pump
+### Uso manual da bomba
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+Deve ser evitado fazer ou introduzir tratamentos diretamente na bomba. Todos os comandos (Bólus, DBT) devem ser acionados na AndroidAPS. No caso de introduzir comandos diretamente na bomba, NÃO os execute com uma frequência menor que 3 minutos, isto é, se por qualquer motivo for necessário administrar 2 Bólus, o segundo Bólus deve ser iniciado pelo menos 3 minutos após o primeiro.
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Mudança de Fuso Horário, DST (Horário de Verão) ou Viajar com Bomba Medtronic e AndroidAPS
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+IMPORTANTE: o loop nunca deve ser desativado enquanto estiver a viajar (excepto se o MGC não suportar modo offline). A AAPS detecta automaticamente mudanças do Fuso Horário e enviará a actualização da hora para a bomba assim que ocorrer no telefone.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Se viajar para Leste, a atualização do Fuso Horário incrementará a hora do telefone (por exemplo de GMT+0 para GMT+2) e o histórico da bomba não será corrompido. No entanto se viajar para Oeste, a atualização do Fuso Horário decrementará a hora (por exemplo, de GMT+2 para GMT+0) e o histórico da bomba poderá deixar de ser coerente por 24 horas, como por exemplo valores duplicados. Isso implica que nas horas seguintes deverá ser prestado cuidado redobrado, porque principalmente a IA e HCA poderão apresentar valores incorrectos.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Este é um problema conhecido para o qual ainda não existe uma solução automática. Uma de duas soluções manuais podem ser implementadas: manter o Fuso Horário e fazer um deslocamento temporal do perfil de basal; remover todas as entradas duplicadas em Tratamentos.
 
 ## Perguntas Frequentes (FAQ)
 
-### Can I see the power of RileyLink/GNARL?
+### É possível ver o estado da bateria do Módulo BT/RF?
 
-Não. At the moment none of this devices support this and it probably won't even in the future.
+Não. O nível da bateria pode ser consultada somente para o OrangeLink e Emalink, em Estatísticas RL no separador Configurações.
 
-### Is GNARL full replacement for RileyLink?
+### O GNARL é um substituto para o RileyLink?
 
-Sim. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Sim. O autor do GNARL incluiu todas as funções utilizadas pelo controlador Medtronic. Toda a comunicação Medtronic é suportada (Junho / 2019). O GNARL não pode ser utilizado para comunicar com o Omnipod. A desvantagem do GNARL é que é necessário que o utilizador o construa, sendo necessária a aquisição de uma versão compatível do hardware.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Nota do autor:** O software GNARL ainda é experimental e não completamente testado, e como tal não deve ser considerado seguro para usar como um RileyLink.
 
-### Where can I get RileyLink or GNARL?
+### Onde posso obter um Módulo BT/RF?
 
-Like mentioned before you can get devices here:
+Como mencionado anteriormente os módulos podem ser obtidos aqui:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink/OrangeLink - Pode ser adquirido em - [getrileylink.org](https://getrileylink.org/).
+- EmaLink - Pode ser adquirido em - [ emalink](https://forms.gle/P87HucuygA2UZs5C7). GNARL - Pode obter as informações necessárias aqui, mas o dispositivo precisa ser adquirido noutro local ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### O que fazer no caso de perder a conexão com RileyLink e/ou bomba?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. Execute a ação "Acordar e Sintonizar", para tentar encontrar a frequência correcta para comunicar com a bomba.
+2. Desligue o Bluetooth do telefone, aguarde 10s e ligue-o novamente. Isto irá forçar a reconexão com o RileyLink.
+3. Reinicie ou desligue e ligue o RileyLink, após o qual deve ser executada a ação "Reiniciar configuração RileyLink".
+4. Tente a operação 2 e 3 em conjunto.
+5. Reinicie ou desligue e ligue o RileyLink e o telefone.
 
-### How to determine what Frequency my pump uses
+### Como determinar a frequência utilizada pela bomba
 
-![Pump Model](../images/Medtronic06.png)
+![Modelo de Bomba](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Na parte de trás da bomba do lado direito está inscrito um código especial de 3 letras. As duas primeiras letras determinam a frequência e a última a cor da bomba. Os valores possíveis para a frequência são:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - América do Norte (na "Frequência da Bomba" selecionar "EUA & Canadá (916 MHz)")
+- CA - Canadá (na "Frequência da Bomba" selecionar "EUA & Canadá (916 MHz)")
+- WW - Internacional (na "Frequência da Bomba" selecionar "Internacional (868 Mhz)")

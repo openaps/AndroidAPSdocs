@@ -8,16 +8,16 @@ Tėvai, globėjai, artimieji ir diabetu sergantys žmonės dirba kartu, kad pad�
 
 ## Aš galiu parašyti kodą! Kaip man dalyvauti?
 
-Super! Tyrinėkite problemas, klauskite gitter kanale, visada yra daug ką nuveikti! Pirmiausia pasirinkite nedidelę užduotį ir pirmą kartą prisidėkite prie viso projekto! :)
+Super! Look at the issues, ask in the discord channel, there is always a lot to do! Pirmiausia pasirinkite nedidelę užduotį ir pirmą kartą prisidėkite prie viso projekto! :)
 
 ## Aš žinau sistemą ir galiu parašyti dokumentaciją!
 
-Puiku, tai yra labai vertinama ir yra geras būdas dalyvauti!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* Senasis gitter kanalas AAPS žinių bazei aptarti yra čia: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Nurodymus, kaip pateikti aprašymus anglų kalba, galite rasti čia: [Kaip daryti PR](../make-a-PR.md). Kitos kalbos yra išverstos tik iš anglų kalbos ir dėl vientisumo ir nuoseklumo jų taisyti negalima.
 
-## Aš kalbu keliomis kalbomis ir noriu išversti programą ar dokumentus
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Jei norite versti **programą** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidaps).
 * Jei norite išversti **AAPS dokumentaciją** į kitas kalbas (ačiū), naudokite [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Tiesiog užsiregistruokite CROWDIN, pasirinkite savo kalbą, palaukite administr
 
 ## Ar yra kitų būdų, kaip padėti?
 
-Mums reikalingi įgūdžiai: grafinis dizainas, UX dizainas, vertimai, wiki redagavimas ar tiesiog žmonės, pasirengę atsakyti į paprastus klausimus Facebook & gitter, kad kūrėjai galėtų sutelkti dėmesį į sudėtingesnius dalykus.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

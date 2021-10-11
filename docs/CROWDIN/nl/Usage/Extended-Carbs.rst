@@ -1,6 +1,6 @@
 Vertraagde koolhydraten / "eCarbs"
 **************************************************
-Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een closed loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. Voor meer informatie, zie `vertraagde bolus <../Usage/Extended-Carbs.html#vertraagde-bolus>`_ hieronder.
+Bij reguliere pomptherapie zijn vertraagde bolussen / multiwave bolussen handig voor vette maaltijden (pizza, pasta, pannenkoeken etc) die je bloedglucose lange tijd laten stijgen, langer dan de insuline bij een normale bolus werkzaam zou zijn. In een closed loop is dat echter niet zo zinvol (en geeft het technische problemen) omdat vertraagde/multiwave bolussen door de pomp worden uitgevoerd als een langdurige en vooraf gedefinieerde hoge basaal. Dat conflicteert met de loop, die de basaalstanden juist dynamisch aanpast. Voor meer informatie, zie `vertraagde bolus <../Usage/Extended-Carbs.html#vertraagde-bolus>`__ hieronder.
 
 En dus moet de loop op een andere manier omgaan met dit soort maaltijden. Daarom is in AndroidAPS vanaf versie 2.0 een optie ingebouwd die "eCarbs" heet. Dat staat voor extended Carbs (vertraagde koolhydraten).
 
@@ -8,12 +8,12 @@ eCarbs zijn koolhydraten die over meerdere uren worden uitgespreid. Voor standaa
 
 Het nut van eCarbs is niet beperkt tot vette / eiwitrijke maaltijden. Ze zijn ook handig als door andere invloeden de bloedglucose gedurende meerdere uren flink stijgt, bijvoorbeeld bij medicijnen zoals corticosteroïden.
 
-Voor het invoeren van eCarbs gebruik je de knop Koolhydraten op het Overzicht-scherm. Vul de duur in, het aantal koolhydraten en desgewenst een timeshift. In dit voorbeeld zie je dat iemand 25 gram koolhydraten wil 'uitsmeren' tussen 15:43 en 17:43 (het screenshot is om 14:43 gemaakt):
+Voor het invoeren van eCarbs gebruik je de knop *Koolhydraten* op het Overzicht-scherm. Vul de duur in, het aantal koolhydraten en desgewenst een timeshift. In dit voorbeeld zie je dat iemand 20 gram koolhydraten wil 'uitsmeren' over de komende 3 uur.
 
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Koolhydraten invoeren
 
-Je ziet de eCarbs in de grafiek terug als kleine beetjes van 3 gram in de toekomst. En je ziet de 25 gram koolhydraten bij COB staan, tussen haakjes omdat het toekomstige koolhydraten zijn:
+Je ziet de eCarbs in de grafiek terug als kleine beetjes van 1 a 2 gram in de toekomst. En je ziet dat er nog 9 gram koolhydraten achter COB staan, tussen haakjes omdat het toekomstige koolhydraten zijn.
 
 .. image:: ../images/eCarbs_Graph.png
   :alt: eCarbs in grafiek
@@ -26,20 +26,20 @@ Op de Behandelingen tab zie je koolhydraten staan, ze zijn donker oranje omdat z
 
 -----
 
-Hoe je vertraagde koolhydraten gebruikt voor een maaltijd met vet en eiwit wordt hier beschreven: `https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html <https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html>`_
+Hoe je vertraagde koolhydraten gebruikt voor een maaltijd met vet en eiwit wordt hier beschreven: `https://adriansloop.blogspot.com/2018/04/page-margin-0.html <https://adriansloop.blogspot.com/2018/04/page-margin-0.html>`_
 
 -----
 
-Voor onderstaand voorbeeld wordt aangeraden om OpenAPS SMB APS te gebruiken, met SMB ingeschakeld en de instelling SMB met koolhydraten ingeschakeld te hebben.
+Voor onderstaand voorbeeld wordt aangeraden om OpenAPS SMB APS te gebruiken, met SMB ingeschakeld en de instelling *SMB met koolhydraten* ingeschakeld te hebben.
 
-Neem nou bijvoorbeeld een pizza, daarbij kun je een gedeeltelijke bolus voor de maaltijd via de bolus calculator geven en via de knop koolhydraten de resterende koolhydraten gedurende 4 a 6 uur, te laten beginnen na 1 of 2 uur. Je zult natuurlijk moeten uitproberen welke precieze waarden voor jou werken. Hierbij kun je ook (in kleine, verstandige stapjes) variëren met de instelling 'max aantal minuten basaal om de SMB te limiteren tot' om het algoritme agressiever/minder agressief te laten zijn.
+Neem nou bijvoorbeeld een pizza, daarbij kun je een gedeeltelijke bolus voor de maaltijd via de bolus calculator geven en via de knop *Koolhydraten* de resterende koolhydraten gedurende 4 a 6 uur, te laten beginnen na 1 of 2 uur. Je zult natuurlijk moeten uitproberen welke precieze waarden voor jou werken. Hierbij kun je ook (in kleine, verstandige stapjes) variëren met de instelling *max aantal minuten basaal om de SMB te limiteren tot* om het algoritme agressiever/minder agressief te laten zijn.
 Voor maaltijden met nauwelijks koolhydraten en een hoog vet/eiwitgehalte kan het genoeg zijn om alleen eCarbs te gebruiken en geen bolus (zie de blogpost hierboven).
 
 Iedere keer dat je eCarbs invoert, wordt er in jouw Careportal automatisch een opmerking toegevoegd. Hierdoor kun je de eerdere keren gemakkelijk terugvinden, zodat je jouw aanpak kunt evalueren en verbeteren voor de volgende keer. Of gewoon herhalen wat je eerder deed, als dat voor jou goed werkte.
 
 Vertraagde bolus
 ==================================================
-Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. `Lees verderop <../Usage/Extended-Carbs.html#waarom-vertraagde-bolussen-niet-werken-in-een-closed-loop>`_ waarom
+Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Vertraagde bolus en overschakelen naar open loop - alleen voor Dana en Insight pomp
 -----------------------------------------------------------------------------

@@ -2,14 +2,16 @@ Résolution de problèmes
 **************************************************
 Vous pouvez trouver des informations de dépannage sur de nombreuses pages dans le wiki. Cette page est une collection de liens pour vous aider à trouver les informations nécessaires pour résoudre votre problème.
 
-D'autres informations utiles peuvent également être disponibles dans la rubrique "FAQ <../Getting-Started/FAQ.html>".
+D'autres informations utiles peuvent également être disponibles dans la rubrique `FAQ <../Getting-Started/FAQ.html>`_.
 
 Application AndroidAPS
 ==================================================
+
 Génération et mise à jour
------
-* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#certificats-perdus>`_
+-------------------
+* `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
@@ -18,18 +20,19 @@ Paramètres
     :alt: Error: Débits de Basal non alignés sur les heures
 
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
+
 Utilisation
 --------------------------------------------------
 * `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-de-ga-errones>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: Absorption lente des glucides
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
-* `Commandes SMS <../Children/SMS-Commands.html#depannage>`_
+* `Commandes SMS <../Children/SMS-Commands.html#resolution-de-problemes>`_
 
 MGC
 ==================================================
-* `Généralités <../Hardware/GeneralCGMRecommendation.rst>`_
+* `Généralités <../Hardware/GeneralCGMRecommendation.html#resolution-de-problemes>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
 * `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_

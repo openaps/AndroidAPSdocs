@@ -1,6 +1,6 @@
 # Αντλίες Medtronic
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are expirenced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcomming release. <<<<**
+**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
 
 * * *
 
@@ -8,14 +8,14 @@
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit#gid=0). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
 
 * * *
 
 ## Απαιτήσεις υλικού και λογισμικού
 
 - ** Τηλέφωνο: ** Ο οδηγός Medtronic θα πρέπει να λειτουργεί με οποιοδήποτε τηλέφωνο που υποστηρίζει BLE. ** ΣΗΜΑΝΤΙΚΟ: Ενώ το πρόγραμμα οδήγησης λειτουργεί σωστά σε όλα τα τηλέφωνα, δεν επιτρέπεται η ενεργοποίηση / απενεργοποίηση του Bluetooth (αυτό απαιτείται όταν χάσετε τη σύνδεση με το RileyLink και το σύστημα δεν μπορεί να ανακτήσει αυτόματα - συμβαίνει κατά διαστήματα). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. Εξετάζουμε το πρόβλημα με το Android 9, αλλά μέχρι στιγμής δεν έχουμε βρει λύση (φαίνεται ότι λειτουργεί σε μερικά μοντέλα και όχι σε άλλα).**
-- ** RileyLink / Gnarl: ** Για επικοινωνία με την αντλία χρειάζεστε συσκευή που μετατρέπει τις εντολές BT από το τηλέφωνο σε RF εντολές που κατανοεί η αντλία. Η συσκευή που λέγεται RileyLink (μπορείτε να την πάρετε εδώ [ getrileylink.org ](https://getrileylink.org/)). Χρειάζεστε σταθερή έκδοση της συσκευής, η οποία είναι για τα παλαιότερα μοντέλα firmware 0.9 (παλαιότερες εκδόσεις μπορεί να μην λειτουργούν σωστά) ή για νεώτερα μοντέλα 2.2 (υπάρχουν επιλογές για αναβάθμιση διαθέσιμες στην τοποθεσία RL). Εάν νιώθετε περιπετειώδης, μπορείτε επίσης να δοκιμάσετε το Gnarl ([ εδώ ](https://github.com/ecc1/gnarl)), το οποίο είναι είδος του RileyLink-clone. 
+- For communication with your pump you need an additional device that converts BT commands from phone into RF commands that pump understands. See list of [additional communication devices](../Module/module#additional-communication-device). Χρειάζεστε σταθερή έκδοση της συσκευής, η οποία είναι για τα παλαιότερα μοντέλα firmware 0.9 (παλαιότερες εκδόσεις μπορεί να μην λειτουργούν σωστά) ή για νεώτερα μοντέλα 2.2 (υπάρχουν επιλογές για αναβάθμιση διαθέσιμες στην τοποθεσία RL). Εάν νιώθετε περιπετειώδης, μπορείτε επίσης να δοκιμάσετε το Gnarl ([ εδώ ](https://github.com/ecc1/gnarl)), το οποίο είναι είδος του RileyLink-clone. 
 - ** Αντλία: ** Το πρόγραμμα οδήγησης λειτουργεί μόνο με τα ακόλουθα μοντέλα και εκδόσεις υλικολογισμικού: 
     - 512/712
     - 515/715
@@ -55,7 +55,7 @@ You need to set following items: (see picture above)
     - για παγκόσμια κλίμακα, η συχνότητα που χρησιμοποιείται είναι 868 Mhz
 - ** Μέγιστο Bolus στην αντλία(U) ** (σε μια ώρα): Αυτό πρέπει να ρυθμιστεί στο ίδιο επίπεδο όπως και στην αντλία. Περιορίζει πόση ινσουλίνη μπορείτε να κάνετε με το Bolus. Εάν υπερβείτε αυτό, το Bolus δεν θα δοθεί και σφάλμα θα ηχήσει. Το μέγιστο που μπορεί να χρησιμοποιηθεί είναι 25, ορίστε τη σωστή τιμή για τον εαυτό σας εδώ, ώστε να μην κάνετε υπερβολική δόση.
 - ** Μέγιστος βασικός στην αντλία (U / h) **: Αυτό πρέπει να ρυθμιστεί στο ίδιο επίπεδο όπως και στην αντλία. Περιορίζει πόση βασική μπορείτε να πάρετε σε μια ώρα. Έτσι, για παράδειγμα, εάν θέλετε να ρυθμίσετε το μέγιστο TBR στο 500% και το υψηλότερο των βασικών μοτίβων σας είναι 1,5 U, τότε θα πρέπει να ρυθμίσετε το Max Basal σε τουλάχιστον 7,5. Αν αυτή η ρύθμιση είναι λάθος (για παράδειγμα, αν ένα από τα βασικά μοτίβα σας υπερβεί αυτή την τιμή, η αντλία θα επιστρέψει σφάλμα).
-- ** Καθυστέρηση πριν από την εκκίνηση του Bolus **: Αυτό είναι καθυστέρηση πριν από την αποστολή bolus στην αντλία, έτσι ώστε αν αλλάξετε γνώμη, μπορείτε να την ακυρώσετε. Η ακύρωση του bolus κατά τη χορήγηση του bolus δεν υποστηρίζεται από την αντλία (εάν θέλετε να σταματήσετε το bolus κατά τη διάρκεια της λειτουργίας, πρέπει να σταματήσετε την αντλία και στη συνέχεια να συνεχίσετε).
+- ** Καθυστέρηση πριν από την εκκίνηση του Bolus **: Αυτό είναι καθυστέρηση πριν από την αποστολή bolus στην αντλία, έτσι ώστε αν αλλάξετε γνώμη, μπορείτε να την ακυρώσετε. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
 - ** Κωδικοποίηση Medtronic **: Αυτή είναι η ρύθμιση που καθορίζει αν η κωδικοποίηση 4b6b που κάνουν οι συσκευές της Medtronic θα γίνει στο AndroidAPS ή στο RileyLink. Αν έχετε RileyLink με firmware 2.x, η προεπιλεγμένη τιμή θα είναι να χρησιμοποιήσετε την κωδικοποίηση υλικού (= έγινε από RileyLink), αν έχετε 0.x firmware, αυτή η ρύθμιση θα αγνοηθεί.
 - ** Τύπος μπαταρίας (Power View) **: Αν θέλετε να δείτε την ισχύ της μπαταρίας στην αντλία σας, πρέπει να επιλέξετε τον τύπο μπαταρίας που χρησιμοποιείτε (υποστηρίζεται προς το παρόν Lithium ή Alkaline) υπολογισμένο ποσοστό και βολτ.
 - ** Διαμόρφωση RileyLink **: Θα βρείτε τη συσκευή σας RileyLink / GNARL.
@@ -68,8 +68,8 @@ You need to set following items: (see picture above)
 On pump tab you can see several lines that are showing pumps (and connections) current status.
 
 - ** Κατάσταση RileyLink **: Εμφανίζει την κατάσταση της σύνδεσης RileyLink. Το τηλέφωνο θα πρέπει να είναι συνεχώς συνδεδεμένο στο RileyLink.
-- ** Κατάσταση αντλίας **: Κατάσταση σύνδεσης αντλίας, αυτό μπορεί να έχει πολλές τιμές, αλλά κυρίως θα δούμε εικονίδιο ύπνου (όταν η σύνδεση αντλίας δεν είναι ενεργή), όταν η εντολή εκτελείται, μπορεί να δείτε ''ξύπνημα'', το οποίο είναι το AAPS που προσπαθεί να κάνει σύνδεση με την αντλία σας ή την περιγραφή οποιασδήποτε εντολής που μπορεί να τρέχει στην αντλία (π. χ.: ρύθμισε ώρα, όρισε TBR, κλπ.).
-- ** Μπαταρία **: Εμφανίζει την κατάσταση μπαταρίας ανάλογα με τη διαμόρφωσή σας. Αυτό μπορεί να είναι ένα απλό εικονίδιο που δείχνει εάν η μπαταρία είναι άδεια ή γεμάτη (κόκκινο εάν η μπαταρία είναι κρίσιμη, κάτω από 20%), ή ποσοστό και τάση.
+- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
+- **Battery**: Shows battery status depending on your configuration. Αυτό μπορεί να είναι ένα απλό εικονίδιο που δείχνει εάν η μπαταρία είναι άδεια ή γεμάτη (κόκκινο εάν η μπαταρία είναι κρίσιμη, κάτω από 20%), ή ποσοστό και τάση.
 - ** Τελευταία σύνδεση **: Ο χρόνος κατά τον οποίο η τελευταία σύνδεση με την αντλία ήταν επιτυχής.
 - ** Τελευταία bolus **: Πότε δόθηκε το τελευταίο bolus.
 - ** Κύριος βασικός ρυθμός **: Αυτός είναι ο κύριος βασικός ρυθμός που τρέχει στην αντλία αυτή την ώρα.
@@ -87,7 +87,7 @@ On lower end we have 3 buttons:
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored localy. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
 
 ## Κατάσταση RL (κατάσταση RileyLink)
 
@@ -110,11 +110,11 @@ When Medtronic driver is selected, 3 possible actions can be added to Actions Ta
 
 ### OpenAPS users
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arrise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
 
 ### Logging
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintainance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintenance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
 
 ### RileyLink/GNARL
 

@@ -69,7 +69,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 ### 'NS에서 프로파일 변경을 수신했지만 폰에는 존재하지 않는다'
 
 * 요청된 프로파일은 Nightscout에서 올바르게 동기화 되지 않았다.
-* 프로파일 변경을 삭제하기 위해서 위의 안내에 따라야 한다.
+* Follow instructions from above to delete the profile switch
 
 mLab의 프로파일 변경에서 직접 삭제할 수도 있다.
 
@@ -80,4 +80,4 @@ mLab의 프로파일 변경에서 직접 삭제할 수도 있다.
 ### 'DIA, 3시간은 너무 짧다.'
 
 * 프로파일에서 인슐린 작용 시간이 적절하지 못하다면 AndroidAPS는 정확히 동작하지 않고 이러한 에러 메시지를 보여준다. 
-* [올바른 DIA 선택하기](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)를 읽고, 프로파일에서 DIA를 설정하여 [프로파일 변경](../Usage/Profiles) 을 한다.
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

@@ -36,7 +36,7 @@ Knoppen:
 * rode X: verwijderen
 * blauwe pijl: kopiëren
 
-Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. Op het profiel tabblad wordt niet altijd het gebruikte profiel weergegeven - bijvoorbeeld als je van profiel hebt gewisseld met de profiel tab op het overzicht-scherm, kan dit afwijken van het profiel dat wordt weergegeven in het tabblad profiel omdat er geen koppeling tussen deze tabs bestaat.
+Als je wijzigingen aanbrengt in je profiel, zorg er dan voor dat je het juiste profiel aan het bewerken bent. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Profiel wissel dupliceren
 
@@ -98,7 +98,7 @@ Nadelen:
 ![Insuline soort](../images/ConfBuild_Insulin.png)
 
 * Kies het werkingsprofiel van de insuline die jij gebruikt.
-* De werkingsprofielen voor 'Snel-werkende Oref', Ultra-Rapid Oref', Lyumjev' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* De werkingsprofielen voor 'Snel-werkende Oref', Ultra-Rapid Oref', Lyumjev' en 'Free-Peak Oref' hebben allemaal een exponentiële vorm. Meer informatie staat in de [OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * Het werkingsprofiel zal variëren op basis van de DIA (Duration of Insulin Action, duur van insulineactiviteit) en de piektijd.
     
     * PAARSE lijn laat zien hoeveel **insuline overblijft** na het moment van bolussen, en neemt af naarmate de tijd verstrijkt.
@@ -154,7 +154,7 @@ Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.rst) pagina
     
     ![Configurator BG bron](../images/ConfBuild_BGSource.png)
 
-* [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 
 * [Tomato App](http://tomato.cool/) voor MiaoMiao
 * Willekeurige BG: genereert willekeurige BG gegevens (alleen Demo modus)
@@ -179,7 +179,7 @@ Voor dana pompen, gebruik **Geavanceerde instellingen ** om BT watchdog te activ
 
 ## Gevoeligheid detectie
 
-Selecteer het type gevoeligheid detectie (ook wel bekend als Auto-Sensitivity / Autosens in het Engels). Over de verschillende opties kun je [hier](../Configuration/Sensitivity-detection-and-COB.md) meer lezen. Hiermee houdt het algoritme jouw gegevens van de afgelopen tijd in de gaten, en past zijn gedrag aan wanneer hij merkt dat je gevoeliger (of, juist ongevoeliger) bent voor insuline dan normaal. Zie ook de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Selecteer het type gevoeligheid detectie (ook wel bekend als Auto-Sensitivity / Autosens in het Engels). Over de verschillende opties kun je [hier](../Configuration/Sensitivity-detection-and-COB.md) meer lezen. Hiermee houdt het algoritme jouw gegevens van de afgelopen tijd in de gaten, en past zijn gedrag aan wanneer hij merkt dat je gevoeliger (of, juist ongevoeliger) bent voor insuline dan normaal. Meer details over het Sensitivity algoritme kunnen worden gelezen in de [OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 Je kunt je gevoeligheid op het Overzicht-scherm laten weergeven door Gevoeligheid te selecteren en te kijken naar de witte lijn. Ook wordt het weergegeven als "AS...%", waarbij AS staat voor AutoSens. Let op, je moet minimaal [Doel 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) bereikt hebben om gevoeligheid detectie/[Autosens](../Usage/Open-APS-features#autosens) jouw insulinetoediening automatisch te laten aanpassen. Als je dit doel nog niet hebt bereikt, dan wordt de Autosens percentage lijn in de grafiek alleen weergegeven ter info.
 
@@ -191,10 +191,8 @@ Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als 
 
 Selecteer het gewenste APS (Artificial Pancreas System, kunstmatig alvleesklier systeem) algoritme. Je kunt de actuele details van jouw gekozen algoritme laten weergeven op het tabblad OpenAPS(OAPS). Daar zie je het resultaat van de meest recente berekening die het algoritme maakte.
 
-* OpenAPS AMA (geavanceerde maaltijdhulp, onderdeel van het algoritme in 2017)  
-    Meer details over OpenAPS AMA kun je vinden in de [OpenAPS documenten](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Voordeel van AMA tov zijn voorganger is dat het systeem sneller een hogere tijdelijke basaalstand af kan geven als je jezelf net een maaltijdbolus hebt gegeven (let op: dit geldt wanneer je je koolhydraten nauwkeurig invoert). 
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus). Dit is het meest recente algoritme, bedoeld voor gevorderde gebruikers.   
-    Je moet minimaal in [Doel 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) zijn om OpenAPS SMB te gebruiken, en vergeet niet om je min_5m_carbimpact op 8 in te stellen via Configurator > gevoeligheid detectie > gevoeligheid Oref1 instellingen.
+* OpenAPS AMA (geavanceerde maaltijdhulp, onderdeel van het algoritme in 2017) Meer details over OpenAPS AMA kun je vinden in de [OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Voordeel van AMA tov zijn voorganger is dat het systeem sneller een hogere tijdelijke basaalstand af kan geven als je jezelf net een maaltijdbolus hebt gegeven (let op: dit geldt wanneer je je koolhydraten nauwkeurig invoert).
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus). Dit is het meest recente algoritme, bedoeld voor gevorderde gebruikers. Je moet minimaal in [Doel 10](../Usage/Objectives#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus) zijn om OpenAPS SMB te gebruiken, en vergeet niet om je min_5m_carbimpact op 8 in te stellen via Configurator > gevoeligheid detectie > gevoeligheid Oref1 instellingen.
 
 ## Loop
 
@@ -297,7 +295,7 @@ Kies of je een notes-veld wilt hebben bij het invoeren van een behandeling of ni
 
 #### Statusindicatoren
 
-Kies of je [statusindicatoren](../Configuration/Preferences#statusindicatoren) wilt laten weergeven op jouw overzichtsscherm voor de canule leeftijd, insuline leeftijd, sensor leeftijd, batterij leeftijd, reservoir niveau en batterij niveau. Als het waarschuwingsniveau wordt bereikt, zal die info in geel worden weergegeven. Wanneer het alarmniveau wordt bereikt, zal het rood worden weergegeven.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Als het waarschuwingsniveau wordt bereikt, zal die info in geel worden weergegeven. Wanneer het alarmniveau wordt bereikt, zal het rood worden weergegeven.
 
 #### Geavanceerde instellingen
 

@@ -13,7 +13,7 @@ To use one of the set “Default-Temp-Targets”, you can short click on your ta
 - If you want to slightly adjust the values of a default temp target, you can long press the Eating Soon, Activity or Hypo button and then edit the values in the Target or Duration fields.
 - If a Temp target is running, an additional "Cancel" button is shown in dialog to cancel it
 
-## Hypo Temp-Target
+## Țintă-Temporară Hipoglicemie
 
 This can be considered as the most important Temp-Target. There are several reasons for it:
 

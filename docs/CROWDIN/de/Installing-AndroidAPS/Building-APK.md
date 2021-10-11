@@ -18,12 +18,52 @@ Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschläg
 * Deaktiviere die "Configure on demand" Checkbox.
 * Klicke Apply oder OK.
 
+## Empfohlene Spezifikation des Computers zum Erstellen der Apk-Datei
+
+<table class="tg">
+  
+<thead>
+  <tr>
+    <th class="tg-baqh">Betriebssystem (nur 64 Bit)</th>
+    <th class="tg-baqh">Windows 8 oder höher</th>
+    <th class="tg-baqh">Mac OS 10.14 oder höher</th>
+    <th class="tg-baqh">Jedes Linux unterstützt Gnome, KDE oder Unity DE;&nbsp;&nbsp;GNU C Library 2.31 oder höher</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-baqh"><p align="center">CPU (nur 64 Bit)</td>
+    <td class="tg-baqh">x86_64 CPU-Architektur; Intel Core oder neuere Generation oder AMD CPU mit Unterstützung für einen <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">ARM-based Chips oder Intel Core der zweiten Generation oder neuer mit Unterstützung für <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
+    <td class="tg-baqh">x86_64 CPU Architektur; Intel Core der zweiten Generation oder neuer, alternativ AMD Prozessor mit Unterstützung für AMD Virtualization (AMD-V) und SSSE3</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">RAM</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8GB oder mehr</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Festplatte</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Mind. 30 GB freier Speicherplatz. SSD wird empfohlen.</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Bildschirmauflösung</td>
+    <td class="tg-baqh" colspan="3"><p align="center">min. 1280 x 800<br></td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Breitband</td>
+  </tr>
+</tbody>
+</table>
+
+Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die betroffene Hardware, Software oder das ganze System ersetzen. **Es wird dringend empfohlen, SSD (Solid State Disk) anstelle von HDD (Hard Disk Drive) zu verwenden, da dies dies die Zeit zur Erstellung der APS-Installationsdatei reduziert.** Dies wird nur empfohlen und ist nicht zwingend. Du kannst eine eine HDD-Festplatte verwenden, um die apk-Datei zu erstellen. Die Reine Erstellung wird dann nur deutlich länger dauern.
+
 * * *
 
 ### Dieser Artikel ist in zwei Teile geteilt.
 
 * Im Überblick werden die wichtigsten Schritte kurz zusammengefasst die allgemein nötig sind, um die APK Datei zu erstellen.
-* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows, als auch auf Mac OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Bei größeren Veränderungen oder fehlenden bzw. falschen Informationen wäre es hilfreich, dies den Entwicklern in der Facebookgruppe "Android APS" oder in den Gitter Chats [Android APS](https://gitter.im/MilosKozak/AndroidAPS) oder [AndroidAPS wiki](https://gitter.im/AndroidAPSwiki/Lobby) mitzuteilen, so dass wir einen Blick darauf werfen können.
+* In der “Schritt für Schritt Anleitung” wird detailliert auf die einzelnen Punkte mithilfe von Screenshots eingegangen. Da die Versionen von Android Studio - der Software, die wir zum Bau der APK verwenden werden - sich schnell weiterentwickeln werden diese nicht mit deiner Installation übereinstimmen, aber sie geben einen guten ersten Eindruck. Android Studio läuft sowohl auf Windows, als auch auf Mac OS X und Linux. Es kann sein, dass es bei jedem Betriebssystem einige kleinere Unterschiede gibt. Falls Du feststellst, dass etwas wichtiges falsch ist oder fehlt, informiere bitte die Facebook Gruppe "AndroidAPS users" oder im Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw), damit wir uns das anschauen können.
 
 ## Übersicht
 
@@ -145,7 +185,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf das kleine Dreieck (1. i
 
 * Klicke nicht auf "Background", während das Repository geklont wird!
     
-    ![Keine Hintergrundaktion](../images/AndroidStudio_NoBackground.png)
+    ![Keine Hintergrundaktion](../images/AndroidStudio361_15.png)
 
 * Nachdem das Repository geklont wurde, öffne Deine lokale Kopie indem Du auf "Yes" klickst.
     
@@ -266,9 +306,9 @@ Der einfachste Weg, die Datei app-full-release.apk auf Dein Smartphone zu übert
 
 Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
 
-## Identifiziere den Empfänger falls Du xDrip+ verwendest
+## Identifiziere den Empfänger falls Du xDrip verwendest+
 
-[Siehe xDrip+ Seite](../Configuration/xdrip#identifiziere-empfanger)
+[Siehe xDrip+ Seite](../Configuration/xdrip#identify-receiver)
 
 ## Problembehandlung
 

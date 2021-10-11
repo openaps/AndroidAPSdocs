@@ -18,7 +18,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 1. Samsung Galaxy S7
     
-    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) pro AndroidAPS
+    * Alternativy: viz [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) pro AndroidAPS
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
-    * Alternativy: Pro AndroidAPS (OS musí být Android Wear) by měly všechny [ hodinky s Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) fungovat bez problémů. Další info najdete v [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)
+    * Alternativy: Pro AndroidAPS (OS musí být Android Wear) by měly všechny [ hodinky s Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) fungovat bez problémů. Další info najdete v [seznam testovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit)
 
 ## Příprava Nightscoutu
 
@@ -104,7 +104,7 @@ Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 
 ![Nastavení G5](../images/SampleSetupG5Settings.png)
 
-* NS Client aktivován (viz [NS Client](../Configuration/Config-Builder#ns-profile) a [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS klient aktivvován (viz [NS Klient](../Configuration/Config-Builder#ns-profile) and [Nightscout nastavení](../Installing-AndroidAPS/Nightscout.md))
 
 ## Nainstalujte xDrip+
 

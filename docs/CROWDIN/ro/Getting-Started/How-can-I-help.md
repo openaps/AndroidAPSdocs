@@ -1,29 +1,29 @@
-# How to help with AndroidAPS
+# Cum puteți ajuta la AndroidAPS
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS funcționează în întregime pe baza eforturilor de voluntariat și nu are personal plătit.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Dezvoltatorii sunt părinți, îngrijitorii, cei dragi și persoanele cu diabet care lucrează împreună pentru dezvoltarea și îmbunătățirea unei soluții pentru o dorință comună. Dezvoltatorii își donează timpul lor liber fără a cere nimic în schimb, dar este puțin nedrept să ne așteptăm de la ei să facă și eforturi financiare pentru a putea realiza un proiect open source așa de genial și gratuit.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Pentru a putea testa cât mai complet orice dispozitiv nou, dezvoltatorii trebuie să folosească un telefon nou și o pompă de rezervă, deoarece sistemul nu poate fi folosit pe oameni atâta timp cât nu este stabil. Noile modele necesită testare pe măsură ce devin disponibile. O parte din banii donați sunt necesari, de asemenea, pentru a acoperi costurile logistice de curierat al acestor dispozitive între diferitele țări, între dezvoltatori. Câteodată este frumos să se contribuie la acoperirea costurilor pe care dezvoltatorii le suportă pentru a se putea întâlni la conferințe sau evenimente în vederea participării la ședințe care să le permită să-și pună împreună la muncă creativitatea și mintea analitică.*
 
-## I can write code! How do I participate?
+## Pot scrie programe! Cum pot participa?
 
-Yay! Look at the issues, ask in the gitter channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Ura! Look at the issues, ask in the discord channel, there is always a lot to do! Alegeți-vă o sarcină ușoară, pentru început, și faceți prima dumneavoastră sincronizare! :)
 
-## I know the system and can write documentation!
+## Cunosc sistemul şi pot scrie documentaţia!
 
-Great, this is a highly appreciated thing and a good way to pay it foreward!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* The old gitter channel regarding the wiki can be found here: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Un ghid cum sa faci înregistrări pe wiki in engleză poate fi găsit aici: [Cum să faci un PR](../make-a-PR.md). Alte limbi sunt doar traduse din engleză şi din motive de consistenţă nu pot fi editate.
 
-## I do speak multiple languages and whant to translate the app or the documentation
+## I do speak multiple languages and want to translate the app or the documentation
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* Dacă doriți să traduceți **aplicația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidaps).
+* Dacă doriți să traduceți **documentația** în alte limbi (mulțumesc), vă rugăm să folosiți [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Doar înscrie-te pe CROWDIN, apasă pe limbă, așteaptă autorizarea de la administrator și mergi mai departe!
 
-## Are there other ways to help?
+## Există alte modalităţi de a ajuta?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in gitter & Facebook to allow developers the time and space to focus on the harder stuff.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

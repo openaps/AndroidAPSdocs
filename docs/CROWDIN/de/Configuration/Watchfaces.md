@@ -16,20 +16,7 @@ Du kannst AndroidAPS auf Deiner Smartwatch mit **Wear OS** installieren. Mit der
 
 Wähle beim [Erstellen von AAPS](../Installing-AndroidAPS/Building-APK.md) build variant "fullRelease" (oder "pumpRelease" falls Du die Pumpe nur steuern, aber keinen Closed Loop betreiben willst).
 
-Stelle sicher, dass sowohl beide Versionen von AAPS (Smartphone und Smartwatch) mit den gleichen Keys signiert sind!
-
-Um die APK auf einer Android Wear Smartwatch zu installieren, folge den folgenden Schritten:
-
-1. Aktiviere den Entwicklermodus auf der Uhr. Drücke einen Button der Uhr und klicke `Einstellungen (settings)`, dann `System`, dann `Über (about)` und klicke mind. 7 Mal auf die `build number` bis Du die Bestätigung erhältst, dass Du Entwickler bist.
-2. Aktiviere ADB auf der Uhr. Drücke einen Button der Uhr und klicke `Einstellungen (settings)`, dann `Entwickler-Optionen (developer options)`, dann `adb debugging` und `debug over wifi`. Notiere Dir die IP-Adresse, die Dir angezeigt wird. Es handelt sich um die klassische Form einer IP-Adresse gefolgt von :5555.
-3. Notiere Dir am PC den Speicherort der `wear-full-release.apk` (befindet sich im gleichen Ordner wie die `app-full-release.apk`, die Du auf Deinem Smartphone installiert hast).
-4. Öffne am PC die Eingabeaufforderung (tippe `command` in das Suchfeld). 
-5. Gib in der Eingabeaufforderung folgendes ein: `cd c:\Program Files (x86)\Android\android-sdk\platform-tools`.
-6. Gib in der Eingabeaufforderung folgendes ein: `adb connect [Gib hier die IP-Adresse aus Schritt 2 mit :5555 ein.]`.
-7. Gib in der Eingabeaufforderung folgendes ein: `adb install -r [Gib hier den Pfad aus Schritt 3 ein.]\wear-full-release.apk`.
-8. Dadurch wird AAPS auf der Uhr installiert und das AAPS Watchface kann ausgewählt werden.
-
-Wenn Du AAPS auf der Smartwatch verwendest, müssen die AAPS Versionen auf Uhr und Smartphone die gleichen sein. Führe ein Update immer auf beiden gleichzeitig aus. Dazu musst Du die Schritte oben nochmals durchführen, musst aber den Entwicklermodus nicht nochmals aktivieren.
+Ab März 2021 musst Du AAPS mittels sogenanntem Sideload auf die Uhr übertragen. Dies kann nicht mehr über den Google Play Store der Uhr erfolgen. Verwende dazu am besten einen [Wear Installer](https://youtu.be/8HsfWPTFGQI). Diesen musst Du sowohl auf Deinem Smartphone als auch Deiner Uhr installieren. Sobald Du AndroidAPS wear version auf der Uhr ausgewählt hast, kannst Du Watchfaces und Komplikationen nutzen und AAPS teilweise über die Uhr steuern.
 
 ### Einrichten auf dem Smartphone
 
@@ -249,7 +236,6 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 
 ## Fehlerbehebung der Smartwatch App:
 
-* In Android Wear 2.0 installiert sich das Watchface nicht von alleine. Du musst in den Playstore der Uhr (unterscheidet sich vom Playstore des Smartphones!) gehen und unter der Kategorie “installierte Apps auf dem Handy” AAPS aktivieren. Aktiviere ebenfalls Auto Update. 
 * Manchmal hilft es, Apps erneut mit der Uhr zu synchronisieren, da es manchmal ein bisschen langsam sein kann, bis der Sync automatisch erfolgt: Wear Os > Zahnrad-Symbol (ganz unten) > Name deiner Uhr > Apps erneut synchronisieren.
 * Schalte ADB Debuggen in den Entwickleroptionen der Uhr ein, verbinde die Uhr via USB mit dem PC und starte die Wear App einmal in Android Studio.
 * Wenn die Daten in Komplikationen nicht aktualisiert werden, prüfe zuerst, ob AAPS-Watchfaces überhaupt funktionieren.

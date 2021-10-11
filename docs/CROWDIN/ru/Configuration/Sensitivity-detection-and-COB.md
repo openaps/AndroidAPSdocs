@@ -2,24 +2,24 @@
 
 ## Алгоритм чувствительности
 
-Currently we have 3 sensitivity detection models:
+В настоящее время есть 3 модели определения чувствительности:
 
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Чувствительность AAPS
+* Средневзвешенная чувствительность
+* Чувствительность Oref1
 
-### Sensitivity AAPS
+### Чувствительность AAPS
 
-Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Чувствительность вычисляется таким же образом, как Oref1, но можно указать время начала отсчета. Минимальное усвоение углеводов рассчитывается из максимального времени поглощения углеводов в настройках
 
-### Sensitivity WeightedAverage
+### Средневзвешенная чувствительность
 
-Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
+Чувствительность рассчитывается как средневзвешанная от отклонений. Можно указать время в прошлом. Новые отклонения имеют большее значение. Минимальное усвоение углеводов рассчитывается из максимального времени поглощения углеводов в настройках. Этот алгоритм является самым быстрым при отслеживании изменений чувствительности.
 
-### Sensitivity Oref1
+### Чувствительность Oref1
 
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Чувствительность рассчитывается на основе данных за прошедшие 8 часов или с последней смены катетера, если это меньше 8 часов назад. Углеводы (не усвоенные) не учитываются по прошествии времени, указанного в настройках. Только алгоритм Oref1 поддерживает непредвиденный прием пищи (UAM). Это означает, что время с распознанным непредвиденным приемом пищи UAM исключено из расчета чувствительности. Поэтому если вы используете супермикроболюс SMB с непредвиденным приемом пищи UAM, вам необходимо выбрать алгоритм Oref1 для правильной работы. Для получения дополнительной информации читайте документацию [OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Одновременный учет углеводов
 
-There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
+Существует значительное отличие при учете средневзвешенного количества углеводов в AAPS по сравнению с Oref1. Компоненты Oref принимают в расчет усвоение углеводов только от однократного приема пищи. Это означает, что второй прием пищи начинает учитываться только после полного усвоения первого. AAPS + средневзвешенные углеводы начинают учет сразу же после ввода углеводов. Если имеет место более одного приема пищи, то минимальный расход углеводов рассчитываться в зависимости от объема еды и максимального времени усвоения. The minimum absorption accordingly will be higher in comparison to Oref plugins.

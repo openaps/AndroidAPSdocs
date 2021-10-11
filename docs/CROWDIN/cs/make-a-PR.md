@@ -1,12 +1,12 @@
 # Udělejte svůj první PR (pull request - žádost o změnu)
 
-**Tento popis je pouze pro editaci anglické dokumentace. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
+**Tento popis je pouze pro editaci anglické dokumentace. All new information must be added in English first. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 
 ## Obecné
 
-For any questions, feedback or new ideas you can contact the documentation team via [gitter](https://gitter.im/AndroidAPSwiki/Lobby). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
+For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). Vytvoření PR není obtížné, ale můžeme vám pomoci editovat dokumentaci.
 
 V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pull request a je to způsob, jak přidat nebo editovat informace uložené v GitHubu. Ve skutečnosti není příliš těžké udělat takový krok a je to skvělý způsob, jak přispět. Tato dokumentace je zde proto, že lidé, jako jste vy, udělali svůj PR. Nebojte se, že uděláte chybu nebo nějak editujete špatné dokumenty. Před sloučením změn do „formálního“ repositáře dokumentace AndroidAPS je zde vždy proces přezkumu. Nějakou chybou nemůžete originál poškodit. Obecný proces je:
 
@@ -16,7 +16,7 @@ V určitém okamžiku bude doporučeno, abyste udělali PR. PR je zkratka pro pu
 * Vytvořte PR, která žádá správce, aby se tyto změny použily.
 * Ten provede přezkum a buď (1) sloučí vaše změny, (2) přidá komentář k vašim změnám, nebo (3) založí nový dokument s vašimi změnami.
 
-(Poznámka: Pokud se učíte spíše vizuálně, existuje YouTube video [zde](https://youtu.be/4b6tsL0_kzg) ukazující, jak PR funguje.)
+(Side note: If you are a visual learner, there is a YouTube video [here](https://youtu.be/4b6tsL0_kzg) showing the PR workflow.)
 
 Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linuxovém prostředí. To lze udělat na jakémkoli Windows PC, Mac atd. (libovolném počítači s připojením k internetu).
 
@@ -24,11 +24,11 @@ Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linux
 
 ![Klonování repozitoře](./images/PR0.png)
 
-2. Jděte na http://androidaps.readthedocs.io/en/latest/Getting-Started/Safety-first.html nebo podobné a přejděte na stránku, kterou chcete editovat. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. In the pop up window that appears, click the word "edit" for editing in GitHub. 
+2. Go to any page and navigate to the page you want to edit. Klikněte na černou oblast dole na stránce se zeleným slovem "v: latest" nebo podobné. In the pop up window that appears, click the word "edit" for editing in GitHub. 
 
 ![edit doc](./images/PR1.png)
 
-     Or you can click on the "Edit in Github" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
+     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
     
 
 ![RTD io](./images/PR2.png)
@@ -51,7 +51,7 @@ Například: chystáme se upravit AndroidAPSdocs. To není nutné dělat v linux
 
 ![vytvořit žádost o přijetí změn](./images/PR6.png)
 
-7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Vraťte se na tuto stránku, abyste zkontrolovali zpětnou vazbu (nebo pokud došla notifikace e-mailem). Žádost o změnu bude nyní na seznamu PR, který bude tým přezkoumávat a případně poskytne zpětnou vazbu před tím, než začlení změnu do hlavní dokumentace pro AndroidAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
+7. Tím dokončíte žádost PR. GitHub přiděluje PR číslo, které se nachází za názvem a hashovou značkou. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). Žádost o změnu bude nyní na seznamu PR, který bude tým přezkoumávat a případně poskytne zpětnou vazbu před tím, než začlení změnu do hlavní dokumentace pro AndroidAPS! Pokud chcete zkontrolovat pokrok ve zpracování PR, můžete kliknout na symbol zvonku v horním pravém rohu svého účtu na GitHub a uvidíte všechny své PR.
 
 ![Sledování PR](./images/PR7.png)
 
@@ -87,9 +87,9 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 #### Links
 
 * external link: `[alt text](www.url.tld)`
-* internal link to .md page: `[alt text](.../folder/file.md)`
-* internal link to .rst page: `[alt text](.../folder/file.rst)`
-* internal link to headline: `[alt text](.../folder/file#headline)`
+* internal link to .md page: `[alt text](../folder/file.md)`
+* internal link to .rst page: `[alt text](../folder/file.rst)`
+* internal link to headline: `[alt text](../folder/file#headline)`
 
 ### .rst files
 
@@ -128,7 +128,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 
 ### Internal links
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+Pokud chcete nastavit vnitřní odkaz v dokumentaci AndroidAPS, použijte pouze **relativní odkazy**. Only this will make the link work in the other languages (Czech, German...) as well.
 
 #### V souborech končících na **.md**:
 
@@ -150,28 +150,28 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ## Adding multiple images to documentation
 
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
+Pokud plánujete provést mnoho editací včetně přidání obrázků, které by pomohly vylepšit části dokumentace (děkujeme Vám!), můžete použít následující postup:
 
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses Github. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
+* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Naopak používejte podtržítka. Jako např. Example_batch_images_upload.png místo "Example batch images upload.png". 
 * Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
-* You can upload images in batches easily by:
+* Můžete snadno nahrát obrázky v dávkách:
   
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your github username)).
+  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
   
-  2. Click in the upper right corner where it says "Upload files"
+  2. Klepněte na pravý horní roh, kde se nachází "Upload files"
   
-  3. Drag and drop your images into the screen
+  3. Přetáhěte snímky na obrazovku pomocí myši
   
-  4. Commit these to your branch
+  4. Potvrďte (Commit) tyto informace
   
-  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
+  5. Nyní můžete vyhledat adresu URL a relativní cestu ke každému souboru a použít je při přidávání obrázků do stránky v dokumentaci.
   
-  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+  6. Chcete-li zobrazit příklady, jak přidat obrázky, můžete se podívat na "zdrojový" kód stránky a podívat se na příklad ze stránky, která již má obrázky vložené úspěšně. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
     * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
       `:alt: Example of uploading images in batches`
 
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
+![Příklad přenosu obrázků v dávkách](./images/Example_batch_images_upload.png)
 
 7. Po přidání obrázků nebo provedení úprav můžete odeslat PR (Pull request) do hlavní větve AndroidAPSdocs.

@@ -7,7 +7,7 @@ Préparez-vous aux imprévus. Vous pouvez modifier des paramètres importants pa
 
 La meilleure pratique consiste à exporter les paramètres après un changement ou la réalisation d'un objectif. 
 
-Les paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur. Ainsi vous serez prêt en cas de perte ou de dommages de votre téléphone AAPS et vous ne serez pas obligé de tout recommencer à partir de zéro.
+Les paramètres exportés doivent être copiés sur un stockage cloud ou sur votre ordinateur, c'est mieux si vous utilisez deux emplacements différents. Ainsi vous serez prêt en cas de perte ou de dommages de votre téléphone AAPS et vous ne serez pas obligé de tout recommencer à partir de zéro.
 
 Sur un ordinateur Windows 10, cela ressemble à ceci :
   
@@ -21,12 +21,12 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 * `Evènement d'automatisation <../Usage/Automation.html>`_
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
 * Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_
-* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Préférences <../Configuration/Preferences.html>`_ y compris les paramètres `NSClient <../Configuration/Preferences.html#ns-client>`_
+* Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
+* `Préférences <../Configuration/Preferences.html>`__ y compris les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
 
 Format de sauvegarde chiffré
 ==================================================
-La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans `Préférences <../Configuration/Preferences.html#mot-de-passe-principal>`_ .
+La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans `Préférences <../Configuration/Preferences.html#mot-de-passe-principal>`__ .
 
 
 Exporter les paramètres
@@ -40,7 +40,7 @@ Exporter les paramètres
 
 * La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
 * Cliquez sur 'OK'.
-* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`__ et cliquez 'OK'.
 * L'exportation réussie sera affichée en bas de l'écran.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -60,7 +60,7 @@ Importer les paramètres
 * Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
 * Sélectionnez un fichier.
 * Confirmez l'importation en cliquant sur 'OK'.
-* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`_ et cliquez 'OK'.
+* Entrez le `mot de passe principal <../Configuration/Preferences.html#mot-de-passe-principal>`__ et cliquez 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS importer les paramètres 2

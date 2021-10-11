@@ -22,14 +22,14 @@ Svarbios pastabos
 --------------------------------------------------
 **Automatizavimas vis dar yra aktyvus, kai ciklas yra išjungtas!**
 
-Todėl, jei reikia, išjunkite automatizavimo taisykles, kai išjungiate ciklą. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
+So make sure to deactivate automation rules during these occasions if necessary. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Įjungti ir išjungti automatizavimo taisyklę
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 Bendrieji
 --------------------------------------------------
@@ -58,7 +58,7 @@ Susietos sąlygos: Galite naudoti kelias sąlygas ir jas susieti taip
 * Laikas prieš pasikartojantis laikas
 
   * Laikas = vienkartinis įvykis
-  * Pasikartojantis laikas = kažkas, kas vyksta reguliariai (pvz. kartą per savaitę, kiekvieną darbo dieną ir pan.)
+  * recurring time = something that happens regularly (i.e. kartą per savaitę, kiekvieną darbo dieną ir pan.)
    
 * Vieta: Konfigūratoriuje (automatizavimas) galite pasirinkti, kurią vietos nustatymo paslaugą norite naudoti:
 
@@ -88,14 +88,14 @@ Pridėję savo veiksmus, **nepamirškite pakeisti numatytųjų reikšmių** spus
   :alt: Automatizavimo numatytosios prieš nustatytos reikšmės
 
 Rūšiuoti automatizavimo taisykles
------
+---------------------
 Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Rūšiuoti automatizavimo taisykles
   
 Ištrinti automatizavimo taisykles
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Rekomendacijos ir išlygos
 ==================================================
 * Jei pirmą kartą naudojate automatizavimą arba kuriate naują taisyklę, taip pat turėtumėte įjungti pranešimą siuntimo taisyklę, kad būtumėte tikri, kad taisyklė veikia taip, kaip numatyta.
-* Stebėkite savo taisyklės rezultatus.
+* Watch the rule results.
 * Nenaudokite pernelyg paprastų sąlygų (pvz., jei KG> 80 mg/dl IR KG<180 mg/dl)
 
   ** Ypač svarbu, jei veiksmas keičia profilį! **
  
-* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Laikini tikslai negrąžina `Autosens <../Usage/Open-APS-features.html#autosens>` _ reikšmės į 0.
+* Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Profilio pakeitimus naudokite saikingai ir tik kaip paskutinę galimybę.
 
-  * Pakeitus profilį, `Autosens <../Usage/Open-APS-features.html#autosens>`_ bus nenaudojamas mažiausiai 6 valandas.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Profilio pakeitimai automatiškai neatkuria jūsų profilio į standartinį
 
@@ -154,4 +154,4 @@ Atkreipkite dėmesį, jei netinkamai naudojate automatizavimo funkciją. Tai gal
 Alternatyvos
 ==================================================
 
-Pažangesniems vartotojams yra ir kitų būdų automatizuoti užduotis naudojant IFTTT arba trečiosios šalies Android programą, vadinamą Automate. Keletas pavyzdžių galima rasti 'čia <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Keletas pavyzdžių galima rasti 'čia <./automationwithapp.html>`_.

@@ -1,0 +1,53 @@
+name: Trigger RTD Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_EN }}" https://readthedocs.org/api/v2/webhook/androidaps/145178/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_CS }}" https://readthedocs.org/api/v2/webhook/androidaps-cs/145181/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_DE }}" https://readthedocs.org/api/v2/webhook/androidaps-de/145183/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_EL }}" https://readthedocs.org/api/v2/webhook/androidaps-el/145184/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_ES }}" https://readthedocs.org/api/v2/webhook/androidaps-es/145185/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_FR }}" https://readthedocs.org/api/v2/webhook/androidaps-fr/145186/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_KO }}" https://readthedocs.org/api/v2/webhook/androidaps-ko/145187/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_LT }}" https://readthedocs.org/api/v2/webhook/androidaps-lt/145188/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_NL }}" https://readthedocs.org/api/v2/webhook/androidaps-nl/145215/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_RU }}" https://readthedocs.org/api/v2/webhook/androidaps-ru/145190/

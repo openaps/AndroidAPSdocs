@@ -19,13 +19,13 @@ Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop f
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
-Dépannage 
+Résolution de problèmes 
 ==================================================
 
 Problèmes de connexion
 --------------------------------------------------
 
-La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. Lorsque la connexion bluetooth est rétablie les données sont comblées.
+La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. When bluetooth connection is restabilised the data is backfilled.
 
 Erreurs de capteur
 --------------------------------------------------

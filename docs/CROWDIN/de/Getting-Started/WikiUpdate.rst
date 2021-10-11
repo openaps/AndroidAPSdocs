@@ -1,34 +1,51 @@
 Docs Updates & Änderungen
 **************************************************
 
+April 2021
+==================================================
+* Liste der `zusätzlichen Kommunikationsgeräte <../Module/module.html#zusatzliches-kommunikationsgerat>`_ für Omnipod und Medtronic Pumpen
+* AAPS Vorhersagekurven in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manuelles-nightscout-setup>`_
+
+März 2021
+==================================================
+* Kommunikation der Entwickler von gitter zu `discord <https://discord.gg/4fQUWHZ4Mw>`_ umgezogen
+
+Februar 2021
+==================================================
+* Neue Navigationsleiste und `neuer Sprachwechsel <../changelanguage.html>`_
+
 Januar 2021
 ==================================================
 * `Aktionen-Tab <../Getting-Started/Screenshots.html#aktionen-tab>`_ - zusätzliche Informationen auf der Seite 'AndroidAPS Bildschirme'
 * Dexcom G6 mit `Build Your Own Dexcom App <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ ("Erstelle dir deine eigene Dexcom App")
 * Libre Smart Reader `Batteriestand <../Getting-Started/Screenshots.html#sensor-level-batterie>`_
 * `Objectives (Ziele) <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ - neue Fragen
-* Omnipod Eros - ` Einrichtung in AAPS <../Configuration/OmnipodEros.html> ` _
 * Weitere `neue AndroidAPS 2.8.0 Funktionen <../Installing-AndroidAPS/Releasenotes.html#version-2-8-0>`_
+
 Dezember 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - gepatche App funktioniert nicht mit US-Sensoren
 * `OpenAPS Übersicht der fest programmierten Limits <../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits>`_
 * Sony Smartwatch 3 ` Manuelle Installation des Google Play Service <../Usage/SonySW3.html> ` _
+
 Oktober 2020
 ==================================================
 * Accu-Chek Combo - Update `Zeitumstellung (Sommer-/Winterzeit) <../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit>`_
 * Accu-Chek Insight - Option `Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * Logs - weitere Details zum `Speicherort <../Usage/Accessing-logfiles.html>`_
-* Omnipod Eros - `Status Update <../Getting-Started/Future-possible-Pump-Drivers.html#insulet-omnipod-mit-alten-eros-pods-homepage >`_
+* Omnipod Eros - Statusupdate
 * `SMS Kommandos - Zeitsynchronisation aller Smartphones <../Children/SMS-Commands.html>`_
+
 September 2020
 ==================================================
 * Großes Update für die neue AAPS Version 2.7
 * Details findest Du in den `Release Notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_
+
 Juni 2020
 ==================================================
 * `Libre 2 <../Hardware/Libre2.html>`_ - weitere Details zu gepatchten Libre Link App und zu Bluetooth Transmittern
 * `Reisen über Zeitzonen hinweg <../Usage/Timezone-traveling.html>`_ mit Libre 2
+
 Mai 2020
 ==================================================
 * `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#verzogerter-bolus-und-wechsel-zum-open-loop-nur-fur-dana-und-insight-pumpe>`_
@@ -36,16 +53,19 @@ Mai 2020
 * `Minimaler Wert zur Anfrage einer Änderung <../Configuration/Preferences.html#minimaler-wert-zur -anfrage-einer-anderung>`_ zur Reduktion der Zahl der Benachrichtigungen im Open Loop
 * `Patched Libre Link App <../Hardware/Libre2.html#schritt-1-erstelle-deine-eigene-gepatchte-librelink-app>`_ - Prüfen, ob die gepatchte App korrekt erstellt wurde
 * `Vorhersagelinien <../Getting-Started/Screenshots.html#vorhersage-kurven>`_ - zusätzliche Details
+
 April 2020
 ==================================================
 * `Insulin nachträglich erfassen <../Usage/CPbefore26.html#id1>`_ (z.B. bei Abgabe mit Spritze)
 * `Android 6 Unterstützung wird mit der nächsten Master Version eingestellt <../Module/module.html#smartphone>`_
+
 März 2020
 ==================================================
 * `AndroidAPS mit Android Studio 3.6.1 erstellen <../Installing-AndroidAPS/Building-APK.html>`_
 * `DanaRS mit Firmware v3 <../Configuration/DanaRS-Insulin-Pump.html>`_ **kann momentan nicht mit AndroidAPS genutzt werden!**
 * `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
 * `Update mit Android Studio 3.6.1 <../Installing-AndroidAPS/Update-to-new-version.html>`_
+
 Februar 2020
 ==================================================
 * `Automation Vorbehalte <../Usage/Automation.html#empfehlungen-und-vorbehalte>`_
@@ -56,10 +76,12 @@ Februar 2020
 * `Konfigurationsbeispiel <../Getting-Started/Sample-Setup.html>`_ - Update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - wichtige neue Funktionen
 * `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
+
 Januar 2020
 ==================================================
 * `Kohlenhydrate manuell korrigieren <../Getting-Started/Screenshots.html#kohlenhydrat-korrektur>`_, falls diese falsch eingegeben wurden
 * `Bildgröße <../make-a-PR.html#bildgrosze>`_ beim Bearbeiten des Docs
+
 Dezember 2019
 ==================================================
 * `Android Auto <../Usage/Android-auto.html>`_ - Setup mit Bildschirmfotos
@@ -67,13 +89,14 @@ Dezember 2019
 * `Glimp <../Configuration/Config-Builder.html#bz-quelle>`_ - Version 4.15.57 und neuer wird unterstützt
 * `Watchfaces <../Configuration/Watchfaces.html>`_ - große Überarbeitung mit zahlreichen Details
 * `Watchface Komplikationen <../Configuration/Watchfaces.html#komplikationen>`_ - Dein Lieblings-Watchface mit AAPS-Daten
+
 November 2019
 ==================================================
 * `Automation - bei deaktiviertem Loop ausschalten <../Usage/Automation.html#wichtiger-hinweis>`_
 * `Dexcom G6 Update zum Transmitter-Wechsel <../Configuration/xdrip.html#transmitter-ersetzen>`_
 * `Warum ein verzögerter Bolus beim Loopen nicht funktioniert <../Usage/Extended-Carbs.html#id1>`_
 * `FAQ - Sport <../Getting-Started/FAQ.html#sport>`_
-* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#vorhersage-kurven>`_
+* `Startbildschirm - Linien im Diagramm <../Getting-Started/Screenshots.html#abschnitt-f-hauptgrafik>`_
 * `Insight - Absolute Werte im NS Client deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#einstellungen-in-androidaps>`_
 * `Medtronic Pumpe - mögliche Doppeleinträge <../Configuration/MedtronicPump.html>`_
 * `Neue Anleitung zum Freestyle Libre 2 <../Hardware/Libre2.html>`_
@@ -82,7 +105,7 @@ November 2019
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
 * `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
-* Docs - Update `Mitschreiben <../make-a-PR.html#code-syntax>`_ und `Übersetzen <../translations.html#wiki-seiten-ubersetzen>`_.
+* Docs - Update `Mitschreiben <../make-a-PR.html#code-syntax>`_ und `Übersetzen <../translations.html>`_.
 
 Oktober 2019
 ==================================================

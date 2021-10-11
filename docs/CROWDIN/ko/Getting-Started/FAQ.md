@@ -18,7 +18,7 @@ AndroidAPS 는 인슐린펌프를 제어하고 인슐린을 주입하는 기기�
 
 우선, **Loop가능한 하드웨어 장치들**이 필요로 합니다:
 
-* [지원되는 인슐린펌프](Pump-Choices.md), 
+* A [supported insulin pump](./Pump-Choices.md), 
 * [안드로이드 스마트폰](Phones.md) (아이폰은 AndroidAPS에서 지원하지 않습니다 - 아이폰을 사용하려면 Loop를 알아보세요 [iOS Loop](https://loopkit.github.io/loopdocs/)) 
 * [연속혈당측정기](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@ AndroidAPS 는 인슐린펌프를 제어하고 인슐린을 주입하는 기기�
 
 세번째로, **소프트웨어 요소들을 설정하여야 합니다**: AndroidAPS 와 CGM/FGM 소스.
 
-네번째로, **관리 요인에 대해 확인하기 위하여 OpenAPS 참조 설계에 관한 공부를하고이해하여야 합니다**. Closed Loop를 하기 위해 가장 기본적으로 요구되는 사항은, 당신의 Basal양과 탄수화물 비율(carb ratio)가 정확해야한다는 점입니다. Closed Loop의 모든 제안들은 당신 필요한 Basal 적정하다고 가정하고 계산됩니다. 따라서 모든 혈당 피크와 저점은 (운동, 스트레스 등) 다른 일시적인 요인들의 결과이며, 인슐린의 일시적인 조절로 관리가 가능하다고 가정합니다. 안전을 위해, Closed Loop가 조절을 하는데 제한이 있습니다. ([OpenAPS Reference Design](https://openaps.org/reference-design/)에서 최대 허용 임시Basal 양을 확인해보세요.) 이것은 당신이 잘못 설정된 Basal양을 바로잡는 용도로 Loop를 사용해서는 안된다는 것을 의미합니다. 예를 들면, 만약 당신이 식사전에 저혈당에 자주 노출된다면 Basal양을 조정할 필요한 것일 수도 있습니다. Autotune</ 0>을 사용하면, 많은 양의 데이터를 기반으로 Basal 및 ISF 조정이 필요한지 혹은 탄수화물 비율(carb ratio)이 변경될 필요가 있는지를 알 수 있습니다. 혹은 [전통적인 방법](http://integrateddiabetes.com/basal-testing/)을 통해서 당신의 Basal량을 테스트하고 설정할 수도 있습니다.</p> 
+네번째로, **관리 요인에 대해 확인하기 위하여 OpenAPS 참조 설계에 관한 공부를하고이해하여야 합니다**. Closed Loop를 하기 위해 가장 기본적으로 요구되는 사항은, 당신의 Basal양과 탄수화물 비율(carb ratio)가 정확해야한다는 점입니다. Closed Loop의 모든 제안들은 당신 필요한 Basal 적정하다고 가정하고 계산됩니다. 따라서 모든 혈당 피크와 저점은 (운동, 스트레스 등) 다른 일시적인 요인들의 결과이며, 인슐린의 일시적인 조절로 관리가 가능하다고 가정합니다. 안전을 위해, Closed Loop가 조절을 하는데 제한이 있습니다. ([OpenAPS Reference Design](https://openaps.org/reference-design/)에서 최대 허용 임시Basal 양을 확인해보세요.) 이것은 당신이 잘못 설정된 Basal양을 바로잡는 용도로 Loop를 사용해서는 안된다는 것을 의미합니다. 예를 들면, 만약 당신이 식사전에 저혈당에 자주 노출된다면 Basal양을 조정할 필요한 것일 수도 있습니다. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Loop를 위한 실질적인 조언들
 
@@ -66,10 +66,10 @@ Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱
 
 Loop를 사용하는데 있어서 실질적으로 필요한 사항에 대해 이해하는데 도움이 될만한 좋은 팁들이 있는 여러 블로그들이 있습니다.
 
-* [설정 미세 조정하기](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [왜 DIA가 중요한가요?](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [식사후 혈당의 Spike(급등락) 제어하기](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [호르몬과 Autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## 어떤 응급 장비가 준비되어 있어야 하나요?
 
@@ -166,7 +166,7 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 
 > **참고:**
 > 
-> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. 초기엔 1 빵단위(bread unit)가 12g의 탄수화물에 해당하였었는데, 나중에 10g의 탄수화물로 변경되었습니다.
+> 일부 유럽 국가들에서는 얼마나 많은 인슐린이 필요한지 결정하기 위해 빵 단위(bread units)를 사용합니다. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > 이 빵단위 모델에서는 탄수화물의 양은 고정되어있고 인슐린의 양이 가변적입니다. ("1 빵단위(bread unit)를 처리하기 위해 얼마나 많은 인슐린이 필요합니까?")
 > 
@@ -174,7 +174,7 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 > 
 > 예:
 > 
-> Bread unit fatcor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Corresponding IC: 12g / 2,4 U = 5,0 g/U -> 5,0g carbs can be covered with one unit of insulin.
 > 
@@ -196,13 +196,13 @@ IC대신 I:C라고도 하며, 탄수화물비율(CR)이라는 용어로 사용�
 
 ![AMA 3시간](../images/Screenshot_AMA3h.png)
 
-AMA에서, DIA가 실제 '인슐린 활동 기간'을 의미하지 않습니다. 과거에 DIA와 관련된 매개 변수였습니다. 현재는 '교정이 완료되는 시간'를 의미합니다. IOB계산과는 관계가 없습니다. OpenAPS SMB에서는, 이 매개변수가 더 이상 필요로 하지 않습니다.
+AMA에서, DIA가 실제 '인슐린 활동 기간'을 의미하지 않습니다. 과거에 DIA와 관련된 매개 변수였습니다. 현재는 '교정이 완료되는 시간'를 의미합니다. IOB계산과는 관계가 없습니다. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## 프로파일
 
 ### DIA (인슐린 활동 시간)을 2-3시간 대신 최소 5시간 이상을 사용하는 이유가 무엇입니까?
 
-[여기](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)에 잘 설명이 되어 있습니다. DIA 변경 후 `프로파일 활성화하기`하는 것을 잊지마세요.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). DIA 변경 후 `프로파일 활성화하기`하는 것을 잊지마세요.
 
 ### 무엇 때문에 나의 혈당이 COB 없이 자주 저혈당이 발생하게 합니까?
 
@@ -263,10 +263,10 @@ Loop사용은 펌프 배터리를 더 빠르게 소모시킬 수 있습니다. �
 
 * 홈 탭에서 "Open Loop"/"Closed Loop"를 길게 누르고 '1시간동안 Loop 일시 중지'를 선택하세요
 * 이제 펌프를 떼어내고 펌프의 지시에 따라 주사기를 교체합니다.
-* Also piming and filling tube and canula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
 * Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-캐뉼라 교체는 펌프의 "프라임 주입 세트" 기능을 사용하지 않지만, Bolus를 이용하여 주입세트 그리고/또는 캐뉼라를 채우는 것은 Bolus 이력에 나타나지 않습니다. 이는 임시 Basal 양을 중단하지 않음을 의미합니다. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. 양이 충분치 않으면, 다시 채움을 하세요. 기본 인슐린 양 버튼은 설정 > 기타 > 채움/교체에서 설정할 수 있습니다. 바늘 길이와 튜브 길이에 따라 얼마나 많은 유닛이 채워져야하는지 캐뉼라 상자안의 설명서를 확인하세요.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. 이는 임시 Basal 양을 중단하지 않음을 의미합니다. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. 양이 충분치 않으면, 다시 채움을 하세요. 기본 인슐린 양 버튼은 설정 > 기타 > 채움/교체에서 설정할 수 있습니다. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## 배경화면
 
@@ -300,7 +300,7 @@ Loop시 아래 단계를 시도해보아야 합니다:
 * 표준 목표 이상으로 [활동 임시 목표](../Usage/temptarget#activity-temp-target) 설정.
 * SMB를 사용하고 있다면 ["높은 임시 목표에서 SMB 사용하기"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets)를 활성화하고 ["항상 SMB 사용하기"](../Usage/Open-APS-features#enable-smb-always)는 비활성화 하세요.
 
-이러한 설정의 사전 및 사후 처리가 중요합니다. 운동 전 미리 이러한 설정을 변경하고, 근력운동이 주는 영향도 고려하세요.
+Pre- and post-processing of these settings is important. 운동 전 미리 이러한 설정을 변경하고, 근력운동이 주는 영향도 고려하세요.
 
 같은 시간에 운동을 규칙적으로 한다면 (예: 운동 수업 등) 프로파일변경이나 임시목표를 설정하기 위해서 [자동화](../Usage/Automation.rst) 기능을 사용하는 것을 고려해봄직합니다. 위치 기반 자동화도 좋은 생각일 수 있지만 사전처리를 더 어렵게 할 수 있습니다.
 

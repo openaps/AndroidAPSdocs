@@ -5,9 +5,9 @@ Wanneer zou ik mijn instellingen moeten exporteren?
 ==================================================
 Wees voorbereid op onvoorziene omstandigheden. Je kunt belangrijke instellingen per ongeluk veranderen en problemen hebben om weer terug te gaan naar de juiste instellingen. Je telefoon kan stuk gaan of gestolen worden. Om makkelijk terug te keren naar instellingen die voor jou goed werkten (en ook: als je de Doelen die je eerder hebt afgerond, niet opnieuw wilt moeten doen) dan moet je jouw instellingen regelmatig exporteren.
 
-Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of na het voltooien van een Doel. 
+Het is goed om jouw instellingen steeds te exporteren na het wijzigen van instellingen of *na het voltooien van een Doel*. 
 
-Geëxporteerde instellingen moet je vervolgens kopiëren naar een cloudopslag, naar je computer of emailen naar jezelf. Zodat je jouw instellingen-bestand nog hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt.
+Kopieer het bestand met jouw geëxporteerde instellingen ook naar een cloudopslag of naar een computer, het liefst naar beide (of naar twee computers, twee cloudopslagen). Zodat je altijd nog ergens een kopie van jouw instellingen-bestand hebt wanneer je AAPS telefoon stuk gaat of gestolen wordt, of als er iets met één computer / cloudopslag gebeurt. Het is heel frustrerend als je jouw instellingen om wat voor reden dan ook kwijt bent, en je moet weer van voren af aan beginnen in de Doelen. Zorg dat je een (liefst meerdere) backup(s) hebt!
 
 Op een Windows-10 computer ziet het er zo uit:
   
@@ -22,11 +22,11 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 * `Configurator <../Configuration/Config-Builder.html>`_ instellingen
 * `Lokaal profiel <../Configuration/Config-Builder.html#lokaal-profiele-aanbevolen>`_ instellingen
 * Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
-* `Instellingen <../Configuration/Preferences.html>`_ incl. `NS Client-instellingen <../Configuration/Preferences.html#ns-client>`_
+* `Instellingen <../Configuration/Preferences.html>`__ incl. `NS Client-instellingen <../Configuration/Preferences.html#nsclient>`_
 
 Versleuteld instellingen-bestand
 ==================================================
-Het bestand met jouw instellingen wordt versleuteld opgeslagen. Het masterwachtwoord kun je instellen via `Instellingen <../Configuration/Voorkeuren.html#masterwachtwoord>`_ .
+Het bestand met jouw instellingen wordt versleuteld opgeslagen. Het masterwachtwoord kun je instellen via `Instellingen <../Configuration/Voorkeuren.html#masterwachtwoord>`__ .
 
 
 Exporteer instellingen
@@ -40,7 +40,7 @@ Exporteer instellingen
 
 * Datum en tijd van de export zal automatisch worden toegevoegd aan de bestandsnaam en wordt weergegeven samen met de bestandslocatie.
 * Klik op "OK'.
-* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
+* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`__ in en klik op 'OK'.
 * Succesvolle export zal worden getoond onderaan het scherm.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -48,7 +48,7 @@ Exporteer instellingen
   
 Importeer instellingen
 ==================================================
-**Importeer de instellingen niet tijdens een actieve Pod sessie** - zie `Omnipod pagina voor details <../Configuration/OmnipodEros.html#importeer-instellingen-van-vorige-aaps>`_.
+**Importeer de instellingen niet tijdens een actieve Pod sessie** - zie `Omnipod pagina <../Configuration/OmnipodEros.html#importeer-instellingen-van-vorige-aaps>`_ voor details.
 
 * Hamburgermenu (3 horizontale strepen in linkerbovenhoek)
 * Onderhoud
@@ -60,7 +60,7 @@ Importeer instellingen
 * Alle bestanden in de map AAPS/preferences/ op jouw telefoon worden getoond in de lijst.
 * Selecteer bestand.
 * Bevestig door op 'OK' te klikken.
-* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`_ in en klik op 'OK'.
+* Voer `masterwachtwoord <../Configuration/Preferences.html#masterwachtwoord>`__ in en klik op 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS instellingen importeren 2

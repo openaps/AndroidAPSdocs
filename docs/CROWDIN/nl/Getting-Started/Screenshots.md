@@ -226,7 +226,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 
 ![Insuline knop](../images/Home2020_ButtonInsulin.png)
 
-* Om een bepaalde hoeveelheid insuline te geven zonder gebruik te maken van de [bolus calculator](../Getting-Started/Screenhots#bolus-calculator).
+* Om een zelfgekozen hoeveelheid insuline te geven zonder gebruik te maken van de [bolus calculator](#bolus-calculator).
 * Ook kun je dmv een vinkje in één moeite jouw [eet binnenkort tijdelijk streefdoel](../Configuration/Preferences#standaard-tijdelijke-streefdoelen) aanzetten.
 * Als je niet wilt dat de pomp insuline gaat afgeven (omdat je met de pen bijspuit) kun je dit dmv een vinkje aangeven in dit scherm. Zo kun je AAPS laten weten dat je insuline hebt genomen.
 
@@ -239,11 +239,11 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 * Tijdverschuiving: Wanneer ga je/heb je de koolhydraten gegeten (in minuten).
 * Tijdsuur: Te gebruiken voor ["vertraagde koolhydraten"](../Usage/Extended-Carbs.rst) (eCarbs)
 * Gebruik de knoppen om het aantal koolhydraten snel in te voeren. Typen in het veld kan ook.
-* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#ns-client).
+* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#nsclient).
 
 #### Boluscalculator
 
-* Zie [details hieronder](../Configuration/Screenhots#bolus-calculator)
+* Zie Bolus Calculator sectie [verderop](#bolus-calculator) de pagina.
 
 #### Kalibraties
 
@@ -282,7 +282,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 ### Sectie J
 
-* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. De optie is alleen zichtbaar wanneer "Inschakelen [superbolus](../Configuration/Preferences.html#superbolus) is ingeschakeld in de [instellingen](../Configuration/Preferences.html#geavanceerde-instellingen-overzicht), onder Overzicht > Geavanceerd.
+* Bij een SUPER BOLUS wordt de basale insuline voor de komende twee uur toegevoegd aan de maaltijdbolus, gevolgd door een tijdelijke basaalstand van nul voor de komende twee uur om te compenseren voor de extra insuline. De optie is alleen zichtbaar wanneer "Inschakelen [superbolus](../Configuration/Preferences#superbolus) is ingeschakeld in de [instellingen](../Configuration/Preferences#geavanceerde-instellingen-overzicht), onder Overzicht > Geavanceerd.
 * Hiermee wordt de insuline 'naar voren gehaald', zodat je een minder hoge glucosepiek zult hebben na de maaltijd.
 * Voor details [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -290,7 +290,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 * Toont de berekende bolus. 
 * Wanneer je al meer insuline aan boord (IOB) hebt dan de berekende bolus, dan zal hier alleen de ontbrekende hoeveelheid koolhydraten te zien zijn.
-* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#ns-client).
+* Notities zullen worden geüpload naar Nightscout - afhankelijk van je instellingen voor [NS client](../Configuration/Preferences#nsclient).
 
 ### Sectie L
 
@@ -307,7 +307,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 #### Verkeerde COB-detectie
 
-![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorbtion.png)
+![Langzame koolhydraat absorptie](../images/Calculator_SlowCarbAbsorption.png)
 
 * Als je de waarschuwing hierboven ziet na het gebruik van de boluswizard, dan heeft AndroidAPS vastgesteld dat de berekende COB-waarde misschien onjuist is. 
 * Dit betekent dat, als je weer wilt bolussen en je hebt nog COB van een vorige maaltijd, je moet uitkijken voor overdosering! 
@@ -322,11 +322,11 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 * Knop [profiel wissel](../Usage/Profiles#profiel-wissel) is een alternatief voor het indrukken van je [huidige profiel](../Getting-Started/Screenshots#huidig-profiel) op het Overzicht scherm.
 * Knop [tijdelijk streefdoel](../Usage/temptarget) is een alternatief voor het indrukken van je [huidige streefdoel](../Getting-Started/Screenshots#streefdoel) op het Overzicht scherm.
 * Knop voor het starten of annuleren van een tijdelijke basaalstand. NB: De knop verandert van "TIJD. BASAAL" naar "ANNULEER x%" wanneer een tijdelijke basaalstand is ingesteld.
-* Hoewel [vertraagde bolussen](../Usage/Extended-Carbs#id1) eigenlijk niet geschikt zijn om te gebruiken in een closed loop, hebben sommige mensen toch aangegeven dat ze de vertraagde bolus functie zouden willen gebruiken.
+* Hoewel [vertraagde bolussen](../Usage/Extended-Carbs#extended boluses) eigenlijk niet geschikt zijn om te gebruiken in een closed loop, hebben sommige mensen toch aangegeven dat ze de vertraagde bolus functie zouden willen gebruiken.
    
    * Deze optie is alleen beschikbaar voor Dana RS en Insight pompen. 
    * De closed loop zal automatisch worden onderbroken en er wordt overgeschakeld naar open loop modus nadat de vertraagde bolus functie is geactiveerd.
-   * Zorg ervoor dat je de [details](../Usage/Extended-Carbs#id1) leest voordat je deze optie gebruikt.
+   * Zorg ervoor dat je de [details](../Usage/Extended-Carbs#extended boluses) leest voordat je deze optie gebruikt.
 
 ### Careportal - sectie N
 
@@ -334,7 +334,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
    
    * sensor leeftijd & niveau (batterij percentage)
    * insuline leeftijd & niveau (eenheden)
-   * infuus leeftijd
+   * cannula age
    * pomp batterij leeftijd & niveau (percentage)
 
 * Er wordt minder informatie getoond als je de ['Lage resolutie' skin](../Configuration/Preferences#skin) gebruikt.
@@ -358,7 +358,7 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 #### Historiek venster
 
-* Hiermee kunt je jouw gegevens terugkijken in het AAPS historiek venster.
+* Allows you to ride back in AAPS history.
 
 #### TDD
 
@@ -382,9 +382,9 @@ Wanneer je wilt bolussen voor een maaltijd, dan doe je dat meestal via dit scher
 
 Meer uitleg over de verschillende soorten insuline, hun werkingsprofielen en waarom dit allemaal belangrijk is, staat in dit artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
-En meer hierover staat in dit uitstekende blog: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+En meer hierover staat in dit uitstekende blog: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-En nog meer in: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+En nog meer in: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Pompstatus
 
@@ -447,17 +447,17 @@ De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corri
 Geschiedenis van de volgende behandelingen:
 
 * Bolus & koolhydraten-> met optie voor het [verwijderen van items](../Getting-Started/Screenshots#koolhydraten-correctie) om foutieve informatie weg te halen
-* [Vertraagde bolus](../Usage/Extended-Carbs#id1)
+* [Vertraagde bolus](../Usage/Extended-Carbs#extended-bolus)
 * Tijdelijke basaalstand (Temporary Basal Rate)
 * [Tijdelijk streefdoel](../Usage/temptarget.md)
 * [Profiel wissel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - hier vind je notities terug die zijn ingevoerd via het Acties tabblad of via het notities veld in dialoogvensters
 
-## BG bron - xDrip, Dexcom App (aangepast)...
+## BG Source - xDrip, Dexcom App (patched)...
 
 ![BG Bron tabblad - hier xDrip](../images/Screenshots_BGSource.png)
 
-* Afhankelijk van de BG bron die je gebruikt, heeft dit tabblad de bijbehorende naam.
+* Depending on your BG source settings this tab is named differently.
 * Toont geschiedenis van CGM metingen en heeft de optie om foutieve metingen te verwijderen (bijv. compressie laag).
 
 ## NSClient

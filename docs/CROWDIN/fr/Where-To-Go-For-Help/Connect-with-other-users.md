@@ -4,24 +4,24 @@ Ce projet est basé sur le travail bénévole, de sorte que certaines règles s'
 
 * niveau 1: Lire le Wiki - nous avons maintenant une fonction de recherche pour vous aider !
 * niveau 2: Recherchez le groupe Facebook, s'il n'y a pas déjà la réponse, alors posez votre question dans le groupe Facebook [AndroidAPS Users Facebook](https://www.facebook.com/groups/1900195340201874/)
-* niveau 3: Si facebook n'a pas permi d'obtenir des résultats alors demander dans [gitter](https://gitter.im/MilosKozak/AndroidAPS). Les entrées directes seront ignorées / supprimées sur les deux canaux pour éviter les réponses en double. N'oubliez pas que la majorité des développeurs sont en Europe, donc la réponse ne peut pas être 24/7; vous pourriez avoir à attendre plusieurs heures, surtout pendant le week-end et les jours fériés.
+* niveau 3: Si facebook n'a pas permi d'obtenir des résultats alors demander dans [discord](https://discord.gg/4fQUWHZ4Mw). Les entrées directes seront ignorées / supprimées sur les deux canaux pour éviter les réponses en double. N'oubliez pas que la majorité des développeurs sont en Europe, donc la réponse ne peut pas être 24/7; vous pourriez avoir à attendre plusieurs heures, surtout pendant le week-end et les jours fériés.
 * niveau 4 : Créez un [issue](https://github.com/nightscout/AndroidAPS/issues) et joignez vos [fichiers log](../Usage/Accessing-logfiles.md)
 * niveau 5: Envoyer un e-mail à *developers@androidaps.org* (uniquement s'il y a des données à caractère personnel qui ne doivent pas être affichées dans un canal public et si vos problèmes n'ont pas été résolus dans les autres niveaux)
 
-Pour obtenir un support sur les sources MGC, utilisez les groupes Facebook ou les canaux gitter spécifiques pour chaque système (par exemple [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) ou la prise en charge de l'utilisation de Nightscout [ CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) car les utilisateurs auront un niveau d'expertise plus élevé que les personnes ici qui utilisent tous des systèmes différents.
+Pour obtenir un support sur les sources MGC, utilisez les groupes Facebook ou les canaux discord spécifiques pour chaque système (par exemple [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) ou la prise en charge de l'utilisation de Nightscout [ CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) car les utilisateurs auront un niveau d'expertise plus élevé que les personnes ici qui utilisent tous des systèmes différents.
 
 ## Assurez-vous de rejoindre le groupe d'utilisateurs AndroidAPS sur Facebook !
 
-Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/groups/1900195340201874/). Vous pouvez poster ici toutes les questions sur l'algorithme, les problèmes de configuration que vous rencontrez avec Android Studio et la création de l'APK, toute question sur l'utilisation de l'application et des conseils pour savoir comment tirer le meilleur usage de l'application. Il existe également un groupe pour les utilisateurs de la pompe Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) qui ont une configuration un peu plus spécifique.
+Rejoindre le groupe Facebook principal [AndroidAPS](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Il existe également un groupe pour les utilisateurs de la pompe Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) qui ont une configuration un peu plus spécifique.
 
-## Autres ressources en Anglais
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup) : couvre tous les systèmes de boucle fermée DIY (OpenAPS, Loop et AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/) : MGC en général
-* [AndroidAPS sur Gitter](https://gitter.im/MilosKozak/AndroidAPS)
+* [AndroidAPS sur Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Ressources spécifiques à chaque pays / langue
+## Country / language specific resources
 
 ### Australie
 

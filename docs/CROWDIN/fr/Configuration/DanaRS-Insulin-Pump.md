@@ -52,7 +52,7 @@
 
 * Entrez **l'ancien mot de passe** (mot de passe par défaut voir [au-dessus](#mot-de-passe-par-defaut)) et appuyez sur OK
     
-    ![DanaRS Entrez l"ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Entrez l'ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
 
 * Si un mauvais mot de passe est entré ici, il n'y aura pas de message indiquant l'échec !
 
@@ -85,7 +85,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 ## Remarque spéciale lors du changement de téléphone
 
-Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
+When switching to a new phone the following steps are necessary:
 
 * [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
 * Transférez les paramètres de l'ancien au nouveau téléphone
@@ -97,4 +97,4 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-Pour plus d'informations sur les voyages dans différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

@@ -1,29 +1,30 @@
 Freestyle Libre 1
 **************************************************
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+Pentru a folosi senzorul Libre ca un CGM care primeste valori la fiecare 5 minute, mai întâi trebuie sa cumperi un adaptor NFC - Bluetooth precum:
 
-* MiaoMiao Reader (version 1 or 2) `https://www.miaomiao.cool/ <https://www.miaomiao.cool/>`_
+* MiaoMiao Reader (versiunea 1 sau 2) ` https: //www.miaomiao.cool/ <https://www.miaomiao.cool/>` _
 * Blucon Nightrider `https://www.ambrosiasys.com/our-products/blucon/ <https://www.ambrosiasys.com/our-products/blucon/>`_
-* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_
+* Bubble `https://bubbleshop.eu/ <https://bubbleshop.eu/>`_  or for Russian users  `https://vk.com/saharmonitor/ <https://vk.com/saharmonitor/>`_  
 
-Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which has an NFC chip which can be enabled and can be used as a NFC collector. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
-* Sony Smartwatch 3 (SWR50) `https://github.com/pimpimmi/LibreAlarm/wiki/ <https://github.com/pimpimmi/LibreAlarm/wiki/>`_
+In plus, este posibil sa poți utiliza un anumit ceas inteligent, Sony Smartwatch 3 care are un cip NFC ce poate fi activat și utilizat ca un colector NFC. Cu toate acestea, adaptoarele personalizate NFC - Bluetooth listate anterior reprezinta o soluție mai putin complexa și sunt utilizare de majoritatea celor care vor sa folosească Libre 1 ca CGM.
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+* Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>https://github.com/pimpimmi/LibreAlarm/wiki`_
 
-If using xDrip+
+In prezent, daca folosești Libre 1 ca sursa de valori ale glicemiei, nu poți folosi opțiunile "Enable SMB always" si "Enable SMB after carbs" pentru algoritmul SMB. Valorile glicemiei furnizate de Libre 1 nu sunt suficient de bine normalizate pentru a fi folosite în siguranță. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+
+Daca se foloseste aplicatia xDrip+
 ==================================================
-* If not already set up then download xDrip+ and follow instructions on `LimiTTEer <https://github.com/JoernL/LimiTTer>`_ or  `Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>`_.
-* In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
-* Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* For settings in xDrip+ with screenshots see `xDrip+ settings page <../Configuration/xdrip.html>`__. There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
-* If AAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
+* Dacă nu este deja setat, descarca xDrip + și urmează instrucțiunile de pe ` LimitTTEer <https://github.com/JoernL/LimiTTer>` _ sau ` Libre Alarm <https://github.com/pimpimmi/LibreAlarm/wiki>` _.
+* În xDrip mergi la Settings > Interapp Compatibility > Broadcast Data Locally și selecteaza ON.
+* În xDrip mergi la Settings > Interapp Compatibility > Accept Treatments și selectează OFF.
+* Dacă vrei sa introduci calibrări din AndroidAPS, in xDrip, mergi la Settings > Interapp Compatibility > Accept Calibrations și selectează ON.  S-ar putea să doriți de asemenea să revizuiți opțiunile din Settings > Less Common Settings > Advanced Calibration Settings.
+* Alege xDrip în ConfigBuilder (setare din AndroidAPS).
+* Pentru setări în xDrip + cu capturi de ecran vezi ' xDrip + settings page <../Configuration/xdrip.html>` __. Există o parte pentru setări de bază în xDrip+ și pentru setări Freestyle Libre xDrip+.
+* If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 
-If using Glimp
+Dacă se folosește aplicația Glimp
 ==================================================
-* You will need Glimp version 4.15.57 or newer. Older versions are not supported.
-* If not already set up then download Glimp and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-for-libre>`_.
-* Select Glimp in ConfigBuilder (setting in AndroidAPS).
+* Vei avea nevoie de Glimp versiunea 4.15.57 sau mai noua. Versiunile mai vechi nu sunt compatibile.
+* If not already set up then download Glimp and follow instructions on `Nightscout <https://nightscout.github.io/uploader/setup/#glimp>`_.
+* Selectează Glimp în ConfigBuilder (setare în AndroidAPS).

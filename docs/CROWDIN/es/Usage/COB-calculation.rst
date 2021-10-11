@@ -15,7 +15,7 @@ Los carbohidratos no absorbidos se cortan después del tiempo especificado
 AAPS, promedio ponderado
 --------------------------------------------------
 
-la absorción se calcula para tener `COB == 0` después del tiempo especificado
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, Promedio ponderado
@@ -32,10 +32,10 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 Normalmente, AAPS detecta la absorción de carbohidros a través de desviaciones de BG. En caso de que haya especificado carbohidratos, pero AAPS no puede ver su absorción estimada a través de las desviaciones BG, utilizará el método `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ para calcular la absorción en su lugar (lo que se denomina 'fallback'). Como este método calcula sólo la absorción mínima de carbohidratos sin considerar desviaciones de BG, podría llevar a valores de COB incorrectos.
 
-.. imagen:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: Pista de un valor COB incorrecto
 
-En la captura de pantalla de arriba, 41% de 1 vez que la absorción de carbohidratos fue calculada matemáticamente por el min_5m_carbimpacto en lugar del valor detectado de las desviaciones.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Esto significa que tal vez tenga menos carbohidratos a bordo que los calculados por el algoritmo. 
 
 ¿Cómo hacer frente a esta advertencia? 
 --------------------------------------------------

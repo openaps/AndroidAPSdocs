@@ -69,7 +69,7 @@ Vous pouvez également supprimer le sélecteur de profil directement dans mLab c
 ### 'Changement de profil reçu de NS mais le profil n'existe pas localement'
 
 * Le profil demandé n'a pas été correctement synchronisé depuis Nightscout.
-* Suivez les instructions ci-dessus pour effacer le changement de profil
+* Follow instructions from above to delete the profile switch
 
 Vous pouvez également supprimer le changement de profil directement dans mLab :
 
@@ -80,4 +80,4 @@ Vous pouvez également supprimer le changement de profil directement dans mLab :
 ### 'DAI 3h trop court'
 
 * Le message d'erreur apparaîtra si votre durée d'action de l'insuline dans votre profil est à une valeur que AndroidAPS ne pense pas être exacte. 
-* Lisez la section [sélection de la valeur de DAI](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.
+* Lisez la section [sélection de la valeur de DAI](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) et modifiez-la dans votre profil, puis faites un [Changement de profil](../Usage/Profiles) pour continuer.

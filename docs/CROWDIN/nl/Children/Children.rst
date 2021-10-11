@@ -2,7 +2,7 @@ Volgen op afstand
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Toezicht op kinderen
+  :alt: Kinderen volgen
   
 AndroidAPS biedt verschillende opties voor het vanaf afstand volgen van kinderen en kan ook behandelings opdrachten verzenden vanaf afstand. Deze functies kun je natuurlijk ook gebruiken om jouw partner of andere dierbare op afstand te volgen.
 
@@ -12,12 +12,12 @@ Functies
 * Ouders kunnen op afstand volgen en alle relevante gegevens bekijken, zoals bloedglucose, koolhydraten aan boord, insuline aan boord etc. door middel van de ** NSClient app** op hun telefoon. De instellingen in zowel AndroidAPS en in NSClient moeten exact hetzelfde zijn.
 * Ouders kunnen glucose alarmen op hun telefoon ontvangen via de **xDrip+ app in 'follower' modus** op hun telefoon.
 * Besturing van AndroidAPS op afstand, met behulp van `SMS Commando's <../Children/SMS-Commands.html>`_ beveiligd door tweestaps authenticatie.
-* Profiel wissels en tijdelijke streefdoelen kunnen op afstand worden ingesteld via de NSClient app.
+* Op afstand besturen via de NSClient app wordt alleen aanbevolen als synchronisatie naar behoren werkt (dwz je ziet geen ongewenste veranderingen in gegevens, zoals een TT, TBR etc die 'uit zichzelf' lijkt te zijn ingesteld) zie je `release-notes voor versie 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ voor meer details.
 
 Hulpmiddelen en apps voor controle op afstand
---------------------------------------------------
-* `Nightscout <http://www.nightscout.info/>`_ in webbrowser (voornamelijk data weergave)
-*	NSClient app
+==================================================
+* `Nightscout <https://nightscout.github.io/>`_ in webbrowser (voornamelijk data weergave)
+* NSClient app is een uitgeklede versie van AAPS waarmee je iemand kunt volgen, en waarmee je: profiel wissels kunt doen, tijdelijke streefdoelen kunt instellen en koolhydraten kunt invoeren. Er zijn 2 apps: NSClient & NSClient2 die je kunt `downloaden <https://github.com/nightscout/AndroidAPS/releases/>`_. Het enige verschil is de naam van de app. Op deze manier kun je de app twee keer installeren op dezelfde telefoon, om 2 verschillende personen/nachtscouts te kunnen volgen (bijv. als 2 gezinsleden diabetes hebben).
 * Dexcom follow als je de originele Dexcom app gebruikt (alleen BG waarden)
 * `xDrip+ <../Configuration/xdrip.html>`_ in 'follow'modus (voornamelijk BG waarden en **alarmen**)
 *    `Sugarmate <https://sugarmate.io/>`_ of `Spike <https://spike-app.com/>`_ op iOS (voornamelijk voor BG waarden en **alarmen**)

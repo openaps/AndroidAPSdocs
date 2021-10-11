@@ -16,7 +16,7 @@ Activiteit & feedback
 * Ouderdom van sensor/canule etc is verplaatst naar Acties.
 * BG controle is verplaatst naar Acties.
 * Tijd. streefdoel is verplaatst naar Acties.
-* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#id1>`_ op deze pagina).
+* Sport is niet langer beschikbaar, maar je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#koolhydraten-bolus>`__ op deze pagina).
 
 Koolhydraten & bolus
 ==============================
@@ -26,8 +26,8 @@ Koolhydraten & bolus
 * Om een bolus te noteren - of het nu gaat om snack, maaltijd of correctie - gebruik de insuline knop op het Overzcht scherm **en let op dat je kiest voor "Geen bolus toedienen, enkel in behandelingen zetten"!**
 * Om insuline achteraf in te voeren, d.w.z. om een bolus te registreren die je enige tijd geleden met de pen hebt gegeven, moet je de Insuline knop gebruiken: vink het keuzevakje "Geen bolus toedienen, enkel in behandelingen zetten" aan, en dan verschijnt er een Tijd-veld waar je een negatieve waarde kunt invullen (bijv. -30 als je een half uur geleden hebt gespoten).
 
-   .. image:: ../images/Careportal_25_26_5.png
-     :alt: Achteraf insuline registreren via insuline knop
+  .. image:: ../images/Careportal_25_26_5.png
+    :alt: Achteraf insuline registreren via insuline knop
 
 * Voor koolhydraten correctie gebruik de koolhydraten knop op het Overzicht scherm.
 * Tijdelijke basaalstanden kunnen gestart en gestopt worden via Acties. NB: De knop verandert van "TIJD. BASAAL" naar "ANNULEER x%" wanneer een tijdelijke basaalstand is ingesteld.
@@ -38,7 +38,7 @@ CGM & OpenAPS
   :alt: Careportal CGM & OpenAPS
   
 * CGM sensor ingebracht is verplaatst naar Acties.
-* Alle andere functies uit deze sectie zijn verwijderd. Je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#carbs-- bolus>`_ op deze pagina).
+* Alle andere functies uit deze sectie zijn verwijderd. Je kunt het notitie-veld gebruiken dat naar voren komt wanneer je een actie invoert, bijv. bij het geven van bolus. (zie screenshot in sectie `Koolhydraten & bolus <#koolhydraten-bolus>`__ op deze pagina).
 
 Pomp
 ==============================

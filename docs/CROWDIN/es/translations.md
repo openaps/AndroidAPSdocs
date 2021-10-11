@@ -1,10 +1,10 @@
 # Cómo traducir AndroidAPS y la documentación
 
-* Vaya a <https://crowdin.com/project/androidaps> o <https://crowdin.com/project/androidapsdocs> e inicie sesión utilizando su cuenta de Github
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
 * Envíe una solicitud de unión al equipo de documentación. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
-* Cuando se apruebe, haga clic en la bandera ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
+* When we approve you, click the flag ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
 
 ## Traducir cadenas para AndroidAPS app
 

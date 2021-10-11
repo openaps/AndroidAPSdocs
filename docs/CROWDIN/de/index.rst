@@ -14,33 +14,40 @@ Die Hauptkomponenten sind:
 
 Für weitere Details lies bitte hier weiter.
 
-Erste Schritte
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-   
+   :glob:
+   :caption: Sprache wechseln
+
+   Sprache wechseln <./changelanguage.rst>
+
+.. _getting-started:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Erste Schritte
+
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
    Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Insulinpumpen <./Getting-Started/Pump-Choices.md>
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
-   
-   
-Was brauche ich? 
---------------------------------------------------
+
+.. _what-do-i-need:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Was brauche ich? 
+
    Module <./Module/module.rst>
    Konfigurationsbeispiel <./Getting-Started/Sample-Setup.md>
 
-   
-AndroidAPS installieren
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Wie man AndroidAPS installiert
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +56,36 @@ AndroidAPS installieren
    Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
-   
-   
-Komponenten-Setup
---------------------------------------------------
+
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
-   :glob:
-   
+    
+   :caption: Komponenten-Setup
+
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Einstellungen <./Configuration/xdrip.md>
    Pumpen <./Hardware/pumps.rst>
    Smartphones <./Hardware/Phoneconfig.rst>
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
-   
 
-AndroidAPS einrichten 
---------------------------------------------------
-.. toctree::
-   :maxdepth: 1
-    
-   
-   Konfigurations-Generator <./Configuration/Config-Builder.md>
-   Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS Nutzung
---------------------------------------------------
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
        
-    
+   :caption: AndroidAPS einrichten
+
+   Konfigurations-Generator <./Configuration/Config-Builder.md>
+   Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: AndroidAPS Nutzung
+
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
    Objectives (Ziele) <./Usage/Objectives.rst>
    OpenAPS-Funktionen <./Usage/Open-APS-features.md>   
@@ -94,80 +99,70 @@ AndroidAPS Nutzung
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
    Android Auto <./Usage/Android-auto.md>  
- 
-Allgemeine Hinweise 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
-       
-   
+   :glob:
+   :caption: Allgemeine Hinweise 
+
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>
-   
+   xDrip+ engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
-AndroidAPS für Kinder
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-   
+   :glob:
+   :caption: AndroidAPS für Kinder
+
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Children/SMS-Commands.rst>
+   Profile helper <./Configuration/profilehelper.rst>
    
-
-Problembehandlung
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
+   :glob:
+   :caption: Problembehandlung
+
    Problembehandlung <./Usage/troubleshooting.rst>
-   
+   Nightscout Client <./Usage/Troubleshooting-NSClient.html>
 
-FAQ 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
+   :glob:
+   :caption: FAQ
+
    FAQ <./Getting-Started/FAQ.md>
 
-   
-Glossar
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-  
-   Glossar <./Getting-Started/Glossary.md>
-  
+   :glob:
+   :caption: Glossar
 
-Hilfe durch die Community 
---------------------------------------------------
+   Glossar <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
+   :caption: Hilfe durch die Community 
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
    Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 
-Für Mediziner & Fachpersonal
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
-            
+   :glob:
+   :caption: Für Mediziner & Fachpersonal
+
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
 
-Mithelfen in der Community
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
-       
+   :glob:
+   :caption: Mithelfen in der Community
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
    App oder Docs übersetzen <./translations.md>
@@ -183,4 +178,4 @@ Mithelfen in der Community
 
 	* Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-	Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ oder `Medtronic <http://www.medtronic.com/>`_
+	Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ oder `Medtronic <https://www.medtronic.com/>`_

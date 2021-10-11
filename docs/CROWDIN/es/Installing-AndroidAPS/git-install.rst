@@ -4,7 +4,7 @@ Windows
 ==================================================
 1. Descargar git
 --------------------------------------------------
-* ** Usted tiene que estar en línea todo el tiempo ya que Android Studio descarga varias actualizaciones! **
+* **You have to be online all of the time as Android Studio downloads several updates!**
 * Cualquier versión de git sirve. Por ejemplo, `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
 * Asegúrese de tomar nota de la ruta de acceso de instalación. Lo necesitará en el siguiente paso.
 
@@ -34,7 +34,7 @@ Windows
 
 * In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 * Use `search function <https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>`_ in windows explorer to find "git.exe" if you are unsure where it can be found. Está buscando git.exe ubicado en la carpeta \bin\.
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 * Close settings window by clicking "OK" button (5.).
 
   .. image:: ../images/AndroidStudio361_11.png
@@ -47,14 +47,14 @@ Windows
 4. Comprobar configuración de git en Android Studio
 --------------------------------------------------
 * Abrir ventana de terminal en Android Studio
-* Enter "`git - -version`" (without quotation marks and no spaces between the two - [minus sign]!) and press Return
+* Enter ``git --version`` (without quotation marks and no spaces between the two - [minus sign]!) and press Return
 
-  .. imagen:: ../images/AndroidStudio_gitversión1.png
+  .. image:: ../images/AndroidStudio_gitversion1.png
     :alt: git - -version
 
 * Si git está instalado y conectado correctamente, recibirá una información sobre la versión instalada que se muestra de la siguiente manera:
 
-  .. imagen:: ../images/AndroidStudio_gitversión2.png
+  .. image:: ../images/AndroidStudio_gitversion2.png
     :alt: resultado git-version
 
 Mac

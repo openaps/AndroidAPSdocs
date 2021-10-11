@@ -18,7 +18,7 @@ AndroidAPS yra skirtas pompos valdymui ir insulino suleidimui. Remiantis galioja
 
 Pirmiausia turite **paruošti komponentus, kurie veikia su AAPS**:
 
-* [palaikomą insulino pompą](Pump-Choices.md) 
+* A [supported insulin pump](./Pump-Choices.md), 
 * [Android išmanusis telefonas](Phones.md) (Apple iOS nepalaiko„AndroidAPS“ - vietoj to pabandykite [iOS Loop](https://loopkit.github.io/loopdocs/)), ir 
 * [Nuolatinė gliukozės kiekio kraujyje (KG) stebėjimo sistema](../Configuration/BG-Source.rst). 
 
@@ -26,7 +26,7 @@ Antra, jūs turite **sukonfigūruoti savo įrangą**. Žr. [Diegimo pažingsniui
 
 Trečia, turite **konfigūruoti programinės įrangos komponentus**: AndroidAPS ir kraujo gliukozės monitoringo šaltinius.
 
-Ketvirta, jūs turite **išmokti ir suprasti rekomenduojamą OpenAPS struktūrą, kad galėtumėte patikrinti savo terapijos veiksnius**. Pagrindinis uždaro ciklo principas: tiksliai nustatytos valandinės bazės ir insulino - angliavandenių rodikliai. Visose rekomendacijose daroma prielaida, kad pagrindinį poreikį patenkina bazinis insulinas ir kad atsirandantys gliukozės kiekio kraujyje svyravimai atsiranda dėl kitų priežasčių (mankšta, stresas ir kt.), kurias tuo metu reikia koreguoti. Saugumo sumetimais koregavimai, kuriuos AAPS gali atlikti automatiškai, yra riboti (žr. „Maksimalus leistinas laikinas bazinis dažnis“ [OpenAPS struktūra](https://openaps.org/reference-design/)). Tai reiškia, kad neturėtumėte naudoti ciklo neteisingam bazinio greičio profiliui ištaisyti. Pvz., jei prieš valgį dažnai turite žemą glikemiją, tada tikriausiai turite pakoreguoti valandinę bazę. Naudodamiesi [Automatinis derinimas Autotune](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig), galite naudoti daugybę esamų terapijos duomenų norėdami sužinoti, ar reikia koreguoti bazes, IA ir JIF. Arba galite patikrinti ir nustatyti bazę [senuoju būdu](http://integrateddiabetes.com/basal-testing/).
+Ketvirta, jūs turite **išmokti ir suprasti rekomenduojamą OpenAPS struktūrą, kad galėtumėte patikrinti savo terapijos veiksnius**. Pagrindinis uždaro ciklo principas: tiksliai nustatytos valandinės bazės ir insulino - angliavandenių rodikliai. Visose rekomendacijose daroma prielaida, kad pagrindinį poreikį patenkina bazinis insulinas ir kad atsirandantys gliukozės kiekio kraujyje svyravimai atsiranda dėl kitų priežasčių (mankšta, stresas ir kt.), kurias tuo metu reikia koreguoti. Saugumo sumetimais koregavimai, kuriuos AAPS gali atlikti automatiškai, yra riboti (žr. „Maksimalus leistinas laikinas bazinis dažnis“ [OpenAPS struktūra](https://openaps.org/reference-design/)). Tai reiškia, kad neturėtumėte naudoti ciklo neteisingam bazinio greičio profiliui ištaisyti. Pvz., jei prieš valgį dažnai turite žemą glikemiją, tada tikriausiai turite pakoreguoti valandinę bazę. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Svarbūs praktiniai aspektai?
 
@@ -66,10 +66,10 @@ Saugumui užtikrinti sistemos rekomendacijos pateikiamos ne pagal vieną KG rodm
 
 Čia yra keli tinklaraščiai su naudingais patarimais, kurie padės suprasti, kaip veikia uždaro ciklo sisemos:
 
-* [Fine-tuning Settings](http://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](http://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
 * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](http://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Kokią atsarginę įrangą rekomenduojama turėti su savimi?
 
@@ -166,7 +166,7 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 
 > **PASTABA:**
 > 
-> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. Pradžioje 1 duonos vienetas prilygo 12g angliavandenių, vėliau buvo pakeista į 10g angliavandenių.
+> Kai kuriose Europos šalyse duonos vienetai buvo naudojami nustatant, kiek insulino reikia maistui. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
 > 
 > Pagal šį modelį angliavandenių kiekis buvo nustatomas fiksuotas, insulino kiekis buvo kintamas. ("Kiek insulino reikia padengti vienam duonos vienetui?")
 > 
@@ -174,7 +174,7 @@ Darant prielaidą, kad bazė yra teisinga, galite išbandyti pagal dabartinius n
 > 
 > Pavyzdys:
 > 
-> Duonos vieneto faktorius (DV = 12g angliavandenių): 2,4vv/DV -> Jums reikia 2,4 vienetų insulino, vienam duonos vienetui.
+> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
 > Atitinkamai IA: 12 g /2,4 vv = 5,0 g/vv -> 1 vienetas insulino dengia 5,0 g angliavandenių.
 > 
@@ -196,13 +196,13 @@ Jei po valgio angliavandeniai visiškai suskaidomi, AIO vėl tampa lygus nuliui,
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametras, kuris naudojamas susijungimui su IVT. Tai reiškia, kada korekcinė dozė turėtų nustoti veikti. Tai neturi nieko bendro su aktyvaus insulino AIO skaičiavimais. OpenAPS SMB šis parametras nebenaudojamas.
+AMA kontekste „dia“ nereiškia „insulino veikimo trukmė“. Tai parametras, kuris naudojamas susijungimui su IVT. Tai reiškia, kada korekcinė dozė turėtų nustoti veikti. Tai neturi nieko bendro su aktyvaus insulino AIO skaičiavimais. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profilis
 
 ### Kodėl verta naudoti minimalią IVT (insulino veikimo trukmė) 5 valandas, o ne 2 ar 3 valandas?
 
-Išsamiai paaiškinta [šiame straipsnyje](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nepamirškite `AKTYVUOTI PROFILĮ` pakeitus savo insulino veikimo trukmę DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nepamirškite `AKTYVUOTI PROFILĮ` pakeitus savo insulino veikimo trukmę DIA.
 
 ### Kas lemia, kad ciklas mažina mano glikemiją iki hipoglikemijos, nors aktyvių angliavandenių AAO nėra?
 
@@ -263,10 +263,10 @@ Rezervuaro keitimo negali atlikti per AndroidAPS - tik tiesiogiai per pompą.
 
 * AndroidAPS pagrindinio ekrano skirtuke paspauskite ir palaikykite mygtuką Atviras ciklas / Uždaras ciklas ir pasirinkite "Sustabdyti ciklą 1 val."
 * Dabar atjunkite pompą, ir pakeiskite rezervuarą pagal pompos instrukciją.
-* Taip pat, pirminis užpildymas bei žarnelės ir kaniulės užpildymas gali būti atliekamas tiesiogiai iš pompos. Tokiu atveju naudokite [KATETERIO KEITIMO mygtuką](../Usage/CPbefore26#pump) veiksmų skirtuke, tiesiog užregistruoti šį veiksmą.
+* Also priming and filling tube and cannula can be done directly on the pump. Tokiu atveju naudokite [KATETERIO KEITIMO mygtuką](../Usage/CPbefore26#pump) veiksmų skirtuke, tiesiog užregistruoti šį veiksmą.
 * Iš naujo prijungę pompą, atnaujinkite ciklą ilgai paspausdami mygtuką „Sustabdyta (X min.)“.
 
-AndroidAPS nenaudoja pompos funkcijos „Pirminis kateterio užpildymas“, o užpildo kateterį įprastu bolusu, kuris į istoriją neįrašomas. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke Veiksmai naudokite mygtuką „Kateterio keitimas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte užpildyti kateterio kaniulę. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. Norėdami sužinoti, kiek vienetų turėtumėte naudoti, priklausomai nuo adatos ir vamzdelio ilgio, skaitykite kateterio (kaniulės) instrukcijas.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Tai reiškia, kad jis nenutraukia tuo metu nustatytos laikinos valandinės bazės. AndroidAPS skirtuke Veiksmai naudokite mygtuką „Kateterio keitimas“, kad nustatytumėte reikiamą insulino kiekį ir pradėtumėte užpildyti kateterio kaniulę. Jei kiekis nėra pakankamas, pakartokite užpildymą. Numatytuosius kiekius galite nustatyti trijų taškų meniu, esančiame skiltyje Nustatymai > Kita > Užpildymas / pirminio užpildymo standartiniai kiekiai. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fonas
 
@@ -300,7 +300,7 @@ Kai naudojate uždarą ciklą, turėtumėte pabandyti šiuos veiksmus:
 * Nustatyti [Aktyvumo laikiną tikslą](../Usage/temptarget#activity-temp-target) virš jūsų įprastinio tikslo.
 * Jei naudojate SMB, įsitikinkite, kad funkcijos ["Įjungti SMB su aukštais tikslais"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) ir ["Įjungti SMB visada"](../Usage/Open-APS-features#enable-smb-always) yra išjungtos.
 
-Svarbus išankstinis ir vėlesnis šių parametrų apdorojimas. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
+Pre- and post-processing of these settings is important. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
 
 Jei sportuojate reguliariai tuo pačiu metu (pvz., sportuojate sporto salėje), galite naudoti [Automatizavimą](../Usage/Automation.rst), kad pakeistumėte profilį ir laikinus tikslus. Geografine padėtimi pagrįsta automatizavimas taip pat yra gera idėja, tačiau apsunkina išankstinį apdorojimą.
 

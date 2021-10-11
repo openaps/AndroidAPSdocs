@@ -84,7 +84,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
   
 .. image:: ../images/fsl2pic7a.jpg
   :alt: xDrip+ log
-  #
+
 Step 3: Start sensor
 ==================================================
 
@@ -95,7 +95,7 @@ In fact this will not start any Libre2 sensor or interact with them in any case.
 Step 4: Configure AndroidAPS
 ==================================================
 * In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use `Identify receiver` as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
+* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identifiziere-empfanger>`_.
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
 

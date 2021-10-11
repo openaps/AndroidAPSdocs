@@ -3,7 +3,7 @@ Dexcom G6
 Pirmiausia pagrindai
 ==================================================
 
-* Laikykitės pagrindinių NGJ higienos ir nustatymų rekomendacijų, kurios pateiktos čia: <../Hardware/GeneralCGMRecommendation.html>`_.
+* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
 * G6 siųstuvams, pagamintiems nuo 2018 metų rudens/pabaigos, prašome įsitikinkite, kad naudojate vieną naujausių xDrip+ versijų <https://github.com/NightscoutFoundation/xDrip/releases>`_. Šie siųstuvai turi naują programinę įrangą, o vėliausia stabili xDrip+ versija (2019/01/10) su ja neveikia.
 
 Bendrieji patarimai naudojant uždarą ciklą su G6
@@ -17,7 +17,7 @@ Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudot
 „Išankstinis įmirkymas“ (sensoriaus įvedimas daug anksčiau nei jo pradžia programoje) G6 su gamykliniu kalibravimu gali sukelti duomenų nukrypimus. Jei sensorių įvedate anksčiau, nei jį startuojate, gali reikėti jį kalibruoti, kad gautumėte geriausius rezultatus.
 * Jei neplanuojate sekti visų galimų nukrypimų, geriau grįžti į tradicinį kalibravimo režimą ir naudoti sistemą kaip G5.
 
-Norėdami gauti daugiau informacijos ir šių rekomendacijų priežastis, skaitykite Tim Street <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>visą straipsnį svetainėje www.diabettech.com<http://www.diabettech.com>`_.
+To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
 
 Jei naudojate G6 su xDrip+
 ==================================================
@@ -26,20 +26,20 @@ Jei naudojate G6 su xDrip+
 * Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia `modifikuotos Dexcom programos <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
-* Pritaikykite xDrip+ nustatymus pagal 'xDrip+ nustatymų puslapį <../Configuration/xdrip.html>`_
-* Jei AAPS negauna glikemijos duomenų, kai telefonas veikia skrydžio režimu, naudokite funkciją 'Nustatyti gavėją', kaip aprašyta xDrip+ nustatymų puslapyje <../Configuration/xdrip.html>`_.
+* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
+* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
 Kai naudojate G6 su modifikuota Dexcom programa
 ==================================================
 * Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G6).
 
-   * Aplankas 2.4 dabartinės versijos vartotojams, aplankas 2.3 yra tik pasenusiam AndroidAPS 2.3.
-   * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. 
-   * Click the link to the Dexcom G6 app on the search results page that is displayed.
-   * Region will be visible in URL.
-   
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Regiono Dexcom G6 URL
+  * Aplankas 2.4 dabartinės versijos vartotojams, aplankas 2.3 yra tik pasenusiam AndroidAPS 2.3.
+  * Atidarykite https://play.google.com/store/search?q=dexcom%20g6 savo kompiuteryje. 
+  * Click the link to the Dexcom G6 app on the search results page that is displayed.
+  * Region will be visible in URL.
+
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Regiono Dexcom G6 URL
 
 * Uninstall the original Dexcom app.
 * Įdiekite atsisiųstą apk
@@ -62,7 +62,7 @@ If using G6 with Build Your Own Dexcom App
 Settings for AndroidAPS
 --------------------------------------------------
 * Select 'Dexcom App (patched)' in config builder.
-* If you don't recieve any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 Settings for xDrip+
 --------------------------------------------------
@@ -87,9 +87,9 @@ Dexcom G6 specifinių trikčių šalinimas
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-Bendrųjų trikčių šalinimas
+General troubleshooting
 --------------------------------------------------
-Bendrųjų trikčių šalinimą, skirtą NGJ, galite rasti 'čia <./GeneralCGMRecommendation.html#troubleshooting>`_.
+General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------

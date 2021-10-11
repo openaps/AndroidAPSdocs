@@ -23,7 +23,7 @@
 * Para DanaRS con el firmware v1 y v2 la contraseña predeterminada es 1234.
 * Para DanaRS con firmware v3 la contraseña predeterminada es una combinación de mes de producción y fecha de producción (por ejemplo, mes 01 y día 24). Open main menu on pump > review > information. Number 3 is production date.
 
-* **¡Debe confirmar el emparejamiento en la bomba! ** Esa es la forma en que está acostumbrado a otros emparejamientos de bluetooth (es decir, móvil y audio del coche).
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
     
     ![Emparejamiento de confirmación Dana RS](../images/DanaRS_Pairing.png)
 
@@ -85,7 +85,7 @@ En caso de que la conexión entre la AAPS y Dana RS se pierde durante la infusi�
 
 ## Nota especial al cambiar de teléfono
 
-Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
+When switching to a new phone the following steps are necessary:
 
 * [Exportar valores](../Usage/ExportImportSettings#export-settings) en el teléfono antiguo
 * Transfer settings from old to new phone
@@ -97,4 +97,4 @@ Al cambiar a un teléfono nuevo, los siguientes pasos son necesarios:
 
 ## Cambio de zona horaria al viajar con la bomba Dana RS
 
-Para obtener información sobre cómo actuar a través de zonas horarias consulte la sección [cambio de zona Horaria con bombas](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

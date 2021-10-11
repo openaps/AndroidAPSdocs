@@ -1,6 +1,6 @@
 # Comment traduire l'application et la documentation wiki
 
-* Allez à <https://crowdin.com/project/androidaps> ou <https://crowdin.com/project/androidapsdocs> et connectez-vous à l'aide de votre compte Github
+* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
 * Envoyez une demande d'adhésion à l'équipe Wiki. Pour le faire, cliquez sur le drapeau de la langue souhaitée, puis sur le bouton "Join" dans le coin supérieur droit de la page suivante. Veuillez renseigner la langue, donner quelques informations sur vous et votre expérience AAPS et si vous voulez être un traducteur ou un correcteur (seulement les personnes qualifiées pour traduire + les utilisateurs avancés d'AndroidAPS).
 
@@ -62,7 +62,7 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 #### Traduction des liens dans les fichiers Markdown (.md)
 
-À l'heure actuelle deux [formats de documents](./make-a-PR#code-syntax) sont utilisés dans les docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
+À l'heure actuelle deux [formats de documents](./make-a-PR#syntaxe-du-code) sont utilisés dans les docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
 
 * * *
 

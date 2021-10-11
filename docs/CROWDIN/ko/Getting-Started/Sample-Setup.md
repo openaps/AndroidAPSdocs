@@ -18,7 +18,7 @@ Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 x
 
 1. 삼성 갤럭시 S7
     
-    * 대안: AndroidAPS 사용을 위해 [테스트해본 폰과 워치의 리스트](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435)를 확인하세요
+    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
 
 2. [DanaRS(다나알에스)](http://www.sooil.com/eng/product/)
     
@@ -35,7 +35,7 @@ Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 x
 
 4. 옵션: 소니 스마트워치3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435) for AndroidAPS (OS must be Android Wear)
+    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
 ## Nightscout 설정
 

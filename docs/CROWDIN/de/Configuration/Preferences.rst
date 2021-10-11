@@ -20,6 +20,9 @@ Einstellungen
   .. image:: ../images/Pref2021_Filter.png
     :alt: Filter in Einstellungen
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 Allgemein
 ===========================================================
@@ -46,8 +49,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-
-   ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
+  ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -61,7 +63,7 @@ Schutz der Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. ` AAPS-Nutzung durch Kinder <../Children/Children.html> ` _).
 * Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ verwenden möchtest.
-* Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie oben beschrieben festzulegen <../Configuration/Preferences.html#master-passwort> ` _.
+* Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie `oben beschrieben <../Configuration/Preferences.html#master-passwort>`__ festzulegen.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Schutz
@@ -172,14 +174,14 @@ Möglichkeit zur Erfassung von Notizen in Behandlungsdialogen
 Statusanzeige
 -----------------------------------------------------------
 * Status Anzeigen geben eine optische Warnung für 
-      
-   * Sensoralter
-   * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite `AndroidAPS Bildschirme <../Getting-Started/Screenshots#sensor-level-batterie>`_).
-   * Insulinalter (Tage Reservoirverwendung)
-   * Reservoirstand (Einheiten)
-   * Kanülenalter
-   * Alter der Pumpenbatterie
-   * Stand (%) der Pumpenbatterie
+
+  * Sensoralter
+  * Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite `AndroidAPS Bildschirme <../Getting-Started/Screenshots.html#sensor-level-batterie>`_).
+  * Insulinalter (Tage Reservoirverwendung)
+  * Reservoirstand (Einheiten)
+  * Kanülenalter
+  * Alter der Pumpenbatterie
+  * Stand (%) der Pumpenbatterie
 
 * Bei Überschreiten der Warnschwelle werden die Werte gelb angezeigt.
 * Bei Überschreiten der kritischen Warnschwelle werden die Werte rot angezeigt.
@@ -191,8 +193,8 @@ Statusanzeige
 Erweiterte Einstellungen (Übersicht)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Einstellungen > Status Lights
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Einstellungen > Status Lights
 
 Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -202,10 +204,10 @@ Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 
 Bolus-Berater
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
+* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
 * Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`_ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Nachricht des Bolus-Beraters
@@ -254,7 +256,7 @@ Minimaler Wert zur Anfrage einer Änderung [%]
 
 Advanced Meal Assist (AMA) oder Super Micro Bolus (SMB)
 ===========================================================
-Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuration/Config-Builder.html>` _ kannst Du zwischen zwei Algorithmen wählen:
+Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuration/Config-Builder.html>`__ kannst Du zwischen zwei Algorithmen wählen:
 
 * `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama>`_ - Stand des Algorithmus in 2017
 * `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - Der aktuellste Algorithmus für erfahrene Nutzer
@@ -262,7 +264,7 @@ Abhängig von Deinen Einstellungen im `Konfigurations-Generator <../Configuratio
 OpenAPS AMA-Einstellungen
 -----------------------------------------------------------
 * Erlaubt AAPS nach einem Essen schneller mit einer Erhöhung der Basalrate zu reagieren - WENN Du die Kohlenhydrate zuverlässig eingibst. 
-* Mehr Details zu den Einstellungen und Autosens findest Du in den `OpenAPS Docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+* Mehr Details zu den Einstellungen und Autosens findest Du in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
 
 Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -301,13 +303,13 @@ Autosens
 Erweiterte Einstellungen (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
-* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
+* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ und stelle sicher, dass Du weißt, was Du tust.
 
 OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
 * Im Gegensatz zu AMA verwendet `SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
 * Du musst `Ziel (objective) 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
-* Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`_
+* Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__
 * Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.
 * *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid. 
 * Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt `Autosens <../Usage/Open-APS-features.html#autosens>`_ Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
@@ -331,13 +333,13 @@ Kohlenhydrat-Vorschlag
 Erweiterte Einstellungen (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
-* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ und stelle sicher, dass Du weißt, was Du tust.
+* Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ und stelle sicher, dass Du weißt, was Du tust.
 
 Resorptions-Einstellungen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Resorptions-Einstellungen
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Resorptions-Einstellungen
 
 min_5m_carbimpact
 -----------------------------------------------------------
@@ -346,7 +348,7 @@ min_5m_carbimpact
 * So lange der Kohlenhydratabbau nicht dynamisch aus den Veränderungen des BZ ermittelt werden kann, wird ein Standardwert für den Abbau angesetzt. Im Prinzip ist es eine Notlauffunktion.
 * Einfach gesagt: Der Algorithmus "weiß", wie sich Deine BZ-Werte unter Berücksichtigung der aktuellen Insulindosis etc. **entwickeln sollten**. 
 * Wenn eine positive Abweichung vom erwarteten Verhalten registriert wird, werden einige Kohlenhydrate absorbiert/aufgenommen. Große Abweichung = viele Kohlenhydrate etc. 
-* Das min_5m_carbimpact definiert die Standard-Kohlenhydrat-Resorptionswirkung pro 5 Minuten. Für weitere Details siehe `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
+* Das min_5m_carbimpact definiert die Standard-Kohlenhydrat-Resorptionswirkung pro 5 Minuten. Für weitere Details siehe `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
 * Der Standardwert für AMA ist 5, für SMB ist es 8.
 * Im COB-Diagramm auf dem Startbildschirm werden Zeiten, in denen min_5m_impact verwendet wird, mit einem orangenen Punkt auf der Diagrammlinie markiert.
 
@@ -364,7 +366,7 @@ Erweiterte Einstellungen - Autosens-Faktoren
 
 Pumpen-Einstellungen
 ===========================================================
-Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pump>`_ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pump>`__ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
 * `DanaR Insulinpumpe <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS Insulinpumpe <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -377,8 +379,8 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 Nightscout-Client
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
 * Gib Deine *Nightscout URL* (z.B. https://yourwebsitename.herokuapp.com) und das *API secret* (ein 12-stelliges Passwort, dass Du in den Variablen bei Heroku definiert hast) ein.
 * Das versetzt AndroidAPS in die Lage, Daten von Nightscout zu lesen und zu schreiben.  
@@ -390,8 +392,8 @@ Nightscout-Client
 Verbindungseinstellungen
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient Verbindungseinstellungen  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: NSClient Verbindungseinstellungen
   
 * Beschränken den Nightscout-Upload auf WLAN-Verbindungen oder sogar auf bestimmte WLAN-SSIDs.
 * Wenn Du nur ein bestimmtes WLAN-Netzwerk verwenden möchtest, kannst du dessen WiFi SSID eingeben. 
@@ -401,15 +403,15 @@ Verbindungseinstellungen
 Alarm-Optionen
 -----------------------------------------------------------
 * In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.  
-* Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
+* Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
 * Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
 * Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder gepatchte Dexcom App) nutze stattdessen deren Alarme.
 
 Erweiterte Einstellungen (Nightscout-Client)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS-Client - erweiterte Einstellungen
+.. image:: ../images/Pref2020_NSClientAdv.png
+  :alt: NS-Client - erweiterte Einstellungen
 
 * Die meisten Optionen in den erweiterten Einstellungen sind selbsterklärend.
 * *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+). 
@@ -421,7 +423,7 @@ Erweiterte Einstellungen (Nightscout-Client)
 
 SMS Kommunikator
 ===========================================================
-* Einstellmöglichkeiten werden nur angezeigt, wenn Du zuvor den SMS Kommunikator im `Konfigurations-Generator <../Configuration/Config-Builder.html#sms-kommunikator>`_ aktiviert hast.
+* Einstellmöglichkeiten werden nur angezeigt, wenn Du zuvor den SMS Kommunikator im `Konfigurations-Generator <../Configuration/Config-Builder.html#sms-kommunikator>`__ aktiviert hast.
 * Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten).  
 * Weitere Information findest Du auf der Seite `SMS-Befehle <../Children/SMS-Commands.html>`_.
 * Zusätzliche Sicherheit wird durch die Verwendung einer Authentifikator-App und einer zusätzlichen PIN am Tokenende erreicht.
@@ -437,24 +439,24 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 Lokale Alarme
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Lokale Alarme
+.. image:: ../images/Pref2020_LocalAlerts.png
+  :alt: Lokale Alarme
 
 * Einstellungen sollten selbsterklärend sein.
 
 Datenübermittlung
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Datenübermittlung
+.. image:: ../images/Pref2020_DataChoice.png
+  :alt: Datenübermittlung
 
 * Du kannst bei der Weiterentwicklung von AAPS unterstützen, indem Du Absturzberichte an die Entwickler sendest.
 
 Wartungseinstellungen
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Wartungseinstellungen
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Wartungseinstellungen
 
 * Standardempfänger von Protokollen ist logs@androidaps.org.
 * Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem `master password <../Configuration/Preferences.html#master-passwort>`_ verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
@@ -464,5 +466,5 @@ Open Humans
 * Du kannst die Community unterstützen, indem Du Deine Daten für Forschungsprojekte zur Verfügung stellst. Weitere Informationen dazu findest Du auf der `Open Humans Seite <../Configuration/OpenHumans.html>`_.
 * In den Einstellungen kannst Du festlegen, wann Daten hochgeladen werden sollen
 
-   * nur über WLAN-Verbindungen
-   * nur während des Ladens
+  * nur über WLAN-Verbindungen
+  * nur während des Ladens

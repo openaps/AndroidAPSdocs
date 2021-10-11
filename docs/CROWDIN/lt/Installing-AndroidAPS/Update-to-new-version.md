@@ -16,11 +16,11 @@
 
 ## Trumpas vadovas patyrusiems vartotojams
 
-Prašau praleiskite šį punktą, jeigu atnaujinate pirmą kartą. Trumpas vadovas patyrusiems vartotojams. Kitas jūsų žingsnis būtų [įdiegti git](../Installing-AndroidAPS/git-install.rst), jei dar to nepadarėte.
+Please skip this paragraph if you are updating for the first time. Trumpas vadovas patyrusiems vartotojams. Kitas jūsų žingsnis būtų [įdiegti git](../Installing-AndroidAPS/git-install.rst), jei dar to nepadarėte.
 
-Jei jau atnaujinote AAPS ankstesnėje versijoje ir naudojate Windows kompiuterį, galite atlikti atnaujinimą keturiais paprastais žingsniais:
+If you have already updated AAPS from previous versions and use a Windows PC you can update in four simple steps:
 
-1. [Eksportuokite nustatymus](../Usage/ExportImportSettings#how-to-export-settings) iš esamos AAPS versijos telefone ir išsaugokite
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Atnaujinkite vietinę kopiją](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [Generuokite pasirašomąAPK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Pasirinkite "app", o ne "wear"!)
 4. Priklausomai nuo jūsų [KG šaltinio](../Configuration/BG-Source.rst), įsitikinkite, kad [nustatytas gavėjas](../Configuration/xdrip#identify-receiver) xDrip arba naudoti modifikuotą Dexcom programą iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).

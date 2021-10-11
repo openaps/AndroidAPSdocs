@@ -6,7 +6,7 @@
 
 ### Ρυθμίσεις Nightscout
 
-Μπορείτε να αρνηθείτε την πρόσβαση του κοινού στην τοποθεσία Nightscout χρησιμοποιώντας [ ρόλους ελέγχου ταυτότητας ](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Ρυθμίσεις AndroidAPS
 
@@ -25,7 +25,7 @@
 
 ## Εγχειρίδιο εγκατάστασης Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Ο ιστότοπός σας Nightscout πρέπει να έχει τουλάχιστον την έκδοση 10 (εμφανίζεται ως 0,10...), οπότε ελέγξτε ότι εκτελείτε την[ τελευταία έκδοση ](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) διαφορετικά θα λάβετε ένα μήνυμα σφάλματος στην εφαρμογή AAPS σας. Μερικοί άνθρωποι θεωρούν ότι το κύκλωμα χρησιμοποιεί περισσότερο από την ελεύθερη ποσόστωση που επιτρέπεται, έτσι το heroku είναι η προτιμώμενη επιλογή.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Μεταβείτε στη διεύθυνση https://herokuapp.com/
 
@@ -37,18 +37,19 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Μπορούν να ρυθμιστούν διάφοροι συναγερμοί για την [παρακολούθηση της αντλίας](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), ειδικότερα για το πόσο άδεια είναι η μπαταρία: 
+  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Κάντε κλικ στην επιλογή "Save" στην κορυφή του πίνακα.
 
 ## Ημι-αυτοματοποιημένη ρύθμιση Nightscout
 
-Αυτή η υπηρεσία προσφέρεται δωρεάν από τον συνάδελφο Martin Schiftan δωρεάν αυτή τη στιγμή. Αν σας αρέσει η υπηρεσία, μπορείτε να στείλετε μια μικρή δωρεά (σύνδεσμος στην πλοήγηση στην αριστερή πλευρά).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Οφέλη**
 
@@ -56,6 +57,8 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 * Μείωση της χειρωνακτικής εργασίας καθώς ο Martin προσπαθεί να αυτοματοποιήσει τη διαδικασία.
 * Όλες οι ρυθμίσεις μπορούν να γίνουν μέσω φιλικού προς το χρήστη ιστοσελίδων. 
 * Η υπηρεσία περιλαμβάνει έναν αυτοματοποιημένο έλεγχο βασικού ρυθμού χρησιμοποιώντας το Autotune. 
-* Ο διακομιστής βρίσκεται στη Γερμανία.
+* The servers are located in Germany and Finland.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

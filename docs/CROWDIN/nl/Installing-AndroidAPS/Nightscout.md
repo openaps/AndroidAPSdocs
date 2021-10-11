@@ -6,7 +6,7 @@ Nightscout kan naast informatie en rapporten weergeven, ook worden gebruikt om A
 
 ### Nightscout instellingen
 
-Je kunt openbare toegang tot jouw Nightscout-site blokkeren met behulp van de [authentication roles](http://www.nightscout.info/wiki/welcome/website-features/0-9-features/authentication-roles) (verificatierollen).
+Je kunt openbare toegang tot jouw Nightscout-site blokkeren met behulp van de [authentication roles](https://nightscout.github.io/nightscout/security) (verificatierollen).
 
 ### AndroidAPS instellingen
 
@@ -25,7 +25,7 @@ Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](..
 
 ## Nightscout aanmaken
 
-We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) anders krijg je een foutmelding op je AAPS app.
+We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) anders krijg je een foutmelding op je AAPS app.
 
 * Ga naar https://herokuapp.com/
 
@@ -37,18 +37,19 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat ee
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), batterijpercentage raden we sowieso aan om te activeren: 
+  * Je kunt verschillende alarmen instellen voor [monitoring the pump ](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery% raden we sowieso aan om te activeren: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Klik op "Save" aan de bovenkant van het scherm.
 
 ## Nightscout aanmaken via ns.10be.de
 
-Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en is op dit moment gratis. Als je wilt dan zou je kunnen overwegen om hem een kleine donatie te sturen (via de link op zijn site, in de navigatiebalk aan de linkerkant).
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Voordelen van deze methode**
 
@@ -56,6 +57,8 @@ Deze service wordt aangeboden door een Duitse collega looper Martin Schiftan en 
 * Je hoeft minder dingen zelf in te stellen omdat Martin dat al voor jou gedaan heeft.
 * Alle instellingen kunnen via een gebruiksvriendelijke website worden gemaakt. 
 * Ook kun je hiermee je basaalstanden automatisch laten checken dmv Autotune. 
-* De server staat in Duitsland.
+* The servers are located in Germany and Finland.
 
-<http://ns.10be.de/en/index.html>
+<https://ns.10be.de/en/index.html>
+
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

@@ -7,7 +7,7 @@ Esté preparado para lo imprevisto. Es posible que cambie los valores importante
 
 La mejor práctica es la exportación después del cambio de valores o la finalización de un objetivo. 
 
-Los valores exportados deben copiarse en un almacenamiento en la nube o en su computadora. Así usted está preparado ante la pérdida o daño de su AAPS teléfono y no tiene que empezar desde cero.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. Así usted está preparado ante la pérdida o daño de su AAPS teléfono y no tiene que empezar desde cero.
 
 En un sistema Windows 10, se ve así:
   
@@ -21,12 +21,12 @@ Among others the following information is part of the settings export:
 * `Automation <../Usage/Automation.html>`_ events
 * `Config builder <../Configuration/Config-Builder.html>`_ settings
 * `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 Exportar ajustes
@@ -40,7 +40,7 @@ Exportar ajustes
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -48,7 +48,7 @@ Exportar ajustes
   
 Importar ajustes
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Menú Hamburguesa (esquina superior izquierda de la pantalla)
 * Mantenimiento
@@ -60,7 +60,7 @@ Importar ajustes
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2

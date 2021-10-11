@@ -1,5 +1,5 @@
 Ressourcen
----------
+----------
 
 .. toctree::
    :maxdepth: 4

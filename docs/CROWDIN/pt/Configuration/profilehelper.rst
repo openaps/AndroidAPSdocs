@@ -1,10 +1,10 @@
-Profile helper
+Assistente de Perfil
 ****************************************
 
-Profile helper offers two functions:
+Assistentes de perfis oferecem duas funções:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontre um perfil para crianças
+2. Compare dois perfis ou trocas de perfis de modo a clonar um novo perfil
 
 Profile for kids (up to 18 years)
 =======================================
@@ -30,7 +30,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 6. Press button 'COMPARE PROFILES' on top of screen.
 7. Comparison of the two adjusted profiles will be displayed.
 
-Once you are fine with the profile adjustments you can `clone the profile <.../Configuration/profilehelper.html#clone-profile>`_ as described below.
+Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
 Compare two profiles
 =======================================

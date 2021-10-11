@@ -1,53 +1,55 @@
-Preferences
+Preferințe
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Deschideți preferințele** făcând clic pe meniul cu cele trei puncte din dreapta sus a ecranului principal.
 
   .. image:: ../images/Pref2020_Open2.png
-    :alt: Open preferences
+    :alt: Deschideți preferințele
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+Poti ajunge direct la o anumită filă din preferinte (de ex. fila pompei) deschizând această filă și dând click pe conectare.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
-    :alt: Open plugin preferences
+    :alt: Deschideți preferințele
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Sub-meniuri** făcând clic pe triunghiul de sub titlul sub-meniu.
 
   .. image:: ../images/Pref2020_Submenu2.png
-    :alt: Open submenu
+    :alt: Deschidere submeniu
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Cu **filtrul** din partea de sus a ecranului de preferinţe, puteţi accesa rapid anumite preferinţe. Doar începeţi să tastaţi o parte din textul pe care îl căutaţi.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Filtru Preferințe
 
+.. contents:: 
+   :backlinks: entry
+   :depth: 2
 
 General
 ===========================================================
 
-**Units**
+**Unități**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* Setati unităţile in mmol/l sau mg/dl în funcţie de preferinţe.
 
-**Language**
+**Limba**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Opțiune nouă de utilizare a limbii implicite a telefonului (recomandat). 
+* În cazul în care doresti AAPS în altă limbă decât cea setata pe telefon poti alege dintre varietatele din lista.
+* Dacă setezi entru aplicatie o alta limba decat cea a telefonului, este posibil ca uneori să vezi o combinatie a limbilor. Acest lucru se datorează unei probleme legate de Android, uneori nefuncționand suprascrierea limbajul Android implicit.
 
   .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+    :alt: Preferințe > General
 
-**Patient name**
+**Numele pacientului**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Poate fi utilizat dacă trebuie facută diferența între mai multe configurări (de ex. doi copii T1D din familia ta).
 
-Protection
+Protecţie
 -----------------------------------------------------------
-Master password
+Parola principală
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-
-   **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+  **Protecția biometrică nu funcționează pe telefoanele OnePlus. Aceasta este o problemă a celor de la OnePlus. * *
 
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
@@ -57,412 +59,412 @@ Master password
   .. image:: ../images/MasterPW.png
     :alt: Set master password
   
-Settings protection
+Protecţie setări
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`_.
+* Protejeaza setările cu parolă sau cu autentificarea biometrică a telefonului (ex. ` copilul foloseşte AAPS <../Children/Children.html>` _).
+* Parola personalizată ar trebui utilizată dacă vrei să utilizezi parola principală doar pentru securizarea ʻsetărilor exportate <../ Utilizare / ExportImportSettings.html> `_.
+* Dacă folosesti o parolă personalizată, fa clic pe linia "Setări parolă" pentru a seta parola cum este descris `mai sus <../Configurare/Preferences.html#master-password>`__.
 
   .. image:: ../images/Pref2020_Protection.png
-    :alt: Protection
+    :alt: Protecţie
 
-Application protection
+Protecția aplicației
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+* Dacă aplicația este protejată, ca sa deschizi AAPS trebuie să introduci parola sau să utilizezi autentificarea biometrică a telefonului.
+* Aplicaţia se va opri imediat dacă este introdusă o parolă greşită-dar încă rulează în fundal dacă a fost deschisă anterior cu succes.
 
-Bolus protection
+Protecţia bolusului
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* Protecția Bolusui poate fi utilă dacă AAPS este folosit de un copil mic și apartinatorul `boluseaza prin SMS <../Children/SMS-Commands.html>`_.
+* In exemplul de mai jos se vede promptul pentru protectia biometrica. Dacă autentificarea biometrică nu funcționează, fa clic în spațiul de deasupra promptului și introdu parola principală.
 
   .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+    :alt: Solicită protecție biometrică
 
-Skin
+Imagine fundal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Puteţi alege din patru tipuri de fundaluri:
 
   .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+    :alt: Selecție fundal + exemple
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* "Fundal pentru rezoluție scăzută" are o etichetă mai scurtă și câmpurile vechime/nivel sunt eliminate pentru a avea mai mult spațiu disponibil pe ecrane cu rezoluție scăzută.
+* Diferență între fundaluri în funcție de orientarea afișării telefonului.
 
-Portrait orientation
+Orientare tip portret
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* ** Fundalul Original* * și ** Butoanele afișate întotdeauna in partea de jos a ecranului * * sunt identice
+* **Afișare mare** are o dimensiune mai mare a graficelor față de afisajul altor fundaluri
 
-Landscape orientation
+Orientare tip peisaj
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* Folosind ** Fundal Original * * și ** Afișare Mare* * trebuie să derulezi în jos ca sa vezi butoanele din partea de jos a ecranului
+* **Afișare mare** are o dimensiune mai mare a graficelor față de afisajul altor fundaluri
 
   .. image:: ../images/Screenshots_Skins.png
-    :alt: Skins depending on phone's display orientation
+    :alt: Fundaluri în functie de orientarea de afișare a telefonului
 
-Overview
+Privire de ansamblu
 ===========================================================
 
-* In overview section you can define preferences for home screen.
+* În secțiunea de prezentare generală poti defini preferințele pentru ecranul principal.
 
   .. image:: ../images/Pref2020_OverviewII.png
     :alt: Preferences > Overview
 
-Keep screen on
+Menține ecranul deschis
 -----------------------------------------------------------
-* Useful while giving a presentation. 
-* It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Util în timpul unei prezentări. 
+* Va consuma multă energie, este bine să ai telefonul conectat la un încărcător.
 
-Buttons
+Butoane
 -----------------------------------------------------------
-* Define which buttons are visible on the bottom of your home screen.
-* With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+* Defineste ce butoane sa fie vizibile în partea de jos a ecranului priincipal.
+* Pentru introducere usoara poti defini cu cele trei butoane valori pentru dialogul carbohidraţi-insulină.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
-    :alt: Preferences > Buttons
+    :alt: Preferinte > Butoane
 
-Quick Wizard
+Asistent Rapid
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
-* In setup you define during which time period the button will be visible on your home screen - just one button per period.
-* If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
-* The proposal has to be confirmed before insulin is delivered.
+* Dacă obisnuiesti sa iei frecvent o anumita gustare sau mâncare, poți folosi butonul de asistent rapid pentru a introduce cu ușurință cantitatea de carbohidrați și a seta bazele de calcul.
+* În configurare definesti în ce perioadă de timp butonul va fi vizibil pe ecranul principal - doar cate un buton o data.
+* Cand faci clic pe butonul Asistent Rapid, AAPS calculeaza și propune un bolus pentru acei carbohidrați pe baza raportului curent (luând în considerare si valoarea glicemiei sau insulina din corp, dacă este configurat). 
+* Propunerea trebuie confirmată înainte ca insulina să fie livrată.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
-    :alt: Preferences > Quick Wizard Button
+    :alt: Preferinte > Buton Asistent Rapid
   
-Default temp targets
+Ţinte temp implicite
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
-* With setting of default TT you can easily change your target for activity, eating soon etc.
-* Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+* `Țintele temporare (TT) <../Usage/temptarget.html#țintele temp->`_ Permit să definesti schimbarea țintei glicemice pentru o anumită perioadă de timp.
+* Cu setarea TT (Tinta Temporara) implicită, poti schimba ușor ținta glicemica pentru activitate fizica, masă în curând etc.
+* Apasa lung pe TT din colțul din dreapta sus de pe ecranul principal sau foloseste scurtăturile din butonul portocaliu "Carbs" din partea de jos.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
-    :alt: Preferences > Default temp targets
+    :alt: Preferinte > TT implicite
   
-Fill/Prime standard insulin amounts
+Umplere/Amorsare - cantități standard de insulină
 -----------------------------------------------------------
-* If you want to fill tube or prime canula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
-* Pre-set values can be defined in this dialogue.
+* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* În acest dialog pot fi definite valori prestabilite.
 
-Range for visualization
+Intervalul de vizualizare
 -----------------------------------------------------------
-* Define which part of the graph on the home screen shall be you target range and be filled with green background.
+* Defineste interval țintă cu fundal verde in graficul de pe ecranul principal.
 
   .. image:: ../images/Pref2020_OV_Range2.png
-    :alt: Preferences > Range for visualization
+    :alt: Preferințe > Interval de vizualizare
 
-Shorten tab titles
+Scurtează titlurile secțiunilor
 -----------------------------------------------------------
-* See more tab titles on screen. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Vezi pe ecran mai multe titluri de file. 
+* De exemplu, fila "OpenAPS AMA" devine "OAPS", "OBIECTIVE" devine "OBJ" etc.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
-    :alt: Preferences > Tabs
+    :alt: Preferinţe > File
 
-Show notes field in treatments dialogs
+Arată zona pentru note în dialogurile de tratamente
 -----------------------------------------------------------
-* Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
+* Oferă posibilitatea sa adaugi texte scurte la tratament (notite pentru ajutor la bolusare, carbohidrati, insulină...) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
-    :alt: Preferences > Notes in treatment dialogs
+    :alt: Preferințe > notite în dialogurile de tratament
   
-Status lights
+Lumini de stare
 -----------------------------------------------------------
 * Status lights give a visual warning for 
-      
-   * Sensor age
-   * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots#sensor-level-battery>`_ for details).
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Cannula age
-   * Pump battery age
-   * Pump battery level (%)
+
+  * Vechime senzor
+  * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
+  * Insulin age (days reservoir is used)
+  * Reservoir level (units)
+  * Vechime canulă
+  * Vechime baterie pompă
+  * Nivel baterie pompă (%)
 
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
-* In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+* În versiunile anterioare AAPS 2.7 setările pentru luminile de stare trebuie făcute în setările Nightscout.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
-    :alt: Preferences > Status Lights
+    :alt: Preferinte > Lumini de stare
 
-Advanced Settings (Overview)
+Setări avansate (Privire generală)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2021_OV_Adv.png
-    :alt: Preferences > Status Lights
+.. image:: ../images/Pref2021_OV_Adv.png
+  :alt: Preferinte > Lumini de stare
 
-Deliver this part of bolus wizard result
+Livreaza doar aceasta partea din cantitatea calculata de asistent
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* General setting to deliver only part of bolus wizard result. 
-* Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
-* The percentage is shown in bolus wizard.
+* Setare generală pentru a livra partial valoarea calculata de asistentul de bolus. 
+* Atunca când se utilizează asistentul pentru bolus, se livreaza, din bolusul calculat, numai procentajul prestabilit (între 10 și 100). 
+* Procentul este afișat în asistentul de bolus.
 
-Bolus advisor
+Consilier bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
-* An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`_ again and enter the amount of carbs you want to eat.
+* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+* Daca se fac bolusuri de corecție, nu se adaugă si **carbohidrați**.
+* Va porni o alarmă atunci când valoarea glicemiei este la un nivel bun pentru a începe masa.
+* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
-    :alt: Bolus advisor message
+    :alt: mesaj consilier bolus
 
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* Activarea superbolusului în asistentul de bolus.
+* "Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>" _ este conceptul de a "împrumuta" insulină de la rata bazală din următoarele două ore pentru a preveni varfurile.
 
-Treatment safety
+Siguranța tratamentului
 ===========================================================
-Patient age
+Vârsta pacientului
 -----------------------------------------------------------
-* Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Limitele de siguranţă sunt stabilite in baza vârstei selectate în această setare. 
+* Dacă ajungi în situația de a atinge limite de siguranță (de ex. valoarea maximă a bolusului), probabil este cazul să incrementezi varsta. 
+* Este o idee proastă să selectezi de la început o vârstă mai mare decât vârsta reală, deoarece aceasta poate duce la supradozaje in cazul introducerii accidentale a unei valori greșite de insulină în căsuța de dialog (de exemplu, prin omiterea separatorului de zecimale). 
+* Dacă doresti să afli valorile concrete ale limitelor de securitate codificate, deruleaza la opţiunea algoritm pe `această pagină <. /Utilizare/Open-APS-features.html>`_.
 
-Max allowed bolus [U]
+Valoarea maximă permisă a bolusului [U]
 -----------------------------------------------------------
-* Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
-* This restriction is also applied to the results of the bolus calculator.
+* Defineşte cantitatea maximă de insulină bolus pentru care AAPS sa permita livrarea imedita. 
+* Aceasta constituie o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului. 
+* Este recomandat să stabilesti o cantitate de bun simț, care corespunde în linii mari cu maximul de bolus de insulină pe care l-ai putea face la o masă sau ca și corecție în mod obișnuit. 
+* Restricția este, de asemenea, aplicată și rezultatelor date de Calculatorul de Bolus.
 
-Max allowed carbs [g]
+Valoarea maximă permisă a carbohidraților [g]
 -----------------------------------------------------------
-* Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+* Definește cantitatea maximă de carbohidrați acceptata pentru dozare de catre calculatorul de bolus AAPS.
+* Aceasta constituie o limită de siguranță pentru a preveni livrarea unor bolusuri masive, datorită unor greșeli de introducere sau din eroarea utilizatorului. 
+* Se recomandă să stabilesti această setare la o valoare de bun simț, care să corespundă, în linii mari, cantității maxime de carbohidrați pe care ați putea-o ingera la o masă.
 
-Loop
+Buclă
 ===========================================================
-APS mode
+Mod APS
 -----------------------------------------------------------
-* Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
-* **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
+* Comutare între buclă deschisă și închisă, precum și Suspendare la Hipoglicemie (LGS)
+* La **Buclă deschisă** sugestiile de RBT (rata bazala temporara) făcute pe baza datelor tale apar ca notificare. După confirmare, RBT va fi transferată în pompă.. La utilizarea pompei virtuale RBT trebuie introdusa manual.
+* La ** Bucla inchisa* * sugestiile de RBT sunt trimise automat la pompă, fără confirmare sau introducere manuala.  
+* La ** Suspendare la Hipoglicemie (LGS = low glucose suspend)**  se intrerupe temporar rata bazala (RB).
 
-Minimal request change [%]
+Cerere de schimbare minimală [%]
 -----------------------------------------------------------
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Daca utilizezi sistemul bucla deschisă vei fi notificat de fiecare dată când AAPS recomandă ajustarea ratei bazale. 
+* Pentru a reduce numărul de notificări, fie utilizezi un interval larg al glicemiei tinta fie crești procentajul ratei minime.
+* Aceasta defineşte modificarea relativa care declanşeaza o notificare.
 
-Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+Asistent avansat la masă (AMA) sau Super Micro bolus (SMB)
 ===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`_ you can choose between two algorithms:
+Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
 
-* `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - state of the algorithm in 2017
-* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - most recent algorithm for advanced users
+* `Ajutor avansat la mese (OpenAPS AMA) <../Usage/Open-APS-features.html#avansed-meal-assist-ama>`_ - starea algoritmului din 2017
+* ` Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>` _-cel mai recent algoritm pentru utilizatorii avansaţi
 
-OpenAPS AMA settings
+Setări OpenAPS AMA (Asistent avansat la masa)
 -----------------------------------------------------------
-* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`_.
+OpenAPS Asistent Avansat pentru Masă (AAM) permite sistemului să stabilească mai rapid temporare mari după masă DACĂ ai introdus corect carbohidrații. 
+* Mai multe detalii despre setări și Autosens pot fi citite în <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>OpenAPS doc`__.
 
-Max U/h a Temp Basal can be set to
+Valoarea maximă în U/ora (unitati insulina/ora) a unei rate bazale temporare poate fi setată la
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
-* The value is measured in units per hour (U/h). 
-* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
+* Setarea previne ca AAPS sa ofere vreodata o rata bazala periculos de mare. 
+* Această valoare se masoară în unități de insulina per oră (u/o). 
+* Se recomandă setarea unei valori de bun simț. O sugestie de calcul a valorii maxime a RBT este **cea mai mare rată bazală (RB)** din profilul tău **înmulțita cu 4**. 
 * For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+* Vezi şi " descrierea detaliată a caracteristicii <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>` _.
 
-Maximum basal IOB OpenAPS can deliver [U]
+Maximul de IOB bazal (Insulin on Board) pe care OpenAPS îl va livra OpenAPS [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
-* This value **does not consider bolus IOB**, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* Cantitatea adițională de insulină bazală (în unități) permis a se acumula în corp, peste cea din profilul bazal. 
+* O dată ce această valoare este atinsă, AAPS va opri livrarea de insulină bazală suplimentară până când IOB bazal va reveni în interval din nou. 
+* Această valoare **nu ia în considerare bolus IOB**, doar bazala.
+* Această valoare este calculată și monitorizată independent de rata bazală obișnuită. Este doar insulină bazală adițională, peste cea care este considerată a fi rata bazală normală.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+Când începi sa folosesti bucla, **se recomandă să setezi la 0 maximum pentru IOB bazal** o perioadă de timp, pana ce te obişnuiesti cu sistemul. Aceasta va duce la restricționarea AAPS în a crește valoarea bazalei. În tot acest timp, AAPS va putea să limiteze sau să anuleze livrarea insulinei bazale, cu scopul prevenirii hipoglicemiei. Acesta este un pas important, ce are scopul de a:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* Avea o perioadă de timp de obișnuire, în siguranță, cu felul în care funcționează sistemul AAPS și felul în care trebuie să monitorizați acest sistem.
+* Profia de ocazie pentru a perfecționa profilul bazal și factorul de sensibilitate la insulină (ISF). 
+* Vedea cum AAPS limitează rata insulinei bazale pentru a preveni hipoglicemia.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Când te vei simți confortabil, poti permite sistemului să înceapă livrarea de insulină bazală peste valoarea stabilită în profil, prin creșterea valorii Maximului IOB Bazal. Recomandarea este să iei **cea mai mare rată bazală** din profil și **să o înmulțesti cu 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Puteți începe într-un mod mai prudent șî apoi să creșteți ușor această valoare în timp. 
+* Acestea sunt doar recomandări; corpul fiecăruia este diferit și reacționează diferit. Puteți constata că este nevoie de valori mai mari sau mai mici față de ceea ce este scris aici, dar este bine să porniți întotdeauna într-un stil prudent și apoi să ajustați valorile ușor, în timp.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Notă: ca o măsură de siguranță, IOB Bazal Maxim este limitat din soft la o valoare de 7 unități.**
 
 Autosens
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-* If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+* `Autosens <../Usage/Open-APS-features.html#autosens>`_ observă deviațiile glicemiei (pozitivă/negativă/neutră).
+* Pe baza acestor deviații va încerca să-și dea seama cât de sensibil/rezistent ești și va ajusta rata bazală și ISF pe baza lor.
+* Dacă selectaţi "Autosens ajustaţi ţinta, de asemenea" algoritmul va modifica de asemenea ţinta dumneavoastră de glicemică.
 
-Advanced settings (OpenAPS AMA)
+Setări avansate (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* În mod normal nu trebuie să schimbați setările in acest dialog!
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
-OpenAPS SMB settings
+Setări OpenAPS SMB
 -----------------------------------------------------------
-* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-* The first three settings are explained `above <./Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`_.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* Spre deosebire de AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ nu utilizează rate bazale temporare pentru a controla nivelul glicemiei, ci în principal micro bolusuri foarte mici.
+* Trebuie să fi început `obiectivul 10 <../Usage/Obiectives.html#obiective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pentru a folosi SMB.
+* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
+* Detalii despre diferitele opţiuni de activare sunt descrise în secţiunea `OpenAPS Funcţie <../Utilizare/Open-APS-features.html#enable-smb>`_.
+* *Cât de des vor fi livrate SMB-uri în minute* este o restricție pentru SMB să fie livrat implicit doar la fiecare 4 minute. Această valoare împiedică sistemul să emită SMB prea des (de exemplu în cazul în care este setată o ţintă temporară). Nu ar trebui să modificaţi această setare decât dacă ştiţi exact consecinţele. 
+* Dacă 'Sensibilitatea ridică ținta' sau 'Ținta inferioară a rezistenței' sunt activate `Autosens <../Usage/Open-APS-features.html#autosens>`_ îți va modifica ținta glicemică în funcție de deviațiile tale ale glicemiei.
+* Dacă ţinta este modificată, va fi afişată cu un fundal verde pe ecranul principal.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
-    :alt: Target modified by autosens
+    :alt: Țintă modificată de autosens
   
-Carb required notification
+Notificare pentru necesar carbohidrați
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* This feature is only available if SMB algorithm is selected.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
+* Această caracteristică este disponibilă doar dacă algoritmul SMB este selectat.
+* Se va sugera suplimentarea cu carbohidrati atunci când design-ul de referință detectează că este nevoie de carbohidrati.
+* În acest caz veţi primi o notificare care poate fi amânată cu 5, 15 sau 30 de minute.
+* În plus, carbohidrații necesari vor fi afișați în secțiunea COB de pe ecranul de principal.
+* Poate fi definit un prag - cantitatea minimă de carbohidrați necesară pentru a declanșa notificarea. 
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
-    :alt: Display carbs required on home screen
+    :alt: Afișare pe ecranul principal a carbohidraților necesari
   
-Advanced settings (OpenAPS SMB)
+Setări avansate (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`_ and to understand what you are doing.
+* În mod normal nu trebuie să schimbați setările in acest dialog!
+* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
-Absorption settings
+Setări absorbție
 ===========================================================
 
-  .. image:: ../images/Pref2020_Absorption.png
-    :alt: Absorption settings
+.. image:: ../images/Pref2020_Absorption.png
+  :alt: Setări pentru absorbţie
 
 min_5m_carbimpact
 -----------------------------------------------------------
-* The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
-* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
-* To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
-* Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
-* The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`_.
-* Standard value for AMA is 5, for SMB it's 8.
-* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+* Algoritmul utilizează BGI (impactul glicemiei) pentru a determina când sunt absorbiți carbohidrati. 
+* Valoarea este utilizată doar în timpul unor pauze de citiri ale CGM sau când activitatea fizică "epuizează" toată creșterea glicemiei care in caz contrar ar face ca AAPS să altereze COB. 
+* În momentele în care absorbția de carbohidrați nu poate fi funcționată dinamic pe baza reacțiilor dvs. glicemice, inserează o alterare implicită a carbohidraților. Practic, este un eşec.
+* Pentru a spune mai simplu: Algoritmul "ştie" cum *ar trebui* să se comporte glicemia ta atunci când este afectată de doza actuală de insulină etc. 
+* Ori de câte ori există o deviere pozitivă de la comportamentul aşteptat, câțiva carbohidrati sunt absorbiţi/alterați. Schimbare mare=mulți carbohidrați etc. 
+* Algoritmul min_5m_carbimpact defineşte impactul implicit al absorbţiei carbohidraților per 5 minute. Pentru mai multe detalii, vedeți `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
+* Valoarea standard pentru AMA este 5, pentru SMB este 8.
+* Graficul COB de pe ecranul principal indică atunci când este folosit min_5m_impact punând un cerc portocaliu în partea de sus.
 
-  .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB graph
+  .. imagine:: ../images/Pref2020_min_5m_carbimpact.png
+    :alt: grafic COB
   
-Maximum meal absorption time
+Timp maxim de absorbţie a mesei
 -----------------------------------------------------------
-* If you often eat high fat or protein meals you will need to increase your meal absorption time.
+* Dacă mâncați în mod obișnuit mâncăruri grase sau cu proteine multe (high fat or high protein), va trebui să creșteți timpul de absorbție.
 
-Advanced settings - autosens ratio
+Setări avansate-raport autosens
 -----------------------------------------------------------
-* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
-* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+* Definire raport minim şi maxim `autosens <../Usage/Open-APS-features.html#autosens>`_ .
+* Valorile standard normale (max. 1.2 şi min. 0.7) nu ar trebui modificate.
 
-Pump settings
+Setări pompă
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`_.  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Asociaţi şi setaţi pompa conform instrucţiunilor pompei:
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `Pompă de Insulină DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Pompă de Insulină DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Pompă Accu Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Pompă Accu Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Pompă Medtronic <../Configuration/MedtronicPump.html>`_
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Dacă folosiți AndroidAPS în sistem buclă deschisă, trebuie să aveți selectată Pompa Virtuală în configuratorul sistemului (Config Builder).
 
-NSClient
+Client NS
 ===========================================================
 
-  .. image:: ../images/Pref2020_NSClient.png
-    :alt: NSClient
+.. image:: ../images/Pref2020_NSClient.png
+  :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
-* Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* Setaţi *Nightscout URL* (i.e. https://numeleaplicatiei.herokuapp.com) și *API Secret* (o parolă de 12 caractere completată în variabilele Heroku).
+* Aceasta va permite datelor să fie citite și scrise atât de către site-ul Nightscout cât și de AndroidAPS.  
+* Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
+* ** Asiguraţi-vă că URL-ul este FĂRĂ /api/v1/ la final. * *
+* *Log app start to NS* va înregistra o notiță în intrările din Nightscout pentru fiecare pornire a aplicaţiei.  Aplicația nu ar trebui să necesite mai mult de o pornire pe zi, apariția mai multor porniri sugerând existența unei probleme (de ex. optimizarea bateriei nu este dezactivată pentru AAPS). 
+* Dacă este activată, modificările din profilului local <../Configuration/Config-Builder.html#local-profile-recomandat>`_ sunt încărcate pe site-ul Nightscout.
 
-Connection settings
+Setări conexiune
 -----------------------------------------------------------
 
-  .. image:: ../images/ConfBuild_ConnectionSettings.png
-    :alt: NSClient connection settings  
+.. image:: ../images/ConfBuild_ConnectionSettings.png
+  :alt: NSClient setări de conexiune
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
-* To delete all SSIDs enter a blank space in the field.
+* Restricționați încărcarea Nightscout doar prin Wi-Fi sau doar prin anumite rețele Wi-Fi.
+* Dacă doriţi să utilizaţi doar o anumită reţea WiFi, puteţi introduce identificatorul WiFi SSID. 
+* SSID-urile multiple pot fi separate prin punct și virgulă. 
+* Pentru a şterge toate SSID-urile introduceţi un spaţiu gol în câmp.
 
-Alarm options
+Opțiuni alarmare
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <http://www.nightscout.info/wiki/welcome/website-features#customalarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* Opțiunile de alarmă vă permit să selectați alarmele implicite Nightscout pe care să le utilizați prin intermediul aplicației.  
+* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
+* Vor funcționa numai dacă aveţi o conexiune la Nightscout şi sunt destinate pentru parinți/îngrijitori. 
+* Dacă aveți sursa CGM pe telefon (de ex. xDrip+ sau aplicația Dexcom modificată) apoi folosiți acele alarme în loc.
 
-Advanced settings (NSClient)
+Setări avansate (NSClient)
 -----------------------------------------------------------
 
-  .. image:: ../images/Pref2020_NSClientAdv.png
-    :alt: NS Client advanced settings
+.. imagine:: ../images/Pref2020_NSClientAdv.png
+  :alt: Setări avansate NS Client
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* Cele mai multe opţiuni din setări avansate sunt auto-explicative.
+* *Activare transmisiuni locale * va partaja datele către alte aplicații de pe telefon, cum ar fi xDrip+. 
 
-  * Dexcom patched app does not broadcast directly to xDrip+. 
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * Aplicația modificată Dexcom nu transmite direct în xDrip+. 
+  * Trebuie sa `treci prin AAPS <../Configuration/Config-Builder.html#bg-source>`_ și să activezi transmiterea locală în AAPS pentru a folosi alarme xDrip+.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* *Utilizaţi întotdeauna valorile bazale absolute* trebuie să fie activate dacă doriţi să utilizaţi Autotune în mod corespunzător. Vezi `documentația OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ pentru mai multe detalii în Autotune.
 
-SMS Communicator
+Comunicator SMS
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`_.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+* Opţiunile vor fi afişate doar dacă este selectat un comunicator SMS în `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
+* Această setare permite controlul de la distanță a aplicației prin instrucțiuni text către telefonul pacientului pe care aplicația îl va urma, cum ar fi suspendarea Loop, sau bolusare.  
+* Mai multe informaţii sunt descrise în `Comenzi SMS <../Children/SMS-Commands.html>`_.
+* Siguranţa suplimentară este obţinută prin utilizarea unei aplicaţii de autentificare şi a unui cod PIN suplimentar la sfârşitul cheii de acces.
 
-Automation
+Automatizare
 ===========================================================
-Select which location service shall be used:
+Selectaţi ce serviciu de locaţie va fi folosit:
 
-* Use passive location: AAPS only takes locations if other apps are requesting it
-* Use network location: Location of your Wi-Fi
+* Utilizare pasiva a locației: AAPS ia doar locații dacă alte aplicații o solicită
+* Folosiţi locaţia de reţea: Locaţia Wi-Fi
 * Use GPS location (Attention! May cause excessive battery drain!)
 
-Local alerts
+Alerte locale
 ===========================================================
 
-  .. image:: ../images/Pref2020_LocalAlerts.png
-    :alt: Local alerts
+.. imagine:: ../images/Pref2020_LocalAlerts.png
+  :alt: Alerte locale
 
-* Settings should be self-explanatory.
+* Setările ar trebui să fie auto-explicative.
 
-Data choices
+Selecție date
 ===========================================================
 
-  .. image:: ../images/Pref2020_DataChoice.png
-    :alt: Data choices
+.. imagine:: ../images/Pref2020_DataChoice.png
+  :alt: Selecție date
 
-* You can help develop AAPS further by sending crash reports to the developers.
+* Puteți ajuta la dezvoltarea în continuare a AAPS prin trimiterea de rapoarte despre defecte către dezvoltatori.
 
-Maintenance settings
+Setări Întreţinere
 ===========================================================
 
-  .. image:: ../images/Pref2020_Maintenance.png
-    :alt: Maintenance settings
+.. image:: ../images/Pref2020_Maintenance.png
+  :alt: Setări Întreţinere
 
-* Standard recipient of logs is logs@androidaps.org.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
+* Destinatarul standard al jurnalelor este logs@androidaps.org.
+* Dacă selectați *Criptează setările exportate*, acestea sunt criptate cu `parola principală <../Configuration/Preferences.html#master-password>`_. În acest caz, parola principală trebuie să fie introdusă de fiecare dată când setările sunt exportate sau importate.
 
 Open Humans
 ===========================================================
-* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
-* In Preferences you can define when data shall be uploaded
+* You can help the community by donating your data to research projects! Detaliile sunt descrise pe pagina "Open Humans" <../Configuration/OpenHumans.html>` _.
+* În Preferinţe puteţi defini când vor fi încărcate datele
 
-   * only if connected to WiFi
-   * only if charging
+  * numai dacă este conectat la WiFi
+  * numai dacă se încarcă

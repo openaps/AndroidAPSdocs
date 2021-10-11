@@ -7,7 +7,7 @@
 
 설정을 변경한 후 또는 목표를 수행한 후 설정을 저장하는 것은 아주 좋은 습관입니다. 
 
-설정된 파일은 클라우드 혹은 본인의 컴퓨터에 복사해놓으세요. 그래야 AAPS 폰이 예상치못한 피해가 발생했을때를 대비할 수 있고 처음부터 다시 시작할 필요가 없습니다.
+Exported settings should be copied to a cloud storage or your computer, better two different locations. 그래야 AAPS 폰이 예상치못한 피해가 발생했을때를 대비할 수 있고 처음부터 다시 시작할 필요가 없습니다.
 
 윈도우 10에서 아래와 같이 보일 수 있습니다.
   
@@ -21,12 +21,12 @@ Among others the following information is part of the settings export:
 * `Automation <../Usage/Automation.html>`_ events
 * `Config builder <../Configuration/Config-Builder.html>`_ settings
 * `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-proof-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`_ incl. `NS Client settings <../Configuration/Preferences.html#ns-client>`_
+* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
 Encrypted backup format
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`_ .
+Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
 설정 내보내기
@@ -40,7 +40,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
 
 * Date and time of export will be added to the file name automatically and displayed together with the path.
 * Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 * Successful export will be prompted at bottom of the screen.
 
 .. image:: ../images/AAPS_ExportSettings2.png
@@ -48,7 +48,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
   
 설정 불러오기
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings>`_.
+**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * 화면 좌측 상단부의  三아이콘을 누릅니다
 * 정비를 누릅니다
@@ -60,7 +60,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
 * All files from folder AAPS/preferences/ on your phone will be shown in the list.
 * Select file.
 * Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`_ and click 'OK'.
+* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2

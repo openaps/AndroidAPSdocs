@@ -30,7 +30,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 6. Ekrano viršuje paspauskite mygtuką "PALYGINTI PROFILIUS".
 7. Bus parodytas dviejų koreguotų profilių palyginimas.
 
-Kai jūs esate patenkintas profilio pakeitimu, galite `klonuoti profilį <.../Configuration/profilehelper.html#clone-profile>`_ kaip aprašyta žemiau.
+Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
 Dviejų profilių palyginimus
 =======================================

@@ -8,16 +8,16 @@ Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří sp
 
 ## Můžu napsat kód! Jak mohu přispět?
 
-Yay! Podívejte se na problémy, zeptejte se na gitteru - tam je toho vždy mnoho, co udělat! Najděte nejprve malý úkol a proveďte první pull request! :)
+Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Najděte nejprve malý úkol a proveďte první pull request! :)
 
 ## Znám systém a můžu psát dokumentaci!
 
-Skvělé, to se cení - dobrý způsob, jak podpořit!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* Starý gitter kanál týkající se wiki lze najít zde: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
-## Mluvím několika jazyky a chci překládat aplikaci nebo dokumentaci
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení
 
 ## Jsou další možnosti, jak pomoci?
 
-Potřebujeme lidi ovládající grafický design, UX design, překladatele, wiki editory nebo jen osoby odpovídající na jednoduché otázky na gitteru. Facebook umožňuje vývojáři šetřit čas a prostor a zaměřit na složitější věci.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

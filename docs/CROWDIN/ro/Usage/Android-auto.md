@@ -7,7 +7,7 @@
 Use system notifications for alerts and notifications:
 
 * Open 3-dot-menu on top right of home screen
-* Preferences
+* Preferințe
 * Scroll all the way down
 * Activate "Use system notifications..."
 
@@ -30,7 +30,7 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![Enable unknown sources](../images/AndroidAuto_03.png)
 
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
 
 ## Show notifications in car
 
@@ -42,6 +42,6 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
 
-## Troubleshooting:
+## Depanare:
 
 * If you don't see the notification, check if you [allowed AAPS to show notifications](#androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](#settings-in-android-auto-app-on-your-phone).

@@ -9,12 +9,12 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 --------------------------------------------------------
 * En utilisant le `site web apkmirror <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ vous pouvez trouver la dernière apk pour "Google Play Services (Wear OS)".
 
-   Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
+  Architecture : armeabi-v7a, version minimale : Android 6.0+, Écran DPI : nodpi
 
 * Vous devez vérifer 2 choses :
 
-   * Est-ce la dernière version ?
-   * Est-elle compatible avec Android 6.0+ (comme c'est la version Wear OS d'Android, 7.0+ et plus ne fonctionnera pas) ?
+  * Est-ce la dernière version ?
+  * Est-elle compatible avec Android 6.0+ (comme c'est la version Wear OS d'Android, 7.0+ et plus ne fonctionnera pas) ?
 
 * Tôt ou tard, Google va définitivement abandonner Android 6.0. Quand cela arrivera, la dernière version ne sera plus disponible pour Android 6.0+, donc ce sera la fin.
 
@@ -47,12 +47,12 @@ La solution de contournement suivante devrait prolonger la durée d'utilisation 
 --------------------------------------------------------
 * Dans le terminal, entrez cette commande "adb install -r -g aplicationname.apk" (donc dans notre cas "adb install -r -g SW3fix.apk").
 
-   .. image:: ../images/SonySW3_Terminal1.png
-     :alt: Commande Terminal
+  .. image:: ../images/SonySW3_Terminal1.png
+    :alt: Commande Terminal
 
 * Attendez environ 4–5 minutes pour que l'installation se termine. 
 
-.. image:: ../images/SonySW3_Terminal2.png
-     :alt: Installation réussie du terminal
+  .. image:: ../images/SonySW3_Terminal2.png
+    :alt: Installation réussie du terminal
 
 * Une fois terminé, redémarrez votre montre et vous devriez voir que les applications commencent à se synchroniser rapidement.

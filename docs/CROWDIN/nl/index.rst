@@ -14,33 +14,40 @@ De belangrijkste onderdelen zijn:
 
 Hieronder volgt de inhoudsopgave.
 
-Aan de slag
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Taal wijzigen
+
+   Taal wijzigen <./changelanguage.rst>
+
+.. _Aan de slag:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Aan de slag
+
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
-   
-   
-Wat heb ik nodig? 
---------------------------------------------------
+   Insulinepompen <./Getting-Started/Pump-Choices.md>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
+
+.. _wat-heb-ik-nodig:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Wat heb ik nodig? 
+
    Onderdelen <./Module/module.rst>
    Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
 
-   
-AndroidAPS installeren
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: AndroidAPS installeren
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -49,38 +56,36 @@ AndroidAPS installeren
    Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
-   
-   
-Onderdelen instellen
---------------------------------------------------
+
+.. _onderdelen-instellen:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Onderdelen instellen
+
    BG bron <./Configuration/BG-Source.rst>
    xDrip+ instellingen <./Configuration/xdrip.md>
    Pompen <./Hardware/pumps.rst>
    Telefoons <./Hardware/Phoneconfig.rst>
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch <./Hardware/Smartwatch.rst>
-   
 
-AndroidAPS instellingen 
---------------------------------------------------
+.. _configuratie:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Configuratie
+
    Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.rst>
-   
-   
-AndroidAPS gebruik
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
+   :caption: AndroidAPS gebruiken
+
    AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.rst>
    OpenAPS functies <./Usage/Open-APS-features.md>   
@@ -94,87 +99,77 @@ AndroidAPS gebruik
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatisering met andere apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
- 
-Algemene Tips 
---------------------------------------------------
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: Algemene Tips 
+
    Wisselen van tijdzone <./Usage/Timezone-traveling.md>
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
-   
+   xDrip engineering modus <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
-AndroidAPS voor kinderen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-   
+   :caption: AndroidAPS voor kinderen
+
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
+   Profielhelper <./Configuration/profilehelper.rst>
    
-
-Problemen oplossen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Problemen oplossen
+
    Problemen oplossen <./Usage/troubleshooting.rst>
-   
+   Nightscout Client <../Usage/Troubleshooting-NSClient.md>
 
-Veelgestelde vragen 
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
+   :caption: Veelgestelde vragen
+
    Veelgestelde vragen <./Getting-Started/FAQ.md>
 
-   
-Veelgebruikte woordenlijst
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-  
-   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
-  
+   :caption: Veelgebruikte woordenlijst
 
-Waar je hulp kunt vinden 
---------------------------------------------------
+   Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Waar je hulp kunt vinden 
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
-Zorgprofessionals
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
-            
+   :caption: Voor zorgprofessionals
+
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
 
 
-Hoe je zelf kunt helpen
---------------------------------------------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Hoe je zelf kunt helpen
 
    Hoe kan je helpen <./Getting-Started/How-can-I-help.md>
    De app of wiki vertalen <./translations.md>
    De wiki verbeteren <./make-a-PR>
 
 
-.. opmerking:: 
+.. note:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
@@ -183,4 +178,4 @@ Hoe je zelf kunt helpen
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.
+	Houd er rekening mee dat: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ of `Medtronic <https://www.medtronic.com/>`_

@@ -51,7 +51,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
   * `SAGE_WARN` = `160` (Warning after x hours since the last CGM Sensor Insert Event in Careportal)
   * `SAGE_URGENT` = `168` (Urgent Warning after x hours since the last CGM Sensor Insert Event in Careportal)
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
 * Click "Save" at the top of the panel.
 

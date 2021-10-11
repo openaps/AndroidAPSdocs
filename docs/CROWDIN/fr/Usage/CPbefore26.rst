@@ -16,7 +16,7 @@ Activité & Feedback
 * Les information d'âge ont été déplacées dans l'onglet/menu Actions.
 * La vérification de glycémie a été déplacée dans l'onglet/menu Actions.
 * Cible temporaire a été déplacée dans l'onglet/menu Actions.
-* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`_ de cette page).
+* Exercice n'est plus disponible, mais vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`__ de cette page).
 
 Glucides et bolus
 ==============================
@@ -26,8 +26,8 @@ Glucides et bolus
 * Pour renseigner un bolus - peu importe si c'est pour une collation, un repas ou une correction - utilisez le bouton Insuline sur l'écran d'accueil **et assurez vous de cocher "Ne pas administrer de bolus, enregistrer uniquement"!**
 * L'option permettant d'antidater l'insulin - par ex. si vous avez oublié d'enregistrer une injection d'insuline par seringue - ne sera disponible que si la case "Ne pas administrer de bolus, enregistrer uniquement" est cochée.
 
-   .. image:: ../images/Careportal_25_26_5.png
-     :alt: Antidater l'insulin via le bouton Insulin
+  .. image:: ../images/Careportal_25_26_5.png
+    :alt: Antidater l'insulin via le bouton Insulin
 
 * Pour la correction des glucides, utilisez le bouton "Glucides" sur l'écran d'accueil.
 * Les débits de base temporaire peuvent être démarrés et arrêtés via le bouton de l'onglet/menu Actions. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
@@ -38,7 +38,7 @@ MGC et OpenAPS
   :alt: Careportal MGC et OpenAPS
   
 * L'insertion d'un capteur MGC est maintenant dans l'onglet/menu Actions.
-* Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`_ de cette page).
+* Toutes les autres fonctions de cette section ont été supprimées. Vous pouvez utiliser le champ Notes dans les boîtes de dialogue lorsque vous entrez des bolus, insuline etc. (voir la copie d'écran dans la section `Glucides et bolus <#glucides-et-bolus>`__ de cette page).
 
 Pompe
 ==============================

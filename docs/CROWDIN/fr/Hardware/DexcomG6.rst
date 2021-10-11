@@ -3,7 +3,7 @@ Dexcom G6
 Les bases en premier
 ==================================================
 
-* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `ici <../Hardware/GeneralCGMRecommendation.html>`_.
+* Suivez les recommandations générales relatives à l'hygiène des MGG et du capteur `ici <../Hardware/GeneralCGMRecommendation.html>`__.
 * Pour les transmetteurs G6 fabriqués après l'automne / fin 2018, veuillez vous assurez que vous utilisez bien l'une des dernières versions de xDrip+ <https://github.com/NightscoutFoundation/xDrip/releases>`_. Ces transmetteurs ont un nouveau firmware et la dernière version stable de xDrip+ (10/01/2019) ne fonctionne pas avec.
 
 Conseils généraux pour boucler avec un G6
@@ -17,7 +17,7 @@ Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus c
 * La pré-installation du G6 avec l'étalonnage usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
 * Si vous n'êtes pas attentif aux changements qui peuvent avoir lieu, il peut être préférable de revenir à mode "non calibré en usine" et utiliser le système comme un G5.
 
-Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez `l'article complet <http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ publié par Tim Street sur `www.diabettech.com <http://www.diabettech.com>`_.
+Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez `l'article complet <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ publié par Tim Street sur `www.diabettech.com <https://www.diabettech.com>`_.
 
 Si vous utilisez le G6 avec xdrip+
 ==================================================
@@ -26,20 +26,20 @@ Si vous utilisez le G6 avec xdrip+
 * Si vous avez besoin de clarté et que vous voulez profiter des alertes xDrip+, utilisez `l'application Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ avec la diffusion locale vers xDrip+.
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
-* Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_
-* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez `Identify receiver` comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`_.
+* Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__
+* Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identifier le récepteur" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__.
 
 Si vous utilisez le G6 avec l'application Dexcom patchée
 ==================================================
 * Téléchargez l'apk ici `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G6 en mg/dl ou mmol/l).
 
-   * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
-   * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. 
-   * Cliquez sur le lien vers l'application Dexcom G6 sur la page de résultats de recherche qui s'affiche.
-   * La région sera visible dans l'URL.
-   
-   .. image:: ../images/DexcomG6regionURL.PNG
-     :alt: Region in Dexcom G6 URL
+  * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
+  * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. 
+  * Cliquez sur le lien vers l'application Dexcom G6 sur la page de résultats de recherche qui s'affiche.
+  * La région sera visible dans l'URL.
+
+  .. image:: ../images/DexcomG6regionURL.PNG
+    :alt: Region in Dexcom G6 URL
 
 * Désinstallez l'application Dexcom d'origine.
 * Installez l'apk téléchargé
@@ -62,7 +62,7 @@ Si vous utilisez G6 avec votre propre application Dexcom
 Paramètres pour AndroidAPS
 --------------------------------------------------
 * Sélectionnez 'App Dexcom (patchée)' dans le générateur de configuration.
-* Si vous ne recevez aucune valeur, sélectionnez une autre source de données, puis re-sélectionnez 'App Dexcom (patchée)' pour déclencher la demande d'autorisations pour établir la connexion entre AAPS et BYODA.
+* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
 Paramètres pour xDrip+
 --------------------------------------------------
@@ -87,9 +87,9 @@ Dépannages spécifiques à Dexcom G6
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ Etat du téléphone
 
-Dépannage général
+General troubleshooting
 --------------------------------------------------
-Les dépannages généraux concernant les MGC peuvent être trouvés `ici <../GeneralCGMRecommendation.html#depannage>`_.
+Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./GeneralCGMRecommendation.html#depannage>`__.
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------

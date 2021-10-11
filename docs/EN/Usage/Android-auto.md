@@ -29,7 +29,7 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![Enable unknown sources](../images/AndroidAuto_03.png)
 
-* Now you can quit developper mode if you want. Tap three dots menu on the top right to do so.
+* Now you can quit developer mode if you want. Tap three dots menu on the top right to do so.
 
 ## Show notifications in car
 

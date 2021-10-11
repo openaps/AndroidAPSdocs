@@ -11,7 +11,60 @@ Pak máte 60 dnů na aktualizaci. Pokud do těchto 60 dnů neaktualizujete AAPS,
 
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
-Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Proto je důležité, aby každý uživatel aktualizoval co nejdříve.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
+Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Therefore it is necessary that every user updates a.s.a.p.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
+
+Version 3.0.0
+================
+Release date: XX-XX-2021
+
+Důležitá poznámky
+----------------------
+* **Minimum Android version is 9.0 now.**
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* Use the same version of AAPS and NSClient
+
+Changes
+----------------------
+* XXXXk lines changed, XXXXk new lines of code
+* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Lot of code rewritten to Kotlin @MilosKozak
+* New internal interface for pump drivers
+* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+  * Record deletion from NS is not allowed (only invalidation through NSClient)
+  * Record modification from NS is not allowed
+  * Sync setting available without engineering mode (for parents)
+* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
+* You can start activity temporary target during creation of profile switch @MilosKozak
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
+* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* User actions tracing @Philoul
+* New automation TempTargetValue trigger @Philoul
+* UI improvements @MilosKozak
+* History browser updated and fixed @MilosKozak
+* Objective9 removed @MilosKozak
+* Fixed bug associated to unstable CGM data @MilosKozak
+* DanaR and DanaRS communication improvement @MilosKozak
+* CircleCI integration @MilosKozak
+* Dana-i support @MilosKozak
+* DiaconnG8 support
+* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+
+
+
+Version 2.8.2
+================
+Release date: 23-01-2021
+
+* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+
+Changes
+----------------------
+* stability improvements
+* more tweaking for Android 8+
+* improved icons
+* watch improvements
+* NSClient fixes
+* Bolus advisor now works with Pumpcontrol and NSClient
 
 Version 2.8.1.1
 ================
@@ -53,7 +106,7 @@ Hlavní nové funkce
 ----------------------
 * `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
 * `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
-* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-28>`_ @rICTx-T1D
+* `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
 * Vylepšení připojení Dana RS @MilosKozak 
 * Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
@@ -71,9 +124,9 @@ Verze 2.7.0
 ================
 Datum vydání: 24. 09. 2020
 
-**Ujistěte se, že jste zkontrolovali a upravili nastavení po přechodu na verzi 2.7, jak je popsáno** `zde <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). Pokud jste například nedokončili zkoušku v `Cíli 3 <../Usage/Objectives. tml#objective-3-proof-your-knowledge>`_ budete ji muset dokončit dříve, než budete moci spustit `Cíl 11 <../Usage/Objectives.html#objektive-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
+Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 Hlavní nové funkce
 ----------------------
@@ -81,7 +134,7 @@ Hlavní nové funkce
 * využití modulů pro pumpy Dana @MilosKozak
 * `nový vzhled, výběr vzhledu <../Getting-Started/Screenshots.html>`_ @MilosKozak
 * nový `vzhled stavových indikátorů <../Configuration/Preferences.html#status-lights>`_ @MilosKozak
-* `podpora více grafů <../Getting-Started/Screenshots.html#section-f---main-graph>`_ @MilosKozak
+* `multiple graphs support <../Getting-Started/Screenshots.html#section-f-main-graph>`_ @MilosKozak
 * `Pomocník s profilem <../Configuration/profilehelper.html>`_ @MilosKozak
 * vizualizace `dynamického nastavení cílové glykémie <../Getting-Started/Screenshots.html#visualization-of-dynamic-target-adjustment>`_ @Tornado-Tim
 * nový `vzhled Nastavení <../Configuration/Preferences.html>`_ @MilosKozak
@@ -96,7 +149,7 @@ Hlavní nové funkce
 * drobná vylepšení pro pumpu Insight @TebbeUbben @MilosKozak
 * `"System default" volba jazyka nastaveného v telefonu <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vektorové ikony @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phoneanandroidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
 * vylepšení prohlížení historie @MilosKozak
 * odstraněn OpenAPS MA algoritmus @Tornado-Tim
 * odstraněna Oref0 senzitivita @Tornado-Tim
@@ -123,7 +176,7 @@ Datum vydání: 03. 05. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Insight: Deaktivace vibrací na bolus pro firmware verze 3
 * Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná. 
 
@@ -134,7 +187,7 @@ Datum vydání: 19. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Oprava pádů pro Insight
 * Jinak je stejná jako verze 2.6.1.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -145,7 +198,7 @@ Datum vydání: 06. 04. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Řeší problém s příkazem SMS CARBS při použití Combo pumpy
 * Jinak je stejná jako verze 2.6.1. Pokud nejste ovlivněni touto chybou, nemusíte provádět upgrade.
 
@@ -156,8 +209,8 @@ Datum vydání: 21. 03. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
-* Povolit zadání pouze adresy https:// v nastavení NSClient
+------------------
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -175,9 +228,9 @@ Datum vydání: 29. 02. 2020
 K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
------
+------------------
 * Drobné úpravy vzhledu (úvodní obrazovka...)
-* Odstraněna karta/nabídka Péče - další podrobnosti `zde <../Usage/CPbefore26.html>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
 * Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Do místního profilu lze nyní uložit více než 1 profil
@@ -186,7 +239,7 @@ Hlavní nové funkce
   * Stará přepnutí profilu lze kopírovat do nového profilu v Místním profilu (včetně posunu času a procentuální změny)
   * Vertikální výběr hodnot pro cíle
 * Odstraněn Jednoduchý profil
-* Funkce `Rozloženého bolusu <../Usage/Extended-Carbs.html#id1>`_ - uzavřená smyčka bude deaktivována
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
 * Plugin MDT: Opravena chyba s duplicitními záznamy
 * Jednotky se nezadávají v profilu, ale v obecném nastavení aplikace
 * Přidáno nové nastavení do průvodce spuštěním
@@ -209,13 +262,15 @@ Verze 2.5.1
 ==================================================
 Datum vydání: 31. 10. 2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
 Verze 2.5.0
 ==================================================
 Datum vydání: 26. 10. 2019
+
+.. _important-notes-2-5-0:
 
 Důležité poznámky
 --------------------------------------------------
@@ -237,15 +292,14 @@ Hlavní nové funkce
 * RxJava2, Okthttp3, podpora Retrofit
 * Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
 * New `Automation plugin <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings>`_ from bolus wizard calculation
+* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Vykreslování aktivity inzulínu
-* Úprava předpovědí IOB podle výsledku detekce senzitivity
+* Adjusting IOB predictions by autosens result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Ověření podpisu
 * Povolit vynechání cílů pro uživatele OpenAPS
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-   
-   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Opravena chyba v ovladačích Dana, kde byl hlášen nesprávný čas
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -308,7 +362,7 @@ Hlavní nové funkce
 
 Různé
 --------------------------------------------------
-* If you are using non default `smbmaxminutes` value you have to setup this value again
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Verze 2.0
@@ -317,7 +371,7 @@ Datum vydání: 03. 11. 2018
 
 Hlavní nové funkce
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achive and how to use it so it can operate smoothly.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ pump support
 * Průvodce nastavením: provede vás procesem úvodního nastavení AndroidAPS
 
@@ -325,19 +379,19 @@ Nastavení k přizpůsobení při přechodu od AMA k SMB
 --------------------------------------------------
 * Cíl 10 musí být zahájen, aby byly SMB povolené (SMB záložka obecně ukazuje, která omezení jsou aktivní)
 * maxIOB now includes _all_ IOB, not just added basal. To znamená, že pokud je k jídlu poslaný bolus 8 U a maxIOB je 7 U, tak SMB nic nepošle, dokud IOB neklesne pod 7 U.
-* výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. Pokud přecházíte z AMA na SMB, musíte toto nastavení změnit ručně
+* výchozí hodnota min_5m_carbimpact se změnila z 3 na 8 při přechodu od AMA k SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Při vytváření AndroidAPS 2.0 apk mějte na paměti: Konfigurace na vyžádání není aktuální verzí pluginu Android Gradle podporována! Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
 
-   * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
-   * V levé části pak na Build, Execution, Deployment > Compiler.
-   * Odtrhněte Configure on demand.
-   * Klikněte na Apply nebo OK.
+  * Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+  * V levé části pak na Build, Execution, Deployment > Compiler.
+  * Odtrhněte Configure on demand.
+  * Klikněte na Apply nebo OK.
 
 Hlavní stránka
 --------------------------------------------------
 * Horní pruh umožňuje pozastavení/zakázání smyčky, zobrazení/úpravu profilu a k zahájení/ukončení dočasných cílů (DC). DC používají výchozí nastavení. Nová možnost DC Hypoglykémie je vysoký dočasný cíl, který má smyčce zabránit, aby příliš agresivně překorigovala dokrmové sacharidy na odvrácení hypoglykémie.
 * Tlačítka ošetření: staré tlačítko ošetření je stále dostupné, ale ve výchozím nastavení je skryté. Viditelnost tlačítek může být nově nastavitelná. New insulin button, new carbs button (including `eCarbs/extended carbs <../Usage/Extended-Carbs.html>`_)
-* `Colored prediction lines <../Getting-Started/Screenshots.html#section-e>`_
+* `Colored prediction lines <../Getting-Started/Screenshots.html#prediction-lines>`_
 * Možnost zobrazit pole poznámky v dialogových oknech inzulínu/sacharidů/kalkulátoru/plnění, poznámka se pak nahrává do NS
 * Aktualizované dialogové okno plnění umožňuje plnění samotné a navíc vložení ošetřujících vstupů pro výměnu kanyly a výměnu zásobníku
 
@@ -360,7 +414,7 @@ Různé
 * Přepracovaná Konfigurace a Cíle, přídány popisky
 * Nová ikona aplikace
 * Spousty vylepšení a oprav chyb
-* Nightscout-independant alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see _Local alerts_ in settings)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Možnost ponechat obrazovku trvale zapnutou
 * Možnost zobrazovat upozornění jako Android notifikace
 * Rozšířené filtrování (dovolující mít povolené SMB i více než 6 h po jídle) je podporováno Dexcom upravenou aplikací a xDripem v nativním módu.
