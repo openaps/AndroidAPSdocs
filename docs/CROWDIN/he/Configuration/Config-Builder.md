@@ -18,7 +18,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## פרופיל
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
@@ -159,7 +159,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
 * Random BG: Generates random BG data (Demo mode only)
 
-## Pump
+## משאבה
 
 Select the pump you are using.
 
