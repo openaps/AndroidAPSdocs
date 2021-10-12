@@ -428,9 +428,9 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 * Calculations are each time the system gets a fresh reading from the CGM.
 * For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
-## Profile
+## פרופיל
 
-![Profile](../images/Screenshots_Profile.png)
+![פרופיל](../images/Screenshots_Profile.png)
 
 * Profile contains information on your individual diabetes settings:
    
