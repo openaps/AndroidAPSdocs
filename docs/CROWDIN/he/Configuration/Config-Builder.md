@@ -68,12 +68,12 @@ Disadvantage:
 
 * none
 
-### Profile helper
+### עוזר פרופילים
 
-Profile helper offers two functions:
+עוזר הפרופילים מציע שתי פונקציות:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. הרכבת פרופיל עבור ילדים
+2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
