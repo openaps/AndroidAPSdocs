@@ -27,6 +27,7 @@ Changes
 ----------------------
 * XXXXk lines changed, XXXXk new lines of code
 * Omnipod DASH support @evereha @vanelsberg
+* Dana-i support @MilosKozak
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Lot of code rewritten to Kotlin @MilosKozak
 * New internal interface for pump drivers
@@ -46,7 +47,6 @@ Changes
 * Fixed bug associated to unstable CGM data @MilosKozak
 * DanaR and DanaRS communication improvement @MilosKozak
 * CircleCI integration @MilosKozak
-* Dana-i support @MilosKozak
 * DiaconnG8 support
 * Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
 
