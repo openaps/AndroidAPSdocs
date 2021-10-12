@@ -146,7 +146,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 * EXTENDED 2 120
   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
-Profile
+פרופיל
 --------------------------------------------------
 * PROFILE STATUS
   * Response: Profile1
