@@ -6,17 +6,15 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
 
-**Loop status:** Currently not supported by any of loop system. La bomba es candidata, pero el protocolo aún se desconoce. La venta de la bomba se inició oficialmente en enero de 2019.
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
-
-**Comments:** Group of developers is looking into protocol (by reverse engineering original app) and into solution for AAPS, now that pump has become available all over world. There are no estimations yet, when this will be available, or even when first testing will begin. If you are interested in progress, or are willing to help, group can be reachable on WeAreNotWaiting discord. Mention your interest in androidaps group and someone will give you more info.
 
 * * *
 
 ### Bomba Ypsomed([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** los modelos 1 - 1.5 (2Q/2018) no son candidatos. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. Está habilitada para BT.
 
