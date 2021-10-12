@@ -24,7 +24,7 @@ Preferences
    :backlinks: entry
    :depth: 2
 
-General
+כללי
 ===========================================================
 
 **Units**
