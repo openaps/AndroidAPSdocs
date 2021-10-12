@@ -1,53 +1,53 @@
 # שאלות נפוצות של לופרים
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+איך להוסיף שאלה: פעלו בהתאם ל[הוראות](../make-a-PR.md)
 
-# General
+# כללי
 
-## Can I just download the AndroidAPS installation file?
+## האם ניתן פשוט להוריד ולהתקין את קובץ ההתקנה של AndroidAPS?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+לא. למעשה לא קיים קובץ התקנה (apk) להורדה עבור AndroidAPS, עליכם [לבנות](../Installing-AndroidAPS/Building-APK.md) את הקובץ בעצמכם. הנה הסיבה לכך:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+היישום AndroidAPS שולט למעשה במשאבה וקובע את מתן האינסולין. בהתאם לרגולציה הקיימת, באירופה, כל מערכת שמסווגת IIa או IIb היא מערכת רפואית שדורשת אישור של הרגולטור (סימון CE) ושמחייבת שורה של מחקרים ואישורים. הפצה של מערכת שאינה מאושרת ע"י הרגולטור אינה חוקית. רגולציה דומה קיימת גם באיזורים אחרים בעולם.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+הדרישות הרגולטוריות אינן מוגבלות למכירה (בתמורה תשלום) והיא חלה על כל סוג של הפצה (גם אם נעשית בחינם). בניה של מכשיר רפואי לשימוש עצמי הוא החריג היחיד שמאפשר להימנע מהדרישות הרגולטוריות.
 
-That’s why apks aren’t available.
+זו הסיבה שקובץ התקנה apk אינו זמין להורדה.
 
-## How to begin?
+## איך להתחיל?
 
-First of all, you have to **get loopable hardware components**:
+ראשית כל, יש להצטייד ב**ציוד\חומרה הנדרשים**:
 
-* A [supported insulin pump](./Pump-Choices.md), 
-* an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* משאבת אינסולין [הנתמכת על ידי המערכת](./Pump-Choices.md) 
+* מכשיר [טלפון אנדרואיד](Phones.md) (מכשירי אפל iOS אינם נתמכים ע"י AndroidAPS ומומלץ לבדוק את השימוש ב-[iOS Loop](https://loopkit.github.io/loopdocs/) לשימוש באייפון) 
+* מד סוכר רציף (CGM) [הנתמך ע"י המערכת](../Configuration/BG-Source.rst) 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+שנית, יש לקבוע את **ההגדרות (setup) לחומרה**. ניתן לראות [דוגמאות להגדרות חומרה, צעד אחר צעד](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+שלישית, יש לקבוע את **ההגדרות לרכיבי התוכנה**: AndroidAPS ומקור נתוני הסוכר מהחיישן.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+רביעית, יש ללמוד ולהבין את **עקרונות ה-OpenAPS ולקבוע את מקדמי הטיפול**. עקרונות הבסיס של טיפול נכון באמצעות לולאה סגורה הם דיוק בהגדרת יחס האינסולין\פחמימה והתוכנית הבזאלית. כל ההמלצות הטיפוליות מניחות שהתוכנית הבזאלית נכונה ושינויים ברמת הסוכר הם תוצאה של גורמים אחרים, שמחייבים תיקון והתאמה (פעילות גופנית, לחץ וכיו"ב.). התיקונים וההתאמות המבוצעים ע"י הלולאה הסגורה מוגבלים בחוקים וכללים לשמירה על הבטיחות (למשל מקסימום אינסולין בזאלי זמני ב[הגדרות OpenAPS](https://openaps.org/reference-design/)), כך שלא יעשה שימוש בבולוס על מנת לתקן תכנון בזאלי שגוי או שאינו מתאים. אם, לצורך ההדגמה, המערכת קובעת בזאלי זמני נמוך מהתוכנית לקראת ארוחה באופן תדיר, יתכן שיש צורך לשנות ולהתאים את התוכנית הבזאלית. ניתן להשתמש בפונקציית [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) לקבלת ניתוח והמלצה על שינויים בתוכנית הבזאלית, ביחס התיקון וביחס אינסולין\פחמימה בהתאם לנתונים שנאספו על ידי המערכת. לחילופין, ניתן לבדוק, לנתח ולהתאים את התוכנית הבזאלית [בצורה הרגילה](https://integrateddiabetes.com/basal-testing/).
 
-## What practicalities of looping do I have?
+## מהן אפשרויות הלופינג (Looping) עומדות לרשותי?
 
-### Password protection
+### הגנה באמצעות סיסמה
 
-If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+על מנת למנוע אפשרות לשינוי ההעדפות ביתר קלות, ניתן להגן על תפריט ההעדפות באמצעות סיסמה, על ידי בחירת "סיסמה להעדפות" בתפריט ההעדפות והזנה של סיסמה לבחירתכם. בכניסה הבאה לתפריט ההעדפות, תידרש סיסמא להמשך. להסרת ההגנה בסיסמה מאוחר יותר, ניתן להכנס לתפריט "סיסמה להעדפות" ולמחוק את הטקסט משדה הסיסמא.
 
-### Android Wear Smartwatches
+### שעוני Android Wear
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+אם בכוונתכם להשתמש באפליקציית Android Wear לביצוע בולוס או שינויים בהגדרות, יש לוודא שהתראות אינן חסומות ב-AndroidAPS. מאחר ואישור פעולות (למשל קביעת הגדרות או מתן בולוס) ממומש באמצעות התראות.
 
-### Disconnect pump
+### ניתוק משאבה
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+למקרה שתרצו להסיר את המשאבה מהגוף לצורך מקלחת\שחיה\ספורט וכו'. עליכם להודיע ל-AndroidAPS שאינסולין לא יוזרק ע"מ לשמור שלא תחול טעות בכמות האינסולין הפעיל בגוף.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
+* לחצו לחיצה ארוכה על כפתור הלופ (צלמית עגולה, ירוקה או כחולה) בראש מסך הבית. 
+* בחרו **'ניתוק משאבה למשך XY דקות'**
+* פעולה זו תקבע בזאלי 0 למשך הזמן שנקבע.
+* המשך המינימלי של ניתוק תלוי במשך המינימלי של המינון הבזאלי הזמני שהמשאבה מאפשרת. לכן, אם ברצונכם לנתק את המשאבה לזמן קצר יותר, עליכם לבחור את המשך הקצר ביותר שהמשאבה שלכם יכולה לקבל ולחבר מחדש באופן ידני כמתואר מטה.
+* כפתור "לולאה סגורה" (או "לולאה פתוחה") יהפוך לאפור ויציג את זמן הניתוק הנותר.
+* AAPS יחבר את המשאבה מחדש לאחר הזמן הנבחר באופן אוטומטי והלולאה הסגורה תתחיל לעבוד שוב.
     
     ![Disconnect pump](../images/PumpDisconnect.png)
 
