@@ -13,6 +13,28 @@ You will receive the following information as soon as a new update is available:
 
 Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Therefore it is necessary that every user updates a.s.a.p.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
+Android version and AAPS version
+====================================
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+
+In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+
+Android 9 and up
+------------------------------------
+* Use latest AAPS version
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Use AAPS version **2.8.2.1**
+* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 7
+------------------------------------
+* Use AAPS version **2.6.2**
+* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+
 Version 3.0.0
 ================
 Release date: XX-XX-2021

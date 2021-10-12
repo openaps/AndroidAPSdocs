@@ -62,7 +62,7 @@ Dexcom G6
 Настройки для AndroidAPS
 --------------------------------------------------
 * Выберите 'приложение Dexcom (модифицированное)' в конфигураторе.
-* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* Если вы не получаете никаких значений, выберите любой другой источник данных, а затем снова выберите 'приложение Dexcom (модифицированное)', чтобы запустить требование разрешений на установление соединения между AAPS и самостоятельно собранным приложением Dexcom.
 
 Настройки для xDrip+
 --------------------------------------------------
@@ -87,7 +87,7 @@ Dexcom G6
 .. image:../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip PhoneServiceState
 
-General troubleshooting
+Устранение неполадок - общее
 --------------------------------------------------
 Общее устранение неполадок мониторинга можно найти `здесь <./GeneralCGMRecommendation.html#Troubleshooting>`__.
 

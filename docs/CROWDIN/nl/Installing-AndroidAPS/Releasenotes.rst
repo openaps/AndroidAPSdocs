@@ -13,6 +13,28 @@ Als je daarna nog eens 30 dagen wacht met bijwerken (dus 90 dagen vanaf de datum
 
 Deze harde beperkingen zijn uiteraard niet bedoeld om je te pesten, maar zijn er om veiligheidsredenen. Nieuwe versies van AndroidAPS bevatten niet alleen nieuwe handige functies, maar ook belangrijke veiligheidsupdates. Therefore it is necessary that every user updates a.s.a.p.. Helaas zijn er nog steeds signalen dat sommige gebruikers een hele oude versie van hun app gebruiken, dus dit is een poging om de veiligheid voor individuele gebruikers en de hele doe-het-zelf loop-gemeenschap te verbeteren.  
 
+Android version and AAPS version
+====================================
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+
+In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+
+Android 9 and up
+------------------------------------
+* Use latest AAPS version
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Use AAPS version **2.8.2.1**
+* Until AAPS version 3 is published just select **master** as this is 2.8.2.1.  
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+
+Android 7
+------------------------------------
+* Use AAPS version **2.6.2**
+* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+
 Version 3.0.0
 ================
 Release date: XX-XX-2021

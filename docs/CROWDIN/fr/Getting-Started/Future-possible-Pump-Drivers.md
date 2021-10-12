@@ -6,17 +6,15 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Omnipod DASH ([Page d'accueil](https://www.myomnipod.com/DASH))
 
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. La pompe est compatible de la Boucle, mais le protocole inconnu à l'heure actuelle. La vente de la pompe a officiellement commencé en janvier 2019.
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
-
-**Comments:** Group of developers is looking into protocol (by reverse engineering original app) and into solution for AAPS, now that pump has become available all over world. There are no estimations yet, when this will be available, or even when first testing will begin. If you are interested in progress, or are willing to help, group can be reachable on WeAreNotWaiting discord. Mention your interest in androidaps group and someone will give you more info.
 
 * * *
 
 ### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. Elle dispose du Bluetooth.
 
@@ -26,13 +24,13 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Kaleido ([Page d'accueil](https://www.hellokaleido.com/))
 
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
+### Medtrum A6/P6/C6 ([Page d'accueil](https://www.medtrum.com/product/nanopump.html))
 
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
 
@@ -58,7 +56,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 * * *
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem : t:slim X2 ([Page d'accueil](https://www.tandemdiabetes.com/))
 
 **Loop status:** Not yet loopable.
 
@@ -68,7 +66,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem : t:sport ([Page d'accueil](https://www.tandemdiabetes.com/about-us/pipeline))
 
 **Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
 
@@ -80,7 +78,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Pompe Insuline Willcare ([Homepage](http://en.shinmyungmedi.com))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
@@ -92,9 +90,9 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ## Pompes plus vendues (les entreprises ne fonctionnent plus)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Pompe Cellnovo ([voir businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Etat de la boucle :** Actuellement non prise en charge par aucun système de boucle. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
@@ -104,13 +102,13 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Etat de la boucle :** Non bouclable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Etat de la boucle :** Non bouclable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
 ## Exigences pour que les pompes soient bouclables
 
@@ -145,6 +143,6 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 * * *
 
-### Other pumps support
+### Prise en charge d'autres pompes
 
 If you have any other pumps you would like to see status on, please contact us on discord.

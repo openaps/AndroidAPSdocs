@@ -25,7 +25,7 @@ Résolution de problèmes
 Problèmes de connexion
 --------------------------------------------------
 
-La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. When bluetooth connection is restabilised the data is backfilled.
+La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. Lorsque la connexion bluetooth est rétablie les données sont comblées.
 
 Erreurs de capteur
 --------------------------------------------------

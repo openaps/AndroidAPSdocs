@@ -6,17 +6,15 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop-Status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist ein Kandidat für den Loop, das Protokoll aber bisher unbekannt. Pumpe wird seit Januar 2019 verkauft.
+**Loop Status:** Omnipod DASH wird voraussichtlich in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300) verfügbar sein.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
-
-**Anmerkungen:** Die Entwickler prüfen das Protokoll (durch Reverse Engineering der Original-App) und eine Lösung für AAPS, nachdem die Pumpe jetzt auf der ganzen Welt verfügbar ist. Es gibt noch keine Einschätzungen, wann diese verfügbar sein wird oder wann der erste Test beginnt. Wenn Du Dich für die Fortschritte interessierst oder unterstützen willst, erreichst Du die Gruppe im WeAreNotWaiting Discord Channel. Gib Dein Interesse an der androidaps Gruppe bekannt und jemand wird Dir mehr Infos geben.
 
 * * *
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2. Quartal 2018) sind keine Kandiadaten für den Loop. Beide haben zwar Bluetooth, die Kommunikation ist aber sehr eingeschränkt und funktioniert nur von der Pumpe zur App. Der Hersteller will bis Ende 2021 eine neue Version - Nickname DOSE (1.6) - herausbringen, die Bolus- und TBR-Kommandos von der App erlauben soll. Sie planen eine eigene Loop-App in 2021. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Beide haben zwar Bluetooth, die Kommunikation ist aber sehr eingeschränkt und funktioniert nur von der Pumpe zur App. Der Hersteller will bis Ende 2021 eine neue Version - Nickname DOSE (1.6) - herausbringen, die Bolus- und TBR-Kommandos von der App erlauben soll. Sie planen eine eigene Loop-App in 2021. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware Voraussetzungen für AAPS:** Keine, da die Pumpe über Bluetooth kommuniziert.
 
@@ -98,7 +96,7 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
-**Hinweis zur Pumpe:** Es ist der Eindruck entstanden, dass sich das Unternehmen aus dem Pumpenmarkt zurückzieht. Weitere Informationen dazu findest Du in diesem [Artikel](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU).
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumpen, die nicht für den Loop geeignet sind
 
@@ -114,7 +112,7 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
-**Grundvoraussetzungen**
+**Voraussetzungen**
 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
@@ -125,11 +123,11 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 - Status abrufen
 - Temporäre Basalraten abbrechen
 
-**Für oref1(SMB) oder zur Bolusabgabe:**
+**Für oref1(SMB) oder Bolusing:**
 
 - Mahlzeiten Bolus abgeben
 
-**Von Vorteil**
+**Sinnvoll außerdem**
 
 - Bolus abbrechen
 - Basalprofil abrufen (fast eine Anforderung)

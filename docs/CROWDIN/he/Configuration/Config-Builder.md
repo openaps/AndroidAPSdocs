@@ -1,4 +1,4 @@
-# Config Builder
+# בונה התצורה
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
@@ -348,6 +348,6 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Config Builder
+### בונה התצורה
 
 Use tab for config builder instead of hamburger menu.

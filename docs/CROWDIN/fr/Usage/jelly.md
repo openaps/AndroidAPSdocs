@@ -23,7 +23,7 @@ Les paramètres suivants et les conseils de manipulation (utilisation de la mont
 
 <b><font color="#FF0000">Très important :</b></font> Si vous n'avez pas besoin Android 8.1 (par ex. pour boucler avec un Accu-Check Combo) restez avec android 7.0 !
 
-Follow these rules to stay with Android 7.0:
+Suivre ces règles pour rester sous Android 7.0 :
 
 * Ne vous connectez pas au wifi ou au réseau mobile lors de la première utilisation pour empêcher la mise à jour automatique.
 * Ignorez la configuration du réseau wifi.

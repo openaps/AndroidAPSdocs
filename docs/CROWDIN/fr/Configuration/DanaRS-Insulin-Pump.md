@@ -85,7 +85,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 ## Remarque spéciale lors du changement de téléphone
 
-When switching to a new phone the following steps are necessary:
+Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
 * [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
 * Transférez les paramètres de l'ancien au nouveau téléphone
@@ -97,4 +97,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).

@@ -13,6 +13,28 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Android Version und AAPS Version
+====================================
+Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert. 
+
+Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
+
+Ab Android 9
+------------------------------------
+* Verwende die aktuelle AAPS-Version.
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Verwende AAPS Version **2.8.2.1**.
+* Bis zur Veröffentlichung von AAPS Version 3 verwende einfach die **AAPS master**-Version, denn diese ist momentan 2.8.2.1. ;-)
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+
+Android 7
+------------------------------------
+* Verwende AAPS Version **2.6.2**.
+* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
+
 Version 3.0.0
 ================
 Erscheinungsdatum: XX.XX.2021
