@@ -20,7 +20,7 @@ Preferences
   .. image:: ../images/Pref2021_Filter.png
     :alt: Preferences filter
 
-.. contents:: 
+.. תוכן עניינים:: 
    :backlinks: entry
    :depth: 2
 
