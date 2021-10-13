@@ -58,206 +58,206 @@
 אפשרות 1: אשף ההתקנה
 --------------------------
 
-After installing a new version of AndroidAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  אם כבר ייצאתם את ההגדרות שלכם מהתקנה קודמת, תוכל לצאת מאשף ההתקנה ולייבא את ההגדרות הישנות שלכם.  For new installations proceed below.
+לאחר התקנת גרסה חדשה של AndroidAPS, **אשף ההתקנה** יופעל אוטומטית.  זה יתרחש גם במהלך שדרוגים במקום.  אם כבר ייצאתם את ההגדרות שלכם מהתקנה קודמת, תוכל לצאת מאשף ההתקנה ולייבא את ההגדרות הישנות שלכם.  עבור התקנות חדשות המשיכו מטה.
 
-Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
+באמצעות **אשף ההתקנה של AAPS (2)** הממוקם בפינה הימנית העליונה** בתפריט שלוש נקודות (1) ** ומעבר במסכי האשף עד שתגיעו למסך **משאבה**. לאחר מכן בחרו את לחצן הבחירה ב-**Omnipod (3)**.
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text. 
+באותו המסך, מתחת לבחירת המשאבה, מוצגות **הגדרות מנהל התקן Omnipod**, תחת תצורת ** ריילילינק** הוסיפו את מכשיר הריילילינק שלכם על ידי לחיצה על הטקסט **לא הוגדר**. 
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed. 
+במסך **בחירת ריילילינק** לחצו על הלחצן **סרוק** כדי לסרוק אחר כל התקני ה-בלוטות' הזמינים ובחרו את הריילילינק שלכם מהרשימה. לאחר בחירת הריילילינק, תוחזרו למסך בחירת סוג המשאבה, שם יוצגו הגדרות מנהל ההתקן של Omnipod ואת הריילילינק שבחרתם כולל כתובת ה-MAC שלו. 
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+לחצו על הלחצן **הבא** כדי להמשיך בשאר אשף ההתקנה. **יכול להיות שתחלוף עד דקה אחת לאתחול של הריילילינק והלחצן **הבא** הופך לפעיל.
 
-Detailed steps on how to setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
+תיאור מפורט של התקנת מכשיר התקשורת עם הפוד מפורטים להלן בקטע 'הגדרת RileyLink <#rileylink-setup>`__.
 
-**OR**
+**או**
 
-Option 2: The Config Builder
+אפשרות 2: בונה התצורה
 ----------------------------
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+דרך הפינה הימנית העליונה **תפריט המבורגר** תחת **בונה התצורה (1)** > **משאבה** > **אומניפוד** על ידי בחירה **בלחצן הבחירה (1)** שכותרתו **אומניפוד**. בחירת תיבת הסימון ** (3) ** לצד **גלגל השיניים (2)** תציג את תפריט Omnipod ככרטיסייה בממשק AAPS שכותרתה **פוד**. בתיעוד זה לשונית זו נקראת **OMNIPOD (POD)**.
 
-    **NOTE:** A faster way to access the **Omnipod settings** can be found below in the `Omnipod Settings section <#omnipod-settings>`__ of this document.
+    **הערה:** דרך גישה מהירה יותר ל-**הגדרות אומניפוד** ניתן למצוא בקטע `הגדרות אומניפוד <#omnipod-settings>`__ במסמך זה.
 
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
-Verification of Omnipod Driver Selection
+אימות בחירת מנהל התקן Omnipod
 ----------------------------------------
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*הערה: אם יצאתם מוקדם מאשף ההתקנה מבלי לבחור את ה-RileyLink, מנהל ההתקן Omnipod מופעל אך עדיין יהיה עליכם לבחור את RileyLink.  ייתכן שתראו שהלשונית OMNIPOD (POD) מופיעה כפי שהיא מופיעה מטה*
 
-To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
+כדי לוודא שהפעלתם את מנהל ההתקן של Omnipod ב-AAPS **החליקו ימינה** מהלשונית **סקירה כללית**, שם תראו כעת לשונית **אומניפוד** או **פוד**.
 
 |Enable_Omnipod_Driver_5|
 
-Omnipod Configuration
+תצורת Omnipod
 ======================
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+**החליקו ימינה** ללשונית **OMNIPOD (POD)** שם תוכלו לנהל את כל הפונקציות של הפוד וריילילינק (חלק מהפונקציות הללו אינן מופעלות או נראות ללא הפעלת פודים פעילה):
 
-    |refresh_pod_status| Refresh Pod connectivity and status
+    |refresh_pod_status| רענן את חיבור וסטטוס הפוד
 
-    |pod_management| Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    |pod_management| ניהול הפוד (הפעלה, השבתה, הפעלת צפצוף בדיקה, סטטוס ריילילינק והיסטוריית פוד)
 
-RileyLink Setup
+תצורת RileyLink
 ---------------
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
+אם כבר צימדתם את הריילילינק בהצלחה באשף ההתקנה או בשלבים שלמעלה, המשיכו אל `הפעלת פוד <#activating-a-pod>`__ מטה.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*הערה: אינדיקציה ויזואלית טובה לכך שהריילילינק אינו מחובר היא שלחצני האינסולין והמחשבון בלשונית "סקירה כללית" יחסרו. הדבר יתרחש גם ב-30 השניות הראשונות לאחר הפעלת AAPS, מכיוון שהוא מתחבר באופן פעיל אל ה-RileyLink.*
 
-1. Ensure that your RileyLink is fully charged and powered on.
+1. וודאו שהריילילינק טעון במלואו ומופעל.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
+2. לאחר בחירת מנהל ההתקן של Omnipod, זהו ובחרו את הריילילינק מתוך **בונה התצורה (1)** > **משאבה** > **Omnipod** > **גלגל השיניים (הגדרות) (2)** > ** תצורת הריילילינק (3)** על ידי לחיצה על הטקסט **לא הוגדר** או **כתובת MAC (אם קיים)**.   
 
-    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+    ודאו שסוללת הריילילינק טעונה ושהוא `ממוקמם בסמיכות <#optimal-omnipod-and-rileylink-positioning>`__ (במרחק של כ-30 ס"מ או פחות) מהטלפון כדי ש-AAPS יזהה אותו על לפי כתובת ה- MAC. לאחר שנבחר, תוכלו להמשיך ולהפעיל את הפוד שלכם. לחצו בלחצן "הקודם" בטלפון כדי לחזור לממשק ה-AAPS הראשי.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. במסך **תצורת ריילילינק** לחצו על הלחצן **סריקה (4)** כדי להתחיל סריקת בלוטות'. ** בחרו את הריילילינק שלכם (5)** מרשימת מכשירי הבלוטות' הזמינים.
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
+4. לאחר בחירתכם תוחזרו לדף הגדרות Omnipod המפרט את **כתובת ה-MAC של הריילילינק שנבחר כרגע (6).** 
 
     |RileyLink_Setup_5|
 
-5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+5. וודאו שבלשונית **OMNIPOD (POD)**, **סטטוס הריילילינק (1)** מופיע כ- **מחובר**. בשדה **סטטוס פוד (2)** אמור להופיע **אין פוד פעיל**; אם לא, נסו שוב את השלב הקודם או שצאו מ-AAPS כדי לראות אם זה מרענן את החיבור.
 
     |RileyLink_Setup_6|
 
-Activating a Pod
+הפעלת פוד
 ----------------
 
-Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
+לפני שתוכלו להפעיל פוד, עליכם לוודא שהגדרתם היטב ושחיברתם את הריילילינק בהגדרות האומניפוד
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
+*תזכורת: תקשורת עם פודים מתרחשת בטווחים מוגבלים מהרגיל כשמבצעים צימוד ופעלת פודים כאמצעי אבטחה. לפני הצימוד, אות הרדיו של הפוד חלש אך לאחר הצימוד הוא יפעל בעוצמת האות המלאה. במהלך הצימוד, וודאו כי פוד נמצא `בסמוך <#optimal-omnipod-and-rileylink-positioning>`__ (במרחק של כ-30 ס"מ או פחות) אך לא ממש בצמוד לריילילינק.
 
-1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. נווטו ללשונית **OMNIPOD (POD)**, לחצו על הלחצן **ניהול הפוד (1)** ולאחר מכן לחצו על **הפעלת פוד (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
+2. יוצג המסך **מילוי פוד**. מלאו פוד חדש עם לפחות 80 יחידות אינסולין והקשיבו לשני צפצופים המעידים על כך שהפוד מוכן להדבקה. בעת חישוב הכמות הכוללת של האינסולין הדרוש למשך 3 ימים, קחו בחשבון כי הפעלת הפוד תשתמש ב-12 עד 15 יחידות. 
 
     |Activate_Pod_3|
 
-    Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
+    וודאו שהפוד החדש ושהריילילינק נמצאים בסמיכות זה לזה (כ-30 ס"מ או פחות) ולחצו **הבא**.
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+3. במסך **אתחול פוד**, הפוד יתחיל להתכונן להדבקה (אתם תשמעו קליק ואחריו סדרה של צלילי תקתוק). אם הריילילינק נמצא מחוץ לטווח של הפוד שמופעל, תתקבל הודעת השגיאה **אין תגובה מהפוד**. אם זה קורה, `קרבו את הריילילינק <#optimal-omnipod-and-rileylink-positioning>`__ (למרחק של כ-30 ס"מ או פחות) אך לא להצמיד אותו ממש לפוד ולחצו על **נסה שוב (1)**.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
-4. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+4. עם סיום האתחול יוצג סימן ביקורת ירוק ולחצן **הבא** יופעל. לחצו על הלחצן **הבא** כדי להשלים את האתחול של הפוד ולמעבר למסך **הצמד פוד**.
 
     |Activate_Pod_6|
 
-5. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+5. לאחר מכן, הכינו את אתר ההדבקה של הפוד החדש. הסירו את מכסה המחט ואת הנייר הלבן מהמדבקה והניחו את הפוד על גופכם כרגיל. לסיום, לחצו על **הבא**.
 
     |Activate_Pod_7|
 
-6. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
+6. כעת תופיע תיבת הדו -שיח **הצמד פוד**. ** לחץ רק על כפתור אישור אם אתם מוכנים להחדיר את הקנולה**.
 
     |Activate_Pod_8|
 
-7. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+7. לאחר לחיצה על **אישור**, ייתכן שיחלוף זמן מה עד שהאומניפוד יגיב ויחדיר את הקנולה (עד 1-2 דקות), אנא שמרו על סבלנות.
 
-    If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    אם הריילילינק נמצא מחוץ לטווח של הפוד שמופעל, תתקבל הודעת השגיאה **אין תגובה מהפוד**. אם זה קורה, `קרבו את הריילילינק <#optimal-omnipod-and-rileylink-positioning>`__ (למרחק של כ-30 ס"מ או פחות) אך לא להצמיד אותו ממש לפוד ולחצו על **נסה שוב**.
 
-    If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
+    אם הריילילינק נמצא מחוץ לטווח הבלוטות' או שאין לו חיבור פעיל לטלפון, תתקבל הודעת שגיאה **אין תגובה מריילילינק**. אם זה קורה, קרבו את הריילילינק אל הטלפון ולחצו על **נסה שוב**.
 
-    *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+    *הערה: לפני החדרת הקנולה, מומלץ לצבוט את העור בסביבת נקודת ההחדרה. זה מבטיח החדרה חלקה של המחט ומפחית את הסיכויים לפתח חסימות.*
 
     |Activate_Pod_9|
 
     |Activate_Pod_10| |Activate_Pod_11|
 
-8. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+8. יופיע V ירוק, ולחצן **הבא** יופעל לאחר החדרת קנולה מוצלחת. לחצו על **הבא**.
 
     |Activate_Pod_12|
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
+9. יופיע המסך **הפוד הופעל**. לחצו על הלחצן הירוק **סיים**. מזל טוב! הפעלתם את הפוד.
 
     |Activate_Pod_13|
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. במסך התפריט **ניהול הפוד**, הלחצן **הפעל פוד (1)** *יושבת* והכפתור **כבה פוד (2)** *יופעל*. הסיבה לכך היא שהפוד פעיל כעת ולא ניתן להפעיל פוד נוסף מבלי להשבית את הפוד הנוכחי.
 
-    Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    לחצו על כפתור החזרה בטלפון כדי לחזור ללשונית **OMNIPOD (POD)** שיציג כעת מידע על הפוד הנוכחי, כולל המינון הבזאלי הנוכחי, רמת מכל האינסולין, אינסולין שהוזרק, שגיאות של הפוד והתראות.
 
-    For more details on the information displayed go to the `Omnipod (POD) Tab <#omnipod-pod-tab>`__ section of this document.
+    לפרטים נוספים עיינו בפרק `לשונית OMNIPOD (POD) <#omnipod-pod-tab>`__ שבמסמך זה.
 
     |Activate_Pod_14| |Activate_Pod_15|
 
-Deactivating a Pod
+השבתת פוד
 ------------------
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+בנסיבות רגילות, פוד אמור לפעול שלושה ימים (72 שעות) ועוד 8 שעות לאחר אזהרת תפוגתו, סך הכל 80 שעות שימוש בפוד.
 
-To deactivate a pod (either from expiration or from a pod failure):
+כיצד להשבית את הפוד (מתוקף התפוגה או בעקבות כשל של הפוד):
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. נווטו ללשונית **OMNIPOD (POD)**, לחצו **ניהול הפוד (1)**, במסך **ניהול פוד** לחצו על **כבה פוד (2)**.
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. במסך **כבה פוד**, ראשית וודאו שהריילילינק נמצא בסמיכות לפוד אך לא בצמוד אליו, לאחר מכן לחצו על **הבא** כדי להתחיל בתהליך השבתת הפוד.
 
     |Deactivate_Pod_3|
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. המסך **מכבה פוד** יופיע ותשמעו צפצוף אישור מהפוד שההשבתה הצליחה.
 
     |Deactivate_Pod_4|
 
-    **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **אם ההשבתה נכשלת** ולא נשמע צפצוף אישור, ייתכן שתקבלו הודעת **אין תגובה מריילילינק** או **אין תגובה מהפוד**. לחצו על **נסה שוב (1)** כדי לנסות להשבית שוב. אם ההשבתה ממשיכה להיכשל, לחצו על הלחצן **היפטר מהפוד (2)** כדי להיפטר מהפוד. כעת תוכלו להסיר את הפוד כיוון שפעילותו הושבתה. אם הפוד הפעיל אזעקה, ייתכן שיהיה עליכם להשתיק אותה ידנית (באמצעות סיכה או מהדק) מכיוון שכפתור **היפטר מהפוד (2)** לא ישתיק אותו.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
-4. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
+4. סימון ירוק יופיע לאחר השבתה מוצלחת. לחצו על **הבא** כדי לעבור אל המסך "הפוד הושבת". כעת תוכלו להסיר את הפוד כיוון שפעילותו הושבתה.
 
     |Deactivate_Pod_7|
 
-5. Click on the green button to return to the **Pod management** screen.
+5. לחצו על הכפתור הירוק כדי לחזור למסך **ניהול הפוד**.
 
     |Deactivate_Pod_8|
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. כעת חזרתם לתפריט **ניהול הפוד** לחץ על כפתור החזרה בטלפון שלך כדי לחזור ללשונית **OMNIPOD (POD)**. וודאו שב**סטטוס ריילילינק:** רשום **מחובר** ושב**סטטוס פוד:** רשום **אין פוד פעיל**.
 
     |Deactivate_Pod_9| |Deactivate_Pod_10|
 
-Suspending and Resuming Insulin Delivery
+הפסקה וחידוש אספקת האינסולין
 ----------------------------------------
 
-The process below will show you how to suspend and resume insulin pump delivery.
+התהליך שלהלן יפרט כיצד להפסיק ולחדש את אספקת האינסולין.
 
-*NOTE - if you do not see a SUSPEND button*, then it has not been enabled to display in the Omnipod (POD) tab. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the `Omnipod settings <#omnipod-settings>`__ under **Other**.
+*הערה - אם אינכם רואים את הכפתור "השהה"*, זה משום שהצגתו לא אופשרה בלשונית OMNIPOD (POD). אפשרו **הצג לחצן "השהיית מתן אינסולין" בלשונית אומניפוד** `בהגדרות אומניפוד <#omnipod-settings>`__ תחת **אחר**.
 
-Suspending Insulin Delivery
+השהיית אספקת האינסולין
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+השתמשו בפקודה זו כדי להכניס את הפוד הפעיל למצב השהייה. במצב מושהה זה, הפוד לא יספק אינסולין. פקודה זו מחקה את פונקציית ההשהיה של השלט המקורי של אומניפוד.
 
-1. Go to the **Omnipod (POD)** tab and click on the **SUSPEND (1)** button. The suspend command is sent from the RileyLink to the active pod and the **SUSPEND (3)** button will become greyed out. The **Pod status (2)** will display **SUSPEND DELIVERY**.
+1. עבור ללשונית **OMNIPOD (POD)** ולחצו על **השהיה (1)**. פקודת ההשהיה נשלחת מהריילילינק אל הפוד הפעיל ולחצן ה**השהייה (3)** יהפוך לאפור. **סטטוס פוד (2)** יציג **השהיית הזרקה**.
 
     |Suspend_Insulin_Delivery_1| |Suspend_Insulin_Delivery_2|
 
-2. When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message **All insulin delivery has been suspended**. Click **OK** to confirm and proceed.
+2. כאשר פקודת ההשהיה נשלחת בהצלחה על ידי הריילילינק, תיבת דו -שיח לאישור תציג את ההודעה **כל הזרקות האינסולין הושהו**. לחץ על **אישור** כדי לאשר ולהמשיך.
 
     |Suspend_Insulin_Delivery_3|
 
-3. Your active pod has now suspended all insulin delivery. The **Omnipod (POD)** tab will update the **Pod status (1)** to **Suspended**. The **SUSPEND** button will change to a new **Resume Delivery (2)** button
+3. הפוד השהה כעת את כל אספקת האינסולין. בלשונית **OMNIPOD (POD)** יעודכן **סטטוס הפוד(1)** ל**מושהה**. הלחצן **השהיה** ישתנה לכפתור חדש **חידוש הזרקה (2)**
 
     |Suspend_Insulin_Delivery_4|
 
-Resuming Insulin Delivery
+חידוש הזרקת האינסולין
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+השתמשו בפקודה זו כדי להנחות את הפוד הפעיל כעת לחדש את אספקת האינסולין. לאחר עיבוד הפקודה, מתן האינסולין יחודש לפי המינון הבזאלי הנוכחי בהתאם להגדרתו בפרופיל. הפוד יקבל שוב פקודות עבור בולוס, מינון בזאלי זמני ו-SMB.
 
-1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
+1. עברו ללשונית **OMNIPOD (POD)** וודאו שבשדה **מצב פוד (1)** מוצג **מושהה** ולאחר מכן לחצו על **חידוש הזרקה (2)** כדי להתחיל את תהליך הפוקד על הפוד לחדש את אספקת האינסולין הרגילה. תופיע הודעה **חידוש הזרקה** תחת **סטטוס פוד (3)**, שמציינת שהריילילינק שולח את הפקודה כרגע אל הפוד המושהה.
 
     |Resume_Insulin_Delivery_1| |Resume_Insulin_Delivery_2|
 
-2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. לחץ על **אישור** כדי לאשר ולהמשיך.
 
     |Resume_Insulin_Delivery_3|
 
@@ -549,7 +549,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 Omnipod Settings
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. בתיעוד זה לשונית זו נקראת **OMNIPOD (POD)**.
 
 |Omnipod_Settings_1|
 
@@ -936,7 +936,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	תצורת RileyLink
 .. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
