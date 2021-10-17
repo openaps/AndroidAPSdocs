@@ -48,6 +48,9 @@ Wichtige Hinweise
 Änderungen
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
+* Omnipod DASH support @evereha @vanelsberg
+* Unterstützung für Dana-i @MilosKozak
+* * Unterstützung für DiaconnG8
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
 * Neue interne Schnittstelle für Pumpentreiber
@@ -55,7 +58,8 @@ Wichtige Hinweise
   * Einträge können nicht via NS gelöscht werden. (Sie können aber durch den NSClient als ungültig gekennzeichnet werden.)
   * Einträgen können via Nightscout nicht geändert werden.
   * Nightscout-Synchronisation ist (für Eltern) ohne engineering mode möglich.
-* Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
+  * Ability to resync data
+* Änderung am Verhalten von Profilwechseln. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
 * Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
@@ -67,8 +71,6 @@ Wichtige Hinweise
 * Fehler bei instabilen CGM-Werten behoben @MilosKozak
 * Verbesserung der Kommunikation mit DanaR und DanaRS @MilosKozak
 * CircleCI-Integration @MilosKozak
-* Unterstützung für Dana-i @MilosKozak
-* * Unterstützung für DiaconnG8
 * Änderung der Dateispeicherorte: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
