@@ -112,21 +112,21 @@ Freestyle Libre 2
 
 На самом деле это физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. Это просто для того, чтобы указать xDrip+, что новый сенсор начал передавать уровень ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные значения, например из-за того, что вы были слишком далеко от вашего телефона, не будут восстановлены.
 
-После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. You may check you bloody BG after activation and make a new initial calibration.
+После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. После активации измерьте ГК и сделайте первоначальную калибровку.
 
-Step 4: Configure AndroidAPS (for looping only)
+Шаг 4: Настройка AndroidAPS (для работы в замкнутом/незамкнутом цикле)
 ==================================================
 * В AndroidAPS перейдите в Config Builder > BG Source и проверьте 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+Если AAPS не получает значения ГК с телефона в режиме авиаперелета пользуйтесь функцией Идентифицировать приемник на странице настроек `xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
 
 До настоящего времени, используя Libre 2 в качестве источника данных ГК, невозможно активировать «Включить SMB всегда» и «Включить SMB после углеводов» в алгоритме SMB. Значения BG Libre 2 недостаточно ровные, чтобы использовать их безопасно. Подробнее см. в `Выравнивание данных мониторинга <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>`.
 
 Опыт и устранение неполадок
 ==================================================
 
-Connectivity
+Связь
 --------------------------------------------------
-The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. Связь может прерваться, если мобильный телефон находится в кармане напротив сенсора или на улице. Когда я работаю в саду, я ношу телефон на одной стороне тела с датчиком. In rooms, where Bluetooth spreads over reflections, no problems should occur. Если возникают проблемы с подключением, проверьте другой телефон. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+Способность к сопряжению исключительная. За исключением мобильных телефонов Huawei, все современные смартфоны, по-видимому, работают хорошо. Повторное подключение в случае потери связи проходит отлично. Связь может прерваться, если мобильный телефон находится в кармане напротив сенсора или на улице. Когда я работаю в саду, я ношу телефон на одной стороне тела с датчиком. В помещениях, где активно присутствуют устройства Bluettooth, нет никаких проблем. Если возникают проблемы с подключением, проверьте другой телефон. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
 Value smoothing & raw values
 --------------------------------------------------
