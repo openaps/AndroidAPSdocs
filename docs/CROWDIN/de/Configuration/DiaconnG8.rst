@@ -90,23 +90,23 @@ Weitere Informationen
 ====================
 Options-Einstellungen für Diaconn G8 Insulinpumpe
 --------------------------------------
--	Config manager > pump > Diaconn G8 > Settings
--	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Hamburger Menü > Konfiguration > Pumpe > Diaconn G8 > Einstellungen
+- DIACONN G8 oben> 3-Punkte-Knopf oben rechts > Diaconn G8-Einstellungen
 
 .. image:: ../images/DiaconnG8/DiaconnG8_14.jpg
- :alt: Diaconn G8 pump options
+ :alt: Diaconn G8 Pumpenoptionen
     
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs. 
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- Wenn die Option **Reservoirwechsel protokollieren** aktiviert ist, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis "Insulinwechsel" eintritt.
+- Ist die Option **Kanülenwechsel protokollieren** aktiviert, werden bei einem Kanülenwechsel die entsprechenden Details automatisch in das Careportal hochgeladen. 
+- Wenn die Option **Schlauchwechsel protokollieren** aktiviert ist, werden die relevanten Details automatisch in das Pflegeportal hochgeladen.
+- Wenn die Option **Batteriewechsel protokollieren** aktiviert ist, werden die relevanten Details neim Batteriewechsel automatisch in das Pflegeportal hochgeladen und die Schaltfläche PUMPENBATTERIEWECHSEL auf der Registerkarte AKTION ist deaktiviert. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
  
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
- :alt: Diaconn G8 actions menu
+ :alt: Diaconn G8 Aktionsmenü
 
-Extended Bolus function
+Funktion verzögerter Bolus
 ------------------------
-- If you use extended bolus it will disable closed loop.
+- Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
 
-- See `this page <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details why extended bolus does not work in a closed loop environment.
+- Auf dieser Seite <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_ wird erläutert, warum der erweiterte Bolus im "Closed Loop"-Modus nicht funktioniert.
 
