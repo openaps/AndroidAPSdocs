@@ -48,7 +48,7 @@ Conseils importants
 Modifications
 ----------------------
 * XXXXk lignes changées, XXXXk nouvelles lignes de code
-* Omnipod DASH support @evereha @vanelsberg
+* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
 * Support de Dana-i @MilosKozak
 * Support de DiaconnG8
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
