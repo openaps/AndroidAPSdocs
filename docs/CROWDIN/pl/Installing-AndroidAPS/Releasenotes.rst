@@ -48,6 +48,9 @@ Important hints
 Changes
 ----------------------
 * XXXXk lines changed, XXXXk new lines of code
+* Omnipod DASH support @evereha @vanelsberg
+* Dana-i support @MilosKozak
+* DiaconnG8 support
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Lot of code rewritten to Kotlin @MilosKozak
 * New internal interface for pump drivers
@@ -55,7 +58,8 @@ Changes
   * Record deletion from NS is not allowed (only invalidation through NSClient)
   * Record modification from NS is not allowed
   * Sync setting available without engineering mode (for parents)
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak
+  * Ability to resync data
+* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
 * NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
 * Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
@@ -67,8 +71,6 @@ Changes
 * Fixed bug associated to unstable CGM data @MilosKozak
 * DanaR and DanaRS communication improvement @MilosKozak
 * CircleCI integration @MilosKozak
-* Dana-i support @MilosKozak
-* DiaconnG8 support
 * Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
