@@ -42,71 +42,71 @@ Bluetooth-Pairing
    .. image:: ../images/DiaconnG8/DiaconnG8_07.jpg
     :alt: PIN-Code
     
-Pump status check and log synchronization
+Überprüfung des Pumpenstatus und Synchronisierung der Protokolle
 ==========================================
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+Sobald Ihre Pumpe verbunden ist, klicken Sie auf das Bluetooth-Symbol, um den Status zu überprüfen und die Protokolle zu synchronisieren.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_08.jpg
-    :alt: Bluetooth status
+    :alt: Bluetooth-Status
     
-Bluetooth Troubleshooting
+Bluetooth-Fehlerbehebung
 ==========================
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Was ist bei einer instabilen Bluetooth-Verbindung mit der Pumpe zu tun?**
 
-Method 1 ) Check the pump again after AAPS application is completed.
+Methode 1) Überprüfe die Pumpe erneut, nachdem die AAPS-Anwendung abgeschlossen ist.
 --------------------------------------------------------------------- 
-- Click on the 3 dots button on the top right.
+- Klicke auf die Schaltfläche mit den 3 Punkten oben rechts.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_09.jpg
-    :alt: Preferences menu
+    :alt: Menü Einstellungen
     
-- Click on Exit. 
+- Klicke auf "Beenden". 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_10.jpg
-    :alt: Exit
+    :alt: Beenden
 
-Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+Methode 2) Wenn die erste Methode nicht funktioniert, trenne die Bluetooth-Verbindung und stelle sie dann wieder her.
 -------------------------------------------------------------------------------------
-- Press and hold the Bluetooth button at the top for about 3 seconds. 
+- Halte die Bluetooth-Taste an der Oberseite etwa 3 Sekunden lang gedrückt. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_11.jpg
-    :alt: Bluetooth button
+    :alt: Bluetooth-Button
  
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Klicke auf den Button 'Einstellungen' auf der gekoppelten Diaconn G8 Insulinpumpe.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_12.jpg
-    :alt: Settings button
+    :alt: Button Einstellung
  
-- Unpair.
+- Entkoppeln.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_13.jpg
-    :alt: Unpair
+    :alt: Entkoppeln
     
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Wiederhole den Bluetooth-Pairing-Prozess für die Pumpe (siehe oben).
 
-Further Information
+Weitere Informationen
 ====================
-Diaconn G8 Insulin pump option setting
+Options-Einstellungen für Diaconn G8 Insulinpumpe
 --------------------------------------
--	Config manager > pump > Diaconn G8 > Settings
--	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Hamburger Menü > Konfiguration > Pumpe > Diaconn G8 > Einstellungen
+- DIACONN G8 oben> 3-Punkte-Knopf oben rechts > Diaconn G8-Einstellungen
 
 .. image:: ../images/DiaconnG8/DiaconnG8_14.jpg
- :alt: Diaconn G8 pump options
+ :alt: Diaconn G8 Pumpenoptionen
     
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs. 
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- Wenn die Option **Reservoirwechsel protokollieren** aktiviert ist, werden die entsprechenden Details automatisch in das Careportal hochgeladen, wenn das Ereignis "Insulinwechsel" eintritt.
+- Ist die Option **Kanülenwechsel protokollieren** aktiviert, werden bei einem Kanülenwechsel die entsprechenden Details automatisch in das Careportal hochgeladen. 
+- Wenn die Option **Schlauchwechsel protokollieren** aktiviert ist, werden die relevanten Details automatisch in das Pflegeportal hochgeladen.
+- Wenn die Option **Batteriewechsel protokollieren** aktiviert ist, werden die relevanten Details neim Batteriewechsel automatisch in das Pflegeportal hochgeladen und die Schaltfläche PUMPENBATTERIEWECHSEL auf der Registerkarte AKTION ist deaktiviert. (Hinweis: Um die Batterie zu wechseln, stoppe bitte alle laufenden Injektionsvorgänge.)
  
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
- :alt: Diaconn G8 actions menu
+ :alt: Diaconn G8 Aktionsmenü
 
-Extended Bolus function
+Funktion verzögerter Bolus
 ------------------------
-- If you use extended bolus it will disable closed loop.
+- Wenn Du einen verzögerten Bolus verwendest, wird der "Closed Loop"-Modus deaktiviert.
 
-- See `this page <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details why extended bolus does not work in a closed loop environment.
+- Auf dieser Seite <../Usage/Extended-Carbs.html#warum-ein-verzogerter-bolus-beim-loopen-nicht-funktioniert>`_ wird erläutert, warum der erweiterte Bolus im "Closed Loop"-Modus nicht funktioniert.
 

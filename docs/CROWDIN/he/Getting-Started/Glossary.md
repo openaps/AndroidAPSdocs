@@ -281,7 +281,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
- <td><strong>Profile</strong></td>
+ <td><strong>פרופיל</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
@@ -377,7 +377,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Wallpaper</strong></td>
+ <td><strong>טפט</strong></td>
  <td>AndroidAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>

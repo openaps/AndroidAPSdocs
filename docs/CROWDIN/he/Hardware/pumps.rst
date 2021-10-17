@@ -1,15 +1,15 @@
-Pump Configuration
+תצורת משאבות
 ***********************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Dana-R pump <../Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <../Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <../Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <../Configuration/Accu-Chek-Insight-Pump.md>
-   Diaconn G8 insulin pump <../Configuration/DiaconnG8.rst>
+   משאבת Dana-R <../Configuration/DanaR-Insulin-Pump.md>
+   משאבת Dana-RS<../Configuration/DanaRS-Insulin-Pump.md>
+   משאבת Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.md>
+   משאבת Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.md>
+   משאבת Diaconn G8 <../Configuration/DiaconnG8.rst>
    Omnipod Eros <../Configuration/OmnipodEros.rst>
-   Medtronic pump <../Configuration/MedtronicPump.md>
-   Future possible pump drivers <../Getting-Started/Future-possible-Pump-Drivers.md>
+   משאבות Medtronic <../Configuration/MedtronicPump.md>
+   משאבות פוטנציאליות עתידיות <../Getting-Started/Future-possible-Pump-Drivers.md>

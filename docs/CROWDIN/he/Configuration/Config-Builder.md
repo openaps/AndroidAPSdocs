@@ -18,7 +18,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## פרופיל
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
@@ -68,12 +68,12 @@ Disadvantage:
 
 * none
 
-### Profile helper
+### עוזר פרופילים
 
-Profile helper offers two functions:
+עוזר הפרופילים מציע שתי פונקציות:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. הרכבת פרופיל עבור ילדים
+2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
@@ -159,7 +159,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
 * Random BG: Generates random BG data (Demo mode only)
 
-## Pump
+## משאבה
 
 Select the pump you are using.
 
@@ -238,7 +238,7 @@ See [Objectives](../Usage/Objectives.rst) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
-## General
+## כללי
 
 ### Overview
 

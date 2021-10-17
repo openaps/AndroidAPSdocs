@@ -86,7 +86,7 @@ Freestyle Libre 2
 
 Обратите внимание, что оригинальное модифицированное приложение **не имеет никакого подключения к Интернету**, чтобы избежать отслеживания.
 
-Однако существует вариант этого приложения с включенным доступом в Интернет для поддержки LibreView. Имейте в виду, что в этом случае ваши данные передаются в облако. But your diadoc tool- and reporting chain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
+Однако существует вариант этого приложения с включенным доступом в Интернет для поддержки LibreView. Имейте в виду, что в этом случае ваши данные передаются в облако. Но ваша цепочка отчетов и diadoc полностью поддерживается. С помощью этого варианта можно также перенести оповещения сенсора на другое устройство, которое не запускало сенсор. Подробно о том, как это сделать, можно найти поиском google на немецких диабетических форумах.
 
 
 Шаг 2: Установите и настройте приложение xDrip+
@@ -94,15 +94,15 @@ Freestyle Libre 2
 
 Значения гликемии передаются на смартфон приложением xDrip+. 
 
-* If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+* Если это еще не сделано, загрузите xdrip и установите одну из последних ночных сборок отсюда `<https://github.com/NightscoutFoundation/xDrip/releases>`_.
 * В xDrip+ выберите "Libre2 (пропатченное приложение)" в качестве источника данных
 * При необходимости введите "BgReading:d, xdrip libr_receiver:v" в разделе Менее распространенные настройки -> Extra Logging Settings-> Extra tags for logging. Это позволит записывать сообщения об ошибках для устранения неисправностей.
 В xdrip перейдите в настройки > совместимость программ >локальная трансляция данных и выберите Включить (ON).
 В xdrip+ перейдите в настройки > совместимость программ > принимать назначения (Accept treatments) и выберите ВЫКЛ (OFF).
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
+* для включения приема ГК с xdrip (версия AAPS 2.5.x и выше) установите `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
 Если хотите, чтобы AndroidAPS мог калибровать показания гликемии, в xdrip + перейдите в настройки > совместимость приложений > принимать калибровки (Accept calibrations) и выберите ВКЛ (ON).  Возможно вы также захотите рассмотреть варианты калибровки в настройках > менее распространенные параметры > дополнительные параметры калибровки.
 
-.. image:: ../images/Libre2_Tags.png
+.. изображение:: ../images/Libre2_Tags.png
   :alt: xDrip+ LibreLink журналы
 
 Шаг 3: Запустить сенсор
@@ -110,9 +110,9 @@ Freestyle Libre 2
 
 В xDrip+ запустите датчик с помощью "Start Sensor" и "not today". 
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. Это просто для того, чтобы указать xDrip+, что новый сенсор начал передавать уровень ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные значения, например из-за того, что вы были слишком далеко от вашего телефона, не будут восстановлены.
+На самом деле это физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. Это просто для того, чтобы указать xDrip+, что новый сенсор начал передавать уровень ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные значения, например из-за того, что вы были слишком далеко от вашего телефона, не будут восстановлены.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
+После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. You may check you bloody BG after activation and make a new initial calibration.
 
 Step 4: Configure AndroidAPS (for looping only)
 ==================================================

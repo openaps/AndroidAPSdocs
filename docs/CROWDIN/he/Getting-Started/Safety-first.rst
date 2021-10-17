@@ -3,7 +3,7 @@ Safety first
 
 **When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
-General
+כללי
 ==================================================
 
 * AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
