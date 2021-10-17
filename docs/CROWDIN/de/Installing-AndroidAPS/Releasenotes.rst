@@ -48,7 +48,7 @@ Wichtige Hinweise
 Änderungen
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
-* Omnipod DASH support @evereha @vanelsberg
+* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für Dana-i @MilosKozak
 * * Unterstützung für DiaconnG8
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
