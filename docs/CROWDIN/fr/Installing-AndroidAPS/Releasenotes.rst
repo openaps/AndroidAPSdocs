@@ -48,6 +48,9 @@ Conseils importants
 Modifications
 ----------------------
 * XXXXk lignes changées, XXXXk nouvelles lignes de code
+* Omnipod DASH support @evereha @vanelsberg
+* Support de Dana-i @MilosKozak
+* Support de DiaconnG8
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
 * Nouvelle interface interne pour les pilotes des pompes
@@ -55,7 +58,8 @@ Modifications
   * La suppression des enregistrements de NS n'est pas autorisée (uniquement l'invalidation via NSClient)
   * La modification des enregistrements à partir de NS n'est pas autorisée
   * Paramètres de synchronisation disponibles sans le mode ingénierie (pour les parents)
-* Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak
+  * Ability to resync data
+* Changement de comportement du changement de profil. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 * NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
@@ -67,8 +71,6 @@ Modifications
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
 * Amélioration de la communication DanaR et DanaRS @MilosKozak
 * Intégration de CircleCI @MilosKozak
-* Support de Dana-i @MilosKozak
-* Support de DiaconnG8
 * Changement de l'emplacement des fichiers : /AAPS/extra (mode ingénierie) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
