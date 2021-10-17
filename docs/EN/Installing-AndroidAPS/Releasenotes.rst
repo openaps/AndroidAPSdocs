@@ -48,7 +48,7 @@ Important hints
 Changes
 ----------------------
 * XXXXk lines changed, XXXXk new lines of code
-* Omnipod DASH support @evereha @vanelsberg
+* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
 * Dana-i support @MilosKozak
 * DiaconnG8 support
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
