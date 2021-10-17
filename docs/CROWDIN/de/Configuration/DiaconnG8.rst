@@ -42,22 +42,22 @@ Bluetooth-Pairing
    .. image:: ../images/DiaconnG8/DiaconnG8_07.jpg
     :alt: PIN-Code
     
-Pump status check and log synchronization
+Überprüfung des Pumpenstatus und Synchronisierung der Protokolle
 ==========================================
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+Sobald Ihre Pumpe verbunden ist, klicken Sie auf das Bluetooth-Symbol, um den Status zu überprüfen und die Protokolle zu synchronisieren.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_08.jpg
-    :alt: Bluetooth status
+    :alt: Bluetooth-Status
     
-Bluetooth Troubleshooting
+Bluetooth-Fehlerbehebung
 ==========================
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Was ist bei einer instabilen Bluetooth-Verbindung mit der Pumpe zu tun?**
 
-Method 1 ) Check the pump again after AAPS application is completed.
+Methode 1) Überprüfe die Pumpe erneut, nachdem die AAPS-Anwendung abgeschlossen ist.
 --------------------------------------------------------------------- 
-- Click on the 3 dots button on the top right.
+- Klicke auf die Schaltfläche mit den 3 Punkten oben rechts.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_09.jpg
     :alt: Preferences menu
