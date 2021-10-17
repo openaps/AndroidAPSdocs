@@ -60,35 +60,35 @@ Methode 1) Überprüfe die Pumpe erneut, nachdem die AAPS-Anwendung abgeschlosse
 - Klicke auf die Schaltfläche mit den 3 Punkten oben rechts.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_09.jpg
-    :alt: Preferences menu
+    :alt: Menü Einstellungen
     
-- Click on Exit. 
+- Klicke auf "Beenden". 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_10.jpg
-    :alt: Exit
+    :alt: Beenden
 
-Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+Methode 2) Wenn die erste Methode nicht funktioniert, trenne die Bluetooth-Verbindung und stelle sie dann wieder her.
 -------------------------------------------------------------------------------------
-- Press and hold the Bluetooth button at the top for about 3 seconds. 
+- Halte die Bluetooth-Taste an der Oberseite etwa 3 Sekunden lang gedrückt. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_11.jpg
-    :alt: Bluetooth button
+    :alt: Bluetooth-Button
  
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Klicke auf den Button 'Einstellungen' auf der gekoppelten Diaconn G8 Insulinpumpe.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_12.jpg
-    :alt: Settings button
+    :alt: Button Einstellung
  
-- Unpair.
+- Entkoppeln.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_13.jpg
-    :alt: Unpair
+    :alt: Entkoppeln
     
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Wiederhole den Bluetooth-Pairing-Prozess für die Pumpe (siehe oben).
 
-Further Information
+Weitere Informationen
 ====================
-Diaconn G8 Insulin pump option setting
+Options-Einstellungen für Diaconn G8 Insulinpumpe
 --------------------------------------
 -	Config manager > pump > Diaconn G8 > Settings
 -	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
