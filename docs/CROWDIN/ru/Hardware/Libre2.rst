@@ -112,7 +112,7 @@ Freestyle Libre 2
 
 На самом деле это физически не запустит сенсор Libre2 и не начнет взаимодействие с ним. Это просто для того, чтобы указать xDrip+, что новый сенсор начал передавать уровень ГК. Если доступно, введите два замера крови для начальной калибровки. Теперь значения глюкозы крови должны отображаться в xDrip+ каждые 5 минут. Пропущенные значения, например из-за того, что вы были слишком далеко от вашего телефона, не будут восстановлены.
 
-After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
+После смены сенсора xDrip+ автоматически определит новый и удалит все данные калибровки. You may check you bloody BG after activation and make a new initial calibration.
 
 Step 4: Configure AndroidAPS (for looping only)
 ==================================================
