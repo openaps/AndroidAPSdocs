@@ -16,7 +16,7 @@ Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**
 
 Chcete-li sestavit verzi AAPS pro Wear OS, je nutné při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) vybrat build variant s názvem "fullRelease" (nebo "pumpRelease", pokud chcete pouze dálkový ovladač k pumpě bez funkcí smyčky).
 
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+Od března 2021 již není možné AAPS pro hodinky stáhnout z Google Play Store. Můžete to obejít pomocí [Wear instalátoru](https://youtu.be/8HsfWPTFGQI), který je potřeba nainstalovat do telefonu i hodinek. Jakmile vyberete AndroidAPS jako aplikaci k nahrání na hodinky, budete moct použít ciferník, komplikace a ovládání AAPS.
 
 ### Nastavení na telefonu
 
@@ -51,11 +51,11 @@ Chcete-li se rychleji dostat do nabídky AAPS, dvakrát klepněte na hodnotu gly
 
 ![Dostupné ciferníky](../images/Watchface_Types.png)
 
-### New watchface as of AndroidAPS 2.8
+### Nový watchface od AndroidAPS 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Ciferník Digital Style](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* Barvy, čáry a kruhy lze konfigurovat v nabídce nastavení pod ozubeným kolečkem v nabídce pro výběr ciferníku.
 
 ## Ciferník AAPSv2 – Popis
 
@@ -197,7 +197,7 @@ AndroidAPS nabízí následující komplikace:
 
 Navíc existují tři druhy komplikací </code>VELKÝ OBRÁZEK</0> **Tmavá tapeta**, **Šedá tapeta** a**Světlá tapeta**, zobrazující statickou tapetu AAPS.
 
-### Complication related settings
+### Nastavení související s komplikacemi
 
 * **Akce po klepnutí na komplikaci** (výchozí `Výchozí`): Rozhodne, které dialogové okno se otevře, když uživatel poklepe na komplikaci: 
     * *Výchozí*: specifické akce pro typ kompilace *(viz seznam výše)*
@@ -236,15 +236,15 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 
 ## Řešení problémů s wear aplikací:
 
-* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
-* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Někdy pomůže znovu sesynchronizovat aplikace do hodinek, i když to ručně může být poněkud zdlouhavé: Android wear > Ikona ozubeného kola > Název hodinek > Synchronizovat aplikace.
+* Povolte ADB ladění ve vývojářských možnostech (na hodinkách), připojte hodinky k počítači přes USB a spusťte Wear aplikaci, až budete mít na počítači otevřené Android Studio.
+* Pokud se komplikace neaktualizují – nejdříve zkontrolujte, zda vůbec AAPS ciferník funguje.
 
 ### Sony Smartwatch 3
 
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+* Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS. 
 * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
+* Možný postup, jak to vyřešit, najdete na stránce [odstraňování potíží](../Usage/SonySW3.rst).
 
 ## Zobrazení dat z Nightscoutu
 
