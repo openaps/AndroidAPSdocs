@@ -8,16 +8,16 @@ Vývojáři jsou rodiče, pečovatelé, blízcí a lidé s cukrovkou, kteří sp
 
 ## Můžu napsat kód! Jak mohu přispět?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Najděte nejprve malý úkol a proveďte první pull request! :)
+Jéje! Podívejte se na seznam problémů, zeptejte se na discord fóru, tam je vždy mnoho věcí na práci! Najděte nejprve malý úkol a proveďte první pull request! :)
 
 ## Znám systém a můžu psát dokumentaci!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Skvělé, toto je velmi ceněná věc a dobrý způsob, jak své znalosti zúročit!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Kanál na discordu týkající se wiki lze nalézt zde: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Návod, jak se to dělá na anglické wiki, lze nalézt zde: [How to make a PR](../make-a-PR.md). Jiné jazyky jsou pouze překladem z angličtiny a nelze je upravovat z důvodů konzistence.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Umím víc jazyků a chci překládat aplikaci nebo dokumentaci
 
 * Pokud chcete přeložit **aplikaci** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidaps).
 * Pokud chcete přeložit **wiki** do jiných jazyků (děkuji), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Prostě se přihlaště na CROWDIN, vyberte Váš jazyk, počkejte na schálení
 
 ## Jsou další možnosti, jak pomoci?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Dovednosti, které potřebujeme jsou grafický design, UX design, překládání, doplňování wiki nebo i jen odpovídání na jednoduché otázky kladené na kanálu na discordu & Facebook umožňuje vývojářům využívat svůj čas pro složitější věci.
