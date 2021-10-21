@@ -48,7 +48,7 @@ Wichtige Hinweise
 Änderungen
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
+* Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für Dana-i @MilosKozak
 * * Unterstützung für DiaconnG8
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
@@ -58,8 +58,8 @@ Wichtige Hinweise
   * Einträge können nicht via NS gelöscht werden. (Sie können aber durch den NSClient als ungültig gekennzeichnet werden.)
   * Einträgen können via Nightscout nicht geändert werden.
   * Nightscout-Synchronisation ist (für Eltern) ohne engineering mode möglich.
-  * Ability to resync data
-* Änderung am Verhalten von Profilwechseln. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+  * Möglichkeit, Daten neu zu synchronisieren
+* Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
 * Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
