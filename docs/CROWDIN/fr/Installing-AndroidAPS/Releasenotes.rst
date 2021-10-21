@@ -55,10 +55,12 @@ Modifications
 * Beaucoup de code réécrit en Kotlin @MilosKozak
 * Nouvelle interface interne pour les pilotes des pompes
 * NSClient réécrit pour une meilleure synchronisation et une personnalisation plus détaillée @MilosKozak
+
   * La suppression des enregistrements de NS n'est pas autorisée (uniquement l'invalidation via NSClient)
   * La modification des enregistrements à partir de NS n'est pas autorisée
   * Paramètres de synchronisation disponibles sans le mode ingénierie (pour les parents)
   * Ability to resync data
+
 * Changement de comportement du changement de profil. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 * NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak
