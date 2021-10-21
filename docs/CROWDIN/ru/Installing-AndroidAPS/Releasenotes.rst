@@ -56,10 +56,12 @@ Release date: XX-XX-2021
 * Lot of code rewritten to Kotlin @MilosKozak
 * New internal interface for pump drivers
 * NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+
   * Record deletion from NS is not allowed (only invalidation through NSClient)
   * Record modification from NS is not allowed
   * Sync setting available without engineering mode (for parents)
   * Ability to resync data
+
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
 * NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
