@@ -85,7 +85,7 @@ V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v pr�
 
 ## Zvláštní poznámka, pokud měníte telefon
 
-When switching to a new phone the following steps are necessary:
+Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kroky:
 
 * [Exportujte nastavení](../Usage/ExportImportSettings#export-settings) na svém starém telefonu
 * Přesuňte nastavení ze starého do nového telefonu
@@ -97,4 +97,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#danarv2-danars).

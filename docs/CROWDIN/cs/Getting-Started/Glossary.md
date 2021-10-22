@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - artificial pancreas system</td>
+ <td>AndroidAPS - systém umělé slinivky</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -90,13 +90,13 @@
 </tr>
 <tr>
  <td><strong>KAN</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td>stáří kanyly - zobrazuje se v Nightscoutu, pokud je vložena informace o výměně v záložce akcí / v menu nebo prostřednictvím AAPS na záložce akcí 'Plnění/Doplňování'</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
+ <td>ukazatel stáří kanyly na domácí stránce</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
 </tr>
@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>systém na verzování pro sledování změn v souborech v počítači a koordinaci práce na těchto souborech<br>-> nezbytný pro aktualizace APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - aktualizace APK</a></td>
 </tr>
@@ -276,9 +276,9 @@
 </tr>
 <tr>
  <td><strong>Predikce</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>predikce vývoje glykémie založená na různých výpočtech</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - křivky predikce</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
