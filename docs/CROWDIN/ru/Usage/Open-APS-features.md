@@ -183,9 +183,9 @@ AMA, сокращение от "advanced meal assist", усовершенств�
 
 ### Включить autosense помощника болюса AMA
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
+Здесь можно выбрать, использовать [детектор чувствительности](../Configuration/Sensitivity-detection-and-COB.md) 'autosense' или нет.
 
-### Autosens adjust temp targets too
+### Autosense также подстраивает цели
 
 If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. Это позволяет AndroidAPS работать более или менее «агрессивно». При этом фактическая цель может быть достигнута быстрее.
 
