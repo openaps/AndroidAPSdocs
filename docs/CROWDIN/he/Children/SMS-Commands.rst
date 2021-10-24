@@ -3,24 +3,24 @@
 בטיחות לפני הכל
 ==================================================
 * AndroidAPS מאפשר שליטה בלופ שבטלפון של ילד מרחוק באמצעות הודעת טקסט.  אם תאפשרו את תקשורת SMS, זכרו שהטלפון ששולח את הפקודות יכול להיגנב. לכן זכרו להגן עליו עם סיסמא לכל הפחות. מומלץ להגדיר סיסמא חזקה או זיהוי ביומטרי.
-* בנוסף, מומלץ לאשר `מספר טלפון נוסף <#authorized-phone-numbers>`_ לפקודות SMS. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
-* AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
-* **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* בנוסף, מומלץ לאשר `מספר טלפון נוסף <#authorized-phone-numbers>`_ לפקודות SMS. כך תוכלו להשתמש במספר הנוסף כדי `להשבית זמנית <#other>`_ את תקשורת ה-SMS במקרה של אובדן או גניבת מכשיר הטלפון העיקרי.
+* AndroidAPS יודיע בהודעת טקסט אם בוצעו הפקודות שנשלחו, כגון בולוס או שינוי פרופיל. רצוי להגדיר זאת כך שתשלחנה הודעות SMS לאישור לשני מספרי טלפון שונים לפחות, במקרה שאחד הטלפונים המקבלים ייגנב.
+* **במידה ומתן הבולוסים מתבצע באמצעות פקודות SMS, יש להזין את כמות הפחמימות לנייטסקאוט (NSClient, האתר...)!** אם לא תעשה זאת, הIOB (אינסולין בגוף) יהיה נכון, אך הCOB (פחמימות בגוף) יירשם כנמוך מידי, וכתוצאה מכך יתכן שלא יתבצע בולוס תיקון מכיון שהAAPS יעריך כי רמת האינסולין הפעיל בגוף גבוהה מידי.
+החל מגירסת AndroidAPS 2.7, יש להשתמש באפליקציית אימות עם סיסמה חד פעמית מבוססת-זמן להגברת בטיחות השימוש בפקודות SMS.
 
-Setup SMS commands
+הגדרת פקודות SMS
 ==================================================
 
 .. image:: ../images/SMSCommandsSetup.png
-  :alt: SMS Commands Setup
+  :alt: הגדרת פקודות SMS
       
-* Most of the adjustments of temp targets, following AAPS etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Boluses can't be given through Nightscout, but you can use SMS commands.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* ניתן לבצע את רוב התאמות ערכי המטרה הזמניים, מעקב AAPS, וכו'. באפליקציית `NSClient <../Children/Children.html>`_ בטלפון אנדרואיד עם חיבור לאינטרנט.
+* לא ניתן לתת בולוסים דרך הנייטסקאוט, אבל ניתן להשתמש בפקודות SMS.
+במידה ומכשיר הטלפון למעקב שלך הוא אייפון, ולכן אין באפשרותך להשתמש באפליקציית ה-NSClient, קיימות פקודות SMS נוספות לשם כך.
 
-* In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+* בהגדרות מכשיר האנדרואיד, עבור ליישומים > AndroidAPS > הרשאות ואפשרו הרשאת SMS.
 
-Authorized phone numbers
+מספרי טלפון מורשים
 -------------------------------------------------
 * In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
 * Enable 'Allow remote commands via SMS'.
