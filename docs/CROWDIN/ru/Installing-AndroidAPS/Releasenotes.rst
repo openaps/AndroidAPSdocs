@@ -69,6 +69,8 @@ Release date: XX-XX-2021
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
 * UI improvements @MilosKozak
+* New user buttons for automations @MilosKozak
+* New automation layout @MilosKozak
 * History browser updated and fixed @MilosKozak
 * Objective9 removed @MilosKozak
 * Fixed bug associated to unstable CGM data @MilosKozak
