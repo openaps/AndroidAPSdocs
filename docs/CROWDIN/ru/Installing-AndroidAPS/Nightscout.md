@@ -49,7 +49,7 @@
 
 ## Полуавтоматизированная установка Nightscout
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+Один из участников проекта Martin Schiftan на протяжении многих лет бесплатно предлагал полуавтоматическую установку Nightscout. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
 **Преимущества**
 
