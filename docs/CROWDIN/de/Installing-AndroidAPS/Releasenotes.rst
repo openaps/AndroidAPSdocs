@@ -68,6 +68,8 @@ Wichtige Hinweise
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
 * Verbesserung der Anzeige (user interface) @MilosKozak
+* New user buttons for automations @MilosKozak
+* New automation layout @MilosKozak
 * History Browser aktualisiert und Fehler behoben @MilosKozak
 * Objective 9 wurde entfernt @MilosKozak
 * Fehler bei instabilen CGM-Werten behoben @MilosKozak
