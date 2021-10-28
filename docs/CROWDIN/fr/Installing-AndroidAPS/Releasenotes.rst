@@ -68,6 +68,8 @@ Modifications
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
 * Améliorations de l'interface utilisateur @MilosKozak
+* New user buttons for automations @MilosKozak
+* New automation layout @MilosKozak
 * Historique mis à jour et corrigé @MilosKozak
 * Objective9 supprimé @MilosKozak
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
