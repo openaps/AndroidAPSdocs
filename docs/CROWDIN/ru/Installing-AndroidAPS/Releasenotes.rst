@@ -43,22 +43,22 @@ Android 7
 Важные Примечания
 ----------------------
 * **Минимальная версия Android теперь 9.0**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. Следует создать новый переключатель профиля и начать с нулевых значений IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
+* Используйте одну версию AAPS и NSClient
 
 Изменения
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
-* Dana-i support @MilosKozak
-* DiaconnG8 support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* Изменены XXXXk строки, XXXXk новые строки кода
+* Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* Поддержка Dana-i @MilosKozak
+* Поддержка DiaconnG8
+* Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Часть кода переписана на Kotlin @MilosKozak
+* Новый интерфейс для драйверов помп
+* NSClient переписан для лучшей синхронизации и более детальной настройки @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
+  * Удаление записи из NS не допускается (аннулирование только через NSClient)
+  * Модификация записи из NS не допускается
   * Sync setting available without engineering mode (for parents)
   * Ability to resync data
 
