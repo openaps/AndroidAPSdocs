@@ -65,18 +65,18 @@ Android 7
 * Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
 * NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak
-* Процедура сброса забытого мастер-пароля. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* UI improvements @MilosKozak
-* New user buttons for automations @MilosKozak
-* New automation layout @MilosKozak
-* History browser updated and fixed @MilosKozak
-* Objective9 removed @MilosKozak
-* Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
+* Отслеживание действий пользователя @Philoul
+* Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
+* Улучшения пользовательского интерфейса @MilosKozak
+* Новые пользовательские кнопки для автоматизации @MilosKozak
+* Новый макет автоматизации @MilosKozak
+* Браузер истории обновлён и исправлен @MilosKozak
+* Цель 9 удалена @MilosKozak
+* Исправлена ошибка, связанная с нестабильными данными CGM @MilosKozak
+* Улучшение связи с DanaR и DanaRS @MilosKozak
+* Интеграция с CircleCI @MilosKozak
+* Изменение местоположения файлов: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
 
