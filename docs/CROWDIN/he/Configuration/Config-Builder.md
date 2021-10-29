@@ -293,7 +293,7 @@ Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE
 
 Choose if you want to have a notes field when entering treatments or not.
 
-#### Status lights
+#### אורות חיווי
 
 Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
