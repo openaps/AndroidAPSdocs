@@ -18,18 +18,18 @@ ContextEdit.
 ====================================
 Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9. 
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Чтобы пользователи более старой версией Android могли применять старые версии AAPS была изменена только проверка версий. Никаких других улучшений не включено.
 
-Android 9 and up
+Android 9 и выше
 ------------------------------------
-* Use latest AAPS version
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+Пользуйтесь новейшей версией AAPS
+Загрузите код AAPS здесь https://github.com/nightscout/AndroidAPS
 
 Android 8
 ------------------------------------
 * Use AAPS version **2.8.2.1**
 * Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+Загрузите код AAPS здесь https://github.com/nightscout/AndroidAPS
 
 Android 7
 ------------------------------------
@@ -323,7 +323,7 @@ Release date: XX-XX-2021
 * Новый модуль `Автоматизация <../Usage/Automation.html>`_
 * Позволяет подать `только часть болюса <../Configuration/Preferences.html#advanced-settings-overview>`_ с калькулятора болюса
 * Рендеринг активности инсулина
-* Adjusting IOB predictions by autosens result
+* Корректировка прогнозов IOB с помощью результата autosense
 Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
@@ -401,7 +401,7 @@ ContextEdit
 
 Новые возможности
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
+* Поддержка oref1/SMB (<https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>документация oref1). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
 * ` _Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html> ` _ Поддержка помпы
 * Мастер установки: направляет вас через процесс настройки AndroidAPS
 
@@ -409,7 +409,7 @@ ContextEdit
 --------------------------------------------------
 * Для включения SMB необходимо начать выполнение цели 10 (вкладка SMB обычно показывает какие применяются ограничения)
 * maxIOB теперь включает весь IOB, а не только добавленный базал. То есть, если дан болюс 8 ед. на еду a максимальный IOB ограничен 7 ед., то SMB не будет подан до тех пор, пока активный инсулин IOB не опустится ниже 7 ед.
-* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. If you are upgrading from AMA to SMB, you have to change it manually
+* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. Если вы переходите с AMA к SMB, то вам нужно изменить его вручную
 * Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
   * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
@@ -444,7 +444,7 @@ ContextEdit
 * Переработан конфигуратор и вкладки целей, добавлены описания
 * Новый значок приложения
 * Много улучшений и исправлений
-* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
+* независимые от Nightscout оповещения, если помпа недоступна длительное время (например, севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
 * Возможность держать экран включенным
 * Опция отображения уведомлений как уведомление Android
 * Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.
