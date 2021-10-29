@@ -27,22 +27,22 @@ Android 9 и выше
 
 Android 8
 ------------------------------------
-* Use AAPS version **2.8.2.1**
-* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
+* Пользуйтесь AAPS версии **2.8.2.1**
+До выхода версии 3 просто выбирайте **master** и это будет 2.8.2.1. ;-)
 Загрузите код AAPS здесь https://github.com/nightscout/AndroidAPS
 
 Android 7
 ------------------------------------
-* Use AAPS version **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+* Пользуйтесь AAPS версии **2.6.2**
+Загрузите код AAPS здесь https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Версия 3.0.0
 ================
-Release date: XX-XX-2021
+Дата выпуска: XX-XX-2021
 
 Важные Примечания
 ----------------------
-* **Minimum Android version is 9.0 now.**
+* **Минимальная версия Android теперь 9.0**
 * **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
 
