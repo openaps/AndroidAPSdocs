@@ -59,13 +59,13 @@ Android 7
 
   * Удаление записи из NS не допускается (аннулирование только через NSClient)
   * Модификация записи из NS не допускается
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * Доступны настройки синхронизации без перехода в инженерный режим (для родителей)
+  * Возможность повторной синхронизации данных
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
+* Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
+* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak
+* Процедура сброса забытого мастер-пароля. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
 * UI improvements @MilosKozak
