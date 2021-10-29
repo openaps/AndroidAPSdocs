@@ -171,7 +171,7 @@ Show notes field in treatments dialogs
   .. image:: ../images/Pref2020_OV_Notes.png
     :alt: Preferences > Notes in treatment dialogs
   
-Status lights
+אורות חיווי
 -----------------------------------------------------------
 * Status lights give a visual warning for 
 
