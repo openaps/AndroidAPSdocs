@@ -1,36 +1,36 @@
 # Устранение неисправностей клиента Nightscout
 
-NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
+Для правильной работы NSClient требуется стабильная коммуникация с сайтом Nightscout. Нестабильная связь приводит к ошибками синхронизации и высокой интенсивности использования данных.
 
-If nobody is following you on Nightscout you can choose to pause NSClient to save battery life or you can choose to setup NSClient so that it only connects when on Wi-Fi and/or during charging.
+Если никто не следит за вами на Nightscout вы можете приостановить NSClient для экономии заряда аккумулятора или вы можете настроить NSClient таким образом, чтобы он подключался только по Wi-Fi и/или во время зарядки.
 
-* How to detect an unstable connection?
+* Как обнаружить нестабильную связь?
 
-Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
+Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. Обычно отклик PING происходит каждые ~ 30 секунд и сообщения о повторном подключении не поступают. Если вы видите много повторных попыток соединения, то это свидетельство проблемы связи.
 
-Since AndroidAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
+Начиная с версии AndroidAPS 2.0, при обнаружении такого поведения, происходит приостановка NSClient на 15 минут и на главном экране появляется сообщение "Сбой (ошибка) NSClient".
 
 * перезапуск
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+В качестве первого шага попробуйте перезапустить Nightcout и затем телефон, чтобы понять, сохраняется ли проблема.
 
-If your Nightscout is hosted on Heroku, you can restart Nightscout by: Logging into Heroku, click on your nightscout app name, click on the 'More' menu, then 'Restart all dynos'.
+Если Nightscout размещен на Heroku, вы можете перезапустить Nightscout так: зайдите в Heroku, нажмите на имя приложения, нажмите в меню «More », затем «Restart all dynos».
 
-For other hosts, please follow your hosts guidance documentation.
+На других хостингах следуйте документации хостинга.
 
 * Проблемы с телефоном
 
-Android may put your phone into a sleep mode. Check if you have an exception for AndroidAPS in your phones power options to allow it to run in the background all the time.
+Android может перевести телефон в спящий режим. Убедитесь, что AndroidAPS в опциях питания имеет разрешение на постоянную работу в фоновом режиме.
 
-Check the NSClient again when in strong network signal location.
+Проверьте NSClient заново в надежном месте сетевого сигнала.
 
-Try another phone.
+Попробуйте другой телефон.
 
 * Nightscout
 
-If your site is hosted on Azure, many people have found that connection issues have improved since moving to Heroku.
+Если ваш сайт размещен на Azure: Многие люди обнаружили, что проблемы подключения уменьшились после перехода на Heroku.
 
-A workaround to connection issues in Azure is to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Для решения проблем подключения в Azure необходимо ВКЛЮЧИТЬ в настройках приложения HTTP протокол 2.0 и Websockets
 
 * Если все еще приходят сообщения об ошибке...
 
