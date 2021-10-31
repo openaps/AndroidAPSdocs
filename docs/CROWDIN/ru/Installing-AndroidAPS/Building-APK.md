@@ -96,39 +96,39 @@ Cледующие снимки экрана были сделаны c Android St
 
 Выберите "Не импортировать настройки", так как вы не использовали их раньше.
 
-![Do not import settings](../images/AndroidStudio361_01.png)
+![Не импортируйте настройки](../images/AndroidStudio361_01.png)
 
 Решите, хотите ли вы совместно использовать данные с Google или нет.
 
-![Share data with Google](../images/AndroidStudio361_02.png)
+![Обмен данными с Google](../images/AndroidStudio361_02.png)
 
 На следующем экране нажмите кнопку "Далее".
 
-![Welcome screen](../images/AndroidStudio361_03.png)
+![Экран приветствия](../images/AndroidStudio361_03.png)
 
 Выберите "Стандартная" установка и нажмите "Далее".
 
-![Standard installation](../images/AndroidStudio361_04.png)
+![Стандартная установка](../images/AndroidStudio361_04.png)
 
 Для интерфейса выберите тему, которая вам нравится. (В этом руководстве мы использовали "Светлую".) Затем нажмите кнопку "Далее". Это всего лишь цветовая схема. Можете выбрать любую (напр. Darcula для темного режима). Этот выбор не влияет на построение APK.
 
-![UI color scheme](../images/AndroidStudio361_05.png)
+![Цветовая схема интерфейса](../images/AndroidStudio361_05.png)
 
 Нажмите кнопку "Готово" в диалоговом окне "Проверить настройки".
 
-![Verify settings](../images/AndroidStudio361_06.png)
+![Подтвердить настройки](../images/AndroidStudio361_06.png)
 
 Подождите, пока Android Studio скачивает дополнительные компоненты и будет терпеливы. После того, как все загрузится кнопка "Готово", станет синей. Теперь нажмите на кнопку.
 
-![Downloading components](../images/AndroidStudio361_07.png)
+![Загрузка компонентов](../images/AndroidStudio361_07.png)
 
 ## Задайте путь к git в параметрах
 
 Убедитесь, что [ git установлен ](../Installing-AndroidAPS/git-install.rst) на вашем компьютере.
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+На экране приветствия Android Studio нажмите на маленький треугольник (1. на следующем снимке экрана) и выберите "Настройки" (2.).
 
-![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
+![Параметры Android Studio с экрана приветствия](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -240,7 +240,7 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ## Создание подписанного APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Подписание означает, что вы подписываете созданное вами приложение, но цифровым способом, как цифровым отпечатком пальца в самом приложении. Это необходимо потому, что Android имеет правило, согласно которому принимается только подписанный код для запуска по соображениям безопасности. Для получения дополнительной информации перейдите по [ этой ссылке](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Нажмите "Build" в строке меню и выберите "Generate Signed Bundle / APK...".
     
@@ -308,7 +308,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Идентифицируйте ресивер при использовании xDrip+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Смотрите страницу xDrip+](../Configuration/xdrip#identify-receiver)
 
 ## Устранение неполадок
 
