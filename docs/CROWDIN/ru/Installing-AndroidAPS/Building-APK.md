@@ -18,39 +18,39 @@
 * Снимите флажок с ячейки "выборочная конфигурация".
 * Нажмите Применить или OK.
 
-## Recommended specification of computer for building apk file
+## Рекомендуемые спецификации компьютеров для сборки файла apk
 
 <table class="tg">
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS(Only 64 bit)</th>
-    <th class="tg-baqh">Windows 8 or higher</th>
-    <th class="tg-baqh">Mac OS 10.14 or higher</th>
-    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+    <th class="tg-baqh">Операционная система (только 64 бит)</th>
+    <th class="tg-baqh">Windows 8 или выше</th>
+    <th class="tg-baqh">Mac OS 10.14 или выше</th>
+    <th class="tg-baqh">Любой Linux поддерживающий Gnome, KDE, или Unity DE;&nbsp;&nbsp;GNU C Library 2.31 или более поздние версии</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <td class="tg-baqh"><p align="center">Процессор CPU (Только 64 бит)</td>
+    <td class="tg-baqh">x86_64 архитектура CPU; ядро Intel или новее, или процессор AMD с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh">Чипы на базе ARM или Intel Core 2 поколения или новее с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">среды Hypervisor </span></a></td>
+    <td class="tg-baqh">архитектура процессора x86_64, процессор Intel Core или новее, или процессор AMD с поддержкой AMD-виртуализации (AMD-V) и SSSE3</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">RAM</td>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh"><p align="center">Оперативная память</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8ГБ или более</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Disk</td>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <td class="tg-baqh"><p align="center">Диск</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Не менее 30ГБ свободного места. Рекомендуется использовать SSD.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Resolution</td>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh"><p align="center">Разрешение</td>
+    <td class="tg-baqh" colspan="3"><p align="center">минимум 1280 x 800 <br></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Internet</td>
+    <td class="tg-baqh"><p align="center">Интернет</td>
     <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
   </tr>
 </tbody>
