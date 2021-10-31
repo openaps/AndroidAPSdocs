@@ -34,6 +34,6 @@ Android может перевести телефон в спящий режим.
 
 * Если все еще приходят сообщения об ошибке...
 
-Check the size of your database in MongoDB (or via the database size plugin in nightscout). If you are using the free tier in MongoDB, 496MB means it is full and needs to be cleaned up. [Follow these Nightscout instructions for checking the size of your database and clearing out data](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout для проверки размера вашей базы данных и удаления данных](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
 
-Before clearing data from your database and if you haven't already set it up, you should consider donating your AndroidAPS data to the Open Humans project (for research). The instructions are on the [OpenHumans configuration page](../Configuration/OpenHumans).
+Перед очисткой данных из базы данных и подумайте о передаче своих данных AndroidAPS в проект Open Humans (для исследований). Инструкции находятся на [странице конфигурации OpenHumans](../Configuration/OpenHumans).
