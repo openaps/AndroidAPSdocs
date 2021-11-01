@@ -29,26 +29,6 @@ Si se utiliza G6 con xdrip+
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
-Si utiliza G6 con la aplicación Dexcom parcheada
-==================================================
-* Descargar el apk desde `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, y elegir la versión que más se adapte a sus necesidades (mg/dl o mmol/l versión, G6).
-
-  * Carpeta 2.4 para los usuarios de la versión actual, la carpeta 2.3 es sólo para la anticuada AndroidAPS 2.3.
-  * Abrir https://play.google.com/store/search?q=dexcom%20g6 en tu ordenador. 
-  * Click the link to the Dexcom G6 app on the search results page that is displayed.
-  * La región estará visible en el URL.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region en el URL de Dexcom G6
-
-* Uninstall the original Dexcom app.
-* Instalar el apk descargado
-* Enter sensor code and transmitter serial no. in patched app.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
-* Seleccione la aplicación Dexcom (parchada) en ConfigBuilder (seteos en AndroidAPS).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
-
 If using G6 with Build Your Own Dexcom App
 ==================================================
 * As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
