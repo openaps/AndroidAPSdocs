@@ -24,7 +24,7 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">OS (pouze 64bitový)</th>
     <th class="tg-baqh">Windows 8 nebo novější</th>
     <th class="tg-baqh">Mac OS 10.14 nebo novější</th>
     <th class="tg-baqh">Jakýkoli Linux, který podporuje Gnome, KDE nebo Unity DE;&nbsp;&nbsp;GNU C knihovnu 2.31 nebo novější</th>
@@ -56,7 +56,7 @@ Jestliže vytváření apk selže s chybou "on demand configuration", proveďte 
 </tbody>
 </table>
 
-Mějte prosím na paměti, že **64bitový CPU a 64bitový OS jsou obě povinné podmínky.** Pokud váš systém nesplňuje tyto podmínky, musíte vyměnit příslušný hardware nebo software nebo celý systém. **Důrazně se doporučuje použít SSD (Solid State Disk) místo HDD (Hard Disk Drive), protože vytváření instalačního souboru APS tak bude trvat kratší dobu.** Doporučené znamená opravdu doporučené, neznamená to povinné. Nicméně, při vytváření souboru apk stále můžete použít HDD, pokud vám nevadí, že dokončení sestavení potrvá delší dobu.
+Mějte prosím na paměti, že **64bitový CPU a 64bitový OS jsou obě povinné podmínky.** Pokud váš systém nesplňuje tyto podmínky, musíte vyměnit příslušný hardware nebo software nebo celý systém. **Důrazně se doporučuje použít SSD (Solid State Disk) místo HDD (Hard Disk Drive), protože vytváření instalačního souboru APK tak bude trvat kratší dobu.** Doporučené znamená opravdu doporučené, neznamená to povinné. Nicméně, při vytváření souboru apk stále můžete použít HDD, pokud vám nevadí, že dokončení sestavení potrvá delší dobu.
 
 * * *
 
@@ -78,9 +78,9 @@ Následují obecné kroky k sestavení souboru APK:
 7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 8. [Možnost „Identify receiver“ při používání xDripu+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
 
-## Step by step walkthrough
+## Průvodce krok za krokem
 
-Detailed description of the steps necessary to build the APK file.
+Následuje detailní popis kroků nutných k sestavení souboru APK.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
@@ -88,47 +88,47 @@ Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/g
 
 ## Instalace Android Studio
 
-The following screenshots have been taken from Android Studio Version 3.6.1. Your screen might look a bit different if you use a newer version of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Následující snímky obrazovky byly převzaty z aplikace Android Studio verze 3.6.1. Máte-li vyšší verzi aplikace Android Studio, může Vaše obrazovka vypadat trochu jinak. Měli byste však být schopni najít cestu. K dispozici je [pomoc od komunity](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Jedna z nejdůležitějších věcí při instalaci aplikace Android Studio: **Buďte trpěliví!** Během instalace a nastavení aplikace Android Studio se stahuje spousta věcí, které zaberou spoustu času.
 
-Install [Android Studio](https://developer.android.com/studio/install.html) and setup during first start.
+Nainstalujte [Android Studio](https://developer.android.com/studio/install.html) a proveďte nastavení během prvního spuštění.
 
-Select "Do not import settings" as you have not used it before.
+Zvolte "Do not import settings", protože jste tento software zatím nevyužívali.
 
-![Do not import settings](../images/AndroidStudio361_01.png)
+![Neimportujte nastavení](../images/AndroidStudio361_01.png)
 
-Decide whether you want to share data with Google or not.
+Rozhodněte se, zda chcete či nechcete sdílet data se společností Google.
 
-![Share data with Google](../images/AndroidStudio361_02.png)
+![Sdílet data s Google](../images/AndroidStudio361_02.png)
 
-On the following screen click "Next".
+Na následující obrazovce klepněte na tlačítko „Next“ (Další).
 
-![Welcome screen](../images/AndroidStudio361_03.png)
+![Úvodní obrazovka](../images/AndroidStudio361_03.png)
 
-Select "Standard" installation and click "Next".
+Vyberte „Standard“ instalaci a klikněte na „Next“ (Další).
 
-![Standard installation](../images/AndroidStudio361_04.png)
+![Standardní instalace](../images/AndroidStudio361_04.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next". This is just the color scheme. You can select any you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK.
+Vyberte si motiv uživatelského rozhraní, který se vám líbí. (V tomto návodu jsme použili „Light“.) Poté klikněte na „Next“ (Další). Jedná se pouze o barevný motiv. Můžete si vybrat jakýkoli jiný (např. „Darcula“ pro tmavý režim). Tato volba nemá žádný vliv na sestavení APK.
 
-![UI color scheme](../images/AndroidStudio361_05.png)
+![Barevný styl](../images/AndroidStudio361_05.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+V dialogovém okně „Verify Settings“ (Ověřit nastavení) klikněte na „Next“ (Další).
 
-![Verify settings](../images/AndroidStudio361_06.png)
+![Ověřit nastavení](../images/AndroidStudio361_06.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Buďte trpěliví - vyčkejte, dokud Android Studio nestáhne potřebné komponenty. Jakmile je vše staženo, tlačítko „Finish“ (Dokončit) se zbarví modře. Klikněte na něj.
 
-![Downloading components](../images/AndroidStudio361_07.png)
+![Stahování komponent](../images/AndroidStudio361_07.png)
 
-## Set git path in preferences
+## Nastavení cesty k nástroji git v předvolbách
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer.
+Ujistěte se, že na svém počítači máte [nainstalován git](../Installing-AndroidAPS/git-install.rst).
 
-On the Android Studio welcome screen click the small triangle (1. in next screenshot) and select "Settings" (2.).
+Na úvodní obrazovce aplikace Android Studio klepněte na malý trojúhelník (1. v dalším snímku obrazovky) a vyberte „Settings“ (2.).
 
-![Android Studio settings from welcome screen](../images/AndroidStudio361_08.png)
+![Nastavení Android Studia z úvodní obrazovky](../images/AndroidStudio361_08.png)
 
 ### Windows
 
@@ -170,11 +170,11 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
     
     * Na úvodní obrazovce Android Studia klikněte na "Get from version control"
         
-        ![Check out project from version control from welcome screen](../images/AndroidStudio_GetFromVersionControl.PNG)
+        ![Uvítací obrazovka Check out project from version control](../images/AndroidStudio_GetFromVersionControl.PNG)
     
     * Pokud již máte spuštěné Android Studio a nevidíte úvodní obrazovku, vyberte volbu File (1.) > New (2.) > Project from Version Control... (3.)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Check out project from version control pomocí programu Android Studio](../images/AndroidStudio_FileNew.PNG)
 
 * Do pole URL vyplňte adresu úložiště AndroidAPS (https://github.com/nightscout/AndroidAPS) (1.).
 
@@ -240,15 +240,15 @@ On the Android Studio welcome screen click the small triangle (1. in next screen
 
 ## Vytvořte podepsaný soubor APK
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Podepsání znamená, že označíte svou aplikaci, že jste si jí sami vytvořili, ale digitálním způsobem, jde o jakýsi digitální otisk prstu v samotné aplikaci. To je nezbytné, protože Android má pravidlo, že z bezpečnostních důvodů přijme pouze podepsaný kód. Více informací k tomuto tématu se dozvíte na [tomto odkazu](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
-* Click "Build" in the menu bar and select "Generate Signed Bundle / APK...".
+* Klikněte na možnost „Build“ v horní liště a vyberte „Generate Signed Bundle / APK...“.
     
-    ![Build apk](../images/AndroidStudio361_27.png)
+    ![Sestavení apk](../images/AndroidStudio361_27.png)
 
-* Select "APK" (1.) instead of "Android App Bundle" and click "Next" (2.).
+* Vyberte „APK“ (1.) místo „Android App Bundle“ a klikněte na „Next“ (2.).
     
-    ![APK instead of bundle](../images/AndroidStudio361_28.png)
+    ![APK místo bundle](../images/AndroidStudio361_28.png)
 
 * Ujistěte se, že modul je nastaven na varianty "app" (1.).
 
@@ -278,37 +278,37 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Zapamatovat heslo](../images/AndroidStudio361_31.png)
 
-* Select build variant "fullRelease" (1.).
+* Vyberte variantu sestavení „fullRelease“ (1.).
 
-* Check boxes V1 and V2 for signature versions (2.).
-* Click "Finish". (3.)
+* Zaškrtněte kolonky V1 a V2 pro verze podpisu (2.).
+* Klikněte na „Finish“. (3.)
     
-    ![Finish build](../images/AndroidStudio361_32.png)
+    ![Dokončit sestavení](../images/AndroidStudio361_32.png)
 
-* Android Studio will display the information "APK(s) generated successfully..." after build is finished.
+* Po úspěšném sestavení Android Studio zobrazí informaci „APK(s) generated successfully...“.
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Easiest way to find the apk is to click on "Event log".
+* V případě, že sestavění neproběhne úspěšně, přejděte do části [řešení problémů](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Nejjednodušší způsob, jak najít soubor apk, je kliknout na „Event Log“.
     
-    ![Build successfully - event log](../images/AndroidStudio361_33.png)
+    ![Sestavení bylo úspěšné - protokol událostí](../images/AndroidStudio361_33.png)
 
-* In the event log section click "locate".
+* V části Event log klikněte na možnost „locate“.
     
-    ![Event log - locate apk](../images/AndroidStudio361_34.png)
+    ![Protokol událostí - najít apk](../images/AndroidStudio361_34.png)
 
-* app-full-release.apk is the file you are looking for.
+* Soubor, který hledáte, má název app-full-release.apk.
     
-    ![File location apk](../images/AndroidStudio361_35.png)
+    ![Umístění souboru apk](../images/AndroidStudio361_35.png)
 
 ## Přeneste soubor APK do telefonu
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Nejjednodušší způsob, jak přenést soubor app-full-release.apk do telefonu, je přes [USB kabel nebo Google Drive](https://support.google.com/android/answer/9064445?hl=en). Vezměte prosím na vědomí, že přenos e-mailem může být problematický, a není to tedy preferovaná varianta přenosu.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+V telefonu musíte povolit instalaci aplikací z neznámých zdrojů. Návody, jak to udělat, naleznete na internetu (např. [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)).
 
 ## Možnost „Identify receiver“ při používání xDripu+
 
-[See xDrip+ page](../Configuration/xdrip#identify-receiver)
+[Viz stránka xDrip+](../Configuration/xdrip#identify-receiver)
 
 ## Řešení problémů
 
