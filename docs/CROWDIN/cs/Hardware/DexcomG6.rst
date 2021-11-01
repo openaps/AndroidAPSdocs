@@ -29,27 +29,6 @@ Používáte-li G6 s aplikací xDrip+
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`__
 * Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte 'Identify receiver' tak, jak je popsáno v `popisu nastavení xDrip+ <../Configuration/xdrip.html>`_.
 
-Používáte-li G6 s upravenou Dexcom aplikací
-==================================================
-* Stáhněte si apk z `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
-kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
-
-  * Složka 2.4 pro uživatele aktuální verze, složka 2.3 je pouze pro zastaralý AndroidAPS 2.3.
-  * Otevřete https://play.google.com/store/search?q=dexcom%20g6 na svém počítači. 
-  * Klikněte na odkaz na aplikaci Dexcom G6 na zobrazené stránce výsledků vyhledávání.
-  * Region bude viditelný v adrese URL.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region v URL adrese Dexcom G6
-
-* Odinstalujte originální aplikaci Dexcom.
-* Nainstalujte stažený apk
-Vložte kód senzoru a sériové číslo vysílače do upravené aplikace Dexcom.
-* Po krátkém čase by aplikace měla zachytit signál vysílače. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
-* Na kartě Konfigurace (nastavení v AndroidAPS) vyberte DexcomG aplikace (upravená).
-* Pokud chcete použít alarmy xDripu+ přes lokální předávání dat: v xDrip+ v hamburgerovém menu > Nastavení > Hardwarový zdroj dat > 640G /EverSense.
-* Neexistuje žádný lokální přenos dat z upravené aplikace Dexcom přímo do xDripu+. Lokální vysílání musí jít přes AAPS, jak je popsáno výše.
-
 Pokud chcete použít G6 s vlastní vytvořenou upravenou Dexcom aplikací
 ==================================================
 * Od prosince 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - vytvoření vlastní upravené Dexcom aplikace) podporuje také místní přenos dat do AAPS a/nebo xDrip+ (ne pro senzory G5!)
