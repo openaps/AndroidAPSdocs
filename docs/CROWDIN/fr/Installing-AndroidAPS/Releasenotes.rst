@@ -48,7 +48,7 @@ Conseils importants
 Modifications
 ----------------------
 * XXXXk lignes changées, XXXXk nouvelles lignes de code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
+* Support Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
 * Support de Dana-i @MilosKozak
 * Support de DiaconnG8
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
@@ -59,17 +59,17 @@ Modifications
   * La suppression des enregistrements de NS n'est pas autorisée (uniquement l'invalidation via NSClient)
   * La modification des enregistrements à partir de NS n'est pas autorisée
   * Paramètres de synchronisation disponibles sans le mode ingénierie (pour les parents)
-  * Ability to resync data
+  * Possibilité de resynchroniser les données
 
-* Changement de comportement du changement de profil. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+* Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 * NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
 * Améliorations de l'interface utilisateur @MilosKozak
-* New user buttons for automations @MilosKozak
-* New automation layout @MilosKozak
+* Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
+* Nouvelle mise en page de l'automatisation @MilosKozak
 * Historique mis à jour et corrigé @MilosKozak
 * Objective9 supprimé @MilosKozak
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
