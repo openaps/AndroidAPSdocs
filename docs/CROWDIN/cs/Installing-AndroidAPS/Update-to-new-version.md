@@ -90,9 +90,9 @@ Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/g
 
 ## Přeneste soubor APK do telefonu
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+Nejjednodušší způsob, jak přenést soubor app-full-release.apk do telefonu, je přes [USB kabel nebo Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+V telefonu musíte povolit instalaci aplikací z neznámých zdrojů. Návody, jak to udělat, naleznete na internetu (např. [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)).
 
 ## Zkontrolujte verzi AAPS na telefonu
 
