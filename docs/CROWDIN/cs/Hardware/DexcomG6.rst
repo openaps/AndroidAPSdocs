@@ -23,42 +23,42 @@ Používáte-li G6 s aplikací xDrip+
 ==================================================
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Jestliže potřebujete službu Clarity, a zároveň chcete využívat výhod výstrah xDripu+, použijte `upravenou aplikaci Dexcom </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ a funkci místního odesílání do xDripu+.
+* Pokud jste ještě nic nenastavovali, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
+* Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`__
+* Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte 'Identify receiver' tak, jak je popsáno v `popisu nastavení xDrip+ <../Configuration/xdrip.html>`_.
 
 Používáte-li G6 s upravenou Dexcom aplikací
 ==================================================
 * Stáhněte si apk z `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, 
 kde si podle používaných jednotek glykémie vyberte odpovídající G6 verzi (mg/dl nebo mmol/l).
 
-  * Folder 2.4 for users of the current version, folder 2.3 is only for the outdated AndroidAPS 2.3.
+  * Složka 2.4 pro uživatele aktuální verze, složka 2.3 je pouze pro zastaralý AndroidAPS 2.3.
   * Otevřete https://play.google.com/store/search?q=dexcom%20g6 na svém počítači. 
-  * Click the link to the Dexcom G6 app on the search results page that is displayed.
-  * Region will be visible in URL.
+  * Klikněte na odkaz na aplikaci Dexcom G6 na zobrazené stránce výsledků vyhledávání.
+  * Region bude viditelný v adrese URL.
 
   .. image:: ../images/DexcomG6regionURL.PNG
     :alt: Region v URL adrese Dexcom G6
 
-* Uninstall the original Dexcom app.
+* Odinstalujte originální aplikaci Dexcom.
 * Nainstalujte stažený apk
-* Enter sensor code and transmitter serial no. in patched app.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+Vložte kód senzoru a sériové číslo vysílače do upravené aplikace Dexcom.
+* Po krátkém čase by aplikace měla zachytit signál vysílače. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
 * Na kartě Konfigurace (nastavení v AndroidAPS) vyberte DexcomG aplikace (upravená).
-* If you want to use xDrip+ alarms via local broadcast: in xDrip+ hamburger menu > settings > hardware data source > 640G /EverSense.
-* There is no local broadcast from patched Dexcom app directly to xDrip+. Broadcast has to go through AAPS as described above.
+* Pokud chcete použít alarmy xDripu+ přes lokální předávání dat: v xDrip+ v hamburgerovém menu > Nastavení > Hardwarový zdroj dat > 640G /EverSense.
+* Neexistuje žádný lokální přenos dat z upravené aplikace Dexcom přímo do xDripu+. Lokální vysílání musí jít přes AAPS, jak je popsáno výše.
 
-If using G6 with Build Your Own Dexcom App
+Pokud chcete použít G6 s vlastní vytvořenou upravenou Dexcom aplikací
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
-* This app lets you use your Dexcom G6 with any Android smartphone.
-* Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
+* Od prosince 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - vytvoření vlastní upravené Dexcom aplikace) podporuje také místní přenos dat do AAPS a/nebo xDrip+ (ne pro senzory G5!)
+* Tato aplikace vám umožní používat vysílač Dexcom G6 s libovolným telefonem s Androidem.
+* Odinstalujte originální Dexcom aplikaci nebo upravenou Dexcom aplikaci, pokud jste již dříve používali kteroukoli z nich.
 * Nainstalujte stažený apk
-* Enter sensor code and transmitter serial no. in patched app.
+Vložte kód senzoru a sériové číslo vysílače do upravené aplikace Dexcom.
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* Po krátkém čase by aplikace měla zachytit signál vysílače. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
 
 Settings for AndroidAPS
 --------------------------------------------------
