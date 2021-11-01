@@ -29,26 +29,6 @@ Als je jouw Dexcom wilt koppelen aan de xDrip+ app dan zul je dus eerst de Dexco
 * Instellingen in xDrip + aanpassen volgens `xDrip+ instellingen pagina <../Configuration/xdrip.html>`__
 * Als AAPS geen BG-waarden ontvangt wanneer de telefoon in vliegtuigmodus staat, gebruik dan 'Identify receiver' (Identificeer ontvanger) zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html>`__.
 
-G6 met aangepaste Dexcom app
-==================================================
-* Download de apk van `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, en kies de versie die je nodig hebt (mg/dl of mmol/l versie, voor G6).
-
-  * Voor de huidige versie van AndroidAPS heb je de aangepaste Dexcom app uit de map 2.4 nodig. De app uit de map 2.3 moet je niet hebben, die was nog van (inmiddels verouderde) AndroidAPS 2.3.
-  * Open https://play.google.com/store/search?q=dexcom%20g6 op jouw computer. 
-  * Klik op de link naar de app Dexcom G6 op de pagina met zoekresultaten die wordt afgebeeld.
-  * Regio wordt weergegeven in URL.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Regio in Dexcom G6 URL
-
-* Verwijder de originele Dexcom app van je telefoon.
-* Installeer de gedownloade apk
-* Voer de sensorcode en het serienummer van de zender in in de aangepaste app.
-* Na korte tijd zal de aangepaste app het signaal van de zender oppikken. (Zo niet, dan moet je de sensor stoppen en een nieuwe starten.)
-* Selecteer Dexcom App (aangepast) in ConfigBuilder (instelling in AndroidAPS).
-* Als je de Dexcom app wilt gebruiken om aan de zender te koppelen, maar ook gebruik wilt maken van xDrip alarmen zet dan óók de xDrip+ app op je telefoon en kies in xDrip hamburger menu > instellingen > hardware gegevensbron > 640G /EverSense.
-De Dexcom app stuurt de waardes door dmv 'local broadcast' (lokaal uitzenden) naar AndroidAPS. AndroidAPS stuurt het dmv 'local broadcast' dan door naar xDrip+. De local broadcast vindt plaats tussen de apps op jouw telefoon, je hebt hierbij geen internet nodig.
-
 Wanneer je de G6 gebruikt met de Bouw Je Eigen Dexcom App
 ==================================================
 * Sinds december 2020 ondersteunt de `Bouw Je Eigen Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (Build Your Own Dexcom App, BYODA) ook het lokaal delen (local broadcast) van BG gegevens met AAPS en/of xDrip+ (Let op: niet voor G5 sensors!).
