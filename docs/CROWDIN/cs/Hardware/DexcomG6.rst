@@ -57,24 +57,24 @@ Pokud chcete použít G6 s vlastní vytvořenou upravenou Dexcom aplikací
 * Odinstalujte originální Dexcom aplikaci nebo upravenou Dexcom aplikaci, pokud jste již dříve používali kteroukoli z nich.
 * Nainstalujte stažený apk
 Vložte kód senzoru a sériové číslo vysílače do upravené aplikace Dexcom.
-* In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
+* V nastavení telefonu přejděte do aplikací > Dexcom G6 > oprávnění > další oprávnění a klepněte na 'Přístup k aplikaci Dexcom'.
 * Po krátkém čase by aplikace měla zachytit signál vysílače. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
 
-Settings for AndroidAPS
+Nastavení pro AndroidAPS
 --------------------------------------------------
-* Select 'Dexcom App (patched)' in config builder.
-* If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+* V konfiguraci vyberte 'Dexcom aplikace (upravená)'.
+* Pokud neobdržíte žádné hodnoty, vyberte jiný zdroj dat, následně opět vyberte 'Dexcom aplikace (upravená)', abyste spustili proces získání oprávnění pro navázání lokálního spojení mezi AAPS a upravenou Dexcom aplikací.
 
-Settings for xDrip+
+Nastavení pro xDrip+
 --------------------------------------------------
-* Select '640G/Eversense' as data source.
-* Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+* Jako zdroj dat vyberte '640G/Eversense'.
+V xDripu+ musí být proveden příkaz 'Spustit senzor', aby bylo možno získávat hodnoty. Toto neovlivní aktuální senzor ovládaný vaší upravenou Dexcom aplikací.
    
 Poradce při potížích s G6
 ==================================================
 Dexcom G6 konkrétní řešení problémů
 --------------------------------------------------
-* Vysílače se sériovým číslem starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+* Vysílače se sériovým číslem začínající na 80 nebo 81 potřebují minimálně poslední stabilní verzi xDripu+ z května 2019 nebo novější noční sestavení.
 * Vysílače se sériovým číslem začínajícím na 8G potřebuje minimálně noční sestavení z 25. července 2019 nebo novější.
 * K vysílači nelze připojit aplikaci xDrip+ i Dexcom současně.
 * Vyčkejte nejméně 15 minut. mezi zastavením a spuštěním senzoru.
@@ -88,9 +88,9 @@ Dexcom G6 konkrétní řešení problémů
 .. image:: ../images/xDrip_Dexcom_PhoneServiceState.png
   :alt: xDrip+ PhoneServiceState
 
-General troubleshooting
+Obecné řešení problémů
 --------------------------------------------------
-General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation.html#troubleshooting>`__.
+Obecné řešení problémů ohledně CGM můžete najít `zde <./GeneralCGMRecommendation.html#troubleshooting>`__.
 
 Nový vysílač se spuštěným senzorem
 --------------------------------------------------
