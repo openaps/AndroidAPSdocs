@@ -203,3 +203,7 @@ Even if the patched LibreLink app approach is smart there may be some reasons to
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
 
 Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+
+
+Best practices for calibrating a libre 2 sensor
+==================================================
