@@ -29,26 +29,6 @@ Dacă utilizaţi G6 cu xDrip+
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
 
-Dacă folosiți G6 cu aplicația Dexcom modificată
-==================================================
-* Descărcați apk-ul de la adresa `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, și apoi alegeți versiunea corectă pentru dumneavoastră (versiunea mg/dl sau mmol/l, G6).
-
-  * Dosarul 2.4 pentru utilizatorii versiunii curente, dosarul 2.3 este doar pentru vechea versiune AndroidAPS 2.3.
-  * Deschide https://play.google.com/store/search?q=dexcom%20g6 pe calculatorul tău. 
-  * Faceți clic pe link-ul către aplicația Dexcom G6 de pe pagina de rezultate de căutare care este afișată.
-  * Regiunea va fi vizibilă în URL.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Regiune in Dexcom G6 URL
-
-* Dezinstalaţi aplicaţia originală Dexcom.
-* Install downloaded apk
-* Introduceţi codul senzorului şi seria transmiţătorului în aplicația modificată.
-* După o scurtă perioadă de timp, aplicația ar trebui să primească semnal de la transmițător. (Dacă nu primește semnal, va trebui să opriți senzorul și să porniți unul nou.)
-* Selectați aplicația Dexcom (modificată) în ConfigBuilder (setare în AndroidAPS).
-* Dacă doriţi să utilizaţi alarmele xDrip+ prin transmitere locală: în meniul hamburger al xDrip+ > setări > sursă de date hardware > 640G /EverSense.
-* Nu există nici o transmitere locală de la aplicația modificată Dexcom direct către xDrip+. Transmisia trebuie să treacă prin AAPS conform descrierii de mai sus.
-
 Dacă utilizaţi G6 cu construită cu Build Your Own Dexcom App
 ==================================================
 * Începând cu luna decembrie 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) suportă transmiterea locală către AAPS și/sau xDrip+ (nu pentru senzorii G5!)
