@@ -63,7 +63,7 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak
+* NSProfile a disparu. RIP Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
