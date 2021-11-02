@@ -243,7 +243,7 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 ### Sony Smartwatch 3
 
 * Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS. 
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
+* Společnost Google od podzimu 2020 již bohužel nepodporuje zařízení s OS 1.5. To vede k problémům při používání hodinek Sony SW3 s AndroidAPS 2.7 a vyšší.
 * Možný postup, jak to vyřešit, najdete na stránce [odstraňování potíží](../Usage/SonySW3.rst).
 
 ## Zobrazení dat z Nightscoutu
