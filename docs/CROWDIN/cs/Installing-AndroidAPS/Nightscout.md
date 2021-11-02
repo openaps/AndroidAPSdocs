@@ -6,7 +6,7 @@ Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. 
 
 ### Nastavení Nightscoutu
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](https://nightscout.github.io/nightscout/security).
 
 ### Nastavení AndroidAPS
 
