@@ -10,18 +10,18 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
    :backlinks: položka
    :depth: 2
 
-Hardware and Software Requirements
+Hardwarové a softwarové požadavky
 ==================================
 
 *  **Pod Communication Device** 
 
   Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |OrangeLink|  `Domovská stránka OrangeLink <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__
+   -  |EmaLink|  `Domovská stránka Emalink <https://github.com/sks01/EmaLink>`__ - `Kontakt  <mailto:getemalink@gmail.com>`__
    -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   -  |LoopLink|  `Domovská stránka LoopLink <https://www.getlooplink.org/>`__ - `Kontakt <https://jameswedding.substack.com/>`__ - Netestováno
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
@@ -837,7 +837,7 @@ All of the development work for the Omnipod driver is done by the community on a
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Hardwarové a softwarové požadavky
 .. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
