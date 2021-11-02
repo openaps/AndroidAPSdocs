@@ -405,7 +405,7 @@ Alarm options
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* If you have the CGM source on your phone (i.e. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
 
 Advanced settings (NSClient)
 -----------------------------------------------------------
