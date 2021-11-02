@@ -1,9 +1,9 @@
-# Glossary<table style="width:100%" border=1 cellpadding=5>
+# מילון מונחים<table style="width:100%" border=1 cellpadding=5>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>מונח</th>
+ <th>תיאור</th>
+ <th>ראו גם</th>
+ <th>לפרטים נוספים</th>
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
