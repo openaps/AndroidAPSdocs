@@ -49,7 +49,7 @@ Protecţie
 Parola principală
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-  **Protecția biometrică nu funcționează pe telefoanele OnePlus. Aceasta este o problemă a celor de la OnePlus. * *
+  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
 
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
@@ -405,7 +405,7 @@ Opțiuni alarmare
 * Opțiunile de alarmă vă permit să selectați alarmele implicite Nightscout pe care să le utilizați prin intermediul aplicației.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Vor funcționa numai dacă aveţi o conexiune la Nightscout şi sunt destinate pentru parinți/îngrijitori. 
-* Dacă aveți sursa CGM pe telefon (de ex. xDrip+ sau aplicația Dexcom modificată) apoi folosiți acele alarme în loc.
+* Dacă aveți sursa CGM pe telefon (de ex. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
 
 Setări avansate (NSClient)
 -----------------------------------------------------------
@@ -415,8 +415,7 @@ Setări avansate (NSClient)
 
 * Cele mai multe opţiuni din setări avansate sunt auto-explicative.
 * *Activare transmisiuni locale * va partaja datele către alte aplicații de pe telefon, cum ar fi xDrip+. 
-
-  * Aplicația modificată Dexcom nu transmite direct în xDrip+. 
+ 
   * Trebuie sa `treci prin AAPS <../Configuration/Config-Builder.html#bg-source>`_ și să activezi transmiterea locală în AAPS pentru a folosi alarme xDrip+.
   
 * *Utilizaţi întotdeauna valorile bazale absolute* trebuie să fie activate dacă doriţi să utilizaţi Autotune în mod corespunzător. Vezi `documentația OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ pentru mai multe detalii în Autotune.
