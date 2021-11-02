@@ -64,7 +64,7 @@ Android 7
 
 * Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
-* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak
+* NSProfile больше не существует. Мир его праху. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
 * Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
