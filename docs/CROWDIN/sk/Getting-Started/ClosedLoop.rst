@@ -11,7 +11,7 @@ Dana M. Lewis, jedna zo zakladateliek open source hnutia pre uzavretý okruh, ho
 
 Autopilot nespraví všetku prácu namiesto pilota a neumožňuje mu prespať celý let. Výrazne ale jeho prácu uľahčuje. Zmierňuje jeho záťaž, spôsobenú neustálou potrebou monitorovať funkcie lietadla a letovú hladinu. To umožňuje pilotovi sústrediť sa na monitorovanie vzdušného priestoru a kontrolu funkcií autopilota.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. Pilot sa už nemusí starať o neustále úpravy.
+Autopilot prijíma signály z rôznych senzorov, počítač ich vyhodnotí spolu so špecifikáciami pilota, a potom vykoná potrebné úpravy. Pilot sa už nemusí starať o neustále úpravy.
 
 **Systém Uzavretého Okruhu**
 
@@ -44,13 +44,13 @@ OpenAPS
 
 Kompatibilné pumpy sú:
 
-* some old Medtronic pumps
+* niektoré staré pumpy Medtronic
 
-Loop for iOS
+Loop pre iOS
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+"Loop pre iOS <https://loopkit.github.io/loopdocs/>"_, je open source systém uzavretého okruhu pre používateľov Apple iPhone.
 
 Kompatibilné pumpy sú:
 
 * Omnipod Eros
-* some old Medtronic pumps
+* niektoré staré pumpy Medtronic
