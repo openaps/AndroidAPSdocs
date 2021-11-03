@@ -34,7 +34,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Stav smyčky:** Je kandidátem na smyčku. Společnost má svůj vlastní omezený systém polosmyčky (A6). Ovládání prostřednictvím aplikace pro iPhone. Žádná aplikaci pro Android aktuálně není k dispozici.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
 
@@ -42,7 +42,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Stav smyčky:** Je kandidátem na smyčku. Dálkové ovládání, které používá, je ve skutečnosti upraveným zařízením se systémem Android. (Pumpa je v současnosti dostupná pouze v Koreji).
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
 
@@ -50,7 +50,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 **Stav smyčky:** Je kandidátem na smyčku.
 
-**Hardwarové požadavky na AAPS:** Žádné. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 **Poznámky:** Existuje pár vývojářů, kteří se snaží dekódovat protokol, stále je to však v přípravné fázi.
 
@@ -62,7 +62,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich pumpy ovládat externími zařízeními, zdá se, že v posledních několika letech se jejich přístup změnil. Společnost se rozhodla aktualizovat svou pumpu t:slim X2, aby ji bylo možné dálkově ovládat (prostřednictvím aplikace t:connect), což znamená, že se otevřou cesty a můžeme se těšit na budoucí možnost ovládat pumpu prostřednictvím AAPS. Nový firmware pumpy má být brzy uvolněn (tento nebo příští rok, než se objeví jejich bezhadičková pumpa t:sport). Zatím nejsou známy žádné podrobnosti, které operace bude možné z aplikace t:connect provádět (bolus určitě, vše ostatní je zatím neznámé).
 
-**Hardwarové požadavky na AAPS:** Žádné. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 * * *
 
@@ -70,7 +70,7 @@ Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich 
 
 **Stav smyčky:** Je kandidátem na smyčku. Pumpa ještě nebyla uvedena, ale proces FDA již běží, takže by měla být venku spíše brzy než později (v USA).
 
-**Hardwarové požadavky na AAPS:** Žádné. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 * * *
 
@@ -82,7 +82,7 @@ Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich 
 
 **Stav smyčky:** V tomto okamžiku to není kandidát na smyčku, ale byli jsme kontaktováni jejich zaměstnanci a mají zájem o rozšíření jejich pumpy tak, aby smyčku podporovala (v současné době tuším chybí pouze příkazy pro nastavení / načtení profilu).
 
-**Hardwarové požadavky na AAPS:** Žádné. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 **Komentáře:** Vzhledem k tomu, že společnost má zájem o integraci AAPS, mohou udělat vlastní implementaci.
 
