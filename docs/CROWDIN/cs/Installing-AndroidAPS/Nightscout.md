@@ -61,4 +61,4 @@ Kolega smyčkař Martin Schiftan nabízel poloautomatizované nastavení Nightsc
 
 <https://ns.10be.de/en/index.html>
 
-Alternativou může být <https://t1pal.com/> – začíná na 11,99 USD za měsíc.
+Alternativou může být <https://t1pal.com/> – začíná na 11,99 USD za měsíc. V neposlední řadě existuje služba nightscout.cz, kterou provozuje Martin Škarecký (prozatím zdarma, drobný pravidelný příspěvek by však velmi ocenil (servery, instalace, údržba a správa něco stojí)).
