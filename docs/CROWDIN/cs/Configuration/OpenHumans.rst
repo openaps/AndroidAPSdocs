@@ -1,27 +1,27 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
+Darujte svá data vědě
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
+Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! To pomáhá vědcům se dále posouvat, rozvíjet nové vědecké myšlenky a pomáhá otevírat téma open source systémů s uzavřenou smyčkou.
+AndroidAPS je připravena na synchronizaci dat s `Open Humans <https://www.openhumans.org>`_, platformou umožňující nahrávat, spojovat a ukládat vaše osobní data - jako jsou genetika, aktivity a zdravotní údaje. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Zachováváte si plnou kontrolu nad tím, co se stane s vašimi daty, a jaké projekty chcete podpořit tím, že jim udělíte přístup k vašim datům. V závislosti na projektu, ke kterému jste se připojili, jsou údaje vyhodnocovány a používány různými způsoby a v různém rozsahu.
 
-The following data will be uploaded to your Open Humans account: 
+Následující data budou odeslána na váš účet Open Humans: 
 
-* Glucose values
-* Careportal events (except notes)
-* Extended boluses
-* Profile switches
-* Total daily doses
-* Temporary basals
-* Temp targets
-* Preferences
-* Application version
-* Device model 
-* Screen dimensions
+* Hodnoty glykémie
+* Události v portálu péče (kromě poznámek)
+* Prodloužené bolusy
+* Přepnutí profilu
+* Celkové denní dávky
+* Dočasné bazály
+* Dočasné cíle
+* Nastavení
+* Verze aplikace
+* Model zařízení 
+* Rozměry obrazovky
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API heslo, nebudou nahrány.
 
 Nastavení
 ========================================
