@@ -218,7 +218,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - בונה התצורה</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -254,7 +254,7 @@
  <td><strong>Open Loop</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - בונה התצורה</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
@@ -266,7 +266,7 @@
  <td><strong>Peak time</strong></td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - בונה התצורה</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
