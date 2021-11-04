@@ -49,7 +49,7 @@ Ochrana
 Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  ** Biometrická ochrana nemusí fungovat na telefonech OnePlus. Toto je známý problém na některých telefonech OnePlus.**
 
 * Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 * Klepněte na trojúhelník pod "Obecné"
@@ -146,7 +146,7 @@ Výchozí nastavení dočasných cílů
   
 Standardní množství inzulinu pro Plnění/Doplňování
 -----------------------------------------------------------
-* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Pokud chcete plnit hadičku nebo kanylu prostřednictvím AAPS, můžete to udělat prostřednictvím `obrazovky Akce <../Getting-Started/Screenshots.html#action-tab>`_.
 * Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 Rozsah zobrazování
@@ -405,7 +405,7 @@ Nastavení alarmů
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
 * Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
-* Pokud máte v telefonu zdroj CGM (např. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
+* Pokud máte v telefonu zdroj CGM (např. xDrip+ nebo BYODA [Vytvořte si vlastní dexcom aplikaci]) a poté použijte tyto alarmy.
 
 Rozšířená nastavení (NSClient)
 -----------------------------------------------------------
