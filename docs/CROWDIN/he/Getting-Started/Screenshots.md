@@ -37,8 +37,8 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
+   * "רגישות מעלה את ערך המטרה" ו\או 
+   * "תנגודת מורידה את ערך המטרה" 
 * If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
 * When it alters the target glucose background will change to green.
 
