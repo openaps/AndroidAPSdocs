@@ -331,7 +331,7 @@
 <tr>
  <td><strong>SMB</strong></td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>UAM - ארוחות לא מוכרזות</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
@@ -365,7 +365,7 @@
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
- <td><strong>UAM</strong></td>
+ <td><strong>UAM - ארוחות לא מוכרזות</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
