@@ -300,7 +300,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
+ <td>dispositif matériel open source pour connecter le Bluetooth Low Energy (BLE) à 916MHz (utilisé pour les anciennes pompes Medtronic) ou 433MHz (utilisé pour les pompes Omnipod Eros) sans fil</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
