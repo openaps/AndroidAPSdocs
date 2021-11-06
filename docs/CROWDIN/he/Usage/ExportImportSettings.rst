@@ -46,7 +46,7 @@ Export settings
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS export settings 2
   
-Import settings
+ייבוא הגדרות
 ==================================================
 **Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
