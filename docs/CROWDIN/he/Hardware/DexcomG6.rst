@@ -39,7 +39,7 @@ If using G6 with Build Your Own Dexcom App
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 * After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
-Settings for AndroidAPS
+הגדרות לשימוש עם AndroidAPS
 --------------------------------------------------
 * Select 'Dexcom App (patched)' in config builder.
 * If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
