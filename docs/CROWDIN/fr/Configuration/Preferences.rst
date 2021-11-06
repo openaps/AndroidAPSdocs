@@ -49,7 +49,7 @@ Protection
 Mot de passe principal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Nécessaire pour pouvoir `exporter les paramètres <../Usage/ExportImportSettings.html>`_ car ils sont chiffrés depuis la version 2.7.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
 * Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Cliquez sur le triangle sous " Général "
@@ -405,7 +405,7 @@ Options d'alarme
 * Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.  
 * Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos `variables Heroku <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants. 
-* Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
+* Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou BYODA [Construisez votre propre application dexcom]) puis utilisez ces alarmes à la place.
 
 Paramètres avancés (NSClient)
 -----------------------------------------------------------
