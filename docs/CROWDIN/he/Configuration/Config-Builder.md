@@ -104,7 +104,7 @@ Disadvantage:
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
     * BLUE line shows **how active** insulin is.
 
-### DIA
+### DIA - משך פעילות אינסולין
 
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.
@@ -200,7 +200,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
-### Open Loop
+### לולאה פתוחה
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
