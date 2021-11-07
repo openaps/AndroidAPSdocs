@@ -78,9 +78,9 @@
 </tr>
 <tr>
  <td><strong>Blucon Nightrider</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
- <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
+ <td>משדר בלוטות' שמאפשר ל-Freestyle Libre לתפקד כחיישן רציף</td>
+ <td>Nightrider / MiaoMiao</td>
+ <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightrider</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
@@ -89,28 +89,28 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td><strong>CAGE - גיל הצינורית</strong></td>
+ <td>גיל הצינורית - מוצג ב-Nightscout אם נתון זה הוזן בלשונית פעולות בכפתור "תיחול"</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
- <td>BAT / RES / SEN</td>
+ <td><strong>CAN - קנולה</strong></td>
+ <td>חיווי התראה במסך הבית על כך שהגיע הזמן להחליף צינורית</td>
+ <td>CAN / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>CGM</strong></td>
- <td>continuous glucose monitor</td>
+ <td><strong>סנסור</strong></td>
+ <td>חיישן סוכר רציף</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Closed Loop</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><strong>לולאה סגורה</strong></td>
+ <td>מערכות בלולאה סגורה מבצעות התאמות אוטומטיות להזרקת האינסולין, ללא צורך באישור המשתמש, בהתבסס על אלגוריתם</td>
+ <td>לולאה פתוחה</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - לולאה סגורה</a></td>
 </tr>
 <tr>
  <td><strong>COB</strong></td>
@@ -210,7 +210,7 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>משדר בלוטות' שמאפשר ל-Freestyle Libre לתפקד כחיישן רציף</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
@@ -253,7 +253,7 @@
 <tr>
  <td><strong>Open Loop</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>לולאה סגורה</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - בונה התצורה</a></td>
 </tr>
 <tr>
