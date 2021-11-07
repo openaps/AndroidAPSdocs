@@ -3,16 +3,21 @@
 
 AndroidAPS היא אפליקציה הפועלת כמערכת לבלב מלאכותי (APS) בסמארטפון אנדרואיד. מהי מערכת לבלב מלאכותי? זוהי תוכנה שמטרתה לעשות את מה שעושה לבלב טבעי: לשמור על רמות הסוכר בדם בטווח בריא באופן אוטומטי. 
 
-מערכת לבלב מלאכותי לא יכולה לעשות את העבודה כמו לבלב ביולוגי, אבל יכולה להקל על ניהול סוכרת מסוג 1 באמצעות מכשירים זמינים מסחרית ותוכנה פשוטה ובטוחה. Those devices include a continuous glucose monitor (CGM) to tell AndroidAPS about your blood sugar levels and an insulin pump which AndroidAPS controls to deliver appropriate doses of insulin. The app communicates with those devices via bluetooth. It makes its dosing calculations using an algorithm, or set of rules, developed for another artificial pancreas system, called OpenAPS, which has thousands of users and has accumulated millions of hours of use. 
+מערכת לבלב מלאכותי לא יכולה לעשות את העבודה כמו לבלב ביולוגי, אבל יכולה להקל על ניהול סוכרת מסוג 1 באמצעות מכשירים זמינים מסחרית ותוכנה פשוטה ובטוחה. מכשירים אלה כוללים חיישן גלוקוז רציף (CGM) כדי לדווח ל-AndroidAPS על רמות הסוכר בדם ומשאבת אינסולין בה היא שולטת כדי לספק מינונים מתאימים של אינסולין. האפליקציה מתקשרת עם מכשירים אלה באמצעות בלוטות'.
+ היא מבצעת את חישובי המינון שלה באמצעות אלגוריתם, או מערכת כללים, שפותחה עבור מערכת לבלב מלאכותית אחרת, בשם OpenAPS, לה אלפי משתמשים וצברה מיליוני שעות שימוש. 
 
-A note of caution: AndroidAPS is not regulated by any medical authority in any country. Using AndroidAPS is essentially carrying out a medical experiment on yourself. Setting up the system requires determination and technical knowledge. If you don't have the technical know-how at the beginning, you will by the end. All the information you need can be found in these documents, elsewhere online, or from others who have already done it -- you can ask them in Facebook groups or other forums. Many people have successfully built AndroidAPS and are now using it entirely safely, but it is essential that every user:
+הערת זהירות: AndroidAPS אינה עוברת רגולציה על ידי אף רשות רפואית באף מדינה. השימוש ב-AndroidAPS הוא בעצם ביצוע ניסוי רפואי על עצמכם.
+ הקמת המערכת דורשת נחישות ויכולת טכנית.
+ אם עדיין אין לכם את הידע הטכני בהתחלה, עד סיום התהליך אתם תרכשו אותו. את כל המידע הדרוש ניתן למצוא במסמכים באתר זה, במקומות אחרים באינטרנט, או אצל אחרים שכבר עשו זאת -- מומלץ לשאול בקבוצות פייסבוק או בפורומים אחרים. אנשים רבים בנו להם בהצלחה את AndroidAPS וכעת משתמשים בו בצורה בטוחה לחלוטין, אך חיוני שכל משתמש:
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* יבנה את המערכת בעצמו כך שיבין היטב איך היא עובדת
 
-.. note:: 
-	**Disclaimer and Warning**
+* יתאים את אלגוריתם המינון האישי שלו יחד צוות הסוכרת שלו כך שיעבוד בצורה מושלמת ככל האפשר
+* יתחזק וינטר את המערכת כדי לוודא שהיא פועלת כראוי
+
+.. הערה:: 
+	**כתב ויתור ואזהרה** 
+
 
 	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
 
