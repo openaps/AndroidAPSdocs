@@ -724,84 +724,86 @@ RileyLink - ריילילינק
 התראות המשאבה אינה נגישה
 -----------------------
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
+מומלץ להגדיר התראות על אי נגישות למשאבה ל-**120 דקות** על ידי מעבר לתפריט שלוש הנקודות בצד שמאל למעלה, בחירת **העדפות** > **התראות מקומיות** > **סף משאבה בלתי נגישה [min]** ולהגדיר אותו ל-**120**.
 
-Import Settings from previous AAPS
+ייבוא הגדרות מגיבוי של AAPS
 ----------------------------------
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+שימו לב כי לייבוא הגדרות יש אפשרות לייבא סטטוס פוד מיושן.
+ כתוצאה מכך, אתם עלולים לאבד פוד פעיל. לכן מומלץ בחום שלא לייבא הגדרות בזמן הפעלת Pod פעיל**.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. בטלו את הפעלת הפוד. ודאו שאין פוד פעיל.
+2. ייצאו את ההגדרות שלך ושמרו עותק במקום בטוח.
+3. הסירו את ההתקנה של הגרסה הקודמת של AAPS והפעל מחדש את הטלפון.
+4. התקינו את הגרסה החדשה של AAPS וודאו כי אין פוד בפעולה.
+5. ייבאו את ההגדרות והפעילו את הפוד החדש.
 
-Omnipod driver alerts
+התראות פוד
 ---------------------
 
-please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
+לידיעתכם, מנהל ההתקן של Omnipod מציג מגוון התראות ייחודיות בלשונית **סקירה כללית**, רובן אינפורמטיביות וניתנות לביטול בעוד שחלקן מספקות למשתמש פעולה לבצע על מנת לפתור את הסיבה להתראה המופעלת. 
+ להלן סיכום של ההתראות העיקריות בהן אתם עשויים להיתקל:
 
-No active Pod
+אין פוד פעיל
 ~~~~~~~~~~~~~
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+לא זוהתה הפעלת פוד פעילה. ניתן לבטל התראה זו זמנית על ידי לחיצה על **השתקה** אך היא תמשיך לפעול כל עוד לא הופעל פוד חדש. לאחר הפעלת פוד, ההתראה הזו מושתקת אוטומטית.
 
-Pod suspended
+הפוד מושהה
 ~~~~~~~~~~~~~
 
-Informational alert that Pod has been suspended.
+התראה אינפורמטיבית כי פוד הושהה.
 
-Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
+הגדרת הפרופיל הבזאלי נכשלה. הזרקת האינסולין עלולה להעצר! נא לרענן ידנית את סטטוס הפוד בלשונית Omnipod ולחדש את ההזרקה במידת הצורך.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+התראה אינפורמטיבית על כך שהגדרת הפרופיל הבזאלי של פוד נכשלה, ויהיה עליכם ללחוץ על *רענן* בלשונית Omnipod.
 
-Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+לא ניתן לאמת אם בולוס SMB הצליח. אם אתם בטוחים שהבולוס לא הצליח, עליכם למחוק את ערך SMB באופן ידני מטיפולים.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+התראה כי לא ניתן לאמת את הצלחת בולוס ה-SMB, יהיה עליכם לאמת את השדה *בולוס אחרון* בלשונית Omnipod כדי לראות האם ה-SMB הצליח ואם לא, להסיר את הערך מהלשונית טיפולים.
 
-Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+לא בטוח אם "בולוס/בזאלי זמני/SMB" הושלם, אנא ודאו ידנית אם הוא הצליח.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+בשל אופן התקשורת בין ריילילינק והאומניפוד, יכולים להתרחש מצבים בהם *לא בטוח* אם פקודה עובדה בהצלחה. לכן יש צורך ליידע את המשתמש על אי וודאות זו כשהכרחי.
 
-Below are a few examples of when an uncertain notification can occur.
+להלן מספר דוגמאות למקרים בהם מופיעות התראות על אי וודאות:
 
-* **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-* **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
-* **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+* **בולוסים** - לא ניתן לאמת בולוסים לא בטוחים באופן אוטומטי. ההודעה תישאר עד הבולוס הבא אך רענון תרמיל ידני ינקה את ההודעה. *כברירת מחדל צפצופי התראות מופעלים עבור סוג התראה זה מכיוון שהמשתמש יצטרך לאמת אותם באופן ידני.*
+* **בזאלי זמני, סטטוסים של הפוד, החלפות פרופיל, שינויי שעון** - רענון פוד ידני ינקה את ההודעה. כברירת מחדל, צפצופי התראה מושבתים עבור סוג התראה זה.
+* **סטיית שעון הפוד -** כאשר השעה על הפוד ועל הטלפון שונים מדי אז קשה ללולאת AAPS לתפקד ולבצע תחזיות והמלצות מדויקות. אם סטיית הזמן בין התרמיל לטלפון היא יותר מחמש דקות אז AAPS תדווח HANDLE TIME CHANGE תחת מצב פוד על כך שהפוד נמצא במצב מושעה. סמל נוסף של **הגדרת זמן** יופיע בתחתית לשונית Omnipod (POD). לחיצה על הגדרת זמן תסנכרן את השעון שעל הפוד עם השעה בטלפון ולאחר מכן תוכלו ללחוץ על כפתור חידוש הזרקה להמשך פעולות הפוד הרגילות.
 
-Best Practices
+שיטות עבודה מומלצות
 ==============
 
-Optimal Omnipod and RileyLink Positioning
+מיקום אופטימלי לפוד ולריילילינק
 -----------------------------------------
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+האנטנה של הריילילינק (המקורי) היא אנטנה סלילית המשדרת בתדר 433 MHz. האנטנה משדרת לכל הכיוונים וטווח קליטתה נראה כמו דונאט תלת ממדי, כך שציר Z מייצג את האנטנה בתנוחה אנכית. משמעות הדבר היא שיש טווח אופטימלי מסויים שבו יש להציב את הריילילינק לעומת האומניפוד, במיוחד בזמן הפעלה וניתוק פוד.
 
 |Toroid_w_CS|
 
-    *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+    *(איור 1: תרשים גרפי של אנטנה סלילית המשדרת לכל הכיוונים*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+מסיבות של אבטחה ובטיחות שימוש, *הפעלת* פוד נעשית *בטווח קצר (כ-30 ס"מ)* יותר מאשר פעולות תקשורת אחרות כמו פקודות בולוסים, בזאלי זמני או ריענון. כתוצאה מאופן שידור זה של אנטנת הריילילינק, מומלץ שלא להצמיד את הריילילינק לפוד.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+בתמונה מטה אפשר לראות מיקום אידאלי של ריילילינק לעומת הפוד בזמן הפעלתו או כיבויו. ייתכן שהפוד יופעל במרחקים שונים אך בטווח זה תקבלו את הביצועים הגבוהים ביותר, כבתמונה.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*הערה: אם חיבור הפוד נכשל גם בטווח האופטימלי המתואר, ייתכן שהסוללה של הריילילינק חלשה שגורמת לירידה בעצמה ובטווח השידור. על מנת למנוע זאת, יש לוודא שהריילילינק טעון או מחובר למטען בזמן תהליך חיבור הפוד.*
 
 |Omnipod_pod_and_RileyLink_Position|
 
-Where to get help for Omnipod driver
+היכן ניתן לקבל עזרה בשימוש במנהל התקן Omnipod
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+כל עבודות פיתוח מנהל התקן האומניפוד נעשות על ידי הקהילה בהתנדבות; אנו מבקשים מכם להתחשב ולהשתמש בהנחיות הבאות בעת בקשת עזרה:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.gg/4fQUWHZ4Mw>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **רמה 0:** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
+- **רמה 1:** אם אתם עדיין נתקלים בבעיות שאתם לא מצליחים לפתור באמצעות מסמך זה, אנא עברו לערוץ *#androidaps* ב-**Discord** באמצעות `קישור ההזמנה <https://discord.gg/4fQUWHZ4Mw>`__.
+- **רמה 2:** חפשו בעיות קיימות כדי לבדוק אם הבעיה שלכם כבר דווחה; אם לא, צרו באנגלית `issue <https://github.com/nightscout/AndroidAPS/issues>`__ וצרפו את `קבצי היומן <../Usage/Accessing-logfiles.html>`__.
+- **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**
 
 
 
