@@ -257,28 +257,28 @@
 
     |Resume_Insulin_Delivery_1| |Resume_Insulin_Delivery_2|
 
-2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. לחץ על **אישור** כדי לאשר ולהמשיך.
+2. כאשר הפקודה "חידוש הזרקה" מאושרת בהצלחה על ידי ריילילינק, תיבת דו-שיח לאישור תציג את ההודעה **מתן האינסולין חודש**. לחץ על **אישור** כדי לאשר ולהמשיך.
 
     |Resume_Insulin_Delivery_3|
 
-3. The **Omnipod (POD)** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will now display the **SUSPEND (2)** button.
+3. בלשונית **OMNIPOD (POD)**, בשדה **סטטוס פוד (1)** יוצג **פועל** ולחצן **חידוש הזרקה** יציג כעת **השהיה (2)**.
 
     |Resume_Insulin_Delivery_4|
 
-Acknowledging Pod Alerts
+אישור התראות
 ------------------------
 
-*NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
+*הערה - אם אינכם רואים לחצן קבל התראות, הסיבה לכך היא שהוא מוצג בלשונית OMNIPOD (POD) רק לאחר שהפוד לקראת תפוגה או שהופעלה התראת מכל אינסולין.*
 
-The process below will show you how to acknowledge and dismiss pod beeps that occur when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Omnipod alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hour (3 days) limit.
+התהליך שלהלן יראה כיצד לאשר ולבטל צפצופים של הפוד המתרחשים כאשר זמן פעולת הפוד מתקרב למגבלת הזמן של הפוד של 72 שעות (3 ימים). מגבלת זמן אזהרה זו מוגדרת ב-**שעות לפני כיבוי** שבהגדרת התראות האומניפוד. אורך החיים המרבי של פוד הוא 80 שעות (3 ימים ו-8 שעות), אולם היצרן ממליץ שלא לחרוג מ-72 השעות (3 ימים).
 
-*NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.*
+*הערה - אם הפעלתם את ההגדרה "אשר התראות פוד אוטומטית" בהתראות אומניפוד, התראה זו תטופל אוטומטית לאחר ההתראה הראשונה ולא תצטרכו לבטלה באופן ידני.*
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the **Omnipod (POD)** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation) and the text will turn **red** after this time has passed, under the **Active Pod alerts (2)** field where the status message **Pod will expire soon** is displayed. This trigger will display the **ACK ALERTS (3)** button. A **system notification (4)** will also inform you of the upcoming pod expiration
+1. כאשר הפוד יגיע לזמן האזהרה **שעות לפני כיבוי**, הוא יצפצף צפצוף אזהרה כדי להודיע שהוא מתקרב לזמן התפוגה שלו ובקרוב יידרש החלפת פוד. תוכלו לאמת זאת בלשונית **OMNIPOD (POD)**, השדה **תפוגת הפוד: (1)** יציג את הזמן המדויק בו יפוג תוקפו של הפוד (72 שעות לאחר ההפעלה) והטקסט יצבע **אדום** לאחר שחלף הזמן הזה, תחת השדה **התראות פוד פעילות (2)** שבו מוצגת הודעת הסטטוס **תוקף הפוד יפוג בקרוב**. זה הזמן בו יופיע הלחצן **קבל התראות (3)**. גם **הודעת מערכת (4)** תודיע על תפוגתו הקרובה של הפוד.
 
     |Acknowledge_Alerts_1| |Acknowledge_Alerts_2|
 
-2. Go to the **Omnipod (POD)** tab and press the **ACK ALERTS (2)** button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. עברו ללשונית **OMNIPOD (POD)** ולחצו על **אשר התראות (2)**. The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
     |Acknowledge_Alerts_3|
 
