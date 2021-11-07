@@ -278,132 +278,132 @@
 
     |Acknowledge_Alerts_1| |Acknowledge_Alerts_2|
 
-2. עברו ללשונית **OMNIPOD (POD)** ולחצו על **אשר התראות (2)**. The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. עברו ללשונית **OMNIPOD (POD)** ולחצו על **אשר התראות (2)**. הריילילינק שולח את הפקודה אל הפוד כדי לבטל את צפצופי האזהרה על תפוגת הפוד ומעדכן את **סטטוס פוד (1)** ורושם **מאשר התראות**.
 
     |Acknowledge_Alerts_3|
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been acknowledged**. Click the **OK** button to confirm and dismiss the dialog.
+3. עם **כיבוי מוצלח** של ההתראות, יופעלו **2 צפצופים** על ידי הפוד ותיבת דו-שיח לאישור תציג את ההודעה **התראות פעילות אושרו**. לחצו על **אישור** כדי לסגור את התיבה.
 
     |Acknowledge_Alerts_4|
 
-    If the RileyLink is out of range of the pod while the acknowledge alerts command is being processed a warning message will display 2 options. **Mute (1)** will silence this current warning. **OK (2)** will confirm this warning and allow the user to try to acknowledge alerts again.
+    אם הריילילינק נמצא מחוץ לטווח הפוד בזמן שהפקודה 'אישור התראות' עובדת, הודעת אזהרה תציג 2 אפשרויות. **השתק (1)** ישתיק את האזהרה הנוכחית. ** אישור (2)** יאשר האזהרה ויאפשר למשתמש לנסות לאשר התראות שוב.
 
     |Acknowledge_Alerts_5|
 
-4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+4. עברו ללשונית **OMNIPOD (POD)**, תחת **התראות פוד פעילות**, הודעת האזהרה אינה מוצגת עוד והפוד כבר לא יוציא צפצופי אזהרת תפוגה.
 
-View Pod History
+הצגת היסטוריית הפוד
 ----------------
 
-This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three day (72 - 80 hours) life.
+פרק זה מתאר כיצד לבדוק את היסטוריית הפודים ולסנן לפי קטגוריות פעולה שונות. כלי היסטוריית הפוד מאפשר לצפות בפעולות והתוצאותיהן שנעשו בעת השימוש בפוד במהלך השימוש בו (72 - 80 שעות).
 
-This feature is useful for verifying boluses, TBRs, basal changes that were given but you may be unsure if they completed. The remaining categories are useful in general for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+כלי זה שימושי לאימות בולוסים, בזאלים זמניים, שינויים בבזאלי שנעשו אך אינכם בטוחים אם הם בוצעו. הקטגוריות הנותרות שימושיות באופן כללי לפתרון בעיות וקביעת סדר האירועים שהתרחשו עד לכשל.
 
-*NOTE:*
-**Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+*הערה:*
+**פקודות לא בטוחות** יופיעו בהיסטוריית הפוד, אולם בשל אופיין אינכם יכולים להבטיח את נכונותן.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. נווטו ללשונית **OMNIPOD (POD)** ולחצו על **ניהול הפוד (1)** ולאחר מכן בחרו **היסטוריית פוד (2)** כדי לפתוח את מסך היסטוריית הפוד.
 
     |Pod_History_1| |Pod_History_2|
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **Omnipod (POD)** tab in the main AAPS interface.
+2. במסך ** היסטוריית פוד** מוצגת קטגוריית ברירת המחדל **הכל (1)** המציגה את **התאריך והשעה (2)** של כל **הפעולות (3)** ו**תוצאות (4)** בסדר כרונולוגי הפוך. לחצו על כפתור **הקודם של הטלפון שלך פעמיים** כדי לחזור ללשונית **OMNIPOD (POD)** בממשק הראשי של AAPS.
 
     |Pod_History_3| |Pod_History_4|
 
-View RileyLink Settings and History
+צפייה בהגדרות ובהיסטוריה של הריילילינק
 -----------------------------------
 
-This section shows you how to review the settings of your active pod and RileyLink along with the communication history of each. This feature, once accessed, is split into two sections: **Settings** and **History**.
+חלק זה מתאר כיצד לבדוק את ההגדרות של הפוד הפעיל ושל הריילילינק יחד עם היסטוריית התקשורת של כל אחד מהם. כלי זה מחולק לשני חלקים: **הגדרות** ו-**היסטוריה**.
 
-The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. The **REFRESH** button on the main **Omnipod (POD)** tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+השימוש העיקרי של כלי זה הוא כאשר הריילילינק של ה-פוד נמצא מחוץ לטווח הבלוטות' של הטלפון למשך זמן מסויים ו**מצב ריילילינק** מדווח **ריילילינק בלתי נגיש**. הלחצן **רענון** בלשונית **OMNIPOD (POD)** ינסה ליצור מחדש באופן ידני תקשורת בלוטות' עם ריילילינק המוגדר כעת בהגדרות האומניפוד.
 
-In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+במקרה שהכפתור **רענון** שבלשונית **OMNIPOD (POD)** לא משחזר את החיבור של הריילילינק לפוד, בצעו את ההפעולות שלהלן לחיבור מחדש ידני.
 
-Manually Re-establish Pod Communication Device Bluetooth Communication
+חיבור מחדש של הריילילינק אל הפוד באופן ידני
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
+1. כאשר **סטטוס ריילילינק: (1)** מדווח **ריילילינק בלתי נגיש**, לחצו על **ניהול הפוד (2)**. בתפריט **ניהול הפוד** תופיע הודעה של חיפוש פעיל אחר חיבור ריילילינק (2), בחרו ב**סטטיסטיקת ריילילינק (3)** כדי לגשת למסך **הגדרות RileyLink**.
 
     |RileyLink_Bluetooth_Reset_1| |RileyLink_Bluetooth_Reset_2|
 
-2. On the **RileyLink Settings (1)** screen under the **RileyLink (2)** section you can confirm both the Bluetooth connection status and error in the **Connection Status and Error: (3)** fields. A *Bluetooth Error* and *RileyLink unreachable* status should be shown. Start the manual Bluetooth reconnection by pressing the **refresh (4)** button in the lower right corner.
+2. במסך **הגדרות ריילילינק (1)** תחת **ריילילינק (2)** תוכלו לראות את מצב חיבור הבלוטות' ואת השגיאה בשדה **מצב חיבור ושגיאה: (3)**. יופיעו *שגיאת בלוטות'* ו*ריילילינק בלתי נגיש*. בצעו חיבור ידני מחדש על ידי לחיצה על **רענון (4)** בפינה הימנית התחתונה.
 
     |RileyLink_Bluetooth_Reset_3|
     
-    If the pod communication device is unresponsive or out of range of the phone while the Bluetooth refresh command is being processed a warning message will display 2 options.
+    אם הריילילינק אינו מגיב או אינו נמצא בטווח הטלפון בזמן שפקודת הרענון מעובדת, תופיע הודעת אזהרה שתציג 2 אפשרויות.
 
-   * **Mute (1)** will silence this current warning.
-   * **OK (2)** will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+   * **השתק (1)** ישתיק את האזהרה הנוכחית.
+   ** אישור (2)** יאשר האזהרה ויאפשר למשתמש לנסות לחדש שוב את החיבור.
 	
     |RileyLink_Bluetooth_Reset_4|	
 	
-3. If the **Bluetooth connection** does not re-establish, try manually turning **off** and then back **on** the Bluetooth function on your phone.
+3. אם **חיבור הבלוטות'** אינו מתחבר מחדש, נסו **לכבות** ידנית **ולהפעיל** מחדש את פונקציית הבלוטות' של הטלפון.
 
-4. After a successful RileyLink Bluetooth reconnection the **Connection Status: (1)** field should report **RileyLink ready**. Congratulations, you have now reconnected your configured pod communication device to AAPS!
+4. אם החיבור הריילילינק מחדש מצליח השדה **מצב חיבור: (1)** יציג **ריילילינק מוכן**. מזל טוב, חיברתם מחדש את הריילילינק ל- AAPS!
 
     |RileyLink_Bluetooth_Reset_5|
 
-Pod Communication Device and Active Pod Settings
+ריילילינק והגדרות הפוד הפעיל
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod. 
+מסך זה יספק מידע, סטטוס והגדרות הריילילינק והפוד הפעיל. 
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. בלשונית **OMNIPOD (POD)** בחרו ב**ניהול הפוד (1)** ולאחר לחצו על **סטטיסטיקת ריילילינק (2)** כדי הציג את ההגדרות של **ריילילינק (3)** ושל הפוד הפעיל כ**מכשיר (4)**.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
     |RileyLink_Statistics_Settings_3|
     
-RileyLink (3) fields
+שדות ריילילינק (3)
 ++++++++++++++++++++
 
-	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
-	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
-	* **Battery Level:** Displays the current battery level of the connected pod communication device
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device (currently only eros pods work with the RileyLink
-	* **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
-	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+	* **כתובת:** כתובת MAC של הריילינק שהפעיל את הפוד.
+	* **שם:** השם איתו מזוהה הריילילינק כמוגדר בהגדרות הבלוטות' של הטלפון.
+	* **רמת סוללה:** מציג את רמת הסוללה הנוכחית של הריילילינק.
+	* **דגם המכשיר המחובר:** דגם הפוד המתקשר כעת עם הריילילינק (כרגע רק פודים מדגם Eros).
+	* **סטטוס חיבור**: הסטטוס הנוכחי של חיבור הבלוטות' בין הריילילינק לבין הטלפון שמריץ AAPS.
+	* **שגיאת חיבור:** אם ישנה שגיאה בריילילינק יופיעו כאן פרטי חיבור הבלוטות'.
+	* **גרסת קושחה:** גרסת הקושחה של הריילילינק.
 
-Device (4) fields - With an Active Pod
+שדות מכשיר (4) - עם פוד פעיל
 ++++++++++++++++++++++++++++++++++++++
 
-	* **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
-	* **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
-	* **Pump Serial Number:** Serial number of the currently activated pod
-	* **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
-	* **Last Used frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-	* **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
-	* **Refresh button** manually refresh the settings on this page.
+	* **סוג מכשיר:** סוג המכשיר המתקשר עם הריילילינק (משאבת אומניפוד).
+	* **דגם מכשיר:** דגם המכשיר המחובר לריילילינק (שם הדגם של הפוד, שהוא Eros).
+	* **מספר סידורי של המשאבה:** מספר סידורי של הפוד הנוכחי.
+	* **תדר המשאבה:** תדר הרדיו לתקשורת בין הריילילינק לבין הפוד.
+	* **תדר בשימוש האחרון:** תדר הרדיו האחרון הידוע בו השתמש הפוד לתקשורת עם הריילילינק.
+	* **קשר אחרון עם המכשיר:** תאריך ושעה של הקשר האחרון שעשה הפוד עם הריילילינק.
+	* **לחצן רענון** רענון ידני של ההגדרות בדף זה.
 
-RileyLink and Active Pod History
+ריילילינק והיסטוריית הפוד
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+מסך זה מספק מידע של כל מצב או פעולה שהריילילינק או הפוד נקטו, בסדר כרונולוגי הפוך. ההיסטוריה כולה זמינה רק לפוד הפעיל כרגע, לאחר החלפת הפוד ההיסטוריה הזו תימחק ורק אירועים של הפוד החדש יקלטו ויוצגו.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. בלשונית **OMNIPOD (POD)** בחרו ב**ניהול הפוד (1)** ולאחר לחצו על **סטטיסטיקת ריילילינק (2)** כדי הציג את מסך ההגדרות וההיסטוריה. לחצו על הטקסט **היסטוריה (3)** כדי להציג את כל ההיסטוריה של הריילילינק ושל הפוד הנוכחי.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
     |RileyLink_Statistics_History_3|
     
-Fields
+שדות
 ++++++
     
-   * **Date & Time**: In reverse chronological order the timestamp of each event.
-   * **Device:** The device to which the current action or state is referring.
-   * **State or Action:** The current state or action performed by the device.
+   * **תאריך ושעה:** זמני התרחשות של כל אירוע, בסדר כרונולוגי הפוך.
+   * **מכשיר:** המכשיר שאליו מתייחסת הפעולה או המצב הנוכחי.
+   * **מצב או פעולה:** המצב הנוכחי או הפעולה המבוצעת על ידי המכשיר.
 
-Omnipod (POD) Tab
+לשונית OMNIPOD (POD)
 =================
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+להלן הסבר על מבנה ומשמעות הסמלים ושדות הסטטוס בלשונית **OMNIPOD (POD)** בממשק הראשי של AAPS.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*הערה: אם הודעה כלשהי בשדות הסטטוס מדווחת "(לא בטוח)", יהיה עליכם ללחוץ על כפתור הרענון כדי לרענן את מצב הפוד.*
 
 |Omnipod_Tab|
 
-Fields
+שדות
 ------
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
