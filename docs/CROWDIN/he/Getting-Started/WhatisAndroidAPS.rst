@@ -19,31 +19,38 @@ AndroidAPS היא אפליקציה הפועלת כמערכת לבלב מלאכו
 	**כתב ויתור ואזהרה** 
 
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* כל המידע, המחשבה והקוד המתוארים כאן מיועדים למטרות מידע וחינוכיות בלבד.
+ Nightscout לא עושה כרגע ניסיון לתאימות לפרטיות HIPAA. 
+ השימוש ב-Nightscout וב-AndroidAPS הוא על אחריותכם בלבד, ואל תשתמשו במידע או בקוד כדי לקבל החלטות רפואיות.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* השימוש בקוד מ-github.com הוא ללא אחריות או תמיכה רשמית מכל סוג שהוא. אנא עיינו ברישיון של מאגר זה לפרטים.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
+	* כל שמות המוצרים והחברות, הסימנים המסחריים, סימני השירות, הסימנים המסחריים הרשומים וסימני השירות הרשומים הם רכושם של בעליהם בהתאמה. 
+ השימוש בהם הוא למטרות מידע ואינו מרמז על כל זיקה או אישור על ידם. 
+
+
+	שימו לב - לפרויקט זה אין קשר ואינו מאושר על ידי: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_ , `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ או `Medtronic <https:// www.medtronic.com/>`_. 
 	
-If you're ready for the challenge, please read on. 
+אם אתם מוכנים לאתגר, המשיכו לקרוא.  
 
-Primary goals behind AndroidAPS
+המטרות העיקריות של AndroidAPS
 ==================================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* אפליקציה עם בטיחות מובנית.
+ כדי לקרוא על תכונות הבטיחות של האלגוריתמים, הידועים כ-oref0 ו-oref1, לחצו כאן (https://openaps.org/reference-design/)
+* אפליקציית "הכל באחד" לניהול סוכרת מסוג 1 עם לבלב מלאכותי ו-Nightscout
+* אפליקציה לה משתמשים יכולים להוסיף או להסיר מודולים לפי הצורך בקלות
+* אפליקציה עם גרסאות שונות עבור מיקומים ושפות שונות.
+* אפליקציה שניתן להשתמש בה במצב לולאה פתוחה וסגורה
+* אפליקציה שקופה לחלוטין: משתמשים יכולים להזין פרמטרים, לראות תוצאות ולקבל את ההחלטה הסופית
+* אפליקציה שמתפקדת ללא תלות במנהלי התקנים למשאבות מסוימות ומכילה "משאבה וירטואלית" כך שמשתמשים יכולים להתנסות בבטחה לפני השימוש בה על עצמם 
+* אפליקציה שמשולבת באופן הדוק עם Nightscout
+* אפליקציה שבה המשתמש שולט במגבלות הבטיחות 
 
-How to start
+איך מתחילים?
 ==================================================
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
+כמובן, כל התוכן הזה כאן הוא מאוד חשוב, אך יכול לבלבל בהתחלה.
+ניתן לקבל אוריינטציה טובה על ידי קריאת `סקירה כללית <../Module/module.html>`_ ו`משימות <../Usage/Objectives.html>`_.
+ אפשר גם לעיין ב`התקנה לדוגמה עם משאבת Dana, חיישן Dexcom ושעון חכם Sony <../Getting-Started/Sample-Setup.html>`_.
  
