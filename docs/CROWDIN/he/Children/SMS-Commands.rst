@@ -157,7 +157,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 * PROFILE 2 30
   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
-Other
+אחר
 --------------------------------------------------
 * TREATMENTS REFRESH
   * Response: Refresh treatments from NS
