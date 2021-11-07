@@ -563,7 +563,7 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 *NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
 
-RileyLink
+RileyLink - ריילילינק
 ---------
 
 Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
