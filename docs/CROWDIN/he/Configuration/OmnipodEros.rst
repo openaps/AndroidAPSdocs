@@ -406,200 +406,202 @@
 שדות
 ------
 
-* **RileyLink Status:** Displays the current connection status of the RileyLink
+* **סטטוס ריילילינק:** מציג את מצב החיבור הנוכחי של הריילילינק
 
-   - *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-   - *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-   - *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+   - *ריילילינק בלתי נגיש* - הריילילינק אינו נמצא בטווח הבלוטות' של הטלפון, כבוי או יש כשל המונע את התקשורת.
+   - *ריילילינק מוכן* - הריילילינק מופעל ומאתחל באופן פעיל את חיבור הבלוטות'
+   - *מחובר* - הריילילינק מופעל, מחובר ומסוגל לתקשר באופן פעיל באמצעות בלוטות'.
 
-* **Pod address:** Displays the current address in which the active pod is referenced
-* **LOT:** Displays the LOT number of the active pod
-* **TID:** Displays the serial number of the pod.
-* **Firmware Version:** Displays the firmware version of the active pod.
-* **Time on Pod:** Displays the current time on the active pod.
-* **Pod expires:** Displays the date and time when the active pod will expire.
-* **Pod status:** Displays the status of the active pod.
-* **Last connection:** Displays the last time communication with the active pod was achieved.
+* **כתובת פוד:** מציג את הכתובת הנוכחית ממנה מופנה הפוד.
+* **LOT:** מציג את מספר ה- LOT של הפוד הפעיל.
+* **TID:** מציג את המספר הסידורי של הפוד.
+* **גרסת קושחה:** מציג את גרסת הקושחה של הפוד הפעיל.
+* **השעה בפוד:** מציג את השעה הנוכחית בפוד הפעיל.
+* **תפוגת הפוד:** מציג את התאריך והשעה בהם יפוג תוקף הפוד הפעיל.
+* **סטטוס פוד:** מציג את הסטטוס של הפוד הפעיל.
+* **חיבור אחרון:** מציג את הפעם האחרונה בה התקבלה תקשורת עם הפוד הפעיל.
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *לפני כמה רגעים* - לפני פחות מ-20 שניות.
+   - *לפני פחות מדקה* - יותר מעשרים שניות אך פחות מ-60 שניות.
+   - *לפני דקה אחת* - יותר מ-60 שניות אך פחות מ-120 שניות (2 דקות)
+   - *לפני XX דקות* - לפני יותר משתי דקות ככבתוב בערך XX
 
-* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **בולוס אחרון:** מציג את המינון של הבולוס האחרון שהפוד הזריק ולפני כמה זמן, בסוגריים.
+* **בזאלי בסיסי:** מציג את המינון הבזאלי המתוכנת עבור השעה הנוכחית בפרופיל הבזאלי.
+* **מינון בזאלי זמני:** מציג את המינון הבזאלי הזמני הפועל כעת בפורמט הבא:
 
-   - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - יחידות\שעה @ שעה בה המינון הבזאלי הזמני נקבע (דקות בפעולה\דקות עד לסיום)
+   - *לדוגמה:* 0.00 יח'\שעה @ 18:25 (90/120 דקות)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
-* **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+* **מכל:** מציג מעל 50+U כאשר נותרו יותר מ -50 יחידות במכל. מתחת לערך זה, היחידות המדויקות מוצגות בטקסט צהוב.
+* **סה"כ שהוזרק:** מציג את המספר הכולל של יחידות האינסולין שהוזרקו. *שימו לב שזהו קירוב כיוון שתיחול ומילוי הפוד אינו תהליך מדויק.*
+* **שגיאות:** מציג את השגיאה האחרונה שהופיעה. לקריאה מחדש של `היסטוריית הפודים <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ לצפייה בקבצי יומן, שגיאות ומידע מפורט יותר.
+* **התראות פוד פעילות:** שדה השמור להתראות הפועלות כרגע על הפוד הפעיל. משמש בדרך כלל כאשר תפוגת הפוד עברה את 72 השעות והתראות צפצוף של הפוד פועלות.
 
-Icons
+אייקונים
 -----
 
 .. list-table:: 
       
     * - |refresh_pod_status|
-      - **REFRESH:** 
+      - **רענן:** 
 			
-	Sends a refresh command to the active pod to update communication
+	שולח פקודת רענון לפוד לעדכון התקשורת
 			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+	* השתמשו כדי לרענן את מצב הפוד ולבטל סטטוסים המכילים את הטקסט "(לא בטוח)".
+	ראו את פרק `פתרון בעיות <#troubleshooting>`__ מטה לקריאה נוספת.
     * - |pod_management|  	 
-      - **POD MGMT:**
+      - **ניהול הפוד:**
 
-	Navigates to the Pod management menu   
+	מנווט אל תפריט ניהול הפוד   
     * - |ack_alerts|		 
-      - **ACK ALERTS:**
+      - **קבל התראות:**
    			 
-	When pressed this will disable the pod expiration beeps and notifications. 
+	לחיצה תשבית את צפצופי התראת התפוגה של הפוד. 
 			 
-	* Button is displayed only when pod time is past expiration warning time
-	* Upon successful dismissal, this icon will no longer appear.			 
+	* הלחצן מוצג רק לאחר אזהרת התפוגה של הפוד
+	* לאחר קבלת ההתראה, אייקון זה יפסיק להופיע.			 
     * - |set_time|	 
-      - **SET TIME:**
+      - **הגדרת שעה:**
    
-	When pressed this will update the time on the pod with the current time on your phone.
+	לחיצה תסנכרן את השעה בפוד עם השעה הנוכחית בטלפון.
     * - |suspend|  		 
-      - **SUSPEND:**
+      - **השהיה:**
    
-	Suspends the active pod
+	משהה את פעילות הפוד
     * - |resume|	 
-      - **RESUME DELIVERY:**
+      - **חידוש הזרקה:**
    
-	Resumes the currently suspended, active pod
+	מחדש את פעילות הפוד המושהה
 
 
-Pod Management Menu
+תפריט ניהול הפוד
 -------------------
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+להלן הסבר על מבנה ומשמעות של האייקונים בתפריט **ניהול הפוד** אליו נכנסים מהלשונית **OMNIPOD (POD)**.
 
 |Omnipod_Tab_Pod_Management|
 
 .. list-table:: 
 
     * - |activate_pod|
-      - **Activate Pod**
+      - **הפעל פוד**
    
-        Primes and activates a new pod
+        מתחל ומפעיל את הפוד החדש
     * - |deactivate_pod|
-      - **Deactivate Pod**
+      - **כבה פוד**
  
-        Deactivates the currently active pod.
+        מכבה את הפוד הנוכחי.
 		 
-	*  A partially paired pod ignores this command.
-	*  Use this command to deactivate a screaming pod (error 49).
-	*  If the button is disabled (greyed out) use the Discard Pod button.
+	* פוד מצומד חלקית יתעלם מהפקודה הזו.
+	* השתמשו בפקודה זו כדי לבטל תרמיל "צורח" (שגיאה 49).
+	* אם הכפתור מושבת (אפור) השתמשו בלחצן "היפטר מהפוד".
     * - |play_test_beep|
-      - **Play test beep**
+      - **השמע צפצוף ניסיון**
  
- 	Plays a single test beep on the pod when pressed.
+ 	משמיע צפצוף בדיקה יחיד על הפוד.
     * - |discard_pod|
-      - **Discard pod**
+      - **היפטר מהפוד**
 
-	Deactivates and discards the pod state of an unresponsive pod when pressed.
+	מכבה את הפוד ומבטל את מצב "פוד לא מגיב".
 			      
-	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	הכפתור מוצג רק במקרים ספציפיים בהם אין אפשרות לבטל את ההפעלה כרגיל:
 
-	* A **pod is not fully paired** and thus ignores deactivate commands.
-	* A **pod is stuck** during the pairing process between steps
-	* A **pod simply does not pair at all.**
+	* פוד **מצומד חלקית** ולכן מתעלם מפקודות השבתה.
+	* **פוד נתקע** בין השלבים בתהליך הצימוד
+	**הפוד לא מצליח לעבור צימוד כלל. **
     * - |pod_history|
-      - **Pod history** 
+      - **היסטוריית הפוד** 
    
-   	Displays the active pod activity history
+   	מציג את היסטוריית פעילות הפוד הפעיל
     * - |rileylink_stats|
-      - **RileyLink stats:**
+      - **סטטיסטיקת ריילילינק:**
    
-        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        מנווט למסך סטטיסטיקת ריילילנק המציג הגדרות עדכניות והיסטוריית חיבורי ריילילינק
 
-	* **Settings** - displays RileyLink and active pod settings information
-	* **History** - displays RileyLink and Pod communication history
+	* **הגדרות** - מציג מידע על הגדרות הריילילינק והפוד
+	* **היסטוריה** - מציג את היסטוריית התקשורת של הריילילינק והפוד
     * - |reset_rileylink_config|
-      - **Reset RileyLink Config** 
+      - **איפוס תצורת ריילילינק** 
    
-   	When pressed this button resets the currently connected pod communication device configuration. 
+   	מאפס את תצורת הריילילינק המחובר כעת. 
 			      
-	* When communication is started, specific data is sent to and set in the RileyLink 
+	* כאשר התקשורת מופעלת, נתונים ספציפיים נשלחים ומוגדרים בריילילינק 
 			      
-	    - Memory Registers are set
-	    - Communication Protocols are set
-	    - Tuned Radio Frequency is set
+	    - רישומי זיכרון
+	    - פרוטוקולי תקשורת
+	    - תדר רדיו
 				
-	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* ראו `הערות נוספות <#reset-rileylink-config-notes>` __ בסוף טבלה זו
     * - |pulse_log|
-      - **Read pulse log:** 
+      - **קרא יומן פעימות:** 
     
-    	Sends the active pod pulse log to the clipboard		    
+    	שולח את יומן הפעימות הפעיל ללוח העריכה		    
 
-*Reset RileyLink Config Notes*
+*איפוס הערות תצורת ריילילינק*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-* If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-* If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-* This button **DOES NOT** need to be pressed when switching between different pod communication devices
+* השימוש העיקרי בתכונה זו הוא כאשר הריילילנק אינו מגיב והתקשורת במצב תקוע.
+*אם הריילילינק עובר כיבוי והפעלה מחדש, יש ללחוץ על הלחצן **איפוס תצורת ריילילינק** כך שיגדיר פרמטרי תקשורת עדכניים בתצורת הריילילינק.
+* אם זה לא נעשה, יהיה צורך להפעיל מחדש את AAPS לאחר מחזור התקנת הפוד.
+* **אין צורך** ללחוץ על כפתור זה בעת מעבר בין ריילילינקים שונים
 
-Omnipod Settings
+הגדרות אומניפוד
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. בתיעוד זה לשונית זו נקראת **OMNIPOD (POD)**.
+ניתן להגדיר את הגדרות של מנהל ההתקן של אומניפוד על ידי בחירת **≡** בפינה הימינית העליונה > **בונה התצורה** > **משאבה** > בחירת לחצן העגול (1) שליד **Omnipod** > **גלגל שיניים (2)**. בחירה **בתיבת הסימון (3)** לצד **גלגל השיניים (2)** תאפשר להציג את תפריט Omnipod כלשונית בממשק AAPS שכותרתו **OMNIOPOD** או **POD**. בתיעוד זה לשונית זו נקראת ** OMNIPOD (POD)**.
 
 |Omnipod_Settings_1|
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**הערה:** דרך מהירה יותר לגשת ל**הגדרות Omnipod** היא על ידי גישה לתפריט **⋮ (1)** בפינה השמאלית העליונה של הלשונית **OMNIPOD (POD)** ובחירת **העדפות Ominpod (2)** מהתפריט הנפתח.
 
 |Omnipod_Settings_2|
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+להלן קבוצות ההגדרות; תוכלו להפעילן או להשביתן באמצעות מתגים שיש לרוב ההגדרות המתוארות להלן:
 
 |Omnipod_Settings_3|
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*הערה: כוכבית (\*) מציינת את ברירת המחדל של הגדרה מופעלת.*
 
 RileyLink - ריילילינק
 ---------
 
-Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
+מאפשר סריקה אחר מכשירי ריילילינק. מנהל התקן הריילילינק לא יכול להשתמש ביותר ממכשיר ריילילינק אחד בבת אחת.
 
-* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. It is **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
+* **הצג את רמת הסוללה המדווחת על-ידי OrangeLink\Emalink:** מדווח את רמת הסוללה של מכשיר הריילילינק עצמו. הפעלת אפשרות זו מומלצת בחום לכל משתמשי OrangeLink/EmaLink.
 
-	+  DOES NOT work with the original RileyLink.
-	+  May not work with RileyLink alternatives.
-	+  Enabled - Reports the current battery level for supported pod communication devices.
-	+  Disabled - Reports a value of n/a.
-* **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+	+ לא עובד עבור הריילילינק המקורי.
+	+ עלול שלא לעבוד במכשירי ריילילינקים מדגמים אלטרנטיביים.
+	+ כשמאופשר - מדווח את רמת הסוללה של ריילילינקים מדגמים נתמכים.
+	+ כשאינו מאופשר - מדווח "לא זמין".
+* **אפשר רישום החלפת סוללה בפעולות:** בלשונית פעולות כפתור החלפת הסוללה מופעל אם הפעלתם הגדרה זו והגדרת דיווח הסוללה למעלה.  חלק מדגמי הריילילינק כיום משתמשים בסוללות רגילות הניתנות להחלפה.  אפשרות זו מאפשרת לכם לבצע רישום ואיפוס של מונה של גיל הסוללה.
 
-Confirmation beeps
+צפצופי אישור
 ------------------
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+מספק צפצופי אישור מהפוד על ביצוע בולוס, שינויים במינון הבזאלי, בזאלי זמני, SMB ושינויים אחרים.
 
-* **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+* ** \* צפצופי בולוס מופעלים:** הפעלה או השבתת צפצופי אישור כאשר מוזרק בולוס.
+*** \*צפצופי בזאלי מופעלים:** הפעלת או השבתת צפצופי אישור כאשר נקבע מינון בזאלי חדש, המינון הבזאלי הפעיל מבוטל או המינון הבזאלי הנוכחי משתנה.
+* ** \*צפצופי SMB מופעלים:** הפעלת או השבתת צפצופי אישור כאשר מוזרק SMB.
+* ** \*צפצופי בזאלי זמני מופעלים:** הפעלת או השבתת צפצופי אישור כאשר בזאלי זמני מופעל או מבוטל.
 
-Alerts
+התראות
 ------
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+מספק התראות של AAPS והכרזות Nightscout על תוקף הפוד, כיבויים, מכל נמוך על פי הגדרותת סף מוגדרות.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*שימו לב כי הודעת AAPS תינתן תמיד לכל התראה לאחר התקשורת הראשונית עם הפוד מאז הופעלה ההתראה. דחיית ההודעה לא תבטל את ההתראה, אלא אם כן מופעל אישור התראות פוד אוטומטי. כדי לבטל את ההתראה באופן ידני עליכם לבקר בכרטיסייה OMNIPOD (POD) וללחוץ על כפתור אישור התראות
 	
-* **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
-* **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+* **\*תזכורת לתפוגה מופעלת:** הפעילו או השביתו תזכורת לתפוגת הפוד שתופעל כאשר יגיע מספר השעות שהגדרתם לפני ההשבתה.
+* **שעות לפני כיבוי:** מגדיר את מספר השעות לפני כיבוי הפוד הפעיל, שלאחר מכן תופעל תזכורת לתפוגה.
+*** \*התראת מכל נמוך מופעלת:** הפעלה או השבתה של התראה על יתרת יחידות אינסולין נמוכה מסף מוגדר.
 
-Notifications
+* **מספר יחידות:** מספר היחידות בהן מופעלת התראת המכל הנמוך.
+* **קבל התראות מהפוד אוטומטית:** כשמאופשר, תינתן הודעה ראשונה אולם מיד לאחר הקשר הראשון של הפוד מאז ההודעה, היא תאושר אוטומטית והתראה תידחה. 
+
+
+הודעות
 -------------
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
@@ -903,7 +905,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
 
 ..
-	Omnipod Settings
+	הגדרות אומניפוד
 .. |Omnipod_Settings_1|                 image:: ../images/omnipod/Omnipod_Settings_1.png
 .. |Omnipod_Settings_2|                 image:: ../images/omnipod/Omnipod_Settings_2.png
 .. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
