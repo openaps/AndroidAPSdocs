@@ -5,9 +5,9 @@ Siga las instrucciones en el manual ` manual de actualización <../Installing-An
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 .. imagen:: ../images/AAPS_LoopDisable90days.png
-  :alt: Información de actualización
+  :alt: Información de la actualización
 
-Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
+Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
@@ -64,43 +64,43 @@ Cambios
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
 * Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde NS usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
-* Procedimiento para restablecer la contraseña maestra olvidada. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* UI improvements @MilosKozak
-* New user buttons for automations @MilosKozak
-* New automation layout @MilosKozak
-* History browser updated and fixed @MilosKozak
-* Objective9 removed @MilosKozak
-* Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
+* Seguimiento de las acciones del usuario @Philoul
+* Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* Mejoras en la interfaz del usuario @MilosKozak
+* Nuevos botones de usuario para las automatizaciones @MilosKozak
+* Nuevo diseño de las automatizaciones @MilosKozak
+* El navegador del historial ha sido actualizado y corregido @MilosKozak
+* Objetivo 9 eliminado @MilosKozak
+* Corregido un problema asociado a datos inestables del MCG @MilosKozak
+* Mejoras de comunicación para DanaR y DanaRS @MilosKozak
+* Integración con CircleCI @MilosKozak
+* Cambio en la ubicación de los ficheros: /AAPS/extra (modo ingeniería) /AAPS/logs /AAPS/exports /AAPS/preferences
 
 
 
-Version 2.8.2
+Versión 2.8.2
 ================
-Release date: 23-01-2021
+Fecha de lanzamiento: 23-01-2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* Por favor, revise también `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ más abajo.
 
 Cambios
 ----------------------
-* stability improvements
-* more tweaking for Android 8+
-* improved icons
-* watch improvements
-* NSClient fixes
-* Bolus advisor now works with Pumpcontrol and NSClient
+* Mejoras de estabilidad
+* Más ajustes para Android 8+
+* Mejoras en los iconos
+* Mejores en relojes
+* Correcciones en NSClient
+* La calculadora de bolos ahora trabaja con Pumpcontrol y NSClient
 
-Version 2.8.1.1
+Versión 2.8.1.1
 ================
-Release date: 12-01-2021
+Fecha de lanzamiento: 12-01-2021
 
 Notas importantes
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
+* Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
 * ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
