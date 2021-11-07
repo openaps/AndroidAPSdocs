@@ -341,7 +341,7 @@ Absorption settings
 .. image:: ../images/Pref2020_Absorption.png
   :alt: Absorption settings
 
-min_5m_carbimpact
+min_5m_carbimpact (השפעת פחמימות מינימלית ב-5 דקות)
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
