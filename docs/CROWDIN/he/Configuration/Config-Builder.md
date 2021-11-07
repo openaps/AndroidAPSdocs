@@ -206,7 +206,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
 * This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
-### Closed Loop
+### לולאה סגורה
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
 * The Closed Loop works within numerous safety limits, which you can be set individually.
