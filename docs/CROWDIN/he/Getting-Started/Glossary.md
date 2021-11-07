@@ -284,7 +284,7 @@
  <td><strong>פרופיל</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - פרופיל</a></td>
 </tr>
 <tr>
  <td><strong>Profile switch</strong></td>
@@ -326,11 +326,11 @@
  <td><strong>Sensor noise</strong></td>
  <td>unstable CGM readings leading to "jumping" values</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - רעש בנתוני חיישן</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>סופר מיקרו בולוס<br>תכונה מתקדמת לאיזון סוכר מהיר יותר</td>
  <td>UAM - ארוחות לא מוכרזות</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
