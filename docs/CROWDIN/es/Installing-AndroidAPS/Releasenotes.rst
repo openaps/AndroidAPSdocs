@@ -13,58 +13,58 @@ Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la n
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is necessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
-Android version and AAPS version
+Versión de Android y versión de AAPS
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9. 
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
-Android 9 and up
+Android 9 y superiores
 ------------------------------------
-* Use latest AAPS version
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* Usar la última versión de AAPS
+* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
 
 Android 8
 ------------------------------------
-* Use AAPS version **2.8.2.1**
-* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* Usar la versión de AAPS **2.8.2.1**
+* Hasta que se publique la versión 3 de AAPS, selecciona **master** ya que se corresponde con la versión 2.8.2.1. ;-)
+* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
 
 Android 7
 ------------------------------------
-* Use AAPS version **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+* Usar la versión de AAPS **2.6.2**
+* Descargar el código fuente de AAPS desde https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Versión 3.0.0
 ================
-Release date: XX-XX-2021
+Fecha de lanzamiento: XX-XX-2021
 
-Important hints
+Notas importantes
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **La versión mínima de Android requerida es la 9.0.**
+* **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Debes realizar un cambio de perfil y comenzar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
+* Usa la misma versión de AAPS y NSClient
 
-Changes
+Cambios
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
-* Dana-i support @MilosKozak
-* DiaconnG8 support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
+* Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* Soporte para Dana-i @MilosKozak
+* Soporte para DiaconnG8
+* Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Gran cantidad de código reescrito a Kotlin @MilosKozak
+* Nueva interfaz interna para controladores de bombas
+* NSClient reescrito para mejorar la sincronización y una personalización más detallada @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * No se permite eliminar registros de NS (Sólo se pueden invalidar mediante NSClient)
+  * No se permite la modificación de registros de NS
+  * Disponible la sincronización de la configuración sin necesidad de habilitar el modo de ingeniería (para padres)
+  * Posibilidad de resincronizar datos
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
+* Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
+* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde NS usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
+* Procedimiento para restablecer la contraseña maestra olvidada. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
 * UI improvements @MilosKozak
@@ -85,7 +85,7 @@ Release date: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
-Changes
+Cambios
 ----------------------
 * stability improvements
 * more tweaking for Android 8+
@@ -98,7 +98,7 @@ Version 2.8.1.1
 ================
 Release date: 12-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
@@ -123,7 +123,7 @@ Versión 2.8.0
 ================
 Fecha de lanzamiento: 01-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
