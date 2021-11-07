@@ -66,7 +66,7 @@ En el momento dos [lenguajes de marcación](./make-a-PR#code-syntax) se utilizan
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**¡Asegúrate de no usar el carácter de espacio dentro de etiquetas HTML al principio o al final!**
 
 ![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 
