@@ -1,9 +1,9 @@
 Необходимые проверки после обновления с AndroidAPS 2.6
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
+* Программный код был существенно изменен при переходе на AAPS 2.7. 
+* Поэтому важно проверить и/или изменить настройки после обновления.
+* Подробнее о новых и расширенных функциях смотрите в <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_.
 
 Check BG source
 -----------------------------------------------------------
