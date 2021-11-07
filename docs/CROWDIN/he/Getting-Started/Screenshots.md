@@ -250,7 +250,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
-#### CGM
+#### סנסור
 
 * Opens xDrip+.
 * Back button returns to AAPS.
