@@ -608,9 +608,9 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 
 *NOTE: These are notifications only, no audible beep alerts are made.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+* **התראת צליל של בזאלי זמני לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS לא בטוח אם מינון בזאלי זמני הוגדר בהצלחה.
+* **התראת צליל של SMB לא ברור מאופשרת: ** הפעילו או השבחתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם SMB הוזרק בהצלחה.
+* **התראת צליל של בולוס לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם בולוס הוזרק בהצלחה.
    
 Other
 -----
