@@ -604,124 +604,124 @@ RileyLink - ריילילינק
 הודעות
 -------------
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
+מספק התראות AAPS והתראות קוליות כאשר לא בטוח אם אירועי בזאלי זמני, SMB או בולוס הצליחו. 
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*הערה: אלה הן התראות בלבד, לא מתבצעות התראות מסוג צפצופים.*
 
 * **התראת צליל של בזאלי זמני לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS לא בטוח אם מינון בזאלי זמני הוגדר בהצלחה.
 * **התראת צליל של SMB לא ברור מאופשרת: ** הפעילו או השבחתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם SMB הוזרק בהצלחה.
 * **התראת צליל של בולוס לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם בולוס הוזרק בהצלחה.
    
-Other
+אחר
 -----
 
-Provides advanced settings to assist debugging.
+מספק הגדרות מתקדמות כדי לסיוע באיתור באגים.
 	
-* **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
-* **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-* **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+* **הצג לחצן השהיית מתן אינסולין בלשונית אומניפוד:** מציג או מסתיר את לחצן השהיית בההזרקה בלשונית **Omnipod (POD)**.
+* **הצג לחצן יומן פעימות בתפריט ניהול פוד:** מציג או מסתיר את לחצן יומן פעימות ב**תפריט ניהול הפוד**.
+* **הצג לחצן סטטיסטיקת ריילילינק בתפריט ניהול פוד:** מציג או מסתיר את לחצן סטטיסטיקת הריילילינק ב**תפריט ניהול הפוד**.
+* **\*זיהוי אזור שעון קיץ\אזור זמן מופעל:** מאפשר לזהות שינויים באזור זמן באופן אוטומטי אם נעשה שימוש בטלפון באזור שבו יש שעון קיץ. 
 
-Switching or Removing an Active Pod Communication Device (RileyLink)
+החלפה או הסרה של מכשיר ריילילינק
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+עם דגמים אלטרנטיביים רבים לריילילינק המקורי הזמינים (כגון OrangeLink או EmaLink) או הצורך במספר מכשירי ריילילינק לגיבוי, יהיה צורך להחליף או להסיר את ריילילינק מתצורת ה-Omnipod. 
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+השלבים הבאים יראו כיצד **להסיר** רייליילנק קיים וכן **להוסיף** רייליילנק חדש.  ביצוע השלבים **הסרה** ו**הוספה** יחליף את הריילילינק.
 
-1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
+1. גשו לתפריט **תצורת ריילילינק** על ידי בחירה בתפריט **3 נקודות (1)** בפינה השמאלית העליונה של הלשונית **Omnipod (POD)** ובחירה ב**העדפות אומניפוד (2)** מהתפריט שנפתח. בתפריט **הגדרות Omnipod** תחת **תצורת ריילילינק (3)** הקישו על הטקסט **לא מוגדר** (אם לא נבחר מכשיר) או **כתובת MAC** (אם קיים מכשיר) לפתיחת התפריט **ריילילינק נבחר**. 
 
     |Omnipod_Settings_2| |RileyLink_Setup_2|  
 
-Remove Currently Selected Pod Communication Device (RileyLink)
+הסרת ריילילינק
 --------------------------------------------------------------
 
-This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+תהליך זה יראה כיצד להסיר את הריילילינקמהגדרות מנהל התקן ה-Omnipod. 
 
-1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu. 
+1. תחת **תצורת ריילילינק** לחצו על הטקסט **כתובת MAC (1)** כדי לפתוח את התפריט **ריילילינק נבחר**. 
 
     |RileyLink_Setup_Remove_1|
 
-2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+2. בתפריט **ריילילינק נבחר** לחצו על **הסר (2)** כדי להסיר **את הריילילינק** שמחובר (3).
 
     |RileyLink_Setup_Remove_2|
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. בדיאלוג האישור לחצו על **כן (4)** כדי לאשר את הסרת הריילילינק.
 
     |RileyLink_Setup_Remove_3|
     
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device.
+4. אתם תוחזרו לתפריט **הגדרת אומניפוד** כאשר תחת **תצורת ריילילינק** יופיע **לא מוגדר (5)**.  ברכות! הסרתם בהצלחה את הריילילינק.
 
     |RileyLink_Setup_Remove_4|
 
-Add Currently Selected Pod Communication Device (RileyLink)
+הוספת ריילילינק
 -----------------------------------------------------------
 
-This process will show how to add a new pod communication device to the Omnipod Driver settings.
+תהליך זה יראה כיצד להוסיף מכשיר ריילילינק להגדרות מנהל התקן Omnipod.
 
-1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
+1. תחת **תצורת ריילילינק** לחצו על הטקסט **לא הוגדר (1)** כדי לפתוח את התפריט **ריילילינק נבחר**. 
 
     |RileyLink_Setup_Add_1|
     
-2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+2. לחצו על **סריקה (2)** כדי להתחיל לסרוק את כל מכשירי הבלוטות' הזמינים.
 
     |RileyLink_Setup_Add_2|
 
-3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device.
+3. בחרו **את מכשיר הריילילנק (3)** מרשימת המכשירים הזמינים ותוחזרו לתפריט **הגדרות אומניפוד** המציג את **כתובת ה-MAC (4)** של המכשיר החדש שבחרתם.  מזל טוב שחיברתם את הריילילינק בהצלחה.
 
     |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
     
 
-Actions (ACT) Tab
+לשונית פעולות (ACT)
 =================
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
+לשונית זו נסקרה היטב בתיעוד הראשי של AAPS אך ישנם בלשונית זו מספר פריטים שמשתנים בשימוש באומניפוד לעומת משאבות מבוססות צינוריות, במיוחד תהליכי תיחול פודים חדשים.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
+1. גשו ללשונית פעולות  (ACT) בממשק AAPS.
 
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+2. תחת **פורטל טיפולים(1)** ב-3 השדות הבאים יתאפס **גילם** ל-0 ימים ו-0 שעות **לאחר כל שינוי תרמיל**: **אינסולין** ו**קנולה**. זה נעשה בגלל האופן שבו משאבת אומניפוד בנויה ופועלת. ** סוללת המשאבה** ו-**מכל האינסולין** נמצאים בתוך כל פוד. מכיוון שהפוד מחדיר את הצינורית ישירות לעור באתר הדבקתו, אין שימוש בצינור מסורתי במשאבות אומניפוד. *לכן לאחר החלפת פוד, הגיל של כל אחד מהערכים הללו יתאפס אוטומטית לאפס.* **גיל סוללת המשאבה** אינו מדווח מכיוון שהסוללה בתרמיל תמיד תהיה יותר מחיי התרמיל (80 שעות לכל היותר).
 
   |Actions_Tab|
 
-Levels
+רמות
 ------
 
-**Insulin Level**
+**יתרת אינסולין**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
+הדיווח על כמות האינסולין ב-Omnipod Eros Pod אינו מדויק.  הסיבה לכך היא שלא ידוע בדיוק כמה אינסולין הוכנס לפוד, רק שכאשר 2 הצפצופים מופעלים בזמן מילוי התרמיל הוזרקו מעל 85 יחידות. פוד יכול להכיל 200 יחידות לכל היותר. גם תיחול יכול גם להכניס שונות מכיוון שזהו תהליך לא מדויק.  עם שני הגורמים הללו, מנהל התקן ה-Omnipod נכתב לתת את הקירוב הטוב ביותר לאינסולין שנותר במכל.  
 
-  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-  * **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir. 
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
-
-
-**Battery Level**
-
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
-
-  * **RileyLink hardware is NOT capable of report battery level** 
-  * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
-  * **Battery Level ONLY works for OrangeLink and EmaLink Devices**
-  * **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned.
-  * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
+  * **מעל 50 יחידות** - מדווח על ערך של 50+U כאשר יותר מ -50 יחידות נמצאות במכל.
+  * **מתחת ל -50 יחידות** - מדווח על ערך מחושב משוער של אינסולין שנותר במכל. 
+  * **SMS** - מחזירה ערך או 50+U עבור תגובות SMS
+  ***נייטסקאוט** - העלאת ערך של 50 כאשר מעל 50 יחידות לנייטסקאוט (גרסה 14.07 ומעלה).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
 
 
-Troubleshooting
+**רמת הסוללה**
+
+דיווח על רמת סוללה הוא הגדרה שניתן לאפשר כדי לאחזר את רמת הסוללה הנוכחית של OrangeLink ו- EmaLink.  חומרת הריילילינק המקורי אינה מסוגלת לדווח על רמת הסוללה שלה.  רמת הסוללה מדווחת לאחר כל תקשורת עם הפוד, כך שלא ניתן להבחין בעלייה לינארית בעת הטעינה.  רענון ידני יעדכן את רמת הסוללה הנוכחית.  כאשר הריילינק מתנתק, ידווח ערך של 0%.
+
+  * **חומרת ריילינק המקורית אינה מסוגלת לדווח על רמת הסוללה** 
+  * **שימוש ברמת הסוללה המדווחת על ידי OrangeLink/EmaLink חייב להיות מופעל בהגדרות Omnipod לדיווח על ערכי רמת הסוללה**
+  * **חיווי רמת הסוללה פועלת רק למכשירי OrangeLink ו-EmaLink**
+  * **דיווח על רמת סוללה עשוי לעבוד במכשירים אחרים (לא כולל RileyLink)**
+  ***SMS** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר.
+  ***נייטסקאוט** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר.
+
+
+פתרון בעיות
 ===============
 
-Pod Failures
+שגיאות בפוד
 ------------
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
+פודים נכשלים מדי פעם בשל מגוון בעיות, כולל בעיות חומרה של הפוד עצמו. הנוהג הטוב ביותר הוא לא להודיע אותם למשווק המשאבה, מכיוון ש- AAPS אינו מקרה שימוש מאושר. ניתן למצוא רשימה של קודי תקלות `כאן <https://github.com/openaps/openomni/wiki/Fault-event-codes>` __ כדי לסייע בקביעת הסיבה.
 
-Preventing error 49 pod failures
+מניעת שגיאה 49 - כישלונות פוד
 --------------------------------
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
+כשל זה קשור למצב פוד שגוי עבור פקודה או שגיאה במהלך פקודת אספקת אינסולין. אנו ממליצים למשתמשים להגדיר ב-NSClient להעלות בלבד (להשבית סנכרון) *תחת **בונה התצורה** > **כללי** > **NSClient** > **גלגל שיניים** > **הגדרות מתקדמות** למניעת תקלות אפשריות.
 
-Pump Unreachable Alerts
+התראות המשאבה אינה נגישה
 -----------------------
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
