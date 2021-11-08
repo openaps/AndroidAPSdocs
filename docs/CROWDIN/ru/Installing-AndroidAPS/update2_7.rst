@@ -19,11 +19,11 @@
 Завершаем экзамен
 -----------------------------------------------------------
 * AAPS 2.7 содержит новую цель 11 для `автоматизации <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`__.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`__. 
-* This will not effect other objectives you have already finished. У вас сохранятся все завершенные цели!
+* Для прохождения `цели11 необходимо завершить экзамен (`цели 3 и 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) <../Usage/Objectives.html#objective-11-automation>`__.
+* Если например, вы не прошли `цель 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`__. 
+* Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
-Set master password
+Установите главный пароль
 -----------------------------------------------------------
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
 * Open Preferences (three-dot-menu on top right of home screen)
