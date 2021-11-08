@@ -45,6 +45,7 @@ Android 7
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. Следует создать новый переключатель профиля и начать с нулевых значений IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
+* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
 
 Изменения
 ----------------------
