@@ -5,11 +5,11 @@
 * Поэтому важно проверить и/или изменить настройки после обновления.
 * Подробнее о новых и расширенных функциях смотрите в <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_.
 
-Check BG source
+Проверяем источник ГК
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
+* Проверьте, корректен ли источник ГК после обновления.
+* При использовании `xDrip+ <../Configuration/xdrip.html>`_ возможно, что источник ГК изменится на приложение Dexcom (модифицированное).
+* Откройте конфигуратор `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (сэндвич-меню в левом верхнем углу главного экрана)
 * Scroll down to "BG source".
 * Select correct BG source if changes are necessary.
 
