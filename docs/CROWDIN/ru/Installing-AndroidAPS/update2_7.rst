@@ -10,11 +10,11 @@
 * Проверьте, корректен ли источник ГК после обновления.
 * При использовании `xDrip+ <../Configuration/xdrip.html>`_ возможно, что источник ГК изменится на приложение Dexcom (модифицированное).
 * Откройте конфигуратор `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (сэндвич-меню в левом верхнем углу главного экрана)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Прокрутите вниз до "источник ГК".
+* Выберите правильный источник ГК.
 
-.. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+.. изображение:../images/modules.png
+  :alt: источник ГК
 
 Finish exam
 -----------------------------------------------------------
