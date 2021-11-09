@@ -25,14 +25,14 @@
 
 Установите главный пароль
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Необходимо, чтобы можно было `экспортировать настройки <../Usage/ExportImportSettings.html>`_ в том виде, в каком они зашифрованы начиная с версии 2.7.
+* Откройте настройки, нажав три точки меню в верхней правой части главного экрана
+* Нажмите на треугольник под "General"
+* Нажмите "Главный пароль"
+* Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
-.. image:: ../images/MasterPW.png
-  :alt: Set master password
+.. изображение:: ../images/MasterPW.png
+  :alt: Установить основной пароль
   
 Экспорт настроек
 -----------------------------------------------------------
