@@ -36,12 +36,12 @@
   
 Экспорт настроек
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
+* AAPS 2.7 использует новый зашифрованный формат резервного копирования. 
+* после обновления до версии 2.7 следует `экспортировать настройки <../Usage/ExportImportSettings.html>`_.
+* Импорт настроек из предыдущих версий возможен только в AAPS 2.7. Экспорт будет в новом формате.
+* Не забудьте сохранить экспортированные настройки не только на телефоне, но и по крайней мере в одном безопасном месте (на ПК, в облачном хранилище...).
+* Если вы собираете AAPS 2.7 с тем же хранилищем ключей, что и в предыдущих версиях, вы можете установить новую версию, не удаляя предыдущую. 
+* Все настройки, а также завершенные цели останутся такими же, как и в предыдущей версии.
 * In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
 
 Autosens (Hint - no action necessary)
