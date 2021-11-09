@@ -18,7 +18,7 @@ ContextEdit.
 ====================================
 Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9. 
 
-Чтобы пользователи более старой версией Android могли применять старые версии AAPS была изменена только проверка версий. Никаких других улучшений не включено.
+Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
 Android 9 и выше
 ------------------------------------
@@ -45,7 +45,7 @@ Android 7
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. Следует создать новый переключатель профиля и начать с нулевых значений IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
 
 Изменения
 ----------------------
