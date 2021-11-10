@@ -118,9 +118,9 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 ### Impact
-**Lower ISF** (i.e. 40 instead of 50) meaning a smaller drop in bg for one unit of insulin. This means a more aggressive / stronger correction with **more insulin**. If the ISF is too low, this can lead to low BGs.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**Higher ISF** (i.e. 45 instead of 35) meaning a larger drop in bg for one unit of insulin. This means a less aggressive / weaker correction with **less insulin**. If the ISF is too high, this can lead to high BGs.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Example:** 
 * BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
