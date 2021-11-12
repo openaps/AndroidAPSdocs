@@ -46,12 +46,19 @@ Notas importantes
 * Usa la misma versión de AAPS y NSClient
 * There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
 
+Preparation steps
+----------------------
+* At least two days before update:
+* disable Dexcom bridge in Nightscout
+* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+
 Cambios
 ----------------------
 * XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
 * Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
 * Soporte para Dana-i @MilosKozak
 * Soporte para DiaconnG8
+* Glunovo support
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
 * Nueva interfaz interna para controladores de bombas
