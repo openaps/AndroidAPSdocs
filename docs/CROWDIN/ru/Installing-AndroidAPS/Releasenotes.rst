@@ -47,12 +47,19 @@ Android 7
 * Используйте одну версию AAPS и NSClient
 * Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Использование BYODA также рекомендуется для обратного сглаживания данных Dexcom
 
+Preparation steps
+----------------------
+* At least two days before update:
+* disable Dexcom bridge in Nightscout
+* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+
 Изменения
 ----------------------
 * Изменены XXXXk строки, XXXXk новые строки кода
 * Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
 * Поддержка Dana-i @MilosKozak
 * Поддержка DiaconnG8
+* Glunovo support
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Часть кода переписана на Kotlin @MilosKozak
 * Новый интерфейс для драйверов помп
