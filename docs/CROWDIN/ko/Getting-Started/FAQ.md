@@ -139,9 +139,9 @@ AAPS는기본적으로 Basal 양을 기반으로 합니다. Basal 이 너무 높
 
 ### 영향
 
-**낮은 ISF** (예: 50 대신 40) = 각 인슐린 단위에 대해 더 공격적이고/강하게 되어 더 크게 혈당을 강하시킵니다. 너무 낮다면, 저혈당을 유발할 수 있습니다.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**높은 ISF** (예: 35 대신 45) = 각 인슐린 단위에 대해 덜 공격적이고/약하게 되어 더 작게 혈당을 강하시킵니다. 너무 높다면, 고혈당을 유발할 수 있습니다.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **예:**
 
