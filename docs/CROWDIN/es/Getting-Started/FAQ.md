@@ -139,9 +139,9 @@ Ve con cuidado, a menudo este parámetro se establece demasido bajo. Demasiado b
 
 ### Impacto
 
-**Menor ISF** (p.e. 40 en lugar de 50) = más agresivo / más fuerte provocando una caída más grande en BGs por cada unidad de insulina. Valores demasiado bajos pueden provocar glucemias demasiado bajas.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**Mayor ISF** (p.e. 45 en lugar de 35) = menos agresivo / más débil - provocando descensos menores de BG por cada unidad de insulina. Valores demasiado altos pueden provocar glucemias demasiado altas.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Ejemplo:**
 
