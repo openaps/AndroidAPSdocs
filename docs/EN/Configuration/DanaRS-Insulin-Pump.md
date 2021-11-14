@@ -1,10 +1,12 @@
-# DanaRS Pump
+# DanaRS and Dana-i Pump
 
 _These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead._
 
 **New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
-* In DanaRS pump "BASAL A" is used by the app. Existing data gets overwritten.
+**New Dana-i can be used from AndroidAPS version 3.0 onwards.**
+
+* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 ## Pairing pump
 
@@ -12,25 +14,28 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
 * Select Menu by tapping the 3 dots in the top right. Select Preferences.
 
-* Select DanaRS Pair New Pump, and click your DanaRS serial number.
+* Click on "Selected pump".
 
   ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
-
-* Select Pump password and input your password.
-
-### Default password
-
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date.
 
 * **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
 
   ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
+* -> For DanaRS v1 select Pump password in preferences and set your password
+* -> For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AndroidAPS pairing dialog
+* -> For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump
+
+
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Restart your phone.
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide)
 * Enable extended boluses on pump
+
+### Default password
+
+* For DanaRS with firmware v1 and v2 the default password is 1234.
+* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date. For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
 
 ## Change password on pump
 
@@ -84,11 +89,15 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 When switching to a new phone the following steps are necessary:
 * [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
 * Transfer settings from old to new phone
-* **Manually pair** Dana RS with the new phone
 
+* DanaRS v1
+  * **Manually pair** Dana RS with the new phone
   * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+  * Install AndroidAPS on the new phone.
+  * [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* DanaRS v3, Dana-i
+  * start pairing procedure like decribed above
+  * sometimes may be necessary to clear pairing information in AndroidAPS by long-click BT icon on DanaRS/i tab
 
 ## Timezone traveling with Dana RS pump
 
