@@ -139,9 +139,9 @@ Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înse
 
 ### Impact
 
-**Un ISF mai mic** (ex.: 40 în loc de 50) = mai agresiv/mai puternic, ceea ce duce la o scădere mai mare a glicemiei pentru fiecare unitate de insulină. Dacă este prea scăzut, acest lucru poate duce la valori scăzute ale glicemiei.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**Un ISF mai mare** (ex.: 45 în loc de 35) = mai puțin agresiv/mai slab, ceea ce duce la o scădere mai mică a valorilor glicemiei pentru fiecare unitate de insulină. Dacă este prea mare, acest lucru poate duce la valori ridicate ale glicemiei.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Example:**
 
