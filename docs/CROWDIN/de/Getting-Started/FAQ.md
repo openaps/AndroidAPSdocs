@@ -139,9 +139,9 @@ Sei vorsichtig, da die Korrektur oftmals zu aggressiv eingestellt ist. D.h. eine
 
 ### Auswirkung
 
-**Niedrigerer ISF** (z.B. 40 statt 50) = aggressiver / stärker -> führt zu stärkerem Absinken des BZ pro Einheit Insulin. Ein zu niedriger ISF kann zu niedrige Glukose-Werte verursachen.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**Höherer ISF** (z.B. 45 statt 35) = weniger aggressiv / schwächer -> führt zu geringerem Absinken des BZ pro Einheit Insulin. Ein zu hoher ISF kann zu hohe BZ-Werte zur Folge haben.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Beispiel:**
 
