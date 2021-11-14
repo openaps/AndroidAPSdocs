@@ -5,9 +5,11 @@ AndroidAPS currently works with
 - Accu-Chek Combo
 - Accu-Chek Insight
 - some old Medtronic
-- Insulet Omnipod (Eros not DASH)
+- Insulet Omnipod (Eros and DASH)
 - DanaR
-- DanaRS  
+- DanaRS 
+- Dana-i
+- Diaconn G8 
 
 pumps. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
@@ -24,6 +26,8 @@ The Combo and the Insight are solid pumps, and loopable. The advantages of the D
 * The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB.  The Dana* RS is configurable that it does neither beeps or vibrates.
 
 * Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+
+* Insulet Omnipod Eros requires a pod communication device such as RileyLink/Orangelink etc. The newer omnipod DASH does not since it communicates with your phone directly via Bluetooth.
 
 * All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system. 
 
