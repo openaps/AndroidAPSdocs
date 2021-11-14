@@ -139,9 +139,9 @@ You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM 
 
 ### Επιπτώσεις
 
-** Κάτω ISF ** (δηλαδή 40 αντί για 50) = πιο επιθετικό οδηγώντας σε μεγαλύτερη πτώση των BG για κάθε μονάδα ινσουλίνης. Αν είναι πολύ χαμηλή, αυτό μπορεί να οδηγήσει σε χαμηλή BGs.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-** Υψηλότερη ISF ** (δηλ. 45 αντί για 35) = λιγότερο επιθετικό / ασθενέστερο που οδηγεί σε μικρότερη πτώση των BG για κάθε μονάδα ινσουλίνης. Αν είναι πολύ υψηλή, αυτό μπορεί να οδηγήσει σε υψηλή BGs.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Παράδειγμα:**
 
