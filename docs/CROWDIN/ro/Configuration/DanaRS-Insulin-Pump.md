@@ -1,10 +1,12 @@
-# Pompa DanaRS
+# DanaRS and Dana-i Pump
 
 *Aceste instrucțiuni sunt destinate configurării aplicației și pompei dumneavoastră pentru cazul în care aveți o pompă model DanaRS model 2017 sau mai nouă. Vizitați pagina [Pompa de insulină DanaR](./DanaR-Insulin-Pump) dacă aveți o pompă DanaR, modelul original.*
 
 **New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
 
-* În pompa DanaRS doar "BASAL A" este folosită de aplicație. Datele preexistente vor fi suprascrise.
+**New Dana-i can be used from AndroidAPS version 3.0 onwards.**
+
+* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
 
 ## Pairing pump
 
@@ -12,63 +14,66 @@
 
 * Selectați Menu prin apăsarea celor 3 puncte aflate în partea dreaptă sus. Alegeți Menu prin apăsarea celor 3 puncte aflate în dreapta sus. Alegeți Preferences.
 
-* Selectați Împerecheați o pompă nouă DanaRS și apăsați pe numărul serial corespunzător pompei dumneavoastră DanaRS.
-    
-    ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
+* Click on "Selected pump".
+  
+  ![AAPS pair Dana RS](../images/AAPS_DanaRSPairing.png)
 
-* Selectați parola pompei și introduceți parola dumneavoastră.
+* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+  
+  ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+
+* -> For DanaRS v1 select Pump password in preferences and set your password
+
+* -> For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AndroidAPS pairing dialog
+* -> For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump
+
+* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+
+* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide)
+* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide)
+* Activați bolusurile extinse în pompă
 
 ### Parola implicită
 
 * Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
-* For DanaRS with firmware v3 the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Numărul 3 este data de producţie.
-
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
-    
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
-
-* Selectați Viteza Bolus pentru a schimba valoarea implicită de livrare a unui bolus (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde pentru livrarea unei unități de insulină).
-
-* Reporniți telefonul.
-* Stabiliți pasul bazalei în pompă la 0.01 U/o prin intermediul meniului Doctors menu (vedeți manualul de utilizare al pompei)
-* Activați bolusurile extinse în pompă
+* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24). Open main menu on pump > review > information. Number 3 is production date. For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
 
 ## Schimbă parola pe pompă
 
 * Apăsaţi butonul OK pe pompă
 * In main menu select "OPTION" (move right by pressing arrow button several times)
-    
-    ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
+  
+  ![Meniu principal DanaRS](../images/DanaRSPW_01_MainMenu.png)
 
 * In options menu select "USER OPTION"
-    
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+  
+  ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
 * Use arrow button to scroll down to "11. parolă"
-    
-    ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
+  
+  ![DanaRS 11. Parolă](../images/DanaRSPW_03_11PW.png)
 
 * Apăsaţi OK pentru a introduce parola veche.
 
 * Introduceţi **parola veche** (Parolă implicită vedeţi [mai sus](#default-password)) şi apăsaţi OK
-    
-    ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
+  
+  ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
 * Dacă este introdusă o parolă greşită aici nu va exista nici un mesaj care să indice greșeala!
 
 * Setează **noua parolă** (Schimbă numerele cu + & - butoane / Mută la dreapta cu butonul săgeată).
-    
-    ![Parola nouă DanaRS](../images/DanaRSPW_05_PWnew.png)
+  
+  ![Parola nouă DanaRS](../images/DanaRSPW_05_PWnew.png)
 
 * Confirmaţi cu butonul OK.
 
 * Salvează apăsând din nou butonul OK.
-    
-    ![Salvați noua parolă DanaRS](../images/DanaRSPW_06_PWnewSave.png)
+  
+  ![Salvați noua parolă DanaRS](../images/DanaRSPW_06_PWnewSave.png)
 
 * Move down to "14. EXIT" and press OK button.
-    
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+  
+  ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
 ## Dana RS specific errors
 
@@ -89,11 +94,16 @@ When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
 * Transfer settings from old to new phone
-* **Manually pair** Dana RS with the new phone
-    
-    * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+
+* DanaRS v1
+  
+  * **Manually pair** Dana RS with the new phone
+  * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
+  * Install AndroidAPS on the new phone.
+  * [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* DanaRS v3, Dana-i 
+  * start pairing procedure like decribed above
+  * sometimes may be necessary to clear pairing information in AndroidAPS by long-click BT icon on DanaRS/i tab
 
 ## Timezone traveling with Dana RS pump
 
