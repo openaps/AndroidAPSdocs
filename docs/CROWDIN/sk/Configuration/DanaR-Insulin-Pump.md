@@ -18,6 +18,7 @@
 * Ak chcete AndroidAPS povoliť dočasný bazál nad 200%, zvoľte Použiť predĺžené bolusy pre > 200%. Pri takomto nastavení umožňujúcom systému vysoké dočasné bazály nad 200 % však nebudete môcť používať predĺžené bolusy (platí pre pôvodnú verziu firmware pumpy).
 * V nastaveniach pre pumpu DanaR môžete zmeniť Rýchlosť bolusu (12sec na 1u, 30sec na 1u alebo 60sec na 1u).
 * Nastavte bazálny krok na pumpe na 0.01U/h
+* Set bolus step on pump to 0.1 U/h
 * Aktivovať v pumpe predĺžené bolusy
 
 ## Cestovanie medzi časovými pásmami s pumpou Dana R
