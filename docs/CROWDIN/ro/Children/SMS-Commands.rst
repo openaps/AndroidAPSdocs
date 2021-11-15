@@ -163,7 +163,7 @@ Altul
   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
   * Response: NSCLIENT RESTART 1 receivers
-* POMPĂ
+* PUMP
   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
   * Response: Pump reconnected
