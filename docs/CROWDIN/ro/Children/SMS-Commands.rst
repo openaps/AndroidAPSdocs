@@ -107,7 +107,7 @@ Buclă
 
 CGM data
 --------------------------------------------------
-* Glicemie
+* BG
   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
