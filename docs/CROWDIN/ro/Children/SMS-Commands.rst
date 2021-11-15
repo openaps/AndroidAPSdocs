@@ -118,7 +118,7 @@ Bazală
 * BASAL STOP/CANCEL
   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3
-  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Răspuns: Pentru a începe bazala 0.3U/h pentru 30 min răspundeți cu un cod din aplicația de autentificare utilizata urmat de PIN
 * BASAL 0.3 20
   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30%
