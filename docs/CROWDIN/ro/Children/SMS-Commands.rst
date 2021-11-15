@@ -157,7 +157,7 @@ Profil
 * PROFILE 2 30
   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
-Altul
+Altele
 --------------------------------------------------
 * TREATMENTS REFRESH
   * Response: Refresh treatments from NS
