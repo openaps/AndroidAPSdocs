@@ -46,9 +46,9 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 * A translated page will not be published in docs before the translation is proofread.
 
-### Translate headline links
+### Tłumacz odnośniki do nagłówków
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
+* Gdy wewnętrzny odnośnik prowadzi tylko do określonej strony (tj. ../Usage/Profiles.html) nie jest wymagane tłumaczenie.
 * Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
 * If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
