@@ -45,7 +45,7 @@ Conseils importants
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau changement de profil et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
 * Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. L'utilisation de BOYDA est également recommandée pour tirer parti du lissage rétroactif Dexcom
-* There is a bug in OrangeLink 3.2 firmware preventing work with AAPS. Downgrade FW to 2.5 if you are affected
+* Il y a un bug dans le firmware 3.2 d'OrangeLink empêchant la communication avec AAPS. Rétrograder le FW à 2.5 si vous êtes affecté
 
 Etapes de préparation
 ----------------------
