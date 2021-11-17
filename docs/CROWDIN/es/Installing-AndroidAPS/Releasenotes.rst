@@ -45,6 +45,7 @@ Notas importantes
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Debes realizar un cambio de perfil y comenzar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
 * There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* There is a bug in OrangeLink 3.2 firmware preventing work with AAPS. Downgrade FW to 2.5 if you are affected
 
 Preparation steps
 ----------------------
