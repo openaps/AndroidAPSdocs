@@ -14,15 +14,15 @@
 
 * Przetłumacz zdania po lewej stronie przez dodanie nowego tekstu tłumaczenia lub kliknij automatyczne tłumaczenie, które stanie się bazą do Twoich zmian
     
-    ![Translation app](./images/translations-translate.png)
+    ![Tłumaczenie aplikacji](./images/translations-translate.png)
 
 * Korektorzy tekstu muszą przejść do trybu korekty
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+    ![Tryb korekty aplikacji](./images/translations-proofreading-mode.png)
     
     i zatwierdzić przetłumaczone teksty
     
-    ![approve text](./images/translations-proofreading.png)
+    ![Zatwierdzanie tekstów](./images/translations-proofreading.png)
 
 Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji AndroidAPS. Na początku dobrze byłoby przejrzeć istniejące tłumaczenia, które nie zostały jeszcze zatwierdzone i sprawdzić błędy lub zatwierdzić je, jeśli są poprawne.
 
@@ -30,7 +30,7 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 * Kliknij nazwę strony dokumentacji, którą chcesz przetłumaczyć
     
-    ![Click docs page](./images/translation_WikiPage.png)
+    ![Wybór strony do przetłumaczenia](./images/translation_WikiPage.png)
 
 * Przetłumacz zdanie po zdaniu
     
@@ -42,7 +42,7 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
     
     4 Naciśnij przycisk "SAVE" aby zapisać
     
-    ![Translation docs](./images/translation_WikiTranslate.png)
+    ![Tłumaczenie dokumentacji](./images/translation_WikiTranslate.png)
 
 * Przetłumaczona strona nie zostanie opublikowana w dokumentach dopóki tłumaczenie nie będzie sprawdzone i zatwierdzone przez korektora.
 
@@ -68,30 +68,30 @@ Obecnie używane są dwa różne [formaty opisu dokumentacji](./make-a-PR#code-s
 
 **Upewnij się, że w tagach HTML nie używasz spacji na ich początku ani na końcu!**
 
-![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+![Crodwin - tag HTML bez znaków spacji](./images/Crowdin_HTMLtag.png)
 
 * * *
 
 Jeśli odnośniki są wyświetlane w Crowdin w ten sposób
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - brak wyświetlania znaczników HTML](./images/CrowdinShowURL1.png)
 
 kliknij na ikonkę koła zębatego, aby otworzyć ustawienia, wybierz "Show" i kliknij "Save".
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - jak włączyć wyświetlanie znaczników HTML](./images/CrowdinShowURL2.png)
 
 Odnośniki zostaną wyświetlone w standardowym formacie HTML i mogą być przetłumaczone z uwzględnieniem reguł wymienionych [powyżej](./translations#tlumacz-odnosniki-do-naglowkow).
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - wyświetlanie znaczników HTML](./images/CrowdinShowURL3.png)
 
 ## Korekta
 
 * Korektorzy tekstu muszą przejść do trybu korekty
     
-    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
+    ![Tryb korekty dokumentacji](./images/translation_WikiProofreading.png)
     
     i zatwierdzić przetłumaczone teksty
     
-    ![approve text](./images/translations-proofreading.png)
+    ![Zatwierdzanie tekstów](./images/translations-proofreading.png)
 
 * Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji dokumentacji. Aby przyspieszyć proces, możesz poinformować zespół dokumentacji o nowych tłumaczeniach.
