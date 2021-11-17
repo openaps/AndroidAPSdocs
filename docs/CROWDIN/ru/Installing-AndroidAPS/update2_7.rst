@@ -1,47 +1,47 @@
-Necessary checks after update coming from AndroidAPS 2.6
+Необходимые проверки после обновления с AndroidAPS 2.6
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
+* Программный код был существенно изменен при переходе на AAPS 2.7. 
+* Поэтому важно проверить и/или изменить настройки после обновления.
+* Подробнее о новых и расширенных функциях смотрите в <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_.
 
-Check BG source
+Проверяем источник ГК
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Проверьте, корректен ли источник ГК после обновления.
+* При использовании `xDrip+ <../Configuration/xdrip.html>`_ возможно, что источник ГК изменится на приложение Dexcom (модифицированное).
+* Откройте конфигуратор `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (сэндвич-меню в левом верхнем углу главного экрана)
+* Прокрутите вниз до "источник ГК".
+* Выберите правильный источник ГК.
 
-.. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+.. изображение:../images/modules.png
+  :alt: источник ГК
 
-Finish exam
+Завершаем экзамен
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`__.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`__. 
-* This will not effect other objectives you have already finished. У вас сохранятся все завершенные цели!
+* AAPS 2.7 содержит новую цель 11 для `автоматизации <../Usage/Automation.html>`_.
+* Для прохождения `цели11 необходимо завершить экзамен (`цели 3 и 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) <../Usage/Objectives.html#objective-11-automation>`__.
+* Если например, вы не прошли `цель 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`__. 
+* Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
-Set master password
+Установите главный пароль
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Необходимо, чтобы можно было `экспортировать настройки <../Usage/ExportImportSettings.html>`_ в том виде, в каком они зашифрованы начиная с версии 2.7.
+* Откройте настройки, нажав три точки меню в верхней правой части главного экрана
+* Нажмите на треугольник под "General"
+* Нажмите "Главный пароль"
+* Введите пароль, подтвердите пароль и нажмите кнопку Ok.
 
-.. image:: ../images/MasterPW.png
-  :alt: Set master password
+.. изображение:: ../images/MasterPW.png
+  :alt: Установить основной пароль
   
 Экспорт настроек
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
+* AAPS 2.7 использует новый зашифрованный формат резервного копирования. 
+* после обновления до версии 2.7 следует `экспортировать настройки <../Usage/ExportImportSettings.html>`_.
+* Импорт настроек из предыдущих версий возможен только в AAPS 2.7. Экспорт будет в новом формате.
+* Не забудьте сохранить экспортированные настройки не только на телефоне, но и по крайней мере в одном безопасном месте (на ПК, в облачном хранилище...).
+* Если вы собираете AAPS 2.7 с тем же хранилищем ключей, что и в предыдущих версиях, вы можете установить новую версию, не удаляя предыдущую. 
+* Все настройки, а также завершенные цели останутся такими же, как и в предыдущей версии.
 * In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
 
 Autosens (Hint - no action necessary)

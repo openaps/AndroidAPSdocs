@@ -18,6 +18,7 @@
 * Dacă doriți ca AndroidAPS să permită rate bazale mai mari de 200%, activați Use extended bolus for >200%. Notă: aceasta înseamnă că nu veți putea folosi bucla cu RBT mărite în timp ce utilizați bolusuri extinse pentru mâncare.
 * În Preferences, sub setările pompei DanaR, puteți schimba viteza implicită folosită pentru livrarea bolusurilor (12 secunde per unitate, 30 secunde per unitate sau 60 de secunde per unitate de insulină livrată).
 * Stabiliți pasul ratei bazale din pompă la 0.01 U/o
+* Set bolus step on pump to 0.1 U/h
 * Activați bolusurile extinse în pompă
 
 ## Traversarea fusurilor orare cu pompa Dana R

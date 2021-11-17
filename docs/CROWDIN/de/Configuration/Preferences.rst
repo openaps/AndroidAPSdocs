@@ -49,7 +49,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  ** Biometrischer Schutz funktioniert nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus.**
+  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -405,7 +405,7 @@ Alarm-Optionen
 * In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.  
 * Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
 * Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
-* Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder gepatchte Dexcom App) nutze stattdessen deren Alarme.
+* Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
 
 Erweiterte Einstellungen (Nightscout-Client)
 -----------------------------------------------------------
@@ -415,8 +415,7 @@ Erweiterte Einstellungen (Nightscout-Client)
 
 * Die meisten Optionen in den erweiterten Einstellungen sind selbsterklärend.
 * *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+). 
-
-  * Die gepatchte Dexcom App übergibt Werte nicht direkt an xDrip+. 
+ 
   * Du musst `über AAPS gehen <../Configuration/Config-Builder.html#bz-quelle>`_ und lokale Broadcast in AAPS aktivieren, um xDrip+ Alarme nutzen zu können.
   
 * *Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout.* muss aktiviert werden, wenn Du Autotune einsetzen willst. In der `OpenAPS Dokumentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ findest Du Details zu Autotune.

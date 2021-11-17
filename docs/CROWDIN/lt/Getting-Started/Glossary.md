@@ -300,7 +300,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>įtaisas, skirtas mažos energijos Bluetooth (BLE) turinčių prietaisų susiejimui su 916 MHz dažnio įrenginiais (senesnėms Medtronic pompoms)</td>
+ <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>

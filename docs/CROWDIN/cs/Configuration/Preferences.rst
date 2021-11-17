@@ -49,7 +49,7 @@ Ochrana
 Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
-  ** Biometrická ochrana nefunguje na telefonech OnePlus. Jde o známý problém OnePlus.**
+  ** Biometrická ochrana nemusí fungovat na telefonech OnePlus. Toto je známý problém na některých telefonech OnePlus.**
 
 * Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
 * Klepněte na trojúhelník pod "Obecné"
@@ -146,7 +146,7 @@ Výchozí nastavení dočasných cílů
   
 Standardní množství inzulinu pro Plnění/Doplňování
 -----------------------------------------------------------
-* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
+* Pokud chcete plnit hadičku nebo kanylu prostřednictvím AAPS, můžete to udělat prostřednictvím `obrazovky Akce <../Getting-Started/Screenshots.html#action-tab>`_.
 * Přednastavené hodnoty se dají měnit v tomto dialogu.
 
 Rozsah zobrazování
@@ -405,7 +405,7 @@ Nastavení alarmů
 * Volby alarmu umožňují vybrat, jaké výchozí alarmy Nightscoutu se mají v aplikaci používat.  
 * Aby alarmy fungovaly, je třeba nastavit v proměnných Nightscoutu (Heroku...) hodnoty glykémie pro Urgentní, Vysokou, Nízkou a Urgentní nízkou glykémii <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * Budou fungovat pouze v případě že budete mít připojení k Nightscoutu, a jsou určeny pro rodiče/pečovatele. 
-* Pokud máte v telefonu zdroj CGM (např. xDrip + nebo upravenou Dexcomalikaci), pak místo nich použijte tyto alarmy.
+* Pokud máte v telefonu zdroj CGM (např. xDrip+ nebo BYODA [Vytvořte si vlastní dexcom aplikaci]) a poté použijte tyto alarmy.
 
 Rozšířená nastavení (NSClient)
 -----------------------------------------------------------
@@ -415,8 +415,7 @@ Rozšířená nastavení (NSClient)
 
 * Většina možností v pokročilém nastavení je samovysvětlující.
 * *Povolení lokálního odesílání* zajistí odesílání dat i do jiných aplikací v mobilu, např. xDrip+. 
-
-  * Upravená aplikace Dexcom nevysílá přímo do xDrip+. 
+ 
   * Pro použití xDrip+ alarmů musíte `přejít do AAPS <../Configuration/Config-Builder.html#bg-source>`_ a povolit lokální odesílání.
   
 * Chcete-li používat autotune, musíte mít vybráno *Vždy používat absolutní hodnoty bazálu*. Další informace o Autotune naleznete v `Dokumentaci OpenAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_.

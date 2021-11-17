@@ -2,28 +2,28 @@ Comandos SMS
 **************************************************
 La seguridad Primero
 ==================================================
-* AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. A strong password or biometrics are recommended.
-* Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
+* AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
+* Además, se recomienda permitir a un `segundo número de teléfono <#authorized-phone-numbers>`_ para comandos SMS. Por lo que es posible utilizar un segundo número de teléfono para `deshabilitar temporalmente <#otro>`_ teléfono SMS en caso de pérdida o robo del teléfono remoto principal.
 * AndroidAPS también te avisará por mensaje de texto si tus comandos resmotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
 * **Si usted envia un bolo por Comandos SMS debe introducir hidratos de carbono a través de Nightscout (NSClient, página Web...)!** Si no lo hace el IOB sería correcto con bajos COB lo potencialmente conduce a no realizar la corrección de bolo dado que AAPS supone que tiene demasiada insulina activa.
-* As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+* Desde la versión 2.7 de AndroidAPS se debe utilizar una aplicación de autenticación por contraseña de un sólo uso, para mejorar la seguridad al usar la opción de comandos SMS.
 
-Setup SMS commands
+Configurar comandos SMS
 ==================================================
 
 .. imagen:: ../images/SMSCommandsSetup.png
   :alt: Configuración de comandos SMS
       
-* La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. can be done on `NSClient app <../Children/Children.html>`_ on an Android phone with an internet connection.
-* Los bolsos no pueden introducirse a través de Nightscout, pero puedes usar comandos SMS.
-* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+* La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. se pueden realizar en `Aplicación NSClient <../Children/Children.html>`_ en un teléfono Android con una conexión a Internet.
+* Los bolos no pueden añadir mediante Nightscout, pero se pueden usar comandos SMS.
+* Si usas un teléfono iPhone como seguidor, no puedes usar la aplicación NSClient, aunque, hay disponibles comandos SMS adicionales.
 
 * En los ajustes de tu móvil Android ve a aplicaciones > AndroidAPS > permisos y habilitar SMS
 
-Authorized phone numbers
+Números de teléfono permitidos
 -------------------------------------------------
-* In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679) 
-* Enable 'Allow remote commands via SMS'.
+* En AndroidAPS ir a **Tabla de configuraciones > Comunicador SMS ** y añadir el número(s) de teléfono que deseas habilitar para enviar comandos SMS (separados por punto y coma - p.ej. +3412345678;+3412345679) 
+* Habilitar 'Permitir comandos remotos mediante SMS'.
 * Si desea utilizar más de un número:
 
   * Introduzca sólo un número.

@@ -25,8 +25,8 @@
 --------------------------------------------------
 * ` Неправильно определены активные углеводы COB <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorption.png
-    :alt: Error: Slow carb absorption
+  .. изображение:: ../images/Calculator_SlowCarbAbsorbtion.png
+    :alt: Ошибка: Медленное поглощение углеводов
 
 * `SMS команды <../Children/SMS-Commands.html#troubleshooting>`_
 

@@ -4,7 +4,7 @@
 
 * Envíe una solicitud de unión al equipo de documentación. Para ello, haz clic en la bandera del idioma deseado y luego el botón "Únete" en la esquina superior derecha de la siguiente página. Especifique un idioma, dé alguna información acerca de usted y su experiencia AAPS y si desea ser un traductor o un corrector de pruebas (sólo personas habilitadas para traducir + avanzados usuarios AndroidAPS).
 
-* When we approve you, click the flag ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
+* Cuando se apruebe, haga clic en la bandera ![Cuando se apruebe, haga clic en la bandera](./images/translation_flags2019.png)
 
 ## Traducir cadenas para AndroidAPS app
 
@@ -66,7 +66,7 @@ En el momento dos [lenguajes de marcación](./make-a-PR#code-syntax) se utilizan
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**¡Asegúrate de no usar el carácter de espacio dentro de etiquetas HTML al principio o al final!**
 
 ![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 

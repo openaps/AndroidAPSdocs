@@ -29,26 +29,6 @@ Si vous utilisez le G6 avec xdrip+
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__
 * Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identifier le récepteur" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__.
 
-Si vous utilisez le G6 avec l'application Dexcom patchée
-==================================================
-* Téléchargez l'apk ici `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_, et choisissez la version correspondant à vos besoins (version G6 en mg/dl ou mmol/l).
-
-  * Le dossier 2.4 concerne les utilisateurs de la version actuelle, le dossier 2.3 n'est que pour la version obsolète 2.3 d'AndroidAPS.
-  * Ouvrir https://play.google.com/store/search?q=dexcom%20g6 sur votre ordinateur. 
-  * Cliquez sur le lien vers l'application Dexcom G6 sur la page de résultats de recherche qui s'affiche.
-  * La région sera visible dans l'URL.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region in Dexcom G6 URL
-
-* Désinstallez l'application Dexcom d'origine.
-* Installez l'apk téléchargé
-* Entrez le code du capteur et le numéro de série du transmetteur dans l'application patchée.
-* Après une courte période l'application patchée devrait recevoir le signal du transmetteur. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
-* Sélectionnez App Dexcom (patchée) dans le Générateur de configuration (paramètre dans AndroidAPS).
-* Si vous voulez utiliser les alarmes xDrip via une diffusion locale, allez dans xDrip, Menu hamburger > Paramètres > Source de données matérielles > 640G / EverSense.
-* Il n'y a pas de diffusion locale de l'application Dexcom patchée directement vers xDrip+. La diffusion doit passer par AAPS, comme décrit ci-dessus.
-
 Si vous utilisez G6 avec votre propre application Dexcom
 ==================================================
 * Depuis Décembre 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) prend également en charge la diffusion locale vers AAPS et/ou xDrip+ (sauf pour les capteurs G5 !)

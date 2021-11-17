@@ -3,11 +3,11 @@ Dexcom G5
 Používáte-li G5 s xDrip+
 ==================================================
 * Pokud jste tak dosud neučinili, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
-* In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
-* In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
+* V xDrip+ vyberte Nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte ZAPNOUT.
+* V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte VYPNOUT.
 * Chcete-li, aby bylo možné přes AndroidAPS kalibrovat senzor, jděte v xDripu do Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout.  Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
 * Na kartě Konfigurace (v AndroidAPS) vyberte xDrip.
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`_ .
+* Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte volbu 'Identify receiver' tak, jak je popsáno v `popisu nastavení xDrip+ <../Configuration/xdrip.html>`_ .
 
 Používáte-li G5 s upravenou Dexcom aplikací
 ==================================================

@@ -107,7 +107,7 @@ Buclă
 
 CGM data
 --------------------------------------------------
-* Glicemie
+* BG
   * Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 * CAL 5.6
   * Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
@@ -118,7 +118,7 @@ Bazală
 * BASAL STOP/CANCEL
   * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3
-  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Răspuns: Pentru a începe bazala 0.3U/h pentru 30 min răspundeți cu un cod din aplicația de autentificare utilizata urmat de PIN
 * BASAL 0.3 20
   * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
 * BASAL 30%
@@ -157,13 +157,13 @@ Profil
 * PROFILE 2 30
   * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
-Altul
+Altele
 --------------------------------------------------
 * TREATMENTS REFRESH
   * Response: Refresh treatments from NS
 * NSCLIENT RESTART
   * Response: NSCLIENT RESTART 1 receivers
-* POMPĂ
+* PUMP
   * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
 * PUMP CONNECT
   * Response: Pump reconnected

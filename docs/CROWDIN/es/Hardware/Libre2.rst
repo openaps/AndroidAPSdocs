@@ -1,9 +1,9 @@
-Freestyle libre 2
+Freestyle Libre 2
 **************************************************
 
-El sistema Freestyle Libre 2 puede reportar automáticamente niveles peligrosos de glucosa en sangre. El Sensor Libre2 envía el nivel de azúcar en sangre actual a un receptor (lector o smartphone) cada minuto. El receptor activa una alarma si es necesario. Con una aplicación de LibreLink parcheada y la aplicación xDrip +, puede recibir y ver continuamente su nivel de glucemia en su teléfono. 
+El sistema Freestyle Libre 2 puede informar automáticamente de niveles peligrosos de glucosa en sangre. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. Con la aplicación de LibreLink parcheada y xDrip+, podemos ver y recibir continuamente los niveles de glucosa en nuestro teléfono. 
 
-El sensor puede ser calibrado en el rango de -40 mg/dl a +20 mg/dl (-2,2 mmol/l a +1,1 mmol/l) para ajustar las diferencias entre las mediciones del pinchazo de los dedos y las lecturas del sensor.
+The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
 
 Las lecturas de BG también se pueden hacer usando un transmisor BT como con el Libre1.
 
@@ -203,3 +203,22 @@ Even if the patched LibreLink app approach is smart there may be some reasons to
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
 
 Comentario #2: El algoritmo OOP no se puede calibrar todavía. Esto se cambiará en el futuro.
+
+
+Mejores prácticas para calibrar un sensor Libre 2
+==================================================
+
+Para conseguir los mejores resultados de calibración en sensores Libre 2, hay algunas reglas que debemos seguir.
+Estas se aplican independientemente de los diferentes métodos de conexión que utilicemos (p.ej. Libre 2 Parcheada, OOP2, etc), usados para obtener los valores de Libre 2.
+
+1.	La regla más importante es calibrar el sensor cuando tengamos unos valores de glucemia estables durante al menos 15 minutos. El valor del delta de las últimas tres lecturas, no debe de exceder de 10 mg/dl (como valor total de los últimos 15 minutos, no entre cada lectura). Libre 2 no mide los niveles de glucosa en sangre, sino en el líquido intersticial. Esto provoca un retraso en los valores de glucosa, especialmente en momentos en los que están aumentando o disminuyendo. Este retraso puede conducir a realizar calibraciones con diferencias demasiado grandes, incluso aunque los aumentos o disminuciones de los valores de glucosa no lo parezcan. Así que siempre que sea posible, hay que evitar calibrar en momentos de subidas o bajadas.  -> Si tienes que realizar una calibración cuando los niveles de glucosa no son estables (p. ej. cuando iniciamos un nuevo sensor), se recomienda eliminar esa calibración/es lo antes posible, añadiendo una nueva cuando nuestra glucosa esté estable. 
+2.	Este punto se basa en seguir los consejos de la primera regla. Cuando realicemos capilares de comprobación, nuestros valores de glucosa deberían de ser estables durante al menos 15 minutos y no comprobar cuando las lecturas se producen en momentos de subidas o bajadas. Importante: Puedes realizar todas las mediciones de glucosa capilar que necesites, pero no las uses para realizar calibraciones si estás en tendencia de subida o bajada.
+3.	As calibrating the sensor in flat levels is a very good starting point it is also strongly recommended to calibrate the sensor only within your desired target range like 70 mg/dl to 160 mg/dl. The libre 2 is not optimized to work over a huge range like 50 mg/dl to 350 mg/dl (at least not in a linear manner), so try to only calibrate when within your desired range. -> Simply accept that values outside your calibration range will not perfectly match blood glucose levels.
+4.	Do not calibrate too often. Calibrating the sensor very often mostly leads to worse results. When the sensor delivers good results in flat conditions just don’t add any new calibration as it does not have any -useful- effect. It should be sufficient to recheck the status every 3-5 days (of course also in flat conditions). 
+5.	Avoid calibration when not required. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 9l, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration) 
+
+Some general  notes:
+After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. For new and old sensors it is more likely that the raw values change and a re-calibration is required.  
+From time to time it happens that a sensor does not provide valid values. Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. E.g. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better.
+Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.  
+

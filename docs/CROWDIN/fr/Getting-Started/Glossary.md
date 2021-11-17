@@ -300,7 +300,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>dispositif matériel open source pour convertir le Bluetooth Low Energy (BLE) vers les communications sans fil 916MHz (utilisé pour les anciennes pompes Medtronic)</td>
+ <td>dispositif matériel open source pour connecter le Bluetooth Low Energy (BLE) à 916MHz (utilisé pour les anciennes pompes Medtronic) ou 433MHz (utilisé pour les pompes Omnipod Eros) sans fil</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>

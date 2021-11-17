@@ -139,9 +139,9 @@ Būkite atsargūs, nes gana dažnai reikšmė yra per žema. Per žema reiškia,
 
 ### Įtaka
 
-**Mažesnis JIF jautrumas** (pvz., 40 mg/dl/vienetui, o ne 50) = agresyvesnis algoritmas, lemiantis didesnį KG sumažėjimą kiekvienam insulino vienetui. Jei jis per mažas, tai gali sukelti hipoglikemiją.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**Didesnis JIF jautrumas** (pvz., 45 mg/dl/vienetui vietoj 35) = mažiau agresyvus algoritmas, dėl kurio mažesnis KG kritimas kiekvienam insulino vienetui. Jei per didelis, tai gali sukelti hiperglikemiją.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
 **Pavyzdys:**
 

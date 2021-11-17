@@ -301,7 +301,7 @@ OpenAPS.</td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>Аппаратное устройство с открытым кодом для соединения устройств с Bluetooth Low Energy (BLE) с устройствами на частоте 916 мегагерц (используется для старых помп Medtronics).</td>
+ <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>

@@ -6,7 +6,7 @@ Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. 
 
 ### Nastavení Nightscoutu
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](https://nightscout.github.io/nightscout/security).
 
 ### Nastavení AndroidAPS
 
@@ -25,7 +25,7 @@ Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost n
 
 ## Ruční nastavení Nightscoutu
 
-Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Je nutné, aby byl váš Nightscout verze alespoň 10 (zobrazeno jako 0.10...), zkontrolujte tedy, jestli provozujete [poslední verzi](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), jinak se vám v AAPS zobrazí chybová zpráva. U některých uživatelů dochází při používání smyčky k překročení kvóty pro bezplatné používání Azure, proto je hostování na Heroku doporučená volba.
 
 * Běžte na https://herokuapp.com/
 
@@ -39,7 +39,7 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
   * `DEVICESTATUS_ADVANCED` = `true`
   * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Pro [hlídání pumpy](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring) lze nastavit různé alarmy, doporučujeme zejména % nabití baterie: 
     * `PUMP_WARN_BATT_P` = `51`
     * `PUMP_URGENT_BATT_P` = `26` 
 
@@ -49,7 +49,7 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
 
 ## Poloautomatickíé zřízení Nightscoutu
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+Kolega smyčkař Martin Schiftan nabízel poloautomatizované nastavení Nightscoutu spoustu let zdarma. Vzhledem k tomu, že se počet uživatelů zvýšil a náklady se zvýšily, musel začít od října 2021 požadovat malý poplatek – počínaje 4,17 EUR měsíčně.
 
 **Výhody**
 
@@ -57,8 +57,8 @@ Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many
 * Téměř žádná manuální práce, protože Martin se snaží celou administraci zautomatizovat.
 * Všechna nastavení lze provádět prostřednictvím uživatelsky přívětivého webového rozhraní. 
 * Tato služba obsahuje rovněž automatické kontroly bazálů prostřednictvím nástroje Autotune. 
-* The servers are located in Germany and Finland.
+* Servery jsou umístěny v Německu a Finsku.
 
 <https://ns.10be.de/en/index.html>
 
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+Alternativou může být <https://t1pal.com/> – začíná na 11,99 USD za měsíc. V neposlední řadě existuje služba nightscout.cz, kterou provozuje Martin Škarecký (prozatím zdarma, drobný pravidelný příspěvek by však velmi ocenil (servery, instalace, údržba a správa něco stojí)).

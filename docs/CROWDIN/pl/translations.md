@@ -1,4 +1,4 @@
-# Jak przetłumaczyć AndroidAPS i dokumentację
+# Jak tłumaczyć AndroidAPS i dokumentację
 
 * Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 

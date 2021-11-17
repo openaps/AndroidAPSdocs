@@ -49,7 +49,7 @@ Beveiliging
 Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
-  **Biometrische beveiliging werkt niet op OnePlus-telefoons. Dit is een bekend probleem van OnePlus.**
+  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
 
 * Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
 * Klik op de driehoek onder "Algemeen"
@@ -405,7 +405,7 @@ Alarm opties
 * Met de alarmopties kun je kiezen welke standaard Nightscout alarmen via de AAPS app moeten binnenkomen.  
 * Om een alarm te laten klinken moet je de Urgent High, High, Low en Urgent Low (Urgent Hoog, Hoog, Laag en Urgent Laag) alarmwaarden in jouw `Heroku variabelen <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_ instellen. 
 * Ze zullen alleen werken terwijl je een verbinding hebt met Nightscout en zijn bedoeld voor ouders/verzorgers die hun kind met diabetes willen volgen. 
-* Als jij zelf de CGM-bron op je telefoon hebt (bijv. de xDrip+ or Dexcom app), gebruik dan die alarmen in plaats van Nightscout alarmen. Dan ben je niet afhankelijk van een internetverbinding voor jouw glucosealarmen (wel zo veilig!).
+* Als jij zelf de CGM-bron op je telefoon hebt (bijv. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
 
 Geavanceerde instellingen (NSClient)
 -----------------------------------------------------------
@@ -415,8 +415,7 @@ Geavanceerde instellingen (NSClient)
 
 * De meeste opties in geavanceerde instellingen spreken voor zich.
 * *Activeer lokaal delen* zal jouw gegevens doorsturen naar andere apps op je telefoon, zoals xDrip+. 
-
-  * De aangepaste Dexcom app stuurt zijn gegevens niet rechtstreeks naar xDrip+. 
+ 
   * Daarom kun je `via AAPS <../Configuration/Config-Builder.html#bg-bron>`_ de Activeer lokaal delen optie aanzetten, en op die manier jouw gegevens naar xDrip+ sturen. Handig als je liever de uitgebreide alarm instellingen in xDrip+ gebruikt dan de alarm instellingen van de Dexcom app.
   
 * *Gebruik altijd absolute basale waarden* moet geactiveerd worden als je Autotune correct wilt gebruiken. Zie `OpenAPS documentatie <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ voor meer informatie over Autotune.

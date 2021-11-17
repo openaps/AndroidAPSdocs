@@ -29,26 +29,6 @@ Dexcom G6 mit xDrip+
 * Passe die Einstellungen in xDrip+ entsprechend den `Empfehlungen an <../Configuration/xdrip.html>`__
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`__ beschrieben.
 
-G6 mit der gepatchten Dexcom App
-==================================================
-* Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter und wähle die Version, die Du benötigst (mg/dl oder mmol/l Version, G6).
-
-  * Ordner 2.4 für alle Nutzer der aktuellen Version. Ordner 2.3 nur für die Nutzer der veralteten AAPS-Version 2.3.
-  *  Öffne https://play.google.com/store/search?q=dexcom%20g6 auf Deinem Computer. 
-  Klicke den Link zur Dexcom G6 App in den angezeigten Suchergebnissen.
-  * Die Region wird in der URL angezeigt.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region in der Dexcom G6 URL
-
-* Deinstalliere die original Dexcom App.
-* Installiere die heruntergeladene apk
-* Transmitter-Seriennummer und Sensor-Code in der gepatchten App eingeben .
-* Innerhalb kurzer Zeit sollte die gepatchte App das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen starten.)
-* Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
-* xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
-* Der lokale Broadcast funktioniert nicht direkt von der gepatchten Dexcom App zu xDrip+. Der Broadcast muss über AAPS laufen.
-
 G6 mit Build Your Own Dexcom App
 ==================================================
 * Seit Dezember 2020 unterstützt die `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - "Erstelle deine eigene Dexcom App") auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!)

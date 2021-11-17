@@ -22,7 +22,7 @@
 --------------------------------------------------
 ** Автоматизация по-прежнему активна при отключении цикла! **
 
-So make sure to deactivate automation rules during these occasions if necessary. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
+Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
 .. изображение:: ../images/Automation_ActivateDeactivate.png
   :alt: Активировать и деактивировать правило автоматизации
@@ -58,7 +58,7 @@ So make sure to deactivate automation rules during these occasions if necessary.
 * Время vs. время повторения
 
   * время = одно событие времени
-  * recurring time = something that happens regularly (i.e. раз в неделю, каждый рабочий день и т. д.)
+  * повторяющееся событие = то, что происходит регулярно (напр. раз в неделю, каждый рабочий день и т. д.)
    
 * расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
 
@@ -154,4 +154,4 @@ So make sure to deactivate automation rules during these occasions if necessary.
 Альтернативы
 ==================================================
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Некоторые примеры можно найти ` здесь <./automationwithapp.html> ` _.
+Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Некоторые примеры можно найти ` здесь <./automationwithapp.html> ` _.
