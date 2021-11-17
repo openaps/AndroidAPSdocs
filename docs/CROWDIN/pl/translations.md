@@ -49,7 +49,7 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 ### Tłumacz odnośniki do nagłówków
 
 * Gdy wewnętrzny odnośnik prowadzi tylko do określonej strony (tj. ../Usage/Profiles.html) nie jest wymagane tłumaczenie.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
+* Wewnętrzne linki do określonego nagłówka (tj. ..//Usage/Profiles.html#percentage) muszą być przetłumaczone, ponieważ nagłówek w innym języku różni się od angielskiego oryginału.
 * If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
     Here are some examples:
