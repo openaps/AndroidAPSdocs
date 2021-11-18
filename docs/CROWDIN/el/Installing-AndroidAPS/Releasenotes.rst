@@ -46,6 +46,7 @@ Important hints
 * Use the same version of AAPS and NSClient
 * There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
 * There is a bug in OrangeLink 3.2 firmware preventing work with AAPS. Downgrade FW to 2.5 if you are affected
+* Behavior change: carbs are recorded only if bolus is successful
 
 Preparation steps
 ----------------------
