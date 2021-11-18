@@ -1,7 +1,7 @@
 Zmień język
 **************************************************
 
-.. note::
+.. Uwaga::
    Wybór języka został przeniesiony na dolny panel menu po lewej stronie. Kliknij na pasku u dołu, aby otworzyć menu wyboru języka.
 
 .. image:: images/documentation_language_menu.png
