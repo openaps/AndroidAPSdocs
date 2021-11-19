@@ -6,7 +6,7 @@
 
 ### Omnipod DASH ([Домашняя страница](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Статус реализации:** Omnipod DASH будет доступен в [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
@@ -14,7 +14,7 @@
 
 ### Помпа Ypsomed ([Домашняя страница](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Статус реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. Несмотря на то, что они имеют BT, коммуникация очень ограничена и однонаправлена: помпа ->приложение. К концу 2021 года планируется выпустить новую версию помпы, названную DOSE, которая позволит подавать болюсы и устанавливать временную базау TBR. Они планируют реализовать замкнутый цикл в 2022 году на собственном приложении. Подробнее см. на этой [странице](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. В помпе есть блутус-связь.
 
