@@ -42,9 +42,9 @@
 * Не забудьте сохранить экспортированные настройки не только на телефоне, но и по крайней мере в одном безопасном месте (на ПК, в облачном хранилище...).
 * Если вы собираете AAPS 2.7 с тем же хранилищем ключей, что и в предыдущих версиях, вы можете установить новую версию, не удаляя предыдущую. 
 * Все настройки, а также завершенные цели останутся такими же, как и в предыдущей версии.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* Если вы потеряли хранилище ключей keystore, соберите версию 2.7 с новым хранилищем и импортируйте настройки из прежних версий приложения по этой инструкции: <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
 
-Autosens (Hint - no action necessary)
+Autosens (подсказка - не требует действий)
 -----------------------------------------------------------
 * Autosens is changed to a dynamic switching model which replicates the reference design.
 * Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
