@@ -56,9 +56,9 @@ Autosens (подсказка - не требует действий)
 * Откройте настройки, нажав три точки меню в верхней правой части главного экрана
 * Прокрутите вниз и нажмите треугольник рядом с "Dana RS".
 * Нажмите на "Пароль помпы (только v1)"
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* Введите пароль помпы (`По умолчанию пароль <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_в зависимости от версии прошивки) и нажмите OK.
 
-.. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+.. изображение:: ../images/DanaRSPW.png
+  :alt: задать пароль Dana RS
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
+Для смены пароля на Dana RS следуйте инструкциям на странице `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
