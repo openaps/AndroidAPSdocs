@@ -46,16 +46,16 @@
 
 Autosens (подсказка - не требует действий)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Autosens изменен на динамическую модель, которая воспроизводит оригинальное решение.
+Начиная с AAPS 2.7 Autosens сам будет переключаться между окнами в 24 и 8 часов для вычисления чувствительности. Он выберет более чувствительный вариант. 
+* Если пользователи перешли с oref1, они, вероятно, заметят, что система стала менее подвержена резким изменениям из-за альтернативного применения чувствительности за 24 или 8 часов.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Создание пароля для Dana RS (если используется Dana RS)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
+* Пароль помпы на `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ в предыдущих версиях не проверялся.
+* Откройте настройки, нажав три точки меню в верхней правой части главного экрана
+* Прокрутите вниз и нажмите треугольник рядом с "Dana RS".
+* Нажмите на "Пароль помпы (только v1)"
 * Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
 
 .. image:: ../images/DanaRSPW.png
