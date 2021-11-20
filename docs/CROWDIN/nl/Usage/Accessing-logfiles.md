@@ -3,8 +3,9 @@
 * Verbind je telefoon met een computer in bestandsoverdrachtsmodus
 * Zoek de logbestanden in de map AndroidAPS
     
-    * Deze map moet ergens op jouw telefoon te vinden zijn, bijvoorbeeld via ***Interne opslag (1) / Android / data / info.nightscout.androidaps / files*** of iets vergelijkbaars
-    * De precieze naam van de hoofdmap (1) op jouw telefoon kan iets anders zijn, afhankelijk van jouw merk/model.
+    * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![log bestanden](../images/aapslog.png)
 
