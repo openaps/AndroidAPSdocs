@@ -139,9 +139,9 @@
 
 ### השפעה
 
-**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
+**ISF נמוך יותר** (לדוגמה 40 במקום 50) משמע כל יחידת אינסולין מפחיתה פחות את הסוכר בדם. זה מוביל לתיקון אגרסיבי\חזק יותר ע"י הלולאה עם **יותר אינסולין**. ערך נמוך מדי יביא להיפוגלקמיות.
 
-**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
+**ISF גבוה יותר** (לדוגמה 45 במקום 35) משמע כל יחידת אינסולין מפחיתה יותר את הסוכר בדם. זה מוביל לתיקון עדין\חלש יותר ע"י הלולאה עם **פחות אינסולין**. ערך ISF גבוה מדי יביא לסוכר גבוה, להיפרגלקמיות.
 
 **לדוגמה:**
 
