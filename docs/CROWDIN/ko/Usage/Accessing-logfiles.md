@@ -3,7 +3,8 @@
 * 폰을 파일 전송모드로 컴퓨터와 연결합니다
 * Locate the log files in the AndroidAPS data directory
     
-    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
     * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![로그](../images/aapslog.png)
