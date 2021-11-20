@@ -4,7 +4,7 @@
 * Locate the log files in the AndroidAPS data directory 
 
    * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
-   * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs ***
+   * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![logs](../images/aapslog.png)
