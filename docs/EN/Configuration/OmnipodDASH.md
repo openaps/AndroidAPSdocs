@@ -45,7 +45,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **Your pod will not stop delivering insulin when it is not connected to AndroidAPS**.
 Default basal rates are programmed on the pod on activation as defined in the current active profile.
-As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 60 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost) the pod will automatically fall back to default basal rates.
+As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost) the pod will automatically fall back to default basal rates.
 
 **30 min Basal Rate Profiles are NOT supported in AndroidAPS.**
 **The AndroidAPS Profile does not support a 30 minute basal rate time frame**
@@ -187,7 +187,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 ## Resuming Insulin Delivery
 
-The process below will show you how to resume insulin pump delivery if it has been suspended.
+**Note**: **(Rarely)**, delivery might sometimes get suspended due to command error such as failing to change profil, since insulin delivery must be suspended to make the change. The process below will show you how to resume insulin pump delivery if it has been suspended.
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 
