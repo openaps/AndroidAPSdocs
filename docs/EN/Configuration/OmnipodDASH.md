@@ -16,10 +16,6 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 * On activation, AAPS will find and connect a new DASH pod.
 * Expected range: 5-10 meters (YMMV)
 
-.. contents:: 
-   :backlinks: entry
-   :depth: 2
-
 # Hardware/Software Requirements
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
@@ -35,7 +31,6 @@ Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
 
 # Before You Begin
-
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
 
@@ -57,13 +52,11 @@ You can enable the Dash driver in AAPS in **two ways**:
  
 ## Option 1: New installations
 
-
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
 
 |Enable_Dash_1|
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (See Option#2).
-
 
 ## Option 2: The Config Builder
 
@@ -71,9 +64,7 @@ On an existing installation you can select the **DASH** pump from the Config bui
 
 On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. 
 
-
 Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS. 
-
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
@@ -81,26 +72,19 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
  
 ## Verification of Omnipod Driver Selection
 
-
-
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see an **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
-
 
 |Enable_Dash_4|
 
 # Dash Configuration
 
-
 Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
-
 
 |Refresh_LOGO| Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
 |POD_MGMT_LOGO| Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
-
 ## Activate Pod
-
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -118,14 +102,11 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 |Activate_Pod_5||Activate_Pod_6|
 
-
 4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
 
 |Activate_Pod_7||Activate_Pod_8|
 
-
 5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
-
 
 |Activate_Pod_9|
 
@@ -136,7 +117,6 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 |Activate_Pod_10||Activate_Pod_11|
 
 7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
-
 
 |Activate_Pod_12|
 
@@ -154,7 +134,6 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 It is good practice to export settings AFTER deactivating the old pod and BEFORE activating the new pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
-
 ## Deactivate Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
@@ -171,23 +150,19 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 3. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
 
-
 |Deactivate_Pod_5|
 
 4. Click on the green button to return to the **Pod Management** screen.
-
 
 |Deactivate_Pod_6|
 
 5. You are now returned to the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
 
-
 |Deactivate_Pod_7||Deactivate_Pod_8|
-
 
 ## Resuming Insulin Delivery
 
-**Note**: **(Rarely)**, delivery might sometimes get suspended due to command error such as failing to change profil, since insulin delivery must be suspended to make the change. The process below will show you how to resume insulin pump delivery if it has been suspended.
+**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 
@@ -321,11 +296,9 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
 
-
 |Dash_settings_1||Dash_settings_2|
 
 **NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
-
 
 |Dash_settings_3|
 
@@ -396,6 +369,20 @@ Additional note:
 
 # Troubleshooting
 
+## Delivery suspended
+
+  * There is no suspend button anymore 
+  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. When this happens:
+     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
+     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened. 
+     - AAPS will try to set the new basal profile every 15 minutes.
+     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
+     - The [**Resume delivery**](#resume-delivery) button will be active if the user chooses to resume delivery manually.
+     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
+  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  * 
+**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+
 ## Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
@@ -420,7 +407,6 @@ Note: In some cases you may need to use the export to restore AndroisAPS setting
 - Think about if you need to export with an active pod session.
 - Regularly export your settings and store a copy in a safe place.
 
-
 ## Import Settings
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, the outdated will result in losing the active Pod! (see **Exporting Settings**)
@@ -443,7 +429,6 @@ Importing settings while on an active Pod session may result in Pod failure or l
 3. Check all preferences
 
 ## Importing settings that contain Pod state from an inactive Pod
-
 
 When importing settings that contain the session state for a Pod that is no longer active it will show up on the DASH tab. AndroidAPS will try to connect which is obviously failing. In this state you can not activate a new Pod.
 
