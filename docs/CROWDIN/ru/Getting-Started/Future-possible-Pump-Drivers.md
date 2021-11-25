@@ -18,59 +18,59 @@
 
 **Требования к оборудованию для AAPS:** Никаких. В помпе есть блутус-связь.
 
-**Комментарии:** В настоящее время над драйвером работают 2 группы, так что можно ожидать поддержки AAPS вскоре после выхода новой версии. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
+**Комментарии:** В настоящее время над драйвером работают 2 группы, так что можно ожидать поддержки AAPS вскоре после выхода новой версии. Одна группа поддерживается YpsoMed и участвует в медицинских испытаниях в Австралии, 2-я работает самостоятельно путем реверсивной инженерии оригинального приложения.
 
 * * *
 
 ### Kaleido ([Домашняя страница](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
+### Medtrum A6/P6/C6 ([Домашняя страница](https://www.medtrum.com/product/nanopump.html))
 
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
+**Статус пригодности:** Является кандидатом для ИПЖ. Компания имеет собственную ограниченную систему полуцикла (A6). Контролируется через приложение iPhone. Приложения для Android пока нет.
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
 ### EOFLOW ([Домашняя страница](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+**Статус пригодности:** Является кандидатом для ИПЖ. Пульт управления фактически является модифицированным Android-устройством. (В настоящее время помпа доступна только в Корее).
 
-**Требования к оборудованию для AAPS:** По-видимому, никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** По-видимому, никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
 ### ACCU-Chek Solo ([Домашняя страница](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate.
+**Статус пригодности:** Является кандидатом для ИПЖ.
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
+**Комментарии:** Есть некоторые разработчики, ведущие декодирование протокола, но пока только на предварительном этапе.
 
 * * *
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Tandem: t:slim X2 ([Домашняя страница](https://www.tandemdiabetes.com/))
 
-**Loop status:** Not yet loopable.
+**Статус пригодности:** Пока не пригодна.
 
 While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
 ### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+**Статус пригодности:** Является кандидатом для ИПЖ. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
@@ -82,7 +82,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
@@ -92,7 +92,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Статус реализации:** В настоящее время не поддерживается какой-либо системой ИПЖ. Помпа является кандидатом на работу с ИПЖ, но поскольку протокол ее работы неизвестен, поддержка появится не очень скоро.
 
 **Требования к оборудованию для AAPS:** По-видимому, никаких. В помпе есть блутус-связь.
 
