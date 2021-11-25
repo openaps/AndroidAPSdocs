@@ -16,9 +16,9 @@
 
 **Статус реализации:** Версии 1 - 1.5 (2Q/2018) не являются кандидатами для ИПЖ. Несмотря на то, что они имеют BT, коммуникация очень ограничена и однонаправлена: помпа ->приложение. К концу 2021 года планируется выпустить новую версию помпы, названную DOSE, которая позволит подавать болюсы и устанавливать временную базау TBR. Они планируют реализовать замкнутый цикл в 2022 году на собственном приложении. Подробнее см. на этой [странице](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Hardware requirement for AAPS:** None. В помпе есть блутус-связь.
+**Требования к оборудованию для AAPS:** Никаких. В помпе есть блутус-связь.
 
-**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
+**Комментарии:** В настоящее время над драйвером работают 2 группы, так что можно ожидать поддержки AAPS вскоре после выхода новой версии. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
 
 * * *
 
@@ -50,7 +50,7 @@
 
 **Loop status:** Is a Loop candidate.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
 
 **Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
 
@@ -62,7 +62,7 @@
 
 While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
 
 * * *
 
@@ -70,7 +70,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
 
 * * *
 
@@ -82,7 +82,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Требования к оборудованию для AAPS:** Никаких. It seems to be BT enabled.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
