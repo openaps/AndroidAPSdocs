@@ -371,7 +371,7 @@ Additional note:
 
 ## Delivery suspended
 
-  * There is no suspend button anymore 
+  * There is no suspend button anymore.
   * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. When this happens:
      - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened. 
@@ -380,7 +380,7 @@ Additional note:
      - The [**Resume delivery**](#resume-delivery) button will be active if the user chooses to resume delivery manually.
      - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
   * For unconfirmed commands, "refresh pod status" should confirm/deny them.
-  * 
+
 **Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
 
 ## Pod Failures
