@@ -60,15 +60,15 @@
 
 **Статус пригодности:** Пока не пригодна.
 
-Хотя в прошлом компания не допускала контроля помпы с внешних устройств, за последние несколько лет правила изменились. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+Хотя в прошлом компания не допускала контроля помпы с внешних устройств, за последние несколько лет правила изменились. Компания решила обновить помпу t:slim X2 и допустить возможность удаленного контроля (через приложение t:connect), это означает, что мы можем рассчитывать на управление помпой через AAPS в будущем. В ближайшее время планируется обновить прошивку помпы (в этом или в следующем году, а затем появится беструбочная помпа t:sport). Пока нет информации о том, какие операции можно будет выполнять на t:connect (разумеется, подача болюса, а все остальное пока неизвестно).
 
 **Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:sport ([Домашняя страница](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Статус пригодности:** Является кандидатом для ИПЖ. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+**Статус пригодности:** Является кандидатом для ИПЖ. Помпа еще не выпущена, но процесс одобрения FDA начат, так что она скоро будет доступна (в США).
 
 **Требования к оборудованию для AAPS:** Никаких. Похоже, что блутус-связь имеется.
 
