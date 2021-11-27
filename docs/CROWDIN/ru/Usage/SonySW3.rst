@@ -1,15 +1,15 @@
 Установка службы Google Play вручную для Sony Smartwatch 3
 #####################################################################
 
-Sony Smartwach 3-одни из самых популярных часов дляс AAPS. К сожалению, осенью 2020 года Google прекратил поддержку устройств с операционной системой OS 1.5. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
+Sony Smartwach 3-одни из самых популярных часов дляс AAPS. К сожалению, осенью 2020 года Google прекратил поддержку устройств с операционной системой OS 1.5. Это приводит к проблемам при использовании Sony SW3 с AndroidAPS 2.7 и более поздними версиями приложения. 
 
-The following workaround should extend the time the Sony Smartwatch 3 can be used but keep in mind that the need to switch to a new smartwatch will come sooner or later.
+Следующий обходной путь должен продлить время использования Sony Smartwatch 3, но имейте в виду, что необходимость перехода на новые часы рано или поздно наступит.
 
-1. Download the latest GService for Wear OS
+1. Скачайте свежую версию GService для Wear OS
 --------------------------------------------------------
-* Using `apkmirror website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ you can find the latest apk for "Google Play Services (Wear OS)".
+* Используя сайт `apkmirror <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ можно найти новую версию приложения "Google Play Services (Wear OS)".
 
-  Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+  Архитектура: armeabi-v7a, Минимальная версия: Android 6.0+, Screen DPI: nodpi
 
 * You must ensure 2 things:
 
