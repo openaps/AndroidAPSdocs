@@ -11,9 +11,9 @@ Sony Smartwach 3-одни из самых популярных часов для
 
   Архитектура: armeabi-v7a, Минимальная версия: Android 6.0+, Screen DPI: nodpi
 
-* You must ensure 2 things:
+* Убедитесь в следующем:
 
-  * Is it the latest version?
+  * Это новейшая версия?
   * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
 
 * Sooner or later, Google will definitely drop Android 6.0. When this will happen, the latest version will not be available anymore for Android 6.0+, therefore it will be the end.
