@@ -44,15 +44,16 @@ Notas importantes
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Debes realizar un cambio de perfil y comenzar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. También se recomienda el uso de la aplicación BOYDA, para aprovechar el suavizado que aplica Dexcom.
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
 * Existe un problema con el firmware OrangeLink 3.2 que impide que trabaje con AAPS. Baja al FW 2.5 si estás afectado con este problema.
 * Cambio de comportamiento: los carbohidratos sólo se registran si el bolo es correcto.
 
 Pasos de preparación
 ----------------------
 * Al menos dos días antes de la actualización:
-* Deshabilitar el "puente" entre Dexcom y Nightscout
-* Si estás usando G5/G6 cambia a BOYDA (si estabas usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+
+   * Deshabilitar el "puente" entre Dexcom y Nightscout
+   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
 
 Cambios
 ----------------------
