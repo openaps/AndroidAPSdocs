@@ -50,9 +50,9 @@ Sony Smartwach 3-одни из самых популярных часов для
   .. изображение:: ../images/SonySW3_Terminal1.png
     :alt: команда терминала
 
-* Wait for about 4–5 minutes for installation to complete. 
+* Дождитесь завершения установки примерно 4–5 минут. 
 
-  .. image:: ../images/SonySW3_Terminal2.png
-    :alt: Terminal successful installation
+  .. изображение:: ../images/SonySW3_Terminal2.png
+    :alt: успешная установка в терминале
 
-* Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
+* После завершения перезагрузите часы, и вы увидите синхронизацию приложений.
