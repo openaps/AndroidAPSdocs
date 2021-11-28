@@ -208,7 +208,7 @@ Hinweis: Der Transmitter kann auch parallel zur gepatchten LibreLink App verwend
 Hinweis 2: Der OOP Algorithmus kann bisher noch nicht kalibriert werden. Das wird sich in Zukunft ändern.
 
 
-Best practices for calibrating a libre 2 sensor
+Best Practices für die Kalibrierung eines Libre 2 Sensors
 ==================================================
 
 To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow.
