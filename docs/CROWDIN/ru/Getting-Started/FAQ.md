@@ -139,9 +139,9 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 ### Результат
 
-**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
+**Более низкий ISF** (например, 40 вместо 50) означает, что каждая единица инсулина менее значительно опускает ГК. Это приводит к более агрессивной / сильной коррекции со стороны алгоритма с **бОльшим количеством инсулина**. Если она слишком мала, можно получить низкий уровень ГК.
 
-**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
+**Более низкий ISF** (например, 45 вместо 35) означает, что каждая единица инсулина менее значительно опускает ГК. Это приводит к менее агрессивной коррекции со стороны алгоритма с **меньшим количеством инсулина**. Если ISF слишком велик, можно получить высокий уровень ГК.
 
 **Пример:**
 

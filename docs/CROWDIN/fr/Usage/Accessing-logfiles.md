@@ -3,7 +3,8 @@
 * Connecter le téléphone à un ordinateur en mode de transfert de fichiers
 * Localiser les fichiers journaux dans le répertoire de données AndroidAPS
     
-    * Le dossier sera à un emplacement similaire à ***Stockage interne(1) / Android / data / info.nightscout.androidaps / files***
+    * (2.8.2) Le dossier sera à un emplacement similaire à ***Stockage interne(1) / Android / data / info.nightscout.androidaps / files***
+    * (3.0.0) Le dossier sera à un emplacement similaire à ***Stockage interne(1) / AAPS / logs***
     * Le nom du dossier de stockage racine (1) peut varier légèrement selon le téléphone.
 
 ![logs](../images/aapslog.png)

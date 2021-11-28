@@ -45,13 +45,16 @@ Android 7
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. Следует создать новый переключатель профиля и начать с нулевых значений IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Использование BYODA также рекомендуется для обратного сглаживания данных Dexcom
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
+* В прошивке OrangeLink 3.2 обнаружена ошибка, препятствующая работе с AAPS. Следует перепрошить устройство на версию 2.5
+* Изменение поведения: углеводы записываются только если болюс подан успешно
 
-Preparation steps
+Этапы подготовки
 ----------------------
-* At least two days before update:
-* disable Dexcom bridge in Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+* Не менее чем за два дня до обновления:
+
+   * отключите Dexcom bridge в Nightscout
+   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). XDrip можно оставить, но не как коллектор (xDrip будет получать данные с Dexcom BOYDA)
 
 Изменения
 ----------------------
@@ -59,7 +62,7 @@ Preparation steps
 * Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
 * Поддержка Dana-i @MilosKozak
 * Поддержка DiaconnG8
-* Glunovo support
+* Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Часть кода переписана на Kotlin @MilosKozak
 * Новый интерфейс для драйверов помп
