@@ -21,22 +21,22 @@ Sony Smartwach 3-одни из самых популярных часов для
 2. Скачайте/установить инструменты adb на вашем компьютере
 --------------------------------------------------------
 * Есть несколько способов установки утилиты отладки adb.
-* It is recommended to use `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Just download zip file and unzip to a directory of your choice.
+* Рекомендуется использовать `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Просто скачайте zip-файл и распакуйте архив в выбранную директорию.
 
-3. Enable ADB Debugging options on your watch
+3. Включите параметры отладки ADB на ваших часах
 --------------------------------------------------------
-* Enable developer mode by going to Settings --> About --> Build number
-* Click it 7 times.
-* Now go to Settings --> Developer Options --> ADB Debugging (enable)
+* Включите режим разработчика, перейдя в Настройки --> About --> Номер сборки
+* Щелкните по нему 7 раз.
+* Теперь перейдите в Настройки --> Параметры разработчика --> Отладка ADB (включено)
 
-4. Connect your watch to your computer
+4. Подключите ваши часы к компьютеру
 --------------------------------------------------------
-* Then plug your smartwatch to PC.
-* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
-* Place this APK to the directory of your adb tool (in our case: the directory of unzipped SDK Platform Tools).
-*	Open Windows terminal using command „cmd“ in Windows start menu.
-*	In terminal, go to the directory that includes your adb tool and google services APK (type command „cd [your path]“, e.g. „cd C:\Users\SWR50looper\sdktools“).
-* Then type “adb devices”.
+* Затем подключите часы к ПК.
+* Переименуйте последние загруженные Google Play Service APK используя какое-нибудь короткое и простое имя (скажем SW3fix.apk).
+* Поместите этот APK в директорию adb (в нашем случае: каталог разархивированных SDK Platform Tools).
+*Откройте терминал Windows с помощью команды «cmd» в меню запуска Windows.
+*В терминале, перейдите в каталог, который включает инструмент adb и Google Services APK сервисы (введите команду „cd [ваш путь]“, напр. „cd C:\Users\SWR50looper\sdktools“).
+* Затем введите "adb devices".
 * After a moment, you should get a prompt asking for debugging permission on your watch: accept.
 * In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
 * If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
