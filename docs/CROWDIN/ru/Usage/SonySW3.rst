@@ -14,13 +14,13 @@ Sony Smartwach 3-одни из самых популярных часов для
 * Убедитесь в следующем:
 
   * Это новейшая версия?
-  * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
+  * Совместима ли она с Android 6.0+ (так как это версия Android wear, 7.0+ и выше не будет работать)?
 
-* Sooner or later, Google will definitely drop Android 6.0. When this will happen, the latest version will not be available anymore for Android 6.0+, therefore it will be the end.
+* Рано или поздно, Google определённо прекратит поддержку Android 6.0. Когда это произойдет, последняя версия больше не будет доступна для Android 6.0+.
 
-2. Download/Install adb debugging tools on your computer
+2. Скачайте/установить инструменты adb на вашем компьютере
 --------------------------------------------------------
-* There are multiple ways to install the adb debugging tool.
+* Есть несколько способов установки утилиты отладки adb.
 * It is recommended to use `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Just download zip file and unzip to a directory of your choice.
 
 3. Enable ADB Debugging options on your watch
