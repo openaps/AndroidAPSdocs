@@ -37,18 +37,18 @@ Sony Smartwach 3-одни из самых популярных часов для
 *Откройте терминал Windows с помощью команды «cmd» в меню запуска Windows.
 *В терминале, перейдите в каталог, который включает инструмент adb и Google Services APK сервисы (введите команду „cd [ваш путь]“, напр. „cd C:\Users\SWR50looper\sdktools“).
 * Затем введите "adb devices".
-* After a moment, you should get a prompt asking for debugging permission on your watch: accept.
-* In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
-* If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
-* If you struggle at this step, you may need specific drivers or else for your watch. Google will be your best friend at this point.
-* Then wait, the installation can take several minutes. 
+* Через несколько секунд вы получите запрос на разрешение отладки на часах: примите его.
+*Когда вы снова напечатаете в терминале"adb devices", там появится что-то вроде "14452D11F536B52 device".
+* Если вы видите "unauthorized" или что-то вроде того, то вы не готовы к следующему шагу, вернитесь назад и повторите попытку.
+* Если этот шаг не получается, вам могут понадобиться недостающие драйверы для часов. Google вам поможет их отыскать.
+* Затем подождите, установка может занять несколько минут. 
 
-5. Send the app to your watch
+5. Отправьте приложение на часы
 --------------------------------------------------------
-* In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
+* В терминале введите команду «adb install -r -g имяприложения.apk» (в нашем случае «adb install -r -g SW3fix.apk»).
 
-  .. image:: ../images/SonySW3_Terminal1.png
-    :alt: Terminal command
+  .. изображение:: ../images/SonySW3_Terminal1.png
+    :alt: команда терминала
 
 * Wait for about 4–5 minutes for installation to complete. 
 
