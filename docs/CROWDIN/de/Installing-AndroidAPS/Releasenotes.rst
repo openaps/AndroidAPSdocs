@@ -44,15 +44,16 @@ Wichtige Hinweise
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
-* There is a bug in OrangeLink 3.2 firmware preventing work with AAPS. Downgrade FW to 2.5 if you are affected
-* Behavior change: carbs are recorded only if bolus is successful
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
+* Es gibt einen Fehler in der OrangeLink 3.2 Firmware, der die Arbeit mit AAPS verhindert. Führe ein Downgrade auf 2.5 durch, falls Du betroffen sein solltest.
+* Geändertes Verhalten: Kohlenhydrate werden nur aufgezeichnet, wenn der Bolus erfolgreich abgegeben werden konnte.
 
-Preparation steps
+Vorbereitende Schritte
 ----------------------
-* At least two days before update:
-* disable Dexcom bridge in Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+* Spätestens zwei Tage vor dem Update:
+
+   * Deaktiviere Dexcom Bridge in Nightscout
+   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
 
 Änderungen
 ----------------------
@@ -60,7 +61,7 @@ Preparation steps
 * Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für Dana-i @MilosKozak
 * * Unterstützung für DiaconnG8
-* Glunovo support
+* Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
 * Neue interne Schnittstelle für Pumpentreiber
@@ -73,13 +74,13 @@ Preparation steps
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
 * Verbesserung der Anzeige (user interface) @MilosKozak
-* New user buttons for automations @MilosKozak
-* New automation layout @MilosKozak
+* Neue Anwender-Buttons für Automatisierungen @MilosKozak
+* Neues Automatisierungs-Layout @MilosKozak
 * History Browser aktualisiert und Fehler behoben @MilosKozak
 * Objective 9 wurde entfernt @MilosKozak
 * Fehler bei instabilen CGM-Werten behoben @MilosKozak
