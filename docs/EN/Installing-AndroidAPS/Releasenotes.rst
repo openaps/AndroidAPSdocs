@@ -44,15 +44,16 @@ Important hints
 * **Minimum Android version is 9.0 now.**
 * **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using `BOYDA<../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
 * There is a bug in OrangeLink 3.2 firmware preventing work with AAPS. Downgrade FW to 2.5 if you are affected
 * Behavior change: carbs are recorded only if bolus is successful
 
 Preparation steps
 ----------------------
 * At least two days before update:
-* disable Dexcom bridge in Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+
+   * disable Dexcom bridge in Nightscout
+   * if you are using G5/G6 switch to `BOYDA<../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
 
 Changes
 ----------------------
