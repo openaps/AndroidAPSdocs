@@ -59,7 +59,7 @@ Vorbereitende Schritte
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
 * Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
-* Unterstützung für Dana-i @MilosKozak
+* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * * Unterstützung für DiaconnG8
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
