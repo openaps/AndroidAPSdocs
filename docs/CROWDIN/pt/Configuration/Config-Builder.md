@@ -150,7 +150,7 @@ Selecione a fonte de glicemia que utiliza - ver [Fonte de GLIC](BG-Source.rst) p
 * Glicose ClienteNS
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - apenas a versão 4.15.57 ou mais recente são suportados
-* [App Dexcom (corrigida)](https://github.com/dexcomapp/dexcomapp/) - Selecione 'Enviar dados BG para xDrip+' se quiser usar alarmes xDrip+.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Configurador Fonte da Glicemia (GLIC)](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Selecione a bomba que está a utilizar.
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Coreana (para bombas domésticas DanaR)
 * Dana Rv2 (Bomba DanaR com upgrade de software não oficial)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (Requer a instalação da Ruffy)
 * [Medtronic](MedtronicPump.md)
