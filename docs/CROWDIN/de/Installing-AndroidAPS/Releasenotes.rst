@@ -44,7 +44,7 @@ Wichtige Hinweise
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ wird auch empfohlen, um von der rückwirkenden Glättung der Dexcom App zu profitieren.
 * Es gibt einen Fehler in der OrangeLink 3.2 Firmware, der die Arbeit mit AAPS verhindert. Führe ein Downgrade auf 2.5 durch, falls Du betroffen sein solltest.
 * Geändertes Verhalten: Kohlenhydrate werden nur aufgezeichnet, wenn der Bolus erfolgreich abgegeben werden konnte.
 
@@ -53,7 +53,7 @@ Vorbereitende Schritte
 * Spätestens zwei Tage vor dem Update:
 
    * Deaktiviere Dexcom Bridge in Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
+   * Falls Du den Dexcom G5 oder G6 verwendest, wechsle zur `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ (im Fall, dass Du bisher xDrip+ nutzt). Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
 
 Änderungen
 ----------------------
