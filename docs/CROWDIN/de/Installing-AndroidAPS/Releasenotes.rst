@@ -74,7 +74,13 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. 
+
+   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+
+   .. image:: ../images/NS_ProfileClone.png
+      :alt: Nightscout profile editor
+   
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
