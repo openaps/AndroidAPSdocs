@@ -74,7 +74,13 @@ Changes
 
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. 
+
+   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+
+   .. image:: ../images/NS_ProfileClone.png
+      :alt: Nightscout profile editor
+   
 * Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
