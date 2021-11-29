@@ -326,7 +326,7 @@ Jei vartojate alkoholį, visada turite stebėti savo glikemiją, kad išvengtum�
 
 #### Kaip užtikrinti ciklo veikimą naktį, neveikiant mobiliajai ir WIFI spinduliuotei?
 
-Daugelis vartotojų naktį mobiliajame telefone įsijungia lėktuvo režimą. Jei norite, kad ciklas veiktų jūsų miego metu, atlikite šiuos veiksmus (tačiau tai veiks tik tada, jei naudojate vietinį glikemijos šaltinį, pvz., xDrip+ arba modifikuotą Dexcom programą, jis NEVEIKS, jei glikemijos duomenis gaunate per NIghtscout):
+Daugelis vartotojų naktį mobiliajame telefone įsijungia lėktuvo režimą. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Įjunkite lėktuvo režimą mobiliajame telefone.
 2. Palaukite, kol lėktuvo režimas bus įjungtas.
