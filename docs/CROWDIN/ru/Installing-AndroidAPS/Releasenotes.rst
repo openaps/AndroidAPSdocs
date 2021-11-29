@@ -60,7 +60,7 @@ Android 7
 ----------------------
 * Изменены XXXXk строки, XXXXk новые строки кода
 * Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* Поддержка Dana-i @MilosKozak
+* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Поддержка DiaconnG8
 * Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
