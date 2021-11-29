@@ -51,7 +51,7 @@ AndroidAPS **actualmente** funciona con
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
 - `Bomba Accu-ChekInsight <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
@@ -73,20 +73,20 @@ For old medtronic pumps an additional communication device (besides your phone) 
 
 El Combo, el Insight y los Medtronics más antiguos son bombas sólidas y loopeables. Además el Combo tiene la ventaja de más tipos de equipos de infusión entre los que escoger teniendo el estándar luer lock. Y la batería es una común que puedes comprar en cualquier gasolinera, tienda de conveniencia 24 horas y si realmente necesitas una, Usted puede robar/tomarlo prestado del mando a distancia en la habitación del hotel ;-).
 
-Las ventajas de la DanaR/RS vs. la Combo como la bomba de elección, sin embargo, son:
+The advantages of the DanaR/RS and Dana-i vs. la Combo como la bomba de elección, sin embargo, son:
 
-- La Dana*R/RS se conecta a casi cualquier teléfono con Android >= 5.1 sin necesidad de flash linage. Si su teléfono se rompe por lo general, puede encontrar fácilmente cualquier teléfono que funciona con las bombas Dana*R/RS como un reemplazo rápido... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
-- El emparejamiento inicial es más fácil con DanaRS. Pero esto se realiza normalmente solo una vez, por lo que solo impacta si quieres probar nuevas características con bombas diferentes.
+- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
+- Initial pairing is simpler with the Dana-i/RS. Pero esto se realiza normalmente solo una vez, por lo que solo impacta si quieres probar nuevas características con bombas diferentes.
 - Hasta ahora Combo funciona con análisis de pantalla. En general funciona bien pero es lento. Para lazo cerrado eso no es crucial puesto que trabaja en segundo plano, sin embargo, usa más tiempo la conexión bluetooth aumentando la probabilidad de fallo de conexión, lo cual no es fácil si te lejas del móvil mientras pones un bolo y cocinas. Aún hay mucho más tiempo que necesitas para estar conectado más tiempo en el que la conexión BT podría romperse, lo cual no es tan fácil si te alejas de tu teléfono mientras se dan bolos y se cocina. 
-- Combo vibra cuando termina una basal temporal, la DanaR vibra (o hace sonido) con SMB. Por la noche, preferirás usar TBR sobre SMB.  DanaRS se puede configurar para que ni haga sonido ni vibre.
-- Leyendo el histórico de la bomba Dana RS en unos segundo junto con los carbohidratos hace posible cambiar fácilmente entre modo offline y continuar el lazo cerrado en cuanto tenga datos de MCG.
+- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Por la noche, preferirás usar TBR sobre SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio. 
 
 Fuentes de datos de glucemia (BG)
 --------------------------------------------------
 Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Funciona con la aplicación xDrip+ ó con la aplicación Dexcom parchada
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Se trabaja con app xDrip+ 'o app parchada Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Estos sensores son bastante antiguos, pero puede encontrar instrucciones sobre cómo usarlos con la aplicación xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funciona con xDrip+ (no se necesita ningún transmisor), pero tienes que construir tu propia aplicación parchada.
