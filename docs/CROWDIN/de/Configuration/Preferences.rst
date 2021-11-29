@@ -49,7 +49,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  ** Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
