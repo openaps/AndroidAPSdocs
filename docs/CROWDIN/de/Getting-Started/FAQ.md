@@ -328,7 +328,7 @@ Wenn du Alkohol trinkst musst du immer dein CGM im Blick haben, um eine Hypoglyk
 
 #### Wie kann ich nachts loopen, ohne Handy- und WLAN-Strahlung ausgesetzt zu sein?
 
-Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
 
 1. Aktiviere im Handy den Flugzeugmodus.
 2. Warte, bis der Flugzeugmodus aktiv ist.
