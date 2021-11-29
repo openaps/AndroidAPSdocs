@@ -59,7 +59,7 @@ Cambios
 ----------------------
 * XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
 * Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* Soporte para Dana-i @MilosKozak
+* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Soporte para DiaconnG8
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
