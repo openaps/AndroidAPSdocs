@@ -326,7 +326,7 @@ Cuando bebas alcohol debes estar pendiente de tu sensor para evitar, manualmente
 
 #### ¿Cómo puede funcionar por la noche sin radiación del móvil ni radiación WIFI?
 
-Muchos usuarios ponen el teléfono en modo de avión por la noche. Si quieres que el lazo funcione mientras estás durmiendo, haz lo siguiente (ésto solo sirve si AAPS recibe los datos de una fuente local, como por ejemplo xDrip+ o la app parcheada de Dexcom, esto NO sirve si recibes los datos vía Nightscout):
+Muchos usuarios ponen el teléfono en modo de avión por la noche. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activa el modo avión en tu móvil.
 2. Espera hasta que el modo avión esté activo.
