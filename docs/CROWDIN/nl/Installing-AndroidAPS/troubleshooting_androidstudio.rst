@@ -74,7 +74,7 @@ Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw com
 Geen CGM gegevens
 ==================================================
 * Wanneer je xDrip+ gebruikt: Ontvanger identificeren zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html##identificeer-ontvanger-identify-receiver>`_.
-* Wanneer je de `aangepaste Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Zorg dat je de juiste versie uit de `2.4 map <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ gebruikt.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Uncommitted changes (Niet-opgenomen wijzigingen)
 ==================================================

@@ -60,7 +60,7 @@ Android 7
 ----------------------
 * Изменены XXXXk строки, XXXXk новые строки кода
 * Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* Поддержка Dana-i @MilosKozak
+* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Поддержка DiaconnG8
 * Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
@@ -75,7 +75,13 @@ Android 7
 
 * Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
-* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak. Для обновления профиля из NS используйте команду "клонировать" ( "Clone") (записи!!!, не сам профиль) и сохраните изменения. Вы должны увидеть "Профиль действителен с:" текущей даты
+* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak. 
+
+   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+
+   .. image:: ../images/NS_ProfileClone.png
+      :alt: Nightscout profile editor
+   
 * Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul

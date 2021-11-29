@@ -12,7 +12,7 @@
 * Используйте [](https://developer.android.com/studio/) Android Studio версии 4.1.1 или новее для построения apk.
 * [Windows 10 для 32-разрядных систем](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) не поддерживается в Android Studio 4.1.1.
 * Если вы используете xDrip, [identify the receiver](../Configuration/xdrip#identify-receiver).
-* Если вы используете Dexcom G6 с модифицированным приложением [Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) вам понадобится версия из папки [2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Пошаговая инструкция для опытных пользователей
 
@@ -23,7 +23,7 @@
 1. [ Экспортируйте параметры ](../Usage/ExportImportSettings#export-settings) из существующей версии AAPS на вашем телефоне, чтобы обезопасить себя
 2. [ Обновите локальную копию ](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS-> Git-> Pull)
 3. [ Создайте подписанное APK ](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Выберите 'app', а не 'wear' на своем пути!)
-4. В зависимости от источника ГК [BG source](../Configuration/BG-Source.rst) убедитесь, что [identify receiver](../Configuration/xdrip#identify-receiver) отмечен в xDrip или используйте модифицированное приложение Dexcom из [папки 2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Установите git (если у вас его нет)
 

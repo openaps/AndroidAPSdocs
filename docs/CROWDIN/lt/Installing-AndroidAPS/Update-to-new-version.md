@@ -12,7 +12,7 @@
 * Please use [Android Studio Version 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 * [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.1.1.
 * Jei naudojate xDrip įsitikinkite, kad [nustatote gavėją](../Configuration/xdrip#identify-receiver).
-* Jei naudojate Dexcom G6 su [modifikuota Dexcom programa](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), jums reikės versijos iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Trumpas vadovas patyrusiems vartotojams
 
@@ -23,7 +23,7 @@ If you have already updated AAPS from previous versions and use a Windows PC you
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Atnaujinkite vietinę kopiją](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [Generuokite pasirašomąAPK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (Pasirinkite "app", o ne "wear"!)
-4. Priklausomai nuo jūsų [KG šaltinio](../Configuration/BG-Source.rst), įsitikinkite, kad [nustatytas gavėjas](../Configuration/xdrip#identify-receiver) xDrip arba naudoti modifikuotą Dexcom programą iš [2.4 aplanko](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Įdiegti git (jei neturite)
 

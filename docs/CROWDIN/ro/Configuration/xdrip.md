@@ -51,7 +51,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J se va folosi un
 
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 * When using xDrip+ as receiver uninstall Dexcom app first. **Transmiţătorul NU POATE FI conectat simultan cu xDrip+ si aplicatia Dexcom**
-* Dacă ai nevoie de Clarity şi doresti si alarmele xDrip+ poti folosi [patched Dexcom app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) cu distribuire locală la xDrip +.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Versiunea xDrip+ în funcție de seria transmitatorului G6.
 

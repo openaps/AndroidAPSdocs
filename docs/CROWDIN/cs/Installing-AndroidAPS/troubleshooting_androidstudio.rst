@@ -74,7 +74,7 @@ Na internetu existuje spousta manuálů, jak zjistit, zda máte 32bitový nebo 6
 Nejsou dostupná data z CGM
 ==================================================
 * V případě, že používáte xDrip+: Proveďte identifikaci vysílače tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
-* V případě, že používáte `upravenou aplikaci Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Ujistěte se, že používáte správnou verzi ze složky `2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Neprovedené změny
 ==================================================

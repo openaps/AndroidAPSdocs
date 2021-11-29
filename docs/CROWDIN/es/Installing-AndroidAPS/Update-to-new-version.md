@@ -12,7 +12,7 @@
 * Utilice [Android Studio Versión 4.1.1](https://developer.android.com/studio/) o más reciente para crear el apk.
 * [Windows 10 sistemas de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 4.1.1.
 * Si está utilizando xDrip, asegúrese de que [identifique el receptor](../Configuration/xdrip#identify-receiver).
-* Si utiliza Dexcom G6 con el [parcheado de la aplicación Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) necesitará la versión de la carpeta [carpeta 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+* You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Rápido acceso a los usuarios experimentados
 
@@ -23,7 +23,7 @@ If you have already updated AAPS from previous versions and use a Windows PC you
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone to be on the save side
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) (VCS->Git->Pull)
 3. [Genera APK firmado](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk) (¡selecciona 'app' en vez de 'reloj' en tu camino!)
-4. Dependiendo de su [BG source](../Configuration/BG-Source.rst), asegúrese de que [identifique el receptor](../Configuration/xdrip#identify-receiver) en xDrip o utilice la aplicación Dexcom parchada de la carpeta [carpeta 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Instalar git (si no lo tienes ya)
 

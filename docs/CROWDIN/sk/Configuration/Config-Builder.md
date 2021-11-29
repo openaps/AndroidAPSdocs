@@ -150,7 +150,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Select the pump you are using.
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * [Medtronic](MedtronicPump.md)

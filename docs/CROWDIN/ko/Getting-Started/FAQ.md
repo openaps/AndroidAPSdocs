@@ -326,7 +326,7 @@ Pre- and post-processing of these settings is important. 운동 전 미리 이�
 
 #### 전화통화 및 WIFI 사용 없이 야간에 Loop를 어떻게 작동할 수 있습니까?
 
-많은 사용자들이 야간에 폰을 비행기모드로 전환합니다. 수면중에 Loop 실행을 원한다면, 다음과 같이 진행하세요 (이 방법은 오직 xDrip+ 혹은 패치된 덱스콤 앱과 같은 로컬 혈당 소스만 사용가능하며, Nightscout로 부터 혈당을 받아오는 것은 불가능합니다):
+많은 사용자들이 야간에 폰을 비행기모드로 전환합니다. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. 폰에서 비행기모드를 작동합니다.
 2. 비행기모드 활성화될때까지 기다립니다.

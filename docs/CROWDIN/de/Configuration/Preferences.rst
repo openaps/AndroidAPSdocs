@@ -49,7 +49,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  ** Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -405,7 +405,7 @@ Alarm-Optionen
 * In den Alarm-Optionen legst Du fest, welche Standard-Nightscout-Alarme in AAPS angezeigt werden sollen.  
 * Damit die Alarme ausgelöst werden können, musst Du in den `Heroku Variablen <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_ Werte für Urgent High, High, Low und Urgent Low Alarme setzen. 
 * Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht. 
-* Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
+* Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder BYODA [Build your own dexcom app]) verwende stattdessen die Alarme dieser App.
 
 Erweiterte Einstellungen (Nightscout-Client)
 -----------------------------------------------------------

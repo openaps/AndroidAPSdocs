@@ -453,7 +453,7 @@ Istoricul următoarelor tratamente:
 * [Schimbare de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notițe introduse prin intermediul paginii de acțiuni și notițe în dialoguri
 
-## BG Source - xDrip, Dexcom App (patched)...
+## BG Source - xDrip+, BYODA...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 

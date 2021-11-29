@@ -44,7 +44,7 @@ Wichtige Hinweise
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ wird auch empfohlen, um von der rückwirkenden Glättung der Dexcom App zu profitieren.
 * Es gibt einen Fehler in der OrangeLink 3.2 Firmware, der die Arbeit mit AAPS verhindert. Führe ein Downgrade auf 2.5 durch, falls Du betroffen sein solltest.
 * Geändertes Verhalten: Kohlenhydrate werden nur aufgezeichnet, wenn der Bolus erfolgreich abgegeben werden konnte.
 
@@ -53,13 +53,13 @@ Vorbereitende Schritte
 * Spätestens zwei Tage vor dem Update:
 
    * Deaktiviere Dexcom Bridge in Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
+   * Falls Du den Dexcom G5 oder G6 verwendest, wechsle zur `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ (im Fall, dass Du bisher xDrip+ nutzt). Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
 
 Änderungen
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
 * Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
-* Unterstützung für Dana-i @MilosKozak
+* Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * * Unterstützung für DiaconnG8
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
@@ -74,7 +74,13 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. 
+
+   Um ein auf Deiner Nightscout Seite erstelltes Profil nach AndroidAPS zu übernehmen, verwende 'Clone' in den NS-Profil-Einstellungen. Stelle sicher, dass Du den 'Datenbank-Eintrag' und nicht das 'gesicherte Profil' im 'Profil-Editor' auf Deiner Nightscout Webseite klonst. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
+
+   .. image:: ../images/NS_ProfileClone.png
+      :alt: Nightscout Profil Editor
+   
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul

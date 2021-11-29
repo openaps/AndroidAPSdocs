@@ -150,7 +150,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 * Glycémie NSClient
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
-* [App Dexcom (patché)](https://github.com/dexcomapp/dexcomapp/) - Sélectionnez "Envoyer des données Gly à xDrip+" si vous voulez utiliser des alarmes xDrip+.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Sélectionner la pompe que vous utilisez.
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR coréenne (pour la pompe DanaR domestique)
 * DanaRv2 (pompe DanaR avec mise à niveau du firmware non officiel)
-* [DanaRS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (nécessite l'installation de ruffy)
 * [Medtronic](MedtronicPump.md)

@@ -182,10 +182,10 @@ Freestyle Libre 2
 
 Если датчик сдвинется немного на коже или каким-то образом поднимется это может привести к плохим результатам. Если нить сенсора немного вышла из ткани, это приведет к неверным результатам. Скорее всего вы увидите скачущие данные в xDrip +. Или к изменению значений ГК. В этом случае немедленно замените сенсор! Т.к. результаты неточны.
 
-Using bluetooth transmitter and OOP
+Использование трансмиттера блутус and OOP
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Please refer to the miaomiao website to find a description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
+Трансмиттер bluetooth может применяться в Libre2 с новейшими версиями приложения xDrip+ и приложением OOP для Libre2. Данные ГК будут поступать каждые 5 минут, так же как и с Libre1. Для получения описания обратитесь к сайту miaomiao. Аналогично и с устройством Bubble и в будущем с другими трансмиттерами. Blucon должен работать, но еще не тестировался.
 
 Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 

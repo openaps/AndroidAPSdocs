@@ -326,7 +326,7 @@ Atunci când consumați alcool, trebuie să fiți întotdeauna atent la CGM pent
 
 #### Cum pot să fac buclă în timpul nopții fără radiații mobile sau WIFI?
 
-Mulţi utilizatori activează modul avion pe timp de noapte. Dacă doriţi ca bucla să vă ajute atunci când dormiţi, procedați după cum urmează (aceasta va funcționa doar cu o sursă locală de glicemie, cum ar fi xDrip+ sau aplicația Dexcom modificată, NU va funcționa dacă obțineți citirile de glicemie prin Nightscout):
+Mulţi utilizatori activează modul avion pe timp de noapte. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activați modul avion în telefon.
 2. Aşteptaţi până când modul avion este activ.

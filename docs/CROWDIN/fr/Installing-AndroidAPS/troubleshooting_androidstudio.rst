@@ -74,7 +74,7 @@ Il y a beaucoup de liens sur Internet pour déterminer si vous avez un système 
 Aucune donnée MGC
 ==================================================
 * Si vous utilisez xDrip+ : identifiez le récepteur comme c'est indiqué dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identifier-le-recepteur>`_.
-* Si vous utilisez `l'application Dexcom G6 patchée <../latest/Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ : Assurez vous que vous utilisez bien la version provenant du `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Modifications non validées
 ==================================================
