@@ -23,7 +23,7 @@ Dexcom G6를 xdrip+와 사용하는 경우
 ==================================================
 * 덱스콤 G6 트랜스미터는 덱스콤 리시버 (또는 t:slim 펌프로 대체 가능)과 한 개의 핸드폰 앱에 동시 연결할 수 있습니다.
 * xDrip+를 리시버로 사용하는 경우 Dexcom 공식 앱을 먼저 제거합니다. ** 트랜스미터로 xDrip+와 Dexcom 공식 앱에 동시 연결은 할 수 없습니다! **
-* Clarity가 필요하고 xDrip+ 알람 사용을 원하는 경우, '덱스콤 앱(패치버전)<../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>'을 xDrip+에 로컬 브로드캐스트로 연결하여 사용하십시오.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Dexcom G6를 xdrip+와 사용하는 경우
 
 Dexcom G6를 직접 빌드한 덱스컴 앱과 사용하는 경우
 ==================================================
-* 2020년 12월에 나온 "직접 덱스컴 앱을 빌드하기<https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` (Build Your Own Dexcom App; BYODA)는 AAPS 와/또는 xDrip+에 로컬 브로드캐스트 연결을 지원합니다(G5 센서는 아님).
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * 이 앱은 덱스콤 G6를 모든 종류의 안드로이드 스마트폰과 함께 사용 가능하도록 해줍니다.
 * 이전에 덱스콤 공식앱 또는 덱스콤 앱(패치버전)을 사용하셨으면 제거하십시오.
 * 다운로드 한 apk를 설치합니다.
 * 센서 코드 및 트랜스미터 일련 번호를 앱 (패치버전)에서 입력하십시오.
 * 휴대폰 설정에서 앱 > 덱스콤 G6 > 사용권한 > 추가 권한에서 '덱스콤 앱에 엑세스하기'를 누르십시오.
-* 짧은 시간 안에 앱 (패치버전)은 트랜스미터 신호를 인식합니다. (인식하지 못할 경우 센서를 중지하고 새 센서를 시작해야 합니다.)
+* After short time BYODA should pick-up transmitter signal. (인식하지 못할 경우 센서를 중지하고 새 센서를 시작해야 합니다.)
 
 AndroidAPS에 대한 설정
 --------------------------------------------------
