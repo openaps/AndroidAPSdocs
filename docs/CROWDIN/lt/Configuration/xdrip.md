@@ -51,7 +51,7 @@ Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, ga
 
 * Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
 * Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
-* Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia [modifikuotos Dexcom programos](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip+ versija, priklausomai nuo to G6 siųstuvo serijos nr.
 
