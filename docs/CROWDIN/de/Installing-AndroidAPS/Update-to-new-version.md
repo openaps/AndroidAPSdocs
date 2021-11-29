@@ -12,7 +12,7 @@
 * Nutze bitte [Android Studio Version 4.1.1](https://developer.android.com/studio/) oder neuer, um die APK-Datei zu erstellen.
 * [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 4.1.1 nicht unterstützt.
 * Wenn Du xDrip verdwendet, stelle sicher, dass [identifiziere Empfänger](../Configuration/xdrip#identifiziere-empfanger) gesetzt ist.
-* You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
+* Du kannst Dexcom G6 auch mit der ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) verwenden.
 
 ## Kurzanleitung für erfahrene Anwender
 
@@ -23,7 +23,7 @@ Wenn Du AAPS bereits in früheren Versionen aktualisiert hast und einen Windows-
 1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone, um auf der sicheren Seite zu sein.
 2. [Aktualisiere Deine lokale Kopie](../Installing-AndroidAPS/Update-to-new-version#fuhre-ein-update-deiner-lokalen-version-durch) (VCS->Git->Pull)
 3. [Erstelle die signierte APK-Datei](../Installing-AndroidAPS/Update-to-new-version#signierte-apk-erstellen-generate-signed-apk) (Generate signed APK - Wähle dabei 'app' statt 'wear' im Dialogfeld!)
-4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
+4. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.rst) sicher, dass Du ['identify receiver'](../Configuration/xdrip#identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app).
 
 ## Installiere git (falls du es noch nicht hast)
 
