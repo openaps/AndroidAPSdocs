@@ -74,7 +74,7 @@ Im Internet findest Du viele Anleitungen, wie Du herausfinden kannst, ob Du ein 
 Fehlende CGM-Daten
 ==================================================
 * Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
-* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen `BYODA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ .
 
 Uncommitted changes
 ==================================================
