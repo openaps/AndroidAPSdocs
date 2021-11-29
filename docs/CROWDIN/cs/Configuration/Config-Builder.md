@@ -150,7 +150,7 @@ Vyberte, který zdroj glykémií používáte – další informace k nastavení
 * Glykémie z NS
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - jsou podporovány pouze verze 4.15.57 a novější
-* [Aplikace Dexcom G (upravená)](https://github.com/dexcomapp/dexcomapp/) – chcete-li používat alarmy xDrip+, vyberte v nastavení „Odesílat glykémie do xDrip+“.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Konfigurace zdroje BG](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Vyberte kterou pumpu používáte.
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
 * Dana Rv2 (DanaR s neoficiálním upgradem firmwaru)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu-Check Combo](Accu-Chek-Combo-Pump.md) (vyžaduje nainstalovanou aplikaci Ruffy)
 * [Medtronic](MedtronicPump.md)
