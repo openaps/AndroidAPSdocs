@@ -59,7 +59,7 @@ Vorbereitende Schritte
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
 * Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * * Unterstützung für DiaconnG8
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
@@ -76,10 +76,10 @@ Vorbereitende Schritte
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
 * Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. 
 
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+   Um ein auf Deiner Nightscout Seite erstelltes Profil nach AndroidAPS zu übernehmen, verwende 'Clone' in den NS-Profil-Einstellungen. Stelle sicher, dass Du den 'Datenbank-Eintrag' und nicht das 'gesicherte Profil' im 'Profil-Editor' auf Deiner Nightscout Webseite klonst. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 
    .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
+      :alt: Nightscout Profil Editor
    
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
