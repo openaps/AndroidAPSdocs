@@ -23,7 +23,7 @@ Jei naudojate G6 su xDrip+
 ==================================================
 * Dexcom G6 siųstuvą galima vienu metu sujungti su Dexcom imtuvu (arba alternatyviai su t:slim pompa) ir mobiliojo telefono programa.
 * Jei naudojate xDrip+ glikemijos duomenims gauti, pirmiausia pašalinkite Dexcom programą. **Negalite vienu metu prijungti xDrip+ ir Dexcom programos prie vieno siųstuvo!**
-* Jei jums reikia Clarity programos ir vis tiek norite naudotis xDrip+ aliarmais, jums reikia `modifikuotos Dexcom programos <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ su įjungta lokalaus duomenų perdavimo funkcija į xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * Jei dar to nepadarėte, atsisiųskite xDrip <https://github.com/NightscoutFoundation/xDrip> _ir vykdykite Nightscout instrukcijas (G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>_).
 * Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Jei naudojate G6 su xDrip+
 
 If using G6 with Build Your Own Dexcom App
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA)also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * This app lets you use your Dexcom G6 with any Android smartphone.
 * Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
 * Įdiekite atsisiųstą apk
 * Enter sensor code and transmitter serial no. in patched app.
 * In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
-* After short time patched app should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+* After short time BYODA should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
 Settings for AndroidAPS
 --------------------------------------------------
