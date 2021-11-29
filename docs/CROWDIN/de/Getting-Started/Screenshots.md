@@ -453,7 +453,7 @@ Historie der folgenden Behandlungen:
 * [Profilwechsel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-eingestellt) - Notizen eingegeben durch Aktions-Tab und Notizen in Dialogen
 
-## BG Source - xDrip+, BYODA...
+## BZ-Quelle - xDrip+, BYODA...
 
 ![Tab BG-Quelle - hier xDrip+](../images/Screenshots_BGSource.png)
 
