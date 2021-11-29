@@ -74,7 +74,13 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde NS usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
+* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. 
+
+   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+
+   .. image:: ../images/NS_ProfileClone.png
+      :alt: Nightscout profile editor
+   
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
