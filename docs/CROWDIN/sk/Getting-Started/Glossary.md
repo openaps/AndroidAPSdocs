@@ -89,6 +89,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td><strong>BYODA</strong></td>
+ <td>'Build your own Dexcom App'</td>
+ <td>&nbsp;</td>
+ <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
+</tr>
+<tr>
  <td><strong>CAGE</strong></td>
  <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
  <td>Nightscout</td>
