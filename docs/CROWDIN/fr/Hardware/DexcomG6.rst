@@ -23,7 +23,7 @@ Si vous utilisez le G6 avec xdrip+
 ==================================================
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter en même temps xDrip+ et l'application Dexcom avec le transmetteur !**
-* Si vous avez besoin de clarté et que vous voulez profiter des alertes xDrip+, utilisez `l'application Dexcom patchée <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ avec la diffusion locale vers xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Si vous utilisez le G6 avec xdrip+
 
 Si vous utilisez G6 avec votre propre application Dexcom
 ==================================================
-* Depuis Décembre 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) prend également en charge la diffusion locale vers AAPS et/ou xDrip+ (sauf pour les capteurs G5 !)
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * Cette application vous permet d'utiliser votre Dexcom G6 avec n'importe quel smartphone Android.
 * Désinstallez l'application Dexcom d'origine ou l'application Dexcom patchée si vous en avez utilisé une auparavant.
 * Installez l'apk téléchargé
 * Entrez le code du capteur et le numéro de série du transmetteur dans l'application patchée.
 * Dans les paramètres du téléphone, allez dans Applications > Dexcom G6 > Autorisations > Autorisations supplémentaires et appuyez sur 'Access Dexcom app'.
-* Après une courte période l'application patchée devrait recevoir le signal du transmetteur. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
+* After short time BYODA should pick-up transmitter signal. (Si ce n'est pas le cas, vous devrez arrêter le capteur et en démarrer un nouveau.)
 
 Paramètres pour AndroidAPS
 --------------------------------------------------
