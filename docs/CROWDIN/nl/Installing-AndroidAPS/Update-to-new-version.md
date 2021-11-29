@@ -12,7 +12,7 @@
 * Gebruik [](https://developer.android.com/studio/)Android Studio Versie 4.1.1 of nieuwer om de apk te bouwen.
 * [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 4.1.1.
 * Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
-* Als je de Dexcom G6 gebruikt met de [aangepaste Dexcom-app](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app), dan moet je de versie uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruiken.
+* You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Snelle methode voor ervaren gebruikers
 
@@ -23,7 +23,7 @@ Als je AAPS al eerder hebt bijgewerkt en je hebt een Windows-PC gebruikt, kun je
 1. [Exporteer jouw instellingen](../Usage/ExportImportSettings#instellingen-exporteren) voor de zekerheid. Mocht er iets misgaan met bijwerken, dan ben je in ieder geval niet jouw AAPS instellingen kwijt.
 2. [Lokale kopie bijwerken](../Installing-AndroidAPS/Update-to-new-version#bijwerken-van-jouw-lokale-kopie) (VCS-> Git-> Pull)
 3. [Ondertekende APK genereren](../Installing-AndroidAPS/Update-to-new-version#bouwen-van-de-ondertekende-apk) (Vergeet onderweg niet om 'app' in plaats van 'wear' te selecteren!)
-4. Afhankelijk van jouw [BG-bron](../Configuration/BG-Source.rst), zorg dat je bij xDrip+ de [Identify receiver](../Configuration/xdrip#identificeer-ontvanger-identify-receiver) hebt ingesteld, of zorg dat je de aangepaste Dexcom-app uit de [2.4 map](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) gebruikt.
+4. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
 ## Installeer Git (als je dat nog niet hebt)
 
