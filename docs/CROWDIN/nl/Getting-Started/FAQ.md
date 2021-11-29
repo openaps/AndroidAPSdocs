@@ -326,7 +326,7 @@ Bij het drinken van alcohol moet je altijd je CGM in de gaten houden, om op tijd
 
 #### Hoe kan ik 's nachts closed loopen zonder mobiele of WIFI straling?
 
-Veel gebruikers zetten 's nachts hun telefoon in vliegtuigmodus. Wanneer je wilt dat de loop werkt in vliegtuigmodus, volg dan deze stappen (dit werkt alleen als je een locale BG-bron hebt zoals xDrip+ of de gepatchte Dexcom app, het werkt NIET wanneer jouw BG-waardes via Nightscout binnenkomen):
+Veel gebruikers zetten 's nachts hun telefoon in vliegtuigmodus. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Zet de telefoon in vliegtuigmodus.
 2. Wacht totdat de vliegtuigmodus actief is.
