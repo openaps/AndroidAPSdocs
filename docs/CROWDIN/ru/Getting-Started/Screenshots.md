@@ -453,7 +453,7 @@
 * [Profile switch/смена профиля](../Usage/Profiles.md)
 * [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 
-## Источник ГК -xDrip, приложение Dexcom (модифицированное)...
+## BG Source - xDrip+, BYODA...
 
 ![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
 
