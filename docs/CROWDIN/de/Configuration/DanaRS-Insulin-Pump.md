@@ -1,54 +1,54 @@
-# DanaRS and Dana-i Pump
+# DanaRS und Dana-i Pumpe
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
+*Diese Anleitung beschreibt die Einrichtung der App und Deiner Pumpe, wenn du eine Dana RS (ab 2017) oder die neuere Dana-i verwendest. Gehe zu [DanaR Insulinpumpe](./DanaR-Insulin-Pump) wenn du die Original DanaR benutzt.*
 
 **Die neue Dana RS Firmware v3 wird ab AAPS-Version 2.7 unterstützt.**
 
-**New Dana-i can be used from AndroidAPS version 3.0 onwards.**
+**Die neue Dana-i kann ab AndroidAPS Version 3.0 verwendet werden.**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+* Bei der DanaRS und Dana-i wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
 ## Pumpe verbinden
 
-* On AndroidAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* Klicke auf dem AndroidAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
+* Wähle 'Dana-i/RS' im Abschnitt Pumpe.
+* Über das Zahnrad erreichst Du die Pumpeneinstellungen direkt oder Du wählst den Weg über den Startbildschirm.
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![AAPS Konfigurations-Generator Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* Gehe zum 'DANA-i/RS' Tab.
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* Wähle das Einstellungsmenü. Klicke dazu auf die drei Punkte rechts oben. 
+* Wähle die 'Dana-i/RS Einstellungen'.
+* Klicke auf "Ausgewählte Pumpe"
+* Im Fenster zum Kopplungsprozess ('Pairing') klicke auf den Eintrag Deiner Pumpe.
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![Dana-i/RS mit AndroidAPS verbinden](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Du musst die Verbindung auf der Pumpe bestätigen!** Das funktioniert genau gleich wie Du es von der Verbindung Deines Smartphones mit anderen Bluetooth-Geräten wie z.B. Bluetooth-Kopfhörern kennst.
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Bestätigung der Verbindung auf der Dana RS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Der Kopplungsprozess unterscheidet sich abhängig vom Pumpentyp und Firmware:
     
-    * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AndroidAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * Für DanaRS v1 wähle das Pumpenpasswort in den Einstellungen und gibt Dein Passwort ein.
+    * Für DanaRS v3 musst Du zwei Zahlenfolgen und Buchstaben in den AndroidAPS-Paarungsdialog eingeben, die auf der Pumpe angezeigt werden.
+    * Für Dana-i wird der Standard-Android-Kopplungsdialog angezeigt und Du musst eine 6-stellige Nummer, die im Pumpendisplay angezeigt wird, eingeben.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide).
-* Erlaube die Vewendung von verlängerten Boli auf der Pumpe
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die BASALschritte auf 0,01 IE/h.
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die BOLUSschritte auf 0,01 IE/h.
+* Aktiviere verzögerten Bolus in der Pumpe.
 
 ### Standard-Passwort
 
 * Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24).
+* Für die DanaRS mit Firmware v3 oder Dana-i wird das Standard-Passwort durch die Kombination von Produktionsmonat und Produktionsdatum gebildet (z.B. Monat 01 und Tag 24).
     
-    * Open main menu on pump > review > information. 
-    * Number 3 is production date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+    * Öffne auf der Pumpe das Hauptmenü > Prüfen > Geräte Info. 
+    * Nummer 3 ist das Produktionsdatum. 
+    * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. Es wird nicht für die Kommunikation verwendet und muss daher nicht in AndroidAPS eingegeben werden.
 
 ## Passwort auf Pumpe ändern
 
@@ -91,9 +91,9 @@
 
 ### Fehler bei der Insulinabgabe
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
@@ -102,22 +102,22 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
 
-When switching to a new phone the following steps are necessary:
+Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 * [Exportiere die Einstellungen](../Usage/ExportImportSettings#export-settings) auf Deinem alten Smartphone
-* Transfer settings from old to new phone
+* Übertrage die Einstellungen vom alten auf das neue Smartphone.
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
+* Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
+* Installiere AndroidAPS auf dem neuen Smartphone.
+* [Importiere die Einstellungen](../Usage/ExportImportSettings#importiere-die-einstellungen) auf Deinem neuen Smartphone
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
+* Starte den Kopplungsprozess wie [oben](#pumpe-verbinden) beschrieben.
+* Manchmal kann es notwendig sein, die Kopplung von AndroidAPS zu löschen, indem Du auf dem Dana-i/RS Tab auf das Bluetooth-Symbol drückst.
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
