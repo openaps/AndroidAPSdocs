@@ -45,7 +45,6 @@ Wichtige Hinweise
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
 * Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ wird auch empfohlen, um von der rückwirkenden Glättung der Dexcom App zu profitieren.
-* Es gibt einen Fehler in der OrangeLink 3.2 Firmware, der die Arbeit mit AAPS verhindert. Führe ein Downgrade auf 2.5 durch, falls Du betroffen sein solltest.
 * Geändertes Verhalten: Kohlenhydrate werden nur aufgezeichnet, wenn der Bolus erfolgreich abgegeben werden konnte.
 * This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
 
