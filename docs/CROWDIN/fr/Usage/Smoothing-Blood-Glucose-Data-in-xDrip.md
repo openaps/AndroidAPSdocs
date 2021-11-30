@@ -6,7 +6,7 @@ Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'i
 
 ### Build Your Own Dexcom App
 
-When using [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
+When using [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. Il n'y a aucune restriction à utiliser les SMB.
 
 ### xDrip+ with Dexcom G5 or G6
 
@@ -14,7 +14,7 @@ Les glycémies ne sont suffisament lissées avec XDrip+ et G5 que si vous utilis
 
 ### Dexcom G5 App (patched)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. Il n'y a aucune restriction à utiliser les SMB.
 
 ## Freestyle Libre sensors
 
