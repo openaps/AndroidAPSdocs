@@ -47,6 +47,7 @@ Conseils importants
 * Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
 * Il y a un bug dans le firmware 3.2 d'OrangeLink empêchant la communication avec AAPS. Rétrograder le FW à 2.5 si vous êtes affecté
 * Changement de fonctionnement: les glucides ne sont enregistrés que si l'injection du bolus a réussi
+* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
 
 Etapes de préparation
 ----------------------
