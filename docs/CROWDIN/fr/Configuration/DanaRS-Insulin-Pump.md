@@ -37,18 +37,18 @@
 
 * Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide).
+* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu Médecin (voir le guide de l’utilisateur de la pompe).
+* Régler l'incrément Bolus sur la pompe à 0,01 U/h en utilisant le menu de Médecin (voir le guide de l’utilisateur de la pompe).
 * Activez les Bolus Étendus sur la pompe
 
 ### Mot de passe par défaut
 
 * Pour les DanaRS avec le firmware v1 et v2, le mot de passe par défaut est 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24).
+* Pour la DanaRS avec le firmware v3 ou la Dana-i, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24).
     
-    * Open main menu on pump > review > information. 
-    * Number 3 is production date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+    * Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. 
+    * Le numéro 3 est la date de production. 
+    * Pour v3/i, ce mot de passe est utilisé uniquement pour verrouiller le menu sur la pompe. Il n'est pas utilisé pour la communication et il n'est pas nécessaire de le saisir dans AndroidAPS.
 
 ## Changer de mot de passe sur la pompe
 
@@ -105,14 +105,14 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
 * [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
-* Transfer settings from old to new phone
+* Transférez les paramètres de l'ancien vers le nouveau téléphone
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* **Appairer manuellement** DanaRS avec le nouveau téléphone
+* Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
+* Installez AndroidAPS sur le nouveau téléphone.
+* [Importer les paramètres](../Usage/ExportImportSettings#importer-les-parametres) sur votre nouveau téléphone
 
 ### DanaRS v3, Dana-i
 
