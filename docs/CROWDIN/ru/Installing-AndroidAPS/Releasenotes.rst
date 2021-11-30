@@ -48,6 +48,7 @@ Android 7
 * Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
 * В прошивке OrangeLink 3.2 обнаружена ошибка, препятствующая работе с AAPS. Следует перепрошить устройство на версию 2.5
 * Изменение поведения: углеводы записываются только если болюс подан успешно
+* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
 
 Этапы подготовки
 ----------------------
