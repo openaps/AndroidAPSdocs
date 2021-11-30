@@ -95,76 +95,76 @@
  <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td><strong>AgeC</strong></td>
+ <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
  <td>status light overdue cannula change on homescreen</td>
- <td>BAT / RES / SEN</td>
+ <td>INS / RES / SEN / BAT</td>
  <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
  <td><strong>MGC</strong></td>
- <td>continuous glucose monitor</td>
+ <td>Mesure de Glycémie en Continue</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Boucle Fermée</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td>les systèmes à boucle fermée font les réglages du débit de base automatiquement, sans avoir besoin de l'approbation de l'utilisateur, en se basant sur un algorithme</td>
+ <td>Boucle Ouverte</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - boucle fermée</a></td>
 </tr>
 <tr>
- <td><strong>COB</strong></td>
- <td>carbs on board</td>
+ <td><strong>GA</strong></td>
+ <td>Glucides Actifs</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>DAI</strong></td>
- <td>duration of insulin action</td>
+ <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Docs - types d'insulines</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
- <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td><strong>heure d'été</strong></td>
+ <td>changement d'heure</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - heure d'été</a></td>
 </tr>
 <tr>
- <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td><strong>eGLUC</strong></td>
+ <td>"Glucides Etendus" - glucides mettant plusieurs heures à être assimilés (notamment avec beaucoup de graisses ou de protéines)<br>les bolus étendus que vous pourriez connaître da,s le cas d'une thérapie sous pompe à insuline n'ont pas beaucoup d'intérêt dans le cas d'une boucle fermée</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
- <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td><strong>MGF</strong></td>
+ <td>Mesure de Glycémie Flash (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>système de contrôle des versions pour le suivi des modifications dans les fichiers informatiques et la coordination des travaux sur les fichiers <br>-> nécessaire pour les mises à jour de l'APK</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - mettre à jour le fichier APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>service d'hébergement web pour le contrôle de version utilisant Git<br>-> stockage du code source de AAPS</td>
  <td>&nbsp;</td>
  <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>application pour récupérer les glycémies du Freestyle Libre</td>
  <td>&nbsp;</td>
- <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout with Glimp</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout avec Glimp</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
@@ -173,19 +173,19 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td><strong>IC (or I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td><strong>G/I (IC)</strong></td>
+ <td>ratio Glucide / Insuline (combien de glucides sont couverts par une unité d'insuline ?)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>IOB</strong></td>
- <td>insulin on board -  insulin active in your body</td>
+ <td><strong>IA</strong></td>
+ <td>Insuline Active dans votre corps</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>ISF</strong></td>
+ <td><strong>SI Sensibilité Insuline</strong></td>
  <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -306,7 +306,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
+ <td>dispositif matériel open source pour connecter le Bluetooth Low Energy (BLE) à 916MHz (utilisé pour les anciennes pompes Medtronic) ou 433MHz (utilisé pour les pompes Omnipod Eros) sans fil</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
