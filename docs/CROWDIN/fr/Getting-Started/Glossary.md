@@ -90,7 +90,7 @@
 </tr>
 <tr>
  <td><strong>BYODA</strong></td>
- <td>'Build your own Dexcom App'</td>
+ <td>'Construire votre propre application Dexcom patchée'</td>
  <td>&nbsp;</td>
  <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
 </tr>
@@ -198,7 +198,7 @@
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>Système d'exploitation gratuit et open-source pour les smartphones, etc. <br>OS alternatifs pour les smartphones ne fonctionnant pas avec Android 8.1 (Oreo)<br> (lors de l'utilisation de Accu-Chek Combo)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pompe Combo</a></td>
 </tr>
@@ -264,7 +264,7 @@
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>détection de sensibilité<br>"implémentation de la conception de référence version 0/1" - l'algorithme clé derrière OpenAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - détection de sensibilité</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profil</a></td>
 </tr>
@@ -311,61 +311,61 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td><strong>AgeC</strong></td>
+ <td>âge du capteur - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>status light sensor change on homescreen</td>
- <td>BAT / CAN / RES</td>
+ <td>alerte de changement de capteur sur l'écran d'accueil</td>
+ <td>CAN / INS / RES / BAT</td>
  <td><a href="../Configuration/Preferences.html#apercu"> Préférences </a> <br> <a href="../Getting-Started/Screenshots.html"> Copie d'écran </a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Détection de sensibilité</strong></td>
  <td>calcul de la sensibilité à l'insuline (pouvant varier selon l'exercice physique, les hormones etc).</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td><strong>Sensor noise</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td><strong>Bruit Capteur</strong></td>
+ <td>lectures MGC instables conduisant à des "sauts" de glycémies</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - bruit capteur</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>Super Micro Bolus<br>fonction avancée pour un ajustement de la glycémie plus rapide</td>
  <td>RNS (UAM)</td>
- <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki RNS</a></td>
 </tr>
 <tr>
  <td><strong>Super bolus</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td>transfert de l'insuline de base vers le bolus pour accélérer la correction de glycémie</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
+ <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - Le Super Bolus</a></td>
 </tr>
 <tr>
- <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td><strong>DTB (TBB)</strong></td>
+ <td>Débit Total de Base (somme des débits de base sur 24 heures</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>DBT (TBR)</strong></td>
+ <td>Débit de Base Temporaire</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>DTI</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td>Dosage Total d'Insuline (bolus + base par jour)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
+ <td><strong>CT</strong></td>
  <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
@@ -374,7 +374,7 @@
  <td><strong>RNS (UAM)</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki SMB</a></td>
 </tr>
 <tr>
  <td><strong>Virtual pump</strong></td>
