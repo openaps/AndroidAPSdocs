@@ -47,6 +47,7 @@ Notas importantes
 * Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
 * Existe un problema con el firmware OrangeLink 3.2 que impide que trabaje con AAPS. Baja al FW 2.5 si estás afectado con este problema.
 * Cambio de comportamiento: los carbohidratos sólo se registran si el bolo es correcto.
+* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
 
 Pasos de preparación
 ----------------------
