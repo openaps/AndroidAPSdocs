@@ -20,22 +20,22 @@
 
 * Select preferences menu by tapping the 3 dots in the top right. 
 * Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
+* Cliquez sur "Pompe sélectionnée".
 * In the pairing window click on the entry for your pump.
     
     ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
 
 * Follow the pairing process based on the type and firmware of your pump:
     
     * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AndroidAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * Pour DanaRS v3, vous devez taper 2 séquences de chiffres et de lettres affichées sur la pompe dans la boîte de dialogue d'appairage AndroidAPS.
+    * Pour Dana-i la boîte de dialogue d'appairage standard Android apparaît et vous devez entrer le numéro à 6 chiffres affiché sur la pompe.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
 * Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide).
