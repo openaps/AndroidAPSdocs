@@ -366,18 +366,18 @@
 </tr>
 <tr>
  <td><strong>CT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
 </tr>
 <tr>
  <td><strong>RNS (UAM)</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>Repas Non Signalés - détection d'une augmentation significative de la glycémie dûe aux repas, à l'adrénaline ou à d'autres influences et tentative d'ajustement avec SMB</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
+ <td><strong>Pompe virtuelle</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Boucle Ouverte</td>
  <td>&nbsp;</td>
