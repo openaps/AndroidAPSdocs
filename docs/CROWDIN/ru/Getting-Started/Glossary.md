@@ -56,7 +56,7 @@
  <td><strong>BAT/БАТ</strong></td>
  <td>низкий уровень заряда батареи на главном экране</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>BG/ГК</strong></td>
@@ -101,58 +101,58 @@
   <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
- <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><strong>Кан/Кат</strong></td>
+ <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
+ <td>БАТ/РЕЗ/СЕН</td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
- <td><strong>CGM/НМГ</strong></td>
- <td>continuous glucose monitor</td>
+ <td><strong>CGM/Непрерывный мониторинг ГК</strong></td>
+ <td>непрерывный мониторинг глюкозы</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Closed Loop/Замкнутый цикл (петля, контур)</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td>замкнутая система управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
+ <td>Открытый цикл (петля, контур)</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - замкнутый цикл</a></td>
 </tr>
 <tr>
- <td><strong>COB</strong></td>
- <td>carbs on board</td>
+ <td><strong>АктУгл COB</strong></td>
+ <td>активные углеводы COB - углеводы в процессе компенсации </td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>DIA (время действия инсулина)</strong></td>
- <td>duration of insulin action</td>
+ <td>продолжительность активности инсулина</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Тип инсулина </a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td>летнее/зимнее время (при переводе часов)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
 </tr>
 <tr>
- <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
- <td>SMB</td>
+ <td><strong>eCarbs/производные углеводы</strong></td>
+ <td>"производные углеводы" появляются в организме через несколько часов из избытков жиров/протеинов пищи. <br> Необходимо учитывать при обычной помповой терапии, несущественны при использовании замкнутого цикла</td>
+ <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
- <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td><strong>ФЛЕШ МОНИТОРИНГ</strong></td>
+ <td>флеш-мониторинг глюкозы (Libre Freestyle)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>система управления версиями файлов (документация, программное обеспечение и пр). Необходима для координации работы над файлами APK <br> и обновления системы AndroidAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - обновление APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимок экрана</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
@@ -335,7 +335,7 @@
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
- <td><strong>SMB</strong></td>
+ <td><strong>Супер микро болюс SMB</strong></td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
@@ -373,7 +373,7 @@
 <tr>
  <td><strong>UAM</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
- <td>SMB</td>
+ <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
