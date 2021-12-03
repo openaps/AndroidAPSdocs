@@ -378,29 +378,29 @@
 </tr>
 <tr>
  <td><strong>Pompe virtuelle</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td>option permettant d'essayer les fonctions de AndroidAPS à l'aide d'un modèle de pompe sans pilote AAPS pour la boucle</td>
  <td>Boucle Ouverte</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Fonds d'écran</strong></td>
- <td>AndroidAPS background image</td>
+ <td>Image d'arrière-plan de AndroidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">voir la page des smartphones</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>logiciel open source pour lire les systèmes MGC (CGM)</td>
  <td>&nbsp;</td>
- <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
+ <td><a href="https://jamorham.github.io/#xdrip-plus"> xDrip + </a> <br> <a href="https://stephenblackwasalreadytaken.github.io/xDrip/"> xDrip </a></td>
 </tr>
 <tr>
- <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td><strong>Zéro-temp</strong></td>
+ <td>débit de base temporaire à 0% (pas d'injection d'insuline basale)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>Voir aussi <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html"> https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html </a></td>
 </tr>
 </table>
