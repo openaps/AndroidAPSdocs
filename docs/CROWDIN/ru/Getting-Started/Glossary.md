@@ -89,14 +89,14 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>BYODA</strong></td>
- <td>'Build your own Dexcom App'</td>
+ <td><strong>Самостоятельно собранное приложение Dexcom (BYODA)</strong></td>
+ <td>'Создайте свое собственное приложение Dexcom'</td>
  <td>&nbsp;</td>
  <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td><strong>Возраст канюли/катетера</strong></td>
+ <td>Отображаемый в системе Nightscout срок эксплуатации инсулиновой канюли. Появляется в случае ввода информации об установке канюли на вкладке портала терапии AAPS или через вкладку действий 'первичное заполнение инфузионного набора' AAPS</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
