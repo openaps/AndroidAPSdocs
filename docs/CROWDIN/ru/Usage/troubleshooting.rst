@@ -30,7 +30,7 @@
 
 * `SMS команды <../Children/SMS-Commands.html#troubleshooting>`_
 
-CGM/НМГ
+CGM/Непрерывный мониторинг ГК
 ==================================================
 * `Общие <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
