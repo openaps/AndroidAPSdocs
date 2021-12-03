@@ -453,7 +453,7 @@
 * [Profile switch/смена профиля](../Usage/Profiles.md)
 * [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
 
-## BG Source - xDrip+, BYODA...
+## Источник ГК - xDrip+, BYODA...
 
 ![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
 
