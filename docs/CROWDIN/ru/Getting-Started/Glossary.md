@@ -217,30 +217,30 @@
 <tr>
  <td><strong>MiaoMiao</strong></td>
  <td>bluetooth-передатчик, использующий сенсор Freestyle Libre в качестве CGM</td>
- <td>BlueReader / Blucon Nightreader</td>
+ <td>BlueReader / Bluсon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>важная системная характеристика безопасности: темпы усваивания углеводов в тех случаях, когда эта величина не может быть определена на основе данных гликемии</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data</td>
+ <td>ПО мониторинга уровня глюкозы систем с CGM. Проект с открытым программным кодом.</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>Клиент Nightscout</strong></td>
+ <td>клиентская часть AAPS для соединения с сервером (сайтом) Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td>Средство создания PDF отчетов из данных NightScout, разработанное участниками сообщества</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
@@ -260,7 +260,7 @@
  <td><strong>Открытый цикл</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
@@ -272,7 +272,7 @@
  <td><strong>Peak time</strong></td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
