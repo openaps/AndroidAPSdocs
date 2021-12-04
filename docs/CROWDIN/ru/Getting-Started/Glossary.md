@@ -156,15 +156,15 @@
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>веб-хостинг сервис для управления версиями с помощью Git<br>-> хранения исходного кода</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>приложение для сбора данных от сенсора Libre Freestyle</td>
  <td>&nbsp;</td>
- <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout with Glimp</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout c Glimp</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
