@@ -2,19 +2,19 @@
 
 Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. По этой причине необходимо отключить цикл до устранения неполадки. В зависимости от типа мониторинга такие проблемы могут быть обусловлены проблемами конфигурации или сенсора/места установки. Для устранения этой проблемы может потребоваться заменить сенсор мониторинга. Некоторые функции, такие как "Всегда включать микроболюсы SMB" и "Активировать микроболюсы после приема углеводов", можно использовать только с хорошо фильтруемым источником данных ГК.
 
-## Dexcom sensors
+## Сенсоры Dexcom
 
-### Build Your Own Dexcom App
+### Создайте свое собственное приложение Dexcom
 
-When using [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
+При использовании самостоятельно собранного приложения Dexcom [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) данные ГК поступают ровно и последовательно. К тому же алгоритм допускает обратное сглаживание. При использовании микроболюсов SMB нет ограничений.
 
-### xDrip+ with Dexcom G5 or G6
+### xDrip + с Dexcom G5 или G6 
 
 Достаточно ровные данные идут только в том случае, если в xDrip + выбран G5 Ob1 коллектор в нативном режиме'.
 
 ### Dexcom G5 App (patched)
 
-When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. При использовании микроболюсов SMB нет ограничений.
 
 ## Freestyle Libre sensors
 
