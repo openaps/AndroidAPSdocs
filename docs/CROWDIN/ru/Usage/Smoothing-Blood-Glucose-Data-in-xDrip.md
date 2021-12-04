@@ -24,4 +24,4 @@
 
 ** Сглаживание шумов сенсора. ** В параметрах xDrip + Settings > xDrip + Display Settings убедитесь, что включено сглаживание шумов сенсора. Это приведет к попыткам сглаживать зашумленные данные.
 
-**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
+** Сглаживать шумы сенсора (сверхчуствительный режим). ** Если данные в xDrip + все же зашумлены, можно применить более агрессивное сглаживание с помощью параметра Сглаживать шумы. Это приведет к применению сглаживания даже при очень низких уровнях обнаруженного шума. Для этого сначала [активируйте режим разработчика](Enabling-Engineering-Mode-in-xDrip.md) в xDrip +. Затем перейдите к параметрам > xDrip + Настройки экрана и включите Сглаживание шумов сенсора (сверхчувствительное).
