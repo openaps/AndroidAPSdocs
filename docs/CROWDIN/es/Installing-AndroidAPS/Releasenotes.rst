@@ -76,10 +76,10 @@ Cambios
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
 * Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. 
 
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+   Para actualizar el perfil desde Nighscout, debes de usar la opción "Clonar" y guardar los cambios. Asegúrate de clonar los "Registro grabado en base de datos" y no los "Perfiles guardados" en el "Editor de Perfil" de tu página Nightscout. You should see "Profile valid from:" set to currrent date.
 
-   .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
+   .. Imagen:: ../images/NS_ProfileClone.png
+      :alt: Editor de perfil Nightscout
    
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
@@ -118,7 +118,7 @@ Fecha de lanzamiento: 12-01-2021
 Notas importantes
 ----------------------
 * Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
+* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.) 
 * ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
