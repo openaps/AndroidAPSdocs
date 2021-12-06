@@ -119,10 +119,10 @@ Notas importantes
 ----------------------
 * Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
 * Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.) 
-* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+* ATENCIÓN: No hagas esto si usas otras aplicaciones para gestionar tratamientos (como xDrip+ con emisión de datos locales/subidas/sincronización,...).
+* NS_UPLOAD_ONLY sólo puede desactivarse si tenemos activo el modo de ingeniería.
 
-Major changes
+Cambios principales
 ----------------------
 * RileyLink, Omnipod and MDT pump improvements and fixes
 * forced NS_UPLOAD_ONLY
