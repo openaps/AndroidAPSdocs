@@ -124,17 +124,17 @@ Notas importantes
 
 Cambios principales
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+* Mejoras y correcciones con RileyLink y bombas Omnipod y MDT 
+* La opción NS_UPLOAD_ONLY es forzada
+* Correcciones en SMB y en la aplicación de Dexcom
+* Correcciones en las esferas de relojes
+* Mejoras en los informes de errores
+* Se ha revertido Gradle para permitir la instalación de esferas de forma directa en los relojes
+* Correcciones en las automatizaciones
+* Mejoras en los controladores RS
+* Se han corregido varios problemas que provocaban que AAPS fallara
+* Correcciones y mejoras en la interfaz gráfica
+* Nuevos idiomas soportados
 
 Versión 2.8.0
 ================
