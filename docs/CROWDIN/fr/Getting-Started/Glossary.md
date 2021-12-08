@@ -92,7 +92,7 @@
  <td><strong>BYODA</strong></td>
  <td>'Construire votre propre application Dexcom patchée'</td>
  <td>&nbsp;</td>
- <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
+ <td>[Dexcom G6](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom)</td>
 </tr>
 <tr>
  <td><strong>AgeC</strong></td>
@@ -116,7 +116,7 @@
  <td><strong>Boucle Fermée</strong></td>
  <td>les systèmes à boucle fermée font les réglages du débit de base automatiquement, sans avoir besoin de l'approbation de l'utilisateur, en se basant sur un algorithme</td>
  <td>Boucle Ouverte</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki - boucle fermée</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-fermee">Wiki - boucle fermée</a></td>
 </tr>
 <tr>
  <td><strong>GA</strong></td>
@@ -134,7 +134,7 @@
  <td><strong>heure d'été</strong></td>
  <td>changement d'heure</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki - heure d'été</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#changements-d-heure">Wiki - heure d'été</a></td>
 </tr>
 <tr>
  <td><strong>eGLUC</strong></td>
