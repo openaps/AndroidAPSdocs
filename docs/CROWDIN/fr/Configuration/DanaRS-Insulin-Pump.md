@@ -1,6 +1,6 @@
 # Pompe DanaRS et Dana-i
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
+*Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017 ou la nouvelle Dana-i. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
 **Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AndroidAPS.**
 
@@ -10,28 +10,28 @@
 
 ## Appairage de la pompe
 
-* On AndroidAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* Sur l'écran d'accueil AndroidAPS, cliquez sur le menu hamburger en haut à gauche et allez dans le Générateur de Configuration.
+* Dans la section Pompe, sélectionnez 'Dana-i/RS'.
+* Cliquez sur la roue crantée pour accéder directement aux paramètres de la pompe ou retourner à l'écran d'accueil.
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![Générateur de configuration AAPS Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* Allez dans l'onglet 'DANA-i/RS'.
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
+* Sélectionnez le Menu des préférences en appuyant sur le menu 3 points en haut à droite. 
+* Sélectionnez 'Préférences Dana-i/R'.
 * Cliquez sur "Pompe sélectionnée".
-* In the pairing window click on the entry for your pump.
+* Dans la fenêtre d'appairage, cliquez sur l'entrée correspondant à votre pompe.
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![Appairage Dana-i/RS avec AAPS](../images/DanaRS_i_Pairing.png)
 
 * **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
     
     ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Suivez le processus d'appairage basé sur le type et le firmware de votre pompe :
     
-    * For DanaRS v1 select pump password in preferences and set your password.
+    * Pour DanaRS v1, sélectionnez le mot de passe de la pompe dans les préférences et définissez votre mot de passe.
     * Pour DanaRS v3, vous devez taper 2 séquences de chiffres et de lettres affichées sur la pompe dans la boîte de dialogue d'appairage AndroidAPS.
     * Pour Dana-i la boîte de dialogue d'appairage standard Android apparaît et vous devez entrer le numéro à 6 chiffres affiché sur la pompe.
 
@@ -116,8 +116,8 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
+* Commencez à appairer la procédure comme indiqué [ci-dessus](#appairage-de-la-pompe).
+* Il est parfois nécessaire d'effacer les informations d'appairage dans AndroidAPS en faisant un clic long sur l'icône BT dans l'onglet Dana-i/RS.
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
