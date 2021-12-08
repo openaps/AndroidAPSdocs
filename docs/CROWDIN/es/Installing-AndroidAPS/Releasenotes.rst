@@ -76,7 +76,7 @@ Cambios
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
 * Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. 
 
-   Para actualizar el perfil desde Nighscout, debes de usar la opción "Clonar" y guardar los cambios. Asegúrate de clonar los "Registro grabado en base de datos" y no los "Perfiles guardados" en el "Editor de Perfil" de tu página Nightscout. You should see "Profile valid from:" set to currrent date.
+   Para actualizar el perfil desde Nighscout, debes de usar la opción "Clonar" y guardar los cambios. Asegúrate de clonar los "Registro grabado en base de datos" y no los "Perfiles guardados" en el "Editor de Perfil" de tu página Nightscout. Deberías ver "Perfil válido desde:" con la fecha actual.
 
    .. Imagen:: ../images/NS_ProfileClone.png
       :alt: Editor de perfil Nightscout
