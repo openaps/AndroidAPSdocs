@@ -64,6 +64,7 @@ Vorbereitende Schritte
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
+* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
 * Neue interne Schnittstelle für Pumpentreiber
 * NSClient komplett neu programmiert, um eine bessere Synchronisierung und detailliertere Anpassungen zu ermöglichen @MilosKozak
 
