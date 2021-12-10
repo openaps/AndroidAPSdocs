@@ -246,19 +246,20 @@
 </tr>
 <tr>
  <td><strong>Цели</strong></td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>Программа обучения работы с ИПЖ, с пошаговой поддержкой перехода от открытой петли управления к закрытой.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>Система искусственной поджелудочной железы с открытым исходным кодом. ПО, работающее на мини-компьютерах (вроде одноплатного компьютера RaspBerry PI). AAPS использует наработки проекта 
+OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">Документация OpenAPS</a></td>
 </tr>
 <tr>
  <td><strong>Открытый цикл</strong></td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>Состояние ИПЖ, в котором система рекомендует изменения, выполняемые вручную на помпе</td>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - конфигуратор</a></td>
 </tr>
