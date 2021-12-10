@@ -64,6 +64,7 @@ Modifications
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
+* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
 * Nouvelle interface interne pour les pilotes des pompes
 * NSClient réécrit pour une meilleure synchronisation et une personnalisation plus détaillée @MilosKozak
 
