@@ -65,6 +65,7 @@ Android 7
 * Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Часть кода переписана на Kotlin @MilosKozak
+* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
 * Новый интерфейс для драйверов помп
 * NSClient переписан для лучшей синхронизации и более детальной настройки @MilosKozak
 
