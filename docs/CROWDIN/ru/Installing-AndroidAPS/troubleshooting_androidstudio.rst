@@ -75,7 +75,7 @@
 ==================================================
 * В случае, если вы используете xDrip+: идентифицируйте ресивер, как описано в настройках xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
 ContextEdit.
-* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
+* В случае, если вы используете пропатченное приложение Dexcom G6: это приложение устарело. Используйте вместо этого самостоятельно построенное приложение Dexcom `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_.
 
 Неодобренные изменения
 ==================================================

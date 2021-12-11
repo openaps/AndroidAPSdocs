@@ -23,7 +23,7 @@ Dacă utilizaţi G6 cu xDrip+
 ==================================================
 * Transmiţătorul Dexcom G6 poate fi conectat simultan la receptorul Dexcom (sau la pompa t:slim) şi la o aplicaţie de pe telefon.
 * Când se utilizează xDrip+ ca receptor, mai întâi dezinstalează aplicaţia Dexcom. ** Nu se poate conecta și xDrip+ si aplicația Dexcom cu transmitatorul in acelasi timp! **
-* Dacă ai nevoie de Clarity şi doresti si alarmele xDrip+ poti folosi aplicația modificată Dexcom <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ cu distribuire locală către xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * Dacă nu ați făcut-o deja, downloadați xdrip <https://github.com/NightscoutFoundation/xDrip>`_ și urmăriți instrucțiunile pe nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Alege xDrip în ConfigBuilder (setare din AndroidAPS).
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Dacă utilizaţi G6 cu xDrip+
 
 Dacă utilizaţi G6 cu construită cu Build Your Own Dexcom App
 ==================================================
-* Începând cu luna decembrie 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) suportă transmiterea locală către AAPS și/sau xDrip+ (nu pentru senzorii G5!)
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * Această aplicație vă permite să folosiți senzorul Dexcom G6 cu orice telefon Android.
 * Dezinstalaţi aplicaţia originală Dexcom sau aplicaţia Dexcom modificată dacă aţi utilizat anterior vreuna dintre ele.
 * Install downloaded apk
 * Introduceţi codul senzorului şi seria transmiţătorului în aplicația modificată.
 * În setările telefonului mergeți la aplicații > Dexcom G6 > permisiuni > permisiuni suplimentare și apăsați pe 'Acces Dexcom'.
-* După o scurtă perioadă de timp, aplicația ar trebui să primească semnal de la transmițător. (Dacă nu primește semnal, va trebui să opriți senzorul și să porniți unul nou.)
+* After short time BYODA should pick-up transmitter signal. (Dacă nu primește semnal, va trebui să opriți senzorul și să porniți unul nou.)
 
 Setări pentru AndroidAPS
 --------------------------------------------------

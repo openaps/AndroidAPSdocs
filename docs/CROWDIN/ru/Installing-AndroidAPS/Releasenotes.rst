@@ -45,26 +45,27 @@ Android 7
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. Следует создать новый переключатель профиля и начать с нулевых значений IOB и COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
-* В прошивке OrangeLink 3.2 обнаружена ошибка, препятствующая работе с AAPS. Следует перепрошить устройство на версию 2.5
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Cамостоятельно построенное приложение Dexcom `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ также рекомендуется для использования преимуществ алгоритма обратного сглажимания от Dexcom
 * Изменение поведения: углеводы записываются только если болюс подан успешно
+* Эта версия не поддерживает старое экспортирвание без шифрования. Если у вас есть только файл "AndroidAPSPreferences", то сначала необходимо обновить приложение до 2.8 и экспортировать настройки туда для последующей возможности импорта в 3.0
 
 Этапы подготовки
 ----------------------
 * Не менее чем за два дня до обновления:
 
    * отключите Dexcom bridge в Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). XDrip можно оставить, но не как коллектор (xDrip будет получать данные с Dexcom BOYDA)
+   * если вы используете G5/G6, переходите на самостоятельно собранное приложение Dexcom `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (если до этого использовали xDrip). XDrip можно оставить, но не как коллектор (xDrip будет получать данные с Dexcom BOYDA)
 
 Изменения
 ----------------------
 * Изменены XXXXk строки, XXXXk новые строки кода
 * Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `Поддержка Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Поддержка DiaconnG8
 * Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Часть кода переписана на Kotlin @MilosKozak
+* Драйвер Medtronic рефакторирован на Kotlin и добавлены изменения/оптимизации/исправления кода @andyrozman
 * Новый интерфейс для драйверов помп
 * NSClient переписан для лучшей синхронизации и более детальной настройки @MilosKozak
 
@@ -77,10 +78,10 @@ Android 7
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
 * NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak. 
 
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+   Для обновления профиля из NS используйте команду "клонировать" ( "Clone") и сохраните изменения. Убедитесь, что клонирована 'запись базы данных', а не 'Сохраненный профиль' в 'Редакторе профиля' на сайте Nightscout. Вы должны увидеть "Профиль действителен с:" текущей даты.
 
-   .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
+   .. изображение:: ../images/NS_ProfileClone.png
+      :alt: редактор профиля Nightscout
    
 * Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
 * Отслеживание действий пользователя @Philoul

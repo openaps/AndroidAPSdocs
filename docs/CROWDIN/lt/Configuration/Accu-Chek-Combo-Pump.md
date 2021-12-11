@@ -6,8 +6,8 @@
 
 * Roche Accu-Chek Combo pompa (bet kuri versija)
 * Smartpix arba Realtime kabelis bei 360 Configuration Software programėlė pompos modifikavimui. (Klientui pageidaujant Roche nemokamai išsiunčia Smartpix ir konfigūravimo programėlę.)
-* Android telefonas su suderinama programinės įrangos versija: ne mažiau kaip Android 8.1 (Oreo) arba LineageOS 14.1 (anksčiau vadinta CyanogenMod). 
-* LineageOS 14.1 turi būti ne ankstesnės nei 2017 m. birželio versijos, nes tik tuo metu buvo padaryti reikalingi pakeitimai Combo pompos susiejimui. 
+* A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AndroisAPS 3.0 Android 9 is mandatory. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
+* With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
 * Telefonų sąrašas peteikiamas dokumente [AAPS telefonai](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * Atkreipkite dėmesį, kad šis sąrašas remiasi tik asmenine vartotojų patirtimi ir gali būti nepilnas. Jūs taip pat galite prisidėti pranešdami apie savo patirtį (pagrindinis šio projekto principas - neatlygintinas asmeninis įnašas).
 * Atminkite, kad nors Android 8.1 leidžia jungtis prie Combo pompos, vis tiek kyla sunkumų naudojant AAPS su Android 8.1.

@@ -23,7 +23,7 @@ Používáte-li G6 s aplikací xDrip+
 ==================================================
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* Jestliže potřebujete službu Clarity, a zároveň chcete využívat výhod výstrah xDripu+, použijte `upravenou aplikaci Dexcom </Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ a funkci místního odesílání do xDripu+.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * Pokud jste ještě nic nenastavovali, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Používáte-li G6 s aplikací xDrip+
 
 Pokud chcete použít G6 s vlastní vytvořenou upravenou Dexcom aplikací
 ==================================================
-* Od prosince 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA - vytvoření vlastní upravené Dexcom aplikace) podporuje také místní přenos dat do AAPS a/nebo xDrip+ (ne pro senzory G5!)
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * Tato aplikace vám umožní používat vysílač Dexcom G6 s libovolným telefonem s Androidem.
 * Odinstalujte originální Dexcom aplikaci nebo upravenou Dexcom aplikaci, pokud jste již dříve používali kteroukoli z nich.
 * Nainstalujte stažený apk
 Vložte kód senzoru a sériové číslo vysílače do upravené aplikace Dexcom.
 * V nastavení telefonu přejděte do aplikací > Dexcom G6 > oprávnění > další oprávnění a klepněte na 'Přístup k aplikaci Dexcom'.
-* Po krátkém čase by aplikace měla zachytit signál vysílače. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
+* After short time BYODA should pick-up transmitter signal. (Jestli ne, budete muset zastavit senzor a znovu ho spustit.)
 
 Nastavení pro AndroidAPS
 --------------------------------------------------

@@ -51,7 +51,7 @@ Users are strongly encouraged to keep their build of AndroidAPS up to date for s
 * 아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
 - 아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
@@ -73,20 +73,20 @@ For old medtronic pumps an additional communication device (besides your phone) 
 
 콤보, 인사이트와 오래된 메드트로닉 펌프가 견고한 펌프이며 Loop사용이 가능합니다. 콤보는 표준 루어 잠금을 가지고 있기 때문에 많은 주입 세트 유형들을 선택할 수 있는 장점이 있습니다. 그리고 표준 배터리를 사용하기 때문에 편리하게 주요소, 24시간 편의점에서 구매가 가능하며 정말 급한 경우에 호텔 리모컨에서 잠깐 빌리는 것도 가능합니다 ;-).
 
-펌프를 선택하기에 있어 다나R/RS의 장점들 VS 콤보의 장점들은 다음과 같습니다.
+The advantages of the DanaR/RS and Dana-i vs. 콤보의 장점들은 다음과 같습니다.
 
-- 다나R/RS 펌프는 Android 5.1 이상의 대부분에 폰에서 연결이 됩니다. 만약 핸드폰이 망가진 경우에는 쉽고 빠르게 다나R/RS와 연동이 되는 교체 폰을 구할 수 있습니다. combo와 연동되는 폰을 찾기는 쉽지 않습니다. (Android 8.1 이상의 폰이 좀 더 대중화되면 바뀔 수도 있습니다)
-- 초기 페어링은 다나RS가 더 간단합니다. 그러나 일반적으로 이 작업은 한 번만 수행되므로 다른 펌프로 새 기능을 테스트하려는 경우에만 영향을줍니다.
+- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... combo와 연동되는 폰을 찾기는 쉽지 않습니다. (Android 8.1 이상의 폰이 좀 더 대중화되면 바뀔 수도 있습니다)
+- Initial pairing is simpler with the Dana-i/RS. 그러나 일반적으로 이 작업은 한 번만 수행되므로 다른 펌프로 새 기능을 테스트하려는 경우에만 영향을줍니다.
 - 지금까지 콤보는 스크린 파싱을 통해서 작동합니다. 일반적으로 잘 동작하지만 아주 느립니다. Loop를 실행하기 위해서는 백그라운드에서 작업이 수행되는 것이 훨씬 많으므로 이것은 문제가 되지 않습니다. 블루투스 연결이 끊어졌을 때 다시 연결하기까지 더 긴 시간이 필요하기 때문에 주사 주입 중 핸드폰에서 멀어졌을 경우에 재연결이 쉽지 않습니다. 
-- 콤보는 TBRs의 마지막에 진동이 울리고 다나R은 SMB 상태에서 진동 또는 경고음이 울립니다. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다.  다나RS는 경고음이나 진동 모두 울리지 않게 구성할 수 있습니다.
-- RS는 오프라인 상태에서도 몇 초 이내로 탄수화물을 비롯한 펌프 이력을 읽을 수 있기 때문에 핸드폰 교체가 쉽고 CGM 값이 들어오자 마자 loop가 진행됩니다.
+- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. 야간에는 SMB보다는 TBRs를 더 많이 사용할 것입니다.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - AndroidAPS와 연동되는 모든 펌프들은 주입 중 방수가 됩니다. Dana 펌프가 배터리와 주사기 주입 시스템이 모두 봉인되어 "방수 보증"이 되는 유일한 펌프입니다. 
 
 혈당정보
 --------------------------------------------------
 다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. For further details, look `here <../Configuration/BG-Source.html>`__. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
 
-* `덱스콤 G6 <../Hardware/DexcomG6.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
 * `덱스콤 G5 <../Hardware/DexcomG5.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
 * 덱스콤 G4 <../Hardware/DexcomG4.html>`_: 이 센서들은 꽤 오래되었지만, xdrip에서 어떻게 사용하는 방법에 대한 설명을 찾아볼 수 있습니다.
 * 리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.

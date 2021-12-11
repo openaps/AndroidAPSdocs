@@ -23,7 +23,7 @@ Dexcom G6
 ==================================================
 * Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 * При использовании xDrip+ в качестве ресивера сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
-* Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь ` модифицированным приложением Dexcom <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ с локальной передачей данных в xDrip +.
+* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
 * Если это еще не сделано, скачайте `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
 * Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`__
@@ -31,13 +31,13 @@ Dexcom G6
 
 При использовании G6 с созданием собственного Dexcom приложения
 ==================================================
-* По состоянию на декабрь 2020 года ` Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` _ (BYODA) также поддерживает локальное вещание на AAPS и/или xDrip + (не для сенсоров G5!)
+* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 * Это приложение позволяет использовать Dexcom G6 с любым смартфоном Android.
 * Деинсталлируйте оригинальное приложение Dexcom или приложение Dexcom, если вы использовали их ранее.
 * Установите загруженное приложение
 * Введите код сенсора и серийный номер трансмиттера в пропатченном приложении.
 * В настройках телефона перейдите к приложениям > Dexcom G6 > разрешения > дополнительные разрешения и нажмите 'Access Dexcom app'.
-* После короткого времени патч приложение должно получить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и начать новый.)
+* After short time BYODA should pick-up transmitter signal. (Если нет, вам придется остановить сенсор и начать новый.)
 
 Настройки для AndroidAPS
 --------------------------------------------------

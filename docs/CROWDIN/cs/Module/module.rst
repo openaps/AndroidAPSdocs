@@ -51,7 +51,7 @@ AndroidAPS **v současné době** funguje s
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
 - `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 - `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ s nadcházející verzí 2.4 (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ s nadcházející verzí (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
 
@@ -73,20 +73,20 @@ Pro staré pumpy Medtronic je potřeba přídavné komunikační zařízení (sp
 
 Combo, Insight a starší pumpy Medtronic jsou dobré pumpy, které lze používat se smyčkou. Combo má také výhodu v podobě mnohem většího počtu typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji ;-)
 
-Výhody pump DanaR/RS oproti Combu:
+The advantages of the DanaR/RS and Dana-i vs. Combu:
 
-- Dana*R/RS se připojí k téměř každému telefonu s operačním systémem Android >= 5.1 bez nutnosti flashovat lineage. Pokud se váš telefon rozbije, obvykle můžete jednoduše najít náhradní telefon spolupracující s Dana*R/RS jako rychlou náhradu... což není tak snadné v případě Comba. (To se může v budoucnu změnit, až bude Android 8.1 více rozšířený)
-- Počáteční spárování je s Dana* RS jednodušší. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, kdy chcete testovat nové funkce s různými pumpami.
+- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... což není tak snadné v případě Comba. (To se může v budoucnu změnit, až bude Android 8.1 více rozšířený)
+- Initial pairing is simpler with the Dana-i/RS. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, kdy chcete testovat nové funkce s různými pumpami.
 - Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Stále strávíte ale mnohem více času, kdy musíte být spojeni, takže může dojít k přerušení spojení, což se může snadno stát, pokud odejde od telefonu mezitím, co posíláte bolus a vaříte. 
-- Combo vibruje na konci dočasného bazálu, Dana* R vibruje (nebo pípne) při SMB. V noci pravděpodobně používáte více dočasné bazální dávky než SMB.  U Dany* RS je možné nastavit, aby ani nepípala, ani nevibrovala.
-- Čtení historie na RS proběhne v několika sekundách včetně sacharidů, takže lze jednoduše vyměnit telefon, zatímco je pumpa offline, a pokračovat ve smyčce, jakmile budou dostupné nějaké hodnoty z CGM.
+- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. V noci pravděpodobně používáte více dočasné bazální dávky než SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - Všechny pumpy, se kterými AndroidAPS komunikuje, jsou vodotěsné. Pouze pumpy Dana mají také „záruku na vodotěsnost“ díky uzavřenému prostoru pro baterii a prostoru pro plnicí zásobník. 
 
 Zdroj glykémií
 --------------------------------------------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`__. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Funguje s aplikací xDrip+ nebo s upravenou aplikací Dexcom
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.

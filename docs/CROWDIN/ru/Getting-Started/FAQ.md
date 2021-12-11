@@ -326,7 +326,7 @@ AAPS по умолчанию строит свой алгоритм отталк
 
 #### Как обеспечить работу цикла ночью без воздействия мобильного и WIFI излучения?
 
-Многие пользователи ночью переводят телефон в режим авиаперелета. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Многие пользователи ночью переводят телефон в режим авиаперелета. Если вы хотите, чтобы AAPS поддерживал вас во время сна, действуйте следующим образом (будет работать только с локальным источником ГК, таким как xDrip+ или ['самостоятельно построенным приложением Dexcom BYODA'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), но НЕ будет работать, если данные ГК поступают с сайта Nightscout):
 
 1. Включите режим авиаперелета на вашем мобильном устройстве.
 2. Подождите, пока режим авиаперелета не будет активирован.

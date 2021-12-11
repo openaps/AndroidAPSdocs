@@ -453,7 +453,7 @@ Historique des traitements suivants :
 * [Changement de profil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
-## BG Source - xDrip+, BYODA...
+## Source Glycémie - xDrip+, BYODA...
 
 ![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 

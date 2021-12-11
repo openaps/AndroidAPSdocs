@@ -110,7 +110,7 @@ Paso 3: Iniciar el sensor
 
 En xDrip+ inicie el sensor con "Iniciar Sensor" y "hoy no". 
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. Esto es simplemente para indicar xDrip+ que un nuevo sensor está dando niveles de azúcar en la sangre. Si está disponible, introduzca dos valores capilares para la calibración inicial. Ahora los valores de glucosa en sangre deben ser mostrados en xDrip+ cada 5 minutos. Se omiten los valores, por ejemplo. porque estabas demasiado lejos de tu teléfono, no se cargarán los valores.
+In fact this will not physically start any Libre2 sensor or interact with them in any case. Esto es simplemente para indicar xDrip+ que un nuevo sensor está dando niveles de azúcar en la sangre. Si es posible, introduce dos valores medidos en sangre para la calibración inicial. Ahora los valores de glucosa deben mostrarse en xDrip+ cada 5 minutos. Se omiten los valores, por ejemplo. porque estabas demasiado lejos de tu teléfono, no se cargarán los valores.
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 

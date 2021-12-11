@@ -44,26 +44,27 @@ Notas importantes
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Debes realizar un cambio de perfil y comenzar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
-* Existe un problema con el firmware OrangeLink 3.2 que impide que trabaje con AAPS. Baja al FW 2.5 si estás afectado con este problema.
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. También se recomienda usar `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ por el filtro suavizado que aplica Dexcom.
 * Cambio de comportamiento: los carbohidratos sólo se registran si el bolo es correcto.
+* Esta versión no soporta las antiguas exportaciones sin cifrar.  Si sólo tienes el archivo "AndroidAPSPreferences", primero tienes que actualizar a la versión 2.8, realizar una exportación y después realizar una importación en la versión 3.0.
 
 Pasos de preparación
 ----------------------
 * Al menos dos días antes de la actualización:
 
    * Deshabilitar el "puente" entre Dexcom y Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+   * Si estás usando G5/G6, tienes que cambiar a `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (sólo si estabas usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
 
 Cambios
 ----------------------
 * XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
 * Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Soporte para DiaconnG8
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
+* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
 * Nueva interfaz interna para controladores de bombas
 * NSClient reescrito para mejorar la sincronización y una personalización más detallada @MilosKozak
 
@@ -76,10 +77,10 @@ Cambios
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
 * Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. 
 
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+   Para actualizar el perfil desde Nighscout, debes de usar la opción "Clonar" y guardar los cambios. Asegúrate de clonar los "Registro grabado en base de datos" y no los "Perfiles guardados" en el "Editor de Perfil" de tu página Nightscout. Deberías ver "Perfil válido desde:" con la fecha actual.
 
-   .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
+   .. Imagen:: ../images/NS_ProfileClone.png
+      :alt: Editor de perfil Nightscout
    
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
@@ -118,23 +119,23 @@ Fecha de lanzamiento: 12-01-2021
 Notas importantes
 ----------------------
 * Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
-* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.) 
+* ATENCIÓN: No hagas esto si usas otras aplicaciones para gestionar tratamientos (como xDrip+ con emisión de datos locales/subidas/sincronización,...).
+* NS_UPLOAD_ONLY sólo puede desactivarse si tenemos activo el modo de ingeniería.
 
-Major changes
+Cambios principales
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+* Mejoras y correcciones con RileyLink y bombas Omnipod y MDT 
+* La opción NS_UPLOAD_ONLY es forzada
+* Correcciones en SMB y en la aplicación de Dexcom
+* Correcciones en las esferas de relojes
+* Mejoras en los informes de errores
+* Se ha revertido Gradle para permitir la instalación de esferas de forma directa en los relojes
+* Correcciones en las automatizaciones
+* Mejoras en los controladores RS
+* Se han corregido varios problemas que provocaban que AAPS fallara
+* Correcciones y mejoras en la interfaz gráfica
+* Nuevos idiomas soportados
 
 Versión 2.8.0
 ================
