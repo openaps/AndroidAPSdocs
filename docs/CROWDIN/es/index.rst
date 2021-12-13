@@ -96,7 +96,7 @@ Para más detalles, por favor, lee aquí.
    Carbohidratos extendidos <./Usage/Extended-Carbs.rst>
    Automatización <./Usage/Automation.rst>
    Careportal (discontinued) <./Usage/CPbefore26.rst>
-   Open Humans Uploader <./Configuration/OpenHumans.rst>
+   Subir datos a Open Humans <./Configuration/OpenHumans.rst>
    Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
    Android automático <./Usage/Android-auto.md>  
 
