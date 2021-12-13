@@ -103,22 +103,22 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Consejos Generales 
 
    Cruzar zonas horarias con bombas <./Usage/Timezone-traveling.md>
    Acceder a los logs <./Usage/Accessing-logfiles.md>
    Sugerencias Combo Accu-Chek para el uso básico <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Exportar/Importar valores <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   Modo Ingeniería en xDrip+ <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: AndroidAPS para niños
 
    Supervisión remota <./Children/Children.rst>
    Comandos SMS <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   Ayudante de perfil <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1
@@ -126,26 +126,26 @@ Para más detalles, por favor, lee aquí.
    :caption: Troubleshooting
 
    Resolución de problemas <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   NSClient <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: FAQ
+   :caption: Preguntas frecuentes
 
    Preguntas frecuentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossary
+   :caption: Glosario
 
    Glosario <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: Dónde ir en busca de ayuda 
 
    Recursos útiles para leer antes de empezar <./Where-To-Go-For-Help/Background-reading.md>
    Cómo puedo ayudar <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -154,7 +154,7 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Para profesionales médicos
 
    Para los clínicos <./Resources/clmédica-guide-to-AndroidAPS>
 
