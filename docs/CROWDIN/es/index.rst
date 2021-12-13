@@ -26,9 +26,9 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Empezando
 
-   La seguridad primero <./Getting-Started/Safety-first>
+   Primero, la seguridad <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
    ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
    Pump choices <./Getting-Started/Pump-Choices.md>
@@ -39,19 +39,19 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: ¿Qué necesito? 
 
    Módulo <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
+   Ejemplo de configuración <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
+   :caption: Cómo instalar AndroidAPS
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Actualizar a una nueva versión o rama<./Installing-AndroidAPS/Update-to-new-version.md>
+   Comprobaciones después de actualizar a AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Instale git <./Installing-AndroidAPS/git-install.rst>
    Resolución de problemas de Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
    Notas de la versión <./Instalación-AndroidAPS/Releasenotes.rst>
@@ -62,7 +62,7 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: Configuración de componentes
 
    MCG/FGM <./Configuration/BG-Source.rst>
    Configuración xDrip <./Configuration/xdrip.md>
@@ -76,17 +76,17 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: Configuración
 
    Creador de configuración <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Preferencias <./Configuration/Preferences.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: Uso de AndroidAPS
 
-   Pantallas AndroidAPS <./Getting-Started/Screenshots.md>
+   Pantallas de AndroidAPS <./Getting-Started/Screenshots.md>
    Objetivos <./Usage/Objectives.rst>
    Características de OpenAPS <./Usage/Open-APS-features.md>   
    Cálculo de COB <./Usage/COB-calculation.rst>
