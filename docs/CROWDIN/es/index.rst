@@ -1,9 +1,9 @@
 Bienvenido a la documentación AndroidAPS
 ==================================================
 
-AndroidAPS es una aplicación de código abierto para las personas que viven con diabetes insulino-dependiente, que actúa como un sistema de páncreas artificial (APS) en los teléfonos inteligentes con Google Android. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Además, necesita al menos una bomba de insulina sopada y aprobada por la FDA/CE y un medidor de glucosa continuo. 
+AndroidAPS es una aplicación de código abierto para las personas que viven con diabetes insulino-dependiente, que actúa como un sistema de páncreas artificial (APS) en los teléfonos inteligentes con Google Android. Los componentes principales son los diferentes algoritmos de software de OpenAPS, que tienen como objetivo hacer lo mismo que un páncreas vivo: mantener los niveles de glucosa en sangre dentro de unos límites saludables, utilizando dosis de insulina automatizada (AID). Adicionalmente, necesitas disponer de una bomba de insulina soportada y aprobada por la FDA/CE, así como un medidor contínuo de glucosa (MCG). 
 
-La aplicación NO utiliza inteligencia artificial de autoaprendizaje. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+La aplicación NO utiliza inteligencia artificial de autoaprendizaje. En su lugar, los cálculoss de AndroidAPS se basan en el algoritmo de dosificación individual y en la ingesta de carbohidratos que el usuario configura manualmente en su perfil de tratamiento, que son verificados por el sistema por motivos de seguridad. 
 
 La aplicación no se proporciona en Google Play - tienes que construirla a partir del código fuente por ti mismo por razones legales.
 
@@ -12,14 +12,14 @@ The main components are:
 .. imagen:: ./images/modules-female.png
   :alt: Componentes
 
-Para más detalles, por favor lee aquí.
+Para más detalles, por favor, lee aquí.
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Cambiar idioma
 
-   Change language <./changelanguage.rst>
+   Cambiar idioma <./changelanguage.rst>
 
 .. _getting-started:
 
