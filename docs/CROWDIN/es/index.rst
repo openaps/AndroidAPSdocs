@@ -7,7 +7,7 @@ La aplicación NO utiliza inteligencia artificial de autoaprendizaje. En su luga
 
 La aplicación no se proporciona en Google Play - tienes que construirla a partir del código fuente por ti mismo por razones legales.
 
-The main components are:
+Los componentes principales son
 
 .. imagen:: ./images/modules-female.png
   :alt: Componentes
@@ -31,7 +31,7 @@ Para más detalles, por favor, lee aquí.
    Primero, la seguridad <./Getting-Started/Safety-first>
    Qué es un sistema de lazo cerrado <./Getting-Started/ClosedLoop.rst>
    ¿Qué es un sistema de lazo cerrado con AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
+   Opciones de bombas de insulina <./Getting-Started/Pump-Choices.md>
    Actualizaciones y cambios en documentos <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
@@ -95,7 +95,7 @@ Para más detalles, por favor, lee aquí.
    Objetivos-temporales <./Usage/temptarget.md>   
    Carbohidratos extendidos <./Usage/Extended-Carbs.rst>
    Automatización <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Portal de cuidados (descontinuado) <./Usage/CPbefore26.rst>
    Subir datos a Open Humans <./Configuration/OpenHumans.rst>
    Automatización con aplicaciones de terceros <./Usage/automationwithapp.md>
    Android automático <./Usage/Android-auto.md>  
@@ -123,7 +123,7 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Resolución de problemas
 
    Resolución de problemas <./Usage/troubleshooting.rst>
    NSClient <./Usage/Troubleshooting-NSClient.md>
@@ -162,7 +162,7 @@ Para más detalles, por favor, lee aquí.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Cómo ayudar
 
    Cómo se puede ayudar <./Getting-Started/How-can-I-help.md>
    Cómo traducir la aplicación y documentos <./translations.md>
@@ -178,4 +178,4 @@ Para más detalles, por favor, lee aquí.
 
 	* Todos los productos y nombres de compañias, marcas, servicios, marcas registradas y servicios registrados son propiedad de sus respectivos tenedores. Su uso aquí es informativo y no implica afiliación o pago por ello.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Tenga en cuenta que este proyecto no tiene ninguna relación, ni está respaldado por: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ o `Medtronic <https://www.medtronic.com/>`_
