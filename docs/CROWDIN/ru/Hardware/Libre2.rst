@@ -187,7 +187,7 @@ Freestyle Libre 2
 
 Трансмиттер bluetooth может применяться в Libre2 с новейшими версиями приложения xDrip+ и приложением OOP для Libre2. Данные ГК будут поступать каждые 5 минут, так же как и с Libre1. Для получения описания обратитесь к сайту miaomiao. Аналогично и с устройством Bubble и в будущем с другими трансмиттерами. Blucon должен работать, но еще не тестировался.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Старые устройства Либре1 не могут использоваться с программами для Libre2. Их следует заменить на более новые или обновить им прошивку для правильной работы. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
 The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
