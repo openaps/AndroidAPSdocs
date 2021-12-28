@@ -53,7 +53,7 @@ Etapes de préparation
 * Au moins deux jours avant la mise à jour :
 
    * Désactivez Dexcom Bridge dans Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Vous pouvez toujours utiliser xDrip mais pas comme collecteur (xDrip peut recevoir des données de BOYDA)
+   * si vous utilisez le G5/G6, basculez vers `BOYDA <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_ (si vous utilisiez xDrip). Vous pouvez toujours utiliser xDrip mais pas comme collecteur (xDrip peut recevoir des données de BOYDA)
 
 Modifications
 ----------------------
