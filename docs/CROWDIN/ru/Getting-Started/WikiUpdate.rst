@@ -1,6 +1,30 @@
 Обновления и изменения в документации
 **************************************************
 
+December 2021
+==================================================
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+
+November 2021
+==================================================
+* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
+* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+
+October 2021
+==================================================
+* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+September 2021
+==================================================
+* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+
+June 2021
+==================================================
+* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+
 Апрель 2021
 ==================================================
 * Список устройств связи <../Module/module.html#additional-communication-device>`_ для помп Omnipod и Medtronic
