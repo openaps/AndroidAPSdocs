@@ -31,13 +31,13 @@ Dexcom G6
 
 При использовании G6 с созданием собственного Dexcom приложения
 ==================================================
-* As of December 2020 `Build Your Own Dexcom App <https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>`_ (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
+*С декабря 2020 года ` самостоятельно собранное приложение Dexcom<https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0>` _ (BYODA) также поддерживает локальное вещание на AAPS и/или xDrip + (не для сенсоров G5!)
 * Это приложение позволяет использовать Dexcom G6 с любым смартфоном Android.
 * Деинсталлируйте оригинальное приложение Dexcom или приложение Dexcom, если вы использовали их ранее.
 * Установите загруженное приложение
 * Введите код сенсора и серийный номер трансмиттера в пропатченном приложении.
 * В настройках телефона перейдите к приложениям > Dexcom G6 > разрешения > дополнительные разрешения и нажмите 'Access Dexcom app'.
-* After short time BYODA should pick-up transmitter signal. (Если нет, вам придется остановить сенсор и начать новый.)
+* Через некоторое время приложение должно подхватить сигнал трансмиттера. (Если нет, вам придется остановить сенсор и запустить новый.)
 
 Настройки для AndroidAPS
 --------------------------------------------------
