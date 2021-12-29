@@ -2,7 +2,7 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## Important notes
 
@@ -15,7 +15,7 @@
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
     <th class="tg-baqh">Windows 8 or higher</th>
     <th class="tg-baqh">Mac OS 10.14 or higher</th>
     <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
@@ -23,7 +23,7 @@
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
     <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
@@ -47,7 +47,7 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file, but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
 
 * * *
 
@@ -119,7 +119,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ## Set git path in preferences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restartet your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
@@ -133,7 +133,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Click Git (2).
 * Make sure update method "Merge" (3) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
     
     ![Android Studio settings](../images/studioSetup/11_GitPath.png)
 
@@ -169,12 +169,10 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
     ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
-
-//TODO Remove start
-
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
     
-    ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG) //TODO Remove end
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
     
     * We will now tell Android Studio were to get the code from:
     
@@ -185,28 +183,28 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     * Choose the directory where you want to save the cloned code (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
-    
-    * Click button "Clone" (5).
+
+* Click button "Clone" (5).
     
     ![Clone repository](../images/studioSetup/22_Cloning.png)
-    
-    * Do not click "Background" while repository is cloned!
-    
-    * After the repository is cloned successfully, Android Studio will open the cloned project.
-    
-    * You will be asked whether you want to trust the project. Click on "Trust project"!
+
+* Do not click "Background" while repository is cloned!
+
+* After the repository is cloned successfully, Android Studio will open the cloned project.
+
+* You will be asked whether you want to trust the project. Click on "Trust project"!
     
     ![Trust project](../images/studioSetup/23_TrustProject.png)
-    
-    * In the status bar at the bottom you will see the information that Android Studio is running background tasks.
+
+* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
     ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
-    
-    * Grant access if your firewall is asking for permission.
+
+* Grant access if your firewall is asking for permission.
     
     ![Firewall permission java](../images/AndroidStudio361_18.png)
-    
-    * Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
+
+* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
     ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
