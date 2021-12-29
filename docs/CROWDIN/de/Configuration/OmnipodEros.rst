@@ -64,11 +64,11 @@ Nach der Installation einer neuen Version von AndroidAPS startet der **Einrichtu
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
-On the same screen, below the pump selection, the **Omnipod Driver Settings** are displayed, under the **RileyLink Configuration** add your RileyLink device by pressing the **Not Set** text. 
+Auf dem gleichen Bildschirm werden unter der Pumpenauswahl die **Omnipod-Treibereinstellungen** angezeigt. Füge unterhalb der **RileyLink Konfiguration** Dein RileyLink Gerät hinzu, indem Du den **Nicht gesetzt** Text drückst. 
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed. 
+Drücke im Bildschirm **RileyLink Auswahl** den **Scannen** Knopf und wähle Deinen RileyLink aus der Liste der verfügbaren Bluetooth-Geräte aus. Wenn Du alles richtig ausgewählt hast, wirst Du auf den Bildschirm der Pumpentreiberauswahl (unter Omnipod Treibereinstellungen) zurückgeleitet. Dort sollte die MAC-Adresse Deines gewählten RileyLink anzeigt werden. 
 
-Press the **Next** button to proceed with the rest of the **Setup Wizard.**  It can take up to one minute for the selected RileyLink to initialize and the **Next** button to become active.
+Drücke die **Weiter** Taste, um mit dem Rest des **Einrichtungsassistenten** fortzufahren. Es kann bis zu einer Minute dauern, bis der gewählte RileyLink eingerichtet wurde und der **Fortsetzen** Button aktiviert wird.
 
 Die Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unten im Bereich `RileyLink Setup <#rileylink-setup>`__.
 
@@ -77,7 +77,7 @@ Die Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unt
 Option 2: Der Konfigurations-Generator
 ----------------------------
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Wenn du das **Kontrollkästchen (4)** neben dem **Einstellungsrädchen (3)** wählst, wird das Omnipod-Menü als Registerkarte im AAPS-Interface mit dem Titel **POD** angezeigt. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
+Über das **Hamburger Menü** oben links unter **Konfigurations-Assistent (1)** <unk> \ **Pumpe**\ <unk> \ **Omnipod** indem Du das **Auswahlfeld (2)** mit dem Titel **Omnipod** wählst. Wenn du das **Kontrollkästchen (4)** neben dem **Einstellungsrädchen (3)** wählst, wird das Omnipod-Menü als Registerkarte im AAPS-Interface mit dem Titel **POD** angezeigt. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
     **HINWEIS:** Eine schnellere Möglichkeit zum Zugriff auf die **Omnipod-Einstellungen** findest du unten in der Rubrik `Omnipod-Einstellungen <#omnipod-einstellungen>`__ dieses Dokuments.
 
@@ -86,7 +86,7 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 Überprüfung der Omnipod-Treiberauswahl
 ----------------------------------------
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*Hinweis: Wenn Du den Setup-Assistenten vorzeitig verlassen hast, ohne Deinen RileyLink auszuwählen, ist der Omnipod Treiber aktiviert, aber Du musst trotzdem Deinen RileyLink noch auswählen.  You may see the Omnipod (POD) tab appear as it does below*
 
 Um zu überprüfen, ob Du den Omnipod-Treiber in AAPS aktiviert hast, **wische nach links** vom Tab **Übersicht** wo du nun einen Reiter **Omnipod** oder **POD** siehst.
 
