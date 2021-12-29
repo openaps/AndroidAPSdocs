@@ -82,10 +82,11 @@ The following screenshots have been taken from Android Studio Version Arctic Fox
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Download and install [Android Studio from here](https://developer.android.com/studio/install.html).
+Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+
 On first start you will find the setup wizard:
 
-#Select "Do not import settings" as you have not used it before.
+Select "Do not import settings" as you have not used it before.
 
    ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
@@ -139,12 +140,12 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
 
-* If automatic setting is successful git version will be displayed beyond the path.
+* If automatic setting is successful git version will be displayed next to the path.
 
    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
 
 
-* Eventuelly git.exe cannot be found automatically or the Test will result in an error (1):
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
@@ -158,7 +159,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Check your selected git path again with the "Test" button as described above.
 
-* When the git version is displayed, close settings window by clicking "OK" button (5.).
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5.).
 
 ### Mac
 
@@ -170,7 +171,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Download AndroidAPS code
 
-* On the Android Studio welcome screen select "Projects" on the left and then "Get from VCS"
+* On the Android Studio welcome screen select "Projects" (1.) on the left and then "Get from VCS" (2.).
 
   ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
 
@@ -180,7 +181,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
       ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 //TODO Remove end
 
-  * We will not tell Android Studio were to get the code from:
+  * We will now tell Android Studio were to get the code from:
 
       ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
