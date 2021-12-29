@@ -174,13 +174,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
   ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
 
-//TODO Remove start
  * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
 
       ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
-//TODO Remove end
 
-  * We will not tell Android Studio were to get the code from:
+  * We will now tell Android Studio were to get the code from:
 
       ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
