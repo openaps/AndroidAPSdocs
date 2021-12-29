@@ -44,27 +44,27 @@ Conseils importants
 * **La version minimale d'Android est maintenant 9.0.**
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau changement de profil et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
-* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
+* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. L'utilisation de `BOYDA <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_ est également recommandé pour tirer parti du "lissage arrière" Dexcom
 * Changement de fonctionnement: les glucides ne sont enregistrés que si l'injection du bolus a réussi
-* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
+* Cette version n'accepte pas les anciens exports non cryptées. Si vous avez seulement le fichier "AndroidAPSPreferences" vous devez passer à la version 2.8 d'abord et l'exporter pour pouvoir l'importer avec la version 3.0
 
 Etapes de préparation
 ----------------------
 * Au moins deux jours avant la mise à jour :
 
    * Désactivez Dexcom Bridge dans Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). Vous pouvez toujours utiliser xDrip mais pas comme collecteur (xDrip peut recevoir des données de BOYDA)
+   * si vous utilisez le G5/G6, basculez vers `BOYDA <../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom>`_ (si vous utilisiez xDrip). Vous pouvez toujours utiliser xDrip mais pas comme collecteur (xDrip peut recevoir des données de BOYDA)
 
 Modifications
 ----------------------
 * XXXXk lignes changées, XXXXk nouvelles lignes de code
 * Support Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Support de DiaconnG8
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
-* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
+* Le pilote Medtronic a été ré-écrit en Kotlin et quelques modifications/optimisations de données et corrections ont été effectuées @andyrozman
 * Nouvelle interface interne pour les pilotes des pompes
 * NSClient réécrit pour une meilleure synchronisation et une personnalisation plus détaillée @MilosKozak
 
@@ -77,10 +77,10 @@ Modifications
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 * NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak. 
 
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
+   Pour mettre à jour le profil du côté de NS, utilisez "Clone" et enregistrez les modifications. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. Vous devriez voir "Profil valide à partir de :" et la date actuelle.
 
    .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
+      :alt: Éditeur de profil Nightscout
    
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul

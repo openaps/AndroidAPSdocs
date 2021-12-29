@@ -187,25 +187,25 @@ Freestyle Libre 2
 
 Трансмиттер bluetooth может применяться в Libre2 с новейшими версиями приложения xDrip+ и приложением OOP для Libre2. Данные ГК будут поступать каждые 5 минут, так же как и с Libre1. Для получения описания обратитесь к сайту miaomiao. Аналогично и с устройством Bubble и в будущем с другими трансмиттерами. Blucon должен работать, но еще не тестировался.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Старые устройства Либре1 не могут использоваться с программами для Libre2. Их следует заменить на более новые или обновить им прошивку для правильной работы. К сожалению, MM1 с новейшей прошивкой пока не работает - в настоящее время идет поиск причин.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Алгоритм Libre2 генерирует те же значения ГК, что и оригинальное считывающее устройство или приложение LibreLink при NFC сканировании. AAPS с Libre2 производит 25 минутное сглаживание, чтобы избежать отдельных скачков. Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Трансмиттер Droplet работает также и с Libre2, но использует интернет-сервис. Дополнительную информацию можно найти в FB или поискать в поисковой системе. ММ2 с приложением "tomato" также использует интернет-сервис. Для получения данных гликемии на обоих устройствах необходимо иметь хорошую связь с интернетом.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
+Даже если алгоритм модифицированного приложения LibreLink не вызывает нареканий, могут существовать причины использования Bluetooth-передатчика:
 
-* the BG readings are identical to the reader results
-* the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-* 8 hours Backfilling is fully supported.
-* get BG readings during the one hour startup time of a new sensor
+* значения ГК совпадают с ридером
+* Libre2 может работать 14,5 дней как и Libre1 
+* Полностью поддерживается восьмичасовое обратное наполнение данными.
+* значения ГК доступны в течение часа прогрева при запуске нового датчика
 
-Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
+Замечание: Передатчик может работать параллельно с приложением LibreLink. Он не нарушает его работу.
 
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+Замечание #2: Процедура OOP пока не может калиброваться. Это изменится в будущем.
 
 
-Best practices for calibrating a libre 2 sensor
+Наилучшие методы калибровки Libre 2
 ==================================================
 
 To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow.
