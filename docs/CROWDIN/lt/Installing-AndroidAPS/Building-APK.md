@@ -133,7 +133,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Click Git (2).
 * Make sure update method "Merge" (3) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
     
     ![Android Studio settings](../images/studioSetup/11_GitPath.png)
 
@@ -169,12 +169,10 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
     ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
-
-//TODO Remove start
-
-* If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
     
-    ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG) //TODO Remove end
+    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
+        
+        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
     
     * We will now tell Android Studio were to get the code from:
     
@@ -185,28 +183,28 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     * Choose the directory where you want to save the cloned code (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
-    
-    * Click button "Clone" (5).
+
+* Click button "Clone" (5).
     
     ![Clone repository](../images/studioSetup/22_Cloning.png)
-    
-    * Do not click "Background" while repository is cloned!
-    
-    * After the repository is cloned successfully, Android Studio will open the cloned project.
-    
-    * You will be asked whether you want to trust the project. Click on "Trust project"!
+
+* Do not click "Background" while repository is cloned!
+
+* After the repository is cloned successfully, Android Studio will open the cloned project.
+
+* You will be asked whether you want to trust the project. Click on "Trust project"!
     
     ![Trust project](../images/studioSetup/23_TrustProject.png)
-    
-    * In the status bar at the bottom you will see the information that Android Studio is running background tasks.
+
+* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
     
     ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
-    
-    * Grant access if your firewall is asking for permission.
+
+* Grant access if your firewall is asking for permission.
     
     ![Firewall permission java](../images/AndroidStudio361_18.png)
-    
-    * Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
+
+* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
     
     ![SDK licence](../images/studioSetup/25_SyncFailed.png)
     
@@ -216,32 +214,32 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * In the menu, go to File (1) > Settings (2).
     
-    ![Atidaryti nustatymus](../images/studioSetup/30_Settings.png)
+    ![Open settings](../images/studioSetup/30_Settings.png)
 
 * Double-click on Appearance & Behaviour to open its submenu (1).
 
 * Double-click on System Settings (2) and select Android SDK (3).
 * Tick the box left of "Android 9.0 (Pie)" (4) (API Level 28).
     
-    ![SDK nustatymai](../images/studioSetup/31_AndroidSDK.png)
+    ![SDK settings](../images/studioSetup/31_AndroidSDK.png)
 
-* Patvirtinkite pakeitimus paspausdami OK.
+* Confirm changes by clicking OK.
     
-    ![Patvirtinti SDK pakeitimus](../images/studioSetup/32_ConfirmSDK.png)
+    ![Confirm SDK changes](../images/studioSetup/32_ConfirmSDK.png)
 
 * Accept licence agreement (1) and click "Next" (2).
     
-    ![Priimti SDK licenciją](../images/studioSetup/33_ConfirmLicense.png)
+    ![Accept SDK licence](../images/studioSetup/33_ConfirmLicense.png)
 
 * Wait until the SDK download and installation is finished.
     
-    ![Palaukti, kol SDK diegiamas](../images/studioSetup/34_DownloadSDK.png)
+    ![Wait during SDK installation](../images/studioSetup/34_DownloadSDK.png)
 
-* Kai SDK diegimas bus baigtas, "Finish" mygtukas pamėlynuos. Spustelėkite mygtuką dabar.
+* When SDK installation is completed the "Finish" button will turn blue. Click this button.
     
-    ![Baigti SDK diegimą](../images/studioSetup/35_DownloadSDKfinished.png)
+    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* Android Studio gali rekomenduoti atnaujinti gradle sistemą. **Never update gradle!** This will lead to difficulties!
+* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
 * If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
     
