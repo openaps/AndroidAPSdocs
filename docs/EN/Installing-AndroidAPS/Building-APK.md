@@ -133,9 +133,9 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
 
-* Double-click "Version Control" (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
+* Double-click "Version Control" (1) to open the sub-menu.
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
 * Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
@@ -153,13 +153,13 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin\** folder.
 
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
 
   ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
 
 * Check your selected git path again with the "Test" button as described above.
 
-* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5.).
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
 
 ### Mac
 
@@ -171,19 +171,17 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Download AndroidAPS code
 
-* On the Android Studio welcome screen select "Projects" (1.) on the left and then "Get from VCS" (2.).
+* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
 
   ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
 
 //TODO Remove start
- * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+ * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
 
       ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
 //TODO Remove end
 
   * We will now tell Android Studio were to get the code from:
-
-      ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
     - Make sure you have selected "Repository URL" on the left (1).
     - Check if "Git" is selected as version control (2).
@@ -191,9 +189,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
       ```
       https://github.com/nightscout/AndroidAPS
       ```
-      to the main AndroidAPS repository into the URL textbox (3):
+      to the main AndroidAPS repository into the URL textbox (3).
     - Choose the directory where you want to save the cloned code (4).
 
+      ![Clone Git](../images/studioSetup/21_CloneURL.png)
+      
 * Click button "Clone" (5).
 
    ![Clone repository](../images/studioSetup/22_Cloning.png)
@@ -222,7 +222,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Download Android SDK
 
-* In the menu, go to  File > Settings.
+* In the menu, go to  File (1) > Settings (2).
 
    ![Open settings](../images/studioSetup/30_Settings.png)
 
@@ -251,7 +251,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1)
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
 
    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -299,7 +299,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
    ![Create key store](../images/studioSetup/46_KeystorePath.png)
 
-  **_Warn: Do not save in same folder as project. You must use a different directory!_**
+  **_Warning: Do not save in same folder as project. You must use a different directory!_**
   A good location would be your home folder.
 
 * Type a file name for your key store (2) and confirm with "OK" (3).
@@ -312,7 +312,9 @@ Signing means that you indicate your app to be your own creation but in a digita
 
   **_Note:_** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
 
-* Do the same for your key (5 + 6).
+* Enter an alias (4) for your key. Choose whatever you like.
+
+* Enter (5) and confirm (6) the password for your key
 
 * Validity (7) is 25 years by default. You do not have to change the default value.
 
