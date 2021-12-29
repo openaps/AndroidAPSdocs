@@ -193,20 +193,20 @@
 <tr>
  <td><strong>AGB (LGS)</strong></td>
  <td>Arrêt Glycémie Basse<br>AAPS réduira le débit de base si la glycémie baisse rapidement. Mais si la glycémie augmente, il ne fera qu'augmenter le débit de base si l'IA (IOB) est négatif (à partir d'un AGB précédent), sinon les débits de base resteront les mêmes que ceux de votre profil sélectionné. Vous pouvez subir temporairement des pics de glycémie à la suite d'hypos sans pouvoir augmenter le débit de base sur le rebond.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objectif 6</a></td>
+ <td><a href="../Usage/Objectives.html#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse">objectif 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>Système d'exploitation gratuit et open-source pour les smartphones, etc. <br>OS alternatifs pour les smartphones ne fonctionnant pas avec Android 8.1 (Oreo)<br> (lors de l'utilisation de Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Pompe Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#configuration-materielle-requise">Wiki - Pompe Combo</a></td>
 </tr>
 <tr>
  <td><strong>Fichiers log</strong></td>
  <td>enregistrement de toutes les actions d'AAPS (utiles pour le dépannage et le débogage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - fichiers log</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#acces-aux-fichiers-log">Wiki - fichiers log</a></td>
 </tr>
 <tr>
  <td><strong>maxIA (maxIOB)</strong></td>
@@ -224,7 +224,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>fonction de sécurité - quantité de glucides assimilés par défaut lorsque l’absorption ne peut pas être calculée dynamiquement en fonction de vos glycémies</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#parametres-dabsorption">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -236,7 +236,7 @@
  <td><strong>NS Client</strong></td>
  <td>fait partie d'AAPS pour se connecter à votre site Nightscout</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#depannage-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
@@ -260,37 +260,37 @@
  <td><strong>Boucle Ouverte</strong></td>
  <td>le système proposera des ajustements recommandés qui doivent être effectués manuellement sur la pompe</td>
  <td>Boucle Fermée</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
  <td>détection de sensibilité<br>"implémentation de la conception de référence version 0/1" - l'algorithme clé derrière OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - détection de sensibilité</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#estimation-de-sensibilite">Wiki - détection de sensibilité</a></td>
 </tr>
 <tr>
  <td><strong>Temps du pic</strong></td>
  <td>heure de l'effet maximum de l'insuline injectée</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Générateur de configuration</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insuline">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>HP</strong></td>
  <td>historique de la pompe (entrée dans l'onglet traitements)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Captures d'écran</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#traitement">Captures d'écran</a></td>
 </tr>
 <tr>
  <td><strong>Prédictions</strong></td>
  <td>prédictions pour les futures glycémies se basant sur différents calculs</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - courbes de prédictions</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#onglet-vue-d-ensemble">Wiki - courbes de prédictions</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
  <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profil">Wiki - profil</a></td>
 </tr>
 <tr>
  <td><strong>Changement de profil</strong></td>
@@ -332,7 +332,7 @@
  <td><strong>Bruit Capteur</strong></td>
  <td>lectures MGC instables conduisant à des "sauts" de glycémies</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - bruit capteur</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#lissage-des-donnees-de-glycemie">Wiki - bruit capteur</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
@@ -368,7 +368,7 @@
  <td><strong>CT</strong></td>
  <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Cibles temp.</a></td>
+ <td><a href="../Usage/temptarget.html#cibles-temporaires">Wiki - Cibles temp.</a></td>
 </tr>
 <tr>
  <td><strong>RNS (UAM)</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>Fonds d'écran</strong></td>
  <td>Image d'arrière-plan de AndroidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">voir la page des smartphones</a></td>
+ <td><a href="../Getting-Started/Phones.html#fond-d-ecran">voir la page des smartphones</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
