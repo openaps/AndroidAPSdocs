@@ -104,7 +104,7 @@ Bitte **wische nach links** zur **Omnipod (POD)** Registerkarte, wo du alle Pod 
 RileyLink-Setup
 ---------------
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
+Wenn Du Deinen RileyLink bereits erfolgreich im Setup-Assistenten oder wie oben beschrieben verbunden hast, fahre mit dem Abschnitt `Aktivieren eines Pod-Abschnitts <#activating-a-pod>`__ fort.
 
 *Hinweis: Ein guter visueller Hinweis dafür, dass der RileyLink nicht angeschlossen ist, ist, dass die Tasten Insulin und Bolusrechner auf der Startseite fehlen. Dies passiert auch in den ersten 30 Sekunden nach dem Start von AAPS, da AAPS sich erst mit dem RileyLink verbinden muss.*
 
@@ -116,11 +116,11 @@ If you already successfully paired your RileyLink in the Setup Wizard or steps a
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. Drücke auf dem Bildschirm **RileyLink Auswahl** die **Scan-Schaltfläche (4)** um einen Bluetooth Scan zu starten. **Wählen Deinen RileyLink (5)** aus der Liste der verfügbaren Bluetooth-Geräte aus.
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
+4. Nach erfolgreicher Auswahl wirst Du zu den Omnipod Einstellungen zurückgeleitet, welche die **MAC-Adresse Deines aktuell ausgewählte RileyLinks auflisten (6).** 
 
     |RileyLink_Setup_5|
 
@@ -133,13 +133,13 @@ Einen Pod aktivieren
 
 Bevor du einen Pod aktivieren kannst, stelle sicher, dass du deine RileyLink-Verbindung in den Omnipod-Einstellungen richtig konfiguriert und verbunden hast.
 
-*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
+*HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass Dein Pod während dieser Prozedur `in der Nähe<#optimale-positionierung-von-omnipod-und-rileylink>`__ *(~30 cm entfernt oder weniger)* ist, aber nicht auf oder direkt neben dem RileyLink liegt.*
 
 1. Navigiere zur Registerkarte **Omnipod (POD)** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 80 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
+2. Die Anzeige ** Pod füllen* * wird angezeigt. Fülle deinen neuen Pod mit mindestens 80 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden. Beachte bei der Berechnung der gesamt Insulinmenge, welche Du in 3 Tagen benötigst, dass zum Füllen des Pod 12 bis 15 IE benötigt werden. 
 
     |Activate_Pod_3|
 
@@ -208,7 +208,7 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
     |Deactivate_Pod_4|
 
-    **WENN die Deaktivierung scheitert** und du keinen Bestätigungspiepton erhältst, kommt evlt. die Meldung **Keine Antwort von RileyLink** oder **Keine Antwort vom Pod**. Bitte klicke auf den Button **Erneut versuchen (1)**, um die Deaktivierung erneut zu versuchen. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **WENN die Deaktivierung scheitert** und du keinen Bestätigungspiepton erhältst, kommt evlt. die Meldung **Keine Antwort von RileyLink** oder **Keine Antwort vom Pod**. Bitte klicke auf den Button **Erneut versuchen (1)**, um die Deaktivierung erneut zu versuchen. Wenn die Deaktivierung weiterhin fehlschlägt, klicke bitte auf die **Verwerfen (2)** -Schaltfläche, um den Pod zu verwerfen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde. Falls Dein Pod einen dauerhaften Alarm hat, musst Du ihn mit einem Pin oder einer Büroklammer manuell ausschalten. Die **Verwerfen (2)** Schaltfläche wird ihn nicht stillt stellen.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
@@ -236,7 +236,7 @@ Insulinabgabe unterbrechen
 
 Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu versetzen. In diesem ausgesetzten Zustand wird der Pod kein Insulin liefern. Dieser Befehl ahmt die Suspend-Funktion nach, die der originale Omnipod PDM an einen aktiven Pod sendet.
 
-1. Gehe zur Registerkarte **Omnipod (POD)** und drücke den Button **Unterbrechen (1)**. Der Suspend-Befehl wird vom RileyLink an den aktiven Pod gesendet und der **Unterbrechen (3)** Button wird ausgegraut. The **Pod status (2)** will display **SUSPEND DELIVERY**.
+1. Gehe zur Registerkarte **Omnipod (POD)** und drücke den Button **Unterbrechen (1)**. Der Suspend-Befehl wird vom RileyLink an den aktiven Pod gesendet und der **Unterbrechen (3)** Button wird ausgegraut. Der **Pod Status (2)** wird **AUSLIEFERUNG UNTERBROCHEN** anzeigen.
 
     |Suspend_Insulin_Delivery_1| |Suspend_Insulin_Delivery_2|
 
@@ -244,7 +244,7 @@ Verwende diesen Befehl, um den aktiven Pod in den Status 'unterbrochen' zu verse
 
     |Suspend_Insulin_Delivery_3|
 
-3. Dein aktiver Pod hat nun die Insulinabgabe unterbrochen. The **Omnipod (POD)** tab will update the **Pod status (1)** to **Suspended**. Der **Unterbrechen**-Button ändert sich zu **Abgabe fortsetzen (2)**.
+3. Dein aktiver Pod hat nun die Insulinabgabe unterbrochen. Die **Omnipod (POD)** Registerkarte aktualisiert den **Pod Status (1)** auf **unterbrochen**. Der **Unterbrechen**-Button ändert sich zu **Abgabe fortsetzen (2)**.
 
     |Suspend_Insulin_Delivery_4|
 
@@ -253,7 +253,7 @@ Insulinabgabe fortsetzen
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
-1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
+1. Gehe zur Registerkarte **Omnipod (POD)** und stelle sicher, dass das Feld **Pod Status (1)** **unterbrochen** anzeigt, dann drücke die **Fortsetzen (2)** Taste, um den Prozess zu starten, um den aktuellen Pod anzuweisen, die normale Insulinlieferung fortzusetzen. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
 
     |Resume_Insulin_Delivery_1| |Resume_Insulin_Delivery_2|
 
@@ -261,24 +261,24 @@ Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die In
 
     |Resume_Insulin_Delivery_3|
 
-3. The **Omnipod (POD)** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will now display the **SUSPEND (2)** button.
+3. Die **Omnipod (POD)** Registerkarte aktualisiert das Feld **Pod Status (1)** um **LAUFEND** und die Schaltfläche **Lieferung fortsetzen** wird nun zu **UNTERBRECHEN (2)** geändert.
 
     |Resume_Insulin_Delivery_4|
 
 Pod-Alarme bestätigen
 ------------------------
 
-*NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
+*HINWEIS - Wenn du keine ACK ALERTS Schaltfläche siehst, liegt es daran, dass diese nur auf der Registerkarte Omnipod (POD) angezeigt wird, wenn der Pod-Ablauf oder der niedrige Reservoir-Alarm ausgelöst wurden.*
 
 In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert werden können, die auftreten, wenn die aktive Pod-Zeit den Grenzwert für die Warnung vor dem Ablauf von 72 Stunden (3 Tage) erreicht. Dieser Grenzwert für die Zeitbegrenzung ist in den **Stunden vor dem Herunterfahren** in den Omnipod Warnungen definiert. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
 
 *HINWEIS - Wenn die Einstellung "Benachrichtigungen automatisch bestätigen" in den Omnipod-Alarmen aktiviert wurden, wird diese Benachrichtigung nach dem ersten Auftreten automatisch bearbeitet und der Alarm muss nicht NICHT manuell abgebrochen werden.*
 
-1. Wenn die definierte **Stunden vor dem Herunterfahren** Warnung erreicht ist, gibt der Pod Warnungen aus, um Dir mitzuteilen, dass er sich seiner Ablaufzeit nähert und bald eine Wechsel des Pods erforderlich sein wird. Dies kann auf der Registerkarte **Omnipod (POD)** überprüft werden, das Feld **Pod läuft ab: (1)** zeigt die genaue Uhrzeit an, wann der Pod abläuft (72 Stunden nach der Aktivierung). Nachdem diese Zeit abgelaufen ist, wird der Text **rot** dargestellt und im Feld **Aktive Pod-Warnungen** wird eine Statusnachricht **Pod läuft in Kürze ab** angezeigt. This trigger will display the **ACK ALERTS (3)** button. A **system notification (4)** will also inform you of the upcoming pod expiration
+1. Wenn die definierte **Stunden vor dem Herunterfahren** Warnung erreicht ist, gibt der Pod Warnungen aus, um Dir mitzuteilen, dass er sich seiner Ablaufzeit nähert und bald eine Wechsel des Pods erforderlich sein wird. Dies kann auf der Registerkarte **Omnipod (POD)** überprüft werden, das Feld **Pod läuft ab: (1)** zeigt die genaue Uhrzeit an, wann der Pod abläuft (72 Stunden nach der Aktivierung). Nachdem diese Zeit abgelaufen ist, wird der Text **rot** dargestellt und im Feld **Aktive Pod-Warnungen** wird eine Statusnachricht **Pod läuft in Kürze ab** angezeigt. Dieser Auslöser zeigt die **ACK ALERTS (3)** Schaltfläche an. Eine **Systembenachrichtigung (4)** informiert Dich über das bevorstehende Ablaufdatum des Pods.
 
     |Acknowledge_Alerts_1| |Acknowledge_Alerts_2|
 
-2. Go to the **Omnipod (POD)** tab and press the **ACK ALERTS (2)** button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. Gehe zur Registerkarte **Omnipod (POD)** und drücke die **ACK ALERTS (2)** Schaltfläche (Bestätigungs-Warnungen). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
     |Acknowledge_Alerts_3|
 
@@ -290,7 +290,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert we
 
     |Acknowledge_Alerts_5|
 
-4. Go to the **Omnipod (POD)** tab, under the **Active Pod alerts** field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+4. Gehe zur Registerkarte **Omnipod (POD)** unter dem Menüpunkt **Aktive Pod Warnungen**. Die Warnmeldung wird dort nicht mehr angezeigt und der aktive Pod erzeugt keine Signale mehr, die mit dem Ablauf des Pods zu tun haben.
 
 Anzeige Pod-Historie
 ----------------
@@ -315,11 +315,11 @@ Zeige RileyLink Einstellungen und Historie an
 
 Dieser Abschnitt zeigt, wie die Einstellungen des aktiven Pods und RileyLinks zusammen mit der Kommunikationshistorie der beiden überprüft werden können. Diese Funktion wird nach dem Aufrufen in zwei Abschnitte unterteilt: **Einstellungen** und **Historie**.
 
-The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the **RileyLink status** reports **RileyLink unreachable**. Der Button **Aktualisieren** auf der Registerkarte **Omnipod (POD)** stellt manuell die Bluetooth-Kommunikation mit dem derzeit in den Omnipod-Einstellungen konfigurierten RileyLink erneut her.
+Hauptsächlich wird diese Funktion verwendet, wenn der RileyLink außerhalb des Bluetooth-Bereichs des Smartphones ist und der **RileyLink-Status** nach einer bestimmten Zeit **RileyLink nicht erreichbar** meldet. Der Button **Aktualisieren** auf der Registerkarte **Omnipod (POD)** stellt manuell die Bluetooth-Kommunikation mit dem derzeit in den Omnipod-Einstellungen konfigurierten RileyLink erneut her.
 
 In the event the **REFRESH** button on the main **Omnipod (POD)** tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
 
-Manually Re-establish Pod Communication Device Bluetooth Communication
+Bluetooth-Kommunikation für Pod-Kommunikationsgerät manuell wiederherstellen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. From the **Omnipod (POD)** tab when the **RileyLink Status: (1)** reports **RileyLink unreachable** press the **POD MGMT (2)** button to navigate to the **Pod Management** menu. On the **Pod Management** menu you will see a notification appear actively searching for a RileyLink connection, press the **RileyLink stats (3)** button to access the **RileyLink settings** screen.
@@ -339,11 +339,11 @@ Manually Re-establish Pod Communication Device Bluetooth Communication
 	
 3. Wenn die **Bluetooth-Verbindung** nicht wieder hergestellt wird, dann versuche die Bluetooth-Funktion auf deinem Smartphone manuell **aus-** und dann wieder **anzuschalten**.
 
-4. Nach einer erfolgreichen RileyLink Bluetooth-Wiederverbindung sollte das Feld **Verbindungsstatus: (1)** **RileyLink bereit** anzeigen. Congratulations, you have now reconnected your configured pod communication device to AAPS!
+4. Nach einer erfolgreichen RileyLink Bluetooth-Wiederverbindung sollte das Feld **Verbindungsstatus: (1)** **RileyLink bereit** anzeigen. Herzlichen Glückwunsch, Du hast jetzt erneut Deinen konfigurierten RileyLink mit AAPS verbunden!
 
     |RileyLink_Bluetooth_Reset_5|
 
-Pod Communication Device and Active Pod Settings
+Pod-Kommunikationsgerät und Aktive Pod-Einstellungen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod. 
@@ -357,7 +357,7 @@ This screen will provide information, status, and settings configuration informa
 RileyLink (3) fields
 ++++++++++++++++++++
 
-	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
+	* **Adresse:** MAC-Adresse des gewählten Pod-Kommunikationsgeräts, die in den Omnipod-Einstellungen definiert wurde.
 	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
 	* **Battery Level:** Displays the current battery level of the connected pod communication device
 	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device (currently only eros pods work with the RileyLink
@@ -438,7 +438,7 @@ Fields
 * **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
 
-Icons
+Symbole
 -----
 
 .. list-table:: 
@@ -491,7 +491,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
     * - |deactivate_pod|
       - **Deactivate Pod**
  
-        Deactivates the currently active pod.
+        Deaktiviert den aktuell aktiven Pod.
 		 
 	*  A partially paired pod ignores this command.
 	*  Use this command to deactivate a screaming pod (error 49).
