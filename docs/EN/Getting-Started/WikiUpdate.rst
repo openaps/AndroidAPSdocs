@@ -3,6 +3,7 @@ Docs updates & changes
 
 December 2021
 ==================================================
+* `Building the APK <>`_ - update Android Studio Arctic Fox @tanja
 * `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added
 
 November 2021
