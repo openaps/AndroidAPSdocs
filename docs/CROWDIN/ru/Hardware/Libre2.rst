@@ -205,7 +205,7 @@ Freestyle Libre 2
 Замечание #2: Процедура OOP пока не может калиброваться. Это изменится в будущем.
 
 
-Best practices for calibrating a libre 2 sensor
+Наилучшие методы калибровки Libre 2
 ==================================================
 
 To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow.
