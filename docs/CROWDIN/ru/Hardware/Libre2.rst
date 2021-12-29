@@ -191,18 +191,18 @@ Freestyle Libre 2
 
 Алгоритм Libre2 генерирует те же значения ГК, что и оригинальное считывающее устройство или приложение LibreLink при NFC сканировании. AAPS с Libre2 производит 25 минутное сглаживание, чтобы избежать отдельных скачков. Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
-Трансмиттер Droplet работает также и с Libre2, но использует интернет-сервис. Дополнительную информацию можно найти в FB или поискать в поисковой системе. ММ2 с приложением "tomato" также использует интернет-сервис. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Трансмиттер Droplet работает также и с Libre2, но использует интернет-сервис. Дополнительную информацию можно найти в FB или поискать в поисковой системе. ММ2 с приложением "tomato" также использует интернет-сервис. Для получения данных гликемии на обоих устройствах необходимо иметь хорошую связь с интернетом.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
+Даже если алгоритм модифицированного приложения LibreLink не вызывает нареканий, могут существовать причины использования Bluetooth-передатчика:
 
-* the BG readings are identical to the reader results
-* the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-* 8 hours Backfilling is fully supported.
-* get BG readings during the one hour startup time of a new sensor
+* значения ГК совпадают с ридером
+* Libre2 может работать 14,5 дней как и Libre1 
+* Полностью поддерживается восьмичасовое обратное наполнение данными.
+* значения ГК доступны в течение часа прогрева при запуске нового датчика
 
-Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
+Замечание: Передатчик может работать параллельно с приложением LibreLink. Он не нарушает его работу.
 
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+Замечание #2: Процедура OOP пока не может калиброваться. Это изменится в будущем.
 
 
 Best practices for calibrating a libre 2 sensor
