@@ -191,7 +191,7 @@ Freestyle Libre 2
 
 Алгоритм Libre2 генерирует те же значения ГК, что и оригинальное считывающее устройство или приложение LibreLink при NFC сканировании. AAPS с Libre2 производит 25 минутное сглаживание, чтобы избежать отдельных скачков. Алгоритм программы генерирует данные каждые 5 минут со сглаживанием по среднему значению за последние 5 минут. Поэтому значения ГК не выглядят гладкими, а совпадают с показаниями оригинального устройства считывания и быстрее следуют "реальным". Если вы хотите пользоваться алгоритмом OOP, включите все настройки сглаживания в xDrip+.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Трансмиттер Droplet работает также и с Libre2, но использует интернет-сервис. Дополнительную информацию можно найти в FB или поискать в поисковой системе. ММ2 с приложением "tomato" также использует интернет-сервис. For both devices you have to take care to have a proper internet connection to get your BG readings.
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
