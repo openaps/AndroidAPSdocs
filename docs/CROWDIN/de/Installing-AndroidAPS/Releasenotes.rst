@@ -46,7 +46,7 @@ Wichtige Hinweise
 * Verwende immer die gleiche Version von AAPS und NSClient.
 * Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die `BOYDA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ wird auch empfohlen, um von der rückwirkenden Glättung der Dexcom App zu profitieren.
 * Geändertes Verhalten: Kohlenhydrate werden nur aufgezeichnet, wenn der Bolus erfolgreich abgegeben werden konnte.
-* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
+* Diese Version akzeptiert keine alten unverschlüsselten Exporte. Wenn Du nur die "AndroidAPSPreferences" Datei hast, solltest Du zuerst auf 2.8 aktualisieren und dort exportieren, um in 3.0 importieren zu können.
 
 Vorbereitende Schritte
 ----------------------
@@ -64,7 +64,7 @@ Vorbereitende Schritte
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
-* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
+* Der Medtronic-Treiber wurde auf Kotlin umgestellt und einige Datenänderungen/Optimierungen und Korrekturen hinzugefügt @andyrozman
 * Neue interne Schnittstelle für Pumpentreiber
 * NSClient komplett neu programmiert, um eine bessere Synchronisierung und detailliertere Anpassungen zu ermöglichen @MilosKozak
 
