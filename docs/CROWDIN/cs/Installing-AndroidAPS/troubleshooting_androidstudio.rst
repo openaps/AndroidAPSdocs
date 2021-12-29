@@ -15,9 +15,21 @@ V případě, že nemůžete najít své staré úložiště klíčů, postupujt
 7. `Importujte nastavení <../Usage/ExportImportSettings.html#exportovat-nastaveni>`_ – pokud nemůžete najít soubor s nastavením na svém telefonu, zkopírujte jej do telefonu z externího úložiště.
 8. Smyčku pak můžete dále používat.
 
+
+
+Error "on demand" Configuration
+==================================================
+
+Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+* Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+* V levé části pak na Build, Execution, Deployment > Compiler.
+* Odtrhněte Configure on demand.
+* Klikněte na Apply nebo OK.
+
+
 Varování kompilátoru Kotlin
 ==================================================
-Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte. 
+Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte.
 
 Sestavení aplikace bylo úspěšné a můžete ji přenést do telefonu.
 
@@ -96,7 +108,7 @@ Možnost 2 – Znovu načtěte zdrojový kód
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Možnost 3 – Zkuste stáhnout aktualizace
 --------------------------------------------------
 * Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
@@ -134,7 +146,7 @@ Nic z výše uvedeného nefunguje
 Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
 1. `Exportujte nastavení <../Usage/ExportImportSettings.html>`__ (ve verzi AAPS, která je již nainstalována v telefonu)
-2. Zálohujte si úložiště klíčů a heslo k němu. V případě, že jste hesla zapomněli, můžete je zkusit najít v projektových souborech, jak je popsáno `zde <https://youtu.be/nS3wxnLgZOo>`__. Nebo můžete vytvořit a použít nové úložiště klíčů. 
+2. Zálohujte si úložiště klíčů a heslo k němu. V případě, že jste hesla zapomněli, můžete je zkusit najít v projektových souborech, jak je popsáno `zde <https://youtu.be/nS3wxnLgZOo>`__. Nebo můžete vytvořit a použít nové úložiště klíčů.
 3. Vytvořte aplikaci úplně od začátku, jak je popsáno `zde <../Installing-AndroidAPS/Building-APK.html#stahnete-si-kod-androidaps>`__.
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
 5. `Importujte nastavení <../Usage/ExportImportSettings.html>`__
