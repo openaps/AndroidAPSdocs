@@ -2,13 +2,13 @@
 
 Wenn die BZ-Daten Sprünge haben oder verrauscht sind, kann es dazu kommen, dass AndroidAPS das Insulin falsch dosiert. Zu hohe oder zu niedrige BZ-Werte können die Folge sein. Daher ist es wichtig, den Loop zu pausieren, bis die Probleme beseitigt sind. Abhängig von Deinem CGM-System können solche Probleme durch die CGM-Konfiguration oder Probleme mit dem Sensor oder der Einsetzstelle entstehen. Ggf. musst Du einen neuen Sensor setzen, um den Fehler zu beheben. Einige Funktionen wie 'SMB immer aktivieren' und 'Aktiviere SMB nach Mahlzeiten' können daher nur mit einer BZ-Quelle verwendet, die die Glukosedaten ausreichend glättet.
 
-## Dexcom sensors
+## Dexcom-Sensoren
 
-### Build Your Own Dexcom App
+### Build your own Dexcom App
 
-When using [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. Es gibt keine Einschränkungen bei der Verwendung des SMB.
+Wenn Du die [BYODA](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) nutzt, werden die BZ-Daten geglättet und sind konsistent. Außerdem kannst Du die rückwirkende Glättung von Dexcom nutzen. Es gibt keine Einschränkungen bei der Verwendung des SMB.
 
-### xDrip+ with Dexcom G5 or G6
+### xDrip+ mit Dexcom G5 oder G6
 
 Ausreichend glatte Daten werden nur geliefert, wenn du den xDrip+ G5 "OB1 Collector im nativen Modus" verwendest.
 
@@ -16,7 +16,7 @@ Ausreichend glatte Daten werden nur geliefert, wenn du den xDrip+ G5 "OB1 Collec
 
 Wenn du die Dexcom G5 App (gepatched) verwendest, dann sind deine BZ-Daten glatt und konsistent. Es gibt keine Einschränkungen bei der Verwendung des SMB.
 
-## Freestyle Libre sensors
+## Freestyle Libre Sensoren
 
 ### xDrip+ mit Freestyle Libre
 
