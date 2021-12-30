@@ -1,32 +1,32 @@
-Remote monitoring
+Uzaktan İzleme
 **************************************************
 
 .. image:: ../images/KidsMonitoring.png
-  :alt: Monitoring children
+  :alt: Çocukları izleme
   
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıca uzaktan sms komutları göndermeye izin verir. Elbette, partnerinizi veya arkadaşınızı takip etmek için de uzaktan izlemeyi kullanabilirsiniz.
 
-Functions
+Fonksiyonlar
 ==================================================
-* Kid's pump is controlled by kid's phone using AndroidAPS.
-* Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient app.
-* Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-* Remote control of AndroidAPS using `SMS Commands <../Children/SMS-Commands.html>`_ secured by two-factor authentication.
-* Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see `release notes for Version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for further details.
+* Çocuğun pompası, AndroidAPS kullanılarak çocuğun telefonu tarafından kontrol edilir.
+* Ebeveynler, telefonlarında **NSClient uygulamasını** kullanarak, glikoz seviyeleri, aktif karbonhidrat, aktif insülin vb. ilgili tüm verileri görerek uzaktan takip edebilirler. . Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
+* Ebeveynler, telefonlarında **xDrip+ uygulamasını takipçi modunda** kullanarak KŞ uyarılarını alabilirler.
+* `SMS Komutları <../Children/SMS-Commands.html>`_ kullanılarak AndroidAPS'in uzaktan kontrolü, iki faktörlü kimlik doğrulama ile güvence altına alınmıştır.
+* NSClient uygulaması aracılığıyla uzaktan kontrol, yalnızca senkronizasyonunuz iyi çalışıyorsa önerilir (örn. TT, TBR'nin (geçici hedefler, geçici bazal oranları) kendi kendine değişmesi gibi istenmeyen veri değişiklikleri olmamalıdır.) daha fazla ayrıntı için 'Sürüm 2.8.1.1 için sürüm notlarına <../Installing-AndroidAPS/Releasenotes.html#important-hints>'_ bakın.
 
-Tools and apps for remote monitoring
+Uzaktan izleme için araçlar ve uygulamalar
 ==================================================
-* `Nightscout <https://nightscout.github.io/>`_ in web browser (mainly data display)
-*	NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  `NSClient & NSClient2 to download <https://github.com/nightscout/AndroidAPS/releases/>`_. The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
-*	Dexcom follow if you are using original Dexcom app (BG values only)
-*	`xDrip+ <../Configuration/xdrip.html>`_ in follower mode (mainly BG values and **alarms**)
-*	`Sugarmate <https://sugarmate.io/>`_ or `Spike <https://spike-app.com/>`_ on iOS (mainly BG values and **alarms**)
+* Web tarayıcısında `Nightscout <https://nightscout.github.io/>`_ (esas olarak veri görüntüleme)
+* NSClient uygulaması, takip özelliği olan, profil geçişleri yapabilen, Geçici Hedefleri ayarlayan ve karbonhidratları girebilen AAPS'nin sadeleştirilmiş bir sürümüdür. 2 uygulama vardır: `NSClient & NSClient2, indirmek için; <https://github.com/nightscout/AndroidAPS/releases/>`_. Tek fark uygulama adıdır. Bu şekilde aynı telefona iki kez uygulamayı yükleyebilir, 2 farklı kişiyi/nightscout'u takip edebilirsiniz.
+* Orijinal Dexcom uygulamasını kullanıyorsanız, Dexcom follow uygulaması (yalnızca KŞ değerleri)
+* Takipçi modunda `xDrip+ <../Configuration/xdrip.html>`_ (esas olarak KŞ değerleri ve **alarmlar**)
+* iOS'ta `Sugarmate <https://sugarmate.io/>`_ veya `Spike <https://spike-app.com/>`_ (özellikle KŞ değerleri ve **alarmlar**)
 
-Things to consider
+Dikkat edilmesi gereken önemli noktalar
 ==================================================
-* Setting the correct `treatment factors <../Getting-Started/FAQ.html#how-to-begin>`_ (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved. 
-* Settings must be the same in AndroidAPS and NSClient app.
-* Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
-* So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
-* What is your emergency plan when remote control does not work (i.e. network problems)?
-* Remote monitoring and treatment can be really helpful in kinder garden and elementary school. But make sure the teachers and educators are aware of your kid's treatment plan. Examples for such care plans can be found in the `files section of AndroidAPS users <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ on Facebook.
+* Doğru `tedavi faktörlerini <../Getting-Started/FAQ.html#how-to-begin>`_ (bazal oran, DIA, IDF...) ayarlamak, çocuklar için özellikle büyüme hormonları söz konusu olduğunda zor olmaktadır. 
+* AndroidAPS ve NSClient uygulamasında ayarlar aynı olmalıdır.
+* AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
+* Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
+* Uzaktan kontrol çalışmadığında acil durum planınız nedir (örn. ağ sorunları)?
+* Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Bu tür bakım planlarına ilişkin örnekler, Facebook'ta AndroidAPS kullanıcılarının <https://www.facebook.com/groups/AndroidAPSUsers/files/>'_ dosyaları bölümünde bulunabilir.
