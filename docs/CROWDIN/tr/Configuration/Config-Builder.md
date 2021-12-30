@@ -194,7 +194,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
-## Loop
+## Döngü
 
 * Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
@@ -305,7 +305,7 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 ### Eylemler
 
-* Some buttons to quickly access common features.
+* Ortak özelliklere hızla erişmek için bazı butonlar.
 * Ayrıntılar için [AAPS ekran görüntülerine](../Getting-Started/Screenshots#action-tab) bakın.
 
 ### Automation
