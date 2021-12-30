@@ -9,7 +9,7 @@
 * Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * As of version 2.3 you have to use git to update. Updating via zip file does not work anymore.
 * As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
+* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
 * If you are using xDrip make sure to [identify the receiver](../Configuration/xdrip#identify-receiver).
 * You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
@@ -35,6 +35,7 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 If you have already changed the URL or update from version 2.8.x, follow these steps:
 
 * Open your existing AndroidAPS project with Android Studio. You might need to select your project. (Double) click on the AndroidAPS project.
+
   ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
 * In the menu bar of Android Studio, select Git -> Fetch
@@ -58,20 +59,18 @@ Note: The files that were updated may vary! This is not an indication
 
    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running a couple of seconds do download some dependencies. Wait until it is finished.
+* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-* Your sourcecode is now the current released version.
-It's time to build the signed apk from it.
-[Build signed apk section](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk)
+* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk).
 
 
 ## Check AAPS version on phone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About.
 
-![AAPS version installed](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 
 ## Troubleshooting
