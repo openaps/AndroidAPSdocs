@@ -93,7 +93,7 @@ Disadvantage:
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
 
-## Insulin
+## İnsülin
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
@@ -234,7 +234,7 @@ You should [export your settings](../Usage/ExportImportSettings.rst) (including 
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
-## Treatments
+## Tedaviler
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
@@ -252,9 +252,9 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Define which Buttons are shown on the home screen.
 
-* Treatments
-* Calculator
-* Insulin
+* Tedaviler
+* Hesap makinesi
+* İnsülin
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
