@@ -113,10 +113,10 @@ CGM (Sürekli glikoz ölçüm) verileri
   * Yanıt: 110 kalibrasyon göndermek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
   * Doğru kod alındıktan sonra yanıt: Kalibrasyon gönderildi (**xDrip kuruluysa. Kalibrasyonların kabul edilmesi xDrip'te etkinleştirilmelidir**)
 
-Bazal
+Basal
 --------------------------------------------------
 * BASAL STOP/CANCEL
-  * Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Geçici bazalı durdurmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * BASAL 0.3
   * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
 * BASAL 0.3 20
