@@ -1,6 +1,6 @@
-SMS Commands
+SMS Komutları
 **************************************************
-Safety First
+Önce Güvenlik
 ==================================================
 * AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. A strong password or biometrics are recommended.
 * Additionally it is recommended to allow a `second phone number <#authorized-phone-numbers>`_ for SMS commands. So you can use second number to `temporary disable <#other>`_ SMS communicator in case your main remote phone gets lost or stolen.
@@ -146,7 +146,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 * EXTENDED 2 120
   * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
-Profile
+Profil
 --------------------------------------------------
 * PROFILE STATUS
   * Response: Profile1
