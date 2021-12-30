@@ -1,10 +1,10 @@
 # Config Builder
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamburger menüsünden Konfigürasyon ayarları'nı açabilirsiniz.
 
 ![Open config builder](../images/ConfBuild_Open.png)
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
 Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
@@ -18,29 +18,29 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
 ### Local profile (recommended)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
 Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Buttons:
+Butonlar:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* yeşil artı: profil ekleme
+* kırmızı X: profil silme
+* mavi ok: profil kopyalama
 
 If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. Bu durumda, yeni yerel profile zaman kayması ve yüzdesel değişim uygulanabilecektir.
 
 1. Go to treatments tab.
 2. Select ProfileSwitch.
@@ -305,8 +305,8 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 ### Eylemler
 
-* Ortak özelliklere hızla erişmek için bazı butonlar.
-* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
+* Some buttons to quickly access common features.
+* Ayrıntılar için [AAPS ekran görüntülerine](../Getting-Started/Screenshots#action-tab) bakın.
 
 ### Automation
 
