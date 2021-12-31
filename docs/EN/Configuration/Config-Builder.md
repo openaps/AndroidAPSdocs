@@ -19,9 +19,10 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
 ## Profile
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
 
-### Local profile (recommended)
+### Local profile
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
 Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
@@ -51,15 +52,6 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
-
-Disadvantage: 
-* none
-
 ### Profile helper
 
 Profile helper offers two functions:
@@ -68,20 +60,6 @@ Profile helper offers two functions:
    2. Compare two profiles or profile switches in order to clone a new profile
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
-
-### NS Profile
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure.
-This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
-
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
-
-Advantage: 
-* multiple profiles
-* easy to edit via PC or tablet
-
-Disadvantage: 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
 
 ## Insulin
 
