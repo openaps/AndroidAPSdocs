@@ -4,16 +4,6 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps that are Loopable
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
-
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-
-***
-
-
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 
