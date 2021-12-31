@@ -37,7 +37,7 @@ Android 7
 
 Versión 3.0.0
 ================
-Fecha de lanzamiento: XX-XX-2021
+Release date: XX-XX-2022
 
 Notas importantes
 ----------------------
