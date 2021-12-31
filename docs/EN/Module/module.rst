@@ -122,17 +122,6 @@ Any problems with the spreadsheet please send an email to `hardware@androidaps.o
 xDrip+
 --------------------------------------------------
 Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
-
-Sample Setup
-==================================================
-If you want to get a step by step example, you might want to look at a sample setup. The first sample setup is quite old, but should be still up-to-date.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
- 
   
 What to do while waiting for modules
 ==================================================
