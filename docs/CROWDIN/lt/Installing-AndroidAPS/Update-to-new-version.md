@@ -9,8 +9,8 @@
 * Prašome atnaujinti kuo greičiau, kai tik nauja versija yra prieinama. Gausite [informaciją AndroidAPS pagrindiniame ekrane](../Installing-AndroidAPS/Releasenotes#release-notes) apie naują versiją.
 * Nuo versijos 2.3 jūs turite naudoti git atnaujinimui. Atnaujinimas per zip failą daugiau nebeveikia.
 * Versijos 2.7 duomenų saugyklos adresas pakeistas į <https://github.com/nightscout/AndroidAPS>. Jei nesate susipažinę su git, paprasčiausias būdas yra pašalinti esamą AndroidAPS katalogą ir pradėti [programos kūrimą nuo pradžių](../Installing-AndroidAPS/Building-APK.md).
-* Please use [Android Studio Version 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
-* [Windows 10 32-bitų sistemos](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) nėra palaikomos Android Studio 4.1.1.
+* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
 * Jei naudojate xDrip įsitikinkite, kad [nustatote gavėją](../Configuration/xdrip#identify-receiver).
 * You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
@@ -31,74 +31,43 @@ Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAP
 
 ## Atnaujinkite savo vietinę kopiją
 
-* Versijos 2.7 duomenų saugyklos adresas pakeistas į <https://github.com/nightscout/AndroidAPS>. Jei nesate susipažinę su git, paprasčiausias būdas yra pašalinti esamą AndroidAPS katalogą ir pradėti [programos kūrimą nuo pradžių](../Installing-AndroidAPS/Building-APK.md).
-* Spustelėkite: VCS -> Git -> Pull
+* Versijos 2.7 duomenų saugyklos adresas pakeistas į <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md). If you have already changed the URL or update from version 2.8.x, follow these steps:
+
+* Open your existing AndroidAPS project with Android Studio. You might need to select your project. (Double) click on the AndroidAPS project.
     
-    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
+    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-* Spustelėkite Pull (nėra pasikeitimų dialogo srityje)
+* In the menu bar of Android Studio, select Git -> Fetch
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
+    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-* Palaukite, kol vyksta atsisiuntimas.
+* You will see a message in the lower right corner that Fetch was successful.
     
-    ![Android Studio - Pull vyksta](../images/AndroidStudio361_Update03.png)
+    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
-* Kai bus atlikta, Android Studio informuos, kad "visi failai yra atnaujinti".
+* In the menu bar, now select Git -> Pull
     
-    ![Visi failai atnaujinti](../images/AndroidStudio361_Update04.png)
+    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
-## Generuoti pasirašytą APK (Generate signed APK)
+* Leave all options as they are (origin/master) and select Pull
+    
+    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-<!--- Text is maintained in page building-apk.md --->
+* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+    
+    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
-* Spustelėkite "Build" (Sukurti) meniu juostoje ir pasirinkite "Generate Signed Bundle / APK..." (Generuoti pasirašomą rinkinį / APK...).
+* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+    
+    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-![Kurti apk](../images/AndroidStudio361_27.png)
+* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk).
 
-* Pasirinkite "APK" (1.) vietoje "Android App Bundle" ir spauskite "Next" (2.).
+## Check AAPS version on phone
 
-![APK vietoj rinkinio](../images/AndroidStudio361_28.png)
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About.
 
-* Įsitikinkite, kad modulis yra nustatytas, į "app".
-* Pasirinkite kelią į savo raktų saugyklą, paspausdami "Choose existing..." ("Pasirinkti esamą...").
-* Įveskite savo slaptažodžius raktų saugyklai ir raktui.
-* Jei pažymėtas laukelis slaptažodžio priminimui, nereikia jų įvesti iš naujo. Jei laukelis nebuvo pažymėtas paskutinio apk kūrimo metu ir negalite priminti slaptažodžių, skaitykite [trikčių skyrių](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Spauskite "Next".
-
-![Raktų saugykla](../images/AndroidStudio361_Update05.png)
-
-* Pasirinkite kūrimo variantą "fullRelease" (1.). 
-* Pažymėkite langelius V1 ir V2 parašo versijoms(2.).
-* Spustelėkite "Finish". (3.)
-
-![Baigti kūrimą](../images/AndroidStudio361_32.png)
-
-* Android Studio bus rodoma informacija "APK(s) generated successfully..."(APK(s) sukurtas sėkmingai...), kai kūrimas bus baigtas.
-* Jei kūrimas nebuvo sėkmingas, skaitykite [trikčių diagnostikos skiltį](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* Lengviausias būdas surasti sukurtą APK, spustelėkite ant "Event log" (įvykių žurnalai).
-
-![Kūrimas sėkmingas - įvykių žurnalas](../images/AndroidStudio361_33.png)
-
-* Įvykių žurnalo skiltyje spauskite "locate" (surasti).
-
-![Įvykių žurnalas - raskite apk](../images/AndroidStudio361_34.png)
-
-* failo, kurio ieškote, pavadinimas yra app-full-release.apk.
-
-![APK failo vieta](../images/AndroidStudio361_35.png)
-
-## Perkelkite APK į išmanųjį telefoną
-
-Lengviausias būdas perkelti app-full-release.apk failą į telefoną yra [USB kabeliu ar Google Disku](https://support.google.com/android/answer/9064445?hl=en). Prašome atkreipti dėmesį, kad perdavimas elektroniniu paštu gali sukelti sunkumų ir nėra tinkamiausias būdas.
-
-Jūsų telefone jūs turite leisti diegti programas iš nežinomų šaltinių. Instrukcijas, kaip tai padaryti, galima rasti internete (pvz., [čia](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) arba [čia](https://www.androidcentral.com/unknown-sources)).
-
-## Patikrinkite AAPS versiją telefone
-
-Galite patikrinti AAPS versiją telefone, paspaudę trijų taškų meniu, ekrano viršuje, dešiniajame kampe ir tada "Apie" ("About").
-
-![Įdiegta AAPS versija](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 ## Trikčių šalinimas
 
