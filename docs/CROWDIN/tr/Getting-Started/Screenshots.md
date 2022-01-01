@@ -222,7 +222,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Buttons for insulin, carbs and Calculator are 'always on'. 
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
-#### Insulin
+#### İnsülin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
@@ -241,7 +241,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * You can use the buttons to quickly increase carb amount.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
-#### Calculator
+#### Hesap makinesi
 
 * See Bolus Wizard [section below](#bolus-wizard)
 
@@ -428,9 +428,9 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 * Calculations are each time the system gets a fresh reading from the CGM.
 * For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
-## Profile
+## Profil
 
-![Profile](../images/Screenshots_Profile.png)
+![Profil](../images/Screenshots_Profile.png)
 
 * Profile contains information on your individual diabetes settings:
    

@@ -239,7 +239,7 @@ Max allowed carbs [g]
 * This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
 * It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
-Loop
+Döngü
 ===========================================================
 APS mode
 -----------------------------------------------------------

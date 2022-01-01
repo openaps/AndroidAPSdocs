@@ -1,10 +1,10 @@
 # Config Builder
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamburger menüsünden Konfigürasyon ayarları'nı açabilirsiniz.
 
 ![Open config builder](../images/ConfBuild_Open.png)
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
 Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
@@ -18,29 +18,29 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## Profil
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
 ### Local profile (recommended)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
 Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Buttons:
+Butonlar:
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* yeşil artı: profil ekleme
+* kırmızı X: profil silme
+* mavi ok: profil kopyalama
 
 If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. Bu durumda, yeni yerel profile zaman kayması ve yüzdesel değişim uygulanabilecektir.
 
 1. Go to treatments tab.
 2. Select ProfileSwitch.
@@ -93,7 +93,7 @@ Disadvantage:
 * no local changes to profile settings
 * profile cannot be changed directly on the phone
 
-## Insulin
+## İnsülin
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
@@ -194,7 +194,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
-## Loop
+## Döngü
 
 * Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
@@ -234,7 +234,7 @@ You should [export your settings](../Usage/ExportImportSettings.rst) (including 
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
-## Treatments
+## Tedaviler
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
@@ -252,9 +252,9 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Define which Buttons are shown on the home screen.
 
-* Treatments
-* Calculator
-* Insulin
+* Tedaviler
+* Hesap makinesi
+* İnsülin
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
@@ -303,10 +303,10 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Eylemler
 
-* Some buttons to quickly access common features.
-* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
+* Ortak özelliklere hızla erişmek için bazı butonlar.
+* Ayrıntılar için [AAPS ekran görüntülerine](../Getting-Started/Screenshots#action-tab) bakın.
 
 ### Automation
 

@@ -37,23 +37,20 @@ Android 7
 
 Version 3.0.0
 ================
-Release date: XX-XX-2021
+Release date: XX-XX-2022
 
 Důležitá poznámky
 ----------------------
 * **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ is also recommended to take advantage of Dexcom back-smoothing
-* Behavior change: carbs are recorded only if bolus is successful
-* This version doesn't accept old unecrypted exports. If you have "AndroidAPSPreferences" file only you should upgrade to 2.8 first and export there to be able import in 3.0
+* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
 
 Preparation steps
 ----------------------
-* At least two days before update:
-
-   * disable Dexcom bridge in Nightscout
-   * if you are using G5/G6 switch to `BOYDA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+**At least two days before update:**
+* disable Dexcom bridge in Nightscout
+* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
 
 Changes
 ----------------------
@@ -64,7 +61,6 @@ Changes
 * Glunovo support
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Lot of code rewritten to Kotlin @MilosKozak
-* Medtronic driver refactored into Kotlin and some data changes/optimizations and fixes added @andyrozman
 * New internal interface for pump drivers
 * NSClient rewritten for better synchronization and more detailed customization @MilosKozak
 
@@ -75,13 +71,7 @@ Changes
 
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. 
-
-   To update profile from NS side use "Clone" and save changes. Make sure to clone 'Database record' and not the 'Stored profile' in 'Profile Editor' on your Nightscout website. You should see "Profile valid from:" set to currrent date.
-
-   .. image:: ../images/NS_ProfileClone.png
-      :alt: Nightscout profile editor
-   
+* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
 * Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
@@ -93,7 +83,11 @@ Changes
 * Fixed bug associated to unstable CGM data @MilosKozak
 * DanaR and DanaRS communication improvement @MilosKozak
 * CircleCI integration @MilosKozak
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Files location change: 
+
+   * /AAPS/extra (engineering mode) 
+   * /AAPS/logs /AAPS/exports 
+   * /AAPS/preferences
 
 
 

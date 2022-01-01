@@ -15,9 +15,21 @@ En caso de que ya no pueda encontrar el almacén de claves antiguo, haga lo sigu
 7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. Continuar con el lazo.
 
+
+
+Error "on demand" Configuration
+==================================================
+
+Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
+* Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
+* En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
+* Desmarque la casilla de verificación Configurar bajo demanda.
+* Haga clic en Aplicar o en Aceptar.
+
+
 Avisos del compilador Kotlin
 ==================================================
-Si la compilación se ha completado satisfactoriamente, pero se obtienen avisos del compilador Kotlin, simplemente ignore estos avisos. 
+Si la compilación se ha completado satisfactoriamente, pero se obtienen avisos del compilador Kotlin, simplemente ignore estos avisos.
 
 La aplicación se ha creado correctamente y se puede transferir al teléfono.
 
@@ -96,7 +108,7 @@ Opción 2 - Volver a cargar código fuente
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reiniciar HEAD
-   
+
 Opción 3 - Comprobar actualizaciones
 --------------------------------------------------
 * Copiar 'git checkout --' en el portapapeles (sin signos de comillas)
@@ -134,7 +146,7 @@ Ninguna de las anteriores funcionó
 Si ninguno de los consejos anteriores lo ha ayudado podría considerar la creación de la aplicación desde cero:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. O simplemente utiliza un almacén de claves nuevo. 
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. O simplemente utiliza un almacén de claves nuevo.
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. Cuando hayas creado el APK exitosamente borra la app existente de su teléfono, transfiere la nueva apk al teléfono e instálela.
 5. `Import settings <../Usage/ExportImportSettings.html>`__

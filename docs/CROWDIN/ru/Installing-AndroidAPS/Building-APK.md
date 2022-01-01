@@ -2,7 +2,7 @@
 
 ## Постройте сами вместо того, чтобы загружать
 
-**AndroidAPS недоступен для скачивания из-за законодательства, касающегося медицинских устройств. Построить приложение для собственного использования вполне законно, но вам не разрешается передавать копию другим! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
+**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! См. раздел [ FAQ ](../Getting-Started/FAQ.md).**
 
 ## Важные Примечания
 
@@ -15,7 +15,7 @@
   
 <thead>
   <tr>
-    <th class="tg-baqh">Операционная система (только 64 бит)</th>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
     <th class="tg-baqh">Windows 8 или выше</th>
     <th class="tg-baqh">Mac OS 10.14 или выше</th>
     <th class="tg-baqh">Любой Linux поддерживающий Gnome, KDE, или Unity DE;&nbsp;&nbsp;GNU C Library 2.31 или более поздние версии</th>
@@ -23,7 +23,7 @@
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">Процессор CPU (Только 64 бит)</td>
+    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
     <td class="tg-baqh">x86_64 архитектура CPU; ядро Intel или новее, или процессор AMD с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
     <td class="tg-baqh">Чипы на базе ARM или Intel Core 2 поколения или новее с поддержкой <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">среды Hypervisor </span></a></td>
     <td class="tg-baqh">архитектура процессора x86_64, процессор Intel Core или новее, или процессор AMD с поддержкой AMD-виртуализации (AMD-V) и SSSE3</td>
@@ -47,7 +47,7 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file, but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
 
 * * *
 
@@ -119,7 +119,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ## Задайте путь к git в параметрах
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restartet your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
