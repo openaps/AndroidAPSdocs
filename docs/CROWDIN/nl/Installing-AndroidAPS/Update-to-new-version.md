@@ -9,8 +9,8 @@
 * Bouw zo snel mogelijk een nieuwe app zodra er een nieuwe versie is uitgebracht. Je zult een [melding op het Overzichtscherm van AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes) zien over de nieuwe versie.
 * Vanaf versie 2.3 moet je git gebruiken om te updaten. Bijwerken via zip-bestand werkt niet meer.
 * Vanaf versie 2.7 is de locatie waar de code staat, gewijzigd in <https://github.com/nightscout/AndroidAPS>. Als je niet precies weet hoe git werkt, dan is het het gemakkelijkst om de map (directory) waarin AndroidAPS staat, te verwijderen. Gebruik daarna de instructies voor het nieuw [bouwen van de APK](../Installing-AndroidAPS/Building-APK.md).
-* Gebruik [](https://developer.android.com/studio/)Android Studio Versie 4.1.1 of nieuwer om de apk te bouwen.
-* [Windows 10 32-bits systemen](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) worden niet ondersteund door Android Studio 4.1.1.
+* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
 * Als je "xDrip+" gebruikt, zorg dan dat je de instelling voor [Identify receiver](../Configuration/xdrip#identify-receiver) (identificeer ontvanger) hebt ingevuld in xDrip+.
 * You can also use Dexcom G6 with the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
 
@@ -31,74 +31,43 @@ Volg de handleiding op de [git-installatiepagina](../Installing-AndroidAPS/git-i
 
 ## Bijwerken van jouw lokale kopie
 
-* Vanaf versie 2.7 is de locatie waar de code staat, gewijzigd in <https://github.com/nightscout/AndroidAPS>. Als je niet precies weet hoe git werkt, dan is het het gemakkelijkst om de map (directory) waarin AndroidAPS staat, te verwijderen. Gebruik daarna de instructies voor het nieuw [bouwen van de APK](../Installing-AndroidAPS/Building-APK.md).
-* Klik op: VCS-> Git-> Pull
+* Vanaf versie 2.7 is de locatie waar de code staat, gewijzigd in <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md). If you have already changed the URL or update from version 2.8.x, follow these steps:
+
+* Open your existing AndroidAPS project with Android Studio. You might need to select your project. (Double) click on the AndroidAPS project.
     
-    ![Android Studio - GIT - Pull](../images/AndroidStudio361_Update01.png)
+    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-* Klik op Pull (laat alles staan zoals het is in het dialoogvenster)
+* In the menu bar of Android Studio, select Git -> Fetch
     
-    ![Android Studio - GIT - Pull 2](../images/AndroidStudio361_Update02a.png)
+    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-* Wacht terwijl het downloaden bezig is.
+* You will see a message in the lower right corner that Fetch was successful.
     
-    ![Android Studio - Pull wordt uitgevoerd](../images/AndroidStudio361_Update03.png)
+    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
-* Wanneer Android Studio klaar is zul je een melding krijgen dat alle bestanden up-to-date zijn: "all files are up-to-date".
+* In the menu bar, now select Git -> Pull
     
-    ![Alle bestanden zijn up-to-date](../images/AndroidStudio361_Update04.png)
+    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
-## Bouwen van de ondertekende APK
+* Leave all options as they are (origin/master) and select Pull
+    
+    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-<!--- Text is maintained in page building-apk.md --->
+* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+    
+    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
-* Klik op "Build" in de menubalk en kies "Generate Signed Bundle / APK..." (Ondertekende Bundel/APK genereren...).
+* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+    
+    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-![Apk bouwen](../images/AndroidStudio361_27.png)
+* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk).
 
-* Selecteer "APK" (1.) in plaats van "Android App Bundle" en klik op "Next" (2.).
+## Check AAPS version on phone
 
-![APK in plaats van bundel](../images/AndroidStudio361_28.png)
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About.
 
-* Zorg dat de module is ingesteld op "app".
-* Selecteer jouw key store door te klikken op "Choose existing..." (Kies bestaande...).
-* Voer jouw wachtwoorden in voor key stor en key.
-* Als je het vakje voor het onthouden van wachtwoorden eerder had geselecteerd, dan staan de wachtwoorden er al en hoef je deze niet in te voeren. Als je het vakje niet had aangevinkt tijdens de laatste keer dat je de app bouwde en je kunt je wachtwoorden niet meer herinneren, ga dan naar de [Problemen oplossen sectie](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
-* Klik "Next" (volgende).
-
-![Key store](../images/AndroidStudio361_Update05.png)
-
-* Selecteer de buildvariant "fullRelease" (1.). 
-* Selecteer de hokjes V1 en V2 voor de handtekeningversies (2.).
-* Klik op "Finish". (3.)
-
-![Bouwen voltooien](../images/AndroidStudio361_32.png)
-
-* Android Studio laat het je weten wanneer de APK succesvol is gebouwd: "APK(s) generated succesfully...".
-* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de pagina [Problemen oplossen](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
-* De makkelijkste manier om de apk te vinden is door te klikken op "Event log".
-
-![Succesvol gebouwd - event log](../images/AndroidStudio361_33.png)
-
-* Klik in de event log sectie op "locate".
-
-![Event log - zoek apk](../images/AndroidStudio361_34.png)
-
-* app-full-release.apk is het bestand dat je nodig hebt.
-
-![Bestandslocatie apk](../images/AndroidStudio361_35.png)
-
-## Overzetten van de APK naar je telefoon
-
-De eenvoudigste manier om app-full-release.apk over te zetten op je telefoon is via [USB-kabel of Google Drive](https://support.google.com/android/answer/9064445?hl=en). Overdracht per e-mail kan leiden tot problemen (veel e-mailprogramma's blokkeren apk-bestanden als bijlage) en is dus niet de makkelijkste manier.
-
-Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt dit ergens in je telefooninstellingen, waarschijnlijk onder Beveiliging. Handleidingen hoe dit te doen kun je op internet vinden (bijv. [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) of [hier](https://www.androidcentral.com/unknown-sources)).
-
-## Controleer AAPS versie op telefoon
-
-U kunt de AAPS-versie op jouw telefoon bekijken door op de drie stipjes in de rechterbovenhoek van het Overzicht scherm te tikken, en te kiezen voor 'Over'.
-
-![AAPS versie geïnstalleerd](../images/Update_VersionCheck.png)
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 ## Problemen oplossen
 
