@@ -2,7 +2,7 @@
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
-![Open config builder](../images/ConfBuild_Open.png)
+![Open config builder](../images/ConfBuild_Open_AAPS30.png)
 
 Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
@@ -10,13 +10,13 @@ Where there are additional settings available within the module, you can click o
 
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 ## Tab or hamburger menu
 
 With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 ## Profile
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
@@ -38,14 +38,14 @@ If you make any changes to your profile, make sure, you are editing the correct 
 
 #### Clone profile switch
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+1. Click 3-dots-menu in upper right corner.
+2. Select 'Treatments'.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and ress "Clone".
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Upload local profiles to Nightscout
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
