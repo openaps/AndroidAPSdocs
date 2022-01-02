@@ -1,21 +1,21 @@
-Change language
+Dili değiştir
 **************************************************
 
 .. note::
-   The language selection have been moved to the bottom drawer of the left menu. Please click on the bottom bar to open language selection menu.
+   Dil seçimi sol menünün alt satırına taşındı. Dil seçim menüsünü açmak için lütfen alttaki çubuğa tıklayın.
 
 .. image:: images/documentation_language_menu.png
    :width: 350
    :alt: Open language menu
 
-Or just click on one of the following languages:
+Veya aşağıdaki dillerden birine tıklamanız yeterlidir:
 
-* `English <https://androidaps.readthedocs.io/en/latest/>`_
-* `Czech <https://androidaps.readthedocs.io/cs/latest/>`_
-* `Dutch <https://androidaps.readthedocs.io/nl/latest/>`_
-* `German <https://androidaps.readthedocs.io/de/latest/>`_
-* `Greek <https://androidaps.readthedocs.io/el/latest/>`_
-* `Korean <https://androidaps.readthedocs.io/ko/latest/>`_
-* `Lithuanian <https://androidaps.readthedocs.io/lt/latest/>`_
-* `Russian <https://androidaps.readthedocs.io/ru/latest/>`_
-* `Spanish <https://androidaps.readthedocs.io/es/latest/>`_
+* `İngilizce <https://androidaps.readthedocs.io/en/latest/>`_
+* `Çek dili <https://androidaps.readthedocs.io/cs/latest/>`_
+* `Flemenkçe <https://androidaps.readthedocs.io/nl/latest/>`_
+* `Almanca <https://androidaps.readthedocs.io/de/latest/>`_
+* `Yunanca <https://androidaps.readthedocs.io/el/latest/>`_
+* `Kore dili <https://androidaps.readthedocs.io/ko/latest/>`_
+* `Litvanyaca <https://androidaps.readthedocs.io/lt/latest/>`_
+* `Rusça <https://androidaps.readthedocs.io/ru/latest/>`_
+* `İspanyolca <https://androidaps.readthedocs.io/es/latest/>`_
