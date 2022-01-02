@@ -6,9 +6,9 @@ BG Source
    :maxdepth: 1
    :glob:
    
-   General <../Hardware/GeneralCGMRecommendation.rst>
-   Data Smoothing <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+Settings <./xdrip.md>
+   Genel <../Hardware/GeneralCGMRecommendation.rst>
+   Veri Düzgünleştirme <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
+   xDrip+ Ayarları <./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
@@ -17,4 +17,4 @@ BG Source
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g  <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout as BG Source <../Hardware/CgmNightscoutUpload.rst>
+   KŞ Kaynağı olarak Nightscout <../Hardware/CgmNightscoutUpload.rst>
