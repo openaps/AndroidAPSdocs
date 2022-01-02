@@ -18,7 +18,7 @@
 2. Führe ein [Update Deiner lokalen Kopie](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) des AndroidAPS Sourcecodes durch (Git->Fetch und Git -> Pull).
 3. [Signierte APK erstellen (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
 4. [Übertrage die erstellte APK-Datei](../Installing-AndroidAPS/Building-APK.html#transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
-5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
+5. [Prüfe die Version](#aaps-version-auf-dem-smartphone-uberprufen) in AndroidAPS
 
 Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 
