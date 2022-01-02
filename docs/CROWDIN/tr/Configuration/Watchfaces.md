@@ -24,7 +24,7 @@ Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Conf
 
 ## Controlling AAPS from Watch
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS is designed to be *controlled* by Android Wear watches. Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
 
 The following functions can be triggered from the watch:
 
