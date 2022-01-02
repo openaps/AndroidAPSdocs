@@ -1,32 +1,32 @@
-# How to translate AndroidAPS and the documentation
+# AndroidAPS ve dokümantasyon nasıl çevrilir
 
-* Go to <https://crowdin.com/project/androidaps> or <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* <https://crowdin.com/project/androidaps> veya <https://crowdin.com/project/androidapsdocs> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags2019.png)
 
-## Translate strings for AndroidAPS app
+## AndroidAPS uygulaması için dizeleri (strings) çevir
 
-* Click strings.xml
+* strings.xml üzerine tıkla
     
-    ![Click strings.xml](./images/translations-click-strings.png)
+    ![strings.xml üzerine tıkla](./images/translations-click-strings.png)
 
-* Translate sentences on left side by adding new translated text or use & edit suggestion
+* Sol taraftaki cümleleri, yeni çevrilmiş metin ekleyerek veya & öneriyi düzenleyerek çevirebilirsiniz
     
     ![Translation app](./images/translations-translate.png)
 
-* Proofreaders have to switch to Proofreading mode
+* Redaktörler redaksiyon moduna geçerek
     
     ![Proofreading mode app](./images/translations-proofreading-mode.png)
     
-    and approve translated texts
+    çevrilmiş metinleri onaylayabilirler
     
     ![approve text](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS. In the beginning it would be good to also go over the existing translations that are not yet approved and check for mistakes or approve them if they are correct.
+Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne eklenecektir. Diğer çevirilere başlamadan, henüz onaylanmayan mevcut çevirileri de gözden geçirip, yanlış olup olmadığını kontrol etmek veya doğruysa onaylamak ileride karışıklığı önler ve zaman kazanmanıza yardımcı olur.
 
-## Translate docs pages
+## Dokümantasyon sayfalarını çevirme
 
 * Click the name of the docs page you want to translate
     
@@ -86,11 +86,11 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 ## Proofreading
 
-* Proofreaders have to switch to Proofreading mode
+* Redaktörler redaksiyon moduna geçerek
     
     ![Proofreading mode docs](./images/translation_WikiProofreading.png)
     
-    and approve translated texts
+    çevrilmiş metinleri onaylayabilirler
     
     ![approve text](./images/translations-proofreading.png)
 
