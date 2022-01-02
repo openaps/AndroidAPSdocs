@@ -50,7 +50,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 #### Upload local profiles to Nightscout
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 ### Profile helper
 
@@ -63,7 +63,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ## Insulin
 
-![Insulin type](../images/ConfBuild_Insulin.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Select the type of insulin curve you are using.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
@@ -86,22 +86,34 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 #### Rapid-Acting Oref
+
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+
 * recommended for Humalog, Novolog and Novorapid
 * DIA = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Ultra-Rapid Oref
+
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+
 * recommended for FIASP
 * DIA = at least 5.0h
 * Max. peak = 55 minutes after injection (fixed, not adjustable)
 
 #### Lyumjev
+
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+
 * special insulin profile for Lyumjev
 * DIA = at least 5.0h
 * Max. peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Free Peak Oref
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
