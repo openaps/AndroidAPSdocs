@@ -1,27 +1,27 @@
-# Accu-Chek Insight Pump
+# Accu-Chek Insight Pompa
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Bu yazılım bir DIY (Kendin Yap) çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetimini sizin için yapan bir şey değildir, ancak gerekli zamanı ayırmaya istekliyseniz diyabetinizi ve yaşam kalitenizi iyileştirmenize izin verir. Acele etmeyin, ancak öğrenmek için kendinize zaman tanıyın. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
 * * *
 
-## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
+## ***UYARI:** Geçmişte **SightRemote** ile Insight kullanıyorsanız, lütfen **en yeni AAPS sürümüne güncelleyin** ve **SightRemote'u kaldırın**.*
 
-## Hardware and software requirements
+## Donanım ve yazılım gereksinimleri
 
-* A Roche Accu-Chek Insight pump (any firmware, they all work)
+* Roche Accu-Chek Insight pompası (herhangi bir donanım yazılımı olabilir, hepsi çalışır)
 
-Note: AAPS will write data always in **first basal rate profile in the pump**.
+Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
-* The AndroidAPS app installed on your phone
+* Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](../Module/module#phone) sayfasında kontrol edin.)
+* Telefonunuzda yüklü olan AndroidAPS uygulaması
 
 ## Setup
 
-* The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
+* Insight pompası aynı anda yalnızca bir cihaza bağlanmalıdır. Insight uzaktan kumandasını (ölçüm cihazı) daha önce kullandıysanız, cihazı pompanızın eşleştirilmiş cihazlar listesinden çıkarmalısınız: Menü > Ayarlar > İletişim > Cihazı kaldır
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* AndroidAPS uygulamasının [Konfigürasyon oluşturucu](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
