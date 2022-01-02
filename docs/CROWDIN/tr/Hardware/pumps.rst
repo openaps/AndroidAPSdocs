@@ -1,15 +1,15 @@
-Pump Configuration
+Pompa Kanfigürasyonu
 ***********************
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   Dana-R pump <../Configuration/DanaR-Insulin-Pump.md>
-   Dana-RS pump <../Configuration/DanaRS-Insulin-Pump.md>
-   Accu-Chek Combo pump <../Configuration/Accu-Chek-Combo-Pump.md>
-   Accu-Chek Insight pump <../Configuration/Accu-Chek-Insight-Pump.md>
-   Diaconn G8 insulin pump <../Configuration/DiaconnG8.rst>
+   Dana-R pompa <../Configuration/DanaR-Insulin-Pump.md>
+   Dana-RS pompa <../Configuration/DanaRS-Insulin-Pump.md>
+   Accu-Chek Combo pompa <../Configuration/Accu-Chek-Combo-Pump.md>
+   Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>
+   Diaconn G8 insulin pompa <../Configuration/DiaconnG8.rst>
    Omnipod Eros <../Configuration/OmnipodEros.rst>
-   Medtronic pump <../Configuration/MedtronicPump.md>
-   Future possible pump drivers <../Getting-Started/Future-possible-Pump-Drivers.md>
+   Medtronic pompaları <../Configuration/MedtronicPump.md>
+   Dahil olacak pompalar<../Getting-Started/Future-possible-Pump-Drivers.md>
