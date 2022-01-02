@@ -119,34 +119,40 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ## BG Source
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
-- [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
-- NSClient BG
-- [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-- [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-- [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
 
-   ![Config Builder BG source](../images/ConfBuild_BGSource.png)
+![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
-- [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-- [Tomato App](http://tomato.cool/) for MiaoMiao device
-- [Glunovo App](https://infinovo.com/) for Glunovo CGM system
-- Random BG: Generates random BG data (Demo mode only)
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
+* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
+* Random BG: Generates random BG data (Demo mode only)
 
 ## Pump
 Select the pump you are using.  
-- [Dana R](DanaR-Insulin-Pump.md)
-- Dana R Korean (for domestic DanaR pump)
-- Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-- [Dana-i/RS](DanaRS-Insulin-Pump.md)
-- [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
-- [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-- [Medtronic](MedtronicPump.md)
+
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+
+* [Dana R](DanaR-Insulin-Pump.md)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
+
+   * For dana pumps, use <b>Advanced settings</b> to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+   * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod DASH](OmnipodDASH.md)
+* [Medtronic](MedtronicPump.md)
+* [Diaconn G8](DiaconnG8.rst)
 - MDI (receive AAPS suggestions for your multiple daily injections therapy)
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
-
-For dana pumps, use <b>Advanced settings</b> to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
-
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
 ## Sensitivity Detection
 Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
