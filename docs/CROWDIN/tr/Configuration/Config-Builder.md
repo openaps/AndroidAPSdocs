@@ -1,4 +1,4 @@
-# Config Builder
+# Konfigürasyon ayarları
 
 Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamburger menüsünden Konfigürasyon ayarları'nı açabilirsiniz.
 
@@ -68,73 +68,73 @@ Disadvantage:
 
 * none
 
-### Profile helper
+### Profil yardımcısı
 
-Profile helper offers two functions:
+Profil yardımcısı iki işlev sunar:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Çocuklar için bir profil bulmak
+2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.rst) açıklanmıştır.
 
-### NS Profile
+### Nightscout Profili
 
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
+NS Profili, Nightscout sitenize kaydettiğiniz profilleri kullanır (https://[yournightscoutsiteaddress]/profile). Bu profillerden hangisinin etkin olduğunu değiştirmek için [Profil Değiştirme](../Usage/Profiles.md)'yi kullanabilirsiniz. Bu, AndroidAPS arızası durumunda profili pompaya yazar. Bu, Nightscout'ta kolayca birden çok profil oluşturmanıza olanak tanır (ör.. iş, ev, spor, tatil vb.) "Kaydet"e tıkladıktan kısa bir süre sonra, akıllı telefonunuz çevrimiçiyse bunlar AAPS'e aktarılacaktır. İnternet bağlantısı veya Nightscout bağlantısı olmasa bile, Nightscout profilleri senkronize edildikten sonra AAPS'de kullanılabilir.
 
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
+Nightscout'tan bir profili etkinleştirmek için [profil değiştirme](../Getting-Started/Screenshots.md#current-profile) yapın. AAPS, profil değişikliğinden sonra seçilen profili pompaya yazar, böylece acil bir durumda AAPS olmadan kullanılabilir ve çalışmaya devam eder.
 
 Advantage:
 
-* multiple profiles
-* easy to edit via PC or tablet
+* çoklu profil
+* PC veya tablet üzerinden düzenlemesi kolay
 
 Disadvantage:
 
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
+* profil ayarlarında yerel değişiklik yapamazsınız
+* profil değiştirme doğrudan telefonda yapılamaz.
 
 ## İnsülin
 
 ![Insulin type](../images/ConfBuild_Insulin.png)
 
-* Select the type of insulin curve you are using.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* The curves will vary based on the DIA and the time to peak.
+* Kullanmakta olduğunuz insülin eğrisinin türünü seçin.
+* 'Hızlı Etkili Oref', Ultra Hızlı Oref', 'Lyumjev' ve 'Serbest Tepe Oref' seçeneklerinin tümü üstel bir şekle sahiptir. Daha fazla bilgi [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) sayfasında listelenmiştir. 
+* Eğriler, İES'e ve zirveye ulaşma süresine bağlı olarak değişecektir.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * MOR çizgi, zamanla bozulduğu için enjekte edildikten sonra ne kadar **insülin kaldığını** gösterir.
+    * MAVİ çizgi, insülinin **ne kadar aktif** olduğunu gösterir.
 
-### DIA
+### İES (DIA) İnsülin etki süresi
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* İES her kişi için aynı değildir. Bu yüzden kendiniz test etmelisiniz. 
+* Ancak her zaman en az 5 saat olmalıdır.
+* Fiasp gibi ultra hızlı insülin kullanan birçok insan için, kural olarak 0.0xx ünite mevcut olsa bile, 3-4 saat sonra pratikte gözle görülür bir etkisi yoktur. Bu kalan miktar, örneğin spor sırasında hala görülebilir. Bu nedenle, AndroidAPS, İES olarak minimum 5saat kullanır.
+* Bununla ilgili daha fazla bilgiyi [bu sayfanın](../Getting-Started/Screenshots#insulin-profile) İnsülin Profili bölümünde okuyabilirsiniz. 
 
-### Insulin type differences
+### İnsülin tipi farklılıkları
 
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* 'Hızlı Etkili', 'Ultra Hızlı' ve 'Lyumjev' için İES, kendiniz ayarlayabileceğiniz tek değişkendir ve zirve zamanı sabittir. 
+* Free-Peak (serbest-zirve), hem İES'i hem de zirveye ulaşma süresini ayarlamanıza olanak tanır fakat yalnızca bu ayarların etkilerini bilen ileri düzey kullanıcılar tarafından kullanılmalıdır. 
+* [İnsülin eğrisi grafiği](../Getting-Started/Screenshots#insulin-profile), farklı eğrileri anlamanıza yardımcı olur. 
+* Yukarıda bir sekme olarak görüntülemek için onay kutusunu etkinleştirebilirsiniz. Diğer türlü hamburger menüsünde olacaktır.
 
-#### Rapid-Acting Oref
+#### Hızlı Etkili Oref
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* Humalog, Novolog ve Novorapid için önerilir
+* İES = en az 5.0s
+* Maks. zirve = enjeksiyondan 75 dakika sonra (sabit, ayarlanabilir değil)
 
-#### Ultra-Rapid Oref
+#### Ultra Hızlı Oref
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* FIASP için önerilir
+* İES = en az 5.0s
+* Maks. zirve = enjeksiyondan 55 dakika sonra (sabit, ayarlanabilir değil)
 
 #### Lyumjev
 
 * special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* İES = en az 5.0s
+* Maks. peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Free Peak Oref
 
@@ -348,6 +348,6 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Config Builder
+### Konfigürasyon ayarları
 
 Use tab for config builder instead of hamburger menu.
