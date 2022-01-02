@@ -128,69 +128,69 @@ Basal
 
 Bolus
 --------------------------------------------------
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin verilmez! (bu değer yalnızca 2 telefon numarası eklendiğinde düzenlenebilir) Bu nedenle yanıt, son bolusun verildiği zamana bağlıdır.
 
 * BOLUS 1.2
-  * Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
-  * Response B: Remote bolus not available. Try again later.
+  * Yanıt A: 1.2Ü bolus göndermek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+  * Yanıt B: Uzaktan bolus gönderilemiyor. Daha sonra tekrar deneyin.
 * BOLUS 0.60 MEAL
-  * If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins).
-  * Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-  * Response B: Remote bolus not available. 
+  * İsteğe bağlı ÖĞÜN parametresi belirtirseniz, bu sms ÖĞÜN Geçici hedefini ayarlar (varsayılan değerler: 45 dakika için 90 mg/dL, 5.0 mmol/l).
+  * Yanıt A: 0.6Ü öğün bolusu göndermek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+  * Yanıt B: Uzaktan bolus gönderilemiyor. 
 * CARBS 5
-  * Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+  * Yanıt: 12:45 te 5g karbonhidrat girmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * CARBS 5 17:35/5:35PM
-  * Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+  * Yanıt: 17:35 te 5g karbonhidrat girmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * EXTENDED STOP/CANCEL
-  * Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Yayma bolusu durdurmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * EXTENDED 2 120
-  * Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+  * Yanıt: 2Ü 120 dk. yayma bolusu başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 Profil
 --------------------------------------------------
 * PROFILE STATUS
-  * Response: Profile1
+  * Yanıt: Profil1
 * PROFILE LIST
-  * Response: 1.`Profile1` 2.`Profile2`
+  * Yanıt: 1.`Profil1` 2.`Profil2`
 * PROFILE 1
-  * Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+  * Yanıt: %100 Profil1 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * PROFILE 2 30
-  * Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+  * Yanıt: %30 Profil2 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 Other
 --------------------------------------------------
 * TREATMENTS REFRESH
-  * Response: Refresh treatments from NS
+  * Yanıt: NS'den tedavileri güncelle
 * NSCLIENT RESTART
-  * Response: NSCLIENT RESTART 1 receivers
-* PUMP
-  * Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+  * Yanıt: NSCLIENT 1 alıcıyı yeniden başlattı
+* POMPA
+  * Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. IOB: 0.5U Rezerv: 34Ü Pil: 100
 * PUMP CONNECT
-  * Response: Pump reconnected
+  * Yanıt: Pompa yeniden bağlandı
 * PUMP DISCONNECT *30*
-  * Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Pompanın bağlantısını 30 dakika boyunca kesmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * SMS DISABLE/STOP
-  * Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+  * Yanıt: Herhangi ikisiyle SMS Uzak Hizmeti yanıtını devre dışı bırakın. Yalnızca AAPS ana akıllı telefondan üzerinden yeniden etkinleştirebileceğinizi unutmayın.
 * TARGET MEAL/ACTIVITY/HYPO   
-  * Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Geçici Hedefi ÖĞÜN/AKTİVİTE/HİPO ayarlamak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * TARGET STOP/CANCEL   
-  * Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Geçici Hedefi iptal etmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * HELP
-  * Response: BG, LOOP, TREATMENTS, .....
+  * Yanıt: KŞ, DÖNGÜ, TEDAVİLER, .....
 * HELP BOLUS
-  * Response: BOLUS 1.2 BOLUS 1.2 MEAL
+  *Yanıt: BOLUS 1.2 BOLUS 1.2 YEMEK
 
 Troubleshooting
 ==================================================
-Multiple SMS
+Çoklu SMS
 --------------------------------------------------
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS. 
+Aynı mesajı tekrar tekrar alıyorsanız (örn. profil değiştirme) muhtemelen diğer uygulamalarla bir döngü sözkonusudur. Örneğin bu program xDrip+ olabilir. Öyleyse, lütfen xDrip+'ın (veya başka bir uygulamanın) tedavileri NS'ye yüklemediğinden emin olun. 
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Diğer uygulama birden fazla telefona yüklenmişse, hepsinde yüklemeyi devre dışı bıraktığınızdan emin olun.
 
-SMS commands not working on Samsung phones
+Samsung telefonlarda çalışmayan SMS komutları
 --------------------------------------------------
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
+Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmadığına dair bir rapor mevcuttur. Telefon ayarlarından 'send as chat message' devre dışı bırakılarak çözülebilir.
 
 .. image:: ../images/SMSdisableChat.png
-  :alt: Disable SMS as chat message
+  :alt: SMS as chat message devre dışı
