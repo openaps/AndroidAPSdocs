@@ -113,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Closed Loop</strong></td>
+ <td><strong>Kapalı Döngü</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -257,9 +257,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td><strong>Open Loop</strong></td>
+ <td><strong>Açık Döngü</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Kapalı Döngü</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -379,7 +379,7 @@
 <tr>
  <td><strong>Virtual pump</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Açık Döngü</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
