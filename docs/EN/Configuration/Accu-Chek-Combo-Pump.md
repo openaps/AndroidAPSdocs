@@ -86,13 +86,12 @@ Please be aware that this is not complete list and reflects personal user experi
 
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](http://wiki.AndroidAPS.org) and use the `combo` branch.
+- Install AndroidAPS as described in the [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Make sure to read the wiki to understand how to setup AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
-- Follow the link http://ruffy.AndroidAPS.org and clone ruffy via git. Use the same branch as you use for
-  AndroidAPS, right now that's the `combo` branch, later on there will be the regular `master` and `dev` branches.
-- Install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
+- Clone ruffy via git from https://github.com/MilosKozak/ruffy. At the moment, the primary branch is the `combo` branch, in case of problems you might also try the 'pairing' branch (see below).
+- Build and install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
   If the pump is already paired and can be controlled via ruffy, installing the `combo` branch is sufficient.
   Note that the pairing processing is somewhat fragile (but only has to be done once)
   and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device
@@ -122,24 +121,28 @@ There are serveral possible reasons. Try the following steps:
 4.  Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device 
     "**SpiritCombo**"
 5.  Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6.  Now start ruffy on the phone. You may press Reset! and remove old Bonding. Then hit Connect!.
-7.  In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** 
-    * Step 5 and 6 have to be in a short timing.
-8.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
+6.  Try using the '**pairing**' branch from the ruffy repository at https://github.com/MilosKozak/ruffy/tree/pairing to establish the connection 
+7.  Now start ruffy on the phone. You may press Reset! and remove the old connection. Then hit **Connect!**.
+8.  In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** 
+    * The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
+9.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
     bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
  
     * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
       between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
-      without successfully Pair. Later you should set it back to 5s, to meet AAPS Combo settings.
+      without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
     * If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not 
       compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If 
       possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
       (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
-9.  At next Pump should show up a 10 digit security code. And Ruffy a screen to enter it. So enter it in Ruffy and you 
+10.  Sometimes the phone asks for a 4 digit bluetooth PIN number that is actually not really relevant here and is not related to the 10 digit PIN shown on the pump. Skipping this PIN dialog will often interrupt the pairing process, so try to just enter 0000. **THIS DOES NOT APPLY TO THE REQUEST FOR THE PUMP PAIRING SECURITY CODE WITH PATTERN XXX XXX XXXX HANDLED IN THE NEXT STEP**
+11.  At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you 
     should be ready to go.
-10.  Reboot the phone.
-11. Now you can restart AAPS loop.
+12.  If pairing was not successful and you got a timeout on the pump, you will need to restart the process from scratch.
+13.  If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
+14.  Reboot the phone.
+15.  Now you can restart AAPS loop.
 
 ## Usage
 
@@ -148,10 +151,10 @@ There are serveral possible reasons. Try the following steps:
   using it is not able to fully understand the system.
 - Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS
   is based upon.
-- Read the wiki to learn about and understand AndroidAPS http://wiki.AndroidAPS.org
+- Read the online documentation to learn about and understand AndroidAPS https://androidaps.readthedocs.io/
 - This integration uses the same functionality which the meter provides that comes with the Combo.
   The meter allows to mirror the pump screen and forwards button presses to the pump. The connection
-  to the pump and this forwarding is what the ruffy app does. A `scripter` components reads the screen
+  to the pump and this forwarding is what the ruffy app does. A `scripter` component reads the screen
   and automates entering boluses, TBRs etc and making sure inputs are processed correctly.
   AAPS then interacts with the scripter to apply loop commands and to administer boluses.
   This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for),
