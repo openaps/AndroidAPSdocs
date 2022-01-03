@@ -271,21 +271,21 @@ OpenAPS</td>
 </tr>
 <tr>
  <td><strong>Peak time</strong></td>
- <td>time of maximum effect of insulin given</td>
+ <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
- <td>pump history (entry in treatments tab)</td>
+ <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - линии прогноза ГК</a></td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
