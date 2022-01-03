@@ -1,20 +1,20 @@
-# Medtronic Pumps
+# Medtronic Pompaları
 
-**>>>> Medtronic pump driver is from 2.5 version part of AndroidAPS (master). While this is the case, Medtronic driver should still be considered beta software. Please install only if you are experienced user. At the moment we are still fighting with double Bolus issue (We get 2 boluses in treatments, which throws IOB calculation (if you experience this bug, please enable Double Bolus Logging in Medtronic configuration and provide your logs)), this should be fixed with upcoming release. <<<<**
-
-* * *
-
-Works only with older Medtronic pumps (details see below). Does not work with Medtronic 640G or 670G.
+**>>>> Medtronic pompa sürücüsü, AndroidAPS'in 2.5 (ana) sürümüne dahil edilmiştir. Durum böyleyken, Medtronic sürücüsü yine de beta yazılımı olarak kabul edilmelidir. Lütfen yalnızca deneyimli bir kullanıcıysanız kurulum yapın. Şu anda hala çift Bolus sorunuyla mücadele ediyoruz (Tedavilerde IOB hesaplaması yapan 2 bolus alıyoruz (bu hatayı yaşıyorsanız, lütfen Medtronic yapılandırmasında Çift Bolus Günlüğünü etkinleştirin ve gönderim sağlayın)) gelecek sürümde bu sorun düzeltilecektir. <<<<**
 
 * * *
 
-If you started using Medtronic driver please add yourself to this [list](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). This is just so that we can see which Phones are good and which are not so good (or bad) for this driver. There is one column called "BT restart". This is to check if yourPhone supports BT enable/disable, which can be used when pump is no longer able to connect, that happens from time to time. If you notice any other problem, please write that in Comments column.
+Yalnızca eski Medtronic pompalarıyla çalışır (ayrıntılar için aşağıya bakın). Medtronic 640G, 670G veya 780G ile çalışmaz.
+
+* * *
+
+Medtronic sürücüsünü kullanmaya başladıysanız, lütfen kendinizi bu [listeye](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit) ekleyin. Bu dosya sadece bu sürücü için hangi telefonların iyi olduğunu ve hangilerinin doğru çalışmadığını (veya kötü olduğunu) görebilmemiz içindir. Tabloda "BT yeniden başlatma" adlı bir sütun mevcuttur. Bu seçenek telefonunuzun zaman zaman gerçekleşen, pompa artık bağlanamadığında kullanılabilen BT etkinleştirme/devre dışı bırakma özelliğini destekleyip desteklemediğini kontrol etmek içindir. Başka bir sorun fark ederseniz, lütfen bunu tabloda Yorumlar sütununa yazın.
 
 * * *
 
 ## Donanım ve yazılım gereksinimleri
 
-- **Phone:** Medtronic driver should work with any phone supporting BLE. **IMPORTANT: While driver works correctly on all phones, enabling/disabling Bluetooth doesn't (this is required when you loose connection to RileyLink and system can't recover automatically - happens from time to time). So you need to get device with Android 7.0 - 8.1, in worst case scenario you can install LinegaeOS 15.1 (required 15.1 or lower) on your phone. We are looking into problem with Android 9, but so far we haven't found resolution (it seems to work on some models and not on others, and on also works sometimes on some models).**
+- **Telefon:** Medtronic sürücüsü, BLE'yi destekleyen bir telefonla çalışmalıdır. **ÖNEMLİ: Sürücü tüm telefonlarda düzgün çalışırken, Bluetooth'un etkinleştirilmesi/devre dışı bırakılması çalışmaz (bu, RileyLink ile bağlantınız koptuğunda ve sistem otomatik olarak kurtarılamadığında gereklidir ve zaman zaman olabilir). Bu yüzden Android 7.0 - 8.1'e sahip bir cihaz edinmeniz gerekiyor, en kötü senaryoda telefonunuza LinegaeOS 15.1'i (15.1 veya daha düşük gerekli) kurabilirsiniz. Android 9 ile ilgili sorunu araştırıyoruz, ancak şu ana kadar bir çözüm bulamadık (bazı modellerde çalışıyor, diğerlerinde çalışmıyor gibi görünüyor. Bazen de çalışmayanlarda ara sıra çalışabiliyor.)**
 - Pompanızla iletişim için, telefondan gelen BT komutlarını pompanın anlayacağı RF komutlarına dönüştüren ek bir cihaza ihtiyacınız vardır. Ek iletişim cihazlarının [listesini burada bulabilirsiniz.](../Module/module#additional-communication-device) Aygıtın kararlı yazılım sürümünde olması gerekiyor. Eski modeller üretici yazılımı 0.9 iken (eski sürümler düzgün çalışmayabilir) daha yeni modeller 2.2 olabilmektedir. (RL sitesinde yükseltme seçenekleri vardır). Bu konuda farklı bir deneyim yapmak istiyorsanız, bir çeşit RileyLink klonu olan Gnarl'ı da([buradan](https://github.com/ecc1/gnarl)) deneyebilirsiniz. 
 - **Pompa:** Sürücü yalnızca aşağıdaki modeller ve pompa yazılımı sürümleriyle çalışır: 
     - 512/712
@@ -27,32 +27,32 @@ If you started using Medtronic driver please add yourself to this [list](https:/
 
 ## Pompa Konfigürasyonu
 
-- **Pompa'da uzaktan kontrol modunu etkinleştir** (Araçlar -> Uzaktan kontrol Seçenekleri, Evet'i seçin ve sonraki ekranda Kimlik Ekle'yi seçin ve sahte kimlik ekleyin (örn. 111111). You need to at least one ID on that Remote IDs list. This options might look differently on different model of pump. This step is important, because when set, Pump will listen more often for remote communication.
-- **Set Max Basal** on your Pump to your "max basal entry in your STD profile" * 4 (if you want to have 400% TBR as max). This number must be under 35 (as you can see in pump).
-- **Set Max Bolus** on your Pump (max is 25)
-- **Set profile to STD**. This will be the only profile we will use. You can also disable.
-- **Set TBR type** to Absolute (not Percent)
+- **Pompa'da uzaktan kontrol modunu etkinleştir** (Araçlar -> Uzaktan kontrol Seçenekleri, Evet'i seçin ve sonraki ekranda Kimlik Ekle'yi seçin ve sahte kimlik ekleyin (örn. 111111). Bu Uzak Kullanıcılar listesinde en az bir kullanıcının bulunması gerekiyor. Bu seçenekler farklı pompa modellerinde farklı görünebilir. Bu adım önemlidir, çünkü ayarladığınızda pompa uzaktan iletişim için frekansı daha sık dinler.
+- **Maks Bazal'ı** Pompanızda "STD profilinizdeki maksimum bazal girişinizde" ayarlayın * 4 (maks. %400 Geçici Bazal Oranı istiyorsanız). Bu sayı 35'in altında olmalıdır (pompadan da görebilirsiniz).
+- **Maks Bolus'u ayarlayın** (maks. 25)
+- **STD profili ayarlayın** Bu kullanacağımız tek profil olacak. Devre dışı da bırakabilirsiniz.
+- **Geçici Bazal Oran tipini ayarlayın** Mutlak olacak (Yüzde değil)
 
-## Configuration of Phone/AndroidAPS
+## Telefon/AndroidAPS Konfigürasyonu
 
-- **Do not pair RileyLink with your Phone.** If you paired your RileyLink, then AndroidAPS won't be able to find it in configuration.
-- Disable Auto-rotate on your phone (on some devices Auto-rotate restarts BT sessions, which is not something we would want).
-- You can configure pump in AndroidAPS two ways: 
+- **RileyLink'i Telefonunuzla eşleştirmeyin.** RileyLink'inizi telefonunuzun bluetooth ayarlarından eşleştirdiyseniz, AndroidAPS onu yapılandırma ayarlarında bulamaz.
+- Telefonunuzda Otomatik Döndür'ü devre dışı bırakın (bazı cihazlarda Otomatik döndürme, BT oturumlarını yeniden başlatır, bu bizim istediğimiz bir şey değil).
+- Pompayı AndroidAPS'de iki şekilde yapılandırabilirsiniz: 
 
-1. Use of Wizard (on new install)
-2. Directly in Config tab (Cog icon on Medtronic driver)
+1. Sihirbaz Kullanımı (yeni kurulumda)
+2. Doğrudan Konfigürasyon ayarları sekmesinde (Medtronic sürücüsündeki Dişli simgesi)
 
-If you do new install you will be thrown directly into wizard. Sometimes if your BT connection is not working fully (unable to connect to pump), you might not be able to complete configuration. In such case select virtual pump and after wizard is finished, you can go with option 2, which will bypass pump detection.
+Yeni kurulum yaparsanız, doğrudan sihirbaza yönlendirileceksiniz. Bazen BT bağlantınız tam olarak çalışmıyorsa (pompaya bağlanamıyorsa) yapılandırmayı tamamlayamayabilirsiniz. Böyle bir durumda sanal pompayı seçerek, sihirbaz tamamlandıktan sonra pompa algılamayı atlayarak 2. seçeneğe geçebilirsiniz.
 
 ![MDT Settings](../images/Medtronic01a.png)
 
-You need to set following items: (see picture above)
+Aşağıdaki öğeleri ayarlamanız gerekir: (yukarıdaki resme bakın)
 
-- **Pump Serial Number**: You can find that on back side, entry SN. You need to get only number, your serial is 6 numbers.
-- **Pump Type**: Which pump type you have (i.e. 522). 
-- **Pump Frequency**: According to pump frequency there were two versions of Medtronic pump made (if you are not sure what frequency your pump uses, look at [FAQ](../Configuration/MedtronicPump#faq)): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
+- **Pompa Seri Numarası**: Bunu pompanın arkasında, SN kısmında bulabilirsiniz. Sadece seri no daki 6 numaraya ihtiyacımız var.
+- **Pompa Tipi**: Sahip olduğunuz pompa tipi (ör. 522). 
+- **Pompa Frekansı**: Medtronic pompasının pompa frekansına göre iki versiyonu üretilmiştir. (pompanızın hangi frekansı kullandığından emin değilseniz, [SSS](../Configuration/MedtronicPump#faq) bölümüne bakın): 
+    - ABD & Kanada için (NA-CA) kullanılan frekans 916 Mhz
+    - Dünya çapında (WW) kullanılan frekans 868 Mhz'dir.
 - **Max Bolus on Pump (U)** (in an hour): This needs to be set to same as on the pump. It limits how much insulin you can Bolus. If you go over this, Bolus won't be set and error will be returned. Max that can be used is 25, please set correct value for yourself here so that you don't overdose.
 - **Max Basal on Pump (U/h)**: This needs to be set to same as on the pump. It limits how much basal you can get in an hour. So for example, if you want to have max TBR set to 500% and highest of your Basal patterns is 1.5 U, then you would need to set Max Basal to at least 7.5. If this setting is wrong (for example, if one of your basal pattern would go over this value, pump would return error).
 - **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
