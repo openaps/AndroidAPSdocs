@@ -261,11 +261,11 @@ Ana ekranda hangi Butonların gösterileceğini tanımlayın.
 
 Ayrıca, insülin ve karbonhidrat artışları için kısayollar ayarlayabilir ve notlar alanının tedavi diyaloglarında gösterilip gösterilmeyeceğine karar verebilirsiniz.
 
-#### Hızlı asistan ayarları
+#### QuickWizard settings
 
 Standart bir yemek için giriş ekranında görüntülenecek bir buton oluşturun. (bolus için karbonhidrat hesaplama yöntemi) Sık yediğiniz standart yemekler için kullanın. Farklı öğünler için farklı saatler belirtilirse, günün saatine bağlı olarak ana ekranda her zaman uygun standart yemek butonunu görüntülersiniz.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+Not: Belirtilen zaman aralığının dışındaysa veya Hızlı asistan butonunda tanımlanan karbonhidratları karşılamak için yeterli aktif insülininiz varsa buton görünmeyecektir.
 
 ![Hızlı asistan butonu](../images/ConfBuild_QuickWizard.png)
 
