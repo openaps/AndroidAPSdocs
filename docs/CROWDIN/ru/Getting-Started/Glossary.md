@@ -331,54 +331,54 @@ OpenAPS</td>
 </tr>
 <tr>
  <td><strong>Sensor noise/шум сенсора</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td>нестабильные данные НМГ, проявляющиеся в больших колебаниях значений ГК.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td><strong>Супер микро болюс SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>сверхмалый болюс, продвинутая техника быстрой подстройки уровня ГК.</td>
+ <td>UAM/</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Super bolus</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td><strong>Super bolus/Суперболюс</strong></td>
+ <td>переход от базальной к болюсной компенсации для быстрой коррекции ГК.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
  <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td>Общая базальная база (суммарный обьем базального инсулина в течении 24 часов)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>Временная Базальная Скорость</strong></td>
+ <td>Временный базальный уровень</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD/общая суточная доза</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td><strong>TDD/общая суточная доза инсулина</strong></td>
+ <td>общая суточная доза инсулина (болюсы + базал)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td><strong>Временная цель (TT)</strong></td>
+ <td>временная цель <br> временное допустимое увеличение/понижение ГК отосительно заданного целевого значения (диапазона)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
 </tr>
 <tr>
- <td><strong>UAM</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td><strong>Незапланированный прием пищи UAM</strong></td>
+ <td>Незафиксированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других воздействий и компенсация через механизм СМБ.</td>
  <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
+ <td><strong>Virtual pump/виртуальная помпа</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
