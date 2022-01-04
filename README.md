@@ -27,17 +27,17 @@ The current build logs of the documentation can be found at on the documentation
 
 In the project open the menu **Builds** section of the documentation, select top **Passed version latest (html)** and select **View raw** or click at the bottom grey bar **/home/docs/....**  
 
-The badges are generated with a [GitHub Action](../../../actions), and the can be inspected for more details, by clicking on the status badge or [here](../../../actions?query=workflow%3A%22Build+Warnings%22).
+The badges are generated with a [GitHub Action](../../actions), and the can be inspected for more details, by clicking on the status badge or [here](../../actions/workflows/build-warnings.yml).
 
-* Select top workflow **Build warning**
+* Select the top workflow **Build warning**
 * Select the build of a language, for example **build (de)**
 * Click on the section **Build docs** to see build output
 
 ### Broken Links
 
-The badges are generated with a [GitHub Action](../../../actions), and the output can be inspected for more details, or by clicking on the status badge, or [here](../../../actions?query=workflow%3A%22Link+Checker%22).
+The badges are generated with a [GitHub Action](../../actions), and the output can be inspected for more details, or by clicking on the status badge, or [here](../../actions/workflows/link-checker.yml).
 
-* Select top workflow **Link Checker**
+* Select the top workflow **Link Checker**
 * Select the build of a language, for example **check (de)**
 * Click on the section **Link Checker** to see link checker output
 
