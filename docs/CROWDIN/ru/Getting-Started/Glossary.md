@@ -270,13 +270,13 @@ OpenAPS</td>
  <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Определение чувствительности</a></td>
 </tr>
 <tr>
- <td><strong>Peak time</strong></td>
+ <td><strong>Время пика</strong></td>
  <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
- <td><strong>PH</strong></td>
+ <td><strong>PH/История записей помпы</strong></td>
  <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Снимки экрана</a></td>
@@ -312,7 +312,7 @@ OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
+ <td><strong>ВОЗРСенс</strong></td>
  <td>возраст сенсора - отображается на сайте Nightscout, если информация введена на вкладке терапии AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
@@ -324,7 +324,7 @@ OpenAPS</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Sensivity detection/определение чувствительности</strong></td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
@@ -348,7 +348,7 @@ OpenAPS</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td><strong>TBB</strong></td>
+ <td><strong>Суточная доза базала/TBB</strong></td>
  <td>Общая базальная база (суммарный обьем базального инсулина в течении 24 часов)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -379,29 +379,29 @@ OpenAPS</td>
 </tr>
 <tr>
  <td><strong>Virtual pump/виртуальная помпа</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td>Возможность применить функции ИПЖ без на помпах без драйвера</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Фоновый рисунок</strong></td>
- <td>AndroidAPS background image</td>
+ <td>Фоновое изображение androidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">см. страницу телефонов</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>программное обеспечение с открытым исходным кодом для чтения систем мониторинга CGM</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td><strong>Zero-temp/Временный нулевой базал</strong></td>
+ <td>Временный базальный уровень в 0% от нормы (без подачи инсулина)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>См. также <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/ru/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
