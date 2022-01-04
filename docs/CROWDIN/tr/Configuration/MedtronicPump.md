@@ -55,35 +55,35 @@ Aşağıdaki öğeleri ayarlamanız gerekir: (yukarıdaki resme bakın)
     - Dünya çapında (WW) kullanılan frekans 868 Mhz'dir.
 - **Pompadaki Maks Bolus (Ü)** (bir saat içinde): Bu, pompadakiyle aynı şekilde ayarlanmalıdır. Bolus yapabileceğiniz insülin miktarını sınırlar. Bu değeri aşarsanız, Bolus giremezsiniz ve hata verir. Kullanılabilecek maksimum değer 25'tir. Doz aşımına uğramamak için lütfen burada kendiniz için doğru değeri ayarlayınız.
 - **Pompadaki Maks Bazal (Ü/s)**: Bu, pompadakiyle aynı şekilde ayarlanmalıdır. Bir saat içinde ne kadar bazal alabileceğinizi belirler. Örneğin, maksimum GBO'nun %500'e ayarlanmasını istiyorsanız ve günlük bazal şablonunuzda en yüksek değer 1,5 Ü/s ise, Maks Bazal'ı en az 7,5Ü/s'e ayarlamanız gerekir. Bu ayar yanlışsa (örneğin, bazal şablonunuzdaki değerlerden biri bunu aşarsa) pompa hata verir.
-- **Delay before Bolus is started (s)**: This is delay before bolus is sent to pump, so that if you change your mind you can cancel it. Cancelling bolus when bolus is running is not supported by pump (if you want to stop bolus when running, you have to suspend pump and then resume).
-- **Medtronic Encoding**: This is setting which determines, if 4b6b encoding that Medtronic devices do will be done in AndroidAPS or on RileyLink. If you have a RileyLink with 2.x firmware, default value will be to use Hardware encoding (= done by RileyLink), if you have 0.x firmware this setting will be ignored.
-- **Battery Type (Power View)**: If you want to see battery power in your pump, you need to select type of battery you use (currently supported Lithium or Alkaline), this will in turn change display to display calculated percent and volts.
-- **RileyLink Configuration**: This will find your RileyLink/GNARL device.
-- **Set neutral temp basals** is an option which can help prevent Medtronic pumps from beeping on the hour. If enabled if will cancel a temp basal before the hour end to prevent this from happening.
+- **Bolus göndermeden önceki bekleme süresi (sn)**: Bolus pompaya gönderilmeden önceki bekleme süresidir. (min.5sn) Fikrinizi değiştirirseniz bu süre içerisinde iptal edebilirsiniz. Bolus gönderilirken iptal etme pompa tarafından desteklenmez (gönderme sırasında bolusu durdurmak istiyorsanız, pompadan askıya almanız ve ardından devam etmeniz gerekir).
+- **Medtronic Kodlama**: Bu, Medtronic cihazlarının yaptığı 4b6b kodlamasının AndroidAPS'de mi yoksa RileyLink'te mi yapılacağını belirleyen ayardır. 2.x yazılımlı bir RileyLink'iniz varsa, varsayılan değer Donanım kodlamasını kullanmak olacaktır (= RileyLink tarafından yapılır), 0.x rileylink yazılımı varsa bu ayar yok sayılır.
+- **Pil Türü (Güç Görünümü)**: Pompanızdaki pil gücünü görmek istiyorsanız, kullandığınız pil türünü (şu anda desteklenen Lityum veya Alkalin) seçmeniz gerekir. Bu şekilde ekranda hesaplanan yüzdeyi ve pil voltajını görebileceksiniz.
+- **RileyLink Yapılandırması**: Bu, RileyLink/GNARL cihazınızı bulacak ve programla eşleşmesini sağlayacaktır.
+- **Sık kullanılan Geçici Bazalları ayarla** Medtronic pompalarının saatte bir bip sesi çıkarmasını önlemeye yardımcı olabilecek bir seçenektir. Etkinleştirilirse, bip sesini önlemek için saat sonunda geçici bazal iptal edilir.
 
-## MEDTRONIC (MDT) Tab
+## MEDTRONIC (MDT) Sekmesi
 
 ![MDT Tab](../images/Medtronic02.png)
 
-On pump tab you can see several lines that are showing pumps (and connections) current status.
+Pompa sekmesinde, pompaların (ve bağlantıların) mevcut durumunu gösteren birkaç satır görebilirsiniz.
 
-- **RileyLink Status**: It shows status of RileyLink connection. Phone should be connected to RileyLink all the time.
-- **Pump Status**: Status of pump connection, this can have several values, but mostly we will see sleep icon (when pump connection is not active), when command is being executed, we might see "Waking Up", which is AAPS trying to make connection to your pump or description of any command that might be running on pump (ex.: Get Time, Set TBR, etc.).
-- **Battery**: Shows battery status depending on your configuration. This can be simple icon showing if battery is empty or full (red if battery is getting critical, under 20%), or percent and voltage.
-- **Last connection**: Time when last connection to pump was successful.
-- **Last Bolus**: When last bolus was given.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour.
-- **Temp basal**: Temp basal that is running or empty.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **RileyLink Durumu**: RileyLink bağlantısının durumunu gösterir. Telefon her zaman RileyLink'e bağlı olmalıdır.
+- **Pompa Durumu**: Pompa bağlantısının durumunu gösterir. Bunun birkaç değeri olabilir, ancak çoğunlukla uyku simgesini görürsünüz. (pompa bağlantısı aktif değilken) Komut yürütülürken "Uyanıyor", AAPS'in pompanızla bağlantı kurmaya çalışması veya pompada çalışıyor olabilecek herhangi bir komutun açıklamasını (ör.: Zaman Al, GBO Ayarla, vb.) görebilirsiniz.
+- **Pil**: Yapılandırmanıza bağlı olarak pil durumunu gösterir. Pilin boş veya dolu olduğunu (pil kritik %20'lik eşiğin altındaysa kırmızı) veya yüzde ve voltajı gösteren basit bir simge olabilir.
+- **Son bağlantı**: Pompaya son başarılı bağlantının olduğu zaman.
+- **Son Bolus**: Son bolusun verildiği zamanı gösterir.
+- **Temel Bazal Oranı**: Pompada o anda çalışan temel bazal oranını gösterir.
+- **Geçici bazal**: Çalışan veya boş geçici bazalı gösterir.
+- **Rezervuar**: Rezervuarda ne kadar insülin olduğu gösterir.(saatte bir güncellenir).
+- **Hatalar**: Sorun varsa hata dizesi (çoğunlukla yapılandırmada hata olup olmadığını gösterir).
 
-On lower end we have 3 buttons:
+Aşağıda 3 butonumuz var:
 
-- **Refresh** is for refreshing state. This should be used only after connection was not present for long time, as this action will reset data about pump (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [bellow](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [bellow](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Yenile** Mevcut pompa durumunu yenilemek içindir. Bu işlem, pompa hakkındaki verileri yenileyeceğinden (geçmişi al, zamanı al/ayarla, profil al, pil durumunu al, vb.) yalnızca bağlantı uzun süre kesildiğinde kullanılmalıdır.
+- **Pompa Geçmişi**: Pompa geçmişini gösterir ([aşağı](../Configuration/MedtronicPump#pump-history)'ya bakın)
+- **RL İstatistikleri**: RL İstatistiklerini Göster ([aşağı](../Configuration/MedtronicPump#rl-status-rileylink-status)'ya bakın)
 
-## Pump History
+## Pompa geçmişi
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
