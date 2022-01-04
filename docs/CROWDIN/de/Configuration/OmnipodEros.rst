@@ -60,7 +60,7 @@ Option 1: Der Einrichtungsassistent
 
 Nach der Installation einer neuen Version von AndroidAPS startet der **Einrichtungsassistent** automatisch.  Dies wird auch nach einem Upgrade geschehen.  Wenn du die Einstellungen von einer vorherigen Installation exportiert hast, kannst du den Einrichtungsassistenten beenden und deine alten Einstellungen importieren.  Für Neuinstallationen fahre unten fort.
 
-Über den **AAPS Einrichtungsassistenten (2)** der sich in der oberen rechten Ecke befindet. Klicke auf das **Drei-Punkte-Menü (1)** und fahre durch das Assistenten-Menü bis zum Erreichen des Bildschirms **Pumpe** fort. Wähle dann den ** Omnipod Button (3) * * aus.
+Über den **AAPS Einrichtungsassistenten (2)** der sich in der oberen rechten Ecke befindet. Klicke auf das **Drei-Punkte-Menü (1)** und fahre durch das Assistenten-Menü bis zum Erreichen des Bildschirms **Pumpe** fort. Wähle dann den **Omnipod Button (3)** aus.
 
     |Enable_Omnipod_Driver_1|  |Enable_Omnipod_Driver_2|
 
@@ -381,7 +381,7 @@ RileyLink and Active Pod History
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
