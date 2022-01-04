@@ -87,15 +87,15 @@ Aşağıda 3 butonumuz var:
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. We keep history only for last 24 hours, so older entries are removed when new are added. This is simple way to see the pump history (some entries from pump might not be displayed, because they are not relevant - for example configuration of functions that are not used by AndroidAPS).
+Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Geçmiş yalnızca son 24 saat için tutulur, bu nedenle yenileri eklendiğinde eski girişler kaldırılır. Bu, pompa geçmişini görmenin basit bir yoludur (pompadaki bazı girişler, alakalı olmadıkları için görüntülenmeyebilir - örneğin, AndroidAPS tarafından kullanılmayan işlevlerin yapılandırılması).
 
-## RL Status (RileyLink Status)
+## RL Durumu (RileyLink Durumu)
 
 ![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
-Dialog has two tabs:
+İki sekmesi vardır:
 
-- **Settings**: Shows settings about RileyLink: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
+- **Ayarlar**: RileyLink ile ilgili ayarları gösterir: Yapılandırılmış Adres, Bağlı Cihaz, Bağlantı Durumu, Bağlantı Hatası ve RileyLink yazılımı sürümleri. Cihaz Tipi her zaman Medtronic Pompa, Model kullandığınız model, Seri numarası konfigüre edilmiş seri numarası, Pompa Frekansı hangi frekansı kullandığınızı gösterir. Son Frekans en son kullanılan frekanstır.
 - **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
 ## Eylemler
