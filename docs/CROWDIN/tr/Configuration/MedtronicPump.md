@@ -44,7 +44,7 @@ Medtronic sürücüsünü kullanmaya başladıysanız, lütfen kendinizi bu [lis
 
 Yeni kurulum yaparsanız, doğrudan sihirbaza yönlendirileceksiniz. Bazen BT bağlantınız tam olarak çalışmıyorsa (pompaya bağlanamıyorsa) yapılandırmayı tamamlayamayabilirsiniz. Böyle bir durumda sanal pompayı seçerek, sihirbaz tamamlandıktan sonra pompa algılamayı atlayarak 2. seçeneğe geçebilirsiniz.
 
-![MDT Settings](../images/Medtronic01a.png)
+![MDT Ayarları](../images/Medtronic01a.png)
 
 Aşağıdaki öğeleri ayarlamanız gerekir: (yukarıdaki resme bakın)
 
@@ -63,7 +63,7 @@ Aşağıdaki öğeleri ayarlamanız gerekir: (yukarıdaki resme bakın)
 
 ## MEDTRONIC (MDT) Sekmesi
 
-![MDT Tab](../images/Medtronic02.png)
+![MDT Sekmesi](../images/Medtronic02.png)
 
 Pompa sekmesinde, pompaların (ve bağlantıların) mevcut durumunu gösteren birkaç satır görebilirsiniz.
 
@@ -85,13 +85,13 @@ Aşağıda 3 butonumuz var:
 
 ## Pompa geçmişi
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Pompa Geçmişi İletişim Kutusu](../images/Medtronic03.png)
 
 Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Geçmiş yalnızca son 24 saat için tutulur, bu nedenle yenileri eklendiğinde eski girişler kaldırılır. Bu, pompa geçmişini görmenin basit bir yoludur (pompadaki bazı girişler, alakalı olmadıkları için görüntülenmeyebilir - örneğin, AndroidAPS tarafından kullanılmayan işlevlerin yapılandırılması).
 
 ## RL Durumu (RileyLink Durumu)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Durumu - Ayarları](../images/Medtronic04.png) ![RileyLink Durumu - Geçmişi](../images/Medtronic05.png)
 
 İki sekmesi vardır:
 
@@ -165,7 +165,7 @@ Like mentioned before you can get devices here:
 
 ### How to determine what Frequency my pump uses
 
-![Pump Model](../images/Medtronic06.png)
+![Pompa Modeli](../images/Medtronic06.png)
 
 If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
 
