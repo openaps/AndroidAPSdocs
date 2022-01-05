@@ -21,7 +21,7 @@ Settings
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 
-Usage
+Kullanım
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
