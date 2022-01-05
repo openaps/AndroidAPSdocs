@@ -1,14 +1,14 @@
 # DanaR Pompa
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
+*Bu talimatlar bir DanaR'ınız varsa uygulamak ve pompanızı yapılandırmak içindir. Bunun yerine ilk 2017'de piyasaya sürülen DanaRS'ınız varsa [DanaRS İnsülin Pompası](./DanaRS-Insulin-Pump)'nı ziyaret edin.*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+* Pompada Ana Menü > Ayarlar > Kullanıcı Seçeneği'ne gidin
+* "8'i açın. Yayma Bolus"
 
-![DanaR pump](../images/danar1.png)
+![DanaR pompa](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Ana Menü > Ayarlar > Keşif'e gidin
+* Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR serinumaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
 
 * In AndroidAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
 
@@ -21,6 +21,6 @@
 * Set bolus step on pump to 0.1 U/h
 * Enable extended boluses on pump
 
-## Timezone traveling with Dana R pump
+## Dana R pompasıyla farklı zaman diliminde seyahat
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.
