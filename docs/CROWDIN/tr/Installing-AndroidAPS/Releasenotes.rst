@@ -1,4 +1,4 @@
-Release notes
+Sürüm notları
 **************************************************
 Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
