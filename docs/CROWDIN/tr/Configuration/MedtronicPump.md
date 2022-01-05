@@ -96,37 +96,37 @@ Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Geçmiş 
 İki sekmesi vardır:
 
 - **Ayarlar**: RileyLink ile ilgili ayarları gösterir: Yapılandırılmış Adres, Bağlı Cihaz, Bağlantı Durumu, Bağlantı Hatası ve RileyLink yazılımı sürümleri. Cihaz Tipi her zaman Medtronic Pompa, Model kullandığınız model, Seri numarası konfigüre edilmiş seri numarası, Pompa Frekansı hangi frekansı kullandığınızı gösterir. Son Frekans en son kullanılan frekanstır.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Geçmiş**: İletişim geçmişini gösterir. RileyLink satırları, RileyLink için durum değişikliklerini, Medtronic satırları ise pompaya hangi komutların gönderildiğini gösterir.
 
 ## Eylemler
 
-When Medtronic driver is selected, 3 possible actions can be added to Actions Tab:
+Medtronic sürücüsü seçildiğinde, Eylemler sekmesine 3 olası buton görebilirsiniz:
 
-- **Wake and Tune Up** - If you see that your AndroidAPS hasn't contacted your pump in a while (it should contact it every 5 minutes), you can force Tune Up. This will try to contact your pump, by searching all sub frequencies on which Pump can be contacted. If it finds one it will set it as your default frequency. 
-- **Reset RileyLink Config** - If you reset your RileyLink/GNARL, you need to use this action, so that device can be reconfigured (frequency set, frequency type set, encoding configured).
-- **Clear Bolus Block** - When you start bolus, we set Bolus Block, which prevents any commands to be issued to pump. If you suspend your pump and resume (to cancel bolus), you can then remove that block. Option is only there when bolus is running... 
+- **Uyan ve Ayarla** - AndroidAPS'in bir süredir pompanızla iletişim kurmadığını görürseniz (5 dakikada bir iletişime geçmelidir), Ayarlamayı zorlayabilirsiniz. Bu, Pompa ile iletişim kurulabilecek tüm alt frekansları arayarak pompanızla iletişim kurmaya çalışacaktır. Bir tane bulursa, onu varsayılan frekansınız olarak ayarlayacaktır. 
+- **RileyLink Yapılandırmasını Sıfırla** - RileyLink/GNARL aygıtınınızı sıfırlarsanız, cihazın yeniden yapılandırılabilmesi için bu eylemi kullanmanız gerekir. (frekans ayarı, frekans tipi ayarı, kodlama yapılandırması)
+- **Bolus Bloğunu Temizle** - Bolus'u başlattığınızda, pompaya herhangi bir komut verilmesini önleyen Bolus Bloğu'nu ayarlarız. Pompanızı askıya alır ve devam ettirirseniz (bolusu iptal etmek için), ardından o bloğu kaldırabilirsiniz. Bu seçenek yalnızca bolus gönderilirken vardır... 
 
-## Important notes
+## Önemli notlar
 
-### OpenAPS users
+### OpenAPS kullanıcıları
 
-When you start using AndroidAPS, primary controller is AndroidAPS and all commands should go through it. Sending boluses should go through AAPS and not be done on pump. We have code in place that will detect any command done on pump, but if you can you should avoid it (I think we fixed all the problems with pump history and AAPS history synchronization, but small issues still may arise, especially if you use the "setup" as it was not intended to be used). Since I started using AndroidAPS with my pump, I haven't touched the pump, except when I have to change the reservoir, and this is the way that AndroidAPS should be used.
+AndroidAPS'i kullanmaya başladığınızda, birincil denetleyici AndroidAPS'dir ve tüm komutlar bu uygulamadan geçmelidir. Bolus gönderme pompa üzerinden değil AAPS üzerinden yapılmalıdır. Pompada yapılan herhangi bir işlem AAPS tarafından algılanmaktadır, ancak bundan kaçınmalısınız (Pompa geçmişi ve AAPS geçmiş senkronizasyonu ile ilgili tüm sorunları düzelttik, ancak özellikle pompa kurulumu AAPS kullanımı için yapılandırılmamışsa ufak problemler yaşayabilirsiniz). AndroidAPS'i pompamla kullanmaya başladığımdan beri, rezervuarı ve seti değiştirmem gerektiği zamanlar dışında pompaya dokunmadım. Özellikle çocuklu aileler pompa tuş kilitlerini aktive ederek AndroidAPS'i bu şekilde kullanmalıdır.
 
-### Logging
+### Log kayıtları
 
-Since Medtronic driver is very new, you need to enable logging, so that we can debug and fix problems, if they should arise. Click on icon on upper left corner, select Maintenance and Log Settings. Options Pump, PumpComm, PumpBTComm need to be checked.
+Medtronic sürücüsü yeni olduğu için, ortaya çıkacak sorunları ayıklayıp düzeltebilmemiz için günlüğe kaydetmeyi etkinleştirmeniz gerekir. Sol üst köşedeki hamburger simgesine tıklayın, Bakım ve ardından Günlük Ayarları'nı seçin. Pump, PumpComm, PumpBTComm seçenekleri işaretlenmelidir.
 
 ### RileyLink/GNARL
 
-When you restart RileyLink or GNARL, you need to either do new TuneUp (action "Wake and Tune Up") or resend communication parameters (action "Reset RileyLink Config"), or else communication will fail.
+RileyLink veya GNARL'ı yeniden başlattığınızda, ya yeni TuneUp ("Uyan ve Ayarla" eylemi) yapmanız ya da iletişim parametrelerini yeniden göndermeniz ("RileyLink Yapılandırmasını Sıfırla" eylemi) gerekir, aksi takdirde iletişim başarısız olur.
 
-### CGMS
+### CGM kullanımı
 
-Medtronic CGMS is currently NOT supported.
+Medtronic CGM (SGİ) sensörleri şu anda DESTEKLENMEMEKTEDİR.
 
-### Manual use of pump
+### Pompanın manuel kullanımı
 
-You should avoid manually doing treatments things on your pump. All commands (bolus, TBR) should go through AndroidAPS, but if it happens that you will do manual commands, do NOT run commands with frequency less than 3 minutes (so if you do 2 boluses (for whatever reason), second should be started at least 3 minutes after first one).
+You should avoid manually doing treatments things on your pump. Tüm komutlar (bolus, GBO) AndroidAPS üzerinden olmalıdır. Ancak bir şekilde pompa üzerinden elle giriş yapmak zorunda kalırsanız, 3 dakika geçmeden yeni giriş YAPMAYIN. (herhangi bir nedenle 2 sefer bolus yapacaksanız, ilkinden en az 3 dakika sonra ikincisi gönderilmelidir.)
 
 ## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
 
