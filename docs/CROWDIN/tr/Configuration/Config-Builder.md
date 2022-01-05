@@ -4,29 +4,29 @@ Ayarlarınıza bağlı olarak, ekranın üst kısmındaki bir sekmeden veya hamb
 
 ![Konfigürasyon ayarlarını açmak](../images/ConfBuild_Open.png)
 
-Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Konfigürasyon ayarları (KONF), modüler özellikleri açıp kapattığınız sekmedir. Sol taraftaki kutular (A) hangisini kullanacağınızı seçmenize izin verir, sağ taraftaki kutular (C) bunları AndroidAPS'de bir sekme (E) olarak görmenizi sağlar. Sağ kutu aktif değilse ekranın sol üst köşesindeki hamburger menüsünü (D) kullanarak fonksiyona ulaşabilirsiniz.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Modül içinde ek ayarlar mevcut olduğunda, sizi tercihler içindeki belirli ayarlara götürecek olan dişli çarka (B) tıklayabilirsiniz.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+**İlk yapılandırma:** AAPS 2.0'dan bu yana bir Kurulum sihirbazı, AndroidAPS'yi kurma sürecinde size rehberlik eder. Ekranın sağ üst tarafındaki 3 nokta menüsüne basın (F) ve kullanmak için 'Kurulum Sihirbazı'nı seçin.
 
 ![Konfigürasyon ayarları kutusu ve dişli çark](../images/ConfBuild_ConfigBuilder.png)
 
-## Tab or hamburger menu
+## Sekme veya hamburger menüsü
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl açılacağına karar verebilirsiniz.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Sekme veya hamburger menüsü](../images/ConfBuild_TabOrHH.png)
 
 ## Profil
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+Kullanmak istediğiniz bazal profili seçin. Daha fazla kurulum bilgisi için [Profiller](../Usage/Profiles.md) sayfasına bakın.
 
-### Local profile (recommended)
+### Yerel profil (önerilir)
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
+Yerel profil, telefona manuel olarak girilen bazal profili kullanır. Seçilir seçilmez, gerekirse pompadan okunan profil verilerini değiştirebileceğiniz AAPS'de yeni bir sekme görünür. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Yerel profilleriniz, [dışa aktarılan ayarların](../Usage/ExportImportSettings.rst) bir parçasıdır. Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
 
 ![Yerel Profil ayarları](../images/LocalProfile_Settings.png)
 
@@ -36,37 +36,37 @@ Butonlar:
 * kırmızı X: profil silme
 * mavi ok: profil kopyalama
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Profilinizde herhangi bir değişiklik yaparsanız, doğru profili düzenlediğinizden emin olun. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
-#### Clone profile switch
+#### Klon profil değişikliği
 
 Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. Bu durumda, yeni yerel profile zaman kayması ve yüzdesel değişim uygulanabilecektir.
 
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Tedaviler sekmesine gidin.
+2. ProfilAnahtarını seçin.
+3. "Klonla" ya basın.
+4. Yeni yerel profili Yerel Profil (LP) sekmesinden veya hamburger menüsünden düzenleyebilirsiniz.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
+![Klon profil değişikliği](../images/LocalProfile_ClonePS.png)
 
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+Nightscout profilinden yerel profile geçmek istiyorsanız, NS profilinizde bir profil geçişi yapın ve profil anahtarını yukarıda açıklandığı gibi klonlayın.
 
-#### Upload local profiles to Nightscout
+#### Yerel profilleri Nightscout'a yükleyin
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
 
 ![Yerel profili NS'a yükleyin](../images/LocalProfile_UploadNS2.png)
 
-Advantage:
+Avantajı:
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+* profil ayarlarını değiştirmek için internet bağlantısı gerekmez
+* profil değişiklikleri doğrudan telefondan yapılabilir
+* profil değiştir üzerinden yeni profil oluşturulabilir
+* yerel profiller Nightscout'a yüklenebilir
 
-Disadvantage:
+Dezavantajı:
 
-* none
+* yok
 
 ### Profil yardımcısı
 
@@ -83,12 +83,12 @@ NS Profili, Nightscout sitenize kaydettiğiniz profilleri kullanır (https://[yo
 
 Nightscout'tan bir profili etkinleştirmek için [profil değiştirme](../Getting-Started/Screenshots.md#current-profile) yapın. AAPS, profil değişikliğinden sonra seçilen profili pompaya yazar, böylece acil bir durumda AAPS olmadan kullanılabilir ve çalışmaya devam eder.
 
-Advantage:
+Avantajı:
 
 * çoklu profil
 * PC veya tablet üzerinden düzenlemesi kolay
 
-Disadvantage:
+Dezavantajı:
 
 * profil ayarlarında yerel değişiklik yapamazsınız
 * profil değiştirme doğrudan telefonda yapılamaz.
