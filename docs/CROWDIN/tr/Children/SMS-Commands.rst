@@ -97,8 +97,8 @@ Döngü
 
   * Yanıt, döngünün durumuna bağlıdır
 
-    * Loop is disabled
-    * Loop is enabled
+    * Döngü devre dışı
+    * Döngü etkin
     * Askıya alındı (10 dk)
 * LOOP SUSPEND 20
   * Yanıt: Döngü 20 dakika süreyle askıya alındı
@@ -118,13 +118,13 @@ Basal
 * BASAL STOP/CANCEL
   * Yanıt: Geçici bazalı durdurmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * BASAL 0.3
-  * Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Bazalı 30dk. 0.3Ü/sa başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * BASAL 0.3 20
-  * Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Bazalı 20dk. 0.3Ü/sa başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * BASAL 30%
-  * Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Bazalı 30dk. %30 başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 * BASAL 30% 50
-  * Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+  * Yanıt: Bazalı 50dk. %30 başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 Bolus
 --------------------------------------------------
