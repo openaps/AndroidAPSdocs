@@ -1,23 +1,23 @@
-Diaconn G8 Insulin Pump
+Diaconn G8 İnsülin Pompası
 ************************
 
-Insulin Pump Bluetooth Pairing
+İnsülin Pompası Bluetooth Eşleştirme
 ===============================
 
-- Click on the hamburger menu in the top left corner.
+- Sol üst köşedeki hamburger menüsüne tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_01.jpg
-    :alt: Hamburger menu
+    :alt: Hamburger menü
 
-- Click on Config Builder.
+- Konfigürasyon ayarlarına tıklayın.
  
    .. image:: ../images/DiaconnG8/DiaconnG8_02.jpg
-    :alt: Config builder
+    :alt: Konfigürasyon ayarları
     
-- After selecting the Diaconn G8 Pump click on the Settings icon (cog wheel).
+- Diaconn G8 Pompayı seçtikten sonra Ayarlar simgesine (dişli çark) tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_03.jpg
-    :alt: Settings
+    :alt: Ayarlar
     
 - Choose Selected pump.
 
