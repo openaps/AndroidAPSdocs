@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## Programı İndirmek yerine kendiniz oluşturun...
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! Ayrıntılar için [SSS sayfasına](../Getting-Started/FAQ.md) bakın.**
 
 ## Önemli notlar
 
