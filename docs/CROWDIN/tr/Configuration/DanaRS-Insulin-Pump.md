@@ -1,4 +1,4 @@
-# DanaRS and Dana-i Pump
+# DanaRS ve Dana-i Pompa
 
 *These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
 
@@ -119,6 +119,6 @@ When switching to a new phone the following steps are necessary:
 * Start pairing procedure like decribed [above](#pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
 
-## Timezone traveling with Dana RS pump
+## Dana RS pompasıyla seyahat edenler için saat dilimi
 
 Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.
