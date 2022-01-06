@@ -303,7 +303,7 @@ Diese Funktion ist hilfreich bei der Überprüfung von Boli, Temporären Basalra
 *HINWEIS:*
 **Unsichere** Befehle erscheinen in der Pod-Historie, aber für deren Genauigkeit gibt es aufgrund der Unsicherheit keine Garantie.
 
-1. Rufe die Registerkarte **Omnipod (POD)** auf und drücke den Button **POD MGMT (1)**, um auf das Menü **Pod-Management** zuzugreifen. Drücke dann auf die Schaltfläche **Pod-Historie(2)**, um auf den Bildschirm der Pod-Historie zuzugreifen.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -349,7 +349,7 @@ Pod-Kommunikationsgerät und Aktive Pod-Einstellungen
 
 Dieser Bildschirm liefert Informationen, Status und Einstellungen zur Konfiguration sowohl für den aktuell konfigurierten Rileylink als auch für den aktuell aktiven Pod. 
 
-1. Geh auf den **Omnipod (POD)** Tab und drücke den **POD MGMT (1)** Button um das **Pod Management** Menü zu erreichen. Drücke dann den **RileyLink Status (2)** Button um den aktuell konfigurierten **RileyLink (3)** und die Einstellungen des aktiven Pod **Geräts (4)** zu sehen.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -382,7 +382,7 @@ Historie des RileyLink und aktiven Pods
 
 Dieser Bildschirm gibt in umgekehrter chronologischer Reihenfolge Auskunft über jeden Zustand oder jede Maßnahme des RileyLink und des aktuell verbundenen Pods. Die gesamte Historie ist nur für den gerade aktiven Pod verfügbar. Nach einem Podwechsel wird diese Historie gelöscht und nur die Ereignisse des neu aktivierten Pods werden aufgezeichnet und angezeigt.
 
-1. Gehe zur Registerkarte **Omnipod (POD)** und drücke den Button **POD MGMT (1)**, um das **Pod Management** Menü zu erreichen. Drücke anschließend den **Pod Historie (2)** Button, um zu den **Einstellungen** und der **Historie** zu gelangen. Klicke auf den Text **Pod Historie (3)**, um den gesamten Verlauf des RileyLink und der derzeit aktiven Pod-Sitzung anzuzeigen.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Klicke auf den Text **Pod Historie (3)**, um den gesamten Verlauf des RileyLink und der derzeit aktiven Pod-Sitzung anzuzeigen.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
