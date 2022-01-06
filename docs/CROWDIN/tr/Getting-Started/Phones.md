@@ -1,13 +1,13 @@
-# List of tested Phones
+# Test edilen Telefonların Listesi
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) oluşturuyor
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Belirli pompaları veya telefonları görüntülemek için filtreleri kullanabilirsiniz, ancak lütfen aramayı bitirdiğinizde, bir sonraki kişinin hepsini görüntüleyebilmesi için tümünü görünür bırakın.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen [formu](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) doldurun.
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+Tabloyla ilgili herhangi bir sorun varsa lütfen hardware@androidaps.org adresine e-posta gönderin, test edilmesini istediğiniz telefon/saat bağışları için lütfen donations@androidaps.org adresine e-posta gönderin.
 
-# Phone Background
+# Telefon Arka Planı
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![telefon arka planı](../images/bg_phone_thump.jpg) </br> Tasarım: Tiago :) </br> Telefonunuzu AndroidAPS arka planı ile dekore etmek istiyorsanız, arka plan resminizi buradan indirebilirsiniz: ![Yüksek çözünürlüklü arka plan.](../images/bg_phone.jpg)
