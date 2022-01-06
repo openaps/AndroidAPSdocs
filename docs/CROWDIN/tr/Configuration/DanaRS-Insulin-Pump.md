@@ -47,12 +47,12 @@
 * Pompa yazılımı v3 olan DanaRS veya Dana-i için varsayılan parola, üretim ayı ve üretim tarihinin (yani 01. ay ve 24. gün) birleşimidir.
     
     * Ana menüde Pompa > gözden geçir > bilgi açın. 
-    * Number 3 is production date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+    * 3. numara üretim tarihidir. 
+    * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AndroidAPS'e girmek için gerekli değildir.
 
-## Change password on pump
+## Pompa şifresi değiştirme
 
-* Press OK button on pump
+* Pompadaki OK düğmesine basın
 * In main menu select "OPTION" (move right by pressing arrow button several times)
     
     ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
