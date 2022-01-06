@@ -112,12 +112,12 @@ Overview
   .. image:: ../images/Pref2020_OverviewII.png
     :alt: Preferences > Overview
 
-Keep screen on
+Ekranı açık tut
 -----------------------------------------------------------
 * Useful while giving a presentation. 
 * It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
-Buttons
+Butonlar
 -----------------------------------------------------------
 * Define which buttons are visible on the bottom of your home screen.
 * With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
@@ -335,7 +335,7 @@ Advanced settings (OpenAPS SMB)
 * Normally you do not have to change the settings in this dialogue!
 * If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
 
-Absorption settings
+Emilim ayarları
 ===========================================================
 
 .. image:: ../images/Pref2020_Absorption.png
@@ -420,14 +420,14 @@ Advanced settings (NSClient)
   
 * *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
 
-SMS Communicator
+SMS Kominikatör
 ===========================================================
 * Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
 * This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
 * Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
 * Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
-Automation
+Otomasyon
 ===========================================================
 Select which location service shall be used:
 

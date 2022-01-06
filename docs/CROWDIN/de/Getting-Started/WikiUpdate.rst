@@ -1,27 +1,27 @@
 Docs Updates & Änderungen
 **************************************************
 
-December 2021
+Dezember 2021
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `AndroidAPS installieren - App erstellen <../Installing-AndroidAPS/Building-APK.html>`_ - Update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ Informationen hinzugefügt @MilosKozak
 
 November 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* Best Practice zur Kalibrierung eines `Libre 2 Sensors <Hardware/Libre2.html#best-practices-fur-die-kalibrierung-eines-libre-2-sensors>`_
+* `ISF <../Getting-Started/FAQ.html#auswirkung>`_ Neuformulierung der Auswirkungen
+* `Update Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Gepatchte Dexcom App <../Hardware/DexcomG6.html>`_ entfernt, da sie veraltet ist
 
-October 2021
+Oktober 2021
 ==================================================
 * `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
 September 2021
 ==================================================
-* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+* Empfohlene Spezifikation des Computers `zum Erstellen der Apk-Datei <../Installing-AndroidAPS/Building-APK.html#empfohlene-spezifikation-des-computers-zum-erstellen-der-apk-datei>`_
 
-June 2021
+Juni 2021
 ==================================================
 * `Watchface sideload <../Configuration/Watchfaces.html>`_ 
 

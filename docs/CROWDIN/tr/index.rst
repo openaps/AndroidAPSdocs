@@ -1,90 +1,90 @@
-Welcome to the AndroidAPS documentation
+AndroidAPS dokümantasyonuna hoş geldiniz
 ==================================================
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+AndroidAPS, android akıllı telefonlarında yapay pankreas sistemi (APS) görevi gören, insüline bağımlı diyabetle yaşayan kişiler için açık kaynak kodlu bir uygulamadır. Ana kompanentler ile amacı, farklı openAPS yazılım algoritmaları kullanarak canlı bir pankreasın yaptığı gibi otomatik insülin dozlama (AID) yaparak kan şekeri seviyelerini sağlıklı sınırlar içinde tutmaktır. Ek olarak, yazılımın desteklediği ve FDA/CE onaylı bir insülin pompasına ve sürekli şeker ölçüm cihazına ihtiyacınız olacaktır. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+Uygulama kendi kendine öğrenen yapay zeka KULLANMAZ. Bunun yerine, AndroidAPS'in hesaplamaları, kullanıcının tedavi profiline manuel olarak koyduğu bireysel dozaj algoritmasına ve karbonhidrat alımına dayanır, ancak bunlar güvenlik nedenleriyle sistem tarafından doğrulanır. 
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+Uygulama Google Play'de bulunmaz - yasal nedenlerle onu kaynak koddan kendiniz oluşturmanız gerekir.
 
-The main components are:
+Ana bileşenler şunlardır:
 
 .. image:: images/modules-female.png
   :alt: Components
 
-For more details, please read on here.
+Daha fazla ayrıntı için lütfen burayı okuyun.
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Dili değiştir
 
-   Change language <./changelanguage.rst>
+   Dili değiştir <./changelanguage.rst>
 
 .. _getting-started:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Başlarken
 
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Önce Güvenlik <./Getting-Started/Safety-first.rst>
+   Kapalı döngü sistemi nedir? <./Getting-Started/ClosedLoop.rst>
+   AndroidAPS ile kapalı döngü sistemi nedir? <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pompa seçimi <./Getting-Started/Pump-Choices.md>
+   Dokm. güncelleme & değişiklikler <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Neye ihtiyacım var? 
 
-   Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: How to Install AndroidAPS
-
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-
-.. _component-setup:
+   Modül <./Module/module.rst>
+   Örnek Kurulum <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: AndroidAPS nasıl yüklerim
+
+   APK Oluşturma <./Installation-Android APS/Building-APK.mod>
+   Yeni bir sürüme veya dala güncelleyin <./Installing-AndroidAPS/Update-to-new-version.md>
+   AAPS 2.7 güncellemesinden sonra kontroller <./Installing-AndroidAPS/update2_7.rst>
+   Git'i yükleyin <./Installing-AndroidAPS/git-install.rst>
+   Android Studio Sorunlarını Giderme <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Sürüm notları <./Installing-AndroidAPS/Releasenotes.rst>
+   Geliştirici dalı <./Installing-AndroidAPS/Dev_branch.md>
+
+.. _bileşen-kurulumu:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Bileşen Kurulumu
 
    CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
+   xDrip Ayarları <./Configuration/xdrip.md>
+   Pompalar <./Hardware/pumps.rst>
+   Telefonlar <./Hardware/Phoneconfig.rst>
+   Nightscout kurulumu <./Installing-AndroidAPS/Nightscout.md>
+   Akıllı saat  <./Hardware/Smartwatch.rst>
 
-.. _configuration:
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Configuration
-
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+.. _konfigürasyon:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: Konfigürasyon
+
+   Konfigürasyon Oluştur <./Configuration/Config-Builder.md>
+   Tercihler <./Configuration/Preferences.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: AndroidAPS Kullanımı
 
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
@@ -149,7 +149,7 @@ For more details, please read on here.
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Dokm. güncelleme & değişiklikler <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1

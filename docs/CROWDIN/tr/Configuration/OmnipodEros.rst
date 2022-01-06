@@ -1,5 +1,5 @@
 =====================================================
- AndroidAPS Omnipod Insulin Pump Driver Documentation
+ AndroidAPS Omnipod İnsülin Pompası Sürücü Dokümantasyonu
 =====================================================
 
 These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
@@ -17,11 +17,11 @@ Hardware and Software Requirements
 
   Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+   -  |OrangeLink|  `OrangeLink Websitesi <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+   -  |EmaLink|  `Emalink Websitesi <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__
+   -  |DiaLink|  DiaLink - `İletişim Bilgileri <mailto:Boshetyn@ukr.net>`__     
+   -  |LoopLink|  `LoopLink Websitesi <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Test edilmedi
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
@@ -302,7 +302,7 @@ This feature is useful for verifying boluses, TBRs, basal changes that were give
 *NOTE:*
 **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@ Pod Communication Device and Active Pod Settings
 
 This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod. 
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -381,7 +381,7 @@ RileyLink and Active Pod History
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 

@@ -42,15 +42,15 @@ Release date: XX-XX-2022
 Notas importantes
 ----------------------
 * **La versión mínima de Android requerida es la 9.0.**
-* **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
+* **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. También se recomienda el uso de la aplicación BOYDA, para aprovechar el suavizado que aplica Dexcom.
 
 Pasos de preparación
 ----------------------
-**At least two days before update:**
+**Al menos dos días antes de la actualización:**
 * Deshabilitar el "puente" entre Dexcom y Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+* Si estás usando G5/G6 cambia a BOYDA (si estabas usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
 
 Cambios
 ----------------------
@@ -71,7 +71,7 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
+* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde Nightscout usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
@@ -83,9 +83,9 @@ Cambios
 * Corregido un problema asociado a datos inestables del MCG @MilosKozak
 * Mejoras de comunicación para DanaR y DanaRS @MilosKozak
 * Integración con CircleCI @MilosKozak
-* Files location change: 
+* Cambios en la ubicación de ficheros: 
 
-   * /AAPS/extra (engineering mode) 
+   * /AAPS/extra (modo ingeniearía) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
 

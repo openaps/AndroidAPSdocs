@@ -1,30 +1,30 @@
-# Building the APK
+# APK oluşturma
 
-## Build yourself instead of download
+## Programı İndirmek yerine kendiniz oluşturun...
 
-**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS, tıbbi cihazlarla ilgili düzenlemeler nedeniyle indirilebilen bir uygulama değildir. Uygulamayı kendi kullanımınız için oluşturmak yasaldır, ancak bir kopyasını başkasına vermemelisiniz! Ayrıntılar için [SSS sayfasına](../Getting-Started/FAQ.md) bakın.**
 
-## Important notes
+## Önemli notlar
 
-* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* Apk'yi oluşturmak için lütfen **[Android Studio Sürüm 2020.3.1](https://developer.android.com/studio/)** veya daha yenisini kullanın.
+* [Windows 10 32 bit sistemler](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process), Android Studio 2020.3.1 tarafından desteklenmemektedir.
 
-## Recommended specification of computer for building apk file
+## apk dosyası oluşturmak için önerilen bilgisayar özellikleri
 
 <table class="tg">
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
-    <th class="tg-baqh">Windows 8 or higher</th>
-    <th class="tg-baqh">Mac OS 10.14 or higher</th>
-    <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
+    <th class="tg-baqh">İşletim Sistemi (Sadece 64 bit)</th>
+    <th class="tg-baqh">Windows 8 veya üstü</th>
+    <th class="tg-baqh">Mac OS 10.14 veya üstü</th>
+    <th class="tg-baqh">Herhangi bir Linux, Gnome, KDE veya Unity DE;&nbsp;&nbsp;GNU C Library 2.31 veya sonraki sürümünü destekler</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
+    <td class="tg-baqh"><p align="center">CPU (Sadece 64 bit)</td>
+    <td class="tg-baqh">x86_64 2. nesil CPU mimarisi Intel Core veya daha yenisi ya da<br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a> desteğine sahip AMD CPU</td>
     <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
   </tr>
@@ -61,7 +61,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 In general, the steps necessary to build the APK file:
 
 1. [Install git](../Installing-AndroidAPS/git-install.rst)
-2. [Install Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
+2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
@@ -77,7 +77,7 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-## Install Android Studio
+## Android Studio'yu yükleyin
 
 The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 

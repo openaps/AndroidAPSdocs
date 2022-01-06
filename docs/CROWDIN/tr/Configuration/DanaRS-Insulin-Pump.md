@@ -1,97 +1,97 @@
-# DanaRS and Dana-i Pump
+# DanaRS ve Dana-i Pompa
 
-*These instructions are for configuring the app and your pump if you have a DanaRS from 2017 onwards or the newer Dana-i. Visit [DanaR Insulin Pump](./DanaR-Insulin-Pump) if you have the original DanaR instead.*
+*Bu talimatlar, 2017'den itibaren bir DanaRS'niz veya daha yeni Dana-i'niz varsa uygulamayı ve pompanızı yapılandırmak içindir. Bunun yerine DanaR'a sahipseniz [DanaR İnsülin Pompası](./DanaR-Insulin-Pump)'nı ziyaret edin.*
 
-**New Dana RS firmware v3 can be used from AndroidAPS version 2.7 onwards.**
+**Yeni Dana RS pompa yazılımı v3, AndroidAPS sürüm 2.7'den itibaren kullanılabilir.**
 
-**New Dana-i can be used from AndroidAPS version 3.0 onwards.**
+**Yeni Dana-i, AndroidAPS 3.0 sürümünden itibaren kullanılabilir.**
 
-* In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
+* DanaRS/i pompasında uygulama tarafından "BASAL A" kullanılır. Mevcut verilerin üzerine yazılır.
 
-## Pairing pump
+## Pompa eşleştirme
 
-* On AndroidAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
-* In pump section select 'Dana-i/RS'.
-* Click on gear wheel to get directly to the pump settings or return to homescreen.
+* AndroidAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
+* Pompa bölümünde 'Dana-i/RS'i seçin.
+* Doğrudan pompa ayarlarına gitmek için dişli çarka tıklayın veya ana ekrana dönün.
     
     ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Go to 'DANA-i/RS' tab.
+* Ana ekranda 'DANA-i/RS' sekmesine gidin.
 
-* Select preferences menu by tapping the 3 dots in the top right. 
-* Select 'Dana-i/RS Preferences'.
-* Click on "Selected pump".
-* In the pairing window click on the entry for your pump.
+* Sağ üstteki 3 noktaya dokunarak tercihler menüsünü seçin. 
+* 'Dana-i/RS Tercihleri'ni seçin.
+* "Pompa seçimi"ne tıklayın.
+* Eşleştirme penceresinde pompanıza tıklayın.
     
     ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
 
-* **You have to confirm the pairing on the pump!** That's just the way you are used to from other bluetooth pairings (i.e. smartphone and car audio).
+* **Pompa üzerinde eşleştirmeyi onaylamanız gerekir!** Bu, diğer bluetooth eşleştirmelerinden (ör. akıllı telefon ve araç ses sistemi) alışık olduğunuz yoldur.
     
     ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
 
-* Follow the pairing process based on the type and firmware of your pump:
+* Pompanızın tipine ve yazılımına göre eşleştirme sürecini takip edin:
     
-    * For DanaRS v1 select pump password in preferences and set your password.
-    * For DanaRS v3 you have to type 2 sequences of numbers and letters displayed on pump to AndroidAPS pairing dialog.
-    * For Dana-i standard Android pairing dialog appear and you have to enter 6-digit number displayed on pump.
+    * DanaRS v1 için tercihlerde pompa şifresini seçin ve şifrenizi ayarlayın.
+    * DanaRS v3 için, AndroidAPS eşleştirme iletişim kutusuna, pompada görüntülenen 2 dizi sayı ve harfi yazmanız gerekir.
+    * Dana-i için standart Android eşleştirme iletişim kutusu görünür ve pompada görüntülenen 6 haneli sayıyı girmeniz gerekir.
 
-* Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
+* Kullanılan varsayılan bolus hızını değiştirmek için Bolus Hızı'nı seçin (1u başına 12sn, 1u başına 30sn veya 1u başına 60sn).
 
-* Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide).
-* Enable extended boluses on pump
+* Doktorlar menüsünü kullanarak pompadaki bazal adımı 0,01 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
+* Doktorlar menüsünü kullanarak pompadaki bolus adımını 0,1 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
+* Pompada yayma bolusları etkinleştir
 
-### Default password
+### Varsayılan parola
 
-* For DanaRS with firmware v1 and v2 the default password is 1234.
-* For DanaRS with firmware v3 or Dana-i the default password is a combination of production month and production date (i.e. month 01 and day 24).
+* Pompa yazılımı v1 ve v2'ye sahip DanaRS için varsayılan parola 1234'tür.
+* Pompa yazılımı v3 olan DanaRS veya Dana-i için varsayılan parola, üretim ayı ve üretim tarihinin (yani 01. ay ve 24. gün) birleşimidir.
     
-    * Open main menu on pump > review > information. 
-    * Number 3 is production date. 
-    * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+    * Ana menüde Pompa > gözden geçir > bilgi açın. 
+    * 3. numara üretim tarihidir. 
+    * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AndroidAPS'e girmek için gerekli değildir.
 
-## Change password on pump
+## Pompa şifresi değiştirme
 
-* Press OK button on pump
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Pompadaki OK düğmesine basın
+* Ana menüde "OPTION" (seçenek) öğesini seçin (sağ ok düğmesine birkaç kez basarak sağa hareket edin)
     
     ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* Seçenekler menüsünde "USER OPTION" "kullanıcı seçeneği"ni seçin
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* "11. password'e (parolaya) inmek için sağ ok düğmesini kullanın"
     
     ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Eski şifreyi girmek için Tamam'a basın.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](#default-password) bakın) ve "OK" Tamam'a basın
     
     ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Buraya yanlış şifre girilirse, başarısız olduğunuzu belirten bir mesaj almayacaksınız!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* **Yeni şifre** belirleyin (+ & - düğmeleriyle sayıları değiştirin / sağa gitmek için sağ ok butonuna basın).
     
     ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* OK butonu ile onaylayın.
 
-* Save by pressing OK button again.
+* OK butonuna tekrar basarak kaydediniz.
     
     ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK button.
+* "14. EXIT" çıkışa gelin ve OK butonuna basın.
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
-## Dana RS specific errors
+## Dana RS'e özgü hatalar
 
-### Error during insulin delivery
+### İnsülin iletimi sırasında hata
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) aşağıdaki mesajı görecek ve bir alarm sesi duyacaksınız.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
@@ -119,6 +119,6 @@ When switching to a new phone the following steps are necessary:
 * Start pairing procedure like decribed [above](#pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
 
-## Timezone traveling with Dana RS pump
+## Dana RS pompasıyla seyahat edenler için saat dilimi
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.

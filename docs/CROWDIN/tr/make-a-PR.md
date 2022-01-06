@@ -28,7 +28,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 ![edit doc](./images/PR1.png)
 
-     Or you can click on the "Edit in GitHub" link in the upper right corner, and then click the pencil icon that appears in the top bar of the page contents to be edited.
+     Veya sağ üst köşedeki "GitHub'da Düzenle" bağlantısına tıklayabilir ve ardından düzenlenecek sayfa içeriğinin üst çubuğunda görünen kalem simgesine tıklayabilirsiniz.
     
 
 ![RTD io](./images/PR2.png)

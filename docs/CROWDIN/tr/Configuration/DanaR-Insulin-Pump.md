@@ -1,26 +1,26 @@
-# DanaR Pump
+# DanaR Pompa
 
-*These instructions are for configuring the app and your pump if you have a DanaR. Visit [DanaRS Insulin Pump](./DanaRS-Insulin-Pump) if you have the DanaRS launched in 2017 instead.*
+*Bu talimatlar bir DanaR'ınız varsa uygulamak ve pompanızı yapılandırmak içindir. Bunun yerine ilk 2017'de piyasaya sürülen DanaRS'ınız varsa [DanaRS İnsülin Pompası](./DanaRS-Insulin-Pump)'nı ziyaret edin.*
 
-* In the pump go to Main Menu > Setting > User Option
-* Turn on "8. Extended Bolus"
+* Pompada Ana Menü > Ayarlar > Kullanıcı Seçeneği'ne gidin
+* "8'i açın. Yayma Bolus"
 
-![DanaR pump](../images/danar1.png)
+![DanaR pompa](../images/danar1.png)
 
-* Go to Main Menu > Setting > Discovery
-* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). If DanaR is not showing in scan then restart phone and take DanaR battery out, replace and start these two steps again.
+* Ana Menü > Ayarlar > Keşif'e gidin
+* Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR serinumaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
 
-* In AndroidAPS go to Config Builder and select the type of DanaR you have (DanaR, DanaR Korean, DanaRv2)
+* AndroidAPS'de Konfigürasyon ayarlarına gidin ve sahip olduğunuz DanaR pompa türünü seçin (DanaR, DanaR Korean, DanaRv2)
 
-* Select Menu by tapping the 3 dots in the top right. Select Preferences.
-* Select DanaR Bluetooth device, and click your DanaR serial number.
-* Select Pump password, and input your password. (Default password is 1234)
-* If you want AndroidAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
-* In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
-* Set basal step on pump to 0.01 U/h
-* Set bolus step on pump to 0.1 U/h
-* Enable extended boluses on pump
+* Sağ üstteki 3 noktaya dokunarak Menü'yü seçin. Tercihleri Seçin.
+* DanaR Bluetooth cihazını seçin ve DanaR seri numaranıza tıklayın.
+* Pompa şifresini seçin ve şifrenizi girin. (Varsayılan şifre 1234'tür)
+* AndroidAPS'nin %200'ün üzerinde bazal orana izin vermesini istiyorsanız, >%200 için yayma bolus kullan'ı etkinleştirin. Bunun yiyecek için yayma bolusları kullanırken yüksek GBO'larla döngü yapamayacağınız anlamına geldiğini unutmayın.
+* DanaR pompa ayarları altındaki Tercihler'de, kullanılan varsayılan bolus hızını değiştirebilirsiniz (1ü başına 12sn, 1ü başına 30sn veya 1ü başına 60sn).
+* Pompadaki bazal adımı 0,01 Ü/s ayarlayın
+* Pompadaki bolus adımını 0,1 Ü/s ayarlayın
+* Pompada yayma bolusları etkinleştir
 
-## Timezone traveling with Dana R pump
+## Dana R pompasıyla farklı zaman diliminde seyahat
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.

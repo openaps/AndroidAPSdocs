@@ -1,12 +1,12 @@
-# For Clinicians – A General Introduction and Guide to AndroidAPS
+# Klinisyenler için – AndroidAPS Klavuzu ve Genel Bir Giriş
 
-This page is intended for clinicians who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+Bu sayfa, AndroidAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade eden klinisyenler veya bu tür bilgileri klinisyenleriyle paylaşmak isteyen hastalar için hazırlanmıştır.
 
-This guide has some high-level information about DIY closed looping and specifically how AndroidAPS works. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). If you have questions, please ask your patient for more details, or always feel free to reach out to the community with question. (If you’re not on social media (e.g. [Twitter](https://twitter.com/kozakmilos) or Facebook), feel free to email developers@AndroidAPS.org). [You can also find some of the latest studies & outcomes related data here](https://openaps.org/outcomes/).
+Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştığı hakkında bazı üst düzey bilgiler içerir. Tüm bu konular hakkında daha fazla ayrıntı için lütfen [kapsamlı AndroidAPS dokümantasyonunu çevrimiçi olarak](../index.rst) inceleyin. Sorularınız varsa, lütfen daha fazla ayrıntı için hastanıza sorun veya sorularınızı iletmek için her zaman topluluğa ulaşmaktan çekinmeyin. (Sosyal medyada değilseniz (ör. [Twitter](https://twitter.com/kozakmilos) veya Facebook), developers@AndroidAPS.org adresine e-posta gönderebilirsiniz). [Ayrıca en son araştırmalardan bazılarını ve sonuçlarla ilgili verileri burada bulabilirsiniz.](https://openaps.org/outcomes/).
 
-### The steps for building a DIY Closed Loop:
+### Kendin Yap (DIY) Kapalı Döngü oluşturma adımları:
 
-To start using AndroidAPS, the following steps should be taken:
+AndroidAPS'i kullanmaya başlamak için aşağıdaki adımlar izlenmelidir:
 
 * Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).

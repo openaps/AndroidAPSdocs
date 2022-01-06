@@ -265,143 +265,143 @@ OpenAPS</td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>Определение чувствительности <br>. Ключевой алгоритм версии 0/1, используемый OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Определение чувствительности</a></td>
 </tr>
 <tr>
- <td><strong>Peak time</strong></td>
- <td>time of maximum effect of insulin given</td>
+ <td><strong>Время пика</strong></td>
+ <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
- <td><strong>PH</strong></td>
- <td>pump history (entry in treatments tab)</td>
+ <td><strong>PH/История записей помпы</strong></td>
+ <td>история помпы (запись во вкладке назначений/лечения)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - линии прогноза ГК</a></td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>Базовые настройки компенсации (базальный уровень, DIA, IC, ISF, целевая ГК)<br> могут быть заданы непосредственно на AAPS или через Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
  <td><strong>Profile switch/смена профиля</strong></td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td>(частичное) изменение профиля или процентное увеличение/уменьшение.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Wiki - смена профиля</a></td>
 </tr>
 <tr>
  <td><strong>RES</strong></td>
- <td>status light overdue reservoir change on homescreen</td>
+ <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
+ <td>устройство с открытым исходным кодом для беспроводной связи между Bluetooth Low Energy (BLE) и радиочастотой 916МГц (на старых помпах Medtronic) или 433МГц (на Omnipod Eros)</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td><strong>ВОЗРСенс</strong></td>
+ <td>возраст сенсора - отображается на сайте Nightscout, если информация введена на вкладке терапии AAPS</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>status light sensor change on homescreen</td>
+ <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
  <td>BAT / CAN / RES</td>
  <td><a href="../Configuration/Preferences.html#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.html">Снимки экрана</a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Sensivity detection/определение чувствительности</strong></td>
  <td>расчет чувствительности к инсулину с учетом физической нагрузки, гормонального фона и пр.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
- <td><strong>Sensor noise</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td><strong>Sensor noise/шум сенсора</strong></td>
+ <td>нестабильные данные НМГ, проявляющиеся в больших колебаниях значений ГК.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td><strong>Супер микро болюс SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
- <td>UAM</td>
+ <td>сверхмалый болюс, продвинутая техника быстрой подстройки уровня ГК.</td>
+ <td>UAM/</td>
  <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Super bolus</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td><strong>Super bolus/Суперболюс</strong></td>
+ <td>переход от базальной к болюсной компенсации для быстрой коррекции ГК.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td><strong>Суточная доза базала/TBB</strong></td>
+ <td>Общая базальная база (суммарный обьем базального инсулина в течении 24 часов)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>Временная Базальная Скорость</strong></td>
+ <td>Временный базальный уровень</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD/общая суточная доза</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td><strong>TDD/общая суточная доза инсулина</strong></td>
+ <td>общая суточная доза инсулина (болюсы + базал)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td><strong>Временная цель (TT)</strong></td>
+ <td>временная цель <br> временное допустимое увеличение/понижение ГК отосительно заданного целевого значения (диапазона)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Wiki - временные цели</a></td>
 </tr>
 <tr>
- <td><strong>UAM</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td><strong>Незапланированный прием пищи UAM</strong></td>
+ <td>Незафиксированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других воздействий и компенсация через механизм СМБ.</td>
  <td>Супер микро болюс SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td><strong>Virtual pump/виртуальная помпа</strong></td>
+ <td>Возможность применить функции ИПЖ без на помпах без драйвера</td>
  <td>Открытый цикл</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Фоновый рисунок</strong></td>
- <td>AndroidAPS background image</td>
+ <td>Фоновое изображение androidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">см. страницу телефонов</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>программное обеспечение с открытым исходным кодом для чтения систем мониторинга CGM</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td><strong>Zero-temp/Временный нулевой базал</strong></td>
+ <td>Временный базальный уровень в 0% от нормы (без подачи инсулина)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+ <td colspan=4>См. также <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/ru/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
