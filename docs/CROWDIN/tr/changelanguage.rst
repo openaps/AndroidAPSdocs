@@ -1,7 +1,7 @@
 Dili değiştir
 **************************************************
 
-.. note::
+.. not::
    Dil seçimi sol menünün alt satırına taşındı. Dil seçim menüsünü açmak için lütfen alttaki çubuğa tıklayın.
 
 .. image:: images/documentation_language_menu.png
