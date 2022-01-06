@@ -8,9 +8,9 @@ Cum se pot adăuga întrebări în secțiunea FAQ: urmați aceste [instrucțiuni
 
 Nu. Nu există nici un fişier apk descărcabil pentru AndroidAPS. Trebuie să ți-l [construiești](../Installing-AndroidAPS/Building-APK.md) singur. Iată de ce:
 
-AndroidAPS este utilizat pentru a controla pompa şi a administra insulină. În conformitate cu reglementările actuale, în Europa, toate sistemele din clasa IIa sau IIb sunt dispozitive medicale care necesită aprobare din partea regulatorilor (un marcaj CE), și care trebuie să aibă diferite studii și semnalizări ale calitații. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există şi în alte părţi ale lumii.
+AndroidAPS este utilizat pentru a controla pompa şi a administra insulină. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuirea unui dispozitiv nereglementat este ilegală. Reglementări similare există şi în alte părţi ale lumii.
 
-Acest regulament nu se limitează la vânzări (în sensul obţinerii de bani pentru ceva), ci se aplică oricărui mod de distribuire (chiar şi acordarea gratuită). Construirea unui dispozitiv medical pentru tine este singura modalitate de a nu fi afectat de aceste reglementări.
+This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
 De aceea fișierele apk nu sunt disponibile.
 
@@ -40,102 +40,88 @@ Dacă intenționați să folosiți aplicația de ceas Wear pentru a bolusa sau p
 
 ### Deconectează pompa
 
-Dacă scoateţi pompa pentru duş/baie/înot/sport etc. trebuie să informaţi AndroidAPS că nu este administrată insulină pentru a menţine IOB corect.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-* Apăsați lung butonul 'Buclă închisă' (va fi numit 'Buclă deschisă' atunci când nu sunteți încă în buclă închisă) în partea de sus a ecranului. 
-* Selectați **'Deconectați pompa pentru XY minute'**
-* Aceasta va seta RBT 0 pentru această perioadă de timp.
-* Durata minimă de timp a unei deconectări este în directă legătură cu durata minimă a RBT care poate fi setat pe pompă. Deci, dacă doriţi să o deconectaţi pentru o perioadă mai scurtă de timp, trebuie să utilizaţi cel mai scurt timp de deconectare disponibil pentru pompa dumneavoastră şi să vă reconectaţi manual, aşa cum este descris mai jos.
-* Butonul 'Buclă închisă' (sau 'Buclă deschisă') se va colora în roșu și va fi numit 'Deconectat (xx m)' afișând timpul rămas din deconectare.
-* AAPS va reconecta automat pompa după ora aleasă și bucla dvs. închisă va începe să funcționeze din nou.
-    
-    ![Deconectează pompa](../images/PumpDisconnect.png)
-
-* Dacă timpul selectat a fost prea lung, vă puteţi reconecta manual.
-
-* Apăsați lung pe butonul roșu 'Deconectat (xx m)'.
-* Selectați 'Reconectare pompă'
-    
-    ![Reconectare pompă](../images/PumpReconnect.png)
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### Recomandări care se bazează nu doar pe o singură citire CGM
 
-Pentru sigurantă, recomandările se bazează nu doar pe o singură citire a CGM, ci pe variația medie. Prin urmare, dacă pierdeți unele citiri, ar putea dura ceva timp după ce reprimiți date pentru ca AndroidAPS să intre din nou în buclă.
+For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
 ### Referințe suplimentare
 
-Există mai multe bloguri cu sfaturi bune pentru a vă ajuta să înţelegeţi cum e mai bine de făcut atunci când folosiți bucla închisă:
+There are several blogs with good tips to help you understand the practicalities of looping:
 
-* [Optimizare setări](https://seemycgm.com/2017/10/29/fine-tuning-settings/) vedeți CGM-ul
-* [De ce contează DIA](https://seemycgm.com/2017/08/09/why-dia-matters/) Vedeți CGM
-* [Cum să limităm vârfurile postprandiale](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DiYPS
-* [Hormonii și autosens](https://seemycgm.com/2017/06/06/hormones-2/) Vedeți CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Ce echipament de urgență este recomandat să iau cu mine?
 
-În primul rând, trebuie să luaţi acelaşi echipament de urgenţă cu dumneavoastră ca oricare alt diabetic ce utilizează tratament cu pompa de insulină. Ca buclă cu AndroidAPS, este recomandat cu tărie să aveți următorul echipament suplimentar cu sau în apropierea dumneavoastră:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
-* Baterie externă pentru încărcarea telefonului, ceas și (poate) cititor bluetooth
-* Copie de rezervă în cloud (Dropbox, Google Drive...) a aplicațiilor pe care le utilizați: cel mai recent fișier apk al AndroidAPS și parola pentru magazinului de cheie, fișierul de setări AndroidAPS, fișierul de setări xDrip, aplicația Dexcom modificată, ...
-* Baterii pentru pompă
+* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
+* Pump batteries
+* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## Cum să port un CGM/FGM în siguranță?
+## How can I safely and securely attach the CGM/FGM?
 
-Puteți să îl bandajați: Se vând "plasturi” gata perforați pentru diverse tipuri de CGM (întrebați Google sau ebay). Unii utilizatori de bucle folosesc banda simplă kinesio sau rocktape.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-Puteţi să-l fixați: Se vând brăţări de braţ care fixează CGM/FGM-ul cu o bandă de cauciuc (întrebaţi Google sau ebay).
+You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 # Setări AndroidAPS
 
-Următoarea listă are scopul de a vă ajuta să optimizaţi setările. Cel mai bine ar fi să începem de sus şi să lucrăm până jos. Scopul de a obţine o setare bună înainte de a schimba o altă setare. Lucraţi mai degrabă în paşi mici, decât să faceţi schimbări mari dintr-o dată. Puteți folosi [Autoadaptare](https://autotuneweb.azurewebsites.net/) pentru a vă ghida, cu toate că nu trebuie urmărit orbeşte: este posibil să nu funcţioneze bine pentru dumneavoastră sau în toate circumstanţele. Țineți cont că setările interacționează una cu alta - puteți avea setări "greșite" care funcționează bine împreună în unele circumstanțe (de ex. dacă se întâmplă ca o bazală prea mare să fie în același timp cu un nivel prea ridicat al CR), dar nu și în altele. Acest lucru înseamnă că trebuie să luaţi în considerare toate setările şi să verificaţi că acestea lucrează împreună într-o varietate de circumstanţe.
+The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
 ## Durata de Acțiune a Insulinei (DIA)
 
 ### Descriere & testare
 
-Perioada de timp în care insulina ajunge la zero.
+The length of time that insulin decays to zero.
 
-Aceasta este destul de des setată prea scurt. Majoritatea oamenilor vor dori cel puțin 5 ore, posibil 6 sau 7.
+This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
 ### Impact
 
-DIA prea scurtă poate duce la glicemii mici. Și invers.
+Too short DIA can lead to low BGs. Și invers.
 
-Dacă DIA este prea scurtă, AAPS crede prea devreme că bolusul anterior este consumat în totalitate și, la o valoare totuși crescută a glicemiei, vă va da mai mult. (De fapt, nu aşteaptă atât de mult, ci prezice ce se va întâmpla şi continuă să adauge insulină). Acest lucru creează, în esenţă, „stivuirea insulinei” de care AAPS nu este conştient.
+If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
-Un exemplu de DIA prea scurtă este un hiper urmat de o supracorecție AAPS care generează ulterior un hipo.
+Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
 
 ## Planificare rată bazală (U/h)
 
 ### Descriere & testare
 
-Cantitatea de insulină dintr-o anumită oră pentru a menţine glicemia la un nivel stabil.
+The amount of insulin in a given hour time block to maintain BG at a stable level.
 
-Testaţi ratele bazale prin suspendarea buclei, post, aşteptare circa 5 ore după mâncare, şi apoi se urmăreste cum s-a modificat glicemia. Repetaţi de câteva ori.
+Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-Dacă glicemia scade, rata bazală este prea mare. Și invers.
+If BG is dropping, basal rate is too high. Și invers.
 
 ### Impact
 
-O rată bazală prea mare poate duce la valori mici ale glicemiei. Și invers.
+Too high basal rate can lead to low BGs. Și invers.
 
-‘Scenariile de referință’ AAPS în raport cu rata bazală implicită. În cazul în care rata bazală este prea mare, un „punct zero” va fi considerat ca IOB mai negativ decât ar trebui. Acest lucru va duce la efectuarea de către AAPS a mai multor corecții ulterioare decât ar trebui ca să aducă IOB la zero.
+AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
-Deci, o rată bazală prea mare va crea glicemii mici atât cu rata implicită, dar de asemenea, timp de câteva ore, deoarece AAPS corectează către țintă.
+So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
 
-Dimpotrivă, o rată bazală prea scăzută poate duce la valori ridicate ale glicemiei și la imposibilitatea de a scădea nivelele până la țintă.
+Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
 ## Factor de sensibilitate la insulină (ISF) (mmol/l/U sau mg/dl/U)
 
 ### Descriere & testare
 
-Scăderea aşteptată a glicemiei după administrarea 1U de insulină.
+The drop in BG expected from dosing 1U of insulin.
 
-Presupunând că bazala este corectă, puteţi testa acest lucru prin suspendarea buclei, verificarea că IOB este zero, şi administrarea câtorva comprimate de glucoză pentru a ajunge la o valoare stabilă „înaltă”.
+Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
-Apoi luaţi o cantitate estimată de insulină (conform 1/ISF) pentru a ajunge la nivelul ţintă al glicemiei.
+Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
 
-Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înseamnă că 1 U va scădea BG mai repede decât era de aşteptat.
+Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
 ### Impact
 
@@ -145,24 +131,24 @@ Aveți grijă deoarece acest lucru este adesea stabilit prea jos. Prea mic înse
 
 **Example:**
 
-* Glicemia este de 190 mg/dl (10,5 mmol) şi ţinta este de 100 mg/dl (5,6 mmol). 
-* Deci, doriţi o corecţie de 90 mg/dl (= 190 - 110).
+* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+* So, you want correction of 90 mg/dl (= 190 - 110).
 * ISF = 30 -> 90 / 30 = 3 units of insulin
 * ISF = 45 -> 90 / 45 = 2 units of insulin
 
-Un ISF care este prea scăzut (nu este neobișnuit) poate duce la 'supra corecţii', deoarece AAPS crede că are nevoie de mai multă insulină pentru a corecta un BG înalt decât face de fapt. Acest lucru poate duce la o evoluție a glicemiei tip „carusel” (mai ales când se postește). În această situaţie, trebuie să creşteţi ISF. Acest lucru va însemna că AAPS va administra doze mai mici de corecţie, iar acest lucru va evita supracorectarea unei glicemii mari, rezultând o glicemie mică.
+An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
-În schimb, un ISF prea mare poate avea ca rezultat subcorecții, ceea ce înseamnă că BG rămâne mai sus față de ţintă-în mod special vizibil peste noapte.
+Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
 ## Raportul insulină la carbohidraţii (IC) (g/U)
 
 ### Descriere & testare
 
-Grame de carbohidraţi pentru fiecare unitate de insulină.
+The grams of carbohydrate for each unit of insulin.
 
-Unii oameni folosesc de asemenea ca abreviere I:C în loc de IC sau vorbesc despre raportul carb (CR).
+Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
 
-Presupunând că bazala este corectă, puteți testa prin verificarea că IOB este zero și că sunteți în valoarea țintă, luaţi exact carbohidraţi cunoscuţi şi o cantitate estimată de insulină pe baza raportului dintre insulină şi carbohidraţi. Cel mai bine este să mănânci ca de obicei în acel moment al zilei și să numeri cu precizie carbohidrații.
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
 > **NOTĂ:**
 > 
@@ -184,11 +170,11 @@ Presupunând că bazala este corectă, puteți testa prin verificarea că IOB es
 
 ### Impact
 
-**Un IC mai mic** = mai puțin mâncare per unitate, adică primești mai multă insulină pentru o anumită cantitate de carbohidrați. De asemenea, poate fi numit "mai agresiv".
+**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
-**Un IC mai mare** = mai multe alimente pe unitate, adică primești mai puţină insulină pentru o anumită cantitate de carbohidrati. De asemenea, poate fi numit "mai puţin agresiv".
+**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
 
-Dacă după ce a fost digerată masa şi IOB s-a întors la zero, glicemia rămâne mai mare decât înainte de mâncare, şansele sunt că IC este prea mare. Dimpotrivă, dacă glicemia dumneavoastră este mai mică decât înainte de a mânca, IC este prea mică.
+If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
 
 # Algoritm APS
 
@@ -196,23 +182,23 @@ Dacă după ce a fost digerată masa şi IOB s-a întors la zero, glicemia răm�
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-În AMA, DIA nu înseamnă de fapt "durata de acțiune a insulinei". Este un parametru care era anterior conectat la DIA. Acum, înseamnă "în care timp ar trebui să se termine corecţia". Nu are nicio legătură cu calcularea IOB-ului. In OpenAPS SMB, there is no need for this parameter any longer.
+In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Profil
 
 ### De ce să folosesc o durată minimă de 5 ore pentru DIA (Durata de acțiune a insulinei) în loc de 2-3 ore?
 
-Aceasta are o explicați foarte bună [în acest articol](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Nu uitați să `ACTIVAȚI PROFILUL` după schimbarea DIA.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### Ce determină bucla să îmi scadă frecvent glicemia la valori hipoglicemice fără COB?
 
-În primul rând, verificați rata bazală și faceți un test pentru rata bazală fără carbohidrați. Dacă este corect, acest comportament este de obicei cauzat de un ISF prea mic. Un ISF prea mic arată de obicei astfel:
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
-![ISF prea mic](../images/isf.jpg)
+![ISF too low](../images/isf.jpg)
 
 ### Ce cauzează vârfuri mari postprandiale în bucla închisă?
 
-În primul rând, verificați rata bazală și faceți un test pentru rata bazală fără carbohidrați. Dacă este corect și glicemia dumneavoastră scade către țintă după ce carbohidrații sunt absorbiți complet, încercați să setați o țintă temporară 'in curând mâncare' în AndroidAPS cu ceva timp înainte de masă sau gândiți-vă cu diabetologul dumneavoastră la un prebolus adecvat. Dacă glicemia dumneavoastră este prea mare după masă și prea mare chiar și după absorbția completă a carbohidraților, împreuna cu diabetologul dvs. gândiţi-vă la scăderea IC. Dacă glicemia dumneavoastră este prea mare în timp ce există COB și este prea mică după absorbția completă a carbohidraților, împreuna cu diabetologul dvs. gândiți-vă la creșterea CI și la un timp adecvat înainte de bolus.
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Alte setări
 
@@ -220,57 +206,57 @@ Aceasta are o explicați foarte bună [în acest articol](https://www.diabettech
 
 ### AndroidAPS NSClient spune „nu este permis” și nu încarcă date. Ce pot face?
 
-În NSClient bifaţi 'Setări conexiune'. Poate că de fapt nu sunteţi într-o rețea WLAN permisă sau aţi activat 'Doar dacă se încarcă' iar cablul de încărcare nu este ataşat.
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
 ## Setări CGM
 
 ### De ce AndroidAPS spune că 'sursa de glicemie nu suportă filtrarea avansată'?
 
-Dacă folosiți alt CGM/FGM decât Dexcom G5 sau G6 în modul nativ xDrip, veți primi această alertă în fila OpenAPS din AndroidAPS. Vezi [Uniformizare date glicemice](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pentru mai multe detalii.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Pompă
 
 ### Unde să montați pompa pe corp?
 
-Există nenumărate posibilităţi de a plasa pompa. Nu contează dacă ai sau nu buclă.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 ### Baterii
 
-Folosirea buclei poate duce la reducerea timpului cât durează bateriile, deoarece sistemul interacționează cu pompa mult mai des decât ar face-o un utilizator obișnuit. Se recomandă să schimbați bateriile la 25%, deoarece comunicația devine problematică sub această valoare. Puteţi seta alarme de avertizare pentru bateria pompei folosind variabila PUMP_WARN_BATT_P în site-ul dumneavoastră Nightscout. Sfaturi pentru îmbunătățirea vieții bateriilor:
+Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
 
-* reduceți perioada de timp cât ecranul pompei stă aprins (din setările pompei)
-* reduceți perioada de timp cât iluminarea ecranului pompei este pornită (din setările pompei)
-* selectați notificarea să fie prin intermediul unui sunet decât prin vibrație (în setările pompei)
-* apăsați butoanele pompei doar pentru revenirea pistonului, folosiți AndroidAPS pentru a verifica istoricul, nivelul bateriilor și volumul rezervorului.
-* Aplicația AndroidAPS poate fi închisă pentru a economisi energia sau elibera memoria RAM în unele telefoane. Când AndroidAPS este reinițializat la fiecare repornire, se stabilește o conexiune Bluetooth cu pompa și apoi sunt recitite rata bazală curentă și istoricul de bolusuri. Acest lucru consumă baterie. Pentru a vedea dacă se întâmplă astfel, mergeți la Preferences > NSClient și activați 'Log app start to NS'. Nightscout va primi un eveniment la fiecare restartare a AndroidAPS, ceea ce va duce la ușurarea identificării problemei. Pentru a diminua acest lucru, acordați toate permisiunile aplicației AndroidAPS în setările bateriei telefonului pentru ca aplicația de monitorizare a consumului să nu oprească AndroidAPS.
+* reduce the length of time the LCD stays on (within pump settings menu)
+* reduce the length of time the backlight stays on (within pump settings menu)
+* select notification settings to a beep rather than vibrate (within pump settings menu)
+* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
     
-    De exemplu, pentru a acorda toate permisiunile pe un telefon Samsung care rulează cu Android Pie:
+    For example, to whitelist on a Samsung phone running Android Pie:
     
-    * Mergeţi la Setări-> Îngrijire dispozitiv-> Baterie 
-    * Derulați până când găsiți AndroidAPS și selectați-l 
-    * Dezactivați "Pune aplicația în repaus"
-    * DE ASEMENEA mergeți la Setări -> Aplicații -> (Simbolul format din trei cercuri în dreapta sus a ecranului) selectați "acces special" -> Optimizare utilizare baterie
-    * Derulați la AndroidAPS și asigurați-vă că este dezactivat.
+    * Go to Settings -> Device Care -> Battery 
+    * Scroll until you find AndroidAPS and select it 
+    * De-select "Put app to sleep"
+    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+    * Scroll to AndroidAPS and make sure it is de-selected.
 
-* curățați bornele bateriei cu tampon cu alcool, pentru a vă asigura că nu a rămas ceară/unsoare.
+* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
-* pentru [pompele Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) procedura de pornire consumă un curent mare prin baterie pentru a rupe în mod intenţionat filmul de pasivitate (care previne pierderea de energie în timp ce este în stocare), dar nu funcţionează întotdeauna pentru a-l rupe 100%. Fie scoateți și reintroduceți bateria de 2-3 ori până când se afișează 100% pe ecran, fie utilizaţi cheia bateriei pentru scurtcircuitare înainte de a fi introdusă, aplicând la ambele borne pentru o fracțiune de secundă.
-* vezi mai multe sfaturi pentru [diverse tipuri de baterii](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Schimbarea rezervoarelor și a canulelor
 
-Schimbarea cartuşului nu poate fi făcută prin intermediul AndroidAPS, ci trebuie efectuată ca înainte direct prin pompă.
+The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
-* Apăsați lung pe "Buclă deschisă"/"Buclă închisă" pe pagina principală a AndroidAPS și selectați 'Suspendă bucla pentru 1h'
-* Acum deconectaţi pompa şi schimbaţi rezervorul conform instrucţiunilor pentru fiecare pompă.
-* Also priming and filling tube and cannula can be done directly on the pump. În acest caz utilizaţi butonul [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) din pagina de acţiuni doar pentru a înregistra modificarea.
-* Odată reconectat la pompă continuați bucla apăsând lung pe 'Suspendat (X m)'.
+* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
+* Now disconnect the pump and change the reservoir as per pump instructions.
+* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Aceasta înseamnă că nu întrerupe o rată bazală temporară care rulează în prezent. În pagina Acţiuni (Act), utilizaţi butonul de [AMORSARE/UMPLERE](../Usage/CPbefore26#pump) pentru a seta cantitatea de insulină necesară pentru a umple setul de infuzie şi a începe amorsarea. Dacă cantitatea nu este suficientă, repetați umplerea. Puteți seta butoanele pentru cantitatea standard în Preferințe > Altele > Cantitați standard de insulină umplere/amorsare. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fundal
 
-Puteți găsi imagini de fundal AndroidAPS pentru telefon pe [pagina de telefoane](../Getting-Started/Phones#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
 
 ## Utilizare zilnică
 
@@ -278,13 +264,11 @@ Puteți găsi imagini de fundal AndroidAPS pentru telefon pe [pagina de telefoan
 
 #### Ce trebuie făcut când se face duș sau baie?
 
-Puteţi îndepărta pompa în timp ce faceți duş sau baie. Pentru această perioadă scurtă de timp, de obicei nu veţi avea nevoie de ea. Dar ar trebui să anunți AAPS despre asta, astfel încât calculele IOB să fie corecte.
-
-Vezi [descrierea de mai sus](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Serviciu
 
-În funcție de tipul locului de muncă, poate folosiți diferiți factori de tratament în zilele lucrătoare. Ca utilizator de buclă ar trebui să vă gândiți la o [schimbare profil](../Usage/Profiles.md) pentru ziua lucrătoare estimată (de ex. peste 100% pentru 8 ore când staţi si în jur de sau mai puţin de 100% atunci când sunteţi activ); o țintă temporară ridicată sau scăzută, sau o [schimbare de timp a profilului tău](../Usage/Profiles#time-shift) atunci când stai în picioare mai devreme sau mai târziu decât în mod obișnuit. Dacă folosiți [profiluri Nightscout](../Configuration/Config-Builder#ns-profile), puteți crea, de asemenea, un al doilea profil (de ex. „acasă” și „zi lucrătoare”) și efectuați o schimbare zilnică a profilului de care aveți nevoie.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Activități de agrement
 
@@ -296,9 +280,9 @@ Deci, ați avea mai mulți carbohidrați la bord, dar în același timp bucla ar
 
 Când folosiți bucla ar trebui să încercați acești pași:
 
-* Faceți o [schimbare profil](../Usage/Profiles.md) < 100%.
-* Setaţi o [ţintă temporară](../Usage/temptarget#activity-temp-target) deasupra ţintei standard.
-* Dacă utilizaţi SMB asiguraţi-vă că ["Activare SMB cu ţinte temporare mari"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) şi ["Activare SMB întotdeauna"](../Usage/Open-APS-features#enable-smb-always) sunt dezactivate.
+* Make a [profile switch](../Usage/Profiles.md) < 100%.
+* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
+* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Faceţi schimbările la timp, înainte de sport şi luaţi în considerare efectul de umplere cu glucoză a muşchilor.
 
@@ -308,33 +292,31 @@ Procentul de schimbare a profilului, valoarea pentru ținta temporară a activit
 
 ### Sex
 
-Puteţi scoate pompa pentru a fi „liber/ă”, dar trebuie să anunți AAPS, astfel încât calculele IOB să fie corecte.
-
-Vezi [descrierea de mai sus](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Consumul de alcool
 
-Consumul de alcool este riscant în modul de buclă închisă deoarece algoritmul nu poate prezice corect dacă alcoolul a influențat glicemia. Trebuie să vă verificați propria metodă de tratare în acest caz, folosind următoarele funcții în AndroidAPS:
+Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
-* Dezactivarea modului de buclă închisă şi tratarea manuală a diabetului sau
-* stabilirea unor ținte temporare ridicate și dezactivarea UAM pentru a evita ca bucla să crească IOB din cauza unei mese inexistente sau
-* faceți o schimbare de profil la mult sub 100% 
+* Deactivating closed loop mode and treating the diabetes manually or
+* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
+* do a profile switch to noticeably less than 100% 
 
-Atunci când consumați alcool, trebuie să fiți întotdeauna atent la CGM pentru a evita manual o hipoglicemie prin consumul de carbohidrati.
+When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
 ### În repaus
 
 #### Cum pot să fac buclă în timpul nopții fără radiații mobile sau WIFI?
 
-Mulţi utilizatori activează modul avion pe timp de noapte. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activați modul avion în telefon.
 2. Aşteptaţi până când modul avion este activ.
 3. Activați Bluetooth.
 
-Acum nu mai primiţi apeluri şi nici nu sunteţi conectat la internet. Dar bucla încă rulează.
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
-Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) atunci când telefonul este în modul avion. Mergeți la Setări > Setări Inter-app > Identificați destinatarul și introduceți `info.nightscout.androidaps`.
+Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
 
 ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
@@ -342,16 +324,16 @@ Unele persoane au descoperit probleme cu transmiterea locală (AAPS nu primește
 
 #### Cum să facem faţă schimbărilor de fus orar?
 
-Cu Dana R şi Dana R Korean nu trebuie să faci nimic. Pentru alte pompe, vedeți pagina [traversând fusuri orare](../Usage/Timezone-traveling.md) pentru mai multe detalii.
+With Dana R and Dana R Korean you don't have to do anything. For other pumps see [time zone travelling](../Usage/Timezone-traveling.md) page for more details.
 
 ## Subiecte medicale
 
 ### Spitalizare
 
-Dacă doriţi să partajaţi unele informaţii despre AndroidAPS şi buclă cu medicii dumneavoastră, puteţi să tipăriţi [ghidul AndroidAPS pentru medici](../Resources/clinician-guide-to-AndroidAPS.md).
+If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Programare medicală la endocrinologul dumneavoastră
 
 #### Raportare
 
-Puteți afișa rapoartele Nightscout (https://YOUR-NS-SITE.com/report) sau să verificați [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
