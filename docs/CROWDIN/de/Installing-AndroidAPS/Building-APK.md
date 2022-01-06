@@ -313,11 +313,11 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Wähle die Build-Variante "fullRelease" (1) und drücke "Finish".
     
-    ![Build-Variante auswählen](../images/studioSetup/49_buildVariant.png)
+    ![Build-Variante auswählen](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio zeigt im unteren Teil des Fensters "Gradle Build running" an. Dies dauert eine Weile je nach Computer und Internetverbindung. **Sei geduldig!**
     
-    ![Build-Variante auswählen](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio zeigt "Generate Signed APK" an, so bald die Erstellung der APK-Datei abgeschlossen ist.
     
