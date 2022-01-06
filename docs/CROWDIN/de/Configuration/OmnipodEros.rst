@@ -361,7 +361,7 @@ RileyLink (3) Felder
 	* **Adresse:** MAC-Adresse des gewählten Pod-Kommunikationsgeräts, die in den Omnipod-Einstellungen definiert wurde.
 	* **Name:** Bluetooth-Identifikationsname des in den Bluetooth-Einstellungen deines Smartphones definierten Pod-Kommunikationsgeräts.
 	* **Akkustand:** Zeigt den aktuellen Batterieladestand des angeschlossenen Pod-Kommunikationsgeräts an
-	* **Verbundenes Gerätemodell:** Modell des Omnipod-Pods, der aktuell mit dem Pod-Kommunikationsgerät kommuniziert
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
 	* **Verbindungsstatus:**: Der aktuelle Status der Bluetooth-Verbindung zwischen dem Pod-Kommunikationsgerät und dem Smartphone, auf dem AAPS läuft.
 	* **Verbindungsfehler: ** Wenn es einen Fehler mit dem Pod-Kommunikationsgerät gibt, werden hier die Details der Bluetooth-Verbindung angezeigt.
 	* **Firmware-Version:** Aktuelle Firmware-Version, die auf dem aktiv verbundenen Pod-Kommunikationsgerät installiert ist.
