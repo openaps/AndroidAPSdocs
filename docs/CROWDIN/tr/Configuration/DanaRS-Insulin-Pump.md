@@ -53,45 +53,45 @@
 ## Pompa şifresi değiştirme
 
 * Pompadaki OK düğmesine basın
-* In main menu select "OPTION" (move right by pressing arrow button several times)
+* Ana menüde "OPTION" (seçenek) öğesini seçin (sağ ok düğmesine birkaç kez basarak sağa hareket edin)
     
     ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
 
-* In options menu select "USER OPTION"
+* Seçenekler menüsünde "USER OPTION" "kullanıcı seçeneği"ni seçin
     
     ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
 
-* Use arrow button to scroll down to "11. password"
+* "11. password'e (parolaya) inmek için sağ ok düğmesini kullanın"
     
     ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
 
-* Press OK to enter old password.
+* Eski şifreyi girmek için Tamam'a basın.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](#default-password) bakın) ve "OK" Tamam'a basın
     
     ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
-* If wrong password is entered here there will be no message indicating failure!
+* Buraya yanlış şifre girilirse, başarısız olduğunuzu belirten bir mesaj almayacaksınız!
 
-* Set **new password** (Change numbers with + & - buttons / Move right with arrow button).
+* **Yeni şifre** belirleyin (+ & - düğmeleriyle sayıları değiştirin / sağa gitmek için sağ ok butonuna basın).
     
     ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
 
-* Confirm with OK button.
+* OK butonu ile onaylayın.
 
-* Save by pressing OK button again.
+* OK butonuna tekrar basarak kaydediniz.
     
     ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
 
-* Move down to "14. EXIT" and press OK button.
+* "14. EXIT" çıkışa gelin ve OK butonuna basın.
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
-## Dana RS specific errors
+## Dana RS'e özgü hatalar
 
-### Error during insulin delivery
+### İnsülin iletimi sırasında hata
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) aşağıdaki mesajı görecek ve bir alarm sesi duyacaksınız.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
