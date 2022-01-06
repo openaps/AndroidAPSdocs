@@ -8,9 +8,9 @@ Jak dodać pytania do FAQ: postępuj zgodnie z [instrukcją](../make-a-PR.md)
 
 No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations, in Europe, all the systems class as IIa or IIb are medical devices that require regulatory approval (a CE mark) and that needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
-This regulation is not restricted to sales (in the meaning of getting money for something) but applies to any way of distribution (even giving away for free). Building a medical device for yourself is the only way not being affected by these regulations.
+This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
 That’s why apks aren’t available.
 
@@ -40,23 +40,9 @@ If you plan to use the android wear app to bolus or change settings then you nee
 
 ### Disconnect pump
 
-If you take your pump off for showering/bathing/swimming/sport etc. you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-* Long-press the button 'Closed loop' (will be called 'Open Loop' when you are not closed looping yet) on top of the homescreen. 
-* Select **'Disconnect pump for XY min'**
-* This will set your basal to zero for that time period.
-* The minimum length of time for a disconnection is due to the minimum length of TBRs that can be set on the pump. So, if you wish to disconnect for a shorter period of time you have to use the shortest disconnection time available for your pump and reconnect manually as described below.
-* Button 'Closed Loop' (or 'Open Loop') will turn red and be named 'Disconnected (xx m)' displaying the remaining disconnection time.
-* AAPS will reconnect pump after the chosen time automatically and your closed loop will start working again.
-    
-    ![Disconnect pump](../images/PumpDisconnect.png)
-
-* If the selected time was too long you can reconnect manually.
-
-* Long-press on the red button 'Disconnected (xx m)'.
-* Select 'Reconnect pump'
-    
-    ![Reconnect pump](../images/PumpReconnect.png)
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### Recommendations not only based on one single CGM reading
 
@@ -73,17 +59,17 @@ There are several blogs with good tips to help you understand the practicalities
 
 ## What emergency equipment is recommended to take with me?
 
-First of all, you have to take the same emergency equipment with you like every other T1D with insulin pump therapy. As looping with AndroidAPS, it is strongly recommended to have the following additional equipment with or near to you:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
-* Battery pack for the energy of your smartphone, wear and (maybe) BT reader
-* Backup in the cloud (Dropbox, Google Drive...) of the apps you use like: your latest AndroidAPS-APK and your key store password, AndroidAPS settings file, xDrip settings file, patched Dexcom app, ...
+* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Pump batteries
+* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## How to safely attach the CGM/FGM?
+## How can I safely and securely attach the CGM/FGM?
 
-You can tape it: There are getting sold pre-perforated 'overpatches' for common CGM systems (ask Google or ebay). Some loopers use the cheaper standard kinesiology tape or rocktape.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-You can fix it: There are getting sold upper arm bracelets that fix the CGM/FGM with a rubber band (ask Google or ebay).
+You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 # Ustawienia AndroidAPS
 
@@ -278,13 +264,11 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### What to do when taking a shower or bath?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
-
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Work
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
 
@@ -308,9 +292,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
-
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 
