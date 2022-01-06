@@ -302,7 +302,7 @@
 *הערה:*
 **פקודות לא בטוחות** יופיעו בהיסטוריית הפוד, אולם בשל אופיין אינכם יכולים להבטיח את נכונותן.
 
-1. נווטו ללשונית **OMNIPOD (POD)** ולחצו על **ניהול הפוד (1)** ולאחר מכן בחרו **היסטוריית פוד (2)** כדי לפתוח את מסך היסטוריית הפוד.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@
 
 מסך זה יספק מידע, סטטוס והגדרות הריילילינק והפוד הפעיל. 
 
-1. בלשונית **OMNIPOD (POD)** בחרו ב**ניהול הפוד (1)** ולאחר לחצו על **סטטיסטיקת ריילילינק (2)** כדי הציג את ההגדרות של **ריילילינק (3)** ושל הפוד הפעיל כ**מכשיר (4)**.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -381,7 +381,7 @@
 
 מסך זה מספק מידע של כל מצב או פעולה שהריילילינק או הפוד נקטו, בסדר כרונולוגי הפוך. ההיסטוריה כולה זמינה רק לפוד הפעיל כרגע, לאחר החלפת הפוד ההיסטוריה הזו תימחק ורק אירועים של הפוד החדש יקלטו ויוצגו.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. לחצו על הטקסט **היסטוריה (3)** כדי להציג את כל ההיסטוריה של הריילילינק ושל הפוד הנוכחי.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. לחצו על הטקסט **היסטוריה (3)** כדי להציג את כל ההיסטוריה של הריילילינק ושל הפוד הנוכחי.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
