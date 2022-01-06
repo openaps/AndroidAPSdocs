@@ -360,7 +360,7 @@ RileyLink (3) fields
 	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
 	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
 	* **Battery Level:** Displays the current battery level of the connected pod communication device
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device (currently only eros pods work with the RileyLink
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
 	* **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
 	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
 	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
