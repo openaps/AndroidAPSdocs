@@ -36,7 +36,7 @@ Butonlar:
 * kırmızı X: profil silme
 * mavi ok: profil kopyalama
 
-Profilinizde herhangi bir değişiklik yaparsanız, doğru profili düzenlediğinizden emin olun. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Profilinizde herhangi bir değişiklik yaparsanız, doğru profili düzenlediğinizden emin olun. Profil sekmesinde, he zaman kullanılan gerçek profil gösterilmez - ör. ana ekrandaki profil sekmesini kullanarak bir profil geçişi yaptıysanız, bunlar arasında bağlantı olmadığı için sekmede gösterilen profil, gerçek profilinizden farklı olabilir.
 
 #### Klon profil değişikliği
 
