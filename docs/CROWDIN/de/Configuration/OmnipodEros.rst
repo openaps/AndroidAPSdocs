@@ -425,19 +425,19 @@ Felder
    - *gerade eben* - vor weniger als 20 Sekunden.
    - *vor weniger als einer Minute* - vor mehr als 20 Sekunden, aber weniger als 60 Sekunden.
    - *vor einer Minute* - vor mehr als 60 Sekunden, aber weniger als 120 Sekunden (2 min).
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *vor XX Minuten* - vor mehr als 2 Minuten, definiert durch den Wert von XX.
 
-* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Letzter Bolus:** Zeigt die Dosierung des letzten Bolus an, der an den aktiven Pod gesendet wurde, und in Klammern, wie lange es her ist, dass er abgegeben wurde.
+* **Basis-Basalrate:** Zeigt die Basalrate an, die für den aktuellen Zeitpunkt im Basalratenprofil programmiert wurde.
+* **Temporäre Basalrate:** Zeigt die aktuell laufende temporäre Basalrate im folgenden Format an
 
-   - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - Einheiten / Stunde zum Zeitpunkt der Erstellung der TBR (gelaufene Minuten / Gesamtminuten, in denen die TBR läuft)
+   - *Beispiel:* 0,00U/h @18:25 ( 90/120 Minuten)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
-* **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+* **Reservoir:** Zeigt über 50+U an, wenn mehr als 50 Einheiten im Reservoir verbleiben. Unterhalb dieses Wertes werden die genauen Einheiten in gelber Schrift angezeigt.
+* **Insgesamt abgegeben:** Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. *Beachte, dass es sich hierbei um einen Näherungswert handelt, da das Befüllen des Pods nicht absolut exakt geschieht.*
+* **Fehler:** Zeigt den zuletzt aufgetretenen Fehler an. Überprüfe die `Pod Historie <#anzeige-pod-historie>`__, `RileyLink Historie <#historie-des-rileylink-und-aktiven-pods>`__ und die Protokolldateien auf frühere Fehler und für ausführlichere Informationen.
+* **Aktive Pod-Warnungen:** Reserviert für derzeit laufende Warnungen auf dem aktiven Pod. Wird normalerweise verwendet, wenn das Pod-Ablaufdatum nach 72 Stunden erreicht ist und native Pieptöne vom Pod ausgegeben werden.
 
 Symbole
 -----
@@ -445,131 +445,133 @@ Symbole
 .. list-table:: 
       
     * - |refresh_pod_status|
-      - **REFRESH:** 
+      - **AKTUALISIEREN:** 
 			
-	Sends a refresh command to the active pod to update communication
+	Sendet einen Befehl an den aktiven Pod, um die Kommunikation zu aktualisieren
 			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+	* Verwende diese Option, um den Pod-Status zu aktualisieren und die Statusfelder zu erneuern, die den Text (unsicher) enthalten.
+	* Weitere Informationen zur `Problembehandlung <#problembehandlung>`__ findest du im Abschnitt unten.
     * - |pod_management|  	 
       - **POD MGMT:**
 
-	Navigates to the Pod management menu   
+	Navigiert zum Pod Management Menü   
     * - |ack_alerts|		 
-      - **ACK ALERTS:**
+      - **ALARM BESTÄTIGEN:**
    			 
-	When pressed this will disable the pod expiration beeps and notifications. 
+	Durch Drücken dieser Taste werden die Signaltöne und Benachrichtigungen zum Ablauf des Pods deaktiviert. 
 			 
-	* Button is displayed only when pod time is past expiration warning time
-	* Upon successful dismissal, this icon will no longer appear.			 
+	* Der Button wird nur angezeigt, wenn die aktuelle Zeit des Pods nach dem Pod-Ablaufdatum liegt.
+	* Nach erfolgreicher Bestätigung wird dieses Symbol nicht mehr angezeigt.			 
     * - |set_time|	 
-      - **SET TIME:**
+      - **ZEIT EINSTELLEN:**
    
-	When pressed this will update the time on the pod with the current time on your phone.
+	Durch Drücken dieser Taste wird die Uhrzeit auf dem Pod mit der aktuellen Uhrzeit des Smartphones aktualisiert.
     * - |suspend|  		 
-      - **SUSPEND:**
+      - **UNTERBRECHEN:**
    
-	Suspends the active pod
+	Setzt den aktiven Pod aus
     * - |resume|	 
-      - **RESUME DELIVERY:**
+      - **ABGABE FORTSETZEN:**
    
-	Resumes the currently suspended, active pod
+	Setzt den derzeit angehaltenen, aktiven Pod fort
 
 
 Pod Management Menu
 -------------------
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod Management** erläutert, das über die Registerkarte **Omnipod (POD)** aufgerufen wird.
 
 |Omnipod_Tab_Pod_Management|
 
 .. list-table:: 
 
     * - |activate_pod|
-      - **Activate Pod**
+      - **Pod aktivieren**
    
-        Primes and activates a new pod
+        Startet und aktiviert einen neuen Pod
     * - |deactivate_pod|
-      - **Deactivate Pod**
+      - **Pod deaktivieren**
  
         Deaktiviert den aktuell aktiven Pod.
 		 
-	*  A partially paired pod ignores this command.
-	*  Use this command to deactivate a screaming pod (error 49).
-	*  If the button is disabled (greyed out) use the Discard Pod button.
+	* Ein unvollständig verbundener Pod ignoriert diesen Befehl.
+	* Verwende diesen Befehl, um einen heulenden Pod zu deaktivieren (Fehler 49).
+	* Wenn die Schaltfläche deaktiviert (ausgegraut) ist, verwende **Pod verwerfen**.
     * - |play_test_beep|
-      - **Play test beep**
+      - **Testton abspielen**
  
- 	Plays a single test beep on the pod when pressed.
+ 	Gibt beim Drücken einen einzelnen Testton auf dem Pod wieder.
     * - |discard_pod|
-      - **Discard pod**
+      - **Pod verwerfen**
 
-	Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Durch Drücken wird der Pod-Status eines nicht reagierenden Pods deaktiviert und verworfen.
 			      
-	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Die Schaltfläche wird nur in ganz bestimmten Fällen angezeigt, da eine ordnungsgemäße Deaktivierung nicht mehr möglich ist:
 
-	* A **pod is not fully paired** and thus ignores deactivate commands.
-	* A **pod is stuck** during the pairing process between steps
-	* A **pod simply does not pair at all.**
+	* Ein **Pod ist nicht vollständig verbunden** und ignoriert daher die Befehle zum Deaktivieren.
+	* Ein **Pod hängt** während des Kopplungsvorgangs zwischen den Schritten fest
+	* Ein **Pod lässt sich überhaupt nicht verbinden.**
     * - |pod_history|
-      - **Pod history** 
+      - **Pod Historie** 
    
-   	Displays the active pod activity history
+   	Zeigt den Aktivitätsverlauf des aktiven Pods an
     * - |rileylink_stats|
-      - **RileyLink stats:**
+      - **RileyLink Status:**
    
-        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Navigiert zum Bildschirm "RileyLink Status", der die aktuellen Einstellungen und den Verlauf der RileyLink-Verbindung anzeigt
 
-	* **Settings** - displays RileyLink and active pod settings information
-	* **History** - displays RileyLink and Pod communication history
+	* **Einstellungen** - zeigt Informationen zum RileyLink und aktiven Pod-Einstellungen an
+	* **Historie** - zeigt den Verlauf der RileyLink- und Pod-Kommunikation an
     * - |reset_rileylink_config|
-      - **Reset RileyLink Config** 
+      - **RileyLink-Konfiguration zurücksetzen** 
    
-   	When pressed this button resets the currently connected pod communication device configuration. 
+   	Durch Drücken dieser Taste wird die Konfiguration des aktuell angeschlossenen Pod-Kommunikationsgeräts zurückgesetzt. 
 			      
-	* When communication is started, specific data is sent to and set in the RileyLink 
+	* Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt 
 			      
-	    - Memory Registers are set
-	    - Communication Protocols are set
-	    - Tuned Radio Frequency is set
+	    - Speicherregister werden gesetzt
+	    - Kommunikationsprotokolle werden eingestellt
+	    - Eingestellte Funkfrequenz wird gesetzt
 				
-	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* Beachte die `zusätzlichen Hinweise <#hinweise-zum-zurucksetzen-der-rileylink-konfiguration>`__ am Ende dieser Tabelle
     * - |pulse_log|
-      - **Read pulse log:** 
+      - **Pulse-Log lesen:** 
     
-    	Sends the active pod pulse log to the clipboard		    
+    	Sendet das Pulse-Log des aktiven Pods in die Zwischenablage		    
 
-*Reset RileyLink Config Notes*
+*Hinweise zum Zurücksetzen der RileyLink-Konfiguration*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-* If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-* If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-* This button **DOES NOT** need to be pressed when switching between different pod communication devices
+* Diese Funktion wird in erster Linie verwendet, wenn das derzeit aktive Pod-Kommunikationsgerät nicht antwortet und die Kommunikation in einem festgefahrenen Zustand ist.
+* Wenn das Pod-Kommunikationsgerät aus- und wieder eingeschaltet wird, muss die Taste **RileyLink-Konfiguration zurücksetzen** gedrückt werden, damit diese Kommunikationsparameter in der Konfiguration des Pod-Kommunikationsgeräts eingestellt werden.
+* Wird dies NICHT getan, muss AAPS neu gestartet werden, nachdem das Pod-Kommunikationsgerät aus- und wieder eingeschaltet wurde.
+* Diese Taste **muss NICHT** gedrückt werden, wenn zwischen verschiedenen Pod-Kommunikationsgeräten gewechselt wird.
 
 Omnipod-Einstellungen
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
+Die Einstellungen des Omnipod-Treibers können über das **Hamburger-Menü** oben links unter **Konfigurations-Assistent**\ ➜\ **Pumpe**\ ➜\ **Omnipod**\ ➜\ **Einstellungsrädchen (2)** konfiguriert werden, 
+ indem Du das **Auswahlfeld (1)** mit dem Titel **Omnipod** wählst. Wenn du das **Kontrollkästchen (3)** neben dem Einstellungsrädchen (2) wählst, wird das Omnipod-Menü als Registerkarte mit der Bezeichnung **OMNIPOD** oder **POD** in der AAPS-Oberfläche angezeigt. Dies wird in dieser Dokumentation als Registerkarte **Omnipod (POD)** bezeichnet.
 
 |Omnipod_Settings_1|
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**HINWEIS:** Eine schnellere Möglichkeit, auf die **Omnipod Einstellungen** zuzugreifen, besteht darin, das **Drei-Punkte-Menü (1)** in der oberen rechten Ecke der Registerkarte **Omnipod (POD)** aufzurufen und **Omnipod Einstellungen (2)** aus dem Dropdown-Menü auszuwählen.
 
 |Omnipod_Settings_2|
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Die Einstellungen sind nach Gruppen sortiert unten aufgelistet.
+Du kannst die meisten der Einstellungen über einen Kippschalter aktivieren oder deaktivieren:
 
 |Omnipod_Settings_3|
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*HINWEIS: Ein Sternchen (\*) bedeutet, dass "aktiviert" der Standardwert für eine Einstellung ist.*
 
 RileyLink
 ---------
 
-Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
+Ermöglicht das Scannen eines Pod-Kommunikationsgeräts. Der Omnipod-Treiber kann nicht mehr als ein Pod-Kommunikationsgerät auf einmal ansteuern.
 
-* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. It is **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
+* **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen:** Meldet den aktuellen Batteriestand des OrangeLink/EmaLink/DiaLink. Es wird **dringend empfohlen**, dass alle OrangeLink/EmaLink/DiaLink-Benutzer diese Einstellung aktivieren.
 
 	+  DOES NOT work with the original RileyLink.
 	+  May not work with RileyLink alternatives.
@@ -710,31 +712,31 @@ Battery level reporting is a setting that can be enabled to return the current b
 Problembehandlung
 ===============
 
-Pod Failures
+Pod Fehler
 ------------
 
-Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be found `here <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ to help determine the cause.
+Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. Eine Liste an Fehlercodes findest du `hier <https://github.com/openaps/openomni/wiki/Fault-event-codes>`__ um die Ursache zu ermitteln.
 
-Preventing error 49 pod failures
+Verhindere Pod Fehler 49
 --------------------------------
 
-This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
+Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Wir empfehlen Nutzern, im Nightscout-Client unter **Konfigurations-Assistent ** -> **Allgemein** -> **NSClient** -> **Einstellungsrädchen** -> **Erweiterte Einstellungen** auf *Nur Upload (Synchronisation deaktivieren)* umzuschalten, um mögliche Fehler zu vermeiden.
 
-Pump Unreachable Alerts
+Pumpe nicht erreichbar Alarme
 -----------------------
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
 
-Import Settings from previous AAPS
+Importieren von Einstellungen aus früherem AAPS
 ----------------------------------
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Bitte beachte, dass beim Importieren von Einstellungen die Möglichkeit besteht, dass ein veralteter Pod-Status importiert wird. Infolgedessen kannst Du einen aktiven Pod verlieren. Es wird daher dringend empfohlen, **keine Einstellungen während einer aktiven Pod-Sitzung zu importieren**.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
-5. Import your settings and activate your new pod.
+1. Deaktiviere deine Pod-Sitzung. Stelle sicher, dass keine aktive Pod-Sitzung läuft.
+2. Exportiere deine Einstellungen und bewahre eine Kopie an einem sicheren Ort auf.
+3. Deinstalliere die vorherige Version von AAPS und starte dein Smartphone neu.
+4. Installiere die neue Version von AAPS und stelle sicher, dass Du keine aktive Pod-Sitzung hast.
+5. Importiere deine Einstellungen und aktiviere einen neuen Pod.
 
 Omnipod driver alerts
 ---------------------
