@@ -19,94 +19,94 @@ Diaconn G8 İnsülin Pompası
    .. image:: ../images/DiaconnG8/DiaconnG8_03.jpg
     :alt: Ayarlar
     
-- Choose Selected pump.
+- Pompa seçimi'ne tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_04.jpg
-    :alt: Select pump
+    :alt: Pompa seçimi
  
-- Select your insulin pump’s model number once it appears in the list.
+- Listede model numarası görünen insülin pompanızın seçin.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_05.jpg
-    :alt: Pump pairing
+    :alt: Pompa eşleştirme
     
-- There are two options to check your model number:
+- Model numaranızı kontrol etmek için iki seçenek vardır:
    
-   i. The last 5 digits of the SN number on the back of the pump.
-   ii. Click on O button > Information > BLE > Last 5 digits.
+   i. Pompanın arkasındaki SN numarasının son 5 hanesi.
+   ii. Pompa üzerinden O düğmesi > Bilgi > BLE > Son 5 basamak.
       
       .. image:: ../images/DiaconnG8/DiaconnG8_06.jpg
-       :alt: check model no.
+       :alt: model no. kontrolü.
        
-- Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
+- Pompanızı seçtiğinizde, pin kodunu soran bir pencere açılır. Bağlantıyı tamamlamak için pompanızda görüntülenen pin numarasını girin.
  
    .. image:: ../images/DiaconnG8/DiaconnG8_07.jpg
-    :alt: PIN code
+    :alt: PIN kodu
     
-Pump status check and log synchronization
+Pompa durum kontrolü ve günlük senkronizasyonu
 ==========================================
 
-- Once your pump is connected, click on the Bluetooth symbol to check the status and to synchronize logs.
+- Pompanız bağlandıktan sonra, durumu kontrol etmek ve günlükleri senkronize etmek için Bluetooth sembolüne tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_08.jpg
-    :alt: Bluetooth status
+    :alt: Bluetooth durumu
     
-Bluetooth Troubleshooting
+Bluetooth Sorun Giderme
 ==========================
 
-**What to do in the case of an unstable Bluetooth connection with the pump.**
+**Pompa ile Bluetooth bağlantısının düzensiz olması durumunda yapılması gerekenler.**
 
-Method 1 ) Check the pump again after AAPS application is completed.
+Yöntem 1) AAPS uygulamasını yeniden başlattıktan sonra pompayı tekrar kontrol edin.
 --------------------------------------------------------------------- 
-- Click on the 3 dots button on the top right.
+- Sağ üstteki 3 nokta butonuna tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_09.jpg
-    :alt: Preferences menu
+    :alt: Tercihler menüsü
     
-- Click on Exit. 
+- Çıkış'a tıklayın. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_10.jpg
-    :alt: Exit
+    :alt: Çıkış
 
-Method 2) If the first method doesn’t work, disconnect Bluetooth and then reconnect.
+Yöntem 2) İlk yöntem işe yaramazsa, Bluetooth bağlantısını kesin ve ardından yeniden bağlanın.
 -------------------------------------------------------------------------------------
-- Press and hold the Bluetooth button at the top for about 3 seconds. 
+- Üstteki Bluetooth düğmesini yaklaşık 3 saniye basılı tutun. 
 
    .. image:: ../images/DiaconnG8/DiaconnG8_11.jpg
-    :alt: Bluetooth button
+    :alt: Bluetooth butonu
  
-- Click on the Setting button on the paired Diaconn G8 Insulin pump.
+- Eşleştirilmiş Diaconn G8 İnsülin pompasındaki ayar butonuna tıklayın.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_12.jpg
-    :alt: Settings button
+    :alt: Ayar butonu
  
-- Unpair.
+- Eşleştirmeyi kaldır.
 
    .. image:: ../images/DiaconnG8/DiaconnG8_13.jpg
-    :alt: Unpair
+    :alt: Eşleştirmeyi kaldır
     
-- Repeat the Bluetooth pairing process for the pump (see above).
+- Pompa için Bluetooth eşleştirme işlemini tekrarlayın (yukarıya bakın).
 
-Further Information
+Daha fazla bilgi
 ====================
-Diaconn G8 Insulin pump option setting
+Diaconn G8 İnsülin pompası seçenek ayarları
 --------------------------------------
--	Config manager > pump > Diaconn G8 > Settings
--	DIACONN G8 at the top> 3 dots button on the top right > Diaconn G8 Preferences
+- Yapılandırma yöneticisi > pompa > Diaconn G8 > Ayarlar
+- Üstte DIACONN G8> sağ üstte 3 nokta düğmesi> Diaconn G8 Tercihleri
 
 .. image:: ../images/DiaconnG8/DiaconnG8_14.jpg
- :alt: Diaconn G8 pump options
+ :alt: Diaconn G8 pompa seçenekleri
     
-- If the **Log reservoir change** option is activated, the relevant details are automatically uploaded to the careportal when an “Insulin Change” event occurs.
-- If the **Log needle change** option is activated, the relevant details are automatically uploaded to the careportal when a “Site Change” event occurs. 
-- If the **Log tube change** option is activated, the relevant details are automatically uploaded to the careportal when a “Tube Change” event occurs.
-- If the **Log battery change** option is activated, the relevant details are automatically uploaded to the careportal when a “Battery Change” event occurs, and the PUMP BATTERY CHANGE button in the ACTION tab is deactivated. (Note: To change the battery, please stop all in-progress injection functions before proceeding.)
+- **Rezervuar değişikliğini günlüğe kaydet** seçeneği aktif ise, bir “İnsülin Değişimi” olayı meydana geldiğinde ilgili detaylar bakım portalına otomatik olarak yüklenir.
+- **İğne değişimini kaydet** seçeneği aktif ise “Set Değişikliği” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım portalına yüklenir. 
+- **Hortum değiştirmeyi günlüğe kaydet** seçeneği aktif ise, “Hortum Değiştirme” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım potalına yüklenir.
+- **Pil değişimini kaydet** seçeneği aktif ise “Pil Değişikliği” olayı gerçekleştiğinde ilgili detaylar otomatik olarak bakım portalına yüklenir ve EYLEM sekmesindeki POMPA BATARYA DEĞİŞİMİ butonu devre dışı bırakılır. (Not: Pili değiştirmek için lütfen önce devam eden tüm enjeksiyon işlevlerini durdurun.)
  
 .. image:: ../images/DiaconnG8/DiaconnG8_15.jpg
- :alt: Diaconn G8 actions menu
+ :alt: Diaconn G8 eylemler menüsü
 
-Extended Bolus function
+Yayma Blosu fonksiyonu
 ------------------------
-- If you use extended bolus it will disable closed loop.
+- Yayma bolus kullanırsanız, kapalı döngü devre dışı bırakılır.
 
-- See `this page <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details why extended bolus does not work in a closed loop environment.
+- Yayma bolusun kapalı döngüde neden çalışmadığına ilişkin ayrıntılar için `bu sayfaya <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ bakın.
 
