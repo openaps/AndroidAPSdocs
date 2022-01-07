@@ -1,6 +1,6 @@
 Dexcom G5
 **************************************************
-If using G5 with xdrip+
+G5'i xdrip+ ile kullanıyorsanız
 ==================================================
 * If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_.
 * In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
