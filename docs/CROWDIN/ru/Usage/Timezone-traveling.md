@@ -1,6 +1,6 @@
-# Timezone traveling with pumps
+# Пересечение часовых зон с помпами
 
-## DanaR, Korean DanaR
+## DanaR, DanaR для корейского рынка
 
 There is no issue with changing timezone in phone because pump doesn't use history
 
