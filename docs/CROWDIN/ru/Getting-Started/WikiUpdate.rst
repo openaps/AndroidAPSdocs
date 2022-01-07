@@ -4,24 +4,24 @@
 Декабрь 2021
 ==================================================
 * `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - обновление до Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ добавил @MilosKozak
 
-November 2021
+ноябрь 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* Наилучшие методы калибровки сенсора `libre 2 <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ переформулирован impact - воздействин
+* Обновление ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* Удалено модифицированное приложение `Dexcom <../Hardware/DexcomG6.html>`_ как устаревшее
 
-October 2021
+Октябрь 2021
 ==================================================
-* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+* `Примечания к выпуску <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
 September 2021
 ==================================================
-* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+* Рекомендуемые спецификации компьютера для `сборки AAPS <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
 
-June 2021
+Июнь 2021
 ==================================================
 * `Watchface sideload <../Configuration/Watchfaces.html>`_ 
 
