@@ -2,9 +2,9 @@
 
 ## DanaR, DanaR для корейского рынка
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Нет проблем с изменением часового пояса в телефоне, так как в помпе не отслеживается история
 
-## DanaRv2, DanaRS
+## DanaRv2 / DanaRS
 
 These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
