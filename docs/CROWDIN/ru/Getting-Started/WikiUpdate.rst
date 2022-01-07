@@ -1,9 +1,9 @@
 Обновления и изменения в документации
 **************************************************
 
-December 2021
+Декабрь 2021
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - обновление до Android Studio Arctic Fox | 2020.3.1 @tanja
 * `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
 
 November 2021
