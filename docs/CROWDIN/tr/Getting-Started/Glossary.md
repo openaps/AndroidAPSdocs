@@ -1,7 +1,7 @@
 # Glossary<table style="width:100%" border=1 cellpadding=5>
 <tr>
  <th>Term</th>
- <th>Description</th>
+ <th>Açıklama</th>
  <th>see also</th>
  <th>more details @</th>
 </tr>
