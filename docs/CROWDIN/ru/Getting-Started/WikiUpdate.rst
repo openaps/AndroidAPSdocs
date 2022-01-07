@@ -17,13 +17,13 @@
 ==================================================
 * `Примечания к выпуску <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
-September 2021
+Сентябрь 2021 года
 ==================================================
 * Рекомендуемые спецификации компьютера для `сборки AAPS <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
 
 Июнь 2021
 ==================================================
-* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+* `загрузка сторонних циферблатов <../Configuration/Watchfaces.html>`_ 
 
 Апрель 2021
 ==================================================
