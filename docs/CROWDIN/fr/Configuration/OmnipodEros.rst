@@ -566,15 +566,15 @@ Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou l
 RileyLink
 ---------
 
-Permet de rechercher un appareil RileyLink. Le pilote Omnipod ne peut pas sélectionner plus d'un périphérique de communication pod à la fois.
+Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
 
-* **Afficher le niveau de batterie transmis par OrangeLink/EmaLink :** indique le niveau de batterie réel de l'OrangeLink/EmaLink. Il est **fortement recommandé** à tous les utilisateurs d'OrangeLink/EmaLink d'activer ce paramètre.
+* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
 	+ NE FONCTIONNE PAS avec le RileyLink original.
 	+ Peut ne pas marcher avec des alternatives au RileyLink.
 	+ Activé - Indique le niveau de batterie actuel des périphériques de communication de pod.
 	+ Désactivé - Indique n/a.
-* **Activer l'enregistrement des changements de pile dans Actions :** Dans le menu Actions le bouton de changement de pile est activé SI vous avez activé ce paramètre ET le paramètre de rapport de la batterie ci-dessus.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
+* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
 
 Bips de confirmation
 ------------------
@@ -696,14 +696,14 @@ L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.
 
 **Niveau batterie**
 
-L'affichage du niveau de la batterie est un paramètre qui peut être activé pour afficherer le niveau de batterie actuel des périphériques de communication pod comme l'OrangeLink et EmaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
 
-  * **Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie** 
-  * **Pour afficher le niveau batterie remonté par OrangeLink/EmaLink, le paramètre DOIT être activé dans les paramètres Omnipod**
-  * **Le niveau batterie ne fonctionne que pour les périphériques OrangeLink et EmaLink**
+  * **RileyLink hardware is NOT capable of reporting battery level** 
+  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
+  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
   * **L'affichage du niveau de batterie PEUT fonctionner pour d'autres appareils (en dehors du RileyLink)**
-  * **SMS** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas renvoyée.
-  * **Nightscout** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas envoyée
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
 Résolution de problèmes
