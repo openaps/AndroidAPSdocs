@@ -191,7 +191,7 @@ Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelis
 
 Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sekmesinde seçilen algoritmanın aktif detayını görüntüleyebilirsiniz.
 
-* OpenAPS AMA (Gelişmiş Öğün Yardımı, algoritmanın 2017'deki durumu) OpenAPS AMA hakkında daha fazla ayrıntı [OpenAPS belgeleri içinde bulunabilir. ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Basit bir ifadeyle bu sistemin faydası, kendinize öğün bolusu verdikten sonra, karbonhidratları güvenilir bir şekilde girerseniz sistem daha hızlı geçici bolus-hedef ile müdahele eder.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (süper mikro bolus, ileri düzey kullanıcılar için en yeni algoritma) [10. Görevi bitirmiş olmanız gerektiğini unutmayın.](../Usage/Objectives#objective-10-ebling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) OpenAPS SMB'yi kullanmak için min_5m_carbimpact, Yapılandırma oluşturucu > Duyarlılık algılama > Duyarlılık Oref1 ayarlarında 8 olarak ayarlanmalıdır.
 
 ## Döngü
