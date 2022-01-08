@@ -27,7 +27,7 @@ Hardware- und Software-Anforderungen
 
   Komponente, die AndroidAPS betreibt und Steuerungsbefehle an das Pod-Kommunikationsgerät sendet.
 
-      +  unterstütze `Android Smartphones <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ mit AAPS ab Version 2.8 und zugehörigem `Komponenten-Setup <../index.html#component-setup>`__
+      +  unterstützte `Android Smartphones <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ mit AAPS ab Version 2.8 und zugehörigem `Komponenten-Setup <../index.html#component-setup>`__
 
 * |Omnipod_Pod| **Insulin-Pumpe** 
 
@@ -569,15 +569,15 @@ Du kannst die meisten der Einstellungen über einen Kippschalter aktivieren oder
 RileyLink
 ---------
 
-Ermöglicht das Scannen eines Pod-Kommunikationsgeräts. Der Omnipod-Treiber kann nicht mehr als ein Pod-Kommunikationsgerät auf einmal ansteuern.
+Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
 
-* **Akkustand von OrangeLink/EmaLink/DiaLink anzeigen:** Meldet den aktuellen Batteriestand des OrangeLink/EmaLink/DiaLink. Es wird **dringend empfohlen**, dass alle OrangeLink/EmaLink/DiaLink-Benutzer diese Einstellung aktivieren.
+* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
 	+  DOES NOT work with the original RileyLink.
 	+  May not work with RileyLink alternatives.
 	+  Enabled - Reports the current battery level for supported pod communication devices.
 	+  Disabled - Reports a value of n/a.
-* **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
 Bestätigungstöne
 ------------------
@@ -699,14 +699,14 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 **Battery Level**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
-  * **RileyLink hardware is NOT capable of report battery level** 
-  * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
-  * **Battery Level ONLY works for OrangeLink and EmaLink Devices**
+  * **RileyLink hardware is NOT capable of reporting battery level** 
+  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
+  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
   * **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned.
-  * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
 Problembehandlung
