@@ -90,7 +90,7 @@ Please be aware that this is not complete list and reflects personal user experi
 - Make sure to read the wiki to understand how to setup AndroidAPS.
 - Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
-- Clone ruffy via git from https://github.com/MilosKozak/ruffy. At the moment, the primary branch is the `combo` branch, in case of problems you might also try the 'pairing' branch (see below).
+- Clone ruffy via git from [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy). At the moment, the primary branch is the `combo` branch, in case of problems you might also try the 'pairing' branch (see below).
 - Build and install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
   If the pump is already paired and can be controlled via ruffy, installing the `combo` branch is sufficient.
   Note that the pairing processing is somewhat fragile (but only has to be done once)
@@ -121,12 +121,12 @@ There are serveral possible reasons. Try the following steps:
 4.  Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device 
     "**SpiritCombo**"
 5.  Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6.  Try using the '**pairing**' branch from the ruffy repository at https://github.com/MilosKozak/ruffy/tree/pairing to establish the connection 
+6.  Try using the '**pairing**' branch from the [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) repository to establish the connection 
 7.  Now start ruffy on the phone. You may press Reset! and remove the old connection. Then hit **Connect!**.
 8.  In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** 
     * The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
-9.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to whait at least 5s 
-    bevore you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+9.  Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to wait at least 5s 
+    before you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
  
     * If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time 
       between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out 
@@ -136,7 +136,7 @@ There are serveral possible reasons. Try the following steps:
       possible, try another smartphone. You can find a list of already successfully used smartphones under [AAPS Phones] 
       (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
-10.  Sometimes the phone asks for a (usually 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually<, ruffy will set this PIN automatically, but ue to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN (see https://github.com/MilosKozak/ruffy/issues/14). This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step.
+10.  Sometimes the phone asks for a (typically 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually, ruffy will set this PIN automatically, but due to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN. This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step. See related [Github issue](https://github.com/MilosKozak/ruffy/issues/14) for details.
 11.  At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you 
     should be ready to go.
 12.  If pairing was not successful and you got a timeout on the pump, you will need to restart the process from scratch.
