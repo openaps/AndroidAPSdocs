@@ -75,7 +75,7 @@ Vietovės paslaugos („GPS“) turi būti suaktyvintos, kad Bluetooth tinkamai 
 
 Originali Dexcom programa iš Google Play Store neveiks, nes ji neperduoda duomenų į kitas programas. Todėl reikalinga šiek tiek pakeista mūsų bendruomenės versija. Tik ši modifikuota Dexcom programa gali bendrauti su AAPS. Be to, modifikuota Dexcom programa gali veikti su visais Android išmaniaisiais telefonais, o ne tik su tais, kurie yra [ Dexcom suderinamumo sąraše](https://www.dexcom.com/dexcom-international-compatibility).
 
-Modifikuotos Dexcom G6 programos mmol/l ir mg/dl versijas galite rasti svetainėje <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Jūs turite pasirinkti G6 [aplikaciją tinkamą savo regionui](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Modifikuotos Dexcom G6 programos mmol/l ir mg/dl versijas galite rasti svetainėje <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
 
 Norėdami tai padaryti, atlikite šiuos veiksmus savo išmaniajame telefone:
 
