@@ -6,7 +6,7 @@ Dit is een lijst van verschillende insulinepompen, en of ze geschikt zijn voor Ã
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 **Hardware eisen voor AAPS:** Waarschijnlijk geen. Want gebruikt Bluetooth.
 
