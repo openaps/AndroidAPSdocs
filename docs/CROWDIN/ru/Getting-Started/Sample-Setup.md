@@ -75,7 +75,7 @@
 
 Оригинальное приложение Dexcom из Google Play Store не будет работать, так как оно не передает данные другим приложениям. Поэтому требуется немного модифицированная версия от нашего сообщества. Только это измененное приложение Dexcom может общаться с AAPS. Кроме того, модифицированное приложение Dexcom может работать со всеми смартфонами Android, а не только находящимися в списке совместимости [Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Версия в mmol/l и версия в mg/dl измененного приложения Dexcom G6 доступны на [ https://github.com/dexcomapp/dexcomapp/tree/master/2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4). Необходимо выбрать приложение G6 [ для своего региона ](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Версия в mmol/l и версия в mg/dl измененного приложения Dexcom G6 доступны на [ https://github.com/dexcomapp/dexcomapp/tree/master/2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4). You have to choose G6 app for your region.
 
 Для этого выполните следующие шаги на вашем смартфоне:
 
