@@ -6,7 +6,7 @@
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 ** Απαιτήσεις υλικού για το AAPS: ** Πιθανώς κανένα. Είναι ενεργοποιημένη η λειτουργία BT.
 
