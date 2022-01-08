@@ -308,7 +308,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### Πώς μπορώ να χρησιμοποιώ το κλειστό σύστημα ρύθμισης σακχάρου (loop) το βράδυ, χωρίς να εκτίθεμαι στην ακτινοβολία του κινητού και του WiFi;
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Ενεργοποιήστε τη "λειτουργία πτήσης" στο κινητό σας.
 2. Περιμένετε μέχρι να ενεργοποιηθεί η λειτουργία του αεροπλάνου.
