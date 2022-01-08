@@ -97,13 +97,13 @@ SMB is ingeschakeld wanneer er een hoog tijdelijk streefdoel actief is (activite
 
 ### Activeer SMB altijd
 
-SMB is altijd ingeschakeld (onafhankelijk van COB, tijdelijke streefdoelen of bolussen). Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+SMB is altijd ingeschakeld (onafhankelijk van COB, tijdelijke streefdoelen of bolussen). Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
 
 Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB altijd' niet mogelijk. Dit wordt pas mogelijk wanneer xDrip+ een betere ruis-filtering heeft voor die systemen. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
 
 ### Activeer SMB na koolhydraten
 
-SMB is ingeschakeld gedurende 6 uur na koolhydraten, zelfs als COB nul is. Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
+SMB is ingeschakeld gedurende 6 uur na koolhydraten, zelfs als COB nul is. Om veiligheidsredenen is deze optie alleen mogelijk voor BG bronnen met een mooi filtersysteem voor 'ruis' in de BG waardes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Dankzij deze filtering zal de Dexcom zender een BG-waarde met een te grote afwijking, niet sturen en wachten op de volgende waarde in 5 minuten.
 
 Voor andere CGM/FGM zoals Freestyle Libre, is 'Activeer SMB na koolhydraten' niet mogelijk. Dit wordt pas mogelijk wanneer xDrip+ een betere ruis-filtering heeft voor die systemen. Je kunt er [hier](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) meer over vinden.
 
