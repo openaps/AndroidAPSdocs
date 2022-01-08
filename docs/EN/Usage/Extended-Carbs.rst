@@ -35,7 +35,7 @@ A way to handle fat and protein with that feature is described here: `https://ad
 -----
 
 Recommended setup, example scenario, and important notes
-==================================================
+=====================================================================
 The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
 A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours. 
@@ -44,7 +44,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 With low carb, high fat/protein meals it may be enough to only use eCarbs without manual boluses (see the blog post above). When eCarbs are generated, a Careportal note is also created to document all inputs, to make it easier to iterate and improve inputs.
 
 Extended bolus and why they won't work in closed-loop environment?
-==================================================
+=====================================================================
 As mentioned above extended or multiwave boluses do not really work in a closed loop environment. `See below <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`_ for details
 
 Extended bolus and switch to open loop - Dana and Insight pump only
