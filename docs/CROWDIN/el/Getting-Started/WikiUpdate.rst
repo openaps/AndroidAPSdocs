@@ -128,7 +128,7 @@ November 2019
 * `SMS commands update <../Children/SMS-Commands.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
-* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+* Update - quick walk-through for experienced users
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 October 2019
@@ -155,7 +155,7 @@ October 2019
 
 Αυγούστου 2019
 ==================================================
-* `Dexcom G6 patched app περιφέρεια <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Dexcom G6 νέος πομπός <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Τι χρειάζομαι; <../index.html#what-do-i-need>`_ - νέα δομή και πρόσθετες πληροφορίες
 * Νέα δομή
