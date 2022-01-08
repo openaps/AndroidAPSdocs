@@ -128,7 +128,7 @@
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
-* `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Update - quick walk-through for experienced users
 * Документация - обновление `редактирования <../make-a-PR.md#code-syntax>`_ и`перевода<../translations.html#translate-docs-pages>`_.
 
 Октябрь 2019
@@ -155,7 +155,7 @@
 
 Август 2019
 ==================================================
-* `Dexcom G6 модифицированное приложение <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Новый трансмиттер Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Что нужно? <../index.html#what-do-ineed> ` _-новая структура и дополнительная информация
 Новая структура
