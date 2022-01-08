@@ -73,4 +73,4 @@ General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation
 
 Transmiţător nou cu senzor în funcțiune
 --------------------------------------------------
-Dacă se întâmplă să schimbaţi transmiţătorul în timpul unei sesiuni de senzor care funcționează, aţi putea încerca să înlăturaţi transmiţătorul fără a deteriora senzorul. Un videoclip poate fi găsit la `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Dacă se întâmplă să schimbaţi transmiţătorul în timpul unei sesiuni de senzor care funcționează, aţi putea încerca să înlăturaţi transmiţătorul fără a deteriora senzorul. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.
