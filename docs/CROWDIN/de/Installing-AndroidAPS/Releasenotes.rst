@@ -75,6 +75,7 @@ Vorbereitende Schritte
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
+* Bolus Wizard improvement
 * Verbesserung der Anzeige (user interface) @MilosKozak
 * Neue Anwender-Buttons für Automatisierungen @MilosKozak
 * Neues Automatisierungs-Layout @MilosKozak
