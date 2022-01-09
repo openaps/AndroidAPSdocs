@@ -75,6 +75,7 @@ Changes
 * Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
+* Bolus Wizard improvement
 * UI improvements @MilosKozak
 * New user buttons for automations @MilosKozak
 * New automation layout @MilosKozak
