@@ -75,6 +75,7 @@ Cambios
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* Bolus Wizard improvement
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak
 * Nuevo diseño de las automatizaciones @MilosKozak
