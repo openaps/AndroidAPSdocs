@@ -91,7 +91,7 @@
 
 ### İnsülin iletimi sırasında hata
 
-Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) aşağıdaki mesajı görecek ve bir alarm sesi duyacaksınız.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
 ![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
