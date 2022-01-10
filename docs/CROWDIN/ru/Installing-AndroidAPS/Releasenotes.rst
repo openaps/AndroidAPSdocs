@@ -50,8 +50,11 @@ Release date: XX-XX-2022
 Этапы подготовки
 ----------------------
 **At least two days before update:**
+
 * отключите Dexcom bridge в Nightscout
+
 * if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Изменения
 ----------------------
