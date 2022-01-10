@@ -808,10 +808,10 @@ All of the development work for the Omnipod driver is done by the community on a
 
 
 ..
-	Interface Icons
+	Arayüz simgeleri
 
 ..
-	Omnipod (POD) Overview Tab
+	Omnipod (POD) Genel Bakış Sekmesi
 
 .. |ack_alerts|                    image:: ../images/omnipod/ICONS/omnipod_overview_ack_alerts.png
 .. |pod_management|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management.png
