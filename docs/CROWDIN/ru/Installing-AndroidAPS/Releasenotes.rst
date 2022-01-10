@@ -45,13 +45,13 @@ Release date: XX-XX-2022
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Этапы подготовки
 ----------------------
 **At least two days before update:**
 * отключите Dexcom bridge в Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). XDrip можно оставить, но не как коллектор (xDrip будет получать данные с Dexcom BOYDA)
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
 
 Изменения
 ----------------------
