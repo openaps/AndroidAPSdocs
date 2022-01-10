@@ -44,13 +44,13 @@ Wichtige Hinweise
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die Verwendung von BOYDA wird auch empfohlen, um von der Rück-Glättung der Werte durch Dexcom zu profitieren.
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Vorbereitende Schritte
 ----------------------
 **Spätestens zwei Tage vor dem Update:**
 * Deaktiviere Dexcom Bridge in Nightscout
-* Anwender der Dexcom G5 und G6 Sensoren müssen zur BOYDA wechseln, falls sie bisher xDrip+ eingesetzt haben. Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
 
 Änderungen
 ----------------------
