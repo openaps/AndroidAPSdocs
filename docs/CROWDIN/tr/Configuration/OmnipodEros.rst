@@ -27,7 +27,7 @@ Donanım ve Yazılım Gereksinimleri
 
   AndroidAPS'yi çalıştıracak ve Pod iletişim cihazına kontrol komutları gönderecek eklenti.
 
-      +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
+      + Desteklenen 'Omnipod sürücüsü Android telefon <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>'__, AAPS 2.8 sürümü ile ve ilgili 'bileşen kurulumu <../index.html#component-setup>'__
 
 *  |Omnipod_Pod|  **Insulin Delivery Device** 
 
