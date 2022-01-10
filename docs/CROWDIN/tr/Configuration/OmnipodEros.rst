@@ -2,15 +2,15 @@
  AndroidAPS Omnipod İnsülin Pompası Sürücü Dokümantasyonu
 =====================================================
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
+Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod Dash** DEĞİL). Omnipod sürücüsü, 2.8 sürümünden itibaren AndroidAPS'nin (AAPS) bir eklentisi olarak mevcuttur.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
-.. contents:: 
-   :backlinks: entry
+.. içerik:: 
+   :backlinks: giriş
    :depth: 2
 
-Hardware and Software Requirements
+Donanım ve Yazılım Gereksinimleri
 ==================================
 
 *  **Pod Communication Device** 
@@ -25,7 +25,7 @@ Hardware and Software Requirements
 
 *  |Android_Phone|  **Mobile Phone Device** 
 
-  Component that will operate AndroidAPS and send control commands to the Pod communication device.
+  AndroidAPS'yi çalıştıracak ve Pod iletişim cihazına kontrol komutları gönderecek eklenti.
 
       +  Supported `Omnipod driver Android phone <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>`__ with a version of AAPS 2.8 and related `components setup <../index.html#component-setup>`__
 
@@ -837,7 +837,7 @@ All of the development work for the Omnipod driver is done by the community on a
 	Instructional Section Images
 	
 ..
-	Hardware and Software Requirements
+	Donanım ve Yazılım Gereksinimleri
 .. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|				image:: ../images/omnipod/OrangeLink.png		
@@ -971,7 +971,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Statistics_Settings_3|    image:: ../images/omnipod/RileyLink_Statistics_Settings_3.png
 
 ..
-	Suspend Insulin Delivery
+	İnsülin İletimini Askıya Al
 .. |Suspend_Insulin_Delivery_1|         image:: ../images/omnipod/Suspend_Insulin_Delivery_1.png
 .. |Suspend_Insulin_Delivery_2|         image:: ../images/omnipod/Suspend_Insulin_Delivery_2.png
 .. |Suspend_Insulin_Delivery_3|         image:: ../images/omnipod/Suspend_Insulin_Delivery_3.png
