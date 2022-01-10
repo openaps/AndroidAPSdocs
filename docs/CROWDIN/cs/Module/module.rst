@@ -86,7 +86,7 @@ Zdroj glykémií
 --------------------------------------------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`__. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
