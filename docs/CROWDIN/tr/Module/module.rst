@@ -148,7 +148,7 @@ If you have your AAPS components all together (congrats!) or at least enough to 
 
 
 ..
-	Hardware and Software Requirements
+	Donanım ve Yazılım Gereksinimleri
 .. |EmaLink|				image:: ../images/omnipod/EmaLink.png
 .. |LoopLink|				image:: ../images/omnipod/LoopLink.png
 .. |OrangeLink|			image:: ../images/omnipod/OrangeLink.png		
