@@ -44,13 +44,13 @@ Conseils importants
 * **La version minimale d'Android est maintenant 9.0.**
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
-* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Etapes de préparation
 ----------------------
 **At least two days before update:**
 * Désactivez Dexcom Bridge dans Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). Vous pouvez toujours utiliser xDrip mais pas comme collecteur (xDrip peut recevoir des données de BOYDA)
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
 
 Modifications
 ----------------------
