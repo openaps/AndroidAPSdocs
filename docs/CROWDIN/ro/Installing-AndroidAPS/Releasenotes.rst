@@ -49,8 +49,11 @@ Important hints
 Preparation steps
 ----------------------
 **At least two days before update:**
+
 * disable Dexcom bridge in Nightscout
+
 * if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Changes
 ----------------------
