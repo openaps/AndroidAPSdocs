@@ -13,9 +13,9 @@ Bu talimatlar, Omnipod Eros nesil pompayı yapılandırmak içindir (**Omnipod D
 Donanım ve Yazılım Gereksinimleri
 ==================================
 
-*  **Pod Communication Device** 
+*  **Pod İletişim Cihazı** 
 
-  Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
+  AndroidAPS Omnipod Eros sekmesi üzerinden yapılandırıp etkinleştirdiğiniz, telefonunuz ile Eros podları arasında iletişimi sağlayan cihaz.
 
    -  |OrangeLink|  `OrangeLink Websitesi <https://getrileylink.org/product/orangelink>`_    
    -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -29,11 +29,11 @@ Donanım ve Yazılım Gereksinimleri
 
       + Desteklenen 'Omnipod sürücüsü Android telefon <https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit>'__, AAPS 2.8 sürümü ile ve ilgili 'bileşen kurulumu <../index.html#component-setup>'__
 
-*  |Omnipod_Pod|  **Insulin Delivery Device** 
+* |Omnipod_Pod| **İnsülin İletim Cihazı** 
 
   Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
 
-      +  A new Omnipod pod (Eros generation - **NOT DASH**)
+      + Yeni bir Omnipod podu (Eros  - **DASH DEĞİL**)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and attempt to begin this process on your next pod change.
 
