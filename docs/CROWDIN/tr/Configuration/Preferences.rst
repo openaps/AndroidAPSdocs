@@ -20,8 +20,8 @@ Preferences
   .. image:: ../images/Pref2021_Filter.png
     :alt: Preferences filter
 
-.. contents:: 
-   :backlinks: entry
+.. içerik:: 
+   :backlinks: giriş
    :depth: 2
 
 General
