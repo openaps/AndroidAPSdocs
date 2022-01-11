@@ -31,7 +31,7 @@ Donanım ve Yazılım Gereksinimleri
 
 * |Omnipod_Pod| **İnsülin İletim Cihazı** 
 
-  Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
+  AndroidAPS kurulu telefonunuz tarafından Pod iletişim cihazına gönderilen komutları yorumlayacak bileşen.
 
       + Yeni bir Omnipod podu (Eros  - **DASH DEĞİL**)
 
