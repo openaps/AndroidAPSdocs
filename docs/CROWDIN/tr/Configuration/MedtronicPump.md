@@ -126,49 +126,49 @@ Medtronic CGM (SGİ) sensörleri şu anda DESTEKLENMEMEKTEDİR.
 
 ### Pompanın manuel kullanımı
 
-You should avoid manually doing treatments things on your pump. Tüm komutlar (bolus, GBO) AndroidAPS üzerinden olmalıdır. Ancak bir şekilde pompa üzerinden elle giriş yapmak zorunda kalırsanız, 3 dakika geçmeden yeni giriş YAPMAYIN. (herhangi bir nedenle 2 sefer bolus yapacaksanız, ilkinden en az 3 dakika sonra ikincisi gönderilmelidir.)
+Tedavi işlemlerini pompanızdan manuel olarak yapmaktan kaçınmalısınız. Tüm komutlar (bolus, GBO) AndroidAPS üzerinden olmalıdır. Ancak bir şekilde pompa üzerinden elle giriş yapmak zorunda kalırsanız, 3 dakika geçmeden yeni giriş YAPMAYIN. (herhangi bir nedenle 2 sefer bolus yapacaksanız, ilkinden en az 3 dakika sonra ikincisi gönderilmelidir.)
 
-## Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+## Saat dilimi değişiklikleri ve DST (Yaz Saati Uygulaması) veya Medtronic Pompa ve AndroidAPS ile Seyahat
 
-Important thing to remember is that you should never disable loop when you are traveling (unless your CGMS can't do offline mode). AAPS will automatically detect Timezone changes and will send command to Pump to change time, when time on Phone is changed.
+Hatırlanması gereken önemli şey, seyahat ederken döngüyü asla devre dışı bırakmamanız gerektiğidir (CGM'niz çevrimdışı modda olmadıkça). AAPS, Saat Dilimi değişikliklerini otomatik olarak algılayacak ve Telefondaki saat değiştiğinde, saati değiştirmesi için Pompaya komut gönderecektir.
 
-Now if you travel to East and your TZ changes with adding hours (ex. from GMT+0 to GMT+2), pump history won't have problem and you don't have to worry... but if you travel to West and your TZ changes by removing hours (GMT+2 to GMT-0), then sychronization might be little iffy. In clear text, that means that for next x hours you will have to be careful, because your IOB, might be little weird.
+Eğer Doğu'ya seyahat ederseniz ve ZD'niz saat ekleyerek değişirse (ör. GMT+0'dan GMT+2'ye kadar, pompa geçmişinde sorun olmayacak ve endişelenmenize gerek yok... ancak Batı'ya seyahat ederseniz ve saat çıkararak ZD'niz değişirse (GMT+2'den GMT-0'a), o zaman senkronizasyon biraz şüpheli olabilir. Açıkça bu, önümüzdeki x saat boyunca dikkatli olmanız gerektiği anlamına gelir, çünkü aktif insülin miktarınız biraz tuhaf olabilir.
 
-We are aware of this problem, and we are already looking into possible solution (see https://github.com/andyrozman/RileyLinkAAPS/issues/145), but for now, have that info in mind when traveling.
+Bu sorunun farkındayız ve şimdiden olası çözümü araştırıyoruz (bkz. https://github.com/andyrozman/RileyLinkAAPS/issues/145), ancak şimdilik seyahat ederken bu bilgiyi aklınızda bulundurun.
 
-## FAQ
+## SSS
 
-### Can I see the power of RileyLink/GNARL?
+### RileyLink/GNARL'ın gücünü görebilir miyim?
 
-No. At the moment none of this devices support this and it probably won't even in the future.
+Hayır. Şu anda bu cihazların hiçbiri bunu desteklemiyor ve muhtemelen gelecekte de olmayacak.
 
-### Is GNARL full replacement for RileyLink?
+### GNARL, RileyLink'in yerini alıyor mu?
 
-Yes. Author of GNARL added all functions used by Medtronic driver. All Medtronic communication is supported (at time of the writing (June/2019). GNARL can't be used for Omnipod communication. Downside of GNARL is that you have to build it yourself, and you have to have compatible version of hardware.
+Evet. GNARL'ın yazılımcısı, Medtronic sürücüsü tarafından kullanılan tüm işlevleri ekledi. Tüm Medtronic iletişimini destekler (Haziran/2019). GNARL, Omnipod iletişimi için kullanılamaz. GNARL'ın dezavantajı, onu kendiniz inşa etmeniz ve uyumlu bir donanım sürümüne sahip olmanız gerektiğidir.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Yazılımcı notu:** Lütfen GNARL yazılımının hala deneysel olduğunu, az test edildiğini ve RileyLink kadar güvenli olarak değerlendirilmemesi gerektiğini unutmayın.
 
-### Where can I get RileyLink or GNARL?
+### RileyLink veya GNARL'ı nereden temin edebilirim?
 
-Like mentioned before you can get devices here:
+Daha önce de belirtildiği gibi, cihazları buradan alabilirsiniz:
 
-- RileyLink - You can get device here - [getrileylink.org](https://getrileylink.org/).
-- GNARL - You can get info here, but device needs to be ordered elsewhere ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
+- RileyLink Cihazını buradan alabilirsiniz - [getrileylink.org](https://getrileylink.org/).
+- GNARL - Buradan bilgi alabilirsiniz, ancak cihazın başka bir yerden sipariş edilmesi gerekiyor ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
 
-### What to do if I loose connection to RileyLink and/or pump?
+### RileyLink ve/veya pompa ile bağlantımı kaybedersem ne yapmalıyım?
 
-1. Run "Wake Up and Tune" action, this will try to find right frequency to communicate with pump.
-2. Disable Bluetooth, wait 10s and enable it again. This will force reconnecting to RileyLink.
-3. Reset RileyLink, after you do that do not forget to run "Reset RileyLink Config" action.
-4. Try 3 and 2 together.
-5. Reset RileyLink and reset phone.
+1. "Uyan ve Ayarla" eylemini çalıştırın, bu, pompa ile iletişim kurmak için doğru frekansı bulmaya çalışacaktır.
+2. Bluetooth'u devre dışı bırakın, 10 saniye bekleyin ve tekrar etkinleştirin. Bluetooth RileyLink'e yeniden bağlanmaya çalışacaktır.
+3. RileyLink'i sıfırlayın, bunu yaptıktan sonra "RileyLink Yapılandırmasını Sıfırla" eylemini çalıştırmayı unutmayın.
+4. 2. ve 3. adımları birlikte deneyin.
+5. RileyLink'i sıfırlayın ve telefonu yeniden başlatın.
 
-### How to determine what Frequency my pump uses
+### Pompamın hangi Frekansı kullandığını nasıl belirleyebilirim?
 
 ![Pompa Modeli](../images/Medtronic06.png)
 
-If you turn your pump around in first line on right side you will see special 3 letter code. First two letters determine frequency type and last one determines color. Here are possible values for Frequency:
+Pompanızın arka tarafında, sağ taraftaki ilk satırda 3 harfli özel kod göreceksiniz. İlk iki harf frekans tipini, son harf ise rengi belirler. Frekans için olası değerler şunlardır:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Kuzey Amerika (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
+- CA - Kanada (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
+- WW - Dünya Çapında (frekans seçiminde "Dünya Çapında (868 Mhz)" seçmeniz gerekir)
