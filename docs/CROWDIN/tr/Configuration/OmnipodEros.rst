@@ -546,7 +546,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 * If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
 * This button **DOES NOT** need to be pressed when switching between different pod communication devices
 
-Omnipod Settings
+Omnipod Ayarları
 ================
 
 The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
@@ -903,7 +903,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
 
 ..
-	Omnipod Settings
+	Omnipod Ayarları
 .. |Omnipod_Settings_1|                 image:: ../images/omnipod/Omnipod_Settings_1.png
 .. |Omnipod_Settings_2|                 image:: ../images/omnipod/Omnipod_Settings_2.png
 .. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
