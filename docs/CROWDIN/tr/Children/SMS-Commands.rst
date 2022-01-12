@@ -113,7 +113,7 @@ CGM (Sürekli glikoz ölçüm) verileri
   * Yanıt: 110 kalibrasyon göndermek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
   * Doğru kod alındıktan sonra yanıt: Kalibrasyon gönderildi (**xDrip kuruluysa. Kalibrasyonların kabul edilmesi xDrip'te etkinleştirilmelidir**)
 
-Basal
+Bazal
 --------------------------------------------------
 * BASAL STOP/CANCEL
   * Yanıt: Geçici bazalı durdurmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
@@ -157,7 +157,7 @@ Profil
 * PROFILE 2 30
   * Yanıt: %30 Profil2 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
-Other
+Diğer
 --------------------------------------------------
 * TREATMENTS REFRESH
   * Yanıt: NS'den tedavileri güncelle
