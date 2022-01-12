@@ -409,7 +409,7 @@ Misc
 * If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
-Version 2.0
+Sürüm 2.0
 ==================================================
 Release date: 03-11-2018
 
@@ -459,6 +459,6 @@ Misc
 * New app icon
 * Lots of improvements and bugfixes
 * Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Ekranı açık tutma seçeneği
+* Bildirimi Android bildirimi olarak gösterme seçeneği
+* Gelişmiş filtreleme (SMB'yi ve yemeklerden 6 saat sonra her zaman etkinleştirmeyi sağlayan), yamalı Dexcom uygulaması veya KŞ kaynağı olarak Xdripte G5 yerel modu ile desteklenir.
