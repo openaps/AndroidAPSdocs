@@ -35,7 +35,7 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Sürüm 3.0.0
 ================
 Release date: XX-XX-2022
 
@@ -95,7 +95,7 @@ Changes
 
 
 
-Version 2.8.2
+Sürüm 2.8.2
 ================
 Release date: 23-01-2021
 
@@ -347,7 +347,7 @@ Major new features
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Sürüm 2.3
 ==================================================
 Release date: 25-04-2019
 
@@ -364,7 +364,7 @@ Major new features
 * New Version-Checker
 
 
-Version 2.2.2
+Sürüm 2.2.2
 ==================================================
 Release date: 07-04-2019
 
@@ -376,7 +376,7 @@ Major new features
 * SMS plugin fix
 
 
-Version 2.2
+Sürüm 2.2
 ==================================================
 Release date: 29-03-2019
 
@@ -389,7 +389,7 @@ Major new features
 * Stop loop if phone disk is full
 
 
-Version 2.1
+Sürüm 2.1
 ==================================================
 Release date: 03-03-2019
 
