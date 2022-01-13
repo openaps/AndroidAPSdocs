@@ -74,7 +74,7 @@ Pod iletişim cihazınızın nasıl kurulacağına ilişkin ayrıntılı adımla
 
 **VEYA**
 
-Option 2: The Config Builder
+Seçenek 2: Konfigürasyon ayarları
 ----------------------------
 
 Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
