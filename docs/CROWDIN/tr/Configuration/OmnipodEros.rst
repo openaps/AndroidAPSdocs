@@ -70,9 +70,9 @@ Aynı ekranda, pompa seçiminin altında, **Omnipod Sürücü Ayarları** görü
 
 **Kurulum Sihirbazının** geri kalanına devam etmek için **İleri** düğmesine basın. Seçilen RileyLink'in başlatılması ve **İleri** düğmesinin etkin hale gelmesi bir dakika kadar sürebilir.
 
-Detailed steps on how to setup your pod communication device are listed below in the `RileyLink Setup Section <#rileylink-setup>`__.
+Pod iletişim cihazınızın nasıl kurulacağına ilişkin ayrıntılı adımlar aşağıda `RileyLink Kurulum Bölümü <#rileylink-setup>`__ içinde listelenmiştir.
 
-**OR**
+**VEYA**
 
 Option 2: The Config Builder
 ----------------------------
