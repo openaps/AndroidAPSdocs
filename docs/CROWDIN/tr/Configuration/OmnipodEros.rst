@@ -66,7 +66,7 @@ Sağ üst köşede bulunan **AAPS Kurulum Sihirbazı (2)** aracılığıyla **ü
 
 Aynı ekranda, pompa seçiminin altında, **Omnipod Sürücü Ayarları** görüntülenir, **RileyLink Konfigürasyonu** altında **Ayarlanmadı** metnine basarak RileyLink cihazınızı ekleyin. 
 
-On the **RileyLink Selection** screen press the **Scan** button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. When properly selected you are returned to the pump driver selection screen displaying the Omnipod driver settings showing your selected RileyLink with the MAC address listed. 
+**RileyLink Seçimi** ekranında **Tara** düğmesine basın ve mevcut tüm Bluetooth cihazlarını tarayarak ve listeden RileyLink cihazınızı bulup seçin. Doğru seçildiğinde, seçtiğiniz RileyLink ve mac adresinin de bulunduğu Omnipod sürücü ayarlarının görüntülendiği pompa sürücüsü seçim ekranına dönersiniz. 
 
 **Kurulum Sihirbazının** geri kalanına devam etmek için **İleri** düğmesine basın. Seçilen RileyLink'in başlatılması ve **İleri** düğmesinin etkin hale gelmesi bir dakika kadar sürebilir.
 
