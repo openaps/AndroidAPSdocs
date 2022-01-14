@@ -6,9 +6,9 @@
 
 ## DanaRv2 / DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Эти помпы требуют особого внимания, т. к. AndroidAPS использует историю работы помпы, но электронный журнал помпы не имеет штампа часового пояса. **Это означает, что если вы просто измените часовой пояс в телефоне, записи будут читаться с различным часовым поясом и произойдет их задвоение.**
 
-To avoid this there are two possibilities:
+Во избежание этого существует две возможности:
 
 ### Option 1: Keep home time and timeshift profile
 
