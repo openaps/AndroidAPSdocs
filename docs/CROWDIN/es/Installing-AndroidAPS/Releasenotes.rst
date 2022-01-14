@@ -37,14 +37,14 @@ Android 7
 
 Versión 3.0.0
 ================
-Release date: XX-XX-2022
+Fecha de lanzamiento: XX-XX-2022
 
 Notas importantes
 ----------------------
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usa BYODA. También se recomienda usar BYODA para aprovechar el suavizado que aplica Dexcom.
 
 Pasos de preparación
 ----------------------
@@ -52,7 +52,7 @@ Pasos de preparación
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
 
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* Si estás usando G5/G6 cambia a BYODA (si estás usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
 
 
 Cambios
@@ -78,7 +78,7 @@ Cambios
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
-* Bolus Wizard improvement
+* Asistente de bolos mejorado
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak
 * Nuevo diseño de las automatizaciones @MilosKozak
