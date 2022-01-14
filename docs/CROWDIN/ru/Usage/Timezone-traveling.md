@@ -24,18 +24,18 @@
    
    * напр. Vienna -> New York: сдвиг профиля +6 часов
    * напр. Vienna -> Sydney: сдвиг профиля --8 часов
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Возможно, не подойдет при использовании модифицированного приложения [LibreLink app](../Hardware/Libre2#time-zone-travelling) поскольку при запуске нового сенсора Libre 2 на смартфоне должен быть настроен автоматический выбор времени.
 
-### Option 2: Delete pump history
+### Вариант 2: Удалить историю работы помпы
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* В настройках телефона отключите 'Автоматический выбор даты и времени' (изменение часового пояса вручную)
 
-When get out of plane:
+Когда выйдете из самолета:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
+* выключите помпу
+* измените часовой пояс на телефоне
+* выключите телефон, включите помпу
+* выполните очистку истории на помпе
 * change time in pump
 * turn on phone
 * let phone connect to the pump and fine-tune time
