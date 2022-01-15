@@ -42,9 +42,9 @@
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматически синхрониззирует время на помпе и на телефоне.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight также регистрирует прошедшие записи и момент смены времени и продолжительность до текущего момента. Таким образом, правильное время может быть определено в AAPS, несмотря на изменение времени.
 
 It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
