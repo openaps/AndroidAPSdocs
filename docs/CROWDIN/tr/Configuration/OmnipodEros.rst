@@ -77,7 +77,7 @@ Pod iletişim cihazınızın nasıl kurulacağına ilişkin ayrıntılı adımla
 Seçenek 2: Konfigürasyon ayarları
 ----------------------------
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
+Sol üst köşedeki **hamburger menüsü** aracılığıyla **Konfigürasyon ayarları(1)** ➜\ **Pompa**\ ➜\ **Omnipod** altında **Omnipod** başlıklı **radyo düğmesini (2)** seçerek. **Ayarlar Dişlisi (3)** yanındaki **onay kutusunun (4)** seçilmesi, Omnipod menüsünün **OMNIPOD** veya **POD** başlıklı AAPS arayüzünde bir sekme olarak görüntülenmesini sağlar. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
 
     **NOT:** **Omnipod ayarlarına** erişmenin daha hızlı bir yolu, aşağıda bu belgenin `Omnipod Ayarları <#omnipod-settings>`__ bölümünde bulunabilir.
 
@@ -86,9 +86,9 @@ Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜
 Omnipod Sürücü Seçiminin Doğrulanması
 ----------------------------------------
 
-*Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  You may see the Omnipod (POD) tab appear as it does below*
+*Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  Omnipod (POD) sekmesi aşağıdaki gibi görünecektir*
 
-To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
+AAPS'de Omnipod sürücüsünü etkinleştirdiğinizi doğrulamak için **Giriş** sekmesinden sola kaydırın**, burada artık bir **Omnipod** veya **POD** sekmesi göreceksiniz.
 
 Enable_Omnipod_Driver_5
 
@@ -106,7 +106,7 @@ RileyLink Kurulumu
 
 RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarılı bir şekilde eşleştirdiyseniz, aşağıdaki `Bir Pod Bölümünü Etkinleştirme <#activating-a-pod>`__ bölümüne ilerleyin.
 
-*Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
+*Not: RileyLink'in bağlı olmadığının göstergesi, GİRİŞ sekmesindeki İnsülin ve Hesap Makinesi düğmelerinin eksik olmasıdır. Bu, RileyLink'e aktif olarak bağlanıp, AAPS başladıktan sonraki ilk 30 saniye boyunca da böyle olacaktır.*
 
 1. RileyLink'inizin tam olarak şarj edildiğinden ve açık olduğundan emin olun.
 
@@ -139,13 +139,13 @@ Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlant
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 birim insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
+2. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 birim insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave12 ile 15 ünite kullanacağını lütfen göz önünde bulundurun. 
 
     |Activate_Pod_3|
 
     Yeni pod ve RileyLink'in birbirine yakın (~30 cm veya daha az) olduğundan emin olun ve **İleri** düğmesini tıklayın.
 
-3. **Pod Başlat** ekranında, podu doldurmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıklama sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa, bir hata mesajı alırsınız **Pod'dan yanıt yok**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+3. **Pod Başlat** ekranında, podu doldurmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıklama sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa, bir hata mesajı alırsınız **Pod'dan yanıt yok**. Bu olursa, `RileyLink'i <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm veya daha yakına) yaklaştırın, ancak podun üstüne veya çok yakınına değil **Yeniden Dene (1)** düğmesine basın.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
@@ -192,7 +192,7 @@ Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlant
 Pod'u Devre Dışı Bırakma
 ------------------
 
-Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Normal şartlar altında toplam 80 saatlik pod kullanımı için, üç günlük (72 saat) pod kullanım ömrüne ilaveten, sona erme uyarısından sonra 8 saat daha çalışmalıdır.
 
 Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolayı):
 
@@ -261,7 +261,7 @@ Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatm
 
     |Resume_Insulin_Delivery_3|
 
-3. The **Omnipod (POD)** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will now display the **SUSPEND (2)** button.
+3. **Omnipod (POD)** sekmesi, **Pod durumu (1)** alanını **ÇALIŞIYOR** olarak gösterecek şekilde güncelleyecek ve **Teslimatı Sürdür** düğmesi şimdi **ASKIYA AL (2)** gösterecektir.
 
     |Resume_Insulin_Delivery_4|
 
@@ -357,24 +357,24 @@ Bu ekran, hem halihazırda yapılandırılmış pod iletişim cihazı hem de akt
 RileyLink (3) alanı
 ++++++++++++++++++++
 
-	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
-	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
-	* **Battery Level:** Displays the current battery level of the connected pod communication device
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
-	* **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
-	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
-	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
+	* **Adres:** Omnipod Ayarlarında tanımlanan seçili pod iletişim cihazının MAC adresi.
+	* **İsim:** Telefonunuzun Bluetooth ayarlarında tanımlanan seçili pod iletişim cihazının Bluetooth tanımlama adı.
+	* **Pil Seviyesi:** Bağlı pod iletişim cihazının mevcut pil seviyesini gösterir
+	* **Bağlı Cihaz:** Şu anda pod iletişim cihazıyla iletişim kuran Omnipod pod modeli
+	* **Bağlantı Durumu**: Pod iletişim cihazı ile AAPS çalıştıran telefon arasındaki Bluetooth bağlantısının mevcut durumu.
+	* **Bağlantı Hatası:** Pod iletişim cihazı ile ilgili bir hata varsa Bluetooth bağlantı detayları burada görüntülenecektir.
+	* **Pod yazılımı:** Aktif olarak bağlı pod iletişim cihazında kurulu mevcut yazılım sürümüdür.
 
 Cihaz (4) alanı - Aktif Pod ile
 ++++++++++++++++++++++++++++++++++++++
 
-	* **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
-	* **Device Model:** The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
-	* **Pump Serial Number:** Serial number of the currently activated pod
-	* **Pump Frequency:** Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
-	* **Last Used frequency:** Last known radio frequency the pod used to communicate with the pod communication device.
-	* **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
-	* **Refresh button** manually refresh the settings on this page.
+	* **Cihaz Tipi:** Pod iletişim cihazı ile iletişim kuran cihazın tipi (Omnipod pod pompası)
+	* **Cihaz Modeli:** Pod iletişim cihazına bağlı aktif cihazın modeli (Omnipod podunun mevcut model adı, yani Eros)
+	* **Pompa Seri Numarası:** Şu anda etkinleştirilmiş olan bölmenin seri numarası
+	* **Pompa Frekansı:** Pod iletişim cihazının ayarladığı iletişim radyo frekansı, kendisi ve pod arasındaki iletişimi etkinleştirmek için.
+	* **Son Kullanılan frekans:** Pod'un, pod iletişim cihazıyla iletişim kurmak için kullandığı bilinen son radyo frekansı.
+	* **Son Cihaz İletişimi:** Pod ile pod iletişim cihazı (örn. RilyLink) arasında yapılan son iletişimin tarihi ve saati.
+	* **Yenile düğmesi** Bu sayfadaki ayarları manuel olarak yenileyin.
 
 RileyLink ve Aktif Pod Geçmişi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -390,9 +390,9 @@ Bu ekran RileyLink'in veya o anda bağlı olan pod içinde olduğu veya gerçekl
 Alanlar
 ++++++
     
-   * **Date & Time**: In reverse chronological order the timestamp of each event.
-   * **Device:** The device to which the current action or state is referring.
-   * **State or Action:** The current state or action performed by the device.
+   * **Tarih ve Saat**: Her etkinliğin zaman damgası ters kronolojik sırayla.
+   * **Aygıt:** Geçerli eylemin veya durumun atıfta bulunduğu cihaz.
+   * **Durum veya Eylem:** Cihaz tarafından gerçekleştirilen mevcut durum veya eylem.
 
 Omnipod (POD) Sekmesi
 =================
@@ -406,25 +406,25 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
 Alanlar
 ------
 
-* **RileyLink Status:** Displays the current connection status of the RileyLink
+* **RileyLink Durumu:** RileyLink'in mevcut bağlantı durumunu görüntüler
 
-   - *RileyLink Unreachable* - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
-   - *RileyLink Ready* - pod communication device is powered on and actively initializing the Bluetooth connection
-   - *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+   - *RileyLink Ulaşılamıyor* Pod iletişim cihazı, telefonun Bluetooth kapsama alanında değil, kapalı veya Bluetooth iletişimini engelleyen bir arıza var.
+   - *RileyLink Hazır* - Pod iletişim cihazı açık ve Bluetooth bağlantısını aktif olarak başlatıyor
+   - *Bağlı* - Pod iletişim cihazı açık, bağlı ve Bluetooth aracılığıyla aktif olarak iletişim kurabiliyor.
 
-* **Pod address:** Displays the current address in which the active pod is referenced
+* **Pod adresi:** Etkin pod'un referans aldığı mevcut adresi görüntüler
 * **LOT:** Etkin pod'un LOT numarasını görüntüler
 * **TID:** Pod'un seri numarasını görüntüler.
-* **Firmware Version:** Displays the firmware version of the active pod.
-* **Time on Pod:** Displays the current time on the active pod.
-* **Pod expires:** Displays the date and time when the active pod will expire.
-* **Pod status:** Displays the status of the active pod.
-* **Last connection:** Displays the last time communication with the active pod was achieved.
+* **Pod Versiyonu:** Ürün Yazılımı Sürümü, Etkin pod'un üretici yazılımı sürümünü görüntüler.
+* **Pod Saati:** Etkin Pod'un geçerli saatini görüntüler.
+* **Pod sona eriyor:** Etkin Pod'un süresinin dolacağı tarih ve saati görüntüler.
+* **Pod durumu:** Etkin Pod'un durumunu görüntüler.
+* **Son bağlantı:** Etkin Pod'la en son iletişimin sağlandığı zamanı görüntüler.
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *Biraz Önce* - 20 saniyeden kısa bir süre önce.
+   - *Bir dakikadan az bir süre önce* - 20 saniyeden daha uzun ama 60 saniyeden daha kısa süre önce.
+   - *1 dakika önce* - 60 saniyeden uzun ancak 120 saniyeden az (2 dak)
+   - *XX dakika önce* - XX değeriyle tanımlandığı şekilde 2 dakikadan daha fazla
 
 * **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
 * **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
