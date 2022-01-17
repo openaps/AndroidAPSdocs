@@ -77,16 +77,16 @@ Pod iletişim cihazınızın nasıl kurulacağına ilişkin ayrıntılı adımla
 Seçenek 2: Konfigürasyon ayarları
 ----------------------------
 
-Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+Via the top-left hand corner **hamburger menu** under **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod** by selecting the **radio button (2)** titled **Omnipod**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will display the Omnipod menu as a tab in the AAPS interface titled **POD**. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
 
-    **NOTE:** A faster way to access the **Omnipod settings** can be found below in the `Omnipod Settings section <#omnipod-settings>`__ of this document.
+    **NOT:** **Omnipod ayarlarına** erişmenin daha hızlı bir yolu, aşağıda bu belgenin `Omnipod Ayarları <#omnipod-settings>`__ bölümünde bulunabilir.
 
     |Enable_Omnipod_Driver_3| |Enable_Omnipod_Driver_4|
 
-Verification of Omnipod Driver Selection
+Omnipod Sürücü Seçiminin Doğrulanması
 ----------------------------------------
 
-*Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below*
+*Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  You may see the Omnipod (POD) tab appear as it does below*
 
 To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
 
@@ -549,7 +549,7 @@ Below is an explanation of the layout and meaning of the icons on the **Pod Mana
 Omnipod Ayarları
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. This is referred to in this documentation as the **Omnipod (POD)** tab.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
 
 |Omnipod_Settings_1|
 
