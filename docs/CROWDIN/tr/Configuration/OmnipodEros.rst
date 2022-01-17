@@ -631,41 +631,41 @@ The following steps will show how to **Remove** and existing pod communication d
 
     |Omnipod_Settings_2| |RileyLink_Setup_2|  
 
-Remove Currently Selected Pod Communication Device (RileyLink)
+Halihazırda Seçili Olan Pod İletişim Aygıtını Kaldırın (RileyLink)
 --------------------------------------------------------------
 
-This process will show how to remove the currently selected pod communication device (RileyLink) from the Omnipod Driver settings.
+Bu işlem, seçili olan pod iletişim cihazının (RileyLink) Omnipod Sürücü ayarlarından nasıl kaldırılacağını gösterecektir.
 
-1. Under **RileyLink Configuration** press the **MAC Address (1)** text to open the **RileyLink Selection** menu. 
+1. **RileyLink Konfigürasyonu** altında, **RileyLink Seçimi** menüsünü açmak için **MAC Adresi (1)** metnine basın. 
 
     |RileyLink_Setup_Remove_1|
 
-2. On the **RileyLink Selection** menu the press **Remove (2)** button to remove **your currently selected RileyLink (3)**
+2. **RileyLink Seçimi** menüsünde **Şu anda seçili olan RileyLink'inizi (3)** kaldırmak için **Kaldır (2)** düğmesine basın
 
     |RileyLink_Setup_Remove_2|
 
-3. At the confirmation prompt press **Yes (4)** to confirm the removal of your device.
+3. Onay isteminde, cihazınızın kaldırılmasını onaylamak için **Evet (4)**'e basın.
 
     |RileyLink_Setup_Remove_3|
     
-4. You are returned to the **Omnipod Setting** menu where under **RileyLink Configuration** you will now see the device is **Not Set (5)**.  Congratulations, you have now successfully removed your selected pod communication device.
+4. **Omnipod Ayarı** menüsüne dönersiniz, burada **RileyLink Yapılandırması** altında artık cihazın **Ayarlanmadı (5)** olduğunu göreceksiniz.  Tebrikler, seçtiğiniz pod iletişim cihazını başarıyla kaldırdınız.
 
     |RileyLink_Setup_Remove_4|
 
-Add Currently Selected Pod Communication Device (RileyLink)
+Halihazırda Seçili Olan Pod İletişim Aygıtını Ekleyin (RileyLink)
 -----------------------------------------------------------
 
-This process will show how to add a new pod communication device to the Omnipod Driver settings.
+Bu işlem, Omnipod Sürücü ayarlarına yeni bir pod iletişim cihazının nasıl ekleneceğini gösterecektir.
 
-1. Under **RileyLink Configuration** press the **Not Set (1)** text to open the **RileyLink Selection** menu. 
+1. **RileyLink Konfigürasyonu** altında, **RileyLink Seçimi** menüsünü açmak için **Ayarlanmadı (1)** metnine basın. 
 
     |RileyLink_Setup_Add_1|
     
-2. Press the **Scan (2)** button to start scanning for all available Bluetooth devices.
+2. Mevcut tüm Bluetooth cihazlarını taramaya başlamak için **Tara (2)** düğmesine basın.
 
     |RileyLink_Setup_Add_2|
 
-3. Select **your RileyLink (3)** from the list of available devices and you will be returned to the **Omnipod Settings** menu displaying the **MAC Address (4)** of your newly selected device.  Congratulations you have successfully selected your pod communication device.
+3. Kullanılabilir cihazlar listesinden **RileyLink'inizi (3)** seçin ve yeni seçilen cihazınızın **MAC Adresini (4)** gösteren **Omnipod Ayarları** menüsüne dönersiniz.  Tebrikler, pod iletişim cihazınızı başarıyla seçtiniz.
 
     |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
     
@@ -677,7 +677,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 1. Go to the **Actions (ACT)** tab in the main AAPS interface.
 
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+2. **Bakım portalında (1)** bölümünün altında, aşağıdaki 3 alanın **yaşları** 0 gün ve 0 saate **her pod değişiminden sonra** olacaktır: **İnsülin** ve **Kanül**. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. **Pompa pili** ve **insülin deposu** her pod için bağımsızdır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
 
   |Actions_Tab|
 
