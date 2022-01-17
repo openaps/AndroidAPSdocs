@@ -433,59 +433,59 @@ Alanlar
    - Ünite / saat @ GBO'nın verildiği zaman (çalışma dakikası / GBO'nın çalıştırılacağı toplam dakika)
    - *Örnek:* 0,00Ü/sa @18:25 ( 90/120 dakika)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
-* **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
+* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Bu değerin altında tam birimler sarı metinle gösterilir.
+* **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite sayısını görüntüler. *Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.*
+* ** Hatalar: ** Karşılaşılan son hatayı görüntüler. `Pod geçmişi <#view-pod-history>`__, `RileyLink geçmişi <#rileylink-and-active-pod-history>`__ ve geçmiş hatalar ve daha ayrıntılı bilgiler için günlük log dosyalarını inceleyin.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
 Simgeler
 -----
 
-.. list-table:: 
+.. liste-table:: 
       
     * - |refresh_pod_status|
-      - **REFRESH:** 
+      - **YENİLE:** 
 			
-	Sends a refresh command to the active pod to update communication
+	İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir
 			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+	* Pod durumunu yenilemek ve metni içeren (belirsiz) durum alanlarını yenilemek için bu seçeneği kullanın.
+	* Ek bilgi için aşağıdaki `Sorun giderme <#troubleshooting>`__ bölümüne bakın.
     * - |pod_management|  	 
-      - **POD MGMT:**
+      - **POD YNTM:**
 
-	Navigates to the Pod management menu   
+	Pod yönetimi menüsüne yönlendirir   
     * - |ack_alerts|		 
-      - **ACK ALERTS:**
+      - **BİLGİ UYARILARI:**
    			 
-	When pressed this will disable the pod expiration beeps and notifications. 
+	Bu düğmeye basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır. 
 			 
-	* Button is displayed only when pod time is past expiration warning time
-	* Upon successful dismissal, this icon will no longer appear.			 
+	* Bu düğme, yalnızca pod'un geçerli saati pod sona erme tarihinden sonraysa görüntülenir
+	* Başarılı bir şekilde görevden alma durumunda, bu simge artık görünmeyecektir.			 
     * - |set_time|	 
-      - **SET TIME:**
+      - **SAATİ AYARLA:**
    
-	When pressed this will update the time on the pod with the current time on your phone.
+	Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
     * - |suspend|  		 
-      - **SUSPEND:**
+      - **ASKIYA AL:**
    
-	Suspends the active pod
+	Etkin pod'u askıya alır
     * - |resume|	 
-      - **RESUME DELIVERY:**
+      - **İLETİME DEVAM ET:**
    
-	Resumes the currently suspended, active pod
+	Şu anda askıya alınmış, etkin pod'u devam ettirir
 
 
-Pod Management Menu
+Pod Yönetim Menüsü
 -------------------
 
-Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
+Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsündeki simgelerin düzeni ve anlamının bir açıklaması bulunmaktadır.
 
 |Omnipod_Tab_Pod_Management|
 
-.. list-table:: 
+.. liste-table:: 
 
     * - |activate_pod|
-      - **Activate Pod**
+      - **Pod Etkinleştir**
    
         Primes and activates a new pod
     * - |deactivate_pod|
