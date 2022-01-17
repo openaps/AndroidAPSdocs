@@ -581,30 +581,30 @@ Onay Bildirimleri
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
-* **\*Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **\*Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **\*SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+* **\*Bolus uyarıları etkin:** Bolus iletildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+* **\*Bazal uyarılar etkin:** Yeni bir bazal oran ayarlandığında, aktif bazal oran iptal edildiğinde veya mevcut bazal oran değiştirildiğinde onay uyarıları etkinleştirin veya devre dışı bırakın.
+* **\*SMB uyarıları etkin:** Bir SMB teslim edildiğinde onay uyarıları etkinleştirin veya devre dışı bırakın.
+* **GBO uyarılarını etkin:** Bir GBO ayarlandığında veya iptal edildiğinde onay uyarılarını etkinleştirin veya devre dışı bırakın.
 
-Alerts
+Alarmlar
 ------
 
-Provides AAPS alerts and Nightscout announcements for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Tanımlanan eşik birimlerine dayalı olarak pod sona erme, kapatma, düşük rezervuar için AAPS uyarıları ve Nightscout duyuruları sağlar.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.*
+*Uyarı tetiklendikten sonra pod ilk iletişimden sonra her uyarı için AAPS bildiriminin DAİMA yayınlanacağını unutmayın. Pod uyarılarının etkinleştirildiğini otomatik olarak onaylamadıkça, bildirimin reddedilmesi uyarıyı KAPATMAZ. Uyarıyı MANUEL OLARAK kapatmak için Omnipod (POD) sekmesini ziyaret etmeli ve BİLGİ UYARILARI düğmesine basmalısınız.*
 	
 * **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **\*Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
-* **Automatically acknowledge Pod alerts:** When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+* **\*Düşük rezervuar uyarısı etkin:** Ünite sayısı alanında tanımlandığı şekilde Pod'ta kalan ünite alt rezervuar sınırına ulaşıldığında devreye girecek uyarı etkinleştirin veya devre dışı bırakın.
+* **Ünite sayısı:** Pod düşük rezervuar uyarısının tetikleneceği ünite birim sayısı.
+* **Pod uyarılarını otomatik olarak kabul et:** Etkinleştirildiğinde, yine de bir bildirim verilecektir, ancak uyarının verilmesinden bu yana ilk pod iletişim temasından hemen sonra, artık otomatik olarak onaylanacak ve uyarı reddedilecektir.
 
-Notifications
+Bildirimler
 -------------
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus events were successful. 
+GBO, SMB veya bolus olaylarının başarılı olup olmadığı yani belirsiz olduğunda AAPS bildirimleri ve sesli telefon uyarıları sağlar. 
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*NOT: Bunlar yalnızca bildirimlerdir, sesli uyarı yapılmaz.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
 * **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
