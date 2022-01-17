@@ -513,43 +513,43 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
     * - |pod_history|
       - **Pod geçmişi** 
    
-   	Displays the active pod activity history
+   	Etkin Pod'un etkinlik geçmişini görüntüler
     * - |rileylink_stats|
-      - **RileyLink stats:**
+      - **RileyLink durumu:**
    
-        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+        Geçerli ayarları ve RileyLink Bağlantı geçmişini gösteren RileyLink İstatistikleri ekranına gider
 
-	* **Settings** - displays RileyLink and active pod settings information
-	* **History** - displays RileyLink and Pod communication history
+	* **Ayarlar** - RileyLink ve aktif pod ayarları bilgilerini görüntüler
+	* **Geçmiş** - RileyLink ve Pod iletişim geçmişini görüntüler
     * - |reset_rileylink_config|
-      - **Reset RileyLink Config** 
+      - **RileyLink Yapılandırmasını Sıfırla** 
    
-   	When pressed this button resets the currently connected pod communication device configuration. 
+   	Bu düğmeye basıldığında, o anda bağlı olan pod iletişim cihazı (örn. RileyLink) yapılandırmasını sıfırlar. 
 			      
-	* When communication is started, specific data is sent to and set in the RileyLink 
+	* İletişim başlatıldığında, belirli veriler RileyLink'e gönderilir ve ayarlanır 
 			      
-	    - Memory Registers are set
-	    - Communication Protocols are set
-	    - Tuned Radio Frequency is set
+	    - Hafıza Kayıtları ayarlandı
+	    - İletişim Protokolleri ayarlandı
+	    - Ayarlı Radyo Frekansı ayarlandı
 				
-	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* Bu tablonun sonundaki `ek notlar <#reset-rileylink-config-notes>`__ bölümüne bakın
     * - |pulse_log|
-      - **Read pulse log:** 
+      - ** Nabız günlüğünü oku:** 
     
-    	Sends the active pod pulse log to the clipboard		    
+    	Aktif pod sinyal günlüğünü panoya gönderir		    
 
-*Reset RileyLink Config Notes*
+*RileyLink Yapılandırma Sıfırlama Notları*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
-* If the pod communication device is turned off and then back on, the **Reset RileyLink Config** button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
-* If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
-* This button **DOES NOT** need to be pressed when switching between different pod communication devices
+* Bu özelliğin birincil kullanımı, o anda etkin olan pod iletişim cihazının yanıt vermediği ve iletişimin takılı kaldığı durumlardır.
+* Pod iletişim cihazı (örn. RileyLink) kapatılıp tekrar açılırsa, pod iletişim cihazı konfigürasyonunda bu iletişim parametrelerini ayarlaması için **RileyLink Ayarlarını Sıfırla** düğmesine basılması gerekir.
+* Bu YAPILMAYACAK OLURSA, pod iletişim cihazı kapatıldıktan sonra AAPS'nin yeniden başlatılması gerekecektir.
+* Farklı pod iletişim cihazları arasında geçiş yaparken bu düğmeye basılması **GEREKMEZ**
 
 Omnipod Ayarları
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
+The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. **Ayarlar Dişlisi (2)** yanındaki **onay kutusunun (3)** seçilmesi, Omnipod menüsünün **OMNIPOD** veya **POD** başlıklı AAPS arayüzünde bir sekme olarak görüntülenmesini sağlar. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
 
 |Omnipod_Settings_1|
 
@@ -557,26 +557,26 @@ The Omnipod driver settings are configurable from the top-left hand corner **ham
 
 |Omnipod_Settings_2|
 
-The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu giriş için bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
 
 |Omnipod_Settings_3|
 
-*NOTE: An asterisk (\*) denotes the default for a setting is enabled.*
+*NOT: Yıldız işareti (\*), bir ayarın varsayılan olarak etkin olduğunu belirtir.*
 
 RileyLink
 ---------
 
-Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
+Bir pod iletişim cihazının taranmasına izin verir. Omnipod sürücüsü aynı anda birden fazla pod iletişim cihazı seçemez.
 
-* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+* **OrangeLink/EmaLink/DiaLink tarafından bildirilen pil seviyesini göster:** OrangeLink/EmaLink/Dialink'in gerçek pil seviyesini bildirir. Tüm OrangeLink/EmaLink/DiaLink kullanıcılarının bu ayarı etkinleştirmesi **şiddetle önerilir**.
 
-	+  DOES NOT work with the original RileyLink.
-	+  May not work with RileyLink alternatives.
-	+  Enabled - Reports the current battery level for supported pod communication devices.
-	+  Disabled - Reports a value of n/a.
-* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+	+ Orijinal RileyLink ile ÇALIŞMAZ.
+	+ RileyLink alternatifleriyle çalışmayabilir.
+	+ Etkin - Desteklenen pod iletişim cihazları için mevcut pil seviyesini raporlar.
+	+ Devre Dışı - n/a değerini gösterir.
+* **Eylemlerde pil değişikliği kaydını etkinleştir:** Eylemler menüsünde, bu ayarı VE yukarıdaki pil raporlama ayarını etkinleştirdiyseniz pil değiştirme düğmesi etkinleştirilir.  Bazı pod iletişim cihazları artık değiştirilebilen normal pilleri kullanmaya imkan sağlarlar.  Bu seçenek, bunu not etmenize ve pil yaşı zamanlayıcılarını sıfırlamanıza olanak tanır.
 
-Confirmation beeps
+Onay Bildirimleri
 ------------------
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
