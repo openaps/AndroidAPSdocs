@@ -394,12 +394,12 @@ Alanlar
    * **Device:** The device to which the current action or state is referring.
    * **State or Action:** The current state or action performed by the device.
 
-Omnipod (POD) Tab
+Omnipod (POD) Sekmesi
 =================
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **Omnipod (POD)** tab in the main AAPS interface.
+Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve durum alanlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
 
-*NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
+*NOT: Omnipod (POD) sekmesi durum alanlarındaki herhangi bir mesaj raporlanırsa (belirsiz), o zaman bunu temizlemek ve bölme durumunu yenilemek için Yenile düğmesine basmanız gerekir.*
 
 |Omnipod_Tab|
 
@@ -413,8 +413,8 @@ Alanlar
    - *Connected* - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
 
 * **Pod address:** Displays the current address in which the active pod is referenced
-* **LOT:** Displays the LOT number of the active pod
-* **TID:** Displays the serial number of the pod.
+* **LOT:** Etkin pod'un LOT numarasını görüntüler
+* **TID:** Pod'un seri numarasını görüntüler.
 * **Firmware Version:** Displays the firmware version of the active pod.
 * **Time on Pod:** Displays the current time on the active pod.
 * **Pod expires:** Displays the date and time when the active pod will expire.
@@ -436,9 +436,9 @@ Alanlar
 * **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
 * **Errors:** Displays the last error encountered. Review the `Pod history <#view-pod-history>`__, `RileyLink history <#rileylink-and-active-pod-history>`__ and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Normally used when pod expiration is past 72 hours and native pod beep alerts are running.
+*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
-Icons
+Simgeler
 -----
 
 .. list-table:: 
