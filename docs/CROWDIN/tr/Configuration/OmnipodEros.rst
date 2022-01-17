@@ -143,53 +143,53 @@ Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlant
 
     |Activate_Pod_3|
 
-    Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the **Next** button.
+    Yeni pod ve RileyLink'in birbirine yakın (~30 cm veya daha az) olduğundan emin olun ve **İleri** düğmesini tıklayın.
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself). If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
+3. **Pod Başlat** ekranında, podu doldurmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıklama sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa, bir hata mesajı alırsınız **Pod'dan yanıt yok**. If this occurs, `move the RileyLink closer <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry (1)** button.
 
     |Activate_Pod_4| |Activate_Pod_5|
 
-4. Upon successful priming a green checkmark will be shown and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+4. Başarılı kullanıma hazırlamanın ardından yeşil bir onay işareti gösterilecek ve **İleri** düğmesi etkinleştirilecektir. Pod hazırlama başlatma işlemini tamamlamak için **İleri** düğmesine tıklayın ve **Podu Ekle** ekranını görüntüleyin.
 
     |Activate_Pod_6|
 
-5. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap and white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+5. Ardından, yeni podun infüzyon bölgesini hazırlayın. Podun plastik iğne kapağını ve beyaz kağıt desteğini yapışkandan çıkarın ve Pod'u vücudunuzda genellikle seçtiğiniz bölgeye uygulayın. Bittiğinde, **İleri** düğmesini tıklayın.
 
     |Activate_Pod_7|
 
-6. The **Attach Pod** dialog box will now appear. **ONLY click on the OK button if you are ready to deploy the cannula**.
+6. **Pod Ekle** iletişim kutusu şimdi görünecektir. **YALNIZCA kanülü yerleştirmeye hazırsanız Tamam düğmesini tıklayın**.
 
     |Activate_Pod_8|
 
-7. After pressing **OK**, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+7. **Tamam**'a bastıktan sonra, Omnipod'un yanıt vermesi ve kanülü (en fazla 1-2 dakika) yerleştirmesi biraz zaman alabilir, bu yüzden sabırlı olun.
 
-    If RileyLink is out of range of the pod being activated, you will receive an error message **No response from Pod**. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the **Retry** button.
+    RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa, bir hata mesajı alırsınız **Pod'dan yanıt yok**. Bu meydana gelirse, RileyLink'i Pod'un üstüne veya hemen yanına değil ama yanına yaklaştırın (~30 cm veya daha az) ve **Yeniden Dene** düğmesini tıklayın.
 
-    If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message **No response from RileyLink**. If this occurs, move the RileyLink closer to the phone and click the **Retry** button.
+    RileyLink Bluetooth kapsama alanı dışındaysa veya telefonla aktif bir bağlantısı yoksa, bir hata mesajı alırsınız **RileyLink'ten yanıt yok**. Bu olursa, RileyLink'i telefona yaklaştırın ve **Yeniden Dene** düğmesini tıklayın.
 
-    *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+    *NOT: Kanül takılmadan önce cildi kanül yerleştirme noktasının yakınında sıkıştırmak iyi bir uygulamadır. Bu iğnenin düzgün bir şekilde yerleştirilmesini sağlar ve tıkanıklık oluşturma şansınızı azaltır.*
 
     |Activate_Pod_9|
 
     |Activate_Pod_10| |Activate_Pod_11|
 
-8. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+8. Yeşil bir onay işareti görünür ve başarılı bir kanül yerleştirilmesinden sonra **İleri** düğmesi etkinleştirilir. **İleri** düğmesine tıklayın.
 
     |Activate_Pod_12|
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
+9. **Pod etkinleştirildi** ekranı görüntülenir. Yeşil **Bitti** düğmesine tıklayın. Tebrikler! Artık yeni bir aktif pod oturumu başlattınız.
 
     |Activate_Pod_13|
 
-10. The **Pod management** menu screen should now display with the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
+10. **Pod yönetimi** menü ekranı şimdi **Podu Etkinleştir (1)** düğmesi *devre dışı* ve **Podu Devre Dışı Bırak (2)** düğmesi *etkin* olarak görüntülenmelidir. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
 
-    Click on the back button on your phone to return to the **Omnipod (POD)** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    **Omnipod (POD)** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın; bu ekran artık aktif pod oturumunuz için geçerli bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgilerini görüntüleyecektir.
 
-    For more details on the information displayed go to the `Omnipod (POD) Tab <#omnipod-pod-tab>`__ section of this document.
+    Görüntülenen bilgiler hakkında daha fazla ayrıntı için bu belgenin `Omnipod (POD) Sekmesi <#omnipod-pod-tab>`__ bölümüne gidin.
 
     |Activate_Pod_14| |Activate_Pod_15|
 
-Deactivating a Pod
+Pod'u Devre Dışı Bırakma
 ------------------
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
