@@ -40,26 +40,26 @@ AndroidAPS создан для управления помпой и подачи
 
 ### Отключение помпы
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Если вы снимаете помпу на время душа, купания, занятия спортом или других действий, то, чтобы активный инсулин IOB правильно отражался в системе, следует проинформировать AndroidAPS, что инсулин не подается,.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+Помпу можно отключить с помощью нажатия на символ цикла на [домашнем экране AndroidAPS](./Screenshots.md#loop-status).
 
 ### Рекомендации основаны не на одном показании мониторинга
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Для безопасности, рекомендации системы делаются не на одном показании ГК, а на среднем из последних значений (с учетом скользящей дельты) Поэтому, если пропущено несколько показаний, понадобится время на то, чтобы AndroidAPS снова начал компенсацию ГК в режиме замкнутого цикла.
 
 ### Дополнительные ресурсы
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Вот несколько блогов с полезными советами, которые помогут понять практику работы ИПЖ:
 
-* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Подробные Настройки ](https://seemycgm.com/2017/10/29/fine-tuning-settings/) (см.мой мониторинг)
+* [Почему так важна длительность работы инсулина DIA](https://seemycgm.com/2017/08/09/why-dia-matters/) (см. мой мониторинг)
+* [Как ограничить пики после питания](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+* [Гормоны и autosens](https://seemycgm.com/2017/06/06/hormones-2/) (см.мой мониторинг)
 
 ## Какое запасное оборудование рекомендуется брать с собой?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
+Прежде всего, вам необходимо иметь стандартный набор для больного диабетом 1го типа. При пользовании AAPS настоятельно рекомендуется также иметь:
 
 * Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Pump batteries
