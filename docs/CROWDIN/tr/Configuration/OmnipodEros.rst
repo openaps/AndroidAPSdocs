@@ -108,15 +108,15 @@ RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarı
 
 *Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
 
-1. Ensure that your RileyLink is fully charged and powered on.
+1. RileyLink'inizin tam olarak şarj edildiğinden ve açık olduğundan emin olun.
 
-2. After selecting the Omnipod driver, identify and select your RileyLink from **Config Builder (1)** ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Gear Icon (Settings) (2)** ➜\ **RileyLink Configuration (3)** by pressing the **Not Set** or **MAC Address (if present)** text.   
+2. Omnipod sürücüsünü seçtikten sonra, **Konfigürasyon ayarları (1)** arasından RileyLink'inizi belirleyin ve seçin ➜\ **Pompa**\ ➜\ **Omnipod**\ ➜\ **Dişli Simgesi (Ayarlar) (2)* * ➜\ **RileyLink Yapılandırması (3)**, **Ayarlanmadı** veya **MAC Adresi (varsa)** metnine basarak.   
 
-    Ensure your RileyLink battery is charged and it is `positioned in close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Once selected, you can proceed to activate your first pod session. Use the back button on your phone to return to the main AAPS interface.
+    RileyLink pilinizin şarjlı olduğundan ve AAPS'nin MAC adresiyle tanıyabilmesi için telefonunuzun `` <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm veya daha az) yakınına yerleştirildiğinden emin olun. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
 
     |RileyLink_Setup_1| |RileyLink_Setup_2|
 
-3. On the **RileyLink Selection** screen press the **Scan (4)** button to initiate a bluetooth scan. **Select your RileyLink (5)**  from the list of available Bluetooth devices.
+3. **RileyLink Seçimi** ekranında bir bluetooth taraması başlatmak için **Tara (4)** düğmesine basın. **Mevcut Bluetooth cihazları listesinden RileyLink'inizi (5)** seçin.
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
@@ -945,27 +945,27 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Setup_6|                  image:: ../images/omnipod/RileyLink_Setup_6.png
 
 ..
-	RileyLink Setup Add Device
+	RileyLink Kurulumu Aygıt Ekle
 .. |RileyLink_Setup_Add_1|                  image:: ../images/omnipod/RileyLink_Setup_Add_1.png
 .. |RileyLink_Setup_Add_2|                  image:: ../images/omnipod/RileyLink_Setup_Add_2.png
 .. |RileyLink_Setup_Add_3|                  image:: ../images/omnipod/RileyLink_Setup_Add_3.png
 .. |RileyLink_Setup_Add_4|                  image:: ../images/omnipod/RileyLink_Setup_Add_4.png
 
 ..
-	RileyLink Setup Remove Device
+	RileyLink Kurulumu Aygıt Kaldır
 .. |RileyLink_Setup_Remove_1|                  image:: ../images/omnipod/RileyLink_Setup_Remove_1.png
 .. |RileyLink_Setup_Remove_2|                  image:: ../images/omnipod/RileyLink_Setup_Remove_2.png
 .. |RileyLink_Setup_Remove_3|                  image:: ../images/omnipod/RileyLink_Setup_Remove_3.png
 .. |RileyLink_Setup_Remove_4|                  image:: ../images/omnipod/RileyLink_Setup_Remove_4.png
 
 ..
-	RileyLink Statistics History
+	RileyLink İstatistik Geçmişi
 .. |RileyLink_Statistics_History_1|     image:: ../images/omnipod/RileyLink_Statistics_History_1.png
 .. |RileyLink_Statistics_History_2|     image:: ../images/omnipod/RileyLink_Statistics_History_2.png
 .. |RileyLink_Statistics_History_3|     image:: ../images/omnipod/RileyLink_Statistics_History_3.png
 
 ..
-	RileyLink Statistics Settings
+	RileyLink İstatistik Ayarları
 .. |RileyLink_Statistics_Settings_1|    image:: ../images/omnipod/RileyLink_Statistics_Settings_1.png
 .. |RileyLink_Statistics_Settings_2|    image:: ../images/omnipod/RileyLink_Statistics_Settings_2.png
 .. |RileyLink_Statistics_Settings_3|    image:: ../images/omnipod/RileyLink_Statistics_Settings_3.png
