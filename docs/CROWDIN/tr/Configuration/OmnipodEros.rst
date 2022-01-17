@@ -365,7 +365,7 @@ RileyLink (3) alanı
 	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
 	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
 
-Device (4) fields - With an Active Pod
+Cihaz (4) alanı - Aktif Pod ile
 ++++++++++++++++++++++++++++++++++++++
 
 	* **Device Type:** The type of device communicating with the pod communication device (Omnipod pod pump)
@@ -376,18 +376,18 @@ Device (4) fields - With an Active Pod
 	* **Last Device Contact:** Date and time of the last contact the pod made with the pod communication device.
 	* **Refresh button** manually refresh the settings on this page.
 
-RileyLink and Active Pod History
+RileyLink ve Aktif Pod Geçmişi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
+Bu ekran RileyLink'in veya o anda bağlı olan pod içinde olduğu veya gerçekleştirdiği her durum veya eylemin ters kronolojik sırayla bilgi sağlar. Tüm geçmiş yalnızca o anda etkin olan pod için kullanılabilir, bir bölme değişikliğinden sonra bu geçmiş silinecek ve yalnızca yeni etkinleştirilen podun olayları kaydedilecek ve gösterilecektir.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. **Omnipod (POD)** sekmesine gidin ve **Pod Yönetimi** menüsüne erişmek için **POD YNTM (1)** düğmesine basın, ardından **Pod Geçmişi (2)** düğmesine basın. **Ayarlar** ve **Geçmiş** ekranını görüntüleyin. RileyLink'in ve o anda aktif olan pod oturumunun tüm geçmişini görüntülemek için **GEÇMİŞ (3)** metnine tıklayın.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
     |RileyLink_Statistics_History_3|
     
-Fields
+Alanlar
 ++++++
     
    * **Date & Time**: In reverse chronological order the timestamp of each event.
@@ -403,7 +403,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 |Omnipod_Tab|
 
-Fields
+Alanlar
 ------
 
 * **RileyLink Status:** Displays the current connection status of the RileyLink
@@ -613,7 +613,7 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 Diğer
 -----
 
-Provides advanced settings to assist debugging.
+Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 	
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
 * **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
