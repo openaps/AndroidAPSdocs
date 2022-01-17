@@ -90,21 +90,21 @@ Omnipod Sürücü Seçiminin Doğrulanması
 
 To verify that you have enabled the Omnipod driver in AAPS **swipe to the left** from the **Overview** tab, where you will now see an **Omnipod** or **POD** tab.
 
-|Enable_Omnipod_Driver_5|
+Enable_Omnipod_Driver_5
 
-Omnipod Configuration
+Omnipod Kanfigürasyonu
 ======================
 
-Please **swipe left** to the **Omnipod (POD)** tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+Lütfen tüm pod ve RileyLink işlevlerini yönetebileceğiniz **Omnipod (POD)** sekmesine **sola kaydırın** (bu işlevlerden bazıları etkin bir pod oturumu olmadan etkinleştirilmez veya görünmez):
 
-    |refresh_pod_status| Refresh Pod connectivity and status
+    |refresh_pod_status| Pod bağlantısını ve durumunu yenileyin
 
-    |pod_management| Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    |pod_management| Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal, RileyLink İstatistikleri ve Pod geçmişi)
 
-RileyLink Setup
+RileyLink Kurulumu
 ---------------
 
-If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the `Activating a Pod Section <#activating-a-pod>`__ below.
+RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarılı bir şekilde eşleştirdiyseniz, aşağıdaki `Bir Pod Bölümünü Etkinleştirme <#activating-a-pod>`__ bölümüne ilerleyin.
 
 *Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.*
 
@@ -936,7 +936,7 @@ All of the development work for the Omnipod driver is done by the community on a
 .. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
 
 ..
-	RileyLink Setup
+	RileyLink Kurulumu
 .. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png
