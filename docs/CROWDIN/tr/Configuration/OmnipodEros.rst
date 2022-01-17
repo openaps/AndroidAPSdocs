@@ -120,26 +120,26 @@ RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarı
 
     |RileyLink_Setup_3| |RileyLink_Setup_4|
 
-4. After successful selection you are returned to the Omnipod Settings page listing your **currently selected RileyLink\'s MAC Address (6).** 
+4. Başarılı bir seçimden sonra, **şu anda seçili RileyLink\'in MAC Adresini (6) listeleyen Omnipod Ayarları sayfasına dönersiniz.** 
 
     |RileyLink_Setup_5|
 
-5. Verify that in the **Omnipod (POD)** tab that the **RileyLink Status (1)** appears as **Connected.** The **Pod status (2)** field should show **No active Pod**; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+5. **Omnipod (POD)** sekmesinde **RileyLink Durumu (1)**'nin **Bağlı olarak göründüğünü doğrulayın.** **Pod durumu (2)** alanında **Etkin Pod yok **; değilse, lütfen önceki adımı deneyin veya bunun bağlantıyı yenileyip yenilemediğini görmek için AAPS'den çıkın.
 
     |RileyLink_Setup_6|
 
-Activating a Pod
+Pod Etkinleştirme
 ----------------
 
-Before you can activate a pod please ensure you have properly configured and connected your RileyLink connection in the Omnipod settings
+Bir podu etkinleştirmeden önce lütfen Omnipod ayarlarında RileyLink bağlantınızı doğru şekilde yapılandırdığınızdan ve bağlandığınızdan emin olun
 
-*REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Before pairing the Pod's radio signal is weaker, however after it has been paired it will operate at full signal power. During these procedures, make sure that your pod is* `within close proximity <#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm away or less) but not on top of or right next to the RileyLink.*
+*HATIRLATICI: Güvenlik önlemleri nedeniyle pod aktivasyonu eşleştirmesi için pod iletişimi sınırlı mesafede gerçekleşir. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. Bu prosedürler sırasında, podunuz* `<#optimal-omnipod-and-rileylink-positioning>`__ (~30 cm veya daha az) yakınında olduğundan, ama RileyLink'in üzerinde veya hemen yanında olmadığından emin olun.*
 
-1. Navigate to the **Omnipod (POD)** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. **Omnipod (POD)** sekmesine gidin ve **POD YNTM (1)** düğmesini ve ardından **Podu Etkinleştir (2)**'yi tıklayın.
 
     |Activate_Pod_1| |Activate_Pod_2|
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
+2. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 birim insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use 12 to 15 units. 
 
     |Activate_Pod_3|
 
