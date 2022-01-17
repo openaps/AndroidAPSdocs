@@ -430,8 +430,8 @@ Alanlar
 * **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
 * **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
 
-   - Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - Ünite / saat @ GBO'nın verildiği zaman (çalışma dakikası / GBO'nın çalıştırılacağı toplam dakika)
+   - *Örnek:* 0,00Ü/sa @18:25 ( 90/120 dakika)
 
 * **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed in yellow text.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. *Note this is an approximation as priming and filling the pod is not an exact process.*
