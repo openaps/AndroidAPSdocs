@@ -606,9 +606,9 @@ GBO, SMB veya bolus olaylarının başarılı olup olmadığı yani belirsiz old
 
 *NOT: Bunlar yalnızca bildirimlerdir, sesli uyarı yapılmaz.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **\*Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **\*Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+* **Belirsiz GBO bildirimleri için uyarım etkin:** Bir GBO'nin başarıyla ayarlanıp ayarlanmadığı AAPS belirsiz olduğunda sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+* **\*Belirsiz SMB bildirimleri için uyarım etkin:** Bir SMB'nin başarıyla teslim edilip edilmediği AAPS belirsiz olduğunda sesli uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+* **\*Belirsiz bolus bildirimleri için uyarım etkin:** Bir bolusun başarıyla iletilip iletilmediği konusunda AAPS belirsiz olduğunda sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
    
 Diğer
 -----
@@ -616,18 +616,18 @@ Diğer
 Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 	
 * **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
-* **Show Pulse log button in Pod Management menu:** Hide or display the pulse log button in the **Pod Management** menu.
-* **Show RileyLink Stats button in Pod Management menu:** Hide or display the RileyLink Stats button in the **Pod Management** menu.
-* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+* **Pod Yönetimi menüsünde Nabız günlüğü düğmesini göster:** **Pod Yönetimi** menüsünde nabız günlüğü düğmesini gizleyin veya görüntüleyin.
+* **Pod Yönetimi menüsünde RileyLink İstatistikleri düğmesini göster:** **Pod Yönetimi** menüsünde RileyLink İstatistikleri düğmesini gizleyin veya görüntüleyin.
+* **\*DST/Saat dilimi algılama etkinleştirildiğinde:** telefon DST yaz saati uygulamasının gözlemlendiği bir alanda kullanılıyorsa saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
 
-Switching or Removing an Active Pod Communication Device (RileyLink)
+Aktif Pod İletişim Aygıtını Değiştirme veya Çıkarma (RileyLink)
 --------------------------------------------------------------------
 
 With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Executing both **Remove** and **Add** steps will switch your device.
+The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Hem **Kaldır** hem de **Ekle** adımlarını uygulamak, cihazınızı değiştirir.
 
-1. Access the **RileyLink Selection** menu by selecting the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu. On the **Omnipod Settings** menu under **RileyLink Configuration (3)** press the **Not Set** (if no device is selected) or **MAC Address** (if a device is present) text to open the **RileyLink Selection** menu. 
+1. Açılır menüden **Omnipod (POD)** sekmesinin sağ üst köşesindeki **3 noktalı menü (1)** öğesini ve **Omnipod tercihleri (2)** öğesini seçerek **RileyLink Seçimi** menüsüne erişin. **Omnipod Ayarları** menüsünde **RileyLink Yapılandırması (3)** altındaki **Ayarlanmadı** (herhangi bir cihaz seçilmemişse) veya **MAC Adresi** (bir cihaz varsa) metnine basın. **RileyLink Seçimi** menüsünü açın. 
 
     |Omnipod_Settings_2| |RileyLink_Setup_2|  
 
