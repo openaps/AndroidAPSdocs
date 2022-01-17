@@ -194,70 +194,70 @@ Pod'u Devre Dışı Bırakma
 
 Under normal circumstances, the life of a pod should run for three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
-To deactivate a pod (either from expiration or from a pod failure):
+Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolayı):
 
-1. Go to the **Omnipod (POD)** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. **Omnipod (POD)** sekmesine gidin, **POD YNTM (1)** düğmesine tıklayın, **Pod yönetimi** ekranında **Pod'u Devre Dışı Bırak (2)** düğmesine tıklayın.
 
     |Deactivate_Pod_1| |Deactivate_Pod_2|
 
-2. On the **Deactivate Pod** screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the **Next** button to begin the process of deactivating the pod.
+2. **Podu Devre Dışı Bırak** ekranında, önce RileyLink'in poda yakın olduğundan, ama podun üstünde veya hemen yanında olmadığından emin olun, ardından işlemi başlatmak için **İleri** düğmesini tıklayarak podu devre dışı bırakın.
 
     |Deactivate_Pod_3|
 
-3. The **Deactivating Pod** screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+3. **Pod Devre Dışı Bırakılıyor** ekranı görünecek ve podun devre dışı bırakmanın başarılı olduğuna dair bir onay bip sesi alacaksınız.
 
     |Deactivate_Pod_4|
 
-    **IF deactivation fails** and you do not receive a confirmation beep, you may receive a **No response from RileyLink** or **No response from Pod message**. Please click on the **Retry (1)** button to attempt deactivation again. If deactivation continues to fail, please click on the **Discard Pod (2)** button to discard the Pod. You may now remove your pod as the active session has been deactivated. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the **Discard Pod (2)** button will not silence it.
+    **EĞER devre dışı bırakma başarısız olursa** ve bir onay bip sesi almazsanız, **RileyLink'ten yanıt yok** veya **Pod mesajından yanıt yok** alabilirsiniz. Devre dışı bırakmayı tekrar denemek için lütfen **Yeniden Dene (1)** düğmesini tıklayın. Devre dışı bırakma işlemi başarısız olmaya devam ederse, lütfen **Pod'u At (2)** düğmesini tıklayarak Pod'u iptal edin. Etkin oturum devre dışı bırakıldığı için artık podunuzu kaldırabilirsiniz. Pod'unuzda çığlık atan bir alarm varsa, **Pod'u Sil (2)** düğmesi onu susturmayacağından (bir iğne veya ataş kullanarak) manuel olarak susturmanız gerekebilir.
 	
 	|Deactivate_Pod_5| |Deactivate_Pod_6|
 
-4. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
+4. Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Pod devre dışı ekranını görüntülemek için **İleri** düğmesine tıklayın. Etkin oturum devre dışı bırakıldığı için artık podunuzu kaldırabilirsiniz.
 
     |Deactivate_Pod_7|
 
-5. Click on the green button to return to the **Pod management** screen.
+5. **Pod yönetimi** ekranına dönmek için yeşil düğmeye tıklayın.
 
     |Deactivate_Pod_8|
 
-6. You are now returned to the **Pod management** menu press the back button on your phone to return to the **Omnipod (POD)** tab. Verify that the **RileyLink Status:** field reports **Connected** and the **Pod status:** field displays a **No active Pod** message.
+6. Artık **Pod yönetimi** menüsüne döndünüz, **Omnipod (POD)** sekmesine dönmek için telefonunuzdaki geri düğmesine basın. **RileyLink Durumu:** alanının **Bağlandı** rapor ettiğini ve **Pod durumu:** alanının **Etkin pod yok** mesajı gösterdiğini doğrulayın.
 
     |Deactivate_Pod_9| |Deactivate_Pod_10|
 
-Suspending and Resuming Insulin Delivery
+İnsülin İletimini Askıya Alma ve Devam Ettirme
 ----------------------------------------
 
-The process below will show you how to suspend and resume insulin pump delivery.
+Aşağıdaki süreç, insülin pompası iletimini nasıl askıya alacağınızı ve devam ettireceğinizi gösterecektir.
 
-*NOTE - if you do not see a SUSPEND button*, then it has not been enabled to display in the Omnipod (POD) tab. Enable the **Show Suspend Delivery button in Omnipod tab** setting in the `Omnipod settings <#omnipod-settings>`__ under **Other**.
+*NOT - bir ASKIYA AL düğmesi* görmüyorsanız, Omnipod (POD) sekmesinde görüntülenmesi etkinleştirilmemiştir. **Diğerleri** altındaki `Omnipod ayarları <#omnipod-settings>`__ içindeki **Omnipod sekmesinde **Teslimatı Askıya Al düğmesini göster** ayarını etkinleştirin.
 
-Suspending Insulin Delivery
+İnsülin İletimini Askıya Alma Durdurma
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this command to put the active pod into a suspended state. In this suspended state, the pod will no longer deliver any insulin. This command mimics the suspend function that the original Omnipod PDM issues to an active pod.
+Etkin podu askıya alınmış duruma getirmek için bu komutu kullanın. Bu askıya alınmış durumda, pod artık herhangi bir insülin iletmeyecektir. Bu komut orijinal Omnipod PDM'nin etkin bir poda verdiği askıya alma işlevini taklit eder.
 
-1. Go to the **Omnipod (POD)** tab and click on the **SUSPEND (1)** button. The suspend command is sent from the RileyLink to the active pod and the **SUSPEND (3)** button will become greyed out. The **Pod status (2)** will display **SUSPEND DELIVERY**.
+1. **Omnipod (POD)** sekmesine gidin ve **ASKIYA AL (1)** düğmesini tıklayın. Askıya alma komutu, RileyLink'ten aktif poda gönderilir ve **ASKIYA AL (3)** düğmesi grileşir. **Pod durumu (2)**, **İLETİMİ ASKIYA AL**'ı görüntüler.
 
     |Suspend_Insulin_Delivery_1| |Suspend_Insulin_Delivery_2|
 
-2. When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message **All insulin delivery has been suspended**. Click **OK** to confirm and proceed.
+2. Askıya alma komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusu **Tüm insülin iletimi askıya alındı** mesajını görüntüler. Onaylamak ve devam etmek için **Tamam**'a tıklayın.
 
     |Suspend_Insulin_Delivery_3|
 
-3. Your active pod has now suspended all insulin delivery. The **Omnipod (POD)** tab will update the **Pod status (1)** to **Suspended**. The **SUSPEND** button will change to a new **Resume Delivery (2)** button
+3. Aktif Pod'unuz şimdi tüm insülin iletimini askıya aldı. **Omnipod (POD)** sekmesi, **Pod durumunu (1)** **Askıya alındı** olarak güncelleyecektir. **ASKIYA AL** düğmesi yeni bir **Teslimatı Sürdür (2)** düğmesine dönüşecektir
 
     |Suspend_Insulin_Delivery_4|
 
-Resuming Insulin Delivery
+İnsülin İletimini Sürdür
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra insülin, aktif bazal profilden geçerli zamana dayalı olarak mevcut bazal oranı kullanarak normal iletimi sürdürecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
-1. Go to the **Omnipod (POD)** tab and ensure the **Pod status (1)** field displays **Suspended**, then press the **Resume Delivery (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod status (3)** field, signifying the RileyLink is actively sending the command to the suspended pod.
+1. **Omnipod (POD)** sekmesine gidin ve **Pod durumu (1)** alanında **Askıya alındı** görüntülendiğinden emin olun, ardından mevcut pod'unuzun normal insülin iletimini sürdürme talimatı verme sürecini başlatmak için **İletimi Sürdür (2)** düğmesine basın. **Pod durumu (3)** alanında **DEVAM TESLİMİ** mesajı görüntülenerek, RileyLink'in aktif olarak askıya alınmış pod'unuza komut gönderdiğini gösterir.
 
     |Resume_Insulin_Delivery_1| |Resume_Insulin_Delivery_2|
 
-2. When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. İletimi sürdür komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusu **İnsülin iletimi devam ettirildi** mesajını görüntüler. Onaylamak ve devam etmek için **Tamam**'a tıklayın.
 
     |Resume_Insulin_Delivery_3|
 
@@ -265,7 +265,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
     |Resume_Insulin_Delivery_4|
 
-Acknowledging Pod Alerts
+Pod Uyarılarını Onaylamak
 ------------------------
 
 *NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.*
