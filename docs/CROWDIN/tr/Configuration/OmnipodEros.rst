@@ -719,23 +719,23 @@ Pod'lar Pod'un kendisiyle ilgili donanım sorunları da dahil olmak üzere çeş
 
 Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
 
-Pump Unreachable Alerts
+Pompaya Ulaşılamıyor Uyarıları
 -----------------------
 
-It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]** and setting this to **120**.
+Pompaya erişilemiyor uyarılarının sağ üst taraftaki üç noktalı menüye gidip **Tercihler**\ ➜\ **Yerel Uyarılar**\ ➜\ ** öğesini seçerek **120 dakika** olarak yapılandırılması önerilir. Pompa ulaşılamaz eşiği [min]** ve bunu **120** olarak ayarlayın.
 
-Import Settings from previous AAPS
+Önceki AAPS ayarlarını içe aktarın
 ----------------------------------
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.
+Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip olduğunu lütfen unutmayın. Sonuç olarak, aktif bir Pod'u kaybedebilirsiniz. Bu nedenle dolayı **etkin bir Pod oturumu sırasında ayarları içe aktarmamanız** şiddetle tavsiye edilir.
 
-1. Deactivate your pod session. Verify that you do not have an active pod session.
-2. Export your settings and store a copy in a safe place.
-3. Uninstall the previous version of AAPS and restart your phone.
-4. Install the new version of AAPS and verify that you do not have an active pod session.
+1. Pod oturumunuzu devre dışı bırakın. Etkin bir pod oturumunuz olmadığına emin olun.
+2. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde saklayın.
+3. AAPS'nin önceki sürümünü kaldırın ve telefonunuzu yeniden başlatın.
+4. AAPS'nin yeni sürümünü yükleyin ve etkin bir pod oturumunuz olmadığını doğrulayın.
 5. Import your settings and activate your new pod.
 
-Omnipod driver alerts
+Omnipod sürücü uyarıları
 ---------------------
 
 please note that the Omnipod driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
