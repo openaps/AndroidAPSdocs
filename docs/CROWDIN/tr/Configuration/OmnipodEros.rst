@@ -426,17 +426,17 @@ Alanlar
    - *1 dakika önce* - 60 saniyeden uzun ancak 120 saniyeden az (2 dak)
    - *XX dakika önce* - XX değeriyle tanımlandığı şekilde 2 dakikadan daha fazla
 
-* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Son bolus:** Etkin Pod'tan gönderilen son bolusun dozajını ve ne kadar süre önce verildiğini parantez içinde görüntüler.
+* **Temel Bazal oranı:** Bazal oran profilinden geçerli zaman için programlanmış bazal oranı görüntüler.
+* **Geçici bazal oranı:** Şu anda çalışmakta olan Geçici Bazal Oranı aşağıdaki biçimde görüntüler
 
    - Ünite / saat @ GBO'nın verildiği zaman (çalışma dakikası / GBO'nın çalıştırılacağı toplam dakika)
    - *Örnek:* 0,00Ü/sa @18:25 ( 90/120 dakika)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Bu değerin altında tam birimler sarı metinle gösterilir.
+* **Rezervuar:** Rezervuarda 50 üniteden fazla kaldığında, 50+Ü'nin üzerinde kalanı görüntüler. Bu değerin altında tam birimler sarı metinle gösterilir.
 * **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite sayısını görüntüler. *Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.*
 * ** Hatalar: ** Karşılaşılan son hatayı görüntüler. `Pod geçmişi <#view-pod-history>`__, `RileyLink geçmişi <#rileylink-and-active-pod-history>`__ ve geçmiş hatalar ve daha ayrıntılı bilgiler için günlük log dosyalarını inceleyin.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
+* **Etkin pod uyarıları:** Şu anda çalışmakta olan etkin Pod'un uyarıları için ayrılmıştır. Genellikle pod son kullanma tarihi 72 saat sonraysa ve pod yerel bip sesleri çıkardığında kullanılır.
 
 Simgeler
 -----
@@ -507,9 +507,9 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 			      
 	Düğme yalnızca, uygun şekilde devre dışı bırakma artık mümkün olmadığı zaman, çok özel durumlarda görüntülenir:
 
-	* A **pod is not fully paired** and thus ignores deactivate commands.
-	* A **pod is stuck** during the pairing process between steps
-	* A **pod simply does not pair at all.**
+	* **pod tam olarak eşlenmemişse** ve bu nedenle devre dışı bırakma komutlarını yok sayar.
+	*Adımlar arasındaki eşleştirme işlemi sırasında **pod takıldı** hatası alındığında
+	* **pod hiçbir şekilde eşleşmez.** ise
     * - |pod_history|
       - **Pod geçmişi** 
    
@@ -549,11 +549,11 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 Omnipod Ayarları
 ================
 
-The Omnipod driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Settings Gear (2)** by selecting the **radio button (1)** titled **Omnipod**. **Ayarlar Dişlisi (2)** yanındaki **onay kutusunun (3)** seçilmesi, Omnipod menüsünün **OMNIPOD** veya **POD** başlıklı AAPS arayüzünde bir sekme olarak görüntülenmesini sağlar. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
+Omnipod sürücü ayarları, sol üst köşedeki **hamburger menüsü** **Konfigürasyon ayarları**\ ➜\ **Pump**\ ➜\ **Omnipod**\ ➜\ **Ayarlar Dişlisi ( 2)** **Omnipod** başlıklı **radyo düğmesini (1)** seçerek. **Ayarlar Dişlisi (2)** yanındaki **onay kutusunun (3)** seçilmesi, Omnipod menüsünün **OMNIPOD** veya **POD** başlıklı AAPS arayüzünde bir sekme olarak görüntülenmesini sağlar. Bu, bu belgede **Omnipod (POD)** sekmesi olarak anılır.
 
 |Omnipod_Settings_1|
 
-**NOTE:** A faster way to access the **Omnipod settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **Omnipod (POD)** tab and selecting **Omnipod preferences (2)** from the dropdown menu.
+**NOT:** **Omnipod ayarlarına** erişmenin daha hızlı bir yolu, **Omnipod (POD)** sekmesinin sağ üst köşesindeki **3 noktalı menüye (1)** erişmek ve açılır menüden **Omnipod tercihleri (2)**'i seçmektir.
 
 |Omnipod_Settings_2|
 
@@ -579,7 +579,7 @@ Bir pod iletişim cihazının taranmasına izin verir. Omnipod sürücüsü ayn�
 Onay Bildirimleri
 ------------------
 
-Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+Bolus, bazal, SMB ve GBO iletimi ve değişiklikleri için pod üzerinden onay bip sesleri sağlar.
 
 * **\*Bolus uyarıları etkin:** Bolus iletildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 * **\*Bazal uyarılar etkin:** Yeni bir bazal oran ayarlandığında, aktif bazal oran iptal edildiğinde veya mevcut bazal oran değiştirildiğinde onay uyarıları etkinleştirin veya devre dışı bırakın.
@@ -593,8 +593,8 @@ Tanımlanan eşik birimlerine dayalı olarak pod sona erme, kapatma, düşük re
 
 *Uyarı tetiklendikten sonra pod ilk iletişimden sonra her uyarı için AAPS bildiriminin DAİMA yayınlanacağını unutmayın. Pod uyarılarının etkinleştirildiğini otomatik olarak onaylamadıkça, bildirimin reddedilmesi uyarıyı KAPATMAZ. Uyarıyı MANUEL OLARAK kapatmak için Omnipod (POD) sekmesini ziyaret etmeli ve BİLGİ UYARILARI düğmesine basmalısınız.*
 	
-* **\*Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+* **\*Süre sonu hatırlatıcısı etkin:** Kapanmadan önce tanımlanan saat süresine ulaşıldığında tetiklenecek şekilde ayarlanan pod sona erme hatırlatıcısını etkinleştirin veya devre dışı bırakın.
+* **Kapanmadan önceki saatler:** Etkin Pod kapanmasının gerçekleşmesinden önceki saat sayısını tanımlar, bu daha sonra sona erme hatırlatıcı uyarısını tetikler.
 * **\*Düşük rezervuar uyarısı etkin:** Ünite sayısı alanında tanımlandığı şekilde Pod'ta kalan ünite alt rezervuar sınırına ulaşıldığında devreye girecek uyarı etkinleştirin veya devre dışı bırakın.
 * **Ünite sayısı:** Pod düşük rezervuar uyarısının tetikleneceği ünite birim sayısı.
 * **Pod uyarılarını otomatik olarak kabul et:** Etkinleştirildiğinde, yine de bir bildirim verilecektir, ancak uyarının verilmesinden bu yana ilk pod iletişim temasından hemen sonra, artık otomatik olarak onaylanacak ve uyarı reddedilecektir.
@@ -615,7 +615,7 @@ Diğer
 
 Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 	
-* **Show Suspend Delivery button in Omnipod tab:** Hide or display the suspend delivery button in the **Omnipod (POD)** tab.
+* **Omnipod sekmesinde İletimi Askıya Al düğmesini göster:** **Omnipod (POD)** sekmesindeki iletimi askıya al düğmesini gizleyin veya görüntüleyin.
 * **Pod Yönetimi menüsünde Nabız günlüğü düğmesini göster:** **Pod Yönetimi** menüsünde nabız günlüğü düğmesini gizleyin veya görüntüleyin.
 * **Pod Yönetimi menüsünde RileyLink İstatistikleri düğmesini göster:** **Pod Yönetimi** menüsünde RileyLink İstatistikleri düğmesini gizleyin veya görüntüleyin.
 * **\*DST/Saat dilimi algılama etkinleştirildiğinde:** telefon DST yaz saati uygulamasının gözlemlendiği bir alanda kullanılıyorsa saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
@@ -623,9 +623,9 @@ Hata ayıklamaya yardımcı olmak için gelişmiş ayarlar sağlar.
 Aktif Pod İletişim Aygıtını Değiştirme veya Çıkarma (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+Mevcut RileyLink'e (OrangeLink veya EmaLink gibi) birçok alternatif model veya aynı pod iletişim cihazının (RileyLink) birden çok/yedek versiyonuna ihtiyaç duyulduğunda, Omnipod Ayarı yapılandırmasından, seçilen pod iletişim cihazının (RileyLink) değiştirilmesi veya çıkarılması gerekli hale gelir. 
 
-The following steps will show how to **Remove** and existing pod communication device (RileyLink) as well as **Add** a new pod communication device.  Hem **Kaldır** hem de **Ekle** adımlarını uygulamak, cihazınızı değiştirir.
+Aşağıdaki adımlar, Mevcut pod iletişim cihazının (RileyLink) **Kaldır**'manın yanı sıra yeni bir pod iletişim cihazının **Eklemesini** gösterecektir.  Hem **Kaldır** hem de **Ekle** adımlarını uygulamak, cihazınızı değiştirir.
 
 1. Açılır menüden **Omnipod (POD)** sekmesinin sağ üst köşesindeki **3 noktalı menü (1)** öğesini ve **Omnipod tercihleri (2)** öğesini seçerek **RileyLink Seçimi** menüsüne erişin. **Omnipod Ayarları** menüsünde **RileyLink Yapılandırması (3)** altındaki **Ayarlanmadı** (herhangi bir cihaz seçilmemişse) veya **MAC Adresi** (bir cihaz varsa) metnine basın. **RileyLink Seçimi** menüsünü açın. 
 
@@ -673,28 +673,28 @@ Bu işlem, Omnipod Sürücü ayarlarına yeni bir pod iletişim cihazının nas�
 Actions (ACT) Tab
 =================
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod pod differs from tube based pumps, especially after the processes of applying a new pod.
+Bu sekme, ana AAPS dokümantasyonunda açık bir şekilde anlatılmıştır, ancak bu sekmede, özellikle yeni bir pod takıldıktan sonra, Omnipod podunun hortum bazlı pompalardan nasıl farklı olduğuna dair özel birkaç nokta belirtilmektedir.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
+1. Ana AAPS arayüzünde **Eylemler (EYLEM)** sekmesine gidin.
 
-2. **Bakım portalında (1)** bölümünün altında, aşağıdaki 3 alanın **yaşları** 0 gün ve 0 saate **her pod değişiminden sonra** olacaktır: **İnsülin** ve **Kanül**. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. **Pompa pili** ve **insülin deposu** her pod için bağımsızdır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+2. **Bakım portalında (1)** bölümünün altında, aşağıdaki 3 alanın **yaşları** 0 gün ve 0 saate **her pod değişiminden sonra** olacaktır: **İnsülin** ve **Kanül**. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. **Pompa pili** ve **insülin deposu** her pod için bağımsızdır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. *Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.* **Pompa pil yaşı**, pod'ta pil her zaman pod'un ömründen daha uzun olacağından rapor edilmez (maksimum 80 saat).
 
   |Actions_Tab|
 
-Levels
+Dolum seviyeleri
 ------
 
-**Insulin Level**
+**İnsülin Seviyesi**
 
-Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This is because it is not known exactly how much insulin was put in the pod, only that when the 2 beeps are triggered while filling the pod that over 85 units have been injected. A Pod can hold a maximum of 200 units. Priming can also introduce variance as it is not and exact process.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
+Omnipod Eros Pod'daki insülin bildirim miktarı kesin değil.  Bunun nedeni, pod ne kadar insülin konulduğu tam olarak bilinmemekle birlikte, yalnızca pod doldurulurken 2 bip sesi tetiklendiğinde 85 üniteden fazla enjekte edilmiş olmasıdır. Bir Pod en fazla 200 ünite alabilir. Hazırlama, kesin bir süreç olmadığı için sapmalara da yol açabilir.  Bu faktörlerin her ikisiyle birlikte, Omnipod sürücüsü rezervuarda kalan insülinin en iyi yaklaşık değerini verecek şekilde yazılmıştır.  
 
-  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
-  * **Below 50 Units** - Reports an approximate calculated value of insulin remaining in the reservoir. 
+  * **50 Ünitenin Üzerinde** - Şu anda rezervuarda 50'den fazla ünite olduğunda 50+Ü değeri bildirir.
+  * **50 Ünitenin Altında** - Rezervuarda kalan insülinin yaklaşık hesaplanmış değerini bildirir. 
   * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
+  * **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
 
 
-**Battery Level**
+**Pil seviyesi**
 
 Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
