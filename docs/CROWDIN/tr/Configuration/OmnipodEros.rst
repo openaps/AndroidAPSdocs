@@ -487,31 +487,31 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
     * - |activate_pod|
       - **Pod Etkinleştir**
    
-        Primes and activates a new pod
+        Yeni bir pod hazırlar ve etkinleştirir
     * - |deactivate_pod|
-      - **Deactivate Pod**
+      - **Pod'u Devre Dışı Bırak**
  
-        Deactivates the currently active pod.
+        O anda etkin olan bölmeyi devre dışı bırakır.
 		 
-	*  A partially paired pod ignores this command.
-	*  Use this command to deactivate a screaming pod (error 49).
-	*  If the button is disabled (greyed out) use the Discard Pod button.
+	*  Kısmen eşleştirilmiş bir pod bu komutu yok sayar.
+	* Çığlık atan bir pod devre dışı bırakmak için bu komutu kullanın (hata 49).
+	* Düğme devre dışıysa (gri renkteyse), (Discard Pod) Pod'u Atın düğmesini kullanın.
     * - |play_test_beep|
-      - **Play test beep**
+      - **Test bip sesi çal**
  
- 	Plays a single test beep on the pod when pressed.
+ 	Basıldığında pod'tan tek bir test bip sesi çalar.
     * - |discard_pod|
-      - **Discard pod**
+      - **Pod'u atın**
 
-	Deactivates and discards the pod state of an unresponsive pod when pressed.
+	Basıldığında, yanıt vermeyen bir Pod'un Pod durumunu devre dışı bırakacak ve iptal edecektir.
 			      
-	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+	Düğme yalnızca, uygun şekilde devre dışı bırakma artık mümkün olmadığı zaman, çok özel durumlarda görüntülenir:
 
 	* A **pod is not fully paired** and thus ignores deactivate commands.
 	* A **pod is stuck** during the pairing process between steps
 	* A **pod simply does not pair at all.**
     * - |pod_history|
-      - **Pod history** 
+      - **Pod geçmişi** 
    
    	Displays the active pod activity history
     * - |rileylink_stats|
