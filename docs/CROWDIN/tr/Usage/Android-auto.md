@@ -7,7 +7,7 @@
 Use system notifications for alerts and notifications:
 
 * Open 3-dot-menu on top right of home screen
-* Preferences
+* Tercihler
 * Scroll all the way down
 * Activate "Use system notifications..."
 
