@@ -79,7 +79,7 @@ Bir hesap oluşturduktan ve verilerinizin Open Humans'a akışını sağladıkta
 
 Kullanım Şartları
 ========================================
-Bu verilerinizi 'Open Humans <https://www.openhumans.org>'a yükleyen açık kaynaklı bir araçtır. Açık izniniz olmadan verilerinizi üçüncü taraflarla paylaşma hakkımız yoktur. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
+Bu verilerinizi 'Open Humans <https://www.openhumans.org>'a yükleyen açık kaynaklı bir araçtır. Açık izniniz olmadan verilerinizi üçüncü taraflarla paylaşma hakkımız yoktur. Projenin ve uygulamanın aldığı veriler, rastgele bir kullanıcı kimliği aracılığıyla tanımlanır ve yalnızca bu sürece ilişkin yetkilendirmenizle birlikte bir Open Humans hesabına güvenli bir şekilde iletilir.
 Yükleme verilerinizi istediğiniz zaman `www.openhumans.org <https://www.openhumans.org>`_ üzerinden yüklemeyi durdurabilir ve silebilirsiniz. Veri alan bazı projelerin bunu desteklemeyebileceğini unutmayın.
 
 Ayrıca `Open Humans Kullanım Şartlarına <https://www.openhumans.org/terms/>`_ ulaşabilirsiniz.
