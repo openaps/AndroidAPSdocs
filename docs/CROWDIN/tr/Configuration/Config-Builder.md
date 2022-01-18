@@ -238,7 +238,7 @@ Daha fazla bilgi için [Görevler](../Usage/Objectives.rst) sayfasına bakın.
 
 Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Bir girişi düzenlemek veya silmek isterseniz (örneğin beklediğinizden daha az karbonhidrat yediniz) tedavilerden 'Kaldır'ı seçin ve [ana ekranda karbonhidrat düğmesi](../Getting-Started/Screenshots#carb-correction) aracılığıyla yeni değeri girin. (gerekirse zamanı değiştirin)
 
-## General
+## Genel
 
 ### Overview
 
