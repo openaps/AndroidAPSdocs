@@ -1,16 +1,16 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
+Verilerinizi bilim için bağışlayın
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
+Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Bu bilim insanlarının işleri ilerletmesine, yeni bilimsel fikirler üretmesine ve açık kaynaklı kapalı döngü sistemlerine açıklığı teşvik etmesine yardımcı olur.
+AndroidAPS, verilerinizi `Open Humans <https://www.openhumans.org>`_ ile senkronize edebilir. Open Humans, kişisel verilerinizi örn. sağlık verileri ve faaliyetler yükleyebileceğiniz, paylaşabileceğiniz ve saklayabileceğiniz bir platformdur. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Verilerinize ne olduğu ve verilerinize erişmelerine izin vererek hangi projeleri desteklemek istediğiniz konusunda tam kontrol sizde olur. Katıldığınız projeye bağlı olarak veriler, onlar tarafından farklı şekillerde ve ölçüde değerlendirilir ve kullanılır.
 
-The following data will be uploaded to your Open Humans account: 
+Aşağıdaki veriler Open Humans hesabınıza yüklenecektir: 
 
-* Glucose values
-* Careportal events (except notes)
+* Glikoz değerleri
+* Bakım Portalı etkinlikleri (notlar hariç)
 * Extended boluses
 * Profile switches
 * Total daily doses
@@ -80,15 +80,15 @@ Once you've created an account and gotten your data flowing into Open Humans, ma
 Terms of Use
 ========================================
 This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
-You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
+Yükleme verilerinizi istediğiniz zaman `www.openhumans.org <https://www.openhumans.org>`_ üzerinden yüklemeyi durdurabilir ve silebilirsiniz. Veri alan bazı projelerin bunu desteklemeyebileceğini unutmayın.
 
-Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
+Ayrıca `Open Humans Kullanım Şartlarına <https://www.openhumans.org/terms/>`_ ulaşabilirsiniz.
 
-Data Privacy
+Veri Gizliliği
 ========================================
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans, her proje için size sayısal bir kimlik atayarak gizliliğinizi korumaya özen gösterir. Bu projelerin sizi tanımasını sağlar ancak sizi tanımlamaz. AndroidAPS tarafından yüklenen Uygulama Kimliği benzerdir ve yalnızca verilerin yönetilmesine yardımcı olur. Daha fazla bilgi için:
 
-* `Open Humans Data Use Policy <https://www.openhumans.org/data-use/>`_
+* `Open Humans Veri Kullanım Politikası <https://www.openhumans.org/data-use/>`_
 * `Open Humans GDPR <https://www.openhumans.org/gdpr/>`_
 
 
