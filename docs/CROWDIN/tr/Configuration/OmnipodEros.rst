@@ -670,7 +670,7 @@ Bu işlem, Omnipod Sürücü ayarlarına yeni bir pod iletişim cihazının nas�
     |RileyLink_Setup_Add_3| |RileyLink_Setup_Add_4|
     
 
-Actions (ACT) Tab
+Eylemler (EYLEM) Sekmesi
 =================
 
 Bu sekme, ana AAPS dokümantasyonunda açık bir şekilde anlatılmıştır, ancak bu sekmede, özellikle yeni bir pod takıldıktan sonra, Omnipod podunun hortum bazlı pompalardan nasıl farklı olduğuna dair özel birkaç nokta belirtilmektedir.
@@ -717,7 +717,7 @@ Pod'lar Pod'un kendisiyle ilgili donanım sorunları da dahil olmak üzere çeş
 49 numaralı Pod hatasını önleme
 --------------------------------
 
-Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. We recommend users to switch to the Nightscout client to *upload only (Disable sync)* under the **Config Builder**\ ➜\ **General**\ ➜\ **NSClient**\ ➜\ **cog wheel**\ ➜\ **Advanced Settings** to prevent possible failures.
+Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Kullanıcıların **Konfigurasyon Ayarları**\ ➜\ **Genel**\ ➜\ **NSClient**\ ➜\ **dişli çark* altında **senkronizasyon\ adımından sadece **Verileri NS'a yükleyin\ seçeneğinin seçilmesi öneririz. Bu seçim olası arızaları önlemek içindir.
 
 Pompaya Ulaşılamıyor Uyarıları
 -----------------------
@@ -733,7 +733,7 @@ Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip
 2. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde saklayın.
 3. AAPS'nin önceki sürümünü kaldırın ve telefonunuzu yeniden başlatın.
 4. AAPS'nin yeni sürümünü yükleyin ve etkin bir pod oturumunuz olmadığını doğrulayın.
-5. Import your settings and activate your new pod.
+5. Ayarlarınızı içe aktarın ve yeni podunuzu etkinleştirin.
 
 Omnipod sürücü uyarıları
 ---------------------
@@ -768,8 +768,8 @@ RileyLink ve Omnipod'un iletişim şekli nedeniyle, bir komutun başarıyla işl
 Aşağıda, belirsiz bir bildirimin ne zaman ortaya çıkabileceğine dair birkaç örnek verilmiştir.
 
 * **Bolus** - Belirsiz boluslar otomatik olarak doğrulanamaz. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. *Varsayılan olarak, kullanıcının manuel olarak onaylaması gerektiğinden, bu tür bir bildirim için uyarı bip sesleri etkinleştirilir.*
-* **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
-* **Pod Zaman Sapması -** Pod zamanı ve telefonunuzun zamanı çok fazla saptığında, AAPS döngüsünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. Omnipod (POD) sekmesinin altında ek bir **Saati Ayarla** simgesi görünecektir. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
+**GBO'lar, Pod Durumları, Profil Anahtarları, Zaman Değişiklikleri** - manuel bir pod güncellemesi mesajı siler. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
+* **Pod Zaman Sapması -** Pod zamanı ve telefonunuzun zamanı çok fazla saptığında, AAPS döngüsünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. Pod ile telefon arasındaki zaman sapması 5 dakikadan fazlaysa, AAPS, HANDLE TIME CHANGE "ZAMAN DEĞİŞİKLİĞİ İŞLE mesajıyla Pod'un Pod durumu altında Askıya alınmış durumda olduğunu bildirir. Omnipod (POD) sekmesinin altında ek bir **Saati Ayarla** simgesi görünecektir. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
 
 En İyi Uygulamalar
 ==============
@@ -783,7 +783,7 @@ Bir Omnipod pod ile iletişim kurmak için RileyLink'te kullanılan anten, 433 M
 
     *(Res 1. Çok yönlü bir modelde sarmal spiral antenin grafik çizimi*)
 
-Hem emniyet hem de güvenlik endişeleri nedeniyle, pod *aktivasyonu*, bolus verme, GBO ayarlama veya yalnızca pod durumunu yenileme gibi diğer işlemlerden *yakın (~30 cm veya daha az)* bir mesafede yapılmalıdır. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+Hem emniyet hem de güvenlik endişeleri nedeniyle, pod *aktivasyonu*, bolus verme, GBO ayarlama veya yalnızca pod durumunu yenileme gibi diğer işlemlerden *yakın (~30 cm veya daha az)* bir mesafede yapılmalıdır. RileyLink anteninden sinyal iletiminin doğası gereği, podun doğrudan RileyLink'in üzerine veya hemen yanına yerleştirilmesi ÖNERİLMEZ.
 
 Aşağıdaki resim, pod etkinleştirme ve devre dışı bırakma prosedürleri sırasında RileyLink'i konumlandırmanın en uygun yolunu göstermektedir. Pod başka pozisyonlarda aktif olabilir ama en başarılı olanı aşağıdaki resimdeki pozisyonu kullanarak elde edersiniz.
 
