@@ -755,21 +755,21 @@ Bazal profil ayarlanamadı. İletim durdurulmuş olabilir! Lütfen Omnipod sekme
 
 Pod bazal profil ayarının başarısız olduğuna ve Omnipod sekmesinde *Yenile*'ye basmanız gerektiğine dair bilgi uyarısıdır.
 
-Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
+SMB bolusunun başarılı olup olmadığı doğrulanamıyor. Bolus'un başarılı olmadığından eminseniz, SMB girişini Tedaviler'den manuel olarak kaldırmalısınız.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+SMB bolus başarısının doğrulanamadığına dair uyarı, SMB bolusunun başarılı olup olmadığını görmek için Omnipod sekmesindeki *Son bolus* alanını doğrulamanız ve değilse Tedaviler sekmesinden girdiyi kaldırmanız gerekir.
 
-Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
+"Görev bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is *uncertain* if a command was successfully processed. The need to inform the user of this uncertainty was necessary.
+RileyLink ve Omnipod'un iletişim şekli nedeniyle, bir komutun başarıyla işlenip işlenmediğinin *belirsiz* olduğu durumlar meydana gelebilir. Kullanıcıyı bu belirsizlik hakkında bilgilendirme önemlidir.
 
-Below are a few examples of when an uncertain notification can occur.
+Aşağıda, belirsiz bir bildirimin ne zaman ortaya çıkabileceğine dair birkaç örnek verilmiştir.
 
-* **Boluses** - Uncertain boluses cannot be automatically verified. The notification will remain until the next bolus but a manual pod refresh will clear the message. *By default alerts beeps are enabled for this notification type as the user will manually need to verify them.*
-* **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. By default alert beeps are disabled for this notification type.
-* **Pod Time Deviation -** When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+* **Bolus** - Belirsiz boluslar otomatik olarak doğrulanamaz. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. *Varsayılan olarak, kullanıcının manuel olarak onaylaması gerektiğinden, bu tür bir bildirim için uyarı bip sesleri etkinleştirilir.*
+* **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
+* **Pod Zaman Sapması -** Pod zamanı ve telefonunuzun zamanı çok fazla saptığında, AAPS döngüsünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
 
 Best Practices
 ==============
