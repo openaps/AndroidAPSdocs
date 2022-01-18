@@ -1,4 +1,4 @@
-Preferences
+Tercihler
 ***********************************************************
 * **Open preferences** by clicking three-dot-menu on top right side of home screen.
 
@@ -24,7 +24,7 @@ Preferences
    :backlinks: giriş
    :depth: 2
 
-General
+Genel
 ===========================================================
 
 **Units**
