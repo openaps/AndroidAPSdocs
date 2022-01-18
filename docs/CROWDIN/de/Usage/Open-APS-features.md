@@ -8,8 +8,8 @@
 * In den Versionen vor AAPS 2.7 musste der Benutzer manuell zwischen 8 oder 24 Stunden wählen.
 * Ab AAPS Version 2.7 wechselt Autosens in AAPS zwischen einem 24- und 8-Stunden-Fenster zur Berechnung der Empfindlichkeit. Dabei wird das empfindlichere Ergebnis verwendet. 
 * Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
-* Das Wechseln einer Kanüle oder ein Profilwechsel setzt Autosens wieder auf 100% zurück.
-* Autosens passt Deine Basalrate, Deinen I:C und den ISF für Dich an (d.h. Nachahmen der Effekte einer Profilverschiebung).
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
+* Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * Wenn Du über einen längeren Zeitraum kontinuierlich Kohlenhydrate zu Dir nimmst, ist Autosens während dieses Zeitraums weniger effektiv, da Kohlenhydrate aus den Berechnungen der BZ-Abweichungen ausgenommen werden.
 
 ## Super Micro Bolus (SMB)
@@ -187,7 +187,7 @@ Hier kannst du auswählen, ob die [Empfindlichkeitserkennung](../Configuration/S
 
 ### Autosense passt auch temporäre Ziele an
 
-Wenn du diese Option aktivierst, dann kann Autosense auch Ziele anpassen (neben Basalrate, ISF und IC). Dadurch kann AndroidAPS "aggressiver" arbeiten oder nicht. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. Dadurch kann AndroidAPS "aggressiver" arbeiten oder nicht. Der aktuell eingestellte Zielwert wird dadurch möglicherweise schneller erreicht.
 
 ### Erweiterte Einstellungen
 
