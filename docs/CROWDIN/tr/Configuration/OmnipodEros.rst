@@ -769,37 +769,37 @@ Aşağıda, belirsiz bir bildirimin ne zaman ortaya çıkabileceğine dair birka
 
 * **Bolus** - Belirsiz boluslar otomatik olarak doğrulanamaz. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. *Varsayılan olarak, kullanıcının manuel olarak onaylaması gerektiğinden, bu tür bir bildirim için uyarı bip sesleri etkinleştirilir.*
 * **TBRs, Pod Statuses, Profile Switches, Time Changes** - a manual pod refresh will clear the message. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
-* **Pod Zaman Sapması -** Pod zamanı ve telefonunuzun zamanı çok fazla saptığında, AAPS döngüsünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. An additional **Set Time** icon will appear at the bottom of the Omnipod (POD) tab. Clicking Set Time will synchronize the time on the pod with the time on the phone and then you can click the RESUME DELIVERY button to continue normal pod operations.
+* **Pod Zaman Sapması -** Pod zamanı ve telefonunuzun zamanı çok fazla saptığında, AAPS döngüsünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. If the time deviation between the pod and the phone is more than 5 minutes then AAPS will report the pod is in a Suspended state under Pod status with a HANDLE TIME CHANGE message. Omnipod (POD) sekmesinin altında ek bir **Saati Ayarla** simgesi görünecektir. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
 
-Best Practices
+En İyi Uygulamalar
 ==============
 
-Optimal Omnipod and RileyLink Positioning
+En İyi Omnipod ve RileyLink Konumlandırılması
 -----------------------------------------
 
-The antenna used on the RileyLink to communicate with an Omnipod pod is a 433 MHz helical spiral antenna. Due to its construction properties it radiates an omni directional signal like a three dimensional doughnut with the z-axis representing the vertical standing antenna. This means that there are optimal positions for the RileyLink to be placed, especially during pod activation and deactivation routines.
+Bir Omnipod pod ile iletişim kurmak için RileyLink'te kullanılan anten, 433 MHz sarmal spiral antendir. Yapı özelliklerinden dolayı, dikey duran anteni temsil eden z ekseni ile üç boyutlu bir halka gibi çok yönlü bir sinyal yayar. Bu özellikle pod etkinleştirme ve devre dışı bırakma rutinleri sırasında, RileyLink'in yerleştirilmesi için en uygun konumdırmanın olduğu anlamına gelir.
 
 |Toroid_w_CS|
 
-    *(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern*)
+    *(Res 1. Çok yönlü bir modelde sarmal spiral antenin grafik çizimi*)
 
-Because of both safety and security concerns, pod *activation* has to be done at a range *closer (~30 cm away or less)* than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
+Hem emniyet hem de güvenlik endişeleri nedeniyle, pod *aktivasyonu*, bolus verme, GBO ayarlama veya yalnızca pod durumunu yenileme gibi diğer işlemlerden *yakın (~30 cm veya daha az)* bir mesafede yapılmalıdır. Due to the nature of the signal transmission from the RileyLink antenna it is NOT recommended to place the pod directly on top of or right next to the RileyLink.
 
-The image below shows the optimal way to position the RileyLink during pod activation and deactivation procedures. The pod may activate in other positions but you will have the most success using the position in the image below.
+Aşağıdaki resim, pod etkinleştirme ve devre dışı bırakma prosedürleri sırasında RileyLink'i konumlandırmanın en uygun yolunu göstermektedir. Pod başka pozisyonlarda aktif olabilir ama en başarılı olanı aşağıdaki resimdeki pozisyonu kullanarak elde edersiniz.
 
-*Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.*
+*Not: Pod en uygun şekilde yerleştirdikten sonra ve RileyLink iletişimi başarısız olursa, bunun nedeni, RileyLink anteninin iletim menzilini azaltan düşük pil seviyesi olabilir. Bu sorunu önlemek için, bu işlem sırasında RileyLink'in doğru şekilde şarj edildiğinden veya doğrudan bir şarj kablosuna bağlandığından emin olun.*
 
 |Omnipod_pod_and_RileyLink_Position|
 
-Where to get help for Omnipod driver
+Omnipod sürücüsü için nereden yardım alınabilir
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından gönüllü olarak yapılır; Yardım talep ederken lütfen düşünceli olmanızı ve aşağıdaki yönergeleri kullanmanızı rica ediyoruz:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using `this invite link <https://discord.gg/4fQUWHZ4Mw>`__.
--  **Level 2:** Search existing issues to see if your issue has already been reported; if not, please create a new `issue <https://github.com/nightscout/AndroidAPS/issues>`__ and attach your `log files <../Usage/Accessing-logfiles.html>`__.
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+- **Seviye 0:** Sorun yaşadığınız işlevselliğin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu belgenin ilgili bölümünü okuyun.
+- **Seviye 1:** Bu belgeyi kullanarak çözemediğiniz sorunlarla hala karşılaşıyorsanız, lütfen `bu davet bağlantısını kullanarak **Discord**'daki *#androidaps* kanalına gidin  <https://discord.gg/4fQUWHZ4Mw>`__.
+- **Seviye 2:** Sorununuzun daha önce rapor edilip edilmediğini görmek için mevcut sorunları arayın; değilse, lütfen yeni bir `sorun <https://github.com/nightscout/AndroidAPS/issues>`__ oluşturun ve `günlük dosyalarınızı (log) <../Usage/Accessing-logfiles.html>`__ ekleyin.
+- **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**
 
 
 
