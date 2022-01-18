@@ -804,7 +804,7 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 
 
 ..
-	Omnipod image aliases resource for referencing images by name with more positioning flexibility
+	Omnipod görüntü takma adları, daha fazla konumlandırma esnekliği ile görüntülere ada göre referans vermek için kaynak
 
 
 ..
@@ -821,7 +821,7 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 .. |suspend|                       image:: ../images/omnipod/ICONS/omnipod_overview_suspend.png
 
 ..
-	Pod Management Tab
+	Pod Yönetimi Sekmesi
 
 .. |activate_pod|                  image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_activate_pod.png
 .. |deactivate_pod|                image:: ../images/omnipod/ICONS/omnipod_overview_pod_management_deactivate_pod.png
@@ -834,7 +834,7 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 
 
 ..
-	Instructional Section Images
+	Eğitici Bölüm Görselleri
 	
 ..
 	Donanım ve Yazılım Gereksinimleri
@@ -847,7 +847,7 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 .. |Omnipod_Pod|			image:: ../images/omnipod/Omnipod_Pod.png
 	
 ..
-		Acknowledge Alerts
+		Bilgilendirme Uyarıları
 .. |Acknowledge_Alerts_1|               image:: ../images/omnipod/Acknowledge_Alerts_1.png
 .. |Acknowledge_Alerts_2|               image:: ../images/omnipod/Acknowledge_Alerts_2.png
 .. |Acknowledge_Alerts_3|               image:: ../images/omnipod/Acknowledge_Alerts_3.png
@@ -855,11 +855,11 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 .. |Acknowledge_Alerts_5|               image:: ../images/omnipod/Acknowledge_Alerts_5.png
 
 ..
-	Actions Tab
+	Eylemler Sekmesi
 .. |Actions_Tab|                  		image:: ../images/omnipod/Actions_Tab.png
 
 ..
-	Activate Pod
+	Pod Etkinleştirme
 .. |Activate_Pod_1|                     image:: ../images/omnipod/Activate_Pod_1.png
 .. |Activate_Pod_2|                     image:: ../images/omnipod/Activate_Pod_2.png
 .. |Activate_Pod_3|                     image:: ../images/omnipod/Activate_Pod_3.png
@@ -877,7 +877,7 @@ Omnipod sürücüsü için tüm geliştirme çalışmaları topluluk tarafından
 .. |Activate_Pod_15|                    image:: ../images/omnipod/Activate_Pod_15.png
 
 ..
-	Deactivate Pod
+	Pod'u Devre Dışı Bırakma
 .. |Deactivate_Pod_1|                   image:: ../images/omnipod/Deactivate_Pod_1.png
 .. |Deactivate_Pod_2|                   image:: ../images/omnipod/Deactivate_Pod_2.png
 .. |Deactivate_Pod_3|                   image:: ../images/omnipod/Deactivate_Pod_3.png
