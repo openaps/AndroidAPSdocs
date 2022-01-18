@@ -8,8 +8,8 @@
 * In versies voorafgaand aan AAPS 2.7 moest de gebruiker kiezen tussen 8 of 24 uur.
 * Van AAPS 2.7 zal Autosens in AAPS schakelen tussen een 24 en 8 uur venster voor het berekenen van de gevoeligheid. Hij kiest voor de meest gevoelige. 
 * Als je voorheen oref1 gebruikte, zul je waarschijnlijk merken dat het systeem minder dynamisch omgaat met veranderingen, als gevolg van het gebruiken van 24 ofwel 8 uur.
-* Het plaatsen van een nieuw infuus of het doen van een profielwissel (zonder tijdsduur) zal de Gevoeligheidsdetectie ratio terugzetten naar 100%.
-* Gevoeligheidsdetectie past jouw basaal, KH ratio en ISF aan (daarmee bootst het na wat een profielwissel doet).
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
+* Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * Wanneer je gedurende een langere tijd telkens koolhydraten eet, dan zal de Gevoeligheidsdetectie minder goed zijn werk kunnen doen, omdat periodes met COB worden uitgesloten van BG delta berekeningen.
 
 ## Super Micro Bolus (SMB)
@@ -187,7 +187,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 ### Autosens adjust temp targets too
 
-If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. Hierdoor grijpt AndroidAPS 'agressiever' in. Jouw streefdoel kan hierdoor wellicht sneller bereikt worden.
 
 ### Geavanceerde instellingen
 
