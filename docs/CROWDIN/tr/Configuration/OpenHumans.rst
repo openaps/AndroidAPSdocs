@@ -11,75 +11,75 @@ Aşağıdaki veriler Open Humans hesabınıza yüklenecektir:
 
 * Glikoz değerleri
 * Bakım Portalı etkinlikleri (notlar hariç)
-* Extended boluses
-* Profile switches
-* Total daily doses
-* Temporary basals
-* Temp targets
-* Preferences
-* Application version
-* Device model 
-* Screen dimensions
+* Yayma Boluslar
+* Profil değişimleri
+* Toplam günlük doz
+* Geçici bazallar
+* Geçici hedefler
+* Tercihler
+* Uygulama sürümü
+* Cihaz modeli 
+* Ekran Ölçüleri
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Nightscout URL'niz veya API secret şifreniz gibi gizli veya özel bilgileriniz yüklenmeyecektir.
 
-Setup
+Kurulum
 ========================================
-1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+1. Henüz yapmadıysanız, hesabınızı `Open Humans <https://www.openhumans.org>`_ üzerinde oluşturun. Dilerseniz mevcut Google veya Facebook hesaplarınızı yeniden kullanabilirsiniz.
+2. `Config Builder <../Configuration/Config-Builder.html>`_ içinde "Open Humans" eklentisini etkinleştirin.
+3. Dişli çark düğmesini kullanarak ayarını açın. Yüklemeyi telefonun Wi-Fi kullandığı ve/veya şarj olduğu zamanlara sınırlayabilirsiniz. 
+4. Open Humans eklentisini açın (OH sekmesinden veya hamburger menüsünden) ve 'GİRİŞ'e tıklayın.
 
 .. image:: ../images/OHUploader1.png
-  :alt: Open Humans Config Builder
+  :alt: Open Humans Konfigürasyon Ayarları
     
-5. Read the given information about the Open Humans Uploader and terms of use carefully. 
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. Open Humans Uploader hakkında verilen bilgileri ve kullanım koşullarını dikkatlice okuyun. 
+6. Kutuyu işaretleyerek onaylayın ve 'GİRİŞ'e tıklayın.
+7. Open Humans web sitesi açılacaktır. Kimlik bilgilerinizle giriş yapın.
+8. Herkese açık Open Humans profilinizde AndroidAPS Yükleyici üyeliğinizi gizlemek isteyip istemediğinize karar verin.
+9. 'Projeyi yetkilendir' düğmesine tıklayın.
 
 .. image:: ../images/OHUploader2.png
-  :alt: Open Humans Terms of Use + Login
+  :alt: Open Humans Kullanım Koşulları + Giriş
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+10. AAPS'ye geri döndüğünüzde, girişin başarılı olduğunu belirten bir istem göreceksiniz.
+11. Kurulumun tamamlanması için Open Humans Uploader eklentisini ve telefonu açık tutun.
+12. Kapat'a tıkladıktan sonra üye kimliğinizi göreceksiniz. Kuyruk boyutları > 0, hala yüklenecek verilerin olduğunu gösterir.
+13. Open Humans'a veri yüklemeyi durdurmak istiyorsanız 'ÇIKIŞ'ı tıklayın.
+14. Android bildirimi, yüklemeyi çalıştırma hakkında sizi bilgilendirecektir.
 
 .. image:: ../images/OHUploader3.png
-  :alt: Open Humans finish setup
+  :alt: Open Humans kurulumu bitir
 
-15. You can manage your data by logging in to the `Open Humans website <https://www.openhumans.org>`_.
+15. `Open Humans web sitesine <https://www.openhumans.org>`_ giriş yaparak verilerinizi yönetebilirsiniz.
 
 .. image:: ../images/OHWeb.png
-  :alt: Open Humans manage data
+  :alt: Open Humans verilerinizi yönetin
      
-Sharing Opportunities
+Verilerinizi paylaşmanın yolları
 ========================================
-`The 'OPEN' project <https://www.open-diabetes.eu/>`_
+` 'OPEN' projesi <https://www.open-diabetes.eu/>
 ---------------------------------------------------------------------------------------  
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
+'OPEN' projesi, sayısı her geçen gün artan diyabetli ve çeşitli sağlık sistemleri ile insanlar üzerinde kendin yap yapay pankreas sistemlerinin (DIY APS) etkileri etrafında bir kanıt temeli oluşturmak için hasta inovasyoncuları, klinisyenleri, sosyal bilimcileri, bilgisayar bilimcileri ve hasta organizasyonlarını bir araya getiren uluslararası ve sektörler arası bir konsorsiyumdan oluşuyor. Daha fazla ayrıntı için lütfen `web sitelerine <https://www.open-diabetes.eu/>`_ bakınız.
 
-September 2020 the 'OPEN' project launched a `survey <https://survey.open-diabetes.eu/>`_ including the option to donate data you uploaded to Open Humans. A `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+Eylül 2020 'OPEN' projesi, Open Humans'a yüklediğiniz verileri bağışlama seçeneği de dahil olmak üzere bir `anket <https://survey.open-diabetes.eu/>`_ başlattı. Verilerinizi 'OPEN' projesine nasıl bağışlayacağınız konusunda bir `öğretici video <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ kendi sitesinde ve anketin içinde mevcuttur.
 
 
-`OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
+`OpenAPS Veri Ortaklığı <https://www.openhumans.org/activity/openaps-data-commons/>`_
 ---------------------------------------------------------------------------------------  
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+OpenAPS Veri Ortaklığı, DIYAPS topluluğundan araştırma için veri setlerini paylaşmanın basit bir yolunu sağlamak için oluşturuldu. Veriler hem geleneksel araştırma çalışmaları oluşturacak geleneksel araştırmacılarla hem de kendi araştırma projelerinin bir parçası olarak verileri gözden geçirmek isteyen topluluktan grup veya bireylerle paylaşılır. OpenAPS Veri Ortaklığı, insanların AndroidAPS, Loop ve OpenAPS dahil olmak üzere DIYAPS'den verilerini kolayca yüklemelerini ve paylaşmalarını sağlamak için 'Open Humans' platformunu kullanır. 
 
-You can get your data into Open Humans via one of three ways: 
+Verilerinizi aşağıdaki üç yoldan biriyle Open Humans'a yükleyebilirsiniz: 
 
-1. use the AndroidAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans. 
+1. verilerinizi Open Humans'a yüklemek için AndroidAPS yükleyici seçeneğini kullanabilirsiniz
+2. verilerinizi Open Humans'a yüklemek için Nightscout Veri Aktarımını kullanabilirsiniz
+3. veri dosyalarını Open Humans'a manuel olarak yükleyebilirsiniz. 
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Bir hesap oluşturduktan ve verilerinizin Open Humans'a akışını sağladıktan sonra, isterseniz verilerinizi araştırma için bağışlamak üzere OpenAPS Veri Ortaklarına da katıldığınızdan emin olun.
 
-Terms of Use
+Kullanım Şartları
 ========================================
-This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
+Bu verilerinizi 'Open Humans <https://www.openhumans.org>'a yükleyen açık kaynaklı bir araçtır. Açık izniniz olmadan verilerinizi üçüncü taraflarla paylaşma hakkımız yoktur. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
 Yükleme verilerinizi istediğiniz zaman `www.openhumans.org <https://www.openhumans.org>`_ üzerinden yüklemeyi durdurabilir ve silebilirsiniz. Veri alan bazı projelerin bunu desteklemeyebileceğini unutmayın.
 
 Ayrıca `Open Humans Kullanım Şartlarına <https://www.openhumans.org/terms/>`_ ulaşabilirsiniz.
