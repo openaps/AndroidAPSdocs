@@ -8,8 +8,8 @@
 * Ve verzích předcházejících AAPS 2.7 si uživatel musel vybrat mezi 8 nebo 24 hodinami ručně.
 * Od AAPS 2.7 Autosens nyní pro výpočet citlivosti přepíná mezi 24 a 8 hodinovým úsekem. Vybere, která z nich je citlivější. 
 * Pokud uživatelé pocházejí z Oref1, pravděpodobně si všimnou toho, že systém může být méně dynamický na změny, v závislosti na citlivosti za 24 nebo 8 hodin.
-* Výměna kanyly nebo změna profilu automaticky nastaví Autosense zpět na 100%.
-* Autosense upravuje váš bazál, I:C a ISF za vás (tzn. napodobuje to, co dělá změna profilu).
+* Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
+* Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * Pokud budete nepřetržitě po delší dobu jíst sacharidy, Autosense bude během této doby méně efektivní, protože období se sacharidy jsou vyloučena z výpočtů odchylek glykémie.
 
 ## Super Micro Bolus (SMB)
@@ -187,7 +187,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 ### Autosens adjust temp targets too
 
-If you have this option enabled, autosens can adjust targets (next to basal, ISF and IC), too. AndroidAPS tak může být více či méně 'agresivní'. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
+If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. AndroidAPS tak může být více či méně 'agresivní'. Aktuálně nastaveného cíle lze s touto funkcí dosáhnout rychleji.
 
 ### Rozšířená nastavení
 
