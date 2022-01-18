@@ -3,7 +3,7 @@
 
 **Kendi yapay pankreas sisteminizi oluşturmaya karar verdiğinizde, her zaman güvenlik ve emniyet hakkında düşünmek ve tüm eylemlerinizin etkisini anlamak önemlidir**
 
-General
+Genel
 ==================================================
 
 * AndroidAPS, şeker hastalığını yönetmenize yardımcı olacak bir araçtır, programı yükleyip KŞ takibini unutabileceğiniz tam otomatik bir sistem değildir!
