@@ -1,56 +1,56 @@
-What is a Closed Loop System?
+Kapalı Döngü Sistemi Nedir?
 **************************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+  :alt: AAPS AAPS sanki bir otopilot gibidir
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+Yapay pankreas kapalı döngü sistemi, diyabet yönetimini sizin için daha kolay hale getirmek için farklı bileşenleri birleştirir. 
+Açık kaynaklı kapalı döngü hareketinin kurucularından biri olan Dana M. Lewis, `Otomatik İnsülin İletimi <https://www.artificialpancreasbook.com/>`_ adlı harika kitabında, onu "diyabetiniz için otomatik pilot" olarak adlandırıyor <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Ama bu ne anlama geliyor?
 
-**Autopilot in an aircraft**
+**Uçakta otopilot**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+Otopilot, işin tamamını yapmaz ve pilotun tüm uçuş boyunca uyumasına imkan vermez. Pilotların işini kolaylaştırır. Onları uçağın ve uçuş durumunun sürekli olarak izlenmesi yükünden kurtarır. Bu pilotun hava sahasını izlemeye ve otopilotun işlevlerini kontrol etmeye konsantre olmasını sağlar.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+Otopilot çeşitli sensörlerden gelen sinyalleri alır, bir bilgisayar bunları pilotun özellikleriyle birlikte değerlendirir ve ardından gerekli ayarlamaları yapar. Pilotun artık sürekli ayarlamalar hakkında endişelenmesine gerek yoktur.
 
-**Closed Loop System**
+**Kapalı Döngü Sistemi**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+Aynısı yapay bir pankreas kapalı döngü sistemi için de geçerlidir. Bütün işi yapmıyor, yine de şeker hastalığınızla ilgilenmeniz gerekiyor. Kapalı döngü sistemi, bir CGM/FGM'den alınan sensör verilerini bazal oran, insülin duyarlılık faktörü ve karbonhidrat oranı gibi diyabet yönetimi spesifikasyonlarınızla birleştirir. Buradan diyabetinizi hedef aralıkta tutmak ve sizi rahatlatmak için tedavi önerilerini hesaplar ve bu kalıcı küçük ayarlamaları uygular. Bu diyabetin "yanında" hayatınız için daha fazla zaman bırakır.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+İnsan gözetimi olmadan sadece otopilotun uçtuğu bir uçağa binmek istemediğiniz gibi, kapalı döngü sistemi diyabet yönetiminizde size yardımcı olur, ancak her zaman desteğinize ihtiyaç duyar! **Kapalı döngüde bile diyabetinizi unutamazsınız!**
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Otopilot, pilotun özelliklerine olduğu kadar sensör değerlerine de bağlı olduğu gibi, bir kapalı döngü sistemi de sizi başarılı bir şekilde desteklemek için bazal oranlar, ISF ve karbonhidrat oranı gibi uygun girdilere ihtiyaç duyar.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Açık Kaynaklı Yapay Pankreas Kapalı Döngü Sistemleri
 ===================================================
-At present there are three major open source closed loop systems available:
+Şu anda üç ana açık kaynaklı kapalı döngü sistemi mevcuttur:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS `bu belgelerde <./WhatisAndroidAPS.html>`_. içinde ayrıntılı olarak açıklanmıştır. İnsülin pompanızın hesaplanması ve kontrolü için bir Android Akıllı Telefon kullanır. OpenAPS ile güçlü bir işbirliği içindedir (ör. algoritmaları paylaşırlar).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+Uyumlu `pompalar <../Hardware/pumps.html>`_ şunlardır:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* bazı eski `Medtronic pompaları <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ ilk Açık Kaynak Kapalı Döngü Sistemidir. Raspberry Pi veya Intel Edison gibi küçük bir bilgisayar kullanır.
 
-Compatible pumps are:
+Uyumlu pompalar şunlardır:
 
-* some old Medtronic pumps
+* Bazı Eski Medtronic pompalar
 
-Loop for iOS
+IOS için Loop
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`iOS için Döngü <https://loopkit.github.io/loopdocs/>`_, Apple iPhone'larla kullanılabilecek Açık Kaynaklı Kapalı Döngü Sistemidir.
 
-Compatible pumps are:
+Uyumlu pompalar şunlardır:
 
 * Omnipod Eros
-* some old Medtronic pumps
+* Bazı Eski Medtronic pompalar
