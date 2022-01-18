@@ -15,7 +15,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 * Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](../Module/module#phone) sayfasında kontrol edin.)
 * Telefonunuzda yüklü olan AndroidAPS uygulaması
 
-## Setup
+## Kurulum
 
 * Insight pompası aynı anda yalnızca bir cihaza bağlanmalıdır. Insight uzaktan kumandasını (ölçüm cihazı) daha önce kullandıysanız, cihazı pompanızın eşleştirilmiş cihazlar listesinden çıkarmalısınız: Menü > Ayarlar > İletişim > Cihazı kaldır
     
