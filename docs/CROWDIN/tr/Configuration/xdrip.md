@@ -209,28 +209,28 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 * Yeni sensör takın (değiştiriyorsanız).
 * Vericiyi sensöre yerleştirin - **Sensörü hemen başlatmayın!**
 * Yeni "Firefly Vericileri" (seri numarası 8G, 8H veya 8J ile başlayanlar) yalnızca yerel modda (native mode) kullanılabilir.
-* The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J):
+* Yeni "Firefly Vericileri" için aşağıdaki seçenekler etkinleştirilmemelidir (seri numarası 8G, 8H veya 8J ile başlayanlar):
    
-   * Preemptive Restart (disable!)
-   * Restart sensor (disable!)
-   * Fallback to xDrip+ (disable!)
+   * Önleyici Yeniden Başlatma (devre dışı bırakın!)
+   * Sensörü Yeniden Başlat (devre dışı bırakın!)
+   * xDrip algoritmasına dönüş (devre dışı bırakın!)
    
    ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
 
-* Check in Classic Status Page -> G5/G6 status -> PhoneServiceState if one of the following information is displayed:
+* Aşağıdaki bilgilerden birinin görüntülendiğini Klasik Durum Sayfası -> G5/G6 durumu -> PhoneServiceState satırında kontrol edin:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+   * 80 veya 81 seri no ile başlayan verici için: "Got data ss:dd" (i.e. "Got data 19:04")
+   * 8G, 8H veya 8J seri no ile başlayan vericiler için: "Got glucose ss:dd" (örn. "Got glucose 19:04") veya "Got no raw ss:dd" (örn. "Got now raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Wait 15 minutes as the transmitter should communicate several times with xDrip before new sensor is started. Battery data will be shown below Firmware information.
+* Yeni sensör başlatılmadan önce vericinin xDrip ile birkaç kez iletişim kurması gerektiğinden 15 dakika bekleyin. Pil verileri, verici yazılımı bilgilerinin altında gösterilecektir.
    
    ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
 
-* Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
+* Sensörü başlatın ancak sakın "Bugün değil" butonuna BASMAYIN! Her zaman "Evet, bugün" ! butonunu kullanın.
 
-* Restart collector (system status - if not replacing sensor)
+* Toplayıcıyı yeniden başlatın (sistem durumunda - "sensörü değiştirmediyseniz")
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
 * `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
    
@@ -242,10 +242,10 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### New Sensor
+### Yeni sensör başlatma
 
 * Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
-* Stop sensor if necessary
+* Gerekirse sensörü durdurun
    
    Gerçekten durdurulduğundan emin olun:
    
@@ -257,56 +257,56 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Clean contacts (transmitter backside) with alcohol and let air-dry.
+* Kontakları (vericinin arka tarafını) alkolle temizleyin ve kurumaya bırakın.
 
-* In case you use this function disable `Restart Sensor` and `Preemptive restarts` (Hamburger menu -> Settings -> G5/G6 Debug Settings). If you miss this step and have these functions enabled the new sensor will not start properly.
+* Yeni sensör başlatma durumunda, `Sensörü Yeniden Başlat` ve `Önleyici yeniden başlatma`'yı devre dışı bırakın (Hamburger menüsü -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları). Bu adımı atlarsanız ve bu işlevler etkinse, yeni sensör düzgün başlamaz.
    
    ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
 
-* Start Sensor
+* Sensör Başlatma
    
-   **For new Firefly transmitters** (serial no. starting with 8G, 8H or 8J) **it is mandatory, for all other transmitters it is recommended to wait approx. 15 minutes between stopping and starting the new sensor (until `Sensor Status: Stopped` is shown on second system status screen). DO NOT BACKDATE!**
+   **Yeni Firefly vericileri için** (seri numarası 8G, 8H veya 8J ile başlayanlar) **için bu zorunludur, diğer tüm vericiler için ise sensörün durdurulması ve yeni sensörün başlatılması arasında yaklaşık 15 dakika beklenilmesi tavsiye edilir.(ikinci sistem durumu ekranında `Sensor Status: Stopped` "sensör durumu: durduruldu" gösterilene kadar). geri tarih ayarlaması YAPMAYIN!** her zaman sensör başlatmada "Evet, bugün" butonunu kullanın.
 
-* Set time inserted
+* Zamanı ayarla
    
-   * To use G6 Native mode you must wait for the 2 hour warm up (i.e insertion time is now).
-   * If you are using the xDrip+ algorithm then you can set a time more than 2 hours ago to avoid warm up. Readings may be very erratic. Therefore, this is not recommended.
-* Enter Sensor code (on the peel-off foil of the sensor) 
-   * Keep code for further reference (i.e. new start after transmitter had to be removed)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
-* No calibration is needed if you use G6 in "native mode". xDrip+ will show readings automatically after 2 hour warm-up.
-* Do not turn original Dexcom Receiver (if used) back on before xDrip+ shows first readings.
+   * G6 Native modunu kullanmak için 2 saatlik ısınmayı beklemeniz gerekir (yani yerleştirme zamanı şimdidir).
+   * xDrip+ algoritmasını kullanıyorsanız, ısınmayı önlemek için 2 saatten daha önce bir süre ayarlayabilirsiniz. Okumalar çok düzensiz olabilir. Bu nedenle, bu tavsiye edilmez.
+* Sensör kodunu girin (sensör ambalajının üzerinde) 
+   * İleride gerekeceği için kodu saklayın (örn. verici değişimi ve yeniden sensör başlatma için)
+   * Kod ayrıca [xDrip+ günlüklerinde](../Configuration/xdrip#retrieve-sensor-code) bulunabilir. xDrip+ ana ekranında 3 nokta menüsünü tıklayın ve `Olay Günlüklerini Görüntüle`'yi seçin.
+* G6'yı "native mode" kullanırsanız kalibrasyon gerekmez. xDrip+, 2 saatlik ısınmadan sonra okumaları otomatik olarak gösterecektir.
+* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom Alıcısını (kullanılıyorsa) açmayın.
    
    ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-### Retrieve sensor code
+### Sensör kodunu öğrenme
 
-* In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
-* Swipe left once to see second screen.
+* 2019/05/18 tarihli master (ana) ve sonraki sürümlerde sensör kodu sistem durumunda gösterilir (Ana ekranda sol üstte Hamburger menüsü\--->Sistem durumu).
+* İkinci ekranı görmek için bir kez sola kaydırın.
    
    ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
 
-* Dexcom sensor code can also be found in xDrip+ logs.
+* Dexcom sensör kodu, xDrip+ günlüklerinde de bulunabilir.
 
-* Tap 3 dot menu (top right side on homescreen)
-* Select `View Event Logs` and search for "code"
+* 3 nokta menüye dokunun (ana ekranda sağ üst taraf)
+* `Olay Günlüklerini Görüntüle` öğesini seçin ve "code" olarak arama yapın.
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
-## Troubleshooting Dexcom G5/G6 and xDrip+
+## Dexcom G5/G6 ve xDrip+ ile İlgili Sorunları Giderme
 
-### Problem connecting transmitter
+### Vericiyi bağlamada sorun
 
-* Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? ?? yerinde represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
-* Open system status in xDrip+ (hamburger menu on top left side of home screen).
-* Check if your transmitter is shown on first status page ('classic status page').
-* If not: Delete device from your smartphone's bluetooth settings and restart collector.
-* Wait about 5 min. until Dexcom transmitter reconnects automatically.
+* Verici, akıllı telefonunuzun bluetooth ayarlarında görülmelidir.
+* Verici Dexcom?? olarak gösterilir ve ?? yerinde vericinizin seri numarasının son iki hanesini temsil eder. (örn. DexcomHY).
+* Sistem durumunu xDrip'te açın (ana ekranın sol üst tarafındaki hamburger menüsü).
+* Vericinizin ilk durum sayfasında ('classic status page') gösterilip gösterilmediğini kontrol edin.
+* Yoksa: Akıllı telefonunuzun bluetooth ayarlarından cihazı silin ve toplayıcıyı yeniden başlatın.
+* Yaklaşık 5 dakika bekleyin. Dexcom vericisi otomatik olarak yeniden bağlanana kadar.
 
-### Problem when starting new sensor
+### Yeni sensör başlatılırken oluaşabilecek sorunlar
 
 Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
