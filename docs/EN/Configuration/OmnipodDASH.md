@@ -20,7 +20,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
-|Omnipod_Pod|
+![Omnipod Pod](https://github.com/Freloner/AndroidAPSdocs/blob/86d0eeb4b694f0267c533c1f1d72ac051435efa3/docs/images/DASH%20images/Omnipod_Pod.png)
 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
@@ -54,9 +54,9 @@ You can enable the Dash driver in AAPS in **two ways**:
 
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
 
-|Enable_Dash_1|
+![Enable_Dash_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (See Option#2).
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
 
 ## Option 2: The Config Builder
 
@@ -68,31 +68,31 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
-|Enable_Dash_2||Enable_Dash_3|
+![Enable_Dash_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_2.png)    ![Enable_Dash_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_3.png)
  
 ## Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see an **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
 
-|Enable_Dash_4|
+![Enable_Dash_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
 
 # Dash Configuration
 
 Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-|Refresh_LOGO| Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-|POD_MGMT_LOGO| Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+![POD_MGMT_LOGO](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
 ## Activate Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-|Activate_Pod_1||Activate_Pod_2|
+![Activate_Pod_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_1.png)    ![Activate_Pod_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_2.png)
 
 2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
 
-|Activate_Pod_3||Activate_Pod_4|
+![Activate_Pod_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_3.png)    ![Activate_Pod_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_4.jpg)
 
 Ensure the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
@@ -100,29 +100,29 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 **NOTE**: Just in case you get an error message here (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
-|Activate_Pod_5||Activate_Pod_6|
+![Activate_Pod_5](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
 
 4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
 
-|Activate_Pod_7||Activate_Pod_8|
+![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
 
 5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
 
-|Activate_Pod_9|
+![Activate_Pod_9](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_9.jpg)
 
 6. After pressing **OK**, it may take some time before the Dash pod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
  *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
 
-|Activate_Pod_10||Activate_Pod_11|
+![Activate_Pod_10](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_10.png)    ![Activate_Pod_11](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_11.jpg)
 
 7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
 
-|Activate_Pod_12|
+![Activate_Pod_12](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_12.jpg)
 
 9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Congratulations! You have now started a new active pod session.
 
-|Activate_Pod_13|
+![Activate_Pod_13](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_13.jpg)
 
 10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. This is because a pod is now active and you cannot activate an additional pod without deactivating the currently active pod first.
 
@@ -130,7 +130,7 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
     For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
 
-|Activate_Pod_14||Activate_Pod_15|
+![Activate_Pod_14](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_14.png)    ![Activate_Pod_15](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_15.jpg)
 
 It is good practice to export settings AFTER deactivating the old pod and BEFORE activating the new pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
@@ -142,23 +142,23 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
 
-|Deactivate_Pod_1||Deactivate_Pod_2|
+![Deactivate_Pod_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_2.png)
 
 2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
 
-|Deactivate_Pod_3||Deactivate_Pod_4|
+![Deactivate_Pod_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_4.jpg)
 
 3. A green checkmark will appear upon successful deactivation. Click on the **Next** button to display the pod deactivated screen. You may now remove your pod as the active session has been deactivated.
 
-|Deactivate_Pod_5|
+![Deactivate_Pod_5](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_5.jpg)
 
 4. Click on the green button to return to the **Pod Management** screen.
 
-|Deactivate_Pod_6|
+![Deactivate_Pod_6](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_6.jpg)
 
 5. You are now returned to the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
 
-|Deactivate_Pod_7||Deactivate_Pod_8|
+![Deactivate_Pod_7](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
 
 ## Resuming Insulin Delivery
 
@@ -168,34 +168,37 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
 
-|Resume_1||Resume_2|
+![Resume_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
 
 2. When the Resume delivery command is successfully confirmed a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
 
-|Resume_3|
+![Resume_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_3.png)
 
 3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
 
-|Resume_4|
+![Resume_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_4.jpg)
 
-## Acknowledging Pod Alerts
+## Silencing Pod Alerts
 
-*NOTE - The Silence ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*NOTE - The 
+
+
+S button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
 1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
 
-|ACK_alerts_1|
+![ACK_alerts_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/ACK%20Alerts/ACK_ALERTS_1.png)
 
 2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button . AAPS sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
 
-|ACK_alerts_2|
+![ACK_alerts_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/ACK%20Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been acknowledged**. Click the **OK** button to confirm and dismiss the dialog.
+3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
 
 
-|ACK_alerts_3|
+![ACK_alerts_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/ACK%20Alerts/ACK_ALERTS_3.png)
 
 4. Go to the **Omnipod (POD)** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
@@ -208,12 +211,13 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 *NOTE:* **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.
 
 1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
-|Pod_history_1||Pod_history_2|
+
+![Pod_history_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_2.jpg)
 
 2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
 
 
-|Pod_history_3||Pod_history_4|
+![Pod_history_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_3.jpg) ![Pod_history_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_4.jpg)
 
 # DASH Tab
 
@@ -221,7 +225,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 *NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
 
-|DASH_Tab_1|
+![DASH_Tab_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20Tab/DASH_Tab_1.png)
 
 ## Fields
 
@@ -253,39 +257,25 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ## Buttons
 
-.. list-table:: 
-      
-    * - |Refresh_Icon|
-      - **REFRESH:** 
-			
-	Sends a refresh command to the active pod to update communication
-			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the [Troubleshooting section](#troubleshooting) below for additional information.
-    * - |POD_MGMT_Icon|  	 
-      - **POD MGMT:**
 
-	Navigates to the Pod management menu   
-    * - |ACK_ALERTS_Icon|		 
-      - **ACK ALERTS:**
-   			 
-	When pressed this will disable the pod expiration and low reservoir beeps and notifications. 
-			 
-	* Button is displayed only when pod time is past expiration warning time or low reservoir warning
-	* Upon successful dismissal, this icon will no longer appear.			 
-    * - |SET_TIME_Icon|	 
-      - **SET TIME:**
-   
-	When pressed this will update the time on the pod with the current time on your phone.
-    * - |RESUME_Icon|	 
-      - **RESUME DELIVERY:**
-   
-	Resumes the currently suspended, active pod
+![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
 
+   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+   * See the Troubleshooting section below for additional information.
+   
+![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
+
+![Silence_ALERTS_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+
+   * Button is displayed only when pod time is past expiration warning time.
+   * Upon successful dismissal, this icon will no longer appear.
+   
+![RESUME_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
+     
 ## Pod Management Menu
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab.
-|DASH_Tab_2||DASH_Tab_3|
+![DASH_Tab_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20Tab/DASH_Tab_2.png) ![DASH_Tab_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20Tab/DASH_Tab_3.png)
 
 * 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
 * 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
@@ -296,15 +286,15 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
 
-|Dash_settings_1||Dash_settings_2|
+![Dash_settings_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Dash%20settings/Dash_settings_1.png) ![Dash_settings_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Dash%20settings/Dash_settings_2.png)
 
 **NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
 
-|Dash_settings_3|
+![Dash_settings_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Dash%20settings/Dash_settings_3.png)
 
 The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
  
-|Dash_settings_4|
+![Dash_settings_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Dash%20settings/Dash_settings_4.jpg)
  
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
@@ -321,7 +311,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **ACK ALERTS button**.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
 	
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -351,7 +341,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
 
-|ACT_1|
+![ACT_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Actions%20Tab/ACT_1.png)
 
 ## Level
 
@@ -490,7 +480,4 @@ All of the development work for the Omnipod DASH driver is done by the community
 if it exists, please confirm.comment/add information on your problem.
 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
-
-
-
 
