@@ -28,9 +28,9 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 * `Hatalarda uyarı ver` seçeneği de devre dışı bırakılmalıdır. Aksi takdirde, wifi/mobil ağın çok kötü olması veya sunucunun müsait olmaması durumunda her 5 dakikada bir alarm alırsınız.
    
-   ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
+   ![xDrip+ Temel Ayarlar 1](../images/xDrip_Basic1.png)
    
-   ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
+   ![xDrip+ Temel Ayarlar 2](../images/xDrip_Basic2.png)
 
 * **Ugy.lar-arası ayarlar** (Yayın) AndroidAPS kullanacaksanız ve veriler AndroidAPS'e iletilecekse, Uygulamalar Arası ayarlarda xDrip+'da yayını etkinleştirmeniz gerekir.
 
@@ -38,14 +38,14 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 * AndroidAPS'de `Tedavileri kabul et` ve "Yerel olarak yayınla"yı da etkinleştirdiyseniz, xDrip+ AndroidAPS'den insülin, karbonhidrat ve bazal oran bilgilerini alır ve hipo tahminini vb. tahmin edebilir. Bu daha doğrudur.
    
-   ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
+   ![xDrip+ Temel Ayarlar 3](../images/xDrip_Basic3.png)
 
 ### Alıcı tanımlama
 
 * Yerel yayınla ilgili sorunlar bulrsanız (AAPS, xDrip+'dan KŞ değerleri almıyor) Ayarlar > Uygulamalar arası ayarlar > Alıcıyı tanımlama'ya gidin ve `info.nightscout.androidaps` girin.
 * Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız**. I büyük harf olursa, APPS xDrip+'dan KŞ değerlerini alamaz.
    
-   ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
+   ![xDrip+ Temel Uyg.-Arası Ayarlar Alıcıyı tanımlayın](../images/xDrip_InterApp_NS.png)
 
 ## xDrip+ & Dexcom G6
 
@@ -60,7 +60,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 ### Dexcom'a özel ayarlar
 
-* G5/G6 Hata Ayıklama Ayarlarını Açın -> Hamburger Menüsü (ana ekranın sol üst köşesinde) -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları ![Open xDrip+ Settings](../images/xDrip_Dexcom_SettingsCall.png)
+* G5/G6 Hata Ayıklama Ayarlarını Açın -> Hamburger Menüsü (ana ekranın sol üst köşesinde) -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları ![xDrip+ Ayarlarını Açın](../images/xDrip_Dexcom_SettingsCall.png)
 
 * Aşağıdaki ayarları etkinleştirin
    
