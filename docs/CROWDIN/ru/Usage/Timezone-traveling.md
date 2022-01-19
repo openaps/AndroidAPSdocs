@@ -46,9 +46,9 @@
 
 Insight также регистрирует прошедшие записи и момент смены времени и продолжительность до текущего момента. Таким образом, правильное время может быть определено в AAPS, несмотря на изменение времени.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Это может вызвать неточности в определении суммарных суточных доз инсулина TDD. Однако это не должно быть проблемой.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Поэтому пользователю Insight не нужно беспокоиться об изменениях часового пояса и изменении времени. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 # Time adjustment daylight savings time (DST)
 
