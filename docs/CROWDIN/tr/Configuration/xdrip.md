@@ -125,11 +125,11 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    -> Ekranın alt kısmına yakın bir yerde, birkaç dakika sonra `Isınma x,x saat kaldı` görüntülenmelidir.
 
--> Vericinizin seri numarası does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Vericinizin seri numarası 8G, 8H veya 8J ile başlamıyorsa ve herhangi bir zaman bildirimi yoksa, birkaç dakika sonra sensörü durdurup yeniden başlatın.
 
-* Restart collector (system status - if not replacing sensor}
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* Toplayıcıyı yeniden başlatın (sistem durumu - sensörü değiştirmediyseniz)
+* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
+* `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
@@ -139,34 +139,34 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-### Transmitter battery status
+### Verici pil durumu
 
-* Battery status can be controlled in system status (Hamburger menu top left on homescreen)
-* Swipe left once to see second screen. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* Verici pil durumu sistem durumunda kontrol edilebilir (Ana ekranda sol üstte Hamburger menüsü)
+* İkinci ekranı görmek için bir kez sola kaydırın. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
 
-* The exact values when the transmitter “dies” due to empty battery are not known. The following information was posted online after the transmitter “died”:
+* Vericinin pil bitmesi nedeniyle "kullanım dışı kaldığı" kesin değerler bilinmemektedir. Verici “kullanım dışı” kaldıktan sonra aşağıdaki bilgiler çevrimiçi olarak yayınlandı:
    
-   * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
-   * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+   * Gönderi 1: Verici günleri: 151 / Voltaj A: 297 / Voltaj B: 260 / Direnç: 2391
+   * Gönderi 2: Verici günleri: 249 / Voltaj A: 275 (hata anında)
 
-### Extend transmitter life
+### Verici ömrünü uzatın
 
-* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip#transmitter-battery-status)).
-* To prevent difficulties starting sensors it is highly recommended to extend transmitter life before day 100 of first usage.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
-* Running sensor session will be stopped when extending transmitter life. So, extend before sensor change or be aware that there will be a new 2 h warm-up phase.
-* Stop sensor manually via hamburger menu.
-* Switch to the `engineering mode`: 
-   * tap on the character on the right of the xDrip+ start screen that represents a syringe
-   * then tap on the microphone icon in the lower right corner
-   * In the text box that opens type "enable engineering mode" 
-   * click "Done"
-   * If Google Speak engine is enabled, you can also speak the voice command: "enable engineering mode". 
-* Go to the G5 debug settings and make sure `Use the OB1 collector` is enabled.
-* Use the voice command: “hard reset transmitter”
-* The voice command will be executed with the next data receipt of the transmitter
-* Look at the system status (Hamburger menu -> system status) and see what happens
-* After approx. 10 min. you can switch to 'Classic Status Page' (swipe right) and click 'Restart collector'. This will set sensor days to 0 without the need to start a new sensor.
+* Şimdiye kadar 8G, 8H veya 8J seri nosu ile başlayan vericilerin ömrü uzatılamamıştır. Aynı durum 81 seri nosu ile başlayıp yazılımı 1.6.5.27 olan vericiler için de geçerlidir. (bkz. xDrip+ Sistem Durumu - G5/G6 durumu [ekran görüntüsü](../Configuration/xdrip#transmitter-battery-status)nde gösterildiği gibi).
+* Sensörlerin başlatılmasındaki zorlukları önlemek için verici ömrünün 100. gününden önce uzatılması şiddetle tavsiye edilir.
+* 81 seri no ile başlayan ve yazılımı 1.6.5.**27**olan bir verici 100. günden sonra yalnızca [mühendislik modu](../Usage/Enabling-Engineering-Mode-in-xDrip) açılır ve 'yerel mod' devre dışı bırakılır ise süre uzatma mümkündür (hamburger menüsü -> ayarlar -> G5/G6 hata ayıklama ayarları -> yerel algoritma) çünkü verici hard reset mümkün DEĞİLDİR.
+* Verici ömrü uzatılırken çalışan sensör oturumu durdurulacaktır. Bu nedenle vericiyi sensör değişiminden önce uzatın ve 2 saatlik yeni bir ısınma aşaması olacağını unutmayın.
+* Sensörü hamburger menüsü aracılığıyla manuel olarak durdurun.
+* `mühendislik moduna` geçin: 
+   * şırıngayı temsil eden xDrip başlangıç ekranının sağ üstündeki karaktere dokunun
+   * ardından sağ alt köşedeki mikrofon simgesine uzun dokunun
+   * Açılan metin kutusuna "enable engineering mode" yazın 
+   * "tamam" ı tıklayın
+   * Google Konuşma motoru etkinse (ingilizce), sesli komutu da ingilizce olarak söyleyebilirsiniz: "enable engineering mode". 
+* G5 hata ayıklama ayarlarına gidin ve `OB1 toplayıcısını kullan` öğesinin etkinleştirildiğinden emin olun.
+* "hard reset transmitter" sesli komutunu kullanın.
+* Vericinin bir sonraki veri alımıyla birlikte sesli komut yürütülecektir.
+* Sistem durumuna bakarak (Hamburger menüsü -> sistem durumu) verici durumunu takip edin.
+* Yaklaşık 10 dk. sonra 'Classic Status Page' sayfasına geçip (sağa kaydırın) ve 'Toplayıcıyı yeniden başlat'ı tıklayın. Bu, yeni bir sensör başlatmaya gerek kalmadan sensör günlerini 0'a ayarlayacaktır.
 * Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
@@ -231,8 +231,8 @@ Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the
 * Start sensor and DO NOT BACKDATE! Always select "Yes, today"!
 
 * Restart collector (system status - if not replacing sensor)
-* Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
-* Long press the red xDrip+ blood drop icon on the main screen to disable the `Source Wizard Button`.
+* xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
+* `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
    
    ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
    
