@@ -332,13 +332,13 @@ xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edi
    
    * `Bluetooth'u aç` 
    * `Taramayı kullan`
-   * `Always discover services`
+   * `Her zaman hizmetleri keşfedin`
 
 * Diğer tüm seçenekler devre dışı bırakılmalıdır
    
    ![xDrip+ Libre Bluetooth Ayarları 2](../images/xDrip_Libre_BTSettings2.png)
 
-### Libre smart reader battery level
+### Libre akıllı okuyucu pil seviyesi
 
 * MiaoMiao 2 gibi akıllı okuyucuların pil seviyesi AAPS'de görüntülenebilir.
 * Ayrıntıları [ekran görüntüleri sayfasında](../Getting-Started/Screenshots#sensor-level-battery) bulabilirsiniz.
