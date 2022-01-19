@@ -56,7 +56,7 @@ When you are installing AndroidAPS for the first time, the **Setup Wizard** will
 
 ![Enable_Dash_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (See Option#2).
+When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
 
 ## Option 2: The Config Builder
 
@@ -254,35 +254,15 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ## Buttons
 
-.. list-table:: 
-      
-    * - ![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png)
-      - **REFRESH:** 
-			
-	Sends a refresh command to the active pod to update communication
-			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the [Troubleshooting section](#troubleshooting) below for additional information.
-    * - ![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png)  	 
-      - **POD MGMT:**
+![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication
 
-	Navigates to the Pod management menu   
-    * - ![ACK_ALERTS_Icon]		 
-      - **ACK ALERTS:**
-   			 
-	When pressed this will disable the pod expiration and low reservoir beeps and notifications. 
-			 
-	* Button is displayed only when pod time is past expiration warning time or low reservoir warning
-	* Upon successful dismissal, this icon will no longer appear.			 
-    * - ![SET_TIME_Icon]	 
-      - **SET TIME:**
+   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+   * See the Troubleshooting section below for additional information.
    
-	When pressed this will update the time on the pod with the current time on your phone.
-    * - ![RESUME_Icon]	 
-      - **RESUME DELIVERY:**
-   
-	Resumes the currently suspended, active pod
-
+![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu 	   
+![Silence_ALERTS_Icon]		 	
+![RESUME_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
+     
 ## Pod Management Menu
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab.
@@ -352,7 +332,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
 
-![ACT_1|(https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Actions%20Tab/ACT_1.png)
+![ACT_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Actions%20Tab/ACT_1.png)
 
 ## Level
 
