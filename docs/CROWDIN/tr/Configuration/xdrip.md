@@ -16,7 +16,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
    
    örn. https://API_SECRET@your-app-name.herokuapp.com/api/v1/
    
-   -> Hamburger Menüsü (ana ekranın sol üst kısmı) -> Ayarlar-> Bulut Yükleme-> Nightscout Sync (REST-API) -> Temel URL
+   -> Hamburger Menu (top left of homescreen) -> Settings-> Cloud Upload-> Nightscout Sync (REST-API) -> Base URL
 
 * `Otomatik Kalibrasyon`'u devre dışı bırakın `Otomatik Kalibrasyon` onay kutusu işaretliyse, `Verileri indir` öğesini bir kez etkinleştirin, ardından `Otomatik Kalibrasyon` onay kutusunu kaldırın ve `Verileri indir` öğesini devre dışı bırakın, aksi takdirde tedaviler (insülin & karbonhidratlar) Nightscout'a iki kez eklenecektir.
 
