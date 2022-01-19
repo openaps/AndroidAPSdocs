@@ -194,7 +194,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde verici seri numarasının son iki rakamı olan)
+* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde are the last two digits of the transmitter serial no.)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
