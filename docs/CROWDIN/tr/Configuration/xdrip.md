@@ -308,12 +308,12 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 
 ### Yeni sensör başlatılırken oluaşabilecek sorunlar
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
+Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aşağıdaki yöntemin çalışmayabileceğini unutmayın.
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Stop sensor
-* Restart your phone
-* Start sensor with code 0000 (four times zero)
+* Telefonuzu yeniden başlatın
+* Sensörü 0000 koduyla başlatın (dört kez sıfır)
 * Wait 15 minutes
 * Stop sensor
 * Start sensor with "real" code (printed on the adhesive protector)
