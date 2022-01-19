@@ -204,11 +204,11 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 * `Kaynak Sihirbazı Butonunu` etkinleştirmek için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
 * OB1& Yerel Mod dahil varsayılan ayarları otomatik kuran Kaynak Sihirbazı Düğmesini kullanın 
    * Bu sihirbaz ilk kurulumda size rehberlik eder.
-   * You will need your transmitter serial number if this is the first time you've used it.
-* Put in serial number of new transmitter. Be careful not to confuse 0 (zero) and O (capital letter o).
-* Insert new sensor (only if replacing).
-* Put transmitter into sensor - **Do not start sensor immediately!**
-* New "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J) can only be used in native mode.
+   * İlk kez kullanacaksanız, vericinizin seri numarasına ihtiyacınız olacaktır.
+* Yeni vericinin seri numarasını girin. 0 (sıfır) ve O'yu (büyük harf o) karıştırmamaya dikkat edin.
+* Yeni sensör takın (değiştiriyorsanız).
+* Vericiyi sensöre yerleştirin - **Sensörü hemen başlatmayın!**
+* Yeni "Firefly Vericileri" (seri numarası 8G, 8H veya 8J ile başlayanlar) yalnızca yerel modda (native mode) kullanılabilir.
 * The following options must not be activated for new "Firefly Transmitters" (serial no. starting with 8G, 8H or 8J):
    
    * Preemptive Restart (disable!)
