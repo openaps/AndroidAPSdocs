@@ -180,7 +180,10 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ## Silencing Pod Alerts
 
-*NOTE - The Silence ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*NOTE - The 
+
+
+S button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
@@ -255,15 +258,16 @@ Below is an explanation of the layout and meaning of the icons and status fields
 ## Buttons
 
 
-![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication
+![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
    
-![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu 	   
-![Silence_ALERTS_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/Silent_alert.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
-   * Button is displayed only when pod time is past expiration warning time
+![Silence_ALERTS_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+
+   * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
    
 ![RESUME_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
