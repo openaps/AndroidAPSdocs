@@ -110,20 +110,20 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
 
-* Insert new sensor (only if replacing)
+* Yeni sensör takın (değiştiriyorsanız)
 
-* Put transmitter into sensor
-* If a message pops up asking to pair with "DexcomXX", where "XX" is the last two characters of the transmitter's serial no., accept it (tap "pair")
-* Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
+* Vericiyi sensöre yerleştirin
+* "DexcomXX" ile eşleştirmeyi isteyen "XX"in verici seri numarasının son iki karakteri olduğu bir mesaj gelirse, kabul edin ("eşleştir"e dokunun)
+* Sistem Durumu -> Klasik Durum Sayfası -> G5/G6 durumu -> PhoneServiceState'de aşağıdaki bilgiler gösterilmeden yeni sensör başlatmayın:
    
-   * Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-   * Transmitter serial starting with 8G, 8H or 8J: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got no raw 19:04")
+   * 80 veya 81 ile başlayan vericilerde: "Veri var ss:dd" (ör "Veri var 19:04")
+   * 8G, 8H veya 8J ile başlayan vericilerde: "Glikoz ss:dd" (örn. "Got glucose 19:04") veya "Got no raw ss:dd" (örn. "Got no raw 19:04")
    
    ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-* Start sensor (only if replacing)
+* Sensörü başlat (değiştiriyorsanız)
    
-   -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
+   -> Ekranın alt kısmına yakın bir yerde, birkaç dakika sonra `Isınma x,x saat kaldı` görüntülenmelidir.
 
 -> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
