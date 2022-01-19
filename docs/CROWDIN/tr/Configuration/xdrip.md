@@ -167,17 +167,17 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 * Vericinin bir sonraki veri alımıyla birlikte sesli komut yürütülecektir.
 * Sistem durumuna bakarak (Hamburger menüsü -> sistem durumu) verici durumunu takip edin.
 * Yaklaşık 10 dk. sonra 'Classic Status Page' sayfasına geçip (sağa kaydırın) ve 'Toplayıcıyı yeniden başlat'ı tıklayın. Bu, yeni bir sensör başlatmaya gerek kalmadan sensör günlerini 0'a ayarlayacaktır.
-* Alternative: If you see a message "Phone Service State: Hard Reset maybe failed" on second system status screen just start the sensor and this message should go away.
+* Alternatif: İkinci sistem durumu ekranında "Phone Service State: Hard Reset maybe failed" mesajını görürseniz, sensörü başlatmanız yeterlidir. Bu mesaj kaybolacaktır.
    
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
-* Transmitter days will be set to 0 after successful extension and start of sensor.
+* Başarılı uzatma ve sensörün başlatılmasından sonra verici günleri 0 olacaktır.
 
-### Replace transmitter
+### Vericiyi değiştirme
 
 2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
 
-Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
 
 * Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
 * Stop sensor (only if replacing sensor)
