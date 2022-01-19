@@ -180,27 +180,27 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
 
 * Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
-* Stop sensor (only if replacing sensor)
+* Sensörü Durdurun (yalnızca sensör değiştiriliyorsa)
    
-   Ensure it really is stopped:
+   Gerçekten durdurulduğundan emin olun:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   İkinci "G5/G6 Status" ekranının yaklaşık yarısında `Queue Items`'a bakın - `(1) Stop Sensor` gibi bir şey göreceksiniz.
    
-   Wait until this goes - usually within a few minutes. Sensor Status must be "Stopped" (see screenshot).
+   Bu gidene kadar bekleyin - (genellikle birkaç dakika) Sensör Durumu "Stopped" olmalıdır (ekran görüntüsüne bakın).
    
-   -> To remove transmitter without stopping sensor see this video <https://youtu.be/AAhBVsc6NZo>.
+   -> Sensörü durdurmadan vericiyi çıkarmak için bu videoyu <https://youtu.be/AAhBVsc6NZo> izleyin.
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
    ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* Forget device in xDrip+ system status AND in smartphone’s BT settings (Will be shown as Dexcom?? whereas ?? are the last two digits of the transmitter serial no.)
+* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde verici seri numarasının son iki rakamı olan)
    
    ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
 
-* Remove transmitter (and sensor if replacing sensor)
+* Vericiyi (ve sensörü değiştiriyorsanız sensörü) çıkarın
 
-* Put the old transmitter far away to prevent reconnection. A microwave is a perfect Faraday shield for this - but unplug power cord to be 100% no one is turning the microwave on.
+* Yeniden bağlanmayı önlemek için eski vericiyi uzağa koyun. Mikrodalga, bunun için mükemmel bir Faraday kalkanıdır - ancak kimsenin mikrodalgayı açmaması için güç kablosunu prizden çekin.
 * `Kaynak Sihirbazı Butonunu` etkinleştirmek için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
 * OB1& Yerel Mod dahil varsayılan ayarları otomatik kuran Kaynak Sihirbazı Düğmesini kullanın 
    * Bu sihirbaz ilk kurulumda size rehberlik eder.
@@ -247,11 +247,11 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 * Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
 * Stop sensor if necessary
    
-   Ensure it really is stopped:
+   Gerçekten durdurulduğundan emin olun:
    
-   On the second "G5/G6 Status" screen look at `Queue Items` about halfway down - It may say something like `(1) Stop Sensor`
+   İkinci "G5/G6 Status" ekranının yaklaşık yarısında `Queue Items`'a bakın - `(1) Stop Sensor` gibi bir şey göreceksiniz.
    
-   Wait until this goes - usually within a few minutes.
+   Bu gidene kadar bekleyin - (genellikle birkaç dakika)
    
    ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
    
@@ -300,7 +300,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 ### Problem connecting transmitter
 
 * Transmitter must be shown in your smartphone's bluetooth settings.
-* Transmitter will be shown as Dexcom?? whereas ?? represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
+* Transmitter will be shown as Dexcom?? ?? yerinde represent the last two digits of your transmitter serial no. (i.e. DexcomHY).
 * Open system status in xDrip+ (hamburger menu on top left side of home screen).
 * Check if your transmitter is shown on first status page ('classic status page').
 * If not: Delete device from your smartphone's bluetooth settings and restart collector.
