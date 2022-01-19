@@ -178,7 +178,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ![Resume_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_4.jpg)
 
-## Acknowledging Pod Alerts
+## Silencing Pod Alerts
 
 *NOTE - The Silence ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
@@ -192,7 +192,7 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 ![ACK_alerts_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/ACK%20Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been acknowledged**. Click the **OK** button to confirm and dismiss the dialog.
+3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
 
 
 ![ACK_alerts_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/ACK%20Alerts/ACK_ALERTS_3.png)
@@ -254,13 +254,18 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ## Buttons
 
+
 ![Refresh_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
    
 ![POD_MGMT_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu 	   
-![Silence_ALERTS_Icon]		 	
+![Silence_ALERTS_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/Silent_alert.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+
+   * Button is displayed only when pod time is past expiration warning time
+   * Upon successful dismissal, this icon will no longer appear.
+   
 ![RESUME_Icon](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
      
 ## Pod Management Menu
@@ -302,7 +307,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **ACK ALERTS button**.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
 	
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -471,7 +476,4 @@ All of the development work for the Omnipod DASH driver is done by the community
 if it exists, please confirm.comment/add information on your problem.
 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
-
-
-
 
