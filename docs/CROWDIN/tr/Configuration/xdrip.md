@@ -125,7 +125,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    -> Ekranın alt kısmına yakın bir yerde, birkaç dakika sonra `Isınma x,x saat kaldı` görüntülenmelidir.
 
--> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Vericinizin seri numarası does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Restart collector (system status - if not replacing sensor}
 * Do not turn original Dexcom receiver (if used) back on before xDrip+ shows first readings.
