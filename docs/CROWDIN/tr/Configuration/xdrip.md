@@ -72,7 +72,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 * Diğer tüm seçenekler devre dışı bırakılmalıdır
 * Pil uyarı seviyesini 280'e ayarlayın (G5/G6 Hata Ayıklama Ayarlarının alt kısmı)
    
-   ![xDrip+ G5/G6 Debug Settings](../images/xDrip_Dexcom_DebugSettings.png)
+   ![xDrip+ G5/G6 Hata Ayıklama Ayarları](../images/xDrip_Dexcom_DebugSettings.png)
 
 ### "Önleyici yeniden başlatma" önerilmez
 
@@ -80,7 +80,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 Dexcom sensörlerinde otomatik olarak süre uzatma (`önleyici yeniden başlatma`), yeniden başlatmanın ardından 9. günde KŞ değerlerinde "atlamalara" yol açabileceğinden önerilmez.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![Öncelikli Yeniden Başlatmadan Sonra xDrip+ ölçüm farkı](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Açık olan şu ki, G6'yı kullanmak, başlangıçta düşünülenden biraz daha karmaşık olabilir. Güvenli bir şekilde kullanmak için dikkat edilmesi gereken birkaç nokta vardır:
 
@@ -108,7 +108,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 
 * Yeni vericinin seri numarasını girin (verici paketinin üzerinde veya vericinin arkasında). `0` (sıfır) ve `O` (büyük harf O)'yu karıştırmamaya dikkat edin.
    
-   ![xDrip+ Dexcom Transmitter Serial No](../images/xDrip_Dexcom_TransmitterSN.png)
+   ![xDrip+ Dexcom Verici Seri Numarası](../images/xDrip_Dexcom_TransmitterSN.png)
 
 * Yeni sensör takın (değiştiriyorsanız)
 
@@ -131,18 +131,18 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
 * `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Dexcom Verici 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Dexcom Verici 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Dexcom Verici 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Dexcom Verici 4](../images/xDrip_Dexcom_Transmitter04.png)
 
 ### Verici pil durumu
 
 * Verici pil durumu sistem durumunda kontrol edilebilir (Ana ekranda sol üstte Hamburger menüsü)
-* İkinci ekranı görmek için bir kez sola kaydırın. ![xDrip+ First Transmitter 4](../images/xDrip_Dexcom_Battery.png)
+* İkinci ekranı görmek için bir kez sola kaydırın. ![xDrip+ İlk Verici 4](../images/xDrip_Dexcom_Battery.png)
 
 * Vericinin pil bitmesi nedeniyle "kullanım dışı kaldığı" kesin değerler bilinmemektedir. Verici “kullanım dışı” kaldıktan sonra aşağıdaki bilgiler çevrimiçi olarak yayınlandı:
    
@@ -190,13 +190,13 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    
    -> Sensörü durdurmadan vericiyi çıkarmak için bu videoyu <https://youtu.be/AAhBVsc6NZo> izleyin.
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Dexcom Sensörü Durdur 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Dexcom Sensörü Durdur 2](../images/xDrip_Dexcom_StopSensor2.png)
 
-* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde are the last two digits of the transmitter serial no.)
+* xDrip sistem durumunda VE akıllı telefonların BT ayarlarında cihazı unutun (Dexcom?? olarak görünen ?? yerinde verici seri numarasının son iki hanesi olan)
    
-   ![xDrip+ Forget Device](../images/xDrip_Dexcom_ForgetDevice.png)
+   ![xDrip+ Cihazı unut](../images/xDrip_Dexcom_ForgetDevice.png)
 
 * Vericiyi (ve sensörü değiştiriyorsanız sensörü) çıkarın
 
@@ -215,7 +215,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    * Sensörü Yeniden Başlat (devre dışı bırakın!)
    * xDrip algoritmasına dönüş (devre dışı bırakın!)
    
-   ![Settings for Firefly transmitters](../images/xDrip_Dexcom_FireflySettings.png)
+   ![Firefly vericileri için ayarlar](../images/xDrip_Dexcom_FireflySettings.png)
 
 * Aşağıdaki bilgilerden birinin görüntülendiğini Klasik Durum Sayfası -> G5/G6 durumu -> PhoneServiceState satırında kontrol edin:
    
@@ -226,7 +226,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 
 * Yeni sensör başlatılmadan önce vericinin xDrip ile birkaç kez iletişim kurması gerektiğinden 15 dakika bekleyin. Pil verileri, verici yazılımı bilgilerinin altında gösterilecektir.
    
-   ![Firefly transmitter battery data](../images/xDrip_Dexcom_FireflyBattery.png)
+   ![Firefly verici pil verileri](../images/xDrip_Dexcom_FireflyBattery.png)
 
 * Sensörü başlatın ancak sakın "Bugün değil" butonuna BASMAYIN! Her zaman "Evet, bugün" ! butonunu kullanın.
 
@@ -234,13 +234,13 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
 * `Kaynak Sihirbazı Butonunu` devre dışı bırakmak için ana ekrandaki kırmızı xDrip kan damlası simgesine uzun basın.
    
-   ![xDrip+ Dexcom Transmitter 1](../images/xDrip_Dexcom_Transmitter01.png)
+   ![xDrip+ Dexcom Verici 1](../images/xDrip_Dexcom_Transmitter01.png)
    
-   ![xDrip+ Dexcom Transmitter 2](../images/xDrip_Dexcom_Transmitter02.png)
+   ![xDrip+ Dexcom Verici 2](../images/xDrip_Dexcom_Transmitter02.png)
    
-   ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
+   ![xDrip+ Dexcom Verici 3](../images/xDrip_Dexcom_Transmitter03.png)
    
-   ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+   ![xDrip+ Dexcom Verici 4](../images/xDrip_Dexcom_Transmitter04.png)
 
 ### Yeni sensör başlatma
 
@@ -253,15 +253,15 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
    
    Bu gidene kadar bekleyin - (genellikle birkaç dakika)
    
-   ![xDrip+ Stop Dexcom Sensor 1](../images/xDrip_Dexcom_StopSensor.png)
+   ![xDrip+ Dexcom Sensörü Durdur 1](../images/xDrip_Dexcom_StopSensor.png)
    
-   ![xDrip+ Stop Dexcom Sensor 2](../images/xDrip_Dexcom_StopSensor2.png)
+   ![xDrip+ Dexcom Sensörü Durdur 2](../images/xDrip_Dexcom_StopSensor2.png)
 
 * Kontakları (vericinin arka tarafını) alkolle temizleyin ve kurumaya bırakın.
 
 * Yeni sensör başlatma durumunda, `Sensörü Yeniden Başlat` ve `Önleyici yeniden başlatma`'yı devre dışı bırakın (Hamburger menüsü -> Ayarlar -> G5/G6 Hata Ayıklama Ayarları). Bu adımı atlarsanız ve bu işlevler etkinse, yeni sensör düzgün başlamaz.
    
-   ![xDrip+ Preemptive Restart](../images/xDrip_Dexcom_Restart.png)
+   ![xDrip+ Önleyici Yeniden Başlatma](../images/xDrip_Dexcom_Restart.png)
 
 * Sensör Başlatma
    
@@ -277,23 +277,23 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 * G6'yı "native mode" kullanırsanız kalibrasyon gerekmez. xDrip+, 2 saatlik ısınmadan sonra okumaları otomatik olarak gösterecektir.
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom Alıcısını (kullanılıyorsa) açmayın.
    
-   ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
+   ![xDrip+ Dexcom Sensörü Başlat 1](../images/xDrip_Dexcom_SensorStart01.png)
    
-   ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+   ![xDrip+ Dexcom Sensörü Başlat 2](../images/xDrip_Dexcom_SensorStart02.png)
 
 ### Sensör kodunu öğrenme
 
 * 2019/05/18 tarihli master (ana) ve sonraki sürümlerde sensör kodu sistem durumunda gösterilir (Ana ekranda sol üstte Hamburger menüsü\--->Sistem durumu).
 * İkinci ekranı görmek için bir kez sola kaydırın.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code2](../images/xDrip_Dexcom_SensorCode2.png)
+   ![xDrip Dexcom Sensör Kodu Alma 2](../images/xDrip_Dexcom_SensorCode2.png)
 
 * Dexcom sensör kodu, xDrip+ günlüklerinde de bulunabilir.
 
 * 3 nokta menüye dokunun (ana ekranda sağ üst taraf)
 * `Olay Günlüklerini Görüntüle` öğesini seçin ve "code" olarak arama yapın.
    
-   ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+   ![xDrip Dexcom Sensör Kodu Alma](../images/xDrip_Dexcom_SensorCode.png)
 
 ## Dexcom G5/G6 ve xDrip+ ile İlgili Sorunları Giderme
 
@@ -310,7 +310,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 
 Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aşağıdaki yöntemin çalışmayabileceğini unutmayın.
 
-* Native sensor is marked as "FAILED: Sensor Failed Start"
+* Sistem durumunda sensör "FAILED: Sensor Failed Start" olarak göründüğünde;
 * Sensörü durdurun
 * Telefonuzu yeniden başlatın
 * Sensörü 0000 koduyla başlatın (dört kez sıfır)
@@ -322,21 +322,21 @@ xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edi
 
 ## xDrip+ & Freestyle Libre
 
-### Libre specific settings
+### Libre'ye özel ayarlar
 
-* Open Bluetooth Settings -> Hamburger Menu (top left of homescreen) -> Settings -> scroll down -> Less common settings -> Bluetooth Settings
+* Bluetooth Ayarlarını Aç -> Hamburger Menüsü (ana ekranın sol üst köşesinde) -> Ayarlar -> aşağı kaydır -> Gelişmiş ayarlar -> Bluetooth Ayarları
    
-   ![xDrip+ Libre Bluetooth Settings 1](../images/xDrip_Libre_BTSettings1.png)
+   ![xDrip+ Libre Bluetooth Ayarları 1](../images/xDrip_Libre_BTSettings1.png)
 
 * Aşağıdaki ayarları etkinleştirin
    
-   * `Turn Bluetooth on` 
-   * `Use scanning`
+   * `Bluetooth'u aç` 
+   * `Taramayı kullan`
    * `Always discover services`
 
 * Diğer tüm seçenekler devre dışı bırakılmalıdır
    
-   ![xDrip+ Libre Bluetooth Settings 2](../images/xDrip_Libre_BTSettings2.png)
+   ![xDrip+ Libre Bluetooth Ayarları 2](../images/xDrip_Libre_BTSettings2.png)
 
 ### Libre smart reader battery level
 
@@ -345,8 +345,8 @@ xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edi
 
 ### Libre Vericiyi Bağla & sensörü başlat
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Libre Verici & Sensör başlatma 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Libre Verici & Sensör başlatma 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Libre Verici & Sensör başlatma 3](../images/xDrip_Libre_Transmitter03.png)
