@@ -26,13 +26,13 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
    
    **Güvenlik uyarısı : xDrip+'tan "Tedavileri yükle" seçeneğini devre dışı bırakmalısınız, aksi takdirde tedaviler AAPS'de iki katına çıkarak yanlış COB (aktif karbonhidrat) ve IOB (aktif insülin) hesaplanmasına neden olabilir.**
 
-* Option `Alert on failures` should also be deactivated. Otherwise you will get an alarm every 5 minutes in case wifi/mobile network is too bad or the server is not available.
+* `Hatalarda uyarı ver` seçeneği de devre dışı bırakılmalıdır. Aksi takdirde, wifi/mobil ağın çok kötü olması veya sunucunun müsait olmaması durumunda her 5 dakikada bir alarm alırsınız.
    
    ![xDrip+ Basic Settings 1](../images/xDrip_Basic1.png)
    
    ![xDrip+ Basic Settings 2](../images/xDrip_Basic2.png)
 
-* **InterApp-Settings** (Broadcast) If you are going to use AndroidAPS and the data should be forwarded to i.e. AndroidAPS you have to activate broadcasting in xDrip+ in Inter-App settings.
+* **Ugy.lar-arası ayarlar** (Yayın) AndroidAPS kullanacaksanız ve veriler AndroidAPS'e iletilecekse, Uygulamalar Arası ayarlarda xDrip+'da yayını etkinleştirmeniz gerekir.
 
 * In order for the values to be equal, you should activate `Send the displayed glucose value`.
 
