@@ -311,14 +311,14 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aşağıdaki yöntemin çalışmayabileceğini unutmayın.
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
-* Stop sensor
+* Sensörü durdurun
 * Telefonuzu yeniden başlatın
 * Sensörü 0000 koduyla başlatın (dört kez sıfır)
-* Wait 15 minutes
-* Stop sensor
-* Start sensor with "real" code (printed on the adhesive protector)
+* 15 dakika bekleyin
+* Sensörü durdurun
+* Sensörü "gerçek" kodla başlatın (yapışkan koruyucunun üzerine basılmıştır)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edin. Yalnızca xDrip+ günlüklerinde, xdrip+'ın bir sensörü durdurup durdurmadığını erken bir aşamada tespit edebilirsiniz. En son durum, başlangıç ekranının altında her zaman doğru gösterilmiyor.
 
 ## xDrip+ & Freestyle Libre
 
@@ -340,10 +340,10 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 
 ### Libre smart reader battery level
 
-* Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots#sensor-level-battery).
+* MiaoMiao 2 gibi akıllı okuyucuların pil seviyesi AAPS'de görüntülenebilir.
+* Ayrıntıları [ekran görüntüleri sayfasında](../Getting-Started/Screenshots#sensor-level-battery) bulabilirsiniz.
 
-### Connect Libre Transmitter & start sensor
+### Libre Vericiyi Bağla & sensörü başlat
 
 ![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
