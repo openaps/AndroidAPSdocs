@@ -104,7 +104,7 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
 
-![Activate_Pod_7](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_7.png)    ![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
+![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
 
 5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
 
