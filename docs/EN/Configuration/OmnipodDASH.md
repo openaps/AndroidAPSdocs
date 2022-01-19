@@ -68,31 +68,31 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
-![Enable_Dash_2] ![Enable_Dash_3]
+![Enable_Dash_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_2.png)    ![Enable_Dash_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_3.png)
  
 ## Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see an **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
 
-![Enable_Dash_4]
+![Enable_Dash_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
 
 # Dash Configuration
 
 Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO] Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-![POD_MGMT_LOGO] Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+![POD_MGMT_LOGO](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
 ## Activate Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
-![Activate_Pod_1] ![Activate_Pod_2]
+![Activate_Pod_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_1.png)    ![Activate_Pod_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_2.png)
 
 2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
 
-![Activate_Pod_3] ![Activate_Pod_4]
+![Activate_Pod_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_3.png)    ![Activate_Pod_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_4.jpg)
 
 Ensure the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
@@ -100,11 +100,11 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 **NOTE**: Just in case you get an error message here (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
-![Activate_Pod_5] ![Activate_Pod_6]
+![Activate_Pod_5](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
 
 4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
 
-![Activate_Pod_7] ![Activate_Pod_8]
+![Activate_Pod_7](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_7.png)    ![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
 
 5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
 
