@@ -34,17 +34,17 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Omnipod Dash PDM to send commands to your Omnipod Dash pod. An Omnipod Dash pod only allows a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with your pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
 
 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
 
 **Your pod will not stop delivering insulin when it is not connected to AndroidAPS**.
 Default basal rates are programmed on the pod on activation as defined in the current active profile.
-As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost) the pod will automatically fall back to default basal rates.
+As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
 
 **30 min Basal Rate Profiles are NOT supported in AndroidAPS.**
 **The AndroidAPS Profile does not support a 30 minute basal rate time frame**
-If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
+If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to chnage this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
 
 # Enabling the Dash Driver in AAPS
 
@@ -72,7 +72,7 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
  
 ## Verification of Omnipod Driver Selection
 
-To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see an **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
+To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
 
 ![Enable_Dash_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
 
