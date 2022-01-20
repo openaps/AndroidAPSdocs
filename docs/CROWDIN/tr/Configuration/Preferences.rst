@@ -1,24 +1,24 @@
 Tercihler
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **Tercihleri Açın**.
 
   .. image:: ../images/Pref2020_Open2.png
-    :alt: Open preferences
+    :alt: Tercihleri açın
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pompa sekmesi) bu sekmeyi açarak ve Eklenti tercihleri'ne tıklayın.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
-    :alt: Open plugin preferences
+    :alt: Tercihler Eklentisini açın
 
-* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+* **Alt menüler**, alt menü başlığının altındaki üçgene tıklanarak açılabilir.
 
   .. image:: ../images/Pref2020_Submenu2.png
-    :alt: Open submenu
+    :alt: Alt menüyü aç
 
-* With the **filter** on top of the preferences screen you can quickly access certain preferences. Just start typing part of the text you are looking for.
+* Tercihler ekranının üst kısmındaki **filtre** ile belirli tercihlere hızlı bir şekilde erişebilirsiniz. Sadece aradığınız metnin bir kısmını yazmaya başlayın.
 
   .. image:: ../images/Pref2021_Filter.png
-    :alt: Preferences filter
+    :alt: Tercihler filtresi
 
 .. içerik:: 
    :backlinks: giriş
@@ -27,7 +27,7 @@ Tercihler
 Genel
 ===========================================================
 
-**Units**
+**Ünite**
 
 * Set units to mmol/l or mg/dl depending on your preferences.
 
