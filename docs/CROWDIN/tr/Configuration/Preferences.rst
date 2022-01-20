@@ -29,27 +29,27 @@ Genel
 
 **Ünite**
 
-* Set units to mmol/l or mg/dl depending on your preferences.
+* Kullanımınıza bağlı olarak birimleri mmol/l veya mg/dl olarak ayarlayın.
 
-**Language**
+**Dil**
 
-* New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* Telefonun varsayılan dilini kullanmak için yeni seçenek (önerilir). 
+* AAPS'i standart telefon dilinden farklı bir dilde kullanmak istiyorsanız, diğer dil seçenekleri arasından seçim yapabilirsiniz.
+* Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Sistem varsayılan android dilini seçtiğiniz dile değiştiren komutlarda oluşan bir android sorunu nedeniyle bazen bu karışıklık oluşmaktadır.
 
   .. image:: ../images/Pref2020_General.png
-    :alt: Preferences > General
+    :alt: Tercihler > Genel
 
-**Patient name**
+**Hasta Adı**
 
-* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+* Birden fazla kurulum arasında ayrım yapmanız gerekiyorsa kullanılabilir (örn. ailenizde iki T1D çocuk varsa).
 
-Protection
+Güvenlik
 -----------------------------------------------------------
-Master password
+Ana parola
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+* Sürüm 2.7'den itibaren şifreli oldukları için `ayarları <../Usage/ExportImportSettings.html>`_ dışa aktarabilmek için gereklidir.
+  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. This is a know issue of OnePlus on some phones.**
 
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
