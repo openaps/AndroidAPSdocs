@@ -34,7 +34,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Omnipod Dash PDM to send commands to your Omnipod Dash pod. An Omnipod Dash pod only allows a single device to send communication to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with your pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Omnipod Dash PDM to send commands to your Omnipod Dash pod. An Omnipod Dash pod only allows a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Omnipod Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with your pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
 
 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
 
@@ -94,7 +94,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![Activate_Pod_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_3.png)    ![Activate_Pod_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_4.jpg)
 
-Ensure the new pod and the phone running AAPS are within proximity of each other and click the **Next** button.
+Make sure that the new pod and the phone running AAPS are within proximity of each other and click the **Next** button.
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 
@@ -102,7 +102,7 @@ Ensure the new pod and the phone running AAPS are within proximity of each other
 
 ![Activate_Pod_5](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
 
 ![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
 
