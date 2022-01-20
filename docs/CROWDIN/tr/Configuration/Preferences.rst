@@ -49,19 +49,19 @@ Güvenlik
 Ana parola
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Sürüm 2.7'den itibaren şifreli oldukları için `ayarları <../Usage/ExportImportSettings.html>`_ dışa aktarabilmek için gereklidir.
-  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. This is a know issue of OnePlus on some phones.**
+  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefon kullanıcıları tarafından bildirilen bir sorundur.**
 
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
+* "Genel" altındaki üçgeni tıklayın
+* "Ana-Parola" ya tıklayın
+* Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
   .. image:: ../images/MasterPW.png
-    :alt: Set master password
+    :alt: Ana parola tanımlama
   
-Settings protection
+Ayarların Güvenliği
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Protect your settings with a password or phone's biometric authentication (i.e. `child is using AAPS <../Children/Children.html>`_).
+* Ayarlarınızı bir parola veya telefonun biyometrik doğrulaması ile koruyun (ör. `çocuğunuz AAPS kullanıyor ise <../Children/Children.html>`_).
 * Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
 * If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
 
