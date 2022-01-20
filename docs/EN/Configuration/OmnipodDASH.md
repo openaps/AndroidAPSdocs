@@ -170,7 +170,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ![Resume_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
 
-2. When the Resume delivery command is successfully confirmed a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
 
 ![Resume_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_3.png)
 
@@ -180,10 +180,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ## Silencing Pod Alerts
 
-*NOTE - The 
-
-
-S button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the Silence ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*NOTE - The "SILENCE ALERTS" button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
 The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
