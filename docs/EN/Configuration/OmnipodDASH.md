@@ -94,7 +94,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![Activate_Pod_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_3.png)    ![Activate_Pod_4](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_4.jpg)
 
-Ensure the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
+Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 
@@ -102,7 +102,7 @@ Ensure the new pod and the phone running AAPS are within close proximity of each
 
 ![Activate_Pod_5](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
 
-4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to your usually selected site on your body. When finished, click on the **Next** button.
+4. Next, prepare the infusion site of the new pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
 
 ![Activate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
 
