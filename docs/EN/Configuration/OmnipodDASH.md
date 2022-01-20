@@ -336,7 +336,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 1. Go to the **Actions (ACT)** tab in the main AAPS interface.
 
-2. Under the **Careportal (1)** section the following 3 fields will have their **age reset** to 0 days and 0 hours **after each pod change**: **Insulin** and **Cannula**. This is done because of how the Omnipod pump is built and operates. The **pump battery** and **insulin reservoir** are self contained inside of each pod. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+2. Under the **Careportal (1)** section the **Insulin** and **Cannula** filds will have their **age reset** to 0 days and 0 hours **after each pod change**. This is done because of how the Omnipod pump is built and operates. Since the pod inserts the cannula directly into the skin at the site of the pod application, a traditional tube is not used in Omnipod pumps. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
 
 ![ACT_1](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Actions%20Tab/ACT_1.png)
 
@@ -344,7 +344,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 **Insulin Level**
 
-Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units will be displayed”. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.
+Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left.
 The omnipod DASH overview tab will display as described the below:
 
   * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
@@ -358,8 +358,8 @@ Additional note:
 
 ## Delivery suspended
 
-  * There is no suspend button anymore.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. When this happens:
+  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes. 
+  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
      - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened. 
      - AAPS will try to set the new basal profile every 15 minutes.
