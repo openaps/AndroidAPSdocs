@@ -240,14 +240,14 @@ Below is an explanation of the layout and meaning of the icons and status fields
    - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
    - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
 
-* **Last bolus:** Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+* **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
 * **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
 * **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
 
    - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
    - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below this value the exact units are displayed.
+* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming. 
 * **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
