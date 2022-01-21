@@ -59,34 +59,34 @@ Ana parola
   .. image:: ../images/MasterPW.png
     :alt: Ana parola tanımlama
   
-Settings protection
+Ayarların Güvenliği "Settings protection"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Ayarlarınızı bir parola veya telefonun biyometrik doğrulaması ile koruyun (ör. `çocuğunuz AAPS kullanıyor ise <../Children/Children.html>`_).
-* Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
-* If you are using a custom password click on line "Settings password" to set password as described `above <../Configuration/Preferences.html#master-password>`__.
+* Ayarların güvenliği "settings protection" tıklandığında, seçenekler arasındaki özel şifre "custom password" yalnızca `dışa aktarılan ayarların <../Usage/ExportImportSettings.html>`_ güvenliğini sağlamak için ana parolayı kullanmak, iç ayarların değiştirilmesinde farklı parola kullanmak istiyorsanız ayarlanmalıdır. Ayarlarda ve tercihlerde değişiklik yapmak için bu paraloyı hatırlamanız gerektiğini unutmayın.
+* Ayarlar için Özel şifre kullanmak istiyorsanız, şifreyi `açıklamadaki gibi ayarlamak için <../Configuration/Preferences.html#master-password>`__ "custom password" satırına tıklayın.
 
   .. image:: ../images/Pref2020_Protection.png
     :alt: Güvenlik
 
 Uygulama Güvenliği
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If app is protected you must enter password or use phone's biometric authentication to open AAPS.
+* Uygulama korumalıysa, AAPS'i açmak için şifre girmeniz veya telefonun biyometrik kimlik doğrulamasını kullanmanız gerekir.
 * Yanlış şifre girilirse uygulama hemen kapanır - ancak daha önce başarıyla açılmışsa arka planda çalışmaya devam eder.
 
 Bolus koruması
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
-* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
+* AAPS küçük bir çocuk tarafından kullanılıyorsa ve siz `SMS yoluyla bolus gönderiyorsanız <../Children/SMS-Commands.html>`_ bolus koruması yararlı olabilir.
+* Aşağıdaki örnekte biyometrik koruma istemini görüyorsunuz. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
 
   .. image:: ../images/Pref2020_PW.png
-    :alt: Prompt biometric protection
+    :alt: Biyometrik koruma
 
-Skin
+Görünüm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* You can choose from four types of skins:
+* Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
   .. image:: ../images/Pref2021_SkinWExample.png
-    :alt: Select skin + examples
+    :alt: Görünüm seçimi + örnekler
 
 * 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 * Difference of other skins depend of phone's display orientation.
