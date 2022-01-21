@@ -88,34 +88,34 @@ Görünüm
   .. image:: ../images/Pref2021_SkinWExample.png
     :alt: Görünüm seçimi + örnekler
 
-* 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
-* Difference of other skins depend of phone's display orientation.
+* 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
+* Diğer görünümlerin farkı, telefonun ekran yönüne bağlıdır.
 
-Portrait orientation
+Dikey oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Orijinal Görünüm**de **Düğmeler her zaman ekranın altında görüntülenir** ve değişmez.
+* **Geniş Ekran**, diğer dış görünümlere kıyasla tüm grafiklerden daha büyük bir boyuta sahiptir.
 
-Landscape orientation
+Yatay oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-* Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Orijinal Görünüm** ve **Geniş Ekran**'ı kullandığınızda ekranın alt kısmındaki düğmeleri görmek için aşağı kaydırmanız gerekir.
+* **Geniş Ekran**, diğer dış görünümlere kıyasla tüm grafiklerden daha büyük bir boyuta sahiptir.
 
   .. image:: ../images/Screenshots_Skins.png
-    :alt: Skins depending on phone's display orientation
+    :alt: Ekran yönüne göre görünüm
 
 Genel Bakış
 ===========================================================
 
-* In overview section you can define preferences for home screen.
+* Genel bakış bölümünde ana ekran için tercihleri tanımlayabilirsiniz.
 
   .. image:: ../images/Pref2020_OverviewII.png
-    :alt: Preferences > Overview
+    :alt: Tercihler > Genel Bakış
 
 Ekranı açık tut
 -----------------------------------------------------------
-* Useful while giving a presentation. 
-* It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+* Sunum yaparken kullanışlıdır. 
+* Çok fazla enerji tüketeceğinden telefonunuzu şarj cihazına takmanız tavsiye edilir.
 
 Butonlar
 -----------------------------------------------------------
