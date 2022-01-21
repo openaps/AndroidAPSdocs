@@ -240,7 +240,7 @@ Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri gör
 
 ## Genel
 
-### Overview
+### Genel Bakış
 
 Döngünüzün mevcut durumu ve en yaygın eylemler için düğmeleri görüntüler (ayrıntılar için [GİRİŞ ekranı bölümüne bakın](../Getting-Started/Screenshots.md)). Ayarlara dişli çark tıklanarak erişilebilir.
 
