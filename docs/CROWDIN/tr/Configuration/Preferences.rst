@@ -382,11 +382,11 @@ NSClient
 .. image:: ../images/Pref2020_NSClient.png
   :alt: NSClient
 
-* Set your *Nightscout URL* (i.e. https://yourwebsitename.herokuapp.com) and the *API secret* (a 12 character password recorded in your Heroku variables).
-* This enables data to be read and written between both the Nightscout website and AndroidAPS.  
-* Double check for typos here if you are stuck in Objective 1.
-* **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-* *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
+* *Nightscout URL'nizi* ayarlayın (ör. https://yourwebsitename.herokuapp.com) ve *API şifresi* (Heroku değişkenlerinize kaydedilen 12 karakterlik bir parola).
+* Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.  
+* Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
+* **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+* *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
 
 Connection settings
@@ -447,17 +447,17 @@ Data choices
 ===========================================================
 
 .. image:: ../images/Pref2020_DataChoice.png
-  :alt: Data choices
+  :alt: Veri seçenekleri
 
-* You can help develop AAPS further by sending crash reports to the developers.
+* Geliştiricilere kilitlenme raporları göndererek AAPS'nin daha da geliştirilmesine yardımcı olabilirsiniz.
 
-Maintenance settings
+Bakım ayarları
 ===========================================================
 
 .. image:: ../images/Pref2020_Maintenance.png
-  :alt: Maintenance settings
+  :alt: Bakım ayarları
 
-* Standard recipient of logs is logs@androidaps.org.
+* Günlüklerin standart alıcısı logs@androidaps.org'dur.
 * If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
 
 Open Humans
@@ -465,5 +465,5 @@ Open Humans
 * You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
 * In Preferences you can define when data shall be uploaded
 
-  * only if connected to WiFi
+  * yalnızca WiFi'ye bağlıysa
   * only if charging
