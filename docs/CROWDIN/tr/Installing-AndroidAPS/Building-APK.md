@@ -56,7 +56,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
-## Overview
+## Genel Bakış
 
 In general, the steps necessary to build the APK file:
 
