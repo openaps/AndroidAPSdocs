@@ -59,7 +59,7 @@ Ana parola
   .. image:: ../images/MasterPW.png
     :alt: Ana parola tanımlama
   
-Ayarların Güvenliği
+Settings protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Ayarlarınızı bir parola veya telefonun biyometrik doğrulaması ile koruyun (ör. `çocuğunuz AAPS kullanıyor ise <../Children/Children.html>`_).
 * Custom password should be used if you want to use master password just for securing `exported settings <../Usage/ExportImportSettings.html>`_.
