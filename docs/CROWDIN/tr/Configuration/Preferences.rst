@@ -119,114 +119,114 @@ Ekranı açık tut
 
 Butonlar
 -----------------------------------------------------------
-* Define which buttons are visible on the bottom of your home screen.
-* With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+* Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
+* Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
   .. image:: ../images/Pref2020_OV_Buttons.png
-    :alt: Preferences > Buttons
+    :alt: Tercihler > Düğmeler
 
 Quick Wizard
 -----------------------------------------------------------
-* If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
-* In setup you define during which time period the button will be visible on your home screen - just one button per period.
-* If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up). 
-* The proposal has to be confirmed before insulin is delivered.
+* Sürekli yediğiniz yiyecekler için, karbonhidrat miktarını girdiğiniz ve neleri hesaplayacağınızı ayarladığınız hızlı asistan butonu oluşturarak, ana sayfaya ekleyip kullanabilirsiniz.
+* Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
+* Hızlı sihirbaz düğmesini tıklarsanız AAPS, mevcut ayarlarınıza göre girdiğiniz karbonhidrat için bir bolus hesaplar ve önerir (ayarlanmışsa kan şekeri değerini veya aktif insülini de dikkate alarak). 
+* İnsülin verilmeden önce önerinin onaylanması gerekir.
 
   .. image:: ../images/Pref2020_OV_QuickWizard.png
-    :alt: Preferences > Quick Wizard Button
+    :alt: Tercihler > Hızlı Asistan Butonu
   
-Default temp targets
+Varsayılan Geçici hedefler
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
-* With setting of default TT you can easily change your target for activity, eating soon etc.
-* Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+* `Geçici hedefler (GH) <../Usage/temptarget.html#temp-targets>`_ belirli bir süre için kan şekeri hedefinizi değiştirmeyi tanımlamanıza izin verir.
+* Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
+* Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
   .. image:: ../images/Pref2020_OV_DefaultTT.png
-    :alt: Preferences > Default temp targets
+    :alt: Tercihler > Varsayılan geçici hedefler
   
-Fill/Prime standard insulin amounts
+Standart insülin miktarlarını Hazırla/Doldur
 -----------------------------------------------------------
-* If you want to fill tube or prime cannula through AAPS you can do this through `actions tab <../Getting-Started/Screenshots.html#action-tab>`_.
-* Pre-set values can be defined in this dialogue.
+* AAPS aracılığıyla hortum doldurmak veya kanül hazırlamak istiyorsanız, bunu `eylemler sekmesi <../Getting-Started/Screenshots.html#action-tab>`_ üzerinden yapabilirsiniz.
+* Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir.
 
-Range for visualization
+Görselleştirme Aralığı
 -----------------------------------------------------------
-* Define which part of the graph on the home screen shall be you target range and be filled with green background.
+* Ana ekrandaki grafiğin hangi bölümünün hedef aralığınız olacağını ve yeşil arka planla doldurulacağını tanımlayın.
 
   .. image:: ../images/Pref2020_OV_Range2.png
-    :alt: Preferences > Range for visualization
+    :alt: Tercihler > Görselleştirme aralığı
 
-Shorten tab titles
+Kısa sekme başlıkları
 -----------------------------------------------------------
-* See more tab titles on screen. 
-* For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+* Ekranda daha fazla sekme başlığı görmenizi sağlar. 
+* Örneğin 'OpenAPS AMA' sekmesi 'OAPS' olur, 'GÖREVLER' 'GRV' olur vb.
 
   .. image:: ../images/Pref2020_OV_Tabs.png
-    :alt: Preferences > Tabs
+    :alt: Tercihler > Sekmeler
 
-Show notes field in treatments dialogs
+Tedavi diyaloglarında not alanını göster
 -----------------------------------------------------------
-* Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...) 
+* Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...) 
 
   .. image:: ../images/Pref2020_OV_Notes.png
-    :alt: Preferences > Notes in treatment dialogs
+    :alt: Tercihler > Tedavi diyaloglarındaki notlar
   
-Status lights
+Durum ışıkları
 -----------------------------------------------------------
-* Status lights give a visual warning for 
+* Durum ışıkları aşağıdakiler için görsel uyarı verir; 
 
-  * Sensor age
-  * Sensor battery level for certain smart readers (see `screenshots page <../Getting-Started/Screenshots.html#sensor-level-battery>`_ for details).
-  * Insulin age (days reservoir is used)
-  * Reservoir level (units)
-  * Cannula age
-  * Pump battery age
-  * Pump battery level (%)
+  * Sensör yaşı
+  * Bazı akıllı okuyucular için sensör pil seviyesi (ayrıntılar için `ekran görüntüleri sayfasına <../Getting-Started/Screenshots.html#sensor-level-battery>`_ bakın).
+  * İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
+  * Rezervuar seviyesi (Ünite)
+  * Kanül yaşı
+  * Pompa pil yaşı
+  * Pompa pil seviyesi (%)
 
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+* Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
+* Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
+* AAPS 2.7'den önceki sürümlerde durum ışıkları için ayarların Nightscout üzerinden yapılması gerekiyordu.
 
   .. image:: ../images/Pref2020_OV_StatusLights2.png
-    :alt: Preferences > Status Lights
+    :alt: Tercihler > Durum Işıkları
 
-Advanced Settings (Overview)
+Gelişmiş ayarlar
 -----------------------------------------------------------
 
 .. image:: ../images/Pref2021_OV_Adv.png
-  :alt: Preferences > Status Lights
+  :alt: Tercihler > Durum Işıkları
 
-Deliver this part of bolus wizard result
+Bolus sihirbazı sonucunun bu kadarını ilet
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* General setting to deliver only part of bolus wizard result. 
-* Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard. 
-* The percentage is shown in bolus wizard.
+* Bolus sihirbazı sonucunun yalnızca bir kısmını iletmek için genel ayar. 
+* Bolus sihirbazı kullanılırken hesaplanan bolusun yalnızca ayarlanan yüzdesi (10 ile 100 arasında olmalıdır) iletilir. 
+* Yüzde, bolus sihirbazında gösterilir.
 
-Bolus advisor
+Bolus danışmanı
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
-* An alarm will be started when glucose value is in good level to start eating.
-* You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
+* `Bolus sihirbazını <../Getting-Started/Screenshots.html#bolus-wizard>`__ çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulacaktır.
+* Düzeltme bolusu kabul edilirse **hiçbir karbonhidrat** kaydedilmez.
+* Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
+* Tekrar `Bolus sihirbazına <../Getting-Started/Screenshots.html#bolus-wizard>`__ girip yemek istediğiniz karbonhidrat miktarını girmelisiniz.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
-    :alt: Bolus advisor message
+    :alt: Bolus danışmanı mesajı
 
-Superbolus
+Süperbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Option to enable superbolus in bolus wizard.
-* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+* Bolus sihirbazında süper bolusu etkinleştirme seçeneği.
+* `Süperbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ ani artışları önlemek için önümüzdeki iki saat içinde bazal orandan bir miktar insülin "ödünç alma" konseptidir.
 
-Treatment safety
+Tedavi güvenliği
 ===========================================================
-Patient age
+Hasta yaşı
 -----------------------------------------------------------
-* Safety limits are set based on the age you select in this setting. 
-* If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
-* If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
+* Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir. 
+* Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir. 
+* Gerçek yaştan daha yüksek olanı seçmek kötü bir fikirdir çünkü insülin iletişim kutusuna yanlış değer girerek (örneğin ondalık noktayı atlayarak) aşırı doz almaya neden olabilir. 
+* Bu sabit güvenlik sınırları için gerçek rakamları bilmek istiyorsanız, `bu sayfada <../Usage/Open-APS-features.html>`_ kullandığınız algoritma özelliğine gidin.
 
-Max allowed bolus [U]
+Maks izin verilen bolus [U]
 -----------------------------------------------------------
 * Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
 * This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
