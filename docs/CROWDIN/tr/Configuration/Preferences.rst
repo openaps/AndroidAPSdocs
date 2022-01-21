@@ -104,7 +104,7 @@ Landscape orientation
   .. image:: ../images/Screenshots_Skins.png
     :alt: Skins depending on phone's display orientation
 
-Overview
+Genel Bakış
 ===========================================================
 
 * In overview section you can define preferences for home screen.
