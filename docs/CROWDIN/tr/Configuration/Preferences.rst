@@ -386,7 +386,7 @@ NSClient
 * Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.  
 * Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
 * **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
-* *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
+* *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez; bundan daha sık olması durumunda sorun çıkarır (örn. battery optimization not disabled for AAPS). 
 * If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
 
 Connection settings
