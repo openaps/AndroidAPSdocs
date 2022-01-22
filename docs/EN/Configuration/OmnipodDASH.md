@@ -377,6 +377,12 @@ Additional note:
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
+## Double Bolus error
+
+You will get the pop-up message **Bolus reported an error. Manually check real delivered amount** when you try issuing a bolus while there already is a bolus that is still being issued. You can either mute for 5 minutes, mute or press OK, wait untill the bolus that is being issued is finished and issue a new bolus.
+
+![Bolus error](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Bolus_error.jpg)
+
 ## Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is known as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod.
