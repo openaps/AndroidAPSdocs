@@ -97,7 +97,7 @@ If you receive a failure message like
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
 
     * Right click on "Default Changeset" and select "Rollback"
-    
+
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
     * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
@@ -106,7 +106,9 @@ If you receive a failure message like
 
     * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore. If there are no other changes in the commit tab, go to Step 3.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+      
+      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
 
 #### Step 3: Resync Gradle (again)
