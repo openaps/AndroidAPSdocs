@@ -62,7 +62,7 @@ AndroidAPS подает оповещение, если время на помп�
 
 ### Действия перед переводом времени
 
-1. Выключите настройки, которые автоматически устанавливают часовой пояс, чтобы принудительно изменять время, когда захотите. How you can do this will depend on your smartphone and Android version.
+1. Выключите настройки, которые автоматически устанавливают часовой пояс, чтобы принудительно изменять время, когда захотите. Как это сделать, будет зависеть от вашего смартфона и его версии Android.
    
    * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
    * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
