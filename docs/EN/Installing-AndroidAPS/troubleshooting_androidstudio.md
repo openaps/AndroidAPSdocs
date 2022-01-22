@@ -52,7 +52,7 @@ If you receive a failure message like
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-####Step 1 - Check git installation
+#### Step 1 - Check git installation
   * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
   ```
   git --version
@@ -84,7 +84,7 @@ If you receive a failure message like
 
     Restart Android Studio.
 
-####Step 2: Check for uncommitted changes.
+#### Step 2: Check for uncommitted changes.
 
   * In Android Studio, oben the "Commit" Tab (1) on the left-hand side.
     ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -103,7 +103,7 @@ If you receive a failure message like
     Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore. If there are no other changes in the commit tab, go to Step 3.
 
 
-####Step 3: Resync Gradle (again)
+#### Step 3: Resync Gradle (again)
 
 Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
