@@ -458,12 +458,12 @@ Bakım ayarları
   :alt: Bakım ayarları
 
 * Günlüklerin standart alıcısı logs@androidaps.org'dur.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. In this case master password has to be entered each time settings are exported or imported.
+* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
 
 Open Humans
 ===========================================================
-* You can help the community by donating your data to research projects! Details are described on the `Open Humans page <../Configuration/OpenHumans.html>`_.
-* In Preferences you can define when data shall be uploaded
+* Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Ayrıntılar, `Open Humans sayfasında <../Configuration/OpenHumans.html>`_ açıklanmaktadır.
+* Tercihler'de verilerin ne zaman yükleneceğini tanımlayabilirsiniz
 
   * yalnızca WiFi'ye bağlıysa
   * only if charging
