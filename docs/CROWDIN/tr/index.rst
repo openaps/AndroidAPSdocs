@@ -78,7 +78,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :glob:
    :caption: Konfigürasyon
 
-   Konfigürasyon Oluştur <./Configuration/Config-Builder.md>
+   Config builder <./Configuration/Config-Builder.md>
    Tercihler <./Configuration/Preferences.rst>
 
 .. toctree::
