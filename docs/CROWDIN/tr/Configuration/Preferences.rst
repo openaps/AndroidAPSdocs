@@ -359,22 +359,22 @@ Maksimum besin emilim süresi
 -----------------------------------------------------------
 * Sık sık yüksek yağlı veya proteinli yemekler yiyorsanız, yemek emilim sürenizi artırmanız gerekecektir.
 
-Advanced settings - autosens ratio
+Gelişmiş ayarlar - otoduyarlılık oranı
 -----------------------------------------------------------
-* Define min. and max. `autosens <../Usage/Open-APS-features.html#autosens>`_ ratio.
-* Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+Otoduyarlılık oranı için `min. ve maks. <../Usage/Open-APS-features.html#autosens>`_ tanımlayın.
+* Normalde standart değerler (maks. 1.2 ve min. 0.7) değiştirilmemelidir.
 
-Pump settings
+Pompa Ayarları
 ===========================================================
-The options here will vary depending on which pump driver you have selected in `Config Builder <../Configuration/Config-Builder.html#pump>`__.  Pair and set your pump up according to the pump related instructions:
+Buradaki seçenekler, `Konfigürasyon ayarları <../Configuration/Config-Builder.html#pump>`__ içinde seçtiğiniz pompa sürücüsüne bağlı olarak değişecektir.  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
 
-* `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ 
-* `DanaRS Insulin Pump <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `Accu Chek Combo Pump <../Configuration/Accu-Chek-Combo-Pump.html>`_
-* `Accu Chek Insight Pump <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-* `Medtronic Pump <../Configuration/MedtronicPump.html>`_
+* `Dana-R insülin pompası <../Configuration/DanaR-Insulin-Pump.md>`_ 
+* `DanaRS insulin Pompası <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `Accu Chek Combo Pompa <../Configuration/Accu-Chek-Combo-Pump.html>`_
+* `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `Medtronic Pompaları <../Configuration/MedtronicPump.html>`_
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
 
 NSClient
 ===========================================================
@@ -386,14 +386,14 @@ NSClient
 * Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.  
 * Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
 * **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
-* *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez; bundan daha sık olması durumunda sorun çıkarır (örn. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez; bundan daha sık olması durumunda sorun çıkarır (örn. AAPS için pil optimizasyonu devre dışı değil). 
+* Yerel profil içindeki `etkinleştirilen değişiklikler <../Configuration/Config-Builder.html#local-profile-recommended>`_ Nightscout sitenize yüklenir.
 
-Connection settings
+Bağlantı Ayarları
 -----------------------------------------------------------
 
 .. image:: ../images/ConfBuild_ConnectionSettings.png
-  :alt: NSClient connection settings
+  :alt: NSClient bağlantı ayarları
   
 * Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
 * If you want to use only a specific WiFi network you can enter its WiFi SSID. 
