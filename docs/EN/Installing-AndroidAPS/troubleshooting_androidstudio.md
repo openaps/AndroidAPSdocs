@@ -27,15 +27,20 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
 
 After you have followed the instructions for your specific problem, you need to trigger the gradle sync again.
 
+### Gradle Resync
+
 If you can still see the message that the gradle sync failed, now select the Link "Try again".
 ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-If you don't see the message anymore, you can still trigger this manually:
-![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+If you don't see the a message anymore, you can still trigger this manually:
+
 * Open the Gradle tab (1) on the right border of Android Studio.
-* Right-click on AndroidAPS
-* Click on "Reload Gradle Project"
+  ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+
+* Right-click on AndroidAPS (2)
+
+* Click on "Reload Gradle Project" (3)
 
 
 ### Uncommitted changes
@@ -97,6 +102,7 @@ If you receive a failure message like
 
 ####Step 3: Resync Gradle (again)
 
+Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
 ### Android Gradle plugin requires Java 11 to run
 
@@ -112,15 +118,25 @@ If you receive a failure message like
 
   Press "OK" to save and close the settings dialog.
 
+  Now you need to trigger a [Gradle Resync](#Gradle-Resync)
+
 ### No cached version of ... available for offline mode
 
   On the right side, open the Gradle tab (1). Make sure the button shown at (2) is NOT selected.
   ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again".
-  ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Now you need to trigger a [Gradle Resync](#Gradle-Resync)
 
-  If you don't see that message anymore, restart Android Studio. This will also trigger the Gradle Sync again!
+### Unable to start daemon process
+
+  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+
+  If you are using Windows 10 you must use a 64-bit operating system.
+
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+
+  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+
 
 ## Error "on demand" Configuration
 
@@ -129,17 +145,18 @@ If your build fails with an error regarding "on demand configuration" you can do
 * In the left pane, click Build, Execution, Deployment > Compiler.
 * Uncheck the Configure on demand checkbox.
 * Click Apply or OK.
+* Now you need to trigger a [Gradle Resync](#Gradle-Resync)
+
+## App was created with compiler/kotlin warnings
+
+If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+
+ ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Your app was build successfully and can be transferred to phone!
 
 
-##Kotlin compiler warning
-
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
-
-App was build successfully and can be transferred to phone.
-
-![ignore Kotline compiler warning](../images/GIT_WarningIgnore.PNG)
-
-##Key was created with errors
+## Key was created with errors
 
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
@@ -148,55 +165,52 @@ When creating a new keystore for building the signed APK, on Windows the followi
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
-##Unable to start daemon process
+## No CGM data is received by AndroidAPS
 
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
-
-![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.html#identify-receiver).
 
 
-##No CGM data
-
-* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* As of AndroidAPS 3.0 BYODA is mandatory for Dexcom users (due to bug in xDrip+) - see `_release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_.
-
-
-
-##App not installed
+## App not installed
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
+1. [Export settings](../Usage/ExportImportSettings.html) (in AAPS version already installed on your phone)
 2. Uninstall AAPS on your phone.
 3. Enable airplane mode & turn off bluetooth.
 4. Install new version (“app-full-release.apk”)
-5. `Import settings <../Usage/ExportImportSettings.html>`__
+5. [Import settings](../Usage/ExportImportSettings.html)
 6. Turn bluetooth back on and disable airplane mode
 
-##App installed but old version
+## App installed but old version
 
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy>`_.
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy)
 
-##None of the above worked
+## None of the above worked
 
 If non of the above tips helped you might consider building the app from scratch:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Or you just use a new keystore.
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
+1. [Export settings](../Usage/ExportImportSettings.html) (in AAPS version already installed on your phone)
+
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+
+    Or you just use a new keystore.
+
+3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-androidaps-code).
+
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. `Import settings <../Usage/ExportImportSettings.html>`__
+5. [Import settings](../Usage/ExportImportSettings.html) again to restore your objectives and settings.
 
 ##Worst case scenario
 
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
+
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#install-android-studio).
