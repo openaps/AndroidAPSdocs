@@ -58,11 +58,11 @@ Insight также регистрирует прошедшие записи и �
 
 ## Помпа Accu Chek Combo
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AndroidAPS подает оповещение, если время на помпе и на телефоне различается слишком сильно. При переходе на летнее/зимнее время это происходило бы посреди ночи. Чтобы предотвратить это и не нарушать свой сон, выполните следующие шаги:
 
-### Actions to take before the clock change
+### Действия перед переводом времени
 
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+1. Выключите настройки, которые автоматически устанавливают часовой пояс, чтобы принудительно изменять время, когда захотите. How you can do this will depend on your smartphone and Android version.
    
    * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
    * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
