@@ -441,9 +441,9 @@ Local alerts
 .. image:: ../images/Pref2020_LocalAlerts.png
   :alt: Local alerts
 
-* Settings should be self-explanatory.
+* Ayarlar açıklayıcı olmalıdır.
 
-Data choices
+Veri seçenekleri
 ===========================================================
 
 .. image:: ../images/Pref2020_DataChoice.png
