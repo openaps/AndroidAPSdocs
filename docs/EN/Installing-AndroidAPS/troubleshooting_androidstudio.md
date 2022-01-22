@@ -93,9 +93,11 @@ If you receive a failure message like
   * In Android Studio, oben the "Commit" Tab (1) on the left-hand side.
     ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
 
     * Right click on "Default Changeset" and select "Rollback"
+    
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
     * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
