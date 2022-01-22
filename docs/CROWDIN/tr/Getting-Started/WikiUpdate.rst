@@ -150,7 +150,7 @@ September 2019
 * `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
 * `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
-* `Remote monitoring <../Children/Children.html>`_
+* `Uzaktan izleme <../Children/Children.html>`_
 * `What is a closed loop system? <../Getting-Started/ClosedLoop.html>`_
 
 August 2019
