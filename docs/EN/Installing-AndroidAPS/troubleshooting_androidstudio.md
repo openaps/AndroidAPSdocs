@@ -54,35 +54,38 @@ If you receive a failure message like
 
 #### Step 1 - Check git installation
   * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
-  ```
-  git --version
-  ```
+    ```
+    git --version
+    ```
+
     ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-  Note: There is a space and two hyphens between git and version!
+    Note: There is a space and two hyphens between git and version!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to Step 2.
+  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
 
   * In case you get an message saying
-  ```
-  Git: command not found
-  ```
-  your Git installation is not right.
+    ```
+    Git: command not found
+    ```
+    your Git installation is not right.
+
   * [Check git installation](../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio)
 
   * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
   * If Git is installed, you have restarted (if on windows), and git still couldn't found:
 
-    Search your computer for a file "git.exe".
+  * Search your computer for a file "git.exe".
 
     Note for yourself, what directory it is in.
 
-    Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where
+  you have found your git installation.
 
-    Save and close.
+  * Save and close.
 
-    Restart Android Studio.
+  * Restart Android Studio.
 
 #### Step 2: Check for uncommitted changes.
 
@@ -91,16 +94,16 @@ If you receive a failure message like
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
 
-      Right click on "Default Changeset" and select "Rollback"
+    * Right click on "Default Changeset" and select "Rollback"
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-      The files are fetched again from the Git server. If there are no other changes in the commit tab, go to Step 3.
+    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
   * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
 
-    Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
 
-    Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore. If there are no other changes in the commit tab, go to Step 3.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore. If there are no other changes in the commit tab, go to Step 3.
 
 
 #### Step 3: Resync Gradle (again)
