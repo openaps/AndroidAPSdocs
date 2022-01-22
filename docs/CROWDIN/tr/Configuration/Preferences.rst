@@ -228,102 +228,102 @@ Hasta yaşı
 
 Maks izin verilen bolus [U]
 -----------------------------------------------------------
-* Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once. 
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose. 
-* This restriction is also applied to the results of the bolus calculator.
+* AAPS'in bolus olarak bir kerede iletmesine izin verilen maksimum insülin miktarını tanımlar. 
+* Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır. 
+* Bunu, bir öğün veya düzeltme dozu için ihtiyaç duyabileceğiniz maksimum bolus insülin dozuna karşılık gelen makul bir miktara ayarlamanız önerilir. 
+* Bu kısıtlama, bolus hesaplayıcısına da uygulanır.
 
-Max allowed carbs [g]
+Maks izin verilen karbonhidrat [g]
 -----------------------------------------------------------
-* Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-* This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error. 
-* It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+* AAPS bolus hesaplayıcısının dozlamasına izin verilen maksimum karbonhidrat miktarını tanımlar.
+* Bu ayar, yanlış giriş veya kullanıcı hatası nedeniyle büyük miktarda bolus verilmesini önlemek için bir güvenlik sınırıdır. 
+* Bunu, bir yemek için ihtiyaç duyabileceğiniz maksimum karbonhidrat miktarına kabaca karşılık gelen makul bir miktara ayarlamanız önerilir.
 
 Döngü
 ===========================================================
-APS mode
+APS modu
 -----------------------------------------------------------
-* Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
-* **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
+* Açık ve kapalı döngü ile düşük glikoz süspansiyonu (DGS) arasında geçiş yapar
+* **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. Manuel olarak onaylandıktan sonra insülin dozlama komutu pompaya aktarılacaktır.. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
+* **Kapalı döngü**, GBO önerilerinin sizden onay veya girdi almadan otomatik olarak pompanıza gönderildiği anlamına gelir.  
+* **Düşük glikoz süspansiyonu**, bitirilmiş bir görevi iptal etmeye gerek kalmadan Düşük Glikoz süspansiyonuna girme imkanı verir.
 
-Minimal request change [%]
+Minimum istek değişikliği [%]
 -----------------------------------------------------------
-* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
-* To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
-* This defines the relative change required to trigger a notification.
+* Açık döngü kullanırken, AAPS'in bazal oranı ayarlamanızı önerdiği her seferde bildirim alırsınız. 
+* Bildirim sayısını azaltmak için daha geniş bir KŞ hedef aralığı kullanabilir veya minimum istek oranının yüzdesini artırabilirsiniz.
+* Bu yüzde, bir bildirimi tetiklemek için gereken göreli değişikliği tanımlar.
 
-Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
+Gelişmiş Yemek Asistanı (AMA) veya Süper Mikro Bolus (SMB)
 ===========================================================
-Depending on your settings in `config builder <../Configuration/Config-Builder.html>`__ you can choose between two algorithms:
+`Konfigürasyon ayarları<../Configuration/Config-Builder.html>`__ içindeki ayarlarınıza bağlı olarak iki algoritma arasında seçim yapabilirsiniz:
 
-* `Advanced meal assist (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - state of the algorithm in 2017
-* `Super Micro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - most recent algorithm for advanced users
+* `Gelişmiş yemek asistanı (OpenAPS AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`_ - algoritmanın 2017'deki durumu
+* `Süper Mikro Bolus (OpenAPS SMB) <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ - ileri düzey kullanıcılar için en yeni algoritma
 
-OpenAPS AMA settings
+OpenAPS SMB ayarları
 -----------------------------------------------------------
-* Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably. 
-* More details about the settings and Autosens can be found in the `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__.
+* Karbonhidratları doğru bir şekilde girerseniz, yemek bolusunuzdan sonra sistem yüksek kan şekerine daha hızlı müdahele eder. 
+* Ayarlar ve Otoduyarlılık hakkında daha fazla ayrıntı için, `OpenAPS dokümantasyonuna <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html>`__ bakabilirsiniz.
 
-Max U/h a Temp Basal can be set to
+Maks Ü/s geçici Bazal ayarlanabilir
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate. 
-* The value is measured in units per hour (U/h). 
-* It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**. 
-* For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-* See also `detailed feature description <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
+* APPS'in tehlikeli derecede yüksek bazal oranı vermesini önlemek için bir güvenlik sınırıdır. 
+* Değer, ünite/saat (Ü/s) cinsinden ölçülür. 
+* Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki **en yüksek bazal oranı** alıp **4 ile çarpmanız** iyi bir tavsiyedir. 
+* Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
+* Ayrıca bkz. `ayrıntılı özellik açıklaması <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-Maximum basal IOB OpenAPS can deliver [U]
+OpenAPS tarafından aşılmayacak, maksimum toplam IOB(Aktif İnsülin)[U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile. 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
-* This value **does not consider bolus IOB**, only basal.
-* This value is calculated and monitored independently of your normal basal rate. It is only the additional basal insulin on top of that normal rate that is considered.
+* Normal bazal profilinizin üzerine vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak). 
+* Bu değere ulaşıldığında, AAPS, Aktif insülin (IOB) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır. 
+* Bu değer **bolus aktif insülini** dikkate almaz, yalnızca bazal insülin için hesaplanır.
+* Bu değer, normal profildeki bazal oranınızdan bağımsız olarak hesaplanır ve izlenir. Normal bazal oranınızın üzerindeki ek bazal insülin dikkate alınır.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. This prevents AAPS from giving any additional basal insulin at all. During this time AAPS will still be able to limit or turn off your basal insulin to help prevent hypoglycaemia. This is an important step in order to:
+Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal IOB'yi 0'a ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
 
-* Have a period of time to safely get used to the AAPS system and monitor how it works.
-* Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-* See how AAPS limits your basal insulin to prevent hypoglycaemia.
+* AAPS sistemine alışmak ve nasıl güvenli çalıştığını izlemek için kendinize süre ayırmak.
+* Bazal profilinizi ve İnsülin Duyarlılık Faktörünüzü (ISF) mükemmelleştirme fırsatını yakalamak.
+* AAPS'in hipoglisemiyi önlemek için bazal insülininizi nasıl sınırladığını görmek.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 3 to get a value of 1.5 U/h.
+Kendinizi rahat hissettiğinizde, Maks Bazal IOB değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
 
-* You can start conservatively with this value and increase it slowly over time. 
-* These are guidelines only; everyone's body is different. You may find you need more or less than what is recommended here, but always start conservatively and adjust slowly.
+* Bu değerle ihtiyatlı başlayabilir ve zamanla yavaş yavaş artırabilirsiniz. 
+* Bunlar yalnızca yönergedir; herkesin vücudu farklıdır. Burada önerilenden daha fazlasına veya daha azına ihtiyacınız olduğunu fark edebilirsiniz, ancak her zaman ihtiyatlı başlayın ve yavaş yavaş ayarlayın.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Not: Bir güvenlik özelliği olarak, Max Basal IOB üst sınırı 7ü dir.**
 
-Autosens
+Otoduyarlılık
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* `Autosens <../Usage/Open-APS-features.html#autosens>`_ looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-* If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+* `Otoduyarlılık <../Usage/Open-APS-features.html#autosens>`_ kan şekeri sapmalarına (pozitif/negatif/nötr) bakar.
+* Bu sapmalara göre sizin ne kadar duyarlı/dirençli olduğunuzu anlamaya çalışacak ve bu sapmalara göre bazal hızı ve IDF'yi ayarlayacaktır.
+* "Otoduyarlılıkta hedefi ayarla"yı seçerseniz, algoritma ayrıca glikoz hedefinizi de değiştirir.
 
-Advanced settings (OpenAPS AMA)
+Gelişmiş ayarlar (OpenAPS AMA)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Normalde bu diyalogdaki ayarları değiştirmeniz gerekmez!
+* Yine de bunları değiştirmek isterseniz ne yaptığınızı anlamak için, `OpenAPS dokümantasyonundaki <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ ayrıntıları okuduğunuzdan emin olun.
 
-OpenAPS SMB settings
+OpenAPS SMB ayarları
 -----------------------------------------------------------
-* In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-* The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
-* Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
-* *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
-* If 'Sensitivity raises target' or 'Resistance lowers target' is enabled `Autosens <../Usage/Open-APS-features.html#autosens>`_ will modify your glucose target according to your blood glucose deviations.
-* If target is modified it will be displayed with a green background on your home screen.
+* AMA'nın aksine, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ glikoz seviyelerini kontrol etmek için geçici bazal oranları kullanmaz, esas olarak küçük süper mikro boluslar kullanır.
+* SMB'yi kullanmak için. `Görev 10 <../Usage/Objectives.html#objective-10-eneasing-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>` 'a başlamış olmalısınız.
+* İlk üç ayar `yukarıda <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__ açıklanmıştır.
+* Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, `OpenAPS özellik bölümünde <../Usage/Open-APS-features.html#enable-smb>`_ açıklanmıştır.
+* *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz. 
+* 'Hassasiyet hedefi yükseltir' veya 'Direnç hedefi düşürür' etkinleştirilirse `Otoduyarlılık <../Usage/Open-APS-features.html#autosens>`_ kan şekeri sapmalarınıza göre glikoz hedefinizi değiştirir.
+* Hedef değiştirilirse, giriş ekranınızda hedef yeşil bir arka planla görüntülenecektir.
 
   .. image:: ../images/Home2020_DynamicTargetAdjustment.png
-    :alt: Target modified by autosens
+    :alt: Hedef otoduyarlılık tarafından değiştirilmiş
   
-Carb required notification
+Karbonhidrat gerekli bildirimi
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* This feature is only available if SMB algorithm is selected.
-* Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
-* In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
+* Bu özellik yalnızca SMB algoritması seçildiğinde kullanılabilir.
+* Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir.
+* Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
+* Ek olarak, gerekli karbonhidratlar ana ekranınızdaki COB bölümünde görüntülenecektir.
 * A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
@@ -332,8 +332,8 @@ Carb required notification
   
 Advanced settings (OpenAPS SMB)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Normally you do not have to change the settings in this dialogue!
-* If you want to change them anyway make sure to read about details in `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ and to understand what you are doing.
+* Normalde bu diyalogdaki ayarları değiştirmeniz gerekmez!
+* Yine de bunları değiştirmek isterseniz ne yaptığınızı anlamak için, `OpenAPS dokümantasyonundaki <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#>`__ ayrıntıları okuduğunuzdan emin olun.
 
 Emilim ayarları
 ===========================================================
