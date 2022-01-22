@@ -21,7 +21,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
+* AndroidAPS uygulamasının [Konfigürasyon ayarları](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
@@ -44,7 +44,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* To check all is well, go back to Config builder in AndroidAPS and tap on the cog-wheel by the Insight Pump to get into Insight settings, then tap on Insight Pairing and you will see some information about the pump:
+* Her şeyin yolunda olduğunu kontrol etmek için, AndroidAPS'de Konfigürasyon ayarlarına geri dönün ve Insight Pump'ın yanındaki dişli çarka dokunarak Insight ayarlarına girin, ardından Insight Pairing'e dokunun, pompa hakkında bazı bilgiler göreceksiniz.
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 
@@ -130,7 +130,7 @@ Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevle
 
 ## Spesifik Insight hataları
 
-### Extended bolus
+### Yayma Bolus
 
 Aynı anda birden fazla yayma bolus hatalara neden olabileceğinden, bir seferde yalnızca bir yayma bolus kullanın.
 
