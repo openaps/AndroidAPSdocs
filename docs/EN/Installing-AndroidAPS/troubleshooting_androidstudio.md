@@ -20,24 +20,32 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed. Open the "Build" tab at the bottom and check what error message is displayed.
 
-### No cached version of ... available for offline mode
+* [Uncommitted changes](#Uncommitted-changes)
+* [No cached version of ... available](#no-cached-version-of--available-for-offline-mode)
+* [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
-On the right side, open the Gradle tab (1). Make sure the button shown at (2) is NOT selected.
-![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+
+After you have followed the instructions for your specific problem, you need to trigger the gradle sync again.
 
 If you can still see the message that the gradle sync failed, now select the Link "Try again".
 ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
-If you don't see that message anymore, restart Android Studio. This will also trigger the Gradle Sync again!
 
-###Uncommitted changes
+If you don't see the message anymore, you can still trigger this manually:
+![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+* Open the Gradle tab (1) on the right border of Android Studio.
+* Right-click on AndroidAPS
+* Click on "Reload Gradle Project"
+
+
+### Uncommitted changes
 
 If you receive a failure message like
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 ####Step 1 - Check git installation
-* Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
   ```
   git --version
   ```
@@ -45,15 +53,17 @@ If you receive a failure message like
 
   Note: There is a space and two hyphens between git and version!
 
-* You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to Step 2.
+  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to Step 2.
 
-* In case you get an message saying
+  * In case you get an message saying
   ```
   Git: command not found
   ```
   your Git installation is not right.
-  * if on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
   * [Check git installation](../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio)
+
+  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+
   * If Git is installed, you have restarted (if on windows), and git still couldn't found:
 
     Search your computer for a file "git.exe".
@@ -66,7 +76,7 @@ If you receive a failure message like
 
     Restart Android Studio.
 
-####Step 2: Check for uncommited changes.
+####Step 2: Check for uncommitted changes.
 
   * In Android Studio, oben the "Commit" Tab (1) on the left-hand side.
     ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
@@ -86,11 +96,31 @@ If you receive a failure message like
 
 
 ####Step 3: Resync Gradle (again)
+
+
+### Android Gradle plugin requires Java 11 to run
+
+  You might experience this error message:
+
+  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+
+  Click on "Gradle Settings" (1) to go to open the gradle settings.
+
+  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+
+  Open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2)
+
+  Press "OK" to save and close the settings dialog.
+
+### No cached version of ... available for offline mode
+
+  On the right side, open the Gradle tab (1). Make sure the button shown at (2) is NOT selected.
+  ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+
   If you can still see the message that the gradle sync failed, now select the Link "Try again".
   ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
   If you don't see that message anymore, restart Android Studio. This will also trigger the Gradle Sync again!
-
 
 ## Error "on demand" Configuration
 
