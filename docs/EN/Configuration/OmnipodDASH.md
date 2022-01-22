@@ -277,7 +277,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing the **POD MGMT (0)** button from the **DASH** tab.
 ![DASH_Tab_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20Tab/DASH_Tab_2.png) ![DASH_Tab_3](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/DASH%20Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](#activate-pod): Primes and activates a new pod.
+* 1 - [**Activate Pod**](#activate-pod): Activates and Primes a new pod.
 * 2 - [**Deactivate Pod**](#deactivate-pod): Deactivates the currently active pod.
 * 3 - **Play Test Beep**: Plays a single test beep on the pod when pressed.
 * 4 - [**Pod history**](#view-pod-history): Displays the active pod activity history.
@@ -398,7 +398,7 @@ Exporting AndroidAPS settings enables you to restore all your settings, and mayb
 
 Note: In some cases, you may need to use the export to restore AndroisAPS settings **while keeping the current active Pod**. In this case, it is important to only import settings exported for the pod currently active.
 
-**A good practice is to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of problems. For instance when moving to another backup phone.
+**A good practice is to do an export immediately after activating a new Dash pod**, Do this at each pod change and copy the exported file to your internet drive. This way you will always be able to restore the current active Pod in case of problems. For instance when moving to another backup phone.
 
 - Think about if you need to export with an active pod session.
 - Regularly export your settings and store a copy in a safe place.
@@ -412,7 +412,7 @@ When importing settings with an active Pod, make sure the export was done on the
 **WARNING**
 Importing settings while on an active Pod session may result in Pod failure or losing the current active Pod. So only try when no other options are available.
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+**Importing while on an active Pod:** (you risk losing the Pod if not done correctly!)
 
 1. Make sure you are importing settings recently exported while on the current Pod.
 2. Import your settings (must be exported for the current pod session)
