@@ -24,7 +24,7 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
 
 These are the usual gradle sync failures:
 * [Uncommitted changes](#Uncommitted-changes)
-* [No cached version of ... available](#no-cached-version-of--available-for-offline-mode)
+* [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
 *Important*:
@@ -151,7 +151,7 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
   If you are using Windows 10 you must use a 64-bit operating system.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
