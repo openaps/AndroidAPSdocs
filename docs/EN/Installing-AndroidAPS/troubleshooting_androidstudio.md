@@ -39,6 +39,7 @@ If you can still see the message that the gradle sync failed, now select the Lin
 If you don't see the a message anymore, you can still trigger this manually:
 
 * Open the Gradle tab (1) on the right border of Android Studio.
+
   ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
 * Right-click on AndroidAPS (2)
