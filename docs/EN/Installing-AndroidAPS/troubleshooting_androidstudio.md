@@ -18,13 +18,16 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 8. Keep on looping.
 
 ## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed. Open the "Build" tab at the bottom and check what error message is displayed.
+Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
+  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+
+These are the usual gradle sync failures:
 * [Uncommitted changes](#Uncommitted-changes)
 * [No cached version of ... available](#no-cached-version-of--available-for-offline-mode)
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
-
+*Important*:
 After you have followed the instructions for your specific problem, you need to trigger the gradle sync again.
 
 ### Gradle Resync
