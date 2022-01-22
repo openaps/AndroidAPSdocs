@@ -125,7 +125,7 @@ Butonlar
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Tercihler > Düğmeler
 
-Quick Wizard
+Hızlı Asistan
 -----------------------------------------------------------
 * Sürekli yediğiniz yiyecekler için, karbonhidrat miktarını girdiğiniz ve neleri hesaplayacağınızı ayarladığınız hızlı asistan butonu oluşturarak, ana sayfaya ekleyip kullanabilirsiniz.
 * Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
@@ -395,51 +395,51 @@ Bağlantı Ayarları
 .. image:: ../images/ConfBuild_ConnectionSettings.png
   :alt: NSClient bağlantı ayarları
   
-* Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-* If you want to use only a specific WiFi network you can enter its WiFi SSID. 
-* Multiple SSIDs can be separated by semicolon. 
-* To delete all SSIDs enter a blank space in the field.
+* Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
+* Yalnızca belirli bir WiFi ağını kullanmak istiyorsanız, WiFi SSID'sini girebilirsiniz. 
+* Birden çok SSID noktalı virgülle ayrılabilir. 
+* Tüm SSID'leri silmek için alana boşluk girin.
 
-Alarm options
+Alarm türleri
 -----------------------------------------------------------
-* Alarm options allows you to select which default Nightscout alarms to use through the app.  
-* For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
-* They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
+* Alarm seçenekleri, uygulama aracılığıyla hangi varsayılan Nightscout alarmlarının kullanılacağını seçmenize olanak tanır.  
+* Alarmların çalması için "Heroku değişkenleri <https://nightscout.github.io/nightscout/setup_variables/#alarms>" içinde Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir. 
+* Yalnızca Nightscout ile bağlantınız varken çalışırlar ve ebeveynler/bakıcılar için tasarlanmıştır. 
+* Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA [Kendi dexcom uygulamanızı oluşturun]), bu uygulamalardaki alarmları kullanın.
 
-Advanced settings (NSClient)
+Gelişmiş Ayarlar (NSClient)
 -----------------------------------------------------------
 
 .. image:: ../images/Pref2020_NSClientAdv.png
-  :alt: NS Client advanced settings
+  :alt: NS Client gelişmiş ayarlar
 
-* Most options in advanced settings are self-explanatory.
-* *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
+* Gelişmiş ayarlardaki çoğu seçenek kendi açıklamasını içerir.
+* *Yerel yayınları etkinleştir*, verilerinizi telefondaki xDrip+ gibi diğer uygulamalarla paylaşacaktır. 
  
-  * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
+  * xDrip+ alarmlarını kullanmak için `AAPS <../Configuration/Config-Builder.html#bg-source>`_ Konfigürasyon ayarlarına gitmeniz ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
   
-* *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
+* *Her zaman bazal mutlak değerleri kullan* Autotune'u doğru kullanmak istiyorsanız etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için `OpenAPS dokümantasyonuna <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ bakın.
 
 SMS Kominikatör
 ===========================================================
-* Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
-* This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
-* Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
-* Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+* Seçenekler yalnızca `Konfigürasyon ayarları <../Configuration/Config-Builder.html#sms-communicator>`__ içinde SMS Kominikatör seçilirse görüntülenecektir.
+* Bu ayar, döngüyü askıya alma veya bolus yapma gibi uygulamanın izleyeceği talimatları hastanın telefonuna mesaj göndererek uygulamanın uzaktan kontrol edilmesini sağlar.  
+* Daha fazla bilgi `SMS Komutları <../Children/SMS-Commands.html>`_ bölümünde açıklanmıştır.
+* Bir kimlik doğrulama uygulaması ve mesaj sonunda ek PIN kullanılarak ek güvenlik elde edilir.
 
 Otomasyon
 ===========================================================
-Select which location service shall be used:
+Hangi konum hizmetinin kullanılacağını seçin:
 
-* Use passive location: AAPS only takes locations if other apps are requesting it
-* Use network location: Location of your Wi-Fi
-* Use GPS location (Attention! May cause excessive battery drain!)
+* Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ederse konum alır
+* Ağ konumunu kullan: Wi-Fi'nizin konumu
+* GPS konumunu kullanın (Dikkat! Aşırı pil tüketimine neden olabilir!)
 
-Local alerts
+Yerel uyarılar
 ===========================================================
 
 .. image:: ../images/Pref2020_LocalAlerts.png
-  :alt: Local alerts
+  :alt: Yerel uyarılar
 
 * Ayarlar açıklayıcı olmalıdır.
 
@@ -458,7 +458,7 @@ Bakım ayarları
   :alt: Bakım ayarları
 
 * Günlüklerin standart alıcısı logs@androidaps.org'dur.
-* If you select *Encrypt exported settings* these are encrypted with your `master password <../Configuration/Preferences.html#master-password>`_. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
+* *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar `ana şifreniz "master password"<../Configuration/Preferences.html#master-password>`_ ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
 
 Open Humans
 ===========================================================
@@ -466,4 +466,4 @@ Open Humans
 * Tercihler'de verilerin ne zaman yükleneceğini tanımlayabilirsiniz
 
   * yalnızca WiFi'ye bağlıysa
-  * only if charging
+  * sadece şarj olurken
