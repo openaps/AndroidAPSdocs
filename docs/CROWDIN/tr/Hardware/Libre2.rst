@@ -1,64 +1,64 @@
 Freestyle Libre 2
 **************************************************
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. 
+Freestyle Libre 2 sistemi, tehlikeli kan şekeri düzeylerini otomatik olarak bildirebilir. Libre2 Sensörü, mevcut kan şekeri seviyesini her dakika bir alıcıya (okuyucu veya akıllı telefon) gönderir. Alıcı, gerekirse bir alarmı tetikler. Yamalı bir LibreLink uygulaması ve xDrip+ uygulaması ile kan şekeri seviyenizi akıllı telefonunuzda sürekli olarak alabilir ve görüntüleyebilirsiniz. 
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+Sensör, glikometre ölçümleri ve sensör okumaları arasındaki farkları ayarlamak için -40 mg/dl ila +20 mg/dl (-2,2 mmol/l ila +1,1 mmol/l) aralığında kalibre edilebilir.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+KŞ okumaları, Libre1'deki gibi bir BT vericisi kullanılarak da yapılabilir.
 
-Important note : This does not work with the US version of the Freestyle 2 sensor ! The US version will only connect to a reader, not a phone.
+Önemli not: Bu, Freestyle 2 sensörünün ABD versiyonuyla çalışmaz! ABD versiyonu bir telefona değil, yalnızca bir okuyucuya bağlanabilir.
 
-Step 1: Build your own patched LibreLink-App
+Adım 1: Kendi yamalı LibreLink-Uygulamanızı oluşturun
 ==================================================
 
-For legal reasons, the so-called patching has to be done by yourself. Use search engines to find the corresponding links. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+Yasal nedenlerle, yama işlemini kendiniz yapmanız gerekir. İlgili bağlantıları bulmak için arama motorlarını kullanın. Esas olarak iki çeşidi vardır: Önerilen izlemeyi önlemek için tüm internet trafiğini engelleyen orijinal yamalı uygulamadır. Diğer varyant, doktorunuzun ihtiyaç duyabileceği LibreView'u destekler.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+Orijinal uygulama yerine yamalı uygulama yüklenmelidir. Onunla başlatılan bir sonraki sensör, mevcut KŞ değerlerini Bluetooth aracılığıyla akıllı telefonunuzda çalışan xDrip+ uygulamasına iletecektir.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Then install the patched app. 
+Önemli: Olası sorunları önlemek için orijinal uygulamayı NFC özellikli bir akıllı telefona yüklemek ve kaldırmak yardımcı olabilir. NFC etkinleştirilmelidir. Bu ekstra güç gerektirmez. Ardından yamalı uygulamayı yükleyin. 
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+Yama uygulanmış uygulama, ön plan yetkilendirme bildirimi ile tanımlanabilir. Ön plan yetkilendirme hizmeti, bu hizmeti kullanmayan orijinal uygulamaya kıyasla bağlantı kararlılığını artırır.
 
 .. image:: ../images/Libre2_ForegroundServiceNotification.png
-  :alt: LibreLink Foreground Service
+  :alt: LibreLink Ön Plan Hizmeti
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+Diğer göstergeler, Linux penguen logosu üç nokta menüsü -> Bilgi veya yamalı uygulamanın yazı tipi olabilir. Bu kriterler, seçtiğiniz uygulama kaynağına bağlı olarak isteğe bağlıdır.
 
 .. image:: ../images/LibreLinkPatchedCheck.png
-  :alt: LibreLink Font Check
+  :alt: LibreLink Font Kontrolü
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app. 
+NFC'nin etkinleştirildiğinden emin olun, yamalı uygulama için bellek ve konum iznini etkinleştirin, otomatik saat ve saat dilimini etkinleştirin ve yamalı uygulamada en az bir alarm ayarlayın. 
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
+Şimdi, sadece sensörü tarayarak yamalı uygulama ile Libre2 sensörünü başlatın. Tüm ayarların doğru yapıldığından emin olun.
 
-Mandatory settings for successful sensor start: 
+Başarılı sensör başlatma için zorunlu ayarlar: 
 
-* NFC enabled / BT enabled
-* memory and location permission enabled 
-* location service enabled
-* automatic time and time zone setting
-* set at least one alarm in the patched app
+* NFC etkin / BT etkin
+* hafıza ve konum izni etkin 
+* konum hizmeti etkin
+* otomatik saat ve saat dilimi ayarı
+* yamalı uygulamada en az bir alarm ayarlayın
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. Bu, ayrıca ayarlanması gereken uygulama konumu izni değildir!
 
 .. image:: ../images/Libre2_AppPermissionsAndLocation.png
-  :alt: LibreLink permissions memory & location
+  :alt: LibreLink izinleri hafıza ve konum
   
   
 .. image:: ../images/Libre2_DateTimeAlarms.png
-  :alt: automatic time and time zone + alarm settings  
+  :alt: otomatik saat ve saat dilimi + alarm ayarları  
 
-The sensor remembers the device it was started from. Only this device can receive alarms in the future.
+Sensör, başlatıldığı cihazı hatırlar. Yalnızca bu cihaz gelecekte alarm alabilir.
 
-The first connection setup to the sensor is critical. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. If one or more mandatory settings are missing they have to be adjusted. You have no time limit to do that. The sensor is constantly trying to setup the connection. Even if is last some hours. Be patient and try different settings before even think of changing the sensor.
+Sensöre ilk bağlantı kurulumu kritiktir. LibreLink uygulaması, sensörle her 30 saniyede bir kablosuz bağlantı kurmaya çalışır. Bir veya daha fazla zorunlu ayar eksikse, bunların ayarlanması gerekir. Bunu yapmak için zaman sınırınız yok. Sensör sürekli olarak bağlantı kurmaya çalışır. Birkaç saat sürse bile. Sabırlı olun ve sensörü değiştirmeyi düşünmeden önce farklı ayarlar deneyin.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+LibreLink'in başlangıç ekranının sol üst köşesinde kırmızı bir ünlem işareti ("!") gördüğünüz sürece, bağlantı yoktur veya LibreLink'in alarm sinyali vermesini engelleyen başka bir ayar yoktur. Lütfen sesin etkin olup olmadığını ve her türlü uygulama engelleme bildiriminin devre dışı bırakılıp bırakılmadığını kontrol edin. Ünlem işareti kaybolduğunda bağlantı kurulmalı ve akıllı telefona kan şekeri değerleri gönderilmelidir. Bu en fazla 5 dakika içerisinde gerçekleşmelidir.
 
 .. image:: ../images/Libre2_ExclamationMark.png
-  :alt: LibreLink no connection
+  :alt: LibreLink bağlantı yok
   
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Ünlem işareti kalıyorsa veya bir hata mesajı alıyorsanız, bunun birkaç nedeni olabilir:
 
 - Android location service is not granted - please enable it in the system settings
 - automatic time and time zone not set - please change the settings accordingly
