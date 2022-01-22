@@ -107,7 +107,7 @@ If you receive a failure message like
     * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
 
     * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
-      
+
       If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
 
@@ -131,12 +131,19 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
   Now you need to trigger a [Gradle Resync](#Gradle-Resync)
 
-### No cached version of ... available for offline mode
+### Could not resolve/No cached version
 
-  On the right side, open the Gradle tab (1). Make sure the button shown at (2) is NOT selected.
-  ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+  You might get this error message:
 
-  Now you need to trigger a [Gradle Resync](#Gradle-Resync)
+    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+
+  * On the right side, open the Gradle tab (1).
+
+    Make sure the button shown at (2) is *NOT* selected.
+
+    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+
+  * Now you need to trigger a [Gradle Resync](#Gradle-Resync)
 
 ### Unable to start daemon process
 
