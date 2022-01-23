@@ -132,9 +132,10 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 ![Activate_Pod_14](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_14.png)    ![Activate_Pod_15](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Activate%20Pod/Activate_Pod_15.jpg)
 
-## Deactivate Pod
+It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
-It is good practice to export settings AFTER deactivating the old pod and BEFORE activating the new pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+
+## Deactivate Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
