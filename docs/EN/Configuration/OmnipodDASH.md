@@ -390,16 +390,16 @@ Exporting AndroidAPS settings enables you to restore all your settings, and mayb
 
 Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
 
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of problems. For instance when moving to another backup phone.
+**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of a problem. For instance when moving to another backup phone.
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any (new) phone.
+Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
 
 ## Import Settings
 
 **WARNING**
-Please note that importing settings will probably import an "outdated" Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
 
-When importing settings with an active Pod, make sure the export was done with the same Pod that is currently active. 
+When importing settings with an active Pod, make sure the export was done with the currently active pod. 
 
 **Importing while on an active Pod:** (you risk losing the Pod!)
 
@@ -416,7 +416,7 @@ When importing settings with an active Pod, make sure the export was done with t
 
 ## Importing settings that contain Pod state from an inactive Pod
 
-When importing settings that contain an active Pod data (that is no longer active), it will show up on the DASH tab. AndroidAPS will try to connect which will obviously fail. In this situation, you can not activate a new Pod.
+When importing settings containing data for a Pod that is no longer active, AndroidAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
 
 To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
 
