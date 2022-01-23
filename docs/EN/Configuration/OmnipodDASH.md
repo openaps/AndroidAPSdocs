@@ -386,47 +386,45 @@ When no communication can be established with the pod for a preconfigured time a
 
 ## Export  Settings
 
-Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. Purpose may be to restore settings to “last known good” or after uninstalling/reinstalling AndroidAPS.
+Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AndroidAPS or in case of phone loss, reinstalling on the new phone.
 
-Note: In some cases you may need to use the export to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only import settings exported for the pod currently active.
+Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
 
-**Good practice is to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of problems. For instance when moving to another backup phone.
+**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of problems. For instance when moving to another backup phone.
 
-- Think about if you need to export with an active pod session.
-- Regularly export your settings and store a copy in a safe place.
+Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any (new) phone.
 
 ## Import Settings
 
-Please note that importing settings has the possibility to import an outdated Pod status. As a result, the outdated will result in losing the active Pod! (see **Exporting Settings**)
-
-When importing settings with an active Pod, make sure the export was done on the same Pod that is currently active. 
-
 **WARNING**
-Importing settings while on an active Pod session may result in Pod failure or losing the current active Pod. So only try when no other options are available.
+Please note that importing settings will probably import an "outdated" Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+
+When importing settings with an active Pod, make sure the export was done with the same Pod that is currently active. 
 
 **Importing while on an active Pod:** (you risk losing the Pod!)
 
-1. Make sure you are importing settings recently exported while on the current Pod.
-2. Import your settings (must be exported for the current pod session)
+1. Make sure you are importing settings that were recently exported with the currently active Pod.
+2. Import your settings
 3. Check all preferences
 
 **Importing (no active Pod session)**
 
 1. Importing any recent export should work (see above)
 2. Import your settings.
-3. Check all preferences
+3. Check all preferences.
+4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data. 
 
 ## Importing settings that contain Pod state from an inactive Pod
 
-When importing settings that contain the session state for a Pod that is no longer active it will show up on the DASH tab. AndroidAPS will try to connect which is obviously failing. In this state you can not activate a new Pod.
+When importing settings that contain an active Pod data (that is no longer active), it will show up on the DASH tab. AndroidAPS will try to connect which will obviously fail. In this situation, you can not activate a new Pod.
 
-To remove the old Pod session “try” to de-activate the Pod. Initially de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
+To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
 
 ## Reinstalling AndroidAPS
 
-When uninstalling AndroidAPS you will lose all settings, objectives and possibly the current Pod session. To restore them make sure you have a recent settings file available!
+When uninstalling AndroidAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
 
-When on an active Pod, also make sure you have an export for the current Pod session or you will lose the Pod currently active on importing settings.
+When on an active Pod, make also sure that you have an export for the current Pod session or you will lose the currently active Pod when importing older settings.
 
 1. Export your settings and store a copy in a safe place.
 2. Uninstall AndroidAPS and restart your phone.
@@ -452,7 +450,7 @@ Please note that the Omnipod Dash driver presents a variety of unique alerts on 
 
 ### No active Pod
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically silenced.
+No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
 
 ### Pod suspended
 
@@ -464,18 +462,18 @@ Informational alert that the Pod basal profile setting has failed, and you will 
 
 ### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
 
-Alert that the SMB bolus success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 
 ### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
 
 # Where to get help for Omnipod DASH driver
 
-All of the development work for the Omnipod DASH driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues)
-if it exists, please confirm.comment/add information on your problem.
+if it exists, please confirm/comment/add information on your problem.
 If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
 
