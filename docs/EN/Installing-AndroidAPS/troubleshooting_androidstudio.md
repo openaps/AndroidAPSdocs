@@ -28,24 +28,7 @@ These are the usual gradle sync failures:
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
 *Important*:
-After you have followed the instructions for your specific problem, you need to trigger the gradle sync again.
-
-### Gradle Resync
-
-If you can still see the message that the gradle sync failed, now select the Link "Try again".
-![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-If you don't see the a message anymore, you can still trigger this manually:
-
-* Open the Gradle tab (1) on the right border of Android Studio.
-
-  ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-* Right-click on AndroidAPS (2)
-
-* Click on "Reload Gradle Project" (3)
-
+After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#Gradle-Sync) again.
 
 ### Uncommitted changes
 
@@ -155,6 +138,21 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
+### Gradle Resync
+
+  If you can still see the message that the gradle sync failed, now select the Link "Try again".
+  ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+
+
+  If you don't see the a message anymore, you can still trigger this manually:
+
+  * Open the Gradle tab (1) on the right border of Android Studio.
+
+    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+
+  * Right-click on AndroidAPS (2)
+
+  * Click on "Reload Gradle Project" (3)
 
 ## Error "on demand" Configuration
 
