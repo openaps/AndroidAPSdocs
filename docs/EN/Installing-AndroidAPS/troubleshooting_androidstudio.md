@@ -154,15 +154,6 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
   * Click on "Reload Gradle Project" (3)
 
-## Error "on demand" Configuration
-
-If your build fails with an error regarding "on demand configuration" you can do the following:
-* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-* In the left pane, click Build, Execution, Deployment > Compiler.
-* Uncheck the Configure on demand checkbox.
-* Click Apply or OK.
-* Now you need to trigger a [Gradle Resync](#Gradle-Resync)
-
 ## App was created with compiler/kotlin warnings
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
