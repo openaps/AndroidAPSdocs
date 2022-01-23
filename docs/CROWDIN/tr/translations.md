@@ -84,7 +84,7 @@ Links will then be shown in standard HTML format and can be translated consideri
 
 ![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
-## Proofreading
+## Redaksiyon
 
 * Redaktörler redaksiyon moduna geçerek
     
@@ -94,4 +94,4 @@ Links will then be shown in standard HTML format and can be translated consideri
     
     ![approve text](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.
+* Redaktör bir çeviriyi onayladığında, sonraki doküman derlemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.

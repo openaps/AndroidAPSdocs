@@ -17,7 +17,7 @@
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Generar APK firmado](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
-4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK.html#transfer-apk-to-smartphone) to your phone and install it
+4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
 5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
@@ -62,11 +62,11 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 ## 3. Build the Signed APK
 
-* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk).
+* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Transfer the apk
 
-You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK.html#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
 ## 5. Check AAPS version on phone
 

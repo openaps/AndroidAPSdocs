@@ -73,4 +73,4 @@ General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation
 
 Naujas siųstuvas su veikiančiu sensoriumi
 --------------------------------------------------
-Jei keisite siųstuvą, kai sensorius veikia, galite pabandyti jį nuimti nepažeisdami paties sensoriaus platformos. Vaizdo įrašą galima rasti adresu `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Jei keisite siųstuvą, kai sensorius veikia, galite pabandyti jį nuimti nepažeisdami paties sensoriaus platformos. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.

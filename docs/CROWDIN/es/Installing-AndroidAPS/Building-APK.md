@@ -6,10 +6,10 @@
 
 ## Notas importantes
 
-* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* Por favor utilice **[Android Studio Versión 2020.3.1](https://developer.android.com/studio/)** o más reciente, para construir la apk.
+* [Sistemas Windows 10 de 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) no son compatibles con Android Studio 2020.3.1.
 
-## Recommended specification of computer for building apk file
+## Configuraciones de equipos recomendadas para generar el archivo apk
 
 <table class="tg">
   
@@ -60,14 +60,14 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 In general, the steps necessary to build the APK file:
 
-1. [Instala Git](../Installing-AndroidAPS/git-install.rst)
+1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
 2. [Instalar Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Establecer la ruta git en las preferencias de Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Descargar código de AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
 5. [Descargar Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [ Construir la aplicación ](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generar apk firmado)
 7. [Transferir el archivo apk a su teléfono](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identificar receptor si se utiliza xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identificar receptor si se utiliza xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
 
 ## Step by step walkthrough
 
@@ -75,7 +75,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Instalar git (si no lo tienes ya)
 
-Siga el manual en [git página de instalación](../Installing-AndroidAPS/git-install.rst).
+Siga el manual en [página de instalación de git](../Installing-AndroidAPS/git-install.rst).
 
 ## Instalar Android Studio
 
@@ -313,11 +313,11 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Select build variant "fullRelease" (1) and press "Finish".
     
-    ![Select build variant](../images/studioSetup/49_buildVariant.png)
+    ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
     
-    ![Select build variant](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio will display the information "Generate Signed APK" after build is finished.
     

@@ -67,7 +67,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [App erstellen](../Installing-AndroidAPS/Building-APK#signierte-apk-erstellen-generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
-8. [Identifiziere den Empfänger falls Du xDrip verwendest+](../Installing-AndroidAPS/Building-APK#identifiziere-den-empfanger-falls-du-xdrip-verwendest)
+8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
 
 ## Schritt für Schritt Anleitung
 
@@ -313,11 +313,11 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Wähle die Build-Variante "fullRelease" (1) und drücke "Finish".
     
-    ![Build-Variante auswählen](../images/studioSetup/49_buildVariant.png)
+    ![Build-Variante auswählen](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio zeigt im unteren Teil des Fensters "Gradle Build running" an. Dies dauert eine Weile je nach Computer und Internetverbindung. **Sei geduldig!**
     
-    ![Build-Variante auswählen](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio zeigt "Generate Signed APK" an, so bald die Erstellung der APK-Datei abgeschlossen ist.
     

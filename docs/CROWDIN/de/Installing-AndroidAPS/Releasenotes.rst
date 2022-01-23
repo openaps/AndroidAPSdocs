@@ -44,13 +44,16 @@ Wichtige Hinweise
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Bies dies behoben ist, muss zwingend BOYDA verwendet werden. Die Verwendung von BOYDA wird auch empfohlen, um von der Rück-Glättung der Werte durch Dexcom zu profitieren.
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Vorbereitende Schritte
 ----------------------
 **Spätestens zwei Tage vor dem Update:**
+
 * Deaktiviere Dexcom Bridge in Nightscout
-* Anwender der Dexcom G5 und G6 Sensoren müssen zur BOYDA wechseln, falls sie bisher xDrip+ eingesetzt haben. Du kannst xDrip+ weiter verwenden, jedoch nicht zum direkten Empfang vom Transmitter. xDrip+ kann aber Daten von BOYDA empfangen.
+
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Änderungen
 ----------------------
@@ -75,6 +78,7 @@ Vorbereitende Schritte
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
+* Bolus Wizard improvement
 * Verbesserung der Anzeige (user interface) @MilosKozak
 * Neue Anwender-Buttons für Automatisierungen @MilosKozak
 * Neues Automatisierungs-Layout @MilosKozak
@@ -316,7 +320,7 @@ Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
-* Falls Du den Dexcom G6 mit der `gepatchten Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:

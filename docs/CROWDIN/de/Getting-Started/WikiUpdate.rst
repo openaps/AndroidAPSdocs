@@ -128,7 +128,7 @@ November 2019
 * `Update SMS-Befehle <../Children/SMS-Commands.html>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
-* `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
+* Update - quick walk-through for experienced users
 * Docs - Update `Mitschreiben <../make-a-PR.html#code-syntax>`_ und `Übersetzen <../translations.html>`_.
 
 Oktober 2019
@@ -155,7 +155,7 @@ September 2019
 
 August 2019
 ==================================================
-* `Dexcom G6 patched App Region <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Dexcom G6 neue Transmitter <../Configuration/xdrip.html#g6-transmitter-das-erste-mal-verbinden>`_ ("firefly" / 8G...)
 * `Was brauche ich? <../index.html#was-brauche-ich>`_ - neue Struktur & zusätzliche Infos
 * Neue Struktur

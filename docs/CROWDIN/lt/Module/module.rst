@@ -86,7 +86,7 @@ Glikemijos šaltinis
 --------------------------------------------------
 Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.

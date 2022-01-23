@@ -45,13 +45,16 @@ Release date: XX-XX-2022
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. До тех пор, пока это не будет исправлено обязательно следует пользоваться самостоятельно построенным приложением Dexcom BYODA. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Этапы подготовки
 ----------------------
 **At least two days before update:**
+
 * отключите Dexcom bridge в Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). XDrip можно оставить, но не как коллектор (xDrip будет получать данные с Dexcom BOYDA)
+
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Изменения
 ----------------------
@@ -76,6 +79,7 @@ Release date: XX-XX-2022
 * Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
+* Bolus Wizard improvement
 * Улучшения пользовательского интерфейса @MilosKozak
 * Новые пользовательские кнопки для автоматизации @MilosKozak
 * Новый макет автоматизации @MilosKozak
@@ -317,7 +321,7 @@ Release date: XX-XX-2022
 --------------------------------------------------
 * Пожалуйста, используйте `Android Studio версии 3.5.1 <https://developer.android.com/studio/>`_ или новее, чтобы `собрать apk <../Installing-AndroidAPS/Building-APK.html>`_ или `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Если вы используете xDrip, должен быть отмечен `identify receiver <../Configuration/xdrip.html#identify-receiver>`_.
-* Если вы используете Dexcom G6 с ` модифицированным приложением Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app> ` _, вам понадобится версия из папки ` 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Поддержка Glimp версии 4.15.57 и новее.
 
 Это обновление для меня? В настоящее время НЕ поддерживается

@@ -1,8 +1,8 @@
-# Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
+# Örnek kurulum: Samsung S7, Dana RS, Dexcom G6 ve Sony Smartwatch
 
 ![Sample Setup](../images/SampleSetup.png)
 
-## Description
+## Açıklama
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
@@ -69,13 +69,13 @@ For security reasons this setting should be set back to inactive once the instal
 
 Location services ("GPS") must be activated in order for Bluetooth to work properly.
 
-### Install Dexcom App (modified version)
+### Dexcom Uygulamasını yükleyin (değiştirilmiş sürüm)
 
-![Dexcom App patched](../images/SampleSetupDexApp.png)
+![Yamalı Dexcom Uygulaması](../images/SampleSetupDexApp.png)
 
 The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
 
 To do this perform the following steps on your smartphone:
 

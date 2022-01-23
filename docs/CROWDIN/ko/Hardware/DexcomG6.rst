@@ -73,4 +73,4 @@ CGM에 대한 일반적인 문제해결은 '이 문서<./GeneralCGMRecommendatio
 
 센서 사용 중에 새로운 트랜스미터로 바꾸기
 --------------------------------------------------
-센서 사용 중 트랜스미터를 변경해야하는 경우, 센서 마운트를 손상시키지 않고 트랜스미터를 제거해야 합니다. 'https: //youtu.be/AAhBVsc6NZ0 <https://youtu.be/AAhBVsc6NZo>' 영상을 확인하십시오.
+센서 사용 중 트랜스미터를 변경해야하는 경우, 센서 마운트를 손상시키지 않고 트랜스미터를 제거해야 합니다. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.

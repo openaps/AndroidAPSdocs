@@ -86,7 +86,7 @@ BZ-Quelle
 --------------------------------------------------
 Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`__. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-* ` Dexcom G6 <../Hardware/DexcomG6.html>`_: Funktioniert mit xDrip+ oder BOYDA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
 * ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_:  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
 * `Libre 2 <../Hardware/Libre2.html>`_: Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.

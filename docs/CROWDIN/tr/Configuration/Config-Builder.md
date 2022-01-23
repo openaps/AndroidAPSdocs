@@ -191,7 +191,7 @@ Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelis
 
 Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sekmesinde seçilen algoritmanın aktif detayını görüntüleyebilirsiniz.
 
-* OpenAPS AMA (Gelişmiş Öğün Yardımı, algoritmanın 2017'deki durumu) OpenAPS AMA hakkında daha fazla ayrıntı [OpenAPS belgeleri içinde bulunabilir. ](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Basit bir ifadeyle bu sistemin faydası, kendinize öğün bolusu verdikten sonra, karbonhidratları güvenilir bir şekilde girerseniz sistem daha hızlı geçici bolus-hedef ile müdahele eder.
+* OpenAPS AMA (gelişmiş yemek yardımı, algoritmanın 2017'deki durumu) Basit bir ifadeyle faydası, yemek bolusu verdikten sonra eğer karbonhidratları doğru bir şekilde girerseniz, sistem daha hızlı bir şekilde kan şekerine yüksek geçici bazal oranları ile müdahale eder.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (süper mikro bolus, ileri düzey kullanıcılar için en yeni algoritma) [10. Görevi bitirmiş olmanız gerektiğini unutmayın.](../Usage/Objectives#objective-10-ebling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) OpenAPS SMB'yi kullanmak için min_5m_carbimpact, Yapılandırma oluşturucu > Duyarlılık algılama > Duyarlılık Oref1 ayarlarında 8 olarak ayarlanmalıdır.
 
 ## Döngü
@@ -238,9 +238,9 @@ Daha fazla bilgi için [Görevler](../Usage/Objectives.rst) sayfasına bakın.
 
 Tedaviler (TEDAVİ) sekmesine bakarsanız, nightcout'a yüklenen tedavileri görebilirsiniz. Bir girişi düzenlemek veya silmek isterseniz (örneğin beklediğinizden daha az karbonhidrat yediniz) tedavilerden 'Kaldır'ı seçin ve [ana ekranda karbonhidrat düğmesi](../Getting-Started/Screenshots#carb-correction) aracılığıyla yeni değeri girin. (gerekirse zamanı değiştirin)
 
-## General
+## Genel
 
-### Overview
+### Genel Bakış
 
 Döngünüzün mevcut durumu ve en yaygın eylemler için düğmeleri görüntüler (ayrıntılar için [GİRİŞ ekranı bölümüne bakın](../Getting-Started/Screenshots.md)). Ayarlara dişli çark tıklanarak erişilebilir.
 
@@ -261,7 +261,7 @@ Ana ekranda hangi Butonların gösterileceğini tanımlayın.
 
 Ayrıca, insülin ve karbonhidrat artışları için kısayollar ayarlayabilir ve notlar alanının tedavi diyaloglarında gösterilip gösterilmeyeceğine karar verebilirsiniz.
 
-#### QuickWizard settings
+#### Hızlı asistan ayarları
 
 Standart bir yemek için giriş ekranında görüntülenecek bir buton oluşturun. (bolus için karbonhidrat hesaplama yöntemi) Sık yediğiniz standart yemekler için kullanın. Farklı öğünler için farklı saatler belirtilirse, günün saatine bağlı olarak ana ekranda her zaman uygun standart yemek butonunu görüntülersiniz.
 

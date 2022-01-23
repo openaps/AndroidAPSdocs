@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
 
 ## Step by step walkthrough
 
@@ -313,11 +313,11 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Select build variant "fullRelease" (1) and press "Finish".
     
-    ![Select build variant](../images/studioSetup/49_buildVariant.png)
+    ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
     
-    ![Select build variant](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio will display the information "Generate Signed APK" after build is finished.
     

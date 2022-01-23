@@ -15,13 +15,13 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 * Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](../Module/module#phone) sayfasında kontrol edin.)
 * Telefonunuzda yüklü olan AndroidAPS uygulaması
 
-## Setup
+## Kurulum
 
 * Insight pompası aynı anda yalnızca bir cihaza bağlanmalıdır. Insight uzaktan kumandasını (ölçüm cihazı) daha önce kullandıysanız, cihazı pompanızın eşleştirilmiş cihazlar listesinden çıkarmalısınız: Menü > Ayarlar > İletişim > Cihazı kaldır
     
     ![Screenshot of Remove Meter Insight](../images/Insight_RemoveMeter.png)
 
-* AndroidAPS uygulamasının [Konfigürasyon oluşturucu](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
+* AndroidAPS uygulamasının [Konfigürasyon ayarları](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
     
     ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
 
@@ -44,7 +44,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
     
     ![Screenshot of Insight Pairing 4](../images/Insight_Pairing4.png)
 
-* Her şeyin yolunda olduğunu kontrol etmek için, AndroidAPS'de Konfigürasyon oluşturucuya geri dönün ve Insight Pump'ın yanındaki dişli çarka dokunarak Insight ayarlarına girin, ardından Insight Pairing'e dokunun, pompa hakkında bazı bilgiler göreceksiniz.
+* Her şeyin yolunda olduğunu kontrol etmek için, AndroidAPS'de Konfigürasyon ayarlarına geri dönün ve Insight Pump'ın yanındaki dişli çarka dokunarak Insight ayarlarına girin, ardından Insight Pairing'e dokunun, pompa hakkında bazı bilgiler göreceksiniz.
     
     ![Screenshot of Insight Pairing Information](../images/Insight_PairingInformation.png)
 

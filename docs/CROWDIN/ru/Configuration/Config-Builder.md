@@ -191,7 +191,7 @@
 
 Выберите нужный алгоритм APS для ведения терапии. Подробности выбранного алгоритма можно просмотреть на вкладке OpenAPS(OAPS).
 
-* Помощник болюса OpenAPS AMA (расширенный помощник болюса, состояние алгоритма на 2017г.) Подробнее об OpenAPS AMA в [документации OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Говоря просто, преимущества этого алгоритма в более эффективной постановке временного базала ПРИ УСЛОВИИ правильного введения углеводов.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [Супер микро болюс OpenAPS](../Usage/Open-APS-features.md) (самый новый алгоритм для опытных пользователей). Для того, чтобы использовать этот алгоритм, вы должны начать [Цель 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb), а параметр min_5m_carbimpact должен быть равен 8 (см. настройки в Конфигуратор > определение чувствительности > Чувствительность Oref1).
 
 ## Замкнутый цикл

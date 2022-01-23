@@ -128,7 +128,7 @@ Lapkritis 2019
 * ` SMS komandų atnaujinimas <../Children/SMS-Commands.html> ` _
 * `Android Studio trikčių šalinimas <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Trikčių šalinimas - nuorodos <../Usage/troubleshooting.html> ` _
-* `Atnaujinimas - trumpas vadovas patyrusiems vartotojams <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Update - quick walk-through for experienced users
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Spalis 2019
@@ -155,7 +155,7 @@ Rugsėjis 2019
 
 Rugpjūtis 2019
 ==================================================
-* `Dexcom G6 modifikuota programa <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Naujas Dexcom G6 siųstuvas <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Ko man reikia? <../index.html#what-do-i-need>`_ - naujos struktūros & papildoma informacija
 * Nauja struktūra

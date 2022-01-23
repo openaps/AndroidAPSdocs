@@ -1,29 +1,29 @@
 Обновления и изменения в документации
 **************************************************
 
-December 2021
+Декабрь 2021
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - обновление до Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ добавил @MilosKozak
 
-November 2021
+ноябрь 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* Наилучшие методы калибровки сенсора `libre 2 <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ переформулирован impact - воздействин
+* Обновление ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* Удалено модифицированное приложение `Dexcom <../Hardware/DexcomG6.html>`_ как устаревшее
 
-October 2021
+Октябрь 2021
 ==================================================
-* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+* `Примечания к выпуску <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
-September 2021
+Сентябрь 2021 года
 ==================================================
-* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+* Рекомендуемые спецификации компьютера для `сборки AAPS <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
 
-June 2021
+Июнь 2021
 ==================================================
-* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+* `загрузка сторонних циферблатов <../Configuration/Watchfaces.html>`_ 
 
 Апрель 2021
 ==================================================
@@ -128,7 +128,7 @@ June 2021
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
-* `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Обновление - краткая инструкция для опытных пользователей
 * Документация - обновление `редактирования <../make-a-PR.md#code-syntax>`_ и`перевода<../translations.html#translate-docs-pages>`_.
 
 Октябрь 2019
@@ -155,7 +155,7 @@ June 2021
 
 Август 2019
 ==================================================
-* `Dexcom G6 модифицированное приложение <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Модифицированное приложение Dexcom G6 - регионы
 * `Новый трансмиттер Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Что нужно? <../index.html#what-do-ineed> ` _-новая структура и дополнительная информация
 Новая структура

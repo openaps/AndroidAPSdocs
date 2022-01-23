@@ -86,7 +86,7 @@ BG bron
 --------------------------------------------------
 Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. Zie meer informatie `hier <../Configuration/BG-Source.html>`__. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BOYDA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Deze sensors zijn vrij oud, maar er zijn instructies te vinden om hem met de xDrip+ app te gebruiken
 * `Libre 2 <../Hardware/Libre2.html>`_: Werkt met xDrip+ (geen zender nodig), maar je moet je eigen gepatchte app bouwen.

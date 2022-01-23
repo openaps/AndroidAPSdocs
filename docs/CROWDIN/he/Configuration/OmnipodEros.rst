@@ -360,7 +360,7 @@
 	* **כתובת:** כתובת MAC של הריילינק שהפעיל את הפוד.
 	* **שם:** השם איתו מזוהה הריילילינק כמוגדר בהגדרות הבלוטות' של הטלפון.
 	* **רמת סוללה:** מציג את רמת הסוללה הנוכחית של הריילילינק.
-	* **דגם המכשיר המחובר:** דגם הפוד המתקשר כעת עם הריילילינק (כרגע רק פודים מדגם Eros).
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
 	* **סטטוס חיבור**: הסטטוס הנוכחי של חיבור הבלוטות' בין הריילילינק לבין הטלפון שמריץ AAPS.
 	* **שגיאת חיבור:** אם ישנה שגיאה בריילילינק יופיעו כאן פרטי חיבור הבלוטות'.
 	* **גרסת קושחה:** גרסת הקושחה של הריילילינק.
@@ -566,15 +566,15 @@
 RileyLink - ריילילינק
 ---------
 
-מאפשר סריקה אחר מכשירי ריילילינק. מנהל התקן הריילילינק לא יכול להשתמש ביותר ממכשיר ריילילינק אחד בבת אחת.
+Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
 
-* **הצג את רמת הסוללה המדווחת על-ידי OrangeLink\Emalink:** מדווח את רמת הסוללה של מכשיר הריילילינק עצמו. הפעלת אפשרות זו מומלצת בחום לכל משתמשי OrangeLink/EmaLink.
+* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
 	+ לא עובד עבור הריילילינק המקורי.
 	+ עלול שלא לעבוד במכשירי ריילילינקים מדגמים אלטרנטיביים.
 	+ כשמאופשר - מדווח את רמת הסוללה של ריילילינקים מדגמים נתמכים.
 	+ כשאינו מאופשר - מדווח "לא זמין".
-* **אפשר רישום החלפת סוללה בפעולות:** בלשונית פעולות כפתור החלפת הסוללה מופעל אם הפעלתם הגדרה זו והגדרת דיווח הסוללה למעלה.  חלק מדגמי הריילילינק כיום משתמשים בסוללות רגילות הניתנות להחלפה.  אפשרות זו מאפשרת לכם לבצע רישום ואיפוס של מונה של גיל הסוללה.
+* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  חלק מדגמי הריילילינק כיום משתמשים בסוללות רגילות הניתנות להחלפה.  אפשרות זו מאפשרת לכם לבצע רישום ואיפוס של מונה של גיל הסוללה.
 
 צפצופי אישור
 ------------------
@@ -698,14 +698,14 @@ RileyLink - ריילילינק
 
 **רמת הסוללה**
 
-דיווח על רמת סוללה הוא הגדרה שניתן לאפשר כדי לאחזר את רמת הסוללה הנוכחית של OrangeLink ו- EmaLink.  חומרת הריילילינק המקורי אינה מסוגלת לדווח על רמת הסוללה שלה.  רמת הסוללה מדווחת לאחר כל תקשורת עם הפוד, כך שלא ניתן להבחין בעלייה לינארית בעת הטעינה.  רענון ידני יעדכן את רמת הסוללה הנוכחית.  כאשר הריילינק מתנתק, ידווח ערך של 0%.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  חומרת הריילילינק המקורי אינה מסוגלת לדווח על רמת הסוללה שלה.  רמת הסוללה מדווחת לאחר כל תקשורת עם הפוד, כך שלא ניתן להבחין בעלייה לינארית בעת הטעינה.  רענון ידני יעדכן את רמת הסוללה הנוכחית.  כאשר הריילינק מתנתק, ידווח ערך של 0%.
 
-  * **חומרת ריילינק המקורית אינה מסוגלת לדווח על רמת הסוללה** 
-  * **שימוש ברמת הסוללה המדווחת על ידי OrangeLink/EmaLink חייב להיות מופעל בהגדרות Omnipod לדיווח על ערכי רמת הסוללה**
-  * **חיווי רמת הסוללה פועלת רק למכשירי OrangeLink ו-EmaLink**
+  * **RileyLink hardware is NOT capable of reporting battery level** 
+  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
+  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
   * **דיווח על רמת סוללה עשוי לעבוד במכשירים אחרים (לא כולל RileyLink)**
-  ***SMS** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר.
-  ***נייטסקאוט** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר.
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
 פתרון בעיות

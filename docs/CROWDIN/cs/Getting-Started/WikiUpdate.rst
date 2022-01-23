@@ -128,7 +128,7 @@ November 2019
 * `SMS commands update <../Children/SMS-Commands.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
-* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+* Update - quick walk-through for experienced users
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Říjen 2019
@@ -155,7 +155,7 @@ září 2019
 
 srpen 2019
 ==================================================
-* `Region pro upravenou aplikaci Dexcom G6 <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Nový vysílač Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Co potřebuji? <../index.html#what-do-i-need>`_ - nová struktura a doplňující informace
 * Nová struktura

@@ -37,20 +37,23 @@ Android 7
 
 Versión 3.0.0
 ================
-Release date: XX-XX-2022
+Fecha de lanzamiento: XX-XX-2022
 
 Notas importantes
 ----------------------
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usar BOYDA. También se recomienda el uso de la aplicación BOYDA, para aprovechar el suavizado que aplica Dexcom.
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usa BYODA. También se recomienda usar BYODA para aprovechar el suavizado que aplica Dexcom.
 
 Pasos de preparación
 ----------------------
 **Al menos dos días antes de la actualización:**
+
 * Deshabilitar el "puente" entre Dexcom y Nightscout
-* Si estás usando G5/G6 cambia a BOYDA (si estabas usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+
+* Si estás usando G5/G6 cambia a BYODA (si estás usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+
 
 Cambios
 ----------------------
@@ -75,6 +78,7 @@ Cambios
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* Asistente de bolos mejorado
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak
 * Nuevo diseño de las automatizaciones @MilosKozak
@@ -316,7 +320,7 @@ Notas importantes
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado

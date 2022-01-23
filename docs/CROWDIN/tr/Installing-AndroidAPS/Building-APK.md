@@ -56,7 +56,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
-## Overview
+## Genel Bakış
 
 In general, the steps necessary to build the APK file:
 
@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
 
 ## Step by step walkthrough
 
@@ -313,11 +313,11 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Select build variant "fullRelease" (1) and press "Finish".
     
-    ![Select build variant](../images/studioSetup/49_buildVariant.png)
+    ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
     
-    ![Select build variant](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio will display the information "Generate Signed APK" after build is finished.
     

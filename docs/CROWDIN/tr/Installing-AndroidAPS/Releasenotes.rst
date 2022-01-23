@@ -35,7 +35,7 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Sürüm 3.0.0
 ================
 Release date: XX-XX-2022
 
@@ -44,13 +44,16 @@ Important hints
 * **Minimum Android version is 9.0 now.**
 * **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BOYDA in mandatory. Using BOYDA is also recommended to take advantage of Dexcom back-smoothing
+* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Preparation steps
 ----------------------
 **At least two days before update:**
+
 * disable Dexcom bridge in Nightscout
-* if you are using G5/G6 switch to BOYDA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BOYDA)
+
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Changes
 ----------------------
@@ -75,6 +78,7 @@ Changes
 * Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
+* Bolus Wizard improvement
 * UI improvements @MilosKozak
 * New user buttons for automations @MilosKozak
 * New automation layout @MilosKozak
@@ -91,7 +95,7 @@ Changes
 
 
 
-Version 2.8.2
+Sürüm 2.8.2
 ================
 Release date: 23-01-2021
 
@@ -316,7 +320,7 @@ Release date: 26-10-2019
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 Is this update for me? Currently is NOT supported
@@ -343,7 +347,7 @@ Major new features
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Sürüm 2.3
 ==================================================
 Release date: 25-04-2019
 
@@ -360,7 +364,7 @@ Major new features
 * New Version-Checker
 
 
-Version 2.2.2
+Sürüm 2.2.2
 ==================================================
 Release date: 07-04-2019
 
@@ -372,7 +376,7 @@ Major new features
 * SMS plugin fix
 
 
-Version 2.2
+Sürüm 2.2
 ==================================================
 Release date: 29-03-2019
 
@@ -385,7 +389,7 @@ Major new features
 * Stop loop if phone disk is full
 
 
-Version 2.1
+Sürüm 2.1
 ==================================================
 Release date: 03-03-2019
 
@@ -405,7 +409,7 @@ Misc
 * If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
-Version 2.0
+Sürüm 2.0
 ==================================================
 Release date: 03-11-2018
 
@@ -455,6 +459,6 @@ Misc
 * New app icon
 * Lots of improvements and bugfixes
 * Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-* Option to keep screen on
-* Option to show notification as Android notification
-* Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+* Ekranı açık tutma seçeneği
+* Bildirimi Android bildirimi olarak gösterme seçeneği
+* Gelişmiş filtreleme (SMB'yi ve yemeklerden 6 saat sonra her zaman etkinleştirmeyi sağlayan), yamalı Dexcom uygulaması veya KŞ kaynağı olarak Xdripte G5 yerel modu ile desteklenir.

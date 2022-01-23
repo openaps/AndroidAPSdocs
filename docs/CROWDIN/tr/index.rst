@@ -78,7 +78,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :glob:
    :caption: Konfigürasyon
 
-   Konfigürasyon Oluştur <./Configuration/Config-Builder.md>
+   Config builder <./Configuration/Config-Builder.md>
    Tercihler <./Configuration/Preferences.rst>
 
 .. toctree::
@@ -123,59 +123,59 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Sorun Giderme
 
-   Troubleshooting <./Usage/troubleshooting.rst>
+   Sorun Giderme <./Usage/troubleshooting.rst>
    Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: FAQ
+   :caption: SSS
 
-   FAQ <./Getting-Started/FAQ.md>
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Glossary
-
-   Glossary <./Getting-Started/Glossary.md>
+   SSS <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: Sözlük
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Sözlük <./Getting-Started/Glossary.md>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Yardım için nereye gitmeli 
+
+   Başlamadan önce okumanız gereken faydalı kaynaklar <./Where-To-Go-For-Help/Background-reading.md>
+   Yardım için nereye gitmeli <./Where-To-Go-For-Help/Connect-with-other-users.md>
    Dokm. güncelleme & değişiklikler <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Klinisyenler için
 
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Klinisyenler için <./Resources/clinician-guide-to-AndroidAPS>
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Nasıl yardım ederim
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Nasıl yardım ederim <./Getting-Started/How-can-I-help.md>
+   Uygulama ve dokümanlar nasıl çevrilir <./translations.md>
+   Dokümanlar nasıl düzenlenir </.make-a-PR>
 
 
-.. note:: 
-	**Disclaimer And Warning**
+.. not:: 
+	**Sorumluluk Reddi ve Uyarı**
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Burada açıklanan tüm bilgi, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AndroidAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* Github.com'dan gelen kodun kullanımı herhangi bir garanti veya resmi destek içermez. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Tüm ürün ve şirket adları, ticari markalar, hizmet markaları, tescilli ticari markalar ve tescilli hizmet markaları ilgili sahiplerinin mülkiyetindedir. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Lütfen unutmayın - bu projenin aşağıdakilerle hiçbir ilişkisi yoktur ve bunlar tarafından desteklenmemektedir: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diyabet Bakımı <https://www.accu-chek.com/>`_ veya `Medtronic <https://www.medtronic.com/>`_

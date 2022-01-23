@@ -75,7 +75,7 @@ Služby určování polohy (dále jen „GPS“) musí být aktivovány, aby Blu
 
 Původní aplikace Dexcom z obchodu Google Play nebude fungovat, protože nevysílá hodnoty do jiné aplikace. Proto je vyžadována verze mírně upravená komunitou. Pouze tato upravená Dexcom aplikace může komunikovat s AAPS. Navíc lze použít upravenou Dexcom aplikaci se všemi Android telefony a ne jen s těmi v [seznamu kompatibilních zařízení s Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Na [ https://github.com/dexcomapp/dexcomapp/tree/master/2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) jsou k dispozici mmol/l a mg/gl verze upravené Dexcom G6 aplikace. Je nutné vybrat si G6 aplikaci určenou [pro váš region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+Na [ https://github.com/dexcomapp/dexcomapp/tree/master/2.4 ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) jsou k dispozici mmol/l a mg/gl verze upravené Dexcom G6 aplikace. You have to choose G6 app for your region.
 
 Chcete-li to provést, proveďte na svém smartphonu následující kroky:
 

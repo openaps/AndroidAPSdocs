@@ -14,7 +14,7 @@
 * Pompa bölümünde 'Dana-i/RS'i seçin.
 * Doğrudan pompa ayarlarına gitmek için dişli çarka tıklayın veya ana ekrana dönün.
     
-    ![AAPS config builder Dana-i/RS](../images/DanaRS_i_ConfigB.png)
+    ![AAPS Konfigürasyon ayarları Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
 * Ana ekranda 'DANA-i/RS' sekmesine gidin.
 
@@ -23,11 +23,11 @@
 * "Pompa seçimi"ne tıklayın.
 * Eşleştirme penceresinde pompanıza tıklayın.
     
-    ![AAPS pair Dana-i/RS](../images/DanaRS_i_Pairing.png)
+    ![AAPS Dana-i/RS eşleştirme](../images/DanaRS_i_Pairing.png)
 
 * **Pompa üzerinde eşleştirmeyi onaylamanız gerekir!** Bu, diğer bluetooth eşleştirmelerinden (ör. akıllı telefon ve araç ses sistemi) alışık olduğunuz yoldur.
     
-    ![Dana RS confirmation pairing](../images/DanaRS_Pairing.png)
+    ![Dana RS eşleştirme onayı](../images/DanaRS_Pairing.png)
 
 * Pompanızın tipine ve yazılımına göre eşleştirme sürecini takip edin:
     
@@ -55,69 +55,69 @@
 * Pompadaki OK düğmesine basın
 * Ana menüde "OPTION" (seçenek) öğesini seçin (sağ ok düğmesine birkaç kez basarak sağa hareket edin)
     
-    ![DanaRS Main Menu](../images/DanaRSPW_01_MainMenu.png)
+    ![DanaRS Ana Menü](../images/DanaRSPW_01_MainMenu.png)
 
 * Seçenekler menüsünde "USER OPTION" "kullanıcı seçeneği"ni seçin
     
-    ![DanaRS Option Menu](../images/DanaRSPW_02_OptionMenu.png)
+    ![DanaRS Seçenek Menüsü](../images/DanaRSPW_02_OptionMenu.png)
 
 * "11. password'e (parolaya) inmek için sağ ok düğmesini kullanın"
     
-    ![DanaRS 11. Password](../images/DanaRSPW_03_11PW.png)
+    ![DanaRS 11. Parola](../images/DanaRSPW_03_11PW.png)
 
 * Eski şifreyi girmek için Tamam'a basın.
 
 * **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](#default-password) bakın) ve "OK" Tamam'a basın
     
-    ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Eski parola girişi](../images/DanaRSPW_04_11PWenter.png)
 
 * Buraya yanlış şifre girilirse, başarısız olduğunuzu belirten bir mesaj almayacaksınız!
 
 * **Yeni şifre** belirleyin (+ & - düğmeleriyle sayıları değiştirin / sağa gitmek için sağ ok butonuna basın).
     
-    ![DanaRS New password](../images/DanaRSPW_05_PWnew.png)
+    ![DanaRS Yeni parola](../images/DanaRSPW_05_PWnew.png)
 
 * OK butonu ile onaylayın.
 
 * OK butonuna tekrar basarak kaydediniz.
     
-    ![DanaRS Save new password](../images/DanaRSPW_06_PWnewSave.png)
+    ![DanaRS Yeni parolayı kaydet](../images/DanaRSPW_06_PWnewSave.png)
 
 * "14. EXIT" çıkışa gelin ve OK butonuna basın.
     
-    ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+    ![DanaRS Çıkış](../images/DanaRSPW_07_Exit.png)
 
 ## Dana RS'e özgü hatalar
 
 ### İnsülin iletimi sırasında hata
 
-Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) aşağıdaki mesajı görecek ve bir alarm sesi duyacaksınız.
+Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) bir mesaj görecek ve bir alarm sesi duyacaksınız.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![İnsülin iletimi alarmı](../images/DanaRS_Error_bolus.png)
 
-* In most cases this is just a communication issue and the correct amount of insulin is delivered.
-* Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
-* Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
+* Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
+* Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
+* İsterseniz [tedaviler sekmesinde](../Getting-Started/Screenshots#carb-correction) hatalı girişi silin.
+* Bir sonraki pompa bağlantısında gerçek miktar okunur ve kaydedilir. Bunu yaptırmak için dana sekmesindeki BT simgesine basın veya bir sonraki bağlantı için bekleyin.
 
-## Special note when switching phone
+## Telefon değiştirirken özel not
 
-When switching to a new phone the following steps are necessary:
+Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
-* [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
-* Transfer settings from old to new phone
+* Eski telefonunuzdaki [Ayarları dışa aktarın](../Usage/ExportImportSettings#export-settings)
+* Ayarları eski telefondan yeni telefona aktarın
 
 ### DanaRS v1
 
-* **Manually pair** Dana RS with the new phone
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
-* Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* Dana RS'i yeni telefonla **manuel olarak eşleştirin**
+* Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
+* AndroidAPS'i yeni telefona yükleyin.
+* Yeni telefonunuzda [Ayarları içe aktarın](../Usage/ExportImportSettings#import-settings)
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
-* Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
+* [Yukarıda](#pairing-pump) açıklanan şekilde eşleştirme prosedürünü başlatın.
+* Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AndroidAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 

@@ -191,7 +191,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Selecione o algoritmo APS desejado para ajustes da terapia. Pode ver os detalhes do algoritmo escolhido no separador OpenAPS(OAPS).
 
-* OpenAPS AMA (Algoritmo de Assistente Avançado de Refeições de 2017) Mais detalhes sobre o OpenAPS AMA podem ser encontrados em [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Os benefícios, de forma simples, são verificados depois de se dar um bólus à refeição, o sistema coloca um perfil mais alto (high-temp) mais rapidamente isto SE forem inseridos hidratos de carbono de forma confiável.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bólus, o algoritmo mais recente para usuários experientes)  
     Atenção que é necessário estar no [Objetivo 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) para usar OpenAPS SMB e min_5m_carbimpact deve ser definido para 8 no Configurador > Sensibilidade de deteção > Configurações Sensibilidade Oref1.
 

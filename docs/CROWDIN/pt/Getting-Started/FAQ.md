@@ -8,9 +8,9 @@ Como adicionar perguntas para a FAQ: Siga estas [instruções](../make-a-PR.md)
 
 Não. Não há nenhum arquivo apk para download para AndroidAPS. Você mesmo tem que [compilar](../Installing-AndroidAPS/Building-APK.md). Aqui está a razão pela qual:
 
-A AndroidAPS é usada para controlar a sua bomba e administrar insulina. Sob os regulamentos atuais, na Europa, toda a classe de sistemas como IIa ou IIb são dispositivos médicos que requerem aprovação regulatória (uma marca CE) e que precisa de vários estudos e assinaturas. Distribuir um dispositivo não regulamentado é ilegal. Regulamentações semelhantes existem noutras partes do mundo.
+A AndroidAPS é usada para controlar a sua bomba e administrar insulina. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuir um dispositivo não regulamentado é ilegal. Regulamentações semelhantes existem noutras partes do mundo.
 
-Este regulamento não se restringe às vendas (no sentido de conseguir dinheiro para alguma coisa) mas aplica-se a qualquer forma de distribuição (mesmo doando-se gratuitamente). Construir um dispositivo médico para si mesmo é a única forma de não ser afetado por esses regulamentos.
+This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
 É por isso que os apks não estão disponíveis.
 
@@ -40,54 +40,40 @@ Se planeia usar o aplicativo android wear para bólus ou alterar as configuraç�
 
 ### Desconetar a bomba
 
-Se tirar a bomba para tomar banho/nadar/praticar desporto, etc. deve informar a AndroidAPS que nenhuma insulina é fornecida para manter a IOB correta.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-* Pressione e segure o botão 'Loop fechado' (será chamado de 'Loop aberto' quando ainda não tiver um loop fechado) na parte superior da tela inicial. 
-* Selecione **'Desconectar bomba por XY min'**
-* Isto definirá a sua basal a zero durante esse período de tempo.
-* O período mínimo de tempo para uma desconexão está relacionado com o tempo minimo das DBTs que podem ser configuradas na bomba. Portanto, se desejar desconectar por um período mais curto de tempo, deve usar o menor tempo de desconexão disponível para a sua bomba e reconectar manualmente conforme descrito abaixo.
-* O botão 'Loop fechado' (ou 'Loop aberto') ficará vermelho e será nomeado como 'Desconectado (xx m)' exibindo o tempo de desconexão restante.
-* A AAPS irá reconecta-ser à bomba automaticamente após o tempo escolhido terminar e o seu loop fechado começará a funcionar novamente.
-    
-    ![Desconetar a bomba](../images/PumpDisconnect.png)
-
-* Se o tempo selecionado tiver sido muito longo, pode reconectar manualmente.
-
-* Mantenha pressionado o botão vermelho 'Desconectado (xx m)'.
-* Selecione 'Reconectar bomba'.
-    
-    ![Reconnect pump](../images/PumpReconnect.png)
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### As recomendações não são baseadas numa única leitura do MCG
 
-Para a sua segurança, as recomendações feitas baseiam-se não apenas numa leitura da MCG mas no delta médio. Por isso, se perder algumas leituras pode demorar um pouco até voltar a obter dados de volta antes da AndroidAPS voltar a estar em looping novamente.
+For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
 ### Mais leituras
 
-Há vários blogs com boas dicas para ajudá-lo a entender as práticas de looping:
+There are several blogs with good tips to help you understand the practicalities of looping:
 
-* [Configurações de ajuste fino](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Por que o DIA importa](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limitando os picos pós refeições](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormonas e autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## Que equipamento de emergência é recomendado para transportar comigo?
 
-Antes de mais nada, é preciso levar o mesmo equipamento de emergência com como todos os outros T1D com terapia de bomba de insulina. Em looping com a AndroidAPS, é altamente recomendável ter os seguintes equipamentos com, ou perto, de si:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
-* Carregador de baterias para a energia do seu smartphone (uma powerbank dá sempre jeito), wear (relógio) e (talvez) leitor BT
-* Backup na nuvem (Dropbox, Google Drive ...) das apps que usa como: a sua versão mais recente da AndroidAPS-APK e a sua senha de armazenamento de passwords, arquivo de configurações da AndroidAPS, arquivo de configurações da xDrip, app patched Dexcom, ...
-* Baterias da Bomba
+* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
+* Pump batteries
+* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## Como conectar com segurança o MCG/MFG?
+## How can I safely and securely attach the CGM/FGM?
 
-Pode colocar uma fita sobre o mesmo. Encontram-se à venda pela net imensas opções para garantir que o sensor não descola. Alguns utilizadores utilizam a fita de kinesia padrão mais barata ou a rocktape.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-Pode fixá-lo: Existem à venda braceletes que fixam o MCG/MFG com uma banda de borracha (pesquise no Google ou ebay).
+You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 # Definições AndroidAPS
 
-A lista seguinte tem como objetivo ajudar a otimizar as configurações. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
 ## Duration of insulin activity (DIA)
 
@@ -242,7 +228,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 * reduce the length of time the backlight stays on (within pump settings menu)
 * select notification settings to a beep rather than vibrate (within pump settings menu)
 * only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. Isto consome bateria. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
     
     For example, to whitelist on a Samsung phone running Android Pie:
     
@@ -278,13 +264,11 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### What to do when taking a shower or bath?
 
-You can remove the pump while taking a shower or bath. For this short period of time you'll usually won't need it. But you should tell it to AAPS so that the IOB calculations are right.
-
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Work
 
-Depending on the kind of your job, maybe you use different treatment factors on workdays. As a looper you should think of a [profile switch](../Usage/Profiles.md) for your estimated working day (e.g. more than 100% for 8h when sitting around or less than 100% when you are active), a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when standing up much earlier or later than regular. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. If you are using [Nightscout profiles](../Configuration/Config-Builder#ns-profile), you can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
 
@@ -308,9 +292,7 @@ The percentage of the profile switch, the value for your activity temp target an
 
 ### Sexo
 
-You can remove the pump to be 'free', but you should tell it to AAPS so that the IOB calculations are right.
-
-See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Beber álcool
 
@@ -326,13 +308,13 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### How can I loop during the night without mobile and WIFI radiation?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Active o modo avião no seu telemóvel.
 2. Wait until the airplane mode is active.
 3. Ligar o Bluetooth.
 
-You are not receiving calls now, nor are you connected to the internet. Mas o loop ainda está em execução.
+You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
 Some people have discovered problems with local broadcast (AAPS not receiving BG values from xDrip+) when phone is in airplane mode. Go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
 

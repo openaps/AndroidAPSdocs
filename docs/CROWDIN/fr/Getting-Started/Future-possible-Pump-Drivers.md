@@ -6,7 +6,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Omnipod DASH ([Page d'accueil](https://www.myomnipod.com/DASH))
 
-**État de la boucle :** Omnipod DASH sera disponible dans [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 

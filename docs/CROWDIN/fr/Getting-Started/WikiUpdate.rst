@@ -128,7 +128,7 @@ Novembre 2019
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
-* `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#acces-rapide-aux-utilisateurs-experimentes>`_
+* Update - quick walk-through for experienced users
 * Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-de-documentation>`_.
 
 Octobre 2019
@@ -155,7 +155,7 @@ Septembre 2019
 
 Août 2019
 ==================================================
-* `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_
+* Dexcom G6 patched app region
 * `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connecter-l-emetteur-g6-pour-la-premiere-fois>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
 * Nouvelle structure
