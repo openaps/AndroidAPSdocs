@@ -28,7 +28,7 @@ These are the usual gradle sync failures:
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
 *Important*:
-After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#Gradle-Sync) again.
+After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#step-3-resync-gradle-again) again.
 
 ### Uncommitted changes
 
