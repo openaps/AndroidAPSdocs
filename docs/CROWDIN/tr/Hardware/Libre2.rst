@@ -180,18 +180,18 @@ Sonuçta, piyasadaki en küçük CGM sistemlerinden biridir. Küçük, verici ge
 
 Zaman zaman kan değerlerinden yanlış ölçen kötü sensörler var gibi görünüyor. Bu şekilde kalırsa bu sensörler derhal değiştirilmelidir.
 
-If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
+Sensör cilt üzerinde biraz hareket ederse veya bir şekilde kaldırılırsa bu kötü sonuçlara neden olabilir. Dokuya oturan filament dokudan biraz dışarı çıkar ve o zaman sensör farklı sonuçlar ölçecektir. Büyük olasılıkla, xDrip+'da atlama değerler göreceksiniz. Ya da KŞ değerleri farklı olacaktır. Lütfen en kısa sürede sensörü değiştirin! Yanlış KŞ değerleri alıyorsunuz.
 
-Using bluetooth transmitter and OOP
+Bluetooth verici ve OOP kullanma
 ==================================================
 
-Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Please refer to the miaomiao website to find a description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
+Bluetooth vericisi, Libre2 ile en son xDrip sürümü ve Libre2 OOP uygulaması ile kullanılabilir. Libre 1'de olduğu gibi her 5 dakikada bir kan şekeri ölçümleri alabilirsiniz. Açıklama için lütfen miaomiao web sitesine bakın. Bu, Bubble cihazıyla ve gelecekte diğer verici cihazlarıyla da çalışacaktır. Bluconun da çalışması gerekir, ancak henüz test edilmemiştir.
 
-Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Eski Libre1 verici cihazları, Libre2 OOP ile kullanılamaz. Düzgün çalışması için daha yeni bir sürümle değiştirilmeleri veya bir ürün yazılımı yükseltmesine sahip olmaları gerekir. En yeni bellenime sahip MM1 ne yazık ki henüz çalışmıyor - şu anda temel neden aranıyor.
 
-The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
+Libre2 OOP, NFC taraması yoluyla orijinal okuyucu veya LibreLink uygulaması ile aynı KŞ okumalarını oluşturuyor. Libre 2 ile AAPS, belirli atlamaları önlemek için 25 dakikalık bir yumuşatma yapar. OOP, son 5 dakikanın ortalaması ile her 5 dakikada bir okuma üretir. Bu nedenle, KŞ okumaları o kadar düzgün değildir, ancak orijinal okuyucu cihazla eşleşir ve "gerçek" KŞ okumalarını daha hızlı takip eder. OOP ile döngü yapmaya çalışırsanız, lütfen xDrip+'daki tüm yumuşatma ayarlarını etkinleştirin.
 
-The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hizmeti kullanıyor. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
