@@ -191,21 +191,21 @@ Eski Libre1 verici cihazları, Libre2 OOP ile kullanılamaz. Düzgün çalışma
 
 Libre2 OOP, NFC taraması yoluyla orijinal okuyucu veya LibreLink uygulaması ile aynı KŞ okumalarını oluşturuyor. Libre 2 ile AAPS, belirli atlamaları önlemek için 25 dakikalık bir yumuşatma yapar. OOP, son 5 dakikanın ortalaması ile her 5 dakikada bir okuma üretir. Bu nedenle, KŞ okumaları o kadar düzgün değildir, ancak orijinal okuyucu cihazla eşleşir ve "gerçek" KŞ okumalarını daha hızlı takip eder. OOP ile döngü yapmaya çalışırsanız, lütfen xDrip+'daki tüm yumuşatma ayarlarını etkinleştirin.
 
-Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hizmeti kullanıyor. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
+Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hizmeti kullanıyor. Daha fazla bilgi almak için lütfen bir arama motoruna bakın. Tomato uygulamasına sahip MM2 de bir internet hizmeti kullanıyor gibi görünüyor. Her iki cihazda da KŞ ölçümlerinizi almak için uygun bir internet bağlantınızın olmasına dikkat etmelisiniz.
 
-Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
+Yamalı LibreLink uygulaması yaklaşımı daha akla yatkın olsa bile, bir bluetooth vericisi kullanmak için bazı nedenler olabilir:
 
-* the BG readings are identical to the reader results
-* the Libre2 sensor can be used 14.5 days as with the Libre1 before 
-* 8 hours Backfilling is fully supported.
-* get BG readings during the one hour startup time of a new sensor
+* KŞ okumaları kendi okuyucusu ile aynıdır
+* Libre2 sensörü, daha önce Libre1'de olduğu gibi 14.5 gün kullanılabilir 
+* 8 saatlik geriye dönük ölçümler eklenir.
+* yeni bir sensörün bir saatlik başlatma süresi boyunca KŞ okumaları alınabilir.
 
-Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
+Açıklama: Verici, LibreLink uygulamasına paralel olarak kullanılabilir. Yamalı LibreLink uygulamasının çalışmasını bozmaz.
 
-Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
+Açıklama 2: OOP algoritması henüz kalibre edilemez. Bu gelecekte değiştirilecektir.
 
 
-Best practices for calibrating a libre 2 sensor
+Libre 2 sensörünü kalibre etmek için en iyi yöntemler
 ==================================================
 
 To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow.
