@@ -176,9 +176,9 @@ Yöntem 1 seyahat ettiğiniz yerde yeni bir Libre2 sensörü ayarlamak zorunda o
 
 Deneyimler
 --------------------------------------------------
-Sonuçta, piyasadaki en küçük CGM sistemlerinden biridir. Küçük, verici gerekmez ve çoğunlukla dalgalanmalar olmadan doğru değerlere ulaşırsınız. Yaklaşık 12 saatlik alıştırma aşamasından sonra, sapmalar tipik olarak 30 mg/dl'den (1,7 mmol/l), 10 mg/dl'ye (0,6 mmol/l) düşer. En iyi sonuçlar kolun arka kısmında alınır, vücudun diğer noktalarında dikkatli olun! Islatma için bir gün önceden yeni bir sensör yerleştirmenize gerek yok. That would disturb the internal levelling mechanism.
+Sonuçta, piyasadaki en küçük CGM sistemlerinden biridir. Küçük, verici gerekmez ve çoğunlukla dalgalanmalar olmadan doğru değerlere ulaşırsınız. Yaklaşık 12 saatlik alıştırma aşamasından sonra, sapmalar tipik olarak 30 mg/dl'den (1,7 mmol/l), 10 mg/dl'ye (0,6 mmol/l) düşer. En iyi sonuçlar kolun arka kısmında alınır, vücudun diğer noktalarında dikkatli olun! Islatma için bir gün önceden yeni bir sensör yerleştirmenize gerek yok. Bu, sensörün iç seviyeleme mekanizmasını bozar.
 
-There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
+Zaman zaman kan değerlerinden yanlış ölçen kötü sensörler var gibi görünüyor. Bu şekilde kalırsa bu sensörler derhal değiştirilmelidir.
 
 If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
 
