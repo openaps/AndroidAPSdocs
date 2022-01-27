@@ -191,7 +191,7 @@ Eski Libre1 verici cihazları, Libre2 OOP ile kullanılamaz. Düzgün çalışma
 
 Libre2 OOP, NFC taraması yoluyla orijinal okuyucu veya LibreLink uygulaması ile aynı KŞ okumalarını oluşturuyor. Libre 2 ile AAPS, belirli atlamaları önlemek için 25 dakikalık bir yumuşatma yapar. OOP, son 5 dakikanın ortalaması ile her 5 dakikada bir okuma üretir. Bu nedenle, KŞ okumaları o kadar düzgün değildir, ancak orijinal okuyucu cihazla eşleşir ve "gerçek" KŞ okumalarını daha hızlı takip eder. OOP ile döngü yapmaya çalışırsanız, lütfen xDrip+'daki tüm yumuşatma ayarlarını etkinleştirin.
 
-Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hizmeti kullanıyor. Daha fazla bilgi almak için lütfen bir arama motoruna bakın. Tomato uygulamasına sahip MM2 de bir internet hizmeti kullanıyor gibi görünüyor. Her iki cihazda da KŞ ölçümlerinizi almak için uygun bir internet bağlantınızın olmasına dikkat etmelisiniz.
+Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hizmeti kullanıyor. Please refer to FB or a search engine to get further information. Tomato uygulamasına sahip MM2 de bir internet hizmeti kullanıyor gibi görünüyor. Her iki cihazda da KŞ ölçümlerinizi almak için uygun bir internet bağlantınızın olmasına dikkat etmelisiniz.
 
 Yamalı LibreLink uygulaması yaklaşımı daha akla yatkın olsa bile, bir bluetooth vericisi kullanmak için bazı nedenler olabilir:
 
