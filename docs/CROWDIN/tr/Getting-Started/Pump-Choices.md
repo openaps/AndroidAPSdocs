@@ -4,7 +4,7 @@ AndroidAPS şu anda aşağıdaki pompalarla çalışabilmektedir.
 
 * Accu-Chek Combo
 * Accu-Chek Insight
-* Bazı Eski Medtronic
+* some old Medtronic
 * Insulet Omnipod
 * DanaR
 * DanaRS 
