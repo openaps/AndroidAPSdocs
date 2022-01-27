@@ -1,29 +1,29 @@
-# How to help with AndroidAPS
+# AndroidAPS'e nasıl katkıda bulunurum?
 
-## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
+## AndroidAPS tamamen gönüllü çabalarla çalışır ve ücretli personeli yoktur.
 
-Developers are parents, caregivers, loved ones and people with diabetes working together to development and improve a solution to a very common want. Developers donate their spare time for free, but it's a bit unfair to expect them to face additional costs to make something so amazing open source and free for all.
+Geliştiriciler, çok yaygın bir ihtiyaca yönelik bir çözüm geliştirmek ve iyileştirmek için birlikte çalışan ebeveynler, bakıcılar, sevdikleriniz ve diyabetli kişilerdir. Geliştiriciler boş zamanlarını ücretsiz olarak bağışlar, ancak bu kadar şaşırtıcı bir açık kaynak ve herkes için ücretsiz bir şey yapmak için ek maliyetlerle yüzleşmelerini beklemek biraz haksızlık olur.
 
-*To fully test a new rig developers need to have a spare phone and a spare pump as it cannot be used on a human until it is stable. Newer models need testing as they become available. Some of the money donated is needed also for the logistical costs of shipping these supplies across countries to the developers. Sometimes it's also nice to contribute towards the developers costs to leave their darkened rooms and meet each other at conferences and events to let their creative and analytical brains bounce off each other.*
+*Yeni bir teçhizatı tam olarak test etmek için geliştiricilerin yedek bir telefona ve yedek bir pompaya sahip olmaları gerekir, çünkü kararlı olana kadar bir insan üzerinde kullanılamaz. Daha yeni modeller piyasaya çıktıkça test edilmelidir. Bağışlanan paranın bir kısmı, bu malzemelerin ülkeler arasında geliştiricilere nakliyesinin lojistik maliyetleri için de gereklidir. Bazen geliştiricilerin karanlık odalarından çıkmaları ve konferanslarda ve etkinliklerde buluşup yaratıcı ve analitik beyinlerinin birbirine sıçramasına izin verme maliyetlerine katkıda bulunmak da güzeldir.*
 
-## I can write code! How do I participate?
+## Kod yazabilirim! Nasıl katılırım?
 
-Yay! Look at the issues, ask in the discord channel, there is always a lot to do! Pick a small task at first and do your first pull request! :)
+Hey! Konulara bak, discord kanalında sor, her zaman yapılacak çok iş var! İlk başta küçük bir görev seçin ve ilk çekme isteğinizi yapın! :)
 
-## I know the system and can write documentation!
+## Sistemi biliyorum ve dokümantasyon yazabilirim!
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Harika, bu çok takdir edilen bir şey ve ona katkıda bulunmanın iyi bir yolu!
 
-* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
-* A guide how to do commits on English wiki can be found here: [How to make a PR](../make-a-PR.md). Other languages are only translated from english and can't be edited for consistency reasons.
+* Wiki ile ilgili discord kanalını burada bulabilirsiniz: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* İngilizce wiki'de taahhütlerin nasıl yapılacağına ilişkin bir kılavuz burada bulunabilir: [PR nasıl yapılır](../make-a-PR.md). Diğer diller yalnızca İngilizce'den çevrilmiştir ve tutarlılık nedeniyle düzenlenemez.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Birden çok dil konuşuyorum ve uygulamayı veya belgeleri çevirmek istiyorum
 
-* If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
-* If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
+* **Uygulamayı** başka dillere çevirmek istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidaps) kullanın.
+* **Dokümantasyonu** başka dillere çevirmek istiyorsanız (teşekkürler), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın. 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+CROWDIN'e kaydolun, dilinize tıklayın, yönetici yetkilendirmesini bekleyin ve devam edin!
 
-## Are there other ways to help?
+## Yardım etmenin başka yolları var mı?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Gereken beceriler arasında grafik tasarım, UX tasarımı, çevirmenler, wiki editörleri veya discord & Facebook, geliştiricilere daha zor şeylere odaklanmak için zaman ve alan sağlayacak.
