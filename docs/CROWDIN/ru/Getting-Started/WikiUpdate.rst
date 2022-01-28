@@ -1,6 +1,10 @@
 Обновления и изменения в документации
 **************************************************
 
+January 2022
+==================================================
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+
 Декабрь 2021
 ==================================================
 * `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - обновление до Android Studio Arctic Fox | 2020.3.1 @tanja
