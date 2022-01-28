@@ -180,7 +180,7 @@ Diğer
 * HELP BOLUS
   *Yanıt: BOLUS 1.2 BOLUS 1.2 YEMEK
 
-Troubleshooting
+Sorun giderme
 ==================================================
 Çoklu SMS
 --------------------------------------------------
