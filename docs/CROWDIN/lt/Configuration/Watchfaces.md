@@ -208,19 +208,41 @@ AndroidAPS provides following complications:
         * *Būsena*: būsenos sub-meniu
         * *Jokių*: Išjungia AAPS plėtinių veiksmus
     * **Unicode ekrano elementuose** (numatytasis `Įjungta`): Kai `Įjungta`, elementuose bus naudojami Unicode simboliai, tokie kaip: `Δ` Delta, `⁞` vertikalių taškų daliklis arba `⎍` bazės simbolis. Jų pateikimas priklauso nuo šrifto, kuris gali būti būdingas tik tam ciferblatui. Ši parinktis leidžia perjungti Unicode simbolius `Išjungta` kai reikia - jei šriftas, naudojamas parinktiniuose ciferblatuose nepalaiko šių simbolių - taip išvengiant grafinių trikdžių.
-    ## Patarimai dėl darbo ir baterijos gyvavimo
+    ## Always on
     
-    Wear OS laikrodžiai labai eikvoja baterijos energiją. Laikrodžio dydis riboja baterijos talpą. Netgi su aparatinės dalies ir programinės įrangos patobulinimais, Wear OS laikrodžiai reikalauja kasdienės įkrovos.
+    Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
     
-    Jei baterijos tarnavimo trukmė yra trumpesnė nei diena (nuo aušros iki sutemų), štai keletas patarimų sprendžiant sunkumus.
+    Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
     
-    Pagrindinės baterijos eikvojimo sritys:
+    The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+    
+    ### Night-time mode
+    
+    While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+    
+    The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+    
+    The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+    
+    Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+    
+    <img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+    
+    ![Simplified UI](../images/Watchface_simplified_ui.png)
+    
+    ### Performance and battery life tips
+    
+    Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+    
+    If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+    
+    Main battery-demanding areas are:
     
     * Aktyvus ekranas su apšvietimu (LED) arba visu intensyvumo režimu (OLED)
     * Atvaizdavimas ekrane
     * Radijo ryšys per Bluetooth
     
-    Kadangi reikalingas sklandus ir nepertraukiamas ryšys, ir norime turėti naujausius atvaizduotus duomenis, dauguma patobulinimų gali būti padaryta *laiko rodymo* srityje:
+    Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
     
     * Gamykliniai ciferblatai paprastai yra geriau optimizuoti, nei tie, kuriuos atsisiunčiate iš parduotuvės.
     * Geriau naudoti ciferblatus, kurie atvaizduoja duomenis neaktyviu / blyškiu režimu.
