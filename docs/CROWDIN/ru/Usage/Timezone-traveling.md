@@ -74,10 +74,10 @@ AndroidAPS подает оповещение, если время на помп�
 
 3. В AndroidAPS обновите связь с помпой.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Перейдите на вкладку терапии... Если видите дублирующие записи:
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
@@ -90,8 +90,8 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 3. On the AndroidAPS “Combo” screen, press Refresh.
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
