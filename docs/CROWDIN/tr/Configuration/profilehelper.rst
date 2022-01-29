@@ -18,8 +18,8 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 .. image:: ../images/ProfileHelperKids1.png
   :alt: Çocuk Profil Yardımcısı 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
+2. Çocukların yaşını ve GTD (günlük toplam doz) **veya** ağırlığını girerek Varsayılan profili (hastane veri setine göre) ayarlayın.
 3. Change screen by clicking on the grey bar labeled 2 on the right.
 4. Long-press 'Current profile' and select DPV Default profile.
 
@@ -40,7 +40,7 @@ You can use profile helper also to compare to different profiles or profile swit
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
 
-1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
+1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
 2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
 3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
 4. Change screen by clicking on the grey bar labeled 2 on the right.
