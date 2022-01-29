@@ -144,7 +144,7 @@
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
- <td>flash glucose monitor (Freestyle Libre)</td>
+ <td>anlık glikoz monitörü (Freestyle Libre)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/BG-Source.html">Viki - KŞ kaynağı</a></td>
 </tr>
