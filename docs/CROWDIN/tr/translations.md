@@ -4,7 +4,7 @@
 
 * Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-* Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Sizi onayladığımızda bayrağa tıklayın ![Sizi onayladığımızda, bayrağa tıklayın](./images/translation_flags2019.png)
 
 ## AndroidAPS uygulaması için dizeleri (strings) çevir
 
@@ -14,15 +14,15 @@
 
 * Sol taraftaki cümleleri, yeni çevrilmiş metin ekleyerek veya & öneriyi düzenleyerek çevirebilirsiniz
     
-    ![Translation app](./images/translations-translate.png)
+    ![Uygulamayı çevirme](./images/translations-translate.png)
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+    ![Uygulama redaksiyon modu](./images/translations-proofreading-mode.png)
     
     çevrilmiş metinleri onaylayabilirler
     
-    ![approve text](./images/translations-proofreading.png)
+    ![metni onayla](./images/translations-proofreading.png)
 
 Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne eklenecektir. Diğer çevirilere başlamadan, henüz onaylanmayan mevcut çevirileri de gözden geçirip, yanlış olup olmadığını kontrol etmek veya doğruysa onaylamak ileride karışıklığı önler ve zaman kazanmanıza yardımcı olur.
 
@@ -30,7 +30,7 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 * Çevirmek istediğiniz doküman sayfasının adını tıklayın
     
-    ![Click docs page](./images/translation_WikiPage.png)
+    ![Dokümanlar sayfasını tıkla](./images/translation_WikiPage.png)
 
 * Cümle cümle çevirin
     
@@ -42,7 +42,7 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
     
     4 Kaydet'e tıklayın
     
-    ![Translation docs](./images/translation_WikiTranslate.png)
+    ![Dokümanları çevirme](./images/translation_WikiTranslate.png)
 
 * Çevrilmiş bir sayfa, redaksiyondan önce dokümantasyonda yayınlanmayacaktır.
 
@@ -62,36 +62,36 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 #### Markdown dosyalarında (.md) bağlantı çevirisi
 
-Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. reStructuredText sözdiziminde (.rst) yazılan dosyalar Crowdin'de her zaman bağlantı adresini gösterirken, markdown sözdizimindeki (.md) dosyalarda bağlantı adresini çevirmek için HTML etiketi görüntülemeyi etkinleştirmeniz gerekebilir.
 
 * * *
 
 **HTML etiketlerinin başında veya sonunda boşluk karakteri kullanmadığınızdan emin olun!**
 
-![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+![Crowdin - Boşluk karakteri olmayan HTML etiketi](./images/Crowdin_HTMLtag.png)
 
 * * *
 
 Crowdin'de bağlantılar bu şekilde görüntüleniyorsa
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - HTML etiketi görüntülenmiyor](./images/CrowdinShowURL1.png)
 
 ayarları açmak için dişli çarka tıklayın, "Göster"i seçin ve "Kaydet"e tıklayın.
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - HTML etiketini göster](./images/CrowdinShowURL2.png)
 
 Bağlantılar daha sonra standart HTML biçiminde gösterilir ve [yukarıda](./translations#translate-headline-links) belirtilen kurallar dikkate alınarak çevrilebilir.
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - HTML etiketi görüntüleme](./images/CrowdinShowURL3.png)
 
 ## Redaksiyon
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
+    ![Doküman redaksiyon modu](./images/translation_WikiProofreading.png)
     
     çevrilmiş metinleri onaylayabilirler
     
-    ![approve text](./images/translations-proofreading.png)
+    ![metni onayla](./images/translations-proofreading.png)
 
 * Redaktör bir çeviriyi onayladığında, sonraki doküman derlemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
