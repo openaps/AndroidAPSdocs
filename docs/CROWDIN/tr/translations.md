@@ -28,41 +28,41 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 ## Dokümantasyon sayfalarını çevirme
 
-* Click the name of the docs page you want to translate
+* Çevirmek istediğiniz doküman sayfasının adını tıklayın
     
     ![Click docs page](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Cümle cümle çevirin
     
     1 Çevrilmemiş metin sol tarafta kırmızı arka plan ile gösterilir.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Altta çeviri tekliflerini tıklayarak düzenleme alanına bir teklif kopyalayabilirsiniz.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Teklifi düzenleyin veya çeviriyi kendiniz yazın.
     
     4 Kaydet'e tıklayın
     
     ![Translation docs](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in docs before the translation is proofread.
+* Çevrilmiş bir sayfa, redaksiyondan önce dokümantasyonda yayınlanmayacaktır.
 
 ### Başlık bağlantılarını çevir
 
 * Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.html) çeviri gerekli değildir.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+* Belirli bir başlığa (ör. ..//Usage/Profiles.html#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
+* Bir başlığı çevirecekseniz, (# işaretinden sonraki kısım, ör. #percentage) tüm harfleri küçük harfe çevirerek, özel karakterleri standart karakterlere dönüştürerek, boşlukları - (eksi işareti) ile değiştirerek ve noktalama işaretlerini atlayarak bunu bir bağlantı metnine dönüştürebilirsiniz.
     
-    Here are some examples:
+    İşte bazı örnekler:
     
-    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Docs Updates & Änderungen \---> #docs-updates-anderungen
-    * AAPS-.apk Datei \---> #aaps-apk-datei
+    * Kapalı Döngü Sistemi AndroidAPS ile uyumlu muydu? \---> #androidaps-ile-kapali-döngü-sistemi-nedir
+    * Doküman Güncellemeleri & değişiklikler \---> #doküman-güncellemeleri-değişiklikler
+    * AAPS-.apk tarih \---> #aaps-apk-tarih
 
-* Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
+* Bağlantınızın istendiği gibi çalışıp çalışmadığını kontrol edin. Yeni çevrilmiş bir başlığa bağlantı veriyorsa, doğru bağlantı sözdizimini kontrol edebilmek için bir sonraki derlemeye kadar beklemeniz gerekebilir. Bu durumda takvim / yapılacaklar uygulamanızda bir hatırlatma yapmayı unutmayın.
 
-#### Link translation in Markdown files (.md)
+#### Markdown dosyalarında (.md) bağlantı çevirisi
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
 * * *
 
@@ -72,15 +72,15 @@ At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. 
 
 * * *
 
-If links are displayed like this in Crowdin
+Crowdin'de bağlantılar bu şekilde görüntüleniyorsa
 
 ![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+ayarları açmak için dişli çarka tıklayın, "Göster"i seçin ve "Kaydet"e tıklayın.
 
 ![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Bağlantılar daha sonra standart HTML biçiminde gösterilir ve [yukarıda](./translations#translate-headline-links) belirtilen kurallar dikkate alınarak çevrilebilir.
 
 ![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
