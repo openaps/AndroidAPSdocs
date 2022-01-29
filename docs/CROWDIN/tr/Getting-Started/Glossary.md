@@ -1,13 +1,13 @@
 # Sözlük<table style="width:100%" border=1 cellpadding=5>
 <tr>
- <th>Term</th>
+ <th>Terim</th>
  <th>Açıklama</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>ayrıca bakınız</th>
+ <th>diğer ayrıntılar @</th>
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - artificial pancreas system</td>
+ <td>AndroidAPS - yapay pankreas sistemi</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    gelişmiş yemek asistanı - karbonhidratlarla başa çıkmak için gelişmiş algoritma
   </td>
   
   <td>
@@ -25,24 +25,24 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
+    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Viki - AMA</a>
   </td>
 <tr>
  <td><strong>Android auto</strong></td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td>AAPS bildirimlerini aracınızın uyumlu gösterge paneli bilgi ve eğlence ana ünitesinde görüntüleyin</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+ <td><a href="../Usage/Android-auto.html">Viki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
- <td>software installation file (Android application package)</td>
+ <td>yazılım yükleme dosyası (Android uygulama paketi)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Viki - APK Derleme</a></td>
 </tr>
 <tr>
- <td><strong>Autosens</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td><strong>Otoduyarlılık</strong></td>
+ <td>egzersiz, hormonlar vb. nedeniyle insüline duyarlılığın hesaplanması.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -324,7 +324,7 @@
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>egzersiz, hormonlar vb. nedeniyle insüline duyarlılığın hesaplanması.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -374,19 +374,19 @@
  <td><strong>UAM</strong></td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Viki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtual pump</strong></td>
- <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
+ <td><strong>Sanal pompa</strong></td>
+ <td>döngü için AndroidAPS sürücüsü olmayan bir pompa modeli kullanarak AAPS işlevlerini veya PWD için deneme seçeneği</td>
  <td>Açık Döngü</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Wallpaper</strong></td>
- <td>AndroidAPS background image</td>
+ <td><strong>Akıllı telefon Duvar kağıdı</strong></td>
+ <td>AndroidAPS arka plan resmi</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">telefon sayfasına bak</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
