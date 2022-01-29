@@ -9,7 +9,7 @@ Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite ta
 
 * Builds the system themselves so that they thoroughly understand how it works
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-* Maintains and monitors the system to ensure it is working properly
+* Sistemin düzgün çalıştığından emin olmak için bakımını yapar ve izler
 
 .. not:: 
 	**Disclaimer and Warning**
