@@ -66,7 +66,7 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**HTML etiketlerinin başında veya sonunda boşluk karakteri kullanmadığınızdan emin olun!**
 
 ![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 
