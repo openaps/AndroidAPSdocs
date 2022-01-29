@@ -40,15 +40,15 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
     
     3 Edit the proposal or write the translation yourself.
     
-    4 Click save
+    4 Kaydet'e tıklayın
     
     ![Translation docs](./images/translation_WikiTranslate.png)
 
 * A translated page will not be published in docs before the translation is proofread.
 
-### Translate headline links
+### Başlık bağlantılarını çevir
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
+* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.html) çeviri gerekli değildir.
 * Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
 * If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
