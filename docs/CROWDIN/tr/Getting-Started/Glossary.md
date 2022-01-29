@@ -1,4 +1,4 @@
-# Glossary<table style="width:100%" border=1 cellpadding=5>
+# Sözlük<table style="width:100%" border=1 cellpadding=5>
 <tr>
  <th>Term</th>
  <th>Açıklama</th>
