@@ -275,22 +275,22 @@
  <td><a href="../Configuration/Config-Builder.html#insulin">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
- <td><strong>PH</strong></td>
+ <td><strong>PG</strong></td>
  <td>pompa geçmişi (tedaviler sekmesine giriş)</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>Tahminler</strong></td>
- <td>predictions for BG in the future based on different calculations</td>
+ <td>farklı hesaplamalara dayalı gelecekteki KŞ için tahminler</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Viki - tahmin çizgileri</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
+ <td>temel tedavi ayarları (bazal oran, İES, IC, İDF, KŞ hedefi)<br>yerel olarak veya Nightscout aracılığıyla tanımlanabilir</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Viki - profil</a></td>
 </tr>
 <tr>
  <td><strong>Profil değiştir</strong></td>
@@ -312,37 +312,37 @@
 </tr>
 <tr>
  <td><strong>SYAŞ</strong></td>
- <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
+ <td>sensör yaşı - eylemler sekmesinde bilgi girilmişse Nightscout'ta görüntülenir</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>SEN</strong></td>
- <td>status light sensor change on homescreen</td>
- <td>BAT / CAN / RES</td>
+ <td>giriş ekranında sensör durum ışığı</td>
+ <td>Pil / Rezeruar / Kanül</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
- <td><strong>Sensivity detection</strong></td>
+ <td><strong>Duyarlılık algılaması</strong></td>
  <td>egzersiz, hormonlar vb. nedeniyle insüline duyarlılığın hesaplanması.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Otoduyarlılık</a></td>
 </tr>
 <tr>
- <td><strong>Sensor noise</strong></td>
- <td>unstable CGM readings leading to "jumping" values</td>
+ <td><strong>Sensör gürültüsü</strong></td>
+ <td>"atlama" değerlerine yol açan kararsız CGM okumaları</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Viki - sensör gürültüsü</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
- <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
+ <td>daha hızlı KŞ ayarı için gelişmiş özellik<br> süper mikro bolus</td>
  <td>UAM</td>
- <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Viki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Super bolus</strong></td>
- <td>shift of basal to bolus insulin for faster BG adjustment</td>
+ <td><strong>Süper bolus</strong></td>
+ <td>daha hızlı kan şekeri ayarı için bazal insülini bolus insüline ekleme</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
@@ -366,9 +366,9 @@
 </tr>
 <tr>
  <td><strong>TT (Geçici Hedef)</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
+ <td>geçici hedef<br>KŞ hedefinde (aralığında) geçici artış/düşüş</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Viki - geçici hedefler</a></td>
 </tr>
 <tr>
  <td><strong>UAM</strong></td>
