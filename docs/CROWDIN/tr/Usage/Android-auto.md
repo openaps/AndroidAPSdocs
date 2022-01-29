@@ -11,7 +11,7 @@ Use system notifications for alerts and notifications:
 * Scroll all the way down
 * Activate "Use system notifications..."
 
-![Use system notifications for alerts and notifications](../images/AndroidAuto_01.png)
+![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01.png)
 
 ## Settings in Android Auto app on your phone
 
