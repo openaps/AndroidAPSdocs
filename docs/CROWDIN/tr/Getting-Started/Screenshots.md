@@ -123,7 +123,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
-   * Predictions
+   * Tahminler
    * Basals
    * Activity - insulin activity curve
 
