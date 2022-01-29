@@ -44,11 +44,11 @@
  <td><strong>Otoduyarlılık</strong></td>
  <td>egzersiz, hormonlar vb. nedeniyle insüline duyarlılığın hesaplanması.</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Otoduyarlılık</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>Nightscout verilerini barındırmak için bulut bilgi işlem platformu</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>status light low battery on homescreen</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>BG</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>Nightscout verilerini barındırmak için bulut bilgi işlem platformu</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,13 +320,13 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
  <td>egzersiz, hormonlar vb. nedeniyle insüline duyarlılığın hesaplanması.</td>
  <td>&nbsp;</td>
- <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
+ <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Otoduyarlılık</a></td>
 </tr>
 <tr>
  <td><strong>Sensor noise</strong></td>
