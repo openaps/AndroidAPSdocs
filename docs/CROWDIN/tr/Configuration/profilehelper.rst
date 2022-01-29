@@ -38,32 +38,32 @@ Profil ayarlamalarını yaptıktan sonra `profili <../Configuration/profilehelpe
 Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir `profil değiştirme'de <../Usage/Profiles.html>`kullanılan profillerinizin yüzdesi).
 
 .. image:: ../images/ProfileHelper1.png
-  :alt: Profile Helper 1
+  :alt: Profil Yardımcısı 1
 
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
-2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
-3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
+2. 'Varsayılan profil'e basın ve mevcut profillerinizin bir listesi için 'Kullanılabilir profil'i veya kullanılan en son profil değişimlerinin bir listesi için 'Profil Değiştir'i seçin.
+3. Profil / profil anahtarının adına basın (yukarıdaki ekran görüntüsünde 'Aktuell_LP') ve listeden bir profil seçin.
 4. Sağdaki 2 etiketli gri çubuğa tıklayarak ekranı değiştirin.
 
 .. image:: ../images/ProfileHelper2.png
-  :alt: Profile Helper 2
+  :alt: Profil Yardımcısı 2
 
-5. As a standard 'Current profile' is offered as comparison candidate. 
-6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
-7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
+5. Standart olarak 'Mevcut profil' karşılaştırma adayı olarak sunulmaktadır. 
+6. Farklı bir profil / profil değiştirme istiyorsanız, 'Geçerli profil'e uzun basın ve 'Kullanılabilir profil' veya 'Profil değiştir'i seçin.
+7. Profil adına uzun basın (yukarıdaki ekran görüntüsünde 'Aktuell_LP') ve listeden bir profil / profil değiştir seçin.
 8. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 9. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-Clone profile
+Profili Klonla
 ==================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
+`Yerel profiller <../Configuration/Config-Builder.html#local-profile-recommended>`_ kullanıyorsanız, doğrudan profil yardımcısından bir profili kopyalayabilirsiniz.
 
 .. image:: ../images/ProfileHelperClone.png
-  :alt: Profile Helper Clone profile / profile switch
+  :alt: Profil Yardımcısı profil Klonlama / profil değiştirme
   
-1. Select the desired profile / profile switch as described above.
-2. If you are using 'Default profile' or 'DPV Default profile' (based on data sets from hospitals for children) make sure you enter correct settings for age, percentage of basal and TDD / weight.
-3. Press button 'CLONE' on bottom of screen.
-4. Confirm with 'OK'.
-5. Activate new profile in local profile tab.
+1. İstenen profili / profil değiştir'meyi yukarıda açıklandığı gibi seçin.
+2. 'Varsayılan profil' veya 'Varsayılan DPV profili' kullanıyorsanız (hastanelerden çocuklar için alınan veri setlerine göre), yaş, bazal yüzdesi ve GTD / ağırlık için doğru ayarları girdiğinizden emin olun.
+3. Ekranın altındaki 'KLON' düğmesine basın.
+4. 'Tamam' ile onaylayın.
+5. Yerel profil sekmesinde yeni profili etkinleştirin.
