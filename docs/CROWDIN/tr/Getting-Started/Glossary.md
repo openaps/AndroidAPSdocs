@@ -229,26 +229,26 @@
 <tr>
  <td><strong>Nightscout</strong></td>
  <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi</td>
- <td>Nightscout Reporter</td>
+ <td>NightScout raporları</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>NS Client (Nightscout İstemcisi)</strong></td>
+ <td>Nightscout sitenize bağlanmak için AAPS'in bir parçası</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Viki - NS Client</a></td>
 </tr>
 <tr>
- <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout data</td>
+ <td><strong>NightScout raporları</strong></td>
+ <td>Nightscout verilerinden PDF raporları oluşturmak için kullanılan araç</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Raporları</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
  <td><strong>Görevler</strong></td>
- <td>learning program within AAPS guiding you step by step from open to closed loop</td>
+ <td>AAPS içinde açık döngüden kapalı döngüye adım adım rehberlik eden öğrenme programı</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.html">Viki - görevler</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
