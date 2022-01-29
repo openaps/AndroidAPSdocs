@@ -66,25 +66,25 @@
 </tr>
 <tr>
 <td><strong>BGI</strong></td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>kan şekeri etkileşimi - tek başına insülin aktivitesine bağlı olarak KŞ'nin yükselmesi veya düşmesi "gerekli" derece</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td><strong>BG source</strong></td>
- <td>Where do your glucose values come from?</td>
- <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+ <td>Glikoz değerleriniz nereden geliyor?</td>
+ <td>CGM / FGM (Sürekli ve Anlık Glikoz Takip sistemleri)</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Viki - KŞ kaynağı</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>FGM olan Freestyle Libreleri, CGM olarak kullanmak için ek bluetooth vericisi</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>basal rate</td>
+ <td>bazal oranı</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -102,39 +102,39 @@
 </tr>
 <tr>
  <td><strong>CAN</strong></td>
- <td>status light overdue cannula change on homescreen</td>
+ <td>başlangıç ​​ekranında kanül değişim durumu ekranı</td>
  <td>BAT / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
- <td>continuous glucose monitor</td>
+ <td>sürekli glikoz monitörü</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>Kapalı Döngü</strong></td>
- <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td>kapalı döngü sistemleri, bir algoritmaya dayalı olarak, kullanıcı onayına ihtiyaç duymadan bazal iletimde otomatik ayarlamalar yapar</td>
+ <td>Açık Döngü</td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Viki kapalı döngü</a></td>
 </tr>
 <tr>
- <td><strong>COB</strong></td>
- <td>carbs on board</td>
+ <td><strong>COB Aktif Karbonhidrat</strong></td>
+ <td>metobolizmadaki karbonhidrat</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>İES (DIA) İnsülin etki süresi</strong></td>
- <td>duration of insulin action</td>
+ <td>insülin etki süresi</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Viki insulin çeşitleri</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
- <td><strong>DST</strong></td>
- <td>daylight savings time</td>
+ <td><strong>DST (YSU)</strong></td>
+ <td>yaz saati uygulaması</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Viki DST</a></td>
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
@@ -146,7 +146,7 @@
  <td><strong>FGM</strong></td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html">Viki - KŞ kaynağı</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -216,7 +216,7 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>FGM olan Freestyle Libreleri, CGM olarak kullanmak için ek bluetooth vericisi</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
