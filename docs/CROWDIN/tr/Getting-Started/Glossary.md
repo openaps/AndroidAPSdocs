@@ -150,21 +150,21 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> necessary for APK updates</td>
+ <td>bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemi<br>-> APK güncellemeleri için gerekli</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
- <td>web-based hosting service for version control using Git<br>-> storage of source code</td>
+ <td>Git<br>-> kaynak kodunun depolanmasını kullanarak sürüm kontrolü için web tabanlı barındırma hizmeti</td>
  <td>&nbsp;</td>
- <td><a href="https://github.com/nightscout/AndroidAPS">GitHub AndroidAPS</a></td>
+ <td><a href="https://github.com/nightscout/AndroidAPS">Github AndroidAPS</a></td>
 </tr>
 <tr>
  <td><strong>Glimp</strong></td>
- <td>app to collect values from Freestyle Libre</td>
+ <td>Freestyle Libre'den değerler toplamak için uygulama</td>
  <td>&nbsp;</td>
- <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Nightscout with Glimp</a> </td>
+ <td><a href="https://nightscout.github.io/uploader/uploaders/#abbott-freestyle-libre">Glimp ile Nightscout</a> </td>
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
