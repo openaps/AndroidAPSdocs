@@ -6,17 +6,17 @@ Profil yardımcısı iki işlev sunar:
 1. Çocuklar için bir profil bulmak
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
-Profile for kids (up to 18 years)
-=======================================
+Çocuklar için profil (18 yaşına kadar)
+==================================
 
-**Important note:**
+**Önemli Not:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Profil Yardımcısı, çocuğunuz için ilk profili bulmanıza yardımcı olmak için tasarlanmıştır. İki farklı hastanenin veri setlerine dayalı olsa bile, yeni bir profil kullanmadan önce her zaman tıbbi ekibinizle görüşün!**
 
-Profile helper offers data sets from two different hospitals for children to find initial profile for your kid up to 18 years.
+Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulması için çocuklar için iki farklı hastaneden veri seti sunar.
 
 .. image:: ../images/ProfileHelperKids1.png
-  :alt: Profile Helper Kids 1
+  :alt: Çocuk Profil Yardımcısı 1
 
 1. Select 'Profile helper' from three-dot-menu on the top right side of the screen.
 2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
@@ -33,7 +33,7 @@ Profile helper offers data sets from two different hospitals for children to fin
 Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
 
 Compare two profiles
-=======================================
+==================================
 
 You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
@@ -55,7 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 9. Comparison of the two adjusted profiles will be displayed.
 
 Clone profile
-=======================================
+==================================
 
 If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
 
