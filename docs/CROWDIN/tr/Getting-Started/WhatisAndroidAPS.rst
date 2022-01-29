@@ -12,7 +12,7 @@ Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite ta
 * Sistemin düzgün çalıştığından emin olmak için bakımını yapar ve izler
 
 .. not:: 
-	**Disclaimer and Warning**
+	**Sorumluluk Reddi ve Uyarı**
 
 	* Burada açıklanan tüm bilgi, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AndroidAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
 
