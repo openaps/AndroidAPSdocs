@@ -53,25 +53,25 @@
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
- <td><strong>BAT</strong></td>
+ <td><strong>PİL</strong></td>
  <td>status light low battery on homescreen</td>
- <td>CAN / RES / SEN</td>
+ <td>Kanül / Rezervuar / Sensör</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
- <td><strong>BG</strong></td>
+ <td><strong>KŞ</strong></td>
  <td>blood glucose</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>BGI</strong></td>
+<td><strong>KŞE</strong></td>
  <td>kan şekeri etkileşimi - tek başına insülin aktivitesine bağlı olarak KŞ'nin yükselmesi veya düşmesi "gerekli" derece</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>BG source</strong></td>
+<td><strong>KŞ Kaynağı</strong></td>
  <td>Glikoz değerleriniz nereden geliyor?</td>
  <td>CGM / FGM (Sürekli ve Anlık Glikoz Takip sistemleri)</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Viki - KŞ kaynağı</a></td>
@@ -90,20 +90,20 @@
 </tr>
 <tr>
  <td><strong>BYODA</strong></td>
- <td>'Build your own Dexcom App'</td>
+ <td>'Kendi Dexcom Uygulamanızı oluşturun'</td>
  <td>&nbsp;</td>
  <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
 </tr>
 <tr>
- <td><strong>CAGE</strong></td>
- <td>cannula age - displayed in Nightscout if information was entered in actions tab / menu tab or through AAPS actions tab 'prime'</td>
+ <td><strong>KYAŞ</strong></td>
+ <td>kanül yaşı - AAPS -- EYLEM sekmesinde "hazırla doldur" aracılığıyla girilmişse Nightscout'ta görüntülenir</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>CAN</strong></td>
+ <td><strong>KANÜL</strong></td>
  <td>başlangıç ​​ekranında kanül değişim durumu ekranı</td>
- <td>BAT / RES / SEN</td>
+ <td>Pil / Rezeruar / Sensör</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
@@ -137,10 +137,10 @@
  <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Viki DST</a></td>
 </tr>
 <tr>
- <td><strong>eCarbs</strong></td>
- <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
+ <td><strong>yKarb</strong></td>
+ <td>"yayma karbonhidratlar" - karbonhidratlar birkaç saate bölünür (çok fazla yağ/protein)<br>düzenli pompa tedavisinden bildiğiniz yayma boluslar, döngü sırasında pek bir anlam ifade etmez</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Viki - yKarb</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">yKarb kullanımı</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
@@ -152,7 +152,7 @@
  <td><strong>git</strong></td>
  <td>bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemi<br>-> APK güncellemeleri için gerekli</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Viki - APK güncellemesi</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
@@ -173,46 +173,46 @@
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
 <tr>
- <td><strong>IC (or I:C)</strong></td>
- <td>insulin to carb ratio (How many carbs are covered by one unit of insulin?)</td>
+ <td><strong>IC (veya I:C)</strong></td>
+ <td>Karbonhidrat insülin oranı (Bir ünite insülin tarafından kaç karbonhidrat karşılanacağı)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>IOB Aktif İnsülin</strong></td>
- <td>insulin on board -  insulin active in your body</td>
+ <td>aktif insülin - vücudunuzda aktif insülin miktarı</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>IDF İnsülin Duyarlılık Faktörü</strong></td>
- <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
+ <td>insülin duyarlılık faktörü - bir ünite insülin iletiminin sonucu KŞ'de beklenen düşüş</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca IOB negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">görev 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
- <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
+ <td>akıllı telefonlar vb. için ücretsiz ve açık kaynaklı işletim sistemi<br>Android 8.1 (Oreo) işletim sistemi olmayan akıllı telefonlar için alternatif işletim sistemi<br>(Accu-Chek Combo kullanırken)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Viki - Combo pompa</a></td>
 </tr>
 <tr>
- <td><strong>Log files</strong></td>
- <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
+ <td><strong>Günlük dosyaları</strong></td>
+ <td>tüm AAPS eylemlerinin kaydı (sorun giderme ve hata ayıklama için kullanışlıdır)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Viki - Günlük dosyaları</a></td>
 </tr>
 <tr>
- <td><strong>maxIOB</strong></td>
- <td>safety feature - maximum total IOB AAPS can't go over</td>
+ <td><strong>makIOB</strong></td>
+ <td>güvenlik özelliği -AAPS maksimum toplam IOB (aktif insülini) geçemez</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - makIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -222,13 +222,13 @@
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
+ <td>güvenlik özelliği - karbonhidrat emiliminin kan reaksiyonlarınıza göre dinamik olarak çalışamadığı zamanlarda varsayılan karbonhidrat düşüşü</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data</td>
+ <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -260,7 +260,7 @@
  <td><strong>Açık Döngü</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Kapalı Döngü</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
@@ -272,7 +272,7 @@
  <td><strong>Peak time</strong></td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
@@ -293,15 +293,15 @@
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td><strong>Profile switch</strong></td>
- <td>(temporary) change of profile used or percentual increase/decrease</td>
+ <td><strong>Profil değiştir</strong></td>
+ <td>(geçici) kullanılan profil değişikliği veya profilde yüzde artış/azalma</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.html">Viki - profil değiştir</a></td>
 </tr>
 <tr>
- <td><strong>RES</strong></td>
- <td>status light overdue reservoir change on homescreen</td>
- <td>BAT / CAN / SEN</td>
+ <td><strong>REZ</strong></td>
+ <td>giriş ekranda durum ışığı- gecikmiş rezervuar değişikliği</td>
+ <td>Pil / Rezeruar / Sensör</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
@@ -372,7 +372,7 @@
 </tr>
 <tr>
  <td><strong>UAM</strong></td>
- <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
+ <td>bildirilmemiş öğünler - öğün, adrenalin veya diğer etkilerden dolayı glikoz seviyelerinde önemli bir artışın tespiti ve bunu SMB ile ayarlamaya çalışmak</td>
  <td>SMB</td>
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Viki - SMB</a></td>
 </tr>
@@ -390,13 +390,13 @@
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
- <td>open source software to read CGM systems</td>
+ <td>CGM sistemlerini okumak için açık kaynaklı yazılım</td>
  <td>&nbsp;</td>
  <td><a href="https://jamorham.github.io/#xdrip-plus">xDrip+</a><br><a href="https://stephenblackwasalreadytaken.github.io/xDrip/">xDrip</a></td>
 </tr>
 <tr>
- <td><strong>Zero-temp</strong></td>
- <td>temporary basal rate with 0% (no basal insulin delivery)</td>
+ <td><strong>Sıfır-Geçici</strong></td>
+ <td>%0 geçici bazal oranı (bazal insülin iletimi yok)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
