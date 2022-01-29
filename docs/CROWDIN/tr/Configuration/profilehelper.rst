@@ -20,22 +20,22 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
 2. Çocukların yaşını ve GTD (günlük toplam doz) **veya** ağırlığını girerek Varsayılan profili (hastane veri setine göre) ayarlayın.
-3. Change screen by clicking on the grey bar labeled 2 on the right.
-4. Long-press 'Current profile' and select DPV Default profile.
+3. Sağdaki 2 etiketli gri çubuğa tıklayarak ekranı değiştirin.
+4. 'Geçerli profil'e uzun basın ve DPV Varsayılan profilini seçin.
 
 .. image:: ../images/ProfileHelperKids2.png
-  :alt: Profile Helper Kids 2
+  :alt: Çocuk Profil Yardımcısı 2
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
-6. Press button 'COMPARE PROFILES' on top of screen.
-7. Comparison of the two adjusted profiles will be displayed.
+5. Çocukların yaşını, bazal yüzdesini ve GTD Toplamı **veya** ağırlığını girerek DPV Varsayılan profilini (başka bir hastane veri kümesine göre) ayarlayın.
+6. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
+7. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-Once you are fine with the profile adjustments you can `clone the profile <../Configuration/profilehelper.html#clone-profile>`_ as described below.
+Profil ayarlamalarını yaptıktan sonra `profili <../Configuration/profilehelper.html#clone-profile>`_ aşağıda açıklandığı gibi klonlayabilirsiniz.
 
-Compare two profiles
+İki profili karşılaştırın
 ==================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir `profil değiştirme'de <../Usage/Profiles.html>`kullanılan profillerinizin yüzdesi).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
@@ -43,7 +43,7 @@ You can use profile helper also to compare to different profiles or profile swit
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
 2. Long-press 'Default profile' and select 'Available profile' for a list of your existing profiles or 'Profile switch' for a list of latest profile switches used.
 3. Long-Press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-4. Change screen by clicking on the grey bar labeled 2 on the right.
+4. Sağdaki 2 etiketli gri çubuğa tıklayarak ekranı değiştirin.
 
 .. image:: ../images/ProfileHelper2.png
   :alt: Profile Helper 2
@@ -51,8 +51,8 @@ You can use profile helper also to compare to different profiles or profile swit
 5. As a standard 'Current profile' is offered as comparison candidate. 
 6. If you want a different profile / profile switch long-press 'Current profile' and select either 'Available profile' or 'Profile switch'.
 7. Long-press the name of the profile / profile switch ('Aktuell_LP' in screenshot above) and select a profile / profile switch from the list.
-8. Press button 'COMPARE PROFILES' on top of screen.
-9. Comparison of the two adjusted profiles will be displayed.
+8. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
+9. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
 Clone profile
 ==================================
