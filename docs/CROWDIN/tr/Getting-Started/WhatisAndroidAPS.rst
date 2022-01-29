@@ -7,8 +7,8 @@ Bir APS, biyolojik pankreasın yaptığı kadar iyi yapamaz, ancak ticari olarak
 
 Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite tarafından düzenlenmemiştir. AndroidAPS'yi kullanmak aslında kendi üzerinizde tıbbi bir deney yapmaktır. Sistemin kurulumu kararlılık ve teknik bilgi gerektirir. Başlangıçta teknik bilgiye sahip değilseniz, sonunda kesinlkle olacaktır. İhtiyacınız olan tüm bilgiler bu belgelerde, başka bir yerde çevrimiçi olarak veya daha önce yapmış olanlardan bulunabilir - onlara Facebook gruplarında veya diğer forumlarda sorabilirsiniz. Birçok kişi AndroidAPS'yi başarıyla oluşturdu ve şimdi tamamen güvenli bir şekilde kullanıyor, ancak her kullanıcının şunları yapması önemlidir:
 
-* Builds the system themselves so that they thoroughly understand how it works
-* Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
+* Sistemin nasıl çalıştığını tam olarak anlamak için sistemi kendiniz kurun
+* Bireysel diyabet ayarlarını diyabet ekibi ile birlikte en iyi şekilde çalışacak şekilde ayarlar
 * Sistemin düzgün çalıştığından emin olmak için bakımını yapar ve izler
 
 .. not:: 
@@ -40,5 +40,5 @@ AndroidAPS'nin arkasındaki birincil hedefler
 Nasıl başlanır
 ==================================================
 Tabii ki, buradaki tüm bu içerikler çok önemlidir, ancak başlangıçta oldukça kafa karıştırıcı olabilir.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. Ayrıca `Dana, Dexcom ve Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_ ile örnek kuruluma da göz atabilirsiniz.
+`Komponentlere Genel Bakış <../Module/module.html>`_ ve `Görevler <../Usage/Objectives.html>`_ tarafından iyi bir oryantasyon sağlanır. Ayrıca `Dana, Dexcom ve Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_ ile örnek kuruluma da göz atabilirsiniz.
  
