@@ -252,33 +252,33 @@
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pie)<br>AAPS uses some of the OpenAPS features</td>
+ <td>açık yapay pankreas sistemi<br>APS küçük bilgisayarlarda çalışır (örn. Raspberry pi)<br>AAPS, OpenAPS özelliklerinden bazılarını kullanır</td>
  <td>&nbsp;</td>
- <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
+ <td><a href="https://openaps.readthedocs.io">OpenAPS dokümanları</a></td>
 </tr>
 <tr>
  <td><strong>Açık Döngü</strong></td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>sistem, pompada manuel olarak yapılması önerilen ayarlamaları tavsiye edecektir</td>
  <td>Kapalı Döngü</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
- <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
+ <td>duyarlılık algılama<br>"referans tasarım uygulaması sürüm 0/1" - OpenAPS'in arkasındaki temel algoritma</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Viki - duyarlılık algılama</a></td>
 </tr>
 <tr>
- <td><strong>Peak time</strong></td>
- <td>time of maximum effect of insulin given</td>
+ <td><strong>Tepe zamanı</strong></td>
+ <td>verilen insülinin maksimum etki süresi</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
- <td>pump history (entry in treatments tab)</td>
+ <td>pompa geçmişi (tedaviler sekmesine giriş)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>Predictions</strong></td>
