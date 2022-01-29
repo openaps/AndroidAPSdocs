@@ -20,11 +20,11 @@ Bir uyarı notu: AndroidAPS, herhangi bir ülkede herhangi bir tıbbi otorite ta
 
 	* Tüm ürün ve şirket adları, ticari markalar, hizmet markaları, tescilli ticari markalar ve tescilli hizmet markaları ilgili sahiplerinin mülkiyetindedir. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
+	Lütfen unutmayın - bu projenin `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ veya `Medtronic <https://www.medtronic.com/>`_. ile hiçbir ilişkisi yoktur ve bunlar tarafından desteklenmemektedir.
 	
-If you're ready for the challenge, please read on. 
+Meydan okumaya hazırsanız, lütfen okumaya devam edin. 
 
-Primary goals behind AndroidAPS
+AndroidAPS'nin arkasındaki birincil hedefler
 ==================================================
 
 * An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
