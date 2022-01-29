@@ -27,17 +27,17 @@ Meydan okumaya hazırsanız, lütfen okumaya devam edin.
 AndroidAPS'nin arkasındaki birincil hedefler
 ==================================================
 
-* An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (https://openaps.org/reference-design/)
-* An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-* An app to which users can easily add or remove modules as needed
-* An app with different versions for specific locations and languages.
-* An app which can be used in open- and closed-loop mode
-* An app that is totally transparent: users can input parameters, see results, and make the final decision
-* An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves 
-* An app closely integrated with Nightscout
-* An app in which the user is in control of safety constraints 
+* Dahili güvenliği olan bir uygulama. Oref0 ve oref1 olarak bilinen algoritmaların güvenlik özelliklerini okumak için burayı tıklayın (https://openaps.org/reference-design/)
+* Yapay pankreas ve Nightscout ile tip 1 diyabeti yönetmek için hepsi bir arada uygulama
+* Kullanıcıların gerektiğinde modülleri kolayca ekleyebileceği veya çıkarabileceği bir uygulama
+* Belirli konumlar ve diller için farklı sürümleri olan bir uygulama.
+* Açık ve kapalı döngü modunda kullanılabilen bir uygulama
+* Tamamen şeffaf bir uygulama: kullanıcılar parametreleri girebilir, sonuçları görebilir ve nihai kararı verebilir
+* Belirli pompa sürücülerinden bağımsız olan ve kullanıcıların kendi kendilerine kullanmadan önce güvenle deney yapabilmeleri için bir "sanal pompa" içeren bir uygulama 
+* Nightscout ile yakından entegre edilmiş bir uygulama
+* Kullanıcının güvenlik kısıtlamalarını kontrol ettiği bir uygulama 
 
-How to start
+Nasıl başlanır
 ==================================================
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
 A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
