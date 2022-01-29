@@ -281,7 +281,7 @@
  <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
 <tr>
- <td><strong>Predictions</strong></td>
+ <td><strong>Tahminler</strong></td>
  <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
@@ -306,12 +306,12 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
+ <td>daha az enerji tüketten Bluetooth sistemi (BLE) 916MHz'e (eski Medtronic pompaları için kullanılır) veya 433MHz'e (Omnipod Eros pompaları için kullanılır) kablosuz iletişim arasında köprülemek için açık kaynaklı donanım aygıtı</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>SAGE</strong></td>
+ <td><strong>SYAŞ</strong></td>
  <td>sensor age - displayed in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
