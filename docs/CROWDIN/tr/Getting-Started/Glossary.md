@@ -179,13 +179,13 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>IOB</strong></td>
+ <td><strong>IOB Aktif İnsülin</strong></td>
  <td>insulin on board -  insulin active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>ISF</strong></td>
+ <td><strong>IDF İnsülin Duyarlılık Faktörü</strong></td>
  <td>insulin sensitivity factor - the expected decrease in BG as a result of one unit of insulin</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
