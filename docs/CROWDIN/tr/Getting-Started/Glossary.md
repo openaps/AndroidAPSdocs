@@ -347,25 +347,25 @@
  <td><a href="https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus">John Walsh - The Super Bolus</a></td>
 </tr>
 <tr>
- <td><strong>TBB</strong></td>
- <td>total base basal (sum of basal rate within 24 hours)</td>
+ <td><strong>(TBB) Toplam Temel Bazal</strong></td>
+ <td>toplam temel bazal (24 saat içindeki bazal oranın toplamı)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TBR</strong></td>
- <td>temporary basal rate</td>
+ <td><strong>GBO</strong></td>
+ <td>geçici bazal oranı</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD</strong></td>
- <td>total daily dose (bolus + basal per day)</td>
+ <td><strong>GTD</strong></td>
+ <td>günlük toplam doz (Günlük bolus + bazal)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TT</strong></td>
+ <td><strong>TT (Geçici Hedef)</strong></td>
  <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
