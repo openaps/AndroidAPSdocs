@@ -1,22 +1,22 @@
-Install git
+Git'i kurun
 **************************************************
 Windows
 ==================================================
-1. Download git
+1. Git'i indir
 --------------------------------------------------
-* **You have to be online all of the time as Android Studio downloads several updates!**
-* Any git version should work. For example `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
-* Make sure to note down the installation path. You will need it in the next step.
+* **Android Studio çeşitli güncellemeler indirdiği için her zaman çevrimiçi olmanız gerekir!**
+* Herhangi bir git sürümü çalışması gerekir. Örneğin `https://git-scm.com/download/win <https://git-scm.com/download/win>`_.
+* Kurulum yerini not ettiğinizden emin olun. Bir sonraki adımda ihtiyacınız olacak.
 
 .. image:: ../images/Update_GitPath.png
-  :alt: Git installation path
+  :alt: Git kurulum yolu
 
-2. Set git path in Android Studio
+2. Android Studio'da git yolunu ayarla
 --------------------------------------------------
-* Open File > Settings 
+* Dosyayı Aç > Ayarlar 
 
   .. image:: ../images/Update_GitSettings1.png
-    :alt: Android Studio - open settings
+    :alt: Android Studio - ayarları aç
 
 * Click the small triangle next to Version Control (1.) to open the sub-menu.
 * Click Git (2.).
@@ -59,7 +59,7 @@ Windows
 
 Mac
 ==================================================
-* Any git version should work. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
+* Herhangi bir git sürümü çalışması gerekir. For example `https://git-scm.com/download/mac <https://git-scm.com/download/mac>`_
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the `official git documentation <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>`_.
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
