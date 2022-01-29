@@ -34,7 +34,7 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 * Translate sentences by sentence
     
-    1 Untranslated text is shown with red background on the left side.
+    1 Çevrilmemiş metin sol tarafta kırmızı arka plan ile gösterilir.
     
     2 You can copy a proposal to the edit field by clicking on the proposal.
     
