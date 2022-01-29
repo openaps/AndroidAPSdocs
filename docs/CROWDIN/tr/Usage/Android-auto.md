@@ -4,7 +4,7 @@
 
 ## AndroidAPS settings for Android Auto
 
-Use system notifications for alerts and notifications:
+Uyarılar ve bildirimler için sistem bildirimlerini kullan:
 
 * Open 3-dot-menu on top right of home screen
 * Tercihler
