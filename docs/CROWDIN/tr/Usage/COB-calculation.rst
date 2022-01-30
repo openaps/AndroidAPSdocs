@@ -51,9 +51,9 @@ Algoritma neden COB'u doğru algılamıyor?
 
 - Belki karbonhidratları fazla tahmin ederek girdiniz.  
 - Bir önceki öğünden sonra aktivite / egzersiz yaptınız.
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- I:C oranının ayarlanması gerekiyor
+- min_5m_carbimpact değeri yanlış (SMB ile 8, AMA ile 3 önerilir)
 
-Manual correction of carbs entered
+Girilen karbonhidratların manuel olarak düzeltilmesi
 ==================================================
 If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
