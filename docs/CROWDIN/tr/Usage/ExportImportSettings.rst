@@ -29,7 +29,7 @@ Encrypted backup format
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
-Export settings
+Dışa aktarma ayarları
 ==================================================
 * Hamburger menu (top left corner of screen)
 * Maintenance
