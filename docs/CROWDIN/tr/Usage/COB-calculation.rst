@@ -1,4 +1,5 @@
-COB calculation
+COB (Aktif Karbonhidrat) hesaplaması
+
 **************************************************
 
 How does AndroidAPS calculate the COB value?
