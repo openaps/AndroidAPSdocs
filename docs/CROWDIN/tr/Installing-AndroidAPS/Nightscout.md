@@ -8,24 +8,24 @@ Nightscout raporlamanın yanı sıra AAPS'i kontrol etmek için de kullanılabil
 
 [kimlik doğrulama rollerini](https://nightscout.github.io/nightscout/security) kullanarak Nightscout sitenize genel erişimi engelleyebilirsiniz.
 
-### AndroidAPS settings
+### AndroidAPS ayarları
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bunu yaparak AAPS, Nightscout'ta yapılan geçici hedefler veya gelecekteki karbonhidratlar gibi değişiklikleri almaz. [NS profili](../Configuration/Config-Builder#ns-profile) kullanıyorsanız, "yalnızca yükle" ayarına rağmen profiller AAPS ve Nightscout arasında senkronize edilecektir.
 
-* Tap 3-dot menu on top right corner on your AAPS homescreen.
-* Select "Preferences".
-* Scroll down and tap "Advanced settings".
-* Activate "NS upload only
+* AAPS ana ekranınızın sağ üst köşesindeki 3 noktalı menüye dokunun.
+* "Tercihler"i seçin.
+* Aşağı kaydırın ve "NSClient"e dokunun.
+* Senkronizasyon sekmesinde "Verileri NS'a yükleyin"i etkinleştirin.
 
 ![Nightscout upload only](../images/NSsafety.png)
 
-### Further security settings
+### Diğer güvenlik ayarları
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+[Önce güvenlik](../Getting-Started/Safety-first.rst) bölümünde açıklandığı gibi telefonunuzu güncel tutun.
 
-## Manual Nightscout setup
+## Manuel Nightscout kurulumu
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Zaten bir Nightscout siteniz olduğu varsayılır, kurulumla ilgili tüm talimatlar için [Nightscout](http://nightscout.github.io/nightscout/new_user/) sayfasını ziyaret edebilirsiniz. Aşağıdaki talimatlar, Nightscout sitenize eklemeniz gereken ayarlardır. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Go to https://herokuapp.com/
 
