@@ -20,8 +20,8 @@ Dexcom G5 Uygulamasını (yamalı) kullanırken BG verileriniz sorunsuz ve tutar
 
 ### Freestyle Libre ile xDrip+
 
-Şimdiye kadar Freestyle Libre değerleri için veri kaynağınız olarak xDrip+ kullanırken, KŞ değerleri yeterince düzgün olmadığından SMB içinde 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir'i aktive edemezsiniz. Except this, there are a couple of things you can do to help reduce noise in the data.
+Şimdiye kadar Freestyle Libre değerleri için veri kaynağınız olarak xDrip+ kullanırken, KŞ değerleri yeterince düzgün olmadığından SMB içinde 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir'i aktive edemezsiniz. Bunun dışında, verilerdeki gürültüyü azaltmaya yardımcı olmak için yapabileceğiniz birkaç şey var.
 
-**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+**Pürüzsüz Sensör Gürültüsü.** xDrip Ayarları > xDrip Ekran Ayarları'nda, smooth sensor noise "Pürüzsüz Sensör Gürültüsü"nün açık olduğundan emin olun. This attempts to apply smoothing to noisy data.
 
 **Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
