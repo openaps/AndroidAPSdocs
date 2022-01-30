@@ -56,4 +56,4 @@ Algoritma neden COB'u doğru algılamıyor?
 
 Girilen karbonhidratların manuel olarak düzeltilmesi
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+Karbonhidratları gereğinden fazla veya az girdiyseniz, bunu `burada <../Getting-Started/Screenshots.html#carb-correction>` açıklandığı gibi tedaviler sekmesi ve eylemler sekmesi aracılığıyla düzeltebilirsiniz.
