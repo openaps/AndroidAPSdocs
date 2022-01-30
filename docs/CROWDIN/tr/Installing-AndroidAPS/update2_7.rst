@@ -42,11 +42,11 @@ Dışa aktarma ayarları
 * Dışa aktarılan ayarlarınızı yalnızca telefonunuzda değil, aynı zamanda güvenli bir yerde (bilgisayarınız, bulut depolama...) sakladığınızdan emin olun.
 * AAPS 2.7 apk'yi Android studio ile önceki sürümlerle aynı anahtar deposuyla kurarsanız, önceki sürümü silmeden yeni sürümü yükleyebilirsiniz. 
 * Tüm ayarlar ve tamamlanan görevler önceki sürümde olduğu gibi kalacaktır.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* Anahtar deponuzu kaybetmeniz ve 2.7 versiyonunu yeni anahtar deponuzla oluşturmanız durumunda, önceki sürümden içe aktarma ayarları ile nasıl kurulumun yapılabileceğini `sorun giderme bölümünde <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_ bulabilirsiniz.
 
-Autosens (Hint - no action necessary)
+Otoduyarlılık (İpucu - herhangi bir işlem gerekmez)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
+* otoduyarlılık, referans tasarımı kopyalayan dinamik bir anahtarlama modeliyle değiştirildi.
 * Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 
