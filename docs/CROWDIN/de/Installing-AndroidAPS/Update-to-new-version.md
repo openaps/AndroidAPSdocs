@@ -80,4 +80,4 @@ Keine Panik, wenn irgendetwas schief läuft.
 
 Tief durchatmen!
 
-Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
