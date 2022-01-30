@@ -81,4 +81,4 @@ If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) if your problem is already documented!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
