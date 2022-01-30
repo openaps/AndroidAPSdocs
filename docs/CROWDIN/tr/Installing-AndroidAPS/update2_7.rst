@@ -47,18 +47,18 @@ Dışa aktarma ayarları
 Otoduyarlılık (İpucu - herhangi bir işlem gerekmez)
 -----------------------------------------------------------
 * otoduyarlılık, referans tasarımı kopyalayan dinamik bir anahtarlama modeliyle değiştirildi.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Otoduyarlılık artık hassasiyeti hesaplamak için 24 ve 8 saatlik bir aralıkta geçiş yapacak. Hangisinin daha hassas olduğunu kendi seçecektir. 
+* Kullanıcılar oref1'den geldiyse, 24 veya 8 saatlik hassasiyetin değişmesi nedeniyle muhtemelen sistemin değişikliklere karşı daha az dinamik olabileceğini fark edeceklerdir.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Dana RS için Pompa Parolasını Ayarlayın (Dana RS kullanılıyorsa)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ için pompa şifresi önceki sürümlerde kontrol edilmedi.
+* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
+* Aşağı kaydırın ve "Dana RS" yanındaki üçgene tıklayın.
+* "Pompa şifresi (yalnızca v1)"e tıklayın
+* Pompa şifresini girin (`Varsayılan şifre <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ aygıt yazılımı sürümüne göre değişir) ve Tamam'ı tıklayın.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Dana RS şifresini ayarlayın
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
+Dana RS'de şifreyi değiştirmek için `DanaRS sayfasındaki <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`'daki talimatları izleyin.
