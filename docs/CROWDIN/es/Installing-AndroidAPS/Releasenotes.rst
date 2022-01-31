@@ -52,12 +52,12 @@ Pasos de preparación
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
 
-* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
+* Si estás usando G5/G6 cambia a BYODA (recomendado) - Puedes usar xDrip+, pero no como recolector (xDrip+ puede recibir datos desde BYODA) o actualizar xDrip+ a la última versión.
 
 
 Cambios
 ----------------------
-* 100k lines changed, 105k new lines of code
+* 100k lineas cambiadas, 105k nuevas líneas de código
 * Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * Soporte para DiaconnG8
