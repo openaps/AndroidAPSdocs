@@ -37,7 +37,7 @@ Android 7
 
 Version 3.0.0
 ================
-Release date: XX-XX-2022
+Release date: 31-01-2022
 
 Important hints
 ----------------------
@@ -52,12 +52,12 @@ Preparation steps
 
 * disable Dexcom bridge in Nightscout
 
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
 
 
 Changes
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
+* 100k lines changed, 105k new lines of code
 * Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * DiaconnG8 support
