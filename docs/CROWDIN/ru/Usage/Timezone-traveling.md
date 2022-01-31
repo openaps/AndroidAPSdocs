@@ -77,11 +77,11 @@ AndroidAPS подает оповещение, если время на помп�
 4. Перейдите на вкладку терапии... Если видите дублирующие записи:
    
    * НЕ нажимайте "Удалить записи в будущем"
-   * Нажмите «удалить» все будущие записи и дубликаты. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
-### Actions to take after the clock change
+### Действия после перевода времени
 
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
@@ -91,9 +91,9 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
    * НЕ нажимайте "Удалить записи в будущем"
-   * Нажмите «удалить» все будущие записи и дубликаты. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
 6. Continue as normal.
 
