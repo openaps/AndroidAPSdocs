@@ -7,9 +7,9 @@ If you try to install the apk, signed with a different keystore than before, you
 
 In case you cannot find your old keystore or its password anymore, proceed as follows:
 
-1. [Export settings](../Usage/ExportImportSettings.html#export-settings) on your phone.
+1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
 2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version.html) and transfer it to your phone.
+4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
 7. [Import settings](../Usage/ExportImportSettings.html#export-settings) to restore your objectives and configuration.
@@ -27,7 +27,7 @@ These are the usual gradle sync failures:
 * [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#step-3-resync-gradle-again) again.
+*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
 ### Uncommitted changes (Niet-opgenomen wijzigingen)
 
@@ -53,7 +53,7 @@ If you receive a failure message like
     ```
     your Git installation is not right.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio)
+  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
 
   * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
@@ -93,7 +93,7 @@ If you receive a failure message like
 
 #### Step 3: Resync Gradle (again)
 
-Follow the instructions at [Gradle Resync](#Gradle-Resync).
+Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ### Android Gradle plugin requires Java 11 to run
 
@@ -109,7 +109,7 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
   Press "OK" to save and close the settings dialog.
 
-  Now you need to trigger a [Gradle Resync](#Gradle-Resync)
+  Now you need to trigger a [Gradle Resync](#gradle-resync)
 
 ### Could not resolve/No cached version
 
@@ -123,7 +123,7 @@ Follow the instructions at [Gradle Resync](#Gradle-Resync).
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#Gradle-Resync)
+  * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
 ### Unable to start daemon process (Kan daemon proces niet starten)
 
@@ -170,9 +170,9 @@ Dit lijkt een bug te zijn in Android Studio 3.5.1 en de meegeleverde Java-omgevi
 
 ## No CGM data is received by AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.html#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
 
 ## App niet geïnstalleerd
@@ -182,31 +182,31 @@ Dit lijkt een bug te zijn in Android Studio 3.5.1 en de meegeleverde Java-omgevi
 * Make sure you have transferred the “app-full-release.apk” file to your phone.
 * If "App not installed" is displayed on your phone follow these steps:
 
-1. [Export settings](../Usage/ExportImportSettings.html) (in AAPS version already installed on your phone)
+1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
 2. Verwijder de AndroidAPS app van jouw telefoon.
 3. Enable airplane mode & turn off bluetooth.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. [Importeer instellingen](../Usage/ExportImportSettings.html)
+5. [Importeer instellingen](../Usage/ExportImportSettings)
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
 ## App geïnstalleerd maar oude versie
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.html#update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
 
 ## Geen van de bovengenoemde
 
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
-1. [Export settings](../Usage/ExportImportSettings.html) (in AAPS version already installed on your phone)
+1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
 
 2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
     Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#download-androidaps-code).
+3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
 
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. [Import settings](../Usage/ExportImportSettings.html) again to restore your objectives and settings.
+5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
 
 ## In het ergste geval
 
