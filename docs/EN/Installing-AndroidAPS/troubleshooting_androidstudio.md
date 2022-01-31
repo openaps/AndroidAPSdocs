@@ -12,7 +12,7 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings.html#export-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings#export-settings) to restore your objectives and configuration.
 
    If you can't find them on your phone copy them from the external storage to your phone.
 8. Keep on looping.
@@ -23,9 +23,9 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [Uncommitted changes](#Uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
+* [Uncommitted changes](#uncommitted-changes)
+* [No cached version of ... available](#could-not-resolve-no-cached-version)
+* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
 *Important*:
 After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
@@ -212,7 +212,7 @@ If non of the above tips helped you might consider building the app from scratch
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
 
-##Worst case scenario
+## Worst case scenario
 
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
@@ -220,4 +220,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#install-android-studio).
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
