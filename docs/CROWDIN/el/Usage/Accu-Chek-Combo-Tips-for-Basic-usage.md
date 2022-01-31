@@ -2,7 +2,7 @@
 
 ## Πώς να εξασφαλίσετε ομαλές λειτουργίες
 
-* Πάντα ** φέρετε μαζί σας το smartphone **, αφήστε το δίπλα στο κρεβάτι σας τη νύχτα.
+* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
 * Πάντα βεβαιωθείτε ότι η μπαταρία της αντλίας είναι όσο το δυνατόν πληρέστερη. Ανατρέξτε στο τμήμα της μπαταρίας για συμβουλές σχετικά με την μπαταρία.
 * Είναι καλύτερο** να μην αγγίξετε την εφαρμογή ruffy **όταν το σύστημα εκτελείται. Εάν ξαναρχίσει η εφαρμογή, η σύνδεση με την αντλία μπορεί να διακοπεί. Μόλις η αντλία είναι συνδεδεμένη με το ruffy, δεν υπάρχει ανάγκη επανασύνδεσης. Ακόμα και μετά την επανεκκίνηση του τηλεφώνου, η σύνδεση επαναφέρεται αυτόματα. Αν είναι δυνατόν, μετακινήστε την εφαρμογή σε οθόνη που δεν χρησιμοποιείται ή σε φάκελο στο smartphone σας, ώστε να μην την ανοίξετε τυχαία.
 * Αν ανοίξετε ακούσια την εφαρμογή κατά τη διάρκεια του κυκλώματος, είναι καλύτερο να επανεκινήσετε αμέσως το smartphone.
@@ -32,7 +32,7 @@
 
 ## Η ακύρωση του προσωρινού βασικού ρυθμού αποτυγχάνει
 
-* Περιστασιακά, το AndroidAPS δεν μπορεί να ακυρώσει αυτόματα μια ειδοποίηση **ακυρωμένο TBR **. Στη συνέχεια πρέπει να πατήσετε την ** αναβάθμιση ** στην καρτέλα AndroidAPS ** Combo ** ή να επιβεβαιωθεί ο συναγερμός στην αντλία.
+* Περιστασιακά, το AndroidAPS δεν μπορεί να ακυρώσει αυτόματα μια ειδοποίηση **ακυρωμένο TBR **. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
 
 ## Υποδείξεις της μπαταρίας της αντλίας
 
@@ -40,18 +40,19 @@
 
 * Μετά από συναγερμό ** χαμηλής μπαταρίας **, η μπαταρία θα πρέπει να αλλάξει το συντομότερο δυνατόν ώστε να έχει πάντα αρκετή ενέργεια για αξιόπιστη επικοινωνία Bluetooth με το smartphone, ακόμα και αν το τηλέφωνο βρίσκεται σε ευρύτερη απόσταση από την αντλία.
 * Ακόμα και μετά από συναγερμό ** χαμηλής μπαταρίας **, η μπαταρία μπορεί να χρησιμοποιηθεί για μεγάλο χρονικό διάστημα. Ωστόσο, συνιστάται να έχετε πάντα μαζί σας μια νέα μπαταρία μετά από ένα συναγερμό χαμηλής μπαταρίας.
-* Για να το κάνετε αυτό, πατήστε παρατεταμένα το ** Κλειστό κύκλωμα ** στην κύρια οθόνη και επιλέξτε **κύκλωμα αναστελμένο για 1 ώρα **. 
-* Wait for the pump to communicate with the phone and the Bluetooth logo on the pump has faded.
+* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
+* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
 ![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](../images/combo/combo-tips-compo.png)
 
-* Απελευθερώστε το κλείδωμα πλήκτρων στην αντλία, θέστε την αντλία σε λειτουργία διακοπής, επιβεβαιώστε πιθανώς ακυρωμένο προσωρινό βασικό ρυθμό και αλλάξτε την μπαταρία.
-* Then put the pump back in run mode select **Resume** when long-pressing on **Suspended** on the main screen.
-* Το AndroidAPS θα επαναφέρει τον απαραίτητο προσωρινό βασικό ρυθμό με την άφιξη της επόμενης τιμής σακχάρου στο αίμα. 
+* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
+* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
+* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
+* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
 ### Τύπος μπαταρίας και αιτίες βραχείας διάρκειας ζωής της μπαταρίας
 
-* Επειδή η εντατική επικοινωνία Bluetooth καταναλώνει πολλή ενέργεια, χρησιμοποιείτε μόνο ** μπαταρίες υψηλής ποιότητας ** όπως το Energizer Ultimate Lithium, το "power one" από το "μεγάλο" service pack Accu-Chek ή εάν πρόκειται για μια επαναφορτιζόμενη μπαταρία, χρησιμοποιήστε μπαταρίες Eneloop. 
+* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
@@ -61,24 +62,26 @@
 * **Power One Alkaline** (Varta) από το πακέτο υπηρεσιών: 2 έως 4 εβδομάδες
 * **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
-If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
+If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
 
-* The latest version (March 2018) of the [ruffy App](https://github.com/MilosKozak/ruffy) significantly improved pump battery lifetime. Βεβαιωθείτε ότι βρίσκεστε σε αυτή την έκδοση αν έχετε προβλήματα με μικρή διάρκεια ζωής της μπαταρίας.
+* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * Υπάρχουν ορισμένες παραλλαγές του καπακιού μπαταρίας της αντλίας Combo, το οποίο βραχυκυκλώνει εν μέρει τις μπαταρίες και τις αποστραγγίζει γρήγορα. Τα καπάκια χωρίς αυτό το πρόβλημα μπορούν να αναγνωριστούν από τις χρυσές μεταλλικές επαφές.
-* Εάν το ρολόι της αντλίας δεν «επιβιώσει» από μια μικρή αλλαγή μπαταρίας, είναι πιθανό να σπάσει ο πυκνωτής ο οποίος κρατάει το ρολόι σε λειτουργία κατά τη διάρκεια μιας σύντομης διακοπής ρεύματος. Σε αυτή την περίπτωση, μόνο η αντικατάσταση της αντλίας από τη Roche θα βοηθήσει, πράγμα που δεν αποτελεί πρόβλημα κατά τη διάρκεια της περιόδου εγγύησης. 
+* Εάν το ρολόι της αντλίας δεν «επιβιώσει» από μια μικρή αλλαγή μπαταρίας, είναι πιθανό να σπάσει ο πυκνωτής ο οποίος κρατάει το ρολόι σε λειτουργία κατά τη διάρκεια μιας σύντομης διακοπής ρεύματος. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
 * Το υλικό και το λογισμικό smartphone (λειτουργικό σύστημα Android και στοίβα bluetooth) επηρεάζουν επίσης τη διάρκεια ζωής της μπαταρίας της αντλίας, παρόλο που οι ακριβείς παράγοντες δεν είναι ακόμη πλήρως γνωστοί. Εάν έχετε την ευκαιρία, δοκιμάστε ένα άλλο smartphone και συγκρίνετε τη διάρκεια ζωής της μπαταρίας.
 
 ## Οι αλλαγές θερινής ώρας
 
 * Επί του παρόντος, ο συνδυασμός προγραμμάτων οδήγησης δεν υποστηρίζει την αυτόματη ρύθμιση του χρόνου της αντλίας.
 * Κατά τη διάρκεια της νύχτας μιας αλλαγής θερινής ώρας, ο χρόνος του smartphone ενημερώνεται, αλλά ο χρόνος της αντλίας παραμένει αμετάβλητος. Αυτό οδηγεί σε συναγερμό λόγω των αποκλίσεων μεταξύ των συστημάτων στις 3 π. μ.
-* Εάν δεν θέλετε να ξυπνήσετε τη νύχτα,** απενεργοποιήστε τη λειτουργία αυτόματης εναλλαγής ώρας στο κινητό τηλέφωνο ** το βράδυ πριν από τη μετάβαση στο χρόνο και ρυθμίστε τις ώρες χειροκίνητα το επόμενο πρωί.
+* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning. A good way to deal with daylight saving time changes is to switch to a different time zone located on the same longitude you are located at but closer to the equator, where usually no daylight saving time is observed. Example: For Central Europe on Summer Time (CEST/GMT+2), you could switch to the time zone of Zimbabwe on your phone the night before the switch to winter time and then switch back to Central European Time CET/GMT+1 the next morning while changing the clock on your pump at the same time. The other way aroud, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Look at https://www.timeanddate.com/time/map/ to find a suitable country.
 
 ## Εκτεταμένο bolus, πολλαπλό bolus
 
-Ο αλγόριθμος OpenAPS δεν υποστηρίζει έναν παράλληλο εκτεταμένο bolus ή πολλαπλό bolus. Αλλά μια παρόμοια θεραπεία μπορεί να επιτευχθεί με την ακόλουθη εναλλακτική λύση:
+Ο αλγόριθμος OpenAPS δεν υποστηρίζει έναν παράλληλο εκτεταμένο bolus ή πολλαπλό bolus. But a similar treatment can be achieved by the following alternatives:
 
-* Εισάγετε τους υδατάνθρακες, αλλά μην κάνετε bolus για αυτό. The loop algorithm will react more aggressively. Αν χρειαστεί, χρησιμοποιήστε **eCarbs**(εκτεταμένοι υδατάνθρακες).
+* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
+* Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
+* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
@@ -86,8 +89,8 @@ If your battery life is significantly shorter than the ranges given above, pleas
 
 ## Συναγερμοί κατά την χορήγηση bolus
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical number of insulin units. If you really want to bolus the same insulin twice in short succession, just wait two more minutes and then deliver the bolus again. If the first bolus has been interrupted or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* Background is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
 
 ![Διπλό bolus](../images/combo/combo-tips-doppelbolus.png)
 
