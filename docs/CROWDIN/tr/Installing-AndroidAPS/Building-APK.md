@@ -60,7 +60,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 In general, the steps necessary to build the APK file:
 
-1. [Git'i kurun](../Installing-AndroidAPS/git-install.rst)
+1. [Git yükleyin](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
