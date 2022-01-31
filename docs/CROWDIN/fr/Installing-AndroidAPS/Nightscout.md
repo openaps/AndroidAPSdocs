@@ -1,28 +1,64 @@
-# Nightscout setup
+# Nightscout
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](http://www.nightscout.info/wiki/welcome/how-to-update-to-latest-cgm-remote-monitor-aka-cookie) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+## Remarques sur la sécurité
 
-* Go to https://herokuapp.com/
+En complément des rapports, Nightscout peut également être utilisé pour contrôler AAPS. C'est-à-dire que vous pouvez définir des cibles temporaires ou ajouter des glucides futurs. Ces informations seront recueillies par AAPS qui agira en conséquence. Par conséquent, cela vaut la peine de penser à sécuriser votre site Nightscout.
 
-* Click your App Service name.
+### Paramètres Nightscout
 
-* Click Application settings (azure) or Settings > "Reveal Config Variables (heroku)
+Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des [rôles d'authentification](https://nightscout.github.io/nightscout/security).
 
-* Add or edit the variables as follows:
+### Paramètres AndroidAPS
+
+Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés. Si vous utilisez les [Profils NS](../Configuration/Config-Builder#profil-ns), les profils seront synchronisés entre AAPS et Nightscout malgré le paramètre "Remonter uniquement vers NS".
+
+* Cliquez sur le menu 3 points en haut à droite de votre page d'accueil AAPS.
+* Sélectionnez "Préferences".
+* Faites défiler vers le bas et dans la section NSClient, appuyez sur "Paramètres Avancés".
+* Activez Remonter uniquement vers NS
+
+![Remonter uniquement vers NS](../images/NSsafety.png)
+
+### Autres paramètres de sécurité
+
+Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant tout](../Getting-Started/Safety-first.rst).
+
+## Manuel d'installation Nightscout
+
+Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://nightscout.github.io/nightscout/new_user/) pour des instructions complètes sur la configuration. Les instructions ci-dessous sont alors les paramètres que vous devrez également ajouter à votre site Nightscout. Votre site Nightscout doit être au moins la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
+
+* Aller à https://herokuapp.com/
+
+* Cliquez sur le nom de votre Application.
+
+* Cliquez sur Paramètres d'application (azure) ou Paramètres > "Reveal Config Variables (heroku)
+
+* Ajouter ou modifier les variables comme suit :
   
   * `ENABLE` = `careportal boluscalc food bwp cage sage iage iob cob basal ar2 rawbg pushover bgi pump openaps`
   * `DEVICESTATUS_ADVANCED` = `true`
+  * `SHOW_FORECAST` = `openaps`
   * `PUMP_FIELDS` = `reservoir battery clock`
-  * Various alarms can be set for [monitoring the pump](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), battery % in particular is encouraged: 
+  * Diverses alarmes peuvent être définies pour [surveiller la pompe](https://github.com/nightscout/cgm-remote-monitor#pump-pump-monitoring), le pourcetage de pile en particulier est encouragé : 
     * `PUMP_WARN_BATT_P` = `51`
-    * `PUMP_URGENT_BATT_P` = `26`
+    * `PUMP_URGENT_BATT_P` = `26` 
 
-![Azure](../../images/nightscout1.png)
+![Azure](../images/nightscout1.png)
 
-* Click "Save" at the top of the panel.
+* Cliquez sur "Enregistrer" en haut du panneau.
 
-## ns.10be.de
+## Configuration de Nightscout semi-automatisée
 
-This service is offered by fellow looper Martin Schiftan free of charge at the moment. You can install Nightscout with a few clicks and use it directly. He tries to automate the administration to such an extent that you don't have to do much manual work anymore. All settings can be made via a user-friendly web interface. The service includes an automated basal rate check using Autotune. The server is located in Germany.
+Le cofondateur Martin Schiftan a offert gratuitement une installation de Nightscout semi-automatisée pendant de nombreuses années. Comme le nombre d'utilisateurs a augmenté de façon importante, il a dû commencer à demander une petite participation à partir d'octobre 2021 - à partir de €4, 7 par mois.
 
-<http://ns.10be.de/en/index.html>
+**Avantages**
+
+* Vous pouvez installer Nightscout en quelques clics et l'utiliser directement. 
+* Réduction du travail manuel car Martin essaye d'automatiser l'administration.
+* Tous les réglages peuvent être effectués via une interface web conviviale. 
+* Le service comprend une vérification automatique des taux basaux à l'aide d'Autotune. 
+* Les serveurs sont situés en Allemagne et en Finlande.
+
+<https://ns.10be.de/en/index.html>
+
+Une alternative est <https://t1pal.com/> - à partir de 11,99$ par mois.

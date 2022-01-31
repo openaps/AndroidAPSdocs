@@ -1,60 +1,83 @@
 # Update auf eine neue Version oder branch
 
-## Master branch
+## Kein Download möglich - APK muss selbst erstellt werden
 
-**Installiere git (falls du es noch nicht hast)**
+**Aufgrund der gesetzlichen Regelungen für Medizinprodukte ist AndroidAPS nicht als Download verfügbar. Du kannst die App legal für Dich selbst erstellen, darfst aber keine Kopie an andere weitergeben! Weitere Informationen findest Du auf der [FAQ Seite](../Getting-Started/FAQ.md).**
 
-* Jede git Version sollte funktionieren. Beispiel: <https://git-scm.com/download/win>
-* Wähle den Ordner, in dem sich git.exe befinde: File - Settings - Version Control - Git ![](../images/git.png)
+## Wichtige Hinweise
 
-**Führe ein Update deiner lokalen Version durch**
+* Wenn eine neue Version erscheint, führe bitte so bald als möglich ein Update durch. Ein [Hinweis auf dem AndroidAPS Startbildschirm](../Installing-AndroidAPS/Releasenotes#release-notes) informiert über die neue Version.
+* Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
+* Nutze bitte **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 2020.3.1 nicht unterstützt.
+* Lies die [Release Notes](../Installing-AndroidAPS/Releasenotes) für die aktuelle Version
 
-* Klicke: VCS->Git->Fetch
+## Übersicht zum Aktualisieren Deiner AndroidAPS-Version
 
-**Wähle branch**
+1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
+2. Führe ein [Update Deiner lokalen Kopie](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) des AndroidAPS Sourcecodes durch (Git->Fetch und Git -> Pull).
+3. [Signierte APK erstellen (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
+4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
+5. [Prüfe die Version](#aaps-version-auf-dem-smartphone-uberprufen) in AndroidAPS
 
-* Falls du “branch” wechseln willst, wähle eine andere “branch” vom Reiter: master (aktuellste, getestete Version), oder andere (siehe weiter unten).
+Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 
-![](../images/branchintray.png)
+## 1. Exportiere Deine Einstellungen
 
-Dann checke aus.
+Die Anleitung findest Du auf der Seite [Einstellungen exportieren & importieren](../Usage/ExportImportSettings#exportiere-die-einstellungen) falls Du Dir nicht mehr sicher bist, wie dies genau funktioniert.
 
-![](../images/checkout.png)
+## 2. Führe ein Update deiner lokalen Version durch
 
-**Branch-Update von Github**
+Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
 
-* Drücke Strg+T, wähle Merge method und drücke OK
+Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge diesen Schritten:
 
-![](../images/merge.png)
+* Öffne Dein existierendes AndroidAPS Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Doppelklicke auf das AndroidAPS Projekt.
+    
+    ![Android Studio - Projekt auswählen](../images/update/01_ProjectSelection.png)
 
-Auf dem Reiter siehst du eine grüne Nachricht “updated project”.
+* Wähle in der Menüleiste von Android Studio Git -> Fetch.
+    
+    ![Android Studio Menü - Git - Fetch](../images/update/02_GitFetch.png)
 
-**Upload auf das Smartphone**
+* Unten rechts wird Dir eine Meldung angezeigt, sobald der Fetch erfolgreich durchgeführt wurde.
+    
+    ![Android Studio Menü - Git - Fetch erfolgreich](../images/update/03_GitFetchSuccessful.png)
 
-Erstelle die APK wie unter [Building APK](Building-APK.md) beschrieben
+* Wähle nun in der Menüleiste Git -> Pull.
+    
+    ![Android Studio Menü - Git - Pull](../images/update/04_GitPull.png)
 
-## Entwickler-Version (dev branch)
+* Lasse alle Optionen wie sie sind (Original/Master) und wähle Pull.
+    
+    ![Android Studio - Git - Pull-Dialog](../images/update/05_GitPullOptions.png)
 
-**Achtung:** Die Entwicklungsversion (Dev Branch) von AndroidAPS ist für Entwickler sowie Tester bestimmt, die mit Stacktraces, Log-Dateien und dem Debugger umgehen können, um Fehlerberichte erstellen zu können, die Entwicklern beim Beheben der Fehler helfen (kurzum: Personen, die wissen, was sie tun und selbstständig arbeiten können). Aus diesem Grunde sind unfertige Features deaktiviert. Diese Features sind nur im **Engineering Mode** aktiviert. Dieser kann eingeschaltet werden, wenn eine Datei mit dem Namen `engineering_mode` im gleichen Verzeichnis, in dem sich die Log-Dateien befinden, angelegt wird. Das Aktivieren dieser Features kann dazu führen, dass der Loop überhaupt nicht mehr funktioniert.
+* Warte ab, während der Download läuft. Du siehst dazu einen Hinweis in der Fußzeile. Eine Erfolgsmeldung wird angezeigt, so bald erfolgreich heruntergeladen wurde. Hinweis: Die Zahl der Dateien, die aktualisiert wurden, kann variieren! Dies ist kein Hinweis auf einen Download-Fehler.
+    
+    ![Android Studio - Pull erfolgreich](../images/update/06_GitPullSuccess.png)
 
-Die stabilste AndroidAPS Version ist im [Master branch](https://github.com/MilosKozak/AndroidAPS/tree/master). Es wird empfohlen diese, vor allem anfangs, zu verwenden.
+* Gradle Sync wird ein paar Sekunden benötigen, um einige Abhängigkeiten herunterzuladen. Warte, bis es fertig ist.
+    
+    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-Im [Dev branch](https://github.com/MilosKozak/AndroidAPS/tree/dev) sieht man, welche Funktionen gerade getestet werden. Damit können Fehler ausgebügelt und Feedback darüber gegeben werden, wie die neuen Funktionen in der Praxis funktionieren. Meist wird die Entwickler-Version auf einem alten Telefon mit einer separaten Pumpe getestet bis es stabil läuft. Jede Benutzung des dev branch erfolgt auf eigene Gefahr!
+## 3. Erstelle die signierte APK
 
-Eine kurze Zusammenfassung einiger der Änderungen an alten Features oder der Entwicklung neuer Features, die sich derzeit im dev branch befinden, ist unten aufgeführt. Falls verfügbar werden zusätzlich Links zu den Schlüsselthemen angegeben.
+* Dein Sourcecode ist jetzt die aktuelle veröffentlichte Version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
-**Super Micro Bolus (SMB)**
+## 4. Übertrage die APK-Datei
 
-Details finden sich hier: [Super Micro Boluses (SMB) on OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb).  
-  
-Bedenke, dass du dich für das Testen einer Funktion entscheidest, die sich noch in Entwicklung befindet. Tue dies auf eigene Gefahr und mit der gebotenen Sorgfalt, um dich selbst zu schützen.  
-  
-> Du solltest mehr als vier Wochen lang (nach Abschluss von Ziel 7) gelooped haben (closed loop nicht open loop) und dir der Situationen bewusst sein, in denen dein APS versagen könnte.  
->  
-Ggf. musst du deine Einstellungen anpassen, damit SMB effektiv arbeiten kann. Ein guter Ausgangspunkt ist, dein max IOB in Höhe des normalen Mahlzeitenbolus + die dreifache maximale tägliche Baslarate einzustellen. Aber bleibe wachsam und passe Einstellungen mit Sorgfalt an.
+Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
-<br />  
-  
-Wie bei allen Updates wurde der vorherigen Code bereinigt, verbessert und die Fehler behoben. <br />  
-Wenn du einen Fehler gefunden hast oder glaubst, dass etwas falsch berechnet wurde, dann sehe im [issues tab](https://github.com/MilosKozak/AndroidAPS/issues) nach, um zu sehen, ob schon jemand diesen Fehler bemerkt hat, falls nicht, kannst du einen neuen Issue öffnen. Je mehr Informationen du dabei bereitstellst, desto besser/schneller kann der Fehler reproduziert und behoben werden. Vergiss nicht, die [Log Dateien](../Usage/Accessing-logfiles.md) anzufügen. Neue Funktion können auch im [gitter room](https://gitter.im/MilosKozak/AndroidAPS) besprochen werden. <br />  
-Wenn du mit dem dev branch up to date bleiben willst, kannst du Updates wie oben beschrieben durchführen. Du musst nur in Android Studio auf den entsprechenden dev branch wechseln.
+## 5. AAPS-Version auf dem Smartphone überprüfen
+
+Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
+
+![Installierte AAPS version](../images/Update_VersionCheck282.png)
+
+# Problembehandlung
+
+Keine Panik, wenn irgendetwas schief läuft.
+
+Tief durchatmen!
+
+Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.

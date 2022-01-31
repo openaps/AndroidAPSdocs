@@ -1,12 +1,19 @@
-# Pump choices
+# Opciones de Bomba
 
-AndroidAPS actualmente funciona con bombas de insulina DanaR, DanaRS y Roche Combo. DanaR y Combo llevan un tiempo en el mercado y disponibles para usuarios de bomba de insulina, la DanaRS es versión superior a DanaR que se espera estará disponible. Si necesita cambiar de bomba de insulina puede encontrar información en grupos de usuarios. Detalles sobre distribuidores puede encontrarlos aquí, por favor comparte los detalles de la tuya si no están en las opciones mencionadas.
+AndroidAPS trabaja actualmente con
 
-La Roche Combo es una bomba confiable y loopeable.
+* Accu-Check Combo
+* Accu-Chek Insight
+* algunas antiguas Medtronic
+* Insulet Omnipod (Eros not DASH)
+* DanaR
+* DanaRS 
 
-Las ventajas de DanaRS como bomba de insulina, sin embargo, son:
+bombas. Los detalles del estado de otras bombas que pueden tener el potencial de trabajar con AndroidAPS se listan en la página [Future (possible) Pumps](Future-possible-Pump-Drivers.md).
 
-* Sooil ha declarado que controlar la bomba desde un móvil (no específicamente Loop) no elimina la garantía de la misma. IME-DC ha declarado que reemplazará la bomba simplemente en caso de rotura o necesidad de reemplazo por lo que Sooil nunca sabrá si ha sido usada para lazos cerrados. Esto hace la DanaR/RS las únicas bombas que pueden usarse para lazos cerrados con garantía del fabricante. (Roche excluye cualquier uso que no esté en el manual)
+Si necesita cambiar de bomba de insulina puede encontrar información en grupos de usuarios. Detalles sobre distribuidores puede encontrarlos aquí, por favor comparte los detalles de la tuya si no están en las opciones mencionadas.
+
+La Combo y la Insight son bombas solidas, y loopeables. Las ventajas de DanaRS como bomba de insulina, sin embargo, son:
 
 * DanaR/RS conecta con casi cualquier móvil con Android>=5.1 sin necesidad de flash Lineage. Si tu teléfono se rompe puede ser sustituido fácilmente... no así con la Combo. (esto puede cambiar en el futuro cuando Android 8.1 sea más popular)
 
@@ -21,5 +28,3 @@ Las ventajas de DanaRS como bomba de insulina, sin embargo, son:
 * Todas las bombas AndroidAPS compatibles son waterproof. Aunque solo la Dana es tiene garantizado waterproof debido a su sellado en el compartimento de la batería y el reservorio.
 
 La Combo es una buena bomba y loopeable. Además tiene la ventaja de más tipos de equipos de infusión entre los que escoger teniendo el estándar luer lock. La batería es común por lo que se puede comprar en cualquier parte
-
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.

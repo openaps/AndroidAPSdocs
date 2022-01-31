@@ -1,42 +1,25 @@
-# Sensitivity detection
+# Detectare sensibilitate
 
-## Sensitvity algorithm
+## Algoritmul pentru sensibilitate
 
-Currently we have 4 sensitivity detection models:
+În acest moment există 3 modele de detectare a sensibilității:
 
-* Sensitivity Oref0
-* Sensitivity AAPS
-* Sensitivity WeightedAverage
-* Sensitivity Oref1
+* Sensibilitate AAPS
+* Sensibilitate estimată prin mediere
+* Sensibilitate Oref1
 
-### Sensitivity Oref0
+### Sensibilitate AAPS
 
-Basically sensitivity is calculated from 24h data in the past and carbs (if not absorbed) are cut off after time specified in preferences. The algorithm is similiar to OpenAPS Oref0, described in [OpenAPS Oref0 documentation](https://openaps.readthedocs.io/en/2017-05-21/docs/walkthrough/phase-4/advanced-features.html).
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimul absorbției de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe
 
-### Sensitivity AAPS
+### Sensibilitate estimată prin mediere
 
-Sensitivity is calculated the same way like Oref0 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
+Sensibilitatea este calculată ca o medie ponderată pe baza variațiilor. You can specify time to the past. Variațiile mai recente valorează mai mult în calcule. Absorbția minimă de carbohidrați este calculată pe baza timpului maxim al absorbției de carbohidrați din preferințe. Acest algoritm este cel mai rapid în detectarea schimbărilor de sensibilitate.
 
-### Sensitivity WeightedAverage
+### Sensibilitate Oref1
 
-Sensitivity is calculated as a weighted average from deviations. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
-
-### Sensitivity Oref1
-
-Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sensibilitate este calculată pe baza datelor din ultimile 8 ore sau de la ultima schimbare de loc de montare a pompei, dacă aceasta a avut loc acum mai puțin de 8 ore. Carbohidrații (dacă nu au fost absorbiți) sunt ignorați după perioada de timp specificată în setări. Only the Oref1 algorithm supports un-announced meals (UAM). Aceasta înseamnă că perioadele de timp în care se consideră că acționează o masă neanunțată (UAM) este exclusă din calculul sensibilității. Deci, dacă folosiți SMB cu UAM, va trebui să alegeți algoritmul Oref1 pentru o funcționare corectă. Pentru mai multe informații puteți citi [documentația OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Simultaneous carbs
 
-There is significant difference while using AAPS, WeightedAverage vs Oref0, Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparation to Oref plugins.
-
-## COB Examples
-
-Oref0 / Oref1 - unabsorbed carbs are cut off after specified time
-
-![COB from oref0](../images/cob_oref0.png)
-
-AAPS, WeightedAverage - absorption is calculated to have `COB == 0` after specified time
-
-![COB from AAPS](../images/cob_aaps.png)
-
-If minimal carbs absorption is used instead of value calculated from deviations, a green dot appears on COB graph
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.

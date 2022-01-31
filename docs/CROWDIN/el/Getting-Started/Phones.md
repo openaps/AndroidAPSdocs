@@ -1,13 +1,13 @@
-# Phones
+# Λίστα με ελεγμένα τηλέφωνα
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Οι χρήστες δημιουργούν μία [λίστα με δοκιμασμένα κινητά τηλέφωνα και ρολόγια](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Μπορείτε να χρησιμοποιήσετε φίλτρα για να εμφανίσετε συγκεκριμένες αντλίες ή τηλέφωνα, αλλά παρακαλώ επιστρέψετε στην αρχική με όλες τις επιλογές όταν ολοκληρώσετε την αναζήτηση, ώστε το επόμενο άτομο να έχει πλήρη εικόνα.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Για να εισάγετε ένα τηλέφωνο ή ρολόι το οποίο δεν είναι ήδη στη λίστα, παρακαλώ συμπληρώστε τη [φόρμα](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email <hardware@androidaps.org>, any donations of phone/watch models that still need testing please email [donations@androidaps.org](mailto:hardware@androidaps.org).
+Οποιαδήποτε προβλήματα με το υπολογιστικό φύλλο παρακαλώ στείλτε email στο hardware@androidaps.org,για οποιεσδήποτες δωρεές μοντέλων τηλεφώνου / ρολογιών που χρειάζονται ακόμα δοκιμές παρακαλώ στείλτε email στο donations@androidaps.org.
 
-## Phone Background
+# Φόντο τηλεφώνου
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![φόντο τηλεφώνου](../images/bg_phone_thump.jpg) </br> Σχέδιο: Thiago :) </br> Εάν θέλετε να διακοσμήσετε το τηλέφωνό σας με περισσότερο AndroidAPS, μπορείτε να κατεβάσετε την εικόνα φόντου σας εδώ: ![Φόντο υψηλής ανάλυσης.](../images/bg_phone.jpg)

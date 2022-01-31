@@ -1,111 +1,469 @@
-# Screenshots
+# Экраны AndroidAPS
 
-## The Homescreen
+## Главный экран
 
-![Homescreen](../images/Screenshot_Home_screen.png)
+![Главный экран V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть повседной информации.
 
-**Section A:** allows you to navigate between the various AndroidAPS modules by swiping left or right.
+### Раздел А - Вкладки
 
-**Section B:** Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
+* Переход между различными модулями AndroidAPS.
+* Также можно переходить между экранами свайпом влево или вправо.
+* Отображаемые вкладки можно выбрать в [Конфигураторе](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-**Section C:** The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
+### Раздел B - Профиль & Цель
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+#### Текущий профиль
 
-**Section D:** Is where you can select which information is displayed on the charts below.
+![Оставшееся время замененного профиля](../images/Home2020_ProfileSwitch.png)
 
-**Section E:** Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+* Текущий профиль отображается на левой панели.
+* Короткое нажатие открывает подробности о текущем профиле
+* Долгое нажатие позволяет [переключаться между разными профилями](../Usage/Profiles#profile-switch).
+* Если профиль был изменен на время - в скобках отображается оставшееся время его активности в минутах.
 
-The extended lines show the predicted BG calculations and trends - if you have it selected.
+#### Целевое значение ГК
 
-    * Orange line: COB (colour is used generally to represent COB and carbs)
-    * Dark blue line: IOB (colour is used generally to represent IOB and insulin)
-    * Light blue line: zero-temp
-    * Dark yellow line: UAM
-    
+![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
 
-These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
+* Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
+* Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
+* Если установлена временная цель - панель будет желтой, а в скобках отображается оставшееся время ее активности в минутах.
 
-The solid blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
+#### Визуализация динамического изменения цели
 
-**Section F:** is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
+![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
 
-**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+* AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
+* Активируйте один или оба [варианта](../Configuration/Preferences#openaps-smb-settings): 
+   * "чувствительность повышает цель" и/или 
+   * "сопротивляемость понижает цель" 
+* Если AAPS обнаружит повышенную сопротивляемость или чувствительность - цель будет изменена. 
+* При таком изменении панель будет зеленой.
 
-## The Calculator
+### Раздел C - ГК & статус петли
 
-![Calculator](../images/Screenshot_Bolus_calculator.png)
+#### Текущий уровень глюкозы крови
 
-When you want to make a meal bolus this is where you will normally make it from.
+* Последнее значение ГК, переданное вашим НМГ, отображается в левой части экрана.
+* Цвет показаний ГК соответствует настроенному [даипазону](../Configuration/Preferences#range-for-visualization): 
+   * зеленый = в заданном диапазоне
+   * красный = ниже заданного диапазона
+   * желтый = выше заданного диапазона
+* Сероватый блок в центре экрана отображает изменение текущего уровня ГК относительно предыдущего чтения, и изменение за последние 15 и 40 минут.
 
-**Section A:** contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
+#### Статус цикла
 
-SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+![Статус цикла](../images/Home2020_LoopStatus.png)
 
-**Section B:** shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Новые иконки отображают статус цикла:
+   
+   * зеленый круг = активна замкнутая петля
+   * зеленый круг с пунктирной линией =[приостановка помпы на низкой ГК (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * красный круг = цикл деактивирован (постоянно отключен)
+   * желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет подаваться) - оставшееся время паузы отображается под иконкой
+   * серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под иконкой
+   * оранжевый круг = запущен суперболюс - оставшееся время отображаешься под иконкой
+   * синий круг с пунктирной линией = активна открытая петля
 
-**Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+* Короткое или длинное нажатие на иконку откроет диалоговое окно для переключения между режимами петли (Закрытая, Предотвращение низкой ГК, Открытая или Отключена), для отключения / возобновления цикла или отключения / подключения помпы обратно.
+   
+   * Если диалоговое окно было вызвано которким нажатием - после смены режима появится запрос на подтверждение. Если долгим нажатием - смена режима применится сразу.
+   
+   ![Меню состояния цикла](../images/Home2020_Loop_Dialog.png)
 
-## Insulin Profile
+### Раздел D - IOB, COD, BR и AS
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Секция D](../images/Home2020_TBR.png)
 
-This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
+   
+   * Значение активного инсулина IOB будет равно нулю, если активна только база текущего профиля и нет остаточного инсулина от предыдущих болюсов. 
+   * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
+   * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.rst) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+* Иконка с фиолетовой линией: базальная скорость - иконка изменяется в соответствии с текущими настройками ВБС (прямая линия при базе 100%) 
+   * Нажмите на иконку (только короткое нажате), чтобы увидеть подробности текущего ВБС (текущий базал, значение ВБС, время начала, остаток/общая продолжительность в минутах)
+* Иконка со стрелочками вверх и вниз: отображает текущий статус Автосенса (AS, Autosens) (включен или отключен) и его значение
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+#### Требуются углеводы
 
-And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+![Требуются углеводы](../images/Home2020_CarbsRequired.png)
 
-## Pump Status
+* Требование углеводов появляется, когда расчеты определяют их недостаток.
+* Это происходит, когда алгоритм Oref думает: "Я не спасу тебя отключением всего инсулина и тебе необходимы углеводы, чтобы не загиповать". 
+* Уведомления об углеводах значительно сложнее, чем калькулятор болюса. Вы можете увидеть требование углеводов даже когда калькулятор болюса не показывает нехватку углеводов.
+* При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS. 
 
-![Pump Status](../images/Screenshot_pump_Combo.png)
+### Раздел E- Индикаторы состояния
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+![Секция E](../images/Home2020_StatusLights.png)
 
-## Care Portal
+* Индикаторы состояния сообщают о 
+   * Времени работы катетера помпы
+   * Времени работы инсулина в резервуаре помпы
+   * Уровень заполнения резервуара (единицы)
+   * Времени работы сенсора мониторинга ГК
+   * Время работы и уровень батареи (%)
+* Если превышено пороговое предупреждение, значения будут показаны желтым.
+* Если превышено критическое пороговое значение, значения будут показаны красным цветом.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#status-lights).
 
-![Care Portal](../images/Screenshot_care_portal.png)
+### Раздел F - Основной график
 
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+![Секция F](../images/Home2020_MainGraph.png)
 
-## Loop, MA, AMA, SMB
+* График показывает уровень глюкозы в крови (ГК) считываемый с вашего мониторинга глюкозы (CGM). 
+* Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
+* Длительное нажатие на графике изменит масштаб времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
+* Зеленая область отражает ваш целевой диапазон. Его можно настроить в [настройках](../Configuration/Preferences#range-for-visualization).
+* Голубые треугольники показывают [микроболюсы SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - если они активированы в [настройках](../Configuration/Preferences#openaps-smb-settings).
+* Дополнительная информация:
+   
+   * Прогнозирование
+   * Базал
+   * Активность-кривая действия инсулина
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+#### Активация необязательной информации
 
-## Profile
+* Щелкните по треугольнику в правой части основного графика, чтобы выбрать, какая информация будет показана на главной диаграмме.
+* Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
+   
+   ![Настройка главного графика](../images/Home2020_MainGraphSetting.png)
 
-![Profile](../images/Screenshot_profile.png)
+#### Линии прогнозирования
 
-AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
+* ** Оранжевая ** линия: [активные углеводы COB ](../Usage/COB-calculation.rst) (цвет используется обычно для представления активных углеводов COB и углеводов)
+   
+   Линия предсказания показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек помпы с учетом того, что отклонения вследствие усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+* **Темно-синяя ** линия: активный инсулин IOB (цвет обычно используется для отображения активного инсулина IOB и инсулина)
+   
+   Линия предсказания показывает, что будет происходить только под воздействием инсулина. Например, если вы ввели инсулин, а потом не ели никаких углеводы.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+* ** Голубая ** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
+   
+   В строке прогноза показано, как изменится линия траектории активного инсулина IOB, если помпа прекратит подачу инсулина (0% TBR).
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+* ** Темно-желтая ** линия: [ непредвиденный прием пищи UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1)
+   
+   Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия предсказания аналогична оранжевой линии активных углеводов COB, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет продления текущей скорости сокращения).
 
-**Basal:** is the basal profile programmed into your pump.
+Обычно реальная кривая глюкозы заканчивается в середине этих линий, или близка к той, которая ближе всего описывает вашу ситуацию.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+#### Базал
 
-## Treatment, xDrip, NSClient
+* **Сплошная синяя** линия показывает базальную скорость помпы и отражает фактическую подачу инсулина с течением времени.
+* **пунктирная синяя** линия - это средняя скорость базы, если не было временных настроек базальной скорости (TBR).
+* При стандартной базальной скорости область под кривой показывается в темно-синем цвете.
+* Когда базовая скорость временно корректируется (увеличивается или уменьшается), область под кривой отображается в светло-синем цвете.
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+#### Нагрузка
 
-## Config Builder
+* **тонкая желтая** линия отображает активность инсулина. 
+* Она основана на ожидаемом падении ГК из-за действия инсулина в системе, если не присутствуют другие факторы (например, углеводы).
 
-![Config Builder](../images/Screenshot_config_builder.png)
+### Раздел G - дополнительные графики
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+* Можно активировать до четырех дополнительных графиков ниже главного графика.
+* Чтобы открыть настройки для дополнительных графиков, щелкните по треугольнику справа от [главного](../Getting-Started/Screenshots#section-f-main-graph) и прокрутите вниз.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
-## Settings and Preferences
+* Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- Граф 1 \---\----).
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and enables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere in the wiki.
+#### Абсолютный инсулин
+
+* Активный инсулин, включая болюсный **и базальный**.
+
+#### Активный инсулин (IOB)
+
+* Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
+* Если бы не было [микроболюсов SMB](../Usage/Open-APS-features#super-micro-bolus-smb), болюсов, и временных базалов, TBR во время действия инсулина DIA, он равнялся бы нулю.
+* Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
+* Спад действия инсулина зависит от [DIA и настроек профиля инсулина](../Configuration/Config-Builder#local-profile-recommended). 
+
+#### Активные углеводы COB
+
+* Показывает активные углеводы в организме (= еще не усвоенные углеводы в вашем теле). 
+* Спад зависит от отклонений, замеченных алгоритмом. 
+* Если он обнаружит более высокое поглощение углеводов, чем ожидалось, будет подан инсулин, и это увеличит количество активного инсулина IOB (более или менее, в зависимости от ваших настроек безопасности). 
+
+#### Отклонение
+
+* ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
+* ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
+* ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
+* ** ЖЕЛТЫЕ ** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
+* **ЧЕРНЫЕ** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
+
+#### Чувствительность
+
+* Показывает чувствительность, обнаруженную алгоритмом [Autosens](../Usage/Open-APS-features#autosens). 
+* Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
+
+#### Нагрузка
+
+* Показывает активность инсулина, рассчитанную на основе профиля инсулина (не производная от активного инсулина). 
+* Значение выше ближе к пику времени действия инсулина.
+* Это значит, что при снижении IOB величина будет отрицательной. 
+
+#### Линия отклонения
+
+* Внутреннее значение, используемое в алгоритме.
+
+### Раздел H-Кнопки
+
+![Кнопки главного экрана](../images/Home2020_Buttons.png)
+
+* Кнопки инсулина, углеводов и калькулятора-'всегда активны'. 
+* Другие кнопки должны быть настроены в [настройках ](../Configuration/Preferences#buttons).
+
+#### Инсулин
+
+![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
+
+* Дать определенное количество инсулина без использования [калькулятора болюса ](#bolus-wizard).
+* Отметив флажок, можно автоматически активировать временную цель[ожидаемый прием пищи](../Configuration/Preferences#default-temp-targets).
+* Если вы не хотите подавать болюс с помпы, а только отметить количество инсулина (например, поданного шприц-ручкой) активируйте соответствующий флажок.
+
+#### Углеводы
+
+![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
+
+* Записать углеводы без подачи болюса.
+* [Заранее настроенные временные цели ](../Configuration/Preferences#default-temp-targets) можно активировать отметив соответствующий флажок.
+* Смещение времени: Когда вы будете употреблять/употребили в пищу углеводы (в минутах).
+* Продолжительность: Для ["пролонгированных углеводов"](../Usage/Extended-Carbs.rst)
+* Можно использовать кнопки для быстрого увеличения количества углеводов.
+* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
+
+#### Калькулятор
+
+* Смотрите раздел мастер болюса Bolus Wizard [ниже](#bolus-wizard)
+
+#### Калибровки
+
+* Отправляет калибровку в xDrip + или открывает диалог калибровки Dexcom.
+* Необходимо активировать в настройках [](../Configuration/Preferences#buttons).
+
+#### CGM/Непрерывный мониторинг ГК
+
+* Открывает xDrip +.
+* Кнопка Назад возвращает в AAPS.
+* Необходимо активировать в настройках [](../Configuration/Preferences#buttons).
+
+#### Мастер быстрых настроек
+
+* Легко вводите количество углеводов и задайте основы расчетов.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#quick-wizard).
+
+## Мастер Болюса
+
+![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
+
+Когда необходимо дать болюс на еду, он обычно подается отсюда.
+
+### Раздел I
+
+* Поле ГК обычно уже заполнено данными с мониторинга. Если мониторинг не работает, то поле будет пустым. 
+* В поле УГЛЕВОДЫ вы добавляете рассчитанное вами количества углеводов - или эквивалента - на которые хотите дать болюс. 
+* Поле CORR-для корректировки - если вы по какой-либо причине хотите изменить конечную дозу.
+* Поле CARB TIME предназначено для предварительной подачи болюса, так что вы можете сообщить системе о задержке в приеме углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
+
+#### Напоминание о приеме пищи
+
+* Для углеводов в будущем можно поставить галочку (и это по умолчанию, когда вводится время в будущем), так что вы можете быть напоминаем в будущем, когда вы будете есть данные, которые вы вводите в AndroidAPS
+   
+   ![Мастер болюса с напоминанием о питании](../images/Home2021_BolusWizard_EatingReminder.png)
+
+### Раздел J
+
+* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а на следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. Эта опция появляетмся только если отмечена опция "Включить [суперболюс](../Configuration/Preferences#superbolus) в мастере" в [окне параметров](../Configuration/Preferences#overview).
+* Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
+* Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+
+### Раздел K
+
+* Показывает рассчитываемый болюс. 
+* Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
+* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента NS](../Configuration/Preferences#nsclient).
+
+### Раздел L
+
+* Подробности расчёта мастера болюса.
+* Можно отменить выбор тех, которые вы не хотите включить, но обычно это не требуется.
+* По соображениям безопасности блок **TT должен быть отмечен вручную**, если вы хотите, чтобы калькулятор болюса отталкивался от действующей временной цели.
+
+#### Комбинации активных углеводов COB и активного инсулина IOB и что они означают
+
+* По соображениям безопасности галочка активного инсулина IOB не может быть снята когда отмечены активные углеводы COB, из-за риска передозировки инсулина, так как AAPS не может заново пересчитать то, что уже дано.
+* Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или супермикроболюса SMB.
+* Если отметить галочкой активный инсулин IOB без активных углеводов COB, AAPS примет в расчет уже поданный инсулин, но не инсулин на углеводы, которые еще предстоит усвоить. Это приведет к уведомлению о "нехватке углеводов".
+* Если болюс на ** дополнительную еду** дается вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
+
+#### Неверное обнаружение активных углеводов COB
+
+![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorption.png)
+
+* Если вы видите вышеприведенное предупреждение после использования болюс-мастера, это означает, что AndroidAPS обнаружил, что рассчетное значение активных углеводов COB может быть неправильным. 
+* Так что если вы хотите повторно подать болюс после предыдущей еды с активными углеводами COB, учитывайте возможность передозировки! 
+* Подробнее см. подсказки на [странице расчета активных углеводов СOB](../Usage/COB-calculation#detection-of-wrong-cob-values).
+
+## Вкладка "Действия"
+
+![Вкладка "Действия"](../images/Home2021_Action.png)
+
+### Действия-раздел M
+
+* Кнопка [переключение профиля ](../Usage/Profiles#profile-switch) является альтернативой нажатию [текущий профиль](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
+* Кнопка [временная цель](../Usage/temptarget#temp-targets) - альтернатива [текущей цели](../Getting-Started/Screenshots#section-b-profile-target) на главном экране.
+* Кнопка начала или отмены временного базала. Обратите внимание, что кнопка меняется с “TEMPBASAL” (ВРЕМБАЗАЛ) на “CANCEL x%” (ОТМЕНА х%), после начала действия.
+* Несмотря на то, что [пролонгированные болюсы](../Usage/Extended-Carbs#extended boluses) действительно не работают в замкнутом цикле, некоторые всё равно просили оставить эту опцию.
+   
+   * Эта опция доступна только для помпDana RS и Insight. 
+   * Замкнутый цикл автоматически будет остановлен и переключится на режим открытого цикла на время пролонгированных болюсов.
+   * Не забудьте прочитать [детали](../Usage/Extended-Carbs#extended boluses) перед использованием этой опции.
+
+### Портал терапии-раздел N
+
+* Отображает информацию о
+   
+   * время, отработанное сенсором & уровень заряда (процент заряда батареи)
+   * время нахождения инсулина в картридже & уровень (единицы)
+   * время работы (возраст) катетера помпы
+   * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
+
+* Будет показано меньше информации, если используется [ низкое разрешение экрана](../Configuration/Preferences#skin).
+
+#### Уровень заряда сенсора (батарея)
+
+* Требуется xDrip+ ночная сборка от декабря 10, 2020 или новее.
+* Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
+* Пороговые значения могут быть заданы в [настройках](../Configuration/Preferences#status-lights).
+* Если уровень батареи сенсора совпадает с уровнем заряда аккумулятора телефона, то версия xDrip+, вероятно, слишком старая и нуждается в обновлении.
+   
+   ![Уровни датчиков равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
+
+### Портал терапии-раздел О
+
+* Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основа данных в [разделе N](#careportal-section-n).
+* Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
+* Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
+
+### Инструменты - раздел P
+
+#### Браузер истории
+
+* Позволяет перемещаться по журналу AAPS.
+
+#### TDD/общая суточная доза
+
+* Общая суточная доза = болюс + базал за сутки
+* Некоторые врачи рекомендуют - особенно для новых пользователей - соотношение базал-болюс 50:50. 
+* Поэтому эта величина рассчитывается как TDD / 2 * TBB (общая суточная база = сумма базала в течение 24 часов). 
+* Другие предпочитают диапазон от 32% до 37% от величины базала TBB. 
+* Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
+
+![Браузер журнала + TDD](../images/Home2021_Action_HB_TDD.png)
+
+## Профиль Инсулина
+
+![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
+
+* Это профиль активности инсулина, который вы выбрали в [конфигураторе](../Configuration/Config-Builder#insulin). 
+* ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
+* Важно отметить, что распад имеет большую остаточную протяженность. 
+* Если вы раньше управляли помпой вручную, то, вероятно, привыкли полагать, что инсулин рассасывается примерно за 3,5 часов. 
+* Однако, при включении цикла длинный след имеет большее значение поскольку расчеты здесь более точные и даже небольшие величины суммируются в рекурсивных вычислениях в алгоритме AndroidAPS.
+
+Более подробное обсуждение различных типов инсулина, их профилей активности и почему это важно, см. здесь [Понимание новых кривых IOB на основе экспоненциальных кривых активности](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+
+Отличная статья об этом: [Почему мы регулярно ошибались в определении длительности действия инсулина (DIA) и почему это важно…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+
+Еще на эту тему: [Экспоненциальные кривые инсулина + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+
+## Статус помпы
+
+![Статус помпы](../images/Screenshot_PumpStatus.png)
+
+* Разная информация о состоянии помпы. Отображаемая информация зависит от модели помпы.
+* Смотрите [страницу помпы](../Hardware/pumps.rst).
+
+## Портал терапии
+
+Здесь повторяются функции которые можно найти на экране Nightscout под символом "+", который позволяет добавлять заметки к терапии.
+
+### Просмотреть расчет углеводов
+
+![Обзор расчёта углеводов на вкладке терапии](../images/Screenshots_TreatCalc.png)
+
+* Если вы использовали помощник болюса [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) для вычисления дозы инсулина, этот расчет можно проверить позже на вкладке терапии.
+* Просто нажмите на зеленую ссылку Calc. (В зависимости от помпы инсулин и углеводы также могут быть показаны на одной линии в терапии.)
+
+### Коррекция углеводов
+
+![Терапия в 1 или 2 линии](../images/Treatment_1or2_lines.png)
+
+На вкладке Лечение можно исправить ошибочные записи углеводов (если вы переоцениваете или недооценили углеводы).
+
+1. Проверьте и запомните фактические активные углеводы COB и активный инсулин IOB на главном экране.
+2. В зависимости от помпы углеводы на вкладке терапии могут быть показаны одной линией с инсулином или в виде отдельной записи (например, для Dana RS).
+3. Удалите запись с неверным количеством углеводов.
+4. Убедитесь, что углеводы удалены успешно, повторно проверив активные углеводы COB на главном экране.
+5. Сделайте то же для активного инсулина IOB, если на вкладке терапии только одна линия для углеводов и инсулина.
+   
+   -> Если углеводы не удаляются должным образом, а вы добавили дополнительные углеводы, как описано здесь (6.), активных углеводов COB окажется слишком много, и это может привести к передозировке инсулина.
+
+6. Введите правильное количество углеводов при помощи кнопки углеводов на главном экране и убедитесь, что точное время события также введено.
+
+7. Если на вкладке терапии только одна линия для углеводов и инсулина, следует также добавить и запись о количестве инсулина. Убедитесь в том, чтобы установить правильное время событие и проверить активный инсулин IOB на главном экране после подтверждения новой записи.
+
+## Замкнутый цикл, помощник болюса AMA / микроболюсы SMB
+
+* Эти вкладки показывают подробную информацию о расчетах алгоритма и почему AAPS действует так, а не иначе.
+* Расчет производится каждый раз, когда система получает свежее данные мониторинга CGM.
+* Дополнительную информацию см. в [разделе APS на вкладке конфигуратора](../Configuration/Config-Builder#aps).
+
+## Профиль
+
+![Профиль](../images/Screenshots_Profile.png)
+
+* Профиль содержит информацию об индивидуальных настройках диабета:
+   
+   * DIA (продолжительность действия инсулина)
+   * IC: соотношение Инсулин - Углеводы
+   * ISF: Коэффициент чувствительности к инсулину
+   * Скорость базала
+   * Цель: Уровень глюкозы крови для AAPS
+
+* Можно применять [локальный профиль](../Configuration/Config-Builder#local-profile-recommended), который может быть отредактирован на смартфоне или [профиль Nightscout ](../Configuration/Config-Builder#ns-profile), который редактируется на вашей странице NS и затем пересылается на телефон. Подробная информация в соответствующих разделах на вкладке [Конфигуратор](../Configuration/Config-Builder.md).
+
+## Терапия
+
+История следующих терапевтических действий:
+
+* Bolus & Carbs -> возможность [удалить записи](../Getting-Started/Screenshots#carb-correction) для исправления истории
+* [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus)
+* Временная базальная скорость
+* [Временная цель](../Usage/temptarget.md)
+* [Profile switch/смена профиля](../Usage/Profiles.md)
+* [Портал терапии](../Usage/CPbefore26#careportal-discontinued) -примечания, введенные через вкладку действий и примечания в диалогах
+
+## Источник ГК - xDrip+, BYODA...
+
+![Вкладка Источник BG-здесь xDrip](../images/Screenshots_BGSource.png)
+
+* В зависимости от заданного в параметрах источника ГК эта вкладка называется по-разному.
+* Показывает хронологию показаний CGM и предлагает возможность удаления показаний при сбое (например, при компрессии сенсора).
+
+## клиент NS
+
+![клиент NS](../images/Screenshots_NSClient.png)
+
+* Показывает состояние соединения с сайтом Nightscout.
+* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
+* Для устранения неполадок смотрите эту [страницу](../Usage/Troubleshooting-NSClient.md).

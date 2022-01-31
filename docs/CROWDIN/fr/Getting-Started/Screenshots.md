@@ -1,111 +1,469 @@
-# Screenshots
+# Ecrans AndroidAPS
 
-## The Homescreen
+## Écran d'accueil
 
-![Homescreen](../images/Screenshot_Home_screen.png)
+![Écran d'accueil V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il contient la plupart des informations dont vous aurez besoin au jour le jour.
 
-**Section A:** allows you to navigate between the various AndroidAPS modules by swiping left or right.
+### Section A - Onglets
 
-**Section B:** Allows you to change the loop status (open loop, closed loop, suspend loop etc), see your current profile, to see your current target blood glucose level and to set a temporary target. Long press on any of the buttons to alter the setting. I.e long press the dark blue target bar in the upper right ("5.5" in the screenshot) to set a temp target.
+* Permet de naviguer entre les différents modules AndroidAPS.
+* Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
+* Les onglets affichés peuvent être sélectionnés dans le [Générateur de configuration](../Configuration/Config-Builder#onglet-ou-menu-hamburger).
 
-**Section C:** The latest blood glucose reading from your CGM, how long ago it was read, changes in the last 15 and 40 minutes, your current basal rate - including any temporary basal rate (TBR) programmed by the system, your insulin on board and carbs on board.
+### Section B - Profil & cible
 
-The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. The figures in brackets show how much consists of insulin remaining from previous boluses and how much is a basal variation due to previous TBRs programmed by AAPS. This second component may be negative if there have recently been periods of reduced basal.
+#### Profil actuel
 
-**Section D:** Is where you can select which information is displayed on the charts below.
+![Changement de profil, durée restante](../images/Home2020_ProfileSwitch.png)
 
-**Section E:** Is the graph showing your blood glucose (BG) as read from your glucose monitor (CGM) it also shows Nightscout notifications such as fingerstick calibrations, and carbs entries. Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or 24 hours.
+* Le profil actuel est affiché dans la barre de gauche.
+* Un appui court sur le profil permet de voir les détails du profil
+* Un appui long sur le profil permet de [changer de profil](../Usage/Profiles#changement-de-profil).
+* Si le changement de profil a été effectué avec une durée, le temps restant en minutes est indiqué entre parenthèses.
 
-The extended lines show the predicted BG calculations and trends - if you have it selected.
+#### Cible
 
-    * Orange line: COB (colour is used generally to represent COB and carbs)
-    * Dark blue line: IOB (colour is used generally to represent IOB and insulin)
-    * Light blue line: zero-temp
-    * Dark yellow line: UAM
-    
+![Cible temporaire, durée restante](../images/Home2020_TT.png)
 
-These lines show you the different predictions based on current carb absorption (COB); insulin only (IOB); showing how long it will take BG to level off at/above target if deviations suddenly cease and we run a zero temp until then (zero-temp) and unannounced meal/effect detection where carbs are detected but have not been entered into the system by the user (UAM).
+* La cible de glycémie actuelle est affichée dans la barre de droite.
+* Un appui court sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
+* Si une cible temporaire est définie, la barre devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
-The solid blue line shows the basal delivery of your pump. The dotted blue line is what the basal rate would be if there were no temporary basal adjustments (TBRs) and the solid blue line is the actual delivery over time.
+#### Visualisation de l'ajustement dynamique de la cible
 
-**Section F:** is also configurable using the options in section D. In this example we are showing the IoB (Insulin on Board) - if there were no TBRs and no remaining boluses this would be zero, the sensitivity, and the deviation. GREY bars show a deviation due to carbs, GREEN that BG is higher than the algorithm expected it to be and RED that it is lower than the algorithm expected.
+![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
 
-**Section G:** enables you to administer a bolus (normally you would use the Calculator button to do this) and to add a fingerstick CGM calibration.
+* AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
+* Activez soit une, soit les deux [options suivantes](../Configuration/Preferences#parametres-openaps-smb) 
+   * "Sensibilité augmente la cible" et/ou 
+   * "Résistance diminue la cible" 
+* Si AAPS détecte une résistance ou une sensibilité, la cible change en fonction de ce qui est défini dans le profil. 
+* Lorsqu'il modifie la cible glycémique, l'arrière-plan passe en vert.
 
-## The Calculator
+### Section C - Gly & état de la boucle
 
-![Calculator](../images/Screenshot_Bolus_calculator.png)
+#### Glycémie actuelle
 
-When you want to make a meal bolus this is where you will normally make it from.
+* La dernière glycémie reçue de votre MGC est affichée sur le côté gauche.
+* La couleur de la glycémie reflète sa position par rapport à la [fourchette](../Configuration/Preferences#fourchette-de-visualisation) définie. 
+   * vert = dans la fourchette
+   * rouge = en dessous de la fourchette
+   * jaune = au-dessus de la fourchette
+* Le bloc gris du milieu affiche les minutes depuis la dernière lecture et les variations depuis la dernière lecture ainsi que depuis les 15 et 40 dernières minutes.
 
-**Section A:** contains is where you input the information about the bolus that you want. The BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. The CORR field is if you want to modify the end dosage for some reason, and the CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected and the bolus will be delayed. You can put a negative number in this field if you are bolusing for past carbs.
+#### État de la boucle
 
-SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The idea is to deliver the insulin sooner and hopefully reduce spikes.
+![État de la boucle](../images/Home2020_LoopStatus.png)
 
-**Section B:** shows the calculated bolus. If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Une nouvelle icône affiche l'état de la boucle:
+   
+   * cercle vert = boucle fermée en cours d'exécution
+   * cercle vert avec des pointillés = [arrêt glycémie basse (AGB)](../Usage/Objectives#objectif-6-demarrage-de-la-boucle-fermee-avec-le-systeme-agb-arret-pour-glycemie-basse)
+   * cercle rouge = boucle désactivée (ne fonctionne pas de façon permanente)
+   * cercle jaune = boucle suspendue (temporairement en pause, mais l'insuline basale sera délivrée) - le temps restant est affiché sous l'icône
+   * cercle gris = pompe déconnectée (temporairement aucune insuline n'est délivrée) - le temps restant est affiché sous l'icône
+   * cercle orange = super bolus en cours - le temps restant est affiché sous l'icône
+   * cercle bleu avec pointillés = boucle ouverte
 
-**Section C:** shows the various elements that have been used to calculate the bolus. You can deselect any that you do not want to include but you normally wouldn't want to.
+* Un appui court ou long sur l'icône de la boucle permet d'ouvrir une boite de dialogue pour changer la boucle (Fermée, Mode Arrêt Glycémie Basse, Ouverte), suspendre/réactiver la boucle ou déconnecter/reconnecter la pompe.
+   
+   * En cas d'appui court sur l'icône de la boucle, une validation est nécessaire après la sélection dans la boite de dialogue
+   
+   ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
-## Insulin Profile
+### Section D - IA, GA, Basal et AS
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![Section D](../images/Home2020_TBR.png)
 
-This shows the activity profile of the insulin you have chosen. The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* Seringue : insuline active (IA) - quantité d'insuline active à l'intérieur de votre corps
+   
+   * Le chiffre de l’insuline active serait à 0 s’il n’y avait que votre basal standard en cours et qu’il ne restait plus d’insuline active d’un précédent bolus. 
+   * L'IA peut être négative s’il y a eu récemment des périodes de basal réduit.
+   * Appuyez sur l'icône pour voir la répartition entre l'IA bolus et l'IA basale
 
-You will normally be using one of the Oref profiles - and the important thing to note is that the decay has a long tail. If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+* Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de basal temporaires (plat à 100%) 
+   * Appuyez sur l'icône pour voir le débit de basal du profil et les détails de n'importe quel basal temporaire (y compris la durée restante)
+* Flèches haut & bas : indique le statut [autosens](../Usage/Open-APS-features#autosens) (activé ou désactivé) et la valeur est affichée sous l'icône
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+#### Glucides requis
 
-And more at: [Exponential Insulin Curves + Fiasp](http://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+![Glucides requis](../images/Home2020_CarbsRequired.png)
 
-## Pump Status
+* Des suggestions de glucides sont données lorsque l'algorithme détecte que des glucides supplémentaires sont nécessaires.
+* C'est quand l'algorithme oref pense que je ne peux pas vous sauver par un 0 (zéro) temp et que vous aurez besoin de manger des glucides pour corriger.
+* Les notifications de glucides sont beaucoup plus sophistiquées que celles de l'Assistant bolus. Vous pouvez voir la suggestion des glucides alors que l'Assistant bolus ne montre pas les glucides manquants.
+* Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
-![Pump Status](../images/Screenshot_pump_Combo.png)
+### Section E - Voyants d'état
 
-Here we see the status of the insulin pump - in this case an Accu-Chek Combo. The information displayed is self explanatory. A long press on the HISTORY button will read the data from your pump history, including your basal profile. But remember only one basal profile is supported on the Combo pump.
+![Section E](../images/Home2020_StatusLights.png)
 
-## Care Portal
+* Les voyants d'état donnent une alerte visuelle pour 
+   * Âge de la canule
+   * Âge de l'insuline (jours d'utilisation du réservoir)
+   * Niveau du réservoir (unités)
+   * Âge du capteur
+   * Âge et niveau de la pile (%)
+* Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
+* Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
+* Les paramètres peuvent être trouvés dans [les préférences](../Configuration/Preferences#voyants-d-etat).
 
-![Care Portal](../images/Screenshot_care_portal.png)
+### Section F - Graphique principal
 
-This replicates the functions you will find on your Nightscout screen under the "+" symbol which allows you to add notes to your records. Functions such as recording when you change a pump site, or insulin cartridge should be self explanatory. BUT this section does not issue any commands to your pump. So if you add a bolus using this screen it simply makes a note of this on your Nightscout record, the pump won't be instructed to deliver a bolus.
+![Section F](../images/Home2020_MainGraph.png)
 
-## Loop, MA, AMA, SMB
+* Le graphique montre votre glycémie (Gly) telle qu'elle est lue par votre capteur de glycémie (MGC). 
+* Les notes saisies dans l'onglet de l'action telles que les calibrations capillaires, les entrées de glucides et les changements de profil sont affichés ici. 
+* Une pression longue sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
+* La zone verte reflète votre fourchette cible. Elle peut être configurée dans les [préférences](../Configuration/Preferences#fourchette-de-visualisation).
+* Les triangles bleus montrent les [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - s'ils sont activés dans les [préférences](../Configuration/Preferences#parametres-openaps-smb).
+* Information optionnelle :
+   
+   * Prédictions
+   * Basals
+   * Activité - courbe d'activité de l'insuline
 
-You don't normally need to worry about these, they show the results of the OpenAPS algorithm which runs each time the system gets a fresh reading from the CGM. These are discussed elsewhere.
+#### Activation des informations optionnelles
 
-## Profile
+* Cliquez sur le triangle situé sur le côté droit du graphique principal pour sélectionner les informations qui seront affichées dans le graphique principal.
+* Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\---- Graph 1 \---\----" sont disponibles.
+   
+   ![Réglage du graphique principal](../images/Home2020_MainGraphSetting.png)
 
-![Profile](../images/Screenshot_profile.png)
+#### Lignes de prédiction
 
-AndroidAPS can run using a number of different profile configuratons. Typically - as shown here - the Nightscout profile has been downloaded via the built in Nighscout client and is displayed here in read-only form. If you wanted to make any changes you would do this from your Nightscout user interface and then do a "Switch Profile" on your AndroidAPS rig to refresh the download. Data such as the basal profile would then be automatically copied over to your pump.
+* Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.rst) (la couleur est généralement utilisée pour représenter les Glucides)
+   
+   Cette ligne de prédiction montre comment votre Glycémie (et pas les GA eux mêmes) devrait évoluer sur la base de vos réglages actuels de la pompe, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
 
-**DIA:** stands for Duration of Insulin Action and it is discussed above in the section on insulin profiles.
+* Ligne **bleu foncé** : Insuline Active (IA) (la couleur est généralement utilisée pour représenter l'insuline)
+   
+   Cette ligne de prédiciton montre ce qui pourrait arriver uniquement avec l'action de l'Insuline. Par exemple si vous avez injecté de l'insuline mais que vous n'avez pas mangé de glucides.
 
-**IC:** is Insulin to Carb ratio. This profile has a number of different values set for different times of day.
+* Ligne **bleu clair** ligne : zéro-temp (glycémie prévisionnelle si un débit de base temporaire à 0% était défini)
+   
+   Cette ligne de prédiction montre comment la trajectoire de l'IA changerai si la pompe arrêtait toute injection d'insuline (DBT 0%).
 
-**ISF:** is Insulin Sensitivity Factor - the amount by which one unit of insulin will reduce your blood glucose assuming that nothing else changes.
+* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensibilite-oref1) (Repas Non Signalés)
+   
+   Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
 
-**Basal:** is the basal profile programmed into your pump.
+Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
 
-**Target:** is the blood glucose level that you want the rig to be aiming for all the time. You can set different levels for differenttimes of day if you wish, and you can even set an upper and lower range so that the rig will only start to make changes when the predicted blood glucose value falls outside, but if you do that then the rig will respond more slowly and you are unlikely to achieve such stable blood sugars.
+#### Basals
 
-## Treatment, xDrip, NSClient
+* Une ligne **bleue continue** indique le débit de basal de votre pompe et reflète l'injection réelle au fil du temps.
+* La ligne **bleue pointillée** est ce qu'aurait dû être le débit de basal s'il n'y avait pas d'ajustements de débit de basal temporaire (DBT).
+* Quand le débit de basal standard est donné, la zone sous la courbe est affichée en bleu foncé.
+* Quand le débit de basal est temporairement ajusté (augmenté ou diminué), la zone sous la courbe est affichée en bleu clair.
 
-These are simply logs of treatments (boluses and carbs), xDrip messages and messages sent to Nightscout via the built-in Nightscout client. You don't normally need to worry about any of these unless there is a problem.
+#### Activité
 
-## Config Builder
+* La ligne **jaune fine** montre l'activité de l'insuline. 
+* Elle indique la capacité de l'insuline présente dans votre corps à faire baisser la glycémie, si aucun autre facteur (comme les glucides) n'était présent.
 
-![Config Builder](../images/Screenshot_config_builder.png)
+### Section G - Graphiques additionnels
 
-This is where you will set up the configuraton of your AndroidAPS rig. This screenshot shows a pretty typical rig using a Combo pump, a Dexcom G5 CGM sensor being managed via xDrip+ and running with NovoRapid insulin on an Oref profile and connected to a Nightscout cloud based server.
+* Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal.
+* Pour ouvrir les paramètres pour des graphiques supplémentaires, cliquez sur le triangle sur le côté droit du [graphique principal](../Getting-Started/Screenshots#section-f-graphique-principal) et faites défiler vers le bas.
 
-The tick box on the right determines if that particular module will be displayed in the top menu bar (see section A at Homescreen) and the small gear wheel symbol allows access to the setting for that module, if there are any.
+![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
-## Settings and Preferences
+* Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
 
-At the top right of the navigation bar you will find three small vertical dots. Pressing on these takes you to the app's preferences and settings, and enables you to export your settings if ever you need to transfer to a different rig. These are discussed elsewhere in the wiki.
+#### Insuline absolue
+
+* Insuline Active incluant les bolus **et la basal**.
+
+#### Insuline active
+
+* Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
+* S'il n'y avait pas de [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), ni de bolus et aucun DBT pendant une durée de DIA, l'Insuline Active serait à zéro.
+* L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
+* La décomposition de l'insuline dépend de votre [DAI et des paramètrages de l'insuline](../Configuration/Config-Builder#profil-local-recommande). 
+
+#### Glucides actifs
+
+* Affiche la quantité de glucides que vous avez à chaque instant (= glucides actifs dans votre corps, non encore assimilés). 
+* La diminution dépend des écarts que l'algorithme détecte. 
+* S'il détecte une absorption plus élevée de glucides que prévu, de l'insuline sera injectée, ce qui augmentera l'IA (plus ou moins, selon vos paramètres de sécurité). 
+
+#### Déviations
+
+* barres **GRISES** montrent un écart dû aux glucides. 
+* barres **VERTES** montrent que la Gly est supérieure à l'attendu de l'algorithme Les barres vertes sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la résistance.
+* barres **ROUGES** montrent que la Gly est inférieur à l'attendu de l'algorithme. Les barres rouges sont utilisées par [Autosens](../Usage/Open-APS-features#autosens) pour augmenter la sensibilité.
+* barres **JAUNES** montrent une déviation due aux RNS.
+* barres **NOIRES** montrent de petites déviations non prises en compte pour la sensibilité
+
+#### Sensibilité
+
+* Affiche la sensibilité que [Autosens](../Usage/Open-APS-features#autosens) a détectée. 
+* C'est le résultat d'un calcul de la sensibilité à l'insuline suite à de l'exercice, aux hormones, etc.
+
+#### Activité
+
+* Affiche l'activité de l'insuline, calculée par votre profil d'insuline (elle n'est pas dérivée de l'IA). 
+* La valeur est plus élevée quand l'insuline délivrée est proche de son pic d'activité.
+* Elle n'est pas dérivée de l'IA, car si c'était le cas elle serait négative quand l'IA diminue. 
+
+#### Pente de déviations
+
+* Valeur interne utilisée dans l'algorithme.
+
+### Section H - Boutons
+
+![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
+
+* Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "toujours affichés". 
+* Les autres boutons doivent être configurés dans les [préférences](../Configuration/Preferences#boutons).
+
+#### Insuline
+
+![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
+
+* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](#assistant-bolus).
+* En cochant la case, vous pouvez démarrer automatiquement votre [cible temporaire Repas imminent](../Configuration/Preferences#cibles-temporaires-par-defaut).
+* Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
+
+#### Glucides
+
+![Bouton Glucides](../images/Home2020_ButtonCarbs.png)
+
+* Permet d'enregistrer les glucides sans faire de bolus.
+* Certaines [cibles temporaires par défaut](../Configuration/Preferences#cibles-temporaires-par-defaut) peuvent être définies directement en cochant la case.
+* Décalage horaire : Quand vous avez / allez manger les glucides (en minutes).
+* Durée : A utiliser pour les ["glucides étendus"](../Usage/Extended-Carbs.rst)
+* Vous pouvez utiliser les boutons pour augmenter rapidement la quantité de glucides.
+* Les notes seront envoyées sur Nightscout - selon vos paramètres [NSClient](../Configuration/Preferences#nsclient).
+
+#### Assistant
+
+* Voir la section [de l'assistant de Bolus ci-dessous](#assistant-bolus)
+
+#### Étalonnages
+
+* Envoie un étalonnage à xDrip+ ou ouvre la boîte de dialogue de calibration du Dexcom.
+* Doit être activé dans les [préférences](../Configuration/Preferences#boutons).
+
+#### MGC
+
+* Ouvre xDrip+.
+* Le bouton Retour permet de revenir à AAPS.
+* Doit être activé dans les [préférences](../Configuration/Preferences#boutons).
+
+#### Assistant rapide
+
+* Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
+* Les détails sont configurés dans les [préférences](../Configuration/Preferences#assistant-rapide).
+
+## Assistant bolus
+
+![Assistant Bolus](../images/Home2020_BolusWizard_v2.png)
+
+Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
+
+### Section I
+
+* Le champ "Gly" est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. 
+* Dans le champ "Glucides", vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. 
+* Le champ "Corr" vous permet de modifier le dosage final pour une raison quelconque.
+* Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+
+#### Rappel repas
+
+* Pour les glucides dans le futur, la case à cocher "alarme" peut être sélectionnée (cochée par défaut lorsqu'un décalage horaire positif est renseigné) afin de vous rappeler quand vous avez prévu de manger les glucides entrés dans AndroidAPS
+   
+   ![Assistant bolus avec rappel alimentation](../images/Home2021_BolusWizard_EatingReminder.png)
+
+### Section J
+
+* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences#superbolus) est activé" dans les [préférences de l'aperçu](../Configuration/Preferences#apercu).
+* L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
+* Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+
+### Section K
+
+* Affiche le bolus calculé et permet de renseigner une note. 
+* Si la quantité d'insuline active dépasse déjà le bolus calculé, elle affichera simplement la quantité de glucides encore nécessaire.
+* Les notes seront envoyées sur Nightscout - selon vos paramètres [NSClient](../Configuration/Preferences#nsclient).
+
+### Section L
+
+* Détails du calcul de l'assistant bolus.
+* Vous pouvez décocher tout ce que vous ne souhaitez pas inclure mais vous ne voudrez normalement pas faire cela.
+* Pour des raisons de sécurité, la case **TT doit être cochée manuellement** si vous voulez que l'assistant de bolus soit calculé en fonction d'une cible temporaire existante.
+
+#### Combinaisons de COB (Carb On Board = glucides actifs) et IOB (Insulin On Board = insuline active) et leur signification
+
+* Pour des raisons de sécurité, les IA ne peuvent pas être décochés lorsque la case GA est cochée car vous risqueriez d'avoir trop d'insuline, AAPS ne tient pas compte de ce qui a déjà été donné.
+* Si vous cochez COB et IOB, les glucides non absorbés qui ne sont pas couverts par de l'insuline + toute l'insuline qui a été délivrée en TBR (basal temporaire) ou SMB seront pris en compte.
+* Si vous cochez l’IA sans GA, AAPS prendra en compte l’insuline déjà délivrée, mais pas les glucides absorbés. Cela conduit à un avis de « manque de glucides ».
+* Si vous faites un bolus pour de la **nourriture supplémentaire** rapidement après un bolus de repas (par exemple pour un dessert supplémentaire) il peut être utile de **décocher toutes les cases**. De cette façon, les nouveaux glucides seront juste additionnés car le repas principal ne sera pas nécessairement absorbé et l'IOB ne correspondra pas avec le COB aussi prêt d'un bolus de repas.
+
+#### Détection incorrecte des GA
+
+![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
+
+* Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
+* Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
+* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-de-ga-errones).
+
+## Onglet Actions
+
+![Onglet Actions](../images/Home2021_Action.png)
+
+### Actions - section M
+
+* Le bouton [Changement de profil](../Usage/Profiles#changement-de-profil) en tant qu'alternative à un appui long sur le [profil actuel](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
+* Le bouton [cible temporaire](../Usage/temptarget#cibles-temporaires) en tant qu'alternative à un appui court sur la [cible actuelle](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
+* Le bouton pour démarrer ou annuler un débit basal temporaire. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
+* Même si les [bolus étendus](../Usage/Extended-Carbs#bolus-etendu) ne fonctionnent pas vraiment dans un environnement de boucle fermée, certaines personnes demandaient une option pour utiliser un bolus étendu de toute façon.
+   
+   * Cette option n'est disponible que pour les pompes Dana RS et Insight. 
+   * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
+   * Assurez-vous de lire les [détails](../Usage/Extended-Carbs#bolus-etendu) avant d'utiliser cette option.
+
+### Careportal - section N
+
+* Afficher les informations
+   
+   * âge du capteur & niveau (pourcentage de la batterie)
+   * âge & niveau d'insuline (unités)
+   * âge de la canule
+   * âge de la batterie de la pompe & niveau (pourcentage)
+
+* Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
+
+#### Niveau du capteur (batterie)
+
+* Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
+* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
+* Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
+* Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
+   
+   ![Le niveau de la batterie du capteur est égal au niveau de la batterie du téléphone](../images/Home2021_ActionSensorBat.png)
+
+### Careportal - section O
+
+* Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#careportal-section-n).
+* Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.
+* La section O vous permet de renseigner les infos Careportal de Nightscout. Ainsi, Activité physique, Notification et Question sont des formes spéciales de Remarques ou Notes.
+
+### Outils - section P
+
+#### Historique
+
+* Vous permet de revoir l'historique des données AAPS.
+
+#### DTI
+
+* Dosage Total d'Insuline = bolus + base par jour
+* Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. 
+* Par conséquent, le rapport est calculé ainsi DTI/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). 
+* D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
+* Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
+
+![Historique + DTI](../images/Home2021_Action_HB_TDD.png)
+
+## Profil d'Insuline
+
+![Profil d'Insuline](../images/Screenshot_insulin_profile.png)
+
+* Ceci montre le profil d'activité de l'insuline que vous avez choisie dans le [Générateur de configuration](../Configuration/Config-Builder#insuline). 
+* La ligne MAUVE indique la quantité d’insuline restante après son injection car elle décroît avec le temps, tandis que la ligne BLEUE indique son activité.
+* Le point important à noter est que la décomposition a une longue queue. 
+* Si vous êtes habitué à la pompe manuellement, vous êtes probablement habitué à supposer que l'insuline se désintègre en environ 3,5 heures. 
+* Toutefois, lorsque vous bouclez la longue queue est importante, car les calculs sont beaucoup plus précis et ces petites quantités s’additionnent lorsqu’elles sont soumises aux calculs récursifs de l’algorithme AndroidAPS.
+
+Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+
+Et vous pouvez lire un excellent article de blog à ce sujet ici: [Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi c'est important…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+
+Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+
+## Statut de la pompe
+
+![Statut de la pompe](../images/Screenshot_PumpStatus.png)
+
+* Contient différentes informations sur l'état de la pompe. Les informations affichées dépendent du modèle de votre pompe.
+* Voir la page [Pompes](../Hardware/pumps.rst) pour plus de détails.
+
+## Careportal
+
+Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et qui vous permet d'ajouter des remarques à vos enregistrements.
+
+### Revoir le calcul des glucides
+
+![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
+
+* Si vous avez utilisé [l'Assistant Bolus](../Getting-Started/Screenshots#assistant-bolus) pour calculer la quantité d'insuline, vous pourrez revoir ce calcul plus tard dans l'onglet traitements.
+* Appuyez simplement sur le lien vert Calc. (Selon la pompe utilisée, l'insuline et les glucides peuvent aussi être affichés sur une seule ligne dans les traitements.)
+
+### Correction de Glucides
+
+![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
+
+L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex. si vous avez surestimé ou sous-estimé les glucides).
+
+1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
+2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
+3. Supprimez l'entrée qui a la mauvaise quantité de glucides.
+4. Assurez-vous que les glucides ont bien été enlevés en vérifiant à nouveau les GA sur l'écran d'accueil.
+5. Vérifiez également l'IA s'il n'y a qu'une seule ligne dans l'onglet de Traitement contenant les glucides et l'insuline.
+   
+   -> Si les glucides ne sont pas enlevés comme prévu et que vous ajoutez des glucides supplémentaires comme expliqué ci-dessous (6.), les GA seront trop élevés et cela pourrait conduire à un surdosage d'insuline.
+
+6. Entrez la bonne quantité de glucides par le bouton Glucides sur l'écran d'accueil et définissez l'heure correcte de l'événement.
+
+7. S'il n'y a qu'une seule ligne dans l'onglet Traitement, contenant les glucides et l'insuline, vous devez remettre la quantité d'insuline qui a été injectée. Assurez-vous de régler correctement l'heure de l'événement et vérifiez bien l'IA sur l'écran d'accueil après avoir confirmé la nouvelle entrée.
+
+## Boucle / AMA / SMB
+
+* Ces onglets montrent des détails sur les calculs de l'algorithme et pourquoi AAPS agit de cette façon.
+* Les calculs sont fait à chaque fois que le système obtient une nouvelle lecture du MGC.
+* Pour plus de détails, voir la section [APS sur la page du constructeur de configuration](../Configuration/Config-Builder#aps).
+
+## Profil
+
+![Profil](../images/Screenshots_Profile.png)
+
+* Le profil contient des informations sur vos paramètres individuels du diabète :
+   
+   * DAI (durée d'action de l'insuline)
+   * G/I : est le rapport quantité de glucides divisé par le nombre d'unité d'insuline
+   * SI : Sensibilité à l'Insuline, appelée également facteur de correction
+   * Débit de Basal
+   * Cible : Niveau de glycémie que vous voulez que AAPS vise
+
+* Vous pouvez soit utiliser un [profil local](../Configuration/Config-Builder#profil-local-recommande) qui peut être édité sur votre smartphone ou un [profil Nightscout](../Configuration/Config-Builder#profil-ns) qui doit être modifié sur votre page NS et ensuite transféré sur votre téléphone. Pour plus de détails, voir les sections correspondantes sur la page du [Générateur de configuration](../Configuration/Config-Builder.md).
+
+## Traitement
+
+Historique des traitements suivants :
+
+* Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
+* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus)
+* Basal temporaire
+* [Cible temp.](../Usage/temptarget.md)
+* [Changement de profil](../Usage/Profiles.md)
+* [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
+
+## Source Glycémie - xDrip+, BYODA...
+
+![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
+
+* Selon les votre source de glycémie, cet onglet est nommé différemment.
+* Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
+
+## NSClient
+
+![NSClient](../images/Screenshots_NSClient.png)
+
+* Affiche l'état de la connexion avec votre site Nightscout.
+* Les paramètres sont effectués dans les [préférences](../Configuration/Preferences#nsclient). Vous pouvez ouvrir la section correspondante en cliquant sur la roue crantée en haut à droite de l'écran.
+* Pour le dépannage, voir [cette page](../Usage/Troubleshooting-NSClient.md).

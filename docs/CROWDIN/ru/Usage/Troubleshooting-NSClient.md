@@ -1,25 +1,39 @@
-# Troubleshooting NSClient
+# Устранение неисправностей клиента Nightscout
 
-NSClient rely on stable communication with Nightscout. Unstable connection leads to synchronization errors and high data usage.
+Для правильной работы NSClient требуется стабильная коммуникация с сайтом Nightscout. Нестабильная связь приводит к ошибками синхронизации и высокой интенсивности использования данных.
 
-If nobody is following you on Nightscout you can pause NSClient to save (a lot) battery life or setup connection only on wifi and during charging.
+Если никто не следит за вами на Nightscout вы можете приостановить NSClient для экономии заряда аккумулятора или вы можете настроить NSClient таким образом, чтобы он подключался только по Wi-Fi и/или во время зарядки.
 
-* How to detect unstable connection?
+* Как обнаружить нестабильную связь?
 
-Go to NSClient tab in AAPS and watch the log. Common beavior is to receive PING every ~30s and almost none reconnection messages. If you see many reconnections there is a problem. Since AndoridAPS 2.0 when such behavior is detected NSClient is paused for 15 minutes and message "NSClient malfunction" on Overview is displayed.
+Перейдите на вкладку NSClient в AAPS и просмотрите журнал событий. Обычно отклик PING происходит каждые ~ 30 секунд и сообщения о повторном подключении не поступают. Если вы видите много повторных попыток соединения, то это свидетельство проблемы связи.
 
-* Restart
+Начиная с версии AndroidAPS 2.0, при обнаружении такого поведения, происходит приостановка NSClient на 15 минут и на главном экране появляется сообщение "Сбой (ошибка) NSClient".
 
-What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
+* перезапуск
 
-* Phone issues
+В качестве первого шага попробуйте перезапустить Nightcout и затем телефон, чтобы понять, сохраняется ли проблема.
 
-Android may put your phone into a sleep. Check you have exception for AndroidAPS in power options to allow run it on background all the time. Check it again on strong network signal. Try another phone.
+Если Nightscout размещен на Heroku, вы можете перезапустить Nightscout так: зайдите в Heroku, нажмите на имя приложения, нажмите в меню «More », затем «Restart all dynos».
+
+На других хостингах следуйте документации хостинга.
+
+* Проблемы с телефоном
+
+Android может перевести телефон в спящий режим. Убедитесь, что AndroidAPS в опциях питания имеет разрешение на постоянную работу в фоновом режиме.
+
+Проверьте NSClient заново в надежном месте сетевого сигнала.
+
+Попробуйте другой телефон.
 
 * Nightscout
 
-If you are on Azure for many people helped to move to Heroku. Recently was reported Azure workaround to set in Application settings HTTP protocol to 2.0 and Websockets to ON
+Если ваш сайт размещен на Azure: Многие люди обнаружили, что проблемы подключения уменьшились после перехода на Heroku.
 
-* If you still get an error...
+Для решения проблем подключения в Azure необходимо ВКЛЮЧИТЬ в настройках приложения HTTP протокол 2.0 и Websockets
 
-Check the size of your database in mLab. 496MB means it is full and needs to be compacted. [Follow these OpenAPS instructions for checking the size of your database](https://openaps.readthedocs.io/en/latest/docs/Troubleshooting/Rig-NS-communications-troubleshooting.html#mlab-maintenance). If compacting does not work, you should consider donating your AndroidAPS data to the Data Commons (for research) before deleting any data collections. There are [instructions in the OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Give%20Back-Pay%20It%20Forward/data-commons-data-donation.html) for how to accomplish this.
+* Если все еще приходят сообщения об ошибке...
+
+Проверьте размер вашей базы данных в MongoDB (или через плагин размера базы данных в NS). Если вы используете бесплатный платежный план в MongoDB, то 496MB означает, что база заполнена и ее следует очистить. [Следуйте этим инструкциям Nightscout для проверки размера вашей базы данных и удаления данных](https://nightscout.github.io/troubleshoot/troublehoot/#database-full).
+
+Перед очисткой данных из базы данных и подумайте о передаче своих данных AndroidAPS в проект Open Humans (для исследований). Инструкции находятся на [странице конфигурации OpenHumans](../Configuration/OpenHumans).

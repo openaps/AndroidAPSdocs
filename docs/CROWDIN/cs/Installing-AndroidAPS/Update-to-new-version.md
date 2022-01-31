@@ -1,58 +1,83 @@
 # Aktualizace na novou verzi nebo větev (branch)
 
-## Větev Master
+## Vyrobte si místo stažení
 
-**Instalace gitu (pokud ho ještě nemáte)**
+**AndroidAPS není k dispozici ke stažení kvůli regulaci zdravotnických zařízení. Je legální vytvořit aplikaci pro své vlastní použití, ale nesmíte dát kopii ostatním! Další informace naleznete v části [Časté dotazy](../Getting-Started/FAQ.md).**
 
-* Měly by fungovat všechny verze gitu. Například <https://git-scm.com/download/win>
-* Řekněte Android Studiu, kde je git.exe umístěný: File > Settings > Version Control > Git![](../images/git.png)
+## Důležité poznámky
 
-**Aktualizace lokální kopie**
+* Aktualizujte co nejdříve, jakmile bude k dispozici nová verze. O nové verzi budete [informování na domovské obrazovce AndroidAPS](../Installing-AndroidAPS/Releasenotes#release-notes).
+* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
+* Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes) for the current version
 
-* Klikněte na: VCS > Git > Fetch
+## Overview for updating your AndroidAPS version
 
-**Výběr větve**
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
+2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Vytvořte podepsaný soubor APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
+4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
+5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
 
-* Pokud chcete změnit větev, vyberte jinou z dolní lišty: master (poslední vydání) nebo jiná verze (viz níže)
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 
-![](../images/branchintray.png)
+## 1. Export your settings
 
-a potom zvolte Checkout
+See the [Export & import settings](../Usage/ExportImportSettings#export-settings) page if you don't remember how to do this.
 
-![](../images/checkout.png)
+## 2. Update your local copy
 
-**Aktualizace větve z Githubu**
+As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
-* Stiskněte Ctrl+T, zvolte metodu Merge a stiskněte OK
+If you have already changed the URL or update from version 2.8.x, follow these steps:
 
-![](../images/merge.png)
+* Open your existing AndroidAPS project with Android Studio. You might need to select your project. (Double) click on the AndroidAPS project.
+    
+    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
 
-Na dolní liště uvidíte zelenou zprávu o aktualizovaném projektu
+* In the menu bar of Android Studio, select Git -> Fetch
+    
+    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
 
-**Nahrání do telefonu**
+* You will see a message in the lower right corner that Fetch was successful.
+    
+    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
 
-Vygenerujte podepsaný APK soubor, jak je popsáno v části Vytvoření APK ([odkaz](Building-APK.md))
+* In the menu bar, now select Git -> Pull
+    
+    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
 
-## Vývojové větve
+* Leave all options as they are (origin/master) and select Pull
+    
+    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-**Pozor:** Dev verze AndroidAPS je pouze pro vývojáře a testery, kteří bez problémů pracují s ladicími výpisy, procházejí logy a eventuálně spustí debugger, aby k chybě připravili zprávu, která je užitečná pro vývojáře (ve zkratce: dev je pro lidi, kteří vědí, co dělají, aniž by potřebovali něčí asistenci!). Proto je mnoho nedokončených funkcí zakázaných. K povolení těchto funkcí vstupte do **Vývojářského režimu** založením souboru s názvem `engineering_mode` ve stejné složce, kde se nacházejí log soubory. Povolením vývojářského režimu můžete smyčku zcela narušit.
+* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+    
+    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
 
-Nejstabilnější verze AndroidAPS k použití je ta v [Master](https://github.com/MilosKozak/AndroidAPS/tree/master) větvi. Doporučuje se zůstat v Master větvi, než dokončíte cíle a procvičíte se ve smyčce.
+* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+    
+    ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-Nicméně [Dev](https://github.com/MilosKozak/AndroidAPS/tree/dev) větev je dobré místo, kde se ukazují testované funkce a můžete zde pomoci vyžehlit nějaké chyby a poskytnout zpětnou vazbu, jak nové funkce pracují v praxi. Uživatelé často testují Dev větev na starém telefonu a pumpě, než jsou si jistí stabilitou - jakékoliv použití je na vaše vlastní riziko.
+## 3. Build the Signed APK
 
-Následuje krátké shrnutí některých změn oproti předchozím verzím a nové funkce aktuálně v Dev větvi. Odkazy na všechny známé klíčové problémy budou sdílené (pokud existují).
+* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
-**Super Micro Bolus (SMB)**
+## 4. Transfer the apk
 
-O Super Micro Bolusech (SMB) si můžete více přečíst v [OpenAPS dokumentaci](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-smb). Nezapomeňte, že se chystáte testovat funkci, která se stále ještě vyvíjí. Činíte tak na vlastní riziko a na vlastní zodpovědnost za své bezpečí.   
-  
-Předtím byste měli běžet v uzavřené smyčce více než čtyři týdny (se splněným cílem 7) a měli byste znát všechny typy situací, ve kterých může APS selhávat.   
-  
-Zřejmě budete potřebovat doladit své nastavení, aby mohlo SMB pracovat efektivně. Pro začátek je dobré zvýšit maximální IOB na běžný bolus k jídlu + trojnásobek maximálního denního bazálu. Ale zůstaňte bdělí a upravujte nastavení s opatrností.
+You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
-<br />  
-  
-Jako u jiných aktualizací, původní kód byl vyčištěný, vylepšený a byly v něm opraveny chyby. <br />  
-Pokud najdete chybu, nebo si myslíte, že se stalo něco špatného při používání Dev větve, pak se podívejte na záložku [Issues](https://github.com/MilosKozak/AndroidAPS/issues), abyste prověřili, jestli to už nenahlásil někdo jiný, pokud ne, tak problém rovnou nahlašte. Čím více informací sdělíte, tím lépe (nezapomeňte sdílet své [log soubory](../Usage/Accessing-logfiles.md). Nové funkce mohou být také diskutovány v [Gitter](https://gitter.im/MilosKozak/AndroidAPS) místnosti. <br />  
-Pokud chcete zůstat se svou Dev větví aktuální, můžete postupovat stejným způsobem, jak bylo popsáno výše. Stačí jen namísto "master" větve použít "dev" větev v Android Studiu.
+## 5. Check AAPS version on phone
+
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+
+![AAPS version installed](../images/Update_VersionCheck282.png)
+
+# Řešení problémů
+
+If anything goes wrong, don't panic.
+
+Take a breath!
+
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) if your problem is already documented!

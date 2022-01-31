@@ -1,118 +1,181 @@
-Welcome to the Android APS documentation
-==============================================
+Добро пожаловать в документацию по AndroidAPS
+==================================================
 
-**What is AndroidAPS?**
+AndroidAPS-приложение с открытым исходным кодом для людей с инсулинозависимым диабетом, которое функционирует как система искусственной поджелудочной железы (APS) на смартфонах Google Android. Основными компонентами являются программные алгоритмы openAPS, которые выполняют функцию поджелудочной железы: держат уровень сахара в крови в заданных пределах с помощью автоматизированного дозирования инсулина (AID). Кроме того, необходима одобренная FDA/CE инсулиновая помпа и непрерывный мониторинг глюкозы. 
 
-AndroidAPS is an app that can communicate with bluetooth-enabled insulin pumps, and runs a version of the OpenAPS "oref0" and "oref1" algorithms.
+Приложение НЕ использует самообучающий искусственный интеллект. Вместо этого расчеты AndroidAPS основаны на индивидуальном алгоритме дозирования и поглощения углеводов, который пользователь самостоятельно вводит в профиль лечения, но они проверяются системой на предмет безопасности. 
 
-**Primary goals behind AndroidAPS:**
+Приложение нельзя найти в Google Play - вы должны самостоятельно собрать его из исходного кода по юридическим причинам.
 
-* modular app where it is possible and easy to add new modules without touching the rest of the code
-* app that allows localization
-* app where it is easy to select what will be included in final apk with an easy change and compilation
-* app which supports open and closed APS mode
-* app where you can see how APS works: input params, result and final decision
-* ability to add more APS algorithms and let the user decide what to use
-* app which is independent from a pump driver and contains a "Virtual pump" to allow users to safely play with APS
-* app with tight Nightscout integration
-* app where is easy to add/remove constraints for user safety
-* all-in-one app for managing T1D with APS and Nightscout
+Основными компонентами являются:
 
-**What you need to get started:**
+.. изображение:../images/modules-female.png
+  :alt: Компоненты
 
-* An Android Smartphone with Android 5.0 or later. See `this spreadsheet <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ for reports on how well a phone works with AndroidAPS.
-* An app to receive CGM data: `xDrip <http://stephenblackwasalreadytaken.github.io/xDrip/>`_/ `xDrip+ <https://jamorham.github.io/#xdrip-plus>`_, `Glimp <https://play.google.com/store/apps/details?id=it.ct.glicemia>`_ , `G5 patched app <https://github.com/dexcomapp/dexcomapp>`_, `PochTech app <https://play.google.com/store/apps/details?id=jp.co.unitec.concretemanagement&hl=gsw>`_ or `600SeriesAndroidUploader <http://pazaan.github.io/600SeriesAndroidUploader/>`_
-* `AndroidAPS <https://github.com/MilosKozak/AndroidAPS>`_ itself
-* `Nightscout cgm-remote-monitor <http://www.nightscout.info/wiki/welcome/set-up-nightscout-using-heroku>`_ 0.10.2 or later
-* A supported pump: Dana-R or Dana-RS Insulin Pump or Accu-Chek Combo (unless you build your own driver for another insulin pump)
-* A Continuous Glucose Monitor (CGM) data source: Dexcom G4/G5/G6, Freestyle Libre, Eversense, Medtronic Guardian, PocTech
+Более подробную информацию смотрите здесь.
 
-
-.. note:: 
-	**Disclaimer And Warning**
-
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
-
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
-
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
-
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_.
-
-Getting Started with AndroidAPS
-----------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Изменить язык
+
+   Изменить язык <./changelanguage.rst>
+
+.. _Начало работы:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Начало работы
+
+   Главное- безопасность <./Getting-Started/Safety-first.rst>
+   Что такое система замкнутого цикла <./Getting-Started/ClosedLoop.rst>
+   Что такое система замкнутого цикла с AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Выбор помп <./Getting-Started/Pump-Choices.md>
+   Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
+
+.. _что-мне-нужно:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Что мне нужно? 
+
+   Модуль <./Module/module.rst>
+   Пример системы <../Getting-Started/Sample-Setup.html>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Как установить AndroidAPS
+
+   Построение APK <./Instaling-AndroidAPS/Building-APK.md>
+   Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
+   Проверка после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Установка git <./Instaling-AndroidAPS/git-install.rst>
+   Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
+   Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
+
+.. _Настройка компонентов:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Настройка компонентов
+
+   CGM/FGM <./Configuration/BG-Source.rst>
+   параметры xDrip <./Configuration/xdrip.md>
+   Помпы <./Hardware/pumps.rst>
+   Телефоны <./Hardware/Phoneconfig.rst>
+   Настройка Nightscout <./Instaling-AndroidAPS/Nightscout.md>
+   Смарт-часы <./Hardware/Smartwatch.rst>
+
+.. _конфигурация:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Конфигурация
+
+   Конфигуратор <../Configuration/Config-Builder.html>`_ настройки>
+   Параметры <./Конфигурация/Настройки.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Использование AndroidAPS
+
+   Экраны androidAPS <./Getting-Started/Screenshots.md>
+   Цели <./Usage/Objectives.rst>
+   Функции OpenAPS <./Usage/Open-APS-features.md>   
+   Вычисление COB <./Usage/COB-calculation.rst>
+   Обнаружение чувствительности <./Configuration/Sensitivity-detection-COB.md>
+   Переключение профиля <./Usage/Profiles.md>
+   Временные цели <./Usage/temptarget.md>   
+   Пролонгированные углеводы <./Usage/Extended-Carbs.rst>
+   Автоматизация <./Usage/Automation.rst>
+   Careportal (более не поддерживается) <./Usage/CPbefore26.rst>
+   Загрузчик Open Humans <./Конфигурация/OpenHumans.rst>
+   Автоматизация с приложениями сторонних организаций <./Usage/automationwithapp.md>
+   Android auto <./Usage/Android-auto.md>  
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Общие советы 
+
+   Пересечение часовых поясов с помпами <./Usage/Timezon-traveling.md>
+   Доступ к файлам журнала <./Usage/Accessing-logfiles.md>
+   Accu-Chek Combo советы для простого использования <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Параметры экспорта/импорта <./Usage/ExportImportSettings.rst>
+   инженерный режим xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: AndroidAPS для детей
+
+   Удаленный мониторинг <../Children/Children.html>
+   Команды SMS <./Children/SMS-Commands.rst>
+   Помощник профиля <./Configuration/profilehelper.rst>
    
-   Safety First <./Getting-Started/Safety-first.md>
-   Screenshots <./Getting-Started/Screenshots.md>
-   Phones <./Getting-Started/Phones.md>
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Future possible pump drivers  <./Getting-Started/Future-possible-Pump-Drivers.md>
-   FAQ for loopers <./Getting-Started/FAQ.md>
-   Glossary <./Getting-Started/Glossary.md>
-  
-How to Install AndroidAPS
-------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Устранение неполадок
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.md>
-   Dev branch <./Installing-AndroidAPS/Dev-branch.md>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   
-Configuration 
----------------
+   Устранение неполадок <./Usage/troubleshooting.rst>
+   Клиент Nightscout <./Usage/Troubleshooting-NSClient.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   
-   Config Builder <./Configuration/Config-Builder.md>
-   BG Source <./Configuration/BG-Source.md>
-   DanaR pump <./Configuration/DanaR-Insulin-Pump.md>
-   DanaRS pump <./Configuration/DanaRS-Insulin-Pump.md>
-   Accu Chek Combo pump <./Configuration/Accu-Chek-Combo-Pump.md>
-   Watchfaces <./Configuration/Watchfaces.md>
-   Preferences <./Configuration/Preferences.md>
-   Sensitivity Detection and COB <./Configuration/Sensitivity-detection-and-COB.md>
-   
-Usage
-------------
+   :caption: FAQ
+
+   Часто задаваемые вопросы <./Getting-started/FAQ.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
-    
-   Objectives <./Usage/Objectives.md>
-   OpenAPS features <./Usage/Open-APS-features.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-Targets <./Usage/temptarget.md>
-   SMS Commands <./Usage/SMS-Commands.md>
-   Extended Carbs <./Usage/Extended-Carbs.md>
-   Timezone traveling with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Smoothing Blood Glucose Data <./Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   AccuChek Combo Tips for Basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-   Troubleshooting NSClient <./Usage/Troubleshooting-NSClient.md>
+   :caption: Словарик
 
-Where to go for help 
-------------
+   Глоссарий <./Getting-Started/Glossary.md>
+
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Куда обратиться за помощью 
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Полезные ресурсы для чтения перед запуском <./Where-To-Go-For-Help/Background-reading.md>
+   Куда обратиться за справкой <./Where-To-Go-For-Help/Connect-wit-other-users.md>
+   Обновления и изменения документации <./Getting-Started/WikiUpdate.rst>
 
-How to help
-------------
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Для клиницистов
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the App <./translations.md>
-   How to edit the wiki <./make-a-PR>
+   Для клиницистов <./Resources/clinician-guide-to-AndroidAPS>
+
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Как помочь
+
+   Как помочь <./Getting-Started/How-can-I-help.md>
+   Как перевести приложение и документы <./translations.md>
+   Как редактировать документы <./сделать-это-пиар>
+
+
+.. примечание:: 
+	**Отказ от ответственности и предупреждение**
+
+	* Вся информация, идеи, и описанный здесь код предназначен только для ознакомительных и образовательных целей. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
+
+	*Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+
+	* Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
+
+	Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <https://www.sooil.com/eng/>` _, ` Dexcom <https://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <https://www.accu-chek.com/>` _ или ` Medtronic <https://www.medtronic.com/>` _
