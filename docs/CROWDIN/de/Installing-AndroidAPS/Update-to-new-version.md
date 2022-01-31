@@ -80,4 +80,4 @@ Keine Panik, wenn irgendetwas schief läuft.
 
 Tief durchatmen!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) if your problem is already documented!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
