@@ -3,82 +3,82 @@
 ## Fichier de clés perdu
 Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+Si vous essayez d'installer l'apk, signé avec un fichier de clés différent de celui d'avant, vous recevrez un message d'erreur indiquant que l'installation a échoué!
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, procédez comme suit :
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
+1. [Exporter les paramètres](../Usage/ExportImportSettings#exporter-les-parametres) sur votre ancien téléphone.
+2. Copiez le fichier de configuration de votre téléphone vers un emplacement externe (par ex. votre ordinateur, un service cloud...).
+4. Générez l'apk signé de la nouvelle version comme décrit dans le [Guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version) et transférez-le sur votre téléphone.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. [Import settings](../Usage/ExportImportSettings.html#export-settings) to restore your objectives and configuration.
+7. [Importer les paramètres](../Usage/ExportImportSettings.html#importer-les-parametres) pour restaurer vos objectifs et votre configuration.
 
-   If you can't find them on your phone copy them from the external storage to your phone.
+   Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
 8. Pousuivez la boucle.
 
-## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle Sync en échec
+Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message indiquant que la synchronisation gradle a échouée, ouvrez l'onglet "Build" (1) en bas d'Android Studio et vérifiez quel message d'erreur (2) est affiché.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
+Ci-dessous les échecs courants de synchronisation de gradle :
 * [Uncommitted changes](#Uncommitted-changes)
 * [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Important*: Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [Resynchronisation gradle](#resynchronisation-gradle) à nouveau.
 
 ### Uncommitted changes
 
-If you receive a failure message like
+Si vous recevez un message d'erreur comme ceci
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Changements non commités Gradle](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Étape 1 - Vérifiez l'installation de git
+  * Ouvrez l'onglet Terminal (1) en bas d'Android Studio, copiez le texte suivant et collez le dans le terminal.
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle version de Git](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    Note : Il y a un espace et deux traits d'union entre git et version !
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Vous devez recevoir un message indiquant quelle version de git est installée, comme vous pouvez le voir dans la capture d'écran ci-dessus. Dans ce cas, allez à [l'étape 2](#etape-2-verifier-les-modifications-non-commit-es).
 
-  * In case you get an message saying
+  * Dans le cas où vous recevez un message disant
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    votre installation Git n'est pas correcte.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [Vérifiez l'installation de git](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * Quand vous êtes sur Windows et que git vient juste d'être installé, vous devez redémarrer votre ordinateur pour rendre git disponible après l'installation
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+  * Si Git est installé, que vous avez redémarré (si sous Windows), et git n'est toujours pas trouvé :
 
-  * Search your computer for a file "git.exe".
+  * Cherchez dans votre ordinateur un fichier "git.exe".
 
-    Note for yourself, what directory it is in.
+    Notez pour vous, dans quel répertoire il se trouve.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * Allez dans les variables d'environnement de Windows, sélectionnez la variable "PATH" et cliquez sur Modifier. Ajoutez le répertoire où vous avez trouvé votre installation de git.
 
-  * Save and close.
+  * Sauver et fermer.
 
-  * Restart Android Studio.
+  * Redémarrer Android Studio.
 
-#### Step 2: Check for uncommitted changes.
+#### Étape 2 : Vérifier les modifications non commitées.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
 
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
 
     * Right click on "Default Changeset" and select "Rollback"
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+      ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
     * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
@@ -91,19 +91,19 @@ If you receive a failure message like
       If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
 
-#### Step 3: Resync Gradle (again)
+#### Étape 3 : Resynchroniser Gradle (encore)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle).
 
-### Android Gradle plugin requires Java 11 to run
+### Android Gradle requires Java 11 to run
 
   You might experience this error message:
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+  ![Configuration de Gradle](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2)
 
@@ -121,7 +121,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
     Make sure the button shown at (2) is *NOT* selected.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle mode hors connexion](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
@@ -133,18 +133,18 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
 
-### Gradle Resync
+### Resynchronisation Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
   If you don't see the a message anymore, you can still trigger this manually:
 
   * Open the Gradle tab (1) on the right border of Android Studio.
 
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+    ![Gradle Rechargement](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
   * Right-click on AndroidAPS (2)
 
@@ -154,7 +154,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+ ![Gradle terminé avec des avertissements](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
 Your app was build successfully and can be transferred to phone!
 
@@ -170,21 +170,21 @@ Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java liv
 
 ## No CGM data is received by AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
 
 ## Application non installée.
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![note d'application du téléphone installée](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
+* Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Exporter les paramètres](../Usage/ExportImportSettings) (dans la version AAPS déjà installée sur votre téléphone)
 2. Désinstaller AAPS sur votre téléphone.
-3. Enable airplane mode & turn off bluetooth.
+3. Activer le mode avion & désactiver bluetooth.
 4. Installer la nouvelle version (« app-full-release.apk »)
 5. [Importer les paramètres](../Usage/ExportImportSettings)
 6. Activer le bluetooth et désactiver le mode avion
@@ -197,7 +197,7 @@ If you built the app successfully, transferred it to your phone and installed it
 
 Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Exporter les paramètres](../Usage/ExportImportSettings) (dans la version AAPS déjà installée sur votre téléphone)
 
 2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
