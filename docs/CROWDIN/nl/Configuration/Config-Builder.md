@@ -150,7 +150,7 @@ Selecteer de bloed glucose bron u gebruikt - Zie [BG bron](BG-Source.rst) pagina
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - enkel versie 4.15.57 en nieuwer worden ondersteund
-* [Dexcom App (aangepast)](https://github.com/dexcomapp/dexcomapp/) - Selecteer 'BG gegevens verzenden naar xDrip+' als je de alarmen van xDrip+ wilt gebruiken.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Configurator BG bron](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Selecteer de pomp die jij gebruikt.
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Koreaans (Koreaanse versie van DanaR)
 * DanaRv2 (DanaR met ge-updatete firmware)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (hiervoor moet je de Ruffy app geïnstalleerd hebben)
 * [Medtronic](MedtronicPump.md)
@@ -191,7 +191,7 @@ Als je Oref1 met SMB gebruikt moet je **min_5m_carbimpact** op 8 instellen. Als 
 
 Selecteer het gewenste APS (Artificial Pancreas System, kunstmatig alvleesklier systeem) algoritme. Je kunt de actuele details van jouw gekozen algoritme laten weergeven op het tabblad OpenAPS(OAPS). Daar zie je het resultaat van de meest recente berekening die het algoritme maakte.
 
-* OpenAPS AMA (geavanceerde maaltijdhulp, onderdeel van het algoritme in 2017) Meer details over OpenAPS AMA kun je vinden in de [OpenAPS documentatie](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Voordeel van AMA tov zijn voorganger is dat het systeem sneller een hogere tijdelijke basaalstand af kan geven als je jezelf net een maaltijdbolus hebt gegeven (let op: dit geldt wanneer je je koolhydraten nauwkeurig invoert).
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (Super Micro Bolus). Dit is het meest recente algoritme, bedoeld voor gevorderde gebruikers. Je moet minimaal in [Doel 10](../Usage/Objectives#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus) zijn om OpenAPS SMB te gebruiken, en vergeet niet om je min_5m_carbimpact op 8 in te stellen via Configurator > gevoeligheid detectie > gevoeligheid Oref1 instellingen.
 
 ## Loop

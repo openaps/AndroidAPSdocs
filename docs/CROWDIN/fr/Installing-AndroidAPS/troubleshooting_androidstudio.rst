@@ -15,9 +15,21 @@ Si vous ne trouvez plus votre ancien fichier de clés, procédez comme suit :
 7. `Importez les paramètres <../Usage/ExportImportSettings.html#exporter-les-parametres>`_ - si vous ne trouvez pas le fichier sur votre téléphone, copiez le depuis votre stockage externe.
 8. Pousuivez la boucle.
 
+
+
+Error "on demand" Configuration
+==================================================
+
+Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
+* Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
+* Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+* Décochez la case Configure on demand.
+* Cliquez sur Appliquer ou OK.
+
+
 Avertissement du compilateur Kotlin
 ==================================================
-Si la compilation a abouti mais que vous obtenez les avertissements de la part du compilateur Kotlin, ignorez ces avertissements. 
+Si la compilation a abouti mais que vous obtenez les avertissements de la part du compilateur Kotlin, ignorez ces avertissements.
 
 L'application a été correctement compilée et peut être transférée au téléphone.
 
@@ -74,7 +86,7 @@ Il y a beaucoup de liens sur Internet pour déterminer si vous avez un système 
 Aucune donnée MGC
 ==================================================
 * Si vous utilisez xDrip+ : identifiez le récepteur comme c'est indiqué dans la page `Paramètres xDrip+ <../Configuration/xdrip.html#identifier-le-recepteur>`_.
-* Si vous utilisez `l'application Dexcom G6 patchée <../latest/Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_ : Assurez vous que vous utilisez bien la version provenant du `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Utilisez `BYODA <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom>`_ à la place.
 
 Modifications non validées
 ==================================================
@@ -96,7 +108,7 @@ Option 2 - Recharger le code source
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Option 3 - Vérifier les mises à jour
 --------------------------------------------------
 * Copiez ‘git checkout --’ dans le presse-papiers (sans les guillemets)
@@ -134,7 +146,7 @@ Rien ci-dessus n'a marché
 Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
 
 1. `Exporter les paramètres <../Usage/ExportImportSettings.html>`__ (dans la version AAPS déjà installée sur votre téléphone)
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`__. Ou vous pouvez recréer un nouveau fichier de clés. 
+2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit `ici <https://youtu.be/nS3wxnLgZOo>`__. Ou vous pouvez recréer un nouveau fichier de clés.
 3. Construisez l'application à partir de zéro comme c'est décrit `ici <../Installing-AndroidAPS/Building-APK.html#telecharger-le-code-androidaps>`__.
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
 5. `Importer les paramètres <../Usage/ExportImportSettings.html>`__

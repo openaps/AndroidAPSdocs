@@ -12,69 +12,87 @@ ContextEdit.
 
 Если вы не обновитесь еще 30 дней (90 дней с новой даты выпуска) AAPS переключится в режим открытого цикла.
 
-Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Therefore it is necessary that every user updates a.s.a.p.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
+Имейте в виду, что это изменение не предназначено для того, чтобы действовать вам на нервы, а существует по соображениям безопасности. Новые версии AndroidAPS не только обеспечивают новые возможности, но и содержат исправления безопасности. Поэтому необходимо, чтобы каждый пользователь обновлял приложение как можно чаще.. К сожалению, все еще поступают сообщения об ошибках из очень старых версий, поэтому это попытка повысить безопасность каждого пользователя и всего сообщества. Благодарим за понимание!
 
-Android version and AAPS version
+Версия Android и версия AAPS
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9. 
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
-Android 9 and up
+Android 9 и выше
 ------------------------------------
-* Use latest AAPS version
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+Пользуйтесь новейшей версией AAPS
+Загрузите код AAPS здесь https://github.com/nightscout/AndroidAPS
 
 Android 8
 ------------------------------------
-* Use AAPS version **2.8.2.1**
-* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* Пользуйтесь AAPS версии **2.8.2.1**
+До выхода версии 3 просто выбирайте **master** и это будет 2.8.2.1. ;-)
+Загрузите код AAPS здесь https://github.com/nightscout/AndroidAPS
 
 Android 7
 ------------------------------------
-* Use AAPS version **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+* Пользуйтесь AAPS версии **2.6.2**
+Загрузите код AAPS здесь https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Версия 3.0.0
 ================
-Release date: XX-XX-2021
+Release date: XX-XX-2022
 
 Важные Примечания
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **Минимальная версия Android теперь 9.0**
+* **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
+* Используйте одну версию AAPS и NSClient
+* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+
+Этапы подготовки
+----------------------
+**At least two days before update:**
+
+* отключите Dexcom bridge в Nightscout
+
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Изменения
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
-* Dana-i support @MilosKozak
-* DiaconnG8 support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* Изменены XXXXk строки, XXXXk новые строки кода
+* Поддержка Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Поддержка Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* Поддержка DiaconnG8
+* Поддержка Glunovo
+* Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Часть кода переписана на Kotlin @MilosKozak
+* Новый интерфейс для драйверов помп
+* NSClient переписан для лучшей синхронизации и более детальной настройки @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * Удаление записи из NS не допускается (аннулирование только через NSClient)
+  * Модификация записи из NS не допускается
+  * Доступны настройки синхронизации без перехода в инженерный режим (для родителей)
+  * Возможность повторной синхронизации данных
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* UI improvements @MilosKozak
-* History browser updated and fixed @MilosKozak
-* Objective9 removed @MilosKozak
-* Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
+* Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
+* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
+* Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
+* Отслеживание действий пользователя @Philoul
+* Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
+* Bolus Wizard improvement
+* Улучшения пользовательского интерфейса @MilosKozak
+* Новые пользовательские кнопки для автоматизации @MilosKozak
+* Новый макет автоматизации @MilosKozak
+* Браузер истории обновлён и исправлен @MilosKozak
+* Цель 9 удалена @MilosKozak
+* Исправлена ошибка, связанная с нестабильными данными CGM @MilosKozak
+* Улучшение связи с DanaR и DanaRS @MilosKozak
+* Интеграция с CircleCI @MilosKozak
+* Files location change: 
+
+   * /AAPS/extra (engineering mode) 
+   * /AAPS/logs /AAPS/exports 
+   * /AAPS/preferences
 
 
 
@@ -303,7 +321,7 @@ Release date: XX-XX-2021
 --------------------------------------------------
 * Пожалуйста, используйте `Android Studio версии 3.5.1 <https://developer.android.com/studio/>`_ или новее, чтобы `собрать apk <../Installing-AndroidAPS/Building-APK.html>`_ или `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Если вы используете xDrip, должен быть отмечен `identify receiver <../Configuration/xdrip.html#identify-receiver>`_.
-* Если вы используете Dexcom G6 с ` модифицированным приложением Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app> ` _, вам понадобится версия из папки ` 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>` _.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Поддержка Glimp версии 4.15.57 и новее.
 
 Это обновление для меня? В настоящее время НЕ поддерживается
@@ -321,7 +339,7 @@ Release date: XX-XX-2021
 * Новый модуль `Автоматизация <../Usage/Automation.html>`_
 * Позволяет подать `только часть болюса <../Configuration/Preferences.html#advanced-settings-overview>`_ с калькулятора болюса
 * Рендеринг активности инсулина
-* Adjusting IOB predictions by autosens result
+* Корректировка прогнозов IOB с помощью результата autosense
 Новая поддержка модифицированных приложений Dexcom (<https://github.com/dexcomapp/dexcomapp/tree/master/2.4> папка 2.4)
 * Верификатор подписи
 * Возможность обойти цели пользователям OpenAPS
@@ -399,7 +417,7 @@ ContextEdit
 
 Новые возможности
 --------------------------------------------------
-* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
+* Поддержка oref1/SMB (<https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>документация oref1). Обязательно прочтите документацию, чтобы знать, чего ожидать от SMB, как он себя поведет, чего может достичь и как добиться его ровной работы.
 * ` _Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html> ` _ Поддержка помпы
 * Мастер установки: направляет вас через процесс настройки AndroidAPS
 
@@ -407,7 +425,7 @@ ContextEdit
 --------------------------------------------------
 * Для включения SMB необходимо начать выполнение цели 10 (вкладка SMB обычно показывает какие применяются ограничения)
 * maxIOB теперь включает весь IOB, а не только добавленный базал. То есть, если дан болюс 8 ед. на еду a максимальный IOB ограничен 7 ед., то SMB не будет подан до тех пор, пока активный инсулин IOB не опустится ниже 7 ед.
-* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. If you are upgrading from AMA to SMB, you have to change it manually
+* минимальное воздействие углеводов min_5m_carbimpact по умолчанию изменилось с 3 до 8, при переходе с AMA на SMB. Если вы переходите с AMA к SMB, то вам нужно изменить его вручную
 * Обратите внимание при создании приложения AndroidAPS 2.0: Выборочная Конфигурация не поддерживается текущей версией плагина Android Gradle! Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
 
   * Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
@@ -442,7 +460,7 @@ ContextEdit
 * Переработан конфигуратор и вкладки целей, добавлены описания
 * Новый значок приложения
 * Много улучшений и исправлений
-* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
+* независимые от Nightscout оповещения, если помпа недоступна длительное время (например, севшая батарея помпы) и пропущенные показания ГК (см. _Локальные оповещения _ в настройках)
 * Возможность держать экран включенным
 * Опция отображения уведомлений как уведомление Android
 * Расширенная фильтрация (позволяющая всегда включать SMB и на 6час. после еды) поддерживаемая модифицированным приложением Dexcom или xDrip в нативном режиме G5 в качестве источника ГК.

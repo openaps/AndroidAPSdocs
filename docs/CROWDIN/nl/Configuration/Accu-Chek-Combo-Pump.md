@@ -6,8 +6,8 @@
 
 * Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
 * Een Smartpix of Realtyme apparaatje met bijbehorende 360 Configuratie software om de pomp te configureren. (Op verzoek stuurt Roche de Smartpix met software gratis op aan haar klanten.)
-* Een geschikte telefoon: een Android telefoon met als Operating System LineageOS 14.1 (of hoger) - ook wel bekend als CyanogenMod - of met Android 8.1 (Oreo). 
-* De LineageOS 14.1 dient een recente versie te zijn, van minimaal Juni 2017, aangezien toen de functionaliteit beschikbaar is gekomen, die nodig is om de Combo pomp te kunnen verbinden met de telefoon. 
+* A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AndroidAPS 3.0 Android 9 is mandatory. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
+* With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
 * Een lijst met telefoons vind je in dit document: [AAPS Telefoons](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * NB: deze lijst is niet compleet en bevat persoonlijke ervaringen. Je wordt gevraagd om jouw eigen ervaring hier ook aan toe te voegen en zodoende anderen te helpen (deze projecten draaien allemaal om #payitforward mentaliteit).
 * Hoewel Android 8.1 het mogelijk maakt om met de Combo te communiceren, kunnen er nog steeds problemen optreden met AAPS op Android 8.1.

@@ -6,7 +6,7 @@ Esta es la lista de algunas Bombas que se van mencionando por ahí, y el grado d
 
 ### Omnipod DASH ([Homepage ](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 **Requisitos de hardware para AAPS: ** Probablemente ninguno. Está habilitada para BT.
 

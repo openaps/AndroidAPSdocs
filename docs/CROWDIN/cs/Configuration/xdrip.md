@@ -51,7 +51,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* Jestliže potřebujete službu Clarity, a chcete zároveň využívat výhod výstrah xDripu+, použijte [upravenou aplikaci Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) a funkci místního odesílání do xDripu+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 

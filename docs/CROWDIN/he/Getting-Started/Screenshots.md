@@ -14,7 +14,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 ### Section B - Profile & target
 
-#### Current Profile
+#### פרופיל נוכחי
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
@@ -37,8 +37,8 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 * AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
 * Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
-   * "resistance lowers target" 
+   * "רגישות מעלה את ערך המטרה" ו\או 
+   * "תנגודת מורידה את ערך המטרה" 
 * If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
 * When it alters the target glucose background will change to green.
 
@@ -123,7 +123,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
-   * Predictions
+   * חיזוי
    * Basals
    * Activity - insulin activity curve
 
@@ -250,7 +250,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
-#### CGM
+#### סנסור
 
 * Opens xDrip+.
 * Back button returns to AAPS.
@@ -360,7 +360,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Allows you to ride back in AAPS history.
 
-#### TDD
+#### TDD - סה"כ מינון אינסולין יומי
 
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
@@ -450,10 +450,10 @@ History of the following treatments:
 * [Extended bolus](../Usage/Extended-Carbs#extended-bolus)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
-* [Profile switch](../Usage/Profiles.md)
+* [החלפת פרופיל](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
-## BG Source - xDrip, Dexcom App (patched)...
+## BG Source - xDrip+, BYODA...
 
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 

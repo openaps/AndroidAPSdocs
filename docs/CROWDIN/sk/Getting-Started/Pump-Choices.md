@@ -11,20 +11,20 @@ AndroidAPS v súčasnosti funguje s týmito pumpami
 
 pumpy. Podrobnosti o stave ďalších púmp, ktoré majú potenciál fungovať s AndroidAPS sú uvedené na stránke [Budúce (možné) pumpy](Future-possible-Pump-Drivers.md).
 
-Ľudia, ktorí sa rozhodujú pre novú pumpu, sa často pýtajú, na ktorú pumpu prejsť, alebo ktorú kúpiť. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Ľudia, ktorí sa rozhodujú pre novú pumpu, sa často pýtajú, na ktorú pumpu prejsť, alebo ktorú kúpiť. Detaily o rôznych distribútoroch sú uvedené v [tejto tabuľke](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Prosíme uveďte detaily toho Vášho ak tam ešte nie je.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+The Combo and the Insight are solid pumps, and loopable. Výhody pumpy DanaR/RS sú:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* Dana*R/RS je schopná spojiť sa s ktorýmkoľvek telefónom s verziou Android >= 5.1 bez potreby použitia lineageOS. Ak sa Váš telefón pokazí, viete za neho rýchlo nájsť náhradu, s ktorou bude pumpa Dana*R/RS spolupracovať, čo sa o pumpe Combo povedať nedá. (Toto sa v budúcnosti môže zmeniť, keď bude Android 8.1 rozšírenejší)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* Úvodné párovanie je jednoduchšie s Dana* RS. Toto ale obvykle robíte len raz, takže to má vplyv iba ak plánujete testovanie nových funkcií s rôznymi pumpami.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Zatiaľ Combo pracuje s analýzou obrazovky. Vo všeobecnosti to funguje dobre ale je to pomalé. Pre uzavretý okruh to nie je príliš dôležité, keďže všetko prebieha na pozadí. Stále je to však oveľa viac času kedy musíte byť pripojený, takže väčšia šanca na výpadok spojenie bluetooth. Nie je to také jednoduché, ak napríklad odídete od telefónu, zatiaľ čo si podávate bolus a varíte.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo vibruje pri ukončení dočasného bazálu, Dana* R vibruje (alebo pípa) pri SMB. Počas noci budete pravdepodobne dočasný bazál využívať častejšie ako SMB. Dana* RS sa dá nastaviť tak aby nepípala ani nevibrovala.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* Načítanie histórie na RS za niekoľko sekúnd i s COB, umožňuje jednoducho vymeniť telefón a pokračovať v uzavretom okruhu, akonáhle sa načíta pár hodnôt z CGM systému.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Všetky pumpy s ktorými AndroidAPS spolupracuje sú vodotesné. Iba pumpy Dana sú tiež "vodotesné so zárukou" v dôsledku utesneného priestoru pre batériu a plniaceho systému zásobníka.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+Combo je samozrejme veľmi dobrá pumpa a použiteľná pre uzavretý okruh. Má výhodu vo veľkom množstve rôznych infúznych setov, ktoré sa s ňou dajú použiť keďže má štandardný luer zámok. Používa štandardné batérie, ktoré môžete kúpiť na hociktorej benzínovej pumpe a v každom obchode. Ak jednu naozaj súrne potrebujete, môžete si ju ukradnúť/požičať z diaľkového ovládania v hotelovej izbe ;-)

@@ -2,7 +2,7 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others!
+**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others!
 See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## Important notes
@@ -15,7 +15,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.**
 <table class="tg">
 <thead>
   <tr>
-    <th class="tg-baqh">OS(Only 64 bit)</th>
+    <th class="tg-baqh">OS (Only 64 bit)</th>
     <th class="tg-baqh">Windows 8 or higher</th>
     <th class="tg-baqh">Mac OS 10.14 or higher</th>
     <th class="tg-baqh">Any Linux supports Gnome, KDE, or Unity DE;&nbsp;&nbsp;GNU C Library 2.31 or later</th>
@@ -23,7 +23,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.**
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU(Only 64 bit)</td>
+    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD CPU with support for a <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a></td>
     <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
@@ -47,7 +47,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.**
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD(Solid State Disk) instead of HDD(Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file, but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
 
 ---
 ### This article is divided into two parts.
@@ -65,7 +65,7 @@ In general, the steps necessary to build the APK file:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](../Installing-AndroidAPS/Building-APK#identify-receiver-if-using-xdrip)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
 
 
 ## Step by step walkthrough
@@ -78,11 +78,12 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ## Install Android Studio
 
-The following screenshots have been taken from Android Studio Version 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
-Download and install [Android Studio from here](https://developer.android.com/studio/install.html).
+Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+
 On first start you will find the setup wizard:
 
 #Select "Do not import settings" as you have not used it before.
@@ -120,7 +121,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ## Set git path in preferences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restartet your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
 
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link  "All settings..." (2):
@@ -132,19 +133,19 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
 
-* Double-click "Version Control" (1.) to open the sub-menu.
-* Click Git (2.).
-* Make sure update method "Merge" (3.) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+* Double-click "Version Control" (1) to open the sub-menu.
+* Click Git (2).
+* Make sure update method "Merge" (3) is selected.
+* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
 
    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
 
-* If automatic setting is successful git version will be displayed beyond the path.
+* If automatic setting is successful git version will be displayed next to the path.
 
    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
 
 
-* Eventuelly git.exe cannot be found automatically or the Test will result in an error (1):
+* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
 
   ![Git not found](../images/studioSetup/13_GitVersionError.png)
 
@@ -152,13 +153,13 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin\** folder.
 
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3.) and click "OK" (4.).
+* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
 
   ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
 
 * Check your selected git path again with the "Test" button as described above.
 
-* When the git version is displayed, close settings window by clicking "OK" button (5.).
+* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
 
 ### Mac
 
@@ -170,19 +171,15 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Download AndroidAPS code
 
-* On the Android Studio welcome screen select "Projects" on the left and then "Get from VCS"
+* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
 
   ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
 
-//TODO Remove start
- * If you already opened Android Studio and do not see the welcome screen anymore select File (1.) > New (2.) > Project from Version Control... (3.)
+ * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
 
       ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
-//TODO Remove end
 
-  * We will not tell Android Studio were to get the code from:
-
-      ![Clone Git](../images/studioSetup/21_CloneURL.png)
+  * We will now tell Android Studio were to get the code from:
 
     - Make sure you have selected "Repository URL" on the left (1).
     - Check if "Git" is selected as version control (2).
@@ -190,9 +187,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
       ```
       https://github.com/nightscout/AndroidAPS
       ```
-      to the main AndroidAPS repository into the URL textbox (3):
+      to the main AndroidAPS repository into the URL textbox (3).
     - Choose the directory where you want to save the cloned code (4).
 
+      ![Clone Git](../images/studioSetup/21_CloneURL.png)
+      
 * Click button "Clone" (5).
 
    ![Clone repository](../images/studioSetup/22_Cloning.png)
@@ -221,7 +220,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Download Android SDK
 
-* In the menu, go to  File > Settings.
+* In the menu, go to  File (1) > Settings (2).
 
    ![Open settings](../images/studioSetup/30_Settings.png)
 
@@ -250,7 +249,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1)
+* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
 
    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
@@ -298,7 +297,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
    ![Create key store](../images/studioSetup/46_KeystorePath.png)
 
-  **_Warn: Do not save in same folder as project. You must use a different directory!_**
+  **_Warning: Do not save in same folder as project. You must use a different directory!_**
   A good location would be your home folder.
 
 * Type a file name for your key store (2) and confirm with "OK" (3).
@@ -311,7 +310,9 @@ Signing means that you indicate your app to be your own creation but in a digita
 
   **_Note:_** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
 
-* Do the same for your key (5 + 6).
+* Enter an alias (4) for your key. Choose whatever you like.
+
+* Enter (5) and confirm (6) the password for your key
 
 * Validity (7) is 25 years by default. You do not have to change the default value.
 
@@ -326,11 +327,11 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Select build variant "fullRelease" (1) and press "Finish".
 
-   ![Select build variant](../images/studioSetup/49_buildVariant.png)
+   ![Select build variant](../images/studioSetup/49_BuildVariant.png)
 
 * Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
 
-   ![Select build variant](../images/studioSetup/50_GradleRunning49_buildVariant.png)
+   ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio will display the information "Generate Signed APK" after build is finished.
 

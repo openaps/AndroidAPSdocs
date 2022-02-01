@@ -150,7 +150,7 @@ Selecteaza sursa valorilor glicemiei pe care o utilizezi- vezi pagina [BG Source
 * Glicemie NSClient
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - doar versiunea 4.15.57 sau versiuni mai recente sunt compatibile
-* [Aplicația Dexcom (modificată)](https://github.com/dexcomapp/dexcomapp/) - Selecteaza 'Trimite valorile glicemiei catre xDrip+' dacă vrei să folosesti alarme xDrip+.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Configurați sursa glicemiilor](../images/ConfBuild_BGSource.png)
 
@@ -166,7 +166,7 @@ Alegeți tipul de pompă pe care îl folosiți.
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Coreeană (pentru pompa DanaR națională)
 * Dana Rv2 (Pompa DanaR cu actualizare de firmware neoficială)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (necesită instalare ruffy)
 * [Medtronic](MedtronicPump.md)
@@ -191,7 +191,7 @@ Dacă folosești Oref1 cu SMB, trebuie să schimbi **min_5m_carbimpact** la 8. V
 
 Selecteaza algoritmul APS dorit pentru ajustări de tratament. Puteți vedea detaliile despre algoritmul ales în secțiunea OpenAPS (OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). Pe scurt, avantajul este ca după bolusul de masă sistemul poate stabili mai rapid temporare mari DACA introduci carbohidrații cu precizie.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Buclă

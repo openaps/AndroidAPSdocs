@@ -89,6 +89,12 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
+ <td><strong>BYODA</strong></td>
+ <td>'Build your own Dexcom App'</td>
+ <td>&nbsp;</td>
+ <td>[Dexcom G6](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app)</td>
+</tr>
+<tr>
  <td><strong>CAGE</strong></td>
  <td>Kanülenalter (canula age) - Wird in Nightscout angezeigt, wenn die Information in AAPS im Aktionen Tab/Menü oder durch AAPS Tab Aktionen -> Vorfüllen/Füllen eingetragen wurde.</td>
  <td>Nightscout</td>
@@ -128,7 +134,7 @@
  <td><strong>DST</strong></td>
  <td>Sommerzeit (daylight savings time)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit">Wiki Zeitumstellung</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki Zeitumstellung</a></td>
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
@@ -187,17 +193,17 @@
 <tr>
  <td><strong>LGS</strong></td>
  <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
- <td><a href="../Usage/Objectives.html#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten">Ziel 6</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">Ziel 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#benotigte-hardware">Wiki - Akku-Chek Combo Pumpe</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Akku-Chek Combo Pumpe</a></td>
 </tr>
 <tr>
- <td><strong>Logdateien</strong></td>
+ <td><strong>Log files</strong></td>
  <td>Aufzeichnung aller AAPS Aktionen (nützlich für Fehlersuche und -beseitigung)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
@@ -206,7 +212,7 @@
  <td><strong>maxIOB</strong></td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Configuration/Preferences.html#openaps-smb-einstellungen">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html##einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html##einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -218,7 +224,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>Sicherheitsfunktion - Standardzeitangabe für den Abbau der Kohlenhydrate. Wird verwendet wenn dieser nicht durch die Veränderung der BZ-Werte dynamisch ermittelt werden kann.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#resorptions-einstellungen">Wiki - Konfigurations-Generator</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -230,7 +236,7 @@
  <td><strong>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</strong></td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
@@ -260,10 +266,10 @@
  <td><strong>Oref0 / Oref1</strong></td>
  <td>Empfindlichkeitserkennung<br>"reference design implementation version 0/1" - der Schlüsselalgorithmus von OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html">Wiki - Empfindlichkeitserkennung...</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
 </tr>
 <tr>
- <td><strong>Peak time (Wirkungshoch)</strong></td>
+ <td><strong>Peak time</strong></td>
  <td>Zeitpunkt des Wirkungshochs des gespritzen Insulins</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Konfigurations-Generator</a></td>
@@ -272,13 +278,13 @@
  <td><strong>PH</strong></td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#careportal-behandlungen">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Predictions (Vorhersagen)</strong></td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td><strong>Profile</strong></td>
@@ -300,7 +306,7 @@
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
- <td>Open Source Hardware zur Umwandlung von Bluetooth Low Energy (BLE) in 916 MHz Funksignale (wird für ältere Medtronic-Pumpen verwendet)</td>
+ <td>Open-Source-Hardware-Gerät, um Bluetooth Low Energy (BLE) in 916MHz (verwendet für alte Medtronic-Pumpen) oder 433MHz (verwendet für Omnipod Eros Pumpen) drahtlose Kommunikation umzuwandeln.</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
@@ -317,7 +323,7 @@
  <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
- <td><strong>Sensitivitätserkennung</strong></td>
+ <td><strong>Sensivity detection</strong></td>
  <td>Ermittlung der Änderung der Insulinempfindlichkeit durch Bewegung, Hormone etc.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens (englisch)</a></td>
@@ -371,7 +377,7 @@
  <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
- <td><strong>Virtuelle Pumpe</strong></td>
+ <td><strong>Virtual pump</strong></td>
  <td>Möglichkeit, AAPS Funktionen auszuprobieren oder für um mit Pumpen, für die noch kein Treiber zur Verfügung steht, manuell loopen zu können</td>
  <td>Open Loop</td>
  <td>&nbsp;</td>
@@ -380,7 +386,7 @@
  <td><strong>Smartphone-Hintergrundbild</strong></td>
  <td>AndroidAPS-Hintergrundbild</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#handy-hintergrundbild">siehe Seite Smartphones</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>

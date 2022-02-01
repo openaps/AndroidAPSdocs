@@ -6,7 +6,7 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ### Omnipod DASH ([Domovská stránka](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
@@ -14,127 +14,127 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ### Pumpa Ypsomed ([Domovská stránka](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Stav smyčky:** Verze 1 - 1.5 (2. kvartál/2018) nejsou kandidáti pro smyčku. I když mají BT komunikaci, komunikace je velmi omezená a pouze jednosměrná: z pumpy -> do aplikace. Do konce roku 2021 se plánuje, že společnost uvolní novou verzi přezdívanou DOSE (1.6), která umožní nastavovat bolus a dočasný bazál z jejich aplikace. V roce 2022 plánují uvedení vlastní smyčky s vlastní aplikací. Více informací najdete na této [stránce](https://www.mylife-diabetescare.com/en/loop-program.html)
 
-**Hardware requirement for AAPS:** None. Podporuje bluetooth.
+**Hardwarové požadavky na AAPS:** Žádné. Podporuje bluetooth.
 
-**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
+**Poznámky:** Na ovladači aktuálně pracují 2 skupiny vývojářů, po uvedení nové verze proto očekáváme, že bude podpora AAPS dostupná. Jednu skupinu podporuje společnost YpsoMed a pomáhá při lékařských zkouškách, které probíhají v Austrálii, druhá skupina pracuje nezávisle na reverzním inženýrství původní aplikace.
 
 * * *
 
 ### Kaleido ([Domovská stránka](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Stav smyčky:** Aktuálně nepodporovaná žádným systémem smyčky. Pumpa je kandidátem na smyčku, ale jelikož je zatím neznámý její komunikační protokol, nezdá se, že by tato pumpa byla brzy podporovaná.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
+### Medtrum A6/P6/C6 ([Domovská stránka](https://www.medtrum.com/product/nanopump.html))
 
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
+**Stav smyčky:** Je kandidátem na smyčku. Společnost má svůj vlastní omezený systém polosmyčky (A6). Ovládání prostřednictvím aplikace pro iPhone. Žádná aplikaci pro Android aktuálně není k dispozici.
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
 
 ### EOFLOW ([Domovská stránka](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
+**Stav smyčky:** Je kandidátem na smyčku. Dálkové ovládání, které používá, je ve skutečnosti upraveným zařízením se systémem Android. (Pumpa je v současnosti dostupná pouze v Koreji).
 
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. It seems to be BT enabled.
+**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
 
 ### Accu-Chek Solo ([Domovská stránka](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Is a Loop candidate.
+**Stav smyčky:** Je kandidátem na smyčku.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
-
-* * *
-
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
-
-**Loop status:** Not yet loopable.
-
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
-
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Poznámky:** Existuje pár vývojářů, kteří se snaží dekódovat protokol, stále je to však v přípravné fázi.
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:slim X2 ([Domovská stránka](https://www.tandemdiabetes.com/))
 
-**Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+**Stav smyčky:** Prozatím bez smyčky.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+Zatímco v minulosti se společnost rozhodla nepovolit, aby bylo možné jejich pumpy ovládat externími zařízeními, zdá se, že v posledních několika letech se jejich přístup změnil. Společnost se rozhodla aktualizovat svou pumpu t:slim X2, aby ji bylo možné dálkově ovládat (prostřednictvím aplikace t:connect), což znamená, že se otevřou cesty a můžeme se těšit na budoucí možnost ovládat pumpu prostřednictvím AAPS. Nový firmware pumpy má být brzy uvolněn (tento nebo příští rok, než se objeví jejich bezhadičková pumpa t:sport). Zatím nejsou známy žádné podrobnosti, které operace bude možné z aplikace t:connect provádět (bolus určitě, vše ostatní je zatím neznámé).
+
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
+
+* * *
+
+### Tandem: t:sport ([Domovská stránka](https://www.tandemdiabetes.com/about-us/pipeline))
+
+**Stav smyčky:** Je kandidátem na smyčku. Pumpa ještě nebyla uvedena, ale proces FDA již běží, takže by měla být venku spíše brzy než později (v USA).
+
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
 * * *
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Komentáře:** Tato pumpa má přijít během několika příštích let a plánuje se, že bude podporovat software Tidepool Loop ([viz tento článek](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Inzulínová pumpa Willcare ([Domovská stránka](http://en.shinmyungmedi.com))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Stav smyčky:** V tomto okamžiku to není kandidát na smyčku, ale byli jsme kontaktováni jejich zaměstnanci a mají zájem o rozšíření jejich pumpy tak, aby smyčku podporovala (v současné době tuším chybí pouze příkazy pro nastavení / načtení profilu).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Hardwarové požadavky na AAPS:** Žádné. Zdá se, že podporuje BT.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Komentáře:** Vzhledem k tomu, že společnost má zájem o integraci AAPS, mohou udělat vlastní implementaci.
 
 * * *
 
 ## Pumpy, které již nejsou v prodeji (společnosti již nefungují)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Pumpa Cellnovo ([viz businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Stav smyčky:** Aktuálně nepodporovaná žádným systémem smyčky. Pumpa je kandidátem na smyčku, ale jelikož je zatím neznámý její komunikační protokol, nezdá se, že by tato pumpa byla brzy podporovaná.
 
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Podporuje bluetooth.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Poznámka k produktu:** Zdá se, že společnost se rozhodla opustit trh s pumpami. Více informací viz tento [článek](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumpy, které nelze provozovat se smyčkou
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Stav smyčky:** Nelze použít pro smyčku. Není k dispozici (bezdrátový) ovladač. **Poznámka:** Pumpa se již neprodává. Společnost opustila trh s pumpami (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Stav smyčky:** Nelze použít pro smyčku. Dokáže vydávat bolusy, ale ne dočasné bazály. **Poznámka** Přestala se prodávat s příchodem modelu Vibe.
 
 ## Požadavky na pumpu, aby podporovala smyčku
 
-**Prerequisite**
+**Předpoklady**
 
 - Pumpa musí podporovat vzdálené ovládání (nějakou formou) (BT, Rádiovou frekvencí, atd.)
 - Protokol komunikace je hacknutý/dokumentovaný/atd.
 
-**Minimal requirement**
+**Minimální požadavky**
 
 - Nastavení dočasné bazální dávky
 - Zjištění stavu
 - Zrušení dočasné bazální dávky
 
-**For oref1(SMB) or Bolusing:**
+**Pro oref1(SMB) nebo posílání bolusů:**
 
 - Poslat bolus
 
-**Good to have**
+**Hodilo by se**
 
 - Zrušit bolus
 - Načíst bazální profil (prakticky nutnost)
 - Nastavit bazální profil (příjemný bonus)
 - Číst historii 
 
-**Other (not required but good to have)**
+**Ostatní (není vyžadováno, ale hodí se)**
 
 - Nastavit rozšířený bolus
 - Zrušit rozšířený bolus
@@ -143,6 +143,6 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 * * *
 
-### Other pumps support
+### Podpora ostatních pump
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Jestliže máte jinou pumpu a chtěli byste k ní znát stav podpory, kontaktujte nás na Discordu.

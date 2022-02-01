@@ -1,13 +1,13 @@
-# List of tested Phones
+# Zoznam testovaných Telefónov
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Používatelia vytvárajú [zoznam otestovaných telefónov a hodiniek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Môžete použiť rôzne filtre pre zobrazenie konkrétnych púmp a telefónov. Prosím nastavte filtre naspäť do pôvodného stavu aby si ich aj ďalší čo prídu po Vás mohli pozrieť všetky.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Pre pridanie telefónu alebo hodiniek, ktoré tam ešte nie sú, použite [formulár](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+V prípade akýchkoľvek problémov s tabuľkou napíšte na hardware@androidaps.org. Ak máte telefóny/hodinky, ktoré môžete darovať na testovanie, napíšte na donations@androidaps.org.
 
-# Phone Background
+# Pozadie na telefón
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![pozadie na telefón](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Ak si chcete telefón vyzdobiť ešte väčšou porciou AndroidAPS, môžete si stiahnuť toto pozadie: ![Pozadie vo vysokom rozlíšení.](../images/bg_phone.jpg)

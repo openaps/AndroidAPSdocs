@@ -51,7 +51,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * El transmisor Dexcom G6 puede conectarse simultáneamente al receptor Dexcom (o alternativamente a la bomba t:slim) y a una aplicación en tu teléfono.
 * Para usar xDrip+ como receptor, desinstala primero la aplicación Dexcom. **No se puede conectar al mismo tiempo la aplicación xDrip+ y Dexcom con el transmisor.**
-* Si necesitas utilizar Clarity (app Dexcom) y quieres beneficiarte de las alarmas de xDrip+ utiliza la [aplicación Dexcom parcheada](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) y la opción de difusión local a xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### La versión de xDrip+ a utilizar depende del número de serie de los transmisores G6.
 

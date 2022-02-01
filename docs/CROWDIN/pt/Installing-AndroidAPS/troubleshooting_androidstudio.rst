@@ -15,9 +15,21 @@ In case you cannot find your old keystore anymore, proceed as follows:
 7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
 8. Keep on looping.
 
+
+
+Error "on demand" Configuration
+==================================================
+
+If your build fails with an error regarding "on demand configuration" you can do the following:
+* Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+* In the left pane, click Build, Execution, Deployment > Compiler.
+* Uncheck the Configure on demand checkbox.
+* Click Apply or OK.
+
+
 Kotlin compiler warning
 ==================================================
-If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings. 
+If build completed successfully but you get Kotlin compiler warnings then just ignore these warnings.
 
 App was build successfully and can be transferred to phone.
 
@@ -74,7 +86,7 @@ There are a lot of manuals on the internet how to determine wether you have a 32
 No CGM data
 ==================================================
 * In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Uncommitted changes
 ==================================================
@@ -96,7 +108,7 @@ Option 2 - Reload source code
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Option 3 - Check for updates
 --------------------------------------------------
 * Copy ‘git checkout --’ to clipboard (without quote signs)
@@ -134,7 +146,7 @@ None of the above worked
 If non of the above tips helped you might consider building the app from scratch:
 
 1. `Export settings <../Usage/ExportImportSettings.html>`__ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Or you just use a new keystore. 
+2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`__. Or you just use a new keystore.
 3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`__.
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. `Import settings <../Usage/ExportImportSettings.html>`__

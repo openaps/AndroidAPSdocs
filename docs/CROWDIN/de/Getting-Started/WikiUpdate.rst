@@ -1,6 +1,30 @@
 Docs Updates & Änderungen
 **************************************************
 
+Dezember 2021
+==================================================
+* `AndroidAPS installieren - App erstellen <../Installing-AndroidAPS/Building-APK.html>`_ - Update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ Informationen hinzugefügt @MilosKozak
+
+November 2021
+==================================================
+* Best Practice zur Kalibrierung eines `Libre 2 Sensors <Hardware/Libre2.html#best-practices-fur-die-kalibrierung-eines-libre-2-sensors>`_
+* `ISF <../Getting-Started/FAQ.html#auswirkung>`_ Neuformulierung der Auswirkungen
+* `Update Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* `Gepatchte Dexcom App <../Hardware/DexcomG6.html>`_ entfernt, da sie veraltet ist
+
+Oktober 2021
+==================================================
+* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+September 2021
+==================================================
+* Empfohlene Spezifikation des Computers `zum Erstellen der Apk-Datei <../Installing-AndroidAPS/Building-APK.html#empfohlene-spezifikation-des-computers-zum-erstellen-der-apk-datei>`_
+
+Juni 2021
+==================================================
+* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+
 April 2021
 ==================================================
 * Liste der `zusätzlichen Kommunikationsgeräte <../Module/module.html#zusatzliches-kommunikationsgerat>`_ für Omnipod und Medtronic Pumpen
@@ -104,7 +128,7 @@ November 2019
 * `Update SMS-Befehle <../Children/SMS-Commands.html>`_
 * `Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Fehlerbehebungen - Linksammlung <../Usage/troubleshooting.html>`_
-* `Update AAPS - Kurzanleitung für erfahrene Anwender <../Installing-AndroidAPS/Update-to-new-version.html#kurzanleitung-fur-erfahrene-anwender>`_
+* Update - quick walk-through for experienced users
 * Docs - Update `Mitschreiben <../make-a-PR.html#code-syntax>`_ und `Übersetzen <../translations.html>`_.
 
 Oktober 2019
@@ -131,7 +155,7 @@ September 2019
 
 August 2019
 ==================================================
-* `Dexcom G6 patched App Region <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Dexcom G6 neue Transmitter <../Configuration/xdrip.html#g6-transmitter-das-erste-mal-verbinden>`_ ("firefly" / 8G...)
 * `Was brauche ich? <../index.html#was-brauche-ich>`_ - neue Struktur & zusätzliche Infos
 * Neue Struktur

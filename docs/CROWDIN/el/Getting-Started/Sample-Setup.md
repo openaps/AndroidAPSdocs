@@ -75,7 +75,7 @@
 
 Η αρχική εφαρμογή Dexcom από το Google Play Store δεν θα λειτουργήσει επειδή δεν μεταδίδει τις τιμές σε άλλες εφαρμογές. Επομένως, απαιτείται μια έκδοση ελαφρώς τροποποιημένη από την κοινότητα. Μόνο αυτή η τροποποιημένη εφαρμογή Dexcom μπορεί να επικοινωνήσει με το AAPS. Επιπλέον, η τροποποιημένη εφαρμογή Dexcom App μπορεί να χρησιμοποιηθεί με όλα τα Android smartphones όχι μόνο σε αυτά που περιλαμβάνονται στη λίστα συμβατότητας [ της Dexcom ](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
 
 To do this perform the following steps on your smartphone:
 

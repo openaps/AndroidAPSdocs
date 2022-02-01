@@ -15,9 +15,21 @@ Falls Du Deinen bisherigen keystore nicht mehr findest, kannst Du wie folgt vorg
 7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#importiere-die-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
 8. Loope weiter!
 
+
+
+Fehler "on demand" Konfiguration
+==================================================
+
+Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
+* Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+* Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+* Deaktiviere die "Configure on demand" Checkbox.
+* Klicke Apply oder OK.
+
+
 Kotlin Compiler Warnung
 ==================================================
-Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhältst, so kannst Du diese ignorieren. 
+Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhältst, so kannst Du diese ignorieren.
 
 Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
 
@@ -74,7 +86,7 @@ Im Internet findest Du viele Anleitungen, wie Du herausfinden kannst, ob Du ein 
 Fehlende CGM-Daten
 ==================================================
 * Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
-* Falls Du die `gepatchte Dexcom G6 App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest: Stelle sicher, dass Du die korrekte Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ verwendest.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen `BYODA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ .
 
 Uncommitted changes
 ==================================================
@@ -96,7 +108,7 @@ Option 2 - Quellcode erneut laden
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Option 3 - Prüfe den Code auf Aktualisierungen
 --------------------------------------------------
 * Kopiere 'git checkout --' in die Zwischenablage (ohne die Anführungszeichen)
@@ -134,7 +146,7 @@ Keiner der oben genannten Lösungsvorschläge funktioniert
 Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
 1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`__ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
-2. Halte Dein key Passwort und Dein key store Passwort bereit. Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` __ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
+2. Halte Dein key Passwort und Dein key store Passwort bereit. Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` __ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore.
 3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK.html#androidaps-code-herunterladen>`__ beschrieben.
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`__

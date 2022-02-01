@@ -6,7 +6,7 @@ Poniżej znajduje się lista niektórych pomp, które mogą działać w pętli, 
 
 ### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-300)
+**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
 
 ** Wymagania sprzętowe dla AAPS: ** Prawdopodobnie brak, ponieważ pompa komunikuje się przez Bluetooth.
 

@@ -15,9 +15,21 @@ Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een
 7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
 8. En je kunt weer doorloopen!
 
+
+
+Error "on demand" Configuration
+==================================================
+
+Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
+* Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+* In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+* Vink de Configure on demand checkbox uit.
+* Klik op Apply (Toepassen) of OK.
+
+
 Kotlin compiler warning
 ==================================================
-Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren. 
+Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren.
 
 Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
 
@@ -74,7 +86,7 @@ Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw com
 Geen CGM gegevens
 ==================================================
 * Wanneer je xDrip+ gebruikt: Ontvanger identificeren zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html##identificeer-ontvanger-identify-receiver>`_.
-* Wanneer je de `aangepaste Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Zorg dat je de juiste versie uit de `2.4 map <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ gebruikt.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Uncommitted changes (Niet-opgenomen wijzigingen)
 ==================================================
@@ -96,7 +108,7 @@ Optie 2 - Broncode opnieuw laden
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Optie 3 - Controleren op updates
 --------------------------------------------------
 * Kopieer 'git checkout --' naar klembord (zonder aanhalingstekens)
@@ -134,7 +146,7 @@ Geen van de bovengenoemde
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`__ beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`__ beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan.
 3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`__ beschreven.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
 5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__

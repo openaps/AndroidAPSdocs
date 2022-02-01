@@ -5,123 +5,141 @@ Siga las instrucciones en el manual ` manual de actualización <../Installing-An
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 .. imagen:: ../images/AAPS_LoopDisable90days.png
-  :alt: Información de actualización
+  :alt: Información de la actualización
 
-Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
+Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Therefore it is necessary that every user updates a.s.a.p.. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
-Android version and AAPS version
+Versión de Android y versión de AAPS
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9. 
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
-Android 9 and up
+Android 9 y superiores
 ------------------------------------
-* Use latest AAPS version
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* Usar la última versión de AAPS
+* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
 
 Android 8
 ------------------------------------
-* Use AAPS version **2.8.2.1**
-* Until AAPS version 3 is published just select **master** as this is 2.8.2.1. ;-)
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* Usar la versión de AAPS **2.8.2.1**
+* Hasta que se publique la versión 3 de AAPS, selecciona **master** ya que se corresponde con la versión 2.8.2.1. ;-)
+* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
 
 Android 7
 ------------------------------------
-* Use AAPS version **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
+* Usar la versión de AAPS **2.6.2**
+* Descargar el código fuente de AAPS desde https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Versión 3.0.0
 ================
-Release date: XX-XX-2021
+Fecha de lanzamiento: XX-XX-2022
 
-Important hints
+Notas importantes
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new profile switch and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **La versión mínima de Android requerida es la 9.0.**
+* **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
+* Usa la misma versión de AAPS y NSClient
+* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usa BYODA. También se recomienda usar BYODA para aprovechar el suavizado que aplica Dexcom.
 
-Changes
+Pasos de preparación
 ----------------------
-* XXXXk lines changed, XXXXk new lines of code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
-* Dana-i support @MilosKozak
-* DiaconnG8 support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+**Al menos dos días antes de la actualización:**
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+* Deshabilitar el "puente" entre Dexcom y Nightscout
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* UI improvements @MilosKozak
-* History browser updated and fixed @MilosKozak
-* Objective9 removed @MilosKozak
-* Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Files location change: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Si estás usando G5/G6 cambia a BYODA (si estás usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
 
 
+Cambios
+----------------------
+* XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
+* Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* Soporte para DiaconnG8
+* Soporte para Glunovo
+* Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Gran cantidad de código reescrito a Kotlin @MilosKozak
+* Nueva interfaz interna para controladores de bombas
+* NSClient reescrito para mejorar la sincronización y una personalización más detallada @MilosKozak
 
-Version 2.8.2
+  * No se permite eliminar registros de NS (Sólo se pueden invalidar mediante NSClient)
+  * No se permite la modificación de registros de NS
+  * Disponible la sincronización de la configuración sin necesidad de habilitar el modo de ingeniería (para padres)
+  * Posibilidad de resincronizar datos
+
+* Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
+* Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
+* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde Nightscout usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
+* Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
+* Seguimiento de las acciones del usuario @Philoul
+* Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* Asistente de bolos mejorado
+* Mejoras en la interfaz del usuario @MilosKozak
+* Nuevos botones de usuario para las automatizaciones @MilosKozak
+* Nuevo diseño de las automatizaciones @MilosKozak
+* El navegador del historial ha sido actualizado y corregido @MilosKozak
+* Objetivo 9 eliminado @MilosKozak
+* Corregido un problema asociado a datos inestables del MCG @MilosKozak
+* Mejoras de comunicación para DanaR y DanaRS @MilosKozak
+* Integración con CircleCI @MilosKozak
+* Cambios en la ubicación de ficheros: 
+
+   * /AAPS/extra (modo ingeniearía) 
+   * /AAPS/logs /AAPS/exports 
+   * /AAPS/preferences
+
+
+
+Versión 2.8.2
 ================
-Release date: 23-01-2021
+Fecha de lanzamiento: 23-01-2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* Por favor, revise también `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ más abajo.
 
-Changes
+Cambios
 ----------------------
-* stability improvements
-* more tweaking for Android 8+
-* improved icons
-* watch improvements
-* NSClient fixes
-* Bolus advisor now works with Pumpcontrol and NSClient
+* Mejoras de estabilidad
+* Más ajustes para Android 8+
+* Mejoras en los iconos
+* Mejores en relojes
+* Correcciones en NSClient
+* La calculadora de bolos ahora trabaja con Pumpcontrol y NSClient
 
-Version 2.8.1.1
+Versión 2.8.1.1
 ================
-Release date: 12-01-2021
+Fecha de lanzamiento: 12-01-2021
 
-Important hints
+Notas importantes
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
-* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+* Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
+* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.) 
+* ATENCIÓN: No hagas esto si usas otras aplicaciones para gestionar tratamientos (como xDrip+ con emisión de datos locales/subidas/sincronización,...).
+* NS_UPLOAD_ONLY sólo puede desactivarse si tenemos activo el modo de ingeniería.
 
-Major changes
+Cambios principales
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+* Mejoras y correcciones con RileyLink y bombas Omnipod y MDT 
+* La opción NS_UPLOAD_ONLY es forzada
+* Correcciones en SMB y en la aplicación de Dexcom
+* Correcciones en las esferas de relojes
+* Mejoras en los informes de errores
+* Se ha revertido Gradle para permitir la instalación de esferas de forma directa en los relojes
+* Correcciones en las automatizaciones
+* Mejoras en los controladores RS
+* Se han corregido varios problemas que provocaban que AAPS fallara
+* Correcciones y mejoras en la interfaz gráfica
+* Nuevos idiomas soportados
 
 Versión 2.8.0
 ================
 Fecha de lanzamiento: 01-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
@@ -302,7 +320,7 @@ Notas importantes
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
-* If you are using Dexcom G6 with the `patched Dexcom app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
