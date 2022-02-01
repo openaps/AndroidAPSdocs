@@ -6,8 +6,8 @@
 
 * Помпа Roche Accu-Chek Combo (любая версия прошивки, работают все)
 * Устройство Smartpix или Realtyme с приложением "360" для конфигурирования помпы под свои параметры. По вашему запросу фирма Roche бесплатно вышлет устройства и По. (как всегда, Россия здесь исключение. По крайней мере, переводчику данной документации ничего не выслали. Возможно, надо разговаривать с сотрудниками или руководителями фирмы, а не с агентами, чьи контакты нам обычно дают при установке помпы)
-* Совместимый смартфон: телефон на Android с прошивкой LineageOS 14.1 (прежнее название - CyanogenMod) или Android 8.1 (Oreo). 
-* LineageOS 14.1 должна иметь свежую версию, по крайней мере от июня 2017, когда в прошивку включили изменения, позволяющие соединяться с помпой Combo. 
+* A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AndroidAPS 3.0 Android 9 is mandatory. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
+* With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
 * Список телефонов можно найти в документе [Телефоны, работающие с AAPS](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit).
 * Пожалуйста, имейте в виду, что это не полный список и отражает личный опыт пользователей. Вам предлагается также делиться результатами вашего опыта и тем самым помогать другим (все подобные проекты основаны на идеологии бескорыстной помощи).
 * Имейте в виду, что в то время как Android 8.1 позволяет общаться с Combo, все еще есть проблемы с AAPS на 8.1.

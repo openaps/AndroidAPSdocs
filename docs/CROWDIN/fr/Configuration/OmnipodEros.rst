@@ -302,7 +302,7 @@ Cette fonction est utile pour vérifier les bolus, les DBT, les changements de b
 *REMARQUE :*
 Les commandes **incertaines** apparaîtront dans l'historique du pod, cependant en raison de leur nature, vous ne pouvez pas être sûr de leur exactitude.
 
-1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du pod** puis appuyez sur le bouton **Historique pod (2)** pour accéder à l'écran d'historique du pod.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@ Paramètres du périphérique de communication pod et du Pod Actif
 
 Cet écran vous montre les informations, états et paramètres de configuration à la fois du périphérique de communication pod actuellement configuré, et du pod Omnipod Eros actuellement actif. 
 
-1. Allez dans l'onglet **Omnipod (POD**) et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du Pod** puis appuyez sur le bouton **Stats RileyLink (2)** pour afficher les paramètres du **RileyLink (3)** et du pod actif **Appareil (4)**.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -360,7 +360,7 @@ Champs RileyLink (3)
 	* **Adresse :** Adresse MAC du périphérique de communication pod sélectionné défini dans les paramètres Omnipod.
 	* **Nom :** Nom d’identification Bluetooth du périphérique de communication pod sélectionné défini dans les paramètres Bluetooth de votre téléphone.
 	* **Niveau batterie :** Affiche le niveau de batterie actuel du périphérique de communication pod connecté
-	* **Appareil connecté :** Modèle du pod Omnipod qui communique actuellement avec le périphérique de communication pod (actuellement seuls les pods Eros fonctionnent avec le RileyLink)
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
 	* **État de la connexion :** l'état actuel de la connexion Bluetooth entre le périphérique de communication pod et le téléphone qui exécute AAPS.
 	* **Erreur de Connexion :** S'il y a une erreur Bluetooth avec le périphérique de communication pod, les détails seront affichés ici.
 	* **Version du firmware :** Version actuelle du firmware installée sur le périphérique de communication pod connecté.
@@ -381,7 +381,7 @@ RileyLink et historique du Pod Actif
 
 Cet écran montre les informations dans l'ordre chronologique inverse de chaque état ou action que le RileyLink ou le pod actuellement connecté fait ou a fait. L'historique complet n'est disponible que pour le pod actuellement actif, après un changement de pod, cet historique sera effacé et seuls les événements du pod nouvellement activé seront enregistrés et affichés.
 
-1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du pod** puis appuyez sur le bouton **Stats Rileylink (2)** pour accéder à l'écran **Paramètres** et **Historique**. Cliquez sur le texte **HISTORIQUE (3)** pour afficher l'historique complet du RileyLink et de la session du pod actif.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Cliquez sur le texte **HISTORIQUE (3)** pour afficher l'historique complet du RileyLink et de la session du pod actif.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
@@ -524,7 +524,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
     * - |reset_rileylink_config|
       - **Réinitialiser la config. RileyLink** 
    
-   	When pressed this button resets the currently connected pod communication device configuration. 
+   	Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
 			      
 	* Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
 			      
@@ -532,7 +532,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	    - Les protocoles de communication sont définis
 	    - La fréquence radio réglée est définie
 				
-	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
+	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
     * - |pulse_log|
       - **Lire Journal d'impulsions:** 
     
@@ -549,7 +549,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 Paramètres Omnipod
 ================
 
-Les paramètres du pilote Omnipod sont configurables à partir du **menu hamburger** en haut à gauche sous **Générateur de configuration**\ ➜\ **Pompe**\ ➜\ **Omnipod**\ ➜\ **Roue crantée (2)** en sélectionnant le **bouton radio (1)** intitulé **Omnipod**. Selecting the **checkbox (3)** next to the **Settings Gear (2)** will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled **OMNIPOD** or **POD**. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
+Les paramètres du pilote Omnipod sont configurables à partir du **menu hamburger** en haut à gauche sous **Générateur de configuration**\ ➜\ **Pompe**\ ➜\ **Omnipod**\ ➜\ **Roue crantée (2)** en sélectionnant le **bouton radio (1)** intitulé **Omnipod**. En sélectionnant la **case à cocher (3)** à côté de la **roue crantée (2)** cela affichera le menu Omnipod sous la forme d'un onglet intitulé **OMNIPOD** ou **POD** dans l'interface AAPS. C'est ce que l'on appelle dans cette documentation l'onglet **Omnipod (POD)**.
 
 |Omnipod_Settings_1|
 
@@ -566,15 +566,15 @@ Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou l
 RileyLink
 ---------
 
-Permet de rechercher un appareil RileyLink. Le pilote Omnipod ne peut pas sélectionner plus d'un périphérique de communication pod à la fois.
+Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
 
-* **Afficher le niveau de batterie transmis par OrangeLink/EmaLink :** indique le niveau de batterie réel de l'OrangeLink/EmaLink. Il est **fortement recommandé** à tous les utilisateurs d'OrangeLink/EmaLink d'activer ce paramètre.
+* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
 	+ NE FONCTIONNE PAS avec le RileyLink original.
 	+ Peut ne pas marcher avec des alternatives au RileyLink.
 	+ Activé - Indique le niveau de batterie actuel des périphériques de communication de pod.
 	+ Désactivé - Indique n/a.
-* **Activer l'enregistrement des changements de pile dans Actions :** Dans le menu Actions le bouton de changement de pile est activé SI vous avez activé ce paramètre ET le paramètre de rapport de la batterie ci-dessus.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
+* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
 
 Bips de confirmation
 ------------------
@@ -623,7 +623,7 @@ Fournit des paramètres avancés pour aider au débogage.
 Changement ou suppression d'un périphérique de communication pod actif (RileyLink)
 --------------------------------------------------------------------
 
-With many alternative models to the original RileyLink available (such as OrangeLink or EmaLink) or the need to have multiple/backup versions of the same pod communication device (RileyLink), it becomes necessary to switch or remove the selected pod communication device (RileyLink) from Omnipod Setting configuration. 
+Avec de nombreux modèles alternatifs au RileyLink d'origine disponibles (comme l'OrangeLink ou l'EmaLink) ou la nécessité d'avoir plusieurs versions de sauvegarde du même périphérique de communication pod (RileyLink), il est devenu nécessaire de pouvoir changer ou de supprimer le périphérique de communication pod sélectionné (RileyLink) des paramètres du Driver Omnipod. 
 
 Les étapes suivantes montreront comment **Supprimer** un périphérique de communication pod existant (RileyLink) et en **Ajouter** un nouveau.  Exécuter à la fois les étapes **Supprimer** et **Ajouter** changera votre périphérique.
 
@@ -684,11 +684,11 @@ Cet onglet est bien documenté dans la documentation principale AAPS, mais il y 
 Niveaux
 ------
 
-**Insulin Level**
+**Niveau d'insuline**
 
-L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.  Ceci est dû au fait que l'on ne sait pas exactement combien d'insuline a été mise dans le pod, ce n'est que lorsque les 2 bips sont émis en remplissant le pod que le réservoir contient plus de 85 unités. Un Pod peut contenir au maximum 200 unités. L'amorçage peut également introduire des écarts car ce n'est pas et le processus exact.  With both of these factors, the Omnipod driver has been written to give the best approximation of insulin remaining in the reservoir.  
+L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.  Ceci est dû au fait que l'on ne sait pas exactement combien d'insuline a été mise dans le pod, ce n'est que lorsque les 2 bips sont émis en remplissant le pod que le réservoir contient plus de 85 unités. Un Pod peut contenir au maximum 200 unités. L'amorçage peut également introduire des écarts car ce n'est pas et le processus exact.  Avec ces deux facteurs, le pilote Omnipod a été écrit pour donner la meilleure estimation de l'insuline restant dans le réservoir.  
 
-  * **Above 50 Units** - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+  * **Au-delà de 50 unités** - Affiche la valeur de 50+U lorsque plus de 50 unités sont actuellement dans le réservoir.
   * **En dessous de 50 unités** - Affiche la quantité approximative d'insuline restante dans le réservoir. 
   * **SMS** - Affiche la valeur ou 50+U pour les réponses SMS
   * **Nightscout** - Envoie la valeur 50 vers Nightscout s'il y a plus de 50 unités (version 14,07 et plus).  Les nouvelles versions afficheront la valeur de plus de 50+ si au-dessus de 50 unités.
@@ -696,14 +696,14 @@ L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.
 
 **Niveau batterie**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
 
-  * **Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie** 
-  * **Pour afficher le niveau batterie remonté par OrangeLink/EmaLink, le paramètre DOIT être activé dans les paramètres Omnipod**
-  * **Le niveau batterie ne fonctionne que pour les périphériques OrangeLink et EmaLink**
+  * **RileyLink hardware is NOT capable of reporting battery level** 
+  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
+  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
   * **L'affichage du niveau de batterie PEUT fonctionner pour d'autres appareils (en dehors du RileyLink)**
-  * **SMS** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas renvoyée.
-  * **Nightscout** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas envoyée
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
 Résolution de problèmes
@@ -794,7 +794,7 @@ L'image ci-dessous montre le positionnement optimal du RileyLink lors des procé
 Où trouver de l'aide pour le pilote Omnipod
 ====================================
 
-All of the development work for the Omnipod driver is done by the community on a volunteer basis; we ask that you please be considerate and use the following guidelines when requesting assistance:
+Tout le travail de développement du pilote Omnipod est fait par la communauté par des bénévoles; nous vous demandons donc d'être attentif et d'utiliser les directives suivantes lorsque vous demandez de l'aide :
 
 - **Niveau 0 :** Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
 - **Niveau 1 :** Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine *#androidaps* sur **Discord** en utilisant `ce lien d'invitation <https://discord.com/invite/NhEUtzr>`__.

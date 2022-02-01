@@ -1,4 +1,4 @@
-# Config Builder
+# בונה התצורה
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
@@ -18,7 +18,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
 
-## Profile
+## פרופיל
 
 Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 
@@ -68,12 +68,12 @@ Disadvantage:
 
 * none
 
-### Profile helper
+### עוזר פרופילים
 
-Profile helper offers two functions:
+עוזר הפרופילים מציע שתי פונקציות:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. הרכבת פרופיל עבור ילדים
+2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
@@ -104,7 +104,7 @@ Disadvantage:
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
     * BLUE line shows **how active** insulin is.
 
-### DIA
+### DIA - משך פעילות אינסולין
 
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.
@@ -150,7 +150,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
     
     ![Config Builder BG source](../images/ConfBuild_BGSource.png)
 
@@ -159,14 +159,14 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
 * Random BG: Generates random BG data (Demo mode only)
 
-## Pump
+## משאבה
 
 Select the pump you are using.
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * [Medtronic](MedtronicPump.md)
@@ -191,7 +191,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) More detail about OpenAPS AMA can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
@@ -200,13 +200,13 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
-### Open Loop
+### לולאה פתוחה
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
 * This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
-### Closed Loop
+### לולאה סגורה
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
 * The Closed Loop works within numerous safety limits, which you can be set individually.
@@ -238,7 +238,7 @@ See [Objectives](../Usage/Objectives.rst) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
-## General
+## כללי
 
 ### Overview
 
@@ -293,7 +293,7 @@ Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE
 
 Choose if you want to have a notes field when entering treatments or not.
 
-#### Status lights
+#### אורות חיווי
 
 Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
@@ -348,6 +348,6 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Config Builder
+### בונה התצורה
 
 Use tab for config builder instead of hamburger menu.

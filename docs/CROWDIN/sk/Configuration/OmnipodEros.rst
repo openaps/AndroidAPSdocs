@@ -302,7 +302,7 @@ This feature is useful for verifying boluses, TBRs, basal changes that were give
 *NOTE:*
 **Uncertain** commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@ Pod Communication Device and Active Pod Settings
 
 This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod. 
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -360,7 +360,7 @@ RileyLink (3) fields
 	* **Address:** MAC address of the selected pod communication device defined in the Omnipod Settings.
 	* **Name:** Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
 	* **Battery Level:** Displays the current battery level of the connected pod communication device
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device (currently only eros pods work with the RileyLink
+	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
 	* **Connection Status**: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
 	* **Connection Error:** If there is an error with the pod communication device Bluetooth connection details will be displayed here.
 	* **Firmware Version:** Current firmware version installed on the actively connected pod communication device.
@@ -381,7 +381,7 @@ RileyLink and Active Pod History
 
 This screen provides information in reverse chronological order of each state or action that either the RileyLink or currently connected pod is in or has taken. The entire history is only available for the currently active pod, after a pod change this history will be erased and only events from the newly activated pod will be recorded and shown.
 
-1. Go to the **Omnipod (POD**) tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
+1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Click on the **HISTORY (3)** text to display the entire history of the RileyLink and currently active pod session.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
@@ -566,15 +566,15 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 RileyLink
 ---------
 
-Allows for scanning of a RileyLink device. The Omnipod driver cannot select more than one RileyLink device at a time.
+Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
 
-* **Use battery level reported by OrangeLink/EmaLink:** Reports the actual battery level of the OrangeLink/EmaLink. It is **strongly recommend** that all OrangeLink/EmaLink users enable this setting.
+* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
 
 	+  DOES NOT work with the original RileyLink.
 	+  May not work with RileyLink alternatives.
 	+  Enabled - Reports the current battery level for supported pod communication devices.
 	+  Disabled - Reports a value of n/a.
-* **Enable battery change logging in Actions:** In the Actions menu the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
+* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Some pod communication devices now have the ability to use regular batteries which can be changed.  This option allows you to note that and reset battery age timers.
 
 Confirmation beeps
 ------------------
@@ -696,14 +696,14 @@ Reporting of the amount of insulin in the Omnipod Eros Pod is not exact.  This i
 
 **Battery Level**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices like the OrangeLink and EmaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
+Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  The RileyLink hardware is not capable of reporting its battery level.  The battery level is reported after each communication with the pod, so when charging a linear increase may not be observed.  A manual refresh will update the current battery level.  When a supported Pod communication device is disconnected a value of 0% will be reported.
 
-  * **RileyLink hardware is NOT capable of report battery level** 
-  * **Use battery level reported by OrangeLink/EmaLink Setting MUST be enabled in the Omnipod settings to reporting battery level values**
-  * **Battery Level ONLY works for OrangeLink and EmaLink Devices**
+  * **RileyLink hardware is NOT capable of reporting battery level** 
+  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
+  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
   * **Battery Level reporting MAY work for other devices (excluding RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned.
-  * **Nightscout** - Battery level is reported when an actual level exists, value of n/a will not be reported
+  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
 Troubleshooting

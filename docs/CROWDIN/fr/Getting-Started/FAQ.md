@@ -10,7 +10,7 @@ Non. Il n'y a pas de fichier apk téléchargeable pour AndroidAPS. Vous devez le
 
 AndroidAPS est utilisé pour contrôler votre pompe et injecter de l'insuline. Selon la réglementation actuelle, en Europe, tous les systèmes de classe IIa ou IIb, sont des dispositifs médicaux qui nécessitent une approbation réglementaire (un marquage CE) qui nécessitent diverses études et approbations. La distribution d'un dispositif non homologué est illégal. Des réglementations similaires existent dans d'autres parties du monde.
 
-Ce règlement n'est pas limité aux ventes (dans le sens d'obtenir de l'argent pour quelque chose), mais s'applique à n'importe quel moyen de distribution (même en accès gratuit). Construire vous même un appareil médical est la seule façon de ne pas être touché par ces règlements.
+Ce règlement n'est pas limité qu'aux ventes (dans le sens d'obtenir de l'argent pour quelque chose), mais s'applique à n'importe quel moyen de distribution (même en accès gratuit). Construire vous même un appareil médical est la seule façon d'utiliser l'application en respectant ces règlements.
 
 C'est pourquoi les apk ne sont pas disponibles.
 
@@ -40,23 +40,9 @@ Si vous envisagez d'utiliser l'application Android Wear pour créer un bolus ou 
 
 ### Débrancher la pompe
 
-Si vous débranchez votre pompe pour une douche / bain / piscine / sport etc., vous devez informer AndroidAPS qu'aucune insuline n'est délivrée pour avoir l'IA correcte.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-* Appuyez longuement sur le bouton "Boucle fermée" (qui sera appelé "Boucle Ouverte" si vous n'êtes pas en boucle fermée en ce moment) sur le dessus de l'écran d'accueil. 
-* Sélectionnez **'Déconnecter la pompe X min (ou h)'**
-* Cela réglera votre débit de basal à zéro pour cette période.
-* La durée minimale d'une déconnexion est liée à la durée minimale des DBT pouvant être définies sur la pompe. Donc, si vous souhaitez vous déconnecter pendant une période plus courte, vous devez utiliser le temps de déconnexion le plus court disponible pour votre pompe et vous reconnecter manuellement comme décrit ci-dessous.
-* Le bouton 'Boucle fermée' (ou 'Boucle ouverte') va basculer en rouge et être renommé 'Déconnecté (xx m)' affichant le temps de déconnexion restant.
-* AAPS reconnectera automatiquement la pompe après la durée choisie et votre boucle fermée recommencera.
-    
-    ![Débrancher la pompe](../images/PumpDisconnect.png)
-
-* Si la durée sélectionnée était trop longue, vous pouvez vous rebrancher manuellement.
-
-* Appuyez longuement sur le bouton rouge "Déconnecté (x min)'.
-* Sélectionnez 'Rebrancher la pompe'.
-    
-    ![Rebrancher la pompe](../images/PumpReconnect.png)
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### Recommandations non seulement basées sur une seule lecture MGC
 
@@ -73,17 +59,17 @@ Il y a plusieurs blogs avec de bons conseils pour vous aider à comprendre les a
 
 ## Ce que l'équipement d'urgence est recommandé d'avoir sur soi ?
 
-Tout d'abord, vous devez prendre le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline. En boucle fermée avec AndroidAPS, il est fortement recommandé d'avoir les équipements supplémentaires suivants avec ou près de vous :
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
-* Pack de batterie de recharge pour de votre smartphone, votre montre et (peut-être) votre lecteur Bluetooth
-* Sauvegarde dans le cloud (Dropbox, Google Drive ...) des applications que vous utilisez comme : votre dernier apk d'AndroidAPS- et vos clés et mot de passe de vos certificats, fichier de paramètres AndroidAPS, fichier de paramètres xDrip, application Dexcom patchée, ...
+* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Piles de la Pompe
+* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## Comment attacher en toute sécurité la MGC/MFG ?
+## How can I safely and securely attach the CGM/FGM?
 
-Vous pouvez le coller : des « patches » pré-perforés sont vendus pour les systèmes MGC courants (demandez à Google ou à eBay). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
 
-Vous pouvez le fixer : il y a des brassards aux bras qui fixent la MGC / MGF avec un élastique (demandez à Google ou eBay).
+You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 # Paramètres AndroidAPS
 
@@ -103,15 +89,15 @@ Une DAI trop courte peut conduire à des hypoglycémies. Et vice-versa.
 
 Si la DAI est trop courte, AAPS pensera que votre bolus précédent est entièrement consommé trop tôt, et si la glycémie est encore élevée, il vous injectera plus d'insuline. (En pratique, il n’attend pas aussi longtemps, mais il prédit ce qui va se passer et continue d’ajouter de l’insuline). Cela crée essentiellement un «empilement d'insuline» dont AAPS n'est pas au courant.
 
-L'exemple d'une DAI trop courte est une hyperglycéùoe suivie d'une correction excessive de AAPS et d'une hypoglycémie derrière.
+L'exemple d'une DAI trop courte est une hyperglycémie suivie d'une correction excessive de AAPS et d'une hypoglycémie derrière.
 
 ## Débits de basal (U/h)
 
 ### Description & test
 
-La quantité d'insuline nécessaire, dans un bloc de temps donné, pour maintenir glycémie à un niveau stable.
+La quantité d'insuline nécessaire, pendant une durée d'une heure, pour maintenir glycémie à un niveau stable.
 
-Testez vos débits de basal en suspendant la boucle, en jeûnant, en attendant 5 heures après la nourriture, et en voyant comment la glycémie change. Répétez quelques fois.
+Testez vos débits de basal en suspendant la boucle, en jeûnant, en attendant 5 heures après la nourriture, et en voyant comment la glycémie change. Répétez plusieurs fois.
 
 Si la glycémie baisse, le débit de basal est trop élevé. Et vice-versa.
 
@@ -119,7 +105,7 @@ Si la glycémie baisse, le débit de basal est trop élevé. Et vice-versa.
 
 Un débit de basal trop élevé peut conduire à des hypoglycémies. Et vice-versa.
 
-'Principes de base' AAPS par rapport au débit de basal par défaut. Si le débit de basal est trop élevé, un « zéro-temp » comptabilisera une IA négative plus importante qu’il ne le devrait. Cela conduira AAPS à faire des corrections plus importante qu'il ne le devrait pour amener l'IA à zéro.
+'Principes de base' de AAPS par rapport au débit de basal par défaut. Si le débit de basal est trop élevé, un « zéro-temp » comptabilisera une IA négative plus importante qu’il ne le devrait. Cela conduira AAPS à faire des corrections plus importante qu'il ne le devrait pour amener l'IA à zéro.
 
 Ainsi, un débit de base trop élevé créera des hypoglycémies, à la fois avec le débit par défaut, mais également pendant quelques heures, lorsque AAPS fera les corrections pour atteindre la cible.
 
@@ -139,14 +125,14 @@ Soyez prudent, car elle est bien souvent trop faible. Trop basse signifie qu'1 U
 
 ### Impact
 
-**Diminution de la SI** (par ex. 40 au lieu de 50) = plus agressif et plus forte, conduisant à une plus grande baisse des glycémies pour chaque unité d'insuline. Si elle est trop basse, cela peut conduire à des hypoglycémies.
+**Une ISF plus basse** (par exemple 40 au lieu de 50) signifie que l'insuline va moins faire baisser votre glycémie pour une unité. Ceci conduit à une correction plus agressive / plus forte de la boucle avec **plus d'insuline**. Si elle est trop basse, cela peut conduire à des hypoglycémies.
 
-**Augmentation de la SI** (par ex. 45 au lieu de 35) = moins agressif et plus faible, conduisant à une plus petite baisse des glycmémies pour chaque unité d'insuline. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
+**Une ISF plus haute** (par exemple 45 au lieu de 35) signifie que l'insuline va plus faire baisser votre glycémie pour une unité. Ceci conduit à une correction moins agressive / plus faible de la boucle avec **moins d'insuline**. Si elle est trop élevée, cela peut conduire à des hyperglycémies.
 
 **Exemple :**
 
 * Glycémie est à 190 mg/dl (10,5 mmol) et la cible est à 100 mg/dl (5,6 mmol). 
-* Donc, vous voulez une correction de 90 mg/dl (= 190-100).
+* Donc, vous voulez une correction de 90 mg/dl (= 190 - 100).
 * SI = 30 -> 90 / 30 = 3 unités d'insuline
 * SI = 45 -> 90 / 45 = 2 unités d'insuline
 
@@ -166,7 +152,7 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 
 > **REMARQUE :**
 > 
-> Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. At the beginning 1 bread unit equal to 12g of carbs, later some changed to 10g of carbs.
+> Dans certains pays européens, des unités de pain ont été utilisées pour déterminer la quantité d'insuline nécessaire à l'alimentation. A l'origine 1 unité de pain est équivalent à 12g de glucides, mais plus tard certains ont changés la référence à 10g de glucides.
 > 
 > Dans ce modèle, la quantité de glucides est la référence et la quantité d'insuline variable. ("Quelle quantité d'insuline est nécessaire pour couvrir une unité de pain?")
 > 
@@ -174,7 +160,7 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 > 
 > Exemple :
 > 
-> Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
+> Facteur pour une unité de pain (1 UP = 12g glucides) : 2,4 U/UP -> Vous avez besoin de 2,4 unités d'insuline quand vous mangez 1 UP.
 > 
 > G/I correspondant : 12g / 2,4 U = 5,0 g/U -> 5,0g de glucides peuvent être couverts avec une unité d'insuline.
 > 
@@ -186,7 +172,7 @@ En supposant que le débit de basal est correct, vous pouvez tester en vérifian
 
 **Diminution du G/I ** = moins de glucides par unité, c'est à dire que vous avez besoin de plus d'insuline pour une quantité fixe de glucides. Peut aussi être appelé "plus agressif".
 
-**Augmentation du G/I ** = plus de glucides par unité, c'est à dire que vous avez besoin de moins d'insuline pour une quantité fixe de glucides. Peut aussi être appelé "moins agressif".
+**Augmentation du G/I** = plus de glucides par unité, c'est à dire que vous avez besoin de moins d'insuline pour une quantité fixe de glucides. Peut aussi être appelé "moins agressif".
 
 Si, après que le repas ait été digéré et que l'IA est revenu à zéro, votre glycémie reste plus élevée qu'avant avoir mangé, il y a de fortes chances que le ratio G/I soit trop important. Inversement, si votre glycémie est inférieure à celle d'avant la nourriture, le ratio G/I est trop faible.
 
@@ -196,7 +182,7 @@ Si, après que le repas ait été digéré et que l'IA est revenu à zéro, votr
 
 ![AAR 3h](../images/Screenshot_AMA3h.png)
 
-Dans l'AMA, DIA ne signifie pas "Durée d'Action de l'Insuline". C'est un paramètre qui était connecté au DAI. Maintenant, cela signifie "à quel moment la correction devrait être terminée". Cela n'a rien à voir avec le calcul de l'IA. In OpenAPS SMB, there is no need for this parameter any longer.
+Dans l'AMA, dia ne signifie pas "Durée d'Action de l'Insuline". C'est un paramètre qui était connecté au DAI. Maintenant, cela signifie "à quel moment la correction devrait être terminée". Cela n'a rien à voir avec le calcul de l'IA. Dans OpenAPS SMB, ce paramètre n'est plus nécessaire.
 
 ## Profil
 
@@ -242,7 +228,7 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
 * réduire la durée du rétro-éclairage (dans le menu des paramètres de la pompe)
 * sélectionnez les paramètres de notification à un bip plutôt que de vibrer (dans le menu des paramètres de la pompe)
 * appuyez uniquement sur les boutons de la pompe pour recharger, utilisez AndroidAPS pour afficher tout l'historique, le niveau de la pile et le volume du réservoir.
-* l'application AndroidAPS peut souvent être fermée pour économiser de l'énergie ou de la RAM libre sur certains téléphones. Lorsque AndroidAPS est réinitialisé à chaque démarrage, il établit une connexion Bluetooth avec la pompe et relit l'historique des débits de basal et des bolus. Cela consomme de la batterie. Pour voir si c'est le cas, allez dans Préférences > NSClient et activer l'option 'Démarrage AAPS entré dans NS'. Nightscout recevra un événement à chaque redémarrage d'AndroidAPS, ce qui facilite le suivi du problème. Pour que cette situation arrive moins souvent, inscrivez AndroidAPS sur la la liste blanche des paramètres de la batterie du téléphone, afin que le moniteur d'alimentation arrête de la fermer.
+* l'application AndroidAPS peut souvent être fermée pour économiser de l'énergie ou de la RAM libre sur certains téléphones. Lorsque AndroidAPS est réinitialisé à chaque démarrage, il établit une connexion Bluetooth avec la pompe et relit l'historique des débits de basal et des bolus. Cela consomme de la batterie. Pour voir si c'est le cas, allez dans Préférences > NSClient et activer l'option 'Démarrage de l'app journaux vers NS'. Nightscout recevra un événement à chaque redémarrage d'AndroidAPS, ce qui facilite le suivi du problème. Pour réduire cette situation, inscrivez AndroidAPS sur la la liste blanche des paramètres de la batterie du téléphone, pour que le moniteur d'alimentation arrète de la fermer.
     
     Par exemple, pour l'inscire sur la liste blanche avec un téléphone Samsung fonctionnant sous Android Pie :
     
@@ -252,7 +238,7 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
     * AUSSI allez dans Paramètres -> Applications -> (Trois points en haut à droite de l'écran), sélectionnez "accès spécial" -> Optimiser util. de la batterie
     * Faites défiler jusqu'à AndroidAPS et assurez-vous qu'elle est désélectionnée.
 
-* nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou graisse de fabrication ne reste.
+* nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou draisse de fabrication ne reste.
 
 * pour les [pompes Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) la procédure de démarrage établit un courant élevé à travers la batterie pour briser de manière ciblée le film passif (cela empêche la perte d'énergie pendant le stockage) mais cela ne suffit pas toujours à la casser à 100%. Supprimez et réinsérez la batterie 2 à 3 fois jusqu'à ce qu'elle affiche 100 % à l'écran, ou utilisez la clé de batterie pour faire un court circuit bref de la batterie avant de l'insérer en appliquant aux deux bornes une fraction de seconde.
 * voir également plus de conseils pour les [types particuliers de piles](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#type-de-pile-et-causes-de-faible-autonomie)
@@ -263,10 +249,10 @@ Le changement de cartouche ne peut pas être fait via AndroidAPS, mais doit êtr
 
 * Faites un appui long sur "Boucle Ouverte" / "Boucle Fermée" de l'onglet Accueil de AndroidAPS et sélectionnez 'Suspendre la Boucle pour 1h'
 * Débranchez maintenant la pompe et changez le réservoir selon les instructions de la pompe.
-* Also priming and filling tube and cannula can be done directly on the pump. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pump) dans l'onglet Actions pour uniquement enregistrer le changement.
+* Ainsi le remplissage de la tubulure et de la canule peuvent être faites directement sur la pompe. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pump) dans l'onglet Actions pour uniquement enregistrer le changement.
 * Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pompe) pour définit la quantité d'insuline nécessaire pour remplir le dispositif de perfusion (tubulure) et purger la canule. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et / ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pompe) pour définit la quantité d'insuline nécessaire pour remplir le dispositif de perfusion (tubulure) et purger la canule. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
 
 ## Fonds d'écran
 
@@ -278,13 +264,11 @@ Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [p
 
 #### Que faire pour prendre une douche ou un bain?
 
-Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour cette courte période de temps, vous n'en aurez généralement pas besoin. Mais vous devez le dire à AAPS, pour que le calcul de l'IA soit juste.
-
-Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
 
 ### Travail
 
-Selon votre type de travail, vous pouvez peut-être utiliser différents paramètres de traitement pendant les jours travaillés. En tant que boucleur, vous devez penser à un [changement de profil](../Usage/Profiles.md) pour votre journée de travail (par exemple, plus de 100% pendant 8h lorsque vous êtes assis ou moins de 100% lorsque vous êtes actif), une cible temporaire élevée ou basse ou un [décalage horaire de votre profil](../Usage/Profiles#decalage-horaire) lorsque vous êtes debout plus tôt ou plus tard que d'habitude. Si vous utilisez des [profils Nightscout](../Configuration/Config-Builder#profil-ns), vous pouvez également créer un second profil (par exemple "Maison" et "Travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. Si vous utilisez des [profils Nightscout](../Configuration/Config-Builder#profil-ns), vous pouvez également créer un second profil (par exemple "Maison" et "Travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
 
 ## Activités de loisirs
 
@@ -300,7 +284,7 @@ Lors de la boucle, vous devriez essayer ces étapes :
 * Définissez une [cible temporaire d'activité](../Usage/temptarget#cible-temporaire-activite) au-dessus de votre cible standard.
 * Si vous utilisez SMB, assurez-vous que ["Activer SMB avec cibles temp. hautes"](../Usage/Open-APS-features#activer-smb-avec-cibles-temp-hautes) et [ "Activer en permanence les SMB" ](../Usage/Open-APS-features#activer-en-permanence-les-smb) sont désactivées.
 
-Pre- and post-processing of these settings is important. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
+Le pré-traitement et le post-traitement de ces paramètres sont importants. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
 
 Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.rst) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
 
@@ -308,9 +292,7 @@ Le pourcentage du changement de profil, la valeur de votre cible temporaire d'ac
 
 ### Sexe
 
-Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes.
-
-Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
 
 ### Boire de l'alcool
 
@@ -326,7 +308,7 @@ Lorsque vous buvez de l'alcool, vous devez toujours avoir un œil sur votre MGC 
 
 #### Comment puis-je boucler pendant la nuit sans rayonnement smartphone et WIFI ?
 
-De nombreux utilisateurs mettent le téléphone en mode avion la nuit. Si vous voulez que la boucle vous aide lorsque vous dormez, procédez comme suit (ceci ne fonctionne qu'avec une source de Gly locale telle que xDrip+ ou une application Dexcom patchée, elle ne fonctionne PAS si vous obtenez les glycémies via Nightscout) :
+De nombreux utilisateurs mettent le téléphone en mode avion la nuit. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activez le mode avion de votre mobile.
 2. Attendez que le mode avion soit actif.

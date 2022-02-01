@@ -27,7 +27,7 @@
     
     ![Huawei - блокировка приложения](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persistent notifications (within xdrip+ app):
+Для xdrip + можно также включить постоянные уведомления (в приложении xdrip +):
 
 * Настройки/менее распространенные параметры/другие опции /Запустить коллектор на переднем плане
   

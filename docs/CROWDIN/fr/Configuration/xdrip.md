@@ -51,7 +51,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
-* Si vous avez besoin d'éclaircissements et voulez profiter des alarmes xDrip+, utilisez l'applications [Dexcom patchée](../Hardware/DexcomG6#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee) avec la diffusion locale vers xDrip+.
+* Si vous avez besoin de Clarity et que vous voulez profiter des alarmes xDrip+, utilisez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom) avec la diffusion locale vers xDrip+.
 
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
 

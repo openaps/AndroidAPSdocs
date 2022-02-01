@@ -1,10 +1,34 @@
 Обновления и изменения в документации
 **************************************************
 
+Декабрь 2021
+==================================================
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - обновление до Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ добавил @MilosKozak
+
+ноябрь 2021
+==================================================
+* Наилучшие методы калибровки сенсора `libre 2 <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ переформулирован impact - воздействин
+* Обновление ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
+* Удалено модифицированное приложение `Dexcom <../Hardware/DexcomG6.html>`_ как устаревшее
+
+Октябрь 2021
+==================================================
+* `Примечания к выпуску <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+Сентябрь 2021 года
+==================================================
+* Рекомендуемые спецификации компьютера для `сборки AAPS <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+
+Июнь 2021
+==================================================
+* `загрузка сторонних циферблатов <../Configuration/Watchfaces.html>`_ 
+
 Апрель 2021
 ==================================================
 * Список устройств связи <../Module/module.html#additional-communication-device>`_ для помп Omnipod и Medtronic
-* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
+* прогнозирование AAPS в ` Nightscout <../Instaling-AndroidAPS/Nightscout.html#manual-nightscout-setup> ` _
 
 Март 2021
 ==================================================
@@ -97,14 +121,14 @@
 Пролонгированный болюс - почему не работает в контексте ИПЖ <../Usage/Extended-Carbs.html#extended-bolus>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
-* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
 * ` Помпа Medtronic - возможные двойные записи <../Configuration/MedtronicPump.html> ` _
 * ` Новые инструкции по Freestyle Libre 2 <../Hardware/Libre2.html> ` _
 * Выбрать профиль с процент - пример <../Usage/Profiles.html>`_
 * ` Обновление для команд по SMS <../Children/SMS-Commands.html> ` _
 * ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * ` Устранение неполадок- ссылки <../Usage/troubleshooting.html> ` _
-* `Обновление - краткое руководство для опытных пользователей <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users> ` _
+* Обновление - краткая инструкция для опытных пользователей
 * Документация - обновление `редактирования <../make-a-PR.md#code-syntax>`_ и`перевода<../translations.html#translate-docs-pages>`_.
 
 Октябрь 2019
@@ -123,7 +147,7 @@
 Сентябрь 2019 года
 ==================================================
 * ` Автоматизация <../Usage/Automation.html> ` _
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
+* `Калькулятор болюса <../Getting-Started/Screenshots.html#slow-carb-absorption>`_ - медленное усвоение углеводов
 * " Безопасность Nightscout <../Installing-AndroidAPS/Nightscout.html#security-considerations> `
 * `Сдвиг времени профиля <../Usage/Profiles.html#timeshift>`_ (подробнее)
 * `Удаленный мониторинг <../Children/Children.html>`_
@@ -131,7 +155,7 @@
 
 Август 2019
 ==================================================
-* `Dexcom G6 модифицированное приложение <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Модифицированное приложение Dexcom G6 - регионы
 * `Новый трансмиттер Dexcom G6 <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `Что нужно? <../index.html#what-do-ineed> ` _-новая структура и дополнительная информация
 Новая структура

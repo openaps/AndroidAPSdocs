@@ -1,14 +1,14 @@
-Smartwatches
+שעונים חכמים
 *************
 
-Smartwatches are optional, but very useful for some users.
-More details are here:
+שעונים חכמים הינם אופציונאליים, אך שימושיים מאוד עבור חלק מהמשתמשים.
+לפרטים נוספים:
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
    
-   List of tested phones and smartwatches <../Getting-Started/Phones.md>
-   Watchfaces Wear OS <../Configuration/Watchfaces.md>
-   Troubleshooting Sony Smartwatch SW 3 <../Usage/SonySW3.rst>
+   רשימת מכשירי טלפון ושעונים חכמים שנוסו <../Getting-Started/Phones.md>
+   מבחר פני שעוני Wear OS <../Configuration/Watchfaces.md>
+   פתרון בעיות בשעוני Sony SW 3 <../Usage/SonySW3.rst>

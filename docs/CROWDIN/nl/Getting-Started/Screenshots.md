@@ -453,7 +453,7 @@ Geschiedenis van de volgende behandelingen:
 * [Profiel wissel](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - hier vind je notities terug die zijn ingevoerd via het Acties tabblad of via het notities veld in dialoogvensters
 
-## BG Source - xDrip, Dexcom App (patched)...
+## BG Source - xDrip+, BYODA...
 
 ![BG Bron tabblad - hier xDrip](../images/Screenshots_BGSource.png)
 

@@ -2,15 +2,23 @@
 
 Si les glycémies sont instables/bruitées, AAPS peut mal doser la quantité d'insuline, entraînant des hyper ou hypo. Pour cette raison, il est important de désactiver la boucle jusqu'à ce que le problème soit résolu. Selon votre MGC, de tels problèmes peuvent être dus à la configuration de la MGC ou à des problèmes de capteur ou de site. Vous devrez peut-être remplacer votre capteur MGC pour résoudre ce problème. Certaines fonctionnalités comme 'Activer en permanence les SMB' et 'Activer SMB après injection de glucides' ne peuvent être utilisées qu'avec une source de glycémie bien filtrée.
 
-## Application Dexcom G5 (patchée)
+## Capteurs Dexcom
 
-Lorsque vous utilisez l'application Dexcom G5 (patchée) vos données de glycémie sont lisses et cohérentes. Il n'y a aucune restriction à utiliser les SMB.
+### Construisez votre propre application Dexcom (BYODA)
 
-## xDrip+ avec Dexcom G5
+When using [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. De plus, vous pouvez profiter du lissage arrière Dexcom. Il n'y a aucune restriction à utiliser les SMB.
+
+### xDrip+ avec Dexcom G5 ou G6
 
 Les glycémies ne sont suffisament lissées avec XDrip+ et G5 que si vous utilisez 'OB1 collector in native mode'.
 
-## XDrip+ avec Freestyle Libre
+### Application Dexcom G5 (patchée)
+
+Lorsque vous utilisez l'application Dexcom G5 (patchée) vos données de glycémie sont lisses et cohérentes. Il n'y a aucune restriction à utiliser les SMB.
+
+## Capteurs Freestyle Libre
+
+### XDrip+ avec Freestyle Libre
 
 Lorsque vous utilisez xDrip+ comme source de données avec le Freestyle Libre, vous ne pouvez pour l'instant pas activer 'Activer en permanence les SMB' et 'Activer SMB après injection de glucides' car les valeurs de glycémies ne sont pas assez lissées. Sauf qu'il y a deux choses que vous pouvez faire pour aider à réduire le bruit dans les données.
 

@@ -23,31 +23,11 @@ Dexcom G6 mit xDrip+
 ==================================================
 * Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 * Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
-* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die <./Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>gepatchte Dexcom App</a> mit lokaler Datenübertragung zu xDrip+ verwenden.
+* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die `BYODA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ mit lokaler Datenübertragung zu xDrip+ verwenden.
 * Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xDrip+.
 * Passe die Einstellungen in xDrip+ entsprechend den `Empfehlungen an <../Configuration/xdrip.html>`__
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`__ beschrieben.
-
-G6 mit der gepatchten Dexcom App
-==================================================
-* Lade die APK von `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>`_ herunter und wähle die Version, die Du benötigst (mg/dl oder mmol/l Version, G6).
-
-  * Ordner 2.4 für alle Nutzer der aktuellen Version. Ordner 2.3 nur für die Nutzer der veralteten AAPS-Version 2.3.
-  *  Öffne https://play.google.com/store/search?q=dexcom%20g6 auf Deinem Computer. 
-  Klicke den Link zur Dexcom G6 App in den angezeigten Suchergebnissen.
-  * Die Region wird in der URL angezeigt.
-
-  .. image:: ../images/DexcomG6regionURL.PNG
-    :alt: Region in der Dexcom G6 URL
-
-* Deinstalliere die original Dexcom App.
-* Installiere die heruntergeladene apk
-* Transmitter-Seriennummer und Sensor-Code in der gepatchten App eingeben .
-* Innerhalb kurzer Zeit sollte die gepatchte App das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen starten.)
-* Wähle gepatchte Dexcom App im Konfigurations-Generator (Konfiguration in AndroidAPS).
-* xDrip+ Alarme kannst Du über den lokalen Broadcast nutzen: In xDrip > Hamburger Menü > Einstellungen > Datenquelle > 640G / EverSense.
-* Der lokale Broadcast funktioniert nicht direkt von der gepatchten Dexcom App zu xDrip+. Der Broadcast muss über AAPS laufen.
 
 G6 mit Build Your Own Dexcom App
 ==================================================
@@ -57,7 +37,7 @@ G6 mit Build Your Own Dexcom App
 * Installiere die heruntergeladene apk
 * Transmitter-Seriennummer und Sensor-Code in der gepatchten App eingeben .
 * Gehe in den Einstellungen des Smartphone zu Apps > Dexcom G6 > Berechtigungen > Weitere Berechtigungen und drücke 'Zugriff Dexcom App'.
-* Innerhalb kurzer Zeit sollte die gepatchte App das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen starten.)
+* Innerhalb kurzer Zeit sollte BYODA das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen starten.)
 
 Einstellungen für AndroidAPS
 --------------------------------------------------
@@ -93,4 +73,4 @@ Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du `hier <./Gene
 
 Neuer Transmitter bei laufendem Sensor
 --------------------------------------------------
-Falls Du einen Transmitter bei einer laufenden Sensorsitzung wechseln musst, kannst Du versuchen, den Transmitter zu tauschen, ohne die Transmitterhalterung zu beschädigen. Ein Video findest Du unter `https://youtu.be/AAhBVsc6NZo <https://youtu.be/AAhBVsc6NZo>`_.
+Falls Du einen Transmitter bei einer laufenden Sensorsitzung wechseln musst, kannst Du versuchen, den Transmitter zu tauschen, ohne die Transmitterhalterung zu beschädigen. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.

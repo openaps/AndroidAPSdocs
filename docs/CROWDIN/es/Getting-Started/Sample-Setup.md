@@ -75,7 +75,7 @@ Servicios de ubicación ("GPS") se debe activar para que Bluetooth funcione corr
 
 La aplicación de Dexcom original de Google Play Store no funcionará porque no difunde los valores a otras aplicaciones. Por lo tanto, se requiere una versión ligeramente modificada por la comunidad. Sólo esta aplicación de Dexcom modificada se puede comunicar con AAPS. Además, la aplicación Dexcom modificada se puede utilizar con todos los smartphones de Android y no sólo con los que están en la lista de compatibilidad de [Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 [app for your region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app).
+A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
 
 Para ello, realice los pasos siguientes en el smartphone:
 

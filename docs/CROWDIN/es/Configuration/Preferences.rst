@@ -49,7 +49,7 @@ Protección
 Contraseña maestra
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-  **Biometric protection does not work on OnePlus phones. This is a know issue of OnePlus.**
+  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
 
 * Open Preferences (three-dot-menu on top right of home screen)
 * Click triangle below "General"
@@ -405,7 +405,7 @@ Opciones de alarma
 * Alarm options allows you to select which default Nightscout alarms to use through the app.  
 * For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your `Heroku variables <https://nightscout.github.io/nightscout/setup_variables/#alarms>`_. 
 * They will only work whilst you have a connection to Nightscout and are intended for parent/carers. 
-* If you have the CGM source on your phone (i.e. xDrip+ or Dexcom patched app) then use those alarms instead.
+* If you have the CGM source on your phone (i.e. xDrip+ or BYODA [Build your own dexcom app]) then use those alarms instead.
 
 Advanced settings (NSClient)
 -----------------------------------------------------------
@@ -415,8 +415,7 @@ Advanced settings (NSClient)
 
 * Most options in advanced settings are self-explanatory.
 * *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+. 
-
-  * Dexcom patched app does not broadcast directly to xDrip+. 
+ 
   * You need to `go through AAPS <../Configuration/Config-Builder.html#bg-source>`_ and enable local broadcast in AAPS to use xDrip+ alarms.
   
 * *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.

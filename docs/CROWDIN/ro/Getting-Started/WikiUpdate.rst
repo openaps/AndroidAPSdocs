@@ -1,6 +1,30 @@
 Docs updates & changes
 **************************************************
 
+December 2021
+==================================================
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+
+November 2021
+==================================================
+* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
+* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+
+October 2021
+==================================================
+* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+September 2021
+==================================================
+* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+
+June 2021
+==================================================
+* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+
 April 2021
 ==================================================
 * List of `communication devices <../Module/module.html#additional-communication-device>`_ for Omnipod and Medtronic pumps
@@ -104,7 +128,7 @@ November 2019
 * `SMS commands update <../Children/SMS-Commands.html>`_
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Troubleshooting - link collection <../Usage/troubleshooting.html>`_
-* `Update - quick walk-through for experienced users <../Installing-AndroidAPS/Update-to-new-version.html#quick-walk-through-for-experienced-users>`_
+* Update - quick walk-through for experienced users
 * Docs - update `edit <../make-a-PR.html#code-syntax>`_ and `translation <../translations.html#translate-docs-pages>`_.
 
 Octombrie 2019
@@ -131,7 +155,7 @@ Septembrie 2019
 
 August 2019
 ==================================================
-* `Dexcom G6 patched app region <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_
+* Dexcom G6 patched app region
 * `Dexcom G6 new transmitter <../Configuration/xdrip.html#connect-g6-transmitter-for-the-first-time>`_ ("firefly" / 8G...)
 * `What do I need? <../index.html#what-do-i-need>`_ - new structure & additional information
 * New structure

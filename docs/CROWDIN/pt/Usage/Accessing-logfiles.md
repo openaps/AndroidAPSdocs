@@ -3,8 +3,9 @@
 * Ligue o telemóvel a um computador no modo de transferência de arquivos
 * Localize os arquivos de registo na pasta de dados da AndroidAPS
     
-    * A pasta estará num local similar a ***Armazenamento interno(1) / Android / data / info.nightscout.androidaps / arquivos***
-    * O nome da pasta de armazenamento raiz (1) pode variar um pouco dependendo do telemóvel.
+    * (2.8.2) The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
+    * The naming of the root storage folder (1) may vary a little depending on the phone.
 
 ![registos](../images/aapslog.png)
 

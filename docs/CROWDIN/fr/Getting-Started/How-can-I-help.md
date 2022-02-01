@@ -12,12 +12,12 @@ Yeh ! Regardez les problèmes ("Issues"), demandez dans "discord", il y a toujou
 
 ## Je connais le système et je peux écrire de la documentation !
 
-Great, this is a highly appreciated thing and a good way to pay it forward!
+Excellent, c'est une chose très appréciée et une bonne façon de contribuer !
 
 * Le canal de discord concernant la doc se trouve ici : [AndroidAPSwiki/Lobby](https://discord.gg/4fQUWHZ4Mw). 
 * Un guide sur la façon de faire des "commits" concernant le wiki anglais peut être trouvé ici : [Comment faire un PR](../make-a-PR.md). Les autres langues ne sont que traduites de l'anglais et ne peuvent pas être éditées indépendamment pour des raisons de cohérence.
 
-## I do speak multiple languages and want to translate the app or the documentation
+## Je parle plusieurs langues et je veux traduire l'application ou la documentation
 
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 

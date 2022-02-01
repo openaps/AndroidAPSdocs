@@ -13,41 +13,85 @@ Wenn Du auch weitere 30 Tage (90 Tage ab dem neuen Release-Datum) nicht aktualis
 
 Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln, sondern aus Sicherheitsgründen erfolgt. Neue Versionen von AndroidAPS bieten nicht nur neue Funktionen, sondern auch wichtige Sicherheitsfixes. Deshalb ist es notwendig, dass jeder Anwender so schnell wie möglich aktualisiert. Leider gibt es noch Fehlerberichte aus sehr alten Versionen, so dass dies ein Versuch ist, die Sicherheit für jeden einzelnen Benutzer und die gesamte DIY-Community zu verbessern. Danke für dein Verständnis.
 
+Android Version und AAPS Version
+====================================
+Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert. 
+
+Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
+
+Ab Android 9
+------------------------------------
+* Verwende die aktuelle AAPS-Version.
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Verwende AAPS Version **2.8.2.1**.
+* Bis zur Veröffentlichung von AAPS Version 3 verwende einfach die **AAPS master**-Version, denn diese ist momentan 2.8.2.1. ;-)
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+
+Android 7
+------------------------------------
+* Verwende AAPS Version **2.6.2**.
+* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
+
 Version 3.0.0
 ================
-Erscheinungsdatum: XX.XX.2021
+Erscheinungsdatum: XX.XX.2022
 
 Wichtige Hinweise
 ----------------------
 * **Es wird nun mindestens Android 9.0 benötigt.**
-* **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen Profilwechsel erstellen und mit einem IOB und COB von 0 starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
+* **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
+* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+
+Vorbereitende Schritte
+----------------------
+**Spätestens zwei Tage vor dem Update:**
+
+* Deaktiviere Dexcom Bridge in Nightscout
+
+* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+
 
 Änderungen
 ----------------------
 * XXXXk Zeilen geändert, XXXXk neue Codezeilen
+* Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
+* Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* * Unterstützung für DiaconnG8
+* Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
 * Neue interne Schnittstelle für Pumpentreiber
 * NSClient komplett neu programmiert, um eine bessere Synchronisierung und detailliertere Anpassungen zu ermöglichen @MilosKozak
+
   * Einträge können nicht via NS gelöscht werden. (Sie können aber durch den NSClient als ungültig gekennzeichnet werden.)
   * Einträgen können via Nightscout nicht geändert werden.
   * Nightscout-Synchronisation ist (für Eltern) ohne engineering mode möglich.
+  * Möglichkeit, Daten neu zu synchronisieren
+
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak
+* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
+* Bolus Wizard improvement
 * Verbesserung der Anzeige (user interface) @MilosKozak
+* Neue Anwender-Buttons für Automatisierungen @MilosKozak
+* Neues Automatisierungs-Layout @MilosKozak
 * History Browser aktualisiert und Fehler behoben @MilosKozak
 * Objective 9 wurde entfernt @MilosKozak
 * Fehler bei instabilen CGM-Werten behoben @MilosKozak
 * Verbesserung der Kommunikation mit DanaR und DanaRS @MilosKozak
 * CircleCI-Integration @MilosKozak
-* Unterstützung für Dana-i @MilosKozak
-* * Unterstützung für DiaconnG8
-* Änderung der Dateispeicherorte: /AAPS/extra (engineering mode) /AAPS/logs /AAPS/exports /AAPS/preferences
+* Änderung des Speicherorts: 
+
+   * /AAPS/extra (engineering mode) 
+   * /AAPS/logs /AAPS/exports 
+   * /AAPS/preferences
 
 
 
@@ -276,7 +320,7 @@ Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
-* Falls Du den Dexcom G6 mit der `gepatchten Dexcom App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest, benötigst Du die Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:

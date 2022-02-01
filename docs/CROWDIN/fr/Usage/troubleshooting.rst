@@ -26,7 +26,7 @@ Utilisation
 * `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-de-ga-errones>`_
 
   .. image:: ../images/Calculator_SlowCarbAbsorption.png
-    :alt: Error: Slow carb absorption
+    :alt: Erreur: Absorption lente des glucides
 
 * `Commandes SMS <../Children/SMS-Commands.html#resolution-de-problemes>`_
 

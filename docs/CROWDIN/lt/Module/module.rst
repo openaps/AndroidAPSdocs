@@ -51,7 +51,7 @@ AndroidAPS **šiuo metu** veikia su
 - `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (papildomai reikia: Ruffy programėlės, LineageOS ar Android 8.1 savo telefone)
 - `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
 - `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
-- `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
 - `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
 
@@ -73,20 +73,20 @@ For old medtronic pumps an additional communication device (besides your phone) 
 
 Combo, Insight ir senesnės Medtronic pompos yra patikimos ir tinkamos uždaram ciklui. Dėl infuzinės sistemos standartinės Luer užrakto jungties, Combo turi didelį pranašumą. Ir tam naudojama įprasta baterija, kurią galite nusipirkti bet kurioje degalinėje ar jums patogioje parduotuvėje. Ir jei jums to tikrai reikia, galite pavogti / pasiskolinti iš nuotolinio valdymo pultelio iš viešbučio kambario ;-).
 
-Dana R/RS pranašumai prieš Combo yra:
+The advantages of the DanaR/RS and Dana-i vs. Combo yra:
 
-Dana* R/RS gali prisijungti prie beveik bet kurio išmaniojo telefono, kuriame įdiegta Android> = 5.1. Nebūtina pakeisti gamyklinės programinės įrangos (pvz., Operacine sistema Lineage). Jei jūsų išmanusis telefonas sugenda arba yra pavogtas, galite greitai rasti kitą, kuris veiks su Dana*R/RS pompa... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
-- Pirmą kartą nustatyti DanaR/RS ir išmaniojo telefono ryšį yra lengviau. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
+- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... su Combo tai nėra taip lengva. bent jau tol, kol Android 8.1 diegiama tik keliuose telefonų modeliuose
+- Initial pairing is simpler with the Dana-i/RS. Tačiau paprastai šio žingsnio reikia tik pradinio sąrankos metu.
 - Kol kas Combo dirba su ekrano analizavimu. Iš esmės tai veikia gerai, bet, deja, lėtai. Tai nėra taip blogai, ko reikia ciklui, nes visa tai veikia fone. Tačiau tai leis lengviau atšaukti esamą Bluetooth ryšį. Tai gali būti nepatogu, jei inicijuojate bolusą ir vėliau būdami per daug toli nuo išmaniojo telefono, pvz., gamindami maistą. 
-- Combo vibruoja laikinos bazės TBR pabaigoje, Dana* R vibruoja (arba supypsi) dėl SMB. Naktį greičiausiai naudositės TBR, o ne SMB.  Dana* RS gali būti sukonfigūruota nei vibruoti, nei pypsėti.
-- Istoriją su aktyviais angliavandeniais galima perskaityti DanaRS per kelias sekundes. Todėl išmaniuosius telefonus galima lengvai pakeisti neprisijungus. Kai tik bus gaunami nauji NGJ duomenys, ciklas gali būti iš karto tęsiamas.
+- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Naktį greičiausiai naudositės TBR, o ne SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos). Tik Dana pompos taip pat turi „garantiją dėl vandens atsparumo“ dėl uždaro akumuliatoriaus ir rezervuaro užpildymo skyriaus. 
 
 Glikemijos šaltinis
 --------------------------------------------------
 Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.

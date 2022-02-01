@@ -1,10 +1,34 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
+December 2021
+==================================================
+* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+
+November 2021
+==================================================
+* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
+* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+
+October 2021
+==================================================
+* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+September 2021
+==================================================
+* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+
+June 2021
+==================================================
+* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+
 Avril 2021
 ==================================================
 * Liste des `dispositifs de communication <../Module/module#peripherique-de-communication-additionnel>`_ pour les pompes Omnipod et Medtronic
-* AAPS predictions in `Nightscout <../Installing-AndroidAPS/Nightscout.html#manual-nightscout-setup>`_
+* Prévisions AAPS dans `Nightscout <../Installing-AndroidAPS/Nightscout.html#manuel-d-installation-nightscout>`_
 
 Mars 2021
 ==================================================
@@ -97,14 +121,14 @@ Novembre 2019
 * `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
-* `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
+* `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
 * `Pompe Medtronic - doubles entrées possibles <../Configuration/MedtronicPump.html>`_
 * `Nouveau tutoriel Freestyle Libre 2 <../Hardware/Libre2.html>`_
 * `Changement de profil avec pourcentage - example <../Usage/Profiles.html>`_
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
-* `Mise à jour - démarrage rapide pour les utilisateurs expérimentés <../Installing-AndroidAPS/Update-to-new-version.html#acces-rapide-aux-utilisateurs-experimentes>`_
+* Update - quick walk-through for experienced users
 * Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-de-documentation>`_.
 
 Octobre 2019
@@ -123,7 +147,7 @@ Octobre 2019
 Septembre 2019
 ==================================================
 * `Automatisation <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
+* `Calculatrice Bolus <../Getting-Started/Screenshots.html#detection-incorrecte-des-ga>`_ - absorption lente des glucides
 * `Sécurité Nightscout <../Installing-AndroidAPS/Nightscout.html#remarques-sur-la-securite>`_
 * `Décalage horaire du profil <../Usage/Profiles.html#decalage-horaire>`_ (plus de détails)
 * `Surveillance à distance <../Children/Children.html>`_
@@ -131,7 +155,7 @@ Septembre 2019
 
 Août 2019
 ==================================================
-* `Application Dexcom G6 patchée par region <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee>`_
+* Dexcom G6 patched app region
 * `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connecter-l-emetteur-g6-pour-la-premiere-fois>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
 * Nouvelle structure

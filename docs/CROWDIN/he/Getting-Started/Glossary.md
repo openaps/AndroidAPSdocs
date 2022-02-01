@@ -1,13 +1,13 @@
-# Glossary<table style="width:100%" border=1 cellpadding=5>
+# מילון מונחים<table style="width:100%" border=1 cellpadding=5>
 <tr>
- <th>Term</th>
- <th>Description</th>
- <th>see also</th>
- <th>more details @</th>
+ <th>מונח</th>
+ <th>תיאור</th>
+ <th>ראו גם</th>
+ <th>לפרטים נוספים</th>
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - artificial pancreas system</td>
+ <td>AndroidAPS - מערכת לבלב מלאכותי באנדרואיד</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    advanced meal assist - advanced algorithm to handle carbs
+    advanced meal assist - אלגוריתם מתקדם יותר לטיפול בפחמימות
   </td>
   
   <td>
@@ -28,65 +28,71 @@
     <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
- <td><strong>Android auto</strong></td>
- <td>display AAPS notifications on your car's compatible in-dash information and entertainment head unit</td>
+ <td><strong>Android Auto</strong></td>
+ <td>מציג התראות של AAPS על מסך מערכת המולטימדיה מבוסס האנדרואיד של רכבים</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
- <td>software installation file (Android application package)</td>
+ <td>קובץ התקנת תוכנה של אנדרואיד</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - בניית APK</a></td>
 </tr>
 <tr>
- <td><strong>Autosens</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td><strong>Autosens (זיהוי רגישות)</strong></td>
+ <td>חישוב רגישות לאינסולין כתוצאה מפעילות גופנית, תגובות הורמונליות וכו'. </td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>שירות מחשוב ענן שאירח את Nightscout (בעבר)</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
  <td><strong>BAT</strong></td>
- <td>status light low battery on homescreen</td>
+ <td>חיווי סוללה נמוכה במסך הבית</td>
  <td>CAN / RES / SEN</td>
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>BG</strong></td>
- <td>blood glucose</td>
+ <td>ערכי סוכר בדם</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
 <td><strong>BGI</strong></td>
- <td>blood glucose interaction -degree to which BG 'should' be rising or falling based on insulin activity alone</td>
+ <td>השפעת על הסוכר בדם - מידת עליית או ירידת הסוכר הצפויה אם מתחשבים רק בפעילות האינסולין בלבד</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>BG source</strong></td>
- <td>Where do your glucose values come from?</td>
- <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
+<td><strong>BG source - מקור נתוני הסוכר</strong></td>
+ <td>מנין מגיעים נתוני הסוכר?</td>
+ <td>חיישן סוכר רציף \ פלאש</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - מקור נתוני הסוכר</a></td>
 </tr>
 <tr>
- <td><strong>Blucon Nightreader</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
- <td>BlueReader / MiaoMiao</td>
- <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
+ <td><strong>Blucon Nightrider</strong></td>
+ <td>משדר בלוטות' שמאפשר ל-Freestyle Libre לתפקד כחיישן רציף</td>
+ <td>Nightrider / MiaoMiao</td>
+ <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightrider</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>basal rate</td>
+ <td>מינונים בזאליים</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
+</tr>
+<tr>
+ <td><strong>BYODA</strong></td>
+ <td>'Build your own Dexcom App'</td>
+ <td>&nbsp;</td>
+ <td>[Dexcom G6](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)</td>
 </tr>
 <tr>
  <td><strong>CAGE</strong></td>
@@ -101,13 +107,13 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>CGM</strong></td>
+ <td><strong>סנסור</strong></td>
  <td>continuous glucose monitor</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Closed Loop</strong></td>
+ <td><strong>לולאה סגורה</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -119,7 +125,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DIA</strong></td>
+ <td><strong>DIA - משך פעילות אינסולין</strong></td>
  <td>duration of insulin action</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
@@ -140,7 +146,7 @@
  <td><strong>FGM</strong></td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html">Wiki - BG source</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - מקור נתוני הסוכר</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -162,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>cloud computing platform to host Nightscout data</td>
+ <td>שירות מחשוב ענן שאירח את Nightscout (בעבר)</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -210,12 +216,12 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
+ <td>משדר בלוטות' שמאפשר ל-Freestyle Libre לתפקד כחיישן רציף</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
 <tr>
- <td><strong>min_5m_carbimpact</strong></td>
+ <td><strong>min_5m_carbimpact (השפעת פחמימות מינימלית ב-5 דקות)</strong></td>
  <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
@@ -251,9 +257,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td><strong>Open Loop</strong></td>
+ <td><strong>לולאה פתוחה</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>לולאה סגורה</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -275,19 +281,19 @@
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>Predictions</strong></td>
+ <td><strong>חיזוי</strong></td>
  <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
- <td><strong>Profile</strong></td>
+ <td><strong>פרופיל</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td><strong>Profile switch</strong></td>
+ <td><strong>החלפת פרופיל</strong></td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
@@ -299,8 +305,8 @@
  <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>RileyLink</strong></td>
- <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz wireless communication (used for old Medtronic pumps)</td>
+ <td><strong>RileyLink - ריילילינק</strong></td>
+ <td>open source hardware device to bridge Bluetooth Low Energy (BLE) to 916MHz (used for old Medtronic pumps) or 433MHz (used for Omnipod Eros pumps) wireless communication</td>
  <td>OpenAPS</td>
  <td>&nbsp;</td>
 </tr>
@@ -318,7 +324,7 @@
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
- <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
+ <td>חישוב רגישות לאינסולין כתוצאה מפעילות גופנית, תגובות הורמונליות וכו'. </td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -353,7 +359,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>TDD</strong></td>
+ <td><strong>TDD - סה"כ מינון אינסולין יומי</strong></td>
  <td>total daily dose (bolus + basal per day)</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -373,11 +379,11 @@
 <tr>
  <td><strong>Virtual pump</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>לולאה פתוחה</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Wallpaper</strong></td>
+ <td><strong>טפט</strong></td>
  <td>AndroidAPS background image</td>
  <td></td>
  <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>

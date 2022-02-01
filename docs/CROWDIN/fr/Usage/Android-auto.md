@@ -30,7 +30,7 @@ Comme AAPS n'est pas une application officielle Android, les notifications doive
 
 ![Activer les Sources inconnues](../images/AndroidAuto_03.png)
 
-* Now you can quit developer mode if you want. Appuyez sur les trois points du menu en haut à droite pour le faire.
+* Vous pouvez maintenant quitter le Mode développeur si vous le souhaitez. Appuyez sur les trois points du menu en haut à droite pour le faire.
 
 ## Afficher les notifications dans la voiture
 

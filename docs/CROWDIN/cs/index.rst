@@ -1,13 +1,13 @@
 Vítejte v dokumentaci k AndroidAPS
 ==================================================
 
-AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
+AndroidAPS je open source aplikace určená pro osoby s diabetem, které jsou závislé na inuzlinu. Funguje jako umělá slinivka (APS) na telefonech se systémem Google Android. Hlavními součástmi jsou různé softwarové algoritmy openAPS, jejichž cílem je dělat totéž, co zdravá slinivka: udržovat glykémii ve zdravém rozmezí pomocí automatizovaného dávkování inzulinu (AID). Komě toho potřebujete schválenou inzulinovou pumpu a senzor pro kontinuální monitoraci glykémie. 
 
-Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Místo toho se výpočty AndroidAPS zakládají na algoritmu individuálního dávkování a příjmu sacharidů, které uživatel ručně zadává do svého profilu ošetření, ale z bezpečnostních důvodů jsou systémem ověřovány. 
 
 Aplikace není k dispozici v Google Play - z právních důvodů si ji musíte sami sestavit ze zdrojového kódu.
 
-The main components are:
+Hlavní součásti jsou:
 
 .. image:: images/modules-female.png
   :alt: Součásti
@@ -17,52 +17,52 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Změnit jazyk
 
-   Change language <./changelanguage.rst>
+   Změnit jazyk <./changelanguage.rst>
 
-.. _getting-started:
+.. _Začínáme:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Getting started
+   :caption: Začínáme
 
    Bezpečnost především <./Getting-Started/Safety-first.rst>
    Co je systém uzavřené smyčky <./Getting-Started/ClosedLoop.rst>
    Co je systém uzavřené smyčky s AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Možné pumpy <./Getting-Started/Pump-Choices.md>
+   Aktualizace dokumentace a změny <./Getting-Started/WikiUpdate.rst>
 
-.. _what-do-i-need:
+.. _Co budu potřebovat:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Co budu potřebovat? 
 
    Modul <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
+   Ukázková instalace <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
+   :caption: Jak nainstalovat AndroidAPS
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
+   Co je třeba zkontrolovat po aktualizaci na AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+   Řešení potíží s Android Studiem <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Poznámky k vydání <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
-.. _component-setup:
+.. _Nastavení komponent:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: Nastavení komponent
 
    CGM/FGM <./Configuration/BG-Source.rst>
    Nastavení xDrip <./Configuration/xdrip.md>
@@ -71,31 +71,31 @@ Další informace naleznete zde.
    Nastavení Nightscoutu <./Installing-AndroidAPS/Nightscout.md>
    Chytré hodinky <./Hardware/Smartwatch.rst>
 
-.. _configuration:
+.. _konfigurace:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: Konfigurace
 
    Konfigurace <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Nastavení <./Configuration/Preferences.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: Používání AndroidAPS
 
    Obrazovky AndroidAPS <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
+   Cíle <./Usage/Objectives.rst>
    Možnosti OpenAPS <./Usage/Open-APS-features.md>   
    Výpočet COB <./Usage/COB-calculation.rst>
    Detekce citlivosti <./Configuration/Sensitivity-detection-and-COB.md>
    Profily <./Usage/Profiles.md>
    Dočasné cíle <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
+   Rozložené sacharidy <./Usage/Extended-Carbs.rst>
    Automatizace <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Péče (zrušeno) <./Usage/CPbefore26.rst>
    Open Humans Uploader <./Configuration/OpenHumans.rst>
    Automatizace s aplikacemi třetích stran <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
@@ -103,58 +103,58 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Obecné tipy 
 
    Cestování s pumpou mezi časovými pásmy <./Usage/Timezone-traveling.md>
    Přístup k log souborům <./Usage/Accessing-logfiles.md>
    Tipy pro základní používání pumpy Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import nastavení <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   Inženýrský režim xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: AndroidAPS pro děti
 
    Vzdálené monitorování <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   SMS příkazy <./Children/SMS-Commands.rst>
+   Pomocník s profilem <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Odstraňování problémů
 
-   Troubleshooting <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   Odstraňování problémů <./Usage/troubleshooting.rst>
+   Nightscout klient <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: FAQ
+   :caption: Nejčastější dotazy
 
    Nejčastější dotazy <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossary
+   :caption: Slovníček
 
    Glosář <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: Kam jít pro pomoc 
 
    Užitečné zdroje informací než začnete <./Where-To-Go-For-Help/Background-reading.md>
    Kam jít pro pomoc <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Aktualizace dokumentace a změny <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Pro lékaře
 
    Pro lékaře <./Resources/clinician-guide-to-AndroidAPS>
 
@@ -162,11 +162,11 @@ Další informace naleznete zde.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Jak mohu pomoci
 
    Jak mohu pomoci <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Jak pomoci s překladem aplikace a dokumentace <./translations.md>
+   Jak upravovat dokumentaci <./make-a-PR>
 
 
 .. poznámka:: 
@@ -178,4 +178,4 @@ Další informace naleznete zde.
 
 	* Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Vezměte prosím na vědomí – tento projekt nemá žádnou spojitost s a není žádným způsobem schválený společnostmi: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ nebo `Medtronic <https://www.medtronic.com/>`_
