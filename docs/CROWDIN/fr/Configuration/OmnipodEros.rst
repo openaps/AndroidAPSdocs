@@ -698,12 +698,12 @@ L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.
 
 L'affichage du niveau de la batterie est un paramètre qui peut être activé pour afficherer le niveau de batterie actuel des périphériques de communication pod comme l'OrangeLink, EmaLink ou Dialink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
 
-  * **RileyLink hardware is NOT capable of reporting battery level** 
-  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
+  * **Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie** 
+  * **Le paramètre "Afficher le niveau batterie remonté par OrangeLink/EmaLink/Dialink" DOIT être activé dans les paramètres Omnipod**
+  * **Le niveau batterie ne fonctionne que pour les périphériques OrangeLink, EmaLink et Dialink**
   * **L'affichage du niveau de batterie PEUT fonctionner pour d'autres appareils (en dehors du RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+  * **SMS** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas renvoyée
+  * **Nightscout** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas envoyée
 
 
 Résolution de problèmes
