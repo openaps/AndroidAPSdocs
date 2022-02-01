@@ -2,7 +2,7 @@
 
 ## Comment assurer les opérations en douceur
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
+* Toujours **porter le smartphone avec vous**, laissez-le à côté de votre lit la nuit. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
 * Toujours vérifiez toujours que la batterie de la pompe est aussi complète que possible. Reportez-vous à la section de la batterie pour obtenir des conseils concernant la batterie.
 * Il est préférable de **ne pas toucher à l'application Ruffy** pendant que le système fonctionne. Si l'application est redémarrée, la connexion à la pompe peut s'arrêter. Une fois que la pompe est connectée à la Ruffy, il n'est pas nécessaire de la reconnecter. Même après un redémarrage du téléphone, la connexion est automatiquement rétablie. Si possible, déplacez l'application vers un écran inutilisé ou dans un dossier de votre smartphone afin de ne pas l'ouvrir accidentellement.
 * Si vous ouvrez involontairement l'application Ruffy pendant le bouclage, il est préférable de redémarrer le smartphone immédiatement.
@@ -48,7 +48,7 @@
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
 * If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* AndroidAPS redéfinira si nécessaire un nouveau Débit de Base Temporaire lors de l'arrivée de la prochaine glycémie. 
 
 ### Type de pile et causes de faible autonomie
 
@@ -62,7 +62,7 @@ Les durées de vie standards des différents types de batterie sont les suivante
 * **Power One Alcaline** (Varta) à partir du servcie pack : 2 à 4 semaines
 * Batteries **Eneloop rechargeables** (BK-3MCCE) : 1 à 3 semaines
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Si la durée de vie de votre pile est significativement inférieure à celle indiquée ci-dessus, vérifiez les causes possibles suivantes :
 
 * Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * Il y a quelques variantes du capuchon de pile de la pompe Combo, qui court-circuite partiellement les piles et les vide rapidement. Les capuchons sans ce problème sont reconnaissables par les contacts dorés.
