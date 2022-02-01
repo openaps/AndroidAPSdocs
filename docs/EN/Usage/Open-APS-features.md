@@ -242,18 +242,18 @@ Default value: 2
   <tr>
     <td>MAXIOB_AMA</td>
     <td>3,0</td>
-    <td>3,5</td>
+    <td>5,0</td>
     <td>7,0</td>
     <td>12,0</td>
     <td>25,0</td>
   </tr>
   <tr>
     <td>MAXIOB_SMB</td>
-    <td>3,0</td>
     <td>7,0</td>
-    <td>12,0</td>
-    <td>25,0</td>
-    <td>45,0</td>
+    <td>13,0</td>
+    <td>22,0</td>
+    <td>30,0</td>
+    <td>70,0</td>
   </tr>
   <tr>
     <td>MAXBASAL</td>
