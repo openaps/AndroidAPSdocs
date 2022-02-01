@@ -52,7 +52,7 @@ Etapes de préparation
 
 * Désactivez Dexcom Bridge dans Nightscout
 
-* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
+* si vous utilisez G5/G6 changez pour BYODA (recommandé) - vous pouvez toujours utiliser xDrip mais pas en tant que collecteur (xDrip peut recevoir des données de BYODA) ou mettez à jour xDrip à la toute dernière version.
 
 
 Modifications
@@ -78,7 +78,7 @@ Modifications
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
-* Bolus Wizard improvement
+* Amélioration de l'Assistant Bolus
 * Améliorations de l'interface utilisateur @MilosKozak
 * Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
 * Nouvelle mise en page de l'automatisation @MilosKozak
@@ -87,9 +87,9 @@ Modifications
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
 * Amélioration de la communication DanaR et DanaRS @MilosKozak
 * Intégration de CircleCI @MilosKozak
-* Files location change: 
+* Changement d'emplacement des fichiers: 
 
-   * /AAPS/extra (engineering mode) 
+   * /AAPS/extra (mode ingénierie) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
 
@@ -320,7 +320,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez le Dexcom G6 avec l'application Dexcom patchée, vous aurez besoin de la version présente dans le `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
