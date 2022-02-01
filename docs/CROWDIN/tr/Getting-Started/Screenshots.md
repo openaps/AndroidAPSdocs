@@ -395,7 +395,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 
 ## Care Portal
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır.
 
 ### Review carb calculation
 
