@@ -2,12 +2,11 @@
 
 AndroidAPS funktioniert derzeit mit
 
-* Accu-Chek Combo
-* Accu-Chek Insight
-* einige alte Medtronic-Pumpen
-* Insulet Omnipod (Eros nicht DASH)
-* Dana R
-* Dana RS 
+* Accu-Chek Insight, Combo
+* some old Medtronic
+* Insulet Omnipod
+* DanaR, RS, Dana-i
+* DiaconnG8
 
 Pumpen. Informationen über weitere Pumpen, die möglicherweise irgendwann mit AndroidAPS funktionieren, findest du auf der Seite [Zukünftig ggf. loopbare Pumpen](Future-possible-Pump-Drivers.md).
 
