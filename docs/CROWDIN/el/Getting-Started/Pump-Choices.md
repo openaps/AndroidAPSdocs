@@ -2,12 +2,11 @@
 
 Το AndroidAPS προς το παρόν λειτουργεί με
 
-* Accu-Check Combo
-* Accu-Check Insight
+* Accu-Chek Insight, Combo
 * some old Medtronic
-* Insulet Omnipod (Eros not DASH)
-* DanaR
-* DanaRS 
+* Insulet Omnipod
+* DanaR, RS, Dana-i
+* DiaconnG8
 
 αντλίες. Λεπτομέρειες σχετικές με την κατάσταση άλλων αντλιών που ενδέχεται να λειτουργήσουν με AndroidAPS εμφανίζονται στη σελίδα [Μελλοντικές (πιθανές) Αντλίες](Future-possible-Pump-Drivers.md).
 
