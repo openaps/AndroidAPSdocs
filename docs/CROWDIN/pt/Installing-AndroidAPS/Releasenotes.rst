@@ -1,4 +1,4 @@
-Release notes
+Notas das Versões
 **************************************************
 Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
@@ -7,7 +7,7 @@ You will receive the following information as soon as a new update is available:
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Depois tem 60 dias para atualizar. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
@@ -35,14 +35,14 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
+Versão 3.0.0
 ================
-Release date: 31-01-2022
+Data de lançamento: 31-01-2022
 
-Important hints
+Notas importantes
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* **A versão mínima do Android é 9.0 agora.**
+* **Os dados não são migrados para a nova base de dados.** Não se queixe, a mudança é tão grande que simplesmente, é impossível. Assim, após a atualização, IOB, COB, tratamentos, etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
 * There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
@@ -114,7 +114,7 @@ Version 2.8.1.1
 ================
 Release date: 12-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
@@ -139,7 +139,7 @@ Version 2.8.0
 ================
 Release date: 01-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
