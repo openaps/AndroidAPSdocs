@@ -42,45 +42,45 @@ Data de lançamento: 31-01-2022
 Notas importantes
 ----------------------
 * **A versão mínima do Android é 9.0 agora.**
-* **Os dados não são migrados para a nova base de dados.** Não se queixe, a mudança é tão grande que simplesmente, é impossível. Assim, após a atualização, IOB, COB, tratamentos, etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
-* There is a bug in xDrip and Dexcom native mode producing duplicated data which prevents AAPS from running in Closed loop mode. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+* **Os dados não são migrados para a nova base de dados.** Não se queixe, a mudança é tão grande que simplesmente, é impossível. Assim, após a atualização, IOB, COB, tratamentos, etc. serão eliminados. Tem que criar uma nova `troca de perfil <../Usage/Profiles.html>`_ e começar com zero IOB e COB. Planeie a atualização com cuidado!!! A melhor ocasião será sem insulina ativa e hidratos de carbono
+* Use a mesma versão da AAPS e NSClient
+* Existe um bug no modo xDrip e Dexcom que produz dados duplicados o que impede a AAPS de executar no modo loop fechado. Até que isso seja resolvido use obrigratoriamente BYODA. Usar o BYODA também é recomendado para aproveitar a suavização de dados do Dexcom
 
-Preparation steps
+Passos preparatórios
 ----------------------
-**At least two days before update:**
+**Pelo menos dois dias antes de atualizar:**
 
-* disable Dexcom bridge in Nightscout
+* Desative Dexcom bridge no Nightscout
 
-* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
+* se estiver a usar a opção G5/G6 para BYODA (recomendado) - pode ainda usar o xDrip, mas não como coletor (xDrip pode receber dados da BYODA) ou atualizar o xDrip para a última versão nightly.
 
 
-Changes
+Alterações
 ----------------------
-* 100k lines changed, 105k new lines of code
-* Omnipod DASH support @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* DiaconnG8 support
-* Glunovo support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* 100k linhas alteradas, 105k novas linhas de código
+* Suporte Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Suporte Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* Suporte ao DiaconnG8
+* Suporte a Glunovo
+* Banco de dados interno atualizado para a sala @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Muito código reescrito para o Kotlin @MilosKozak
+* Nova interface interna para drivers da bomba
+* NSCliente reescrito para melhor sincronização e personalização mais detalhada @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * Eliminação de registos de NS não é permitida (apenas invalidação através de NSClient)
+  * Gravar modificações de NS não é permitido
+  * Configuração de sincronização disponível sem o modo engineering (para pais)
+  * Capacidade de resincronizar dados
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* Bolus Wizard improvement
-* UI improvements @MilosKozak
-* New user buttons for automations @MilosKozak
+* Alteração do comportamento da mudança de perfil. Agora há uma distinção entre Troca de Perfil *(algo que o utilizador quer) * e Mudança de Perfil *(quando a alteração é executada pela bomba)* @MilosKozak @Tebbe
+* Pode iniciar um Alvo temporário para Atividade durante a criação da Troca de perfil @MilosKozak
+* Perfil NS deixa de existir. RIP. Apenas o perfil local é usado e pode habilitar a sincronização com NS @MilosKozak. Para atualizar o perfil a partir do NS, use "Clone" e salve as alterações. Deve ver "Perfil válido de:" definido como data atual
+* Processo de redefinição de senha mestre, caso tenha sido esquecida. Para redefinir a senha mestra coloque o arquivo de nome "PasswordReset" no diretório /AAPS/extra e reinicie a AAPS. Então a nova senha mestra será o número de série da sua bomba ativa @MilosKozak
+* Ações do utilizador guardadas @Philoul
+* Nova automação para TempTargetValue @Philoul
+* Melhoria do Assistente de Bólus
+* Melhorias na interface do utilizador @MilosKozak
+* Novos botões de utilizador para automações @MilosKozak
 * New automation layout @MilosKozak
 * History browser updated and fixed @MilosKozak
 * Objective9 removed @MilosKozak
@@ -95,13 +95,13 @@ Changes
 
 
 
-Version 2.8.2
+Versão 2.8.2
 ================
-Release date: 23-01-2021
+Data de lançamento: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
-Changes
+Alterações
 ----------------------
 * stability improvements
 * more tweaking for Android 8+
@@ -112,7 +112,7 @@ Changes
 
 Version 2.8.1.1
 ================
-Release date: 12-01-2021
+Data de lançamento: 12-01-2021
 
 Notas importantes
 ----------------------
@@ -137,7 +137,7 @@ Major changes
 
 Version 2.8.0
 ================
-Release date: 01-01-2021
+Data de lançamento: 01-01-2021
 
 Notas importantes
 ----------------------
@@ -166,11 +166,11 @@ Major new features
 
 Version 2.7.0
 ================
-Release date: 24-09-2020
+Data de lançamento: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. Vai manter todos os objetivos acabados!
 
 Major new features
 ----------------------
@@ -204,7 +204,7 @@ Major new features
 
 Version 2.6.1.4
 ================
-Release date: 04-05-2020
+Data de lançamento: 04-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -215,7 +215,7 @@ Major new features
 
 Version 2.6.1.3
 ================
-Release date: 03-05-2020
+Data de lançamento: 03-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -226,7 +226,7 @@ Major new features
 
 Version 2.6.1.2
 ================
-Release date: 19-04-2020
+Data de lançamento: 19-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -237,7 +237,7 @@ Major new features
 
 Version 2.6.1.1
 ================
-Release date: 06-04-2020
+Data de lançamento: 06-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -248,7 +248,7 @@ Major new features
 
 Version 2.6.1
 ==============
-Release date: 21-03-2020
+Data de lançamento: 21-03-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -267,7 +267,7 @@ Major new features
 
 Version 2.6.0
 ==============
-Release date: 29-02-2020
+Data de lançamento: 29-02-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -424,11 +424,11 @@ Settings to adjust when switching from AMA to SMB
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Se a construção falhar com um erro em relação à "on demand configuration" pode fazer o seguinte:
 
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
+  * Abra a janela Preferências clicando em Arquivo> Configurações (no Mac, Android Studio> Preferências).
+  * No painel esquerdo, clique em Build, Execution, Deployment > Compiler.
+  * Desmarque a caixa de opção Configure on demand.
   * Click Apply or OK.
 
 Overview tab
