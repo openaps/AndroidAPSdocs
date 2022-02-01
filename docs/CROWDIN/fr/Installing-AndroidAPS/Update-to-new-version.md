@@ -7,9 +7,9 @@
 ## Remarques importantes
 
 * Veuillez mettre à jour dès que possible quand une nouvelle version est disponible. Vous recevrez une [information dans la page d'accueil AndroidAPS](../Installing-AndroidAPS/Releasenotes#notes-de-version) à propos de la nouvelle version.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* À partir de la version 2.7, l'emplacement du code a été déplacé vers <https://github.com/nightscout/AndroidAPS>. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un [nouveau clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
+* [Les systèmes d'exploitation Windows 10 32 bits](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 2020.3.1.
 * Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes) for the current version
 
 ## Overview for updating your AndroidAPS version
@@ -26,9 +26,9 @@ In case you experience problems, see separate page for [troubleshooting Android 
 
 See the [Export & import settings](../Usage/ExportImportSettings#export-settings) page if you don't remember how to do this.
 
-## 2. Update your local copy
+## 2. Mettez à jour votre copie locale
 
-As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+À partir de la version 2.7, l'emplacement du code a été déplacé vers <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
 If you have already changed the URL or update from version 2.8.x, follow these steps:
 
@@ -68,11 +68,11 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
-## 5. Check AAPS version on phone
+## 5. Vérifier la version d'AAPS sur le téléphone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Version installée d'AAPS](../images/Update_VersionCheck282.png)
 
 # Résolution de problèmes
 
