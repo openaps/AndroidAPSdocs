@@ -23,13 +23,13 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [Modifications non validées](#Uncommitted-changes)
+* [Uncommitted changes](#Uncommitted-changes)
 * [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
 
 *Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
-### Modifications non validées
+### Uncommitted changes
 
 If you receive a failure message like
 
