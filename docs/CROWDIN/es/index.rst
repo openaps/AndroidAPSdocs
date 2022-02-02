@@ -42,7 +42,6 @@ Para más detalles, por favor, lee aquí.
    :caption: ¿Qué necesito? 
 
    Módulo <./Module/module.rst>
-   Ejemplo de configuración <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
