@@ -35,8 +35,6 @@ Android 7
 * Utiliser la version **2.6.2** d'AAPS
 * Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
-================
 Date de sortie : 31-01-2022
 
 Conseils importants
@@ -57,9 +55,9 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* Support Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* Support de DiaconnG8
+* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
