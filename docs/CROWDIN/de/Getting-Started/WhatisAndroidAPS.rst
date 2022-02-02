@@ -40,5 +40,4 @@ Die primären Ziele von AndroidAPS
 Wie lege ich los?
 ==================================================
 Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken.
-Gute Orientierung bieten die `Modul-Übersicht <../Module/module.html>`_ und die `Objectives (Ziele) <../Usage/Objectives.html>`_. Du kannst Dir zuerst auch einmal das `Sample Setup mit Dana, Dexcom und Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_ ansehen.
- 
+Gute Orientierung bieten die `Modul-Übersicht <../Module/module.html>`_ und die `Objectives (Ziele) <../Usage/Objectives.html>`_.
