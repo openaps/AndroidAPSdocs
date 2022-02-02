@@ -84,9 +84,9 @@ Les avantages de la DanaR/RS et Dana-i vs. la Combo comme choix de pompe de choi
 
 Source GLY
 --------------------------------------------------
-Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA est obligatoire depuis la version 3.0 (voir `release notes <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails)
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_ : Ces capteurs sont assez anciens, mais vous pouvez trouver les instructions sur la façon de les utiliser avec l'application xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_ : Il fonctioinne avec xDrip+ (pas besoin de transmetteur), mais vous devez compiler votre propre application patchée
