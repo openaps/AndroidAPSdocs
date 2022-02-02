@@ -44,7 +44,6 @@ Notas importantes
 * **A versão mínima do Android é 9.0 agora.**
 * **Os dados não são migrados para a nova base de dados.** Não se queixe, a mudança é tão grande que simplesmente, é impossível. Assim, após a atualização, IOB, COB, tratamentos, etc. serão eliminados. Tem que criar uma nova `troca de perfil <../Usage/Profiles.html>`_ e começar com zero IOB e COB. Planeie a atualização com cuidado!!! A melhor ocasião será sem insulina ativa e hidratos de carbono
 * Use a mesma versão da AAPS e NSClient
-* Existe um bug no modo xDrip e Dexcom que produz dados duplicados o que impede a AAPS de executar no modo loop fechado. Até que isso seja resolvido use obrigratoriamente BYODA. Usar o BYODA também é recomendado para aproveitar a suavização de dados do Dexcom
 
 Passos preparatórios
 ----------------------
@@ -78,6 +77,8 @@ Alterações
 * Processo de redefinição de senha mestre, caso tenha sido esquecida. Para redefinir a senha mestra coloque o arquivo de nome "PasswordReset" no diretório /AAPS/extra e reinicie a AAPS. Então a nova senha mestra será o número de série da sua bomba ativa @MilosKozak
 * Ações do utilizador guardadas @Philoul
 * Nova automação para TempTargetValue @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
 * Melhoria do Assistente de Bólus
 * Melhorias na interface do utilizador @MilosKozak
 * Novos botões de utilizador para automações @MilosKozak
