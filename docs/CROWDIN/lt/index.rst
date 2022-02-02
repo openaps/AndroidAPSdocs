@@ -42,7 +42,6 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    :caption: What do I need? 
 
    Moduliai <./Module/module.rst>
-   Pavyzdinė Sąranka <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
