@@ -23,7 +23,7 @@ Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**
 
 * V nabídce [Konfigurace](../Configuration/Config-Builder) aplikace AndroidAPS vyberte v sekci Pumpa model Accu-Chek Insight
     
-    ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder.png)
+    ![Snímek obrazovky nastavení pumpy Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Chcete-li otevřít nabídku nastavení, klikněte na ozubené kolečko.
 
