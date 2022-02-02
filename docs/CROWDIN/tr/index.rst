@@ -42,7 +42,6 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :caption: Neye ihtiyacım var? 
 
    Modül <./Module/module.rst>
-   Örnek Kurulum <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
