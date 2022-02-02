@@ -23,7 +23,7 @@ Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la b
 
 * En [Config Builder ](../Configuration/Config-Builder) de la aplicación AndroidAPS, seleccione Accu-Chek Insight en la sección de la bomba
     
-    ![Pantallazo de Configuración de Insight](../images/Insight_ConfigBuilder.png)
+    ![Pantallazo de Configuración de Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Toque el icono de, engranaje para abrir la configuración de la bomba.
 
