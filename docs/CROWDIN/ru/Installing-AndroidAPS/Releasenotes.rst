@@ -45,7 +45,6 @@ Release date: 31-01-2022
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
-* Существует ошибка в xDrip в нативном режиме Dexcom, которая ведет к дублированию данных, что не позволяет AAPS работать в режиме замкнутого цикла. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Этапы подготовки
 ----------------------
@@ -79,6 +78,8 @@ Release date: 31-01-2022
 * Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
 * Bolus Wizard improvement
 * Улучшения пользовательского интерфейса @MilosKozak
 * Новые пользовательские кнопки для автоматизации @MilosKozak
