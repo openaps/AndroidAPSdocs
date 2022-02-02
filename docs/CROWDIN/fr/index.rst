@@ -42,7 +42,6 @@ Pour plus de détails, lisez la suite ici.
    :caption: De quoi ai-je besoin 
 
    Composants <./Module/module.rst>
-   Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
