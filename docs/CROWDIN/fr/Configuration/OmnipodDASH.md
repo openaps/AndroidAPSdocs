@@ -1,4 +1,4 @@
-# Omnipod DASH
+# Omnipod Dash
 
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 3.0.
 
