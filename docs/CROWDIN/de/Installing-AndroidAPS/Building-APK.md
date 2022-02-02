@@ -87,43 +87,43 @@ Lade [Android Studio von dieser Seite](https://developer.android.com/studio/inst
 
 Beim ersten Start öffnet sich der Setup Wizard:
 
-Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
+# Select "Do not import settings" as you have not used it before.
 
-![Einstellungen nicht importieren](../images/studioSetup/01_ImportSettings.png)
+![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-Entscheide, ob Du Daten mit Google teilen möchten oder nicht.
+Decide whether you want to share data with Google or not.
 
-![Daten mit Google teilen](../images/studioSetup/02_DataSharing.png)
+![Share data with Google](../images/studioSetup/02_DataSharing.png)
 
-Klicke auf dem nächsten Bildschirm den Button "Next".
+On the following screen click "Next".
 
-![Willkommensbildschirm](../images/studioSetup/03_Welcome.png)
+![Welcome screen](../images/studioSetup/03_Welcome.png)
 
-Wähle “Standard” Installation und klicke auf “Next”.
+Select "Standard" installation and click "Next".
 
-![Standardinstallation](../images/studioSetup/04_InstallType.png)
+![Standard installation](../images/studioSetup/04_InstallType.png)
 
-Wähle das Design für die Benutzeroberfläche, das Dir am besten gefällt. (In dieser Anleitung verwenden wir "Light".) Dann klicke auf "Next".
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
 
 > ***Hinweis:*** Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf das Erstellen der APK, aber die folgenden Screenshots könnten anders aussehen.
 
-![Farbschema](../images/studioSetup/05_UITheme.png)
+![UI color scheme](../images/studioSetup/05_UITheme.png)
 
-Klicke auf “Finish” im Fenster “Verify Settings”.
+Click "Finish" on the "Verify Settings" dialog.
 
-![Einstellungen überprüfen](../images/studioSetup/06_Verify.png)
+![Verify settings](../images/studioSetup/06_Verify.png)
 
-Warte während Android Studio zusätzliche Komponenten herunterlädt und bleibe geduldig. Sobald alles heruntergeladen ist, wird der Button "Finish" blau dargestellt. Klicke diesen dann an.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Komponenten herunterladen](../images/studioSetup/07_Downloading.png)
+![Downloading components](../images/studioSetup/07_Downloading.png)
 
 ## Git-Pfad in Android Studio eintragen
 
-Stelle sicher, dass [git auf Deinem PC installiert](../Installing-AndroidAPS/git-install.rst) ist und dass Du den PC nach der git-Installation neu gestartet hast.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
 
-Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\] (1) auf der linken Seite und wähle dann den Link "All settings..." \[Alle Einstellungen...\] (2):
+On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
-![Einstellungen für Android Studio vom Willkommensbildschirm aus](../images/studioSetup/10_WizardSettings.png)
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
@@ -253,7 +253,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
 
 ## Signierte APK erstellen (Generate signed APK)
 
-Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst und als von Dir erstellt kennzeichnest. Es ist notwendig, die App digital zu signieren, da Android aus Sicherheitsgründen nur signierten Code akzeptiert. Weitere Informationen dazu findest Du unter [diesem Link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Nachdem Android Studio gestartet wurde, musst Du warten, bis alle Hintergrundaufgaben abgeschlossen sind.
     
@@ -341,10 +341,10 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 ## Übertrage die APK-Datei auf das Smartphone
 
-Der einfachste Weg, die Datei app-full-release.apk auf Dein Smartphone zu übertragen ist mittels [USB-Kabel oder Google Drive](https://support.google.com/android/answer/9064445?hl=de). Bitte beachte, dass die Übertragung per Mail zu Schwierigkeiten führen kann und daher nicht empfohlen wird.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Problembehandlung
 
-Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
