@@ -1,31 +1,31 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
-January 2022
+Janvier 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
 
-December 2021
+Décembre 2021
 ==================================================
 * `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
 * `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
 
-November 2021
+Novembre 2021
 ==================================================
 * Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
 * Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
 
-October 2021
+Octobre 2021
 ==================================================
 * `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
-September 2021
+Septembre 2021
 ==================================================
 * Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
 
-June 2021
+Juin 2021
 ==================================================
 * `Watchface sideload <../Configuration/Watchfaces.html>`_ 
 
