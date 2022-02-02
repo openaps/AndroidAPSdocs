@@ -44,7 +44,6 @@ Conseils importants
 * **La version minimale d'Android est maintenant 9.0.**
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau `changement de profil <../Usage/Profiles.html>`_ et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
-* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Jusqu'à ce que ce soit corrigé utilisez obligatoirement BOYDA. L'utilisation de BYODA est également recommandée pour tirer parti du lissage rétroactif Dexcom
 
 Etapes de préparation
 ----------------------
@@ -78,6 +77,8 @@ Modifications
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
 * Amélioration de l'Assistant Bolus
 * Améliorations de l'interface utilisateur @MilosKozak
 * Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
