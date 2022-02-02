@@ -84,9 +84,9 @@ Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
 BZ-Quelle
 --------------------------------------------------
-Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`__. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
+Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
 * ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_:  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
 * `Libre 2 <../Hardware/Libre2.html>`_: Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.
@@ -122,17 +122,6 @@ Probleme mit der Tabelle bitte per E-Mail an `hardware@androidaps.org <mailto:ha
 xDrip+
 --------------------------------------------------
 Auch wenn Du die xDrip+ App nicht als BZ-Datenquelle benötigst, kannst Du sie dennoch für  Alarme oder eine gute Anzeige der Glukosewerte verwenden. Du kannst in xDrip+ beliebig viele Alarme einreichten, festlegen zu welchen Zeiten diese aktiv sein sollen, ob sie die Stummschaltung des Smartphones überschreiben können etc. Weitere Hinweise zu den xDrip+ Einstellungen findest Du `hier <../Configuration/xdrip.html>`__. Beachte bitte, dass die Entwicklung von xDrip+ sehr agil ist und die Dokumentation damit teilweise nicht Schritt halten und entsprechend nicht immer aktuell sein kann.
-
-Konfigurationsbeispiel
-==================================================
-Eine Schritt-für-Schritt-Anleitung findest Du im Sample Setup. Dieses ist schon etwas älter, die Vorgehensweise ist aber noch aktuell.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Sample Setup <../Getting-Started/Sample-Setup.rst>
- 
   
 Wartezeit überbrücken
 ==================================================
