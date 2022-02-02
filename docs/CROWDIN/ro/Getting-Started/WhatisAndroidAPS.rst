@@ -40,5 +40,4 @@ AndroidAPS Obiective principale
 Cum să începi
 ==================================================
 Desigur, tot acest conținut este foarte important, dar poate fi la început destul de confuz.
-O bună orientare este dată de `Vizualizarea modulului <../module/module.html>`_ și `Obiective <../Usage/Objectives.html>`_. De asemenea, poți arunca o privire asupra "Exemplului de configurare Dana, Dexcom şi Sony Smartwatch <../Getting-Started/Sample-Setup.html>"_.
- 
+O bună orientare este dată de `Vizualizarea modulului <../module/module.html>`_ și `Obiective <../Usage/Objectives.html>`_.
