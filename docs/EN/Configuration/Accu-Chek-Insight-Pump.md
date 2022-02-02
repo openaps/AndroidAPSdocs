@@ -29,7 +29,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
    
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
 
-   ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+   ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Tap the cog-wheel to open Insight settings.
 * In settings, tap on the button 'Insight pairing' at the top of the screen. You should see a list of all nearby bluetooth devices (below left).
