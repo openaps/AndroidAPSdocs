@@ -23,7 +23,7 @@ Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe
 
 * Wähle im [Konfigurations-Generator](../Configuration/Config-Builder) in AndroidAPS die Accu-Chek Insight im Bereich Pumpe.
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Tippe auf das Zahnrad, um die Insight-Einstellungen zu öffnen.
 
