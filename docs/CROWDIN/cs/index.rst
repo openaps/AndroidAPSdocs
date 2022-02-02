@@ -42,7 +42,6 @@ Další informace naleznete zde.
    :caption: Co budu potřebovat? 
 
    Modul <./Module/module.rst>
-   Ukázková instalace <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
