@@ -40,5 +40,4 @@ AndroidAPS'nin arkasındaki birincil hedefler
 Nasıl başlanır
 ==================================================
 Tabii ki, buradaki tüm bu içerikler çok önemlidir, ancak başlangıçta oldukça kafa karıştırıcı olabilir.
-`Komponentlere Genel Bakış <../Module/module.html>`_ ve `Görevler <../Usage/Objectives.html>`_ tarafından iyi bir oryantasyon sağlanır. Ayrıca `Dana, Dexcom ve Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_ ile örnek kuruluma da göz atabilirsiniz.
- 
+`Komponentlere Genel Bakış <../Module/module.html>`_ ve `Görevler <../Usage/Objectives.html>`_ tarafından iyi bir oryantasyon sağlanır.
