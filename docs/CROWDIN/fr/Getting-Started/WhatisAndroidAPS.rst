@@ -42,5 +42,4 @@ Principaux objectifs derrière AndroidAPS :
 Comment débuter
 ==================================================
 Bien sûr, tout ce contenu ici est très important, mais peut être au début assez déroutant.
-Une bonne orientation est donnée par le `Module de présentation <../Module/module.html>`_ et les `Objectifs <../Usage/Objectives.html>`_. Vous pouvez également consulter `l'exemple de configuration avec une Dana, un Dexcom et une montre Sony <../Getting-Started/Sample-Setup.html>`_.
- 
+Une bonne orientation est donnée par le `Module de présentation <../Module/module.html>`_ et les `Objectifs <../Usage/Objectives.html>`_.
