@@ -157,7 +157,7 @@ Select the pump you are using.
 
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
 * [Omnipod Eros](OmnipodEros.rst)
-* [Omnipod DASH](OmnipodDASH.md)
+* [Omnipod Dash](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.rst)
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
