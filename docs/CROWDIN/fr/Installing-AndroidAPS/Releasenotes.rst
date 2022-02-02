@@ -55,9 +55,9 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
+* `Support de la DiaconnG8 <../Configuration/DiaconnG8.rst>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -75,8 +75,8 @@ Modifications
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
-* New automation Careportal action @Philoul
-* Add Bolus reminder in Carbs Dialog @Philoul
+* Nouvelle action d'automatisation Careportal @Philoul
+* Ajout un rappel bolus dans le dialogue Glucides @Philoul
 * Amélioration de l'Assistant Bolus
 * Améliorations de l'interface utilisateur @MilosKozak
 * Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
