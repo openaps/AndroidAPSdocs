@@ -43,7 +43,6 @@ Para mais detalhes, leia o seguinte.
    :caption: Do que preciso? 
 
    Módulo <./Module/module.rst>
-   Exemplo de configuração
 
 .. toctree::
    :maxdepth: 1
