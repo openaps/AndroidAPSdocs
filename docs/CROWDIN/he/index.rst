@@ -42,7 +42,6 @@ For more details, please read on here.
    :caption: What do I need? 
 
    Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
