@@ -42,7 +42,6 @@ The main components are:
    :caption: What do I need? 
 
    Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
