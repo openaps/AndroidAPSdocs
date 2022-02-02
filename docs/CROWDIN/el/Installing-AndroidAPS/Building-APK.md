@@ -87,7 +87,7 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings" as you have not used it before.
+# Select "Do not import settings" as you have not used it before.
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
