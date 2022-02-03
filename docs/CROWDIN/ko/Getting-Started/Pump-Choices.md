@@ -12,7 +12,7 @@ AndroidAPS는 현재 아래의 펌프와 호환됩니다.
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-펌프. AndroidAPS와 잠재적으로 연동 가능한 다른 펌프들의 세부정보 상태는 미래에 연동 가능성이 있는 펌프 ([Link](Future-possible-Pump-Drivers.md)) 에 정리되어 있습니다.
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 만약 당신이 업그레이드된 펌프를 선택할 생각이거나 많은 사람들이 선택하는 펌프를 선택하고 싶다면. 다양한 판매자의 세부정보는 [이 스프레드시트](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0)에 있고 만약 리스트에 없는 정보를 당신이 알고 있다면 공유해 주시기 바랍니다.
 
