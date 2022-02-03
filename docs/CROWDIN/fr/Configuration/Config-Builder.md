@@ -25,37 +25,37 @@ Avec la case à cocher sous le symbole de l'oeil, vous pouvez décider comment o
 
 ### Profil Local
 
-Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. Avec le changement de profil suivant, les données sont ensuite écrites dans la pompe dans le profil 1. Ce profil est recommandé car il ne dépend pas de la connectivité Internet.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Vos profils locaux font partie des [paramètres exportés](../Usage/ExportImportSettings.rst). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Paramètres profil local](../images/LocalProfile_Settings.png)
 
-Buttons:
+Boutons :
 
-* green plus: add
-* red X: delete
-* blue arrow: duplicate
+* Plus vert : ajouter
+* X rouge : supprimer
+* Flèche bleue : dupliquer
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Si vous apportez des modifications à votre profil, assurez-vous que vous éditez le profil correct. Dans l'onglet Profil, ce n'est pas toujours le profil actuellement utilisé qui est affiché. Par ex. si vous avez fait un changement de profil à partir du bouton de l'écran d'accueil, il peut être différent du profil affiché dans l'onglet Profil car il n'y a pas de connexion entre les deux.
 
 #### Dupliquer un changement de profil
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Vous pouvez facilement créer un profil local à partir d'un changement de profil. Dans ce cas, le décalage temporel et le pourcentage seront appliqués au nouveau profil local.
 
-1. Click 3-dots-menu in upper right corner.
-2. Select 'Treatments'.
-3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and ress "Clone".
-5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Cliquez sur le menu 3 points en haut à droite de l'écran d'accueil.
+2. Sélectionnez 'Traitements'.
+3. Cliquez sur l'icone en forme d'étoile pour accéder à la page de changement de profil.
+4. Sélectionnez le changement de profil souhaité et appuyez sur "Dupliquer".
+5. Vous pouvez éditer le nouveau profil local dans l'onglet Profil local (PL) ou via le menu hamburger.
 
 ![Dupliquer un changement de profil](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Remonter les profils locaux sur Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Les profils locaux peuvent également être téléchargés sur Nightscout. Les paramètres peuvent être trouvés dans [les préférences NSClient](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+![Télécharger profil local sur NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 ### Assistant Profil
 
@@ -64,18 +64,18 @@ L'assistant profil a deux fonctions :
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Les détails sont expliqués sur la [page d'aide des profils](../Configuration/profilehelper.rst).
 
 ## Insuline
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Type d'insuline](../images/ConfBuild_Insulin_AAPS30.png)
 
-* Select the type of insulin curve you are using.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* The curves will vary based on the DIA and the time to peak.
+* Sélectionnez le type de courbe d'insuline que vous utilisez.
+* Les options 'Insuline à Action rapide Oref', 'Insuline à action Ultra Rapide Oref', 'Lyumjev' et 'Profil d'insuline ajustable Oref' ont toutes une forme exponentielle. Vous trouverez plus d'informations dans la [Documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* Les courbes varient en fonction de la DAI et le temps du pic.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * La ligne ROSE montre la quantité **d'insuline restante** dans le corps après avoir été injectée car elle se dégrade avec le temps.
+    * La ligne BLUE montre de **combien l'insuline est active**.
 
 ### DAI
 
