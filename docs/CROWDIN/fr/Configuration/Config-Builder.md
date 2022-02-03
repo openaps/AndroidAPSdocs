@@ -79,16 +79,16 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 ### DAI
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
+* Mais elle doit toujours être au minimum de 5 heures.
+* Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
+* Vous pouvez en savoir plus à ce sujet dans la section Profil d'Insuline de [cette page](../Getting-Started/Screenshots#profil-d-insuline). 
 
-### Insulin type differences
+### Différences entre les types d'insuline
 
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
+* Pour l'insuline à "Action Rapide", "Ultra-Rapide" et "Lyumjev", la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. 
+* Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
+* Le [graphique de courbe d'insuline](../Getting-Started/Screenshots#profil-d-insuline) vous aide à comprendre les différentes courbes. 
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
 #### Insuline à Action Rapide Oref 
