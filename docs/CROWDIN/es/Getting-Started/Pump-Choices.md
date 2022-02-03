@@ -12,7 +12,7 @@ AndroidAPS trabaja actualmente con
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-bombas. Los detalles del estado de otras bombas que pueden tener el potencial de trabajar con AndroidAPS se listan en la página [Future (possible) Pumps](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Si necesita cambiar de bomba de insulina puede encontrar información en grupos de usuarios. Detalles sobre distribuidores puede encontrarlos aquí, por favor comparte los detalles de la tuya si no están en las opciones mencionadas.
 
