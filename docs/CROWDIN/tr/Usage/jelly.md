@@ -1,10 +1,10 @@
 # Jelly Pro
 
-## Advantage/Disadvantage
+## Avantajlar/dezavantajlar
 
-### Advantages Jelly
+### Jelly avantajları
 
-* It's really small.
+* Gerçekten küçük.
 * Even if you tell people, they might not consider it as a normal smartphone and will except it easier as a exception when phones are normally not allowed.
 
 ### Disadvantages Jelly
