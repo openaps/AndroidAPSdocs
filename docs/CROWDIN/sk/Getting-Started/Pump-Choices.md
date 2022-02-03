@@ -12,7 +12,7 @@ AndroidAPS v súčasnosti funguje s týmito pumpami
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-pumpy. Podrobnosti o stave ďalších púmp, ktoré majú potenciál fungovať s AndroidAPS sú uvedené na stránke [Budúce (možné) pumpy](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Ľudia, ktorí sa rozhodujú pre novú pumpu, sa často pýtajú, na ktorú pumpu prejsť, alebo ktorú kúpiť. Detaily o rôznych distribútoroch sú uvedené v [tejto tabuľke](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Prosíme uveďte detaily toho Vášho ak tam ešte nie je.
 
