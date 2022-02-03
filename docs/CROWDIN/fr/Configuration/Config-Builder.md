@@ -97,87 +97,87 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 * recommandé pour Humalog, Novolog et Novorapid
 * DAI = au moins 5.0h
-* Pic peak = 75 minutes after injection (fixed, not adjustable)
+* Pic maxi = 75 minutes après l'injection (fixe, non réglable)
 
 #### Insuline Ultra Rapide Oref
 
 ![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
-* recommended for FIASP
+* recommendé pour FIASP
 * DAI = au moins 5.0h
-* Pic peak = 55 minutes after injection (fixed, not adjustable)
+* Pic maxi = 55 minutes après l'injection (fixe, non réglable)
 
 #### Lyumjev
 
 ![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
+* profil d'insuline spécifique pour Lyumjev
 * DAI = au moins 5.0h
-* Pic peak = 45 minutes after injection (fixed, not adjustable)
+* Pic maxi = 45 minutes après l'injection (fixe, non réglable)
 
 #### Profil d'insuline ajustable Oref
 
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
-* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
-* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
+* Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. Pour cela, cliquez sur la roue crantée pour entrer dans les paramètres avancés.
+* La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
+* Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
 
 ## Source GLY
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Sélectionnez la source de glycémie que vous utilisez - consultez la page [Source Gly](BG-Source.rst) pour plus d'informations sur la configuration.
 
-![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
 
-* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
-* [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
+* [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* [Application Tomato](http://tomato.cool/) pour les transmetteurs MiaoMiao
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
-* Random BG: Generates random BG data (Demo mode only)
+* Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
 
 ## Pompe
 
-Select the pump you are using.
+Sélectionner la pompe que vous utilisez.
 
 ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
 
-* [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Korean (for domestic DanaR pump)
-* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
+* [DanaR](DanaR-Insulin-Pump.md)
+* DanaR coréenne (pour la pompe DanaR domestique)
+* DanaRv2 (pompe DanaR avec mise à niveau du firmware non officiel)
 * [Dana-i/RS](DanaRS-Insulin-Pump.md)
     
-    * For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
-    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+    * Pour les pompes Dana, utilisez **Paramètres avancés** pour activer le "Watchdog BT" si nécessaire. Il éteint le Bluetooth pendant une seconde si aucune connexion à la pompe n'est possible. Cela peut être utile sur certains téléphones où la puce bluetooth se bloque.
+    * [Le mot de passe pour les pompes Dana RS](../Configuration/DanaRS-Insulin-Pump.md) doit être entré correctement. Le mot de passe n'était vérifié dans les versions précédentes.
 
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (nécessite l'installation de ruffy)
 * [Omnipod Eros](OmnipodEros.rst)
 * [Omnipod Dash](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.rst)
-* MDI (receive AAPS suggestions for your multiple daily injections therapy)
-* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MIQ (Permet de recevoir des suggestions de AAPS pour des thérapies avec de Multiples Injection Quotidiennes)
+* Pompe virtuelle (boucle ouverte pour les pompes qui n'ont pas encore de pilote - suggestions AAPS uniquement)
 
 ## Estimation de Sensibilité
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Sélectionnez le type de calcul pour la sensibilité. Pour plus de détails sur la conception, veuillez [lire ceci](../Configuration/Sensitivity-detection-and-COB.md). Cela analysera les données historiques au fur et à mesure et fera des ajustements si elle détecte que vous réagissez de façon plus sensible (ou plus résistante) à l'insuline que d'habitude. Plus de détails sur l'algorithme de la Sensitibilité peuvent être lus dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sensibilité dans les paramètres du graphique et en observant la ligne blanche. Remarque, vous devez être à l'[Objectif 8](../Usage/Objectives#objectif-8-ajustement-des-debits-basal-et-des-ratios-si-necessaire-puis-activation-de-la-fonction-auto-sens) pour que la détection de sensibilité / [Autosens](../Usage/Open-APS-features#autosens) ajuste automatiquement la quantité d'insuline délivrée. Avant d'atteindre cet objectif, le poucentage Autosens ainsi que la ligne dans votre graphique ne sont affichés que pour information.
 
 ### Paramètres d’absorption
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
+Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbimpact** à 8. La valeur n'est utilisée que pendant les lacunes dans les lectures de CGM ou lorsque l'activité physique "utilise" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. Parfois, lorsque l'[absorption de glucides](../Usage/COB-calculation.rst) ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous pouvez afficher le détail actif de l'algorithme choisi dans l'onglet OpenAPS (OAPS).
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017) En termes simples, les avantages sont après un bolus de repas le système peut faire une temporaire haute plus rapidement SI vous entrez les glucides de manière fiable.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Boucle
@@ -253,35 +253,35 @@ Créez un bouton pour un repas standard (Glucides et méthode de calcul pour le 
 
 Remarque : Le bouton ne sera pas visible si vous êtes en dehors de la plage de temps spécifiée ou si vous avez suffisamment d'IA pour couvrir les glucides définis dans le bouton d'assistant rapide.
 
-![QuickWizard button](../images/ConfBuild_QuickWizard.png)
+![Bouton Assistant rapide](../images/ConfBuild_QuickWizard.png)
 
 #### Cibles Temporaires par défaut
 
-Choose default temp-targets (duration and target). Preset values are:
+Choisissez les cibles temporaires par défaut (durée et cible). Les valeurs prédéfinies sont :
 
-* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
-* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
-* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
+* Repas imminent : cible 72 mg/dl / 4,0 mmol/l, durée 45 min
+* Activité : cible 140 mg/dl / 7,8 mmol/l, durée 90 min
+* Hypo : cible 125 mg/dl / 6,9 mmol/l, durée 45 min
 
 #### Insuline par défaut pour Amorcer/Remplir
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+Choisissez la quantité par défaut des trois boutons de la boite de dialogue Amorcer/Remplir, selon la longueur de votre cathéter.
 
 #### Fourchette de visualisation
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choisissez les valeurs de glycémies hautes et basses du graphique principal sur l'écran d'accueil AndroidAPS et la montre. Il ne s'agit que de la visualisation, pas de la plage cible de votre glycémie. Par exemple : 70 - 180 mg/dl ou 3,9 - 10 mmol/l
 
 #### Raccourcir les titres des onglets
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choisissez si les titres des onglets dans AndroidAPS sont longs (ex: ACTIONS, PROFIL LOCAL, AUTOMATION) ou courts (ex: ACT, PL, AUTO)
 
 #### Affiche les notes dans les dialogues
 
-Choose if you want to have a notes field when entering treatments or not.
+Choisissez si vous voulez avoir un champ Notes lors de la saisie des traitements ou non.
 
 #### Voyants d'état
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferences#voyants-d-etat) sur l'écran d'accueil avec l'âge de la canule, l'âge du capteur, l'âge de la batterie, le niveau du réservoir ou de la batterie. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Paramètres Avancés
 
