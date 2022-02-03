@@ -12,7 +12,7 @@
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-αντλίες. Λεπτομέρειες σχετικές με την κατάσταση άλλων αντλιών που ενδέχεται να λειτουργήσουν με AndroidAPS εμφανίζονται στη σελίδα [Μελλοντικές (πιθανές) Αντλίες](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Εάν χρειάζεται να επιλέξετε μία αντλία για αναβάθμιση ή για αγορά, τότε συχνά, πολλοί ρωτούν ποια να επιλέξουν. Λεπτομέρειες για τους διάφορους προμηθευτές βρίσκονται σε [αυτή τη φόρμα ](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), παρακαλούμε να μοιραστείτε τα στοιχεία της δικής σας, εάν δεν είναι ήδη στη λίστα.
 
