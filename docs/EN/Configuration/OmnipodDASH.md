@@ -265,7 +265,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
    
 ![POD_MGMT_Icon](../images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
-![Silence_ALERTS_Icon](../images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+![ack_alert_logo](../images/DASH%20images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
    * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
