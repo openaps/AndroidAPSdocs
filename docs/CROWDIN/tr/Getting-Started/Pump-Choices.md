@@ -10,17 +10,17 @@ AndroidAPS şu anda aşağıdaki pompalarla çalışabilmektedir.
 * [Diaconn G8 ](../Configuration/DiaconnG8.rst)
 * [Omnipod Eros](../Configuration/OmnipodEros.rst)
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
-* some old [Medtronic](../Configuration/MedtronicPump.md)
+* Bazı eski [Medtronic](../Configuration/MedtronicPump.md)
 
 pompaları. AndroidAPS ile çalışma potansiyeline sahip olabilecek diğer pompaların durumlarının ayrıntıları [Gelecek (olası) Pompalar](Future-possible-Pump-Drivers.md) sayfasında listelenmiştir.
 
 Yükseltmek veya satın almak için bir pompa seçmeniz gerekiyorsa, insanlar genellikle hangisini seçeceklerini sorar. Çeşitli distribütörlerin ayrıntıları [bu e-tabloda](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0) yer almaktadır, henüz listelenmemişse lütfen bilgilerinizi paylaşın.
 
-Combo ve Insight, sağlam pompalardır ve döngüde kullanılabilir. The advantages of the DanaR/RS/-i as the pump of choice however are:
+Combo ve Insight, sağlam pompalardır ve döngüde kullanılabilir. Bununla birlikte, tercih edilen pompa olarak DanaR/RS/-i'nin avantajları şunlardır:
 
-* The Dana*R/RS/-i connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS/-i pumps as quick replacement... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
+* Dana*R/RS/-i, lineage yükleme gerektirmeden Android >= 5.1 olan hemen hemen her telefona bağlanır. Telefonunuz bozulursa, hızlıca Dana*R/RS pompalarıyla çalışan herhangi bir telefonu kolayca bulabilirsiniz... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
 
-* Initial pairing is simpler with the DanaRS/-i. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
+* DanaRS/-i ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
 
 * Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Yine de bağlantınız uzun zaman alabilir, bu nedenle BT bağlantısının kopabileceği yerlerde bağlantı için daha fazla zamana ihtiyaç var, bu da bolus yaparken veya yemek yerken telefonunuzdan uzaklaşırsanız o kadar kolay değil.
 
@@ -28,7 +28,7 @@ Combo ve Insight, sağlam pompalardır ve döngüde kullanılabilir. The advanta
 
 * RS'deki geçmişi birkaç saniyede karbonhidratla okumak, çevrimdışıyken telefonları kolayca değiştirmeyi ve bazı CGM değerleri girer girmez döngüye devam etmeyi mümkün kılar.
 
-* Insulet Omnipod Eros requires a pod communication device such as RileyLink/Orangelink etc. The newer omnipod DASH does not since it communicates with your phone directly via Bluetooth.
+* Insulet Omnipod Eros, RileyLink/Orangelink vb. gibi bir pod iletişim cihazı gerektirir. Daha yeni omnipod DASH, telefonunuzla doğrudan Bluetooth üzerinden iletişim kurduğu için gerek duymaz.
 
 * All pumps AndroidAPS can talk with are waterproof on delivery. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
 
