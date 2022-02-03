@@ -20,7 +20,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
-![Omnipod Pod](../images/DASH%20images/Omnipod_Pod.png)
+![Omnipod Pod](../images/DASH images/Omnipod_Pod.png)
 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
@@ -54,7 +54,7 @@ You can enable the Dash driver in AAPS in **two ways**:
 
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
 
-![Enable_Dash_1](../images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
+![Enable_Dash_1](../images/DASH images/Enable Dash/Enable_Dash_1.png)
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
 
@@ -68,13 +68,13 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
-![Enable_Dash_3](../images/DASH%20images/Enable%20Dash/Enable_Dash_3.png)
+![Enable_Dash_3](../images/DASH images/Enable Dash/Enable_Dash_3.png)
  
 ## Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
 
-![Enable_Dash_4](../images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
+![Enable_Dash_4](../images/DASH images/Enable Dash/Enable_Dash_4.jpg)
 
 # Dash Configuration
 
