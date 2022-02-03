@@ -12,7 +12,7 @@ AndroidAPS fonctionne actuellement avec les pompes
 * [Omnipod Dash](../Configuration/OmnipodDASH.md)
 * quelques anciennes [Medtronic](../Configuration/MedtronicPump.md)
 
-Les détails de l'état des autres pompes susceptibles de fonctionner avec AndroidAPS sont listés sur la page [Future pompes (possible)](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Si vous devez choisir une pompe pour une mise à niveau ou pour acheter, vous vous demandez souvent laquelle choisir. Les détails des différents distributeurs sont dans [ cette feuille de calcul ](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), veuillez partager les détails des vôtres s'ils ne sont pas déjà répertoriés.
 
