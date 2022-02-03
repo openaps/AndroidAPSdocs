@@ -20,7 +20,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
-![Omnipod Pod](https://github.com/Freloner/AndroidAPSdocs/blob/86d0eeb4b694f0267c533c1f1d72ac051435efa3/docs/images/DASH%20images/Omnipod_Pod.png)
+![Omnipod Pod](../images/DASH%20images/Omnipod_Pod.png)
 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
