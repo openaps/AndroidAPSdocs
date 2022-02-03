@@ -12,7 +12,7 @@ AndroidAPS šiuo metu veikia su
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-pompomis. Informaciją apie kitas pompas, kurios ilgainiui gali veikti su AndroidAPS, galite rasti puslapyje [Ateityje galimai naudojamos pompos](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Žmonės, kurie turi pasirinkti naują pompą, dažnai klausia, kurią pasirinkti. Išsamią informaciją apie įvairius platintojus galite rasti šioje [lentelėje](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Prašome užpildyti savo patirtį, jei jos dar nėra sąraše.
 
