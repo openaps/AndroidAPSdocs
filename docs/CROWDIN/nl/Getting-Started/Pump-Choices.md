@@ -12,7 +12,7 @@ AndroidAPS werkt momenteel met
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-pomp. Details over de status van andere pompen die mogelijk in de toekomst met AndroidAPS zullen werken, staan op de pagina met [mogelijk toekomstige insulinepompen](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De DanaRS is de opvolger van de DanaR. De Accuchek Combo en Insight zijn al langer verkrijgbaar in Nederland en België en veel mensen gebruiken deze pomp al. De Dana pompen horen in Nederland niet tot het standaard aanbod, maar zijn na toestemming van jouw arts en verzekeraar wel vanuit Duitsland te leveren. Bij het kiezen van een nieuwe pomp vragen veel mensen zich af voor welke ze zouden moeten kiezen. De verschillende leveranciers staan in [dit werkblad](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0).
 
