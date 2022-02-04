@@ -1,4 +1,4 @@
-# Yeni bir sürüme veya şubeye güncelleme
+# Update to a new version or branch
 
 ## Programı İndirmek yerine kendiniz oluşturun...
 
@@ -7,7 +7,7 @@
 ## Önemli notlar
 
 * Lütfen yeni bir sürüm çıktıktan sonra mümkün olan en kısa sürede güncelleyin. Yeni sürüm hakkında [AndroidAPS ana ekranında bilgi](../Installing-AndroidAPS/Releasenotes#release-notes) alacaksınız.
-* As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+* 2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
 * Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes) for the current version
@@ -29,7 +29,7 @@ See the [Export & import settings](../Usage/ExportImportSettings#export-settings
 
 ## 2. Update your local copy
 
-As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
 If you have already changed the URL or update from version 2.8.x, follow these steps:
 
