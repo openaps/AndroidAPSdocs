@@ -39,11 +39,11 @@ Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayacaktır; durum b
 
 **Podunuz, AndroidAPS'ye bağlı olmadığında insülin vermeyi durdurmaz**. Varsayılan bazal oranlar, geçerli etkin profilde tanımlandığı gibi etkinleştirme sırasında poda programlanır. AndroidAPS çalışır durumda olduğu sürece, maksimum 120 dakika boyunca çalışan bazal oran komutları gönderir. Herhangi bir nedenle pod herhangi bir yeni komut almadığında (örneğin, Pod - telefon mesafesi nedeniyle iletişimin kesilmesi) pod otomatik olarak varsayılan bazal oranlarına geri dönecektir.
 
-**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** **The AndroidAPS Profile does not support a 30 minute basal rate time frame** If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
+**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** **The AndroidAPS Profile does not support a 30 minute basal rate time frame** If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 birimlik bir bazal oranınız varsa, bu çalışmayacaktır. Bu 1,1 birim bazal oranını 9:00-11:00 veya 10:00-12:00 zaman aralığına değiştirmeniz gerekecektir. Omnipod Dash donanımının kendisi 30 dakikalık bazal oran profili artışlarını desteklese de, AndroidAPS şu anda algoritmalarıyla bunları hesaba katamıyor.
 
-# Enabling the Dash Driver in AAPS
+# AAPS'de Dash Sürücüsünü Etkinleştirme
 
-You can enable the Dash driver in AAPS in **two ways**:
+Dash sürücüsünü AAPS'de **iki şekilde** etkinleştirebilirsiniz:
 
 ## Option 1: New installations
 
