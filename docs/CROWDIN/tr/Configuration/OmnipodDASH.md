@@ -47,11 +47,11 @@ Dash sürücüsünü AAPS'de **iki şekilde** etkinleştirebilirsiniz:
 
 ## Option 1: New installations
 
-When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
+AndroidAPS'yi ilk kez kurarken, **Kurulum Sihirbazı**, AndroidAPS'yi yüklemeniz için size rehberlik edecektir. Pompa seçimine ulaştığınızda “DASH” seçeneğini seçin.
 
 ![Enable_Dash_1](../images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
+Şüphe duyduğunuzda, AndroidAPS'yi kurduktan sonra “Sanal Pompa”yı ve daha sonra “DASH”ı da seçebilirsiniz (bkz. seçenek 2).
 
 ## Seçenek 2: Konfigürasyon ayarları
 
