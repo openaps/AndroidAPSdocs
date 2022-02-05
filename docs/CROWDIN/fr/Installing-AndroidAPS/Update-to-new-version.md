@@ -35,50 +35,50 @@ Si vous avez déjà modifié l'URL ou ou que vous faite la mise à jour à parti
 
 * Ouvrez votre projet AndroidAPS existant avec Android Studio. Vous devrez peut-être sélectionner votre projet. (Double) cliquez sur le projet AndroidAPS.
     
-    ![Android Studio - Select Project](../images/update/01_ProjectSelection.png)
+    ![Android Studio - Sélectionnez un projet](../images/update/01_ProjectSelection.png)
 
-* In the menu bar of Android Studio, select Git -> Fetch
+* Dans la barre de menu d'Android Studio, sélectionnez Git -> Fetch
     
-    ![Android Studio Menu - Git - Fetch](../images/update/02_GitFetch.png)
+    ![Menu Android Studio - Git - Fetch](../images/update/02_GitFetch.png)
 
-* You will see a message in the lower right corner that Fetch was successful.
+* Vous verrez un message dans le coin inférieur droit indiquant que Fetch a réussi.
     
-    ![Android Studio Menu - Git - Fetch successful](../images/update/03_GitFetchSuccessful.png)
+    ![Menu Android Studio - Git - Fetch réussi](../images/update/03_GitFetchSuccessful.png)
 
-* In the menu bar, now select Git -> Pull
+* Dans la barre de menus, sélectionnez Git -> Pull
     
-    ![Android Studio Menu - Git - Pull](../images/update/04_GitPull.png)
+    ![Menu Android Studio - Git - Pull](../images/update/04_GitPull.png)
 
-* Leave all options as they are (origin/master) and select Pull
+* Laissez toutes les options telles qu'elles sont (origin/master) et sélectionnez Pull
     
-    ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
+    ![Android Studio fenêtre de dialogue - Git - Pull](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+* Attendez tant que le téléchargement est en cours, vous verrez ceci comme des informations dans la barre du bas. Une fois terminé, vous verrez un message de réussite. Note: Les fichiers qui ont été mis à jour peuvent varier ! Ce n'est pas une indication
     
-    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    ![Android Studio - Pull réussi](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+* Gradle Sync s'exécutera quelques secondes pour télécharger des dépendances. Patientez jusqu'à ce que ce soit fini.
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-## 3. Build the Signed APK
+## 3. Construisez l'APK signé
 
-* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+* Votre code source est maintenant la version actuelle publiée. Il est maintenant temps de construire l'apk signé comme c'est décrit dans la section [Générer un APK signé](../Installing-AndroidAPS/Building-APK#generer-un-apk-signe).
 
-## 4. Transfer the apk
+## 4. Transférez l'apk
 
-You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer. Consultez les instructions pour [Transférer le fichier APK sur le smartphone](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone)
 
 ## 5. Vérifier la version d'AAPS sur le téléphone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Après avoir installer le nouvel apk, vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos". Vous devriez voir la version actuelle en résultat.
 
 ![Version installée d'AAPS](../images/Update_VersionCheck282.png)
 
 # Résolution de problèmes
 
-If anything goes wrong, don't panic.
+Si quelque chose ne va pas, ne paniquez pas.
 
-Take a breath!
+Respirez un bon coup !
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Ensuite, consultez la page [de dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) pour voir si votre problème est déjà documenté !
