@@ -3,19 +3,19 @@ Mises à jour et modifications de la documentation
 
 Janvier 2022
 ==================================================
-* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+* `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ mise à jour @tanja
 
 Décembre 2021
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `Construire l'APK <../Installing-AndroidAPS/Building-APK.html>`_ - mettre à jour Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information ajoutée @MilosKozak
 
 Novembre 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Meilleures pratiques pour calibrer un `capteur libre 2 <../Hardware/Libre2.html#meilleures-pratiques-pour-calibrer-un-capteur-libre-2>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* Mise à jour `dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Suppression de l'appli `Dexcom patchée<../Hardware/DexcomG6.html>`_ car elle est obsolète
 
 Octobre 2021
 ==================================================
