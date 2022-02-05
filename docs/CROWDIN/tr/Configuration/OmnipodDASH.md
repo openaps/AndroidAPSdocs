@@ -107,129 +107,129 @@ Yeni podun ve AAPS yüklü telefonun birbirine yakın olduğundan emin olun ve *
 
 6. **Tamam**'a bastıktan sonra, Dash podunun yanıt vermesi ve kanülü yerleştirmesi biraz zaman alabilir (en fazla 1-2 dakika), bu yüzden sabırlı olun.
 
- *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. Bu iğnenin düzgün bir şekilde yerleştirilmesini sağlar ve tıkanıklık oluşturma şansınızı azaltır.*
+ *NOT: Kanül takılmadan önce, kanül yerleştirme noktasının etrafındaki cildi sıkıştırmak iyi bir uygulamadır. Bu iğnenin düzgün bir şekilde yerleştirilmesini sağlar ve tıkanıklık oluşturma şansınızı azaltır.*
 
 ![Activate_Pod_10](../images/DASH%20images/Activate%20Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH%20images/Activate%20Pod/Activate_Pod_11.jpg)
 
-7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+7. Başarılı bir kanül yerleştirilmesinden sonra yeşil bir onay işareti görünür ve **İleri** butonu aktif olur. **İleri** butonunu tıklayın.
 
 ![Activate_Pod_12](../images/DASH%20images/Activate%20Pod/Activate_Pod_12.jpg)
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Tebrikler! Artık yeni bir aktif pod oturumu başlattınız.
+9. **Pod etkinleştirildi** ekranı görüntülenir. Yeşil **Bitti** düğmesini tıklayın. Tebrikler! Artık yeni bir aktif pod oturumu başlattınız.
 
 ![Activate_Pod_13](../images/DASH%20images/Activate%20Pod/Activate_Pod_13.jpg)
 
-10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
+10. **Pod yönetimi** menüsünde şimdi **Pod Etkinleştir (1)** butonu <em x-id"3"=>devre dışı</em> olmalı ve **Pod'u Devre Dışı Bırak (2)** butonu *aktif olmalıdır.*. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    **DASH** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    Görüntülenen bilgilerle ilgili daha fazla ayrıntı için bu dokümantasyonun [**DASH Sekmesi**](#dash-tab) bölümüne gidin.
 
 ![Activate_Pod_14](../images/DASH%20images/Activate%20Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH%20images/Activate%20Pod/Activate_Pod_15.jpg)
 
-It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+Podu etkinleştirdikten SONRA ayarları dışa aktarmak akıllıca olacaktır. Bunu her pod değişikliğinde yapın ve ayda bir dışa aktarılan dosyayı internet sürücünüze (cloud) kopyalayın. [**Dışarı aktarma ayarları dokümantasyonuna bakabilirsiniz **](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
 
 ## Pod'u Devre Dışı Bırakma
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Normal koşullar altında, bir podun beklenen ömrü üç gündür. (72 saat) Pod sona erme uyarısından sonra ek 8 saattlik süre ile toplam 80 saat olabilir.
 
 Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolayı):
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. **DASH** sekmesine gidin, **POD YNTM (1)** butonunu tıklayın, **pod yönetimi** ekranında **Pod'u Devre Dışı Bırak (2)** butonunu tıklayın.
 
 ![Deactivate_Pod_1](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
+2. **Pod'u Devre Dışı Bırak** ekranında, podu devre dışı bırakma işlemini başlatmak için **İleri** butonunu tıklayın. Devre dışı bırakmanın başarılı olduğuna dair poddan bir onay bip sesi alacaksınız.
 
 ![Deactivate_Pod_3](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_4.jpg)
 
-3. Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Click on the **Next** button to display the pod deactivated screen. Etkin oturum devre dışı bırakıldığı için artık podunuzu kaldırabilirsiniz.
+3. Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Pod devre dışı ekranını görüntülemek için **İleri** butonunu tıklayın. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz.
 
 ![Deactivate_Pod_5](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+4. **Pod Yönetimi** ekranına dönmek için yeşil butona tıklayın.
 
 ![Deactivate_Pod_6](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
+5. Artık **Pod Yönetimi** menüsündesiniz; **DASH** sekmesine dönmek için telefonunuzdaki geri butonuna basın. **Pod durumu:** alanında bir **Aktif pod yok** mesajının görüntülendiğini doğrulayın.
 
 ![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
 
 ## İnsülin İletimini Sürdür
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Not**: Profil geçişleri sırasında dash, yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](#delivery-suspended) konusunu okuyun.
 
-Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra insülin, aktif bazal profilden geçerli zamana dayalı olarak mevcut bazal oranı kullanarak normal iletimi sürdürecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
+İletimi askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
-1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
+1. **DASH** sekmesine gidin ve **Pod durumu (1)** satırında **ASKIYA ALINDI** mesajının görünmesi gerekir, ardından mevcut podun normal insülin iletimini sürdürmesi talimatını vermek için **İLETİME DEVAM ET (2)** butonuna basın. **Pod Durumu (3)** satırında **İleme Devam Et** mesajı görüntülenir.
 
 ![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
 
-2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. İletimi sürdür komutu başarılı olduğunda, bir onay iletişim kutusu **İnsülin iletimi yeniden başlatıldı.** mesajını görüntüler. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
 
 ![Resume_3](../images/DASH%20images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
+3. **DASH** sekmesi, **Pod durumu (1)** satırını **ÇALIŞIYOR** olarak günceller ve **İletime Devam Et** butonu artık görüntülenmez.
 
 ![Resume_4](../images/DASH%20images/Resume/Resume_4.jpg)
 
-## Silencing Pod Alerts
+## Pod Uyarılarını Susturma
 
-*NOTE - The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
+*NOT - ALARMLARI SUSTUR butonu yalnızca **DASH** sekmesinde pod sona erme veya düşük rezervuar uyarısı tetiklendiğinde kullanılabilir. Alarmları Sustur butonu görünmüyorsa ve poddan bip sesleri duyuyorsanız, 'Pod durumunu yenilemeyi' deneyin.*
 
-The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+Aşağıdaki süreç, aktif 72 saatlik (3 gün) pod süresi sona ermeden önce uyarı süresi sınırına ulaştığında pod bip seslerini nasıl onaylayacağınızı ve kapatacağınızı gösterecektir. Bu uyarı zaman sınırı, Dash uyarıları ayarında **Kapanmadan kaç saat önce?** satırında tanımlanır. Bir pod'un maksimum ömrü 80 saattir (3 gün 8 saat), ancak Insulet 72 saat (3 gün) sınırının aşılmamasını önermektedir.
 
-1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
+1. Tanımlanan **Kapanmadan kaç saat önce?** uyarı süresi sınırına ulaşıldığında, pod sona erme zamanına yaklaştığını size bildirmek için uyarı bip sesleri çıkaracak ve yakında pod değişikliği gerekecektir. Bunu **DASH** sekmesinde doğrulayabilirsiniz, **Pod Sona Erme: (1)** satırı tam zamanı gösterecektir. Pod'un süresi dolar (etkinleştirmeden 72 saat sonra) ve bu süre geçerse metin **kırmızı** olacaktır. **Etkin pod alarmları (2)** satırında, **Pod'un süresi yakında dolacak** durum mesajı görüntülenir. Bu aynı zamanda **ALARMLARI SUSTUR (3)** butonunun görüntülenmesini de tetikler.
 
 ![ACK_alerts_1](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_1.png)
 
-2. Go to the **DASH** tab and press the **SILENCE ALERTS (2)** button . AAPS sends the command to the pod to deactivate the pod expiration warning beeps and updates the **Pod status (1)** field with **ACKNOWLEDGE ALERTS**.
+2. **DASH** sekmesine gidin ve **ALARMLARI SUSTUR (2)** butonuna basın. AAPS, pod sona erme uyarı bip seslerini devre dışı bırakmak için pod'a komutu gönderir ve **Pod durumu (1)** satırını **BİLİNEN UYARILAR ** olarak günceller.
 
 ![ACK_alerts_2](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_2.png)
 
-3. Upon **successful deactivation** of the alerts, **2 beeps** will be issued by the active pod and a confirmation dialog will display the message **Activate alerts have been Silenced**. Click the **OK** button to confirm and dismiss the dialog.
+3. Uyarıların **başarıyla devre dışı bırakılması** üzerine, etkin pod tarafından **2 bip** sesi verilir ve bir onay iletişim kutusunda **Etkin alarmlar susturuldu.** mesajı görüntülenir. İletişim kutusunu onaylamak ve kapatmak için **Tamam** butonunu tıklayın.
 
 
 ![ACK_alerts_3](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **Omnipod (POD)** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
+4. **DASH** sekmesine gidin. **Etkin Pod Alarmları** satırında, uyarı mesajı artık görüntülenmez ve etkin pod artık sona erme uyarısı bip sesi vermez.
 
 ## Pod Geçmişini Görüntüle
 
-Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
+Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. Pod geçmişi aracı, üç günlük (72 - 80 saat) ömrü boyunca şu anda etkin olan pod'unuza yönelik eylemleri ve sonuçları görüntülemenize olanak tanır.
 
-This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
+Bu özellik, pod'a gönderilen bolusların, GBO'larin ve bazal komutların doğrulanmasında yardımcı olur. Kalan kategoriler, genel olarak sorunları gidermek ve bir arızaya yol açan olayların sırasını belirlemek için kullanışlıdır.
 
-*NOTE:* **Only the last command can be uncertain**. New commands *will not be sent* until the **last 'uncertain' command becomes 'confirmed' or 'denied'**. The way to 'fix' uncertain commands is to **'refresh pod status'**.
+*NOT:* **Yalnızca son komut belirsiz olabilir**. **son 'belirsiz' komut 'onaylanan' veya 'reddedilen'** olana kadar yeni komutlar *gönderilmeyecektir*. Belirsiz komutları 'düzeltmenin' yolu, **'pod durumunu yenilemek'**tir.
 
-1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. **DASH** sekmesine gidin ve **POD YNTM (1)** butonuna basarak **Pod Yönetimi** menüsüne gidin ve ardından pod geçmişi ekranına erişmek için **Pod geçmişi (2)** butonuna basın.
 
 ![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_2.jpg)
 
-2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
+2. **Pod geçmişi ** ekranında, **All (1)** (Tümü) varsayılan kategorisi ile tüm pod **Eylemleri (3)** ve **Sonuçları (4)** **Tarih ve Saat (2)** ters kronolojik sırada görüntülenir. Ana AAPS arayüzünde **DASH** sekmesine dönmek için telefonunuzun **geri butonunu 2 kez** kullanın.
 
 
 ![Pod_history_3](../images/DASH%20images/Pod%20History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH%20images/Pod%20History/Pod_history_4.jpg)
 
-# DASH Tab
+# DASH Sekmesi
 
-Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
+Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum satırlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
 
-*NOTE: If any message in the **DASH** tab status fields report (uncertain), then you will need to press the Refresh button to clear it and refresh the pod status.*
+*NOT: **DASH** sekmesi durum satırları raporunda herhangi bir mesaj varsa (belirsiz), bunu temizlemek ve pod durumunu yenilemek için Yenile butonuna basmanız gerekir.*
 
 ![DASH_Tab_1](../images/DASH%20images/DASH%20Tab/DASH_Tab_1.png)
 
 ## Alanlar
 
-* **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
-* **Bluetooth Status:** Displays the current connection status.
-* **Sequence Number:** Displays the sequence number of the active POD.
-* **Firmware Version:** Displays the firmware version for the active connection.
-* **Time on Pod:** Displays the current time on the Pod.
-* **Pod expires:** Displays the date and time when the Pod will expire.
-* **Pod status:** Displays the Pod status.
-* **Last connection:** Displays time of last communication with the Pod.
+* **Bluetooth Adresi:** Bağlı Pod'un mevcut bluetooth adresini görüntüler.
+* **Bluetooth Durumu:** Mevcut bağlantı durumunu görüntüler.
+* **Sıra Numarası:** Etkin POD'un sıra numarasını görüntüler.
+* **Firmware Versiyonu:** Etkin bağlantının firmware sürümünü görüntüler.
+* **Pod üzerindeki zaman:** Bölmedeki geçerli saati görüntüler.
+* **Pod Sona Erme:** Pod'un süresinin dolacağı tarih ve saati görüntüler.
+* **Pod durumu:** Pod durumunu görüntüler.
+* **Son bağlantı:** Pod ile son iletişimin zamanını görüntüler.
 
    - *Moments ago* - less than 20 seconds ago.
    - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
