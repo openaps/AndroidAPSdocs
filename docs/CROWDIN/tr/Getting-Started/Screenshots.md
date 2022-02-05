@@ -252,8 +252,8 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### CGM
 
-* Opens xDrip+.
-* Back button returns to AAPS.
+* xDrip+ açmak.
+* Geri düğmesi AAPS'e döner.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### Quick Wizard
