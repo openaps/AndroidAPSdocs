@@ -13,7 +13,7 @@ Décembre 2021
 Novembre 2021
 ==================================================
 * Meilleures pratiques pour calibrer un `capteur libre 2 <../Hardware/Libre2.html#meilleures-pratiques-pour-calibrer-un-capteur-libre-2>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
+* `SI <../Getting-Started/FAQ.html#impact>`_ reformulation de l'impact
 * Mise à jour `dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Suppression de l'appli `Dexcom patchée<../Hardware/DexcomG6.html>`_ car elle est obsolète
 
