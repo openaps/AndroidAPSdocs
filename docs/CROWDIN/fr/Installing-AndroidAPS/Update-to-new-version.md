@@ -14,18 +14,18 @@
 
 ## Overview for updating your AndroidAPS version
 
-1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
-2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+1. [Exporter les paramètres](../Usage/ExportImportSettings#exporter-les-parametres) à partir de la version AAPS existante sur votre téléphone. Vous n'en avez peut-être pas besoin, mais mieux vaut les sauver que regretter de ne pas l'avoir fait.
+2. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version#mettez-a-jour-votre-copie-locale) des fichiers sources d'AndroidAPS (Git -> Fetch et Git -> Pull)
 3. [Générer un APK signé](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
-4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
-5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
+4. [Transférez l'apk généré](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone) sur votre téléphone et installez le
+5. [Vérifier la version](#verifier-la-version-d-aaps-sur-le-telephone) dans AndroidAPS
+6. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip#identifier-le-recepteur) dans xDrip+ ou utilisez l'application [BYODA (Construisez votre propre application Dexcom)](../Hardware/DexcomG6.html#si-vous-utilisez-g6-avec-votre-propre-application-dexcom).
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Dans le cas où vous auriez des problèmes, allez voir la page spécifique de [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 
-## 1. Export your settings
+## 1. Exporter les paramètres
 
-See the [Export & import settings](../Usage/ExportImportSettings#export-settings) page if you don't remember how to do this.
+Allez voir la page [Exporter & importer les paramètres](../Usage/ExportImportSettings#exporter-les-parametres) si vous ne vous souvenez plus comment faire.
 
 ## 2. Mettez à jour votre copie locale
 
