@@ -12,7 +12,7 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings#export-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
 8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
