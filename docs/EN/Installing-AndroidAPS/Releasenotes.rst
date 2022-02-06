@@ -95,8 +95,6 @@ Changes
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
 
-
-
 Version 2.8.2
 ================
 Release date: 23-01-2021
