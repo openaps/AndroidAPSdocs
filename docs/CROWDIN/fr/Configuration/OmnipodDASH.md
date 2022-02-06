@@ -1,29 +1,29 @@
 # Omnipod Dash
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 3.0.
+Ces instructions sont pour configurer la pompe de génération **Omnipod DASH** **(et pas Omnipod Eros)**. Le pilote Omnipod est disponible dans AndroidAPS (AAPS) depuis la version 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
+**Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-# Omnipod DASH specifications
+# Spécifications de DASH Omnipod
 
-These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
+Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **Omnipod EROS**:
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
-* No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT LE connection only when needed
-* No more "no connection to link device / pod" errors
-* AAPS will wait for pod accessibility to send commands
-* On activation, AAPS will find and connect a new DASH pod.
-* Expected range: 5-10 meters (YMMV)
+* Les pompes DASH sont identifiées par un bouchon d'aiguille bleue (EROS a un bouchon d'aiguille clair). Les pods sont par ailleurs identiques en termes de dimensions physiques
+* Pas besoin d'un dispositif de liaison Omnipod / pont BLE séparé (pas de RileyLink, OrangeLink ou EmaLink nécessaires).
+* Connexion BT LE uniquement lorsque nécessaire
+* Plus aucune erreur du type "aucune connexion au périphérique / pod"
+* AAPS attendra l'accessibilité du pod pour envoyer des commandes
+* Lors de l'activation, AAPS trouvera et se connectera à un nouveau pod DASH.
+* Distance usuelle : 5-10 mètres (selon les téléphones)
 
-# Hardware/Software Requirements
+# Configuration matérielle et logicielle requise
 
-* A new **Omnipod DASH Pod** (Identified by blue needle cap)
+* Un nouveau pod **Omnipod DASH** (identifié par un bouchon d'aiguille bleu)
 
 ![Omnipod Pod](../images/DASH%20images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection
-   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+* **Un téléphone Android compatible** avec une connexion Bluetooth BLE
+   -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné)
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
