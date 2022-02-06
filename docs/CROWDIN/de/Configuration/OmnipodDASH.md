@@ -1,8 +1,8 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 3.0.
+These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 3.0 verfügbar.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
+**Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 # Omnipod DASH specifications
 
