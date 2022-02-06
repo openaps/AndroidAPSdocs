@@ -35,6 +35,8 @@ Android 7
 * Usar la versión de AAPS **2.6.2**
 * Descargar el código fuente de AAPS desde https://github.com/MilosKozak/AndroidAPS
 
+Version 3.0.0
+================
 Release date: 31-01-2022
 
 Notas importantes
@@ -43,12 +45,13 @@ Notas importantes
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
 
+**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+
 Pasos de preparación
 ----------------------
 **Al menos dos días antes de la actualización:**
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
-
 * Si estás usando G5/G6 cambia a BYODA (recomendado) - Puedes usar xDrip+, pero no como recolector (xDrip+ puede recibir datos desde BYODA) o actualizar xDrip+ a la última versión.
 
 
@@ -71,8 +74,8 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde Nightscout usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
-* Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
 * New automation Careportal action @Philoul
@@ -91,8 +94,6 @@ Cambios
    * /AAPS/extra (modo ingeniearía) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
-
-
 
 Versión 2.8.2
 ================
