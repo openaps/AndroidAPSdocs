@@ -12,7 +12,7 @@ AndroidAPS funktioniert derzeit mit
 * [Omnipod DASH](../Configuration/OmnipodDASH.md)
 * some old [Medtronic](../Configuration/MedtronicPump.md)
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+Informationen über weitere Pumpen, die möglicherweise irgendwann mit AndroidAPS funktionieren, findest du auf der Seite [Zukünftig ggf. loopbare Pumpen](Future-possible-Pump-Drivers.md).
 
 Leute, die sich für eine neue Pumpe entscheiden müssen, fragen oft, für welche sie sich entscheiden sollen. Details zu den verschiedenen Distributoren findest du [in dieser Tabelle](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Ergänze bitte deine eigenen Erfahrungen, wenn sie nicht bereits aufgeführt sind.
 
@@ -30,6 +30,6 @@ Die Combo und die Insight sind solide Pumpen und loopbar. The advantages of the 
 
 * Insulet Omnipod Eros requires a pod communication device such as RileyLink/Orangelink etc. The newer omnipod DASH does not since it communicates with your phone directly via Bluetooth.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
+* Alle Pumpen, die AndroidAPS unterstützt, sind (jedenfalls bei Auslieferung) wasserdicht. Nur die DanaR/Rs garantiert auch während der Nutzung Wasserdichtigkeit durch das abgedichtete Batteriefach und das Reservoir-System.
 
 Die Combo ist natürlich eine sehr gute Pumpe. Sie hat auch den Vorteil, dass die Auswahl an Kathetern wegen des Standard Luer-Lock-Anschlusses groß ist. Und sie verwendet Standard-Batterien, die rund um die Uhr an jeder Tankstelle erhältlich sind. Im Notfall kannst du sie sogar aus der Fernbedienung in deinem Hotelzimmer "ausleihen" ;-)
