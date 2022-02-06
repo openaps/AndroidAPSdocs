@@ -46,7 +46,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 1. Click 3-dots-menu in upper right corner.
 2. Select 'Treatments'.
 3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and ress "Clone".
+4. Select the desired profile switch and press "Clone".
 5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
 ![Fazer Mudança De Perfil](../images/LocalProfile_ClonePS_AAPS30.png)
