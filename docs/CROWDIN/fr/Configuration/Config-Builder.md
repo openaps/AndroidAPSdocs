@@ -46,7 +46,7 @@ Vous pouvez facilement créer un profil local à partir d'un changement de profi
 1. Cliquez sur le menu 3 points en haut à droite de l'écran d'accueil.
 2. Sélectionnez 'Traitements'.
 3. Cliquez sur l'icone en forme d'étoile pour accéder à la page de changement de profil.
-4. Sélectionnez le changement de profil souhaité et appuyez sur "Dupliquer".
+4. Select the desired profile switch and press "Clone".
 5. Vous pouvez éditer le nouveau profil local dans l'onglet Profil local (PL) ou via le menu hamburger.
 
 ![Dupliquer un changement de profil](../images/LocalProfile_ClonePS_AAPS30.png)
