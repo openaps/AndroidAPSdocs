@@ -29,6 +29,7 @@
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
+* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
 
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
