@@ -50,6 +50,7 @@ Für weitere Details lies bitte hier weiter.
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
    Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installation git <./Installing-AndroidAPS/git-install.rst>
    Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
