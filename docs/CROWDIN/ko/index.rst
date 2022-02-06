@@ -50,6 +50,7 @@ For more details, please read on here.
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
