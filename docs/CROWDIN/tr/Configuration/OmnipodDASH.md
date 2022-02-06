@@ -20,11 +20,11 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 
 * Yeni bir **Omnipod DASH Pod** (Mavi iğne kapağıyla anlaşılır)
 
-![Omnipod Pod](../images/DASH%20images/Omnipod_Pod.png)
+![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
    -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Lütfen [**DASH Test Edilen telefonları**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) kontrol edin veya sadece telefonunuzla deneyin ve sonucu bize bildirin (telefon referansı ve coğrafi bölge, Android sürümü, çalıştı / bazı zorluklar / çalışmadı)
-   -  [**APK Derle**](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html#) talimatları kullanılarak **AndroidAPS'nin 3.0 veya daha yeni sürümü derleyin ve yükleyin**.
+   -  [**APK Derle**](../Installing-AndroidAPS/Building-APK.html#) talimatları kullanılarak **AndroidAPS'nin 3.0 veya daha yeni sürümü derleyin ve yükleyin**.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayacaktır; durum böyle değilse, lütfen sabırlı olun ve bir sonraki pod değişikliğinizde bu işleme başlayın.
@@ -49,7 +49,7 @@ Dash sürücüsünü AAPS'de **iki şekilde** etkinleştirebilirsiniz:
 
 AndroidAPS'yi ilk kez kurarken, **Kurulum Sihirbazı**, AndroidAPS'yi yüklemeniz için size rehberlik edecektir. Pompa seçimine ulaştığınızda “DASH” seçeneğini seçin.
 
-![Enable_Dash_1](../images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
+![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
 Şüphe duyduğunuzda, AndroidAPS'yi kurduktan sonra “Sanal Pompa”yı ve daha sonra “DASH”ı da seçebilirsiniz (bkz. seçenek 2).
 
@@ -63,61 +63,63 @@ Sol üst köşede **hamburger menüsü** seçilip **Konfigürasyon ayarları (1)
 
 **NOT:** [**Dash ayarlarına**](#dash-settings) erişmenin daha hızlı bir yolunu, aşağıda bu dokümantasyonun Dash ayarları kısmında bulabilirsiniz.
 
-![Enable_Dash_3](../images/DASH%20images/Enable%20Dash/Enable_Dash_3.png)
+![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
 ## Omnipod Sürücü Seçiminin Doğrulanması
 
 Eğer kutucuğu (4) işaretlediyseniz, AAPS'de Dash pompasını etkinleştirdiğinizi doğrulamak için, **Giriş** sekmesinde **sola kaydırarak** **DASH** sekmesine ulaşmanız gerekir. Kutucuğu işaretlemediyseniz, sol üstteki hamburger menüsünde pompalar kısmında DASH satırında bulacaksınız.
 
-![Enable_Dash_4](../images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
+![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
 # Dash Konfigürasyonu
 
 Lütfen **sola kaydırıp** tüm pod işlevlerini yönetebileceğiniz **DASH** sekmesine ulaşın.(bu işlevlerden bazıları etkin bir pod oturumu olmadan etkinleştirilmez veya görünmez):
 
-![Refresh_LOGO](../images/DASH%20images/Refresh_LOGO.png) Pod bağlantısını ve durumunu yenileyin, pod bip sesleri pod alarmlarında susturabilir.
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
-![POD_MGMT_LOGO](../images/DASH%20images/POD_MGMT_LOGO.png) Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal ve Pod geçmişi)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal ve Pod geçmişi)
 
 ## Pod Etkinleştirme
 
 1. **DASH** sekmesine gidin. **POD YNTM (1)** butonuna ve ardından **Pod Etkinleştir (2) **butonuna tıklayın.
 
-![Activate_Pod_1](../images/DASH%20images/Activate%20Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH%20images/Activate%20Pod/Activate_Pod_2.png)
+![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 birim insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave 3-10 ünite kullanacağını lütfen göz önünde bulundurun.
+2. **Podu Doldur** ekranı görüntülenir. Yeni bir podu en az 80 ünite insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave 3-10 ünite kullanacağını lütfen göz önünde bulundurun.
 
-![Activate_Pod_3](../images/DASH%20images/Activate%20Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH%20images/Activate%20Pod/Activate_Pod_4.jpg)
+![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
 Yeni podun ve AAPS yüklü telefonun birbirine yakın olduğundan emin olun ve **İleri** butonunu tıklayın.
 
+**NOT**: Aşağıdaki hata mesajını almanız durumunda (bu olabilir), panik yapmayın. **TEKRAR DENE** butonunu tıklayın. Çoğu durumda etkinleştirme başarıyla devam eder.
+
+![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
+
 3. **Pod'u Başlat** ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız).  Başarılı kullanıma hazırlamanın ardından yeşil bir onay işareti gösterilecek ve **İleri** butonu aktif olacaktır. Pod hazırlama işlemini tamamlamak ve **Pod Ekle** ekranını görüntülemek için **İleri** butonunu tıklayın.
 
-**NOT**: Burada bir hata mesajı alırsanız (bu olabilir), panik yapmayın. **TEKRAR DENE** butonunu tıklayın. Çoğu durumda etkinleştirme başarıyla devam eder.
-
-![Activate_Pod_5](../images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
+![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
 4. Ardından, yeni podun infüzyon bölgesini hazırlayın. Podun plastik iğne kapağını çıkarın. Poddan dışarı çıkan bir şey görürseniz, işlemi iptal edin ve yeni bir pod ile başlayın. Her şey yolunda görünüyorsa, yapışkanın arkasındaki beyaz kağıdı çıkarın ve podu vücudunuzdaki seçtiğiniz bölgeye uygulayın. Bitirdiğinizde, **İleri** butonunu tıklayın.
 
-![Activate_Pod_8](../images/DASH%20images/Activate%20Pod/Activate_Pod_8.jpg)
+![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
 5. **Pod Ekle** iletişim kutusu şimdi görünecektir. **Kanülü vücudunuza yerleştirmeye hazırsanız Tamam düğmesini tıklayın**.
 
-![Activate_Pod_9](../images/DASH%20images/Activate%20Pod/Activate_Pod_9.jpg)
+![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
 6. **Tamam**'a bastıktan sonra, Dash podunun yanıt vermesi ve kanülü yerleştirmesi biraz zaman alabilir (en fazla 1-2 dakika), bu yüzden sabırlı olun.
 
  *NOT: Kanül takılmadan önce, kanül yerleştirme noktasının etrafındaki cildi sıkıştırmak iyi bir uygulamadır. Bu iğnenin düzgün bir şekilde yerleştirilmesini sağlar ve tıkanıklık oluşturma şansınızı azaltır.*
 
-![Activate_Pod_10](../images/DASH%20images/Activate%20Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH%20images/Activate%20Pod/Activate_Pod_11.jpg)
+![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
 7. Başarılı bir kanül yerleştirilmesinden sonra yeşil bir onay işareti görünür ve **İleri** butonu aktif olur. **İleri** butonunu tıklayın.
 
-![Activate_Pod_12](../images/DASH%20images/Activate%20Pod/Activate_Pod_12.jpg)
+![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
 9. **Pod etkinleştirildi** ekranı görüntülenir. Yeşil **Bitti** düğmesini tıklayın. Tebrikler! Artık yeni bir aktif pod oturumu başlattınız.
 
-![Activate_Pod_13](../images/DASH%20images/Activate%20Pod/Activate_Pod_13.jpg)
+![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
 10. **Pod yönetimi** menüsünde şimdi **Pod Etkinleştir (1)** butonu <em x-id"3"=>devre dışı</em> olmalı ve **Pod'u Devre Dışı Bırak (2)** butonu *aktif olmalıdır.*. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
 
@@ -125,7 +127,7 @@ Yeni podun ve AAPS yüklü telefonun birbirine yakın olduğundan emin olun ve *
 
     Görüntülenen bilgilerle ilgili daha fazla ayrıntı için bu dokümantasyonun [**DASH Sekmesi**](#dash-tab) bölümüne gidin.
 
-![Activate_Pod_14](../images/DASH%20images/Activate%20Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH%20images/Activate%20Pod/Activate_Pod_15.jpg)
+![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 Podu etkinleştirdikten SONRA ayarları dışa aktarmak akıllıca olacaktır. Bunu her pod değişikliğinde yapın ve ayda bir dışa aktarılan dosyayı internet sürücünüze (cloud) kopyalayın. [**Dışarı aktarma ayarları dokümantasyonuna bakabilirsiniz **](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
@@ -138,41 +140,41 @@ Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolay�
 
 1. **DASH** sekmesine gidin, **POD YNTM (1)** butonunu tıklayın, **pod yönetimi** ekranında **Pod'u Devre Dışı Bırak (2)** butonunu tıklayın.
 
-![Deactivate_Pod_1](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_2.png)
+![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
 2. **Pod'u Devre Dışı Bırak** ekranında, podu devre dışı bırakma işlemini başlatmak için **İleri** butonunu tıklayın. Devre dışı bırakmanın başarılı olduğuna dair poddan bir onay bip sesi alacaksınız.
 
-![Deactivate_Pod_3](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_4.jpg)
+![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
 3. Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Pod devre dışı ekranını görüntülemek için **İleri** butonunu tıklayın. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz.
 
-![Deactivate_Pod_5](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_5.jpg)
+![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
 4. **Pod Yönetimi** ekranına dönmek için yeşil butona tıklayın.
 
-![Deactivate_Pod_6](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_6.jpg)
+![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
 5. Artık **Pod Yönetimi** menüsündesiniz; **DASH** sekmesine dönmek için telefonunuzdaki geri butonuna basın. **Pod durumu:** alanında bir **Aktif pod yok** mesajının görüntülendiğini doğrulayın.
 
-![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
 ## İnsülin İletimini Sürdür
 
 **Not**: Profil geçişleri sırasında dash, yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](#delivery-suspended) konusunu okuyun.
 
-İletimi askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
+Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra insülin, aktif bazal profilden geçerli zamana dayalı olarak mevcut bazal oranı kullanarak normal iletimi sürdürecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
 1. **DASH** sekmesine gidin ve **Pod durumu (1)** satırında **ASKIYA ALINDI** mesajının görünmesi gerekir, ardından mevcut podun normal insülin iletimini sürdürmesi talimatını vermek için **İLETİME DEVAM ET (2)** butonuna basın. **Pod Durumu (3)** satırında **İleme Devam Et** mesajı görüntülenir.
 
-![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
+![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
 2. İletimi sürdür komutu başarılı olduğunda, bir onay iletişim kutusu **İnsülin iletimi yeniden başlatıldı.** mesajını görüntüler. Onaylamak ve devam etmek için **Tamam**'ı tıklayın.
 
-![Resume_3](../images/DASH%20images/Resume/Resume_3.png)
+![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
 3. **DASH** sekmesi, **Pod durumu (1)** satırını **ÇALIŞIYOR** olarak günceller ve **İletime Devam Et** butonu artık görüntülenmez.
 
-![Resume_4](../images/DASH%20images/Resume/Resume_4.jpg)
+![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
 ## Pod Uyarılarını Susturma
 
@@ -182,16 +184,16 @@ Aşağıdaki süreç, aktif 72 saatlik (3 gün) pod süresi sona ermeden önce u
 
 1. Tanımlanan **Kapanmadan kaç saat önce?** uyarı süresi sınırına ulaşıldığında, pod sona erme zamanına yaklaştığını size bildirmek için uyarı bip sesleri çıkaracak ve yakında pod değişikliği gerekecektir. Bunu **DASH** sekmesinde doğrulayabilirsiniz, **Pod Sona Erme: (1)** satırı tam zamanı gösterecektir. Pod'un süresi dolar (etkinleştirmeden 72 saat sonra) ve bu süre geçerse metin **kırmızı** olacaktır. **Etkin pod alarmları (2)** satırında, **Pod'un süresi yakında dolacak** durum mesajı görüntülenir. Bu aynı zamanda **ALARMLARI SUSTUR (3)** butonunun görüntülenmesini de tetikler.
 
-![ACK_alerts_1](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_1.png)
+![ACK_alerts_1](../images/DASH_images/ACK_Alerts/ACK_ALERTS_1.png)
 
 2. **DASH** sekmesine gidin ve **ALARMLARI SUSTUR (2)** butonuna basın. AAPS, pod sona erme uyarı bip seslerini devre dışı bırakmak için pod'a komutu gönderir ve **Pod durumu (1)** satırını **BİLİNEN UYARILAR ** olarak günceller.
 
-![ACK_alerts_2](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_2.png)
+![ACK_alerts_2](../images/DASH_images/ACK_Alerts/ACK_ALERTS_2.png)
 
 3. Uyarıların **başarıyla devre dışı bırakılması** üzerine, etkin pod tarafından **2 bip** sesi verilir ve bir onay iletişim kutusunda **Etkin alarmlar susturuldu.** mesajı görüntülenir. İletişim kutusunu onaylamak ve kapatmak için **Tamam** butonunu tıklayın.
 
 
-![ACK_alerts_3](../images/DASH%20images/ACK%20Alerts/ACK_ALERTS_3.png)
+![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
 4. **DASH** sekmesine gidin. **Etkin Pod Alarmları** satırında, uyarı mesajı artık görüntülenmez ve etkin pod artık sona erme uyarısı bip sesi vermez.
 
@@ -205,12 +207,12 @@ Bu özellik, pod'a gönderilen bolusların, GBO'larin ve bazal komutların doğr
 
 1. **DASH** sekmesine gidin ve **POD YNTM (1)** butonuna basarak **Pod Yönetimi** menüsüne gidin ve ardından pod geçmişi ekranına erişmek için **Pod geçmişi (2)** butonuna basın.
 
-![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH_images/Pod_History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH_images/Pod_History/Pod_history_2.jpg)
 
 2. **Pod geçmişi ** ekranında, **All (1)** (Tümü) varsayılan kategorisi ile tüm pod **Eylemleri (3)** ve **Sonuçları (4)** **Tarih ve Saat (2)** ters kronolojik sırada görüntülenir. Ana AAPS arayüzünde **DASH** sekmesine dönmek için telefonunuzun **geri butonunu 2 kez** kullanın.
 
 
-![Pod_history_3](../images/DASH%20images/Pod%20History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH%20images/Pod%20History/Pod_history_4.jpg)
+![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
 # DASH Sekmesi
 
@@ -218,7 +220,7 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 
 *NOT: **DASH** sekmesi durum satırları raporunda herhangi bir mesaj varsa (belirsiz), bunu temizlemek ve pod durumunu yenilemek için Yenile butonuna basmanız gerekir.*
 
-![DASH_Tab_1](../images/DASH%20images/DASH%20Tab/DASH_Tab_1.png)
+![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
 ## Alanlar
 
@@ -231,43 +233,43 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 * **Pod durumu:** Pod durumunu görüntüler.
 * **Son bağlantı:** Pod ile son iletişimin zamanını görüntüler.
 
-   - *Moments ago* - less than 20 seconds ago.
-   - *Less than a minute ago* - more than 20 seconds but less than 60 seconds ago.
-   - *1 minute ago* - more than 60 seconds but less than 120 seconds (2 min)
-   - *XX minutes ago* - more than 2 minutes ago as defined by the value of XX
+   - *Biraz önce* - 20 saniyeden kısa bir süre önce.
+   - *Bir dakikadan kısa bir süre önce* - 20 saniyeden uzun, ancak 60 saniyeden kısa bir süre önce.
+   - *1 dakika önce* - 60 saniyeden uzun ancak 120 saniyeden kısa (2 dakika)
+   - *XX dakika önce* - XX değeriyle tanımlanan 2 dakikadan daha uzun bir süre önce
 
-* **Last bolus:** Displays the amount of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
-* **Base Basal rate:** Displays the basal rate programmed for the current time from the basal rate profile.
-* **Temp basal rate:** Displays the currently running Temporary Basal Rate in the following format
+* **Son bolus:** Etkin pod'dan gönderilen son bolus miktarını ve ne kadar süre önce verildiğini parantez içinde görüntüler.
+* **Bazal oranı:** Bazal oran profilinden geçerli zaman için programlanmış bazal oranı görüntüler.
+* **Geçici bazal oranı:** Şu anda çalışmakta olan Geçici Bazal Oranı aşağıdaki biçimde görüntüler
 
    - {Units per hour} @{TBR start time}  ({minutes run}/{total minutes TBR will be run})
-   - *Example:* 0.00U/h @18:25 ( 90/120 minutes)
+   - *Örnek:* 0,00Ü/s @18:25 ( 90/120 dakika)
 
-* **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
-* **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-* **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod.
+* **Rezervuar:** Rezervuarda 50 üniteden fazla insülin olduğuda 50+Ü'den fazla kalanı gösterir. 50 Ü'nin altında, tam birimler görüntülenir.
+* **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. Bu miktar etkinleştirme ve hazırlama için kullanılan insülini de içerir.
+* **Hatalar:** Karşılaşılan son hatayı görüntüler. Geçmiş hatalar ve daha ayrıntılı bilgiler için [Pod geçmişini](#view-pod-history) ve günlük dosyalarını inceleyin.
+*  **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır.
 
 ## Butonlar
 
 
-![Refresh_Icon](../images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
 
-![POD_MGMT_Icon](../images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
-![Silence_ALERTS_Icon](../images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
    * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
 
-![RESUME_Icon](../images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
 
 ## Pod Yönetim Menüsü
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH%20images/DASH%20Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH%20images/DASH%20Tab/DASH_Tab_3.png)
+Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
 * 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
 * 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
@@ -278,15 +280,15 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
 
-![Dash_settings_1](../images/DASH%20images/Dash%20settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH%20images/Dash%20settings/Dash_settings_2.png)
+![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
 **NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
 
-![Dash_settings_3](../images/DASH%20images/Dash%20settings/Dash_settings_3.png)
+![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
 Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu giriş için bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
 
-![Dash_settings_4](../images/DASH%20images/Dash%20settings/Dash_settings_4.jpg)
+![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
@@ -333,7 +335,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 2. Under the **Careportal (1)** section the **Insulin** and **Cannula** filds will have their **age reset** to 0 days and 0 hours **after each pod change**. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
 
-![ACT_1](../images/DASH%20images/Actions%20Tab/ACT_1.png)
+![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
 ## Level
 
@@ -465,4 +467,3 @@ All of the development work for the Omnipod DASH driver is done by the community
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
-
