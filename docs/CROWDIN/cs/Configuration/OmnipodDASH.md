@@ -20,11 +20,11 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
-![Omnipod Pod](../images/DASH%20images/Omnipod_Pod.png)
+\[Omnipod Pod\](../images/DASH images/Omnipod_Pod.png)
 
 * **Compatible Android phone** with a BLE Bluetooth connection
    -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html#) instructions.
+   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
@@ -49,7 +49,7 @@ You can enable the Dash driver in AAPS in **two ways**:
 
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
 
-![Enable_Dash_1](../images/DASH%20images/Enable%20Dash/Enable_Dash_1.png)
+\[Enable_Dash_1\](../images/DASH images/Enable Dash/Enable_Dash_1.png)
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
 
@@ -63,19 +63,19 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
-![Enable_Dash_3](../images/DASH%20images/Enable%20Dash/Enable_Dash_3.png)
+\[Enable_Dash_3\](../images/DASH images/Enable Dash/Enable_Dash_3.png)
 
 ## Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
 
-![Enable_Dash_4](../images/DASH%20images/Enable%20Dash/Enable_Dash_4.jpg)
+\[Enable_Dash_4\](../images/DASH images/Enable Dash/Enable_Dash_4.jpg)
 
 # Dash Configuration
 
 Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
-![Refresh_LOGO](../images/DASH%20images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+[Refresh_LOGO](../images/DASH%20images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
 ![POD_MGMT_LOGO](../images/DASH%20images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
@@ -91,9 +91,11 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
-**NOTE**: Just in case you get an error message here (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+![Activate_Pod_3](../images/DASH%20images/Activate%20Pod/Activate_pod_error.png)
+
+3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 
 ![Activate_Pod_5](../images/DASH%20images/Activate%20Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH%20images/Activate%20Pod/Activate_Pod_6.jpg)
 
@@ -154,7 +156,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
 
-![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
 
 ## Resuming Insulin Delivery
 
@@ -164,7 +166,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
 
-![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
+![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH%20images/Resume/Resume_2.jpg)
 
 2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
 
@@ -205,7 +207,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
-![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH%20images/Pod%20History/Pod_history_2.jpg)
 
 2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
 
@@ -258,7 +260,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ![POD_MGMT_Icon](../images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
-![Silence_ALERTS_Icon](../images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+![ack_alert_logo](../images/DASH%20images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
    * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
