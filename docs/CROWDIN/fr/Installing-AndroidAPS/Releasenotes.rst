@@ -45,7 +45,7 @@ Conseils importants
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau `changement de profil <../Usage/Profiles.html>`_ et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 3.0 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update3_0.html>`__.
 
 Etapes de préparation
 ----------------------
@@ -74,8 +74,8 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
-* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
+* NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être `synchronisé avec NS <../Installing-AndroidAPS/update3_0.html#profil-nightscout-ne-peut-plus-etre-selectionne>`_. @MilosKozak. 
+* Procédure de `réinitialisation du mot de passe principal <../Installing-AndroidAPS/update3_0.html#reinitialiser-le-mot-de-passe-principal>`_ en cas d'oubli @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
 * Nouvelle action d'automatisation Careportal @Philoul
