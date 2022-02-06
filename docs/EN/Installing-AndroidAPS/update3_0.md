@@ -1,4 +1,4 @@
-# Necessary checks after update coming from AndroidAPS 3.0
+# Necessary checks after update to AndroidAPS 3.0
 
 * **Minimum Android version is 9.0 now.**
 * **Data is not migrated to new database.**
