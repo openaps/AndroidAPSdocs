@@ -13,7 +13,7 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
 7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
 
    Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
 8. Continuez à boucler.
@@ -72,24 +72,24 @@ Si vous recevez un message d'erreur comme ceci
 
 #### Étape 2 : Vérifier les modifications non commitées.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * Dans Android Studio, observez l'onglet « Commit » (1) à gauche. ![Onglet de commit : changements non commités](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Vous pouvez voir "Default changeset" (2) ou "Unversioned files" (3):
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+    * Pour "Default Changeset", vous avez probablement mis à jour gradle ou modifié certains contenus du fichier par erreur.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * Faites un clic droit sur "Default Changeset" et sélectionnez "Rollback"
 
       ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+    * Les fichiers sont récupérés à nouveau depuis le serveur Git. S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[Étape 3](#etape-3-resynchroniser-gradle-encore).
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+  * Si vous pouvez voir "Unversioned Files", vous pouvez avoir stocké des fichiers dans votre répertoire soure qui devraient être ailleurs, par ex. votre fichier de de clés.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * Utilisez votre explorateur de fichiers habituel sur votre ordinateur pour déplacer ou couper et coller ce(s) fichier(s) à un autre endroit.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+    * Retournez à Android Studio et cliquez sur le bouton Refresh (4) dans l'onglet Commit pour vous assurer que le fichier n'est plus stocké dans le répertoire AndroidAPS.
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+      S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[Étape 3](#etape-3-resynchroniser-gradle-encore).
 
 
 #### Étape 3 : Resynchroniser Gradle (encore)
@@ -98,47 +98,47 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Android Gradle requires Java 11 to run
 
-  You might experience this error message:
+  Si vous rencontrez ce message d'erreur:
 
   ![Android Gradle requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
-  Click on "Gradle Settings" (1) to go to open the gradle settings.
+  Cliquez sur "Gradle Settings" (1) pour ouvrir les paramètres du gradle.
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  Si vous n'avez pas le lien vers "Gradle Settings", ouvrez les paramètres Gradle manuellement en sélectionnant l'onglet Gradle sur la bordure droite (1), sélectionnez l'icône des outils (2) et là 'Gradle Settings' (3).
 
   ![Configuration de Gradle](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  Lorsque vous avez ouvert la boîte de dialogue des paramètres Gradle, ouvrez les options (1) à "Gradle JDK" et sélectionnez "Embedded JDK version" (2).
 
   ![Configuration de Gradle](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Press "OK" to save and close the settings dialog.
+  Appuyez sur "OK" pour enregistrer et fermer la boîte de dialogue des paramètres.
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+  *Important*: Si vous ne voyez pas le paramètre "Gradle JDK", vous n'avez peut-être pas mis à jour Android Studio. Assurez-vous que vous utilisez Android Studio 2021.1.1 Bumblebee) ou plus récent.
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
+  Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  Si vous rencontrez ce message d'erreur:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Sur la droite, ouvrez l'onglet Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    Assurez-vous que le bouton affiché (2) n'est *PAS* sélectionné.
 
     ![Gradle mode hors connexion](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Impossible de démarrer le processus daemon
 
-  Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. Ceci n'est pas pris en charge par Android Studio 3.5.1 et plus et il n'y a malheureusement rien que le développeur d'AAPS ne puisse faire.
 
-  If you are using Windows 10 you must use a 64-bit operating system.
+  Si vous utilisez Windows 10, vous devez utiliser un système d'exploitation 64 bits.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  Il y a beaucoup de documentation sur Internet pour savoir si vous avez un OS 32 bits ou 64 bits - par ex. [celle-ci](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
   ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
 
@@ -157,16 +157,16 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
   * Click on "Reload Gradle Project" (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## Générer l'APK signé avec succès mais avec 0 variantes de compilation
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la génération a été effectuée avec succès mais on vous dit que 0 variantes de compilation ont été générées:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk)) and you will find the generated apk there!
+C'est un faux avertissement. Vérifiez le répertoire que vous avez sélectionné en tant que "Dossier de destination" pour la génération (étape [Générer l'APK signé](../Installing-AndroidAPS/Building-APK.html#generer-l-apk-signe)) et vous y trouverez l'apk généré !
 
 
-## App was created with compiler/kotlin warnings
+## L'application a été créée avec les avertissements du compilateur/kotlin
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
@@ -184,16 +184,16 @@ Lors de la création d'un fichier de clés pour pouvoir générer un APK signé,
 Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java livré sous Windows. La clé est créée correctement mais une recommandation est affichée à tort comme une erreur. Cela peut actuellement être ignoré.
 
 
-## No CGM data is received by AndroidAPS
+## Aucune donnée MGC n'est reçue par AndroidAPS
 
-* Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Utilisez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom) à la place.
 
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
 
 ## Application non installée.
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![note d'application du téléphone installée](../images/Update_AppNotInstalled.png)
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
