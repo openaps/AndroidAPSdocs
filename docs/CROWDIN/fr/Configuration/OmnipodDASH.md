@@ -24,16 +24,16 @@ Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **O
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
    -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné)
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html#) instructions.
-* [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+   -  **Version 3.0 ou plus récente d'AndroidAPS construit et installé** en utilisant les instructions [**Build APK**](../Installing-AndroidAPS/Building-APK.html#).
+* [**Moniteur Glycémie continue (MGC)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
+Ces instructions supposent que vous commencez une nouvelle session de pod; si ce n'est pas le cas, soyez patient et essayez de commencer ce processus lors de votre prochain changement de pod.
 
 # Avant de commencer
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
+**SÉCURITÉ D'ABORD** - ne pas essayer ce processus dans un environnement où vous ne pouvez pas récupérer d'une erreur (pods supplémentaires, insuline, et les smartphones sont nécessaires).
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Votre PDM Omnipod Dash ne fonctionnera plus suite à l'activation de votre pod avec le pilote AAPS Dash.** Vous avez précédemment utilisé votre PDM Dash pour envoyer des commandes à votre Dash pod. An Dash pod only allows a single device to send commands to communicate with it. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
 
 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
 
@@ -107,7 +107,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 6. After pressing **OK**, it may take some time before the Dash pod responds and inserts the cannula (1-2 minutes maximum), so be patient.
 
- *NOTE: Before the cannula is inserted, it is good practice to pinch the skin near the cannula insertion point. This ensures a smooth insertion of the needle and will decrease your chances of developing occlusions.*
+ *REMARQUE : Avant d'insérer la canule, il est recommandé de pincer la peau près du point d'insertion de la canule. Cela permet une insertion en douceur de l'aiguille et réduira les risques d'occlusions.*
 
 ![Activate_Pod_10](../images/DASH%20images/Activate%20Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH%20images/Activate%20Pod/Activate_Pod_11.jpg)
 
@@ -251,17 +251,17 @@ Below is an explanation of the layout and meaning of the icons and status fields
 ## Boutons
 
 
-![Refresh_Icon](../images/DASH%20images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/DASH%20images/Refresh_LOGO.png) : Envoie une commande d'actualisation au pod actif pour mettre à jour la communication.
 
-   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+   * A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
    * See the Troubleshooting section below for additional information.
 
 ![POD_MGMT_Icon](../images/DASH%20images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
-![Silence_ALERTS_Icon](../images/DASH%20images/Silent_alert%20.jpg) : When pressed this will disable the pod expiration beeps and notifications.
+![Silence_ALERTS_Icon](../images/DASH%20images/Silent_alert%20.jpg) : Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications.
 
-   * Button is displayed only when pod time is past expiration warning time.
-   * Upon successful dismissal, this icon will no longer appear.
+   * Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration.
+   * En cas de désactivation réussi, cette icône n'apparaîtra plus.
 
 ![RESUME_Icon](../images/DASH%20images/DASH%20tab%20icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
 
@@ -314,7 +314,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
 * **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
@@ -335,7 +335,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH%20images/Actions%20Tab/ACT_1.png)
 
-## Level
+## Niveau
 
 **Insulin Level**
 
