@@ -50,6 +50,7 @@ Aby uzyskać więcej informacji, czytaj dalej.
 
    Tworzenie pakietu APK <./Installing-AndroidAPS/Building-APK.md>
    Aktualizacja do nowej wersji lub innego branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
