@@ -74,8 +74,8 @@ Changes
 
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
-* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0#reset-master-password>`_ @MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
 * New automation Careportal action @Philoul
