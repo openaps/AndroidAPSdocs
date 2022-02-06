@@ -25,7 +25,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
 Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Building-APK.html#) instructions.
+   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
@@ -161,7 +161,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
 
-![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
+![Deactivate_Pod_7](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH%20images/Deactivate%20Pod/Deactivate_Pod_8.jpg)
 
 ## Resuming Insulin Delivery
 
@@ -171,7 +171,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
 
-![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Resume/Resume_2.jpg)
+![Resume_1](../images/DASH%20images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH%20images/Resume/Resume_2.jpg)
 
 2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
 
@@ -212,7 +212,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 1. Go to the **DASH** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu and then press the **Pod history (2)** button to access the pod history screen.
 
-![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](https://github.com/Freloner/AndroidAPSdocs/blob/3.0/docs/images/DASH%20images/Pod%20History/Pod_history_2.jpg)
+![Pod_history_1](../images/DASH%20images/Pod%20History/Pod_history_1.jpg) ![Pod_history_2](../images/DASH%20images/Pod%20History/Pod_history_2.jpg)
 
 2. On the **Pod history** screen, the default category of **All (1)** is displayed, showing the **Date and Time (2)** of all pod **Actions (3)** and **Results (4)** in reverse chronological order. Use your phone’s **back button 2 times** to return to the **DASH** tab in the main AAPS interface.
 
