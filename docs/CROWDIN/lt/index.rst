@@ -50,6 +50,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 
    Android programos (APK) kūrimas <./Installing-AndroidAPS/Building-APK.md>
    Atnaujinimas į naują versiją ar atšaką <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
    Patikrinimas po atnaujinimo į AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git įdiegimas <./Installing-AndroidAPS/git-install.rst>
    * Android Studio trikčių šalinimas <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
