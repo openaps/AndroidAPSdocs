@@ -42,7 +42,6 @@ Hieronder volgt de inhoudsopgave.
    :caption: Wat heb ik nodig? 
 
    Onderdelen <./Module/module.rst>
-   Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1

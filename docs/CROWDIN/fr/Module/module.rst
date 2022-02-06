@@ -84,9 +84,9 @@ Les avantages de la DanaR/RS et Dana-i vs. la Combo comme choix de pompe de choi
 
 Source GLY
 --------------------------------------------------
-Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`__. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA est obligatoire depuis la version 3.0 (voir `release notes <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails)
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_ : Ces capteurs sont assez anciens, mais vous pouvez trouver les instructions sur la façon de les utiliser avec l'application xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_ : Il fonctioinne avec xDrip+ (pas besoin de transmetteur), mais vous devez compiler votre propre application patchée
@@ -122,17 +122,6 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 xDrip+
 --------------------------------------------------
 Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
-
-Exemple de configuration
-==================================================
-Si vous souhaitez obtenir un exemple d'étape par étape, vous pouvez consulter un exemple de configuration. Le premier exemple de configuration est assez ancien, mais il doit être encore à jour.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Exemple de configuration <../Getting-Started/Sample-Setup.rst>
- 
   
 Que faire en attendant les composants
 ==================================================

@@ -2,7 +2,7 @@
 
 ## Como assegurar operações suaves
 
-* Ande **SEMPRE com o smartphone consigo**, deixe-o próximo da sua cama à noite.
+* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
 * Certifique-se sempre de que a bateria da bomba está o mais completa possível. Consulte a seção da bateria para dicas sobre a bateria.
 * É melhor **não mexer na app ruffy** enquanto o sistema está em execução. Se a app for iniciada novamente, a conexão com a bomba pode ser interrompida. Uma vez que a bomba esteja conectada ao ruffy, não há necessidade de se reconectar. Mesmo após um reinício do telefone, a conexão é restabelecida automaticamente. Se possível, mova a app para um ecrã não utilizado ou para uma pasta no seu smartphone para que não a abra acidentalmente.
 * Se abrir involuntariamente a app ruffy durante o loop, é melhor reiniciar o smartphone logo de seguida.
@@ -32,7 +32,7 @@
 
 ## Falha do cancelamento de uma basal temporária
 
-* Ocasionalmente, a AndroidAPS pode não cancelar automaticamente um alerta de **DBT CANCELADA**. Então tem de pressionar **ATUALIZAR** na AndroidAPS , no separador **Combo** ou o alarme na bomba será confirmado.
+* Ocasionalmente, a AndroidAPS pode não cancelar automaticamente um alerta de **DBT CANCELADA**. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
 
 ## Considerações sobre a bateria da bomba
 
@@ -40,18 +40,19 @@
 
 * Após um alarme de **bateria fraca** a bateria deve ser mudada o mais rápido possível para ter energia suficiente para uma comunicação Bluetooth confiável com o smartphone, mesmo que o telefone esteja a uma distância mais larga da bomba.
 * Mesmo depois de um alarme de **de bateria baixa** , a bateria pode ser usada por algum tempo. No entanto, recomenda-se sempre ter uma bateria nova consigo após um alarme de "bateria baixa".
-* Para fazer isto, pressione sem largar o símbolo de **Loop Fechado** no ecrã principal e selecione **Suspender loop por 1h**. 
-* Aguarde até que a bomba comunique com o telefone e o logotipo do Bluetooth na bomba desapareça.
+* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
+* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
 ![Bluetooth activado](../images/combo/combo-tips-compo.png)
 
-* Solte o bloqueio de teclas na bomba, pare a bomba, confirme uma taxa de basal temporária possivelmente cancelada e mude a bateria.
-* Em seguida, volte a INICIAR A BOMBA e selecione **Retomar Loop** pressionando continuamente **no símbolo do loop** no ecrã principal.
-* A AndroidAPS vai estabelecer uma dose basal temporária necessária a partir do próximo valor de açúcar no sangue. 
+* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
+* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
+* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
+* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
 ### Tipo de bateria e causas de curta duração da bateria
 
-* Como a comunicação por Bluetooth é intensiva, consome muita energia, portanto use **baterias de alta qualidade** como a Energizer Ultimate Lithium, as distribuídas pela Accu-Chek ou se está pensando em baterias recarregáveis, use baterias Eneloop. 
+* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
 ![Energizar](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
@@ -61,33 +62,35 @@ Intervalos de tempo de vida habituais dos diferentes tipos de bateria:
 * **Power One Alkaline** (Varta) Accu-chek: 2 to 4 semanas
 * **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
-Se a vida útil das suas baterias for significativamente mais curta do que os intervalos acima, confira as seguintes possíveis causas:
+If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
 
-* A última versão (março de 2018) da [app ruffy](https://github.com/MilosKozak/ruffy) melhorou significativamente o tempo de vida da bateria da bomba. Certifique-se de estar a usar essa versão se tiver problemas com o período de vida da bateria.
+* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * Existem algumas variantes da tampa de bateria da bomba Combo, que colocam a bateria em curto circuito e assim gasta a sua energia. As tampas sem este problema podem ser reconhecidas pelos contatos dourados.
-* Se o relógio da bomba não "sobreviver" a uma curta mudança de bateria, é provável que o capacitor (o que mantém o relógio a funcionar durante uma breve interrupção de energia) esteja estragado. Neste caso, apenas uma substituição da bomba pela Roche ajudará, o que não é um problema durante o período de garantia. 
+* Se o relógio da bomba não "sobreviver" a uma curta mudança de bateria, é provável que o capacitor (o que mantém o relógio a funcionar durante uma breve interrupção de energia) esteja estragado. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
 * O hardware e software do telemóvel (sistema operacional Android e bluetooth) também têm impacto no tempo de vida da bateria da bomba, mesmo que os fatores exatos não sejam completamente conhecidos ainda. Se tiver oportunidade, teste outro smartphone e compare o tempo de vida da bateria.
 
 ## Mudanças de Hora
 
 * Atualmente, o controlador da Combo não suporta o ajuste automático do horário da bomba.
 * Durante a noite de uma mudança de horário, o tempo do telemóvel é atualizado, mas o tempo da bomba permanece inalterado. Isto leva a um alarme devido a tempos diferentes entre os sistemas.
-* Se não quiser ser acordado durante a noite, **desative o horário automático de verão no telemóvel** na noite antes da mudança da hora e ajuste os horários manualmente na manhã seguinte.
+* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning. A good way to deal with daylight saving time changes is to switch to a different time zone located on the same longitude you are located at but closer to the equator, where usually no daylight saving time is observed. Example: For Central Europe on Summer Time (CEST/GMT+2), you could switch to the time zone of Zimbabwe on your phone the night before the switch to winter time and then switch back to Central European Time CET/GMT+1 the next morning while changing the clock on your pump at the same time. The other way aroud, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Look at https://www.timeanddate.com/time/map/ to find a suitable country.
 
 ## Bólus prolongado, bólus multiondas
 
-O algoritmo OpenAPS não suporta um bólus prolongado ou bólus multiondas criados na bomba. Mas um tratamento semelhante pode ser alcançado através da seguinte alternativa:
+O algoritmo OpenAPS não suporta um bólus prolongado ou bólus multiondas criados na bomba. But a similar treatment can be achieved by the following alternatives:
 
-* Insira os hidratos de carbono mas não coloque bólus para eles. O algoritmo do loop reagirá com mais agressividade. Se necessário, use o botão **Hidratos** no ecrã principal.
+* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
+* Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
+* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
 
-* Se estiver tentado a apenas usar o bólus prolongado ou multionda diretamente na bomba, a AndroidAPS irá penalizá-lo desativando o loop fechado nas próximas seis horas, para garantir que nenhum excesso de insulina serácalculado.
+* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
 ![Loop desativado após bólus multionda](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Alarmes na administração de bólus
 
-* Caso a AndroidAPS detecte que um bólus idêntico foi administrado com sucesso no mesmo minuto, a entrega de bólus será impedida com número idêntico de unidades de insulina. Se realmente quer administrar a mesma insulina duas vezes num curto espaço de tempo, basta esperar mais dois minutos e depois administrar o bólus novamente. Se o primeiro bólus tiver sido interrompido ou não foi entregue por outras razões, pode imediatamente reenviar o bólus a partir da APS 2.0.
-* O background é um mecanismo de segurança que lê o histórico de bólus da bomba antes de enviar um novo bólus para calcular corretamente a insulina ativa (IA), mesmo quando um bólus é entregue diretamente da bomba. Há que evitar tratamentos repetidos.
+* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
+* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Há que evitar tratamentos repetidos.
 
 ![Bólus duplo](../images/combo/combo-tips-doppelbolus.png)
 

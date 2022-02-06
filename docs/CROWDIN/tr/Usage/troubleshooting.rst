@@ -1,4 +1,4 @@
-Troubleshooting
+Sorun giderme
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -12,7 +12,7 @@ Building & updating
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 
-Settings
+Ayarlar
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 

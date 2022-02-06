@@ -35,16 +35,13 @@ Android 7
 * Verwende AAPS Version **2.6.2**.
 * Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
-================
-Erscheinungsdatum: XX.XX.2022
+Release date: 31-01-2022
 
 Wichtige Hinweise
 ----------------------
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Vorbereitende Schritte
 ----------------------
@@ -52,15 +49,15 @@ Vorbereitende Schritte
 
 * Deaktiviere Dexcom Bridge in Nightscout
 
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
 
 
 Änderungen
 ----------------------
-* XXXXk Zeilen geändert, XXXXk neue Codezeilen
-* Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100k lines changed, 105k new lines of code
+* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* * Unterstützung für DiaconnG8
+* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
@@ -78,6 +75,8 @@ Vorbereitende Schritte
 * Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
 * Bolus Wizard improvement
 * Verbesserung der Anzeige (user interface) @MilosKozak
 * Neue Anwender-Buttons für Automatisierungen @MilosKozak

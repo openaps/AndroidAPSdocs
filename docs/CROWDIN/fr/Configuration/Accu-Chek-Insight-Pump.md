@@ -23,7 +23,7 @@ Remarque : AAPS écrira toujours les données dans le **premier profil débit de
 
 * Dans le [Générateur de configuration](../Configuration/Config-Builder) de l'application AndroidAPS, sélectionnez Accu-Chek Insight dans la section de la pompe.
     
-    ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder.png)
+    ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Appuyez sur la roue crantée pour ouvrir les paramètres Insight.
 

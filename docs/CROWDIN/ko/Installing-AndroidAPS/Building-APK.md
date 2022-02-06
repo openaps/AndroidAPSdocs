@@ -87,7 +87,7 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings" as you have not used it before.
+# Select "Do not import settings" as you have not used it before.
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
@@ -347,4 +347,4 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## 문제 해결
 
-별도의 [Android Studio 문제해결](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) 페이지를 보세요.
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).

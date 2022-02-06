@@ -6,7 +6,7 @@
 
 ## Notas importantes
 
-* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
+* Por favor, use o **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 ## Recommended specification of computer for building apk file
@@ -87,7 +87,7 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-Select "Do not import settings" as you have not used it before.
+# Select "Do not import settings" as you have not used it before.
 
 ![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 

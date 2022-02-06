@@ -4,7 +4,7 @@
 
 * Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-* Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags2019.png)
+* Sizi onayladığımızda bayrağa tıklayın ![Sizi onayladığımızda, bayrağa tıklayın](./images/translation_flags2019.png)
 
 ## AndroidAPS uygulaması için dizeleri (strings) çevir
 
@@ -14,84 +14,84 @@
 
 * Sol taraftaki cümleleri, yeni çevrilmiş metin ekleyerek veya & öneriyi düzenleyerek çevirebilirsiniz
     
-    ![Translation app](./images/translations-translate.png)
+    ![Uygulamayı çevirme](./images/translations-translate.png)
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Proofreading mode app](./images/translations-proofreading-mode.png)
+    ![Uygulama redaksiyon modu](./images/translations-proofreading-mode.png)
     
     çevrilmiş metinleri onaylayabilirler
     
-    ![approve text](./images/translations-proofreading.png)
+    ![metni onayla](./images/translations-proofreading.png)
 
 Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne eklenecektir. Diğer çevirilere başlamadan, henüz onaylanmayan mevcut çevirileri de gözden geçirip, yanlış olup olmadığını kontrol etmek veya doğruysa onaylamak ileride karışıklığı önler ve zaman kazanmanıza yardımcı olur.
 
 ## Dokümantasyon sayfalarını çevirme
 
-* Click the name of the docs page you want to translate
+* Çevirmek istediğiniz doküman sayfasının adını tıklayın
     
-    ![Click docs page](./images/translation_WikiPage.png)
+    ![Dokümanlar sayfasını tıkla](./images/translation_WikiPage.png)
 
-* Translate sentences by sentence
+* Cümle cümle çevirin
     
-    1 Untranslated text is shown with red background on the left side.
+    1 Çevrilmemiş metin sol tarafta kırmızı arka plan ile gösterilir.
     
-    2 You can copy a proposal to the edit field by clicking on the proposal.
+    2 Altta çeviri tekliflerini tıklayarak düzenleme alanına bir teklif kopyalayabilirsiniz.
     
-    3 Edit the proposal or write the translation yourself.
+    3 Teklifi düzenleyin veya çeviriyi kendiniz yazın.
     
-    4 Click save
+    4 Kaydet'e tıklayın
     
-    ![Translation docs](./images/translation_WikiTranslate.png)
+    ![Dokümanları çevirme](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in docs before the translation is proofread.
+* Çevrilmiş bir sayfa, redaksiyondan önce dokümantasyonda yayınlanmayacaktır.
 
-### Translate headline links
+### Başlık bağlantılarını çevir
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.html) çeviri gerekli değildir.
+* Belirli bir başlığa (ör. ..//Usage/Profiles.html#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
+* Bir başlığı çevirecekseniz, (# işaretinden sonraki kısım, ör. #percentage) tüm harfleri küçük harfe çevirerek, özel karakterleri standart karakterlere dönüştürerek, boşlukları - (eksi işareti) ile değiştirerek ve noktalama işaretlerini atlayarak bunu bir bağlantı metnine dönüştürebilirsiniz.
     
-    Here are some examples:
+    İşte bazı örnekler:
     
-    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Docs Updates & Änderungen \---> #docs-updates-anderungen
-    * AAPS-.apk Datei \---> #aaps-apk-datei
+    * Kapalı Döngü Sistemi AndroidAPS ile uyumlu muydu? \---> #androidaps-ile-kapali-döngü-sistemi-nedir
+    * Doküman Güncellemeleri & değişiklikler \---> #doküman-güncellemeleri-değişiklikler
+    * AAPS-.apk tarih \---> #aaps-apk-tarih
 
-* Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
+* Bağlantınızın istendiği gibi çalışıp çalışmadığını kontrol edin. Yeni çevrilmiş bir başlığa bağlantı veriyorsa, doğru bağlantı sözdizimini kontrol edebilmek için bir sonraki derlemeye kadar beklemeniz gerekebilir. Bu durumda takvim / yapılacaklar uygulamanızda bir hatırlatma yapmayı unutmayın.
 
-#### Link translation in Markdown files (.md)
+#### Markdown dosyalarında (.md) bağlantı çevirisi
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. reStructuredText sözdiziminde (.rst) yazılan dosyalar Crowdin'de her zaman bağlantı adresini gösterirken, markdown sözdizimindeki (.md) dosyalarda bağlantı adresini çevirmek için HTML etiketi görüntülemeyi etkinleştirmeniz gerekebilir.
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**HTML etiketlerinin başında veya sonunda boşluk karakteri kullanmadığınızdan emin olun!**
 
-![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
+![Crowdin - Boşluk karakteri olmayan HTML etiketi](./images/Crowdin_HTMLtag.png)
 
 * * *
 
-If links are displayed like this in Crowdin
+Crowdin'de bağlantılar bu şekilde görüntüleniyorsa
 
-![Crowdin - no HTML tag display](./images/CrowdinShowURL1.png)
+![Crowdin - HTML etiketi görüntülenmiyor](./images/CrowdinShowURL1.png)
 
-click on the cogwheel to open settings, select "Show" and click "Save".
+ayarları açmak için dişli çarka tıklayın, "Göster"i seçin ve "Kaydet"e tıklayın.
 
-![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
+![Crowdin - HTML etiketini göster](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Bağlantılar daha sonra standart HTML biçiminde gösterilir ve [yukarıda](./translations#translate-headline-links) belirtilen kurallar dikkate alınarak çevrilebilir.
 
-![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
+![Crowdin - HTML etiketi görüntüleme](./images/CrowdinShowURL3.png)
 
 ## Redaksiyon
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
+    ![Doküman redaksiyon modu](./images/translation_WikiProofreading.png)
     
     çevrilmiş metinleri onaylayabilirler
     
-    ![approve text](./images/translations-proofreading.png)
+    ![metni onayla](./images/translations-proofreading.png)
 
 * Redaktör bir çeviriyi onayladığında, sonraki doküman derlemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.

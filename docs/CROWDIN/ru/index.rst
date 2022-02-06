@@ -42,7 +42,6 @@ AndroidAPS-приложение с открытым исходным кодом 
    :caption: Что мне нужно? 
 
    Модуль <./Module/module.rst>
-   Пример системы <../Getting-Started/Sample-Setup.html>
 
 .. toctree::
    :maxdepth: 1

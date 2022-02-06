@@ -84,9 +84,9 @@ Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos)
 
 Glikemijos šaltinis
 --------------------------------------------------
-Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
+Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.
@@ -122,17 +122,6 @@ Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.
 xDrip+
 --------------------------------------------------
 Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
-
-Pavyzdinis nustatymas
-==================================================
-Žingsnis po žingsnio instrukcijas rasite Pavyzdiniame nustatyme. Pavyzdinio nustatymo rekomendacijos yra gana senos, tačiau vis dar aktualios.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Pavyzdinis Nustatymas <../Getting-Started/Sample-Setup.rst>
- 
   
 Ką daryti laukiant modulių
 ==================================================

@@ -84,9 +84,9 @@ The advantages of the DanaR/RS and Dana-i vs. la Combo como la bomba de elecció
 
 Fuentes de datos de glucemia (BG)
 --------------------------------------------------
-Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`__. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
+Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Se trabaja con app xDrip+ 'o app parchada Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Estos sensores son bastante antiguos, pero puede encontrar instrucciones sobre cómo usarlos con la aplicación xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funciona con xDrip+ (no se necesita ningún transmisor), pero tienes que construir tu propia aplicación parchada.
@@ -122,17 +122,6 @@ Cualquier problema con la hoja de cálculo por favor envíe un correo electróni
 xDrip+
 --------------------------------------------------
 Incluso si no necesitas tener la aplicación xDrip + como fuente de BG, todavía puedes usarla para esto. alarmas o una buena muestra de glucosa en sangre. Puede tener el número de alarmas que desee, especificar la hora en la que la alarma debe estar activa, se puede alterar temporalmente la modalidad silenciosa, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Por favor, tenga en cuenta que las documentaciones de esta aplicación no siempre están al día, ya que su progreso es bastante rápido.
-
-Configuración de ejemplo
-==================================================
-Si desea obtener un ejemplo paso a paso, es posible que desee ver una configuración de ejemplo. La primera configuración de la muestra es bastante antigua, pero debe estar todavía actualizada.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Configuración de ejemplo <../Getting-Started/Sample-Setup.rst>
- 
   
 Qué hacer mientras se espera a los módulos
 ==================================================

@@ -35,16 +35,13 @@ Android 7
 * Usar la versión de AAPS **2.6.2**
 * Descargar el código fuente de AAPS desde https://github.com/MilosKozak/AndroidAPS
 
-Versión 3.0.0
-================
-Fecha de lanzamiento: XX-XX-2022
+Release date: 31-01-2022
 
 Notas importantes
 ----------------------
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usa BYODA. También se recomienda usar BYODA para aprovechar el suavizado que aplica Dexcom.
 
 Pasos de preparación
 ----------------------
@@ -52,15 +49,15 @@ Pasos de preparación
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
 
-* Si estás usando G5/G6 cambia a BYODA (si estás usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+* Si estás usando G5/G6 cambia a BYODA (recomendado) - Puedes usar xDrip+, pero no como recolector (xDrip+ puede recibir datos desde BYODA) o actualizar xDrip+ a la última versión.
 
 
 Cambios
 ----------------------
-* XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
-* Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100k lineas cambiadas, 105k nuevas líneas de código
+* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* Soporte para DiaconnG8
+* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
@@ -78,6 +75,8 @@ Cambios
 * Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
 * Asistente de bolos mejorado
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak

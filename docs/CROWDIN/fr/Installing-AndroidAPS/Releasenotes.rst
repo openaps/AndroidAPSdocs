@@ -35,32 +35,29 @@ Android 7
 * Utiliser la version **2.6.2** d'AAPS
 * Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS
 
-Version 3.0.0
-================
-Release date: XX-XX-2022
+Date de sortie : 31-01-2022
 
 Conseils importants
 ----------------------
 * **La version minimale d'Android est maintenant 9.0.**
-* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
+* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau `changement de profil <../Usage/Profiles.html>`_ et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
-* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
 
 Etapes de préparation
 ----------------------
-**At least two days before update:**
+**Au moins deux jours avant la mise à jour :**
 
 * Désactivez Dexcom Bridge dans Nightscout
 
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* si vous utilisez G5/G6 changez pour BYODA (recommandé) - vous pouvez toujours utiliser xDrip mais pas en tant que collecteur (xDrip peut recevoir des données de BYODA) ou mettez à jour xDrip à la toute dernière version.
 
 
 Modifications
 ----------------------
-* XXXXk lignes changées, XXXXk nouvelles lignes de code
-* Support Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100k lignes changées, 105k nouvelles lignes de code
+* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* Support de DiaconnG8
+* `Support de la DiaconnG8 <../Configuration/DiaconnG8.rst>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -74,11 +71,13 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
+* NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak. Pour mettre à jour le profil du côté NS, utilisez "Clone" (enregistrement!!, pas profil) et enregistrez les modifications. Vous devriez voir "Profil valide à partir de :" et la date actuelle
 * Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
-* Bolus Wizard improvement
+* Nouvelle action d'automatisation Careportal @Philoul
+* Ajout un rappel bolus dans le dialogue Glucides @Philoul
+* Amélioration de l'Assistant Bolus
 * Améliorations de l'interface utilisateur @MilosKozak
 * Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
 * Nouvelle mise en page de l'automatisation @MilosKozak
@@ -87,9 +86,9 @@ Modifications
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
 * Amélioration de la communication DanaR et DanaRS @MilosKozak
 * Intégration de CircleCI @MilosKozak
-* Files location change: 
+* Changement d'emplacement des fichiers: 
 
-   * /AAPS/extra (engineering mode) 
+   * /AAPS/extra (mode ingénierie) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
 
@@ -320,7 +319,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez le Dexcom G6 avec l'application Dexcom patchée, vous aurez besoin de la version présente dans le `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge

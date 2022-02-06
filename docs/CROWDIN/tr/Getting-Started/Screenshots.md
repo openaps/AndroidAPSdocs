@@ -123,7 +123,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
-   * Predictions
+   * Tahminler
    * Basals
    * Activity - insulin activity curve
 
@@ -252,8 +252,8 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### CGM
 
-* Opens xDrip+.
-* Back button returns to AAPS.
+* xDrip+ açmak.
+* Geri düğmesi AAPS'e döner.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### Quick Wizard
@@ -395,7 +395,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 
 ## Care Portal
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
+Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır.
 
 ### Review carb calculation
 

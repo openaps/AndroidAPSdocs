@@ -1,64 +1,64 @@
-Necessary checks after update coming from AndroidAPS 2.6
+AndroidAPS 2.6'dan güncelleme sonrası gerekli kontroller
 ***********************************************************
 
-* The program code was changed significantly when switching to AAPS 2.7. 
-* Therefore it is important that you make some changes or check settings after the update.
-* Please see `release notes <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ for details on new and extended features.
+* AAPS 2.7'ye geçilirken program kodu önemli ölçüde değiştirildi. 
+* Bu nedenle güncellemeden sonra bazı değişiklikler yapmanız veya ayarları kontrol etmeniz önemlidir.
+* Yeni ve genişletilmiş özelliklerle ilgili ayrıntılar için lütfen `sürüm notlarına <../Installing-AndroidAPS/Releasenotes.html#version-2-7-0>`_ bakın.
 
-Check BG source
+KŞ kaynağını kontrol edin
 -----------------------------------------------------------
-* Check if BG source is correct after update.
-* Especially when using `xDrip+ <../Configuration/xdrip.html>`_ it might happen, that BG source is changed to Dexcom app (patched).
-* Open `Config builder <../Configuration/Config-Builder.html#bg-source>`_ (hamburger menu on top left side of home screen)
-* Scroll down to "BG source".
-* Select correct BG source if changes are necessary.
+* Güncellemeden sonra KŞ kaynağının doğru olup olmadığını kontrol edin.
+* Özellikle `xDrip+ <../Configuration/xdrip.html>`_ kullanıldığında KŞ kaynağının Dexcom uygulaması (yamalı) olarak değiştirilmiş olabilir.
+* `Konfigürasyon ayarları<../Configuration/Config-Builder.html#bg-source>`_ açın (ana ekranın sol üst tarafında hamburger menüsü)
+* "KŞ kaynağı"na ilerleyin.
+* Değişiklik gerekliyse doğru KŞ kaynağını seçin.
 
 .. image:: ../images/ConfBuild_BG.png
-  :alt: BG source
+  :alt: KŞ kaynağı
 
-Finish exam
+Sınavı bitir
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 for `automation <../Usage/Automation.html>`_.
-* You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-11-automation>`__.
-* If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`__. 
-* This will not effect other objectives you have already finished. You will keep all finished objectives!
+* AAPS 2.7, `otomasyon <../Usage/Automation.html>`_ için yeni 11. görevi içerir.
+* 11.Görevi `tamamlamak için de <../Usage/Objectives.html#objective-11-automation>`_ sınavı bitirmiş olmanız (`3. ve 4. görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) gerekir.
+* Örneğin, `3.görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ içindeki sınavı henüz bitirmediyseniz, ` 11.hedefe <../Usage/Objectives.html#objective-11-automation>`_ başlamadan önce sınavı tamamlamanız gerekir. 
+* Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
-Set master password
+Ana parola tanımlama
 -----------------------------------------------------------
-* Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`__ as they are encrypted as of version 2.7.
-* Open Preferences (three-dot-menu on top right of home screen)
-* Click triangle below "General"
-* Click "Master-Password"
-* Enter password, confirm password and click ok.
+* Sürüm 2.7'den itibaren şifreli oldukları için `ayarları <../Usage/ExportImportSettings.html>`_ dışa aktarabilmek için gereklidir.
+* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
+* "Genel" altındaki üçgeni tıklayın
+* "Ana-Parola" ya tıklayın
+* Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
 .. image:: ../images/MasterPW.png
-  :alt: Set master password
+  :alt: Ana parola tanımlama
   
-Export settings
+Dışa aktarma ayarları
 -----------------------------------------------------------
-* AAPS 2.7 uses a new encrypted backup format. 
-* You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
-* Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
-* Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-* If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version. 
-* All settings as well as finished objectives will remain as they were in the previous version.
-* In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the `troubleshooting section <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_.
+* AAPS 2.7, yeni bir şifreli yedekleme formatı kullanır. 
+* 2.7 sürümüne güncelledikten sonra `ayarlarınızı <../Usage/ExportImportSettings.html>`_ dışa aktarmalısınız.
+* Önceki sürümlerdeki ayar dosyaları yalnızca AAPS 2.7'de içe aktarılabilir. Dışa aktarma yeni formatta olacaktır.
+* Dışa aktarılan ayarlarınızı yalnızca telefonunuzda değil, aynı zamanda güvenli bir yerde (bilgisayarınız, bulut depolama...) sakladığınızdan emin olun.
+* AAPS 2.7 apk'yi Android studio ile önceki sürümlerle aynı anahtar deposuyla kurarsanız, önceki sürümü silmeden yeni sürümü yükleyebilirsiniz. 
+* Tüm ayarlar ve tamamlanan görevler önceki sürümde olduğu gibi kalacaktır.
+* Anahtar deponuzu kaybetmeniz ve 2.7 versiyonunu yeni anahtar deponuzla oluşturmanız durumunda, önceki sürümden içe aktarma ayarları ile nasıl kurulumun yapılabileceğini `sorun giderme bölümünde <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_ bulabilirsiniz.
 
-Autosens (Hint - no action necessary)
+Otoduyarlılık (İpucu - herhangi bir işlem gerekmez)
 -----------------------------------------------------------
-* Autosens is changed to a dynamic switching model which replicates the reference design.
-* Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* otoduyarlılık, referans tasarımı kopyalayan dinamik bir anahtarlama modeliyle değiştirildi.
+* Otoduyarlılık artık hassasiyeti hesaplamak için 24 ve 8 saatlik bir aralıkta geçiş yapacak. Hangisinin daha hassas olduğunu kendi seçecektir. 
+* Kullanıcılar oref1'den geldiyse, 24 veya 8 saatlik hassasiyetin değişmesi nedeniyle muhtemelen sistemin değişikliklere karşı daha az dinamik olabileceğini fark edeceklerdir.
 
-Set Pump Password for Dana RS (if using Dana RS)
+Dana RS için Pompa Parolasını Ayarlayın (Dana RS kullanılıyorsa)
 -----------------------------------------------------------
-* Pump password for `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ was not checked in previous versions.
-* Open Preferences (three-dot-menu on top right of screen)
-* Scroll down and click triangle next to "Dana RS".
-* Click "Pump password (v1 only)"
-* Enter pump password (`Default password <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ is different depending on firmware version) and click OK.
+* `Dana RS <../Configuration/DanaRS-Insulin-Pump.html>`_ için pompa şifresi önceki sürümlerde kontrol edilmedi.
+* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
+* Aşağı kaydırın ve "Dana RS" yanındaki üçgene tıklayın.
+* "Pompa şifresi (yalnızca v1)"e tıklayın
+* Pompa şifresini girin (`Varsayılan şifre <../Configuration/DanaRS-Insulin-Pump.html#default-password>`_ aygıt yazılımı sürümüne göre değişir) ve Tamam'ı tıklayın.
 
 .. image:: ../images/DanaRSPW.png
-  :alt: Set Dana RS password
+  :alt: Dana RS şifresini ayarlayın
   
-To change password on Dana RS follow instructions on `DanaRS page <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`_.
+Dana RS'de şifreyi değiştirmek için `DanaRS sayfasındaki <../Configuration/DanaRS-Insulin-Pump.html#change-password-on-pump>`'daki talimatları izleyin.

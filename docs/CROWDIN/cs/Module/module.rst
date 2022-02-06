@@ -84,9 +84,9 @@ The advantages of the DanaR/RS and Dana-i vs. Combu:
 
 Zdroj glykémií
 --------------------------------------------------
-Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`__. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
+Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
@@ -122,17 +122,6 @@ V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardw
 xDrip+
 --------------------------------------------------
 I když aplikaci xDrip+ nepotřebujete jako zdroj glykémie, stále ji můžete používat např. pro výstrahy a zobrazování glykémie. Můžete tak mít libovolný počet výstrah, specifikovat časy, kdy budou aktivní, zda mají přebít tichý režim telefonu apod. Některé informace o aplikaci xDrip+ najdete `zde <../Configuration/xdrip.html>`__. Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
-
-Ukázková instalace
-==================================================
-Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instalaci. První příklad je poměrně starý, ale stále je aktuální.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Ukázková instalace <../Getting-Started/Sample-Setup.rst>
- 
   
 Co dělat při čekání na moduly
 ==================================================

@@ -1,6 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
 
+January 2022
+==================================================
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+
 Dezember 2021
 ==================================================
 * `AndroidAPS installieren - App erstellen <../Installing-AndroidAPS/Building-APK.html>`_ - Update Android Studio Arctic Fox | 2020.3.1 @tanja

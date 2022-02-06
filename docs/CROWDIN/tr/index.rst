@@ -42,7 +42,6 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :caption: Neye ihtiyacım var? 
 
    Modül <./Module/module.rst>
-   Örnek Kurulum <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
@@ -78,7 +77,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :glob:
    :caption: Konfigürasyon
 
-   Config builder <./Configuration/Config-Builder.md>
+   Konfigürasyon Ayarları <./Configuration/Config-Builder.md>
    Tercihler <./Configuration/Preferences.rst>
 
 .. toctree::
@@ -89,36 +88,36 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
    OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
-   Open Humans Uploader <./Configuration/OpenHumans.rst>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Aktif karb. hesaplaması <./Usage/COB-calculation.rst>
+   Duyarlılık algılama <./Configuration/Sensitivity-detection-and-COB.md>
+   Profil değiştirme <./Usage/Profiles.md>
+   Geçici hedefler <./Usage/temptarget.md>   
+   Yayma karbonhidratlar <./Usage/Extended-Carbs.rst>
+   Otomasyon <./Usage/Automation.rst>
+   Bakım portalı (devam etmiyor) <./Usage/CPbefore26.rst>
+   Open Humans Yükleyici <./Configuration/OpenHumans.rst>
+   3. taraf uygulamalarla otomasyon <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Genel İpuçları 
 
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   Pompalarla saat dilimleri arasında seyahat <./Usage/Timezone-traveling.md>
+   Günlük dosyalarına erişim <./Usage/Accessing-log files.md>
+   Temel kullanım için Accu-Chek Combo ipuçları <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Ayarları Dışa Aktarma/İçe Aktarma <./Usage/ExportImportSettings.rst>
+   xDrip mühendislik modu <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: Çocuklar için AndroidAPS
 
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   Uzaktan izleme <./Children/Children.rst>
+   SMS komutları <./Children/SMS-Commands.rst>
+   Profil yardımcısı <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1

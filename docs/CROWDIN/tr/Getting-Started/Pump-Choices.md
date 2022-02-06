@@ -2,29 +2,34 @@
 
 AndroidAPS şu anda aşağıdaki pompalarla çalışabilmektedir.
 
-* Accu-Chek Combo
-* Accu-Chek Insight
-* Bazı Eski Medtronic
-* Insulet Omnipod
-* DanaR
-* DanaRS 
+* [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+* [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+* [DanaR](../Configuration/DanaR-Insulin-Pump.md)
+* [DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
+* [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)
+* [Diaconn G8 ](../Configuration/DiaconnG8.rst)
+* [Omnipod Eros](../Configuration/OmnipodEros.rst)
+* [Omnipod DASH](../Configuration/OmnipodDASH.md)
+* Bazı eski [Medtronic](../Configuration/MedtronicPump.md)
 
-pompaları. Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+Yükseltmek veya satın almak için bir pompa seçmeniz gerekiyorsa, insanlar genellikle hangisini seçeceklerini sorar. Çeşitli distribütörlerin ayrıntıları [bu e-tabloda](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0) yer almaktadır, henüz listelenmemişse lütfen bilgilerinizi paylaşın.
 
-The Combo and the Insight are solid pumps, and loopable. The advantages of the DanaR/RS as the pump of choice however are:
+Combo ve Insight, sağlam pompalardır ve döngüde kullanılabilir. Bununla birlikte, tercih edilen pompa olarak DanaR/RS/-i'nin avantajları şunlardır:
 
-* The Dana*R/RS connects to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana*R/RS pumps as quick replacement... not so easy with the Combo. (This might change in the future when Android 8.1 gets more popular)
+* Dana*R/RS/-i, lineage yükleme gerektirmeden Android >= 5.1 olan hemen hemen her telefona bağlanır. Telefonunuz bozulursa, hızlıca Dana*R/RS pompalarıyla çalışan herhangi bir telefonu kolayca bulabilirsiniz... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
 
-* Initial pairing is simpler with the Dana* RS. But you usually only do this once so it only impacts if you want to test a new feature with different pumps.
+* DanaRS/-i ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
 
-* So far the Combo works with screen parsing. In general that works great but it is slow. For looping this does not matter much as everything works in the background. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+* Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Yine de bağlantınız uzun zaman alabilir, bu nedenle BT bağlantısının kopabileceği yerlerde bağlantı için daha fazla zamana ihtiyaç var, bu da bolus yaparken veya yemek yerken telefonunuzdan uzaklaşırsanız o kadar kolay değil.
 
-* The Combo vibrates on the end of TBRs, the Dana* R vibrates (or beeps) on SMB. At night time you are likely to be using TBRs more than SMB. The Dana* RS is configurable that it does neither beeps or vibrates.
+* Combo, GBO'larin sonunda titreşir, Dana* R, SMB'de titreşir (veya bip sesi çıkarır). Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir. Dana* RS, ne bip sesi çıkaracak ne de titreyecek şekilde yapılandırılabilir.
 
-* Reading the history on the RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+* RS'deki geçmişi birkaç saniyede karbonhidratla okumak, çevrimdışıyken telefonları kolayca değiştirmeyi ve bazı CGM değerleri girer girmez döngüye devam etmeyi mümkün kılar.
 
-* All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system.
+* Insulet Omnipod Eros, RileyLink/Orangelink vb. gibi bir pod iletişim cihazı gerektirir. Daha yeni omnipod DASH, telefonunuzla doğrudan Bluetooth üzerinden iletişim kurduğu için gerek duymaz.
 
-The Combo of course is a very good pump, and loopable. It also has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-)
+* All pumps AndroidAPS can talk with are waterproof on delivery. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
+
+Combo elbette çok iyi bir pompadır ve döngüye alınabilir. Ayrıca standart bir luer kilidine sahip olduğu için daha birçok infüzyon seti tipi arasından seçim yapma avantajına da sahiptir. Ve pil, herhangi bir benzin istasyonundan, 24 saat açık marketten satın alabileceğiniz varsayılan bir pildir ve gerçekten ihtiyacınız varsa, otel odasındaki uzaktan kumandadan çalabilir/ödünç alabilirsiniz ;-)

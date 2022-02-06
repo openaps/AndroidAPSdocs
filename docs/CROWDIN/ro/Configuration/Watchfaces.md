@@ -14,9 +14,9 @@ Puteţi instala aplicaţia AndroidAPS pe ceasuri **cu Wear OS**. Versiunea de ce
 
 ### Construirea versiunii Wear OS pentru AAPS
 
-Pentru a construi versiunea Wear OS pentru AAPS trebuia să selectaţi varianta build "fullRelease" când se [crează APK](../Installing-AndroidAPS/Building-APK.md) (sau "pumpRelease" care vă va permite să controlaţi de la distanţă pompa dar fără looping).
+The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
 
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Configurare pe telefon
 
@@ -209,19 +209,41 @@ AndroidAPS oferă următoarele auxiliare:
     * *None*: Dezactivează acțiunea de atingere a auxiliarelor AAPS
 * **Unicode in auxiliare** (implicit `On`): Când e `On`, auxiliarele vor folosi caractere Unicode pentru simboluri ca `Δ` Delta, `⁞` separator vertical din puncte sau `⎍` simbol pentru Rata Bazală. Afișarea lor depinde de tipul caracterului, și asta poate fi foarte specific. Această opţiune permite comutarea simbolurilor Unicode `Off` dacă este necesar - când caracterul utilizat de către faţa de ceas personalizată nu suportă acele simboluri - pentru a evita erorile grafice.
 
-## Performanță și ponturi despre autonomia bateriei
+## Always on
 
-Ceasurile Wear OS sunt dispozitive cu constrângeri mari de consum. Dimensiunea ceasului limitează capacitatea bateriei. Chiar şi cu progresele recente atât pe partea de hardware, cât şi pe cea de software, ceasurile Wear OS necesită în continuare încărcarea zilnică.
+Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
 
-Dacă o baterie durează mai puțin de o zi (de dimineața până seara), iată câteva sfaturi pentru a investiga problemele.
+Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
 
-Principalele mari consumatoare ale bateriei sunt:
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+
+### Night-time mode
+
+While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+
+Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+
+<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+
+![Simplified UI](../images/Watchface_simplified_ui.png)
+
+### Performance and battery life tips
+
+Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+
+If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+
+Main battery-demanding areas are:
 
 * Afișare activă cu iluminare de fundal (pentru LED) sau în modul intensitate completă (pentru OLED)
 * Afișare pe ecran
 * Comunicații radio prin Bluetooth
 
-Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualizate) şi dorim să avem cele mai recente date redate, majoritatea optimizărilor se pot face în zona *timp de afişare*:
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
 * De obicei, ceasurile de marcă sunt mai bine optimizate decât cele personalizate, descărcate din magazin.
 * Este mai bine să utilizaţi feţe de ceas care limitează cantitatea de date afișate în mod inactiv/estompat.
@@ -248,8 +270,8 @@ Deoarece nu putem face compromisuri în comunicare (avem nevoie de date actualiz
 
 ## Vizualizare date Nightscout
 
-Dacă folosiți un alt sistem de buclă și doriți să *vizualizați* detaliile buclei pe ceasul Android Wear, sau doriți să monitorizați bucla copilului dumneavoastră, atunci puteți compila/descărca doar APK-ul NSClient. Pentru a face acest lucru, urmăriți [instrucțiunile de compilare ale APK-ului](../Installing-AndroidAPS/Building-APK.md) după ce ați selectat varianta "NSClientRelease". Există mai multe fețe de ceas din care puteți alege, fețe ce afișează deviația medie, IOB, RBT-ul activ și profilurile bazale + graficul citirilor de glicemie.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Există mai multe fețe de ceas din care puteți alege, fețe ce afișează deviația medie, IOB, RBT-ul activ și profilurile bazale + graficul citirilor de glicemie.
 
 # Pebble
 
-Utilizatorii ceasurilor Pebble pot folosi [fața de ceas Urchin](https://github.com/mddub/urchin-cgm) pentru *vizualizarea* datelor buclei (dacă acestea sunt înregistrate și în Nightscout), dar nu vor putea interacționa cu AndroidAPS prin intermediul ceasului. Puteți alege ce câmpuri să fie afișate, cum ar fi IOB și RBT-ul curent sau predicțiile. Dacă sunteți în buclă deschisă, puteți folosi [IFTTT](https://ifttt.com/) pentru a crea un applet care să vă informeze dacă există notificări primite de la AndroidAPS și caer să vă trimită un SMS sau o notificare pushover.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.

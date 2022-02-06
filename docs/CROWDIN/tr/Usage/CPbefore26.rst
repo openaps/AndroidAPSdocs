@@ -1,12 +1,12 @@
-Careportal (discontinued)
+Bakım portalı (sonlandırıldı)
 *******************************
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
+Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır. Ancak bakım portalı, pompaya herhangi bir komut vermiyor! Dolayısıyla, bu ekran kullanılarak bir bolus eklendiyse, bunu Nightscout kaydınıza not eder, pompaya bolus iletimi talimatı verilmez. Bu birçok yanlış anlaşılmaya neden oldu.
 
-The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
+Başlangıçta bakımportalı çevrimdışı destek eklemek için kullanılan kod, AAPS'in geliştirilmesiyle uyumlu değildi ve daha fazla kodlamayı engelliyordu. **Bu nedenle, AAPS sürüm 2.6'da bakım portalının kaldırılmasına karar verildi.**
 
-Most functions of careportal can still be found either in actions or the start screen. The actions can be reached either via actions tab or hamburger menu - depending on your settings in `config builder <../Configuration/Config-Builder.html>`_.
+Bakım portalının çoğu işlevi hala eylemlerde veya başlangıç ekranında bulunabilir. Eylemlere, eylemler sekmesinden veya hamburger menüsü aracılığıyla `Konfigürasyon ayarları <../Configuration/Config-Builder.html>`_ içindeki ayarlarınızdan erişilebilir.
 
-This page will show where you can find the functions previously available in careportal.
+Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabileceğinizi gösterecektir.
 
 Activity & feedback
 ==============================
