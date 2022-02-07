@@ -4,32 +4,33 @@ These instructions are for configuring the **Omnipod DASH** generation pump **(N
 
 **This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. Только вы несете ответственность за то, что делаете.**
 
-# Omnipod DASH specifications
+## Omnipod DASH specifications
 
 These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
 
 * The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
 * No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT LE connection only when needed
+* BT connection only when needed, connects to send command and disconnects right after !
 * No more "no connection to link device / pod" errors
 * AAPS will wait for pod accessibility to send commands
 * On activation, AAPS will find and connect a new DASH pod.
 * Expected range: 5-10 meters (YMMV)
 
-# Hardware/Software Requirements
+## Hardware/Software Requirements
 
 * A new **Omnipod DASH Pod** (Identified by blue needle cap)
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Compatible Android phone** with a BLE Bluetooth connection
-   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
 
-# Before You Begin
+## Before You Begin
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
 
@@ -41,11 +42,11 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **30 min Basal Rate Profiles are NOT supported in AndroidAPS.** **The AndroidAPS Profile does not support a 30 minute basal rate time frame** If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
 
-# Enabling the Dash Driver in AAPS
+## Enabling the Dash Driver in AAPS
 
 You can enable the Dash driver in AAPS in **two ways**:
 
-## Option 1: New installations
+### Option 1: New installations
 
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
 
@@ -53,7 +54,7 @@ When you are installing AndroidAPS for the first time, the **Setup Wizard** will
 
 When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
 
-## Option 2: The Config Builder
+### Option 2: The Config Builder
 
 On an existing installation you can select the **DASH** pump from the Config builder:
 
@@ -65,13 +66,13 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
-## Verification of Omnipod Driver Selection
+### Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-# Dash Configuration
+## Dash Configuration
 
 Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
 
@@ -79,7 +80,7 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
-## Activate Pod
+### Activate Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
@@ -132,7 +133,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
 
-## Deactivate Pod
+### Deactivate Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
@@ -158,7 +159,7 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
-## Resuming Insulin Delivery
+### Resuming Insulin Delivery
 
 **Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
 
@@ -176,7 +177,7 @@ Use this command to instruct the active, currently suspended pod to resume insul
 
 ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
-## Silencing Pod Alerts
+### Silencing Pod Alerts
 
 *NOTE - The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
@@ -197,7 +198,7 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 4. Go to the **Omnipod (POD)** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
-## View Pod History
+### View Pod History
 
 This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
 
@@ -214,7 +215,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-# DASH Tab
+## DASH Tab
 
 Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
 
@@ -222,7 +223,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ![DASH_Tab_1](../images/DASH_images/DASH_Tab/DASH_Tab_1.png)
 
-## Fields
+### Fields
 
 * **Bluetooth Address:** Displays the current bluetooth address of the connected Pod.
 * **Bluetooth Status:** Displays the current connection status.
@@ -250,7 +251,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 * **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
 
-## Buttons
+### Buttons
 
 
 ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
@@ -267,7 +268,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
 
-## Pod Management Menu
+### Pod Management Menu
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
@@ -276,7 +277,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 * 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
 * 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
-# Dash Settings
+## Dash Settings
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
 
@@ -292,7 +293,7 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
-## Confirmation beeps
+### Confirmation beeps
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -301,7 +302,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-## Alerts
+### Alerts
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -312,7 +313,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 * **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 
-## Notifications
+### Notifications
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
@@ -323,11 +324,11 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
 * **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
 
-## Другое
+### Другое
 
 * **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
 
-# Actions (ACT) Tab
+## Actions (ACT) Tab
 
 This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod Dash pod differs from tube based pumps, especially after the processes of applying a new pod.
 
@@ -337,7 +338,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-## Level
+### Level
 
 **Insulin Level**
 
@@ -350,9 +351,9 @@ Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
-# Устранение неполадок
+## Устранение неполадок
 
-## Delivery suspended
+### Delivery suspended
 
   * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
   * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
@@ -366,19 +367,19 @@ Additional note:
 
 **Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
 
-## Pod Failures
+### Pod Failures
 
 Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
-## Preventing error 49 pod failures
+### Preventing error 49 pod failures
 
 This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
-## Pump Unreachable Alerts
+### Pump Unreachable Alerts
 
 When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
 
-## Export  Settings
+### Export  Settings
 
 Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AndroidAPS or in case of phone loss, reinstalling on the new phone.
 
@@ -388,7 +389,7 @@ Note: The active pod information is included in the exported settings. If you im
 
 Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
 
-## Import Settings
+### Import Settings
 
 **WARNING** Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
 
@@ -407,13 +408,13 @@ When importing settings with an active Pod, make sure the export was done with t
 3. Check all preferences.
 4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data.
 
-## Importing settings that contain Pod state from an inactive Pod
+### Importing settings that contain Pod state from an inactive Pod
 
 When importing settings containing data for a Pod that is no longer active, AndroidAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
 
 To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
 
-## Reinstalling AndroidAPS
+### Reinstalling AndroidAPS
 
 When uninstalling AndroidAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
 
@@ -427,7 +428,7 @@ When on an active Pod, make also sure that you have an export for the current Po
 6. Activate a new Pod
 7. When done: Export current settings
 
-## Updating AndroidAPS to a newer version
+### Updating AndroidAPS to a newer version
 
 In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
 
@@ -437,29 +438,17 @@ In most cases there is no need to uninstall. You can do an “in-place” instal
 4. RESUME the Pod or activate a new Pod.
 5. When done: Export current settings.
 
-## Omnipod driver alerts
+### Omnipod driver alerts
 
 Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
-### No active Pod
+* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
+* Pod suspended Informational alert that Pod has been suspended.
+* Setting basal profile failed : Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed.. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+* Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+* Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
 
-No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
-
-### Pod suspended
-
-Informational alert that Pod has been suspended.
-
-### Setting basal profile failed. Delivery might be suspended! Please manually refresh the Pod status from the Omnipod tab and resume delivery if needed..
-
-Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-
-### Unable to verify whether SMB bolus succeeded. If you are sure that the Bolus didn't succeed, you should manually delete the SMB entry from Treatments.
-
-Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
-
-### Uncertain if "task bolus/TBR/SMB" completed, please manually verify if it was successful.
-
-# Where to get help for Omnipod DASH driver
+## Where to get help for Omnipod DASH driver
 
 All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
 
