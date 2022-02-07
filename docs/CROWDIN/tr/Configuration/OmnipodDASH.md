@@ -253,7 +253,7 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 ## Butonlar
 
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir.
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
