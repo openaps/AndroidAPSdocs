@@ -10,7 +10,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 
 * DASH podları mavi bir iğne kapağıyla tanımlanır (EROS'un şeffaf bir iğne kapağı vardır). Podlar, fiziksel boyutlar açısından birbirinin aynıdır
 * Bağlantı için ayrı bir BLE bağlantı/köprü cihazına gerek yoktur (RileyLink, OrangeLink veya EmaLink gerekmez).
-* BT connection only when needed, connects to send command and disconnects right after !
+* BT bağlantısı yalnızca komut göndermek için gerektiğinde yapılır ve hemen sonra bağlantı kesilir!
 * Artık "köprü cihazına bağlantı yok / pod" hataları yok
 * AAPS komutları göndermek için pod erişilebilirliğini bekleyecek
 * Aktifleştirmede, AAPS yeni bir DASH podunu bulacak ve bağlayacaktır.
@@ -24,7 +24,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
    -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
-   -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
+   -  **Bazı telefon modelleri için bir sorun bildirildi** : **AAPS Omnipod Dash sürücüsünün her komut gönderdiğinde Bluetooth aracılığıyla Dash POD'a bağlandığını ve hemen ardından bağlantısının kesildiğini unutmayın. Bluetooth bağlantıları AAPS çalıştıran telefona bağlı olan kulaklık vb. diğer cihazlar tarafından bozulabilir, (bazı telefon modellerinde ender durumlarda bağlantı sorununa veya etkinleştirme sırasında veya sonrasında pod hatalarına/kaybına neden olabilir) veya etkilenebilir.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -256,62 +256,62 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 
 ![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir.
 
-   * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-   * See the Troubleshooting section below for additional information.
+   * Pod durumunu yenilemek ve metin içeren (belirsiz) durum satırlarını yenilemek için kullanın.
+   * Ek bilgi için aşağıdaki Sorun Giderme bölümüne bakın.
 
-![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
+![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Pod yönetimi menüsüne gider.
 
-![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
+![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : Pod uyarı biplerini ve bildirimleri devre dışı bırakır (pod süre sonu, düşük rezervuar..).
 
-   * Button is displayed only when pod time is past expiration warning time.
-   * Upon successful dismissal, this icon will no longer appear.
+   * Bu buton, yalnızca pod kullanım süresi (72saat) aşılmışsa görüntülenir.
+   * Başarılı bir devre dışı bırakmanın ardından bu simge artık görünmeyecektir.
 
-![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod.
+![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Aktif pod üzerinde askıya alınmış insülin iletimini sürdürür.
 
 ### Pod Yönetim Menüsü
 
-Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
+Aşağıda, **DASH** sekmesindeki **POD YNTM (0)** butonuna basılarak erişilen **Pod Yönetimi** menüsündeki butonların anlamları verilmiştir. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
-* 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 1 - [**Pod Etkinleştir**](#activate-pod) : Yeni bir pod'u hazırlar ve etkinleştirir.
+* 2 - [**Pod'u Devre Dışı Bırak**](#deactivate-pod) : Şu anda etkin olan pod'u devre dışı bırakır.
+* 3 - **Test Bip Sesi Çal** : Basıldığında pod'dan test bip sesi çalar.
+* 4 - [**Pod geçmişi**](#view-pod-history) : Pod etkinlik geçmişini görüntüler.
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
+Dash sürücüsü ayarları, sol üst köşedeki **hamburger menüsüne** basılıp **Konfigürasyon ayarları (1)**\ ➜\ **Pompa**\ ➜\ **Dash**\ ➜\ **Dişli Çark (3)**, **Dash** başlıklı **radyo düğmesi (2)** seçerek yapılandırılabilir. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
-**NOTE:** A faster way to access the **Dash settings** is by accessing the **3 dot menu (1)** in the upper right hand corner of the **DASH** tab and selecting **Dash preferences (2)** from the dropdown menu.
+**NOT:** **Dash ayarlarına** daha hızlı erişmenin bir yolu da, <strong x-id="1 **DASH** sekmesinde iken sağ üst köşesindeki **3 noktalı menü (1)** ye basıp açılan menüden **Dash tercihler'ini (2)** seçmektir.
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
-Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu giriş için bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
+Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu ayarı bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
-*NOTE: An asterisk (\*) denotes the default setting is enabled.*
+*NOT: Yıldız işareti (\*), varsayılan ayarın etkin olduğunu gösterir.*
 
 ### Onay Bildirimleri
 
 Bolus, bazal, SMB ve GBO iletimi ve değişiklikleri için pod üzerinden onay bip sesleri sağlar.
 
-* **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
-* **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
-* **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
-* **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
+* **Bolus bip seslerini etkinleştir:** Bolus iletildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+* **Bazal bip seslerini etkinleştir:** Yeni bir bazal oran ayarlandığında, aktif bazal oran iptal edildiğinde veya mevcut bazal oran değiştirildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+* **SMB bip seslerini etkinleştir:** Bir SMB teslim edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
+* **GBO (TBR) bip seslerini etkinleştir:** Bir GBO ayarlandığında veya iptal edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
 
 ### Alarmlar
 
-Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
+Tanımlanan eşik değerlerine dayalı olarak pod sona erme, kapatma, düşük rezervuar için AAPS alarm verir.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Pod uyarılarının etkinleştirildiğini otomatik olarak onaylamadıkça, bildirimin reddedilmesi uyarıyı KAPATMAZ. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+*Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. Uyarıyı MANUEL OLARAK kapatmak için **DASH** sekmesini ziyaret etmeli ve **ALARMLARI SUSTUR** butonuna basmalısınız.*
 
-* **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
-* **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
-* **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
-* **Number of units:** The number of units at which to trigger the pod low reservoir alert.
+* **Süre sonu hatırlatıcısını etkinleştir:** Kapanmadan önce tanımlanan saat süresine ulaşıldığında tetiklenecek şekilde pod sona erme hatırlatıcısını etkinleştirin veya devre dışı bırakın.
+* **Kapanmadan kaç saat önce:** Etkin pod kapanmadan önceki saat süresini tanımlar, bu daha sonra pod süre sonu hatırlatıcısı alarmını tetikler.
+* **Düşük rezervuar uyarısını etkinleştir:** Pod, ünite satırında belirlenen alt rezervuar sınırına ulaştığında bir alarm etkinleştirin veya devre dışı bırakın.
+* **Ünite:** Pod düşük rezervuar alarmının tetikleneceği ünite sayısı.
 
 ### Bildirimler
 
