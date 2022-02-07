@@ -26,11 +26,14 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection  
-   -  Not all phone hardware and Android versions are guaranteed to work.
-        Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+* **Compatible Android phone** with a BLE Bluetooth connection :
+ 
+   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+
    -  **AGAIN** ! <u>For some phone model, this might be an issue</u> : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
+
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
+
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
@@ -276,7 +279,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
    * Upon successful dismissal, this icon will no longer appear.
 
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
-​     
+
 ### Pod Management Menu
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab.
@@ -317,7 +320,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
 *Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
-​	
+
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
 * **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
