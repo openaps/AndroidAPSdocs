@@ -46,7 +46,7 @@ Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. 
 1. Sağ üst köşedeki 3 nokta menüsüne tıklayın.
 2. 'Tedaviler'i seçin.
 3. Profil değiştirme sayfasına erişmek için yıldız sembolüne basın.
-4. İstediğiniz profil anahtarını seçin ve "Klon" düğmesine basın.
+4. Select the desired profile switch and press "Clone".
 5. Yeni yerel profili Yerel Profil (YP) sekmesinden veya hamburger menüsünde "profil"den düzenleyebilirsiniz.
 
 ![Klon profil değişikliği](../images/LocalProfile_ClonePS_AAPS30.png)
@@ -105,7 +105,7 @@ Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.
 
 * FIASP için önerilir
 * İES = en az 5.0s
-* Maks. peak = 55 minutes after injection (fixed, not adjustable)
+* Maks. zirve = enjeksiyondan 55 dakika sonra (sabit, ayarlanabilir değil)
 
 #### Lyumjev
 

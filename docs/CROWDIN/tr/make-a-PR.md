@@ -1,4 +1,4 @@
-# İlk PR'nizi yapmak (çekme isteği)
+# How to edit the docs
 
 **Bu açıklama yalnızca İngilizce belgeleri düzenlemek içindir. Tüm yeni bilgiler önce İngilizce olarak eklenmelidir. Diğer dillere çeviri yapmak istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın.**
 

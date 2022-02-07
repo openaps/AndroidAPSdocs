@@ -1,4 +1,4 @@
-# Κάνοντας το πρώτο σας PR (pull request=αίτημα έλξης)
+# How to edit the docs
 
 **Αυτή η περιγραφή αφορά μόνο την επεξεργασία της αγγλικής τεκμηρίωσης. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 

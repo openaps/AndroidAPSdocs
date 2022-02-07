@@ -35,6 +35,8 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS
 
+Version 3.0.0
+================
 Release date: 31-01-2022
 
 Important hints
@@ -43,12 +45,13 @@ Important hints
 * **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
 
+**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+
 Preparation steps
 ----------------------
 **At least two days before update:**
 
 * disable Dexcom bridge in Nightscout
-
 * if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
 
 
@@ -71,8 +74,8 @@ Changes
 
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone. RIP. Only local profile is used and you can enable synchronization with NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
-* Forgotten master password reset procedure. To reset master password put file of name PasswordReset to /AAPS/extra directory and restart AAPS. Then new master password will be serial number of your active pump @MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
 * New automation Careportal action @Philoul
@@ -91,8 +94,6 @@ Changes
    * /AAPS/extra (engineering mode) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
-
-
 
 Sürüm 2.8.2
 ================

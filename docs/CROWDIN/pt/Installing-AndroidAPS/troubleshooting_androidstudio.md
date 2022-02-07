@@ -12,7 +12,8 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Uninstall previous AAPS version on your phone.
 6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings.html#export-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
+8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
 8. Keep on looping.
@@ -23,9 +24,9 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [Uncommitted changes](#Uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
+* [Uncommitted changes](#uncommitted-changes)
+* [No cached version of ... available](#could-not-resolve-no-cached-version)
+* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
 *Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
@@ -103,11 +104,17 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
+  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+
+  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2)
-
   Press "OK" to save and close the settings dialog.
+
+  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
   Now you need to trigger a [Gradle Resync](#gradle-resync)
 
@@ -149,6 +156,15 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
   * Right-click on AndroidAPS (2)
 
   * Click on "Reload Gradle Project" (3)
+
+## Generate Signed APK generated successfully with 0 build variants
+
+When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+
+![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk)) and you will find the generated apk there!
+
 
 ## App was created with compiler/kotlin warnings
 
@@ -207,6 +223,7 @@ If non of the above tips helped you might consider building the app from scratch
 
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
+6. You should check your battery optimization options and disable them again.
 
 ## Worst case scenario
 
@@ -216,4 +233,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#install-android-studio).
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).

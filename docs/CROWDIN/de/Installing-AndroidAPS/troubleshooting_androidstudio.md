@@ -12,11 +12,11 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Import settings](../Usage/ExportImportSettings#export-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
 8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+8. Loope weiter!
 
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -134,7 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
 
   If you are using Windows 10 you must use a 64-bit operating system.
 
@@ -177,49 +177,49 @@ Your app was build successfully and can be transferred to phone!
 
 ## Key was created with errors
 
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Beim Erstellen eines neuen Keystores zum Erstellen der signierten APK wird unter Windows möglicherweise die folgende Fehlermeldung angezeigt:
 
 ![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Windows zu sein. Der Schlüssel wird korrekt erstellt, aber eine Empfehlung wird fälschlicherweise als Fehler angezeigt. Dies kann momentan ignoriert werden.
 
 
 ## No CGM data is received by AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
 
 ## App not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
+* Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Exportiere die Einstellungen](../Usage/ExportImportSettings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Deinstalliere AAPS auf Deinem Smartphone.
-3. Enable airplane mode & turn off bluetooth.
+3. Aktiviere den Flugmodus & schalte Bluetooth aus.
 4. Installiere die neue Version ("app-full-release.apk").
 5. [Importiere die Einstellungen](../Usage/ExportImportSettings)
 6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
-## App installed but old version
+## App installiert, aber weiter die alte Version auf dem Smartphone
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
 
-## None of the above worked
+## Keiner der oben genannten Löungsvorschläge funktioniert
 
-If non of the above tips helped you might consider building the app from scratch:
+Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Exportiere die Einstellungen](../Usage/ExportImportSettings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 
 2. Halte Dein key Passwort und Dein key store Passwort bereit. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
 
     Oder verwende einfach einen neuen keystore.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
+3. Erstelle die App von Grund auf neu wie [hier](../Installing-AndroidAPS/Building-APK#download-androidaps-code) beschrieben.
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
@@ -227,10 +227,10 @@ If non of the above tips helped you might consider building the app from scratch
 
 ## Worst case scenario
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Anleitungen zur kompletten Deinstallation findest Du online z.B.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Installiere Android Studio von Grund auf, wie [hier](../Installing-AndroidAPS/Building-APK#install-android-studio) beschrieben.

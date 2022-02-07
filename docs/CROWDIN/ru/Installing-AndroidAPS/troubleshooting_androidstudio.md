@@ -12,10 +12,11 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
 6. Установите новую версию AAPS на свой телефон.
-7. [Import settings](../Usage/ExportImportSettings.html#export-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
+8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
-8. Продолжайте пользоваться циклом.
+8. Keep on looping.
 
 ## Gradle Sync failed
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
@@ -23,9 +24,9 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [Неодобренные изменения](#Uncommitted-changes)
-* [No cached version of ... available](#could-not-resolveno-cached-version)
-* [Android Gradle requires Java 11 to run](#Android-Gradle-plugin-requires-Java-11-to-run)
+* [Неодобренные изменения](#uncommitted-changes)
+* [No cached version of ... available](#could-not-resolve-no-cached-version)
+* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
 *Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
@@ -103,11 +104,17 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
+  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+
+  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2)
-
   Press "OK" to save and close the settings dialog.
+
+  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
   Now you need to trigger a [Gradle Resync](#gradle-resync)
 
@@ -127,7 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ### Не удается запустить демон процесс
 
-  Если вы видите подобное сообщение об ошибке, вы, вероятно, используете ОС Windows 10, 32-bit. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
 
   If you are using Windows 10 you must use a 64-bit operating system.
 
@@ -150,6 +157,15 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Click on "Reload Gradle Project" (3)
 
+## Generate Signed APK generated successfully with 0 build variants
+
+When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+
+![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.html#generate-signed-apk)) and you will find the generated apk there!
+
+
 ## App was created with compiler/kotlin warnings
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
@@ -159,13 +175,13 @@ If your build completed successfully but you get compiler or kotlin warnings (in
 Your app was build successfully and can be transferred to phone!
 
 
-## Ключ создан с ошибками
+## Key was created with errors
 
-При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
-![Ключ создан с ошибками](../images/AndroidStudio35SigningKeys.png)
+![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
 
-Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
 ## No CGM data is received by AndroidAPS
@@ -175,7 +191,7 @@ Your app was build successfully and can be transferred to phone!
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
 
-## Приложение не установлено
+## App not installed
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
@@ -189,13 +205,13 @@ Your app was build successfully and can be transferred to phone!
 5. [Выполните импорт настроек](../Usage/ExportImportSettings)
 6. Снова включите Bluetooth и отключите режим самолета
 
-## Приложение установлено, но старая версия
+## App installed but old version
 
 If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
 
-## Ничего из вышеперечисленного не сработало
+## None of the above worked
 
-Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
 
@@ -207,13 +223,14 @@ If you built the app successfully, transferred it to your phone and installed it
 
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
+6. You should check your battery optimization options and disable them again.
 
-## Сценарий худшего варианта
+## Worst case scenario
 
-Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Руководства по полной деинсталляции можно найти в Интернете, напр.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.html#install-android-studio).
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).

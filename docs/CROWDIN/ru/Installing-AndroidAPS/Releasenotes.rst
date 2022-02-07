@@ -36,6 +36,8 @@ Android 7
 * Пользуйтесь AAPS версии **2.6.2**
 Загрузите код AAPS здесь https://github.com/MilosKozak/AndroidAPS
 
+Version 3.0.0
+================
 Release date: 31-01-2022
 
 Важные Примечания
@@ -44,12 +46,13 @@ Release date: 31-01-2022
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
 * Используйте одну версию AAPS и NSClient
 
+**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+
 Этапы подготовки
 ----------------------
 **At least two days before update:**
 
 * отключите Dexcom bridge в Nightscout
-
 * if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
 
 
@@ -72,8 +75,8 @@ Release date: 31-01-2022
 
 * Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
-* NSProfile больше не существует. Мир его праху. Используется только локальный профиль, и можно включить синхронизацию с NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
-* Процедура сброса забытого мастер-пароля. Чтобы сбросить мастер-пароль поместите файл с именем PasswordReset в /AAPS/extra directory (дополнительный каталог) и перезапустите AAPS. В этом случае новым мастер-паролем будет серийный номер вашей действующей помпы м@MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
 * New automation Careportal action @Philoul
@@ -92,8 +95,6 @@ Release date: 31-01-2022
    * /AAPS/extra (engineering mode) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
-
-
 
 Версия 2.8.2
 ================

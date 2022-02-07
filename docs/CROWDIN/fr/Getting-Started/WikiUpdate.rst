@@ -19,15 +19,15 @@ Novembre 2021
 
 Octobre 2021
 ==================================================
-* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+* `Notes de version <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
 Septembre 2021
 ==================================================
-* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+* Configuration d'ordinateur recommandée pour `construire l'application AAPS <../Installing-AndroidAPS/Building-APK.html#configuration-recommandee-de-l-ordinateur-pour-construire-un-fichier-apk>`_
 
 Juin 2021
 ==================================================
-* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+* `Installation des Cadrans WearOS <../Configuration/Watchfaces.html>`_ 
 
 Avril 2021
 ==================================================
@@ -132,7 +132,7 @@ Novembre 2019
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
-* Update - quick walk-through for experienced users
+* Mise à jour - Accès rapide aux utilisateurs expérimentés
 * Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-de-documentation>`_.
 
 Octobre 2019
@@ -159,7 +159,7 @@ Septembre 2019
 
 Août 2019
 ==================================================
-* Dexcom G6 patched app region
+* Région de l'application Dexcom G6 patchée
 * `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connecter-l-emetteur-g6-pour-la-premiere-fois>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
 * Nouvelle structure

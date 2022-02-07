@@ -1,4 +1,4 @@
-# Udělejte svůj první PR (pull request - žádost o změnu)
+# How to edit the docs
 
 **Tento popis je pouze pro editaci anglické dokumentace. Všechny nové informace musí být přidány nejdřív v angličtině. Pokud chcete přeložit wiki do jiných jazyků (děkujeme), použijte prosím [crowdin](https://crowdin.com/project/androidapsdocs).**
 

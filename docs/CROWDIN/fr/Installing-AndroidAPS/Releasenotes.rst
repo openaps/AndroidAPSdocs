@@ -35,6 +35,8 @@ Android 7
 * Utiliser la version **2.6.2** d'AAPS
 * Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS
 
+Version 3.0.0
+================
 Date de sortie : 31-01-2022
 
 Conseils importants
@@ -43,12 +45,13 @@ Conseils importants
 * **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau `changement de profil <../Usage/Profiles.html>`_ et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
 
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 3.0 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update3_0.html>`__.
+
 Etapes de préparation
 ----------------------
 **Au moins deux jours avant la mise à jour :**
 
 * Désactivez Dexcom Bridge dans Nightscout
-
 * si vous utilisez G5/G6 changez pour BYODA (recommandé) - vous pouvez toujours utiliser xDrip mais pas en tant que collecteur (xDrip peut recevoir des données de BYODA) ou mettez à jour xDrip à la toute dernière version.
 
 
@@ -71,8 +74,8 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak. Pour mettre à jour le profil du côté NS, utilisez "Clone" (enregistrement!!, pas profil) et enregistrez les modifications. Vous devriez voir "Profil valide à partir de :" et la date actuelle
-* Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
+* NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être `synchronisé avec NS <../Installing-AndroidAPS/update3_0.html#profil-nightscout-ne-peut-plus-etre-selectionne>`_. @MilosKozak. 
+* Procédure de `réinitialisation du mot de passe principal <../Installing-AndroidAPS/update3_0.html#reinitialiser-le-mot-de-passe-principal>`_ en cas d'oubli @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
 * Nouvelle action d'automatisation Careportal @Philoul
@@ -91,8 +94,6 @@ Modifications
    * /AAPS/extra (mode ingénierie) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
-
-
 
 Version 2.8.2
 ================

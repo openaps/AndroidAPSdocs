@@ -17,9 +17,9 @@
 1. [Exportiere Deine Einstellungen](../Usage/ExportImportSettings#exportiere-die-einstellungen) von der "alten" AAPS Version auf Deinem Smartphone. Vielleicht brauchst Du sie nicht, aber sicher ist sicher.
 2. Führe ein [Update Deiner lokalen Kopie](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) des AndroidAPS Sourcecodes durch (Git->Fetch und Git -> Pull).
 3. [Signierte APK erstellen (Generate signed APK)](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
-4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
+4. [Übertrage die erstellte APK-Datei](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
 5. [Prüfe die Version](#aaps-version-auf-dem-smartphone-uberprufen) in AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
+6. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.rst) sicher, dass Du ['identify receiver'](../Configuration/xdrip#identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app).
 
 Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
 
@@ -81,4 +81,4 @@ Keine Panik, wenn irgendetwas schief läuft.
 
 Tief durchatmen!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.

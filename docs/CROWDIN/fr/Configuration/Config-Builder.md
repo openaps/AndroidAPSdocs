@@ -93,7 +93,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 #### Insuline à Action Rapide Oref 
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Insuline à action rapide Oref](../images/ConfBuild_Insulin_RAO.png)
 
 * recommandé pour Humalog, Novolog et Novorapid
 * DAI = au moins 5.0h
@@ -101,7 +101,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 #### Insuline Ultra Rapide Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Insuline Ultra Rapide Oref](../images/ConfBuild_Insulin_URO.png)
 
 * recommendé pour FIASP
 * DAI = au moins 5.0h
@@ -109,7 +109,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insuline Lyumjev](../images/ConfBuild_Insulin_L.png)
 
 * profil d'insuline spécifique pour Lyumjev
 * DAI = au moins 5.0h
@@ -117,7 +117,7 @@ Les détails sont expliqués sur la [page d'aide des profils](../Configuration/p
 
 #### Profil d'insuline ajustable Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Insuline ajustable Oref](../images/ConfBuild_Insulin_FPO.png)
 
 * Avec le "Profil d'insuline ajustable 0ref" vous pouvez entrer individuellement l'heure du pic. Pour cela, cliquez sur la roue crantée pour entrer dans les paramètres avancés.
 * La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
@@ -130,20 +130,20 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) est déconseillé comme récepteur pour Dexcom G6 depuis AAPS 3.0 (voir [Notes de version](../Installing-AndroidAPS/Releasenotes.html#conseils-importants) pour plus de détails.
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 * [Application Tomato](http://tomato.cool/) pour les transmetteurs MiaoMiao
-* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
-* NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
+* [Application Glunovo](https://infinovo.com/) pour le système MGC Glunovo
+* Glycémie NSClient - non recommandé car la boucle fermée repose sur la couverture des données mobiles / wifi dans ce cas. Les données MGC ne seront reçues que s'il y a une connexion en ligne à votre site NS. Mieux vaut utiliser la diffusion locale de l'une des autres sources de données de la MGC.
 * Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
 
 ## Pompe
 
 Sélectionner la pompe que vous utilisez.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+![Sélection de la pompe dans le Générateur de configuration](../images/ConfBuild_Pump_AAPS30.png)
 
 * [DanaR](DanaR-Insulin-Pump.md)
 * DanaR coréenne (pour la pompe DanaR domestique)
@@ -304,7 +304,7 @@ Permet aux aidants à distance de contrôler certaines fonctionnalités d'Androi
 
 ### Aliments
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Affiche les préréglages alimentaires définis dans la base de données Nightscout, voir [Nightscout Lisez-moi](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pour plus d'informations sur la configuration.
 
 Remarque : Les entrées ne peuvent pas être utilisées dans la calculatrice AndroidAPS. (Affichage uniquement)
 

@@ -35,7 +35,9 @@ Android 7
 * Verwende AAPS Version **2.6.2**.
 * Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
 
-Release date: 31-01-2022
+Version 3.0.0
+================
+Erscheinungsdatum: 31.01.2022
 
 Wichtige Hinweise
 ----------------------
@@ -43,21 +45,22 @@ Wichtige Hinweise
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
 
+**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+
 Vorbereitende Schritte
 ----------------------
 **Spätestens zwei Tage vor dem Update:**
 
 * Deaktiviere Dexcom Bridge in Nightscout
-
-* if you are using G5/G6 switch to BYODA (recommended) - you still can use xDrip but not as collector (xDrip can receive data from BYODA) or update xDrip to latest nightly version.
+* Wenn Du den Dexcom G5 oder G6 verwendest, wird der Wechsel zur BYODA empfohlen. Du kannst den xDrip+ Master weiter verwenden, allerdings nicht als Empfänger. xDrip+ kann Daten von der BYODA empfangen. Wenn Du xDrip+ als Empfänger nutzen willst, musst Du die letzte nightly Version verwenden.
 
 
 Änderungen
 ----------------------
-* 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100-tausend Zeilen geändert, 105-tausend neue Codezeilen
+* Unterstützung für `Omnipod DASH <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
+* Unterstützung für `DiaconnG8 <../Configuration/DiaconnG8.rst>`_
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
@@ -71,13 +74,13 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
-* Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
-* New automation Careportal action @Philoul
-* Add Bolus reminder in Carbs Dialog @Philoul
-* Bolus Wizard improvement
+* Neue Automatisierung Careportal Aktion @Philoul
+* Bolus Erinnerung im KH-Dialog @Philoul
+* Verbesserung Bolus Assistent
 * Verbesserung der Anzeige (user interface) @MilosKozak
 * Neue Anwender-Buttons für Automatisierungen @MilosKozak
 * Neues Automatisierungs-Layout @MilosKozak
@@ -91,8 +94,6 @@ Vorbereitende Schritte
    * /AAPS/extra (engineering mode) 
    * /AAPS/logs /AAPS/exports 
    * /AAPS/preferences
-
-
 
 Version 2.8.2
 ================
