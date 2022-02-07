@@ -27,13 +27,12 @@ Ab Android 9
 Android 8
 ------------------------------------
 * Verwende AAPS Version **2.8.2.1**.
-* Bis zur Veröffentlichung von AAPS Version 3 verwende einfach die **AAPS master**-Version, denn diese ist momentan 2.8.2.1. ;-)
-* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.8.2.1
 
 Android 7
 ------------------------------------
 * Verwende AAPS Version **2.6.2**.
-* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
+* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
 Version 3.0.0
 ================
@@ -52,7 +51,8 @@ Vorbereitende Schritte
 **Spätestens zwei Tage vor dem Update:**
 
 * Deaktiviere Dexcom Bridge in Nightscout
-* Wenn Du den Dexcom G5 oder G6 verwendest, wird der Wechsel zur BYODA empfohlen. Du kannst den xDrip+ Master weiter verwenden, allerdings nicht als Empfänger. xDrip+ kann Daten von der BYODA empfangen. Wenn Du xDrip+ als Empfänger nutzen willst, musst Du die letzte nightly Version verwenden.
+* if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
+* if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
 
 Änderungen
