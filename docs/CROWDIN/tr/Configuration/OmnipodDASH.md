@@ -315,9 +315,9 @@ Tanımlanan eşik değerlerine dayalı olarak pod sona erme, kapatma, düşük r
 
 ### Bildirimler
 
-Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
+GBO, SMB, bolus veya teslimatı askıya alınan başarılı olayları için AAPS bildirimleri ve sesli telefon uyarıları sağlar.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*NOT: Bunlar yalnızca bildirimlerdir, sesli uyarı yapılmaz.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
 * **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
