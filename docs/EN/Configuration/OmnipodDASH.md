@@ -2,20 +2,10 @@
 
 These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 3.0.
 
-**This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
+**Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
 
-###Contents: 
+******This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
 
-* [**Omnipod DASH specifications**](#omnipod-dash-specifications)
-* [**Hardware/Software Requirements**](#hardware/software-requirements)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
-* [**Dash settings**](#dash-settings)
 
 
 ## Omnipod DASH specifications
@@ -38,7 +28,8 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * **Compatible Android phone** with a BLE Bluetooth connection  
    -  Not all phone hardware and Android versions are guaranteed to work.
-Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+        Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work)
+   -  **AGAIN** ! <u>For some phone model, this might be an issue</u> : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -63,7 +54,7 @@ If you are new to AndroidAPS and are setting up your basal rate profile for the 
 ## Enabling the Dash Driver in AAPS
 
 You can enable the Dash driver in AAPS in **two ways**:
- 
+
 ### Option 1: New installations
 
 When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
@@ -83,7 +74,7 @@ Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
- 
+
 ### Verification of Omnipod Driver Selection
 
 To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left. 
@@ -267,7 +258,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 * **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming. 
 * **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
-*  **Active pod alerts:** Reserved for currently running alerts on the active pod.
+* **Active pod alerts:** Reserved for currently running alerts on the active pod.
 
 ### Buttons
 
@@ -276,16 +267,16 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
    * Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
    * See the Troubleshooting section below for additional information.
-   
+
 ![POD_MGMT_Icon](../images/DASH_images/POD_MGMT_LOGO.png) : Navigates to the Pod management menu.
 
 ![ack_alert_logo](../images/DASH_images/ack_alert_logo.png) : When pressed this will disable the pod alerts beeps and notifications (expiry, low reservoir..).
 
    * Button is displayed only when pod time is past expiration warning time.
    * Upon successful dismissal, this icon will no longer appear.
-   
+
 ![RESUME_Icon](../images/DASH_images/DASH_tab_icons/RESUME_Icon.png) : Resumes the currently suspended insulin delivery in the active pod. 
-     
+​     
 ### Pod Management Menu
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab.
@@ -307,9 +298,9 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
 The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
- 
+
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
- 
+
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
 ### Confirmation beeps
@@ -326,7 +317,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
 *Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
-	
+​	
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
 * **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
@@ -357,7 +348,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Insulin Level
 
 **Insulin Level**
 
@@ -489,6 +480,6 @@ All of the development work for the Omnipod DASH driver is done by the community
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
 -  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues)
-if it exists, please confirm/comment/add information on your problem.
-If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
+     if it exists, please confirm/comment/add information on your problem.
+       If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
