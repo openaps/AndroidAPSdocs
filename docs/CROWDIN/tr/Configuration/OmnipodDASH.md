@@ -176,7 +176,7 @@ Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatm
 
 ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
-## Pod Uyarılarını Susturma
+## Silencing Pod Alerts
 
 *NOT - ALARMLARI SUSTUR butonu yalnızca **DASH** sekmesinde pod sona erme veya düşük rezervuar uyarısı tetiklendiğinde kullanılabilir. Alarmları Sustur butonu görünmüyorsa ve poddan bip sesleri duyuyorsanız, 'Pod durumunu yenilemeyi' deneyin.*
 
