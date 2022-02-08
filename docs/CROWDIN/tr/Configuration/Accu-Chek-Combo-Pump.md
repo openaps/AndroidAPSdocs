@@ -98,8 +98,8 @@ Bunun birkaç olası nedeni olabilir. Aşağıdaki adımları deneyin:
 11. At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you should be ready to go.
 12. If pairing was not successful and you got a timeout on the pump, you will need to restart the process from scratch.
 13. If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
-14. Reboot the phone.
-15. Now you can restart AAPS loop.
+14. Telefonu yeniden başlatın.
+15. AAPS programını yeniden başlatabilirsiniz.
 
 ## Kullanım
 
