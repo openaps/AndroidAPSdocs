@@ -51,13 +51,13 @@
     - Pompadan bolus yapmayı önlemek için pompada tuş kilidini etkinleştirin, özellikle when the pump was used before and quick bolusing was a habit.
     - Ekran zaman aşımını ve menü zaman aşımını sırasıyla minimum 5.5 ve 5 olarak ayarlayın. Bu AAPS'nin hata durumlarından daha hızlı kurtulmasını sağlar ve bu tür hatalar sırasında meydana gelebilecek titreşim sayısını azaltır
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Kullanıcı menüsü ayarlarının ekran görüntüsü](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![GBO ayarlarının ekran görüntüsü](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Bolus ayarlarının ekran görüntüsü](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![İnsülin rrezervuar ayarlarının ekran görüntüsü](../images/combo/combo-insulin-settings.png)
 
 - AndroidAPS'yi [AndroidAPS viki](https://androidaps.readthedocs.io/) deki açıklandığı gibi yükleyin
 - Make sure to read the wiki to understand how to setup AndroidAPS.
@@ -75,7 +75,7 @@ Bunun birkaç olası nedeni olabilir. Aşağıdaki adımları deneyin:
 
 1. Pompaya **yeni veya dolu bir pil** takın. Ayrıntılar için pil bölümüne bakın. Pompanın akıllı telefona çok yakın olduğundan emin olun.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo telefonun yanında olmalı](../images/Combo_next_to_Phone.png)
 
 2. Eşleştirme devam ederken telefonla bağlantı kuramamaları için diğer bluetooth cihazlarını kapatın veya kaldırın. Herhangi bir paralel bluetooth iletişimi veya bağlantı kurma istemi, eşleştirme sürecini bozabilir.
 
