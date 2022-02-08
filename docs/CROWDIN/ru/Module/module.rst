@@ -1,4 +1,4 @@
-# Обзор компонентов 
+mComponent Overview 
 **************************************************
 AndroidAPS - это не просто (самостоятельно собранное) приложение, это один из модулей закрытой системы ИПЖ Прежде чем выбрать компоненты, неплохо рассмотреть их в `комплексе компонентов <../index.html#component-setup> `_.
    
@@ -88,7 +88,7 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 --------------------------------------------------
 Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. For further details, look `here <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию с приложением xDrip+
 * ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
