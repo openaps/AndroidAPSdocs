@@ -23,7 +23,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
-   -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Lütfen [**DASH Test Edilen telefonları**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) kontrol edin veya sadece telefonunuzla deneyin ve sonucu bize bildirin (telefon referansı ve coğrafi bölge, Android sürümü, "çalıştı / bazı zorluklar mevcut / çalışmadı" şeklinde).
    -  **Bazı telefon modelleri için bir sorun bildirildi** : **AAPS Omnipod Dash sürücüsünün her komut gönderdiğinde Bluetooth aracılığıyla Dash POD'a bağlandığını ve hemen ardından bağlantısının kesildiğini unutmayın. Bluetooth bağlantıları AAPS çalıştıran telefona bağlı olan kulaklık vb. diğer cihazlar tarafından bozulabilir, (bazı telefon modellerinde ender durumlarda bağlantı sorununa veya etkinleştirme sırasında veya sonrasında pod hatalarına/kaybına neden olabilir) veya etkilenebilir.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
@@ -422,10 +422,10 @@ When on an active Pod, make also sure that you have an export for the current Po
 
 1. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde saklayın.
 2. Uninstall AndroidAPS and restart your phone.
-3. Install the new version of AndroidAPS.
+3. AndroidAPS'in yeni sürümünü yükleyin.
 4. Import your settings
-5. Verify all preferences (optionally import settings again)
-6. Activate a new Pod
+5. Tüm tercihleri doğrulayın (isteğe bağlı olarak ayarları tekrar içe aktarın)
+6. Yeni bir pod etkinleştirin
 7. When done: Export current settings
 
 ### Updating AndroidAPS to a newer version
