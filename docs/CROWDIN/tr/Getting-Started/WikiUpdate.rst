@@ -1,27 +1,27 @@
-Docs updates & changes
+Dokümanlar güncellemeleri ve değişiklikleri
 **************************************************
 
-January 2022
+Ocak 2022
 ==================================================
-* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+* `Android Studio Sorun Giderme <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - güncelleme @tanja
 
-December 2021
+Aralık 2021
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `APK Derleme <../Installing-AndroidAPS/Building-APK.html>`_ - Android Studio Arctic Fox'u güncelleme | 2020.3.1 @tanja
+*`Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ bilgisi eklendi @MilosKozak
 
-November 2021
+Kasım 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* `Libre 2 sensörünü kalibre etmek için en iyi uygulamalar <Hardware/Libre2.html#libre-2-sensörünü-kalibre-etmek-için-en-iyi-uygulamalar>`_
+* `İDF <../Getting-Started/FAQ.html#impact>`_ etkinin yeniden yapılandırılması
+* Güncelleme `sorun giderme Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Yamalanmış `Dexcom <../Hardware/DexcomG6.html>`_ uygulaması eski olduğu için kaldırıldı
 
-October 2021
+Ekim 2021
 ==================================================
-* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+* `Sürüm notları <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
 
-September 2021
+Eylül 2021
 ==================================================
 * Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
 
