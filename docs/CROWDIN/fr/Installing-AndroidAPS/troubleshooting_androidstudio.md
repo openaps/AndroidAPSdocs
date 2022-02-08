@@ -12,7 +12,7 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 4. Générez l'apk signé de la nouvelle version comme décrit dans le [Guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version) et transférez-le sur votre téléphone.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
+7. [Importer les paramètres](../Usage/ExportImportSettings#importer-les-parametres) sur votre nouveau téléphone.
 8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
 
    Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
