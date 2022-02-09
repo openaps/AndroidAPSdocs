@@ -24,7 +24,7 @@ Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **O
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
    -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné).
-   -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
+   -  **Pour certains modèles de téléphones, ceci peut présenter un problème** : **Sachez que le pilote AAPS Omnipod Dash se connecte avec le Dash POD via le Bluetooth chaque fois qu'il envoie une commande, et il se déconnecte juste après. Les connexions Bluetooth peuvent être perturbées par d'autres périphériques connectés au téléphone qui exécutent AAPS, comme les écouteurs etc... (qui peuvent occasionner, dans des rares occasions, des problèmes de connexion ou des erreurs/perte de pod lors de l'activation ou par la suite pour certains téléphones), ou être perturbés par elle.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Moniteur Glycémie continue (MGC)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -34,33 +34,33 @@ Ces instructions supposent que vous commencez une nouvelle session de pod; si ce
 
 **SÉCURITÉ D'ABORD** - ne pas essayer ce processus dans un environnement où vous ne pouvez pas récupérer d'une erreur (pods supplémentaires, insuline, et les smartphones sont nécessaires).
 
-**Votre PDM Omnipod Dash ne fonctionnera plus suite à l'activation de votre pod avec le pilote AAPS Dash.** Vous avez précédemment utilisé votre PDM Dash pour envoyer des commandes à votre Dash pod. An Dash pod only allows a single device to send commands to communicate with it. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Votre PDM Omnipod Dash ne fonctionnera plus suite à l'activation de votre pod avec le pilote AAPS Dash.** Vous avez précédemment utilisé votre PDM Dash pour envoyer des commandes à votre Dash pod. Un pod Dash ne permet qu'à un seul périphérique d'envoyer des commandes pour communiquer avec lui. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. Cela signifie que lorsque vous activez un pod Dash avec votre téléphone Android via le pilote AAPS Dash, **vous ne serez plus en mesure d'utiliser votre PDM avec ce pod**. Le pilote AAPS Dash de votre téléphone Android devient maintenant votre PDM.
 
-*This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
+*Cela ne veut pas dire que vous pouvez jeter votre PDM, il est recommandé de le garder comme une sauvegarde, et en cas d'urgence dans le cas où vous perdez votre téléphone ou AAPS ne fonctionne pas correctement.*
 
-**Your pod will not stop delivering insulin when it is not connected to AndroidAPS**. Default basal rates are programmed on the pod on activation as defined in the current active profile. As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
+**Votre pod n'arrêtera pas de délivrer d'insuline lorsqu'il n'est pas connecté à AndroidAPS**. Les débits de basal par défaut définis dans le profil actif actuel sont programmés dans le pod lors de l'activation. Tant qu'AndroidAPS est opérationnel, il enverra des commandes de débit de base qui s'exécuteront pendant 120 minutes au maximum. Lorsque, pour une raison quelconque, le pod ne reçoit pas de nouvelles commandes (par exemple parce que la communication a été perdue à cause de la distance Pod - téléphone) le pod retourne automatiquement aux débits de basal par défaut.
 
-**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** **The AndroidAPS Profile does not support a 30 minute basal rate time frame** If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
+**Les profils de débit de base 30 min NE sont PAS pris en charge dans AndroidAPS.** **Le profil AndroidAPS ne supporte pas une période de 30 minutes de durée de débit basal** Si vous êtes nouveau sur AndroidAPS et que vous configurez votre profil de débit de basal pour la première fois; veuillez noter que les débits de basal à partir d'une demi-heure ne sont pas pris en charge, et vous devrez ajuster votre profil de débit de basal pour commencer au début de l'heure. Par exemple, si vous avez un débit de basal de 1,1 unités qui commence à 09h30 et a une durée de 2 heures se terminant à 11h30, cela ne marchera pas. Vous devrez mettre à jour ce taux de basal de 1,1 sur une plage horaire de 9h00 à 11h00 ou de 10h00 à 12h00. Même si Omnipod Dash lui-même prend en charge les incréments de débit basal de 30 min, AndroidAPS n'est pas en mesure de les prendre en compte avec ses algorithmes actuellement.
 
-## Enabling the Dash Driver in AAPS
+## Activation du Driver Dash dans AAPS
 
-You can enable the Dash driver in AAPS in **two ways**:
+Vous pouvez activer le pilote Dash dans AAPS de **deux façons**:
 
-### Option 1: New installations
+### Option 1 : Nouvelles installations
 
-When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
+Lorsque vous installez AndroidAPS pour la première fois, l' **Assistant d'installation** vous guidera dans l'installation d'AndroidAPS. Sélectionnez « DASH » lorsque vous atteignez la sélection de pompe.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
+En cas de doute, vous pouvez également sélectionner « Pompe virtuelle » et sélectionner « DASH » plus tard, après avoir configuré AndroidAPS (voir l’option 2).
 
 ### Option 2 : Le Générateur de configuration
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+Sur une installation existante, vous pouvez sélectionner la pompe **DASH** dans l'Assistant de configuration :
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
+Sur le coin en haut à gauche dans le ** menu hamburger** sélectionnez **Configuration (1)**\ ➜\ **Pompe**\ ➜\ **Dash**\ ➜\ **Roue crantée des paramètres (3)** en sélectionnant le **bouton radio (2)** intitulé **Dash**.
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
+La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
@@ -254,7 +254,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 ### Boutons
 
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Envoie une commande d'actualisation au pod actif pour mettre à jour la communication.
 
    * A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
    * See the Troubleshooting section below for additional information.
@@ -279,7 +279,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
+The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
@@ -317,7 +317,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
-*NOTE: These are notifications only, no audible beep alerts are made.*
+*REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
 * **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
@@ -338,7 +338,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Niveau
 
 **Insulin Level**
 
@@ -432,7 +432,7 @@ When on an active Pod, make also sure that you have an export for the current Po
 
 In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
 
-1. Export your settings.
+1. Exporter les paramètres.
 2. Install  the new AndroidAPS version.
 3. Verify the installation was successful
 4. RESUME the Pod or activate a new Pod.
