@@ -4,13 +4,13 @@
 
 ## Açıklama
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+Bu kurulumda, döngünün kontrol merkezi olarak Samsung Galaxy S7 akıllı telefon kullanılıyor. Biraz değiştirilmiş Dexcom Uygulaması, Dexcom G6 CGM'den glikoz değerlerini okur. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Dexcom Uygulaması yalnızca sınırlı uyarı seçenekleri sunduğundan, açık kaynak uygulaması xDrip+ yalnızca yüksek ve düşük alarmları değil, aynı zamanda bireysel gereksinimlere göre ek uyarıları da tanımlamak için kullanılır.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+İsteğe bağlı olarak, glikoz ve AndroidAPS değerlerini bileğinizde görüntülemek için bir Android wear akıllı saati kullanılabilir (bu örnek kurulumda Sony Smartwatch 3 (SWR50) kullanılmakta). Saat AndroidAPS'yi kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlayın).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+Sistem çevrimdışı olarak çalışır. This means there is no need for a data connection from the smartphone to the Internet for operation.
 
 Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
 
@@ -138,7 +138,7 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 ## Optional: Setup Sony Smartwatch 3 (SWR50)
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Saat AndroidAPS'yi kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlayın). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Smartwatch](../images/SampleSetupSmartwatch.png)
 
