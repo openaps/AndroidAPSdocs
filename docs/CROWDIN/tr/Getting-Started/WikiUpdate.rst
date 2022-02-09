@@ -142,19 +142,19 @@ Ekim 2019
 * `COB hesaplaması ayrı sayfada <../Usage/COB-calculation.html>`_
 * `COB - yanlış COB değeri tespiti <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 * `Dexcom G6'ya özel sorun giderme <../Hardware/DexcomG6.html#dexcom-g6-special-troubleshooting>`_
-* `Objectives update version 2.5 <../Usage/Objectives.html>`_
+* `Görevler sürüm 2.5 güncellemesi <../Usage/Objectives.html>`_
 * `Tercihler güncellemesi <../Configuration/Preferences.html>`_
-* `SGLT-2 inhibitörleri - <../Module/module.html#no-use-of-sglt-2-inhibitors>` döngüsü sırasında kullanmayın
-* `SMS Commands Troubleshooting <../Children/SMS-Commands.html#troubleshooting>`_
-* `xDrip - update G6 transmitter replacement <../Configuration/xdrip.html#replace-transmitter>`_
+* `SGLT-2 inhibitörleri - <../Module/module.html#no-use-of-sglt-2-inhibitors>` döngü sırasında kullanmayın
+* `SMS Komutları Sorun Giderme <../Children/SMS-Commands.html#troubleshooting>`_
+* `xDrip - G6 vericisini güncelleyin <../Configuration/xdrip.html#replace-transmitter>`_
 
 Eylül 2019
 ==================================================
-* `Automate <../Usage/Automation.html>`_
-* `Bolus calculator <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - slow carb absorption
-* `Nightscout security <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
-* `Profile timeshift <../Usage/Profiles.html#time-shift>`_ (more details)
-* `Uzaktan izleme <../Children/Children.html>`_
+* `Otomatikleştir <../Usage/Automation.html>`_
+* `Bolus hesaplayıcı <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - yavaş karbonhidrat emilimi
+* `Nightscout güvenliği <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
+* `Profil zaman kayması <../Usage/Profiles.html#time-shift>`_ (daha fazla ayrıntı)
+* `Remote monitoring <../Children/Children.html>`_
 * `Kapalı Döngü Sistemi Nedir? <../Getting-Started/ClosedLoop.html>`_
 
 Ağustos 2019
