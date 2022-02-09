@@ -118,11 +118,11 @@ xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdı
     * Ayarlar > Alarmlar ve Uyarılar > Kalibrasyon Uyarıları: devre dışı (değiştirilmiş Dexcom uygulaması aracılığıyla hatırlatılır)
     * Ayarlar > Donanım Veri Kaynağı > 640G/EverSense
     * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. This is necessary otherwise an error message will appear regularly.) 
+    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Configuration/BG-Source.rst) bakın.
 
-### Example of an alarm setup
+### Alarm kurulum örneği
 
 The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
