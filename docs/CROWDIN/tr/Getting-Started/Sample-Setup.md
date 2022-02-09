@@ -124,19 +124,19 @@ xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Config
 
 ### Alarm kurulum örneği
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+"Acil düşük alarmı" (55 mg/dl - 3,1mmol altında), değiştirilmiş Dexcom uygulamasından devre dışı bırakılamayan standart bir alarmdır.
 
 ![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Toplantılar / ibadethaneler / sinema vb. için ipucu:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Samsung Galaxy S7'de "Rahatsız etmeyin" modu etkinleştirilirse (Menü > Ayarlar > Sesler ve titreşim > Rahatsız etmeyin: sağa kaydırarark (= etkin)), telefon yalnızca acil düşük alarmı sırasında titrer ve herhangi bir akustik uyarı vermez. xDrip+ aracılığıyla kurulan diğer alarmlar için sessiz modun göz ardı edilip edilmeyeceğini (akustik sesin çalınıp çalınmayacağını) seçebilirsiniz.
 
-## Disable power saving option
+## Güç tasarrufu seçeneğini devre dışı bırakma
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G6 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+Samsung Galaxy S7 cihazınızda Menü > Ayarlar > Cihaz Bakımı > Pil > İzlenmeyen Uygulamalar > + Uygulama ekle seçeneğine gidin: AndroidAPS, Dexcom G6 Mobile, xDrip+ ve Android Wear (akıllı saat kullanılıyorsa) uygulamalarını arka arkaya seçin
 
-## Optional: Setup Sony Smartwatch 3 (SWR50)
+## İsteğe bağlı: Sony Smartwatch 3'ü (SWR50) kurun
 
 With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Saat AndroidAPS'yi kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlayın). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
