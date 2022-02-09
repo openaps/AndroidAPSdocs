@@ -118,7 +118,7 @@ xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdı
     * Ayarlar > Alarmlar ve Uyarılar > Kalibrasyon Uyarıları: devre dışı (değiştirilmiş Dexcom uygulaması aracılığıyla hatırlatılır)
     * Ayarlar > Donanım Veri Kaynağı > 640G/EverSense
     * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
+    * Menü > Sensörü Başlat (Formalitedir ve çalışan G6 sensörüyle bir ilgisi yoktur. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
 
 xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Configuration/BG-Source.rst) bakın.
 
