@@ -4,26 +4,26 @@ Ces instructions sont pour configurer la pompe de génération **Omnipod DASH** 
 
 **Ce logiciel est une partie d'un système de pancréas artificiel "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
-## Omnipod DASH specifications
+## Spécifications de DASH Omnipod
 
 Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **Omnipod EROS**:
 
 * Les pompes DASH sont identifiées par un bouchon d'aiguille bleue (EROS a un bouchon d'aiguille clair). Les pods sont par ailleurs identiques en termes de dimensions physiques
 * Pas besoin d'un dispositif de liaison Omnipod / pont BLE séparé (pas de RileyLink, OrangeLink ou EmaLink nécessaires).
-* BT connection only when needed, connects to send command and disconnects right after !
+* Connexion BT uniquement lorsque c'est nécessaire, se connecte pour envoyer la commande et se déconnecte immédiatement après !
 * Plus aucune erreur du type "aucune connexion au périphérique / pod"
 * AAPS attendra l'accessibilité du pod pour envoyer des commandes
 * Lors de l'activation, AAPS trouvera et se connectera à un nouveau pod DASH.
 * Distance usuelle : 5-10 mètres (selon les téléphones)
 
-## Hardware/Software Requirements
+## Configuration matérielle et logicielle requise
 
 * Un nouveau pod **Omnipod DASH** (identifié par un bouchon d'aiguille bleu)
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
-   -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné).
    -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Moniteur Glycémie continue (MGC)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
