@@ -56,57 +56,57 @@ Yazılım, bilgisayarınıza yüklendikten sonra birçok ek veri indirdiğinden,
 * Menü > Ayarlar > Telefon bilgisi > Yazılım bilgisi: En az "Android Sürümü 8.0" (Android 8.0.0 sürümüne kadar başarıyla test edilmiştir Oreo - Samsung Experience Sürüm 9.0) 
 * Donanım yazılımı güncellemesi için: menü > Tercihler > yazılım güncellemesi
 
-### Allow installation from unknown sources
+### Bilinmeyen kaynaklardan uygulama yüklemeye izin ver
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Menü > Ayarlar > Cihaz güvenliği > Bilinmeyen kaynaklar > sağa kaydır (= etkin)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+Güvenlik nedeniyle, burada açıklanan tüm uygulamaların yüklenmesi tamamlandıktan sonra bu ayar tekrar devre dışı bırakılmalıdır.
 
 ### Bluetooth'u Etkinleştir
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Menü > Ayarlar > Bağlantılar > Bluetooth > sağa kaydır (= etkin)
+2. Menü > Ayarlar > Bağlantılar > Konum > sağa kaydır (= etkin)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Bluetooth'un düzgün çalışması için konum servisleri ("GPS") etkinleştirilmelidir.
 
 ### Dexcom Uygulamasını yükleyin (değiştirilmiş sürüm)
 
 ![Yamalı Dexcom Uygulaması](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
+Google Play Store'daki orijinal Dexcom uygulaması, değerleri diğer uygulamalara yayınlamadığından çalışmayacaktır. Bu nedenle, topluluk tarafından biraz değiştirilmiş bir sürüm gereklidir. Yalnızca bu değiştirilmiş Dexcom uygulaması AAPS ile iletişim kurabilir. Ek olarak, değiştirilmiş Dexcom Uygulaması, yalnızca [Dexcom'un uyumluluk listesindeki](https://www.dexcom.com/dexcom-international-complete) değil, tüm Android akıllı telefonlarla kullanılabilir.
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+Değiştirilmiş Dexcom G6 uygulamasının mmol/l ve mg/dl sürümü <https://github.com/dexcomapp/dexcomapp/tree/master/2.4> adresinde mevcuttur. Bölgeniz için uygun G6 uygulamasını seçmelisiniz.
 
-To do this perform the following steps on your smartphone:
+Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+1. Orijinal Dexcom uygulaması zaten yüklüyse: 
+    * Sensörü durdurun
+    * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
+2. Değiştirilmiş Dexcom uygulamasını indirin (mg/dl veya mmol/l ve [bölgeyi](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) ihtiyaçlarınıza göre kontrol edin): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+3. Akıllı telefonunuza değiştirilmiş Dexcom G6 uygulamasını yükleyin (= indirilen APK dosyasını seçin)
+4. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
+5. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
+    * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
+    * Düşük `KAPALI`
+    * Yüksek `KAPALI`
+    * Artış oranı `KAPALI`
+    * Düşme oranı `KAPALI`
+    * Sinyal kaybı `KAPALI`
 
-## Install AndroidAPS
+## AndroidAPS'i yükleyin
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
-3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
-4. In this sample setup we used (among others)
+1. [APK'yı oluşturmak](../Installing-AndroidAPS/Building-APK#generate-signed-apk) için talimatları izleyin
+2. Oluşturulan APK'yı telefonunuza [aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
+4. Bu örnek kurulumda yardımcıyı kullandık
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client etkinleştirildi (bkz. [NS Client](../Configuration/Config-Builder#ns-profile) ve [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md))
 
-## Install xDrip+
+## xDrip+'ı yükleyin
 
 xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
