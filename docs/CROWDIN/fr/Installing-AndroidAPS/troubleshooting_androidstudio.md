@@ -24,7 +24,7 @@ Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message i
   ![Échec de Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 Ci-dessous les échecs courants de synchronisation de gradle :
-* [Uncommitted changes](#uncommitted-changes)
+* [Uncommitted changes](#modifications-non-validees)
 * [No cached version of ... available](#could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
@@ -144,18 +144,18 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Resynchronisation Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Si vous pouvez toujours voir le message que la synchronisation de gradle a échoué, sélectionnez maintenant le lien "Try again".![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the a message anymore, you can still trigger this manually:
+  Si vous ne voyez plus le message, vous pouvez toujours le déclencher manuellement:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Ouvrez l'onglet Gradle (1) sur le côté droit de Android Studio.
 
     ![Gradle Rechargement](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AndroidAPS (2)
+  * Faites un clic droit sur AndroidAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * Cliquez sur "Reload Gradle Project" (3)
 
 ## Générer l'APK signé avec succès mais avec 0 variantes de compilation
 
@@ -168,11 +168,11 @@ C'est un faux avertissement. Vérifiez le répertoire que vous avez sélectionn�
 
 ## L'application a été créée avec les avertissements du compilateur/kotlin
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+Si votre compilation est terminée avec succès mais que vous obtenez des avertissements du compilateur ou de kotlin (indiqués par un point d'exclamation jaune ou bleu), alors vous pouvez ignorer ces avertissements.
 
  ![Gradle terminé avec des avertissements](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Your app was build successfully and can be transferred to phone!
+Votre application a été correctement compilée et peut être transférée au téléphone!
 
 
 ## La clé a été créée avec des erreurs
