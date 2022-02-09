@@ -108,16 +108,16 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 ## xDrip+'ı yükleyin
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdır. Bu kurulumda, geliştiricilerin uygulamayı ilk yazdıklarının aksine, xDrip+ bu yöntemle Dexcom G6'dan glikoz verilerini toplamak için değil, yalnızca alarmlar vermek ve widget'taki Android ana ekranında mevcut glikoz değerini ve eğrisini görüntülemek için kullanılır. XDrip+ ile alarmlar, Dexcom yazılımı, AAPS veya Nightscout'tan çok daha fazla bireysel olarak ayarlanabilir (ses seçiminde herhangi bir sınırlama yoktur, gündüz/gece saatine bağlı olarak farklı alarmlar vb.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
+1. Akıllı telefonunuzla xDrip+'ın en son kararlı APK sürümünü indirin <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - Google Play Store'daki sürümü değil!
+2. İndirilen APK dosyasını seçerek xDrip+'ı yükleyin.
+3. xDrip+'ı başlatın ve aşağıdaki ayarları yapın (sol üstte hamburger menüsü) 
+    * Ayarlar > Alarmlar ve Uyarılar > Glikoz Seviyesi Uyarı Listesi > İhtiyaçlarınıza göre Uyarı Oluştur (yüksek ve düşük). 
+    * Mevcut alarmlar, alarma uzun basılarak değiştirilebilir.
+    * Ayarlar > Alarmlar ve Uyarılar > Kalibrasyon Uyarıları: devre dışı (değiştirilmiş Dexcom uygulaması aracılığıyla hatırlatılır)
+    * Ayarlar > Donanım Veri Kaynağı > 640G/EverSense
+    * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. This is necessary otherwise an error message will appear regularly.) 
 
 For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
