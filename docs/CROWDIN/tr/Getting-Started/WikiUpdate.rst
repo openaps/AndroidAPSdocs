@@ -154,7 +154,7 @@ Eylül 2019
 * `Bolus hesaplayıcı <../Getting-Started/Screenshots.html#wrong-cob-detection>`_ - yavaş karbonhidrat emilimi
 * `Nightscout güvenliği <../Installing-AndroidAPS/Nightscout.html#security-considerations>`_
 * `Profil zaman kayması <../Usage/Profiles.html#time-shift>`_ (daha fazla ayrıntı)
-* `Remote monitoring <../Children/Children.html>`_
+* `Uzaktan izleme <../Children/Children.html>`_
 * `Kapalı Döngü Sistemi Nedir? <../Getting-Started/ClosedLoop.html>`_
 
 Ağustos 2019
