@@ -149,6 +149,6 @@ Details about the information displayed on the watchface can be found [here](../
 * On your smartwatch: Long press display to change watchface and select `AAPSv2`
 * If necessary restart both devices once.
 
-## Pump setup
+## Pompa Ayarları
 
 see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
