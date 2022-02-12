@@ -1,6 +1,6 @@
 # Örnek kurulum: Samsung S7, Dana RS, Dexcom G6 ve Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Örnek kurulum](../images/SampleSetup.png)
 
 ## Açıklama
 
@@ -49,7 +49,7 @@ Yazılım, bilgisayarınıza yüklendikten sonra birçok ek veri indirdiğinden,
 
 ## Akıllı telefon kurulumu
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Akıllı telefon](../images/SampleSetupSmartphone.png)
 
 ### Akıllı telefon donanım yazılımını kontrol edin
 
@@ -102,7 +102,7 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 * KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![G5 Ayarları](../images/SampleSetupG5Settings.png)
 
 * NS Client etkinleştirildi (bkz. [NS Client](../Configuration/Config-Builder#ns-profile) ve [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md))
 
@@ -126,7 +126,7 @@ xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Config
 
 "Acil düşük alarmı" (55 mg/dl - 3,1mmol altında), değiştirilmiş Dexcom uygulamasından devre dışı bırakılamayan standart bir alarmdır.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip alarmları](../images/SampleSetupxDripWarning.png)
 
 Toplantılar / ibadethaneler / sinema vb. için ipucu:
 
@@ -138,17 +138,17 @@ Samsung Galaxy S7 cihazınızda Menü > Ayarlar > Cihaz Bakımı > Pil > İzlenm
 
 ## İsteğe bağlı: Sony Smartwatch 3'ü (SWR50) kurun
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+Bir Android Wear akıllı saat ile diyabetli yaşam daha da göze çarpmayan bir hale getirilebilir. Saat, bileğinizde mevcut glikoz seviyesini, döngünün durumunu vb. görüntülemek için kullanılabilir. Saat AndroidAPS'yi kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak). Bunu yapmak için AAPSv2 saat arayüzünün CGM değerine iki kez dokunun. SWR50 genellikle pil yeniden şarj edilene kadar tam gün çalışır (Samsung Galaxy S7 ile aynı şarj cihazı: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Akıllı saat](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Saat arayüzünde görüntülenen bilgilerle ilgili ayrıntılar [burada](../Configuration/Watchfaces.md) bulunabilir.
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
-* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
-* On your smartwatch: Long press display to change watchface and select `AAPSv2`
-* If necessary restart both devices once.
+* Google Play Store aracılığıyla akıllı telefonunuza "Android Wear" uygulamasını yükleyin ve oradaki talimatlara göre akıllı saati bağlayın.
+* AAPS'de hamburger menüsü (sol üst köşe) > Konfigürasyon ayarları > Genel (listenin altında) > Wear > sol tarafta etkinleştir'i ve ayar çarkını seçin > Saat ayarları'nı tıklayın ve `Saat tarafından kontrol`'ü etkinleştirin
+* Akıllı saatinizde: Saat yüzünü değiştirmek için ekrana uzun basın ve `AAPSv2` öğesini seçin
+* Gerekirse her iki cihazı da bir kez yeniden başlatın.
 
 ## Pompa Ayarları
 
-see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
+[Dana RS pompasına](../Configuration/DanaRS-Insulin-Pump.md) bakın
