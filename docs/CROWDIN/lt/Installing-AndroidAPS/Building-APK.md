@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Atsisiųskite AndroidAPS SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Sukurti programą](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generuoti pasirašomą apk)
 7. [Perkelti apk failą į telefoną](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identifikuoti gavėją, jei naudojate xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identifikuoti gavėją, jei naudojate xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Žingsnis po žingsnio instrukcija
 
