@@ -1,6 +1,10 @@
 Обновления и изменения в документации
 **************************************************
 
+February 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 January 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
@@ -12,7 +16,7 @@ January 2022
 
 ноябрь 2021
 ==================================================
-* Наилучшие методы калибровки сенсора `libre 2 <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ переформулирован impact - воздействин
 * Обновление ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * Удалено модифицированное приложение `Dexcom <../Hardware/DexcomG6.html>`_ как устаревшее
@@ -76,7 +80,7 @@ January 2022
 
 Май 2020
 ==================================================
-* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
 * `Минимальный уровень запроса на отключение уведомлений <../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
@@ -100,7 +104,7 @@ January 2022
 * ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
 * '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
 * `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
-* Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
 * Версия 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - новые функции
 * `Усложнения Wear <../Configuration/watchfaces.html>`_
