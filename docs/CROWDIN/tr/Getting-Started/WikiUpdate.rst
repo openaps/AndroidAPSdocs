@@ -1,6 +1,10 @@
 Dokümanlar güncellemeleri ve değişiklikleri
 **************************************************
 
+February 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 Ocak 2022
 ==================================================
 * `Android Studio Sorun Giderme <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - güncelleme @tanja
@@ -12,7 +16,7 @@ Aralık 2021
 
 Kasım 2021
 ==================================================
-* `Libre 2 sensörünü kalibre etmek için en iyi uygulamalar <Hardware/Libre2.html#libre-2-sensörünü-kalibre-etmek-için-en-iyi-uygulamalar>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `İDF <../Getting-Started/FAQ.html#impact>`_ etkinin yeniden yapılandırılması
 * Güncelleme `sorun giderme Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Yamalanmış `Dexcom <../Hardware/DexcomG6.html>`_ uygulaması eski olduğu için kaldırıldı
@@ -76,7 +80,7 @@ Haziran 2020
 
 Mayıs 2020
 ==================================================
-* `Yalnızca Dana + Insight pompaları için yayma bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
 * `Insight titreşimi devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (pompa yazılımı 3.x için)
 * Açık döngü modunda bildirim sayısını azaltmak için `Minimum istek oranı <../Configuration/Preferences.html#minimal-request-change>`_
 * `Yamalı Libre Link uygulaması <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - doğru yama yapılıp yapılmadığının kontrolü
@@ -100,7 +104,7 @@ Mart 2020
 * `Otoduyarlılık <../Usage/Open-APS-features.html#autosens>`_ - kısa açıklama
 * `Bakımportalı alternatifler <../Usage/CPbefore26.html>`_
 * `Yayma bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ özelliği - kapalı döngü devre dışı bırakılacak
-* Yeni `Yerel Profil eklentisi <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Örnek Kurulum <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6'yı güncelleme
 * `Sürüm 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - önemli yeni özellikler
 * `Wear komplikasyonları <../Configuration/Watchfaces.html>`_
