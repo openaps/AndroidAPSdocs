@@ -387,7 +387,7 @@ Client NS
 * Verificați temeinic să nu existe greșeli de scriere în aceste setări, în cazul în care nu puteți îndeplini Obiectivul 1.
 * ** Asiguraţi-vă că URL-ul este FĂRĂ /api/v1/ la final. * *
 * *Log app start to NS* va înregistra o notiță în intrările din Nightscout pentru fiecare pornire a aplicaţiei.  Aplicația nu ar trebui să necesite mai mult de o pornire pe zi, apariția mai multor porniri sugerând existența unei probleme (de ex. optimizarea bateriei nu este dezactivată pentru AAPS). 
-* Dacă este activată, modificările din profilului local <../Configuration/Config-Builder.html#local-profile-recomandat>`_ sunt încărcate pe site-ul Nightscout.
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
 
 Setări conexiune
 -----------------------------------------------------------
