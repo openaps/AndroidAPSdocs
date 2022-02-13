@@ -1,6 +1,10 @@
 Actualizaciones y cambios de Documentos
 **************************************************
 
+February 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 January 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
@@ -12,7 +16,7 @@ December 2021
 
 November 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
 * Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
@@ -76,7 +80,7 @@ June 2020
 
 May 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
@@ -100,7 +104,7 @@ February 2020
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
 * `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Wear complications <../Configuration/Watchfaces.html>`_
