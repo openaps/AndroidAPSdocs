@@ -387,7 +387,7 @@ NSClient
 * Pokud jste uvízli v cíli 1, prověřte možné překlepy.
 * **Ujistěte se, že adresa URL na konci NEOBSAHUJE /api/v1/.**
 * *Zaznamenávat spuštění aplikace do NS* vloží do záznamů portálu ošetření v Nightscoutu poznámku pokaždé, když je aplikace spuštěna.  Aplikace by se neměla restartovat více než jednou denně. Pokud k tomu odchází častěji, jde obvykle o problém (např. když pro AAPS není zakázána optimalizace baterie). 
-* Jsou-li aktivovány změny v `lokálním profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_, jsou nahrány do Nightscoutu.
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
 
 Nastavení připojení
 -----------------------------------------------------------
