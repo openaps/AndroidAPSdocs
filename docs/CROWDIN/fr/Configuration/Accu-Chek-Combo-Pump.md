@@ -69,7 +69,7 @@
 - Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 - Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
-## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
+## Why pairing with the pump does not work with the app "ruffy"?
 
 Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
