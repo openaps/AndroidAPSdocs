@@ -1,154 +1,154 @@
 # Örnek kurulum: Samsung S7, Dana RS, Dexcom G6 ve Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Örnek kurulum](../images/SampleSetup.png)
 
 ## Açıklama
 
-In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
+Bu kurulumda, döngünün kontrol merkezi olarak Samsung Galaxy S7 akıllı telefon kullanılıyor. Biraz değiştirilmiş Dexcom Uygulaması, Dexcom G6 CGM'den glikoz değerlerini okur. AndroidAPS, Koreli üretici SOOIL'in Dana RS insülin pompasını bluetooth üzerinden kontrol etmek için kullanır. Başka bir cihaza gerek yoktur.
 
-As the Dexcom App only offers limited alarm options the open source app xDrip+ is used to define not only high and low alarms but also additional alarms according to individual requirements.
+Dexcom Uygulaması yalnızca sınırlı uyarı seçenekleri sunduğundan, açık kaynak uygulaması xDrip+ yalnızca yüksek ve düşük alarmları değil, aynı zamanda bireysel gereksinimlere göre ek uyarıları da tanımlamak için kullanılır.
 
-Optionally an Android wear smartwatch can be used (in this sample setup the Sony Smartwatch 3 (SWR50)) to display glucose and AndroidAPS values on your wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+İsteğe bağlı olarak, glikoz ve AndroidAPS değerlerini bileğinizde görüntülemek için bir Android wear akıllı saati kullanılabilir (bu örnek kurulumda Sony Smartwatch 3 (SWR50) kullanılmakta). The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
 
-The system works offline. This means there is no need for a data connection from the smartphone to the Internet for operation.
+Sistem çevrimdışı olarak çalışır. Bu operasyon için akıllı telefonun internete veya mobil bağlantıya gerek olmadığı anlamına gelir.
 
-Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" when a data connection is established. By doing so you can provide comprehensive reports for the doctor's visit or share the current values with family members at any time. It is also possible to send data to Nightscout only when using a (predefined) Wi-Fi connection in order to profit from the different Nightscout reports.
+Bununla birlikte, bir veri bağlantısı kurulduğunda veriler otomatik olarak "bulutta" Nightscout'a yüklenir. Bunu yaparak, doktor ziyareti için kapsamlı raporlar sağlayabilir veya mevcut değerleri istediğiniz zaman aile üyeleriyle paylaşabilirsiniz. Farklı Nightscout raporlarından yararlanmak için yalnızca (önceden tanımlanmış) bir Wi-Fi bağlantısı kullanırken Nightscout'a veri göndermek de mümkündür.
 
-## Required components
+## Gerekli bileşenler
 
 1. Samsung Galaxy S7
     
-    * Alternatives: see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS
+    * Alternatifler: AndroidAPS için [test edilen telefonların ve saatlerin listesine](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) bakın
 
 2. [DanaRS](http://www.sooil.com/eng/product/)
     
-    * Alternatives: 
+    * Alternatifler: 
     * [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
     * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
     * [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-    * [Some old Medtronic pumps (additionally needed: RileyLink/Gnarl hardware, Android Phone with bluetooth low energy / BLE-chipset)](../Configuration/MedtronicPump.md)
-    * Other pumps might be available in the future, see [future possible pump drivers](Future-possible-Pump-Drivers.md) for details.
+    * [Bazı eski Medtronic pompaları (ilave olarak gerekli: RileyLink/Gnarl donanımı, bluetooth düşük enerjili Android Telefon / BLE-chipset)](../Configuration/MedtronicPump.md)
+    * Gelecekte başka pompalar da mevcut olabilir, ayrıntılar için [gelecekteki olası pompa sürücülerine](Future-possible-Pump-Drivers.md) bakın.
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternatifler: olası [KŞ kaynaklarının](../Configuration/BG-Source.rst) listesine bakın
 
-4. Optional: Sony Smartwatch 3 (SWR50)
+4. İsteğe bağlı: Sony Smartwatch 3 (SWR50)
     
-    * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
+    * Alternatifler: Tüm [Google Wear OS ile](https://wearos.google.com/intl/de_de/#find-your-watch) saatler iyi çalışmalıdır, ayrıntılar için AndroidAPS için [test edilen telefonlar ve saatler listesine](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) bakın (OS Android Wear olmalıdır)
 
-## Nightscout setup
+## Nightscout kurulumu
 
-See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
+Ayrıntılı [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md)'na bakın
 
-## Computer setup
+## Bilgisayar kurulumu
 
-To be able to create an Android app from the freely available AAPS open source code you need Android Studio on your computer or notebook (Windows, Mac, Linux). A detailed instruction can be found at [building the APK](../Installing-AndroidAPS/Building-APK.md).
+Ücretsiz olarak kullanılabilen AAPS açık kaynak kodundan bir Android uygulaması oluşturabilmek için bilgisayarınızda veya dizüstü bilgisayarınızda (Windows, Mac, Linux) Android Studio'ya ihtiyacınız vardır. [APK'yı oluşturma](../Installing-AndroidAPS/Building-APK.md) bölümünde ayrıntılı bir talimat bulunabilir.
 
-Please be patient when installing Android Studio as the software downloads a lot of additional data once installed on your computer.
+Yazılım, bilgisayarınıza yüklendikten sonra birçok ek veri indirdiğinden, Android Studio'yu kurarken lütfen sabırlı olun.
 
-## Smartphone setup
+## Akıllı telefon kurulumu
 
-![Smartphone](../images/SampleSetupSmartphone.png)
+![Akıllı telefon](../images/SampleSetupSmartphone.png)
 
-### Check smartphone firmware
+### Akıllı telefon donanım yazılımını kontrol edin
 
-* Menu > Settings > Phone info > Software info: At least "Android-Version 8.0" (successfully tested up to Android version 8.0.0 Oreo - Samsung Experience Version 9.0) 
-* For firmware update: menu > Preferences > software update
+* Menü > Ayarlar > Telefon bilgisi > Yazılım bilgisi: En az "Android Sürümü 8.0" (Android 8.0.0 sürümüne kadar başarıyla test edilmiştir Oreo - Samsung Experience Sürüm 9.0) 
+* Donanım yazılımı güncellemesi için: menü > Tercihler > yazılım güncellemesi
 
-### Allow installation from unknown sources
+### Bilinmeyen kaynaklardan uygulama yüklemeye izin ver
 
-Menu > Settings > Device security > Unknown sources > slider to right side (= active)
+Menü > Ayarlar > Cihaz güvenliği > Bilinmeyen kaynaklar > sağa kaydır (= etkin)
 
-For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
+Güvenlik nedeniyle, burada açıklanan tüm uygulamaların yüklenmesi tamamlandıktan sonra bu ayar tekrar devre dışı bırakılmalıdır.
 
-### Enable Bluetooth
+### Bluetooth'u Etkinleştir
 
-1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
-2. Menu > Settings > Connections > Location > slider to right side (= active)
+1. Menü > Ayarlar > Bağlantılar > Bluetooth > sağa kaydır (= etkin)
+2. Menü > Ayarlar > Bağlantılar > Konum > sağa kaydır (= etkin)
 
-Location services ("GPS") must be activated in order for Bluetooth to work properly.
+Bluetooth'un düzgün çalışması için konum servisleri ("GPS") etkinleştirilmelidir.
 
 ### Dexcom Uygulamasını yükleyin (değiştirilmiş sürüm)
 
 ![Yamalı Dexcom Uygulaması](../images/SampleSetupDexApp.png)
 
-The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
+Google Play Store'daki orijinal Dexcom uygulaması, değerleri diğer uygulamalara yayınlamadığından çalışmayacaktır. Bu nedenle, topluluk tarafından biraz değiştirilmiş bir sürüm gereklidir. Yalnızca bu değiştirilmiş Dexcom uygulaması AAPS ile iletişim kurabilir. Ek olarak, değiştirilmiş Dexcom Uygulaması, yalnızca [Dexcom'un uyumluluk listesindeki](https://www.dexcom.com/dexcom-international-complete) değil, tüm Android akıllı telefonlarla kullanılabilir.
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
+Değiştirilmiş Dexcom G6 uygulamasının mmol/l ve mg/dl sürümü <https://github.com/dexcomapp/dexcomapp/tree/master/2.4> adresinde mevcuttur. Bölgeniz için uygun G6 uygulamasını seçmelisiniz.
 
-To do this perform the following steps on your smartphone:
+Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
-1. If the original Dexcom app is already installed: 
-    * Stop sensor
-    * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+1. Orijinal Dexcom uygulaması zaten yüklüyse: 
+    * Sensörü durdurun
+    * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
+2. Değiştirilmiş Dexcom uygulamasını indirin (mg/dl veya mmol/l ve [bölgeyi](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) ihtiyaçlarınıza göre kontrol edin): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
+3. Akıllı telefonunuza değiştirilmiş Dexcom G6 uygulamasını yükleyin (= indirilen APK dosyasını seçin)
+4. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
+5. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
+    * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
+    * Düşük `KAPALI`
+    * Yüksek `KAPALI`
+    * Artış oranı `KAPALI`
+    * Düşme oranı `KAPALI`
+    * Sinyal kaybı `KAPALI`
 
-## Install AndroidAPS
+## AndroidAPS'i yükleyin
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
-3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
-4. In this sample setup we used (among others)
+1. [APK'yı oluşturmak](../Installing-AndroidAPS/Building-APK#generate-signed-apk) için talimatları izleyin
+2. Oluşturulan APK'yı telefonunuza [aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
+4. Bu örnek kurulumda yardımcıyı kullandık
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![G5 Ayarları](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client etkinleştirildi (bkz. [NS Client](../Configuration/Config-Builder#ns-profile) ve [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md))
 
-## Install xDrip+
+## xDrip+'ı yükleyin
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdır. Bu kurulumda, geliştiricilerin uygulamayı ilk yazdıklarının aksine, xDrip+ bu yöntemle Dexcom G6'dan glikoz verilerini toplamak için değil, yalnızca alarmlar vermek ve widget'taki Android ana ekranında mevcut glikoz değerini ve eğrisini görüntülemek için kullanılır. XDrip+ ile alarmlar, Dexcom yazılımı, AAPS veya Nightscout'tan çok daha fazla bireysel olarak ayarlanabilir (ses seçiminde herhangi bir sınırlama yoktur, gündüz/gece saatine bağlı olarak farklı alarmlar vb.).
 
-1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
-2. Install xDrip+ by selecting the downloaded APK file.
-3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
-    * The existing alarms can be changed with a long press on the alarm.
-    * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
-    * Settings > Hardware Data Source > 640G/EverSense
-    * Settings > Inter-app settings > Accept Calibrations > `ON`
-    * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. This is necessary otherwise an error message will appear regularly.) 
+1. Akıllı telefonunuzla xDrip+'ın en son kararlı APK sürümünü indirin <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - Google Play Store'daki sürümü değil!
+2. İndirilen APK dosyasını seçerek xDrip+'ı yükleyin.
+3. xDrip+'ı başlatın ve aşağıdaki ayarları yapın (sol üstte hamburger menüsü) 
+    * Ayarlar > Alarmlar ve Uyarılar > Glikoz Seviyesi Uyarı Listesi > İhtiyaçlarınıza göre Uyarı Oluştur (yüksek ve düşük). 
+    * Mevcut alarmlar, alarma uzun basılarak değiştirilebilir.
+    * Ayarlar > Alarmlar ve Uyarılar > Kalibrasyon Uyarıları: devre dışı (değiştirilmiş Dexcom uygulaması aracılığıyla hatırlatılır)
+    * Ayarlar > Donanım Veri Kaynağı > 640G/EverSense
+    * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
+    * Menü > Sensörü Başlat (Formalitedir ve çalışan G6 sensörüyle bir ilgisi yoktur. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Configuration/BG-Source.rst) bakın.
 
-### Example of an alarm setup
+### Alarm kurulum örneği
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+"Acil düşük alarmı" (55 mg/dl - 3,1mmol altında), değiştirilmiş Dexcom uygulamasından devre dışı bırakılamayan standart bir alarmdır.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip alarmları](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Toplantılar / ibadethaneler / sinema vb. için ipucu:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Samsung Galaxy S7'de "Rahatsız etmeyin" modu etkinleştirilirse (Menü > Ayarlar > Sesler ve titreşim > Rahatsız etmeyin: sağa kaydırarark (= etkin)), telefon yalnızca acil düşük alarmı sırasında titrer ve herhangi bir akustik uyarı vermez. xDrip+ aracılığıyla kurulan diğer alarmlar için sessiz modun göz ardı edilip edilmeyeceğini (akustik sesin çalınıp çalınmayacağını) seçebilirsiniz.
 
-## Disable power saving option
+## Güç tasarrufu seçeneğini devre dışı bırakma
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G6 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+Samsung Galaxy S7 cihazınızda Menü > Ayarlar > Cihaz Bakımı > Pil > İzlenmeyen Uygulamalar > + Uygulama ekle seçeneğine gidin: AndroidAPS, Dexcom G6 Mobile, xDrip+ ve Android Wear (akıllı saat kullanılıyorsa) uygulamalarını arka arkaya seçin
 
-## Optional: Setup Sony Smartwatch 3 (SWR50)
+## İsteğe bağlı: Sony Smartwatch 3'ü (SWR50) kurun
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+Bir Android Wear akıllı saat ile diyabetli yaşam daha da göze çarpmayan bir hale getirilebilir. Saat, bileğinizde mevcut glikoz seviyesini, döngünün durumunu vb. görüntülemek için kullanılabilir. Saat AndroidAPS'yi kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak). Bunu yapmak için AAPSv2 saat arayüzünün CGM değerine iki kez dokunun. SWR50 genellikle pil yeniden şarj edilene kadar tam gün çalışır (Samsung Galaxy S7 ile aynı şarj cihazı: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Akıllı saat](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Saat arayüzünde görüntülenen bilgilerle ilgili ayrıntılar [burada](../Configuration/Watchfaces.md) bulunabilir.
 
-* Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
-* In AAPS choose hamburger menu (top left corner) > Config Builder > General (at the bottom of the list) > Wear > activate on left side, click cock wheel > Wear settings and activate `Controls from Watch`
-* On your smartwatch: Long press display to change watchface and select `AAPSv2`
-* If necessary restart both devices once.
+* Google Play Store aracılığıyla akıllı telefonunuza "Android Wear" uygulamasını yükleyin ve oradaki talimatlara göre akıllı saati bağlayın.
+* AAPS'de hamburger menüsü (sol üst köşe) > Konfigürasyon ayarları > Genel (listenin altında) > Wear > sol tarafta etkinleştir'i ve ayar çarkını seçin > Saat ayarları'nı tıklayın ve `Saat tarafından kontrol`'ü etkinleştirin
+* Akıllı saatinizde: Saat yüzünü değiştirmek için ekrana uzun basın ve `AAPSv2` öğesini seçin
+* Gerekirse her iki cihazı da bir kez yeniden başlatın.
 
-## Pump setup
+## Pompa Ayarları
 
-see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
+[Dana RS pompasına](../Configuration/DanaRS-Insulin-Pump.md) bakın

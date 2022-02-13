@@ -63,13 +63,13 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
 
 * Powerbar und Kabel, um bei Bedarf Dein Smartphone, Deine Uhr und ggf. Dein Bluetooth Reader laden zu können.
 * Pumpenbatterien
-* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+* Aktuelle [apk](../Installing-AndroidAPS/Building-APK.md) und [Einstellungs-Dateien](../Usage/ExportImportSettings.rst) für AndroidAPS und alle anderen von Ihnen verwendeten Apps (e.. xDrip+, BYO Dexcom) sowohl lokal als auch in der Cloud (Dropbox, Google Drive).
 
-## How can I safely and securely attach the CGM/FGM?
+## Wie kann ich den CGM/FGM sicher und zuverlässig befestigen?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Einige Looper verwenden auch günstigere Standard Kinesiotapes oder Rocktape.
+Du kannst es mit Tape fixieren. Es gibt mehrere vorperforierte 'Overpatches' für gängige CGM Systeme (Suche bei Google, eBay oder Amazon). Einige Looper verwenden auch günstigere Standard Kinesiotapes oder Rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Du kannst es fixieren. Sie können auch Oberarm - Armbänder kaufen, die das CGM/FGM mit einer Band fixieren (Suche bei Google, eBay oder Amazon).
 
 # AndroidAPS Einstellungen
 
@@ -266,11 +266,11 @@ Das AndroidAPS Hintergrundbild für Dein Smartphone findest Du auf der [Seite Sm
 
 #### Was mache ich, wenn ich duschen oder ein Bad nehmen möchte?
 
-Du kannst die Pumpe zum Duschen oder Baden ablegen. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. Siehe [ Beschreibung oben ](../Getting-Started/FAQ#disconnect-pump).
+Du kannst die Pumpe zum Duschen oder Baden ablegen. Für diesen kurzen Zeitraum benötigen Sie sie möglicherweise nicht aber Sie sollten AAPS sagen, dass Sie die Verbindung getrennt haben, damit die IOB-Berechnungen korrekt sind. Siehe [ Beschreibung oben ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Arbeit
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. Wenn du [Nightscout Profile](../Configuration/Config-Builder#nightscout-profil) verwendest, dann kannst du dort auch ein zweites Profil erstellen (z.B. "Daheim" und "Arbeit") und täglich einen Profilwechsel zu dem gerade benötigten Profil machen.
+Je nach Job können Sie verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper sollten Sie einen [-Profil-Wechsel](../Usage/Profiles.md) für Ihren typischen Arbeitstag in Betracht ziehen. Zum Beispiel können Sie zu einem Profil über 100% wechseln, wenn Sie einen weniger anspruchsvollen Job haben (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Sie aktiv sind und den ganzen Tag aktiv sind. How können sich ein höheres oder niedrigeres temporäres Ziel oder eine [Zeit-Verschiebung des Profils](../Usage/Profiles#time-shift) wählen, wenn viel früher oder später als üblich arbeiten, oder Schichtdienst haben. Wenn du [Nightscout Profile](../Configuration/Config-Builder#nightscout-profil) verwendest, dann kannst du dort auch ein zweites Profil erstellen (z.B. "Daheim" und "Arbeit") und täglich einen Profilwechsel zu dem gerade benötigten Profil machen.
 
 ## Freizeitaktivitäten
 
@@ -294,7 +294,7 @@ Der Prozentsatz des Profilwechsels, der Wert für das temporäre Ziel und die be
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. Siehe [ Beschreibung oben ](../Getting-Started/FAQ#disconnect-pump).
+Du kannst die Pumpe entfernen, um "frei" zu sein, aber du solltest es in AAPS eingeben, damit die IOB Berechnungen stimmen. Siehe [ Beschreibung oben ](../Getting-Started/FAQ#disconnect-pump).
 
 ### Alkoholkonsum
 
@@ -310,7 +310,7 @@ Wenn du Alkohol trinkst musst du immer dein CGM im Blick haben, um eine Hypoglyk
 
 #### Wie kann ich nachts loopen, ohne Handy- und WLAN-Strahlung ausgesetzt zu sein?
 
-Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
 
 1. Aktiviere im Handy den Flugzeugmodus.
 2. Warte, bis der Flugzeugmodus aktiv ist.

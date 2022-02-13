@@ -1,4 +1,4 @@
-구성 요소 개요 
+mComponent Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -86,7 +86,7 @@ The advantages of the DanaR/RS and Dana-i vs. 콤보의 장점들은 다음과 �
 --------------------------------------------------
 다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. For further details, look `here <../Configuration/BG-Source.html>`_. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `덱스콤 G5 <../Hardware/DexcomG5.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
 * 덱스콤 G4 <../Hardware/DexcomG4.html>`_: 이 센서들은 꽤 오래되었지만, xdrip에서 어떻게 사용하는 방법에 대한 설명을 찾아볼 수 있습니다.
 * 리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.

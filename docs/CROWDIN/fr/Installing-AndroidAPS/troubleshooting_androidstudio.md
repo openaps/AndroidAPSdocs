@@ -12,7 +12,7 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 4. Générez l'apk signé de la nouvelle version comme décrit dans le [Guide de mise à jour](../Installing-AndroidAPS/Update-to-new-version) et transférez-le sur votre téléphone.
 5. Désinstaller la précédente version de AAPS sur votre téléphone.
 6. Installez la nouvelle version de AAPS sur votre téléphone.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
+7. [Importer les paramètres](../Usage/ExportImportSettings#importer-les-parametres) sur votre nouveau téléphone.
 8. Vérifiez vos options d'optimisation de la batterie et désactivez-les à nouveau.
 
    Si vous ne pouvez pas les trouver sur votre téléphone, copiez les depuis le stockage externe vers votre téléphone.
@@ -24,7 +24,7 @@ Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message i
   ![Échec de Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 Ci-dessous les échecs courants de synchronisation de gradle :
-* [Uncommitted changes](#uncommitted-changes)
+* [Uncommitted changes](#modifications-non-validees)
 * [No cached version of ... available](#could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
@@ -144,35 +144,35 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Resynchronisation Gradle
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Si vous pouvez toujours voir le message que la synchronisation de gradle a échoué, sélectionnez maintenant le lien "Try again".![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the a message anymore, you can still trigger this manually:
+  Si vous ne voyez plus le message, vous pouvez toujours le déclencher manuellement:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Ouvrez l'onglet Gradle (1) sur le côté droit de Android Studio.
 
     ![Gradle Rechargement](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AndroidAPS (2)
+  * Faites un clic droit sur AndroidAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * Cliquez sur "Reload Gradle Project" (3)
 
 ## Générer l'APK signé avec succès mais avec 0 variantes de compilation
 
 Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la génération a été effectuée avec succès mais on vous dit que 0 variantes de compilation ont été générées:
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK généré avec 0 variantes de compilation](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
 C'est un faux avertissement. Vérifiez le répertoire que vous avez sélectionné en tant que "Dossier de destination" pour la génération (étape [Générer l'APK signé](../Installing-AndroidAPS/Building-APK.html#generer-l-apk-signe)) et vous y trouverez l'apk généré !
 
 
 ## L'application a été créée avec les avertissements du compilateur/kotlin
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+Si votre compilation est terminée avec succès mais que vous obtenez des avertissements du compilateur ou de kotlin (indiqués par un point d'exclamation jaune ou bleu), alors vous pouvez ignorer ces avertissements.
 
  ![Gradle terminé avec des avertissements](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Your app was build successfully and can be transferred to phone!
+Votre application a été correctement compilée et peut être transférée au téléphone!
 
 
 ## La clé a été créée avec des erreurs
@@ -207,7 +207,7 @@ Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java liv
 
 ## Application installée mais ancienne version
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+Si vous avez compilé l'application, que vous l'avez transferrée dans votre téléphone et installée avec succès mais que le numéro de version est resté le même, vous avez peut-être omis de [mettre à jour votre copie locale](../Installing-AndroidAPS/Update-to-new-version.html#mettez-a-jour-votre-copie-locale)
 
 ## Rien ci-dessus n'a marché
 
@@ -215,7 +215,7 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
 1. [Exporter les paramètres](../Usage/ExportImportSettings) (dans la version AAPS déjà installée sur votre téléphone)
 
-2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+2. Ayez vos mots de passe pour la clé et le fichier de clés sous la main. Si vous avez oublié ces mots de passe vous pouvez essayer de les retrouver dans les fichiers du projet comme c'est décrit [ici](https://youtu.be/nS3wxnLgZOo).
 
     Ou vous pouvez recréer un nouveau fichier de clés.
 
@@ -223,13 +223,13 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+6. Vous devez vérifier vos options d'optimisation de la batterie et désactivez-les à nouveau.
 
 ## Pire scénario
 
 Dans le cas où même construire l'application à partir de rien ne résout pas votre problème, vous pouvez essayer de désinstaller complètement Android Studio. Certains utilisateurs ont signalé que cela a résolu leur problème.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex.
+**Assurez-vous de désinstaller tous les fichiers associés à Android Studio.** Si vous ne supprimez pas complètement tous les fichiers cachés, la désinstallation peut provoquer de nouveaux problèmes au lieu de résoudre ceux existants. Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 

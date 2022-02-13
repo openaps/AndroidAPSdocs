@@ -1,4 +1,4 @@
-Übersicht der Komponenten 
+mComponent Overview 
 **************************************************
 AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor du dich für Komponenten entscheidest, wäre es eine gute Idee, dir das 'Setup der verschiedenen Komponenten < ../index.html#component-setup> `_ anzuschauen.
    
@@ -84,9 +84,9 @@ Die Vorteile der DanaR/RS und Dana-i vs. der Combo sind aber:
 
 BZ-Quelle
 --------------------------------------------------
-Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
+Dies ist nur eine knappe Übersicht über alle kompatiblen CGM/FGM mit AndroidAPS. Weitere Details findest Du `hier <../Configuration/BG-Source.html>`_. Nur ein kurzer Hinweis: Wenn Du Deine Glukose-Daten in der xDrip+ App oder Deiner Nightscout-Website anzeigen kannst, kannst Du xDrip+ (oder Nightscout mit Webverbindung) als BZ-Quelle in AAPS wählen.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * ` Dexcom G5 <../Hardware/DexcomG5.html>`_: Funktioniert mit xDrip+ oder der gepatchten Dexcom App
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_:  Diese Sensoren sind relativ alt, aber es gibt im Netz Anleitungen wie Du sie mit der xDrip+ App verwenden kannst.
 * `Libre 2 <../Hardware/Libre2.html>`_: Funktioniert mit xDrip+ (kein Transmitter erforderlich), Du musst aber auch für den Libre 2 eine eigene gepatchte App erstellen.

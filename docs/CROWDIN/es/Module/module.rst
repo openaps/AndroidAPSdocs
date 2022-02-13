@@ -1,4 +1,4 @@
-Descripción General De Los Componentes 
+mComponent Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -86,7 +86,7 @@ Fuentes de datos de glucemia (BG)
 --------------------------------------------------
 Esta es sólo una breve descripción general de todos los MCGs/FGM compatibles con AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Solo una breve sugerencia: si puedes visualizar tus datos de glucosa en la aplicación xDrip+ o en el sitio web de Nightscout, puedes elegir xDrip+ (o Nightscout con la conexión web) como fuente BG en AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Se trabaja con app xDrip+ 'o app parchada Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Estos sensores son bastante antiguos, pero puede encontrar instrucciones sobre cómo usarlos con la aplicación xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funciona con xDrip+ (no se necesita ningún transmisor), pero tienes que construir tu propia aplicación parchada.

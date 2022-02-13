@@ -1,4 +1,4 @@
-Komponentų Apžvalga 
+mComponent Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -86,7 +86,7 @@ Glikemijos šaltinis
 --------------------------------------------------
 Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.

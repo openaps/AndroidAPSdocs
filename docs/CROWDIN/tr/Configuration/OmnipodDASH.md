@@ -23,7 +23,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
-   -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
+   -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Lütfen [**DASH Test Edilen telefonları**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) kontrol edin veya sadece telefonunuzla deneyin ve sonucu bize bildirin (telefon referansı ve coğrafi bölge, Android sürümü, "çalıştı / bazı zorluklar mevcut / çalışmadı" şeklinde).
    -  **Bazı telefon modelleri için bir sorun bildirildi** : **AAPS Omnipod Dash sürücüsünün her komut gönderdiğinde Bluetooth aracılığıyla Dash POD'a bağlandığını ve hemen ardından bağlantısının kesildiğini unutmayın. Bluetooth bağlantıları AAPS çalıştıran telefona bağlı olan kulaklık vb. diğer cihazlar tarafından bozulabilir, (bazı telefon modellerinde ender durumlarda bağlantı sorununa veya etkinleştirme sırasında veya sonrasında pod hatalarına/kaybına neden olabilir) veya etkilenebilir.**
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
@@ -319,140 +319,140 @@ GBO, SMB, bolus veya teslimatı askıya alınan başarılı olayları için AAPS
 
 *NOT: Bunlar yalnızca bildirimlerdir, sesli uyarı yapılmaz.*
 
-* **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
-* **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
-* **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
-* **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
+* **Belirsiz GBO (TBR) bildirimleri için sesi etkinleştir:** Bir Geçici Bazal Oranının başarılı bir şekilde ayarlanıp ayarlanmadığı AAPS tarafından belirsiz olduğunda sesli bir uyarı ve görsel bildirim tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+* **Belirsiz SMB bildirimleri için sesi etkinleştir:** Bir SMB'nin başarıyla teslim edilip edilmediğinden AAPS emin olmadığında sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+* **Belirsiz bolus bildirimleri için sesi etkinleştir:** AAPS'nin bir bolusun başarıyla iletildiğinden emin olmadığı durumlarda sesli uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
+* **İletimin askıya alındığı bildirimi etkinleştirildiğinde sesle uyar:** İletimi askıya alma başarıyla tamamlandığında sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
 
 ### Diğer
 
-* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+* **\*DST/Saat dilimi algılamayı etkinleştir:**, telefon DST'nin gözlemlendiği bir alanda kullanılıyorsa, saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
 
 ## Eylemler (EYLEM) Sekmesi
 
-This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod Dash pod differs from tube based pumps, especially after the processes of applying a new pod.
+Bu sekme, ana AAPS dokümantasyonunda detaylı bir şekilde anlatılmıştır. Ancak bu sekmede, özellikle yeni bir pod uygulandıktan sonra, Omnipod Dash podunun hortum tabanlı pompalardan farklılıklarına dair birkaç detay verilecektir.
 
-1. Go to the **Actions (ACT)** tab in the main AAPS interface.
+1. Ana AAPS arayüzünde **Eylemler (EYLEM)** sekmesine gidin.
 
-2. Under the **Careportal (1)** section the **Insulin** and **Cannula** filds will have their **age reset** to 0 days and 0 hours **after each pod change**. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. *Therefore after a pod change the age of each of these values will automatically reset to zero.* **Pump battery age** is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours). The **pump battery** and **insulin reservoir** are self contained inside of each pod.
+2. **Bakımportalı (1)** bölümünün altında **İnsülin** ve **Kanül** alanları her pod değişikliğinden sonra **yaşlarını 0 gün ve 0 saat ** olacak şekilde sıfırlayacaktır. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. *Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.* **Pompa pil yaşı** pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez. **Pompa pili** ve **insülin rezervuarı**, her pod içinde yer almaktadır.
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Seviye
 
-**Insulin Level**
+**İnsülin Seviyesi**
 
-Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left. The omnipod DASH overview tab will display as described the below:
+Görüntülenen insülin seviyesi, Omnipod DASH tarafından bildirilen miktardır. Bununla birlikte, pod sayısal insülin rezervuar seviyesini yalnızca 50 ünitenin altında olduğunda bildirir. O zamana kadar “50 ünitenin üzerinde” şeklinde görüntülenecektir. Bildirilen miktar kesin değildir: pod çoğu durumda "boş" olduğunu bildirdiğinde bile rezervuarda hala biraz ek insülin kalacaktır. Omnipod DASH sekmesi, aşağıda açıklandığı gibi görüntülenecektir:
 
-  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **50 Ünitenin Üzerinde** - Pod, şu anda rezervuarda 50 üniteden fazla insülin olduğunu rapor ediyor.
+  * **50 Ünitenin Altında** - Pod tarafından bildirilen rezervuarda kalan insülin miktarı.
 
-Additional note:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
+Ek not:
+  * **SMS** - SMS yanıtlarında insülin seviyesi 50+Ü veya değer görünür.
+  * **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümlerde 50 üniteden fazla olduğunda 50+ değerini bildirir.
 
 ## Sorun giderme
 
-### Delivery suspended
+### İletimi askıya alma
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - AAPS will try to set the new basal profile every 15 minutes.
-     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resume-delivery) button will be active if the user chooses to resume delivery manually.
-     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
-  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  * Artık iletimi askıya alma butonu yok. Pod insülin iletimini "askıya almak" istiyorsanız, x dakika için sıfır GBO ayarlayabilirsiniz.
+  * Profil geçişleri sırasında, dash pompa yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Bu olduğunda:
+     - Bazal, SMB, Manuel bolus vb. içeren insülin iletimi olmayacaktır.
+     - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
+     - AAPS, her 15 dakikada bir yeni bazal profili ayarlamaya çalışacaktır.
+     - APPS, iletim hala askıya alınmışsa iletimin her 15 dakikada bir askıya alındığını bildiren bir bildirim gösterecektir. (iletim devam ettirilemedi)
+     - [**İletime devam et**](#resume-delivery) butonu etkin olacak ve kullanıcı iletimi manuel olarak sürdürmeyi seçebilecektir.
+     - AAPS kendi kendine iletimi sürdüremezse (bu, Pod'a ulaşılamıyorsa, ses kapatılmışsa vb. olabilir), pod 3 dakika için her dakikada bir 4 kez bip sesi çıkarmaya başlar, ardından iletim 20 dakikadan daha uzun süre askıda kalırsa bu her 15 dakikada bir tekrarlanır.
+  * Onaylanmamış komutlar için "pod durumunu yenile" komutu, bunları onaylamalı/reddetmelidir.
 
-**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+**Not:** Pod bip seslerini duyduğunuzda, telefonu kontrol etmeden iletimin devam ettiğini varsaymayın, iletim askıya alınmış olabilir, **bu yüzden kontrol etmeniz gerekiyor!**
 
 ### Pod Hataları
 
-Pod'lar Pod'un kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra başarısız oluyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. Nedenini belirlemeye yardımcı olacak hata kodlarının bir listesi [**burada bulunabilir.**](https://github.com/openaps/openomni/wiki/Fault-event-codes)
 
 ### 49 numaralı Pod hatasını önleme
 
-Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Bu, sürücü ve Pod'un gerçek durum üzerinde anlaşamadığı zaman meydana gelir. Pod (yerleşik bir güvenlik önlemi dışında), daha sonra kurtarılamaz bir 49 (0x31) hata koduyla tepki verir ve sonunda "çığlık atan" olarak bilinen bir hatayla sonuçlanır: yalnızca pod'un arkasındaki uygun yerde bir delik açılarak durdurulabilen uzun rahatsız edici bir bip sesi. "49 pod arızasının" kesin kök nedenini izlemek çoğu zaman zordur. Bu hatanın meydana gelmesinde şüphelenilen durumlar, örneğin uygulama çökmeleri, bir geliştirme sürümünün çalıştırılması veya yeniden kurulumdur.
 
 ### Pompaya Ulaşılamıyor Uyarıları
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+Önceden yapılandırılmış bir süre boyunca pod ile iletişim kurulamadığında, "Pompaya ulaşılamıyor" uyarısı verilir. Pompaya erişilemiyor uyarıları, sağ üst taraftaki üç noktalı menüye gidip **Tercihler**\ ➜\ **Yerel uyarılar**\ ➜\ **Pompa ulaşılamaz eşiği [dk]** öğesi seçilerek yapılandırılabilir. Önerilen değer, **120** dakika sonra uyarı vermesidir.
 
-### Export  Settings
+### Ayarları Dışa Aktarma
 
-Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AndroidAPS or in case of phone loss, reinstalling on the new phone.
+AndroidAPS ayarlarını dışa aktarmak, tüm ayarlarınızı ve belki daha da önemlisi tüm gerçekleştirdiğiniz görevleri geri yükleyebilmenizi sağlar. AndroidAPS'i kaldırıp/yeniden yükledikten sonra veya telefonun kaybolması durumunda yeni telefona yeniden yüklemeniz durumunda ayarları "bilinen son çalışma durumuna" geri yüklemeniz gerekebilir.
 
-Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
+Not: Aktif pod bilgileri, dışa aktarılan ayarlara dahildir. Dışa aktarılan "eski" bir dosyayı içe aktarırsanız, aktif podunuz "kullanım dışı olacaktır". Bu durumda mevcut podu değiştirmekten başka bir alternatif yoktur. Bazı durumlarda (_programlı_ bir telefon değişikliği gibi), ** bir pod kullanırken ** AndroisAPS ayarlarını geri yüklemek için dışa aktarılan dosyayı kullanmanız gerekebilir. Bu durumda, yalnızca o anda aktif olan podu içeren, yakın zamanda dışa aktarılmış ayarlar dosyasının kullanılması önemlidir.
 
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of a problem. For instance when moving to another backup phone.
+**Bu sebeple bir pod etkinleştirdikten hemen sonra ayarları dışa aktarmak akıllıcadır**. Bu şekilde, bir sorun olması durumunda (Örneğin, başka bir yedek telefona geçerken) her zaman aktif pod'u geri yükleyebileceksiniz.
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
+Dışa aktarılan ayarlarınızı, gerektiğinde herhangi bir telefon tarafından erişilebilen güvenli bir yere (bulut sürücüsü) düzenli olarak kopyalayın (örneğin, telefonun kaybolması veya fabrika ayarlarına sıfırlanması durumunda).
 
-### Import Settings
+### Ayarları İçe Aktarma
 
-**WARNING** Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+**UYARI** Ayarları içe aktarmanın eski bir Pod durumunu içe aktarabileceğini lütfen unutmayın. Sonuç olarak, aktif Pod'u kaybetme riski vardır! (bkz. **Ayarları Dışa Aktarma**). Aktif pod kullanırken, başka seçeneğiniz kalmazsa denenebilir.
 
-When importing settings with an active Pod, make sure the export was done with the currently active pod.
+Ayarları etkin bir pod ile içe aktarırken, dışa aktarılan ayarların o anda etkin olan pod ile yapıldığından emin olun.
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+**Etkin bir pod kullanırken içe aktarma:** (Pod'u kaybetme riskiniz vardır!)
 
-1. Make sure you are importing settings that were recently exported with the currently active Pod.
-2. Import your settings
-3. Check all preferences
+1. Şu anda etkin olan Pod ile yakın zamanda dışa aktarılan ayarları içe aktardığınızdan emin olun.
+2. Ayarlarınızı içe aktarın
+3. Tüm tercihleri kontrol edin
 
-**Importing (no active Pod session)**
+**İçe aktarma (etkin Pod kullanımı yok)**
 
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data.
+1. Yakın zamanda dışa aktarılan bir dosyanın içe aktarılması işe yarayacaktır (yukarıya bakın)
+2. Ayarlarınızı içe aktarın.
+3. Tüm tercihleri kontrol edin.
+4. İçe aktarma ayarları herhangi bir etkin pod verisi içeriyorsa, "mevcut olmayan" pod'u **devre dışı bırakmanız** gerekebilir.
 
-### Importing settings that contain Pod state from an inactive Pod
+### Etkin olmayan bir pod durumunu içeren ayarları içe aktarma
 
-When importing settings containing data for a Pod that is no longer active, AndroidAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+Aktif olmayan bir pod verileri içeren ayarları içe aktarırken, AndroidAPS onunla bağlanmaya çalışacak ve başarısız olacaktır. Bu durumda yeni bir Pod etkinleştiremezsiniz.
 
-To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
+Eski Pod oturumunu kaldırmak için Pod'u devre dışı bırakmayı “deneyin”. Devre dışı bırakma başarısız olur. “Yeniden Dene”yi seçin. İkinci veya üçüncü denemeden sonra pod'u kaldırma seçeneğine sahip olacaksınız. Eski pod kaldırıldıktan sonra yeni bir pod etkinleştirebilirsiniz.
 
-### Reinstalling AndroidAPS
+### AndroidAPS'i yeniden yükleme
 
-When uninstalling AndroidAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+AndroidAPS'i kaldırdığınızda tüm ayarlarınızı, hedeflerinizi ve mevcut Pod oturumunu kaybedersiniz. Bunları geri yüklemek için, yakın zamanda dışa aktarılmış bir ayar dosyanız olduğundan emin olun!
 
-When on an active Pod, make also sure that you have an export for the current Pod session or you will lose the currently active Pod when importing older settings.
+Etkin bir pod kullanırken, mevcut pod oturumu için bir dışa aktarılan dosyanız olduğundan emin olun, aksi takdirde eski ayarları içe aktarırken o anda etkin olan pod'u kaybedersiniz.
 
 1. Ayarlarınızı dışa aktarın ve bir kopyasını güvenli bir yerde saklayın.
-2. Uninstall AndroidAPS and restart your phone.
-3. Install the new version of AndroidAPS.
-4. Import your settings
-5. Verify all preferences (optionally import settings again)
-6. Activate a new Pod
-7. When done: Export current settings
+2. AndroidAPS'i kaldırın ve telefonunuzu yeniden başlatın.
+3. AndroidAPS'in yeni sürümünü yükleyin.
+4. Ayarlarınızı içe aktarın
+5. Tüm tercihleri doğrulayın (isteğe bağlı olarak ayarları tekrar içe aktarın)
+6. Yeni bir pod etkinleştirin
+7. Tamamlandığında, mevcut ayarları dışa aktarın
 
-### Updating AndroidAPS to a newer version
+### AndroidAPS'i daha yeni bir sürüme güncelleme
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
+Çoğu durumda, mevcut kurulumu kaldırmaya gerek yoktur. Yeni sürüm için kurulumu başlatarak “üzerine” kurulum yapabilirsiniz. This is also possible when on an active Pod  session.
 
 1. Export your settings.
-2. Install  the new AndroidAPS version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new Pod.
-5. When done: Export current settings.
+2. Yeni AndroidAPS sürümünü yükleyin.
+3. Kurulumun başarılı olduğunu doğrulayın
+4. Mevcut pod'a DEVAM EDİN veya yeni bir pod etkinleştirin.
+5. Tamamlandığında, mevcut ayarları dışa aktarın.
 
 ### Omnipod sürücü uyarıları
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
+Omnipod Dash sürücüsü **Giriş sekmesinde** çeşitli uyarılar sunmakla birlikte bunların çoğu bilgi amaçlıdır ve kapatılabilirken, bazıları da kullanıcıya tetiklenen uyarının nedenini çözmek için bir eylemde bulunmasını sağlar. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
 
-* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
-* Pod suspended Informational alert that Pod has been suspended.
-* Setting basal profile failed : Delivery might be suspended! Lütfen Omnipod sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse teslimi devam ettirin.. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-* SMB bolusunun başarılı olup olmadığı doğrulanamıyor. Bolus'un başarılı olmadığından eminseniz, SMB girişini Tedaviler'den manuel olarak kaldırmalısınız. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
-* "Görev bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
+* Etkin pod yok Etkin Pod oturumu algılanmadı. (pod not activated) Bu uyarı, **ERTELE**'ye basılarak geçici olarak kapatılabilir, ancak yeni bir pod etkinleştirilmedikçe tetiklenmeye devam edecektir. Pod etkinleştirildiğinde bu uyarı otomatik olarak kapatılır.
+* Pod askıya alındı Pod'un askıya alındığına dair bilgi uyarısı.
+* Bazal profil ayarlanamadı : İletim askıya alınabilir! Lütfen Dash sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse iletimi devam ettirin.. Pod bazal profili ayarının başarısız olduğuna ve Dash sekmesinde *Yenile*'ye basmanız gerektiğine dair bilgi uyarısı.
+* SMB bolusunun başarılı olup olmadığı doğrulanamıyor. Bolus'un başarılı olmadığından eminseniz, SMB girişini Tedaviler'den manuel olarak kaldırmalısınız. SMB bolus komutunun başarısının doğrulanamadığına dair uyarı, SMB bolusunun başarılı olup olmadığını görmek için DASH sekmesindeki *Son bolus* alanını doğrulamanız ve iletilmedi ise tedaviler sekmesinden girişi kaldırmanız gerekir.
+* "Bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
 
-## Where to get help for Omnipod DASH driver
+## Omnipod DASH sürücüsü için nereden yardım alınabilir?
 
-All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Omnipod DASH sürücüsü için tüm geliştirme çalışmaları topluluk tarafından **gönüllü** temelinde yapılır; Yardım talep etmeden önce bu gerçeği hatırlamanızı ve aşağıdaki yönergeleri kullanmanızı rica ediyoruz:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
+-  **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #androidaps* kanalına gidin.
+-  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AndroidAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. Yoksa, lütfen bir [yeni sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı ekleyin](../Usage/Accessing-logfiles.html).
+-  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**

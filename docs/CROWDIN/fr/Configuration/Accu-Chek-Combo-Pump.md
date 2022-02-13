@@ -81,10 +81,10 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
 3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
+4. Supprimer une pompe déjà connecté au téléphone via Bluetooth : dans Paramètres / Bluetooth, retirez l'appareil couplé "**SpiritCombo**"
 5. Assurez-vous que AAPS n'exécute pas la boucle en arrière-plan. Désactiver la boucle dans AAPS.
-6. Try using the '**pairing**' branch from the [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) repository to establish the connection 
-7. Maintenant, démarrez ruffy sur le téléphone. Vous pouvez appuyer sur Reset! and remove the old connection. Then hit **Connect!**.
+6. Essayez d'utiliser la branche '**appairage**' du dépôt [MilosKozak/Ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) pour établir la connexion 
+7. Maintenant, démarrez ruffy sur le téléphone. Vous pouvez appuyer sur Reset! et supprimez l'ancienne connexion. Puis appuyez sur **Connect!**.
 8. Dans le menu Bluetooth de la pompe, allez à **ADD DEVICE / ADD CONNECTION**. Appuyez sur **CONNECTER !** 
     - The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
 

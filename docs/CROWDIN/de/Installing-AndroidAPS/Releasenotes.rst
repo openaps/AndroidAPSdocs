@@ -27,13 +27,12 @@ Ab Android 9
 Android 8
 ------------------------------------
 * Verwende AAPS Version **2.8.2.1**.
-* Bis zur Veröffentlichung von AAPS Version 3 verwende einfach die **AAPS master**-Version, denn diese ist momentan 2.8.2.1. ;-)
-* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS branch 2.8.2.1
 
 Android 7
 ------------------------------------
 * Verwende AAPS Version **2.6.2**.
-* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
+* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
 Version 3.0.0
 ================
@@ -45,14 +44,15 @@ Wichtige Hinweise
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
 
-**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+**Prüfe nach dem Update auf 3.0 auf jeden Fall deine Einstellungen und passe sie ggf. an wie** `hier beschrieben <../Installing-AndroidAPS/update3_0.html>`__.
 
 Vorbereitende Schritte
 ----------------------
 **Spätestens zwei Tage vor dem Update:**
 
 * Deaktiviere Dexcom Bridge in Nightscout
-* Wenn Du den Dexcom G5 oder G6 verwendest, wird der Wechsel zur BYODA empfohlen. Du kannst den xDrip+ Master weiter verwenden, allerdings nicht als Empfänger. xDrip+ kann Daten von der BYODA empfangen. Wenn Du xDrip+ als Empfänger nutzen willst, musst Du die letzte nightly Version verwenden.
+* Wenn Du den Dexcom G5 oder G6 mit xDrip+ nutzt, musst Du xDrip+ auf eine nightly Version nach dem 14.01.2022 updaten.
+* Wenn Du den Dexcom G5 oder G6 verwendest, wird der Wechsel zur BYODA als Empfänger empfohlen, um von der rückwirkenden Glättung der BZ-Werte zu profitieren. Du kannst xDrip+ weiter für andere Zwecke verwenden, denn xDrip+ kann Werte von der BYODA empfangen.
 
 
 Änderungen
@@ -74,7 +74,7 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* NSProfil ist weg, nur lokales Profil kann verwendet werden. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
 * Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul

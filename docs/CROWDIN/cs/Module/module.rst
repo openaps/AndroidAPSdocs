@@ -1,4 +1,4 @@
-Přehled komponent 
+mComponent Overview 
 **************************************************
 AndroidAPS není jen (vlastnoručně sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <../index.html#component-setup>`_.
    
@@ -86,7 +86,7 @@ Zdroj glykémií
 --------------------------------------------------
 Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is mandatory as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details)
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.

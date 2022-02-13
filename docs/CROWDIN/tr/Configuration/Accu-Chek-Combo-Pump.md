@@ -19,102 +19,102 @@
 - Yalnızca bir bazal profil desteklenir.
 - Pompada birden farklı bir bazal profil ayarlamak veya pompadan yayma bolus veya çoklu yayma boluslar iletmek, TBR'leri (geçici bazal oranları) etkiler ve döngü bu koşullar altında güvenli bir şekilde çalışamayacağından döngüyü 6 saat boyunca yalnızca düşük askıya alma moduna zorlar.
 - Şu anda pompada saat ve tarihi ayarlamak mümkün değildir, bu nedenle [yaz saati değişiklikleri](../Usage/Timezone-traveling#accu-chek-combo) manuel olarak yapılmalıdır. (Gece alarm vermemesi için, akşam telefonun otomatik saat güncellemesini devre dışı bırakabilir, pompa saati ile birlikte sabah tekrar değiştirebilirsiniz).
-- Currently only basal rates in the range of 0.05 to 10 U/h are supported. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Similarly, when reducing to 50%, the lowest basal rate must be at least 0.10 U/h.
-- If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
-- Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
-- Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. 
-- If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this. 
-- There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth), before the pump accepts connections from the phone again. 
-- There is very little that can be done to remedy either of those issues at this point. So if you see those errors frequently your only option at this time is to get another phone that's known to work well with AndroidAPS and the Combo (see above).
-- Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. 
-- Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter [Usage](#usage) below)
-- Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
+- Şu anda sadece 0,05 ila 10 Ü/st aralığındaki bazal oranlar desteklenmektedir. Bu aynı zamanda bir profili değiştirirken de geçerlidir, örn. %200'e çıkarken, en yüksek bazal oran iki katına çıkacağı için 5 Ü/s'i geçmemelidir. Benzer şekilde, %50'ye indirildiğinde, en düşük bazal oranı en az 0,10 Ü/s olmalıdır.
+- Döngü, çalışan bir GBO'nin iptal edilmesini isterse, Combo bunun yerine 15 dakika için %90 veya %110'luk bir GBO ayarlayacaktır. Bunun nedeni, bir GBO'nın iptal edilmesinin pompada çok fazla titreşime neden olacak bir uyarıya neden olmasıdır.
+- Ara sıra (birkaç günde bir) AAPS, kullanıcının daha sonra ilgilenmesi gereken bir GBO İPTAL EDİLDİ uyarısını otomatik olarak iptal etmede başarısız olabilir (uyarıyı AAPS'e aktarmak için AAPS'deki yenile düğmesine basabilir veya pompadaki uyarıyı onaylayabilirsiniz).
+- Bluetooth bağlantı kararlılığı, farklı telefonlara göre değişir ve artık pompaya bağlantının kurulmadığı durumlarda "pompaya erişilemiyor" uyarılarına neden olur. 
+- Bu hata oluşursa, Bluetooth'un etkinleştirildiğinden emin olun, bunun kesintili bir sorundan kaynaklanıp kaynaklanmadığını görmek için Combo sekmesindeki Yenile düğmesine basın ve hala bağlantı kurulmazsa, genellikle bunu düzeltmesi gereken telefonu yeniden başlatın. 
+- Yeniden başlatmanın yardımcı olamayacağı başka bir sorun, pompa telefondan tekrar bağlantıları kabul etmeden önce pompadaki bir butona (pompanın Bluetooth'unu sıfırlar) basılması gerektiğidir. 
+- Bu noktada bu sorunlardan herhangi birini giderebilmek için yapılabilecek çok az şey var. Bu nedenle, bu hataları sık sık görüyorsanız, şu anda tek seçeneğiniz AndroidAPS ve Combo ile iyi çalıştığı bilinen başka bir telefon almaktır (yukarıya bakın).
+- Pompadan bolus verilmesi her zaman zamanında algılanmayacaktır (AAPS pompaya her bağlandığında kontrol eder) ve en kötü durumda 20 dakika kadar sürebilir. 
+- Pompadaki boluslar her zaman yüksek bir GBO'dan veya AAPS tarafından verilen bir bolustan önce kontrol edilir, ancak sınırlamalar nedeniyle AAPS, yanlış öncüller altında hesaplandığı için GBO/Bolus vermeyi reddedecektir. (-> Pompadan bolus vermeyin! Aşağıdaki [Kullanım](#usage) bölümüne bakın)
+- Döngü GBO'ların kontrolünü üstlendiğinden, pompada herhangi bir GBO ayarlamaktan kaçınılmalıdır. Pompada yeni bir GBO'nın algılanması 20 dakika kadar sürebilir ve GBO'nın etkisi yalnızca algılandığı andan itibaren hesaba katılır, bu nedenle en kötü durumda, Aktif İnsüline yansıtılmayan 20 dakikalık bir GBO olabilir. 
 
 ## Kurulum
 
-- Configure the pump using 360 config software. 
-- If you do not have the software, please contact your Accu-Chek hotline. They usually send registered users a CD with the "360° Pump Configuration Software" and a SmartPix USB-infrared connection device (the Realtyme device also works if you have that).
-- **Required settings** (marked green in screenshots):
+- 360 yapılandırma yazılımını kullanarak pompayı yapılandırın. 
+- Yazılıma sahip değilseniz, lütfen Accu-Chek yardım hattınızla iletişime geçin. Genellikle kayıtlı kullanıcılara "360° Pompa Yapılandırma Yazılımı" ve bir SmartPix USB kızılötesi bağlantı cihazı içeren bir CD gönderirler (eğer varsa Realtyme cihazı da çalışır).
+- **Gerekli ayarlar** (ekran görüntülerinde yeşil olarak işaretlenmiştir):
     
-    - Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-    - Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
-    - Set TBR *Maximum Adjustment* to 500%
-    - Disable *Signal End of Temporary Basal Rate*
-    - Set TBR *Duration increment* to 15 min
-    - Enable Bluetooth
+    - Menü yapılandırmasını "Standart" olarak ayarlayın/bırakın; bu yalnızca pompada desteklenen menüleri/eylemleri gösterecek ve desteklenmeyenleri (yayma/çoklu yayma bolus, çoklu bazal oranları) gizleyecektir, bu da kullanıldığında döngü işlevselliğinin kısıtlanmasına neden olur çünkü kullanıldığında döngüyü güvenli bir şekilde çalıştırmak mümkün değildir.
+    - *Hızlı Bilgi Metni*'nin "HIZLI BİLGİ" olarak ayarlandığını doğrulayın (tırnak işaretleri olmadan, *İnsülin Pompası Seçenekleri* altında bulunur).
+    - GBO *Maksimum Ayarı* %500 olarak ayarlayın
+    - *Geçici Bazal Oranının Sonu Sinyali*'ni Devre Dışı Bırakın
+    - GBO *Süre artışını* 15 dk olarak ayarlayın
+    - Bluetooth'u Etkinleştirin
 
-- **Recommended settings** (marked blue in screenshots)
+- **Önerilen ayarlar** (ekran görüntülerinde mavi olarak işaretlenmiştir)
     
-    - Set low cartridge alarm to your liking
-    - Configure a max bolus suited for your therapy to protect against bugs in the software
-    - Similarly, configure maximum TBR duration as a safeguard. Allow at least 3 hours, since the option to disconnect the pump for 3 hours sets a 0% for 3 hours.
-    - Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
-    - Set display timeout and menu timeout to the minimum of 5.5 and 5 respectively. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
+    - Rezervuar düşük alarmını istediğiniz gibi ayarlayın
+    - Yazılımdaki hatalara karşı koruma sağlamak için tedavinize uygun bir maksimum bolus yapılandırın
+    - Benzer şekilde, bir koruma olarak maksimum GBO süresini yapılandırın. Pompayı 3 saat ayırma seçeneği 3 saat için %0'ı ayarladığından, en az 3 saat bekleyin.
+    - Pompadan bolus yapmayı önlemek için pompada tuş kilidini etkinleştirin, özellikle pompa daha önce manuel kullanıldığında hızlı bolus yapmak bir alışkanlıktır.
+    - Ekran zaman aşımını ve menü zaman aşımını sırasıyla minimum 5.5 ve 5 olarak ayarlayın. Bu AAPS'nin hata durumlarından daha hızlı kurtulmasını sağlar ve bu tür hatalar sırasında meydana gelebilecek titreşim sayısını azaltır
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Kullanıcı menüsü ayarlarının ekran görüntüsü](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![GBO ayarlarının ekran görüntüsü](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Bolus ayarlarının ekran görüntüsü](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![İnsülin rrezervuar ayarlarının ekran görüntüsü](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](https://androidaps.readthedocs.io/)
-- Make sure to read the wiki to understand how to setup AndroidAPS.
-- Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo plugin from interfering with ruffy during the pairing process.
-- Clone ruffy via git from [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy). At the moment, the primary branch is the `combo` branch, in case of problems you might also try the 'pairing' branch (see below).
-- Build and install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch. If the pump is already paired and can be controlled via ruffy, installing the `combo` branch is sufficient. Note that the pairing processing is somewhat fragile (but only has to be done once) and may need a few attempts; quickly acknowledge prompts and when starting over, remove the pump device from the Bluetooth settings beforehand. Another option to try is to go to the Bluetooth menu after initiating the pairing process (this keeps the phone's Bluetooth discoverable as long as the menu is displayed) and switch back to ruffy after confirming the pairing on the pump, when the pump displays the authorization code. If you're unsuccessful in pairing the pump (say after 10 attempts), try waiting up to 10s before confirming the pairing on the pump (when the name of the phone is displayed on the pump). If you have configured the menu timeout to be 5s above, you need to increase it again. Some users reported they needed to do this. Lastly, consider moving from one room to another in case of local radio interference. At least one user immediately overcame pairing problems by simply changing rooms.
-- When AAPS is using ruffy, the ruffy app can't be used. The easiest way is to just reboot the phone after the pairing process and let AAPS start ruffy in the background.
-- If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
-- Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
-- To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+- AndroidAPS'yi [AndroidAPS viki](https://androidaps.readthedocs.io/) deki açıklandığı gibi yükleyin
+- AndroidAPS'in nasıl kurulacağını anlamak için viki'yi okuduğunuzdan emin olun.
+- Bu noktada Combo eklentisinin eşleştirme işlemi sırasında ruffy ile çakışmasını önlemek için AndroidAPS'deki MDI eklentisini seçin, Combo eklentisini değil.
+- [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy)'den git aracılığıyla ruffy'yi klonlayın. Şu anda birincil branch `combo` branch dir, sorun olması durumunda 'eşleştirme' branch'ini de deneyebilirsiniz (aşağıya bakın).
+- Ruffy'yi derleyin ve kurun ve pompayı eşleştirmek için kullanın. Birden çok denemeden sonra çalışmazsa, `eşleştirme` branch geçin, pompayı eşleştirin ve ardından orijinal branch'e geri dönün. Pompa zaten eşleştirilmişse ve ruffy ile kontrol edilebiliyorsa, `combo` branch'in kurulması yeterlidir. Eşleştirme işleminin biraz hassas olduğunu (ancak yalnızca bir kez yapılması gerektiğini) ve birkaç deneme gerektirebileceğini unutmayın; istemleri hızlı bir şekilde onaylayın ve Bluetooth ayarlarından önce yeniden başlatırken pompa cihazını çıkarın. Denenecek başka bir seçenek de eşleştirme işlemini başlattıktan sonra Bluetooth menüsüne gitmektir.(bu menü görüntülendiği sürece telefonun Bluetooth'unun keşfedilebilir olmasını sağlar) ve pompa yetkilendirme kodunu görüntülediğinde, pompadaki eşleştirmeyi onayladıktan sonra ruffy'ye geri dönün. Pompayı eşleştirmede başarısız olursanız (10 denemeden sonra diyelim), pompada eşleştirmeyi onaylamadan önce (pompada telefonun adı görüntülendiğinde) 10 saniye kadar beklemeyi deneyin. Menü zaman aşımını 5sn üzeri olacak şekilde ayarladıysanız tekrar arttırmanız gerekir. Bazı kullanıcılar bunu yapmaları gerektiğini bildirdiler. Son olarak, yerel radyo paraziti durumunda bir odadan diğerine geçmeyi düşünün. En az bir kullanıcı, sadece oda değiştirerek eşleştirme problemleminin üstesinden geldi.
+- AAPS ruffy kullanırken, ruffy uygulaması kullanılamaz. En kolay yol sadece eşleştirme işleminden sonra telefonu yeniden başlatın ve AAPS'in arka planda ruffy'yi başlatmasına izin verin.
+- Pompa tamamen yeniyse, pompa üzerinde bir bolus yapmanız gerekir, böylece pompa bir ilk geçmiş girişi oluşturur.
+- AAPS'de Combo eklentisini etkinleştirmeden önce profilinizin doğru ayarlandığından ve etkinleştirildiğinden(!) ve AAPS bazal profili pompayla senkronize edeceğinden bazal profilinizin güncel olduğundan emin olun. Ardından Combo eklentisini etkinleştirin. Pompayı başlatmak için Combo sekmesindeki *Yenile* düğmesine basın.
+- Pompa **bağlantısı kesilmiş** durumdayken kurulumunuzu doğrulamak için, 15 dakika boyunca %500'lük bir GBO ayarlamak için AAPS'yi kullanın ve bolus verin. Pompanın şimdi çalışan bir GBO'su ve geçmişte bolus olması gerekir. AAPS ayrıca aktif GBO'yu ve iletilen bolusu göstermelidir.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## Pompayla eşleştirme neden "ruffy" uygulamasıyla çalışmıyor?
 
-There are serveral possible reasons. Try the following steps:
+Bunun birkaç olası nedeni olabilir. Aşağıdaki adımları deneyin:
 
-1. Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
+1. Pompaya **yeni veya dolu bir pil** takın. Ayrıntılar için pil bölümüne bakın. Pompanın akıllı telefona çok yakın olduğundan emin olun.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo telefonun yanında olmalı](../images/Combo_next_to_Phone.png)
 
-2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
+2. Eşleştirme devam ederken telefonla bağlantı kuramamaları için diğer bluetooth cihazlarını kapatın veya kaldırın. Herhangi bir paralel bluetooth iletişimi veya bağlantı kurma istemi, eşleştirme sürecini bozabilir.
 
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
+3. Pompanın Bluetooth menüsünde önceden bağlı cihazları silin: **BLUETOOTH AYARLARI / BAĞLANTI / KALDIR** **CİHAZ YOK** gösterilene kadar.
 
-4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
-5. Make sure, that AAPS not running in background the loop. Deaktivate Loop in AAPS.
-6. Try using the '**pairing**' branch from the [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) repository to establish the connection 
-7. Now start ruffy on the phone. You may press Reset! and remove the old connection. Then hit **Connect!**.
-8. In the Bluetooth menu of the pump, go to **ADD DEVICE / ADD CONNECTION**. Press *CONNECT!** 
-    - The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
+4. Bluetooth aracılığıyla telefona hali hazırda bağlı olan bir pompayı silin: Ayarlar / Bluetooth altında, eşleştirilmiş "**SpiritCombo**" cihazını kaldırın
+5. AAPS'in döngüyü arka planında çalıştırmadığından emin olun. APPS'de Döngüyü Devre Dışı Bırakın.
+6. Bağlantıyı kurmak için [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) deposundaki '**pairing**' dalını kullanmayı deneyin 
+7. Şimdi telefonda ruffy uygulamasını başlatın. Sıfırla'ya (Reset) basabilirsiniz! ve eski bağlantıyı kaldırın. Ardından **Bağlan!**'a basın.
+8. Pompanın Bluetooth menüsünde **CİHAZ EKLE / BAĞLANTI EKLE** seçeneğine gidin. *BAĞLAN!**'a basın 
+    - Sonraki üç adım zamanlamaya duyarlıdır, bu nedenle eşleştirme başarısız olursa farklı duraklamalar/hızlar denemeniz gerekebilir. Denemeden önce tam diziyi okuyun.
 
-9. Now the Pump should show up the BT Name of phone to select for pairing. Here it is importand to wait at least 5s before you hit the select button on Pump. Otherwise the Pumpe will not send the Paring request to the Phone proberly.
+9. Şimdi Pompa, eşleştirme için seçilecek telefonun BT Adını göstermelidir. Burada Pompa üzerindeki seçim düğmesine basmadan önce en az 5sn beklemeniz önemlidir. Aksi takdirde Pompa, Eşleştirme talebini Telefona düzgün şekilde gönderemez.
     
-    - If Combo Pump is set to 5s Screentime out, you may test it with 40s (original setting). From experiance the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
-    - If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Make sure you are running a new **LineageOS ≥ 14.1** or **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+    - Eğer Combo pompası 5s Ekran zaman aşımı olarak ayarlandıysa, 40s (orijinal ayar) ile test edebilirsiniz. Deneyimlenen pompanın telefonda görünme süresi, pompadan telefonun seçilmesinden itibaren 5-10s civarıdır. Diğer birçok durumda, eşleştirme başarız olur ve zaman aşımına uğrar. Daha sonra, AAPS Combo ayarları ve bağlantıları hızlandırmak için tekrar 5s'ye ayarlamalısınız.
+    - Pompa, telefonu bir eşleştirme cihazı olarak göstermiyorsa, telefonunuzun Bluetooth yığını muhtemelen pompayla uyumlu değildir. Yeni bir **LineageOS ≥ 14.1** veya **Android ≥ 8.1 (Oreo)** çalıştırdığınızdan emin olun. Mümkünse başka bir akıllı telefon deneyin. Halihazırda başarıyla kullanılan akıllı telefonların listesini [AAPS Telefonları] altında bulabilirsiniz. (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
-10. Sometimes the phone asks for a (typically 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually, ruffy will set this PIN automatically, but due to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN. This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step. See related [Github issue](https://github.com/MilosKozak/ruffy/issues/14) for details.
+10. Bazen telefon, daha sonra pompada gösterilen 10 haneli PIN ile ilgili olmayan (tipik olarak 4 haneli) bir bluetooth PIN numarası ister. Genellikle, ruffy bu PIN'i otomatik olarak ayarlar, ancak zamanlama sorunları nedeniyle bu her zaman çalışmaz. Pompada herhangi bir kod gösterilmeden önce telefonda Bluetooth eşleştirme PIN'i isteği görünürse, PIN olarak **}gZ='GD?gj2r|B}>** girmeniz gerekir. Bu en kolay şekilde eşleştirme adımları başlamadan önce bu 16 karakterlik metni panoya kopyalayıp bu adımda iletişim kutusuna yapıştırarak yapılır. Ayrıntılar için ilgili [Github sorununa](https://github.com/MilosKozak/ruffy/issues/14) bakın.
 
-11. At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you should be ready to go.
-12. If pairing was not successful and you got a timeout on the pump, you will need to restart the process from scratch.
-13. If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
-14. Reboot the phone.
-15. Now you can restart AAPS loop.
+11. Daha sonra pompa 10 haneli bir güvenlik kodu göstermeli ve telefonda kodun girileceği Ruffy ekranı görünmelidir. Öyleyse kodu Ruffy'ye girin ve başlamaya hazır olun.
+12. Eşleştirme başarılı olmadıysa ve pompada bir zaman aşımı yaşadıysanız, işlemi sıfırdan yeniden başlatmanız gerekecektir.
+13. Ruffy uygulamasını oluşturmak için ''Pairing' dalını kullandıysanız, şimdi bunun üzerine 'combo' dalından sürüm derlemesini yükleyin. Tüm ayarları ve verileri saklayabilmek için uygulamanın iki sürümünü imzalarken aynı anahtarları kullandığınızdan emin olun, çünkü bunlar bağlantı özelliklerini de içerir.
+14. Telefonu yeniden başlatın.
+15. AAPS programını yeniden başlatabilirsiniz.
 
 ## Kullanım
 
-- Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
-- Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS is based upon.
-- Read the online documentation to learn about and understand AndroidAPS https://androidaps.readthedocs.io/
-- This integration uses the same functionality which the meter provides that comes with the Combo. The meter allows to mirror the pump screen and forwards button presses to the pump. The connection to the pump and this forwarding is what the ruffy app does. A `scripter` component reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS then interacts with the scripter to apply loop commands and to administer boluses. This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for), and setting a TBR or giving a bolus causes the pump to vibrate.
-- The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs consumed, which can't be entered on the pump, which is another reason why all inputs should be done in AndroidAPS). 
-- Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
-- The pump's first basal rate profile is read on application start and is updated by AAPS. The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety measure (don't rely on safety measures by default, this is meant to detect an unintended change on the pump).
-- It's recommended to enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit. Also, with keylock enabled, accidentally pressing a key will NOT interrupt active communication between AAPS and pump.
-- When a BOLUS/TBR CANCELLED alert starts on the pump during bolusing or setting a TBR, this is caused by a disconnect between pump and phone, which happens from time to time. AAPS will try to reconnect and confirm the alert and then retry the last action (boluses are NOT retried for safety reasons). Therefore, such an alarm can be ignored as AAPS will confirm it automatically, usually within 30s (cancelling it is not problem, but will lead to the currently active action to have to wait till the pump's display turns off before it can reconnect to the pump). If the pump's alarm continues, automatic corfirmation failed, in which case the user needs to confirm the alarm manually.
-- When a low cartridge or low battery alarm is raised during a bolus, they are confirmed and shown as a notification in AAPS. If they occur while no connection is open to the pump, going to the Combo tab and hitting the Refresh button will take over those alerts by confirming them and show a notification in AAPS.
-- When AAPS fails to confirm a TBR CANCELLED alert, or one is raised for a different reason, hitting Refresh in the Combo tab establishes a connection, confirms the alert and shows a notification for it in AAPS. This can safely be done, since those alerts are benign - an appropriate TBR will be set again during the next loop iteration.
-- For all other alerts raised by the pump: connecting to the pump will show the alert message in the Combo tab, e.g. "State: E4: Occlusion" as well as showing a notification on the main screen. An error will raise an urgent notification. AAPS never confirms serious errors on the pump, but let's the pump vibrate and ring to make sure the user is informed of a critical situation that needs action.
-- After pairing, ruffy should not be used directly (AAPS will start in the background as needed), since using ruffy at AAPS at the same time is not supported.
-- If AAPS crashes (or is stopped from the debugger) while AAPS and the pump were communicating (using ruffy), it might be necessary to force close ruffy. Restarting AAPS will start ruffy again. Restarting the phone is also an easy way to resolve this if you don't know how to force kill an app.
-- Don't press any buttons on the pump while AAPS communicates with the pump (Bluetooth logo is shown on the pump).
+- Bunun bir ürün olmadığını unutmayın, özellikle başlangıçta kullanıcının sistemi, sınırlamaları ve nasıl hata yapabileceğini izlemesi ve anlaması gerekir. Kullanan kişi sistemi tam olarak anlayamamışsa bu sistemi KULLANMAMANIZ şiddetle tavsiye edilir.
+- AndroidAPS'in temel aldığı döngü algoritmasını anlamak için https://openaps.org OpenAPS dokümantasyonunu okuyun.
+- AndroidAPS hakkında bilgi edinmek ve anlamak için çevrimiçi dokümantasyonu okuyun https://androidaps.readthedocs.io/
+- Bu entegrasyon, Combo ile birlikte gelen kumandanın sağladığı aynı işlevselliği kullanır. Kumanda, pompa ekranını yansıtmaya ve düğme basışlarını pompaya iletmeye izin verir. Pompaya bağlantı ve bu yönlendirme, ruffy uygulaması tarafından yapılır. Bir `scripter` bileşeni ekranı okur ve bolus, GBO vb. girişlerin doğru şekilde işlendiğini kontrol eder ve otomatikleştirir. AAPS daha sonra döngü komutlarını uygulamak ve bolusları yönetmek için komut dosyası oluşturucuyla etkileşime girer. Bu modun bazı kısıtlamaları vardır: nispeten yavaştır (ancak ne için kullanıldığına göre yeterince hızlıdır) ve bir GBO (geçici bazal oran) ayarlamak veya bolus vermek pompanın titreşmesine neden olur.
+- Combo'nun AndroidAPS ile entegrasyonu, tüm girişlerin AndroidAPS üzerinden yapıldığı varsayımıyla tasarlanmıştır. Doğrudan pompaya girilen boluslar AAPS tarafından algılanır, ancak AndroidAPS'in böyle bir bolustan haberdar olması 20 dakika kadar sürebilir. Doğrudan pompaya iletilen bolusların okunması bir güvenlik özelliğidir ve düzenli olarak kullanılması amaçlanmamıştır (döngü karbonhidrat bilgisi gerektirir, pompaya girilemez, bu da tüm girişlerin AndroidAPS'de yapılmasının bir başka nedenidir). 
+- Pompa üzerinden bir GBO (geçici bazal oran) ayarlamayın veya iptal etmeyin. Döngü, GBO'nun kontrolünü programda üstlenir. Aksi takdirde kullanıcı tarafından pompada ayarlanan bir GBO'nun başlangıç zamanını belirlemek mümkün olmadığından güvenilir şekilde çalışamaz.
+- Pompanın ilk bazal oran profili, uygulama başlangıcında okunur ve AAPS tarafından güncellenir. Bazal oran pompada manuel olarak değiştirilmemelidir, ancak bir güvenlik önlemi olarak algılanacak ve düzeltilecektir (varsayılan olarak güvenlik önlemlerine güvenmeyin, bu pompada istenmeyen bir değişikliği algılamak içindir).
+- Pompa önceki standart kullanımında "hızlı bolus" özelliğinin kullanılması bir alışkanlık olduğu ve pompadan bolus yapmayı önlemek için pompada tuş kilidinin etkinleştirilmesi önerilir. Ayrıca, tuş kilidi etkinleştirildiğinde, yanlışlıkla bir tuşa basılması ENGELLENECEK ve AAPS ile pompa arasındaki aktif iletişim kesilmeyecektir.
+- Bolus yapma veya bir GBO ayarlama sırasında pompada bir BOLUS/GBO İPTAL EDİLDİ uyarısı başladığında, bu pompa ile telefon arasındaki zaman zaman meydana gelen bir bağlantı kesilmesinden kaynaklanır. AAPS yeniden bağlanmaya ve uyarıyı onaylamaya çalışacak ve ardından son eylemi yeniden deneyecektir (güvenlik nedenlerinden dolayı boluslar yeniden denenmez). Öyleyse, AAPS genellikle 30 saniye içinde otomatik olarak onaylayacağından buna benzer bir alarm yoksayılabilir.(iptal etmek sorun değildir, ancak mevcut etkin eylemin, pompaya yeniden bağlanmadan önce pompanın ekranının kapanmasını beklemesi gereklidir). Pompanın alarmı devam ederse, otomatik doğrulama başarısız olur ve bu durumda kullanıcının alarmı manuel olarak onaylaması gerekir.
+- Bolus sırasında düşük rezervuar veya düşük pil alarmı verildiğinde, bunlar onaylanır ve AAPS'de bir bildirim olarak gösterilir. Pompaya bağlantı açık değilken oluşurlarsa, Combo sekmesine gidip Yenile düğmesine basmak, bu uyarıları onaylayarak devralacak ve AAPS'de bir bildirim gösterecektir.
+- AAPS, GBO İPTAL EDİLDİ uyarısını onaylayamadığında veya farklı bir nedenle uyarı verildiğinde, Combo sekmesinde Yenile'ye basmak bir bağlantı kurar, uyarıyı onaylar ve AAPS'de bunun için bir bildirim gösterir. Bu uyarılar zararsız olduğundan, bu güvenli bir şekilde yapılabilir - bir sonraki döngü yinelemesi sırasında uygun bir GBO yeniden ayarlanacaktır.
+- Pompa tarafından iletilen diğer tüm uyarılar için: pompaya bağlanmak, Combo sekmesinde uyarı mesajını gösterecektir, örn. "Durum: E4: Tıkanma" ve ayrıca ana ekranda bir bildirim gösterir. Bir hata acil bir bildirime neden olur. AAPS, pompadaki ciddi hataları hiçbir zaman onaylamaz, ancak kullanıcının harekete geçmesi gereken kritik bir durum hakkında bilgilendirildiğinden emin olmak için pompanın titreşmesine ve çalmasına izin verir.
+- Eşleştirmeden sonra ruffy doğrudan kullanılmamalıdır. (AAPS gerektiğinde arka planda başlatacaktır) Çünkü AAPS ile aynı anda ruffy kullanımı desteklenmemektedir.
+- AAPS ve pompa iletişim kurarken (ruffy kullanarak) AAPS çökerse (veya hata ayıklayıcı tarafından durdurulursa), ruffy'yi kapatmaya zorlamak gerekebilir. AAPS'yi yeniden başlatmak tekrar ruffy'yi başlatacaktır. Bir uygulamayı nasıl zorla kapatacağınızı bilmiyorsanız, telefonu yeniden başlatmak da bunu çözmenin kolay bir yoludur.
+- AAPS pompa ile iletişim kurarken pompa üzerinde herhangi bir düğmeye basmayın (pompada Bluetooth logosu görülür).

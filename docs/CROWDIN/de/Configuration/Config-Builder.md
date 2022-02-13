@@ -46,7 +46,7 @@ Aus einem Profilwechsel kannst Du ganz einfach ein neues lokales Profil erstelle
 1. Klicke auf das 3-Punkte-Menü in der oberen rechten Ecke.
 2. Wähle "Behandlungen" aus.
 3. Drücke das Sternsymbol um auf die Seite des Profilwechsels zuzugreifen.
-4. Select the desired profile switch and press "Clone".
+4. Wähle den gewünschten Profilwechsel und drücke "Clone".
 5. Das neue lokale Profil kannst Du im Tab "Lokales Profil" (LP) oder über das Hamburger-Menü bearbeiten.
 
 ![Profilwechsel klonen](../images/LocalProfile_ClonePS_AAPS30.png)
