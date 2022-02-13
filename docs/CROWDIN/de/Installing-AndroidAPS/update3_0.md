@@ -1,27 +1,27 @@
 # Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 3.0
 
 * **Minimale Android-Version ist 9.0 jetzt.**
-* **Data is not migrated to new database.**
+* **Daten werden nicht in die neue Datenbankstruktur überführt.**
 
-  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Die Änderungen der Struktur sind so weitreichend, dass eine Übernahme nicht möglich ist. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen neuen [Profilwechsel](../Usage/Profiles) machen und mit IOB = 0 und COB = 0 starten.
 
   Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 
-* Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
+* In den [Release Notes](../Installing-AndroidAPS/Releasenotes) findest Du weitere Details zu den neuen und geänderten Funktonen.
 
 
-## Check automations
+## Automatisierungen prüfen
 
-* New restrictions were introduced. Check your automations, especially if your conditions are still valid.
-* If one of the conditions is missing, you need to add it again.
-* Red automations contain invalid actions, go and edit them and reset to valid values
+* Neue Beschränkungen wurden eingeführt. Überprüfe Deine Automatisierungen, insbesondere auf Gültigkeit der Bedingungen.
+* Wenn eine der Bedingungen fehlt, musst Du sie erneut hinzufügen.
+* Rote Automatisierungen enthalten ungültige Aktionen, bearbeite sie und setze sie auf gültige Werte zurück.
 
-  Example: A profile change to 140% was allowed earlier but is now restriced to 130%.
+  Beispiel: Eine Änderung des Profils auf 140 % wurde früher erlaubt, ist jetzt aber auf 130 % beschränkt.
 
-## Check your nsclient settings and set the synchronization complications
+## Prüfe Deine NSClient- und Synchronisations-Einstellungen
 
-* The implementation of the nsclient plugin has changed completly.
-* Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
+* Die Implementierung des NSClient Plugins hat sich komplett geändert.
+* Gehe zur Registerkarte NSClient und öffne die Einstellungen im rechten Menü. Eine neue Einstellung "Synchronisierung" ist jetzt verfügbar.
 * You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
 
 ## Nightscout profile cannot be pushed
@@ -29,7 +29,7 @@
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
-* Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. You should see "Profile valid from:" set to currrent date.
+* Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
