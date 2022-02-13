@@ -10,7 +10,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### Ajustes en AndroidAPS
 
-Sólo hay una función de carga NS (sin sincronización) en los valores de AAPS. Al hacerlo, AAPS no recogerá los cambios realizados en Nightscout, tales como objetivos temporales o futuros carbohidratos. Si está utilizando el perfil [NS profile](../Configuration/Config-Builder#ns-profile), los perfiles se sincronizarán entre AAPS y Nightscout a pesar del valor de "upload only" (solo subir).
+Sólo hay una función de carga NS (sin sincronización) en los valores de AAPS. Al hacerlo, AAPS no recogerá los cambios realizados en Nightscout, tales como objetivos temporales o futuros carbohidratos.
 
 * Toca el menú de 3 puntos en la esquina superior derecha en la pantalla de inicio de AAPS.
 * Seleccione "preferencias".
