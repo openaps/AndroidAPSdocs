@@ -80,7 +80,7 @@ Rugsėjis 2020
 
 2020 m. gegužė
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight vibracijos išjungimas <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (tik programinė įranga 3.x)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Modifikuota Libre Link programėlė <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - patikrinkite ar tinkamai modifikuota
@@ -103,7 +103,7 @@ Vasaris 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - trumpas paaiškinimas
 * 'Priežiūros alternatyvos <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
 * `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - pagrindinės naujos funkcijos
@@ -126,7 +126,7 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
