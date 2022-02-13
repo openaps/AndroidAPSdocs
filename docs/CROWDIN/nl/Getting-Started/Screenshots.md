@@ -184,7 +184,7 @@ Bovenstaande voorspellingslijnen rekenen met verschillende (extreme) scenario's.
 * Toont de insuline aan boord (= actieve insuline in jouw lichaam). Dit is inclusief insuline afkomstig van bolussen en tijdelijke basaalstanden (**minus de ingestelde basaalstanden uit jouw profiel**).
 * Als er gedurende de DIA geen [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), geen bolussen en geen TBR zouden zijn geweest, dan zou dit nul zijn.
 * IOB kan negatief zijn als je geen insuline meer aan boord hebt van een voorafgaande bolus en je voor een langere tijd een laag (of zelfs nul) tijdelijk basaal hebt gekregen.
-* Hoe snel jouw IOB afneemt hangt af van je [DIA en insuline profiel instellingen](../Configuration/Config-Builder#lokaal-profiel-aanbevolen). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Koolhydraten aan boord (COB)
 
@@ -440,14 +440,14 @@ De Behandelingen tab kan worden gebruikt om foutieve koolhydraat-invoer te corri
    * Basaal
    * Streefdoel: bloedglucosewaarde waar AAPS naar moet streven
 
-* Je kunt een [lokaal profiel](../Configuration/Config-Builder#lokaal-profiel-aanbevolen) gebruiken dat op je smartphone bewerkt kan worden, of een [Nightscout profiel](../Configuration/Config-Builder#ns-profiel) dat op je NS pagina bewerkt moet worden en daarna naar je telefoon moet worden overgebracht. 
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Bolus
 
 Geschiedenis van de volgende behandelingen:
 
 * Bolus & koolhydraten-> met optie voor het [verwijderen van items](../Getting-Started/Screenshots#koolhydraten-correctie) om foutieve informatie weg te halen
-* [Vertraagde bolus](../Usage/Extended-Carbs#extended-bolus)
+* [Vertraagde bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Tijdelijke basaalstand (Temporary Basal Rate)
 * [Tijdelijk streefdoel](../Usage/temptarget.md)
 * [Profiel wissel](../Usage/Profiles.md)
