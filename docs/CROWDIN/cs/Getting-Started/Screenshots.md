@@ -184,7 +184,7 @@ Obvykle vaše skutečná křivka glykémie končí uprostřed těchto linek nebo
 * Zobrazuje vydaný inzulín, který je aktivní (= aktivní inzulín v těle). Zahrnuje inzulín z bolusu a dočasného bazálu (**ale nezahrnuje bazální dávky nastavené ve vašem profilu**).
 * Pokud by neexistovaly žádné [SMB](../Usage/Open-APS-features#super-micro-bolus-smb), žádné bolusy ani žádné TBR během doby DIA, tato hodnota by byla nula.
 * IOB může být záporný, pokud již není aktivní žádný bolus a po delší dobu byl nastaven nulový/nízký dočasný bazál.
-* Odbourávání závisí na vaší hodnotě [DIA a nastavení inzulinového profilu](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Zbývající sacharidy
 
