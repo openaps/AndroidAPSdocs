@@ -80,7 +80,7 @@ June 2020
 
 May 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight deactivate vibration <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (firmware 3.x only)
 * `Minimal request rate <../Configuration/Preferences.html#minimal-request-change>`_ to reduce number of notifications in open loop mode
 * `Patched Libre Link app <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - check if correctly patched
@@ -103,7 +103,7 @@ February 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
@@ -126,7 +126,7 @@ November 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
