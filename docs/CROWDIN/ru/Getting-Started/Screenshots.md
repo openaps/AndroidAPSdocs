@@ -184,7 +184,7 @@
 * Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
 * Если бы не было [микроболюсов SMB](../Usage/Open-APS-features#super-micro-bolus-smb), болюсов, и временных базалов, TBR во время действия инсулина DIA, он равнялся бы нулю.
 * Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
-* Спад действия инсулина зависит от [DIA и настроек профиля инсулина](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Активные углеводы COB
 
@@ -440,14 +440,14 @@
    * Скорость базала
    * Цель: Уровень глюкозы крови для AAPS
 
-* Можно применять [локальный профиль](../Configuration/Config-Builder#local-profile-recommended), который может быть отредактирован на смартфоне или [профиль Nightscout ](../Configuration/Config-Builder#ns-profile), который редактируется на вашей странице NS и затем пересылается на телефон. Подробная информация в соответствующих разделах на вкладке [Конфигуратор](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Терапия
 
 История следующих терапевтических действий:
 
 * Bolus & Carbs -> возможность [удалить записи](../Getting-Started/Screenshots#carb-correction) для исправления истории
-* [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus)
+* [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
