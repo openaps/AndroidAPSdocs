@@ -1,6 +1,10 @@
 Docs Updates & Änderungen
 **************************************************
 
+February 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 January 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
@@ -12,7 +16,7 @@ Dezember 2021
 
 November 2021
 ==================================================
-* Best Practice zur Kalibrierung eines `Libre 2 Sensors <Hardware/Libre2.html#best-practices-fur-die-kalibrierung-eines-libre-2-sensors>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#auswirkung>`_ Neuformulierung der Auswirkungen
 * `Update Fehlerbehebung Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Gepatchte Dexcom App <../Hardware/DexcomG6.html>`_ entfernt, da sie veraltet ist
@@ -76,7 +80,7 @@ Juni 2020
 
 Mai 2020
 ==================================================
-* `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#verzogerter-bolus-und-wechsel-zum-open-loop-nur-fur-dana-und-insight-pumpe>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
 * `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
 * `Minimaler Wert zur Anfrage einer Änderung <../Configuration/Preferences.html#minimaler-wert-zur -anfrage-einer-anderung>`_ zur Reduktion der Zahl der Benachrichtigungen im Open Loop
 * `Patched Libre Link App <../Hardware/Libre2.html#schritt-1-erstelle-deine-eigene-gepatchte-librelink-app>`_ - Prüfen, ob die gepatchte App korrekt erstellt wurde
@@ -100,7 +104,7 @@ Februar 2020
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - kurze Erklärung
 * ` Careportal Alternativen <../Usage/CPbefore26.html> ` _
 * `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
-* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Konfigurationsbeispiel <../Getting-Started/Sample-Setup.html>`_ - Update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - wichtige neue Funktionen
 * `Wear Komplikationen <../Configuration/Watchfaces.html>`_ für Smartwatches
