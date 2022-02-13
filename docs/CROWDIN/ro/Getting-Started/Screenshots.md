@@ -440,14 +440,14 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Ținta: Nivelul glicemiei pe care doriţi ca AAPS să îl atingă
 
-* Puteţi fie să utilizaţi un [profil local](../Configuration/Config-Builder#local-profile-recommended) care poate fi editat pe telefon sau un [profil Nightscout](../Configuration/Config-Builder#ns-profile) care trebuie să fie editat pe pagina NS şi să fie transferat după aceea în telefonul dumneavoastră. Pentru detalii vedeţi secţiunile corespunzătoare de pe [pagina config builder](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Tratament
 
 Istoricul următoarelor tratamente:
 
 * Bolus & carbohidrați -> opțiune de [ștergere intrări](../Getting-Started/Screenshots#carb-correction) pentru a corecta istoricul
-* [Bolus extins](../Usage/Extended-Carbs#extended-bolus)
+* [Bolus extins](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Rată bazală temporară
 * [Ţintă temporară](../Usage/temptarget.md)
 * [Schimbare de profil](../Usage/Profiles.md)
