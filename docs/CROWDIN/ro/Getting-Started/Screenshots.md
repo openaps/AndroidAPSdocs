@@ -184,7 +184,7 @@ De obicei, curba reală a glicemiei ajunge în mijlocul acestor linii, sau aproa
 * Arată insulina pe care o aveţi la bord (= insulină activă în corpul dumneavoastră). Include insulina din bolus și bazala temporară (**dar exclude ratele bazale stabilite în profilul dvs.**).
 * Acesta ar fi zero dacă nu ar exista [SMB-uri](../Usage/Open-APS-features#super-micro-bolus-smb), nici bolusuri și nici TBR pe durata DIA.
 * IOB poate fi negativ dacă nu mai aveți insulină din bolusuri și zero/low temp de o perioadă mai lungă de timp.
-* Consumarea insulinei depinde de [DIA şi de profilul de insulină](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Carbohidrați activi
 
