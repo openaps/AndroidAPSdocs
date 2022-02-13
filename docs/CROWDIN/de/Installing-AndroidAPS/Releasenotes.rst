@@ -74,8 +74,8 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* NSProfil ist weg, nur lokales Profil kann verwendet werden. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
-* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
+* NSProfil ist weg, nur lokales Profil kann verwendet werden. Lokales Profil kann mit NS synchronisiert werden mit NS <../Installing-AndroidAPS/update3_0#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* Möglichkeit, das `Master Password zurückzusetzen <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
 * Neue Automatisierung Careportal Aktion @Philoul
@@ -320,7 +320,7 @@ Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Wenn du Dexcom G6 mit der gepatchten Dexcom App verwendest, benötigst du die Version vom `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:
