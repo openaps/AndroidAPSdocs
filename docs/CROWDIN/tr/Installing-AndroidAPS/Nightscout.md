@@ -10,7 +10,7 @@ Nightscout raporlamanın yanı sıra AAPS'i kontrol etmek için de kullanılabil
 
 ### AndroidAPS ayarları
 
-AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bunu yaparak AAPS, Nightscout'ta yapılan geçici hedefler veya gelecekteki karbonhidratlar gibi değişiklikleri almaz. [NS profili](../Configuration/Config-Builder#ns-profile) kullanıyorsanız, "yalnızca yükle" ayarına rağmen profiller AAPS ve Nightscout arasında senkronize edilecektir.
+AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bunu yaparak AAPS, Nightscout'ta yapılan geçici hedefler veya gelecekteki karbonhidratlar gibi değişiklikleri almaz.
 
 * AAPS ana ekranınızın sağ üst köşesindeki 3 noktalı menüye dokunun.
 * "Tercihler"i seçin.
