@@ -440,14 +440,14 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
    * Débit de Basal
    * Cible : Niveau de glycémie que vous voulez que AAPS vise
 
-* Vous pouvez soit utiliser un [profil local](../Configuration/Config-Builder#profil-local-recommande) qui peut être édité sur votre smartphone ou un [profil Nightscout](../Configuration/Config-Builder#profil-ns) qui doit être modifié sur votre page NS et ensuite transféré sur votre téléphone. Pour plus de détails, voir les sections correspondantes sur la page du [Générateur de configuration](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Traitement
 
 Historique des traitements suivants :
 
 * Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
-* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus)
+* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Basal temporaire
 * [Cible temp.](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
