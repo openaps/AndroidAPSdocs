@@ -20,7 +20,7 @@ Onder andere de volgende gegevens uit jouw instellingen worden ge-exporteerd:
 
 * `Automation <../Usage/Automation.html>`_ instellingen
 * `Configurator <../Configuration/Config-Builder.html>`_ instellingen
-* `Lokaal profiel <../Configuration/Config-Builder.html#lokaal-profiele-aanbevolen>`_ instellingen
+* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
 * Jouw voortgang door de `Doelen <../Usage/Objectives.html>`_ incl. `examen resultaten <../Usage/Objectives.html#doel-3-bewijs-jouw-kennis>`_
 * `Instellingen <../Configuration/Preferences.html>`__ incl. `NS Client-instellingen <../Configuration/Preferences.html#nsclient>`_
 
