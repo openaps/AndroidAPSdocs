@@ -163,7 +163,7 @@ Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la 
 
 ![APK généré avec 0 variantes de compilation](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-C'est un faux avertissement. Vérifiez le répertoire que vous avez sélectionné en tant que "Dossier de destination" pour la génération (étape [Générer l'APK signé](../Installing-AndroidAPS/Building-APK.html#generer-l-apk-signe)) et vous y trouverez l'apk généré !
+C'est un faux avertissement. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
 
 
 ## L'application a été créée avec les avertissements du compilateur/kotlin
