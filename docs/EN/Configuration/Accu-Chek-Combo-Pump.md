@@ -81,7 +81,7 @@
   pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
-## Why does pairing with the pump does not work with the app "ruffy"?
+## Why pairing with the pump does not work with the app "ruffy"?
 There are serveral possible reasons. Try the following steps:
 
 1.  Insert a **fresh or full battery** into the pump. Look at the battery section for details. Make sure that the pump is very close to the smartphone.
