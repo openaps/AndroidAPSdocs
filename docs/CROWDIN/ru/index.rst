@@ -50,7 +50,7 @@ AndroidAPS-приложение с открытым исходным кодом 
 
    Построение APK <./Instaling-AndroidAPS/Building-APK.md>
    Обновление до новой версии или ветви <./Instaling-AndroidAPS/Update-to-new-version.md>
-   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Проверка после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Установка git <./Instaling-AndroidAPS/git-install.rst>
    Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
