@@ -80,7 +80,7 @@ Haziran 2020
 
 Mayıs 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-why-they-won-t-work-in-closed-loop-environment>`_
+* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Insight titreşimi devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (pompa yazılımı 3.x için)
 * Açık döngü modunda bildirim sayısını azaltmak için `Minimum istek oranı <../Configuration/Preferences.html#minimal-request-change>`_
 * `Yamalı Libre Link uygulaması <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - doğru yama yapılıp yapılmadığının kontrolü
@@ -103,7 +103,7 @@ Mart 2020
 * `Otomasyon uyarıları <../Usage/Automation.html#good-practice-caveats>`_
 * `Otoduyarlılık <../Usage/Open-APS-features.html#autosens>`_ - kısa açıklama
 * `Bakımportalı alternatifler <../Usage/CPbefore26.html>`_
-* `Yayma bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ özelliği - kapalı döngü devre dışı bırakılacak
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Örnek Kurulum <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6'yı güncelleme
 * `Sürüm 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - önemli yeni özellikler
@@ -126,7 +126,7 @@ Kasım 2019
 ==================================================
 * `Otomasyon - <../Usage/Automation.html#important-note>` döngü kapalıyken devre dışı bırakın
 * `Dexcom G6 verici güncellemesi <../Configuration/xdrip.html#replace-transmitter>`_
-* `Yayma bolus - neden bir döngü bağlamında çalışmıyorlar <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `SSS - spor <../Getting-Start/FAQ.html#sports>`_
 * `Giriş ekranı - grafikteki çizgiler <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - NS İstemcisinde mutlak değerleri devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
