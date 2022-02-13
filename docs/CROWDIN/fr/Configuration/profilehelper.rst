@@ -57,7 +57,7 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 Dupliquer le profil
 =======================================
 
-Si vous utilisez des `profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_, vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Assistant profile Dupliquer le Profil / Changement de profil
