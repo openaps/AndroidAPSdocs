@@ -1,9 +1,9 @@
 Dokümanlar güncellemeleri ve değişiklikleri
 **************************************************
 
-February 2022
+Şubat 2022
 ==================================================
-* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `AndroidAPS 3.0 güncellemesinden sonra gerekli kontroller <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 
 Ocak 2022
 ==================================================
@@ -16,7 +16,7 @@ Aralık 2021
 
 Kasım 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Bir `libre 2 sensörünü <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_ kalibre etmek için en iyi yöntemler
 * `İDF <../Getting-Started/FAQ.html#impact>`_ etkinin yeniden yapılandırılması
 * Güncelleme `sorun giderme Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Yamalanmış `Dexcom <../Hardware/DexcomG6.html>`_ uygulaması eski olduğu için kaldırıldı
@@ -103,8 +103,8 @@ Mart 2020
 * `Otomasyon uyarıları <../Usage/Automation.html#good-practice-caveats>`_
 * `Otoduyarlılık <../Usage/Open-APS-features.html#autosens>`_ - kısa açıklama
 * `Bakımportalı alternatifler <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* `Yayma bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only>`_ özelliği - kapalı döngü devre dışı bırakılacak
+* Yeni `Yerel Profil eklentisi <../Configuration/Config-Builder.html#local-profile>`_
 * `Örnek Kurulum <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6'yı güncelleme
 * `Sürüm 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - önemli yeni özellikler
 * `Wear komplikasyonları <../Configuration/Watchfaces.html>`_
@@ -126,7 +126,7 @@ Kasım 2019
 ==================================================
 * `Otomasyon - <../Usage/Automation.html#important-note>` döngü kapalıyken devre dışı bırakın
 * `Dexcom G6 verici güncellemesi <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Yayma bolus - neden bir döngü bağlamında çalışmıyor <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only> `_
 * `SSS - spor <../Getting-Start/FAQ.html#sports>`_
 * `Giriş ekranı - grafikteki çizgiler <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - NS İstemcisinde mutlak değerleri devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
