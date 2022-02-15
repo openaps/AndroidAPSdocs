@@ -20,7 +20,7 @@ Neben anderen werden folgende Einstellungen exportiert:
 
 * `Automation <../Usage/Automation.html>`_ Regeln
 * Einstellungen des `Konfigurations-Generators <../Configuration/Config-Builder.html>`_
-* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
+* Einstellungen der `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil>`_
 * Status der `Ziele (Objectives) <../Usage/Objectives.html>`_ inkl. `Ergebnisse der Multiple-Choice-Fragen <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_
 * `Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`__ inkl. `NS Client Einstellungen <../Configuration/Preferences.html#nightscout-client>`_
 
