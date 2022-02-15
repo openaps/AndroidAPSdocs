@@ -1,11 +1,11 @@
 Docs Updates & Änderungen
 **************************************************
 
-February 2022
+Februar 2022
 ==================================================
 * `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 
-January 2022
+Januar 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
 
@@ -80,7 +80,7 @@ Juni 2020
 
 Mai 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Verzögerter Bolus nur für Dana + Insight Pumpen <../Usage/Extended-Carbs.html#verzogerter-bolus-und-wechsel-zum-open-loop-nur-fur-dana-und-insight-pumpe>`_
 * `Insight Vibration deaktivieren <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (nur Firmware 3.x)
 * `Minimaler Wert zur Anfrage einer Änderung <../Configuration/Preferences.html#minimaler-wert-zur -anfrage-einer-anderung>`_ zur Reduktion der Zahl der Benachrichtigungen im Open Loop
 * `Patched Libre Link App <../Hardware/Libre2.html#schritt-1-erstelle-deine-eigene-gepatchte-librelink-app>`_ - Prüfen, ob die gepatchte App korrekt erstellt wurde
