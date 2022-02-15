@@ -1,7 +1,7 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
-February 2022
+Février 2022
 ==================================================
 * `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 
@@ -80,7 +80,7 @@ Juin 2020
 
 Mai 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompesdana-et-insight>`_
 * `Désactivation des vibrations sur pompes Insight <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (uniquement firmware 3.x)
 * `Changement minimum <../Configuration/Preferences.html#changement-minimum>`_ pour réduire le nombre de notifications en mode boucle ouverte
 * `Application Libre Link patchée <../Hardware/Libre2.html#etape-1-construire-votre-propre-application-librelink-patchee>`_ - vérifier si le patch est correct
