@@ -2,7 +2,7 @@
 
 Documentation for AndroidAPS
 
-To view documentation visit https://androidaps.readthedocs.io/
+To view documentation, visit https://androidaps.readthedocs.io
 
 ## Docs Status
 
@@ -19,19 +19,20 @@ To view documentation visit https://androidaps.readthedocs.io/
 | [Russian](https://androidaps.readthedocs.io/ru/latest/)    | [![Documentation Status](https://readthedocs.org/projects/androidaps-ru/badge/?version=latest)](https://readthedocs.org/projects/androidaps-ru/builds/) | [![Build Warnings - ru](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Andries-Smit/4d086495590ccb904468b66aecc48bdb/raw/AndroidAPSdocs_build_warnings_ru_master.json)](../../actions?query=workflow%3A%22Build+Warnings%22) | [![Link Checker - ru](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/Andries-Smit/fc7bdcb3bc52e1ae006b2435ac6001b4/raw/AndroidAPSdocs_broken_links_ru_master.json)](../../actions?query=workflow%3A%22Link+Checker%22) |
 
 
-**Note** Issues in the source language "English" should be fixed in (GitHub)[https://github.com/openaps/AndroidAPSdocs]. Issues in translation should be fixed via [CROWDIN](https://crowdin.com/project/androidapsdocs) platform.
+**Note:** Issues in the source language "English" should be fixed in [GitHub](https://github.com/openaps/AndroidAPSdocs). Issues in translation should be fixed via [CROWDIN](https://crowdin.com/project/androidapsdocs) platform.
 
 ### Build and Warning
 
-The current build logs of the documentation can be found at on the documentation hosting site, by clicking the **docs** badge in the column **Build**.  
+The current build logs of the documentation can be found on the documentation hosting site, by clicking the **docs** badge in the column **Build**.  
 
-In the project open the menu **Builds** section of the documentation, select top **Passed version latest (html)** and select **View raw** or click at the bottom grey bar **/home/docs/....**  
+For the selected project on readthedocs.org, the **Builds** section will be opened.
+Select the top entry "**Passed** version latest (html)" and select **View raw** or click at the bottom grey bar */home/docs/checkouts/readthedocs.org/user_builds/androidaps...* to expand the build logs.
 
-The badges are generated with a [GitHub Action](../../actions), and the can be inspected for more details, by clicking on the status badge or [here](../../actions/workflows/build-warnings.yml).
+The badges are generated with a [GitHub Action](../../actions), and they can be inspected for more details, by clicking on the status badge or [here](../../actions/workflows/build-warnings.yml).
 
 * Select the top workflow **Build warning**
 * Select the build of a language, for example **build (de)**
-* Click on the section **Build docs** to see build output
+* Click on the section **Build docs** to see the build output
 
 ### Broken Links
 
@@ -39,7 +40,7 @@ The badges are generated with a [GitHub Action](../../actions), and the output c
 
 * Select the top workflow **Link Checker**
 * Select the build of a language, for example **check (de)**
-* Click on the section **Link Checker** to see link checker output
+* Click on the section **Link Checker** to see the link checker output
 
 **Note:** Links that always failed, but are working correctly should be excluded in the check. Please raise an issue, on one of the channels, or open a pull request in the [flow](https://github.com/openaps/AndroidAPSdocs/.github/workflows/link-checker.yml#L56).
 
@@ -65,6 +66,6 @@ The most issues are in restructured text:
 The link checker validates both internal and external links. Most common issues:
 
 - Translation headers, cause link anchor form other pages to be broken
-- External links are changes
+- External links are changed
 - Link checker receives a redirect on external page
 - Link anchor to was generated on page load (have to be excluded)
