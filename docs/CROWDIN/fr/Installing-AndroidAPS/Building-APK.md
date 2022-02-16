@@ -2,7 +2,7 @@
 
 ## Construire vous-même au lieu de télécharger
 
-**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
+**AndroidAPS n'est pas disponible en téléchargement en raison de la réglementation concernant les dispositifs médicaux. Il est légal de construire l'application pour votre usage personnel, mais vous ne devez en aucun cas donner une copie à d'autres personnes ! Voir la [page FAQ](../Getting-Started/FAQ.md) pour plus de détails.**
 
 ## Remarques importantes
 
@@ -15,7 +15,7 @@
   
 <thead>
   <tr>
-    <th class="tg-baqh">OS (Only 64 bit)</th>
+    <th class="tg-baqh">OS (seulement 64 bits)</th>
     <th class="tg-baqh">Windows 8 ou supérieur</th>
     <th class="tg-baqh">Mac OS 10.14 ou supérieur</th>
     <th class="tg-baqh">N'importe quel Linux prend en charge Gnome, KDE, ou Unity DE;&nbsp;&nbsp;GNU C Library 2.31 ou ultérieure</th>
@@ -23,7 +23,7 @@
 </thead>
 <tbody>
   <tr>
-    <td class="tg-baqh"><p align="center">CPU (Only 64 bit)</td>
+    <td class="tg-baqh"><p align="center">CPU (seulement 64 bits)</td>
     <td class="tg-baqh">architecture processeur x86_64 ; Core Intel de 2ème génération ou plus récente, ou processeur AMD prenant en charge un <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor Windows</span></a></td>
     <td class="tg-baqh">Intel Core de 2ème génération ou plus récente, ou processeur AMD prenant en charge un <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
     <td class="tg-baqh">architecture du processeur x86_64, Intel Core de 2ème génération ou plus récent ou processeur AMD avec support pour la virtualisation AMD (AMD-V) et SSSE3</td>
@@ -47,7 +47,7 @@
 </tbody>
 </table>
 
-Veuillez garder à l'esprit que le processeur **64 bits et le système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Veuillez garder à l'esprit que le processeur **64 bits et le système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prendra moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que ce n'est pas obligatoire. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
 
 * * *
 
@@ -67,7 +67,7 @@ En général, les étapes nécessaires pour construire le fichier APK sont :
 5. [Télécharger Android SDK](../Installing-AndroidAPS/Building-APK#telecharger-android-sdk)
 6. [Générer l'application](../Installing-AndroidAPS/Building-APK#generer-un-apk-signe) (générer un fichier apk signé)
 7. [Transférer le fichier apk sur votre téléphone](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone)
-8. [Identifier le récepteur si vous utilisez xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identifier le récepteur si vous utilisez xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Démarche pas à pas
 
@@ -79,7 +79,7 @@ Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/gi
 
 ## Installer Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. Mais vous devriez y arriver. Vous pouvez demande de [l'aide auprès de la commauté](../Where-To-Go-For-Help/Connect-with-other-users.md).
+Les captures d'écran suivantes ont été prises à partir de Android Studio Version Arctic Fox | 2020.3.1. Les écrans peuvent changer dans les versions futures d'Android Studio. Mais vous devriez y arriver. Vous pouvez demande de [l'aide auprès de la commauté](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient !** Au cours de l'installation et de la configuration, Android Studio télécharge beaucoup de choses ce qui prendra du temps.
 

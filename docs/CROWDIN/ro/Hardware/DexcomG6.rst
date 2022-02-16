@@ -24,7 +24,7 @@ Dacă utilizaţi G6 cu xDrip+
 * Transmiţătorul Dexcom G6 poate fi conectat simultan la receptorul Dexcom (sau la pompa t:slim) şi la o aplicaţie de pe telefon.
 * Când se utilizează xDrip+ ca receptor, mai întâi dezinstalează aplicaţia Dexcom. ** Nu se poate conecta și xDrip+ si aplicația Dexcom cu transmitatorul in acelasi timp! **
 * If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
-* Dacă nu ați făcut-o deja, downloadați xdrip <https://github.com/NightscoutFoundation/xDrip>`_ și urmăriți instrucțiunile pe nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 * Alege xDrip în ConfigBuilder (setare din AndroidAPS).
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.

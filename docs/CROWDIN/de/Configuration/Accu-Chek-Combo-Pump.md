@@ -69,7 +69,7 @@
 - Bevor das Combo-Plugin in AndroidAPS aktiviert wird, muss sichergestellt sein, dass das Basalratenprofil korrekt in AndroidAPS eingestellt ist und aktiviert wurde(!), da AndroidAPS das in der Pumpe programmierte Profil mit den eigenen Einstellungen überschreibt. Wenn das Basalratenprofil also korrekt in AAPS eingestellt ist, kann das Combo-Plugin aktiviert werden. Drücke nun den *Aktualisieren* Button im Combo Tab um die Pumpe zu initialisieren.
 - **Trenne die Pumpe** um die Konfiguration zu prüfen, setze mit AAPS eine TBR von 500% für 15 Min. und gib einen Bolus ab. Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historie haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
 
-## Warum funktioniert die Kopplung mit der Pumpe nicht mit der App "ruffy"?
+## Why pairing with the pump does not work with the app "ruffy"?
 
 Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 

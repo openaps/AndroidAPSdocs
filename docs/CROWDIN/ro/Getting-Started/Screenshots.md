@@ -184,7 +184,7 @@ De obicei, curba reală a glicemiei ajunge în mijlocul acestor linii, sau aproa
 * Arată insulina pe care o aveţi la bord (= insulină activă în corpul dumneavoastră). Include insulina din bolus și bazala temporară (**dar exclude ratele bazale stabilite în profilul dvs.**).
 * Acesta ar fi zero dacă nu ar exista [SMB-uri](../Usage/Open-APS-features#super-micro-bolus-smb), nici bolusuri și nici TBR pe durata DIA.
 * IOB poate fi negativ dacă nu mai aveți insulină din bolusuri și zero/low temp de o perioadă mai lungă de timp.
-* Consumarea insulinei depinde de [DIA şi de profilul de insulină](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Carbohidrați activi
 
@@ -440,14 +440,14 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Ținta: Nivelul glicemiei pe care doriţi ca AAPS să îl atingă
 
-* Puteţi fie să utilizaţi un [profil local](../Configuration/Config-Builder#local-profile-recommended) care poate fi editat pe telefon sau un [profil Nightscout](../Configuration/Config-Builder#ns-profile) care trebuie să fie editat pe pagina NS şi să fie transferat după aceea în telefonul dumneavoastră. Pentru detalii vedeţi secţiunile corespunzătoare de pe [pagina config builder](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Tratament
 
 Istoricul următoarelor tratamente:
 
 * Bolus & carbohidrați -> opțiune de [ștergere intrări](../Getting-Started/Screenshots#carb-correction) pentru a corecta istoricul
-* [Bolus extins](../Usage/Extended-Carbs#extended-bolus)
+* [Bolus extins](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Rată bazală temporară
 * [Ţintă temporară](../Usage/temptarget.md)
 * [Schimbare de profil](../Usage/Profiles.md)

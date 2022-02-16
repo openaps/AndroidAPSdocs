@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Загрузите Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Постройте приложение ](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (сгенерируйте подписанный apk)
 7. [Перенесите файл apk на телефон](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Идентифицируйте ресивер при использовании xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Идентифицируйте ресивер при использовании xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Пошаговое руководство
 

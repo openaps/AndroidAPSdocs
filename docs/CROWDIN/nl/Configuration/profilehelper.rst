@@ -57,7 +57,7 @@ Je kunt de profiel hulp ook gebruiken om twee verschillende profielen of profiel
 Profiel dupliceren
 =======================================
 
-Als je `lokale profielen <../Configuration/Config-Builder.html#lokaal-profiel-aanbevolen>`_ gebruikt, dan kun je een profiel dupliceren / profiel wissel doen rechtstreeks vanuit de profiel hulp.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profiel hulp Profiel dupliceren / profiel wisselen

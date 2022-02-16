@@ -50,7 +50,7 @@ Para más detalles, por favor, lee aquí.
 
    Compilando la APK <./Installing-AndroidAPS/Building-APK.md>
    Actualizar a una nueva versión o rama<./Installing-AndroidAPS/Update-to-new-version.md>
-   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Comprobaciones después de actualizar a AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Instale git <./Installing-AndroidAPS/git-install.rst>
    Resolución de problemas de Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>

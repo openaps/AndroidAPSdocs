@@ -1,6 +1,10 @@
 Dokumentų atnaujinimai ir pakeitimai
 **************************************************
 
+February 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 January 2022
 ==================================================
 * `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
@@ -12,7 +16,7 @@ December 2021
 
 November 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
 * Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
@@ -99,8 +103,8 @@ Vasaris 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - trumpas paaiškinimas
 * 'Priežiūros alternatyvos <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
-* Naujas `Vietinio profilio įskiepis <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * "Pavyzdinis nustatymas <../Getting-Started/Sample-Setup.html>`_ - Dexcom G6 atnaujinimas
 * `Versija 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - pagrindinės naujos funkcijos
 * `Išmaniųjų laikrodžių ekrano elementai <../Configuration/Watchfaces.html>`_
@@ -122,7 +126,7 @@ Lapkritis 2019
 ==================================================
 * `Automatizavimas - išjungimas, kai sustabdomas ciklas <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 siųstuvo keitimo atnaujinimas <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * 'DUK - sportas <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_

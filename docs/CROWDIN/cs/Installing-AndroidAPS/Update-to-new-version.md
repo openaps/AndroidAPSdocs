@@ -16,7 +16,7 @@
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Vytvořte podepsaný soubor APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
+3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
 5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
 6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).

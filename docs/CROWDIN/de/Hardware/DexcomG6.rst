@@ -24,7 +24,7 @@ Dexcom G6 mit xDrip+
 * Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 * Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 * Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die `BYODA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ mit lokaler Datenübertragung zu xDrip+ verwenden.
-* Lade `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ herunter und folge den Anleitungen auf Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 * Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > xDrip+.
 * Passe die Einstellungen in xDrip+ entsprechend den `Empfehlungen an <../Configuration/xdrip.html>`__
 * Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze `identify receiver` wie auf der Seite `xDrip+ Einstellungen <../Configuration/xdrip.html>`__ beschrieben.

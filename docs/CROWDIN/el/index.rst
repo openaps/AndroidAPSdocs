@@ -50,7 +50,7 @@ The main components are:
 
    Χτίζοντας το APK <./Installing-AndroidAPS/Building-APK.md>
    Ενημέρωση σε νέα έκδοση ή υποκατάστημα <./Installing-AndroidAPS/Update-to-new-version.md>
-   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>

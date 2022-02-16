@@ -10,7 +10,7 @@ Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentica
 
 ### AndroidAPS Einstellungen
 
-In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen. Falls Du ein [NS Profil](../Configuration/Config-Builder#nightscout-profil) nutzt, werden die Profildaten dennoch weiter zwischen AAPS und Nightscout synchronisiert.
+In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). Wenn Du diese Funktion wählst, wird AAPS keine Änderungen von Nightscout (z.B. temporäre Ziele oder Kohlenhydrateingaben) übernehmen.
 
 * Tippe oben rechts auf dem Startbildschirm auf das 3-Punkte-Menü.
 * Klicke auf "Einstellungen".

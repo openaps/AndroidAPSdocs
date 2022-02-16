@@ -1,33 +1,33 @@
 Dexcom G6
 **************************************************
-Basics first
+Önce temel bilgiler
 ==================================================
 
-* Follow general CGM hygiene and setting sensor recommendation `here <../Hardware/GeneralCGMRecommendation.html>`__.
-* 2018 sonbaharından/sonundan sonra üretilen G6 vericileri için lütfen 'en son xDrip+ sürümlerinden <https://github.com/NightscoutFoundation/xDrip/releases>' birini kullandığınızdan emin olun. Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+* Genel CGM hijyenini ve sensör ayar önerisini `buradan <../Hardware/GeneralCGMRecommendation.html>`__ takib edebilirsiniz.
+* 2018 sonbaharından/sonundan sonra üretilen G6 vericileri için lütfen 'en son xDrip+ sürümlerinden <https://github.com/NightscoutFoundation/xDrip/releases>' birini kullandığınızdan emin olun. Bu vericiler yeni bir firmware yazılımına sahiptir ve xDrip+'ın en son kararlı sürümü (2019/01/10) bununla istenildiği gibi çalışmaz.
 
-General hints for looping with G6
+Dexcom G6 ile kapalı döngü hakkında genel bilgiler
 ==================================================
 
 Açık olan şu ki, G6'yı kullanmak, başlangıçta düşünülenden biraz daha karmaşık olabilir. Güvenli bir şekilde kullanmak için dikkat edilmesi gereken birkaç nokta vardır: 
 
-* If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
+* xDrip+ veya Spike'ta yerel verileri kalibrasyon koduyla kullanıyorsanız, yapılacak en güvenli şey, sensörün "önleyici yeniden başlatılmasına" izin vermemektir.
 * Önleyici yeniden başlatma kullanmanız gerekiyorsa, değişikliği gözlemleyebileceğiniz ve gerekirse kalibre edebileceğiniz günün bir saatinde yaptığınızdan emin olun. 
-* If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
+* Sensörleri yeniden başlatıyorsanız, en güvenli sonuçlar için 11. ve 12. günlerde fabrika kalibrasyonu olmadan yapın ya da kalibrasyona hazır olduğunuzdan ve sapmaları göz önünde bulundurduğunuzdan ve gerekirse kalibrasyon ile düzeltebildiğinizden emin olun.
 * Fabrika kalibrasyonu ile "Pre-soaking" ön ısınma denilen sensörü daha önce verici olmadan doku sıvısına "alışacak" şekilde yerleştirmek, muhtemelen glikoz değerlerinde sapmalara yol açar. 'pre-soak' ön ısınma yapıyorsanız, en iyi sonuçları almak için muhtemelen sensörü kalibre etmeniz gerekecektir.
-* If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+* Meydana gelebilecek değişiklikler konusunda dikkatli değilseniz, fabrikada kalibre edilmemiş moda dönmek ve sistemi bir G5 gibi kullanmak daha iyi olabilir.
 
-To learn more about the details and reasons for these recommendations read the `complete article <https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/>`_ published by Tim Street at `www.diabettech.com <https://www.diabettech.com>`_.
+Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek için Tim Street tarafından yayınlanan <a href="https://www.diabettech.com">www.diabettech.com</a> adresindeki <a href="https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/">makalenin tamamını</a> okuyun.
 
-If using G6 with xDrip+
+xDrip+ ile Dexcom G6 kullanıyorsanız
 ==================================================
-* The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
-* When using xDrip+ as receiver uninstall Dexcom app first. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
+* Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
+* xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
 * If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 * Konfigürasyon ayarlarında (AndroidAPS'de) xDrip+'ı seçin.
-* Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
-* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.
+* xDrip+'daki ayarları `xDrip+ ayarlar sayfasına <../Configuration/xdrip.html>`__ göre yapın
+* Telefon uçak modundayken AAPS KŞ değerleri almıyorsa, 'xDrip+ ayarlar sayfasında <../Configuration/xdrip.html>'__ açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
 If using G6 with Build Your Own Dexcom App
 ==================================================
@@ -73,4 +73,4 @@ General Troubleshoothing for CGMs can be found `here <./GeneralCGMRecommendation
 
 New transmitter with running sensor
 --------------------------------------------------
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. Bu konu hakkında video şu adreste bulunabilir `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.

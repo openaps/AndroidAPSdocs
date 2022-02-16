@@ -387,7 +387,7 @@ NSClient
 * Als je vastzit in Doel 1, controleer dan goed of je hier geen typfouten hebt gemaakt.
 * **Zorg ervoor dat de URL is ingevuld ZONDER /api/v1/ aan het eind.**
 * *Log app start naar Nightscout' zal elke keer dat de app is gestart, een notitie maken.  De app zou niet vaker dan één keer per dag opnieuw moeten starten; gebeurt dit vaker dan wijst dat op een probleem. Vaak wordt dit veroorzaakt doordat de accubesparings-functie van jouw telefoon steeds de app afsluit. Los dit op door de accubesparings-instellingen van jouw telefoon aan te passen. Het kan ook zijn dat jouw telefoon te weinig (werk)geheugen beschikbaar heeft. Zorg dan dat je niet teveel zware apps draait of maak geheugenruimte vrij.   
-* Je kunt hier instellen dat wijzigingen in jouw `lokaal profiel <../Configuration/Config-Builder.html#llokale-profielen-uploaden-naar-nightscout>`_ worden geüpload naar Nightscout.
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
 
 Verbindings instellingen
 -----------------------------------------------------------

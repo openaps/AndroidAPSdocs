@@ -57,7 +57,7 @@ Pomocníka s profilem můžete použít také pro porovnání dvou různých pro
 Klonování profilu
 =======================================
 
-Pokud použijete `místní profily <../Configuration/Config-Builder.html#local-profile-recommended>`_, můžete klonovat profil / přepnutí profilu přímo z Pomocníka s profilem.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Pomocník profilu Klonování profilu / přepnutí profilu

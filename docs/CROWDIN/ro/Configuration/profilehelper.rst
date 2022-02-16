@@ -57,7 +57,7 @@ Puteți utiliza asistentul de profil de asemenea pentru a face comparații cu di
 Copiere profil
 =======================================
 
-Dacă folosiți `profile locale <../Configuration/Config-Builder.html#local-profile-recommended>`_ puteți copia un profil / schimba profilul direct din asistentul de profil.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. imagine:: ../images/ProfileHelperClone.png
   :alt: Profile Helper copiere profil / schimbare profil

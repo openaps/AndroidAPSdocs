@@ -1,6 +1,6 @@
-# AAPS on Wear OS smartwatch
+# Wear OS akıllı saatinde AAPS
 
-You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
+AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirsiniz. AAPS'nin akıllı saat sürümü şunları yapmanızı sağlar:
 
 * **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc. 

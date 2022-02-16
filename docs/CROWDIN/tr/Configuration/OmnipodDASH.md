@@ -361,7 +361,7 @@ Ek not:
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
      - AAPS, her 15 dakikada bir yeni bazal profili ayarlamaya çalışacaktır.
      - APPS, iletim hala askıya alınmışsa iletimin her 15 dakikada bir askıya alındığını bildiren bir bildirim gösterecektir. (iletim devam ettirilemedi)
-     - [**İletime devam et**](#resume-delivery) butonu etkin olacak ve kullanıcı iletimi manuel olarak sürdürmeyi seçebilecektir.
+     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - AAPS kendi kendine iletimi sürdüremezse (bu, Pod'a ulaşılamıyorsa, ses kapatılmışsa vb. olabilir), pod 3 dakika için her dakikada bir 4 kez bip sesi çıkarmaya başlar, ardından iletim 20 dakikadan daha uzun süre askıda kalırsa bu her 15 dakikada bir tekrarlanır.
   * Onaylanmamış komutlar için "pod durumunu yenile" komutu, bunları onaylamalı/reddetmelidir.
 
@@ -454,5 +454,5 @@ Omnipod DASH sürücüsü için tüm geliştirme çalışmaları topluluk taraf�
 
 -  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
 -  **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #androidaps* kanalına gidin.
--  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AndroidAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. Yoksa, lütfen bir [yeni sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı ekleyin](../Usage/Accessing-logfiles.html).
+-  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AndroidAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
 -  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**

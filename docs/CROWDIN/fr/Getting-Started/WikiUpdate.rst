@@ -1,6 +1,10 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
+Février 2022
+==================================================
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+
 Janvier 2022
 ==================================================
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ mise à jour @tanja
@@ -12,7 +16,7 @@ Décembre 2021
 
 Novembre 2021
 ==================================================
-* Meilleures pratiques pour calibrer un `capteur libre 2 <../Hardware/Libre2.html#meilleures-pratiques-pour-calibrer-un-capteur-libre-2>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `SI <../Getting-Started/FAQ.html#impact>`_ reformulation de l'impact
 * Mise à jour `dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Suppression de l'appli `Dexcom patchée<../Hardware/DexcomG6.html>`_ car elle est obsolète
@@ -99,8 +103,8 @@ Février 2020
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
-* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
@@ -122,7 +126,7 @@ Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
-* `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_

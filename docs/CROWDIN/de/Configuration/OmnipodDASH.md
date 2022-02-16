@@ -1,167 +1,167 @@
 # Omnipod DASH
 
-These instructions are for configuring the **Omnipod DASH** generation pump **(NOT Omnipod Eros)**. Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 3.0 verfügbar.
+Diese Anleitung ist für die Konfiguration der **Omnipod DASH** Pumpe **(NICHT für Omnipod Eros)**. Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 3.0 verfügbar.
 
 **Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
-## Omnipod DASH specifications
+## Omnipod DASH Spezifikationen
 
-These are the specifications of the **Omnipod DASH** and what differentiates it from the **Omnipod EROS**:
+Hier finden sich die Spezifikationen für den **Omnipod DASH** und die Unterschiede zum **Omnipod EROS**:
 
-* The DASH pods are identified by a blue needle cap (EROS has a clear needle cap). The pods are otherwise identical in terms of physical dimensions
-* No need for a separate Omnipod to BLE link/bridge device (NO RileyLink, OrangeLink, or EmaLink needed).
-* BT connection only when needed, connects to send command and disconnects right after !
-* No more "no connection to link device / pod" errors
-* AAPS will wait for pod accessibility to send commands
-* On activation, AAPS will find and connect a new DASH pod.
-* Expected range: 5-10 meters (YMMV)
+* Die DASH Pods sind durch eine blaue Nadelkappe gekennzeichnet (EROS haben eine farblose Nadelkappe). Die Pods sind ansonsten in Bezug auf die übrigen Abmessungen identisch.
+* Es muss kein separates Gerät für die Verbindung zwischen DASH Pods und AAPS verwendet werden, da in den Pods ein Bluetooth-Modul integriert ist (KEIN RileyLink, OrangeLink oder EmaLink erforderlich).
+* Die BT-Verbindung wird immer nur kurz zum Senden von Befehlen verwendet und trennt sich anschließend wieder!
+* Der Fehler "Keine Verbindung zum Gerät / Pod" tritt nicht mehr auf.
+* AAPS wartet auf Erreichbarkeit des Pod, um Befehle zu senden
+* Für die Aktivierung eines neuen DASH Pod findet AAPS den Pod und verbindet sich.
+* Reichweite für die BT-Verbindung: 5-10 Meter (je nach Umgebung)
 
-## Hardware/Software Requirements
+## Hardware- und Software-Anforderungen
 
-* A new **Omnipod DASH Pod** (Identified by blue needle cap)
+* Ein neuer **Omnipod DASH** (erkennbar durch eine blaue Nadelkappe)
 
 ![Omnipod Pod](../images/DASH_images/Omnipod_Pod.png)
 
-* **Compatible Android phone** with a BLE Bluetooth connection
-   -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
-   -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
-* [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
+* **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
+   -  Nicht alle Telefone und Android-Versionen werden sicher funktionieren. Bitte überprüfe die [**DASH getesteten Telefone**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) oder teste einfach mit Deinem Telefon und teile das Ergebnis (Telefonversion und geographische Region, Android-Version, funktioniert / einige Schwierigkeiten / funktioniert nicht).
+   -  **Bei einigen Telefonmodellen könnte es zu Problemen kommen**: Beachte, dass der Omnipod DASH Treiber des AAPS sich jedes Mal mit dem DASH Pod über Bluetooth verbindet, wenn er einen Befehl sendet und sich unmittelbar danach wieder trennt. Die Bluetooth-Verbindungen können durch andere Geräte gestört werden, die mit dem Telefon verbunden sind, auf dem AAPS läuft, wie Earbuds etc... (was in seltenen Fällen zu Verbindungsproblemen oder Pod-Fehlern bei der Aktivierung oder danach bei einigen Telefonmodellen führen kann).</strong>
+   -  **Version 3.0 oder neuer von AndroidAPS erstellt und installiert** nach der [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) Anleitung.
+* [**Kontinuierliche Glukosemessung (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
-These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
+Diese Anleitung geht davon aus, dass Du einen neuen DASH Pod startest. Falls dies nicht der Fall ist, habe bitte Geduld und beginne diesen Prozess erst bei Deinem nächsten Starten eines neuen Pods.
 
 ## Bevor du anfängst
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
+**Sicherheit geht vor** - Stelle sicher, dass Du auf eventuell auftretende Fehler reagieren kannst, bevor Du diesen Prozess beginnst: zusätzliche Pods, Insulin und Smartphone mit vollem Akku sind unbedingt notwendig.
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Dein Omnipod DASH PDM wird nicht mehr funktionieren, nachdem der AAPS Dash-Treiber deinen Pod aktiviert hat.** Zuvor hast Du den Dash PDM verwendet, um Befehle an Deinen Dash-Pod zu senden. Ein Dash-Pod kann nur von einem einzigen Gerät Befehle empfangen und mit ihm kommunizieren. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. Das bedeutet, dass, sobald Du einen DASH-Pod mit Deinem Smartphone über den AAPS DASH-Treiber aktiviert hast, **Du den PDM nicht mehr mit diesem Pod** verwenden kannst. Der AAPS DASH Treiber in Deinem Android-Telefon ist jetzt Dein PDM.
 
-*This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
+*Dies bedeutet NICHT, dass Du Deinen PDM wegwerfen solltest. Es wird empfohlen, ihn als Backup zu behalten und für Notfälle, falls das Telefon verloren geht oder AAPS nicht korrekt funktioniert.*
 
-**Your pod will not stop delivering insulin when it is not connected to AndroidAPS**. Default basal rates are programmed on the pod on activation as defined in the current active profile. As long as AndroidAPS is operational it will send basal rate commands that run for a maximum of 120 minutes. When for some reason the pod does not receive any new commands (for instance because communication was lost due to Pod - phone distance) the pod will automatically fall back to default basal rates.
+**Dein Pod gibt weiterhin Insulin ab, auch wenn er nicht mit AndroidAPS verbunden ist**. Die Standard-Basalraten werden bei der Aktivierung auf den Pod übertragen, wie sie im aktuell aktiven Profil definiert sind. Solange AndroidAPS aktiv ist, sendet es Basalraten-Befehle, die maximal 120 Minuten laufen. Wenn der Pod aus irgendeinem Grund keine neuen Befehle erhält (zum Beispiel, weil die Kommunikation aufgrund eines zu großen Abstandes zwischen Pod und Telefon verloren gegangen ist), fällt der Pod automatisch auf die Standard-Basalraten zurück.
 
-**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** **The AndroidAPS Profile does not support a 30 minute basal rate time frame** If you are new to AndroidAPS and are setting up your basal rate profile for the first time, please be aware that basal rates starting on a half-hour basis are not supported, and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work. You will need to change this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00. Even though the Omnipod Dash hardware itself supports the 30 min basal rate profile increments, AndroidAPS is not able to take them into account with its algorithms currently.
+**Basalraten-Profile mit 30-Minuten-Schritten werden in AndroidAPS NICHT unterstützt.** Wenn Du neu bei AndroidAPS bist und zum ersten Mal Dein Basalprofil einrichtest, beachte bitte, dass Basalprofile, die mit einer halben Stunde beginnen, nicht unterstützt werden und Du Dein Basalprofil anpassen musst. Basalraten müssen immer zur vollen Stunde starten. Wenn Du zum Beispiel eine Basalrate von 1,1 Einheiten hast, die um 9:30 Uhr startet und zwei Stunden bis 11:30 Uhr läuft, wird dies nicht funktionieren. Du muss diese 1,1 IE Basalrate auf einen Zeitraum von entweder 9:00 - 11:00 Uhr oder 10:00 - 12:00 Uhr einstellen. Obwohl die Hardware des Omnipod DASH selbst Basalratenwechsel zur halben Stunde unterstützt, ist AndroidAPS derzeit nicht in der Lage, sie mit seinen Algorithmen zu berücksichtigen.
 
-## Enabling the Dash Driver in AAPS
+## Aktivieren des Omnipod-DASH Treibers in AAPS
 
-You can enable the Dash driver in AAPS in **two ways**:
+Der DASH Treiber kann in AAPS auf **zwei Wegen** aktiviert werden:
 
-### Option 1: New installations
+### Option 1: Neue Installation
 
-When you are installing AndroidAPS for the first time, the **Setup Wizard** will guide you through installing AndroidAPS. Select “DASH” when you reach Pump selection.
+Wenn Du AndroidAPS zum ersten Mal installierst, führt Dich der **Einrichtungsassistent** durch die Installation von AndroidAPS. Wähle "DASH" aus, wenn Du die Pumpenauswahl erreichst.
 
 ![Enable_Dash_1](../images/DASH_images/Enable_Dash/Enable_Dash_1.png)
 
-When in doubt you can also select “Virtual Pump” and select “DASH” later, after setting up AndroidAPS (see option 2).
+Im Zweifel kannst Du beim Einrichten von AndroidAPS auch zunächst die „Virtuelle Pumpe“ und dann später „DASH“ wählen (siehe Option 2).
 
 ### Option 2: Der Konfigurations-Generator
 
-On an existing installation you can select the **DASH** pump from the Config builder:
+Bei einer vorhandenen Installation von AAPS kannst Du **DASH** als Pumpe unter "Konfiguration" auswählen:
 
-On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**.
+Über das **Hamburger Menü** oben links unter **Konfiguration (1)** \ ➜\ **Pumpe** \ ➜ \ **Dash** \ ➜\ **Zahnrad (3)** über das **Auswahlfeld (2)** für **DASH**.
 
-Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
+Wenn Du das ** Kontrollkästchen (4)** neben dem ** Einstellungsrädchen (3)** wählst, wird das DASH-Menü als Registerkarte im AAPS-Interface mit dem Titel **DASH** als eigener Tab angezeigt. Wenn Du dieses Kästchen aktivierst, wird der Zugriff auf die DASH-Befehle bei der Verwendung von AAPS erleichtert.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**HINWEIS:** Eine schnellere Möglichkeit, zu den [**DASH-Einstellungen**](#dash-settings) zu gelangen, findest Du im Abschnitt DASH-Einstellungen weiter unten in diesem Dokument.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
 ### Überprüfung der Omnipod-Treiberauswahl
 
-To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
+Um zu überprüfen, ob Du den DASH-Treiber in AAPS aktiviert hast, wenn das Kästchen (4) ausgewählt ist, **wische nach links** von der Registerkarte **Übersicht**, wo Du nun einen Tab **DASH** sehen solltest. Wenn Du das Kästchen nicht aktiviert hast, findest Du die Registerkarte DASH links oben im Hamburger Menü.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-## Dash Configuration
+## DASH Konfiguration
 
-Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+Bitte **wische nach links **zur **DASH** Registerkarte, wo du alle Pod Funktionen verwalten kannst (einige dieser Funktionen sind ohne aktive Pod Sitzung nicht aktiviert oder nicht sichtbar):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Aktualisieren von Pod-Verbindungen und -Status, Abstellen von Alarmen wenn der Pod piept
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod-Management (Aktivieren, Deaktivieren, Testsignal und Pod-Historie)
 
 ### Pod aktivieren
 
-1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. Navigiere zur Registerkarte **DASH** und klicke auf den **POD MGMT (1)** Button und dann auf **Pod aktivieren (2)**.
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fülle deinen neuen Pod mit mindestens 80 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+2. Der **Pod füllen** Bildschirm wird angezeigt. Fülle deinen neuen Pod mit mindestens 80 Einheiten Insulin und achte auf zwei Signaltöne, die anzeigen, dass der Pod bereit ist, gestartet zu werden. Beachte bei der Berechnung der gesamten Insulinmenge, welche Du in drei Tagen benötigst, dass zum Füllen des Pod 3 bis 10 IE benötigt werden.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
+Stelle sicher, dass der neue Pod und das Samrtphone mit dem AAPS in der Nähe voneinander liegen und klicke auf den Button **Weiter**.
 
-**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+**HINWEIS**: Nur wenn Du die folgende Fehlermeldung erhältst (dies kann passieren), keine Panik. Klicke auf den **Wiederholen-Button**. In den meisten Fällen wird die Aktivierung dann erfolgreich fortgesetzt.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+3. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst).  Ein grünes Häkchen wird nach erfolgreichem Befüllen angezeigt und der **Weiter** Button wird angezeigt. Klicke auf den **Weiter** Button, um die Initialisierung des Pods abzuschließen; anschließend wird der **Pod anbringen** Bildschirm angezeigt.
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Bereite anschließend die Infusionsstelle des neuen Pods vor. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
+4. Bereite anschließend die Infusionsstelle des neuen Pods vor. Entferne die blaue Nadelkappe aus Kunststoff. Wenn Du anschließend etwas aus dem Pod herausragen siehst, beende den Prozess und starte mit einem neuen Pod. Wenn alles in Ordnung ist, ziehe das weiße Papier von der Klebefläche ab und setze den Pod auf die ausgewählte Stelle Deines Körpers. Wenn du fertig bist, klicke auf den **Weiter** Button.
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
+5. Das **Pod anlegen** Dialogfenster wird nun angezeigt. **NUR auf OK klicken, wenn Du bereit bist, die Kanüle einzuführen**.
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. After pressing **OK**, it may take some time before the Dash pod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+6. Nach dem Drücken von **OK** dauert es eventuell etwas, bevor der DASH antwortet und die Kanüle setzt (1-2 Minuten maximal), also habe Geduld.
 
- *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes zu kneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
+ *HINWEIS: Bevor die Kanüle eingesetzt wird, ist es ratsam, die Haut in der Nähe des Kanülensetzpunktes etwas zusammenzukneifen. Dies sorgt für eine sanfte Einführung der Nadel und verringert die Gefahr einer Verstopfung.*
 
 ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+7. Es wird ein grünes Häkchen angezeigt, und der Button **Weiter** wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf den **Weiter** Button.
 
 ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
+9. Der **Pod aktiviert** Bildschirm wird angezeigt. Klicke auf den grünen **Beenden** Button. Glückwunsch! Du hast jetzt eine neuen Pod aktiviert.
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Dies liegt daran, dass jetzt ein Pod aktiv ist und du keinen zusätzlichen Pod aktivieren kannst, ohne zuerst den aktuell aktiven Pod zu deaktivieren.
+10. Der Menübildschirm **Pod Management** sollte nun den **Aktiviere Pod (1)** Button als *deaktiviert* und den **Deaktiviere Pod (2)** Button als *aktiviert* angezeigen. Dies liegt daran, dass jetzt ein Pod aktiv ist und du keinen zusätzlichen Pod aktivieren kannst, ohne zuerst den aktuell aktiven Pod zu deaktivieren.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Klicke auf den Zurück-Knopf auf deinem Smartphone, um zum Tab-Bildschirm **DASH** zurückzukehren, auf dem jetzt Informationen zu deiner aktiven Pod-Sitzung angezeigt werden, einschließlich der aktuellen Basalrate, Pod Reservoir Level, abgegebenem Insulin, Pod Fehlern und Warnungen.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    Weitere Details zu den angezeigten Informationen findest Du im [**DASH Tab**](#dash-tab) Abschnitt dieses Dokuments.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+Es ist zu empfehlen, NACH der Aktivierung des Pods die Einstellungen zu exportieren. Dies solltest Du nach jedem Podwechsel und einmal monatlich tun. Kopiere die Exportdatei an einen sicheren Ort (z. B. in der Cloud). Siehe [**Einstellungen exportieren**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
 
 ### Pod deaktivieren
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Unter normalen Umständen beträgt die erwartete Lebensdauer eines Pods drei Tage (72 Stunden) und zusätzliche 8 Stunden nach der Pod-Ablaufwarnung und somit insgesamt 80 Stunden.
 
 Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der Nutzungsdauer oder wegen eines Pod-Fehlers):
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Gehe zur Registerkarte **DASH** und klicke auf **POD MGMT (1)** und dann auf dem **Pod Management** Bildschirm klicke auf den **Pod deaktivieren (2)** Button.
 
 ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
+2. Auf dem Bildschirm **Pod deaktivieren**, klicke auf die **Weiter** Taste, um die Deaktivierung des Pods zu starten. Du erhältst vom Pod ein Piepen als Bestätigung, dass die Deaktivierung erfolgreich war.
 
 ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. Nach erfolgreicher Deaktivierung wird ein grünes Häkchen angezeigt. Click on the **Next** button to display the pod deactivated screen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde.
+3. Nach erfolgreicher Deaktivierung wird ein grünes Häkchen angezeigt. Klicke auf **Weiter** um die Deaktivierung des Pods abzuschließen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde.
 
 ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+4. Klicke auf den grünen Knopf, um zum Bildschirm **Pod Management** zurückzukehren.
 
 ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
+5. Du bist jetzt wieder im **Pod Management** Menü; drücke die Zurück-Taste auf Deinem Smartphone um zur Registerkarte **DASH** zurückzukehren. Überprüfe, ob das Feld **Pod Status** die Nachricht **Kein aktiver Pod** anzeigt.
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
 ### Insulinabgabe fortsetzen
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Hinweis**: Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen werden. Lesen Sie [**Insulinabgabe unterbrochen**](#delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
@@ -279,7 +279,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 
 ## Dash Settings
 
-The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**.
+The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. Wenn Du das ** Kontrollkästchen (4)** neben dem ** Einstellungsrädchen (3)** wählst, wird das DASH-Menü als Registerkarte im AAPS-Interface mit dem Titel **DASH** als eigener Tab angezeigt.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
@@ -361,7 +361,7 @@ Additional note:
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
      - AAPS will try to set the new basal profile every 15 minutes.
      - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resume-delivery) button will be active if the user chooses to resume delivery manually.
+     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
   * For unconfirmed commands, "refresh pod status" should confirm/deny them.
 
@@ -454,5 +454,5 @@ All of the development work for the Omnipod DASH driver is done by the community
 
 -  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
 -  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.html).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
 -  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**

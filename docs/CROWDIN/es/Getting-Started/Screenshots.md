@@ -184,7 +184,7 @@ Por lo general, su verdadera curva de glucosa termina en el medio de estas líne
 * Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
 * If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Carbohidratos activos COB
 
@@ -440,14 +440,14 @@ La pestaña de tratamiento se puede utilizar para corregir las entradas de Hc de
    * Tasa basal
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Tratamiento
 
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
-* [Bolo extendido](../Usage/Extended-Carbs#extended-bolus)
+* [Bolo extendido](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporary basal rate
 * [Objetivo temporal](../Usage/temptarget.md)
 * [Cambio de perfil](../Usage/Profiles.md)

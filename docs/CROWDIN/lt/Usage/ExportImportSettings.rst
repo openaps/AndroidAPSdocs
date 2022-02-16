@@ -20,7 +20,7 @@ Be kita ko, eksportuojami šie parametrai:
 
 * `Automatizavimo įvykiai <../Usage/Automation.html>`_
 * `Konfigūratoriaus <../Configuration/Config-Builder.html>`_ parametrai
-* 'Vietinio profilio <../Configuration/Config-Builder.html#local-profile-recommended>`_ parametrai
+* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
 * `Tikslų <../Usage/Objectives.html>`_ statusas, įskaitant `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
 * `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 

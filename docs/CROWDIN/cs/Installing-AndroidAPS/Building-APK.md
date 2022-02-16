@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Sestavte aplikaci](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (vygenerujte podepsaný soubor apk)
 7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip#identify-receiver)
 
 ## Průvodce krok za krokem
 

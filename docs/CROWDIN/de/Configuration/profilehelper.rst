@@ -57,7 +57,7 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 Profil klonen
 ==================================
 
-Wenn Du `lokale Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_ verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profile Helper Clone Profil / Profilwechsel

@@ -24,7 +24,7 @@ Dexcom G6를 xdrip+와 사용하는 경우
 * 덱스콤 G6 트랜스미터는 덱스콤 리시버 (또는 t:slim 펌프로 대체 가능)과 한 개의 핸드폰 앱에 동시 연결할 수 있습니다.
 * xDrip+를 리시버로 사용하는 경우 Dexcom 공식 앱을 먼저 제거합니다. ** 트랜스미터로 xDrip+와 Dexcom 공식 앱에 동시 연결은 할 수 없습니다! **
 * If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
-* 만약 아직 'xDrip'을 설치하지 않았다면 <https://github.com/NightscoutFoundation/xDrip>에서 다운로드하고, nightscout ('G5' <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>)의 지시사항을 따르십시오.
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 * 구성 관리자 (AndroidAPS의 세팅)에서 xDrip+를 선택합니다.
 * Adjust settings in xDrip+ according to `xDrip+ settings page <../Configuration/xdrip.html>`__
 * If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html>`__.

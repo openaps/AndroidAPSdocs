@@ -50,7 +50,7 @@ Další informace naleznete zde.
 
    Vytvoření APK<./Installing-AndroidAPS/Building-APK.md>
    Jak aktualizovat na novou verzi <./Installing-AndroidAPS/Update-to-new-version.md>
-   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/uodate3_0.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Co je třeba zkontrolovat po aktualizaci na AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
    Řešení potíží s Android Studiem <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>

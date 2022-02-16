@@ -10,7 +10,7 @@ Je kunt openbare toegang tot jouw Nightscout-site blokkeren met behulp van de [a
 
 ### AndroidAPS instellingen
 
-Er is een Alleen NS upload (geen synchronisatie) functie in de AAPS instellingen. Wanneer deze is ingeschakeld, zullen aanpassingen die zijn gemaakt in Nightscout, zoals tijdelijke streefdoelen of toekomstige koolhydraten, niet worden doorgegeven aan AAPS. Let op: als je een [NS profiel](../Configuration/Config-Builder#ns-profile) gebruikt, dan worden de profielen wél gesynchroniseerd tussen AAPS en Nightscout, ook al heb je de instelling "Alleen uploaden" ingeschakeld.
+Er is een Alleen NS upload (geen synchronisatie) functie in de AAPS instellingen. Wanneer deze is ingeschakeld, zullen aanpassingen die zijn gemaakt in Nightscout, zoals tijdelijke streefdoelen of toekomstige koolhydraten, niet worden doorgegeven aan AAPS.
 
 * Tik op 3 stipjes in de rechterbovenhoek van AAPS overzicht scherm.
 * Selecteer "Instellingen".

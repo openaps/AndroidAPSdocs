@@ -2,7 +2,7 @@ Carbohidratos Extendidos/eCarbs
 **************************************************
 What are eCarbs and when are they useful?
 ==================================================
-Con una terapia de bomba normal, los bolos extendidos son una buena manera de tratar comidas grasas o de absorción lenta que aumentan la glucosa en sangre por más tiempo que el efecto de la insulina. En un contexto de lazo cerrado, sin embargo, los bolos extendidos no tienen tanto sentido (y plantean dificultades técnicas), ya que son básicamente una basal temporal alta fija, que va en contra de cómo funciona el lazo, que está ajustando la tasa basal de forma dinámica. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
+Con una terapia de bomba normal, los bolos extendidos son una buena manera de tratar comidas grasas o de absorción lenta que aumentan la glucosa en sangre por más tiempo que el efecto de la insulina. En un contexto de lazo cerrado, sin embargo, los bolos extendidos no tienen tanto sentido (y plantean dificultades técnicas), ya que son básicamente una basal temporal alta fija, que va en contra de cómo funciona el lazo, que está ajustando la tasa basal de forma dinámica. For details see `extended bolus <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`__ below.
 
 La necesidad de lidiar con tales comidas todavía existe. Por eso, AndroidAPS a partir de la versión 2.0 es compatible con los llamados carbohidratos extendidos o eCarbs.
 

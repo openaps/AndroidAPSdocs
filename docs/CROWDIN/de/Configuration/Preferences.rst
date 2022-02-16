@@ -387,7 +387,7 @@ Nightscout-Client
 * Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 * **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
 * *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert). 
-* Falls aktiviert, werden Änderungen Deiner `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_ zu Nightscout hochgeladen.
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
 
 Verbindungseinstellungen
 -----------------------------------------------------------

@@ -184,7 +184,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält Insulin aus Bolus und temporärem Basal (** schließt aber Basalraten aus deinem Profil aus**).
 * Wenn es keine [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), keine Boli und keine TBR während der DIA-Zeit gäbe, wäre dies Null.
 * Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
-* Das Abklingverhalten hängt von den Einstellungen des DIA [und den Einstellungen im Insulinprofil](../Configuration/Config-Builder#lokales-profil-empfohlen) ab. 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Aktive Kohlenhydrate
 
@@ -440,14 +440,14 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightscout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Bolus
 
 Historie der folgenden Behandlungen:
 
 * Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](../Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
-* [Verzögerter Bolus](../Usage/Extended-Carbs#extended-bolus)
+* [Verzögerter Bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporäre Basalrate (TBR)
 * [Temporäres Ziel](../Usage/temptarget.md)
 * [Profilwechsel](../Usage/Profiles.md)

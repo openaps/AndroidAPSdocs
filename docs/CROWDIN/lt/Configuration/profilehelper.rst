@@ -57,7 +57,7 @@ Taip pat galite naudoti profilio pagalbininką, kad palygintumėte profilius ar 
 Profilio klonavimas
 =======================================
 
-Jei naudojate `vietinius profilius <../Configuration/Config-Builder.html#local-profile-recommended>`_, galite klonuoti profilio / profilio keitimą tiesiai iš profilio pagalbininko.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profilio pagalbininko profilio klonavimas / profilio perjungimas
