@@ -1,11 +1,11 @@
 Instellingen
 ***********************************************************
-* **Open de instellingen** door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Open instellingen
 
-* Je kunt direct naar voorkeuren springen voor een bepaald tabblad (bijv. pomp tabblad) door dit tabblad te openen en op Plugin voorkeuren te klikken.
+* Je kunt direct naar voorkeuren springen voor een bepaald tabblad (bijv. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin instellingen
@@ -34,8 +34,8 @@ Algemeen
 **Taal**
 
 * Nieuwe optie om de standaard ingestelde taal van jouw telefoon te gebruiken (aanbevolen). 
-* Mocht je AAPS in een andere taal willen hebben dan de standaardtaal van jouw telefoon, kun je hier elke taal kiezen die je maar wil.
-* Let op: Als je een andere taal kiest dan de standaardtaal van jouw telefoon, dan zie je soms een mix van talen. Dit komt door een Android probleem, waarbij het overschrijven van de standaard taalinstelling soms niet werkt, helaas is daar geen oplossing voor.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* Let op: Als je een andere taal kiest dan de standaardtaal van jouw telefoon, dan zie je soms een mix van talen. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Instellingen > Algemeen
@@ -49,9 +49,9 @@ Beveiliging
 Masterwachtwoord
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Noodzakelijk om instellingen te kunnen `exporteren <../Usage/ExportImportSettings.html>`_ als ze zijn versleuteld. (Geldt vanaf AAPS versie 2.7).
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-* Open de Instellingen door te klikken op de 3 stipjes in de rechterbovenhoek van het Overzicht scherm
+* Open Preferences (three-dot menu on top right of home screen)
 * Klik op de driehoek onder "Algemeen"
 * Klik op "Masterwachtwoord"
 * Voer het wachtwoord in, bevestig het wachtwoord en klik op ok.
@@ -94,12 +94,12 @@ Skin
 Staande stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Klassiek weergave thema** en **Knoppen worden altijd weergegeven aan de onderkant van het scherm** zijn identiek
-* **Groot scherm** geeft alle grafieken groter weer dan bij andere skins
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Liggende stand
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Wanneer je voor **Klassiek weergave thema** en **Groot scherm**, moet je naar beneden scrollen om de knoppen onder aan het scherm te zien
-* **Groot scherm** geeft alle grafieken groter weer dan bij andere skins
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Skins afhankelijk van de oriëntatie van de telefoon
@@ -137,7 +137,7 @@ Vaste maaltijd
   
 Standaard tijdelijke streefdoelen
 -----------------------------------------------------------
-* Dmv `Tijdelijk streefdoel (Temp Target, TT) <../Usage/temptarget.html#tijdelijk-streefdoel>`_ kun je vaste waardes instellen om jouw bloedglucose streefdoel gedurende een zelfgekozen tijdsduur te wijzigen.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * Je kunt zelf instellen welke BG waarde en welke tijdsduur AAPS gebruikt bij de verschillende standaard tijdelijke streefdoelen: activiteit, eet binnenkort en hypo.
 * Om een bepaald tijdelijk streefoel te activeren heb je drie opties: houd het streefdoel in de rechterbovenhoek van jouw Overzicht scherm lang ingedrukt, of gebruik de knop op het Activiteit tabblad, of zet een vinkje via de oranje "Koolhydraten" knop aan de onderkant. Alledrie hebben hetzelfde resultaat.
 
@@ -205,7 +205,7 @@ Voer dit deel van het boluscalculator resultaat uit
 Bolusadviseur
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Als je de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ gebruikt en je glucose waarde is hoger dan 10 mmol/l (180 mg/dl) wordt een correctie bolus voorgesteld.
-* Als de correctie bolus wordt geaccepteerd zullen er **geen koolhydraten** worden geregistreerd.
+* If correction bolus is accepted **no carbs** will be recorded.
 * Er zal een alarm afgaan wanneer de glucosewaarde genoeg is gedaald om te beginnen met eten.
 * Je moet op dat moment de `Bolus calculator <../Getting-Started/Screenshots.html#bolus-calculator>`_ opnieuw gebruiken en daar de hoeveelheid koolhydraten invoeren die je wilt eten.
 
@@ -223,7 +223,7 @@ Leeftijd Patiënt
 -----------------------------------------------------------
 * Veiligheidslimieten worden ingesteld op basis van de leeftijd die je in deze instelling selecteert. 
 * Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. 
-* Het is een slecht idee om hogere categorie te kiezen dan past bij jouw echte leeftijd/resistentie, omdat het kan leiden tot een overdosis als je de verkeerde waarde in het insulin-dialoogvenster intypt (bijv. als je de komma verkeerd zet). 
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * Als je wilt weten wat de precieze getallen zijn voor deze veiligheidslimieten, ga dan naar `deze pagina <../Usage/Open-APS-features.html>`_ en scroll naar het algoritme dat jij gebruikt.
 
 Max toegestane bolus [E]
@@ -244,7 +244,7 @@ Loop
 APS Mode
 -----------------------------------------------------------
 * Schakelt tussen open loop, gesloten loop en 'stop bij laag'
-* **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. Dit wordt weergegeven als melding, jij als gebruiker moet iets doen om deze suggestie ook daadwerkelijk op je pomp uit te voeren.  
+* **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. After manual confirmation, the command to dose insulin will be transferred to pump.  
 * **Closed loop** (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
 * **Stop bij laag** betekent dat AAPS wél lagere basaalstanden instelt als je BG teveel zakt, maar als je BG teveel stijgt, zal hij geen hogere basaalstand instellen (tenzij IOB<0).
 
@@ -324,7 +324,7 @@ Waarschuwing 'koolhydraten nodig'
 * Wanneer het algoritme denkt dat je extra koolhydraten nodig hebt om te voorkomen dat je een hypo krijgt, zal hij een waarschuwing geven.
 * Je hebt de mogelijkheid om deze waarschuwing te snoozen voor 5, 15 of 30 minuten.
 * De benodigde hoeveelheid koolhydraten wordt ook weergegeven in de COB sectie op het Overzicht scherm.
-* Je kunt zelf een drempelwaarde kiezen: de minimumhoeveelheid koolhydraten die nodig is voor het activeren van de waarschuwing. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 * 'Koolydraten nodig' meldingen kunnen worden gepusht naar Nightscout als je dat wenst, dan zal er een notitie worden gemaakt en naar Nightscout gestuurd.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Het algoritme maakt gebruik van BGI (bloedglucose impact) om te bepalen wanneer koolhydraten zijn geabsorbeerd. 
 * Deze waarde wordt gebruikt om de hoeveelheid opgenomen koolhydraten (Carbs On Board, COB) te laten afnemen wanneer jouw bloedsuiker niet zoveel stijgt als het algoritme had verwacht nadat je koolhydraten hebt gegeten. Deze waarde wordt alleen gebruikt in speciale gevallen: wanneer jouw CGM geen gegevens doorgeeft, of wanneer bijv. fysieke activiteit de koolhydraten "opeet". 
-* In dit soort gevallen, wanneer jouw koolhydraat absorptie niet kan worden bepaald op basis van hoe jouw bloedglucose reageert, dan zal AAPS terugvallen op deze waarde voor de afname van COB. Het is in feite een vangnet.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Het is in feite een vangnet.
 * Om het simpel te stellen: Het algoritme "weet" hoe jouw BGs zich *zouden* moeten gedragen, adhv jouw huidige hoeveelheid insuline icm ISF. 
 * Wanneer jouw BG sneller daalt dan het algoritme had verwacht, dan betekent dit dat er koolhydraten worden geabsorbeerd (COB neemt af). Hierbij geldt: grote verandering = veel koolhydraten. 
 * De min_5m_carbimpact is wat het algoritme gebruikt als minimale hoeveel koolhydraten die per 5 minuten worden geabsorbeerd. Zie voor meer informatie `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
