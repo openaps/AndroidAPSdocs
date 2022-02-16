@@ -1,11 +1,11 @@
 Nastavení
 ***********************************************************
-* **Otevřete nastavení** klepnutím na tři tečky v pravém horním rohu hlavní obrazovky.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Otevřít nastavení
 
-* Do nastavení příslušného pluginu (např. záložka pumpa) se dostanete klepnutím na Nastavení plugginu.
+* Do nastavení příslušného pluginu (např. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Otevřít nastavení pluginu
@@ -34,8 +34,8 @@ Obecné
 **Jazyk**
 
 * Nová možnost je používat výchozí jazyk telefonu (doporučeno). 
-* V případě, že chcete mít AAPS v jiném jazyce než je standardní jazyk telefonu si můžete vybrat z široké nabídky dalších jazyků.
-* Pokud používáte různé jazyky, můžete se někdy setkat s jazykovým mixem. To je způsobeno chybou androida, kdy v některých případech nefunguje přepsání výchozího jazyka.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* Pokud používáte různé jazyky, můžete se někdy setkat s jazykovým mixem. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Nastavení > Obecné
@@ -49,9 +49,9 @@ Ochrana
 Hlavní heslo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Abyste mohli `exportovat nastavení <../Usage/ExportImportSettings.html>`_, je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
-  ** Biometrická ochrana nemusí fungovat na telefonech OnePlus. Toto je známý problém na některých telefonech OnePlus.**
+  ** Biometrická ochrana nemusí fungovat na telefonech OnePlus. This is a known issue of OnePlus on some phones.**
 
-* Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
+* Open Preferences (three-dot menu on top right of home screen)
 * Klepněte na trojúhelník pod "Obecné"
 * Klepněte na položku "Hlavní heslo"
 * Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
@@ -94,12 +94,12 @@ Vzhled
 Na výšku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * ** Původní vzhled** a **Tlačítka jsou vždy zobrazena na spodní části obrazovky** jsou stejné
-* **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Na šířku
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Při použití **Původní vzhled** a **Velký displej**, musíte posouvat dolů, abyste zobrazili tlačítka v dolní části obrazovky
-* **Velký displej** v porovnání s ostatními vzhledy má větší velikost grafů
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Vzhledy v závislosti na orientaci telefonu
@@ -137,7 +137,7 @@ Průvodce rychlým bolusem
   
 Výchozí nastavení dočasných cílů
 -----------------------------------------------------------
-* `Dočasné cíle (DC) <../Usage/temptarget.html#temp-targets>`_ vám umožní nastavit na určitou dobu změněnou cílovou hodnotu glykémie.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * S nastavením základních hodnot DC můžete jednodušeji měnit své cílové hodnoty glykémie pro aktivity, blížící se jídlo atd.
 * Dlouze stiskněte cíl v pravém horním rohu domácí obrazovky nebo použijte zaškrtávací políčka v dialogu Sacharidy po kliknutí na oranžové tlačítko Sacharidy na domovské obrazovce.
 
@@ -205,7 +205,7 @@ Podat tuto část z výsledku kalkulace [%]
 Poradce pro bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Když spustíte `Bolusovou kalkulačku <../Getting-Started/Screenshots.html#bolus-wizard>`__ a glykémie je vyšší než 10 mmol (180 mg/dl), kalkulačka vám nabídne korekční bolus.
-* Pokud odsouhlasíte korekční bolus, zaznamená se **žádné sacharidy**.
+* If correction bolus is accepted **no carbs** will be recorded.
 * Alarm se spustí v okamžiku, kdy hodnota glykémie bude na úrovni, kdy bude vhodné začít s jídlem.
 * Musíte znovu klepnout na `Bolusovou kalkulačku <../Getting-Started/Screenshots.html#bolus-wizard>`__ a zadat množství sacharidů, které chcete sníst.
 
@@ -223,7 +223,7 @@ Věk pacienta
 -----------------------------------------------------------
 * Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení. 
 * Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš. 
-* Nastavení vyššího věku než je ve skutečnosti může vést k předávkování inzulínem při chybném nastavení množství inzulínu (například vynecháním desetinné čárky v dialogu). 
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * Chcete-li zjistit, jaké máte pevně nastavené bezpečnostní limity, podívejte se na popis Vámi používaného algoritmu `na této stránce <../Usage/Open-APS-features.html>`_.
 
 Maximální povolený bolus [U]
@@ -244,7 +244,7 @@ Smyčka
 Typ smyčky
 -----------------------------------------------------------
 * Přepíná mezi uzavřenou, otevřenou smyčkou i pozastavením při nízké glykémii (LGS)
-* **Otevřená smyčka** znamená, že návrhy dočasného bazálu jsou provedeny na základě vašich dat, a zobrazí se jako oznámení. Po manuálním potvrzení bude příkaz pro podání inzulinu odeslán do pumpy. Pouze v případě že máte nastavenou virtuální pumpu je nutné inzulín aplikovat ručně.
+* **Otevřená smyčka** znamená, že návrhy dočasného bazálu jsou provedeny na základě vašich dat, a zobrazí se jako oznámení. After manual confirmation, the command to dose insulin will be transferred to pump. Pouze v případě že máte nastavenou virtuální pumpu je nutné inzulín aplikovat ručně.
 * **Uzavřená smyčka** znamená, že dočasné bazály jsou automaticky, bez jakéhokoliv potvrzení z vaší strany, posílány přímo do pumpy.  
 * **Pozastavení při nízké glykémii** dává možnost vstoupit do režimu Pozastavení při nízké glykémii bez nutnosti měnit aktuální cíl.
 
@@ -324,7 +324,7 @@ Oznámení vyžadovaných sacharidů
 * V případě že referenční design detekuje potřebu sacharidů, navrhe konzumaci dalších sacharidů.
 * V tomto případě obdržíte oznámení, které může být odloženo na 5, 15 nebo 30 minut.
 * Kromě toho se na domovské obrazovce v sekci COB zobrazí požadované sacharidy.
-* Prahovou hodnotu lze nastavit - minimální množství sacharidů potřebných ke spuštění oznámení. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 *V případě potřeby může být notifikace vyžadovaných sacharidů odeslána do Nightscoutu. Notifikace se pak zobrazí v Nightscoutu a bude vysílána.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritmus používá BGI (vliv na glukózu v krvi) k určení, kdy jsou absorbovány sacharidy. 
 * Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. 
-* V situacích, kdy absorpci sacharidů nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. V podstatě jde o bezpečnostní pojistku.
 * Zjednodušeně řečeno: algoritnuls ví jak by se měla chovat vaše glykémie, je-li ovlivněna podaným inzulínem apod. 
 * Kdykoli dojde k pozitivní odchylce od očekávaného chování, je rozloženo/absorbováno určité množství sacharidů. Velká změna = více sacharidů atp. 
 * Hodnota min_5m_carbimpact definuje výchozí vliv absorpce sacharidů za 5 minut. Více informací najdete v `dokumentaci OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
