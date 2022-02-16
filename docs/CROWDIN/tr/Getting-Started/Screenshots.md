@@ -1,6 +1,6 @@
 # AndroidAPS ekranları
 
-## The Homescreen
+## Giriş Ekranı
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
@@ -10,7 +10,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 * Çeşitli AndroidAPS modülleri arasında gezinin.
 * Alternatif olarak, sola veya sağa kaydırarak ekranları değiştirebilirsiniz.
-* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Görüntülenen sekmeler [konfigürasyon ayarları](../Configuration/Config-Builder#tab-or-hamburger-menu)'nda seçilebilir.
 
 ### Bölüm B - Profil & hedef
 
@@ -18,70 +18,70 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
-* Current profile is displayed in the left bar.
-* Short press profile bar to view profile details
-* Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
-* If profile switch was made with duration remaining time in minutes is shown in brackets.
+* Mevcut profil sol çubukta görüntülenir.
+* Profil çubuğuna kısa basarak profil ayrıntılarını görüntüleyebilirsiniz
+* [Farklı profiller arasında geçiş yapmak](../Usage/Profiles#profile-switch) için profil çubuğuna uzun basın.
+* Eğer profil geçişi yapılmışsa kalan süre parantez içinde dakika cinsinden gösterilecektir.
 
 #### Hedef
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
-* Current target blood glucose level is displayed in the right bar.
-* Short press target bar to set a [temporary target](../Usage/temptarget.md).
-* If temp target is set bar turns yellow and remaining time in minutes is shown in brackets.
+* Mevcut hedefiniz sağ çubukta görüntülenir.
+* [Geçici hedef](../Usage/temptarget.md) belirlemek için hedef çubuğuna kısa basın.
+* Geçici hedef ayarlanmışsa, çubuk sarıya döner ve kalan süre parantez içinde dakika olarak gösterilir.
 
-#### Visualization of Dynamic target adjustment
+#### Dinamik hedef ayarının görselleştirilmesi
 
 ![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
-* AAPS can dynamically adjust your target based on sensitivity if you are using SMB algorithm.
-* Enable either one or both of the [following options](../Configuration/Preferences#openaps-smb-settings) 
-   * "sensitivity raises target" and/or 
+* AAPS, SMB algoritması kullanıyorsanız, hedefinizi hassasiyete göre dinamik olarak ayarlayabilir.
+* [Aşağıdaki seçeneklerden](../Configuration/Preferences#openaps-smb-settings) birini veya her ikisini etkinleştirin 
+   * "Duyarlılık hedefi yükseltir" ve/veya 
    * "direnç hedefi düşürür" 
-* If AAPS detects resistance or sensitivity the target will change from what is set from profile. 
-* When it alters the target glucose background will change to green.
+* AAPS direnç veya duyarlılık tespit ederse hedefi değiştirebilecektir. 
+* Değiştirdiğinde hedef çubuğu yeşile dönecektir.
 
-### Section C - BG & loop status
+### Bölüm C - KŞ & döngü durumu
 
-#### Current blood glucose
+#### Geçerli kan şekeri
 
-* Latest blood glucose reading from your CGM is shown on the left side.
-* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization). 
-   * green = in range
-   * red = below range
-   * yellow = above range
-* The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
+* CGM'nizden alınan en son kan şekeri ölçümü sol tarafta gösterilir.
+* KŞ değerinin rengi, tanımlanan aralığın [durumu](../Configuration/Preferences#range-for-visualization)'nu yansıtır. 
+   * yeşil = aralık içerisinde
+   * kırmızı = aralığın altında
+   * sarı = aralığın üstünde
+* Ortadaki grimsi blok, son okumadan bu yana geçen süreyi ve son okumadan bu yana değişim ile 15 ve 40 dakikadaki KŞ değişikliklerini gösterir.
 
-#### Loop status
+#### Döngü durumu
 
-![Loop status](../images/Home2020_LoopStatus.png)
+![Döngü durumu](../images/Home2020_LoopStatus.png)
 
-* A new icon shows loop status:
+* Yeni bir simge döngü durumunu gösterir:
    
-   * green circle = loop running
-   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
-   * red circled = loop disabled (not working permanently)
-   * yellow circle = loop suspended (temporarily paused but basal insulin will be given) - remaining time is shown below icon
-   * grey circle = pump disconnected (temporarily no insulin dosage at all) - remaining time is shown below icon
-   * Orange circle = super bolus running - remaining time is shown below icon
-   * blue circle with dotted line = open loop
+   * yeşil daire = döngü çalışıyor
+   * noktalı çizgili yeşil daire = [düşük glikoz süspansiyonu (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * kırmızı daire = döngü devre dışı (kalıcı olarak çalışmıyor)
+   * sarı daire = döngü askıya alındı (geçici olarak duraklatıldı ancak bazal insülin verilecek) - kalan süre simgenin altında gösterilir
+   * gri daire = pompa bağlantısı kesildi (geçici olarak hiç insülin dozu yok) - kalan süre simgenin altında gösterilir
+   * Turuncu daire = süper bolus çalışıyor - kalan süre simgenin altında gösterilir
+   * noktalı çizgili mavi daire = açık döngü
 
-* Short press or Long press the icon to open the Loop dialog to switch loop mode (Close, Low Glucose Suspend, Open or Disable), suspend / re-enable loop or disconnect / reconnect pump.
+* Döngü diyalog kutusunu açmak ve döngü modunu değiştirmek için (Kapatmak, Düşük Glikoz süspansiyonu, Açmak veya Devre Dışı Bırakmak), döngüyü askıya almak / yeniden etkinleştirmek veya pompayı ayırmak / yeniden bağlamak için simgeye uzun ya da kısa basabilirsiniz.
    
-   * If short press on Loop icon, a validation is required after selection in Loop Dialog
+   * Döngü simgesine kısa basarsanız, iletişim kutusundaki seçimden sonra bir onay istenecektir. (Uzun basarak diyalog penceresi açarsanız istenmez)
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
-### Section D - IOB, COB, BR and AS
+### Bölüm D - IOB, COB, BO ve OD
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır. 
+   * Yakın zamanda bazalınız düşürülmüşse, (IOB) aktif insülin negatif olabilir.
+   * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
