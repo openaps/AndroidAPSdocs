@@ -35,7 +35,7 @@ Once you are fine with the profile adjustments you can `clone the profile <../Co
 Dviejų profilių palyginimus
 =======================================
 
-Taip pat galite naudoti profilio pagalbininką, kad palygintumėte profilius ar profilio pakeitimus (profilio pakeitimą procentais `profilio pakeitimo skiltyje <../Usage/Profiles.html>`_).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profilio pagalbininkas 1
