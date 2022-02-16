@@ -9,12 +9,12 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 ### Bölüm A - Sekmeler
 
 * Çeşitli AndroidAPS modülleri arasında gezinin.
-* Alternatively you can change screens by swiping left or right.
+* Alternatif olarak, sola veya sağa kaydırarak ekranları değiştirebilirsiniz.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
-### Section B - Profile & target
+### Bölüm B - Profil & hedef
 
-#### Current Profile
+#### Geçerli Profil
 
 ![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
@@ -23,7 +23,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 * Long press profile bar to [switch between different profiles](../Usage/Profiles#profile-switch).
 * If profile switch was made with duration remaining time in minutes is shown in brackets.
 
-#### Target
+#### Hedef
 
 ![Temp target remaining duration](../images/Home2020_TT.png)
 
