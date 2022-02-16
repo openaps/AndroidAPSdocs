@@ -211,7 +211,10 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Buttons for insulin, carbs and Calculator are almost'always on'. 
+
+   * If connection to pump is lost, the insulin button will not be visible.
+
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
 #### Insulin
