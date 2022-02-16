@@ -1,14 +1,14 @@
-# AndroidAPS screens
+# AndroidAPS ekranları
 
 ## The Homescreen
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
-This is the first screen you will come across when you open AndroidAPS and it contains most of the information that you will need day to day.
+Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gün ihtiyaç duyacağınız bilgilerin çoğunu içerir.
 
-### Section A - Tabs
+### Bölüm A - Sekmeler
 
-* Navigate between the various AndroidAPS modules.
+* Çeşitli AndroidAPS modülleri arasında gezinin.
 * Alternatively you can change screens by swiping left or right.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder#tab-or-hamburger-menu).
 
