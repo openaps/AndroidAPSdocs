@@ -35,7 +35,7 @@ Profil ayarlamalarını yaptıktan sonra `profili <../Configuration/profilehelpe
 İki profili karşılaştırın
 ==================================
 
-Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir `profil değiştirme'de <../Usage/Profiles.html>`kullanılan profillerinizin yüzdesi).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profil Yardımcısı 1
