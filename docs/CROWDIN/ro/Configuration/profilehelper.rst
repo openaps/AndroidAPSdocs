@@ -35,7 +35,7 @@ Once you are fine with the profile adjustments you can `clone the profile <../Co
 Compară două profiluri
 =======================================
 
-Puteți utiliza asistentul de profil de asemenea pentru a face comparații cu diferite profiluri sau schimbări de profil (procent din profilurile dumneavoastră utilizate într-o schimbare de profil <../Usage/Profiles.html>` _ înainte).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. imagine:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
