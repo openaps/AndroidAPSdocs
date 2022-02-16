@@ -35,7 +35,7 @@ Zodra je klaar bent met het aanpassen van het profiel kun je `het profiel duplic
 Vergelijk twee profielen
 =======================================
 
-Je kunt de profiel hulp ook gebruiken om twee verschillende profielen of profielwissels (van een eerder gemaakte `percentage profielwissel <../Usage/Profiles.html>`_ ) te vergelijken.
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profiel Hulp 1
