@@ -137,7 +137,7 @@ Quick Wizard
   
 Default temp targets
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * With setting of default TT you can easily change your target for activity, eating soon etc.
 * Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
