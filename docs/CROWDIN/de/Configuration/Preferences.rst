@@ -1,11 +1,11 @@
 Einstellungen
 ***********************************************************
-* **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Einstellungen öffnen
 
-* Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. Pumpen-Tab) springen, indem Du diesen Tab öffnest und auf Plugin-Einstellungen klickst.
+* Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Plugin-Einstellungen öffnen
@@ -34,8 +34,8 @@ Allgemein
 **Sprache**
 
 * Neue Option, um die Standardsprache des Smartphones zu verwenden (empfohlen). 
-* Falls Du AAPS in einer anderen Sprache als der Standardsprache deines Smartphones nutzen möchtest, kannst Du zwischen vielen verschiedenen Sprachen wählen.
-* Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, sodass das Überschreiben der Standardsprache einer App manchmal nicht korrekt funktioniert.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Einstellungen > Allgemein
@@ -49,9 +49,9 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  ** Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
+  **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. This is a known issue of OnePlus on some phones.**
 
-* Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
+* Open Preferences (three-dot menu on top right of home screen)
 * Klicke das Dreieck neben "Allgemein".
 * Klicke auf "Master-Passwort".
 * Gib ein Passwort ein, bestätige es und klicke auf OK.
@@ -61,7 +61,7 @@ Master-Passwort
   
 Schutz der Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. ` AAPS-Nutzung durch Kinder <../Children/Children.html> ` _).
+* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. `AAPS-Nutzung durch Kinder <../Children/Children.html>`_).
 * Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ verwenden möchtest.
 * Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie `oben beschrieben <../Configuration/Preferences.html#master-passwort>`__ festzulegen.
 
@@ -94,12 +94,12 @@ Erscheinungsbild
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Querformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
@@ -137,7 +137,7 @@ Quick Wizard
   
 Vordefinierte temporäre Ziele
 -----------------------------------------------------------
-* `Temp Targets (TT) <../Usage/temptarget.html#temp-targets>`_ erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 * Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
@@ -204,10 +204,10 @@ Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 
 Bolus-Berater
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
-* Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
+* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
+* If correction bolus is accepted **no carbs** will be recorded.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+* Du musst erneut den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Nachricht des Bolus-Beraters
@@ -215,7 +215,7 @@ Bolus-Berater
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Option zur Aktivierung des Superbolus im Bolus-Rechner.
-* ` Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>` _ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
+* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
 
 Sicherheitseinstellungen der Behandlungen
 ===========================================================
@@ -223,8 +223,8 @@ Alter des Patienten
 -----------------------------------------------------------
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
 * Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
-* Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
-* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf der Seite <a href="../Usage/Open-APS-features.md"</a> zu der Algorithmenfunktion, die Du verwendest.
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
+* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf `dieser Seite <../Usage/Open-APS-features.html>`_ zu der Algorithmenfunktion, die Du verwendest.
 
 Maximal erlaubter Bolus [U]
 -----------------------------------------------------------
@@ -244,7 +244,7 @@ Loop
 APS-Modus
 -----------------------------------------------------------
 * Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
-* **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. Nach der manuellen Bestätigung wird das Kommando an die Pumpe übertragen und Insulin abgegeben. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
+* **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. After manual confirmation, the command to dose insulin will be transferred to pump. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
 * **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.  
 * **Low glucose suspend** gibt Dir die Möglichkeit, in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten) zu wechseln ohne dafür eines der Ziele (objectives) zurücksetzen zu müssen.
 
@@ -268,7 +268,7 @@ OpenAPS AMA-Einstellungen
 
 Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. 
+* Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. 
 * Der Wert wird in IE pro Stunde angegeben (IE/h). 
 * Es wird empfohlen, hier etwas Vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**. 
 * Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
@@ -307,9 +307,9 @@ Erweiterte Einstellungen (OpenAPS AMA)
 
 OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
-* Im Gegensatz zu AMA verwendet `SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
-* Du musst `Ziel (objective) 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
-* Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__
+* Im Gegensatz zu AMA verwendet `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+* Du musst `Ziel 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
+* Die ersten drei Einstellungen sind `oben beschrieben <../Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__.
 * Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.
 * *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid. 
 * Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt `Autosens <../Usage/Open-APS-features.html#autosens>`_ Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
@@ -324,7 +324,7 @@ Kohlenhydrat-Vorschlag
 * Der Algorithmus empfiehlt Dir, etwas zu essen, wenn er feststellt, dass zusätzliche Kohlenhydrate benötigt werden.
 * In diesem Fall erhältst Du eine Benachrichtigung, die Du für 5, 15 oder 30 Minuten stummschalten kannst.
 * Zusätzlich werden die vorgeschlagenen Kohlenhydrate auf dem Startbildschirm im Bereich COB angezeigt.
-* Ein Schwellenwert lässt sich definieren, damit erst eine Mindest-KH-Menge erreicht werden muss, bevor eine Benachrichtigung erscheint. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 * Auf Wunsch können die Kohlenhydrat-Vorschläge an Nightscout gesandt werden. In diesem Fall wird eine Ankündigung angezeigt und hochgeladen.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Der Algorithmus verwendet die Auswirkungen auf den Blutzuckerspiegel (BGI - blood glucose impact), um zu bestimmen, wann Kohlenhydrate absorbiert werden. 
 * Dieser Wert wird nur dann verwendet, wenn keine CGM-Werte empfangen werden oder körperliche Aktivitäten den Blutzuckeranstieg "kompensieren", den AAPS normalerweise zur Berechnung des Kohlenhydratabbaus verwendet. 
-* So lange der Kohlenhydratabbau nicht dynamisch aus den Veränderungen des BZ ermittelt werden kann, wird ein Standardwert für den Abbau angesetzt. Im Prinzip ist es eine Notlauffunktion.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
 * Einfach gesagt: Der Algorithmus "weiß", wie sich Deine BZ-Werte unter Berücksichtigung der aktuellen Insulindosis etc. **entwickeln sollten**. 
 * Wenn eine positive Abweichung vom erwarteten Verhalten registriert wird, werden einige Kohlenhydrate absorbiert/aufgenommen. Große Abweichung = viele Kohlenhydrate etc. 
 * Das min_5m_carbimpact definiert die Standard-Kohlenhydrat-Resorptionswirkung pro 5 Minuten. Für weitere Details siehe `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
@@ -366,7 +366,7 @@ Erweiterte Einstellungen - Autosens-Faktoren
 
 Pumpen-Einstellungen
 ===========================================================
-Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pump>`__ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pumpe>`__ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
 * `DanaR Insulinpumpe <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS Insulinpumpe <../Configuration/DanaRS-Insulin-Pump.html>`_
