@@ -35,7 +35,7 @@ Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das `Profil klonen <
 Vergleiche zwei Profile
 ==================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geändertes `Profil <../Usage/Profiles.html>`_) miteinander zu vergleichen.
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 Profil klonen
 ==================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
+Wenn Du `lokale Profile <../Configuration/Config-Builder.html#lokales-profil>`_ verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profile Helper Clone Profil / Profilwechsel
