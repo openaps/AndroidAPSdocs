@@ -53,7 +53,7 @@ AndroidAPS-приложение с открытым исходным кодом 
    Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Проверка после обновления до AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Установка git <./Instaling-AndroidAPS/git-install.rst>
-   Устранение неполадок Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Примечания к выпуску <./Installing-AndroidAPS/Releasenotes.rst>
    Ветка разработчика <./Instaling-AndroidAPS/Dev_branch.md>
 
