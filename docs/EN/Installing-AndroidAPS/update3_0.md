@@ -53,7 +53,11 @@ However, when there are a lot of duplicates, it might be easier to
 * import your settings again
 
 ### Red warning sign: Duplicate BG data
+
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+
+  ![Red BG warning](../images/bg_warn_red.png)
+
 You need to find out why you get duplicate BGs:
 * Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there.
 * Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip, if you use that.
@@ -62,6 +66,9 @@ You need to find out why you get duplicate BGs:
 
 ### Yellow warning sign
 The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+
+  ![Yellow BG warning](../images/bg_warn_yellow.png)
+
 Usually you do not have to take any action. The closed loop will continue to work!
 
 *Note*:
