@@ -53,7 +53,7 @@ Hieronder volgt de inhoudsopgave.
    Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Controles na bijwerken naar AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git installeren <./Installing-AndroidAPS/git-install.rst>
-   Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
 
