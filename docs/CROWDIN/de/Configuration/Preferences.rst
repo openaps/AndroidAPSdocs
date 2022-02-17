@@ -1,11 +1,11 @@
 Einstellungen
 ***********************************************************
-* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+* **Öffne die Einstellungen** durch einen Klick auf das 3-Punkte-Menü rechts oben auf dem Startbildschirm.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Einstellungen öffnen
 
-* Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. pump tab) by opening this tab and clicking Plugin preferences.
+* Du kannst direkt zu den Einstellungen für einen bestimmten Tab (z.B. Pumpen-Tab) springen, indem Du diesen Tab öffnest und auf Plugin-Einstellungen klickst.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Plugin-Einstellungen öffnen
@@ -34,8 +34,8 @@ Allgemein
 **Sprache**
 
 * Neue Option, um die Standardsprache des Smartphones zu verwenden (empfohlen). 
-* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
-* Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. This is due to an android issue that overriding the default android language sometimes doesn't work.
+* Falls Du AAPS in einer anderen Sprache als der Standardsprache deines Smartphones nutzen möchtest, kannst Du zwischen vielen verschiedenen Sprachen wählen.
+* Falls sich die Systemsprache deines Smartphones und die ausgewählte Sprache für AAPS unterscheiden, kann dies manchmal zu einem Sprachmix führen. Dies ist auf ein Android-Problem zurückzuführen, sodass das Überschreiben der Standardsprache einer App manchmal nicht korrekt funktioniert.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Einstellungen > Allgemein
@@ -49,9 +49,9 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. This is a known issue of OnePlus on some phones.**
+  **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
-* Open Preferences (three-dot menu on top right of home screen)
+* Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
 * Klicke auf "Master-Passwort".
 * Gib ein Passwort ein, bestätige es und klicke auf OK.
@@ -94,12 +94,12 @@ Erscheinungsbild
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
 Querformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
@@ -137,7 +137,7 @@ Quick Wizard
   
 Vordefinierte temporäre Ziele
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
+* `Temp Targets (TT) <../Usage/temptarget.html>`_ erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
 * Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 * Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
@@ -205,7 +205,7 @@ Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 Bolus-Berater
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
-* If correction bolus is accepted **no carbs** will be recorded.
+* Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
 * Du musst erneut den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
@@ -223,7 +223,7 @@ Alter des Patienten
 -----------------------------------------------------------
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
 * Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
-* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
+* Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
 * Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf `dieser Seite <../Usage/Open-APS-features.html>`_ zu der Algorithmenfunktion, die Du verwendest.
 
 Maximal erlaubter Bolus [U]
@@ -244,7 +244,7 @@ Loop
 APS-Modus
 -----------------------------------------------------------
 * Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
-* **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. After manual confirmation, the command to dose insulin will be transferred to pump. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
+* **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. Nach der manuellen Bestätigung wird das Kommando an die Pumpe übertragen und Insulin abgegeben. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
 * **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.  
 * **Low glucose suspend** gibt Dir die Möglichkeit, in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten) zu wechseln ohne dafür eines der Ziele (objectives) zurücksetzen zu müssen.
 
@@ -324,7 +324,7 @@ Kohlenhydrat-Vorschlag
 * Der Algorithmus empfiehlt Dir, etwas zu essen, wenn er feststellt, dass zusätzliche Kohlenhydrate benötigt werden.
 * In diesem Fall erhältst Du eine Benachrichtigung, die Du für 5, 15 oder 30 Minuten stummschalten kannst.
 * Zusätzlich werden die vorgeschlagenen Kohlenhydrate auf dem Startbildschirm im Bereich COB angezeigt.
-* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
+* Ein Schwellenwert lässt sich definieren, damit erst eine Mindest-KH-Menge erreicht werden muss, bevor eine Benachrichtigung erscheint. 
 * Auf Wunsch können die Kohlenhydrat-Vorschläge an Nightscout gesandt werden. In diesem Fall wird eine Ankündigung angezeigt und hochgeladen.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Der Algorithmus verwendet die Auswirkungen auf den Blutzuckerspiegel (BGI - blood glucose impact), um zu bestimmen, wann Kohlenhydrate absorbiert werden. 
 * Dieser Wert wird nur dann verwendet, wenn keine CGM-Werte empfangen werden oder körperliche Aktivitäten den Blutzuckeranstieg "kompensieren", den AAPS normalerweise zur Berechnung des Kohlenhydratabbaus verwendet. 
-* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
+* So lange der Kohlenhydratabbau nicht dynamisch aus den Veränderungen des BZ ermittelt werden kann, wird ein Standardwert für den Abbau angesetzt. Im Prinzip ist es eine Notlauffunktion.
 * Einfach gesagt: Der Algorithmus "weiß", wie sich Deine BZ-Werte unter Berücksichtigung der aktuellen Insulindosis etc. **entwickeln sollten**. 
 * Wenn eine positive Abweichung vom erwarteten Verhalten registriert wird, werden einige Kohlenhydrate absorbiert/aufgenommen. Große Abweichung = viele Kohlenhydrate etc. 
 * Das min_5m_carbimpact definiert die Standard-Kohlenhydrat-Resorptionswirkung pro 5 Minuten. Für weitere Details siehe `OpenAPS Docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
@@ -387,7 +387,7 @@ Nightscout-Client
 * Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 * **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
 * *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
+* Falls aktiviert, werden Änderungen Deiner `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil>`_ zu Nightscout hochgeladen.
 
 Verbindungseinstellungen
 -----------------------------------------------------------
