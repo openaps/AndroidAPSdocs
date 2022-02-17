@@ -53,7 +53,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Patikrinimas po atnaujinimo į AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git įdiegimas <./Installing-AndroidAPS/git-install.rst>
-   * Android Studio trikčių šalinimas <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Atnaujinimų pastabos <./Installing-AndroidAPS/Releasenotes.rst>
    Kūrėjo versija <./Installing-AndroidAPS/Dev_branch.md>
 
