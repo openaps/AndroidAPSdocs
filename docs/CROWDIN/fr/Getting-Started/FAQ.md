@@ -69,7 +69,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Vous pouvez le fixer. Vous pouvez également acheter un brassard pour maintenir le MGC/MGF en place (recherche Google, eBay ou Amazon).
 
 # Paramètres AndroidAPS
 
