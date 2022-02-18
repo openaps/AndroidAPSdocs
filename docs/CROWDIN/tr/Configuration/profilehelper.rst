@@ -35,7 +35,7 @@ Profil ayarlamalarını yaptıktan sonra `profili <../Configuration/profilehelpe
 İki profili karşılaştırın
 ==================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir `profil değiştirme'de <../Usage/Profiles.html>`kullanılan profillerinizin yüzdesi).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profil Yardımcısı 1
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 Profili Klonla
 ==================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
+`Yerel profil <../Configuration/Config-Builder.html#local-profile>`_ kullanıyorsanız, doğrudan profil yardımcısından bir profil klonlayabilirsiniz.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profil Yardımcısı profil Klonlama / profil değiştirme
