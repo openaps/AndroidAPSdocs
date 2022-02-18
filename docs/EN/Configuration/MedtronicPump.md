@@ -158,3 +158,4 @@ On the back of the pump you will find a line detailing your model number along w
 - NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
 - CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
 - WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+ 
