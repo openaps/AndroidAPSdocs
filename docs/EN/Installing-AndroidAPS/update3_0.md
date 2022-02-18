@@ -72,4 +72,5 @@ The yellow warning signal is indicating that your BG arrived in irregular time i
 Usually you do not have to take any action. The closed loop will continue to work!
 
 *Note*:
-Receiving a yellow warning, e.g. after a sensor change is quite usual and nothing to worry.
+Receiving a yellow warning, is normal for libre sensors. 
+For dexcom sensors, this is also normal e.g. after a sensor change is quite usual and nothing to worry.
