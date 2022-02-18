@@ -264,7 +264,7 @@ Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [p
 
 #### Que faire pour prendre une douche ou un bain?
 
-Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
 
 ### Travail
 
@@ -292,7 +292,7 @@ Le pourcentage du changement de profil, la valeur de votre cible temporaire d'ac
 
 ### Sexe
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
+Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
 
 ### Boire de l'alcool
 
@@ -308,7 +308,7 @@ Lorsque vous buvez de l'alcool, vous devez toujours avoir un œil sur votre MGC 
 
 #### Comment puis-je boucler pendant la nuit sans rayonnement smartphone et WIFI ?
 
-De nombreux utilisateurs mettent le téléphone en mode avion la nuit. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+De nombreux utilisateurs mettent le téléphone en mode avion la nuit. Si vous voulez que la boucle vous aide lorsque vous dormez, procédez comme suit (ceci ne fonctionne qu'avec une source de Gly locale telle que xDrip+ ou ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom), elle ne fonctionne PAS si vous obtenez les glycémies via Nightscout) :
 
 1. Activez le mode avion de votre mobile.
 2. Attendez que le mode avion soit actif.
