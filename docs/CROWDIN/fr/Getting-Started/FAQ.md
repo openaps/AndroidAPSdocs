@@ -42,7 +42,7 @@ Si vous envisagez d'utiliser l'application Android Wear pour créer un bolus ou 
 
 Si vous retirez votre pompe pour la douche, le bain, la natation, sports ou toutes autres activités, vous devez informer AndroidAPS qu'aucune insuline n'est délivrée pour que l'IA soit correcte.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+La pompe peut être déconnectée à l'aide de l'icône de la Boucle sur l'écran d'accueil [AndroidAPS](./Screenshots.md#etat-de-la-boucle).
 
 ### Recommandations non seulement basées sur une seule lecture MGC
 
@@ -264,7 +264,7 @@ Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [p
 
 #### Que faire pour prendre une douche ou un bain?
 
-Vous pouvez retirer la pompe pour prendre une douche ou un bain. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
 
 ### Travail
 
