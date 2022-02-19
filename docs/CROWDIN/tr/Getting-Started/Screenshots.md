@@ -73,15 +73,57 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
+#### BG warning sign
+
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+
+However, when there are a lot of duplicates, it might be easier to
+
+* [backup your settings](../Usage/ExportImportSettings.rst),
+* reset your database in the maintenance menu and
+* [import your settings](../Usage/ExportImportSettings.rst) again
+
+##### Red warning sign: Duplicate BG data
+
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+
+![Red BG warning](../images/bg_warn_red.png)
+
+You need to find out why you get duplicate BGs:
+
+* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
+* Do you have any followers that might receive your BG but do also upload it again to your NS site?
+* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+
+##### Yellow warning sign
+
+* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+   
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
+
+* Usually you do not have to take any action. The closed loop will continue to work!
+
+* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
+* Special note for libre users:
+   
+   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+   * Also jumpy readings interrupt the continous flow.
+   * Therefore the yellow warning sign will be 'always on' for libre users.
+
 ### Bölüm D - IOB, COB, BO ve OD
 
 ![Section D](../images/Home2020_TBR.png)
 
-* Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
+* Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
-   * Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır. 
-   * Yakın zamanda bazalınız düşürülmüşse, (IOB) aktif insülin negatif olabilir.
-   * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
+   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
+   * IOB may be negative if there have recently been periods of reduced basal.
+   * Press the icon to see the split of bolus and basal insulin
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
@@ -219,7 +261,10 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Buttons for insulin, carbs and Calculator are almost'always on'.
+   
+   * If connection to pump is lost, the insulin button will not be visible.
+
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
 #### İnsülin
@@ -230,7 +275,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
-#### Carbs
+#### Karbonhidrat
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
@@ -252,11 +297,11 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### CGM
 
-* xDrip+ açmak.
-* Geri düğmesi AAPS'e döner.
+* Opens xDrip+.
+* Back button returns to AAPS.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
-#### Quick Wizard
+#### Hızlı Asistan
 
 * Easily enter amount of carbs and set calculation basics.
 * Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
@@ -360,7 +405,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Allows you to ride back in AAPS history.
 
-#### TDD
+#### GTD
 
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
