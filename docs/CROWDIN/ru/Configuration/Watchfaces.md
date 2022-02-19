@@ -3,7 +3,7 @@
 Приложение AndroidAPS можно установить в смарт-часах на ** Wear OS**. Версия на часах позволяет:
 
 * **отображать данные на часах**: при помощи [пользовательских циферблатов](#aaps-watchfaces) или стандартных циферблатов с использованием [дополнений](#complications)
-* **контролировать AAPS на телефоне**: чтобы подать болюс, установить временную цель и т. д. 
+* **контролировать AAPS на телефоне**: чтобы подать болюс, установить временную цель и т. д.
 
 ### Перед тем как купить часы...
 
@@ -227,7 +227,7 @@ The Android developer options enable your watch to stay awake during charging. T
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
@@ -264,7 +264,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ### Sony Smartwatch 3
 
-* Sony Smartwach 3-одни из самых популярных часов, которые можно использовать с AAPS. 
+* Sony Smartwach 3-одни из самых популярных часов, которые можно использовать с AAPS.
 * К сожалению, осенью 2020 года Google прекратил поддержку устройств операционной системы OS 1.5. Это приводит к проблемам при использовании Sony SW3 с AndroidAPS 2.7 и выше.
 * На [странице устранения неполадок](../Usage/SonySW3.rst) можно найти способ обхода этого обстоятельства.
 
