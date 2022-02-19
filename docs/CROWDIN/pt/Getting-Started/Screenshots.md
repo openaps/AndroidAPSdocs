@@ -73,6 +73,48 @@ This is the first screen you will come across when you open AndroidAPS and it co
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
+#### BG warning sign
+
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+
+However, when there are a lot of duplicates, it might be easier to
+
+* [backup your settings](../Usage/ExportImportSettings.rst),
+* reset your database in the maintenance menu and
+* [import your settings](../Usage/ExportImportSettings.rst) again
+
+##### Red warning sign: Duplicate BG data
+
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+
+![Red BG warning](../images/bg_warn_red.png)
+
+You need to find out why you get duplicate BGs:
+
+* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
+* Do you have any followers that might receive your BG but do also upload it again to your NS site?
+* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+
+##### Yellow warning sign
+
+* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+   
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
+
+* Usually you do not have to take any action. The closed loop will continue to work!
+
+* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
+* Special note for libre users:
+   
+   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+   * Also jumpy readings interrupt the continous flow.
+   * Therefore the yellow warning sign will be 'always on' for libre users.
+
 ### Section D - IOB, COB, BR and AS
 
 ![Section D](../images/Home2020_TBR.png)
@@ -124,7 +166,7 @@ This is the first screen you will come across when you open AndroidAPS and it co
 * Optional information:
    
    * Previsão
-   * Basais
+   * Basals
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -154,14 +196,14 @@ This is the first screen you will come across when you open AndroidAPS and it co
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-#### Basais
+#### Basals
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
 * In times standard basal rate is given the area under the curve is shown in dark blue.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
-#### Actividade
+#### Activity
 
 * The **thin yellow** line shows the activity of Insulin. 
 * It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
@@ -205,7 +247,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Actividade
+#### Activity
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
@@ -219,7 +261,10 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Buttons for insulin, carbs and Calculator are almost'always on'.
+   
+   * If connection to pump is lost, the insulin button will not be visible.
+
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
 #### Insulina
@@ -315,7 +360,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ## Action tab
 
-![Separador Accões](../images/Home2021_Action.png)
+![Actions tab](../images/Home2021_Action.png)
 
 ### Actions - section M
 
@@ -366,13 +411,13 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
 * Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
 * Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Nota: A sua diabetes pode variar!
+* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
 ## Insulin Profile
 
-![Perfil da Insulina](../images/Screenshot_insulin_profile.png)
+![Insulin Profile](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
 * The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
