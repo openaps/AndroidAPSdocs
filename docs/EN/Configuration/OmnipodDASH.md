@@ -99,7 +99,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 **NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
+![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 
