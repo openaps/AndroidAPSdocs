@@ -40,37 +40,11 @@
 * For EROS it is also listed on the POD tab as "Sequence Number"
 
 ## Warning signal beneath BG
+
 Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
-
-*Note*:
-The last 24h hours are taken into accord. So even after you solved the origin problem, the duplicate BGs stay there for a while and will cause the warning signal to not disappear.
-
-You need to manually delete a couple of entries from the dexcom/xdrip tab.
-
-However, when there are a lot of duplicates, it might be easier to
-* backup your settings,
-* reset your database in the maintenance menu and
-* import your settings again
-
-### Red warning sign: Duplicate BG data
-
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
   ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there.
-* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your NS site?
-* Last resort: In AAPS, go to your NS Client settings, select the sync settings  and disable the "Accept CGM data from NS" option.
-
-### Yellow warning sign
-The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
-
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-Usually you do not have to take any action. The closed loop will continue to work!
-
-*Note*:
-Receiving a yellow warning, is normal for libre sensors. 
-For dexcom sensors, this is also normal e.g. after a sensor change is quite usual and nothing to worry.
+For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
