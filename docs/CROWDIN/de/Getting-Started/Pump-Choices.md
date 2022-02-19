@@ -1,18 +1,16 @@
 # Pumenwahl
 
-AndroidAPS works with a number of insulin pumps. This table lists the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device.
+AndroidAPS works with a number of insulin pumps. The follow list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-| Pump Type                                                       | Communication type          |
-| --------------------------------------------------------------- | --------------------------- |
-| [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)     | Bluetooth                   |
-| [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) | Bluetooth                   |
-| [Dana R](../Configuration/DanaR-Insulin-Pump.md)                | Bluetooth                   |
-| [Dana RS](../Configuration/DanaRS-Insulin-Pump.md)              | Bluetooth                   |
-| [Dana-i](../Configuration/DanaRS-Insulin-Pump.md)               | Bluetooth                   |
-| [Diaconn G8 ](../Configuration/DiaconnG8.rst)                   | Bluetooth                   |
-| [Omnipod Eros](../Configuration/OmnipodEros.rst)                | Rileylink Compatible Device |
-| [Omnipod DASH](../Configuration/OmnipodDASH.md)                 | Bluetooth                   |
-| Certain older [Medtronic](../Configuration/MedtronicPump.md)    | Rileylink Compatible Device |
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
+- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Compatible Device)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
 Informationen über weitere Pumpen, die möglicherweise irgendwann mit AndroidAPS funktionieren, findest du auf der Seite [Zukünftig ggf. loopbare Pumpen](Future-possible-Pump-Drivers.md).
 
