@@ -4,7 +4,7 @@ Docs updates & changes
 February 2022
 ==================================================
 * `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
-* `Medtronic pump update <../Configuration/MedtronicPump.html> `_ @dottedfingertips
+* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
 * `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 
 January 2022
