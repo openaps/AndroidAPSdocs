@@ -15,7 +15,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Android version and AAPS version
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
@@ -58,9 +58,9 @@ Passos preparatórios
 Alterações
 ----------------------
 * 100k linhas alteradas, 105k novas linhas de código
-* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Suporte Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Suporte a Glunovo
 * Banco de dados interno atualizado para a sala @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Muito código reescrito para o Kotlin @MilosKozak
@@ -74,7 +74,7 @@ Alterações
 
 * Alteração do comportamento da mudança de perfil. Agora há uma distinção entre Troca de Perfil *(algo que o utilizador quer) * e Mudança de Perfil *(quando a alteração é executada pela bomba)* @MilosKozak @Tebbe
 * Pode iniciar um Alvo temporário para Atividade durante a criação da Troca de perfil @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
 * Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Ações do utilizador guardadas @Philoul
 * Nova automação para TempTargetValue @Philoul
@@ -89,10 +89,10 @@ Alterações
 * Fixed bug associated to unstable CGM data @MilosKozak
 * DanaR and DanaRS communication improvement @MilosKozak
 * CircleCI integration @MilosKozak
-* Files location change: 
+* Files location change:
 
-   * /AAPS/extra (engineering mode) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (engineering mode)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
 
 Versão 2.8.2
@@ -116,8 +116,8 @@ Data de lançamento: 12-01-2021
 
 Notas importantes
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
+* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
+* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
 * ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
@@ -141,28 +141,28 @@ Data de lançamento: 01-01-2021
 
 Notas importantes
 ----------------------
-* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
+* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 * Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Major new features
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
+* Dana RS connection improvements @MilosKozak
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* New NSClient tablet layout @MilosKozak
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
 * New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* SetupWizard improvements @MilosKozak 
-* Security improvements @dlvoy 
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* SetupWizard improvements @MilosKozak
+* Security improvements @dlvoy
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 Version 2.7.0
 ================
@@ -211,7 +211,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Major new features
 ----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
-* Otherwise is equal to 2.6.1.3. Update is optional. 
+* Otherwise is equal to 2.6.1.3. Update is optional.
 
 Version 2.6.1.3
 ================
@@ -222,7 +222,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Major new features
 ------------------
 * Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. Update is optional. 
+* Otherwise is equal to 2.6.1.2. Update is optional.
 
 Version 2.6.1.2
 ================
@@ -275,7 +275,7 @@ Major new features
 ------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -283,7 +283,7 @@ Major new features
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -306,7 +306,7 @@ Version 2.5.1
 ==================================================
 Data de lançamento: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 
