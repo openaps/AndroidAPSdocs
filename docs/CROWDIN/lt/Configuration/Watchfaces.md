@@ -3,7 +3,7 @@
 Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančiame laikrodyje. AAPS versija laikrodžiui leidžia:
 
 * **pateikti duomenis jūsų laikrodyje**: naudojant [pasirinktinį ciferblatą](#aaps-watchfaces) arba standartiniame ekrane, naudojant [ekrano elementus](#complications)
-* **valdyti AAPS telefone**: suleisti bolusą, nustatyti laikiną tikslą ir pan. 
+* **valdyti AAPS telefone**: suleisti bolusą, nustatyti laikiną tikslą ir pan.
 
 ### Prieš perkant laikrodį...
 
@@ -226,7 +226,7 @@ AndroidAPS provides following complications:
     
     Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
     
-    <img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+    ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
     
     ![Simplified UI](../images/Watchface_simplified_ui.png)
     
@@ -261,7 +261,7 @@ AndroidAPS provides following complications:
     * If Complications does not update data - check first if AAPS watchfaces work at all.
     ### Sony Smartwatch 3
     
-    * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+    * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
     * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
     * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
     ## Peržiūrėti Nightscout duomenis

@@ -125,7 +125,7 @@ Mygtukai
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Preferences > Buttons
 
-Greitas vedlys
+Quick Wizard
 -----------------------------------------------------------
 * If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 * In setup you define during which time period the button will be visible on your home screen - just one button per period.

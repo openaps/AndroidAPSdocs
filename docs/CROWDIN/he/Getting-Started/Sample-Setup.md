@@ -75,17 +75,14 @@ Location services ("GPS") must be activated in order for Bluetooth to work prope
 
 The original Dexcom app from the Google Play Store will not work because it does not broadcast the values to other apps. Therefore, a version slightly modified by the community is required. Only this modified Dexcom app can communicate with AAPS. Additionally the modified Dexcom App can be used with all Android smartphones not only the ones in [Dexcom's compatibility list](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
-
 To do this perform the following steps on your smartphone:
 
 1. If the original Dexcom app is already installed: 
     * Stop sensor
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
     * Low `OFF`
     * High `OFF`
@@ -104,7 +101,7 @@ To do this perform the following steps on your smartphone:
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Install xDrip+
 
@@ -113,7 +110,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
 1. Download the latest stable APK version of xDrip+ with your smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - not the version from the Google Play Store!
 2. Install xDrip+ by selecting the downloaded APK file.
 3. Start xDrip+ and make the following settings (hamburger menu at top left) 
-    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs. 
+    * Settings > Alarms and Alerts > Glucose Level Alert List > Create Alerts (high and low) according to your needs.
     * The existing alarms can be changed with a long press on the alarm.
     * Settings > Alarms and Alerts > Calibration Alerts: disabled (reminded via the modified Dexcom app)
     * Settings > Hardware Data Source > 640G/EverSense
