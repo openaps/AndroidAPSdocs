@@ -3,7 +3,7 @@
 Puede instalar la aplicación AndroidAPS en su reloj **basado en Wear OS**. La versión de AAPS para reloj le permite:
 
 * **muestra datos en el reloj**: proporcionando [pantallas personalizadas](#aaps-watchfaces) o en pantalla estándar con el uso de compilaciones [complicaciones](#complications)
-* **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc. 
+* **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc.
 
 ### Antes de comprar un reloj...
 
@@ -227,7 +227,7 @@ The Android developer options enable your watch to stay awake during charging. T
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
@@ -264,7 +264,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ### Sony Smartwatch 3
 
-* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS. 
+* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
 * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
 
