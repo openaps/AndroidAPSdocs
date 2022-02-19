@@ -122,22 +122,16 @@ Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius
 *Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
-9 tikslas: Išbandykite papildomas kasdienio naudojimo funkcijas ir įgykite pasitikėjimą uždara ciklo sistema
-====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
-
-
-Tikslas 10: dienos metu aktyvuokite papildomas oref1 funkcijas, tokias kaip super mikro bolusas (SMB)
+Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 ====================================================================================================
 * Turite perskaityti šios dokumentacijos `SMB skyrių <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ir `oref1 skiltį openAPS dokumentacijoje <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_, kad suprastumėte kaip veikia SMB, ypač kokia yra nulinės bazės nustatymo idėja.
 * Tada turėtumėte `padidinti maxAIO <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_, kad SMB veiktų gerai. max AIO dabar apima visą AIO, ne tik pridėtą (pakeltą) valandinę bazę. Tai yra, jei valgymui suleidžiamas 8 vv boliusas, o maksAIO yra 7 vv, SMB nebus leidžiamas tol, kol AIO nenukris žemiau 7 vv. Galima pradėti nuo maxAIO = vidutinis maisto bolusas + 3x maksimali dienos valandinė bazė bet kuriuo paros metu (apie tai rašoma `7 tiksle <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
 * pereinant nuo AMA iki SMB, "min_5m_carbimpact" numatytasis absorbcijos parametras pakeičiamas nuo 3 iki 8. Jeigu Jūs pereinate nuo AMA į SMB, turite jį parametrą pakeisti rankiniu būdu.
 
 
-Tikslas 11: Automatizavimas
+Objective 10: Automation
 ====================================================================================================
-* Jūs turite pradėti tikslą 11, kad galėtumėte naudoti `Automatizavimu <../Usage/Automation.html>`_.
+* You have to start objective 10 to be able to use `Automation <../Usage/Automation.html>`_.
 * Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
 * Ankstesnių (iki šiol neužbaigtų) tikslų atlikimas neturės įtakos kitiems tikslams, kuriuos jau užbaigėte. Visi užbaigti tikslai bus išsaugoti!
 
@@ -148,3 +142,7 @@ Jei dėl bet kokios priežasties norite grįžti į tikslų pradžią, galite ta
 
 .. image:: ../images/Objective_ClearFinished.png
   :alt: Grįžti į tikslus
+
+Objectives in Android APS before version 3.0
+====================================================================================================
+One objective was removed when Android APS 3.0 was released.  The objectives as of version 2.8.2 can be found `here <../Usage/Objectives_old.rst`_.
