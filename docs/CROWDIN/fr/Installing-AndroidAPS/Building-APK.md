@@ -87,35 +87,35 @@ Download [Android Studio from here](https://developer.android.com/studio/install
 
 On first start you will find the setup wizard:
 
-# Sélectionnez "Ne pas importer les paramètres" car vous n'avez pas eu d'utilisation préalable.
+Select "Do not import settings" as you have not used it before.
 
-![Ne pas importer les paramètres](../images/studioSetup/01_ImportSettings.png)
+![Do not import settings](../images/studioSetup/01_ImportSettings.png)
 
-Décidez si vous voulez partager les données avec Google ou non.
+Decide whether you want to share data with Google or not.
 
-![Partager des données avec Google](../images/studioSetup/02_DataSharing.png)
+![Share data with Google](../images/studioSetup/02_DataSharing.png)
 
-Dans l'écran suivant, cliquez sur "Next".
+On the following screen click "Next".
 
-![Écran d'accueil](../images/studioSetup/03_Welcome.png)
+![Welcome screen](../images/studioSetup/03_Welcome.png)
 
-Sélectionnez l'installation "Standard" et cliquez sur "Next".
+Select "Standard" installation and click "Next".
 
-![Installation standard](../images/studioSetup/04_InstallType.png)
+![Standard installation](../images/studioSetup/04_InstallType.png)
 
-Sélectionnez le thème de l'interface utilisateur que vous souhaitez. (dans ce manuel, nous avons utilisé "Light"). Cliquez ensuite sur "Next".
+Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
 
 > ***Note:*** This is just the color scheme. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
 
-![Couleur de l'interface](../images/studioSetup/05_UITheme.png)
+![UI color scheme](../images/studioSetup/05_UITheme.png)
 
-Cliquez sur "Finish" dans la boite de dialogue "Verify Settings".
+Click "Finish" on the "Verify Settings" dialog.
 
-![Vérifiez les paramètres](../images/studioSetup/06_Verify.png)
+![Verify settings](../images/studioSetup/06_Verify.png)
 
-Attendez qu'Android Studio télécharge des composants supplémentaires et soyez patient. Une fois que tout est téléchargé, le bouton "Finish" devient bleu. Cliquez sur le bouton maintenant.
+Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
-![Téléchargement des composants](../images/studioSetup/07_Downloading.png)
+![Downloading components](../images/studioSetup/07_Downloading.png)
 
 ## Définir le chemin de git dans les préférences
 
@@ -123,7 +123,7 @@ Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your c
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
-![Paramètres Android Studio à partir de l'écran d'accueil](../images/studioSetup/10_WizardSettings.png)
+![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
@@ -253,7 +253,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Générer un APK signé
 
-Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * After Android Studio is started, wait until all background tasks are finished.
     
@@ -341,9 +341,9 @@ Signer signifie que vous signez votre application générée mais d'une façon n
 
 ## Transférer le fichier APK sur le smartphone
 
-La façon la plus facile de transférer le fichier app-full-release.apk dans votre téléphone est via [un câble USB ou Google Drive](https://support.google.com/android/answer/9064445?hl=fr). Veuilez noter que le transfert par email peut entraîner des difficultés et n'est pas la méthode conseillée.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Les explications peuvent être trouvées sur internet (par ex. [ici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Résolution de problèmes
 
