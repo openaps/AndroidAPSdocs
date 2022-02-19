@@ -201,7 +201,7 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **Omnipod (POD)** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
+4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
 ### View Pod History
 
