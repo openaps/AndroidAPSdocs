@@ -3,7 +3,12 @@ Mises à jour et modifications de la documentation
 
 Février 2022
 ==================================================
+* `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
+* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
 * `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @ robertrub @vanelsberg
+* Update docs for AAPS 3.0 (partly) @xJoe
+* `Wear OS for AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
 
 Janvier 2022
 ==================================================
