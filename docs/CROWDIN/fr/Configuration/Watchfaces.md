@@ -3,7 +3,7 @@
 Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de:
 
 * **afficher les données sur votre montre** : en fournissant des [cadrans personnalisés](#cadrans-aaps) ou dans des cadrans standards avec l'utilisation de [complications](#complications)
-* **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc. 
+* **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc.
 
 ### Avant d'acheter la montre...
 
@@ -227,7 +227,7 @@ Les options de développement Android permettent à votre montre de rester réve
 
 Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une détérioration de l'écran, en particulier sur les anciens écrans OLED. Les montres diminueront généralement l'éclairage de l'écran pour éviter le déteriorer; veuillez consulter le manuel utilisateur, le fabricant ou internet pour obtenir des conseils.
 
-<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Interface simplifiée](../images/Watchface_simplified_ui.png)
 
@@ -264,7 +264,7 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 
 ### Sony Smartwatch 3
 
-* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. 
+* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS.
 * Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS 2.7 et plus.
 * Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.rst).
 
