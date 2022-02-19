@@ -1,11 +1,11 @@
 Preferințe
 ***********************************************************
-* **Deschideți preferințele** făcând clic pe meniul cu cele trei puncte din dreapta sus a ecranului principal.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Deschideți preferințele
 
-Poti ajunge direct la o anumită filă din preferinte (de ex. fila pompei) deschizând această filă și dând click pe conectare.
+Poti ajunge direct la o anumită filă din preferinte (de ex. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Deschideți preferințele
@@ -34,8 +34,8 @@ General
 **Limba**
 
 * Opțiune nouă de utilizare a limbii implicite a telefonului (recomandat). 
-* În cazul în care doresti AAPS în altă limbă decât cea setata pe telefon poti alege dintre varietatele din lista.
-* Dacă setezi entru aplicatie o alta limba decat cea a telefonului, este posibil ca uneori să vezi o combinatie a limbilor. Acest lucru se datorează unei probleme legate de Android, uneori nefuncționand suprascrierea limbajul Android implicit.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* Dacă setezi entru aplicatie o alta limba decat cea a telefonului, este posibil ca uneori să vezi o combinatie a limbilor. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Preferințe > General
@@ -49,9 +49,9 @@ Protecţie
 Parola principală
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Necessary to be able to `export settings <../Usage/ExportImportSettings.html>`_ as they are encrypted as of version 2.7.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-* Open Preferences (three-dot-menu on top right of home screen)
+* Open Preferences (three-dot menu on top right of home screen)
 * Click triangle below "General"
 * Click "Master-Password"
 * Enter password, confirm password and click ok.
@@ -94,12 +94,12 @@ Imagine fundal
 Orientare tip portret
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * ** Fundalul Original* * și ** Butoanele afișate întotdeauna in partea de jos a ecranului * * sunt identice
-* **Afișare mare** are o dimensiune mai mare a graficelor față de afisajul altor fundaluri
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Orientare tip peisaj
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Folosind ** Fundal Original * * și ** Afișare Mare* * trebuie să derulezi în jos ca sa vezi butoanele din partea de jos a ecranului
-* **Afișare mare** are o dimensiune mai mare a graficelor față de afisajul altor fundaluri
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Fundaluri în functie de orientarea de afișare a telefonului
@@ -137,7 +137,7 @@ Asistent Rapid
   
 Ţinte temp implicite
 -----------------------------------------------------------
-* `Țintele temporare (TT) <../Usage/temptarget.html#țintele temp->`_ Permit să definesti schimbarea țintei glicemice pentru o anumită perioadă de timp.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * Cu setarea TT (Tinta Temporara) implicită, poti schimba ușor ținta glicemica pentru activitate fizica, masă în curând etc.
 * Apasa lung pe TT din colțul din dreapta sus de pe ecranul principal sau foloseste scurtăturile din butonul portocaliu "Carbs" din partea de jos.
 
@@ -205,7 +205,7 @@ Livreaza doar aceasta partea din cantitatea calculata de asistent
 Consilier bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* Daca se fac bolusuri de corecție, nu se adaugă si **carbohidrați**.
+* If correction bolus is accepted **no carbs** will be recorded.
 * Va porni o alarmă atunci când valoarea glicemiei este la un nivel bun pentru a începe masa.
 * You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
@@ -223,7 +223,7 @@ Vârsta pacientului
 -----------------------------------------------------------
 * Limitele de siguranţă sunt stabilite in baza vârstei selectate în această setare. 
 * Dacă ajungi în situația de a atinge limite de siguranță (de ex. valoarea maximă a bolusului), probabil este cazul să incrementezi varsta. 
-* Este o idee proastă să selectezi de la început o vârstă mai mare decât vârsta reală, deoarece aceasta poate duce la supradozaje in cazul introducerii accidentale a unei valori greșite de insulină în căsuța de dialog (de exemplu, prin omiterea separatorului de zecimale). 
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * Dacă doresti să afli valorile concrete ale limitelor de securitate codificate, deruleaza la opţiunea algoritm pe `această pagină <. /Utilizare/Open-APS-features.html>`_.
 
 Valoarea maximă permisă a bolusului [U]
@@ -244,7 +244,7 @@ Buclă
 Mod APS
 -----------------------------------------------------------
 * Comutare între buclă deschisă și închisă, precum și Suspendare la Hipoglicemie (LGS)
-* La **Buclă deschisă** sugestiile de RBT (rata bazala temporara) făcute pe baza datelor tale apar ca notificare. După confirmare, RBT va fi transferată în pompă.. La utilizarea pompei virtuale RBT trebuie introdusa manual.
+* La **Buclă deschisă** sugestiile de RBT (rata bazala temporara) făcute pe baza datelor tale apar ca notificare. After manual confirmation, the command to dose insulin will be transferred to pump. La utilizarea pompei virtuale RBT trebuie introdusa manual.
 * La ** Bucla inchisa* * sugestiile de RBT sunt trimise automat la pompă, fără confirmare sau introducere manuala.  
 * La ** Suspendare la Hipoglicemie (LGS = low glucose suspend)**  se intrerupe temporar rata bazala (RB).
 
@@ -324,7 +324,7 @@ Notificare pentru necesar carbohidrați
 * Se va sugera suplimentarea cu carbohidrati atunci când design-ul de referință detectează că este nevoie de carbohidrati.
 * În acest caz veţi primi o notificare care poate fi amânată cu 5, 15 sau 30 de minute.
 * În plus, carbohidrații necesari vor fi afișați în secțiunea COB de pe ecranul de principal.
-* Poate fi definit un prag - cantitatea minimă de carbohidrați necesară pentru a declanșa notificarea. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritmul utilizează BGI (impactul glicemiei) pentru a determina când sunt absorbiți carbohidrati. 
 * Valoarea este utilizată doar în timpul unor pauze de citiri ale CGM sau când activitatea fizică "epuizează" toată creșterea glicemiei care in caz contrar ar face ca AAPS să altereze COB. 
-* În momentele în care absorbția de carbohidrați nu poate fi funcționată dinamic pe baza reacțiilor dvs. glicemice, inserează o alterare implicită a carbohidraților. Practic, este un eşec.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Practic, este un eşec.
 * Pentru a spune mai simplu: Algoritmul "ştie" cum *ar trebui* să se comporte glicemia ta atunci când este afectată de doza actuală de insulină etc. 
 * Ori de câte ori există o deviere pozitivă de la comportamentul aşteptat, câțiva carbohidrati sunt absorbiţi/alterați. Schimbare mare=mulți carbohidrați etc. 
 * Algoritmul min_5m_carbimpact defineşte impactul implicit al absorbţiei carbohidraților per 5 minute. Pentru mai multe detalii, vedeți `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.

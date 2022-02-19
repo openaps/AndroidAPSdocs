@@ -75,23 +75,20 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-Une version en mmol/l et une version en mg/dl de l'application Dexcom G6 patchée sont disponibles ici <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. Vous devez choisir l'application G6 pour votre région.
-
-Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
+To do this perform the following steps on your smartphone:
 
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
     * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
-2. Téléchargez l'application Dexcom patchée (vérifiez l'unité mg/dl ou mmol/l et la [région](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-l-application-dexcom-patchee) selon vos besoins): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Installez l'application Dexcom G6 patchée sur votre smartphone (= selectionnez le fichier apk téléchargé)
-4. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
-5. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
-    * Urgent glycémie basse `55mg/dl` / `3.1mmol/l` (impossible à désactiver)
-    * Glycémie basse `OFF`
-    * Glyécmie haute `OFF`
-    * Taux d'augmentation `OFF`
-    * Taux de baisse `OFF`
-    * Perte de signal `OFF`
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
+    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
+    * Low `OFF`
+    * High `OFF`
+    * Rise rate `OFF`
+    * Fall rate `OFF`
+    * Signal loss `OFF`
 
 ## Installer AndroidAPS
 
@@ -100,49 +97,49 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 
-* Source GLY : `App Dexcom G6 (patché)` -- cliquez sur la roue crantée et activez `Remonter les Gly vers NS` et `Transmettre les Gly vers xDrip+` (voir [ source GLY ](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
 
-![Paramètres G5](../images/SampleSetupG5Settings.png)
+![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activé (voir [NS Client](../Configuration/Config-Builder#profil-ns) et [Configuration de Nightscout](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Installer xDrip+
 
-xDrip+ est une autre application open source très aboutie qui offre d'innombrables possibilités. Dans cette configuration, contrairement à l'utilisation première prévue par les développeurs, xDrip+ n'est pas utilisée pour collecter des données de glycémie à partir du Dexcom G6, mais seulement pour utiliser des alarmes et afficher la valeur de glycémie actuelle, y compris la courbe sur l'écran d'accueil Android dans le widget. Avec xDrip+ les alarmes peuvent être réglées beaucoup plus précisément qu'avec le logiciel Dexcom, AAPS ou Nightscout (sans limitation dans la sélection des sons, différentes alarmes selon le jour/nuit etc.).
+xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
 
 1. Téléchargez la dernière version stable de xDrip+ avec votre smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - pas la version de Google Play Store!
 2. Installez xDrip+ en sélectionnant le fichier APK téléchargé.
 3. Démarrez xDrip+ et indiquez les paramètres suivants (menu hamburger en haut à gauche) 
-    * Paramètres > Alarmes et alertes > Liste d'alerte de niveau Glucose > Créer des alertes (hautes et basses) selon vos besoins. 
+    * Paramètres > Alarmes et alertes > Liste d'alerte de niveau Glucose > Créer des alertes (hautes et basses) selon vos besoins.
     * Les alarmes existantes peuvent être modifiées avec une longue pression sur l'alarme.
     * Paramètres > Alarmes et alertes > Alertes de calibrage : désactivées (rappelées via l'application Dexcom modifiée)
     * Paramètres > Source de données matérielles > 640G/EverSense
     * Paramètres > Paramètres Inter-app > Accepter les calibrations > `ON`
     * Menu > Démarrer le capteur (n'est rien qu'un "pro forma" et n'a rien à voir avec le capteur G6 en cours. Ceci est nécessaire sinon un message d'erreur apparaîtra régulièrement.) 
 
-Pour plus d'informations sur xDrip+, voir ici [Page source GLY](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
 
 ### Exemple d'une installation d'alarme
 
-La "Urgent alarme glycémie basse" (en dessous de 55 mg/dl càd. 3,1 mmol) est une alarme standard de l'application Dexcom patchée qui ne peut pas être désactivée.
+The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
 
-![alarmes xDrip](../images/SampleSetupxDripWarning.png)
+![xDrip alarms](../images/SampleSetupxDripWarning.png)
 
-Astuce pour les réunions / visites d'église / cinéma etc :
+Tip for meetings / church visits / cinema etc..:
 
-Si le mode "Ne pas déranger" est activé dans le Samsung Galaxy S7 (Menu > Paramètres > Sons et vibrations > Ne pas déranger : curseur vers le côté droit (= actif)), lors d'une alarme basse, le téléphone ne fait que vibrer et n'émet pas d'avertissement sonore. Pour les autres alarmes configurées via xDrip+ vous pouvez choisir si le mode silencieux doit être ignoré (son émis) ou non.
+If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
 
 ## Désactiver l'option économie d'énergie
 
-Sur votre Samsung Galaxy S7 allez dans Menu > Paramètres > Maintenance de l'appareil > Batterie > Applications non surveillées > + Ajouter des applications : Sélectionnez les applications AndroidAPS, Dexcom G6 Mobile, xDrip+ et Android Wear (si la montre connectée est utilisée) l'une après l'autre
+On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G6 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
 
 ## Optionnel : Configurer la Sony Smartwatch 3 (SWR50)
 
-Avec une montre Android Wear, vivre avec son diabète peut être encore plus discrèt. La montre peut être utilisée pour afficher le niveau de glycémie actuel, l'état de la boucle, etc sur le poignet. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). Pour ce faire, appuyez deux fois sur la valeur MGC du cadran d'AAPSv2. Le SWR50 fonctionne généralement pour une journée complète jusqu'à ce que la batterie ait besoin d'être rechargée (même chargeur que le Samsung Galaxy S7 : microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. La montre peut même être utilisée pour contrôler AndroidAPS (par ex. pour lancer discrètement un bolus de repas). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
 ![Montres connectées](../images/SampleSetupSmartwatch.png)
 
-Pour plus d'informations sur les informations affichées sur le cadran, voir [ici](../Configuration/Watchfaces.md).
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Installez l'application "Android Wear" sur votre smartphone via le Google Play Store et connectez la smartwatch selon les instructions qui y sont données.
 * Dans AAPS, choisissez le menu hamburger (coin supérieur gauche) > Générateur de configuration > Général (en bas de la liste) > Wear > Activez sur le côté gauche, cliquez sur la roue crantée > Paramètres de Wear et activez `Commandes depuis la montre`
@@ -151,4 +148,4 @@ Pour plus d'informations sur les informations affichées sur le cadran, voir [ic
 
 ## Configuration de la pompe
 
-voir [pompe Dana RS](../Configuration/DanaRS-Insulin-Pump.md)
+see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)

@@ -53,7 +53,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    AAPS 3.0 güncellemesinden sonra İpuçları ve Kontroller<./Installing-AndroidAPS/update3_0.md>
    AAPS 2.7 güncellemesinden sonra kontroller <./Installing-AndroidAPS/update2_7.rst>
    Git'i yükleyin <./Installing-AndroidAPS/git-install.rst>
-   Android Studio Sorunlarını Giderme <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Sürüm notları <./Installing-AndroidAPS/Releasenotes.rst>
    Geliştirici dalı <./Installing-AndroidAPS/Dev_branch.md>
 

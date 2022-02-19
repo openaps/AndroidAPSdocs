@@ -35,7 +35,7 @@ Až budete s úpravami profilu spokojeni, můžete `klonovat profil <../Configur
 Porovnání dvou profilů
 =======================================
 
-Pomocníka s profilem můžete použít také pro porovnání dvou různých profilů nebo přepnutí profilů (procenta podle posledních `přepnutí profilu <../Usage/Profiles.html>`_).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Pomocník profilu 1

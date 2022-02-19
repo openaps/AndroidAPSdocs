@@ -49,7 +49,7 @@ Schutz
 Master-Passwort
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Die `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ sind ab Version 2.7 verschlüsselt.
-  ** Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
+  **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
 
 * Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 * Klicke das Dreieck neben "Allgemein".
@@ -61,7 +61,7 @@ Master-Passwort
   
 Schutz der Einstellungen
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. ` AAPS-Nutzung durch Kinder <../Children/Children.html> ` _).
+* Schütze deine Einstellungen mit einem Passwort oder einer biometrischen Authentifizierung (d. h. `AAPS-Nutzung durch Kinder <../Children/Children.html>`_).
 * Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der `exportierten Einstellungen <../Usage/ExportImportSettings.html>`_ verwenden möchtest.
 * Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie `oben beschrieben <../Configuration/Preferences.html#master-passwort>`__ festzulegen.
 
@@ -94,12 +94,12 @@ Erscheinungsbild
 Hochformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Ursprüngliches Erscheinungsbild** und **Schaltflächen werden immer am unteren Rand des Bildschirms angezeigt** sind identisch.
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
 Querformat
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Bei Verwendung von **Ursprüngliches Erscheinungsbild** und **Großer Bildschirm**, musst Du nach unten scrollen, um Schaltflächen am unteren Rand des Bildschirms zu sehen
-* ** Großer Bildschirm * * zeigt alle Diagramme größer an.
+* **Großer Bildschirm** zeigt alle Diagramme größer an.
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
@@ -137,7 +137,7 @@ Quick Wizard
   
 Vordefinierte temporäre Ziele
 -----------------------------------------------------------
-* `Temp Targets (TT) <../Usage/temptarget.html#temp-targets>`_ erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
+* `Temp Targets (TT) <../Usage/temptarget.html>`_ erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
 * Mit dem Setzen von Standard-TT kannst Du Dein Ziel für Aktivität, Bald essen, usw. einfach verändern.
 * Drücke lange auf deinen Zielwert in der oberen rechten Ecke auf dem Home-Bildschirm oder verwende die Shortcuts im orange "Kohlenhydrate" (Carbs)-Button am unteren Rand.
 
@@ -204,10 +204,10 @@ Abgabe nur eines Teils der vom Bolus-Rechner ermittelten Insulinmenge
 
 Bolus-Berater
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol ) liegt, wird ein Korrekturbolus vorgeschlagen.
+* Wenn du den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ verwendest und dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
 * Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 * Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
-* Du musst erneut den Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+* Du musst erneut den `Bolus-Rechner <../Getting-Started/Screenshots.html#bolus-rechner>`__ aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
 
   .. image:: ../images/Home2021_BolusWizard_CorrectionOffer.png
     :alt: Nachricht des Bolus-Beraters
@@ -215,7 +215,7 @@ Bolus-Berater
 Superbolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Option zur Aktivierung des Superbolus im Bolus-Rechner.
-* ` Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>` _ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
+* `Superbolus <https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/>`_ ist ein Konzept, um in den nächsten zwei Stunden etwas Insulin aus der Basalrate "vorzuziehen", um Spitzen zu verhindern.
 
 Sicherheitseinstellungen der Behandlungen
 ===========================================================
@@ -224,7 +224,7 @@ Alter des Patienten
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
 * Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
 * Es ist keine gute Idee, ein höheres Alter anzugeben als das tatsächliche, weil es zu einer Überdosierung führen kann, wenn ein falscher Wert im Insulin-Dialog eingegeben wird (z. B. beim Weglassen des Kommas). 
-* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf der Seite <a href="../Usage/Open-APS-features.md"</a> zu der Algorithmenfunktion, die Du verwendest.
+* Wenn du die Werte für diese fest codierten Sicherheitsgrenzen wissen möchtest, scrolle auf `dieser Seite <../Usage/Open-APS-features.html>`_ zu der Algorithmenfunktion, die Du verwendest.
 
 Maximal erlaubter Bolus [U]
 -----------------------------------------------------------
@@ -268,7 +268,7 @@ OpenAPS AMA-Einstellungen
 
 Maximale IE/h, die als TBR gesetzt werden können
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. 
+* Diese Einstellung existiert als Sicherheitsgrenze, um zu verhindern, dass AAPS jemals eine gefährlich hohe Basalrate setzt. 
 * Der Wert wird in IE pro Stunde angegeben (IE/h). 
 * Es wird empfohlen, hier etwas Vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**. 
 * Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
@@ -307,9 +307,9 @@ Erweiterte Einstellungen (OpenAPS AMA)
 
 OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
-* Im Gegensatz zu AMA verwendet `SMB < ../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
-* Du musst `Ziel (objective) 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
-* Die ersten drei Einstellungen sind `oben beschrieben. <./Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__
+* Im Gegensatz zu AMA verwendet `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+* Du musst `Ziel 10 <../Usage/Objectives.html#ziel-10-aktiviere-zusatzliche-oref1-funktionen-zum-taglichen-gebrauch-wie-z-b-den-super-micro-bolus-smb>`_ gestartet haben, um SMB nutzen zu können.
+* Die ersten drei Einstellungen sind `oben beschrieben <../Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__.
 * Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.
 * *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid. 
 * Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt `Autosens <../Usage/Open-APS-features.html#autosens>`_ Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
@@ -366,7 +366,7 @@ Erweiterte Einstellungen - Autosens-Faktoren
 
 Pumpen-Einstellungen
 ===========================================================
-Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pump>`__ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+Die Einstellungen hier sind je nach Pumpenmodell, das Du im `Konfigurations-Generator <../Configuration/Config-Builder.html#pumpe>`__ gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
 * `DanaR Insulinpumpe <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `DanaRS Insulinpumpe <../Configuration/DanaRS-Insulin-Pump.html>`_
@@ -387,7 +387,7 @@ Nightscout-Client
 * Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 * **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
 * *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
+* Falls aktiviert, werden Änderungen Deiner `lokalen Profile <../Configuration/Config-Builder.html#lokales-profil>`_ zu Nightscout hochgeladen.
 
 Verbindungseinstellungen
 -----------------------------------------------------------

@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version d'Android et version AAPS
 ====================================
-Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS 3. .0 et supérieur car il nécessite au moins Android 9. 
+Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS 3. .0 et supérieur car il nécessite au moins Android 9.
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
@@ -58,9 +58,9 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `Support de la DiaconnG8 <../Configuration/DiaconnG8.rst>`_
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -74,7 +74,7 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être `synchronisé avec NS <../Installing-AndroidAPS/update3_0.html#profil-nightscout-ne-peut-plus-etre-selectionne>`_. @MilosKozak. 
+* NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être `synchronisé avec NS <../Installing-AndroidAPS/update3_0.html#profil-nightscout-ne-peut-plus-etre-selectionne>`_. @MilosKozak.
 * Procédure de `réinitialisation du mot de passe principal <../Installing-AndroidAPS/update3_0.html#reinitialiser-le-mot-de-passe-principal>`_ en cas d'oubli @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
@@ -89,10 +89,10 @@ Modifications
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
 * Amélioration de la communication DanaR et DanaRS @MilosKozak
 * Intégration de CircleCI @MilosKozak
-* Changement d'emplacement des fichiers: 
+* Changement d'emplacement des fichiers:
 
-   * /AAPS/extra (mode ingénierie) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (mode ingénierie)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
 
 Version 2.8.2
@@ -116,8 +116,8 @@ Date de sortie : 12-01-2021
 
 Conseils importants
 ----------------------
-* L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1. 
-* Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.). 
+* L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1.
+* Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.).
 * ATTENTION : NE PAS le faire si vous avez une autre application qui gère les traitements (comme xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY ne peut être désactivé que si le mode ingénierie est activé.
 
@@ -141,28 +141,28 @@ Date de sortie : 01-01-2021
 
 Conseils importants
 ----------------------
-* **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt. 
+* **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt.
 * `Les objectifs ont changé. <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ **Finissez les objectifs non terminés avant la mise à jour.**
 * Le dossier github est toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 ----------------------
-* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
-* `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
+* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org
+* `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak
 * `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-2-8>`_ @rICTx-T1D
-* Améliorations de la connexion Dana RS @MilosKozak 
+* Améliorations de la connexion Dana RS @MilosKozak
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 * Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
 * Nouveau type de patient `"Grossesse" <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_ @Brian Quinion
-* Nouvelle présentation tablette de NSClient @MilosKozak 
-* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
+* Nouvelle présentation tablette de NSClient @MilosKozak
+* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
 * `Filtre des préférences <../Configuration/Preferences.html>`_ @Brian Quinion
 * Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 * Nouveau `type d'insuline Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* Améliorations de l'assistant de configuration @MilosKozak 
-* Améliorations de la sécurité @dlvoy 
-* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* Améliorations de l'assistant de configuration @MilosKozak
+* Améliorations de la sécurité @dlvoy
+* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 Version 2.7.0
 ================
@@ -211,7 +211,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 ----------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
-* Sinon, identique à 2.6.1.3. La mise à jour est facultative. 
+* Sinon, identique à 2.6.1.3. La mise à jour est facultative.
 
 Version 2.6.1.3
 ================
@@ -222,7 +222,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 ------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3
-* Sinon, identique à 2.6.1.2. La mise à jour est facultative. 
+* Sinon, identique à 2.6.1.2. La mise à jour est facultative.
 
 Version 2.6.1.2
 ================
@@ -275,7 +275,7 @@ Nouvelles fonctionnalités majeures
 ------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`__
-* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Le profil local peut contenir plusieurs profils
   * Les profils peuvent être dupliqués et modifiés
@@ -283,7 +283,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
@@ -306,7 +306,7 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 

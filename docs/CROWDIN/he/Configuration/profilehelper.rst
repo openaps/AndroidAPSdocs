@@ -35,7 +35,7 @@
 השוואת פרופילים
 =======================================
 
-ניתן להשתמש בעוזר הפרופילים גם כדי להשוות בין פרופילים או החלפות פרופילים (כלומר בין אחוזים שונים של הפרופילים שאותם מגדירים ב`החלפת פרופיל <../Usage/Profiles.html>`_).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1

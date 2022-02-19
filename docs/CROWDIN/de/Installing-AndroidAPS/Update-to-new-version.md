@@ -19,9 +19,9 @@
 3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Übertrage die erstellte APK-Datei](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
 5. [Prüfe die Version](#aaps-version-auf-dem-smartphone-uberprufen) in AndroidAPS
-6. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.rst) sicher, dass Du ['identify receiver'](../Configuration/xdrip#identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app).
+6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
 
-Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 ## 1. Exportiere Deine Einstellungen
 

@@ -42,7 +42,7 @@ Si vous envisagez d'utiliser l'application Android Wear pour créer un bolus ou 
 
 Si vous retirez votre pompe pour la douche, le bain, la natation, sports ou toutes autres activités, vous devez informer AndroidAPS qu'aucune insuline n'est délivrée pour que l'IA soit correcte.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+La pompe peut être déconnectée à l'aide de l'icône de la Boucle sur l'écran d'accueil [AndroidAPS](./Screenshots.md#etat-de-la-boucle).
 
 ### Recommandations non seulement basées sur une seule lecture MGC
 
@@ -65,11 +65,11 @@ You have to have the same emergency equipment with you like every other T1D with
 * Piles de la Pompe
 * Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## How can I safely and securely attach the CGM/FGM?
+## Comment puis-je fixer la MGC/MGF en toute sécurité ?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Certains Boucleur utilisent également des cassettes Kinesi standard ou des cassettes rock moins chères.
+Vous pouvez le coller. Il existe plusieurs « overpatchs » pré-troués adaptés aux systèmes MGC disponibles (recherchez sur Google, eBay ou Amazon). Certains boucleur utilisent également des pansements hydrofilm standard ou des bandes adhésives moins chères.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Vous pouvez le fixer. Vous pouvez également acheter un brassard pour maintenir le MGC/MGF en place (recherche Google, eBay ou Amazon).
 
 # Paramètres AndroidAPS
 
@@ -264,11 +264,11 @@ Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [p
 
 #### Que faire pour prendre une douche ou un bain?
 
-Vous pouvez retirer la pompe pour prendre une douche ou un bain. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
 
 ### Travail
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Selon votre de travail, vous pouvez peut-être utiliser différents paramètres de traitement pendant les jours travaillés. En tant que boucleur, vous devriez envisager un [changement de profil](../Usage/Profiles.md) pour votre journée de travail habituelle. Par exemple, vous pouvez passer à un profil supérieur à 100 % si vous avez un emploi moins fatigant (par ex. assis derrière un bureau), ou moins de 100 % si vous êtes actif et debout toute la journée. Vous pourriez également faire une cible temporaire élevée, basse ou encore un [Décalage horaire](../Usage/Profiles#decalage-horaire) de votre profil lorsque vous travaillez beaucoup plus tôt ou plus tard que d'habitude, ou si vous travaillez en trois huit. Vous pouvez aussi créer un second profil (par exemple "maison" et "jour de travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
 
 ## Activités de loisirs
 
@@ -292,7 +292,7 @@ Le pourcentage du changement de profil, la valeur de votre cible temporaire d'ac
 
 ### Sexe
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. Voir [description ci-dessus](../Getting-Started/FAQ#disconnect-pump).
+Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
 
 ### Boire de l'alcool
 
@@ -308,7 +308,7 @@ Lorsque vous buvez de l'alcool, vous devez toujours avoir un œil sur votre MGC 
 
 #### Comment puis-je boucler pendant la nuit sans rayonnement smartphone et WIFI ?
 
-De nombreux utilisateurs mettent le téléphone en mode avion la nuit. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+De nombreux utilisateurs mettent le téléphone en mode avion la nuit. Si vous voulez que la boucle vous aide lorsque vous dormez, procédez comme suit (ceci ne fonctionne qu'avec une source de Gly locale telle que xDrip+ ou ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom), elle ne fonctionne PAS si vous obtenez les glycémies via Nightscout) :
 
 1. Activez le mode avion de votre mobile.
 2. Attendez que le mode avion soit actif.

@@ -90,13 +90,13 @@ Bitte **wische nach links **zur **DASH** Registerkarte, wo du alle Pod Funktione
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-Stelle sicher, dass der neue Pod und das Samrtphone mit dem AAPS in der Nähe voneinander liegen und klicke auf den Button **Weiter**.
+Stelle sicher, dass der neue Pod und das Smartphone, auf dem AAPS läuft, in der Nähe voneinander liegen und klicke auf den Button **Weiter**.
 
 **HINWEIS**: Nur wenn Du die folgende Fehlermeldung erhältst (dies kann passieren), keine Panik. Klicke auf den **Wiederholen-Button**. In den meisten Fällen wird die Aktivierung dann erfolgreich fortgesetzt.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
 
-3. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst).  Ein grünes Häkchen wird nach erfolgreichem Befüllen angezeigt und der **Weiter** Button wird angezeigt. Klicke auf den **Weiter** Button, um die Initialisierung des Pods abzuschließen; anschließend wird der **Pod anbringen** Bildschirm angezeigt.
+3. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst).  Ein grünes Häkchen wird nach erfolgreichem Befüllen angezeigt und der **Weiter** Button wird angezeigt. Klicke auf den **Weiter** Button, um die Initialisierung des Pods abzuschließen; anschließend wird der **Pod anlegen** Bildschirm angezeigt.
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
@@ -161,19 +161,19 @@ Gehe wie folgt vor, um einen Pod zu deaktivieren (entweder vor dem Ablaufen der 
 
 ### Insulinabgabe fortsetzen
 
-**Hinweis**: Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen werden. Lesen Sie [**Insulinabgabe unterbrochen**](#delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
+**Hinweis**: Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen werden. Lies [**Insulinabgabe unterbrochen**](#delivery-suspended) im Abschnitt Problembehandlung für weitere Details.
 
 Benutze diesen Befehl, um den aktiven, derzeit pausierten Pod anzuweisen, die Insulinabgabe fortzusetzen. Nachdem der Befehl erfolgreich verarbeitet wurde, wird die normale Insulinabgabe mit der aktuellen Basalrate fortgesetzt. Grundlage dafür ist das aktive Basalprofil zur aktuellen Uhrzeit. Der Pod akzeptiert wieder Befehle für Bolus, TBR und SMB.
 
-1. Go to the **DASH** tab and ensure the **Pod status (1)** field displays **SUSPENDED**, then press the **RESUME DELIVERY (2)** button to start the process to instruct the current pod to resume normal insulin delivery. A message **RESUME DELIVERY** will display in the **Pod Status (3)** field.
+1. Gehe zur Registerkarte **DASH** und stelle sicher, dass der **Pod Status (1)** **unterbrochen** anzeigt, drücke dann die **Abgabe fortsetzen (2)** Taste, um den aktuellen Pod anzuweisen, die normale Insulinabgabe fortzusetzen. Eine Nachricht **RESUME DELIVERY** wird im Feld **Pod Status (3)** angezeigt.
 
 ![Resume_1](../images/DASH_images/Resume/Resume_1.jpg)   ![Resume_2](../images/DASH_images/Resume/Resume_2.jpg)
 
-2. When the Resume delivery command is successful, a confirmation dialog will display the message **Insulin delivery has been resumed**. Click **OK** to confirm and proceed.
+2. Wenn der Befehl zur Fortsetzung der Insulinabgabe erfolgreich war, wird in einem Bestätigungsdialog die Nachricht **Insulinabgabe wieder aufgenommen.** angezeigt. Klicke **OK** um zu bestätigen und fortzufahren.
 
 ![Resume_3](../images/DASH_images/Resume/Resume_3.png)
 
-3. The **DASH** tab will update the **Pod status (1)** field to display **RUNNING,** and the **Resume Delivery** button will no longer be displayed
+3. In der Registerkarte **DASH** wird das Feld **Pod Status (1)** aktualisiert, es zeigt **In Betrieb** an und die **Insulinabgabe fortsetzen** Schaltfläche wird nicht mehr angezeigt.
 
 ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 

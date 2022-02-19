@@ -35,7 +35,7 @@ Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez `dupl
 Comparer deux profils
 =======================================
 
-Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage d'activation de vos profils utilisés dans un précédent `changement de profil <../Usage/Profiles.html>`_).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Assistant Profil 1

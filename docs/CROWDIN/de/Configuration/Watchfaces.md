@@ -3,7 +3,7 @@
 Du kannst AndroidAPS auf Deiner Smartwatch mit **Wear OS** installieren. Mit der Watch-Version von AAPS kannst Du:
 
 * **Daten auf Deiner Uhr anzeigen**: nutze dafür ein [Custom Watchface](#aaps-watchfaces) oder stattdessen ein Standard-Watchface mit [Komplikationen](#komplikationen).
-* **AAPS steuern**: Bolus abgeben, temporäres Ziel setzen, etc. 
+* **AAPS steuern**: Bolus abgeben, temporäres Ziel setzen, etc.
 
 ### Bevor Du Dir eine Uhr kaufst...
 
@@ -227,7 +227,7 @@ Die Android-Entwickleroptionen ermöglichen es Deiner Uhr wach zu bleiben, währ
 
 Hinweis: Nicht alle Displays können always-on gut handhaben. Es kann dazu führen, dass sich der Bildschirm einbrennt, insbesondere auf den älteren OLED-Displays. Die Uhren verdunkeln das Display im Allgemeinen, um das Einbrennen zu verhindern; bitte informiere Dich über das Handbuch , Angaben des Herstellers oder das Internet für Ratschläge.
 
-<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Vereinfachte Benutzeroberfläche](../images/Watchface_simplified_ui.png)
 
@@ -264,7 +264,7 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 
 ### Sony Smartwatch 3
 
-* Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS. 
+* Die Sony Smartwach 3 ist eine der beliebtesten Uhren zu Verwendung mit AAPS.
 * Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. Dies führt zu Problemen bei der Verwendung von Sony SW3 mit AndroidAPS 2.7 und höher.
 * Einen Workaround findest Du auf der Seite zur [Problembehandlung](../Usage/SonySW3.rst).
 

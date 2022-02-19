@@ -3,7 +3,7 @@
 Puteţi instala aplicaţia AndroidAPS pe ceasuri **cu Wear OS**. Versiunea de ceas a AAPS vă permite să:
 
 * **afișează datele pe ceas**: utilizând [fețe de ceas personalizate](#aaps-watchfaces) sau pe fețele de ceas standard utilizând [auxiliare](#complications)
-* **controlează AAPS pe telefon**: la bolusare, la stabilirea unei ținte temporare etc. 
+* **controlează AAPS pe telefon**: la bolusare, la stabilirea unei ținte temporare etc.
 
 ### Înainte de a cumpăra ceas...
 
@@ -227,7 +227,7 @@ The Android developer options enable your watch to stay awake during charging. T
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-<img style="float: right;" src="../images/Watchface_nightstand.jpg" />
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
@@ -264,7 +264,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ### Sony Smartwatch 3
 
-* Ceasul Sony Smartwach 3 este unul dintre cele mai populare ceasuri folosite cu AAPS. 
+* Ceasul Sony Smartwach 3 este unul dintre cele mai populare ceasuri folosite cu AAPS.
 * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
 * O posibilă soluție poate fi găsită pe această [pagină de depanare](../Usage/SonySW3.rst).
 

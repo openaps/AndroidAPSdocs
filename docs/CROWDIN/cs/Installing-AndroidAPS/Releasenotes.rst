@@ -15,7 +15,7 @@ Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to 
 
 Android version and AAPS version
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9. 
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
@@ -58,9 +58,9 @@ Preparation steps
 Changes
 ----------------------
 * 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Glunovo support
 * Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Lot of code rewritten to Kotlin @MilosKozak
@@ -74,7 +74,7 @@ Changes
 
 * Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 * You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
 * Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * User actions tracing @Philoul
 * New automation TempTargetValue trigger @Philoul
@@ -89,10 +89,10 @@ Changes
 * Fixed bug associated to unstable CGM data @MilosKozak
 * DanaR and DanaRS communication improvement @MilosKozak
 * CircleCI integration @MilosKozak
-* Files location change: 
+* Files location change:
 
-   * /AAPS/extra (engineering mode) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (engineering mode)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
 
 Version 2.8.2
@@ -116,8 +116,8 @@ Release date: 12-01-2021
 
 Důležitá poznámky
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
+* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
+* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
 * ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
@@ -141,28 +141,28 @@ Datum vydání: 01. 01. 2021
 
 Důležitá poznámky
 ----------------------
-* **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů. 
+* **Minimální verze Androidu je teď 8.0.** Pro starší verze Androidu lze stále použít verzi 2.6.1.4 ze starého úložiště kódů.
 * `Cíle byly změněny. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 Umístění kódů bylo změněno na https://github.com/nightscout/AndroidAPS . Pokud se nevyznáte v práci s nástrojem git, nejjednodušší způsob aktualizace je odstranění staré verze a vytvoření `nového klonu kódu<../Installing-AndroidAPS/Building-APK.html>`_.
 * K sestavení APK použijte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ nebo novější.
 
 Hlavní nové funkce
 ----------------------
-* `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org 
-* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `podpora Omnipod Eros <../Configuration/OmnipodEros.html>` _ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and zvláštní díky @ps2 @itsmojo, dalším, kteří se ůčastnili vývoje ovladače pro Loop a @jlucasvt z GetRileyLink.org
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Vylepšení připojení Dana RS @MilosKozak 
+* Vylepšení připojení Dana RS @MilosKozak
 * Odstraněno chování "Nezměněné hodnoty CGM" v SMB pro nativní aplikaci Dexcom
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * Nový "Těhotný" typ pacienta <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinon
-* Nové rozložení NSClient pro tablety @MilosKozak 
-* NSClient přenáší nastavení inzulinu, senzitivity a zobrazení přímo z hlavní AAPS @MilosKozak 
+* Nové rozložení NSClient pro tablety @MilosKozak
+* NSClient přenáší nastavení inzulinu, senzitivity a zobrazení přímo z hlavní AAPS @MilosKozak
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * Nové ikony pumpy@Rig22 @@teleriddler @osodebailar
 * New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* Vylepšení instalačního průvodce @MilosKozak 
-* Zlepšení zabezpečení @dlvoy 
-* Různé vylepšení a opravy @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Chinon 
+* Vylepšení instalačního průvodce @MilosKozak
+* Zlepšení zabezpečení @dlvoy
+* Různé vylepšení a opravy @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Chinon
 
 Verze 2.7.0
 ================
@@ -211,7 +211,7 @@ K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/
 Hlavní nové funkce
 ----------------------
 * Insight: Deaktivace vibrací na bolus pro firmware verze 3 - druhý pokus
-* Jinak je stejná jako verze 2.6.1.3. Aktualizace není povinná. 
+* Jinak je stejná jako verze 2.6.1.3. Aktualizace není povinná.
 
 Verze 2.6.1.3
 ================
@@ -222,7 +222,7 @@ K sestavení APK použijte `Android Studio 3.6.1 <https://developer.android.com/
 Hlavní nové funkce
 ------------------
 * Insight: Deaktivace vibrací na bolus pro firmware verze 3
-* Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná. 
+* Jinak je stejná jako verze 2.6.1.2. Aktualizace není povinná.
 
 Verze 2.6.1.2
 ================
@@ -275,7 +275,7 @@ Hlavní nové funkce
 ------------------
 * Drobné úpravy vzhledu (úvodní obrazovka...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
-* Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Do místního profilu lze nyní uložit více než 1 profil
   * Profily lze kopírovat a upravovat
@@ -283,7 +283,7 @@ Hlavní nové funkce
   * Stará přepnutí profilu lze kopírovat do nového profilu v Místním profilu (včetně posunu času a procentuální změny)
   * Vertikální výběr hodnot pro cíle
 * Odstraněn Jednoduchý profil
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * Plugin MDT: Opravena chyba s duplicitními záznamy
 * Jednotky se nezadávají v profilu, ale v obecném nastavení aplikace
 * Přidáno nové nastavení do průvodce spuštěním
@@ -306,7 +306,7 @@ Verze 2.5.1
 ==================================================
 Datum vydání: 31. 10. 2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 * New versioning that will allow to do minor updates without triggering the update-notification.
 

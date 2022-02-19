@@ -1,11 +1,11 @@
 Tercihler
 ***********************************************************
-Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **Tercihleri Açın**.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Tercihleri açın
 
-* Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pompa sekmesi) bu sekmeyi açarak ve Eklenti tercihleri'ne tıklayın.
+* Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Tercihler Eklentisini açın
@@ -34,8 +34,8 @@ Genel
 **Dil**
 
 * Telefonun varsayılan dilini kullanmak için yeni seçenek (önerilir). 
-* AAPS'i standart telefon dilinden farklı bir dilde kullanmak istiyorsanız, diğer dil seçenekleri arasından seçim yapabilirsiniz.
-* Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Sistem varsayılan android dilini seçtiğiniz dile değiştiren komutlarda oluşan bir android sorunu nedeniyle bazen bu karışıklık oluşmaktadır.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Tercihler > Genel
@@ -49,9 +49,9 @@ Güvenlik
 Ana parola
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Sürüm 2.7'den itibaren şifreli oldukları için `ayarları <../Usage/ExportImportSettings.html>`_ dışa aktarabilmek için gereklidir.
-  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefon kullanıcıları tarafından bildirilen bir sorundur.**
+  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. This is a known issue of OnePlus on some phones.**
 
-* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
+* Open Preferences (three-dot menu on top right of home screen)
 * "Genel" altındaki üçgeni tıklayın
 * "Ana-Parola" ya tıklayın
 * Parolayı girin, onaylayın ve Tamam'a tıklayın.
@@ -94,12 +94,12 @@ Görünüm
 Dikey oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Orijinal Görünüm**de **Düğmeler her zaman ekranın altında görüntülenir** ve değişmez.
-* **Geniş Ekran**, diğer dış görünümlere kıyasla tüm grafiklerden daha büyük bir boyuta sahiptir.
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Yatay oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Orijinal Görünüm** ve **Geniş Ekran**'ı kullandığınızda ekranın alt kısmındaki düğmeleri görmek için aşağı kaydırmanız gerekir.
-* **Geniş Ekran**, diğer dış görünümlere kıyasla tüm grafiklerden daha büyük bir boyuta sahiptir.
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Ekran yönüne göre görünüm
@@ -137,7 +137,7 @@ Hızlı Asistan
   
 Varsayılan Geçici hedefler
 -----------------------------------------------------------
-* `Geçici hedefler (GH) <../Usage/temptarget.html#temp-targets>`_ belirli bir süre için kan şekeri hedefinizi değiştirmeyi tanımlamanıza izin verir.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 * Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
@@ -205,7 +205,7 @@ Bolus sihirbazı sonucunun bu kadarını ilet
 Bolus danışmanı
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * `Bolus sihirbazını <../Getting-Started/Screenshots.html#bolus-wizard>`__ çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulacaktır.
-* Düzeltme bolusu kabul edilirse **hiçbir karbonhidrat** kaydedilmez.
+* If correction bolus is accepted **no carbs** will be recorded.
 * Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
 * Tekrar `Bolus sihirbazına <../Getting-Started/Screenshots.html#bolus-wizard>`__ girip yemek istediğiniz karbonhidrat miktarını girmelisiniz.
 
@@ -223,7 +223,7 @@ Hasta yaşı
 -----------------------------------------------------------
 * Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir. 
 * Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir. 
-* Gerçek yaştan daha yüksek olanı seçmek kötü bir fikirdir çünkü insülin iletişim kutusuna yanlış değer girerek (örneğin ondalık noktayı atlayarak) aşırı doz almaya neden olabilir. 
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * Bu sabit güvenlik sınırları için gerçek rakamları bilmek istiyorsanız, `bu sayfada <../Usage/Open-APS-features.html>`_ kullandığınız algoritma özelliğine gidin.
 
 Maks izin verilen bolus [U]
@@ -244,7 +244,7 @@ Döngü
 APS modu
 -----------------------------------------------------------
 * Açık ve kapalı döngü ile düşük glikoz süspansiyonu (DGS) arasında geçiş yapar
-* **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. Manuel olarak onaylandıktan sonra insülin dozlama komutu pompaya aktarılacaktır.. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
+* **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. After manual confirmation, the command to dose insulin will be transferred to pump. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
 * **Kapalı döngü**, GBO önerilerinin sizden onay veya girdi almadan otomatik olarak pompanıza gönderildiği anlamına gelir.  
 * **Düşük glikoz süspansiyonu**, bitirilmiş bir görevi iptal etmeye gerek kalmadan Düşük Glikoz süspansiyonuna girme imkanı verir.
 
@@ -324,7 +324,7 @@ Karbonhidrat gerekli bildirimi
 * Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir.
 * Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
 * Ek olarak, gerekli karbonhidratlar ana ekranınızdaki COB bölümünde görüntülenecektir.
-* Bir eşik değeri tanımlanabilir - bildirimi tetiklemek için gereken minimum karbonhidrat miktarı. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 * İstenirse karbonhidrat gerekli bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilip yayınlanacaktır.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritma, karbonhidratların ne zaman emildiğini belirlemek için BGI (kan şekeri etkisi) kullanır. 
 * Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. 
-* Karbonhidrat emiliminin kan reaksiyonlarınıza göre dinamik olarak hesaplanamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Temel olarak bir ön güvenliktir.
 * Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması * gerektiğini* "bilir". 
 * Beklenen davranıştan pozitif bir sapma olduğunda, bazı karbonhidratlar emilir/çürür. Büyük değişiklik=çok karbonhidrat vs. 
 * min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için `OpenAPS dokümantasyonuna bakın <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min- 5m-karbipakt>`__.

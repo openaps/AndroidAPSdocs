@@ -57,7 +57,7 @@ Profil yardımcısını farklı profiller veya profil değişimleri ile karşıl
 Profili Klonla
 ==================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
+`Yerel profil <../Configuration/Config-Builder.html#local-profile>`_ kullanıyorsanız, doğrudan profil yardımcısından bir profil klonlayabilirsiniz.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profil Yardımcısı profil Klonlama / profil değiştirme

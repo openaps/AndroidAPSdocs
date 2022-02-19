@@ -259,7 +259,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![Auf Hintergrundaufgaben warten](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Schaue auf der [Seite zur Problembehebung in Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) nach bekannten Problemen!
+    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Fehler](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![Build abgeschlossen](../images/studioSetup/51_BuildFinished.png)
 
-* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Klicke auf die Benachrichtigung, um sie zu vergrößern.
 
@@ -347,4 +347,4 @@ Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. A
 
 ## Problembehandlung
 
-Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

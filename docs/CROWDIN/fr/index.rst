@@ -53,7 +53,7 @@ Pour plus de détails, lisez la suite ici.
    Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Vérifications à faire après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installer git <./Installing-AndroidAPS/git-install.rst>
-   Dépannage d'Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Notes de versions <./Installing-AndroidAPS/Releasenotes.rst>
    Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
 
