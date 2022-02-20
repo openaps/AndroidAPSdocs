@@ -145,4 +145,4 @@ Als je om welke reden dan ook terug wilt gaan in de leerdoelen druk dan op "volt
 
 Objectives in Android APS before version 3.0
 ====================================================================================================
-One objective was removed when Android APS 3.0 was released.  The objectives as of version 2.8.2 can be found `here <../Usage/Objectives_old.rst`_.
+One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.rst>`_.
