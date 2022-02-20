@@ -145,4 +145,4 @@ If you want to go back in objectives for whatever reason you can do so by clicki
 
 Objectives in Android APS before version 3.0
 ====================================================================================================
-One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.rst>`_.
+One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.html>`_.
