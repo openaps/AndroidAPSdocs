@@ -1,6 +1,6 @@
 # Pompa Seçimi
 
-AndroidAPS works with a number of insulin pumps. The follow list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
+AndroidAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
