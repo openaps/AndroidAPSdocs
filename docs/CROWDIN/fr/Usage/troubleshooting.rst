@@ -16,8 +16,14 @@ Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Débits de Basal non alignés sur les heures
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
 

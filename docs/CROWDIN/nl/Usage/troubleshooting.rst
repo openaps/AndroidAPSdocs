@@ -16,8 +16,14 @@ Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: fout: Basaal profiel niet ingesteld in hele uren
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 

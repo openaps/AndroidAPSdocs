@@ -16,8 +16,14 @@ Ayarlar
 --------------------------------------------------
 * `Profil <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Hata: Bazal saatlere göre ayarlanamadı
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 

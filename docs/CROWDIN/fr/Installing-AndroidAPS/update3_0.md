@@ -38,3 +38,20 @@
 * Le nouveau mot de passe sera le numéro de série de votre pompe active.
 * Pour Dash: Le numéro de série est imprimé sur le Pod.
 * Pour EROS, il est également listé dans l'onglet POD dans "Numéro de série"
+
+## Warning signal beneath BG
+
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+
+  ![Red BG warning](../images/bg_warn_red.png)
+
+  ![Yellow BG warning](../images/bg_warn_yellow.png)
+
+For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+
+
+## Failure message: Data from different pump
+
+   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+
+To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

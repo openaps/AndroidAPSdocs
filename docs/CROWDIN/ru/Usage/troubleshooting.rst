@@ -16,8 +16,14 @@
 --------------------------------------------------
 * `Профиль <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. изображение:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Ошибка: Базал не выстроен по часам
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. изображение:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Клиент Nightscout <./Usage/Troubleshooting-NSClient.md>`_
 

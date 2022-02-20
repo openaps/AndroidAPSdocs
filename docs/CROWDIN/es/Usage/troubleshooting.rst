@@ -16,8 +16,14 @@ Configuración
 --------------------------------------------------
 * `Perfil <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. imagen:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Basal no alineado con las horas
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. imagen:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * ` Nightscout Cliente <../Usage/Troubleshooting-NSClient.html>`_
 

@@ -77,7 +77,7 @@ Acesta este primul ecran pe care îl veți descoperi când deschideți AndroidAP
 
 Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-*Note*: The last 24h hours are taken into accord. So even after you solved the origin problem, the duplicate BGs stay there for a while and will cause the warning signal to not disappear.
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
 To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 

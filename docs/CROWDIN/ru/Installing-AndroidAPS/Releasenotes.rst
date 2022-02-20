@@ -16,7 +16,7 @@ ContextEdit.
 
 Версия Android и версия AAPS
 ====================================
-Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9. 
+Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9.
 
 Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
@@ -59,9 +59,9 @@ Release date: 31-01-2022
 Изменения
 ----------------------
 * 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <..../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Поддержка Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.rst>`_
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Поддержка Glunovo
 * Внутренняя база данных обновлена до Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Часть кода переписана на Kotlin @MilosKozak
@@ -75,7 +75,7 @@ Release date: 31-01-2022
 
 * Изменение поведения смены профиля. Теперь имеется различие между Переключением Профилей *(чего хочет пользователь)* и Изменением Профиля *(когда изменение инициируется помпой)* @MilosKozak @Tebbe
 * Можно начать выполнение временной цели при создании переключателя профиля @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak. 
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
 * Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Отслеживание действий пользователя @Philoul
 * Новый триггер автоматизации - значение временной цели - TempTargetValue @Philoul
@@ -90,10 +90,10 @@ Release date: 31-01-2022
 * Исправлена ошибка, связанная с нестабильными данными CGM @MilosKozak
 * Улучшение связи с DanaR и DanaRS @MilosKozak
 * Интеграция с CircleCI @MilosKozak
-* Files location change: 
+* Files location change:
 
-   * /AAPS/extra (engineering mode) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (engineering mode)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
 
 Версия 2.8.2
@@ -117,8 +117,8 @@ Release date: 31-01-2022
 
 Важные подсказки
 ----------------------
-* Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1. 
-* Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.). 
+* Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1.
+* Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.).
 * ВНИМАНИЕ: НЕ делайте это, если есть какие-либо другие методы обработки (например, трансляция и загрузка/синхронизация xDrip...).
 * NS_UPLOAD_ONLY может быть выключен только в инженерном режиме.
 
@@ -142,28 +142,28 @@ Release date: 31-01-2022
 
 Важные Примечания
 ----------------------
-* **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории. 
+* **Минимальная версия теперь Android 8.0.** Для более старых версий Android, все еще можно использовать 2.6.1.4 в старом репозитории.
 * «Цели претерпели изменения. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Завершите выполнение целей до обновления.**
 * Расположение репозитория https://github.com/nightscout/AndroidAPS . Если вы не знакомы с Git самый простой способ обновления- удалить каталог с AndroidAPS и `заново клонировать <../Installing-AndroidAPS/Building-APK.html>`_.
 * Используйте ` Android Studio 4.1.1 <https://developer.android.com/studio/>` _ или новее, чтобы построить apk.
 
 Новые возможности
 ----------------------
-* `Поддержка Omnipod Eros <../Configuration/OmnipodEros. tml>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, все остальные, участвующие в разработке драйвера для Omnipod а также @jlucasvt с GetRileyLink.org 
-* `помощник болюса <../Configuration/Preferences.html#bolus-advisor>`_ & `подсказка о приеме пищи <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `Поддержка Omnipod Eros <../Configuration/OmnipodEros. tml>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, все остальные, участвующие в разработке драйвера для Omnipod а также @jlucasvt с GetRileyLink.org
+* `помощник болюса <../Configuration/Preferences.html#bolus-advisor>`_ & `подсказка о приеме пищи <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak
 * `Новый циферблат смарт-часов <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Улучшение связи с Dana RS @MilosKozak 
+* Улучшение связи с Dana RS @MilosKozak
 * Удален алгоритм "Неизмененные значения CGM " в SMB для оригинального приложения Dexcom
 * Новый скин `Низкое разрешение <../Configuration/Preferences.html#skin>`_
 * Новый `тип пациента "Беременные" <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* Новый макет вкладки NSClient @MilosKozak 
-* Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak 
+* Новый макет вкладки NSClient @MilosKozak
+* Передача данных об инсулине, чувствительности и настройках отображения непосредственно с приложения AAPS @MilosKozak
 * `Фильтр параметров конфигурации <../Configuration/Preferences.html> ` _ @Brian Quinion
 * Новые иконки помп @Rig22 @@teleriddler @osodebailar
 * Новый тип инсулина `Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* Улучшения Помощника настройки @MilosKozak 
-* Улучшения безопасности @dlvoy 
-* Различные улучшения и исправления @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion 
+* Улучшения Помощника настройки @MilosKozak
+* Улучшения безопасности @dlvoy
+* Различные улучшения и исправления @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
 
 Версия 2.7.0
 ================
@@ -212,7 +212,7 @@ Release date: 31-01-2022
 Новые возможности
 ----------------------
 * Insight: Выключение вибрации при болюсах на версии прошивки 3-вторая попытка
-* В остальном эквивалентна 2.6.1.3. Обновление не является обязательным. 
+* В остальном эквивалентна 2.6.1.3. Обновление не является обязательным.
 
 Версия 2.6.1.3
 ================
@@ -223,7 +223,7 @@ Release date: 31-01-2022
 Новые возможности
 ------------------
 * Insight: Выключение вибрации при болюсах на версии прошивки 3
-* В остальном эквивалентна 2.6.1.2. Обновление не является обязательным. 
+* В остальном эквивалентна 2.6.1.2. Обновление не является обязательным.
 
 Версия 2.6.1.2
 ================
@@ -276,7 +276,7 @@ Release date: 31-01-2022
 ------------------
 * Небольшие изменения дизайна (стартовая страница...)
 * Удалена закладка / меню Careportal - подробнее `здесь <../Usage/CPbefore26.html>`__
-* Новый плагин `Local Profile <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Локальный профиль может иметь более 1 профиля
   * Профили можно копировать и редактировать
@@ -284,7 +284,7 @@ Release date: 31-01-2022
   * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
   * Vertical NumberPicker для целей
 * SimpleProfile удален
-* `Пролонгированный болюс <../Usage/Extended-Carbs.html > ` _ функция - замкнутый цикл будет отключена
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * Плагин MDT: Исправлена ошибка с дублирующимися записями
 * Единицы не указаны в профиле, но это глобальные параметры
 * Добавлены новые параметры для мастера установки
@@ -307,7 +307,7 @@ Release date: 31-01-2022
 ==================================================
 Дата выпуска: 31-10-2019
 
-Обратите внимание на " важные примечания <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Обратите внимание на " важные примечания <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Исправлена ошибка в сетевом состоянии, которые приводят к ошибкам (не критично, но будет тратить много энергии на пересчет).
 * Новая иерархия версий, позволяющая выполнять незначительные обновления без уведомлений об обновлении.
 

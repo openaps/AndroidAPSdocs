@@ -87,7 +87,7 @@ Lade [Android Studio von dieser Seite](https://developer.android.com/studio/inst
 
 Beim ersten Start öffnet sich der Setup Wizard:
 
-# Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
+Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
 ![Einstellungen nicht importieren](../images/studioSetup/01_ImportSettings.png)
 
@@ -259,7 +259,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![Auf Hintergrundaufgaben warten](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
+    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Schaue auf der [Seite zur Problembehebung in Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) nach bekannten Problemen!
     
     ![Gradle Sync Fehler](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![Build abgeschlossen](../images/studioSetup/51_BuildFinished.png)
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
+* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Klicke auf die Benachrichtigung, um sie zu vergrößern.
 
@@ -347,4 +347,4 @@ Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. A
 
 ## Problembehandlung
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
