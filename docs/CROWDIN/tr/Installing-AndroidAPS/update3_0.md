@@ -41,7 +41,7 @@
 
 ## Warning signal beneath BG
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
   ![Red BG warning](../images/bg_warn_red.png)
 
