@@ -73,11 +73,11 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
-#### BG warning sign
+#### KŞ uyarı işareti
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Not*: AAPS hesaplamalar için 30 saate kadar olan süreyi dikkate alır. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
 To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
