@@ -98,7 +98,7 @@ At the bottom of the screen there are three buttons:
 
 ![Pompa Geçmişi İletişim Kutusu](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
 ## RL Durumu (RileyLink Durumu)
 
