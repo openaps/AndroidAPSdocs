@@ -1,15 +1,15 @@
 # Medtronic Pompaları
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+AAPS sürücüsü, G ile biten (530G, 600 serisi [630G, 640G, 670G], 700 serisi [770G, 780G] vb.) tüm modellerde ve daha yeni modellerde çalışmaz.
 
 The following model and firmware combinations are compatible:
 
 - 512/712 (any firmware version)
 - 515/715 (any firmware version)
 - 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 523/723 (pompa yazılımı 2.4A veya altı)
+- 554/754 AB sürümü (pompa yazılımı 2.6A veya altı)
+- 554/754 Kanada sürümü (pompa yazılımı 2.7A veya altı)
 
 You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
