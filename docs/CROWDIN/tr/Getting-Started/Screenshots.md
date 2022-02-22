@@ -91,29 +91,29 @@ Ancak, çok sayıda kopya olduğunda, aşağıdakileri yapmak daha kolay olabili
 
 Kırmızı uyarı işareti, hemen harekete geçmenizi işaret ediyor: Döngünün işini doğru yapmasını engelleyen, yinelenen KŞ verileri alıyorsunuz. Bu nedenle, çözülene kadar döngünüz devre dışı bırakılacaktır.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Kırmızı KŞ uyarısı](../images/bg_warn_red.png)
 
 Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 * NS sitenizde Dexcom köprüsü etkin mi? Heroku'ya (veya başka bir yer sağlayıcısına) giderek köprüyü devre dışı bırakın, "etkinleştir" değişkenini düzenleyin ve buradaki "köprü" bölümünü kaldırın. (Heroku için [ayrıntıları burada bulabilirsiniz](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your NS site?
-* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+* Birden fazla kaynakKŞ'nizi NS'ye yüklüyor mu? BYODA uygulamasını kullanıyorsanız, AAPS'de yüklemeyi etkinleştirin, ancak xDrip+ kullanıyorsanız, xDrip+'da etkinleştirmeyin.
+* KŞ'nizi takip eden ve aynı zamanda NS sitenize tekrar yükleyebilecek takipçileriniz var mı?
+* Son çare: AAPS'de NS İstemci ayarlarınıza gidin, senkronizasyon ayarlarını seçin ve "NS'den CGM verilerini kabul et" seçeneğini devre dışı bırakın.
 
-##### Yellow warning sign
+##### Sarı uyarı işareti
 
-* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+* Sarı uyarı sinyali, KŞ'nizin düzensiz zaman aralıklarında geldiğini veya bazı KŞ verilerinin eksik olduğunu gösteriyor.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-* Usually you do not have to take any action. The closed loop will continue to work!
+* Genellikle herhangi bir işlem yapmanız gerekmez. Kapalı döngü çalışmaya devam eder!
 
-* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
-* Special note for libre users:
+* Bir sensör değişikliği, KŞ verilerinin sabit akışını kesintiye uğrattığından, sensör değişikliğinden sonra sarı bir uyarı işareti normaldir ve endişelenecek bir şey yoktur.
+* Libre kullanıcıları için özel not:
    
-   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-   * Also jumpy readings interrupt the continous flow.
-   * Therefore the yellow warning sign will be 'always on' for libre users.
+   * Her libre verisi birkaç saatte bir veya iki dakika kayar, bu da düzenli KŞ aralıklarının mükemmel akışını asla elde edemeyeceğiniz anlamına gelir.
+   * Ayrıca atlamalı okumalar sürekli akışı keser.
+   * Bu nedenle, libre kullanıcıları için sarı uyarı işareti 'her zaman açık' olacaktır.
 
 ### Bölüm D - IOB, COB, BO ve OD
 
@@ -125,11 +125,11 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Yakın zamanda bazalınız düşürülmüşse, (IOB) aktif insülin negatif olabilir.
    * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Tahıl: [Aktif karbonhidrat (COB)](../Usage/COB-calculation.rst) - daha önce yediğiniz henüz emilmemiş karbonhidratlar -> karbonhidrat gerekiyorsa simge yanıp söner
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
-* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
+* Mor çizgi: bazal oran - geçici bazal orandaki değişiklikleri yansıtan simge (%100'de sabit çizgi) 
+   * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
+* Yukarı & aşağı oklar: [otoduyarlılık](../Usage/Open-APS-features#autosens) durumunu (etkin veya devre dışı) belirtir ve değer simgenin altında gösterilir.
 
 #### Carbs required
 
