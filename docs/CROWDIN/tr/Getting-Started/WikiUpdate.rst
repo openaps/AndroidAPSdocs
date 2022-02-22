@@ -3,12 +3,12 @@ Dokümanlar güncellemeleri ve değişiklikleri
 
 Şubat 2022
 ==================================================
-* `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
-* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
+* `KŞ kalite uyarı işareti <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
+* `Medtronic pompa güncellemesi <../Configuration/MedtronicPump.html>`_ @dottedfingertips
 * `AndroidAPS 3.0 güncellemesinden sonra gerekli kontroller <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 * `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @ robertrub @vanelsberg
-* Update docs for AAPS 3.0 (partly) @xJoe
-* `Wear OS for AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
+* AAPS 3.0 için dokümanları güncelleyin (kısmen) @xJoe
+* `AAPS 3.0 için Wear OS <../Configuration/Watchfaces.html>`_ @peterleimbach
 
 Ocak 2022
 ==================================================
