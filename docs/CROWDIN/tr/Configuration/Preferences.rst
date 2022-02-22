@@ -387,7 +387,7 @@ NSClient
 * Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
 * **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
 * *Uygulamanın NS'ye başlatılması*, uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez; bundan daha sık olması durumunda sorun çıkarır (örn. AAPS için pil optimizasyonu devre dışı değil). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
+* `yerel profil <../Configuration/Config-Builder.html#local-profile>`_ içindeki etkinleştirilmiş değişiklikler Nightscout sitenize yüklenir.
 
 Bağlantı Ayarları
 -----------------------------------------------------------
