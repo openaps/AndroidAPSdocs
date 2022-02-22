@@ -77,25 +77,25 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
-*Not*: AAPS hesaplamalar için 30 saate kadar olan süreyi dikkate alır. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Not*: AAPS hesaplamalar için 30 saate kadar olan süreyi dikkate alır. Dolayısıyla, sorun çözüldükten sonra bile, son düzensiz aralık oluştuktan sonra sarı üçgenin kaybolması yaklaşık 30 saat sürebilir.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Bunu hemen kaldırmak için Dexcom/xDrip+ sekmesinden birkaç girişi manuel olarak silmeniz gerekir.
 
-However, when there are a lot of duplicates, it might be easier to
+Ancak, çok sayıda kopya olduğunda, aşağıdakileri yapmak daha kolay olabilir
 
-* [backup your settings](../Usage/ExportImportSettings.rst),
-* reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.rst) again
+* [ayarlarınızı yedekleyin](../Usage/ExportImportSettings.rst),
+* bakım menüsünde veritabanınızı sıfırlayın ve
+* [ayarlarınızı tekrar içe aktarın](../Usage/ExportImportSettings.rst)
 
-##### Red warning sign: Duplicate BG data
+##### Kırmızı uyarı işareti: Yinelenen KŞ verileri
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Kırmızı uyarı işareti, hemen harekete geçmenizi işaret ediyor: Döngünün işini doğru yapmasını engelleyen, yinelenen KŞ verileri alıyorsunuz. Bu nedenle, çözülene kadar döngünüz devre dışı bırakılacaktır.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* NS sitenizde Dexcom köprüsü etkin mi? Heroku'ya (veya başka bir yer sağlayıcısına) giderek köprüyü devre dışı bırakın, "etkinleştir" değişkenini düzenleyin ve buradaki "köprü" bölümünü kaldırın. (Heroku için [ayrıntıları burada bulabilirsiniz](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your NS site?
 * Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
