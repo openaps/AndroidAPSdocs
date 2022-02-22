@@ -140,11 +140,11 @@ AndroidAPS, Saat Dilimi değişikliklerini otomatik olarak algılar ve telefonun
 
 Doğuya seyahat etmek, şimdiki zamana saat ekleyeceğiniz anlamına gelir (ör. GMT+0'dan GMT+2'ye) herhangi bir çakışma olmayacağından (örneğin aynı saatin iki kez tekrar etmesi mümkün olmayacak) herhangi bir soruna yol açmayacaktır. Bununla birlikte, batıya seyahat etmek, mevcut zamanda geriye gittiğiniz için sorunlara neden olabilir ve bu da hatalı IOB verileriyle sonuçlanabilir.
 
-Batıya seyahat ederken görülen sorunlar geliştiriciler tarafından biliniyor ve olası bir çözüm üzerinde çalışmalar devam ediyor. Daha fazla ayrıntı için https://github.com/andyrozman/RileyLinkAAPS/issues/145 adresine bakın. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+Batıya seyahat ederken görülen sorunlar geliştiriciler tarafından biliniyor ve olası bir çözüm üzerinde çalışmalar devam ediyor. Daha fazla ayrıntı için https://github.com/andyrozman/RileyLinkAAPS/issues/145 adresine bakın. Şimdilik lütfen böyle bir sorun ortaya çıkabileceğini unutmayın ve saat dilimlerini değiştirirken dikkatli bir şekilde izleyin.
 
-### Is a GNARL a fully compatible Rileylink combatible device?
+### Bir GNARL, tam uyumlu Rileylink ile karşılaştırılabilir bir cihaz mıdır?
 
-The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
+GNARL kodu, AndroidAPS'de Medtronic sürücüsü tarafından kullanılan tüm işlevleri tam olarak destekler, bu da tamamen uyumlu olduğu anlamına gelir. Uyumlu bir donanım tedarik etmeniz ve ardından GNARL kodunu cihaza yüklemeniz gerekeceğinden, bunun ek çalışma gerektireceğini unutmamak önemlidir.
 
 **Yazılımcı notu:** Lütfen GNARL yazılımının hala deneysel olduğunu, az test edildiğini ve RileyLink kadar güvenli olarak değerlendirilmemesi gerektiğini unutmayın.
 
@@ -152,15 +152,15 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 ### RileyLink ve/veya pompa ile bağlantımı kaybedersem ne yapmalıyım?
 
-There are a number of options to try and resolve connectivity issues.
+Bağlantı sorunlarını çözmek için çeşitli seçenekler deneyebilirsiniz.
 
-- Use the "Wake Up and Tune" button in the ACT tab as detailed above.
-- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
-- Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
-    1. Restart the phone
-    2. *While* the phone is restarting restart the Rileylink device
-    3. Open AndroidAPS and allow the connection to restore
+- Yukarıda ayrıntılı olarak açıklandığı gibi EYLEM sekmesindeki "Uyan ve Ayarla" butonunu kullanın.
+- Telefonunuzda Bluetooth'u devre dışı bırakın, 10 saniye bekleyin ve ardından tekrar etkinleştirin. Bu işlem Rileylink cihazını telefona yeniden bağlanmaya zorlayacaktır.
+- Rileylink cihazını sıfırlayın. Ardından EYLEM sekmesindeki "Rileylink Yapılandırmasını Sıfırla" butonunu kullanmanız gerekir.
+- Kullanıcılar, diğer yöntemlerin olmadığı durumlarda tekrar bağlantı için aşağıdaki adımların etkili olduğunu bulmuşlardır: 
+    1. Telefonunuzu yeniden başlatın
+    2. *Telefon yeniden başlatılırken* Rileylink cihazınızı yeniden başlatın
+    3. AndroidAPS'i açın ve bağlantının geri yüklenmesine izin verin
 
 ### Pompamın hangi Frekansı kullandığını nasıl belirleyebilirim?
 
