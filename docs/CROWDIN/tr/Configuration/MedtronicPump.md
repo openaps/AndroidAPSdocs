@@ -120,37 +120,37 @@ Medtronic sürücüsü kullanıldığında, Eylemler Sekmesine iki buton eklenir
 
 ### OpenAPS kullanıcıları
 
-OpenAPS kullanıcıları, Medtronic pompa ile AndroidAPS'in OpenAPS'den tamamen farklı bir yaklaşım kullandığını unutmamalıdır. AndroidAPS'i kullanmak ve pompayla etkileşim kurmanın birincil yöntemi telefonunuzdur. Normal kullanımda pompa menüsünü sadece rezervuar ve set değiştirirken kullanırsınız. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AndroidAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS kullanıcıları, Medtronic pompa ile AndroidAPS'in OpenAPS'den tamamen farklı bir yaklaşım kullandığını unutmamalıdır. AndroidAPS'i kullanmak ve pompayla etkileşim kurmanın birincil yöntemi telefonunuzdur. Normal kullanımda pompa menüsünü sadece rezervuar ve set değiştirirken kullanırsınız. Bu, bolusun en azından bir kısmının genellikle hızlı bolus butonları aracılığıyla iletildiği OpenAPS kullanımından farklıdır. Pompanın manuel olarak bolus iletmek için kullanılması durumunda, AndroidAPS aynı anda bir bolus iletmeye çalışırsa sorun yaşayabilirsiniz. Bu gibi durumlarda sorunları önlemek için gerekli kontroller vardır ancak yine de mümkünse bundan kaçınılmalıdır.
 
 ### Log kayıtları
 
-In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
+Medtronic pompa işlevinizde sorun gidermeniz gerekirse, ekranın sol üst köşesindeki menü simgesini seçin, Bakım ve Günlük Ayarları'nı seçin. Herhangi bir Medtronic sorununu gidermek için Pump, PumpComm, PumpBTComm seçili olmalıdır.
 
 ### Medtronic CGM
 
-Medtronic CGM is currently NOT supported.
+Medtronic CGM (SGİ) sensörleri şu anda DESTEKLENMEMEKTEDİR.
 
 ### Pompanın manuel kullanımı
 
-You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AndroidAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
+Pompanızda manuel olarak bolus göndermekten veya GBO'ları ayarlamaktan kaçınmalısınız. Tüm bu komutlar AndroidAPS aracılığıyla yapılmalıdır. Manuel komutların kullanılması durumunda, herhangi bir sorun riskini azaltmak için aralarında en az 3 dakikalık bir gecikme olmalıdır.
 
 ### Saat dilimi değişiklikleri ve DST (Yaz Saati Uygulaması) veya Medtronic Pompa ve AndroidAPS ile Seyahat
 
-AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
+AndroidAPS, Saat Dilimi değişikliklerini otomatik olarak algılar ve telefonunuz yeni saate geçtiğinde Pompanın saatini günceller.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Doğuya seyahat etmek, şimdiki zamana saat ekleyeceğiniz anlamına gelir (ör. GMT+0'dan GMT+2'ye) herhangi bir çakışma olmayacağından (örneğin aynı saatin iki kez tekrar etmesi mümkün olmayacak) herhangi bir soruna yol açmayacaktır. Bununla birlikte, batıya seyahat etmek, mevcut zamanda geriye gittiğiniz için sorunlara neden olabilir ve bu da hatalı IOB verileriyle sonuçlanabilir.
 
-The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
+Batıya seyahat ederken görülen sorunlar geliştiriciler tarafından biliniyor ve olası bir çözüm üzerinde çalışmalar devam ediyor. Daha fazla ayrıntı için https://github.com/andyrozman/RileyLinkAAPS/issues/145 adresine bakın. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
 ### Is a GNARL a fully compatible Rileylink combatible device?
 
 The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Yazılımcı notu:** Lütfen GNARL yazılımının hala deneysel olduğunu, az test edildiğini ve RileyLink kadar güvenli olarak değerlendirilmemesi gerektiğini unutmayın.
 
-## FAQ
+## SSS
 
-### What to do if I loose connection to RileyLink and/or pump?
+### RileyLink ve/veya pompa ile bağlantımı kaybedersem ne yapmalıyım?
 
 There are a number of options to try and resolve connectivity issues.
 
