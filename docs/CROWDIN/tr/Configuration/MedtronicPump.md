@@ -78,49 +78,49 @@ AndroidAPS'i medtronic pompanızla çalışacak şekilde ayarlarken aşağıdaki
 ![MDT Sekmesi](../images/Medtronic02.png) AndroidAPS, bir Medtronic pompası kullanacak şekilde yapılandırıldığında, ekranın üst kısmında bir MDT sekmesi gösterilecektir. Bu sekme, Medtronic'e özgü bazı eylemlerle birlikte mevcut pompa durumu bilgilerini görüntüler.
 
 - **RileyLink Durumu**: Telefonunuz ve Rileylink uyumlu cihaz arasındaki bağlantının mevcut durumu. Bu satır her zaman "Bağlı" olarak görünmelidir. Diğer herhangi bir durum, kullanıcı müdahalesini gerektirebilir. 
-- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
-- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AndroidAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc. 
-- **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
-- **Last connection**: How long ago the last succesful pump connection happened.
-- **Last Bolus**: How long ago the last succesful bolus was delivered.
-- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
-- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
+- **RileyLink Pili**: EmaLink veya OrangeLink cihazınızın mevcut pil seviyesi. Medtronic Pompa Yapılandırma menüsünde "OrangeLink/EmaLink/DiaLink cihazı tarafından bildirilen pil seviyesini göster" seçimine bağlıdır.
+- **Pompa Durumu**: Pompa bağlantısının mevcut durumu. Pompa sürekli bağlı olmayacağından, burada genellikle uyku simgesi görünecektir. "Uyanıyor" da dahil olmak üzere AndroidAPS bir komut iletmeye çalışırken "Saat Alınıyor", "GBO Ayarla" gibi diğer olası pompa komutlarını da burada bulabilirsiniz. 
+- **Pil**: Medtronic Pompa Yapılandırma menüsünde Pil Tipi (Güç Görünümü) için seçilen değere göre pil durumunu gösterir. 
+- **Son bağlantı**: Son başarılı pompa bağlantısının ne kadar önce gerçekleştiği.
+- **Son Bolus**: Son başarılı bolusun ne kadar süre önce verildiği.
+- **Temel Bazal Oranı**: Aktif Profilinizde şu anda pompada çalışan temel bazal orandır.
+- **Geçici Bazal**: Şu anda saatte 0 ünite de olabilen teslim edilen geçici bazal.
 - **Rezervuar**: Rezervuarda ne kadar insülin olduğu gösterir.(saatte bir güncellenir).
 - **Hatalar**: Sorun varsa hata dizesi (çoğunlukla yapılandırmada hata olup olmadığını gösterir).
 
-At the bottom of the screen there are three buttons:
+Ekranın altında üç buton vardır:
 
-- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Yenile**: Pompanın mevcut durumunu yenilemek içindir. Bu buton komple veri yenilediğinden (geçmişi al, zamanı al/ayarla, profil al, pil durumunu al, vb.) yalnızca bağlantı uzun bir süre boyunca kopmuşsa kullanılmalıdır.
+- **Pompa Geçmişi**: Pompa geçmişini gösterir ([aşağıya](../Configuration/MedtronicPump#pump-history) bakın)
+- **RL Stats**: RL Durumunu Gösterir ([aşağıya](../Configuration/MedtronicPump#rl-status-rileylink-status) bakın)
 
 ## Pompa geçmişi
 
 ![Pompa Geçmişi İletişim Kutusu](../images/Medtronic03.png)
 
-Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+Pompa geçmişi her 5 dakikada bir alınır ve yerel olarak saklanır. Yalnızca 24 saatlik geçmiş değerler depolanır. Gerektiğinde pompa davranışını görmenin bir yoludur. Depolanan öğeler yalnızca AndroidAPS ile ilgili olanlardır ve ilgisi olmayan bir yapılandırma işlevi içermez.
 
 ## RL Durumu (RileyLink Durumu)
 
 ![RileyLink Durumu - Ayarları](../images/Medtronic04.png) ![RileyLink Durumu - Geçmişi](../images/Medtronic05.png)
 
-The RL Status dialog has two tabs:
+RL Durumu iletişim kutusunda iki sekme bulunur:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Cihaz Tipi her zaman Medtronic Pompa, Model kullandığınız model, Seri numarası konfigüre edilmiş seri numarası, Pompa Frekansı hangi frekansı kullandığınızı gösterir. Son Frekans en son kullanılan frekanstır.
+- **Ayarlar**: RileyLink ile ilgili ayarları gösterir: Yapılandırılmış Adres, Bağlı Cihaz, Bağlantı Durumu, Bağlantı Hatası ve RileyLink yazılımı sürümleri. Cihaz Tipi her zaman Medtronic Pompa, Model kullandığınız model, Seri numarası konfigüre edilmiş seri numarası, Pompa Frekansı hangi frekansı kullandığınızı gösterir. Son Frekans en son kullanılan frekanstır.
 - **Geçmiş**: İletişim geçmişini gösterir. RileyLink satırları, RileyLink için durum değişikliklerini, Medtronic satırları ise pompaya hangi komutların gönderildiğini gösterir.
 
 ## Eylemler
 
-When the Medtronic driver is used, two additional actions are added to Actions Tab:
+Medtronic sürücüsü kullanıldığında, Eylemler Sekmesine iki buton eklenir:
 
-- **Wake and Tune Up** - In the event that AndroidAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a succesful connection is made the succesful frequency will be set as the default. 
-- **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
+- **Uyan ve Ayarla** - AndroidAPS'in pompanıza uzun bir süre boyunca bağlanmaması durumunda (5 dakikada bir bağlanmalıdır) bu buton ile zorlayabilirsiniz. Bu buton pompanız tarafından kullanılan tüm olası radyo frekanslarını arayarak pompanızla iletişim kurmaya çalışacaktır. Başarılı bir bağlantı yapılması durumunda, başarılı frekans varsayılan olarak ayarlanacaktır. 
+- **RileyLink Yapılandırmasını Sıfırla** - RileyLink uyumlu cihazınızı sıfırlarsanız, cihazın yeniden yapılandırılabilmesi için bu eylemi kullanmanız gerekebilir (frekans ayarı, frekans tipi ayarı, yapılandırılmış kodlama).
 
 ## Önemli notlar
 
 ### OpenAPS kullanıcıları
 
-OpenAPS users should note that AndroidAPS with Medtronic uses a completely different approach than OpenAPS. Using AndroidAPS the primary method of interacting with th pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AndroidAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
+OpenAPS kullanıcıları, Medtronic pompa ile AndroidAPS'in OpenAPS'den tamamen farklı bir yaklaşım kullandığını unutmamalıdır. AndroidAPS'i kullanmak ve pompayla etkileşim kurmanın birincil yöntemi telefonunuzdur. Normal kullanımda pompa menüsünü sadece rezervuar ve set değiştirirken kullanırsınız. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AndroidAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
 
 ### Log kayıtları
 
@@ -130,11 +130,11 @@ In the event you need to troubleshoot your Medtronic pump function select the me
 
 Medtronic CGM is currently NOT supported.
 
-### Manual use of pump
+### Pompanın manuel kullanımı
 
 You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AndroidAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+### Saat dilimi değişiklikleri ve DST (Yaz Saati Uygulaması) veya Medtronic Pompa ve AndroidAPS ile Seyahat
 
 AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
