@@ -46,7 +46,7 @@ The following settings should be configured on the pump in order for AndroidAPS 
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Medtronic Ayarları](../images/Medtronic01a.png)
 
 While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
 
@@ -166,7 +166,7 @@ There are a number of options to try and resolve connectivity issues.
 
 ![Pompa Modeli](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Frekans için olası değerler şunlardır:
+Pompanın arkasında, 3 harfli özel bir kodla birlikte model numaranızın ayrıntılarını veren bir satır bulacaksınız. İlk iki harf frekans tipini, son harf ise rengi belirler. Frekans için olası değerler şunlardır:
 
 - NA - Kuzey Amerika (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
 - CA - Kanada (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
