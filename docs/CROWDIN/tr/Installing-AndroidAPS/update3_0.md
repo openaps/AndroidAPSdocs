@@ -1,9 +1,9 @@
-# Necessary checks after update to AndroidAPS 3.0
+# AndroidAPS 3.0 güncellemesinden sonra gerekli kontroller
 
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.**
+* **Minimum Android sürümü artık 9.0'dır.**
+* **Veriler yeni veritabanına taşınmaz.**
 
-  Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
 
   Plan the update carefully!!! Best in situation without active insulin and carbs
 
