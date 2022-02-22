@@ -43,9 +43,9 @@
 
 Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Kırmızı KŞ uyarısı](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
 For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
 
