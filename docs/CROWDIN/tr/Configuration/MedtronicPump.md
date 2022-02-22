@@ -75,7 +75,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 ## MEDTRONIC (MDT) Sekmesi
 
-![MDT Tab](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+![MDT Sekmesi](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
@@ -96,13 +96,13 @@ At the bottom of the screen there are three buttons:
 
 ## Pompa geçmişi
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Pompa Geçmişi İletişim Kutusu](../images/Medtronic03.png)
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
 ## RL Durumu (RileyLink Durumu)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![RileyLink Durumu - Ayarları](../images/Medtronic04.png) ![RileyLink Durumu - Geçmişi](../images/Medtronic05.png)
 
 The RL Status dialog has two tabs:
 
@@ -162,12 +162,12 @@ There are a number of options to try and resolve connectivity issues.
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AndroidAPS and allow the connection to restore
 
-### How to determine what Frequency my pump uses
+### Pompamın hangi Frekansı kullandığını nasıl belirleyebilirim?
 
-![Pump Model](../images/Medtronic06.png)
+![Pompa Modeli](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Frekans için olası değerler şunlardır:
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Kuzey Amerika (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
+- CA - Kanada (frekans seçiminde "ABD ve Kanada (916 MHz)" seçeneğini seçmeniz gerekir)
+- WW - Dünya Çapında (frekans seçiminde "Dünya Çapında (868 Mhz)" seçmeniz gerekir)
