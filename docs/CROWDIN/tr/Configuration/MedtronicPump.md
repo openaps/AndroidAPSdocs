@@ -85,8 +85,8 @@ AndroidAPS'i medtronic pompanızla çalışacak şekilde ayarlarken aşağıdaki
 - **Last Bolus**: How long ago the last succesful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
 - **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Rezervuar**: Rezervuarda ne kadar insülin olduğu gösterir.(saatte bir güncellenir).
+- **Hatalar**: Sorun varsa hata dizesi (çoğunlukla yapılandırmada hata olup olmadığını gösterir).
 
 At the bottom of the screen there are three buttons:
 
