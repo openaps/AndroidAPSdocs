@@ -1,4 +1,4 @@
-# Update to a new version or branch
+# Yeni bir ana sürüme veya yan sürüme güncelleme
 
 ## Programı İndirmek yerine kendiniz oluşturun...
 
