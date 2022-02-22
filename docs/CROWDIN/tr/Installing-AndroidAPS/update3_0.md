@@ -3,11 +3,11 @@
 * **Minimum Android sürümü artık 9.0'dır.**
 * **Veriler yeni veritabanına taşınmaz.**
 
-  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
 
-  Plan the update carefully!!! Best in situation without active insulin and carbs
+  Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
 
-* Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
+* Yeni ve değiştirilen özelliklerle ilgili ayrıntılar için lütfen [Sürüm Notlarına](../Installing-AndroidAPS/Releasenotes) bakın.
 
 
 ## Check automations
