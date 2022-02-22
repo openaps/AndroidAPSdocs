@@ -75,20 +75,20 @@ Bluetooth'un düzgün çalışması için konum servisleri ("GPS") etkinleştiri
 
 Google Play Store'daki orijinal Dexcom uygulaması, değerleri diğer uygulamalara yayınlamadığından çalışmayacaktır. Bu nedenle, topluluk tarafından biraz değiştirilmiş bir sürüm gereklidir. Yalnızca bu değiştirilmiş Dexcom uygulaması AAPS ile iletişim kurabilir. Ek olarak, değiştirilmiş Dexcom Uygulaması, yalnızca [Dexcom'un uyumluluk listesindeki](https://www.dexcom.com/dexcom-international-complete) değil, tüm Android akıllı telefonlarla kullanılabilir.
 
-To do this perform the following steps on your smartphone:
+Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 1. Orijinal Dexcom uygulaması zaten yüklüyse: 
     * Sensörü durdurun
     * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
 2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
-3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+3. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
+4. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
+    * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
+    * Düşük `KAPALI`
+    * Yüksek `KAPALI`
+    * Artış oranı `KAPALI`
+    * Düşme oranı `KAPALI`
+    * Sinyal kaybı `KAPALI`
 
 ## AndroidAPS'i yükleyin
 
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
 4. Bu örnek kurulumda yardımcıyı kullandık
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
