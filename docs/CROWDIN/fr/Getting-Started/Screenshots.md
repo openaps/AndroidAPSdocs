@@ -190,48 +190,48 @@ You need to find out why you get duplicate BGs:
    
    Cette ligne de prédiction montre comment la trajectoire de l'IA changerai si la pompe arrêtait toute injection d'insuline (DBT 0%).
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* Ligne **jaune foncé**: [RNS](../Configuration/Sensitivity-detection-and-COB#sensibilite-oref1) (Repas Non Signalés)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Les Repas Non Signalés signifient qu'une augmentation significative de la glycémie liée aux repas, à l'adrénaline ou à d'autres facteurs est détectée. Cette ligne de prédiction est similaire à la ligne ORANGE GA, mais elle suppose que les déviations diminueront de façon constante (en étendant le taux de réduction actuel).
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
 
 #### Basals
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* Une ligne **bleue continue** indique le débit de basal de votre pompe et reflète l'injection réelle au fil du temps.
+* La ligne **bleue pointillée** est ce qu'aurait dû être le débit de basal s'il n'y avait pas d'ajustements de débit de basal temporaire (DBT).
+* Quand le débit de basal standard est donné, la zone sous la courbe est affichée en bleu foncé.
+* Quand le débit de basal est temporairement ajusté (augmenté ou diminué), la zone sous la courbe est affichée en bleu clair.
 
-#### Activity
+#### Activité
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* La ligne **jaune fine** montre l'activité de l'insuline. 
+* Elle indique la capacité de l'insuline présente dans votre corps à faire baisser la glycémie, si aucun autre facteur (comme les glucides) n'était présent.
 
 ### Section G - Graphiques additionnels
 
-* You can activate up to four additional graphs below the main graph.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+* Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal.
+* Pour ouvrir les paramètres pour des graphiques supplémentaires, cliquez sur le triangle sur le côté droit du [graphique principal](../Getting-Started/Screenshots#section-f-graphique-principal) et faites défiler vers le bas.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+* Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Insuline absolue
 
-* Active insulin including boluses **and basal**.
+* Insuline Active incluant les bolus **et la basal**.
 
-#### Insulin on board
+#### Insuline active
 
-* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
-* If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
-* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
+* Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
+* S'il n'y avait pas de [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), ni de bolus et aucun DBT pendant une durée de DIA, l'Insuline Active serait à zéro.
+* L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
 * Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
-#### Carbs On Board
+#### Glucides actifs
 
-* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
+* Affiche la quantité de glucides que vous avez à chaque instant (= glucides actifs dans votre corps, non encore assimilés). 
+* La diminution dépend des écarts que l'algorithme détecte. 
 * If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
 
 #### Deviations
@@ -247,7 +247,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
 * Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
 
-#### Activity
+#### Activité
 
 * Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
 * The value is higher for insulin closer to peak time.
@@ -366,7 +366,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Le bouton [Changement de profil](../Usage/Profiles#changement-de-profil) en tant qu'alternative à un appui long sur le [profil actuel](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
 * Le bouton [cible temporaire](../Usage/temptarget#cibles-temporaires) en tant qu'alternative à un appui court sur la [cible actuelle](../Getting-Started/Screenshots#section-b-profil-cible) de l'écran d'accueil.
-* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
+* Le bouton pour démarrer ou annuler un débit basal temporaire. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
 * Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * This option is only available for Dana RS and Insight pumps. 
@@ -471,44 +471,44 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
 * Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Pour plus de détails, voir la section [APS sur la page du constructeur de configuration](../Configuration/Config-Builder#aps).
 
 ## Profil
 
 ![Profil](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Le profil contient des informations sur vos paramètres individuels du diabète :
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
-   * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * DAI (durée d'action de l'insuline)
+   * G/I : est le rapport quantité de glucides divisé par le nombre d'unité d'insuline
+   * SI : Sensibilité à l'Insuline, appelée également facteur de correction
+   * Débit de Basal
+   * Cible : Niveau de glycémie que vous voulez que AAPS vise
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Traitement
 
-History of the following treatments:
+Historique des traitements suivants :
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
+* Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
 * [Bolus étendu](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
+* Basal temporaire
+* [Cible Temp](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Careportal](../Usage/CPbefore26.html#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
 ## Source Glycémie - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differently.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* Selon les votre source de glycémie, cet onglet est nommé différemment.
+* Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Affiche l'état de la connexion avec votre site Nightscout.
+* Les paramètres sont effectués dans les [préférences](../Configuration/Preferences#nsclient). Vous pouvez ouvrir la section correspondante en cliquant sur la roue crantée en haut à droite de l'écran.
+* Pour le dépannage, voir [cette page](../Usage/Troubleshooting-NSClient.md).
