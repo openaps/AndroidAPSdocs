@@ -75,20 +75,20 @@ Les services de géolocalisation ("GPS") doivent être activés pour que Bluetoo
 
 L'application Dexcom originale du Google Play Store ne fonctionnera pas parce qu'elle ne diffuse pas de valeurs vers d'autres applications. Par conséquent, une version légèrement modifiée par la communauté est nécessaire. Seule cette application Dexcom modifiée peut communiquer avec AAPS. De plus, l'application Dexcom modifiée peut être utilisée avec tous les smartphones Android et non pas seulement ceux de [la liste de compatibilité Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-To do this perform the following steps on your smartphone:
+Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
     * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
-3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+2. Téléchargez et installez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom)
+3. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
+4. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
+    * Urgent glycémie basse `55mg/dl` / `3.1mmol/l` (impossible à désactiver)
+    * Glycémie basse `OFF`
+    * Glyécmie haute `OFF`
+    * Taux d'augmentation `OFF`
+    * Taux de baisse `OFF`
+    * Perte de signal `OFF`
 
 ## Installer AndroidAPS
 
