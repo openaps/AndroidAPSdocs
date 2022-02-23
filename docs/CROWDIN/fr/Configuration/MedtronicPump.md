@@ -1,17 +1,17 @@
 # Pompes Medtronic
 
-The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
+Le pilote ne fonctionne pas avec les nouveaux modèles, y compris tous les modèles se terminant par G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
 
-The following model and firmware combinations are compatible:
+Les combinaisons de modèles et de firmware suivantes sont compatibles :
 
-- 512/712 (any firmware version)
-- 515/715 (any firmware version)
-- 522/722 (any firmware version)
-- 523/723 (firmware 2.4A or lower)
-- 554/754 EU release (firmware 2.6A or lower)
-- 554/754 Canada release (firmware 2.7A or lower)
+- 512/712 (tout firmware)
+- 515/715 (tout firmware)
+- 522/722 (tout firmware)
+- 523/723 (firmware 2.4A ou inférieur)
+- 554/754 version EU (firmware 2.6A ou inférieur)
+- 554/754 version canadienne (firmware 2.7A ou inférieure)
 
-You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documentation d'OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) et la [documentation de Loop](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Configuration matérielle et logicielle requise
 
@@ -46,26 +46,26 @@ The following settings should be configured on the pump in order for AndroidAPS 
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Paramètres Medtronic](../images/Medtronic01a.png)
 
 While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
 - **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select): 
-    - for US & Canada, frequency used is 916 Mhz
-    - for Worldwide, frequency used is 868 Mhz
+    - pour les US & le Canada, la fréquence utilisée est 916 Mhz
+    - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AndroidAPS can ever set.
 - **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AndroidAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
 - **Medtronic Encoding**: Determines if the medtronic encoding is carried out. Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AndroidAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
 - **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AndroidAPS will display the remaining calculated battery percentage level and volts. The following options are available:
     
-    - Not selected (Simple view)
-    - Alkaline (Extended view)
-    - Lithium (Extended view)
-    - NiZn (Extended view)
-    - NiMH (Extended view)
+    - Non sélectionné (vue simple)
+    - Alcaline (vue étendue)
+    - Lithium (vue étendue)
+    - NiZn (vue étendue)
+    - NiMH (vue Étendue)
 - **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
 
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
@@ -75,7 +75,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 ## Onglet MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+![Onglet MDT](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
@@ -85,8 +85,8 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 - **Last Bolus**: How long ago the last succesful bolus was delivered.
 - **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
 - **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
-- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
-- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
+- **Réservoir** : Indique la quantité d'insuline présente dans le réservoir (mise à jour au minimum toutes les heures).
+- **Erreurs** : Affiche une erreur en cas d'incident (le plus souvent il s'agit d'une erreur dans la configuration).
 
 At the bottom of the screen there are three buttons:
 
@@ -96,18 +96,18 @@ At the bottom of the screen there are three buttons:
 
 ## Historique pompe
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
 ## État RL (RileyLink État)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![État RileyLink - Paramètres](../images/Medtronic04.png) ![État RileyLink - Historique](../images/Medtronic05.png)
 
 The RL Status dialog has two tabs:
 
-- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
-- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
+- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Le type d'appareil est toujours Pompe Medtronic, Modèle affiche votre modèle de pompe, Numéro de série est le numéro de la pompe configuré, Fréquence de pompe indique la fréquence utilisée, Dernière fréquence est la dernière fréquence utilisée.
+- **Historique** : Affiche l'historique des communications, pour le RileyLink cela concerne les changements d'état et pour le Medtronic les commandes envoyées à la pompe.
 
 ## Actions
 
@@ -130,11 +130,11 @@ In the event you need to troubleshoot your Medtronic pump function select the me
 
 Medtronic CGM is currently NOT supported.
 
-### Manual use of pump
+### Utilisation manuelle de la pompe
 
 You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AndroidAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
 
-### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
+### Modifications de fuseau horaire, changements d'heure ou Voyage avec la pompe Medtronic et AndroidAPS
 
 AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
@@ -146,11 +146,11 @@ The issues seen when travelling west are known to the developers and work on a p
 
 The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Note de l'auteur :** Veuillez noter que le logiciel GNARL est encore expérimental et légèrement testé, il ne devrait pas être considéré comme aussi sûr à utiliser qu'un RileyLink.
 
-## FAQ
+## Questions fréquentes
 
-### What to do if I loose connection to RileyLink and/or pump?
+### Que faire si je perds la connexion à RileyLink et/ou à la pompe ?
 
 There are a number of options to try and resolve connectivity issues.
 
@@ -162,12 +162,12 @@ There are a number of options to try and resolve connectivity issues.
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AndroidAPS and allow the connection to restore
 
-### How to determine what Frequency my pump uses
+### Comment déterminer la fréquence utilisée par ma pompe
 
-![Pump Model](../images/Medtronic06.png)
+![Modèle de Pompe](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Voici les valeurs possibles pour la fréquence :
 
-- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
-- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
-- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")
+- NA - Amérique du Nord (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
+- CA - Canada (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
+- WW - Worldwide (pour la fréquence, vous devez sélectionner "Worldwide (868 Mhz)")
