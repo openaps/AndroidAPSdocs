@@ -166,7 +166,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Optional information:
    
    * Tahminler
-   * Basals
+   * Bazallar
    * Activity - insulin activity curve
 
 #### Activate optional information
@@ -196,7 +196,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
-#### Basals
+#### Bazallar
 
 * A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
 * The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
