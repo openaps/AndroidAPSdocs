@@ -150,9 +150,9 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Rezervuar seviyesi (Ünite)
    * Sensör yaşı
    * Pil yaşı ve seviyesi (%)
-* If threshold warning is exceeded, values will be shown in yellow.
-* If threshold critical is exceeded, values will be shown in red.
-* Settings can be made in [preferences](../Configuration/Preferences#status-lights).
+* Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
+* Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
+* Ayarlar [tercihlerde](../Configuration/Preferences#status-lights) yapılabilir.
 
 ### Section F - Main graph
 
