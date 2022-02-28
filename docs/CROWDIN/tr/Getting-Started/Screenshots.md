@@ -135,21 +135,21 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ![Carbs required](../images/Home2020_CarbsRequired.png)
 
-* Carbs suggestions are given when the reference design detects that it requires carbs.
+* Algoritma, Kş'nizin çok düşmesini önlemek için bir şeyler yemeniz gerektiğini anlarsa, önerilen karbonhidrat miktarı görüntülenir.
 * This is when the oref algorithm thinks I can't rescue you by 0 (zero) temping and you will need carbs to fix.
 * The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
-### Section E - Status lights
+### Bölüm E - Durum ışıkları
 
 ![Section E](../images/Home2020_StatusLights.png)
 
-* Status lights give a visual warning for 
-   * Cannula age
-   * Insulin age (days reservoir is used)
-   * Reservoir level (units)
-   * Sensor age
-   * Battery age and level (%)
+* Durum ışıkları için görsel bir uyarı verir 
+   * Kanül yaşı
+   * İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
+   * Rezervuar seviyesi (Ünite)
+   * Sensör yaşı
+   * Pil yaşı ve seviyesi (%)
 * If threshold warning is exceeded, values will be shown in yellow.
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences#status-lights).
