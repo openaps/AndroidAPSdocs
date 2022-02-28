@@ -22,36 +22,36 @@
 
 * Die Implementierung des NSClient Plugins hat sich komplett geändert.
 * Gehe zur Registerkarte NSClient und öffne die Einstellungen im rechten Menü. Eine neue Einstellung "Synchronisierung" ist jetzt verfügbar.
-* You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
+* Du kannst nun eine detaillierte Auswahl treffen, welche Daten mit deiner Nightscout-Seite synchronisiert werden sollen.
 
-## Nightscout profile cannot be pushed
-* The nightscout profile is gone, rest in peace!
-* To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
-* Search for a profile switch with 100% and press clone.
-* A new local profile is added, valid from the current date.
+## Nightscout-Profil kann nicht geladen werden
+* Das Nightscout Profil ist verschwunden, Ruhe in Frieden!
+* Um Dein aktuelles Nightscout-Profil in ein lokales Profil zu kopieren, geh auf die Seite 'Behandlungen' (jetzt im rechten Dreipunkt-Menü).
+* Suche nach einem Profilwechsel mit 100% und drücke 'Klonen'.
+* Ein neues lokales Profil wird hinzugefügt, dass vom aktuellen Datum an gültig ist.
 * Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
 
-## Reset master password
-* You can now reset your master password in case you have forgotten it.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
-* Restart AndroidAPS.
-* The new password will be the serial number of your active pump.
-* For Dash: The serial number is printed on the Pod.
-* For EROS it is also listed on the POD tab as "Sequence Number"
+## Masterpasswort zurücksetzen
+* Du kannst nun Dein Master-Passwort zurücksetzen, falls Du es vergessen hast.
+* Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
+* AndroidAPS neu starten.
+* Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
+* Für DASH: Die Seriennummer ist auf dem Pod aufgedruckt.
+* Für den Omnipod EROS ist es die in der Registerkarte 'POD' als "Laufende Nummer" angegebene Zahl.
 
-## Warning signal beneath BG
+## Warnsignal neben BG
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+Details findest du auf der Seite [AAPS-Bildschirm](../Getting-Started/Screenshots#bg-warning-sign)
 
 
-## Failure message: Data from different pump
+## Fehlermeldung: Daten aus verschiedenen Pumpen
 
-   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+   ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Um dieses Problem zu beheben, gehe zum Bildschirm [Konfiguration](../Configuration/Config-Builder#pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
