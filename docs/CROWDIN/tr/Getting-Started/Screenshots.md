@@ -154,29 +154,29 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Kritik eşik aşılırsa değerler kırmızı ile gösterilir.
 * Ayarlar [tercihlerde](../Configuration/Preferences#status-lights) yapılabilir.
 
-### Section F - Main graph
+### Bölüm F - Ana grafik
 
 ![Section F](../images/Home2020_MainGraph.png)
 
-* Graph shows your blood glucose (BG) as read from your glucose monitor (CGM). 
-* Notes entered in action tab such as fingerstick calibrations and carbs entries as well as profile switches are shown here. 
-* Long press on the graph to change the time scale. You can choose 6, 12, 18 or 24 hours.
-* The green area reflects your target range. It can be configured in [preferences](../Configuration/Preferences#range-for-visualization).
+* Grafik, glikoz monitörünüzden (CGM) okunan kan şekerinizi (KŞ) gösterir. 
+* Parmak ucundan alınan kalibrasyonları ve karbonhidrat girişleri gibi işlem sekmesine girilen notların yanı sıra profil geçişleri burada gösterilir. 
+* Zaman ölçeğini değiştirmek için grafiğe uzun basın. 6, 12, 18 veya 24 saat seçebilirsiniz.
+* Yeşil alan hedef aralığınızı yansıtmaktadır. [tercihlerde](../Configuration/Preferences#range-for-visualization) yapılandırılabilir.
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
-* Optional information:
+* İsteğe Bağlı Bilgi:
    
    * Tahminler
    * Bazallar
-   * Activity - insulin activity curve
+   * Aktivite - insülin aktivite eğrisi
 
-#### Activate optional information
+#### İsteğe bağlı bilgileri etkinleştir
 
-* Click the triangle on the right side of the main graph to select which information will be displayed in the main graph.
-* For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
+* Ana grafikte hangi bilgilerin görüntüleneceğini seçmek için ana grafiğin sağ tarafındaki üçgene tıklayın.
+* Ana grafik için sadece "\---\---- Grafik 1 \---\----" satırının üzerindeki üç seçenek mevcuttur.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
 
-#### Prediction lines
+#### Tahmin çizgileri
 
 * **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
    
