@@ -24,7 +24,8 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 * **Compatible Android phone** with a BLE Bluetooth connection
    -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
-   -  **For some phone models, this might be an issue** : **Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.**
+   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using Android 12 together with pod that have firmware version 3.XX.X. Avoid using Android 12 with these old firmware pods for now!**  
+     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -94,7 +95,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
 **NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
+![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
 3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
 

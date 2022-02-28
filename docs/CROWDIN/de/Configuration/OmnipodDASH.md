@@ -345,35 +345,35 @@ Diese Registerkarte ist in der AAPS-Hauptdokumentation gut dokumentiert, aber es
 Der angezeigte Insulinlevel ist der von Omnipod DASH gemeldete Betrag an verbleibenden Einheiten. Der Pod meldet allerdings den tatsächlichen Insulinlevel erst dann, wenn er unter 50 Einheiten liegt. Bis dahin wird „Über 50 Einheiten“ angezeigt. Die gemeldete Menge ist nicht genau: Wenn der Pod „leer“ meldet, wird das Reservoir in den meisten Fällen noch einige zusätzliche Einheiten Insulin enthalten. Auf der Registerkarte DASH wird die Übersicht angezeigt wie unten beschrieben:
 
   * **Mehr als 50 IE verbleibend** - Der Pod meldet mehr als 50 Einheiten im Reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **Unter 50 Einheiten** - Die Menge an Insulin, die noch im Reservoir vorhanden ist, wie vom Pod gemeldet.
 
-Additional note:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Neuere Versionen melden einen Wert von 50+, wenn sich mehr als 50 Einheiten im Reservoir befinden.
+Sonstiges
+  * **SMS** - Aus dem Pod übernommener Wert oder 50+ IE für SMS-Antworten
+  * **Nightscout** - Lädt den Wert 50 hoch, wenn mehr als 50 Einheiten angezeigt werden (Nightscout Version 14.07 und älter).  Neuere Versionen melden einen Wert von 50+, wenn sich mehr als 50 Einheiten im Reservoir befinden.
 
 ## Problembehandlung
 
-### Delivery suspended
+### Insulinabgabe unterbrochen
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
-     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
-     - AAPS will try to set the new basal profile every 15 minutes.
-     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
-     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
-  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
+  * Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-TBR für x Minuten setzen.
+  * Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen bleiben. Wenn das passiert:
+     - Es wird gibt dann keine Insulinabgabe; dies schließt Basal-, SMB-, manuelle Boli usw. ein.
+     - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
+     - AAPS wird alle 15 Minuten versuchen, das neue Basalprofil zu setzen.
+     - AAPS wird alle 15 Minuten eine Benachrichtigung anzeigen, dass die Insulinabgabe unterbrochen ist, wenn die Abgabe weiterhin unterbrochen ist (Insulinabgabe konnte nicht gestartet werden).
+     - Die [**Abgabe fortsetzen**](#resuming-insulin-delivery) Schaltfläche ist aktiv, wenn der Benutzer die Abgabe manuell fortsetzen möchte.
+     - Wenn AAPS die Abgabe nicht alleine fortsetzen kann (dies geschieht, wenn der Pod nicht erreichbar ist, der Ton stumm geschaltet ist, etc.), beginnt der Pod für 3 Minuten jede Minute viermal zu piepen, dies wird alle 15 Minuten wiederholt, wenn die Abgabe mehr als 20 Minuten ausgesetzt ist.
+  * Für unbestätigte Befehle sollte "Aktualisieren" des Podstatus diese bestätigen oder ablehnen.
 
-**Note:** When you hear beeps from the pod, do not assume that delivery will continue without checking the phone, delivery might stay suspended, **so you need to check !**
+**Hinweis:** Wenn Du Pieptöne vom Pod hörst, kannst Du nicht davon ausgehen, dass die Insulinabgabe ohne Überprüfung im Smartphone fortgesetzt wird. Die Abgabe könnte weiterhin ausgesetzt bleiben, **also musst Du prüfen, was los ist!**
 
 ### Pod Fehler
 
-Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. Eine Liste der Fehlercodes [**findet sich hier**](https://github.com/openaps/openomni/wiki/Fault-event-codes), um die Ursache zu ermitteln.
 
 ### Verhindere Pod Fehler 49
 
-Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Dies ist der Fall, wenn der AAPS-Treiber und der Pod unterschiedliche Angaben zum aktuellen Status haben. Der Pod reagiert (aufgrund einer eingebauten Sicherheitsfunktion) dann mit einem nicht auflösbaren Fehlercode 49 (0x31) und verabschiedet sich mit einem so genannten „Heuler“: dem langen, irritierenden Piepton, der nur gestoppt werden kann, indem mit einer Büroklammer in ein Loch am richtigen Ort auf der Rückseite des Pods gedrückt wird. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
 ### Pumpe nicht erreichbar Alarme
 

@@ -60,7 +60,7 @@ Sur une installation existante, vous pouvez sélectionner la pompe **DASH** dans
 
 Sur le coin en haut à gauche dans le ** menu hamburger** sélectionnez **Configuration (1)**\ ➜\ **Pompe**\ ➜\ **Dash**\ ➜\ **Roue crantée des paramètres (3)** en sélectionnant le **bouton radio (2)** intitulé **Dash**.
 
-La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
+La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**. Cocher cette case facilitera votre accès aux commandes DASH lorsque vous utilisez AAPS.
 
 **NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
 
@@ -68,57 +68,57 @@ La sélection de la **case à cocher (4)** à côté de la **Roue crantée des P
 
 ### Vérification de la sélection du pilote Omnipod
 
-To verify that you have enabled the Dash driver in AAPS, if you have checked the box (4), **swipe to the left** from the **Overview** tab, where you will now see a **DASH** tab. If you have not checked the box, you’ll find the DASH tab in the hamburger menu upper left.
+Pour vérifier que vous avez activé le pilote Dash dans AAPS, si vous avez coché la case (4), **glisser vers la gauche** depuis l'onglet **Aperçu** , où vous verrez maintenant un onglet **DASH**. Si vous n'avez pas coché la case, vous trouverez l'onglet DASH dans le menu hamburger en haut à gauche.
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-## Dash Configuration
+## Configuration du Dash
 
-Please **swipe left** to the **DASH** tab where you will be able to manage all pod functions (some of these functions are not enabled or visible without an active pod session):
+Veuillez **glisser vers la gauche** vers l'onglet **DASH** où vous serez en mesure de gérer toutes les fonctions du pod (certaines de ces fonctions ne sont pas activées ou visibles sans une session pod active):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Rafraîchir la connectivité et le statut du Pod, être en mesure de couper les alarmes lorsque le pod émet un bip
 
-![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Gestion du Pod (activer, désactiver, jouer le bip de test et l'historique du Pod)
 
 ### Activer le Pod
 
-1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
+1. Naviguez vers l'onglet **DASH** et cliquez sur le bouton **POD MGMT (1)** , puis cliquez sur **Activer Pod (2)**.
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Remplissez le nouveau pod avec au moins 80 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+2. L'écran **Remplir le pod** s'affiche. Remplissez le nouveau pod avec au moins 80 unités d'insuline et écoutez le deux bips indiquant que le pod est prêt à être amorcé. Lors du calcul de la quantité totale d'insuline dont vous avez besoin pour 3 jours, veuillez prendre en compte que l'amorçage du pod utilisera de 3 à 10 unités.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
+Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proximité de l'autre et cliquez sur le bouton **Suivant**.
 
-**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
+**NOTE**: Au cas où vous obtiendrez le message d'erreur ci-dessous (ce qui peut se produire), ne paniquez pas. Cliquez sur le bouton **Réessayer**. Dans la plupart des cas, l'activation se poursuivra avec succès.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
 
-3. On the **Initialize Pod** screen, the pod will begin priming (you will hear a click followed by a series of ticking sounds as the pod primes itself).  A green checkmark will be shown upon successful priming, and the **Next** button will become enabled. Click on the **Next** button to complete the pod priming initialization and display the **Attach Pod** screen.
+3. Sur l'écran **Initialiser le Pod** le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce).  Une coche verte s'affichera en cas d'amorçage réussi, et le bouton **Suivant** sera activé. Cliquer sur le bouton **Suivant** pour terminer l'initialisation de l'amorçage du pod et afficher l'écran **Attacher Pod**.
 
 ![Activate_Pod_5](../images/DASH_images/Activate_Pod/Activate_Pod_5.jpg)    ![Activate_Pod_6](../images/DASH_images/Activate_Pod/Activate_Pod_6.jpg)
 
-4. Ensuite, préparer le site de perfusion du nouveau pod. Remove the pod's plastic needle cap. If you see something that sticks out of the pod, cancel the process and start with a new pod. If everything looks OK, take off the white paper backing from the adhesive and apply the pod to the selected site on your body. When finished, click on the **Next** button.
+4. Ensuite, préparer le site de perfusion du nouveau pod. Retirez le bouchon en plastique de l'aiguille du Pod. Si vous voyez quelque chose qui depasse du pod, annulez le processus et recommencez avec un nouveau pod. Si tout semble OK, retirez le papier blanc de protection de l'adhésif et appliquez le pod sur le site sélectionné sur votre corps. Une fois terminé, cliquez sur le bouton **Suivant**.
 
 ![Activate_Pod_8](../images/DASH_images/Activate_Pod/Activate_Pod_8.jpg)
 
-5. The **Attach Pod** dialog box will now appear. **click on the OK button ONLY if you are ready to deploy the cannula**.
+5. La boîte de dialogue **Attacher Pod** apparaîtra. **cliquez sur le bouton OK UNIQUEMENT si vous êtes prêt à déployer la canule**.
 
 ![Activate_Pod_9](../images/DASH_images/Activate_Pod/Activate_Pod_9.jpg)
 
-6. After pressing **OK**, it may take some time before the Dash pod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+6. Après avoir appuyé sur **OK**, il peut se passer un certain temps avant que le pod Dash réponde et insère la canule (1-2 minutes maximum), donc soyez patient.
 
  *REMARQUE : Avant d'insérer la canule, il est recommandé de pincer la peau près du point d'insertion de la canule. Cela permet une insertion en douceur de l'aiguille et réduira les risques d'occlusions.*
 
 ![Activate_Pod_10](../images/DASH_images/Activate_Pod/Activate_Pod_10.png)    ![Activate_Pod_11](../images/DASH_images/Activate_Pod/Activate_Pod_11.jpg)
 
-7. A green checkmark appears, and the **Next** button becomes enabled upon successful cannula insertion. Click on the **Next** button.
+7. Une coche verte s'affiche, et le bouton **Suivant** est activé en cas d'insertion de canule réussie. Cliquer sur le button **Suivant**.
 
 ![Activate_Pod_12](../images/DASH_images/Activate_Pod/Activate_Pod_12.jpg)
 
-9. The **Pod activated** screen is displayed. Click on the green **Finished** button. Félicitations ! Vous avez démarré une nouvelle session de Pod actif.
+9. L'écran **Pod activé** s'affiche. Cliquer sur le bouton vert **Terminé**. Félicitations ! Vous avez démarré une nouvelle session de Pod actif.
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 

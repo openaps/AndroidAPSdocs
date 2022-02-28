@@ -227,11 +227,11 @@ The Android developer options enable your watch to stay awake during charging. T
 
 Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![Komidin Saat arayüzü](../images/Watchface_nightstand.jpg)
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
-### Performance and battery life tips
+### Performans ve pil ömrü ipuçları
 
 Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 

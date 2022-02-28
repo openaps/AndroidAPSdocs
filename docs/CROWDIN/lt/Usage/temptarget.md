@@ -19,8 +19,8 @@ Tai gali būti laikoma svarbiausiu laikinu tikslu. Tam keletas priežasčių:
 
 1. Suprantate, kad artėja hipoglikemija: paprastai ciklas su ja susitvarko, tačiau kartais galite numatyti geriau nei programa, tokiu atveju ciklas reaguos greičiau, kai bus nustatyta aukštesnė tikslinė glikemija.
 2. Kai valgote angliavandenius, siekiant išvengti hipoglikemijos, cukraus kiekis kraujyje padidės labai greitai. Ciklas koreguos šį padidėjimą ir, jei įjungta, suleis SMB. Hipo Laikinas ciklas padeda šio veiksmo išvengti. 
-3. (Pažangus, [10 tikslas](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): galite įjungti „Intensyvus laikinas tikslas didina jautrumą" funkciją laikiniems tikslams, lygiems ar didesniems nei 100 mg/dl arba 5,5 mmol/l OpenAPS SMB skirtuke, todėl AndroidAPS yra jautresnis.
-4. (Pažangus, [10 tikslas](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): galite išjungti „SMB esant intensyviems laikiniems tikslams". Tada, net jei turite AAO > 0, įjungtos "SMB su laikinais tikslais" ar "SMB visada" funkcijos ir OpenAPS SMB aktyvus, AndroidAPS nesuleis SMB, kol intensyvūs laikini tikslai yra aktyvūs. 
+3. (advanced, [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can enable “High Temp-Targets raises sensitivity” for Temp-Targets of 100mg/dl or 5.5mmol/l or higher in OpenAPS SMB, so AndroidAPS is more sensitive.
+4. (advanced, [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active. 
 
 Pastaba: jei įvesite angliavandenius su mygtuku „Angliavandeniai“ ir cukraus kiekis kraujyje bus mažesnis nei 72 mg/dl arba 4 mmol/l, Hipo Laikinas tikslas bus automatiškai įjungtas.
 
@@ -28,13 +28,13 @@ Pastaba: jei įvesite angliavandenius su mygtuku „Angliavandeniai“ ir cukrau
 
 Prieš aktyvų užsiėmimą ir jo metu galbūt norėsite turėti aukštesnį tikslą, kad išvengtumėte hipoglikemijos. Norėdami supaprastinti Laikino tikslo nustatymą, galite sukonfigūruoti savo numatytąjį „Aktyvumo laikiną tikslą“. Remdamiesi IVT, AIO ir savo patirtimi, prieš sportinį užsiėmimą galite nustatyti laikiną tikslą. Taip pat žr. [DUK Sporto skiltį](../Getting-Started/FAQ#sports).
 
-Pažangus, [10 tikslas](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): Aktyvumo laikino tikslo privalumas yra tas, kad galite įjungti „Intensyvus laikinas tikslas didina jautrumą" funkciją laikiniems tikslams lygiems ar didesniems nei 100 mg/dl arba 5,5 mmol/l OpenAPS SMB skirtuke. Tada AndroidAPS yra jautresnis. Kai kurie žmonės sportinio užsiėmimo metu keičia profilį, o ne LT, tačiau visi yra skirtingi. Jei funkcija "SMB su intensyviu laikinu tikslu" yra išjungta, AndroidAPS nesuleis SMB, net jei ir AAO > 0, o funkcijos "SMB su laikinu tikslu" arba "SMB visada" įjungtos ir OpenAPS SMB aktyvus.
+Advanced, [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): The advantages about “Activity Temp-Target”, is that you can enable “High Temp-Targets raises sensitivity” for Temp-Targets higher or equal 100mg/dl or 5.5mmol/L in OpenAPS SMB. Tada AndroidAPS yra jautresnis. Kai kurie žmonės sportinio užsiėmimo metu keičia profilį, o ne LT, tačiau visi yra skirtingi. Jei funkcija "SMB su intensyviu laikinu tikslu" yra išjungta, AndroidAPS nesuleis SMB, net jei ir AAO > 0, o funkcijos "SMB su laikinu tikslu" arba "SMB visada" įjungtos ir OpenAPS SMB aktyvus.
 
 ## Netrukus valgysiu Laikinas tikslas
 
 Jei žinote, kad jūs netrukus eisite valgyti, galite įjungti šį laikiną tikslą, tam, kad prieš valgant jūsų organizme būtų daugiau aktyvaus insulino. Ypač tiems, kurie nesusileidžia insulino prieš valgant, tai gali būti gera alternatyva išlaikyti kraujo glikemiją kuo arčiau tikslinės reikšmės. Daugiau apie "Netrukus valgysiu" režimą galite perskaityti straipsnyje ['How to do “eating soon” mode'](https://diyps.org/2015/03/26/how-to-do-eating-soon-mode-diyps-lessons-learned/) arba [čia](https://diyps.org/tag/eating-soon-mode/).
 
-Pažangus, [10 tikslas](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): Jei OpenAPS SMB ir "Žemas laikinas tikslas mažina jautrumą" funkcijos įjungtos, AndroidAPS veiks šiek tiek agresyviau. Reikalaujama, kad šiuo atveju laikinas tikslas būtų mažesnis nei 100 mg/dl arba 5.5mmol/l.
+Advanced, [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): If you use OpenAPS SMB and have “Low temptarget lowers sensitivity”, AndroidAPS works a little bit more aggressive. Reikalaujama, kad šiuo atveju laikinas tikslas būtų mažesnis nei 100 mg/dl arba 5.5mmol/l.
 
 ## Pasirinktinis Laikinas tikslas
 
