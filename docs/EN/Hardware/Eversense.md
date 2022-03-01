@@ -1,6 +1,4 @@
----
-title: For users of Eversense
----
+# For users of Eversense
 
 The easiest way to use Eversense with AndroidAPS is to install the
 non-US modified [Eversense
