@@ -1,8 +1,6 @@
----
-title: Dexcom G6
----
+# Dexcom G6
 
-# Basics first
+## Basics first
 
 -   Follow general CGM hygiene and setting sensor recommendation
     [here](../Hardware/GeneralCGMRecommendation.html).
@@ -12,7 +10,7 @@ title: Dexcom G6
     Those transmitters have a new firmware and latest stable version of
     xDrip+ (2019/01/10) cannot deal with it.
 
-# General hints for looping with G6
+## General hints for looping with G6
 
 What’s clear is that using the G6 is perhaps a little more complex than
 it as first suggests. To use it safely, there are a few points to be
@@ -40,7 +38,7 @@ article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/)
 published by Tim Street at
 [www.diabettech.com](https://www.diabettech.com).
 
-# If using G6 with xDrip+
+## If using G6 with xDrip+
 
 -   The Dexcom G6 transmitter can simultaneously be connected to the
     Dexcom receiver (or alternatively the t:slim pump) and one app on
@@ -61,7 +59,7 @@ published by Tim Street at
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.html).
 
-# If using G6 with Build Your Own Dexcom App
+## If using G6 with Build Your Own Dexcom App
 
 -   As of December 2020 [Build Your Own Dexcom
     App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0)
@@ -77,7 +75,7 @@ published by Tim Street at
 -   After short time BYODA should pick-up transmitter signal. (If not
     you will have to stop sensor and start new one.)
 
-## Settings for AndroidAPS
+### Settings for AndroidAPS
 
 -   Select 'Dexcom App (patched)' in config builder.
 -   If you don't receive any values select any other data source, then
@@ -85,16 +83,16 @@ published by Tim Street at
     permissions to establish the connection between AAPS and
     BYODA-broadcast.
 
-## Settings for xDrip+
+### Settings for xDrip+
 
 -   Select '640G/Eversense' as data source.
 -   Command 'start sensor' must be performed in xDrip+ in order to
     receive values. This will not affect your current sensor controlled
     by Build Your Own Dexcom App.
 
-# Troubleshooting G6
+## Troubleshooting G6
 
-## Dexcom G6 specific troubleshooting
+### Dexcom G6 specific troubleshooting
 
 -   Transmitters with serial no. starting with 80 or 81 need at least
     last stable xDrip+ version from May 2019 or a newer nightly build.
@@ -116,12 +114,12 @@ published by Tim Street at
 
 ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-## General troubleshooting
+### General troubleshooting
 
 General Troubleshoothing for CGMs can be found
 [here](./GeneralCGMRecommendation.html#troubleshooting).
 
-## New transmitter with running sensor
+### New transmitter with running sensor
 
 If you happen to change transmitter during a running sensor session you
 might try to remove the transmitter without damaging the sensor mount. A
