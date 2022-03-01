@@ -1,6 +1,4 @@
----
-title: Freestyle Libre 1
----
+# Freestyle Libre 1
 
 To use your Libre as a CGM that is getting new BG values every 5 minutes
 you first need to buy a NFC to Bluetooth adapter like:
@@ -26,7 +24,7 @@ safely. See [Smoothing blood glucose
 data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html) for more
 details.
 
-# If using xDrip+
+## If using xDrip+
 
 -   If not already set up then download xDrip+ and follow instructions
     on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre
@@ -47,7 +45,7 @@ details.
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.html).
 
-# If using Glimp
+## If using Glimp
 
 -   You will need Glimp version 4.15.57 or newer. Older versions are not
     supported.
