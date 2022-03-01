@@ -1,8 +1,6 @@
----
-title: General CGM recommendations
----
+# General CGM recommendations
 
-# CGM hygiene
+## CGM hygiene
 
 Whichever CGM system you are using, if you are going to use blood based
 calibration, then there are some very clear rules you should apply,
@@ -20,7 +18,7 @@ whether or not you are using DIY CGM software or the official apps.
     (7-9mmol/l or 126-160mg/dl) as this provides a better range for the
     point/slope calibration.
 
-# Setting sensor (G6)
+## Setting sensor (G6)
 
 When setting sensor, it is recommended not to press the inserter too
 firmly in order to avoid bleeding. The sensor thread should not come
@@ -30,9 +28,9 @@ After setting the sensor, the transmitter can be clicked into the sensor
 holder. Caution! First click in the square side and then press down the
 round side.
 
-# Troubleshooting
+## Troubleshooting
 
-## Connection problems
+### Connection problems
 
 Bluetooth connection may be disturbed by other nearby Bluetooth devices
 such as blood glucose meters, headsets, tablets or kitchen devices such
@@ -40,7 +38,7 @@ as microwave ovens or ceramic hobs. In this case xdrip does not display
 any BG values. When bluetooth connection is restabilised the data is
 backfilled.
 
-## Sensor Errors
+### Sensor Errors
 
 If recurring sensor errors occur try selecting a different body site to
 set your sensor. The sensor thread should not come into contact with
@@ -49,14 +47,14 @@ blood.
 Often a "Sensor Error" can be corrected by immediate drinking and
 massage around the sensor!
 
-## Jumpy values
+### Jumpy values
 
 You might try to change settings for noise blocking in xdrip (Settings -
 Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and
 worse". See also [Smoothing BG
 data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html).
 
-## Negative Sensor Age
+### Negative Sensor Age
 
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
