@@ -1,8 +1,6 @@
----
-title: Dexcom G5
----
+# Dexcom G5
 
-# If using G5 with xdrip+
+## If using G5 with xdrip+
 
 -   If not already set up then download
     [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow
@@ -21,7 +19,7 @@ title: Dexcom G5
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.html) .
 
-# If using G5 with patched Dexcom app
+## If using G5 with patched Dexcom app
 
 -   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and
     choose the version that fits your needs (mg/dl or mmol/l version,
