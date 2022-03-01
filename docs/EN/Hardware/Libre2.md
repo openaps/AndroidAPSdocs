@@ -1,6 +1,4 @@
----
-title: Freestyle Libre 2
----
+# Freestyle Libre 2
 
 The Freestyle Libre 2 system can automatically report dangerous blood
 glucose levels. The Libre2 Sensor sends the current blood sugar level to
@@ -19,7 +17,7 @@ Libre1.
 Important note : This does not work with the US version of the Freestyle
 2 sensor ! The US version will only connect to a reader, not a phone.
 
-# Step 1: Build your own patched LibreLink-App
+## Step 1: Build your own patched LibreLink-App
 
 For legal reasons, the so-called patching has to be done by yourself.
 Use search engines to find the corresponding links. There are mainly two
@@ -158,7 +156,7 @@ of a running sensor to a different device which not has started the
 sensor. Please google in diabetes related German forums how this could
 be done.
 
-# Step 2: Install and configure xDrip+ app
+## Step 2: Install and configure xDrip+ app
 
 The blood sugar values are received on the smartphone by the xDrip+ App.
 
@@ -184,7 +182,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
-# Step 3: Start sensor
+## Step 3: Start sensor
 
 In xDrip+ start the sensor with "Start Sensor" and "not today".
 
@@ -200,7 +198,7 @@ After a sensor change xDrip+ will automatically detect the new sensor
 and will delete all calibration data. You may check you bloody BG after
 activation and make a new initial calibration.
 
-# Step 4: Configure AndroidAPS (for looping only)
+## Step 4: Configure AndroidAPS (for looping only)
 
 -   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
 -   If AndroidAPS does not receive BG values when phone is in airplane
@@ -213,9 +211,9 @@ of Libre 2 are not smooth enough to use it safely. See [Smoothing blood
 glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html) for
 more details.
 
-# Experiences and Troubleshooting
+## Experiences and Troubleshooting
 
-## Connectivity
+### Connectivity
 
 The connectivity is extraordinarily good. With the exception of Huawei
 mobile phones, all current smartphones seem to work well. The reconnect
@@ -228,7 +226,7 @@ another phone. It may also help to set the sensor with the internal BT
 antenna pointing down. The slit on the applicator must be pointing down
 when setting the sensor.
 
-## Value smoothing & raw values
+### Value smoothing & raw values
 
 Technically, the current blood sugar value is transmitted to xDrip+
 every minute. A weighted average filter calculates a smoothed value over
@@ -248,7 +246,7 @@ as using the smoothed line to make proper therapy decisions.
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
-## Sensor runtime
+### Sensor runtime
 
 The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no
 longer exist. xDrip+ shows additional sensor information after enabling
@@ -260,7 +258,7 @@ log under "New sensor found".
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
 
-## New sensor
+### New sensor
 
 A sensor exchange takes place on-the-fly: Set new sensor shortly before
 activation. As soon as xDrip+ receives no more data from the old sensor,
@@ -282,7 +280,7 @@ Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
-## Calibration
+### Calibration
 
 You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL
 \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable
@@ -294,7 +292,7 @@ the end of the sensor and do not jitter as with the Libre1. However, if
 the sensor is completely off, this will not change. The sensor should
 then be replaced immediately.
 
-## Plausibility checks
+### Plausibility checks
 
 The Libre2 sensors contain plausibility checks to detect bad sensor
 values. As soon as the sensor moves on the arm or is lifted slightly,
@@ -304,7 +302,7 @@ additional checks are made. The app can deactivate the sensor even
 though the sensor is OK. Currently the internal test is too strict. I
 have completely stopped scanning and haven't had a failure since then.
 
-## Time zone travelling
+### Time zone travelling
 
 In other [time zones](../Usage/Timezone-traveling.html) there are two
 strategies for looping:
@@ -322,7 +320,7 @@ longer. If you set a new sensor, the automatic time zone must be set, so
 method 1. would be disturbed. Please check before, if you are somewhere
 else, you can run otherwise fast into problems.
 
-## Experiences
+### Experiences
 
 Altogether it is one of the smallest CGM systems on the market. Small,
 no transmitter necessary and mostly very accurate values without
@@ -343,7 +341,7 @@ Mostly probably you will see jumping values in xDrip+. Or the difference
 to the bloody values change. Please replace the sensor immediately! The
 results are inaccurate now.
 
-# Using bluetooth transmitter and OOP
+## Using bluetooth transmitter and OOP
 
 Bluetooth transmitter can be used with the Libre2 with the latest xDrip+
 nightlys and the Libre2 OOP app. You can receive blood sugar readings
