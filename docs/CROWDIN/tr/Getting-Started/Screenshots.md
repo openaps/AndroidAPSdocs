@@ -184,7 +184,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 * **Koyu mavi** çizgi: IOB Aktif insülin (Bu renk genellikle aktif insülin ve insülini temsil etmek için kullanılır)
    
-   Prediction line shows what would happen under the influence of insulin only. Örneğin biraz insülin gönderip birşey yemediyseniz.
+   Tahmin çizgisi, sadece insülinin etkisi altında ne olacağını gösterir. Örneğin biraz insülin gönderip birşey yemediyseniz.
 
 * **Açık mavi** çizgi: sıfır geçici (geçici bazal oranı %0 olarak ayarlandıysa, tahmini KŞ)
    
