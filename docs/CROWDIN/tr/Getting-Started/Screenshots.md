@@ -217,7 +217,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 * To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
 
-#### Absolute insulin
+#### Mutlak insülin
 
 * Active insulin including boluses **and basal**.
 
