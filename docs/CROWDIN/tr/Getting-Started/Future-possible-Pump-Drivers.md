@@ -109,7 +109,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 - Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
 - Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimal requirement**
+**Minimum gereksinim**
 
 - Set Temporary Basal Rate
 - Get Status

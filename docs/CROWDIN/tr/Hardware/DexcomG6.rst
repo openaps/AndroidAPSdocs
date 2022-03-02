@@ -23,9 +23,9 @@ xDrip+ ile Dexcom G6 kullanıyorsanız
 ==================================================
 * Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
 * xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
-* If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
-* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
-* Konfigürasyon ayarlarında (AndroidAPS'de) xDrip+'ı seçin.
+* Clarity'ye ihtiyacınız varsa ve xDrip alarmlarından yararlanmak istiyorsanız, `BYODA <../Hardware/Dexcom G6.html#if-using-g6-with-build-your-own-dexcom-app>`_ kullanarak yerel yayınla xDrip+'ı kurun.
+* Henüz kurulmadıysa, `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ dosyasını indirin ve `xDrip+ ayarlar sayfasındaki <../Configuration/xdrip.html>`_ talimatlarını izleyin.
+* Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
 * xDrip+'daki ayarları `xDrip+ ayarlar sayfasına <../Configuration/xdrip.html>`__ göre yapın
 * Telefon uçak modundayken AAPS KŞ değerleri almıyorsa, 'xDrip+ ayarlar sayfasında <../Configuration/xdrip.html>'__ açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 

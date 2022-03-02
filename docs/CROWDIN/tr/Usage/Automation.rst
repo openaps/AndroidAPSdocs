@@ -1,7 +1,7 @@
 Otomasyon
 **************************************************
 
-What is Automation
+Otomasyon Nedir?
 ==================================================
 Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerekebilir. Bundan kaçınmak için, olayı yeterince iyi tanımlayıp otomatikleştirmeyi deneyerek, sizin için otomatik olarak yapmasına izin verebilirsiniz. 
 

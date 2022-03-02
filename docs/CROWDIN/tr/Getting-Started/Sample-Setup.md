@@ -8,7 +8,7 @@ Bu kurulumda, döngünün kontrol merkezi olarak Samsung Galaxy S7 akıllı tele
 
 Dexcom Uygulaması yalnızca sınırlı uyarı seçenekleri sunduğundan, açık kaynak uygulaması xDrip+ yalnızca yüksek ve düşük alarmları değil, aynı zamanda bireysel gereksinimlere göre ek uyarıları da tanımlamak için kullanılır.
 
-İsteğe bağlı olarak, glikoz ve AndroidAPS değerlerini bileğinizde görüntülemek için bir Android wear akıllı saati kullanılabilir (bu örnek kurulumda Sony Smartwatch 3 (SWR50) kullanılmakta). The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus).
+İsteğe bağlı olarak, glikoz ve AndroidAPS değerlerini bileğinizde görüntülemek için bir Android wear akıllı saati kullanılabilir (bu örnek kurulumda Sony Smartwatch 3 (SWR50) kullanılmakta). Saat AndroidAPS'i kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak).
 
 Sistem çevrimdışı olarak çalışır. Bu operasyon için akıllı telefonun internete veya mobil bağlantıya gerek olmadığı anlamına gelir.
 
@@ -75,20 +75,20 @@ Bluetooth'un düzgün çalışması için konum servisleri ("GPS") etkinleştiri
 
 Google Play Store'daki orijinal Dexcom uygulaması, değerleri diğer uygulamalara yayınlamadığından çalışmayacaktır. Bu nedenle, topluluk tarafından biraz değiştirilmiş bir sürüm gereklidir. Yalnızca bu değiştirilmiş Dexcom uygulaması AAPS ile iletişim kurabilir. Ek olarak, değiştirilmiş Dexcom Uygulaması, yalnızca [Dexcom'un uyumluluk listesindeki](https://www.dexcom.com/dexcom-international-complete) değil, tüm Android akıllı telefonlarla kullanılabilir.
 
-To do this perform the following steps on your smartphone:
+Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 1. Orijinal Dexcom uygulaması zaten yüklüyse: 
     * Sensörü durdurun
     * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
-3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
-    * Low `OFF`
-    * High `OFF`
-    * Rise rate `OFF`
-    * Fall rate `OFF`
-    * Signal loss `OFF`
+2. [BYODA Dexcom uygulamasını](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) indirin ve yükleyin
+3. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
+4. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
+    * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
+    * Düşük `KAPALI`
+    * Yüksek `KAPALI`
+    * Artış oranı `KAPALI`
+    * Düşme oranı `KAPALI`
+    * Sinyal kaybı `KAPALI`
 
 ## AndroidAPS'i yükleyin
 
@@ -97,11 +97,11 @@ To do this perform the following steps on your smartphone:
 3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
 4. Bu örnek kurulumda yardımcıyı kullandık
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS İstemcisi etkinleştirildi (bkz. [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+'ı yükleyin
 
@@ -135,9 +135,9 @@ On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery >
 
 ## İsteğe bağlı: Sony Smartwatch 3'ü (SWR50) kurun
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. The watch can even be used to control AndroidAPS (i.e. discreetly set a meal bolus). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Saat AndroidAPS'i kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
 
-![Smartwatch](../images/SampleSetupSmartwatch.png)
+![Akıllı saat](../images/SampleSetupSmartwatch.png)
 
 Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
