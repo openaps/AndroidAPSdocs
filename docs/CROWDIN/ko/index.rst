@@ -17,12 +17,24 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Change language
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Getting started
 
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -30,20 +42,22 @@ For more details, please read on here.
    :caption: What do I need? 
 
    Module <./Module/module.rst>
-   Sample Setup <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS 설치하기
+   :caption: How to Install AndroidAPS
 
    APK 파일 빌드하기 <./Installing-AndroidAPS/Building-APK.md>
    새 버전 혹은 다른 branch로 업데이트 하기 <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+
+.. _component-setup:
 
 .. toctree::
    :maxdepth: 1
@@ -57,10 +71,12 @@ For more details, please read on here.
    Nightscout 설정 <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
 
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 환경설정 
+   :caption: Configuration
 
    Config builder <./Configuration/Config-Builder.md>
    Preferences <./Configuration/Preferences.rst>
@@ -93,6 +109,7 @@ For more details, please read on here.
    로그 파일에 접근하기 <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import Settings <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -101,13 +118,15 @@ For more details, please read on here.
 
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 문제해결
+   :caption: Troubleshooting
 
    Troubleshooting <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
@@ -119,14 +138,14 @@ For more details, please read on here.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 용어
+   :caption: Glossary
 
    용어 <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 도움을 구할 곳들 
+   :caption: Where to go for help 
 
    시작하기 전에 보면 좋은 유용한 자료들 <./Where-To-Go-For-Help/Background-reading.md>
    도움을 구할 곳들 <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -139,17 +158,18 @@ For more details, please read on here.
 
    For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: 도움주기
+   :caption: How to help
 
-   도움주기 <./Getting-Started/How-can-I-help.md>
+   도움주기
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
 
-.. note:: 
+.. 참고:: 
 	**고지사항 및 경고문**
 
 	이곳에 설명된 모든 정보, 생각, 코드는 오직 정보제공 및 교육적 목적으로만 제공된 것입니다. Nightscout은 현재 HIPAA 개인 정보 보호 준수 규약을 따르지 않습니다. Nightscout와 AndroidAPS를 본인의 책임하에 사용하세요. 의학적 결정을 위해 이 정보와 코드를 사용하지 마세요.
@@ -158,4 +178,4 @@ For more details, please read on here.
 
 	* 모든 제품명, 회사명, 상표, 서비스표, 등록상표, 등록 서비스표는 해당 소유자의 고유 재산입니다. 그것들을 사용한 것은 정보를 제공하기 위한 목적이며, 그들과의 제휴 또는 보증을 의미하지는 않습니다.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ or `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

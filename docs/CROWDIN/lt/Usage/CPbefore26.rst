@@ -16,7 +16,7 @@ Activity & feedback
 * Age information was moved to actions tab / menu.
 * BG check was moved to actions tab / menu.
 * Temporary target was moved to actions tab / menu.
-* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#id1>`_ on this page).
+* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`__ on this page).
 
 Carbs & bolus
 ==============================
@@ -26,8 +26,8 @@ Carbs & bolus
 * To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
 * Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
 
-   .. image:: ../images/Careportal_25_26_5.png
-     :alt: Backdate insulin via insulin button
+  .. image:: ../images/Careportal_25_26_5.png
+    :alt: Backdate insulin via insulin button
 
 * For carbs correction use the carbs button on the homescreen.
 * Temporary basal rates can be started and stopped through the button in actions tab / menu. Please note that the button changes from "TEMPBASAL" to "CANCEL x%" when a temporary basal rate is set.
@@ -38,7 +38,7 @@ CGM & OpenAPS
   :alt: Careportal CGM & OpenAPS
   
 * CGM sensor insert can now be found in the actions tab / menu.
-* All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`_ on this page).
+* All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`__ on this page).
 
 Pompa
 ==============================

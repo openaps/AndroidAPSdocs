@@ -4,24 +4,24 @@
 
 * επίπεδο 1: Διαβάστε το Wiki - τώρα έχουμε μια λειτουργία αναζήτησης για να σας βοηθήσουμε!
 * επίπεδο 2: Αναζητήστε την ομάδα Facebook, αν δεν υπάρχει ήδη απάντηση, τότε ρωτήστε την ερώτησή σας στην ομάδα χρηστών [AndroidAPS Users Facebook.](https://www.facebook.com/groups/1900195340201874/)
-* επίπεδο 3: Εάν στο facebook δεν λάβατε αποτελέσματα τότε ρωτήστε στο [gitter](https://gitter.im/MilosKozak/AndroidAPS). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Μην ξεχνάτε ότι η πλειοψηφία των προγραμματιστών είναι στην Ευρώπη, οπότε η απάντηση μπορεί να μην είναι σε πλαίσιο 24/7. ίσως χρειαστεί να περιμένετε αρκετές ώρες, ειδικά τα Σαββατοκύριακα και τις αργίες.
+* level 3: If facebook did not get results then ask in [discord](https://discord.gg/4fQUWHZ4Mw). Direct crossposts will be ignored/deleted on both channels to avoid duplicate answers. Μην ξεχνάτε ότι η πλειοψηφία των προγραμματιστών είναι στην Ευρώπη, οπότε η απάντηση μπορεί να μην είναι σε πλαίσιο 24/7. ίσως χρειαστεί να περιμένετε αρκετές ώρες, ειδικά τα Σαββατοκύριακα και τις αργίες.
 * level 4: Create an [issue](https://github.com/nightscout/AndroidAPS/issues) and attach your [log files](../Usage/Accessing-logfiles.md)
 * επίπεδο 5: email στο *developers@androidaps.org* (μόνο εάν εμπλέκονται προσωπικά δεδομένα που δεν πρέπει να μεταβούν σε δημόσιο κανάλι και τα προβλήματά σας δεν έχουν επιλυθεί σε άλλα επίπεδα)
 
-Για υποστήριξη σε συγκεκριμένα CGM, χρησιμοποιήστε τις ομάδες Facebook ή gitter για το συγκεκριμένο σύστημα (π.χ. [xdrip ](https://www.facebook.com/groups/xDripG5/), [600 uploader series](https://www.facebook.com/groups/NightscoutForMedtronic/)) ή υποστήριξη στο Nightscout [CGMintheCloud ](https://www.facebook.com/groups/cgminthecloud/) δεδομένου ότι οι χρήστες θα έχουν μεγαλύτερο επίπεδο εμπειρογνωμοσύνης από τους ανθρώπους εδώ που χρησιμοποιούν πολλά τα διαφορετικά συστήματα.
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Βεβαιωθείτε ότι έχετε γίνει μέλος στην ομάδα χρηστών του AndroidAPS στο Facebook!
 
-Συμμετοχή εδώ [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). Μπορείτε να δημοσιεύσετε εδώ τυχόν ερωτήσεις σχετικά με τον αλγόριθμο, τυχόν προβλήματα εγκατάστασης που έχετε με το Android Studio και δημιουργία του APK, τυχόν ερωτήματα σχετικά με τη χρήση της εφαρμογής και συμβουλές για τον καλύτερο τρόπο χρήσης του. Υπάρχει επίσης μια ομάδα για τους χρήστες αντλιών Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) οι οποίοι έχουν μια ελαφρώς πιο συγκεκριμένη ρύθμιση.
+Συμμετοχή εδώ [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Υπάρχει επίσης μια ομάδα για τους χρήστες αντλιών Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) οι οποίοι έχουν μια ελαφρώς πιο συγκεκριμένη ρύθμιση.
 
-## Άλλες πηγές (Αγγλικά)
+## Other resources in English
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): καλύπτει όλα τα συστήματα κλειστού κυ΄κλωματος DIY (OpenAPS, Loop και AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM γενικά θέματα
-* [AndroidAPS on Gitter](https://gitter.im/MilosKozak/AndroidAPS)
+* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
-## Χώρα / γλώσσες ειδικές πηγές
+## Country / language specific resources
 
 ### Αυστραλία
 

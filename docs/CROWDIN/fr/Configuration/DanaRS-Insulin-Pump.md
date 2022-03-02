@@ -1,37 +1,54 @@
-# Pompe DanaRS
+# Pompe DanaRS et Dana-i
 
-*Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
+*Ces instructions décrivent la configuration de l’application et de votre pompe si vous avez une DanaRS commercialisée depuis 2017 ou la nouvelle Dana-i. Visitez la [pompe à insuline Dana R](./DanaR-Insulin-Pump) si vous avez plutôt la pompe initiale DanaR.*
 
 **Le nouveau firmware Dana RS v3 peut être utilisé depuis la version 2.7 d'AndroidAPS.**
 
-* Sur la pompe DanaRS, « BASAL A » est utilisé par l'application. Les données existantes sont écrasé.
+**La nouvelle Dana-i peut être utilisée depuis la version 3.0 d'AndroidAPS.**
+
+* Sur la pompe DanaRS/i, pompe « BASAL A » est utilisé par l'application. Les données existantes se font écrasé.
 
 ## Appairage de la pompe
 
-* Dans AndroidAPS, allez dans Générateur de configuration et sélectionnez « DanaRS »
-
-* Sélectionnez le Menu en appuyant sur les 3 points en haut à droite. Sélectionnez le menu Préférences.
-
-* Sélectionnez Appairer une nouvelle pompe DanaRS, puis cliquez sur le numéro de série de votre DanaRS.
+* Sur l'écran d'accueil AndroidAPS, cliquez sur le menu hamburger en haut à gauche et allez dans le Générateur de Configuration.
+* Dans la section Pompe, sélectionnez 'Dana-i/RS'.
+* Cliquez sur la roue crantée pour accéder directement aux paramètres de la pompe ou retourner à l'écran d'accueil.
     
-    ![Appairage DanaRS avec AAPS](../images/AAPS_DanaRSPairing.png)
+    ![Générateur de configuration AAPS Dana-i/RS](../images/DanaRS_i_ConfigB.png)
 
-* Sélectionnez Mot de passe de la pompe et saisissez votre mot de passe.
+* Allez dans l'onglet 'DANA-i/RS'.
+
+* Sélectionnez le Menu des préférences en appuyant sur le menu 3 points en haut à droite. 
+* Sélectionnez 'Préférences Dana-i/R'.
+* Cliquez sur "Pompe sélectionnée".
+* Dans la fenêtre d'appairage, cliquez sur l'entrée correspondant à votre pompe.
+    
+    ![Appairage Dana-i/RS avec AAPS](../images/DanaRS_i_Pairing.png)
+
+* **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
+    
+    ![Confirmation d'appairage Dana RS](../images/DanaRS_Pairing.png)
+
+* Suivez le processus d'appairage basé sur le type et le firmware de votre pompe :
+    
+    * Pour DanaRS v1, sélectionnez le mot de passe de la pompe dans les préférences et définissez votre mot de passe.
+    * Pour DanaRS v3, vous devez taper 2 séquences de chiffres et de lettres affichées sur la pompe dans la boîte de dialogue d'appairage AndroidAPS.
+    * Pour Dana-i la boîte de dialogue d'appairage standard Android apparaît et vous devez entrer le numéro à 6 chiffres affiché sur la pompe.
+
+* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
+
+* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu Médecin (voir le guide de l’utilisateur de la pompe).
+* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Activez les Bolus Étendus sur la pompe
 
 ### Mot de passe par défaut
 
 * Pour les DanaRS avec le firmware v1 et v2, le mot de passe par défaut est 1234.
-* Pour les DanaRS avec le firmware v3, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24). Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. Le numéro 3 est la date de production.
-
-* **Vous devez confirmer l'appairage sur la pompe !** C'est juste la façon dont vous êtes habitués à faire d'autres appairages bluetooth (par ex. le smartphone et l'audio de la voiture).
+* Pour la DanaRS avec le firmware v3 ou la Dana-i, le mot de passe par défaut est une combinaison du mois de production et de la date de production (par ex. mois 01 et jour 24).
     
-    ![Confirmation d'appairage DanaRS](../images/DanaRS_Pairing.png)
-
-* Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
-
-* Redémarrez votre téléphone.
-* Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu de Médecins (voir le guide de l’utilisateur de la pompe)
-* Activez les Bolus Étendus sur la pompe
+    * Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. 
+    * Le numéro 3 est la date de production. 
+    * Pour v3/i, ce mot de passe est utilisé uniquement pour verrouiller le menu sur la pompe. Il n'est pas utilisé pour la communication et il n'est pas nécessaire de le saisir dans AndroidAPS.
 
 ## Changer de mot de passe sur la pompe
 
@@ -52,7 +69,7 @@
 
 * Entrez **l'ancien mot de passe** (mot de passe par défaut voir [au-dessus](#mot-de-passe-par-defaut)) et appuyez sur OK
     
-    ![DanaRS Entrez l"ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
+    ![DanaRS Entrez l'ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
 
 * Si un mauvais mot de passe est entré ici, il n'y aura pas de message indiquant l'échec !
 
@@ -88,13 +105,20 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
 * [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
-* Transférez les paramètres de l'ancien au nouveau téléphone
+* Transférez les paramètres de l'ancien vers le nouveau téléphone
+
+### DanaRS v1
+
 * **Appairer manuellement** DanaRS avec le nouveau téléphone
-    
-    * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
+* Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
 * Installez AndroidAPS sur le nouveau téléphone.
 * [Importer les paramètres](../Usage/ExportImportSettings#importer-les-parametres) sur votre nouveau téléphone
 
+### DanaRS v3, Dana-i
+
+* Commencez à appairer la procédure comme indiqué [ci-dessus](#appairage-de-la-pompe).
+* Il est parfois nécessaire d'effacer les informations d'appairage dans AndroidAPS en faisant un clic long sur l'icône BT dans l'onglet Dana-i/RS.
+
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-Pour plus d'informations sur les voyages dans différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).

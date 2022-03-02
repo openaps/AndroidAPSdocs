@@ -1,13 +1,14 @@
 # Чтение лог-файлов
 
 * Подключите телефон к компьютеру в режиме передачи файлов
-* Locate the log files in the AndroidAPS data directory
+* Найдите файлы журнала в папке с данными AndroidAPS
     
-    * The folder will be at a location similar to ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
-    * The naming of the root storage folder (1) may vary a little depending on the phone.
+    * (2.8.2)Папка будет находиться где-то в районе ***Internal storage(1) / Android / data / info.nightscout.androidaps / files***
+    * (3.0.0) Папка будет находиться где-то в районе ***Internal storage(1) / AAPS / logs***
+    * Имя корневой папки (1) может немного отличаться в зависимости от телефона.
 
 ![журнал событий](../images/aapslog.png)
 
-* The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
-* Previous log files are zipped and stored in folders in date/time order. 
-* If you are sharing your log file in [gitter](https://gitter.im/MilosKozak/AndroidAPS) to talk about a potential bug, please unzip and upload the file dated before the error occurred.
+* Текущий журнал-это файл .log, который можно просмотреть разными способами, например как [ LogCat ](https://developer.android.com/studio/debug/am-logcat.html) в Android Studio, через Android-приложение Log Viewer или просто как обычный текст. 
+* Предыдущие файлы журналов архивируются и хранятся в папках по датам/времени. 
+* Если вы делитесь своим лог-файлом в [discord](https://discord.gg/4fQUWHZ4Mw), чтобы рассказать о потенциальной ошибке, распакуйте и загрузите файл до возникновения ошибки.

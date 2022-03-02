@@ -1,94 +1,94 @@
 Open Humans Uploader
 ****************************************
-Donate your data for science
+Darujte svá data vědě
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
+Můžete pomoci komunitě tím, že daruje vaše data do výzkumných projektů! To pomáhá vědcům se dále posouvat, rozvíjet nové vědecké myšlenky a pomáhá otevírat téma open source systémů s uzavřenou smyčkou.
+AndroidAPS je připravena na synchronizaci dat s `Open Humans <https://www.openhumans.org>`_, platformou umožňující nahrávat, spojovat a ukládat vaše osobní data - jako jsou genetika, aktivity a zdravotní údaje. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Zachováváte si plnou kontrolu nad tím, co se stane s vašimi daty, a jaké projekty chcete podpořit tím, že jim udělíte přístup k vašim datům. V závislosti na projektu, ke kterému jste se připojili, jsou údaje vyhodnocovány a používány různými způsoby a v různém rozsahu.
 
-The following data will be uploaded to your Open Humans account: 
+Následující data budou odeslána na váš účet Open Humans: 
 
-* Glucose values
-* Careportal events (except notes)
-* Extended boluses
-* Profile switches
-* Total daily doses
-* Temporary basals
-* Temp targets
-* Preferences
-* Application version
-* Device model 
-* Screen dimensions
+* Hodnoty glykémie
+* Události v portálu péče (kromě poznámek)
+* Prodloužené bolusy
+* Přepnutí profilu
+* Celkové denní dávky
+* Dočasné bazály
+* Dočasné cíle
+* Nastavení
+* Verze aplikace
+* Model zařízení 
+* Rozměry obrazovky
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Tajné nebo soukromé informace, jako je adresa vašeho Nightscoutu nebo API heslo, nebudou nahrány.
 
 Nastavení
 ========================================
-1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+1. Jestliže dosud účet nemáte, vytvořte si účet na `Open Humans <https://www.openhumans.org>`_ pokud jste to jestě nedělali. Můžete se přihlásit také prostřednictvím svých stávajících účtů Google nebo Facebook.
+2. Povolte plugin “Open Humans” na záložce `Konfigurace <../Configuration/Config-Builder.html>`_.
+3. Pomocí ozubeného kolečka otevřete jeho nastavení. Můžete nahrávání dat omezit pouze na dobu, kdy je telefon na Wi-Fi a/nebo na nabíječce. 
+4. Otevřete plugin Open Humans (buď přes záložku OH, nebo přes hamburgerové menu) a klepněte na 'LOGIN'.
 
 .. image:: ../images/OHUploader1.png
-  :alt: Open Humans Config Builder
+  :alt: Open Humans v Konfiguraci
     
-5. Read the given information about the Open Humans Uploader and terms of use carefully. 
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. Pozorně si přečtěte uvedené informace o nástroji Open Humans Uploader a podmínkách jeho použití. 
+6. Potvrďte zaškrtnutím políčka a klepněte na 'LOGIN'.
+7. Otevře se webová stránka Open Humans. Přihlaste se pomocí svých přihlašovacích údajů.
+8. Rozhodněte, zda chcete skrýt své členství AndroidAPS Uploader ve svém veřejném profilu Open Humans.
+9. Klepněte na tlačítko 'Authorize project'.
 
 .. image:: ../images/OHUploader2.png
-  :alt: Open Humans Terms of Use + Login
+  :alt: Podmínky použití a přihlášení k Open Humans
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+10. Vrátíte-li se do AAPS, uvidíte zprávu o tom, že přihlášení bylo úspěšné.
+11. Ponechejte plugin Open Humans Uploader i telefon zapnuté, aby bylo možné nastavení dokončit.
+12. Poté, co klepnete na tlačítko zavřít, uvidíte své ID člena. Velikosti fronty > 0 ukazují, že jsou zde stále ještě nějaká data, která je třeba nahrát.
+13. Chcete-li přestat nahrávat data do Open Humans, klepněte na 'LOGOUT'.
+14. Oznámení systému Android vás bude informovat o probíhajícím nahrávání.
 
 .. image:: ../images/OHUploader3.png
-  :alt: Open Humans finish setup
+  :alt: Závěrečné nastavení Open Humans
 
-15. You can manage your data by logging in to the `Open Humans website <https://www.openhumans.org>`_.
+15. Svá data můžete spravovat po přihlášení na stránku `Open Humans <https://www.openhumans.org>`_.
 
 .. image:: ../images/OHWeb.png
-  :alt: Open Humans manage data
+  :alt: Správa dat Open Humans
      
-Sharing Opportunities
+Možnosti sdílení
 ========================================
-`The 'OPEN' project <https://www.open-diabetes.eu/>`_
+`'OPEN' project <https://www.open-diabetes.eu/>`_
 ---------------------------------------------------------------------------------------  
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
+Projekt "OPEN" spojuje mezinárodní a mezioborové konsorcium inovátorů z řad pacientů, klinických pracovníků, sociálních vědců, počítačových vědců a organizací hájících zájmy pacientů s cílem prozkoumat různé aspekty DIY APS (systémy umělé slinivky typu udělej-si-sám), které používá stále více lidí s diabetem. Další informace naleznete na jejich `webové stránce <https://www.open-diabetes.eu/>`_.
 
-September 2020 the 'OPEN' project launched a `survey <https://survey.open-diabetes.eu/>`_ including the option to donate data you uploaded to Open Humans. A `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+Projekt "OPEN" v září 2020 spustil `průzkum <https://survey.open-diabetes.eu/>`_ včetně možnosti darovat data, která jste nahráli na účet Open Humans. `Návod <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_, jak darovat vaše data projektu „OPEN“, je k dispozici na stránkách a také přímo v průzkumu.
 
 
 `OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
 ---------------------------------------------------------------------------------------  
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+OpenAPS Data Commons byl vytvořen proto, aby bylo možné jednoduše sdílet datové sady od DIYAPS komunity pro účely výzkumu. Tyto údaje jsou sdíleny s tradičními výzkumnými pracovníky, kteří budou vytvářet tradiční výzkumné studie, a se skupinami nebo jednotlivci z komunity, kteří chtějí přezkoumat údaje v rámci svých vlastních výzkumných projektů. OpenAPS Data Commons používá platformu "Open Humans" s cílem umožnit lidem snadno nahrávat a sdílet svá data z DIYAPS, včetně systémů AndroidAPS, Loop a OpenAPS. 
 
-You can get your data into Open Humans via one of three ways: 
+Data můžete do Open Humans dostat jedním ze tří způsobů: 
 
-1. use the AndroidAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans. 
+1. použít funkci AndroidAPS uploader pro odesílání svých dat do Open Humans
+2. použít Nightscout Data Transfer pro odesílání svých dat do Open Humans
+3. ručně nahrát datové soubory do Open Humans 
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Jakmile si vytvoříte účet a vaše data budou odesílána do Open Humans, ujistěte se, že se připojíte k OpenAPS Data Commons, abyste mohli darovat svá data pro výzkum, pokud se tak rozhodnete.
 
-Terms of Use
+Smluvní podmínky
 ========================================
-This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
-You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
+Toto je open source nástroj, který zkopíruje vaše data do `Open Humans <https://www.openhumans.org>`_. Bez vašeho výslovného svolení neuchováváme žádná práva pro sdílení vašich údajů se třetími stranami. Data, která projekt a aplikace obdrží, jsou identifikována pomocí náhodného ID uživatele a budou bezpečně přenesena na Open Humans účet pouze na základě vaší autorizace tohoto procesu.
+Data můžete kdykoli přestat nahrávat nebo je smazat na `www.openhumans.org <https://www.openhumans.org>`_. Pamatujte, že některé projekty, které přijímají data, toto nemusí podporovat.
 
-Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
+Viz také `Podmínky Open Humans <https://www.openhumans.org/terms/>`_.
 
-Data Privacy
+Ochrana dat
 ========================================
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans se stará o ochranu vašeho soukromí tím, že vám pro každý projekt přidělí číselné ID. To umožňuje rozpoznat projekty, ale neumožňuje to identifikovat vaši osobu. ID aplikace nahrané pomocí AndroidAPS je podobné a pomáhá pouze spravovat data. Další informace naleznete zde:
 
-* `Open Humans Data Use Policy <https://www.openhumans.org/data-use/>`_
+* `Zásady využití dat Open Humans <https://www.openhumans.org/data-use/>`_
 * `Open Humans GDPR <https://www.openhumans.org/gdpr/>`_
 
 

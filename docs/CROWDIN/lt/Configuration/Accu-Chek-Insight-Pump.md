@@ -23,7 +23,7 @@ Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
 * AndroidAPS programos [ konfigūratoriuje ](../Configuration/Config-Builder) pompos skyriuje pasirinkite Accu-Chek Insight
     
-    ![Insight pompos konfigūratoriaus ekrano vaizdas](../images/Insight_ConfigBuilder.png)
+    ![Insight pompos konfigūratoriaus ekrano vaizdas](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Spustelėkite krumpliaračio piktogramą, kad atidarytumėte Insight nustatymus.
 

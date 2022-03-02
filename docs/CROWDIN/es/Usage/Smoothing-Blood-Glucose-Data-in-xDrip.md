@@ -2,18 +2,26 @@
 
 Si los datos de BG son variables/ruidosos, la AAPS puede inyectar incorrectamente la insulina lo que resulta en BG altos o bajos. Por esta razón, es importante inhabilitar el lazo hasta que se resuelva el problema. Dependiendo de su MCG, estos problemas pueden deberse a la configuración de los mismos o a problemas de sensor/sitio. You may need to replace your CGM sensor to resolve this. Algunas características como 'Habilitar SMB siempre' y 'Habilitar SMB después de carbohidratos' sólo se pueden utilizar con una fuente BG con buen filtrado.
 
-## Aplicación de DexcomG5 (parcheada)
+## Dexcom sensors
 
-Cuando se utiliza Dexcom G5 App (parcheado), los datos de BG son fluidos y consistentes. No hay restricciones en el uso de SMB.
+### Build Your Own Dexcom App
 
-## xDrip+ con Dexcom G5
+When using [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
+
+### xDrip+ with Dexcom G5 or G6
 
 Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
-## xDrip+ con Freestyle Libre
+### Dexcom G5 App (patched)
 
-Cuando se utiliza xDrip+ como fuente de datos para los valores del Freestyle Libre hasta ahora no se puede activar "Habilitar SMB siempre' y 'permitir las SMB después de hidratos de carbono" dentro de las SMB debido a que los valores de BG no son lo suficientemente suaves. Excepto esto, hay un par de cosas que se pueden hacer para ayudar a reducir el ruido en los datos.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
 
-**Suave Ruido Del Sensor.** En xDrip+ Ajustes > xDrip+ Configuración de la Pantalla asegúrese de que el Suavizado de Ruido del Sensor está activado. Esto intenta aplicar suavizado a los datos ruidosos.
+## Freestyle Libre sensors
 
-**Suavizado de Ruido Del Sensor (Ultrasensible).** Si usted todavía está viendo datos ruidosos en xDrip+ puede aplicar un más agresivo suavizado mediante el ajuste de Suavizado de Ruido del Sensor (Ultrasensible). Esto intentará aplicar suavizado incluso en niveles muy bajos de ruido detectado. To do this, first enable engineering mode in xDrip+. A continuación, vaya a Configuración > xDrip+ Configuración de la Pantalla y activar Suavizado de Ruido del Sensor (Ultrasensible).
+### xDrip+ with Freestyle Libre
+
+When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).

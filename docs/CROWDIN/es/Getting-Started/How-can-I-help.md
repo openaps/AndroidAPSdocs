@@ -8,16 +8,16 @@ Los desarrolladores son los padres, guardianes, seres queridos y personas con di
 
 ## Puedo escribir código! ¿Cómo puedo participar?
 
-¡Síiiii! Mira los temas, pregunta en el canal de gitter, ¡ siempre hay mucho que hacer! ¡Elige una pequeña tarea al principio y haz tu primera solicitud de pull! :)
+¡Síiiii! Look at the issues, ask in the discord channel, there is always a lot to do! ¡Elige una pequeña tarea al principio y haz tu primera solicitud de pull! :)
 
 ## Conozco el sistema y puedo escribir documentación!
 
-¡Genial, esto es una cosa muy apreciada y una buena manera de pagarlo de antemano!
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* El canal de gitter antiguo relativo a la wiki se puede encontrar aquí: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
+* The discord channel regarding the wiki can be found here: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
 * Puede encontrar una guía sobre cómo realizar confirmaciones en el wiki inglés: [Cómo hacer un PR](../make-a-PR.md). Los demás idiomas sólo se traducen del inglés y no se pueden editar por razones de coherencia.
 
-## Yo hablo varios idiomas y quiero traducir la aplicación o la documentación
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Si desea traducir **la aplicación** a otros idiomas (gracias), utilice [crowdin](https://crowdin.com/project/androidaps).
 * Si desea traducir **los documentos** a otros idiomas (gracias), por favor use [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Sólo tiene que registrarse en CROWDIN, hacer clic en su idioma, esperar a la au
 
 ## ¿Hay otras formas de ayudar?
 
-Las habilidades necesarias incluyen diseño gráfico, diseño de UX, traductores, editores de wiki o simplemente pay it forward al responder las preguntas simples en el gitter & Facebook para permitir a los desarrolladores el tiempo y el espacio para enfocarse en las cosas más difíciles.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

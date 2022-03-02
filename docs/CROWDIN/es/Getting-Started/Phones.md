@@ -10,4 +10,4 @@ Cualquier problema con la hoja de cálculo por favor envíe un correo electróni
 
 # Fondo de teléfono
 
-![fondo de teléfono](../images/bg_phone_thump.jpg) </br> Diseño: Thiago:) </br> Si desea decorar su teléfono con más AndroidAPS, puede descargar su imagen de fondo aquí: ![Fondo con alta resolución.](../images/bg_phone.jpg)
+![fondo de teléfono](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Fondo con alta resolución.](../images/bg_phone.jpg)

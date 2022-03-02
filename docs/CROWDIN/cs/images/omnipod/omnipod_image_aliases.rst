@@ -7,7 +7,7 @@
 ..
 	Omnipod (POD) Overview Tab
 
-.. |ack_alerts|                    image:: ICONS/omnipod_overview_ack_alerts.png
+.. |ack_alerts| image:: ICONS/omnipod_overview_ack_alerts.png
 .. |pod_management|                image:: ICONS/omnipod_overview_pod_management.png
 .. |refresh_pod_status|            image:: ICONS/omnipod_overview_refresh_pod_status.png
 .. |resume|               	   image:: ICONS/omnipod_overview_resume.png

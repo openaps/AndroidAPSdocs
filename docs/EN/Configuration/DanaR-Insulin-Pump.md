@@ -17,8 +17,9 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * If you want AndroidAPS to allow basal rate above 200%, enable Use extended boluses for >200%. Note this means you cannot loop with high TBRs whilst using extended boluses for food.
 * In Preferences under DanaR pump settings you can change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 * Set basal step on pump to 0.01 U/h
+* Set bolus step on pump to 0.1 U/h
 * Enable extended boluses on pump
 
 ## Timezone traveling with Dana R pump
 
-For information on traveling accross time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

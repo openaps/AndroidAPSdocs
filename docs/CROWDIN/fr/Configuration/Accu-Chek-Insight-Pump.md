@@ -12,7 +12,7 @@
 
 Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module.html#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
+* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
 * L'application AndroidAPS installée sur votre téléphone
 
 ## Paramètres
@@ -23,7 +23,7 @@ Remarque : AAPS écrira toujours les données dans le **premier profil débit de
 
 * Dans le [Générateur de configuration](../Configuration/Config-Builder) de l'application AndroidAPS, sélectionnez Accu-Chek Insight dans la section de la pompe.
     
-    ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder.png)
+    ![Copie d'écran de Génération de configuration Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Appuyez sur la roue crantée pour ouvrir les paramètres Insight.
 

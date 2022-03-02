@@ -1,94 +1,94 @@
-Open Humans Uploader
+Încarcă date in platforma Open Humans
 ****************************************
-Donate your data for science
+Donează datele tale pentru știință
 ========================================
-You can help the community by donating your data to research projects! This helps scientists to pay it forward, develop new scientific ideas and broaden the open mind of open source closed loop systems.
-AndroidAPS is ready to synchronize your data with `Open Humans <https://www.openhumans.org>`_, a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data. 
+Poți ajuta comunitatea prin donarea datelor tale către proiecte de cercetare! Acest lucru ajută oamenii de știință să meargă mai departe, să dezvolte noi idei științifice și să crească atenția acordata sistemelor în bucla închisa open-source.
+AndroidAPS poate sincroniza datele tale cu `Open Humans <https://www.openhumans.org>`_, o platformă care permite încărcarea și stocarea datelor tale personale - cum ar fi date genetice, de activitate și de sănătate. 
 
-You retain full control about what happens to your data and what projects you want to support by giving them access to your data. Depending on the project you have joined, data is evaluated and used by them in different ways and extent.
+Deții controlul deplin asupra a ceea ce se întâmplă cu datele tale și asupra proiectelor pe care dorești să le susții oferindu-le acces la datele tale. Datele tale sunt evaluate și folosite în moduri și în grade diferite in funcție de proiectul la care te-ai alăturat.
 
-The following data will be uploaded to your Open Humans account: 
+Următoarele date vor fi încărcate în contul tău Open Humans: 
 
-* Glucose values
-* Careportal events (except notes)
-* Extended boluses
-* Profile switches
-* Total daily doses
-* Temporary basals
-* Temp targets
-* Preferences
-* Application version
-* Device model 
-* Screen dimensions
+* Valorile glicemiei
+* Evenimente Careportal (cu excepția notelor)
+* Bolusuri extinse
+* Schimbări de profil
+* Doze zilnice totale
+* Bazale temporare
+* Ținte temporare
+* Preferințe
+* Versiunea aplicaţiei
+* Tipul dispozitivului 
+* Dimensiuni ecran
 
-Secret or private information such as your Nightscout URL or API secret will not be uploaded.
+Informații secrete sau private, cum ar fi Nightscout URL sau API secret nu vor fi încărcate.
 
-Setup
+Instalare
 ========================================
-1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.
-3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged. 
-4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
+1. Crează-ți un cont pe `Open Humans <https://www.openhumans.org>`_ dacă nu ai făcut deja acest lucru. Poți utiliza, dacă dorești, conturile tale de Google sau Facebook.
+2. Activează conectarea “Open Humans” în `Config Builder <../Configuration/Config-Builder.html>`_.
+3. Deschide setarea folosind iconița roata dințată. Poți restricționa încărcarea pe durata în care telefonul utilizează Wi-Fi și/sau este conectat la un încărcător. 
+4. Deschide conectarea Open Humans (fir prin secțiunea OH sau meniul complet) și apasă pe 'LOGIN'.
 
 .. image:: ../images/OHUploader1.png
   :alt: Open Humans Config Builder
     
-5. Read the given information about the Open Humans Uploader and terms of use carefully. 
-6. Confirm by checking the box and click 'LOGIN'.
-7. Open Humans website will be opened. Login with your credentials.
-8. Decide whether you want to hide your AndroidAPS Uploader membership in your public Open Humans profile.
-9. Click button 'Authorize project'.
+5. Citește cu atenție informațiile furnizate despre funcția de Open Humans Uploader și termenii de utilizare. 
+6. Confirmă prin bifarea căsuţei şi apasă pe "LOGIN".
+7. Site-ul Open Humans va fi deschis. Autentifică-te cu datele tale de autentificare.
+8. Decide dacă vrei să îți ascunzi calitatea de membru al aplicației AndroidAPS Uploader în profilul public Open Humans.
+9. Apăsați butonul „Autorizează proiectul”.
 
 .. image:: ../images/OHUploader2.png
-  :alt: Open Humans Terms of Use + Login
+  :alt: Open Humans Termeni de utilizare + Autentificare
 
-10. Returning to AAPS you will see a prompt that login succeeded.
-11. Keep Open Humans Uploader plugin and phone turned on for setup to complete.
-12. After clicking close you will see your member ID. Queue sizes > 0 shows that there is still data to be uploaded.
-13. Click 'LOGOUT' if you want to stop uploading data to Open Humans.
-14. Android notification will inform you about running upload.
+10. Când revii la AAPS vei vedea logare reușită.
+11. Pentru finalizarea configurării păstrează conectarea Open Humans Uploader pornita și telefonul deschis.
+12. După ce dai click pe închidere vei vedea ID-ul tău de membru. Dimensiunea cozii > 0 arată că încă mai sunt date ce trebuie încărcate.
+13. Apasă pe 'LOGOUT' dacă vrei să oprești încărcarea datelor în Open Humans.
+14. Notificările Android te vor informa despre încărcarea în curs.
 
-.. image:: ../images/OHUploader3.png
-  :alt: Open Humans finish setup
+.. image:: ../images/OHUploader2.png
+  :alt: Open Humans termină configurarea
 
-15. You can manage your data by logging in to the `Open Humans website <https://www.openhumans.org>`_.
+15. Îți poți gestiona datele conectându-te la `website-ul Open Humans <https://www.openhumans.org>`_.
 
-.. image:: ../images/OHWeb.png
-  :alt: Open Humans manage data
+.. image:: ../images/OHUploader2.png
+  :alt: Open Humans management date
      
-Sharing Opportunities
+Oportunități de partajare
 ========================================
-`The 'OPEN' project <https://www.open-diabetes.eu/>`_
+` Proiectul 'OPEN' <https://www.open-diabetes.eu/>` _
 ---------------------------------------------------------------------------------------  
-The 'OPEN' project brings together an international and intersectoral consortium of patient innovators, clinicians, social scientists, computer scientists and patient advocacy organizations in order to investigate various aspects of Do-it-Yourself Artificial Pancreas Systems (DIY APS) that are used by an increasing number of people with diabetes. For more details see their `website <https://www.open-diabetes.eu/>`_.
+Proiectul "OPEN" reuneşte un consorţiu internaţional şi intersectorial de pacienţi inovatori, medici, oameni de ştiinţă, informaticieni şi organizaţii care pledeaza pentru pacienti, cu scopul de a investiga diverse aspecte in legatura cu sistemele de pancreas-artificial-realizat-individual (DIY APS) utilizate de un număr din ce în ce mai mare de persoane cu diabet. Pentru mai multe detalii, viziteaza site-ul lor " <https://www.open-diabetes.eu/>" _.
 
-September 2020 the 'OPEN' project launched a `survey <https://survey.open-diabetes.eu/>`_ including the option to donate data you uploaded to Open Humans. A `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
+Proiectul 'OPEN' din septembrie 2020 a lansat un `sondaj <https://survey.open-diabetes.eu/>` _ care include opțiunea de a dona către Open Humans datele pe care le-ai încărcat. Un `tutorial <https://open-diabetes.eu/en/open-survey/survey-tutorials/>`_ cum să donezi datele tale pentru proiectul 'OPEN' este disponibil pe site-ul lor și în cadrul sondajului.
 
 
-`OpenAPS Data Commons <https://www.openhumans.org/activity/openaps-data-commons/>`_
+" OpenAPS Data Commons <https://www. openhumans. org/activity/openaps-data-commons/>` _
 ---------------------------------------------------------------------------------------  
-The OpenAPS Data Commons was created to enable a simple way to share data sets from the DIYAPS community for research. The data is shared both with traditional researchers who will create traditional research studies, and with groups or individuals from the community who want to review data as part of their own research projects. The OpenAPS Data Commons uses the 'Open Humans' platform to enable people to easily upload and share their data from DIYAPS including AndroidAPS, Loop, and OpenAPS. 
+OpenAPS Data Commons e creat pentru a permite o modalitate simplă de a partaja date de la comunitatea DIYAPS pentru cercetare. Datele sunt partajate atât catre cercetători tradiționali, pentru studii de cercetare, cât și grupurilor sau persoanelor din comunitate care doresc să analizeze datele ca parte a propriilor proiecte. OpenAPS Data Commons folosește platforma 'Open Humans' pentru a permite oamenilor să încarce ușor și să partajeze datele lor din DIYAPS, inclusiv AndroidAPS, Loop şi OpenAPS. 
 
-You can get your data into Open Humans via one of three ways: 
+Poți să introduci datele tale în Open Humans prin unul din aceste trei moduri: 
 
-1. use the AndroidAPS uploader option to get your data into Open Humans
-2. use the Nightscout Data Transfer to get your data into Open Humans
-3. manually upload data files into Open Humans. 
+1. utilizează opțiunea de încarcare AndroidAPS
+2. utilizează transferul de date Nightscout
+3. încarca manual fişiere de date în Open Humans. 
 
-Once you've created an account and gotten your data flowing into Open Humans, make sure to also join the OpenAPS Data Commons in order to donate your data for research if you choose.
+Odată ce ai creat contul și fluxul de date se transmite in Open Humans, alătura-te și la OpenAPS Data Commons pentru a dona datele pentru cercetare, dacă vrei.
 
-Terms of Use
+Condiții de utilizare
 ========================================
-This is an open source tool that will copy your data to `Open Humans <https://www.openhumans.org>`_. We retain no rights to share your data with third parties without your explicit authorization. The data the project and app receive are identified via a random user ID and will only be securely transmitted to an Open Humans account with your authorization of that process.
-You can stop uploading and delete your upload data at any time via `www.openhumans.org <https://www.openhumans.org>`_. Beware that some projects that receive data may not support this.
+Acesta este un instrument open source care va copia datele tale în `Open Humans <https://www.openhumans.org>`_. Nu avem nici un drept de a partaja datele tale cu terţe părţi fără autorizaţia ta explicită. Datele pe care le primesc proiectul și aplicația sunt identificate printr-un ID de utilizator aleatoriu și vor fi transmise în siguranță într-un cont Open Humans cu autorizarea ta pentru acest proces.
+Poți inceta încărcarea și sa ștergi datele de încărcate oricând prin `www.openhumans.org <https://www.openhumans.org>`_. Țineți cont că unele proiecte care primesc date s-ar putea să nu suporte acest lucru.
 
-Also see `Open Humans Terms of Use <https://www.openhumans.org/terms/>`_.
+Consultați de asemenea `Open Humans Termeni de Utilizare <https://www.openhumans.org/terms/>`_.
 
-Data Privacy
+Confidenţialitatea datelor
 ========================================
-Open Humans takes care of protecting your privacy by assigning a numerical ID to you for each project. This allows projects to recognize but no identify you. The Application ID uploaded by AndroidAPS is similar and only helps administrate the data. More information can be found here:
+Open Humans iti protejeaza intimitatea prin atribuirea unui ID numeric pentru fiecare proiect. Aceasta permite proiectelor să recunoască sursa fara sa te idntifice. ID-ul aplicației încărcate de către AndroidAPS este similar și ajută doar la administrarea datelor. Mai multe informații pot fi gasite aici:
 
-* `Open Humans Data Use Policy <https://www.openhumans.org/data-use/>`_
-* `Open Humans GDPR <https://www.openhumans.org/gdpr/>`_
+* ` Open Humans Politica de Utilizare a Datelor <https://www.openhumans.org/data-use/>` _
+* " Open Humans RGPD <https://www.openhumans.org/gdpr/>` _
 
 

@@ -6,18 +6,30 @@ Wenn Du beim Update von AndroidAPS den selben keystore verwendest, musst Du die 
 
 Falls Du Deinen bisherigen keystore nicht mehr findest, kannst Du wie folgt vorgehen:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html#exportiere-die-einstellungen>`__ auf Deinem Smartphone.
 2. Kopiere die Datei mit den Einstellungen von Deinem Smartphone auf einen externen Speicherort (z.B. Dein Computer, einen Cloud-Speicher-Dienst...).
 3. Stelle sicher, dass die Datei "AndroidAPS Preferences" sicher gespeichert ist.
 4. Erstelle die signierte apk-Datei der neuen Version wie auf der `Update Seite <../Installing-AndroidAPS/Update-to-new-version.html>`_ beschrieben.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+7. `Importiere Deine Einstellungen <../Usage/ExportImportSettings.html#importiere-die-einstellungen>`_ - falls Du sie auf Deinem Smartphone nicht findest, kopiere sie einfach vom externen Speicherort auf das Smartphone.
 8. Loope weiter!
+
+
+
+Fehler "on demand" Konfiguration
+==================================================
+
+Wenn der Build-Prozess mit einem Fehler zu "on demand configuration" fehlschlägt, dann kannst du folgendes tun:
+* Das Einstellungen-Fenster öffnen, indem du auf Datei > Einstellungen (auf dem Mac: Android Studio > Preferences) klickst.
+* Klicke im linken Fensterbereich auf Build, Execution, Deployment > Compiler.
+* Deaktiviere die "Configure on demand" Checkbox.
+* Klicke Apply oder OK.
+
 
 Kotlin Compiler Warnung
 ==================================================
-Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhältst, so kannst Du diese ignorieren. 
+Wenn der Build erfolgreich abgeschlossen wurde, Du aber eine Warnung des 'Kotlin Compilers' erhältst, so kannst Du diese ignorieren.
 
 Die App wurde erfolgreich erstellt und kann auf das Smartphone übertragen werden.
 
@@ -51,9 +63,9 @@ Fehler: buildOutput.apkData must not be null
 ==================================================
 Manchmal kann es sein, dass Du beim Erstellen der APK-Datei folgende Fehlermeldung bekommst:
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
+
+  ``Cause: buildOutput.apkData must not be null``
 
 Dies ist ein bekannter Fehler in Android Studio 3.5 und wird wahrscheinlich erst in Android Studio 3.6 behoben. Drei mögliche Vorgehensweisen:
 
@@ -74,7 +86,7 @@ Im Internet findest Du viele Anleitungen, wie Du herausfinden kannst, ob Du ein 
 Fehlende CGM-Daten
 ==================================================
 * Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den `xDrip+ Einstellungen <../Configuration/xdrip.html#identifiziere-empfanger>`_ beschrieben.
-* Falls Du die `gepatchte Dexcom G6 App <../Hardware/DexcomG6.html#g6-mit-der-gepatchten-dexcom-app>`_ verwendest: Stelle sicher, dass Du die korrekte Version aus dem `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ verwendest.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen `BYODA <../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app>`_ .
 
 Uncommitted changes
 ==================================================
@@ -96,7 +108,7 @@ Option 2 - Quellcode erneut laden
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Option 3 - Prüfe den Code auf Aktualisierungen
 --------------------------------------------------
 * Kopiere 'git checkout --' in die Zwischenablage (ohne die Anführungszeichen)
@@ -104,7 +116,7 @@ Option 3 - Prüfe den Code auf Aktualisierungen
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
     :alt: Android Studio Terminal
-   
+
 * Paste copied text and press return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -118,32 +130,31 @@ App not installed / Installation fehlgeschlagen
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
   
-1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`__ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 2. Deinstalliere AAPS auf Deinem Smartphone.
 3. Aktiviere den Flugmodus & schalte Bluetooth aus.
 4. Installiere die neue Version ("app-full-release.apk").
-5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`_
+5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`__
 6. Aktiviere Bluetooth wieder und schalte den Flugmodus aus.
 
 App installiert, aber weiter die alte Version auf dem Smartphone
 ==================================================
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`_.
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine `lokale Kopie zu aktualisieren <../Installing-AndroidAPS/Update-to-new-version.html#fuhre-ein-update-deiner-lokalen-version-durch>`_.
 
 Keiner der oben genannten Lösungsvorschläge funktioniert
 ==================================================
 Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
-1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`_ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
-2. Halte Dein key Passwort und Dein key store Passwort bereit.
-    Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>`_ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
-5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`_
+1. `Exportiere Deine Einstellungen <../Usage/ExportImportSettings.html>`__ (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
+2. Halte Dein key Passwort und Dein key store Passwort bereit. Falls Du die Passwörter vergessen hast, kannst Du versuchen, sie  wie `hier <https://youtu.be/nS3wxnLgZOo>` __ beschrieben in den Projektdateien zu finden. Oder verwende einfach einen neuen keystore.
+3. Erstelle die App von Grund auf neu wie `hier <../Installing-AndroidAPS/Building-APK.html#androidaps-code-herunterladen>`__ beschrieben.
+4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
+5. `Export/Import von Einstellungen <../Usage/ExportImportSettings.html>`__
 
 Worst case scenario
 ==================================================
 Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
-**Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst.** Wenn Du Android Studio und seine versteckten Dateien nicht komplett entfernt werden, kann die Deinstallation neue Schwierigkeiten verursachen statt Deine bestehenden Probleme zu lösen. Anleitungen zur kompletten Deinstallation findest Du online z.B. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Stelle sicher, dass Du beim Deinstallieren von Android Studio alle damit in Verbindung stehenden Dateien entfernst. ** Wenn Du Android Studio und seine versteckten Dateien nicht komplett entfernt werden, kann die Deinstallation neue Schwierigkeiten verursachen statt Deine bestehenden Probleme zu lösen. Anleitungen zur kompletten Deinstallation findest Du online z.B. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
 Installiere Android Studio von Grund auf wie `hier <../Installing-AndroidAPS/Building-APK.html#android-studio-installieren>`_ beschrieben und **führe kein gradle Update durch**.

@@ -1,45 +1,45 @@
-General CGM recommendations
+Recomandări generale CGM
 **************************************************
 
-CGM hygiene
+Igiena CGM
 ==================================================
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps. 
+Indiferent de sistemul CGM pe care îl utilizaţi, dacă doriţi să utilizaţi calibrarea bazată pe glucometru, atunci există unele reguli foarte clare pe care ar trebui să le aplicaţi, indiferent dacă utilizaţi sau nu software-ul DIY CGM sau aplicaţiile oficiale. 
 
-* Make sure hands and kit are clean.
-* Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-* Avoid calibrating when glucose levels are moving up or down. 
-* Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
-* If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+* Asiguraţi-vă că mâinile şi trusa sunt curate.
+* Încercaţi să calibraţi atunci când aveţi o serie de puncte cu o evoluție orizontală (15-30 minute este de obicei suficient)
+* Evitaţi calibrarea atunci când nivelele glicemiei cariază în sus sau în jos. 
+* Faceţi "suficiente" calibrări - în aplicaţii oficiale vi se va cere o dată sau de două ori pe zi verificări ale glicemiei. În cazul sistemelor DIY este posibil să nu fiţi alertat şi ar trebui să fiți prudent când continuaţi fără calibrări.
+* Dacă este posibil, calibraţi cu unele valori dintr-o gamă mai mică (4-5mmol/l sau 72-90mg/dl) şi unele de la un nivel uşor mai înalt (7-9mmol/l sau 126-160mg/dl), deoarece aceasta oferă o gamă mai bună pentru calibrarea punctelor/pantei.
 
-Setting sensor (G6)
+Inserare senzor (G6)
 ==================================================
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Atunci când este inserat senzorul, este recomandat să nu se apese prea ferm pe inserter pentru a evita sângerarea. Firul senzorului nu trebuie să intre în contact cu sângele.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
+După inserarea senzorului, transmiţătorul poate fi apăsat în suportul de pe senzor. Atenție! Mai întâi faceţi click în partea ascuțită şi apoi apăsaţi pe partea rotundă.
 
-Troubleshooting 
+Depanare 
 ==================================================
 
-Connection problems
+Probleme de conectare
 --------------------------------------------------
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is reestablished the data is backfilled.
+Conexiunea Bluetooth poate fi deranjată de alte dispozitive Bluetooth din apropiere, cum ar fi glucometre, căști, tablete sau dispozitive de bucătărie cum ar fi cuptoarele cu microunde sau plitele electrice. În acest caz, xDrip nu afișează valorile glicemiei. When bluetooth connection is restabilised the data is backfilled.
 
-Sensor Errors
+Erori senzor
 --------------------------------------------------
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood. 
+Dacă apar erori de senzor repetate, încercaţi să alegeți un alt loc pe corp pentru a insera senzorul. Firul senzorului nu trebuie să intre în contact cu sângele. 
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Adesea o eroare de senzor poate fi corectată prin hidratare imediată și masare ușoară în jurul senzorului!
 
-Jumpy values
+Valori săltărețe
 --------------------------------------------------
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
+Ați putea încerca să modificați setările pentru blocarea zgomotului în xDrip (Setări - Setări intre aplicații - Blocarea zgomotului) adică "Blochează zgomotul foarte ridicat și cel mai ridicat".  A se vedea deasemenea `Smoothing BG data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_.
 
-Negative Sensor Age
+Vârstă negativă a senzorului
 --------------------------------------------------
 .. image:: ../images/Troubleshooting_SensorAge.png
-  :alt: Negative sensor age
+  :alt: Vârstă negativă a senzorului
 
-This occurs if there is either a double "CGM Sensor Insert" entry in `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+Acest lucru se întâmplă dacă există fie o înregistrare dublă "Inserare senzor CGM" în `actions tab / menu <../Configuration/Config-Builder.html#actions>`_ sau un senzor inserat cu dată greșită. Mergeți la pagina de tratamente > careportal și ștergeți intrarea greșită.

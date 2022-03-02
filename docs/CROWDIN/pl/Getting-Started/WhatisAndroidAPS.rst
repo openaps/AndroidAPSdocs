@@ -11,7 +11,7 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 * Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 * Maintains and monitors the system to ensure it is working properly
 
-.. note::
+.. notatka:: 
 	**Disclaimer and Warning**
 
 	* Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.
@@ -40,5 +40,4 @@ Primary goals behind AndroidAPS
 How to start
 == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_. You can also take a look on the `sample setup with Dana, Dexcom and Sony Smartwatch <../Getting-Started/Sample-Setup.html>`_.
- 
+A good orientation is given by the `Module Overview <../Module/module.html>`_ and the `Objectives <../Usage/Objectives.html>`_.

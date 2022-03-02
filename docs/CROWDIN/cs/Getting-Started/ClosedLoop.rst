@@ -5,7 +5,7 @@ Co je systém uzavřené smyčky?
   :alt: AAPS je jako autopilot
 
 Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu. 
-Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku, jej ve své skvělé knize `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ přirovnává k `„autopilotu pro váš diabetes“ <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Co to však znamená?
+Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku, jej ve své skvělé knize `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ přirovnává k „autopilotu pro váš diabetes“<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Co to však znamená?
 
 **Autopilot v letadle**
 
@@ -23,7 +23,7 @@ Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilot
 
 
 Open source systémy uzavřené smyčky APS
-==================================================
+===================================================
 V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smyčky:
 
 AndroidAPS (AAPS)
@@ -32,10 +32,11 @@ Systém AndroidAPS je podrobně popsán v `této dokumentaci <./WhatisAndroidAPS
 
 Kompatibilní pumpy jsou:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * některé staré `Medtronic pumpy <../Configuration/MedtronicPump.html>`_
 
 OpenAPS

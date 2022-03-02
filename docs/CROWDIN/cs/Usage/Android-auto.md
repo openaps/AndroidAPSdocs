@@ -30,7 +30,7 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![Enable unknown sources](../images/AndroidAuto_03.png)
 
-* Nyní můžete opustit režim vývojáře, pokud chcete. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
+* Now you can quit developer mode if you want. Chcete-li jej opustit, klepněte na tři tečky vpravo nahoře.
 
 ## Show notifications in car
 

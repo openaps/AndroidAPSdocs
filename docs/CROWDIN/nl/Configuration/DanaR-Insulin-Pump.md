@@ -18,8 +18,9 @@
 * Als je wilt dat AndroidAPS de basaalstand hoger boven de 200% kan instellen, schakel dan "Gebruik vertraagde bolussen voor > 200%" in. Dat betekent wel, dat je niet kunt loopen met hoge tijdelijke basaalstanden als je vertraagde maaltijdbolussen gebruikt.
 * In Instellingen onder DanaR pomp instellingen kun je de standaard bolus snelheid wijzigen (12sec per 1E, 30sec per 1E of 60sec per 1E).
 * Zet de stapgrootte voor basaal op 0,01 E/uur
+* Set bolus step on pump to 0.1 U/h
 * Activeer vertraagde bolussen op de pomp
 
 ## Wisselen van tijdzone met de DanaR
 
-Lees alles over reizen in verschillende tijdzones op de pagina [Wisselen van tijdzone](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

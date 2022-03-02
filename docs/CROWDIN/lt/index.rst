@@ -17,38 +17,52 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Pradėkite
+   :caption: Change language
+
+   Change language <./changelanguage.rst>
+
+.. _getting-started:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Getting started
 
    Saugumas pirmiausia <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Dokumentacijos atnaujinimai ir pakeitimai <./Getting-Started/WikiUpdate.rst>
 
+.. _what-do-i-need:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need?
+   :caption: What do I need? 
 
    Moduliai <./Module/module.rst>
-   Pavyzdinė Sąranka <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Kaip įdiegti AndroidAPS
+   :caption: How to Install AndroidAPS
 
    Android programos (APK) kūrimas <./Installing-AndroidAPS/Building-APK.md>
    Atnaujinimas į naują versiją ar atšaką <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Patikrinimas po atnaujinimo į AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git įdiegimas <./Installing-AndroidAPS/git-install.rst>
-   * Android Studio trikčių šalinimas <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Atnaujinimų pastabos <./Installing-AndroidAPS/Releasenotes.rst>
    Kūrėjo versija <./Installing-AndroidAPS/Dev_branch.md>
+
+.. _component-setup:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Komponentų Nustatymas
+   :caption: Component Setup
 
    Glikemijos duomenų šaltiniai <./Configuration/BG-Source.rst>
    xDrip Nustatymai <./Configuration/xdrip.md>
@@ -57,10 +71,12 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
    Nightscout nustatymas <./Installing-AndroidAPS/Nightscout.md>
    Išmanieji laikrodžiai <./Hardware/Smartwatch.rst>
 
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Konfigūracija
+   :caption: Configuration
 
    Konfigūratorius <./Configuration/Config-Builder.md>
    Nustatymai <./Configuration/Preferences.rst>
@@ -68,7 +84,7 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS naudojimas
+   :caption: AndroidAPS Usage
 
    AndroidAPS ekranai <./Getting-Started/Screenshots.md>
    Tikslai <./Usage/Objectives.rst>
@@ -87,46 +103,49 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Bendrieji Patarimai
+   :caption: General Hints 
 
    Keliavimas per laiko zonas su pompomis <./Usage/Timezone-traveling.md>
    Žurnalų pasiekimas <./Usage/Accessing-logfiles.md>
    Accu-Chek Combo patarimai bendram naudojimui <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Eksportuoti / Importuoti Parametrus <./Usage/ExportImportSettings.rst>
+   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS vaikams
+   :caption: AndroidAPS for children
 
    Nuotolinis stebėjimas <./Children/Children.rst>
    SMS komandos <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Trikčių šalinimas
+   :caption: Troubleshooting
 
    Trikčių šalinimas <./Usage/troubleshooting.rst>
+   Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: DUK
+   :caption: FAQ
 
    DUK <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Terminų žodynas
+   :caption: Glossary
 
    Terminų žodynas <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Kur ieškoti pagalbos
+   :caption: Where to go for help 
 
    Naudingi ištekliai prieš pradedant <./Where-To-Go-For-Help/Background-reading.md>
    Kur kreiptis pagalbos <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -135,21 +154,22 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Medikams
+   :caption: For Clinicians
 
    Medikams <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Kaip padėti
+   :caption: How to help
 
    Kaip padėti <./Getting-Started/How-can-I-help.md>
    Kaip išversti programėlę ir dokumentaciją <./translations.md>
    Kaip redaguoti dokumentaciją <./make-a-PR>
 
 
-.. note:: 
+.. pastaba:: 
 	**Atsakomybės Ir Įspėjimas**
 
 	* Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
@@ -158,4 +178,4 @@ Norėdami gauti daugiau informacijos, prašome perskaityti čia.
 
 	* Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-	Atkreipkite dėmesį: Šis projektas nėra susijęs su ir jam nėra pritarę: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ar `Medtronic <http://www.medtronic.com/>`_
+	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_

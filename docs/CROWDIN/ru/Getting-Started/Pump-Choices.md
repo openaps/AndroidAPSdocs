@@ -1,30 +1,17 @@
 # Выбор помпы
 
-AndroidAPS на этот момент работает с
+AndroidAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-* Accu Chek Combo
-* Accu-Chek Insight
-* некоторые старые помпы Medtronic
-* Insulet Omnipod (Eros not DASH)
-* DanaR
-* DanaRS 
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
+- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Compatible Device)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
-помпами Подробности о других помпах, которые возможно смогут работать с AndroidAPS, перечислены на странице [ Помпы будущего ](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Часто спрашивают, какая помпа лучше для AAPS. Детали дистрибьюторов приведены в [этой таблице](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), добавьте вашу помпу, если она не внесена.
-
-Combo и Insight прекрасные помпы, способные работать в составе ИПЖ Однако преимущества помп Dana R/ RS для AAPS следующие:
-
-* Dana*R/RS соединяется почти с любым телефоном с Android >= 5.1 без необходимости перепрошивки на Lineage OS. Если ваш телефон сломался, вы легко найдете телефон, который работает с Dana* R/RS в качестве быстрой замены... С Combo не так просто. (Ситуация может измениться, когда Android 8.1 станет более популярным)
-
-* Первоначальное сопряжение проще с Dana* RS. Но обычно это делается только один раз, так что это свойство важно, если хотите проверить новую функцию на других помпах.
-
-* На данный момент Combo работает с экранным анализом. В целом, это неплохо, но такая работа идет медленно. Для цикла ИПЖ это не имеет значения, так как он работает в фоновом режиме. Тем не менее, требуется больше времени на соединение и, соответственно, больше возможности его разорвать, что плохо, если вы отошли от телефона, например, во время болюса, когда готовите пищу.
-
-* Combo вибрирует по завершении временных базалов TBR, Dana* R вибрирует (или пищит) на микроболюсах SMB. В ночное время вы, скорее всего, будете использовать TBR а не SMB. Dana* RS может быть сконфигурирована так, что не будет ни вибрировать ни пищать.
-
-* Чтение истории на RS позволяет легко заменить телефоны в автономном режиме и продолжать работу с появлением новых значений мониторинга CGM.
-
-* Все помпы, с которыми работает AndroidAPS, изначально водонепроницаемы. Но только помпы Dana также "гарантированно водонепроницаемы" благодаря изолированным отсекам батареи и системы наполнения резервуара.
-
-Combo, конечно, очень хорошая помпа, применимая в системах ИПЖ. Также у нее есть преимущество выбора типа инфузионной системы, так как в ней применен стандартный разъем типа luer. Батарею вы можете купить на любой заправочной станции или в круглосуточно работающем магазине, а при необходимости ее можно добыть из пульта дистанционного управления в номере отеля ;-)

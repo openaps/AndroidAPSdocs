@@ -17,20 +17,31 @@ Pour plus de détails, lisez la suite ici.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Pour commencer
-   
-   Sécurité avant tout <./Getting-Started/Safety-first.rst>
-   Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.rst>
-   Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
+   :caption: Changer de langue
+
+   Changer de langue <./changelanguage.rst>
+
+.. _getting-started:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: De quoi ai-je besoin ? 
-   
+   :caption: Pour commencer
+
+   Sécurité avant tout <./Getting-Started/Safety-first.rst>
+   Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.rst>
+   Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Choix de pompes <./Getting-Started/Pump-Choices.md>
+   Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: De quoi ai-je besoin 
+
    Composants <./Module/module.rst>
-   Exemple de configuration <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
@@ -39,17 +50,20 @@ Pour plus de détails, lisez la suite ici.
 
    Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
    Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Vérifications à faire après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installer git <./Installing-AndroidAPS/git-install.rst>
-   Dépannage d'Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Notes de versions <./Installing-AndroidAPS/Releasenotes.rst>
    Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
+
+.. _component-setup:
 
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Configuration des composants
-   
+
    MGC/MGF <./Configuration/BG-Source.rst>
    Paramètres xDrip <./Configuration/xdrip.md>
    Pompes à insuline <./Hardware/pumps.rst>
@@ -57,11 +71,13 @@ Pour plus de détails, lisez la suite ici.
    Paramètres Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Montres connectées  <./Hardware/Smartwatch.rst>
 
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Générateur de configuration 
-   
+   :caption: Générateur de configuration
+
    Générateur de configuration <./Configuration/Config-Builder.md>
    Préférences <./Configuration/Preferences.rst>
 
@@ -69,7 +85,7 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: Utilisation d'AndroidAPS
-    
+
    Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
    Objectifs <./Usage/Objectives.rst>
    Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>   
@@ -80,7 +96,7 @@ Pour plus de détails, lisez la suite ici.
    Glucides étendus <./Usage/Extended-Carbs.rst>
    Automatisation <./Usage/Automation.rst>
    Careportal (supprimé) <./Usage/CPbefore26.rst>
-   Téléversement Open Humans <./Configuration/OpenHumans.rst>
+   Téléversement Open Humans <../Configuration/OpenHumans.rst>
    Automatisation avec des applications tierces <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
@@ -88,39 +104,42 @@ Pour plus de détails, lisez la suite ici.
    :maxdepth: 1
    :glob:
    :caption: Conseils généraux 
-   
+
    Fuseaux horaires <./Usage/Timezone-traveling.md>
    Acces aux fichiers journaux <./Usage/Accessing-logfiles.md>
    Conseils d'utilisation de l'Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import des paramètres <./Usage/ExportImportSettings.rst>
+   Mode ingénierie xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: AndroidAPS pour les enfants
-   
+
    Surveillance à distance <./Children/Children.rst>
    Commandes SMS <./Children/SMS-Commands.rst>
-
+   Assistant Profil <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Dépannage
-  
+
    Dépannage <./Usage/troubleshooting.rst>
+   Client Nightscout <../Usage/Troubleshooting-NSClient.html>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Questions fréquentes 
-  
+   :caption: Questions fréquentes
+
    Questions fréquentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Glossaire
-  
+
    Glossaire <./Getting-Started/Glossary.md>
 
 .. toctree::
@@ -138,6 +157,7 @@ Pour plus de détails, lisez la suite ici.
    :caption: Pour les professionnels de santé
 
    Pour les professionnels de santé <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
@@ -158,4 +178,4 @@ Pour plus de détails, lisez la suite ici.
 
 	* Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées,  sont la propriété de leurs détenteurs respectifs. Leur utilisation est à titre informatif et n'implique aucune affiliation avec eux ni aucune approbation de leur part.
 
-	A noter - ce projet n'a aucun lien avec, et n'est pas approuvé par : `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ ou `Medtronic <http://www.medtronic.com/>`_
+	A noter - ce projet n'a aucun lien avec, et n'est pas approuvé par : `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ ou `Medtronic <https://www.medtronic.com/>`_

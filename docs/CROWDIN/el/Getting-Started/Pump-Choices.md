@@ -1,30 +1,17 @@
 # Επιλογές αντλίας
 
-Το AndroidAPS προς το παρόν λειτουργεί με
+AndroidAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
-* Accu-Check Combo
-* Accu-Check Insight
-* some old Medtronic
-* Insulet Omnipod (Eros not DASH)
-* DanaR
-* DanaRS 
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
+- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
+- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Compatible Device)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
+- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
-αντλίες. Λεπτομέρειες σχετικές με την κατάσταση άλλων αντλιών που ενδέχεται να λειτουργήσουν με AndroidAPS εμφανίζονται στη σελίδα [Μελλοντικές (πιθανές) Αντλίες](Future-possible-Pump-Drivers.md).
+Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
 
 Εάν χρειάζεται να επιλέξετε μία αντλία για αναβάθμιση ή για αγορά, τότε συχνά, πολλοί ρωτούν ποια να επιλέξουν. Λεπτομέρειες για τους διάφορους προμηθευτές βρίσκονται σε [αυτή τη φόρμα ](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), παρακαλούμε να μοιραστείτε τα στοιχεία της δικής σας, εάν δεν είναι ήδη στη λίστα.
-
-Οι αντλίες Combo και Insight είναι αντλίες durable και δυνατότητα κλειστού κυκλώματος. Τα πλεονεκτήματα όμως των DanaR/RS σαν αντλίες επιλογής είναι:
-
-* Οι Dana*R/RS συνδέονται με σχεδόν όλα τα Android τηλέφωνα >= 5.1 χωρίς την ανάγκη flash lineage. Εάν το τηλέφωνό σας χαλάει συχνά, μπορείτε να βρείτε εύκολα οποιοδήποτε τηλέφωνο λειτουργεί με τις αντλίες Dana*R/RS σαν γρήγορη αντικατάσταση... όχι τόσο εύκολο με την Combo. (Αυτό μπορεί να αλλάξει στο μέλλον όταν το Android 8.1 γίνει πιο διαδεδομένο)
-
-* Η αρχική σύζευξη είναι πιο εύκολη με την Dana* RS. Επειδή όμως συνήθως αυτό γίνεται μόνο μία φορά, σας επηρεάζει μόνο όταν θέλετε να δοκιμάσετε ένα νέο χαρακτηριστικό με διαφορετικές αντλίες.
-
-* Μέχρι στιγμής η αντλία Combo λειτουργεί με τεχνολογία οθόνης. Σε γενικές γραμμές αυτό λειτουργεί καλά αλλά είναι αργό. Για το κύκλωμα αυτό δεν έχει σημασία όσο όλα λειτουργούν στο παρασκήνιο. Εξακολουθεί να υπάρχει πολύς χρόνος που πρέπει να συνδεθείτε, ώστε να υπάρχει μεγαλύτερη διάρκεια σύνδεσης με τη σύνδεση BT, κάτι που δεν είναι τόσο εύκολο εάν απομακρυνθείτε από το τηλέφωνό σας ενώ ταυτόχρονα πιέζετε bolus & μαγείρεμα.
-
-* Το Combo δονείται στο τέλος των TBR, η Dana * R δονείται (ή μπιπ) στο SMB. Τη νύχτα είναι πιθανό να χρησιμοποιείτε TBRs περισσότερο από SMB. Η Dana * RS είναι διαμορφωμένη ώστε να μην εκπέμπει ή να δονείται.
-
-* Η ανάγνωση του ιστορικού στην RS σε λίγα δευτερόλεπτα με υδατάνθρακες καθιστά δυνατή την εύκολη εναλλαγή των τηλεφώνων ενώ είναι εκτός σύνδεσης και συνεχίζει το κύκλωμα από τη στιγμή που αναγνωρίσει τιμές από το cgm.
-
-* Όλες οι αντλίες που μπορεί να συνομιλεί με το AndroidAPS είναι αδιάβροχες κατά την παράδοση. Μόνο οι αντλίες Dana είναι επίσης "αδιάβροχες με εγγύηση" λόγω της σφραγισμένης θήκης των μπαταριών και του συστήματος πλήρωσης δεξαμενών.
-
-Το Combo, φυσικά, είναι μια πολύ καλή αντλία, και έχει και τη δυνατότητα κυκλώματος. Έχει επίσης το πλεονέκτημα πολλών περισσότερων τύπων συσκευών έγχυσης για να διαλέξετε, καθώς έχει μια τυποποιημένη κλειδαριά Luer. Και η μπαταρία είναι μια προεπιλεγμένη που μπορείτε να αγοράσετε σε οποιοδήποτε βενζινάδικο, κατάστημα 24 ωρών και αν χρειάζεστε πραγματικά, μπορείτε να το κλέψετε / δανειστείτε από το τηλεχειριστήριο στο δωμάτιο του ξενοδοχείου ;-)

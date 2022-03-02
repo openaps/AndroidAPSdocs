@@ -15,7 +15,7 @@ Neįsisavinti angliavandeniai yra nebeskaičiuojami po nustatyto laiko
 AAPS, SvertinisVidurkis
 --------------------------------------------------
 
-įsisavinimas yra apskaičiuojamas, kad būtų `AAO == 0` po nustatyto laiko
+absorption is calculated to have ``COB == 0`` after specified time
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, SvertinisVidurkis
@@ -32,10 +32,10 @@ Kaip AndroidAPS nustato klaidingas AAO reikšmes?
 
 Įprastai AAPS nustato angliavandenių įsisavinimą pagal KG svyravimus. Tuo atveju, jei jūs suvedėte angliavandenius, bet AAPS nemato numatyto jų įsisavinimo pagal KG svyravimus, ji naudos `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ metodą apskaičiuoti įsisavinimui (taip vadinamą 'atsarginę priemonę'). Kadangi šis metodas skaičiuoja tik minimalų angliavandenių įsisavinimą nekreipiant dėmesio į KG svyravimus, tai gali lemti neteisingas AAO reikšmes.
 
-.. image:: ../images/Calculator_SlowCarbAbsorbtion.png
+.. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: Užuomina apie neteisingą AAO reikšmę
 
-Ekrano vaizde viršuje 41% laiko angliavandenių įsisavinimas buvo matematiškai skaičiuojamas min_5m_carbimpact vietoj reikšmių, nustatytų iš svyravimų.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo. 
+In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo. 
 
 Kaip elgtis su tokiu įspėjimu? 
 --------------------------------------------------

@@ -1,8 +1,8 @@
 # Jak překládat AndroidAPS a dokumentaci
 
-* Jděte na <https://crowdin.com/project/androidaps> nebo <https://crowdin.com/project/androidapsdocs> a přihlaste se Vaším Github účtem
+* Jděte na <https://crowdin.com/project/androidaps> nebo <https://crowdin.com/project/androidapsdocs> a přihlaste se vaším Github účtem
 
-* Send a join request to the docs team. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
+* Odešlete žádost o připojení k Wiki týmu. Klikněte na vlajku požadovaného jazyka a poté na tlačítko "Join" vpravo nahoře na následující stránce. Specifikujte prosím svůj jazyk, uveďte nějaké informace o sobě a svých zkušenostech s AAPS a zda chcete být překladatel nebo korektor (pouze osoby se zkušeností s překlady + pokročilí uživatelé AndroidAPS).
 
 * Jakmile vás schválíme, klikněte na vlajku ![Jakmile vás schválíme, klikněte na vlajku](./images/translation_flags2019.png)
 
@@ -26,9 +26,9 @@
 
 Když korektor schválí překlad, tak bude přidaný do příští verze AndroidAPS. Na úvod by také bylo dobré projít existující překlady, které ještě nebyly schválené, a ověřit v nich chyby nebo je schválit, pokud byly správné.
 
-## Translate docs pages
+## Překlad stránek Wiki
 
-* Click the name of the docs page you want to translate
+* Klikněte na název stránky wiki, kterou chcete překládat
     
     ![Click docs page](./images/translation_WikiPage.png)
 
@@ -44,29 +44,29 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
     
     ![Translation docs](./images/translation_WikiTranslate.png)
 
-* A translated page will not be published in docs before the translation is proofread.
+* Přeložená stránka nebude publikována na Wiki dříve, než bude překlad potvrzen.
 
-### Translate headline links
+### Překlad odkazů v nadpisech
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
-* If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
+* Pokud interní odkaz vede pouze na konkrétní stránku (tj. ../Usage/Profiles.html), je nutné odkaz nepřekládat.
+* Pokud interní odkaz vede na konkrétní nadpis (tj. ..//Usage/Profiles.html#percentage) musí být odkaz přeložen, protože titulek v jiném jazyce se liší od anglického originálu.
+* Pokud překládáte nadpis, můžete jej přeměnit na odkaz na kotvu (část za # - tj. #procenta) otočením všech písmen na malá písmena, transformací speciálních znaků na standardní znaky, nahrazením mezer znamínkem - (minus znaménko) a přeskočením interpunkčních znamének.
     
-    Here are some examples:
+    Zde je několik příkladů:
     
-    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Docs Updates & Änderungen \---> #docs-updates-anderungen
-    * AAPS-.apk Datei \---> #aaps-apk-datei
+    * Co je systém uzavřené smyčky AndroidAPS? \---> #co-je-system-uzavrene-smycky-androidaps
+    * Aktualizace Wiki & Změny \---> #aktualizace-wiki-zmeny
+    * Soubor AAPS-.apk --> #soubor-aaps-apk
 
-* Check your link if it is working as intended. If it is linking to a new translated headline you may have to wait until next build to be able to check correct link syntax. In this case do not forget to make a reminder in your calendar / todo app.
+* Zkontrolujte, že vámi vytvořený odkaz funguje správně. Pokud je to odkaz na nově přeložený nadpis, budete muset počkat, až bude možné po potvrzení překladu zkontrolovat správnost odkazu. V tom případě si nezapomeňte udělat upomínku do vašeho kalendáře / úkolníčku.
 
-#### Link translation in Markdown files (.md)
+#### Překládání odkazů v Markdown souborech (.md)
 
 At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
 * * *
 
-**Make sure not to use space character at within HTML tags at the beginning or the end!**
+**Mějte na paměti, že nesmíte používat mezeru v HTML tagu na jeho začátku nebo konci!**
 
 ![Crodwin - HTML tag without space character](./images/Crowdin_HTMLtag.png)
 

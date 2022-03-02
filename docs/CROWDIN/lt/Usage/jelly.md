@@ -23,7 +23,7 @@ Tolimesni nustatymai ir naudojimo patarimai (naudokite laikrodį kasdieniams vei
 
 <b><font color="#FF0000">Labai svarbu:</b></font> Jei jums nereikia Android 8.1 (t. y. uždaras ciklas su Accu-Check Combo) likite su Android 7.0!
 
-Laikytis šių taisyklių pasiliekant su Android 7.0:
+Follow these rules to stay with Android 7.0:
 
 * Nesijunkite prie bevielio ar mobilaus ryšio naudojant pirmą kartą, norint išvengti automatinių atnaujinimų.
 * Praleiskite bevielio tinklo nustatymą.

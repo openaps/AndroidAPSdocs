@@ -1,37 +1,49 @@
-Troubleshooting Android Studio
+Řešení problémů s Android Studiem
 **************************************************
-Lost keystore
+Ztráta úložiště klíčů
 ==================================================
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+Pokud při aktualizaci AndroidAPS používáte stále stejné úložiště klíčů, nemusíte odinstalovávat předchozí verzi na svém chytrém telefonu. To je důvod, proč je doporučeno uchovávat úložiště klíčů na bezpečném místě.
 
-In case you cannot find your old keystore anymore, proceed as follows:
+V případě, že nemůžete najít své staré úložiště klíčů, postupujte při aktualizaci takto:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
-2. Copy settings from your phone to an external location (i.e. your computer, cloud storage service...).
-3. Make sure settings file "AndroidAPS Preferences" is stored safely.
-4. Generate signed apk of new version as described on the `update page <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
-8. Keep on looping.
+1. `Exportujte nastavení <../Usage/ExportImportSettings.html#exportovat-nastaveni>`_ na svém telefonu.
+2. Zkopírujte nastavení ze svého telefonu na externí úložiště (např. váš počítač, cloudové úložiště...).
+3. Ujistěte se, že soubor se zálohou nastavení "AndroidAPS Preferences" je bezpečně uložen.
+4. Vytvořte podepsanou aplikaci v nové verzi tak, jak je popsáno na stránce `Jak aktualizovat na novou verzi <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+5. Odinstalujte předchozí verzi AAPS na svém telefonu.
+6. Nainstalujte novou verzi AAPS na svůj telefon.
+7. `Importujte nastavení <../Usage/ExportImportSettings.html#exportovat-nastaveni>`_ – pokud nemůžete najít soubor s nastavením na svém telefonu, zkopírujte jej do telefonu z externího úložiště.
+8. Smyčku pak můžete dále používat.
+
+
+
+Error "on demand" Configuration
+==================================================
+
+Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+* Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+* V levé části pak na Build, Execution, Deployment > Compiler.
+* Odtrhněte Configure on demand.
+* Klikněte na Apply nebo OK.
+
 
 Varování kompilátoru Kotlin
 ==================================================
-Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte. 
+Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte.
 
 Sestavení aplikace bylo úspěšné a můžete ji přenést do telefonu.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
-  :alt: ignore Kotline compiler warning
+  :alt: ignorujte varování kompilátoru Kotlin
 
-Key was created with errors
+Klíč byl vytvořen s chybami
 ==================================================
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Při vytváření nového úložiště klíčů pro vytvoření podepsané APK se ve Windows může objevit následující chybová zpráva
 
 .. image:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Key was created with errors
+  :alt: Klíč byl vytvořen s chybami
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Zdá se, že se jedná o chybu Android Studia 3.5.1 a jeho prostředí Java ve Windows. Klíč je správně vytvořen, ale doporučení je nesprávně zobrazeno jako chyba. To lze nyní ignorovat.
 
 Nelze stáhnout… / Práce Offline
 ==================================================
@@ -45,105 +57,104 @@ ujistěte se, že položka ‘Offline work’ je deaktivována.
 File -> Settings
 
 .. image:: ../images/GIT_Offline2.jpg
-  :alt: Settings offline work
+  :alt: Nastavení práce offline
 
 Error: buildOutput.apkData must not be null
 ==================================================
-Sometimes you might get an error message when building the apk saying
+Někdy můžete při vytváření APK dostat chybovou zprávu, která říká
 
-  `Errors while building APK.`
-   
-  `Cause: buildOutput.apkData must not be null`
+  ``Errors while building APK.``
 
-This is a known bug in Android Studio 3.5 and will probably not be fixed before Android Studio 3.6. Three options:
+  ``Cause: buildOutput.apkData must not be null``
 
-1. Manually delete the three build folders (normal "build", build folder in "app" and build folder in "wear") and generate signed apk again.
-2. Set destination folder to project folder instead of app folder as described in `this video <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
-3. Change apk destination folder (different location).
+Toto je známá chyba v Android Studio 3.5 a pravděpodobně nebude opravena před Androidem Studio 3.6. Tři možnosti:
+
+1. Ručně smažte tři složky pro sestavení (obvykle "build", složku pro sestavení v "app" a složku sestavení ve "wear") a znovu vygenerujte podepsanou apk.
+2. Nastavte cílovou složku do složky projektu namísto složky aplikace, jak je popsáno v `tomto videu <https://www.youtube.com/watch?v=BWUFWzG-kag>`_.
+3. Změňte cílovou složku APK (jiné umístění).
 
 Unable to start daemon process
 ==================================================
-If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above. I you are using Windows 10 you must use a 64-bit operating system.
+Pokud vidíte zmíněnou chybovou zprávu, pravděpodobně používáte 32bitový systém Windows 10. Ten není podporován Android Studiem 3.5.1 a novějším. Pokud používáte Windows 10, musíte používat 64bitový operační systém.
 
-There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. `this one <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
+Na internetu existuje spousta manuálů, jak zjistit, zda máte 32bitový nebo 64bitový OS – například `tento <https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>`_.
 
 .. image:: ../images/AndroidStudioWin10_32bitError.png
   :alt: Screenshot Unable to start daemon process
   
 
-No CGM data
+Nejsou dostupná data z CGM
 ==================================================
-* In case you are using xDrip+: Identify receiver as described on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
-* In case you are using `patched Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Make sure you are using the correct version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* V případě, že používáte xDrip+: Proveďte identifikaci vysílače tak, jak je popsáno na stránce `nastavení xDrip+ <../Configuration/xdrip.html#identify-receiver>`_.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Neprovedené změny
 ==================================================
 Pokud se zobrazí podobná chybová zpráva,
 
 .. image:: ../images/GIT_TerminalCheckOut0.PNG
-  :alt: Failure uncommitted changes
+  :alt: Chyba uncommitted changes
 
-Option 1 - Check git installation
+Možnost 1 – Zkontrolujte instalaci gitu
 --------------------------------------------------
-* git might be not installed correctly (must be globally available)
-* when on Windows and git was just installed, you should restart your computer or at least log out and re-login once, to make git globally available after the installation
-* `Check git installation <../Installing-AndroidAPS/git-install.html#check-git-settings-in-android-studio>`_
-* If no git version is shown in check but git is installed on your computer, make sure Android Studio knows where `git is located <../Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>`_ on your computer.
+* git nemusel být nainstalován správně (musí být globálně dostupný)
+* pokud jste ve Windows a git byl právě nainstalován, měli byste restartovat počítač nebo se alespoň odhlásit a znovu se přihlásit, aby byl git po své instalaci globálně dostupný
+* `Zkontrolujte instalaci git <../Installing-AndroidAPS/git-install.html#kontrola-nastaveni-git-v-android-studiu>`_
+* Pokud se při kontrole nezobrazí žádná verze gitu, ale git je na počítači nainstalován, zkontrolujte, že Android Studio ví, `kde je git v počítači umístěn <../Installing-AndroidAPS/git-install.html#nastaveni-git-v-android-studiu>`_.
 
-Option 2 - Reload source code
+Možnost 2 – Znovu načtěte zdrojový kód
 --------------------------------------------------
 * V Android Studio zvolte VCS -> GIT -> Reset HEAD
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
-Option 3 - Check for updates
+
+Možnost 3 – Zkuste stáhnout aktualizace
 --------------------------------------------------
 * Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
 * Přepněte v Android Studiu na Terminal (ve spodní části vlevo v okně Android Studia)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
-* Paste copied text and press return
+    :alt: Terminál Android Studia
+
+* Vložte zkopírovaný text a stiskněte enter
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
-    :alt: GIT checkout success
+    :alt: Vaše větev kódu je aktuální
 
 Aplikace není nainstalována
 ==================================================
 .. image:: ../images/Update_AppNotInstalled.png
-  :alt: phone app note installed
+  :alt: aplikace v telefonu není nainstalována
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
 * Pokud se na telefonu zobrazí „Aplikace není nainstalována“, postupujte následovně:
   
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
+1. `Exportujte nastavení <../Usage/ExportImportSettings.html>`__ (ve verzi AAPS, která je již nainstalována v telefonu)
 2. Odinstalujte aplikaci AAPS ze svého telefonu
-3. Enable airplane mode & turn off bluetooth.
+3. Zapněte režim letadlo a vypněte bluetooth.
 4. Nainstalujte novou verzi (“app-full-release.apk”)
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+5. `Importujte nastavení <../Usage/ExportImportSettings.html>`__
 6. Znovu zapněte bluetooth a vypněte režim letadlo
 
 Aplikace je nainstalována, ale ve staré verzi
 ==================================================
-If you build the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to `update your local copy <../Update-to-new-version.html#update-your-local-copy>`_.
+Jestliže jste úspěšně sestavili aplikaci, přenesli ji do telefonu a nainstalovali ji, ale číslo verze zůstává stejné, možná jste zapomněli krok sloučení v `návodu na aktualizaci lokální kopie <../Installing-AndroidAPS/Update-to-new-version.html#aktualizace-lokalni-kopie>`_.
 
 Nic z výše uvedeného nefunguje
 ==================================================
 Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
-1. `Export settings <../Usage/ExportImportSettings.html>`_ (in AAPS version already installed on your phone)
-2. Have your key password and key store password ready
-    In case you have forgotten passwords you can try to find them in project files as described `here <https://youtu.be/nS3wxnLgZOo>`_. Or you just use a new keystore. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
-5. `Import settings <../Usage/ExportImportSettings.html>`_
+1. `Exportujte nastavení <../Usage/ExportImportSettings.html>`__ (ve verzi AAPS, která je již nainstalována v telefonu)
+2. Zálohujte si úložiště klíčů a heslo k němu. V případě, že jste hesla zapomněli, můžete je zkusit najít v projektových souborech, jak je popsáno `zde <https://youtu.be/nS3wxnLgZOo>`__. Nebo můžete vytvořit a použít nové úložiště klíčů.
+3. Vytvořte aplikaci úplně od začátku, jak je popsáno `zde <../Installing-AndroidAPS/Building-APK.html#stahnete-si-kod-androidaps>`__.
+4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
+5. `Importujte nastavení <../Usage/ExportImportSettings.html>`__
 
 Nejčernější scénář
 ==================================================
 V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e. `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
+**Ujistěte se, že jsou odinstalovány všechny soubory spojené s Android Studiem.** Pokud zcela neodstraníte Android Studio se všemi skrytými soubory, odinstalování může způsobit nové problémy namísto vyřešení těch stávajících. manuály pro kompletní odinstalaci můžete najít na internetu, například `https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10 <https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>`_.
 
-Install Android Studio from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#install-android-studio>`_ and **do not update gradle**.
+Znovu od začátku nainstalujte Android Studio, jak je popsáno `zde <../Installing-AndroidAPS/Building-APK.html#instalace-android-studio>`_ a **neaktualizujte gradle**.

@@ -1,58 +1,58 @@
-Manual Installation of Google Play Service for  Sony Smartwatch 3
+Manuální instalace služeb Google Play pro Sony Smartwatch 3
 #####################################################################
 
-The Sony Smartwatch 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
+Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS. Společnost Google od podzimu 2020 již bohužel nepodporuje zařízení s OS 1.5. To vede k problémům při používání hodinek Sony SW3 s AndroidAPS 2.7 a vyšší. 
 
-The following workaround should extend the time the Sony Smartwatch 3 can be used but keep in mind that the need to switch to a new smartwatch will come sooner or later.
+Následující postup by měl prodloužit dobu, po kterou lze hodinky Sony Smartwatch 3 používat, ale mějte na paměti, že dříve nebo později bude potřeba přejít na nové chytré hodinky.
 
-1. Download the latest GService for Wear OS
+1. Stáhněte si nejnovější Google Service pro Wear OS
 --------------------------------------------------------
-* Using `apkmirror website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ you can find the latest apk for "Google Play Services (Wear OS)".
+* Pomocí `webové stránky apkmirror <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ najdete nejnovější apk pro "Google Play Services (Wear OS)".
 
-   Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+  Architektura: armeabi-v7a, minimální verze: Android 6.0+, DPI obrazovky: nodpi
 
-* You must ensure 2 things:
+* Musíte zajistit 2 věci:
 
-   * Is it the latest version?
-   * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
+  * Jedná se o nejnovější verzi?
+  * Je kompatibilní s Android 6.0+ (protože verze pro android wear 7.0+ a vyšší nebude fungovat)?
 
-* Sooner or later, Google will definitely drop Android 6.0. When this will happen, the latest version will not be available anymore for Android 6.0+, therefore it will be the end.
+* Dříve nebo později Google definitivně ukončí podporu Android 6.0. Až se tak stane, nejnovější verze pro Android 6.0+ již nebude k dispozici, proto to bude konec.
 
-2. Download/Install adb debugging tools on your computer
+2. Stáhněte a nainstalujte si nástroje adb pro ladění do svého počítače
 --------------------------------------------------------
-* There are multiple ways to install the adb debugging tool.
-* It is recommended to use `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Just download zip file and unzip to a directory of your choice.
+* Existuje několik způsobů, jak nainstalovat nástroj adb pro ladění.
+* Doporučuje se použít `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Stačí stáhnout zip soubor a rozbalit jej do adresáře dle vašeho výběru.
 
-3. Enable ADB Debugging options on your watch
+3. Povolte možnosti ladění ADB na hodinkách
 --------------------------------------------------------
-* Enable developer mode by going to Settings --> About --> Build number
-* Click it 7 times.
-* Now go to Settings --> Developer Options --> ADB Debugging (enable)
+* Povolte vývojářský režim tak, že přejdete do Nastavení --> About --> Build number
+* Klikněte na něj 7krát.
+* Nyní přejděte do Nastavení --> Developer options --> ADB Debugging (enable)
 
-4. Connect your watch to your computer
+4. Připojte hodinky k počítači
 --------------------------------------------------------
-* Then plug your smartwatch to PC.
-* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
-* Place this APK to the directory of your adb tool (in our case: the directory of unzipped SDK Platform Tools).
-*	Open Windows terminal using command „cmd“ in Windows start menu.
-*	In terminal, go to the directory that includes your adb tool and google services APK (type command „cd [your path]“, e.g. „cd C:\Users\SWR50looper\sdktools“).
-* Then type “adb devices”.
-* After a moment, you should get a prompt asking for debugging permission on your watch: accept.
-* In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
-* If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
-* If you struggle at this step, you may need specific drivers or else for your watch. Google will be your best friend at this point.
-* Then wait, the installation can take several minutes. 
+* Poté připojte své hodinky k PC.
+* Přejmenujte nejnovější APK služeb Google na něco krátkého a jednoduchého (řekněme SW3fix.apk).
+* Umístěte tento soubor APK do adresáře svého nástroje adb (v našem případě: adresář rozbalených SDK Platform Tools).
+* Otevřete terminál Windows pomocí příkazu „cmd“ v nabídce start Windows.
+* V terminálu přejděte do adresáře, který obsahuje váš nástroj adb a APK služeb Google (zadejte příkaz „cd [vaše cesta]“, např. „cd C:\Uživatelé\SWR50looper\sdktools“).
+* Pak zadejte „adb devices“.
+* Po chvíli byste měli obdržet žádost o povolení k ladění na hodinkách: tu přijměte.
+* V terminálu byste nyní měli vidět něco jako "zařízení 14452D11F536B5", když znovu napíšete "adb devices".
+* Pokud vidíte "unauthorized" nebo něco jiného, nejste připraveni na další krok, vraťte se zpět a zkuste to znovu.
+* Pokud se vám v tomto kroku nedaří, možná budete potřebovat konkrétní ovladače nebo jiný soubor pro vaše hodinky. Google bude v tomto okamžiku vaším nejlepším přítelem.
+* Potom počkejte, instalace může trvat několik minut. 
 
-5. Send the app to your watch
+5. Odešlete aplikaci do hodinek
 --------------------------------------------------------
-* In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
+* V terminálu zadejte tento příkaz „adb install -r -g nazevaplikace.apk“ (v našem případě tedy „adb install -r -g SW3fix.apk“).
 
-   .. image:: ../images/SonySW3_Terminal1.png
-     :alt: Terminal command
+  .. image:: ../images/SonySW3_Terminal1.png
+    :alt: Příkaz terminálu
 
-* Wait for about 4–5 minutes for installation to complete. 
+* Počkejte asi 4–5 minut na dokončení instalace. 
 
-.. image:: ../images/SonySW3_Terminal2.png
-     :alt: Terminal successful installation
+  .. image:: ../images/SonySW3_Terminal2.png
+    :alt: Terminál – úspěšná instalace
 
-* Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
+* Jakmile máte hotovo, restartujte hodinky a měli byste vidět, jak se aplikace začínají samy synchronizovat.

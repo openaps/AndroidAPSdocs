@@ -36,7 +36,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 * Aby byly hodnoty stejné, měli byste aktivovat `Odesílat zobrazovanou glykémii`.
 
-* Pokud jste aktivovali `Přijímat ošetření` a v AndroidAPS i Povolení odesílání, bude xDrip+ přijímat sacharidy, insulín i bazální hodnoty z AndroidAPS, a může tak předpovídat blížící se hypo atd. mnohem přesněji.
+* Pokud také zapnete `Přijímat ošetření` a "Povolení lokálního odesílání" v AndroidAPS, tak xDrip+ bude přijímat informace o inzulínu, sacharidech a nastavení bazálů z AndroidAPS a bude předpovídat blížící se hypo atd. mnohem přesněji.
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
@@ -51,7 +51,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* Jestliže potřebujete službu Clarity, a chcete zároveň využívat výhod výstrah xDripu+, použijte [upravenou aplikaci Dexcom](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) a funkci místního odesílání do xDripu+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 
@@ -90,11 +90,11 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 * Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
 * Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
 
-Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](http://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street, na adrese [www.diabettech.com](http://www.diabettech.com).
+Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street, na adrese [www.diabettech.com](https://www.diabettech.com).
 
 ### První připojení vysílače G6
 
-**Pro druhé a další spuštění vysílače viz [Prodloužení životnosti vysílače](../Configuration/xdrip#extend-transmitter-life) níže.**
+**Pro druhý a další vysílače viz [Prodloužení životnosti vysílače](#extend-transmitter-life) níže.**
 
 S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající znaky 80 nebo 81) můžete použít verzi [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -153,7 +153,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
 
 * Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem začíná číslem 81 a firmwarem 1.6.5. ** 27 ** (viz xDrip+ Stav systému - G5/G6, [viz screenshot výše](../Configuration/xdrip#transmitter-battery-status)).
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
-* Používání vysílačů se sériovým číslem začínajícím na 81 a firmwarem 1.6.5.**27** po 100 dni je možné pouze při zapnutém „engineering mode“ a deaktivovaném „nativním režimu“ (hamburger menu -> nastavení -> nastavení ladění pro G5/G6 -> Native Algorithm), protože nelze udělat hard reset vysílače.
+* Používání vysílačů se sériovým číslem začínajícím na 81 a firmwarem 1.6.5.**27** po 100 dnech je možné pouze při zaputém [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) a deaktivovaném 'nativním režimu' (hamburger menu -> Nastavení -> Nastavení ladění pro G5/G6 -> Native Algorithm), protože NELZE provést hard reset vysílače.
 * Během prodlužování životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2h zahřívání senzoru.
 * Zastavte senzor ručně nebo prostřednictvím hamburger menu.
 * Přepněte do `engineering mode`: 

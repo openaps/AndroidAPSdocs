@@ -22,14 +22,14 @@ Belangrijke opmerking
 --------------------------------------------------
 **Automatisering is nog steeds actief wanneer je de loop uitschakelt!**
 
-Dus zorg ervoor dat je de Automation-regels deactiveert indien nodig. Je kunt dit doen door het vinkje in het vakje bij de naam van jouw automatiseringsregel weg te halen.
+So make sure to deactivate automation rules during these occasions if necessary. Je kunt dit doen door het vinkje in het vakje bij de naam van jouw automatiseringsregel weg te halen.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Automatiseringsregel activeren en deactiveren
 
 Waar vind je Automatisering
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Afhankelijk van jouw `instellingen in de configurator <../Configuration/Config-Builder.html#tabblad-of-hamburger-menu>`_ vind je `Automatisering <../Configuration/Config-Builder.html#automatisering>`__ in het hamburger menu of als een tabblad.
 
 Algemeen
 --------------------------------------------------
@@ -58,7 +58,7 @@ Je kunt kiezen tussen verschillende voorwaarden. Hieronder worden enkele voorbee
 * Tijd vs. herhaal tijd
 
   * tijd = eenmalige gebeurtenis
-  * herhaal tijd = iets dat met regelmaat gebeurt (dat wil zeggen één keer per week, elke werkdag etc.)
+  * recurring time = something that happens regularly (i.e. één keer per week, elke werkdag etc.)
    
 * locatie: in de configurator (Automation) kun je opgeven welke locatieservice je wilt gebruiken:
 
@@ -88,14 +88,14 @@ Na het toevoegen van jouw actie, **vergeet niet om de standaardwaarden** te vera
   :alt: Automatisering standaard vs. ingestelde waardes
 
 Automatiseringsregels sorteren
------
+---------------------
 Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de rechterkant van het scherm ingedrukt en sleep je de regel omhoog of omlaag.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Automatiseringsregels sorteren
   
 Automatiseringsregels verwijderen
------
+-----------------------
 Om een automatiseringsregel te verwijderen, klik op het prullenbak-icoon.
 
 .. image:: ../images/Automation_Delete.png
@@ -109,10 +109,10 @@ Tips & valkuilen
 
   **Extra belangrijk wanneer de actie een profiel wissel is!**
  
-* Probeer tijdelijke streefdoelen te gebruiken in plaats van profiel wissels. Tijdelijke streefdoelen resetten `Autosens <../Usage/Open-APS-features.html#autosens>`_ niet. Profiel wissels doen dat wel, en veelvuldige profielwissels maken het Autosens daardoor onmogelijk om goed te functioneren.
+* Probeer tijdelijke streefdoelen te gebruiken in plaats van profiel wissels. Tijdelijke streefdoelen resetten `Autosens <../Usage/Open-APS-features.html#autosens>`__ niet. Profiel wissels doen dat wel, en veelvuldige profielwissels maken het Autosens daardoor onmogelijk om goed te functioneren.
 * Gebruik profielwissels daarom spaarzaam en zet ze bij voorkeur pas in als laatste redmiddel.
 
-  * Elke profielwissel maakt `Autosens <../Usage/Open-APS-features.html#autosens>`_ nutteloos voor minimaal 6 uur.
+  * Elke profielwissel maakt `Autosens <../Usage/Open-APS-features.html#autosens>`__ nutteloos voor minimaal 6 uur.
 
 * Een profielwissel zal het profiel NIET automatisch terugzetten naar jouw basisprofiel wanneer de condities van jouw regel niet meer van toepassing zijn.
 
@@ -154,4 +154,4 @@ Behoed jezelf voor onjuist gebruik van automatisering. Dit kan leiden tot proble
 Alternatieven
 ==================================================
 
-Voor gevorderde gebruikers zijn er andere mogelijkheden om taken te automatiseren met behulp van IFTTT of een Android app genaamd Automate. Enkele voorbeelden zijn `hier <./automationwithapp.html>`_ te vinden.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Enkele voorbeelden zijn `hier <./automationwithapp.html>`_ te vinden.

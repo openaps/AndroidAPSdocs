@@ -4,74 +4,171 @@ Siga las instrucciones en el manual ` manual de actualización <../Installing-An
 
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
-.. image:: ../images/AAPS_LoopDisable90days.png
-  :alt: Información de actualización
+.. imagen:: ../images/AAPS_LoopDisable90days.png
+  :alt: Información de la actualización
 
-Entonces tienes 60 días para actualizarte. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
+Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver `glosario <../Getting-Started/Glossary.html>`_) como en el `objetivo 6 <../Usage/Objectives.html>`_.
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, son necesarias que todas las actualizaciones de usuario a.s.a.p. (Lo antes posible).. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
-Version 2.8.1.1
+Versión de Android y versión de AAPS
+====================================
+Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9.
+
+Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
+
+Android 9 y superiores
+------------------------------------
+* Usar la última versión de AAPS
+* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
+
+Android 8
+------------------------------------
+* Usar la versión de AAPS **2.8.2.1**
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.8.2.1
+
+Android 7
+------------------------------------
+* Usar la versión de AAPS **2.6.2**
+* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+
+Version 3.0.0
 ================
-Release date: 12-01-2021
+Release date: 31-01-2022
 
-Important hints
+Notas importantes
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users. 
-* If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc). 
-* ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-* NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+* **La versión mínima de Android requerida es la 9.0.**
+* **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
+* Usa la misma versión de AAPS y NSClient
 
-Major changes
+**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+
+Pasos de preparación
 ----------------------
-* RileyLink, Omnipod and MDT pump improvements and fixes
-* forced NS_UPLOAD_ONLY
-* fix for SMB & Dexcom app
-* watchface fixes
-* crash reporting improved
-* gradle reverted to allow direct watchface instalation
-* automation fixes
-* RS driver improvement
-* various crashes fixed
-* UI fixes and improvements
-* new translations
+**Al menos dos días antes de la actualización:**
+
+* Deshabilitar el "puente" entre Dexcom y Nightscout
+* if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
+* if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+
+
+Cambios
+----------------------
+* 100k lineas cambiadas, 105k nuevas líneas de código
+* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
+* Soporte para Glunovo
+* Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Gran cantidad de código reescrito a Kotlin @MilosKozak
+* Nueva interfaz interna para controladores de bombas
+* NSClient reescrito para mejorar la sincronización y una personalización más detallada @MilosKozak
+
+  * No se permite eliminar registros de NS (Sólo se pueden invalidar mediante NSClient)
+  * No se permite la modificación de registros de NS
+  * Disponible la sincronización de la configuración sin necesidad de habilitar el modo de ingeniería (para padres)
+  * Posibilidad de resincronizar datos
+
+* Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
+* Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
+* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
+* Seguimiento de las acciones del usuario @Philoul
+* Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* New automation Careportal action @Philoul
+* Add Bolus reminder in Carbs Dialog @Philoul
+* Asistente de bolos mejorado
+* Mejoras en la interfaz del usuario @MilosKozak
+* Nuevos botones de usuario para las automatizaciones @MilosKozak
+* Nuevo diseño de las automatizaciones @MilosKozak
+* El navegador del historial ha sido actualizado y corregido @MilosKozak
+* Objetivo 9 eliminado @MilosKozak
+* Corregido un problema asociado a datos inestables del MCG @MilosKozak
+* Mejoras de comunicación para DanaR y DanaRS @MilosKozak
+* Integración con CircleCI @MilosKozak
+* Cambios en la ubicación de ficheros:
+
+   * /AAPS/extra (modo ingeniearía)
+   * /AAPS/logs /AAPS/exports
+   * /AAPS/preferences
+
+Versión 2.8.2
+================
+Fecha de lanzamiento: 23-01-2021
+
+* Por favor, revise también `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ más abajo.
+
+Cambios
+----------------------
+* Mejoras de estabilidad
+* Más ajustes para Android 8+
+* Mejoras en los iconos
+* Mejores en relojes
+* Correcciones en NSClient
+* La calculadora de bolos ahora trabaja con Pumpcontrol y NSClient
+
+Versión 2.8.1.1
+================
+Fecha de lanzamiento: 12-01-2021
+
+Notas importantes
+----------------------
+* Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1.
+* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.)
+* ATENCIÓN: No hagas esto si usas otras aplicaciones para gestionar tratamientos (como xDrip+ con emisión de datos locales/subidas/sincronización,...).
+* NS_UPLOAD_ONLY sólo puede desactivarse si tenemos activo el modo de ingeniería.
+
+Cambios principales
+----------------------
+* Mejoras y correcciones con RileyLink y bombas Omnipod y MDT 
+* La opción NS_UPLOAD_ONLY es forzada
+* Correcciones en SMB y en la aplicación de Dexcom
+* Correcciones en las esferas de relojes
+* Mejoras en los informes de errores
+* Se ha revertido Gradle para permitir la instalación de esferas de forma directa en los relojes
+* Correcciones en las automatizaciones
+* Mejoras en los controladores RS
+* Se han corregido varios problemas que provocaban que AAPS fallara
+* Correcciones y mejoras en la interfaz gráfica
+* Nuevos idiomas soportados
 
 Versión 2.8.0
 ================
 Fecha de lanzamiento: 01-01-2021
 
-Important hints
+Notas importantes
 ----------------------
-* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
+* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 * Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
+* Dana RS connection improvements @MilosKozak
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* New NSClient tablet layout @MilosKozak
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
 * New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* SetupWizard improvements @MilosKozak 
-* Security improvements @dlvoy 
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* SetupWizard improvements @MilosKozak
+* Security improvements @dlvoy
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 Versión 2.7.0
 ================
 Fecha de lanzamiento: 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`_.
+**Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
 You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
@@ -114,7 +211,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 ----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
-* Otherwise is equal to 2.6.1.3. La actualización es opcional. 
+* Otherwise is equal to 2.6.1.3. La actualización es opcional.
 
 Versión 2.6.1.3
 ================
@@ -123,9 +220,9 @@ Fecha de lanzamiento: 03-05-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. La actualización es opcional. 
+* Otherwise is equal to 2.6.1.2. La actualización es opcional.
 
 Versión 2.6.1.2
 ================
@@ -134,7 +231,7 @@ Fecha de lanzamiento: 19-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -145,7 +242,7 @@ Fecha de lanzamiento: 06-04-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Resolves SMS CARBS command issue while using Combo pump
 * Otherwise is equal to 2.6.1. If you are not affected by this bug you don't need to upgrade.
 
@@ -156,8 +253,8 @@ Fecha de lanzamiento: 21-03-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
-* Allow to enter only https:// in NSClient settings
+------------------
+* Allow to enter only ``https://`` in NSClient settings
 * Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
 * Fixed small UI bugs
 * Fixed Insight crashes
@@ -175,10 +272,10 @@ Fecha de lanzamiento: 29-02-2020
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
------
+------------------
 * Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`_
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -186,7 +283,7 @@ Nuevas características importantes
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#id1>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -209,7 +306,7 @@ Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
-Tenga en cuenta las `notas importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes>`_ y `limitaciones <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-actualmente-is-not-soportado>`_ listados para `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 
@@ -217,11 +314,13 @@ Versión 2.5.0
 ==================================================
 Fecha de lanzamiento: 26-10-2019
 
+.. _important-notes-2-5-0:
+
 Notas importantes
 --------------------------------------------------
-* Utilice `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ o más reciente para `crear el apk <../Installing-AndroidAPS/Building-APK.html>`_ o `actualización <../Installing-AndroidAPS/Update-to-new-version.html>`_.
+* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si está utilizando xDrip `identificar el receptor <../Configuration/xdrip.html#identify-receiver>`_ debe establecerse.
-* Si utiliza Dexcom G6 con el `la app Dexcom parchada <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ necesitará la versión de la `carpeta 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp is supported from version 4.15.57 and newer.
 
 ¿Es esta actualización para mí? Actualmente NO es soportado
@@ -239,13 +338,12 @@ Nuevas características importantes
 * Nuevo " plugin de Automatización <../Usage/Automation.html>`_
 * Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
 * Representación de la actividad de la insulina
-* Ajustar las predicciones de IOB por el resultado de autodetección
+* Adjusting IOB predictions by autosens result
 * Nuevo soporte para los apks de Dexcom parcheados (` 2.4 carpeta <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * Verificador de firma
 * Permite saltar objetivos para usuarios de OpenAPS
 * Nuevos `objetivos <../Usage/Objectives.html>`_ - examinar, manejo de aplicaciones
-   
-   (Si ha iniciado al menos el objetivo "Iniciar en un lazo abierto" en las versiones anteriores, el examen es opcional.)
+  (Si ha iniciado al menos el objetivo "Iniciar en un lazo abierto" en las versiones anteriores, el examen es opcional.)
 * Corregido el bug en controladores Dana* donde se informó una falsa diferencia de tiempo
 * Se ha corregido el error en `SMS communicator <../Children/SMS-Commands.html>`_
 
@@ -308,7 +406,7 @@ Nuevas características importantes
 
 Misceláneo
 --------------------------------------------------
-* Si utiliza un valor no predeterminado `smbmaxminutes`, tienes que volver a configurar este valor
+* If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
 Versión 2.0
@@ -317,7 +415,7 @@ Fecha de lanzamiento: 03-11-2018
 
 Nuevas características importantes
 --------------------------------------------------
-* soporte oref1/SMB (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Esté seguro de leer la documentación para conocer que esperar de SMB, como se va a comportar, que puede alcanzar, como usarlo y operarlo suavemente.
+* oref1/SMB support (`oref1 documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 * `_Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ soporte de la bomba
 * Asistente de configuración: le guiará a través del proceso de configuración de AndroidAPS
 
@@ -325,13 +423,13 @@ Valores para ajustar cuando se cambia de AMA a SMB
 --------------------------------------------------
 * El objetivo 10 debe iniciarse para que las SMB estén habilitadas (la pestaña SMB muestra generalmente las restricciones que se aplican)
 * maxIOB ahora incluye _all_ IOB, no sólo el basal añadido. Es decir, si se le da un bolo de 8 U para una comida y maxIOB es 7 U, no se entregarán SMB hasta que el IOB caiga por debajo de 7 U.
-* El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. Si está actualizando desde AMA a SMB, tiene que cambiarlo manualmente
+* El valor predeterminado de min_5m_carbimpact ha cambiado de 3 a 8 llendo de AMA a SMB. If you are upgrading from AMA to SMB, you have to change it manually
 * Nota cuando se construya AndroidAPS 2.0 apk: La configuración personalizada no está soportada por la versión actual del plugin de Android Gradle! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
-   * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
-   * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
-   * Desmarque la casilla de verificación Configurar bajo demanda.
-   * Haga clic en Aplicar o en Aceptar.
+  * Abra la ventana de Preferencias, haga clic en Archivo > Configuración (en Mac, Android Studio > Preferencias).
+  * En el panel de la izquierda, pulse Compilar, Ejecución, Deployment > Compilador.
+  * Desmarque la casilla de verificación Configurar bajo demanda.
+  * Haga clic en Aplicar o en Aceptar.
 
 Pestaña general
 --------------------------------------------------
@@ -360,7 +458,7 @@ Misceláneo
 * Revisión para las pestañas del constructor de configuración y objetivos, añadiendo descripciones
 * Nuevo icono de la aplicación
 * Muchas mejoras y correcciones de errores
-* Alertas independientes de Nightscout si la bomba es inalcanzable durante más tiempo (p.ej. batería de bomba agotada) y lecturas de BG perdidas (ver *Local alerts* en configuración)
+* Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
 * Opción para mantener la pantalla encendida
 * Opción de mostrar notificaciónes como notificación Android
 * Filtrado avanzado (que permite siempre habilitar SMB y 6h después de las comidas) soportado con el app de Dexcom o xDrip patched con el modo nativo G5 como fuente BG.

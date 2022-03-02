@@ -18,8 +18,9 @@
 * Jei norite, kad AndroidAPS naudotų bazės reikšmes virš 200 %, pažymėkite "Naudoti ištęstus bolusus >200%". Įsidėmėkite, kad Jūs negalėsite naudoti ciklo su padidinta laikina baze, jei naudosite ištęstus bolusus maistui.
 * "Nustatymuose" pasirinkę "DanaR pompos nustatymai" galite pakeisti standartinį boluso greitį (1 V per 12 s, 1 V per 30 s, 1 V per 60 s).
 * Nustatykite bazės žingsnį pompoje 0.01 U/h
+* Set bolus step on pump to 0.1 U/h
 * Įgalinkite ištęstus bolusus pompoje
 
 ## Keliavimas per skirtingas laiko juostas su DanaR pompa
 
-Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

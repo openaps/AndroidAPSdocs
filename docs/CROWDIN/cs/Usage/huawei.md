@@ -27,7 +27,7 @@ Existují různé možnosti, některé jsou specifické pro Android, jiné pro H
     
     ![Huawei - uzamknout aplikaci](../images/Huawei_LockApp.png)
 
-U aplikace xdrip+ můžete také povolit trvalé notifikace (prostřednictvím aplikace xdrip+):
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Nastavení / méně častá nastavení / other misc options / Spustit kolektor v popředí
   

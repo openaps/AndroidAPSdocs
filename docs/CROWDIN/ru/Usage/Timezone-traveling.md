@@ -1,87 +1,87 @@
-# Timezone traveling with pumps
+# Пересечение часовых зон с помпами
 
-## DanaR, Korean DanaR
+## DanaR, DanaR для корейского рынка
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Нет проблем с изменением часового пояса в телефоне, так как в помпе не отслеживается история
 
-## DanaRv2, DanaRS
+## DanaRv2 / DanaRS
 
-These pumps need a special care because AndoridAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+Эти помпы требуют особого внимания, т. к. AndroidAPS использует историю работы помпы, но электронный журнал помпы не имеет штампа часового пояса. **Это означает, что если вы просто измените часовой пояс в телефоне, записи будут читаться с различным часовым поясом и произойдет их задвоение.**
 
-To avoid this there are two possibilities:
+Во избежание этого существует две возможности:
 
-### Option 1: Keep home time and timeshift profile
+### Вариант 1: продолжать пользоваться домашним временем и специально созданным профилем сдвига по времени
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* В настройках телефона отключите 'Автоматический выбор даты и времени' (изменение часового пояса вручную).
+* Телефон должен продолжать использовать ваше обычное домашнее время на весь период поездки.
+* Произведите сдвиг времени вашего профиля в зависимости от разницы во времени между домашним и целевым временем.
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * Нажмите и удерживайте название профиля (середина верхнего ряда на домашнем экране)
+   * Выберите 'Переключение профиля'
+   * Установите 'Сдвиг по времени' в зависимости от места назначения.
    
    ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+   * напр. Vienna -> New York: сдвиг профиля +6 часов
+   * напр. Vienna -> Sydney: сдвиг профиля --8 часов
+* Возможно, не подойдет при использовании модифицированного приложения [LibreLink app](../Hardware/Libre2#time-zone-travelling) поскольку при запуске нового сенсора Libre 2 на смартфоне должен быть настроен автоматический выбор времени.
 
-### Option 2: Delete pump history
+### Вариант 2: Удалить историю работы помпы
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change)
+* В настройках телефона отключите 'Автоматический выбор даты и времени' (изменение часового пояса вручную)
 
-When get out of plane:
+Когда выйдете из самолета:
 
-* turn off pump
-* change timezone on phone
-* turn off phone, turn on pump
-* clear history in pump
-* change time in pump
-* turn on phone
-* let phone connect to the pump and fine-tune time
+* выключите помпу
+* измените часовой пояс на телефоне
+* выключите телефон, включите помпу
+* выполните очистку истории на помпе
+* измените время на помпе
+* включите телефон
+* позвольте телефону подключиться к помпе и точно подстроить время
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Драйвер автоматически синхрониззирует время на помпе и на телефоне.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight также регистрирует прошедшие записи и момент смены времени и продолжительность до текущего момента. Таким образом, правильное время может быть определено в AAPS, несмотря на изменение времени.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+Это может вызвать неточности в определении суммарных суточных доз инсулина TDD. Однако это не должно быть проблемой.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skiped in calculation in AAPS as the correct time cannot be identified properly.
+Поэтому пользователю Insight не нужно беспокоиться об изменениях часового пояса и изменении времени. Данное правило содержит один недостаток: у помпы Insight очень маленькая внутренняя батарея для хранения времени. во время замены "настоящей" батареи. Если замена батареи занимает слишком много времени, то в этой внутренней батарее может кончиться заряд, время на часах будет сброшено, и вам будет предложено ввести новое время и дату после ее установки. В этом случае все записи до замены батареи пропускаются в расчётах в AAPS, так как правильное время должным образом не может быть определено.
 
-# Time adjustment daylight savings time (DST)
+# Корректировки при переходе на летнее/зимнее время (DST)
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+В зависимости от настроек помпы и мониторинга скачки времени могут приводить к проблемам. В помпе Combo, например, происходит повторное считывание истории, что ведет к задваиванию данных. Так что настраивайте переход на новое время днем а не ночью.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+Если вы подаете болюс при помощи калькулятора болюса, не применяйте в рассчетах активные углеводы COB и активный инсулин IOB если не уверены в их абсолютной точности -- лучше ими не пользоваться пару часов после перехода на новое время.
 
 ## Помпа Accu Chek Combo
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AndroidAPS подает оповещение, если время на помпе и на телефоне различается слишком сильно. При переходе на летнее/зимнее время это происходило бы посреди ночи. Чтобы предотвратить это и не нарушать свой сон, выполните следующие шаги:
 
-### Actions to take before the clock change
+### Действия перед переводом времени
 
-1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
+1. Выключите настройки, которые автоматически устанавливают часовой пояс, чтобы принудительно изменять время, когда захотите. Как это сделать, будет зависеть от вашего смартфона и его версии Android.
    
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Некоторые из них имеют два параметра, предназначена для автоматической установки времени (которая в идеале должна оставаться) и автоматической установки часового пояса (которую вы должны выключить).
+   * К сожалению, некоторые версии Android имеют один переключатель автоматической настройки как времени, так и часового пояса. Его надо пока что отключить.
 
-2. Find a time zone that has the same time as your current location but doesn't use DST.
+2. Найдите часовой пояс, который имеет то же время, что и ваше текущее местоположение, но не использует автоматический переход на летнее/зимнее время (DST).
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Список таких стран здесь [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Для среднеевропейского времени CET это может быть "Браззавиль" (Kongo). Измените часовой пояс телефона на Kongo.
 
-3. In AndroidAPS refresh your pump.
+3. В AndroidAPS обновите связь с помпой.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Перейдите на вкладку терапии... Если видите дублирующие записи:
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
-### Actions to take after the clock change
+### Действия после перевода времени
 
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
@@ -90,10 +90,10 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 3. On the AndroidAPS “Combo” screen, press Refresh.
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
 6. Continue as normal.
 

@@ -2,18 +2,26 @@
 
 Εάν τα δεδομένα BG είναι μεταβλητά / θορυβώδη, το AAPS μπορεί να προκαλέσει λανθασμένη δόση ινσουλίνης με αποτέλεσμα την υψηλή ή χαμηλή BG. Για το λόγο αυτό, είναι σημαντικό να απενεργοποιήσετε το κύκλωμα μέχρι να επιλυθεί το πρόβλημα. Ανάλογα με το CGM σας, τέτοια ζητήματα μπορεί να οφείλονται σε προβλήματα διαμόρφωσης ή προβλημάτων αισθητήρων / ιστοτόπων του CGM. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
-## Εφαρμογή Dexcom G5 (patched)
+## Dexcom sensors
 
-Όταν χρησιμοποιείτε το Dexcom G5 (patched) τα δεδομένα BG σας είναι ομαλά και συνεπή. Δεν υπάρχουν περιορισμοί στη χρήση του SMB.
+### Build Your Own Dexcom App
 
-## xDrip+ με Dexcom G5
+When using [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
+
+### xDrip+ with Dexcom G5 or G6
 
 Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
-## xDrip+ με Freestyle Libre
+### Dexcom G5 App (patched)
 
-Όταν χρησιμοποιείτε το xDrip + ως πηγή δεδομένων για τις τιμές Freestyle Libre μέχρι τώρα δεν μπορείτε να ενεργοποιήσετε την επιλογή "Ενεργοποίηση SMB πάντα" και "Ενεργοποίηση SMB μετά από υδατάνθρακες" στο SMB, επειδή οι τιμές BG δεν είναι αρκετά ομαλές. Εκτός από αυτό, υπάρχουν μερικά πράγματα που μπορείτε να κάνετε για να μειώσετε το θόρυβο στα δεδομένα.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
 
-** Ομαλός θόρυβος αισθητήρα. ** Στην xDrip + Ρυθμίσεις> xDrip + Ρυθμίσεις οθόνης βεβαιωθείτε ότι ο Smooth Sensor Noise είναι ενεργοποιημένος. Αυτό προσπαθεί να εφαρμόσει εξομάλυνση στα θορυβώδη δεδομένα.
+## Freestyle Libre sensors
 
-** Ο θόρυβος του Smooth Sensor (Υπερευαισθησία). ** Αν εξακολουθείτε να βλέπετε θορυβώδη δεδομένα στο xDrip +, μπορείτε να εφαρμόσετε πιο επιθετική εξομάλυνση χρησιμοποιώντας τη ρύθμιση Smooth Sensor Noise (Υπερευαισθησία). Αυτό θα προσπαθήσει να εφαρμόσει εξομάλυνση ακόμη και σε πολύ χαμηλά επίπεδα ανιχνευμένου θορύβου. To do this, first enable engineering mode in xDrip+. Στη συνέχεια, μεταβείτε στις Ρυθμίσεις> xDrip + Ρυθμίσεις οθόνης και ενεργοποιήστε τον Smooth Sensor Noise (Υπερευαισθησία).
+### xDrip+ with Freestyle Libre
+
+When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
+
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).

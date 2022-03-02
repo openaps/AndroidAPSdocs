@@ -23,7 +23,7 @@ De volgende instellingen zorgen ervoor dat de batterij van de Jelly smartphone o
 
 <b><font color="#FF0000">Belangrijk:</b></font> Als je Android 8.1 niet persé nodig hebt (alleen nodig om te loopen met een Accu-Check Combo), dan laat je de telefoon op Android versie 7.0 staan!
 
-Volg deze regels om bij Andorid 7.0 te blijven:
+Follow these rules to stay with Android 7.0:
 
 * Geen verbinding maken met wifi of mobiel netwerk bij het eerste gebruik, om automatische update te voorkomen.
 * Stel géén wifi-netwerk in.

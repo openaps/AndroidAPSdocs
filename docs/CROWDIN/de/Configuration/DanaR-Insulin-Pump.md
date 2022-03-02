@@ -18,6 +18,7 @@
 * Falls du willst, dass Aaps Basalraten über 200% einstellen kann, musst du “Benutze verlängerten Bolus für hohe temp. Basalraten” aktivieren. Das bedeutet aber, dass während eines verlängerten Mahlzeitenbolus nicht mit hohen temporären Basalraten loopen kannst.
 * Unter "DanaR Pumpen-Einstellungen" kannst du auch die Bolus-Geschwindigkeit (12s/1IE, 30s/1IE oder 60s/1IE) einstellen.
 * Stelle auf der Pumpe die Basalschritte auf 0,01 IE/h.
+* Stelle auf der Pumpe die Bolusschritte auf 0,01 IE/h.
 * Erlaube die Vewendung von verlängerten Boli auf der Pumpe
 
 ## Mit der Dana R Pumpe über Zeitzonen hinweg reisen

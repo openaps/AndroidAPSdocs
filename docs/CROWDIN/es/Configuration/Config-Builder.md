@@ -2,7 +2,7 @@
 
 Dependiendo de sus ajustes, puede abrir el administrador de configuraciones a través de una pestaña en la parte superior de la pantalla o a través del menú de la hamburguesa.
 
-![Abrir configuraciones](../images/ConfBuild_Open.png)
+![Abrir configuraciones](../images/ConfBuild_Open_AAPS30.png)
 
 Configuraciones (Conf.) es la pestaña en la donde se activan y desactivan las características modulares. Las opciones en el lado izquierdo (A) le permiten seleccionar cuál utilizar, las opciones del lado derecho (C) le permiten ver estas como pestañas. (E) en AndroidAPS. En caso de que el recuadro correcto no esté activado, puede llegar a la función utilizando el menú de hamburguesa (D) en la parte superior izquierda de la pantalla.
 
@@ -10,63 +10,52 @@ Cuando hay opciones adicionales disponibles en el módulo, puede hacer clic en l
 
 **Primera configuración:** En AAPS 2.0 un asistente de instalación le guía a través del proceso de configuración de AndroidAPS. Presione los 3 puntos en la parte superior derecha de la pantalla (F) y seleccione 'Asistente de configuración' para usarlo.
 
-![Caja de configuraciones y engranaje](../images/ConfBuild_ConfigBuilder.png)
+![Caja de configuraciones y engranaje](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 ## Pestañas o menú de hamburguesa
 
 Con la casilla de verificación, bajo el símbolo de ojo, puede decidir cómo abrir la sección correspondiente del programa.
 
-![Pestañas o menú de hamburguesa](../images/ConfBuild_TabOrHH.png)
+![Pestañas o menú de hamburguesa](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 ## Perfil
 
-Seleccione el perfil basal que desea utilizar. Consulte la página [Perfiles](../Usage/Profiles.md) para obtener más información de configuración.
+* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
 
-### Perfil local (recomendado)
+### Local profile
 
-El "perfil local" utiliza el perfil basal manualmente ingresado en el teléfono. Tan pronto como se selecciona, aparece una nueva pestaña en AAPS, donde puede cambiar los datos de perfil leídos de la bomba si es necesario. Con la tecla siguiente, el perfil se escriben en la bomba en el perfil 1. Este perfil se recomienda ya que no depende de la conectividad a Internet.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-Los perfiles locales forman parte de [ valores exportados ](../Usage/ExportImportSettings.rst). Así que asegúrese de tener una copia de seguridad en un lugar seguro.
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
 
-![Valores de perfil local](../images/LocalProfile_Settings.png)
+![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Botones:
+Buttons:
 
-* verde más: añadir
-* rojo X: borrar
-* flecha azul: duplicado
+* green plus: add
+* red X: delete
+* blue arrow: duplicate
 
-Si realiza algún cambio en su perfil, asegúrese de que está editando el perfil correcto. En la pestaña de perfil no siempre se muestra el perfil real que se utiliza-por ejemplo, si usted hizo un cambio de perfil utilizando la pestaña de perfil en la pantalla de inicio puede diferir del perfil realmente mostrado en la pestaña de perfil, ya que no hay ninguna conexión entre estos.
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clonar cambio de perfil
 
-Puede crear fácilmente un perfil local nuevo a partir del conmutador de perfil. En este caso, el cambio de tiempo y el porcentaje se aplicarán al nuevo perfil local.
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
-1. Vaya a la pestaña de tratamientos.
-2. Seleccionar Cambio de perfil.
-3. Pulse "Clonar".
-4. Puede editar el nuevo perfil local en la pestaña Perfil local (LP) o a través del menú principal.
+1. Click 3-dots-menu in upper right corner.
+2. Select 'Treatments'.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and press "Clone".
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clonar cambio de perfil](../images/LocalProfile_ClonePS.png)
-
-Si desea cambiar de perfil Nightscout a un perfil local, haga un cambio de perfil en su perfil NS y clone el conmutador de perfil tal como se ha descrito anteriormente.
+![Clonar cambio de perfil](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Cargar los perfiles locales para Nightscout
 
-Los perfiles locales también se pueden subir a Nightscout. Los ajustes se pueden encontrar en [NSClient preferences](../Configuration/Preferences#nsclient).
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-![Cargar el perfil local de NS](../images/LocalProfile_UploadNS2.png)
-
-Ventajas:
-
-* no es necesaria ninguna conexión a Internet para cambiar los valores de perfil
-* los cambios de perfil se pueden hacer directamente en el teléfono
-* nuevo perfil se puede crear desde el conmutador de perfil
-* los perfiles locales también se pueden subir a Nightscout
-
-Desventajas:
-
-* ninguno
+![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 ### Asistente de perfil
 
@@ -75,30 +64,14 @@ El ayudante de perfil ofrece dos funciones:
 1. Encontrar un perfil para niños
 2. Comparar dos perfiles o conmutadores de perfil para clonar un perfil nuevo
 
-Los detalles se explican por separado en la [página de ayuda de perfil](../Configuration/profilehelper.rst).
-
-### Perfil NS
-
-El perfil de NS utiliza los perfiles que guardados en el sitio de Nightscout (https: //[yournightscoutsiteaddress]/profile). Puede usar el [Selector de Perfil](../Usage/Profiles.md) para cambiar cuál de los perfiles está activo, y se escribe ese perfil en la bomba en caso de fallo AndroidAPS. Esto le permite crear fácilmente múltiples perfiles en Nightscout (p.ej.. trabajo, casa, deportes, vacaciones, etc.). Poco después de hacer clic en "Guardar" serán transferidos a AAPS si su smartphone está en línea. Incluso sin conexión a Internet o sin conexión a Nightscout, los perfiles de Nightscout están disponibles en AAPS una vez que se han sincronizado.
-
-Realice un [cambio de perfil](../Getting-Started/Screenshots.md#current-profile) para activar un perfil de Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
-
-Ventajas:
-
-* perfiles múltiples
-* fácil de editar por PC o tablet
-
-Desventajas:
-
-* no hay cambios locales en la configuración del perfil
-* el perfil no puede ser cambiado directamente en el teléfono
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
 ## Insulina
 
-![Insulin type](../images/ConfBuild_Insulin.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Select the type of insulin curve you are using.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
 * The curves will vary based on the DIA and the time to peak.
     
     * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
@@ -120,11 +93,15 @@ Desventajas:
 
 #### Rapid-Acting Oref
 
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+
 * recommended for Humalog, Novolog and Novorapid
 * DIA = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Ultra-Rapid Oref
+
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
 * DIA = at least 5.0h
@@ -132,13 +109,17 @@ Desventajas:
 
 #### Lyumjev
 
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+
 * special insulin profile for Lyumjev
 * DIA = at least 5.0h
 * Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-#### Free Peak Oref
+#### Free-Peak Oref
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
@@ -146,40 +127,45 @@ Desventajas:
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Dexcom App (patched)](https://github.com/dexcomapp/dexcomapp/) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
-    
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
-
-* [Poctech](http://www.poctechcorp.com/en/contents/268/5682.html)
-
+* [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * Random BG: Generates random BG data (Demo mode only)
 
 ## Bomba
 
 Select the pump you are using.
 
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
-* [Dana RS](DanaRS-Insulin-Pump.md)
+* [Dana-i/RS](DanaRS-Insulin-Pump.md)
+    
+    * For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
+* [Diaconn G8](DiaconnG8.rst)
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
-
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
-
 ## Detección de sensibilidad
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#auto-sensitivity-mode).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
@@ -191,10 +177,8 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
-* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017)  
-    More detail about OpenAPS AMA can be found in the [OpenAPS docs](http://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html#advanced-meal-assist-or-ama). In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably. 
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users)  
-    Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 
@@ -297,7 +281,7 @@ Choose if you want to have a notes field when entering treatments or not.
 
 #### Luces de estado
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for canula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Advanced settings
 

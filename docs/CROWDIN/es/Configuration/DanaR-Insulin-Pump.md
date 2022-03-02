@@ -18,8 +18,9 @@
 * Si quieres que AndroidAPS permita una tasa basal por encima del 200%, activa el uso de bolos extendidos por >200%. Tenga en cuenta esto significa que no puede hacer lazos con TBRs altos mientras utiliza bolos extendidos para alimentos.
 * En Preferencias en la configuración de la bomba DanaR puede cambiar la velocidad de bolo por defecto utilizada (12seg por 1u, 30seg por 1u o 60s por 1u).
 * Ajustar paso basal a 0.01 U/h
+* Set bolus step on pump to 0.1 U/h
 * Habilitar bolos extendidos en bomba
 
 ## Cambio de zona horaria al viajar con la bomba Dana R
 
-Para obtener información sobre cómo actuar a través de zonas horarias consulte la sección [cambio de zona Horaria con bombas](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).

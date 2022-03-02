@@ -25,7 +25,7 @@ Po nastřelení senzoru je možno nakliknout vysílač do pouzdra senzoru. Pozor
 Problém s připojením
 --------------------------------------------------
 
-Bluetooth spojení může být rušeno nedalekými Bluetooth zařízeními, jako například glukomentry, bluetooth sluchátka, tablety nebo kuchyňská zařízení, jako jsou mikrovlnné trouby nebo varné desky. V tomto případě xDrip neukazuje žádné hodnoty glykémií. Jakmile se bluetooth spojení obnoví, jsou data zpětně doplněna.
+Bluetooth spojení může být rušeno nedalekými Bluetooth zařízeními, jako například glukomentry, bluetooth sluchátka, tablety nebo kuchyňská zařízení, jako jsou mikrovlnné trouby nebo varné desky. V tomto případě xDrip neukazuje žádné hodnoty glykémií. When bluetooth connection is restabilised the data is backfilled.
 
 Chyby senzorů
 --------------------------------------------------

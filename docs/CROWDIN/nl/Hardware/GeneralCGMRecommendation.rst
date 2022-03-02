@@ -25,7 +25,7 @@ Problemen oplossen
 Verbindingsproblemen
 --------------------------------------------------
 
-De Bluetooth-verbinding kan worden verstoord door andere Bluetooth-apparaten zoals bloedglucose meters, koptelefoons, tablets of keukenapparatuur zoals magnetrons (microgolven) of keramische kookplaten. In dat geval toont xDrip+ geen BG-waarden. Wanneer de Bluetooth-verbinding opnieuw is hersteld, worden de ontbrekende glucosegegevens aangevuld (met een maximum van 3 uur).
+De Bluetooth-verbinding kan worden verstoord door andere Bluetooth-apparaten zoals bloedglucose meters, koptelefoons, tablets of keukenapparatuur zoals magnetrons (microgolven) of keramische kookplaten. In dat geval toont xDrip+ geen BG-waarden. When bluetooth connection is restabilised the data is backfilled.
 
 Sensor Fout
 --------------------------------------------------

@@ -17,12 +17,24 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Taal wijzigen
+
+   Taal wijzigen <./changelanguage.rst>
+
+.. _Aan de slag:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Aan de slag
 
    Allereerst de veiligheid <./Getting-Started/Safety-first.rst>
    Wat is een closed loop systeem <./Getting-Started/ClosedLoop.rst>
    Wat is een closed loop systeem met AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Insulinepompen <./Getting-Started/Pump-Choices.md>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
+
+.. _wat-heb-ik-nodig:
 
 .. toctree::
    :maxdepth: 1
@@ -30,7 +42,6 @@ Hieronder volgt de inhoudsopgave.
    :caption: Wat heb ik nodig? 
 
    Onderdelen <./Module/module.rst>
-   Gebruiksvoorbeeld <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
@@ -39,12 +50,15 @@ Hieronder volgt de inhoudsopgave.
 
    Bouwen van de app <./Installing-AndroidAPS/Building-APK.md>
    Bijwerken naar een nieuwe versie <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Controles na bijwerken naar AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Git installeren <./Installing-AndroidAPS/git-install.rst>
-   Problemen in Android Studio oplossen <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev_branch.md>
-   
+   Dev branch (voor ontwikkelaars) <./Installing-AndroidAPS/Dev-branch.md>
+
+.. _onderdelen-instellen:
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -57,10 +71,12 @@ Hieronder volgt de inhoudsopgave.
    Nightscout instellen <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch <./Hardware/Smartwatch.rst>
 
+.. _configuratie:
+
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS instellingen 
+   :caption: Configuratie
 
    Configurator <./Configuration/Config-Builder.md>
    Instellingen <./Configuration/Preferences.rst>
@@ -68,7 +84,7 @@ Hieronder volgt de inhoudsopgave.
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS gebruik
+   :caption: AndroidAPS gebruiken
 
    AndroidAPS Screenshots <./Getting-Started/Screenshots.md>
    Doelen <./Usage/Objectives.rst>
@@ -93,6 +109,7 @@ Hieronder volgt de inhoudsopgave.
    Toegang tot logbestanden <./Usage/Accessing-logfiles.md>
    AccuChek Combo - tips <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Instellingen exporteren/importeren <./Usage/ExportImportSettings.rst>
+   xDrip engineering modus <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
@@ -101,18 +118,20 @@ Hieronder volgt de inhoudsopgave.
 
    Volgen op afstand <./Children/Children.rst>
    SMS Comando's <./Children/SMS-Commands.rst>
-
+   Profielhelper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
    :glob:
    :caption: Problemen oplossen
 
    Problemen oplossen <./Usage/troubleshooting.rst>
+   Nightscout Client <../Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Veelgestelde vragen 
+   :caption: Veelgestelde vragen
 
    Veelgestelde vragen <./Getting-Started/FAQ.md>
 
@@ -120,24 +139,25 @@ Hieronder volgt de inhoudsopgave.
    :maxdepth: 1
    :glob:
    :caption: Veelgebruikte woordenlijst
-  
+
    Veelgebruikte woordenlijst <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Waar je hulp kunt vinden
+   :caption: Waar je hulp kunt vinden 
 
    Leestips voordat je begint <./Where-To-Go-For-Help/Background-reading.md>
    Contact met anderen <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Wiki-updates & wijzigingen <./Getting-Started/WikiUpdate.rst>
+   Documentatie wijzigingen <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Zorgprofessionals
+   :caption: Voor zorgprofessionals
 
    Voor zorgprofessionals <./Resources/clinician-guide-to-AndroidAPS>
+
 
 .. toctree::
    :maxdepth: 1
@@ -149,7 +169,7 @@ Hieronder volgt de inhoudsopgave.
    De wiki verbeteren <./make-a-PR>
 
 
-.. note::
+.. note:: 
 	**Disclaimer en waarschuwing**
 
 	* Alle informatie, gedachten, en de code die hier beschreven staan zijn alleen voor informatieve en educatieve doeleinden. Nightscout probeert zich op geen enkele wijze te houden aan gegevensbewaking van medische gegevens. Gebruik van Nightscout en AndroidAPS is op eigen risico, en gebruik de informatie of code niet om behandelbeslissingen te nemen.
@@ -158,4 +178,4 @@ Hieronder volgt de inhoudsopgave.
 
 	* Alle product-en bedrijfsnamen, handelsmerken, servicemerken, geregistreerde handelsmerken en geregistreerde dienstmerken zijn eigendom van hun respectievelijke houders. Hun gebruik is voor informatieve doeleinden en impliceert op geen enkele wijze een samenwerking met of goedkeuring van hen.
 
-	NB: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ of `Medtronic <http://www.medtronic.com/>`_.
+	Houd er rekening mee dat: - dit project is niet gekoppeld aan en wordt niet ondersteund door: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ of `Medtronic <https://www.medtronic.com/>`_

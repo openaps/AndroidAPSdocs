@@ -18,8 +18,9 @@
 * Si vous voulez qu'AndroidAPS autorise et utilise le débit de Basal supérieur à 200%, il faut confirmer l'autorisation des bolus étendus pour > 200%. Notez que cela signifie que vous ne pouvez pas opérer en boucle avec des traitements Cible Temporaire Haute tout en utilisant des bolus prolongés pour se nourrir.
 * Dans le menu Préférences sous paramètres de pompe de DanaR, vous pouvez modifier la vitesse de bolus par défaut utilisée (12 sec par 1 Unité, 30 sec par 1 Unité ou 60 sec par 1 Unité).
 * Régler l'incrément basal sur la pompe à 0.01 U/h
+* Régler l'incrément bolus sur la pompe à 0,1 U/h
 * Activez les Bolus Étendus sur la pompe
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-Pour plus d'informations sur les voyages dans différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).

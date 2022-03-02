@@ -69,7 +69,7 @@ Alternatively you can delete the profile switch directly in mLab as described be
 ### 'Received profile switch from NS but profile does not exist locally'
 
 * The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delte the profile switch
+* Follow instructions from above to delete the profile switch
 
 Alternatively you can delete the profile switch directly in mLab:
 
@@ -80,4 +80,4 @@ Alternatively you can delete the profile switch directly in mLab:
 ### 'DIA 3hr too short'
 
 * Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
-* Read about [selecting the right DIA](http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

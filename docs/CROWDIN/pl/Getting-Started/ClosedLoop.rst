@@ -23,7 +23,7 @@ Just as the autopilot depends on the sensor values as well as the pilot's specif
 
 
 Open Source Artificial Pancreas Closed Loop Systems
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+===================================================
 At present there are three major open source closed loop systems available:
 
 AndroidAPS (AAPS)
@@ -32,10 +32,11 @@ AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.htm
 
 Compatible `pumps <../Hardware/pumps.html>`_ are:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
 
 OpenAPS

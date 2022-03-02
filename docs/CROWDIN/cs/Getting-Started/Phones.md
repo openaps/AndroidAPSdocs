@@ -10,4 +10,4 @@ V případě jakýchkoli problémů s tabulkou prosím napište e-mail na hardwa
 
 # Tapety na telefon
 
-![pozadí telefonu](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Pokud si chcete vyzdobit váš telefon ještě větší porcí AndroidAPS, můžete si stáhnout obrázek na pozadí zde: ![Pozadí ve vysokém rozlišení.](../images/bg_phone.jpg)
+![pozadí telefonu](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Pokud si chcete vyzdobit telefon ještě větší porcí AndroidAPS, můžete si stáhnout obrázek na pozadí zde: ![Pozadí ve vysokém rozlišení.](../images/bg_phone.jpg)

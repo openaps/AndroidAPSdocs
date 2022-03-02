@@ -15,7 +15,7 @@ Nicht absorbierte Kohlenhydrate werden nach der eingestellten Zeit verworfen, we
 AAPS, WeightedAverage
 --------------------------------------------------
 
-Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  `COB = 0` gilt.
+Die Kohlenhydratresorption wird auf Basis der angegebenen Zeit berechnet, so dass nach deren Ablauf  ``COB == 0`` gilt.
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WeightedAverage
@@ -30,12 +30,12 @@ AAPS warnt Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzei
 Wie erkennt AndroidAPS falsche COB-Werte? 
 --------------------------------------------------
 
-Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung der BZ-Werte. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber AAPS deren erwartete Absorption nicht durch BZ-Veränderungen erkennen kann, wird die Methode ` min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#resorptions-einstellungen>`_ verwendet, um die Absorption zu berechnen (so genanntes 'Fallback '). Da diese Methode nur die minimale Kohlenhydrat-Resorption ohne Berücksichtigung von BZ-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
+Normalerweise erkennt AAPS die Kohlenhydrat-Resorption auf Basis der Entwicklung der BZ-Werte. Für den Fall, dass Du Kohlenhydrate eingegeben hast, aber AAPS deren erwartete Absorption nicht durch BZ-Veränderungen erkennen kann, wird die Methode ` min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#resorptions-einstellungen> ` _ verwendet, um die Absorption zu berechnen (so genanntes 'Fallback '). Da diese Methode nur die minimale Kohlenhydrat-Resorption ohne Berücksichtigung von BZ-Änderungen berechnet, kann dies zu falschen COB-Werten führen.
 
 .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
   :alt: Hinweis fehlerhafte COB Werte
 
-In der Abbildung oben wurde 41% der 1Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat. 
+In der Abbildung oben wurde 41% der Kohlenhydrat-Resorption durch min_5m_carbimpact statt des Wertes, der bei Abweichungen festgestellt wurde, mathematisch berechnet.  Das bedeutet, dass evtl. weniger Kohlenhydrate noch im Körper aktiv sind als der Algorithmus berechnet hat. 
 
 Wie kann man mit dieser Warnung umgehen? 
 --------------------------------------------------

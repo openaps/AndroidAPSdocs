@@ -1,4 +1,4 @@
-Automation
+Automatizare
 **************************************************
 
 What is Automation
@@ -22,14 +22,14 @@ Important note
 --------------------------------------------------
 **Automation is still active when you disable loop!**
 
-So make sure to deactivate automation rules during these occasions if neccessary. You can do so by unticking the box left of the name of your automation rule.
+So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
 
 Where to find Automation
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`_ in hamburger menu or as a tab.
+Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
 General
 --------------------------------------------------
@@ -45,20 +45,20 @@ There are some limits:
 * **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 
-Condition
+Condiție
 --------------------------------------------------
 You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
 * connect conditions: you can have several conditions and can link them with 
 
-  * "And"
-  * "Or"
+  * "Și"
+  * "Sau"
   * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
    
-* Time vs. recurring time
+* Time vs. timp recurent
 
   * time =  single time event
-  * recurring time = something that happens regulalrly (i.e. once a week, every working day etc.)
+  * recurring time = something that happens regularly (i.e. once a week, every working day etc.)
    
 * location: in the config builder (Automation), you can select which location service you want to use:
 
@@ -66,18 +66,18 @@ You can choose between several conditions. Here are some things explained, but m
   * Use network location: Location of your Wifi
   * Use GPS location (Attention! May cause excessive battery drain!)
   
-Action
+Acțiune
 --------------------------------------------------
 You can choose one or more actions: 
 
-* start temp target 
+* pornește o țintă temporară 
 
   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
   * works only if there is no previous temp target
    
-* stop temp target
-* notification
-* profile percentage
+* oprește o țintă temporară
+* notificare
+* procentajul profilului
 
   * must be between 70% and 130% 
   * works only if the previous percentage is 100%
@@ -88,14 +88,14 @@ After adding your action, **don't forget to change the default values** to what 
   :alt: Automation default vs. set values
 
 Sort automation rules
------
+---------------------
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
 Delete automation rules
------
+-----------------------
 To delete an automation rule click on trash icon.
 
 .. image:: ../images/Automation_Delete.png
@@ -104,15 +104,15 @@ To delete an automation rule click on trash icon.
 Good practice & caveats
 ==================================================
 * When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Whatch the rule results.
+* Watch the rule results.
 * Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
 
   **Doubly important if action is a profile switch!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`_ back to 0.
+* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
 * Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`_ useless for a min of 6 hours.
+  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
 
 * Profile switching will not reset the profile back to your base profile
 
@@ -151,7 +151,7 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 * Creating one way rules (i.e. do something but don't undo it by another rule)
 * Creating long term rules
 
-Alternatives
+Alternative
 ==================================================
 
-For advanced users, there are other posibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.

@@ -1,10 +1,10 @@
-Profile helper
+Assistente de Perfil
 ****************************************
 
-Profile helper offers two functions:
+Assistentes de perfis oferecem duas funções:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontre um perfil para crianças
+2. Compare dois perfis ou trocas de perfis de modo a clonar um novo perfil
 
 Profile for kids (up to 18 years)
 =======================================
@@ -35,7 +35,7 @@ Once you are fine with the profile adjustments you can `clone the profile <../Co
 Compare two profiles
 =======================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of on of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 Clone profile
 =======================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile-recommended>`_ you can clone a profile / profile switch directly from profile helper.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profile Helper Clone profile / profile switch

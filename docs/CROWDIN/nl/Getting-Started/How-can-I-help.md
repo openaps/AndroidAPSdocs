@@ -8,16 +8,16 @@ Ontwikkelaars zijn ouders, verzorgers, partners en mensen met diabetes ze ontwik
 
 ## Ik kan programmeren! Hoe doe ik mee?
 
-Ja! Bekijk de problemen, vraag in het Gitter kanaal, er is altijd genoeg te doen! Pak een kleine taak als eerste en maak je eerste Pull Request! :)
+Top! Stort je op de problemen ('issues') in GitHub, vraag rond in het discord kanaal, er is altijd veel te doen. Pak een kleine taak als eerste en maak je eerste Pull Request! :)
 
-## Ik ken de AAPS-oplossing en kan documentatie schrijven!
+## Ik ken het AAPS-systeem en kan documentatie schrijven!
 
-Mooi, dit wordt zeer gewaardeerd en is een prima manier om je steentje bij te dragen #payitforward.
+Great, this is a highly appreciated thing and a good way to pay it forward!
 
-* Het oude gitter kanaal voor de wiki kan je hier vinden: [AndroidAPSwiki/Lobby](https://gitter.im/AndroidAPSwiki/Lobby). 
-* Een instructie hoe je Commits op de Engelse wiki kunt doen: [How to make a PR](../make-a-PR.md). Andere talen worden alleen vertaald uit het Engels en worden verder niet bewerkt, om de wiki consistent te houden.
+* Het discord kanaal voor de documentatie kun je hier vinden: [AndroidAPS](https://discord.gg/4fQUWHZ4Mw). 
+* Een instructie hoe je aanpassingen ('Commits') aan de Engelse documentatie kunt doen: [How to make a PR](../make-a-PR.md). Veranderingen aan de documentatie worden altijd in het Engels gedaan, vervolgens worden ze vertaald naar andere talen. Er worden in andere talen geen veranderingen gemaakt aan documentatie zelf, alleen vertaald uit het Engels, om de documentatie consistent te houden.
 
-## Ik spreek meedere talen en wil de AAPS applicatie of documentatie vertalen.
+## I do speak multiple languages and want to translate the app or the documentation
 
 * Als je de **app** naar andere talen wilt vertalen (dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidaps).
 * Als je de **wiki** naar andere talen wilt vertalen (ook dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs). 
@@ -26,4 +26,4 @@ Meld je aan bij Crowdin, kies je taal en wacht op autorisatie door een admin en 
 
 ## Zijn er andere manieren om te helpen?
 
-De benodigde skills zijn Grafische Vormgeving, UX design, vertalen, Wiki bewerken of simpelweg bijdragen in gitter en Facebook door vragen te beantwoorden, zodat de ontwikkelaars zich kunnen richten op het complexere werk.
+Als je iets kunt betekenen in grafisch ontwerp, UI ontwerp, vertalen, documenten updaten of simpelweg andermans vragen beantwoorden in discord & Facebook dan help je de ontwikkelaars enorm, daarmee zorg je ervoor dat zij zich kunnen concentreren op ingewikkeldere dingen. Alle inzet wordt gewaardeerd #payitforward.

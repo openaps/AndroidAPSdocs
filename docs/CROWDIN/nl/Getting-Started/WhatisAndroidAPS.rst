@@ -40,5 +40,4 @@ Belangrijkste uitgangspunten van AndroidAPS:
 Hoe te beginnen
 ==================================================
 Natuurlijk is alles wat hier beschreven staat belangrijk, maar de grote hoeveelheid nieuwe informatie kan in het begin behoorlijk verwarrend zijn.
-Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>`_ en de `Doelen <../Usage/Objectives.html>`_. Of bekijk het `Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.html>`_ met Dana pomp, Dexcom sensor en Sony Smartwatch.
- 
+Een goede oriëntatie wordt gegeven door het `Module Overzicht <../Module/module.html>`_ en de `Doelen <../Usage/Objectives.html>`_.

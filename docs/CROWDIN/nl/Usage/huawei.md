@@ -27,7 +27,7 @@ Er zijn verschillende opties, sommige Android specifiek, sommige Huawei specifie
     
     ![Huawei - app vergrendelen](../images/Huawei_LockApp.png)
 
-Voor xDrip+, kun je ook de 'hardnekkige melding' optie inschakelen (in xDrip+ app):
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Instellingen / minder vaak voorkomende instellingen / other misc options / Run Collector op voorgrond
   

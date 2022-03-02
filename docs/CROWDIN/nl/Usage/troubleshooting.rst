@@ -6,24 +6,33 @@ Mocht je jouw probleem niet terugvinden in de linkjes in dit overzicht, dan vind
 
 AndroidAPS app
 ==================================================
+
 Bouwen & bijwerken
------
+-------------------
 * `Keystore kwijt <../Installing-AndroidAPS/troubleshooting_androidstudio.html#keystore-digitale-handtekening-kwijt>`_
 * `Problemen met Android Studio oplossen <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: fout: Basaal profiel niet ingesteld in hele uren
 
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
+
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
+
 Gebruik
 --------------------------------------------------
 * `COB - Detectie van verkeerde COB waarden <../Usage/COB-calculation.html#detectie-van-verkeerde-cob-waarden>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Foutmelding: Trage koolhydraten absorptie
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Error: Slow carb absorption
 
 * `Problemen met SMS Commando's <../Children/SMS-Commands.html#problemen-oplossen>`_
 
@@ -39,7 +48,7 @@ Pomp
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#foutmeldingen-specifiek-voor-de-danars>`_
 * `Accu-Chek Combo algemeen <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specifieke-foutmeldingen>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
@@ -48,6 +57,6 @@ Telefoons
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & batterij optimalisatie <../Usage/huawei.html>`_
 
-Smartwaches
+Smartwatch
 ==================================================
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

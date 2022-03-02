@@ -27,7 +27,7 @@ Yra įvairių variantų, kai kurie būdingi konkrečiai "Android", kai kurie - "
     
     ![Huawei - užrakinti programą](../images/Huawei_LockApp.png)
 
-Xdrip+ galite pasirinkti naudoti nuolatinius pranešimus (per xdrip+ programą):
+For xdrip+, you can also enable persistent notifications (within xdrip+ app):
 
 * Setttings / less common settings / other misc options / Run Collector in foreground
   

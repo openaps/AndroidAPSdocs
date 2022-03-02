@@ -58,7 +58,7 @@ Einrichtung
      
 Möglichkeiten zum Teilen Deiner Daten
 ========================================
-`Das 'OPEN' Projekt <https://open-diabetes.eu/de/>`_
+`Das 'OPEN' Projekt <https://open-diabetes.eu/de//>`_
 ---------------------------------------------------------------------------------------  
 Das “OPEN” Projekt besteht aus einem internationalen und bereichsübergreifenden Konsortium, das Patienten-Innovatoren, Kliniker, Sozialwissenschaftler, Informatiker und Patientenorganisationen zusammenführt, um eine Evidenzbasis rund um die Auswirkungen von Do-it-yourself Artificial Pancreas Systemen (DIY APS) auf Menschen mit Diabetes und verschiedene Gesundheitssysteme zu schaffen. Weitere Informationen findest Du auf der `OPEN Website <https://www.open-diabetes.eu/>`_.
 

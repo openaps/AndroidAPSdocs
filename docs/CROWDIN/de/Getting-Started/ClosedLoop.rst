@@ -23,7 +23,7 @@ So wie der Autopilot neben den Sensorwerten auf die Vorgaben der Piloten angewie
 
 
 Open Source Closed Loop System für eine künstliche Bauchspeicheldrüse
-==================================================
+===================================================
 Aktuell sind drei große Open Source Closed Loop Systeme verfügbar:
 
 AndroidAPS (AAPS)
@@ -32,10 +32,11 @@ AndroidAPS wird in `dieser Dokumentation <./WhatisAndroidAPS.html>`_ ausführlic
 
 Kompatible `Insulinpumpen <../Hardware/pumps.html>`_ sind:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * einige alte `Medtronic Pumpen <../Configuration/MedtronicPump.html>`_
 
 OpenAPS

@@ -6,30 +6,39 @@ D'autres informations utiles peuvent également être disponibles dans la rubriq
 
 Application AndroidAPS
 ==================================================
+
 Génération et mise à jour
------
+-------------------
 * `Certificats perdus <../Installing-AndroidAPS/troubleshooting_androidstudio.html#fichier-de-cles-perdu>`_
 * `Dépannage AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+
 Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Débits de Basal non alignés sur les heures
 
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
+
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
+
 Utilisation
 --------------------------------------------------
 * `Valeur de glucides incorrectes <../Usage/COB-calculation.html#detection-de-ga-errones>`_
 
-  .. image:: ../images/Calculator_SlowCarbAbsorbtion.png
-    :alt: Error: Absorption lente des glucides
+  .. image:: ../images/Calculator_SlowCarbAbsorption.png
+    :alt: Erreur: Absorption lente des glucides
 
-* `Commandes SMS <../Children/SMS-Commands.html#depannage>`_
+* `Commandes SMS <../Children/SMS-Commands.html#resolution-de-problemes>`_
 
 MGC
 ==================================================
-* `Généralités <../Hardware/GeneralCGMRecommendation.html#depannage>`_
+* `Généralités <../Hardware/GeneralCGMRecommendation.html#resolution-de-problemes>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
 * `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
 * `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_
@@ -39,7 +48,7 @@ Pompes
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#erreurs-specifiques-a-danars`_
 * `Accu-Chek Combo généralités <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#pourquoi-l-appairage-avec-la-pompe-ne-fonctionne-pas-avec-l-application-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#erreurs-specifiques-a-insight>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#que-faire-si-je-perds-la-connexion-a-rileylink-et-ou-a-la-pompe>`_
 

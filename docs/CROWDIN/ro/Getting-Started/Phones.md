@@ -1,13 +1,13 @@
-# List of tested Phones
+# Lista de telefoane testate
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Utilizatorii au creat o [listă de telefoane și ceasuri testate](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
 
-You can use filters to display particular pumps or phones but please set back to view all when you've finished looking, ready for the next person to view all.
+Puteți folosi filtre pentru a afișa anumite pompe sau telefoane, dar va trebui să ștergeți aceste filtre după ce ați reușit să vedeți ceea ce vă interesa, pentru ca și următoarele persoane să poată vedea întreaga listă.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+Pentru a adăuga un telefon sau un ceas care nu este deja listat în acel fișier, vă rugăm să completați [formularul](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
 
-Any problems with the spreadsheet please email hardware@androidaps.org, any donations of phone/watch models that still need testing please email donations@androidaps.org.
+Orice probleme aveți cu foaia de calcul vă rugăm să trimiteţi email la hardware@androidaps.org, orice donaţii de modele de telefoane/ceasuri care mai au nevoie de testare vă rugăm să trimiteţi un e-mail la donations@androidaps.org.
 
-# Phone Background
+# Fundalul telefonului
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![fundal telefon](../images/bg_phone_thump.jpg) </br> Design: Thiago:) </br> Daca vrei sa iti înfrumusețezi telefonul cu mai multe imagini AndroidAPS, iti poti descarca imaginea de fundal de aici: ![Fundal de înaltă rezoluţie.](../images/bg_phone.jpg)

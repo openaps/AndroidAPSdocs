@@ -6,7 +6,7 @@ Nėra jokių problemų dėl laiko zonos keitimo telefone, nes pompa nenaudoja te
 
 ## DanaRv2, DanaRS
 
-Naudojant šias pompas būkite atidūs, nes AndroidAPS naudoja pompos istoriją, kurios įrašai pompoje neturi laiko juostų žymės. **Tai reiškia, kad jeigu Jūs tiesiog pakeisite laiko juostą telefone, duomenys bus nuskaitomi su skirtinga laiko juosta ir dubliuosis.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **Tai reiškia, kad jeigu Jūs tiesiog pakeisite laiko juostą telefone, duomenys bus nuskaitomi su skirtinga laiko juosta ir dubliuosis.**
 
 Norint išvengti šito, yra du pasirinkimai:
 
@@ -48,7 +48,7 @@ Insight pompa taip pat užfiksuoja atmintyje, kuriuo metu laikas pasikeitė ir n
 
 Tai gali įtakoti neatitikimus TDDs (paros suminė dozė). Bet tai neturėtų būti problema. 
 
-Taigi Insight pompos naudotojai neturėtų nerimauti dėl laiko juostų ir laiko keitimo. Yra tik viena išimtis: Insight pompa turi mažą vidinę bateriją, kurios energija skiriama laikui ir pan. kol Jūs keičiate "tikrąją" bateriją. Jeigu baterijos keitimas užtrunka, vidinė baterija išsikrauna, laikrodis nustatomas iš naujo, nes Jūsų bus paprašyta suvesti laiką ir datą vos tik įdėjus naują bateriją. Šiuo atveju visi įrašai iki baterijos keitimo yra praleidžiami AAPS skaičiavimuose, kol nėra nustatytas teisingas laikas.
+Taigi Insight pompos naudotojai neturėtų nerimauti dėl laiko juostų ir laiko keitimo. Yra tik viena išimtis: Insight pompa turi mažą vidinę bateriją, kurios energija skiriama laikui ir pan. kol Jūs keičiate "tikrąją" bateriją. Jeigu baterijos keitimas užtrunka, vidinė baterija išsikrauna, laikrodis nustatomas iš naujo, nes Jūsų bus paprašyta suvesti laiką ir datą vos tik įdėjus naują bateriją. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
 # Vasaros laiko nustatymas (VL)
 

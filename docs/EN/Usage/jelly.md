@@ -19,7 +19,7 @@ The following settings and handling advice (use watch for daily operations inste
 ### First setup
 <b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
 
-Follow these rules to stay with Andorid 7.0:
+Follow these rules to stay with Android 7.0:
 * Do not connect to wifi or mobile network on first use to prevent auto update.
 * Skip setting up wifi network.
 * Setting up Google account offline is the only thing that cannot be skipped.

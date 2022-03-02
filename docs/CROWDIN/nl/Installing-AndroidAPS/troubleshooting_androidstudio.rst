@@ -2,24 +2,36 @@ Problemen met Android Studio oplossen
 **************************************************
 Keystore (digitale handtekening) kwijt
 ==================================================
-Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op .jks) opslaan en bewaren op jouw computer.
+Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op *.jks) opslaan en bewaren op jouw computer.
 
 Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. `Export settings <../Usage/ExportImportSettings.html#export-settings>`_ on your phone.
+1. `Exporteer instellingen <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ op jouw telefoon.
 2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
 3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
 4. Bouwen van de ondertekende apk zoals beschreven op de pagina `Bijwerken naar een nieuwe versie <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
-7. `Import settings <../Usage/ExportImportSettings.html#export-settings>`_ - if you can't find them on your phone copy them from the external storage.
+7. `Instellingen importeren <../Usage/ExportImportSettings.html#instellingen-exporteren>`_ - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
 8. En je kunt weer doorloopen!
+
+
+
+Error "on demand" Configuration
+==================================================
+
+Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
+* Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+* In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+* Vink de Configure on demand checkbox uit.
+* Klik op Apply (Toepassen) of OK.
+
 
 Kotlin compiler warning
 ==================================================
-Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren. 
+Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren.
 
-Je kunt verdergaan met het overzetten van de app (.apk bestand) naar je telefoon.
+Je kunt verdergaan met het overzetten van de app (*.apk bestand) naar je telefoon.
 
 .. image:: ../images/GIT_WarningIgnore.PNG
   :alt: negeer Kotlin compiler waarschuwing
@@ -52,7 +64,7 @@ Error: buildOutput.apkData must not be null
 Misschien krijg je de volgende foutmelding bij het bouwen van de apk:
 
   `Errors while building APK` (Fouten bij het bouwen van APK)
-   
+
   `Cause: buildOutput.apkData must not be null` (Oorzaak: buildOutput.apkData mag niet leeg zijn)
 
 Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden opgelost voordat Android Studio 3.6 uitkomt. Je hebt drie opties:
@@ -74,7 +86,7 @@ Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw com
 Geen CGM gegevens
 ==================================================
 * Wanneer je xDrip+ gebruikt: Ontvanger identificeren zoals beschreven op de `xDrip+ instellingen pagina <../Configuration/xdrip.html##identificeer-ontvanger-identify-receiver>`_.
-* Wanneer je de `aangepaste Dexcom G6 app <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_: Zorg dat je de juiste versie uit de `2.4 map <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ gebruikt.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ instead.
 
 Uncommitted changes (Niet-opgenomen wijzigingen)
 ==================================================
@@ -96,15 +108,15 @@ Optie 2 - Broncode opnieuw laden
 
 .. image:: ../images/GIT_TerminalCheckOut3.PNG
   :alt: Reset HEAD
-   
+
 Optie 3 - Controleren op updates
 --------------------------------------------------
 * Kopieer 'git checkout --' naar klembord (zonder aanhalingstekens)
 * Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster)
 
   .. image:: ../images/GIT_TerminalCheckOut1.PNG
-  :alt: Android Studio Terminal
-   
+    :alt: Android Studio Terminal
+
 * Plak gekopieerde tekst en druk op return
 
   .. image:: ../images/GIT_TerminalCheckOut2.jpg
@@ -122,7 +134,7 @@ App niet geïnstalleerd
 2. Verwijder de AndroidAPS app van jouw telefoon.
 3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
 App geïnstalleerd maar oude versie
@@ -134,11 +146,10 @@ Geen van de bovengenoemde
 Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
 1. `Instellingen exporteren <../Usage/ExportImportSettings.html>`_ (in AAPS-app die al op jouw telefoon is geïnstalleerd)
-2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand.
-    In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`_beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan. 
-3. Build app from scratch as described `here <../Installing-AndroidAPS/Building-APK.html#download-androidaps-code>`_.
-4.	Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. `Instellingen importeren <./Usage/ExportImportSettings.html>`_
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals `hier <https://youtu.be/nS3wxnLgZOo>`__ beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan.
+3. Bouw app vanaf het begin zoals `hier <../Installing-AndroidAPS/Update-to-new-version.html#bijwerken-van-jouw-lokale-kopie>`__ beschreven.
+4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
+5. `Instellingen importeren <./Usage/ExportImportSettings.html>`__
 
 In het ergste geval
 ==================================================

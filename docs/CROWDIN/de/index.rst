@@ -17,12 +17,24 @@ Für weitere Details lies bitte hier weiter.
 .. toctree::
    :maxdepth: 1
    :glob:
+   :caption: Sprache wechseln
+
+   Sprache wechseln <./changelanguage.rst>
+
+.. _getting-started:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
    :caption: Erste Schritte
 
    Sicherheitshinweise <./Getting-Started/Safety-first.rst>
    Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
    Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Insulinpumpen <./Getting-Started/Pump-Choices.md>
    Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
+
+.. _what-do-i-need:
 
 .. toctree::
    :maxdepth: 1
@@ -30,24 +42,26 @@ Für weitere Details lies bitte hier weiter.
    :caption: Was brauche ich? 
 
    Module <./Module/module.rst>
-   Konfigurationsbeispiel <./Getting-Started/Sample-Setup.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS installieren
+   :caption: Wie man AndroidAPS installiert
 
    App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
    Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
    Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
    Installation git <./Installing-AndroidAPS/git-install.rst>
-   Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.rst>
+   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
    Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
    Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
 
+.. _component-setup:
+
 .. toctree::
    :maxdepth: 1
-   :glob:
+    
    :caption: Komponenten-Setup
 
    CGM/FGM <./Configuration/BG-Source.rst>
@@ -57,15 +71,19 @@ Für weitere Details lies bitte hier weiter.
    Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
 
+.. _configuration:
+
 .. toctree::
    :maxdepth: 1
-   :caption: AndroidAPS einrichten 
+       
+   :caption: AndroidAPS einrichten
 
    Konfigurations-Generator <./Configuration/Config-Builder.md>
    Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: AndroidAPS Nutzung
 
    AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
@@ -84,40 +102,49 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Allgemeine Hinweise 
 
    Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
    Logfiles erhalten <./Usage/Accessing-logfiles.md>
    Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
    Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>
+   xDrip+ engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: AndroidAPS für Kinder
 
    Kontrolle aus der Ferne <./Children/Children.rst>
    SMS-Befehle <./Children/SMS-Commands.rst>
-
+   Profile helper <./Configuration/profilehelper.rst>
+   
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Problembehandlung
 
    Problembehandlung <./Usage/troubleshooting.rst>
+   Nightscout Client <./Usage/Troubleshooting-NSClient.html>
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: FAQ
 
    FAQ <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Glossar
 
    Glossar <./Getting-Started/Glossary.md>
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Hilfe durch die Community 
 
    Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
@@ -126,12 +153,15 @@ Für weitere Details lies bitte hier weiter.
 
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Für Mediziner & Fachpersonal
 
    Für Mediziner & Fachpersonal <./Resources/clinician-guide-to-AndroidAPS>
 
+
 .. toctree::
    :maxdepth: 1
+   :glob:
    :caption: Mithelfen in der Community
 
    Wie ich helfen kann <./Getting-Started/How-can-I-help.md>
@@ -148,4 +178,4 @@ Für weitere Details lies bitte hier weiter.
 
 	* Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-	Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <http://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <http://www.accu-chek.com/>`_ oder `Medtronic <http://www.medtronic.com/>`_
+	Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ oder `Medtronic <https://www.medtronic.com/>`_

@@ -18,8 +18,9 @@
 * AndroidAPS가 Basal양을 200프로 이상 늘어나게 하려면, ">200% 주입위한 확장Bolus 사용"을 활성화하세요. 이것은 식사를 위해 확장Bolus를 주입한 동안은, 기본설정보다 높은 임시Basal로 Loop할 수 없음을 의미합니다.
 * 다나R 펌프 세팅의 설정에서 기본 Bolus주입 속도를 변경할 수 있습니다(1u당 12초, 1u당 30초 및 1u당 60초).
 * 펌프의 Basal 단위를 0.01U/h로 하세요.
+* Set bolus step on pump to 0.1 U/h
 * 펌프에서 확장Bolus를 활성화하세요.
 
 ## 다나R 펌프 사용시 다른 시간대 국가로의 여행
 
-다른 시간대의 나라로 여행하는 경우에 대한 정보는 [ 펌프와 함께 하는 다른 시간대 여행 ](../Usage/Timezone-traveling#danarv2-danars) 섹션을 참조하십시오.
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
