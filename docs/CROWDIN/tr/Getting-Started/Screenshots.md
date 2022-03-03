@@ -298,7 +298,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 #### CGM
 
 * Opens xDrip+.
-* Back button returns to AAPS.
+* Geri düğmesi AAPS'e döner.
 * Must be activated in [preferences](../Configuration/Preferences#buttons).
 
 #### Hızlı Asistan
