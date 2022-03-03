@@ -237,97 +237,97 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 #### Sapmalar
 
 * **GRİ** çubuklar, karbonhidrat nedeniyle bir sapma gösterir. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
-* **YELLOW** bars show a deviation due to UAM.
-* **BLACK** bars show small deviations not taken into account for sensitivity
+* **YEŞİL** çubuklar, KŞ'nin algoritmanın beklediğinden daha yüksek olduğunu gösterir. [Otoduyarlılık](../Usage/Open-APS-features#autosens)'ta direnci artırmak için yeşil çubuklar kullanılır.
+* **KIRMIZI** çubuklar, KŞ'nin algoritmanın beklediği değerden daha düşük olduğunu gösterir. [Otoduyarlılık](../Usage/Open-APS-features#autosens)'ta hassasiyeti artırmak için kırmızı çubuklar kullanılır.
+* **SARI** çubuklar UAM (bildirilmemiş öğünler) nedeniyle bir sapma gösterir.
+* **SİYAH** çubuklar, hassasiyet için dikkate alınmayan küçük sapmaları gösterir
 
 #### Duyarlılık
 
-* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* [Otoduyarlılığın](../Usage/Open-APS-features#autosens) algıladığı hassasiyeti gösterir. 
+* Duyarlılık, egzersiz, hormonlar vb. sonucunda insüline duyarlılığın hesaplanmasıdır.
 
 #### Aktivite
 
-* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* İnsülin profiliniz tarafından hesaplanan insülin aktivitesini gösterir (Aktif insülin türevi değildir). 
+* İnsülin zirve zamanına daha yakın olduğunda değer daha yüksektir.
+* IOB azalırken negatif olmak anlamına gelir. 
 
 #### Sapma eğimi
 
-* Internal value used in algorithm.
+* Algoritmada kullanılan iç değer.
 
-### Section H - Buttons
+### Bölüm H - Butonlar
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are almost'always on'.
+* İnsülin, karbonhidrat ve hesap makinesi butonları neredeyse her zaman açıktır.
    
-   * If connection to pump is lost, the insulin button will not be visible.
+   * Pompa bağlantısı kesilirse insülin düğmesi görünmez.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
+* Diğer butonların [tercihlerde](../Configuration/Preferences#buttons) ayarlanması gerekir.
 
 #### İnsülin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
-* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
+* [Bolus hesaplayıcı](#bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
+* [Yakında Öğün GH](../Configuration/Preferences#default-temp-targets) kutusunu işaretleyerek otomatik olarak yakında öğün hedefinizi başlatabilirsiniz.
+* Pompadan bolus yapmadan sadece insülin miktarını kaydetmek istiyorsanız "Bolusu sadece kayıt altına al" kutusunu işaretleyin.
 
 #### Karbonhidrat
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
-* To record carbs without bolusing.
-* Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
-* Time offset: When will you / have you been eaten carbs (in minutes).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
-* You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Karbonhidratları bolus olmadan kaydetmek için kullanılır.
+* Belirli [önceden ayarlanmış geçici hedefler](../Configuration/Preferences#default-temp-targets) ilgili kutu işaretlenerek doğrudan ayarlanabilir.
+* Zaman farkı: Ne zaman karbonhidrat yediniz / yiyeceksiniz (dakika olarak).
+* Süre: ["Yayma karbonhidratlar"](../Usage/Extended-Carbs.rst) için kullanılacak
+* Karbonhidrat miktarını hızlı bir şekilde artırmak için butonları kullanabilirsiniz.
+* Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 
 #### Hesap makinesi
 
-* See Bolus Wizard [section below](#bolus-wizard)
+* Bolus Sihirbazı için [aşağıdaki bölüme](#bolus-wizard) bakın
 
-#### Calibrations
+#### Kalibrasyonlar
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* xDrip+'a bir kalibrasyon gönderir veya Dexcom kalibrasyon diyalog penceresini açar.
+* [Tercihlerde](../Configuration/Preferences#buttons) etkinleştirilmelidir.
 
 #### CGM
 
-* Opens xDrip+.
+* xDrip+'ı açmak için kullanılır.
 * Geri düğmesi AAPS'e döner.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* [Tercihlerde](../Configuration/Preferences#buttons) etkinleştirilmelidir.
 
 #### Hızlı Asistan
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Karbonhidrat miktarını kolayca girin ve temel hesaplamaları ayarlayın.
+* Ayrıntılar [Tercihlerde](../Configuration/Preferences#quick-wizard) ayarlanır.
 
-## Bolus Wizard
+## Bolus Sihirbazı
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
-### Section I
+### Bölüm I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
-* The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* KŞ alanında normalde zaten CGM'nizden gelen en son okuma bulunur. Çalışan bir CGM'niz yoksa boş olacaktır. 
+* Karbonhidrat alanına, bolus yapmak istediğiniz karbonhidrat - veya eşdeğeri - hesapladığınız tahmini miktarı girersiniz. 
+* Düzeltme alanı, herhangi bir nedenle son dozu değiştirmek istiyorsanız ilave edebilir ya da azaltabilirsiniz.
+* Karbonhidrat zamanı alanı ön bolus içindir, böylece sisteme karbonhidratların yenmesi için bir gecikme olacağını söyleyebilirsiniz. Yenmiş karbonhidratlar için bolus yapıyorsanız, bu alana negatif bir sayı girebilirsiniz.
 
-#### Eating reminder
+#### Yemek hatırlatıcısı
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* Yenecek karbonhidratlar için alarm onay kutusu işaretlenebilir. Böylece AndroidAPS'e girdiğiniz karbonhidratları ne zaman yemeniz gerektiği size hatırlatılabilir. (Girilen süre sonunda karbonhidratlar sisteme ilave edilir.)
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### Section J
+### Bölüm J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
+* SÜPER BOLUS, sonraki iki saat için bazal insülinin bolusa ilave edildiği ve sıfır GBO olacak sonraki iki saati telafi etmek için kullanılır. Bu seçenek yalnızca [Genel bakış Tercihlerde ](../Configuration/Preferences#overview) [ "Sihirbazda superbolusu etkinleştir"](../Configuration/Preferences#superbolus) ayarlandığında gösterilir.
 * The idea is to deliver the insulin sooner and hopefully reduce spikes.
 * For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -335,7 +335,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Shows the calculated bolus. 
 * If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 
 ### Section L
 
