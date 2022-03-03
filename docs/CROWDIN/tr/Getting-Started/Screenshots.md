@@ -253,7 +253,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 * The value is higher for insulin closer to peak time.
 * It would mean to be negative when IOB is decreasing. 
 
-#### Deviation slope
+#### Sapma eğimi
 
 * Internal value used in algorithm.
 
