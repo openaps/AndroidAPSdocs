@@ -328,41 +328,41 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 ### Bölüm J
 
 * SÜPER BOLUS, sonraki iki saat için bazal insülinin bolusa ilave edildiği ve sıfır GBO olacak sonraki iki saati telafi etmek için kullanılır. Bu seçenek yalnızca [Genel bakış Tercihlerde ](../Configuration/Preferences#overview) [ "Sihirbazda superbolusu etkinleştir"](../Configuration/Preferences#superbolus) ayarlandığında gösterilir.
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
-* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* Buradaki ana fikir, bazal insülini erkenden vererek ani artışları azaltmaktır.
+* Ayrıntılar için [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) adresini ziyaret edin.
 
-### Section K
+### Bölüm K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
+* Hesaplanan bolusu gösterir. 
+* Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
 * Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 
-### Section L
+### Bölüm L
 
-* Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+* Sihirbazın bolus hesaplamasının ayrıntıları.
+* Dahil etmek istemediğiniz herhangi bir hesaplamanın seçimini kaldırabilirsiniz.
+* Bolus sihirbazının mevcut bir geçici hedefe göre hesaplama yapmasını istiyorsanız, güvenlik nedenleriyle **TT kutusunun manuel olarak işaretlenmesi gerekir**.
 
-#### Combinations of COB and IOB and what they mean
+#### COB ve IOB kombinasyonları ve ne anlama geldikleri
 
-* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Güvenlik nedenleriyle, COB (Aktif karbonhidrat) kutusu işaretlendiğinde IOB (Aktif insülin) kutusunun işareti kaldırılamaz, çünkü AAPS halihazırda mevcut insülini hesaba katmadığı için çok fazla insülin riskiyle karşı karşıya kalabilirsiniz.
+* COB ve IOB'u işaretlerseniz, mevcut emilmemiş karbonhidratlar + GBO veya SMB olarak verilen tüm insülinler dikkate alınacaktır.
+* COB işaretlemeden IOB'u işaretlerseniz, AAPS iletilen insülini hesaba katar, ancak bu hesaba hala emilecek karbonhidratlar dahil edilmez. Bu işareleme 'eksik karbonhidrat' bildirimine yol açar.
+* Yemek bolusundan kısa bir süre sonra **ek gıda** için (örn. ilave tatlı) bolus yaparsanız, **tüm kutuların işaretini kaldırmak** yararlı olabilir. Bu şekilde, ana öğün henüz tam olarak emilmemiş olduğundan yalnızca yeni karbonhidratlar ilave edilir, bu nedenle aktif insülin, yemek bolusundan kısa bir süre sonra aktif karbonhidrat ile tam olarak eşleşmeyecektir.
 
-#### Wrong COB detection
+#### Yanlış Aktif Karbonhidrat tespiti
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan COB değerinin yanlış olabileceğini algılamıştır. 
+* Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
+* Ayrıntılar için [COB hesaplama sayfasındaki](../Usage/COB-calculation#detection-of-wrong-cob-values) ipuçlarına bakın.
 
-## Action tab
+## Eylem Sekmesi
 
 ![Actions tab](../images/Home2021_Action.png)
 
-### Actions - section M
+### Eylemler - bölüm M
 
 * Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
