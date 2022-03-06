@@ -308,7 +308,8 @@ Setări avansate (OpenAPS AMA)
 Setări OpenAPS SMB
 -----------------------------------------------------------
 * Spre deosebire de AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ nu utilizează rate bazale temporare pentru a controla nivelul glicemiei, ci în principal micro bolusuri foarte mici.
-* Trebuie să fi început `obiectivul 10 <../Usage/Obiectives.html#obiective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ pentru a folosi SMB.
+* You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+
 * The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
 * Detalii despre diferitele opţiuni de activare sunt descrise în secţiunea `OpenAPS Funcţie <../Utilizare/Open-APS-features.html#enable-smb>`_.
 * *Cât de des vor fi livrate SMB-uri în minute* este o restricție pentru SMB să fie livrat implicit doar la fiecare 4 minute. Această valoare împiedică sistemul să emită SMB prea des (de exemplu în cazul în care este setată o ţintă temporară). Nu ar trebui să modificaţi această setare decât dacă ştiţi exact consecinţele. 
