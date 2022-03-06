@@ -85,7 +85,7 @@ Haziran 2020
 
 Mayıs 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Yalnızca Dana + Insight pompaları için yayma bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only>`_
 * `Insight titreşimi devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (pompa yazılımı 3.x için)
 * Açık döngü modunda bildirim sayısını azaltmak için `Minimum istek oranı <../Configuration/Preferences.html#minimal-request-change>`_
 * `Yamalı Libre Link uygulaması <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - doğru yama yapılıp yapılmadığının kontrolü

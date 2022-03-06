@@ -24,7 +24,8 @@ Hier finden sich die Spezifikationen für den **Omnipod DASH** und die Unterschi
 
 * **Kompatibles Android Smartphone** mit Bluetooth-Verbindung (Bluetooth Low Energy, BLE)
    -  Nicht alle Telefone und Android-Versionen werden sicher funktionieren. Bitte überprüfe die [**DASH getesteten Telefone**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) oder teste einfach mit Deinem Telefon und teile das Ergebnis (Telefonversion und geographische Region, Android-Version, funktioniert / einige Schwierigkeiten / funktioniert nicht).
-   -  **Bei einigen Telefonmodellen könnte es zu Problemen kommen**: Beachte, dass der Omnipod DASH Treiber des AAPS sich jedes Mal mit dem DASH Pod über Bluetooth verbindet, wenn er einen Befehl sendet und sich unmittelbar danach wieder trennt. Die Bluetooth-Verbindungen können durch andere Geräte gestört werden, die mit dem Telefon verbunden sind, auf dem AAPS läuft, wie Earbuds etc... (was in seltenen Fällen zu Verbindungsproblemen oder Pod-Fehlern bei der Aktivierung oder danach bei einigen Telefonmodellen führen kann).</strong>
+   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AndroidAPS, especially with other Bluetooth devices connected!**  
+     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. Die Bluetooth-Verbindungen können durch andere Geräte gestört werden, die mit dem Telefon verbunden sind, auf dem AAPS läuft, wie Earbuds etc... (was in seltenen Fällen zu Verbindungsproblemen oder Pod-Fehlern bei der Aktivierung oder danach bei einigen Telefonmodellen führen kann).
    -  **Version 3.0 oder neuer von AndroidAPS erstellt und installiert** nach der [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) Anleitung.
 * [**Kontinuierliche Glukosemessung (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -94,7 +95,7 @@ Stelle sicher, dass der neue Pod und das Smartphone, auf dem AAPS läuft, in der
 
 **HINWEIS**: Nur wenn Du die folgende Fehlermeldung erhältst (dies kann passieren), keine Panik. Klicke auf den **Wiederholen-Button**. In den meisten Fällen wird die Aktivierung dann erfolgreich fortgesetzt.
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
+![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
 3. Der Bildschirm **Initialisiere Pod** wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst).  Ein grünes Häkchen wird nach erfolgreichem Befüllen angezeigt und der **Weiter** Button wird angezeigt. Klicke auf den **Weiter** Button, um die Initialisierung des Pods abzuschließen; anschließend wird der **Pod anlegen** Bildschirm angezeigt.
 
@@ -196,7 +197,7 @@ In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und stummgeschal
 
 ![ACK_alerts_3](../images/DASH_images/ACK_Alerts/ACK_ALERTS_3.png)
 
-4. Go to the **DASH** tab. Im Feld **Aktive Pod-Warnungen** wird keine Warnmeldung mehr angezeigt und der aktive Pod gibt keine Pieptöne zur Warnung mehr ab.
+4. Wechsele zur Registerkarte **DASH**. Im Feld **Aktive Pod-Warnungen** wird keine Warnmeldung mehr angezeigt und der aktive Pod gibt keine Pieptöne zur Warnung mehr ab.
 
 ### Anzeige Pod-Historie
 
@@ -373,86 +374,86 @@ Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwar
 
 ### Verhindere Pod Fehler 49
 
-Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Dies ist der Fall, wenn der AAPS-Treiber und der Pod unterschiedliche Angaben zum aktuellen Status haben. Der Pod reagiert (aufgrund einer eingebauten Sicherheitsfunktion) dann mit einem nicht auflösbaren Fehlercode 49 (0x31) und verabschiedet sich mit einem so genannten „Heuler“: dem langen, irritierenden Piepton, der nur gestoppt werden kann, indem mit einer Büroklammer in ein Loch am richtigen Ort auf der Rückseite des Pods gedrückt wird. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Dies ist der Fall, wenn der AAPS-Treiber und der Pod unterschiedliche Angaben zum aktuellen Status haben. Der Pod reagiert (aufgrund einer eingebauten Sicherheitsfunktion) dann mit einem nicht auflösbaren Fehlercode 49 (0x31) und verabschiedet sich mit einem so genannten „Heuler“: dem langen, irritierenden Piepton, der nur gestoppt werden kann, indem mit einer Büroklammer in ein Loch am richtigen Ort auf der Rückseite des Pods gedrückt wird. Der genaue Ursprung eines „Pod Fehlers 49“ ist oft schwer zu ermitteln. Situationen, die für das Auftreten dieses Fehlers vermutet werden (z.B. bei einem Absturz der Anwendung, beim Ausführen einer Entwicklungsversion oder bei einer Neuinstallation).
 
 ### Pumpe nicht erreichbar Alarme
 
-When no communication can be established with the pod for a preconfigured time a “Pump unreachable” alert will be raised. Pump unreachable alerts can be configured by going to the top right-hand side three-dot menu, selecting **Preferences**\ ➜\ **Local Alerts**\ ➜\ **Pump unreachable threshold [min]**. Recommended value is alerting after **120** minutes.
+Wenn für eine voreingestellte Zeitspanne keine Kommunikation mit dem Pod hergestellt werden kann, wird eine „Pumpe nicht erreichbar“ Alarmmeldung angezeigt. Pump nicht erreichbar Alarme können über das Drei-Punkte-Menü oben rechts konfiguriert werden. Wählen Sie **Einstellungen** \ ➜ \ **Lokale Alarme** \ ➜ \ ** Grenzwert Pumpe ist nicht erreichbar [min]**. Empfohlener Wert ist eine Alarmierung nach **120** Minuten.
 
-### Export  Settings
+### Exporteinstellungen
 
-Exporting AndroidAPS settings enables you to restore all your settings, and maybe more importantly, all your Objectives. You may need to restore settings to the “last known working situation” or after uninstalling/reinstalling AndroidAPS or in case of phone loss, reinstalling on the new phone.
+Durch den Export der AndroidAPS-Einstellungen kannst Du alle Deine Einstellungen - und vielleicht noch wichtiger - alle Deine Objectives (Ziele) wiederherstellen. Es kann passieren, dass die Einstellungen in der „letzten bekannten funktionierenden Fassung“ wieder hergestellt werden müssen, etwa nach der Deinstallation/Neuinstallation von AndroidAPS oder im Falle eines Telefonverlustes auf dem neuen Telefon.
 
-Note: The active pod information is included in the exported settings. If you import an "old" exported file, your actual pod will "die". There is no other alternative. In some cases (like a _programmed_ phone change), you may need to use the exported file to restore AndroisAPS settings **while keeping the current active Pod**. In this case it is important to only use the recently exported settings file containing the pod currently active.
+Hinweis: Die Informationen des aktiven Pod sind in den exportierten Einstellungen enthalten. Wenn Sie eine "alte" Exportdatei importieren, wird Ihr aktueller Pod "sterben". Es gibt hierzu keine Alternative. In einigen Fällen (wie bei einem _vorgesehenen_ Telefonwechsel) musst Du unter Umständen die exportierte Datei verwenden, um die AndroisAPS-Einstellungen wiederherzustellen **während der aktuelle aktive Pod** beibehalten wird. In diesem Fall ist es wichtig, nur die zuletzt exportierte Einstellungsdatei zu verwenden, die den aktuell aktiven Pod enthält.
 
-**It is good practice to do an export immediately after activating a pod**. This way you will always be able to restore the current active Pod in case of a problem. For instance when moving to another backup phone.
+**Es ist eine gute Idee, einen Export sofort nach der Aktivierung eines Pods durchzuführen.** Auf diese Weise wirst Du immer in der Lage sein, die Verbindung zum aktuell aktiven Pod im Falle eines Problems wiederherzustellen. Zum Beispiel, wenn Du auf ein anderes Smartphone wechseln willst.
 
-Regularly copy your exported settings to a safe place (as a cloud drive) that can be accessible by any phone when needed (e.g. in case of a phone loss or factory reset of the actual phone).
+Kopiere die exportierten Einstellungen regelmäßig an einen sicheren Ort (z. B. in der Cloud), der bei Bedarf von jedem Telefon aus zugänglich ist (z. B. im Falle eines Telefonverlustes oder dem Rücksetzen auf die Werkseinstellung des aktuellen Telefons).
 
-### Import Settings
+### Importeinstellungen
 
-**WARNING** Please note that importing settings will possibly import an outdated Pod status. As a result, there is a risk of losing the active Pod! (see **Exporting Settings**). It is better to only try it when no other options are available.
+**WARNUNG** Bitte beachte, dass durch das Importieren von Einstellungen möglicherweise ein veralteter Pod-Status importiert wird. Dadurch besteht die Gefahr, dass der aktive Pod eingebüßt wird! (siehe **Exporteinstellungen**). Es ist besser, dies nur dann auszuprobieren, wenn keine anderen Optionen verfügbar sind.
 
-When importing settings with an active Pod, make sure the export was done with the currently active pod.
+Wenn Du die Einstellungen mit einem aktiven Pod importierst, stelle sicher, dass der Export ebenfalls mit diesem Pod durchgeführt wurde.
 
-**Importing while on an active Pod:** (you risk losing the Pod!)
+**Importieren während ein Pod aktiv ist:** (Du riskierst den Pod!)
 
-1. Make sure you are importing settings that were recently exported with the currently active Pod.
-2. Import your settings
-3. Check all preferences
+1. Stelle sicher, dass Du Einstellungen importierst, die kürzlich mit dem aktuell aktiven Pod exportiert wurden.
+2. Einstellungen importieren
+3. Alle Voreinstellungen kontrollieren
 
-**Importing (no active Pod session)**
+**Importieren ohne aktiven Pod**
 
-1. Importing any recent export should work (see above)
-2. Import your settings.
-3. Check all preferences.
-4. You may need to **Deactivate** the "non exixting" pod if the imported settings included any active pod data.
+1. Importieren aller kürzlichen Exporte sollte funktionieren (siehe oben)
+2. Einstellungen importieren
+3. Alle Voreinstellungen kontrollieren.
+4. Es kann erforderlich sein, einen in den importierten Einstellungen enthaltenen, aber nicht mehr vorhandenen Pod zu **deaktivieren**.
 
-### Importing settings that contain Pod state from an inactive Pod
+### Importieren von Einstellungen, die den Pod-Status von einem inaktiven Pod enthalten
 
-When importing settings containing data for a Pod that is no longer active, AndroidAPS will try to connect with it, which will obviously fail. You can not activate a new Pod in this situation.
+Beim Importieren von Einstellungen, die Daten für einen Pod enthalten, der nicht mehr aktiv ist, wird AndroidAPS versuchen, sich mit diesem zu verbinden, was vorhersehbar fehlschlagen wird. Du kannst in dieser Situation keinen neuen Pod aktivieren.
 
-To remove the old Pod session “try” to de-activate the Pod. The de-activation will fail. Select “Retry”. After the second or third retry you will get the option to remove the pod. Once the old pod is removed you will be able to activate a new Pod.
+Um die alte Pod-Sitzung zu entfernen „probiere“ den Pod zu deaktivieren. Die Deaktivierung wird fehlschlagen. Wähle "Wiederholen". Nach der zweiten oder dritten Wiederholung erhälst Du die Möglichkeit, den Pod zu entfernen. Sobald der alte Pod entfernt ist, kannst du einen neuen Pod aktivieren.
 
-### Reinstalling AndroidAPS
+### Neuinstallation von AndroidAPS
 
-When uninstalling AndroidAPS you will lose all your settings, objectives and the current Pod session. To restore them make sure you have a recent exported settings file available!
+Beim Deinstallieren von AndroidAPS verlierst Du alle Einstellungen, Objectives (Ziele) und die aktuelle Pod-Sitzung. Um sie wiederherzustellen, stelle sicher, dass Du eine kürzlich exportierte Einstellungsdatei zur Verfügung hast!
 
-When on an active Pod, make also sure that you have an export for the current Pod session or you will lose the currently active Pod when importing older settings.
+Wenn ein Pod aktiv ist, stelle sicher, dass Du einen Export für die aktuelle Pod-Sitzung hast oder Du wirst den aktuell aktiven Pod verlieren, wenn Du ältere Einstellungen importierst.
 
 1. Exportiere deine Einstellungen und bewahre eine Kopie an einem sicheren Ort auf.
-2. Uninstall AndroidAPS and restart your phone.
-3. Install the new version of AndroidAPS.
-4. Import your settings
-5. Verify all preferences (optionally import settings again)
-6. Activate a new Pod
-7. When done: Export current settings
+2. Deinstalliere AndroidAPS und starte Dein Telefon neu.
+3. Installiere die neue Version von AndroidAPS.
+4. Einstellungen importieren
+5. Überprüfe alle Einstellungen (optional Einstellungen erneut importieren)
+6. Einen neuen Pod aktivieren
+7. Anschließend: Aktuelle Einstellungen exportieren
 
-### Updating AndroidAPS to a newer version
+### AndroidAPS auf eine neuere Version aktualisieren
 
-In most cases there is no need to uninstall. You can do an “in-place” install by starting the installation for the new version. This is also possible when on an active Pod  session.
+In den meisten Fällen ist eine Deinstallation nicht erforderlich. Du kannst eine „in-place“ Installation durchführen, indem Du die Installation für die neue Version startest. Dies ist auch möglich, wenn ein Pod aktiv ist.
 
 1. Exportiere Deine Einstellungen.
-2. Install  the new AndroidAPS version.
-3. Verify the installation was successful
-4. RESUME the Pod or activate a new Pod.
-5. When done: Export current settings.
+2. Installiere die neue AndroidAPS-Version.
+3. Überprüfe, ob die Installation erfolgreich war.
+4. Verbinde den Pod wieder oder aktiviere einen neuen Pod.
+5. Anschließend: Aktuelle Einstellungen exportieren.
 
 ### Omnipod-Treiberwarnungen
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
+Bitte beachte, dass der Omnipod-Treiber auf der Registerkarte **DASH** eine Vielzahl eindeutiger Warnungen anzeigt. Die meisten davon sind informativ und können ignoriert werden, während einige dem Benutzer eine Aktion vorschlagen, um die Ursache für die ausgelöste Warnung zu beheben. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
 
-* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
-* Pod suspended Informational alert that Pod has been suspended.
-* Setting basal profile failed : Delivery might be suspended! Bitte aktualisiere den Pod-Status manuell auf der Registerkarte Omnipod und setze die Übertragung bei Bedarf fort. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
-* Es kann nicht überprüft werden, ob der SMB-Bolus erfolgreich war. Wenn du sicher bist, dass der Bolus nicht erfolgreich war, solltest du den SMB-Eintrag manuell auf der Registerkarte Behandlungen entfernen. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+* Kein aktiver Pod Keine aktive Pod Sitzung erkannt. Dieser Alarm kann vorübergehend durch Drücken von **Schlummern** deaktiviert werden, wird aber weiterhin ausgelöst, solange kein neuer Pod aktiviert wurde. Einmal aktiviert, wird dieser Alarm automatisch ausgeschaltet.
+* Pod unterbrochen Hinweis, dass der Pod angehalten wurde.
+* Setzen des Basalprofils fehlgeschlagen: Insulinabgabe könnte ausgesetzt werden! Bitte aktualisiere den Pod-Status manuell auf der Registerkarte Omnipod und setze die Übertragung bei Bedarf fort. Hinweis, dass die Einstellung des Pod-Basalprofils fehlgeschlagen ist und Du auf der Registerkarte DASH auf *Aktualisieren* drücken musst.
+* Es kann nicht überprüft werden, ob der SMB-Bolus erfolgreich war. Wenn du sicher bist, dass der Bolus nicht erfolgreich war, solltest du den SMB-Eintrag manuell auf der Registerkarte Behandlungen entfernen. Warnung, dass der Erfolg eines Befehls für einen SMB-Bolus nicht überprüft werden konnte. Du musst das Feld *Letzter Bolus* auf der Registerkarte DASH überprüfen, um zu sehen, ob der SMB-Bolus erfolgreich war, und wenn nicht, den Eintrag auf der Registerkarte Behandlungen entfernen.
 * Unsicher, ob die "Ereignis Bolus/TBR/SMB" abgeschlossen wurde. Bitte überprüfe manuell, ob sie erfolgreich war.
 
-## Where to get help for Omnipod DASH driver
+## Wo bekomme ich Hilfe für den Omnipod-Treiber?
 
-All of the development work for the Omnipod DASH driver is done by the community on a **volunteer** basis; we ask that you to remember that fact and use the following guidelines before requesting assistance:
+Die gesamte Entwicklungsarbeit für den Omnipod-Treiber wird von der Community auf **freiwilliger** Basis geleistet. Wir bitten dich, rücksichtsvoll zu sein und die folgenden Richtlinien zu befolgen, bevor du um Unterstützung bittest:
 
--  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
--  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
--  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
--  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
+-  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
+-  **Level 1:** Wenn Du immer noch Probleme hast, die du mit diesem Dokument nicht lösen kannst, dann gehe bitte in den *#androidaps* Channel auf **Discord**, indem du [diesen Einladungslink <https://discord.gg/4fQUWHZ4Mw>](https://discord.gg/4fQUWHZ4Mw) benutzt.
+-  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AndroidAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Logdateien](../Usage/Accessing-logfiles.md) an.
+-  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**

@@ -38,7 +38,7 @@
 * Klicke auf "Bolus-Geschwindigkeit" um die gewünschte Abgabegeschwindigkeit (12 s/1 IE, 30 s/1 IE oder 60 s/1 IE) einzustellen.
 
 * Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die BASALschritte auf 0,01 IE/h.
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Bolus-Schritte auf 0,05 IE/h.
 * Aktiviere verzögerten Bolus in der Pumpe.
 
 ### Standard-Passwort

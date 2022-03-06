@@ -2,7 +2,7 @@ Objectives as of Android APS 2.8.2.1
 **************************************************
 This is not the latest version of the Android APS Objectives.  This page details the Objectives that were in place prior to version 3.0.  Anyone using an older version of Android (i.e. prior to Android 9) and Android APS version 2.8.2.1 should refer to this page.  
 
-Please see `this page <../Usage/Objectives.rst>`_ for the current set of Objectives.
+Please see `this page <../Usage/Objectives.html>`_ for the current set of Objectives.
 
 AndroidAPS má sadu Cílů, které musíte dokončit a které vás provedou jeho funkcemi a nastaveními tak, aby pro vás smyčka nebyla nebezpečná.  Zajistí vám, že jste nastavili všechny detaily z dříve uvedených sekcí správně, že rozumíte tomu, co váš systém dělá a proč, a že mu můžete důvěřovat.
 

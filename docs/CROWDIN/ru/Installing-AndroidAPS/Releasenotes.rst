@@ -59,7 +59,7 @@ Release date: 31-01-2022
 Изменения
 ----------------------
 * 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Поддержка Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Поддержка Glunovo

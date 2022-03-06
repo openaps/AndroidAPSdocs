@@ -131,9 +131,9 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
 * Yukarı & aşağı oklar: [otoduyarlılık](../Usage/Open-APS-features#autosens) durumunu (etkin veya devre dışı) belirtir ve değer simgenin altında gösterilir.
 
-#### Carbs required
+#### Karbonhidrat İhtiyacı
 
-![Carbs required](../images/Home2020_CarbsRequired.png)
+![Karbonhidrat İhtiyacı](../images/Home2020_CarbsRequired.png)
 
 * Algoritma, Kş'nizin çok düşmesini önlemek için bir şeyler yemeniz gerektiğini anlarsa, önerilen karbonhidrat miktarı görüntülenir.
 * Bu oref algoritmasının, seni 0 (sıfır) geçici bazal oranı ile kurtaramayacağı ve düzeltmek için karbonhidrata ihtiyacın olacağı anlamına gelir.
@@ -178,191 +178,191 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 #### Tahmin çizgileri
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Turuncu** çizgi: [COB](../Usage/COB-calculation.rst) (Bu renk genellikle aktif karbonhidrat ve karbonhidratları temsil etmek için kullanılır)
    
-   Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
+   Tahmin çizgisi, mevcut pompa ayarlarına ve karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak KŞ'nizin nereye gideceğini (Aktif karbonhidratın değil!) gösterir. Bu çizgi yalnızca bilinen COB (Aktif Karbonhidrat) varsa görünür.
 
-* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
+* **Koyu mavi** çizgi: IOB Aktif insülin (Bu renk genellikle aktif insülin ve insülini temsil etmek için kullanılır)
    
-   Prediction line shows what would happen under the influence of insulin only. For example if you dialled in some insulin and then didn’t eat any carbs.
+   Tahmin çizgisi, sadece insülinin etkisi altında ne olacağını gösterir. Örneğin biraz insülin gönderip birşey yemediyseniz.
 
-* **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
+* **Açık mavi** çizgi: sıfır geçici (geçici bazal oranı %0 olarak ayarlandıysa, tahmini KŞ)
    
-   Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
+   Tahmin çizgisi, pompa tüm insülin iletimini (%0 GBO) durdurursa Aktif İnsülin çizgisinin nasıl değişeceğini gösterir.
 
-* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
+* **Koyu sarı** çizgi: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (bildirilmemiş öğünler)
    
-   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+   Bildirilmemiş öğünlerin anlamı, öğün, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışın tespit edilmesidir. Tahmin çizgisi TURUNCU Aktif Karbonhidrat çizgisine benzer, ancak sapmaların sabit bir oranda (mevcut azalma oranını genişleterek) azalacağını varsayar.
 
-Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
+Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en çok benzeyen varsayımlarda bulunanın yakınında biter.
 
 #### Bazallar
 
-* A **solid blue** line shows the basal delivery of your pump and reflects the actual delivery over time.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
-* When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
+* **Sürekli mavi** çizgi, pompanızın bazal iletimini gösterir ve zaman içindeki gerçek iletimi yansıtır.
+* **noktalı mavi** çizgi, geçici bazal ayarlamalar (GBO'lar) olmasaydı bazal oranın ne olacağıdır.
+* Standart bazal oran verildiğinde eğrinin altındaki alan koyu mavi ile gösterilir.
+* Bazal oran geçici olarak ayarlandığında (artırıldığında veya azaldığında) eğrinin altındaki alan açık mavi ile gösterilir.
 
-#### Activity
+#### Aktivite
 
-* The **thin yellow** line shows the activity of Insulin. 
-* It is based on the expected drop in BG of the insulin in your system if no other factors (like carbs) were present.
+* **İnce sarı** çizgi, insülin aktivitesini gösterir. 
+* Başka hiçbir faktör (karbonhidrat gibi) mevcut değilse, sisteminizdeki insülinin KŞ'nde beklenen düşüşe dayanır.
 
-### Section G - additional graphs
+### Bölüm G - ek grafikler
 
-* You can activate up to four additional graphs below the main graph.
-* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots#section-f-main-graph) and scroll down.
+* Ana grafiğin altında en fazla dört ek grafik etkinleştirebilirsiniz.
+* Ek grafikler için ayarları açmak için [ana grafiğin](../Getting-Started/Screenshots#section-f-main-graph) sağ tarafındaki üçgeni tıklayın ve aşağı kaydırın.
 
 ![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
-* To add an additional graph check the box on the left side of its name (i.e. \---\---- Graph 1 \---\----).
+* Ek bir grafik eklemek için adının sol tarafındaki kutuyu işaretleyin (yani \---\---- Grafik 1 \---\----).
 
-#### Absolute insulin
+#### Mutlak insülin
 
-* Active insulin including boluses **and basal**.
+* Boluslar dahil aktif insülin **ve bazal**.
 
-#### Insulin on board
+#### (IOB) Aktif İnsülin
 
-* Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
-* If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
-* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
+* Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
+* Eğer [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) olmazsa, İES süresi boyunca bolus ve GBO da gönderilmezsa bu değer sıfır olur.
+* Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse IOB (Aktif insülin) negatif olabilir.
+* Azalma [İES ve insülin profil ayarlarınıza](../Configuration/Config-Builder#local-profile) bağlıdır. 
 
-#### Carbs On Board
+#### (COB) Aktif Karbonhidrat
 
-* Shows the carbs you have on board (= active, not yet decayed carbs in your body). 
-* Decaying depends on the deviations the algorithm detects. 
-* If it detects a higher carb absorption than expected, insulin would be given and this will increase IOB (more or less, depending on your safety settings). 
+* Aktif karbonhidratları gösterir (= vücudunuzdaki aktif, henüz bozulmamış karbonhidratlar). 
+* Bozulma, algoritmanın algıladığı sapmalara bağlıdır. 
+* Beklenenden daha yüksek bir karbonhidrat emilimi tespit edilirse, insülin verilecek ve bu aktif insülini artıracaktır (güvenlik ayarlarınıza bağlı olarak daha fazla veya daha az). 
 
-#### Deviations
+#### Sapmalar
 
-* **GREY** bars show a deviation due to carbs. 
-* **GREEN** bars show that BG is higher than the algorithm expected it to be. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features#autosens).
-* **RED** bars show that BG is lower than the algorithm expected. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features#autosens).
-* **YELLOW** bars show a deviation due to UAM.
-* **BLACK** bars show small deviations not taken into account for sensitivity
+* **GRİ** çubuklar, karbonhidrat nedeniyle bir sapma gösterir. 
+* **YEŞİL** çubuklar, KŞ'nin algoritmanın beklediğinden daha yüksek olduğunu gösterir. [Otoduyarlılık](../Usage/Open-APS-features#autosens)'ta direnci artırmak için yeşil çubuklar kullanılır.
+* **KIRMIZI** çubuklar, KŞ'nin algoritmanın beklediği değerden daha düşük olduğunu gösterir. [Otoduyarlılık](../Usage/Open-APS-features#autosens)'ta hassasiyeti artırmak için kırmızı çubuklar kullanılır.
+* **SARI** çubuklar UAM (bildirilmemiş öğünler) nedeniyle bir sapma gösterir.
+* **SİYAH** çubuklar, hassasiyet için dikkate alınmayan küçük sapmaları gösterir
 
-#### Sensitivity
+#### Duyarlılık
 
-* Shows the sensitivity that [Autosens](../Usage/Open-APS-features#autosens) has detected. 
-* Sensitivity is a calculation of sensitivity to insulin as a result of exercise, hormones etc.
+* [Otoduyarlılığın](../Usage/Open-APS-features#autosens) algıladığı hassasiyeti gösterir. 
+* Duyarlılık, egzersiz, hormonlar vb. sonucunda insüline duyarlılığın hesaplanmasıdır.
 
-#### Activity
+#### Aktivite
 
-* Shows the activity of insulin, calculated by your insulin profile (it's not derivative of IOB). 
-* The value is higher for insulin closer to peak time.
-* It would mean to be negative when IOB is decreasing. 
+* İnsülin profiliniz tarafından hesaplanan insülin aktivitesini gösterir (Aktif insülin türevi değildir). 
+* İnsülin zirve zamanına daha yakın olduğunda değer daha yüksektir.
+* IOB azalırken negatif olmak anlamına gelir. 
 
-#### Deviation slope
+#### Sapma eğimi
 
-* Internal value used in algorithm.
+* Algoritmada kullanılan iç değer.
 
-### Section H - Buttons
+### Bölüm H - Butonlar
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are almost'always on'.
+* İnsülin, karbonhidrat ve hesap makinesi butonları neredeyse her zaman açıktır.
    
-   * If connection to pump is lost, the insulin button will not be visible.
+   * Pompa bağlantısı kesilirse insülin düğmesi görünmez.
 
-* Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
+* Diğer butonların [tercihlerde](../Configuration/Preferences#buttons) ayarlanması gerekir.
 
 #### İnsülin
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
-* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences#default-temp-targets).
-* If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
+* [Bolus hesaplayıcı](#bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
+* [Yakında Öğün GH](../Configuration/Preferences#default-temp-targets) kutusunu işaretleyerek otomatik olarak yakında öğün hedefinizi başlatabilirsiniz.
+* Pompadan bolus yapmadan sadece insülin miktarını kaydetmek istiyorsanız "Bolusu sadece kayıt altına al" kutusunu işaretleyin.
 
 #### Karbonhidrat
 
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
-* To record carbs without bolusing.
-* Certain [pre-set temporary targets](../Configuration/Preferences#default-temp-targets) can be set directly by checking the box.
-* Time offset: When will you / have you been eaten carbs (in minutes).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
-* You can use the buttons to quickly increase carb amount.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Karbonhidratları bolus olmadan kaydetmek için kullanılır.
+* Belirli [önceden ayarlanmış geçici hedefler](../Configuration/Preferences#default-temp-targets) ilgili kutu işaretlenerek doğrudan ayarlanabilir.
+* Zaman farkı: Ne zaman karbonhidrat yediniz / yiyeceksiniz (dakika olarak).
+* Süre: ["Yayma karbonhidratlar"](../Usage/Extended-Carbs.rst) için kullanılacak
+* Karbonhidrat miktarını hızlı bir şekilde artırmak için butonları kullanabilirsiniz.
+* Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 
 #### Hesap makinesi
 
-* See Bolus Wizard [section below](#bolus-wizard)
+* Bolus Sihirbazı için [aşağıdaki bölüme](#bolus-wizard) bakın
 
-#### Calibrations
+#### Kalibrasyonlar
 
-* Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* xDrip+'a bir kalibrasyon gönderir veya Dexcom kalibrasyon diyalog penceresini açar.
+* [Tercihlerde](../Configuration/Preferences#buttons) etkinleştirilmelidir.
 
 #### CGM
 
-* Opens xDrip+.
-* Back button returns to AAPS.
-* Must be activated in [preferences](../Configuration/Preferences#buttons).
+* xDrip+'ı açmak için kullanılır.
+* Geri düğmesi AAPS'e döner.
+* [Tercihlerde](../Configuration/Preferences#buttons) etkinleştirilmelidir.
 
 #### Hızlı Asistan
 
-* Easily enter amount of carbs and set calculation basics.
-* Details are setup in [preferences](../Configuration/Preferences#quick-wizard).
+* Karbonhidrat miktarını kolayca girin ve temel hesaplamaları ayarlayın.
+* Ayrıntılar [Tercihlerde](../Configuration/Preferences#quick-wizard) ayarlanır.
 
-## Bolus Wizard
+## Bolus Sihirbazı
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-When you want to make a meal bolus this is where you will normally make it from.
+Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
-### Section I
+### Bölüm I
 
-* BG field is normally already populated with the latest reading from your CGM. If you don't have a working CGM then it will be blank. 
-* In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
-* The CORR field is if you want to modify the end dosage for some reason.
-* The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+* KŞ alanında normalde zaten CGM'nizden gelen en son okuma bulunur. Çalışan bir CGM'niz yoksa boş olacaktır. 
+* Karbonhidrat alanına, bolus yapmak istediğiniz karbonhidrat - veya eşdeğeri - hesapladığınız tahmini miktarı girersiniz. 
+* Düzeltme alanı, herhangi bir nedenle son dozu değiştirmek istiyorsanız ilave edebilir ya da azaltabilirsiniz.
+* Karbonhidrat zamanı alanı ön bolus içindir, böylece sisteme karbonhidratların yenmesi için bir gecikme olacağını söyleyebilirsiniz. Yenmiş karbonhidratlar için bolus yapıyorsanız, bu alana negatif bir sayı girebilirsiniz.
 
-#### Eating reminder
+#### Yemek hatırlatıcısı
 
-* For carbs in the future the alarm checkbox can be selected (and is by default when a time in the future is entered) so that you can be reminded at a time in the future of when to eat the carbs you have input into AndroidAPS
+* Yenecek karbonhidratlar için alarm onay kutusu işaretlenebilir. Böylece AndroidAPS'e girdiğiniz karbonhidratları ne zaman yemeniz gerektiği size hatırlatılabilir. (Girilen süre sonunda karbonhidratlar sisteme ilave edilir.)
    
    ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
 
-### Section J
+### Bölüm J
 
-* SUPER BOLUS is where the basal insulin for the next two hours is added to the immediate bolus and a zero TBR is issued for the following two hours to take back the extra insulin. The option only shows when "Enable [superbolus](../Configuration/Preferences#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences#overview).
-* The idea is to deliver the insulin sooner and hopefully reduce spikes.
-* For details visit [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
+* SÜPER BOLUS, sonraki iki saat için bazal insülinin bolusa ilave edildiği ve sıfır GBO olacak sonraki iki saati telafi etmek için kullanılır. Bu seçenek yalnızca [Genel bakış Tercihlerde ](../Configuration/Preferences#overview) [ "Sihirbazda superbolusu etkinleştir"](../Configuration/Preferences#superbolus) ayarlandığında gösterilir.
+* Buradaki ana fikir, bazal insülini erkenden vererek ani artışları azaltmaktır.
+* Ayrıntılar için [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) adresini ziyaret edin.
 
-### Section K
+### Bölüm K
 
-* Shows the calculated bolus. 
-* If the amount of insulin on board already exceeds the calculated bolus then it will just display the amount of carbs still required.
-* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
+* Hesaplanan bolusu gösterir. 
+* Aktif insülin miktarı hesaplanan bolusu aşarsa, o zaman sadece gerekli olan karbonhidrat miktarını gösterecektir.
+* Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 
-### Section L
+### Bölüm L
 
-* Details of wizard's bolus calculation.
-* You can deselect any that you do not want to include but you normally wouldn't want to.
-* For safety reasons the **TT box must be ticked manually** if you want the bolus wizard to calculate based on an existing temporary target.
+* Sihirbazın bolus hesaplamasının ayrıntıları.
+* Dahil etmek istemediğiniz herhangi bir hesaplamanın seçimini kaldırabilirsiniz.
+* Bolus sihirbazının mevcut bir geçici hedefe göre hesaplama yapmasını istiyorsanız, güvenlik nedenleriyle **TT kutusunun manuel olarak işaretlenmesi gerekir**.
 
-#### Combinations of COB and IOB and what they mean
+#### COB ve IOB kombinasyonları ve ne anlama geldikleri
 
-* For safety reasons IOB boxed cannot be unticked when COB box is ticked as you might run the risk of too much insulin as AAPS is not accounting for what’s already given.
-* If you tick COB and IOB unabsorbed carbs that are not already covered with insulin + all insulin that has been delivered as TBR or SMB will be taken into account.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Güvenlik nedenleriyle, COB (Aktif karbonhidrat) kutusu işaretlendiğinde IOB (Aktif insülin) kutusunun işareti kaldırılamaz, çünkü AAPS halihazırda mevcut insülini hesaba katmadığı için çok fazla insülin riskiyle karşı karşıya kalabilirsiniz.
+* COB ve IOB'u işaretlerseniz, mevcut emilmemiş karbonhidratlar + GBO veya SMB olarak verilen tüm insülinler dikkate alınacaktır.
+* COB işaretlemeden IOB'u işaretlerseniz, AAPS iletilen insülini hesaba katar, ancak bu hesaba hala emilecek karbonhidratlar dahil edilmez. Bu işareleme 'eksik karbonhidrat' bildirimine yol açar.
+* Yemek bolusundan kısa bir süre sonra **ek gıda** için (örn. ilave tatlı) bolus yaparsanız, **tüm kutuların işaretini kaldırmak** yararlı olabilir. Bu şekilde, ana öğün henüz tam olarak emilmemiş olduğundan yalnızca yeni karbonhidratlar ilave edilir, bu nedenle aktif insülin, yemek bolusundan kısa bir süre sonra aktif karbonhidrat ile tam olarak eşleşmeyecektir.
 
-#### Wrong COB detection
+#### Yanlış Aktif Karbonhidrat tespiti
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
-* So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan COB değerinin yanlış olabileceğini algılamıştır. 
+* Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
+* Ayrıntılar için [COB hesaplama sayfasındaki](../Usage/COB-calculation#detection-of-wrong-cob-values) ipuçlarına bakın.
 
-## Action tab
+## Eylem Sekmesi
 
 ![Actions tab](../images/Home2021_Action.png)
 
-### Actions - section M
+### Eylemler - bölüm M
 
 * Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
@@ -436,7 +436,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 ![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Care Portal
 

@@ -308,7 +308,8 @@ Gelişmiş ayarlar (OpenAPS AMA)
 OpenAPS SMB ayarları
 -----------------------------------------------------------
 * AMA'nın aksine, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ glikoz seviyelerini kontrol etmek için geçici bazal oranları kullanmaz, esas olarak küçük süper mikro boluslar kullanır.
-* SMB'yi kullanmak için. `Görev 10 <../Usage/Objectives.html#objective-10-eneasing-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>` 'a başlamış olmalısınız.
+* You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+
 * İlk üç ayar `yukarıda <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__ açıklanmıştır.
 * Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, `OpenAPS özellik bölümünde <../Usage/Open-APS-features.html#enable-smb>`_ açıklanmıştır.
 * *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz. 

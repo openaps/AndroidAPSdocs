@@ -2,7 +2,7 @@ Objectives as of Android APS 2.8.2.1
 **************************************************
 This is not the latest version of the Android APS Objectives.  This page details the Objectives that were in place prior to version 3.0.  Anyone using an older version of Android (i.e. prior to Android 9) and Android APS version 2.8.2.1 should refer to this page.  
 
-Please see `this page <../Usage/Objectives.rst>`_ for the current set of Objectives.
+Please see `this page <../Usage/Objectives.html>`_ for the current set of Objectives.
 
 AndroidAPS turi keletą mokymo programos tikslų, kuriuos įvykdę įvaldysite saugaus ciklo naudojimo funkcijas bei nustatymus.  Jie užtikrina, kad aukščiau aprašytus parametrus sukonfigūravote teisingai, ir kad suprantate, ką Jūsų sistema daro ir kodėl galite ja pasitikėti.
 

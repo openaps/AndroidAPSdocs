@@ -317,7 +317,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Android Studio zeigt im unteren Teil des Fensters "Gradle Build running" an. Dies dauert eine Weile je nach Computer und Internetverbindung. **Sei geduldig!**
     
-    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
+    ![Gradle läuft](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio zeigt "Generate Signed APK" an, so bald die Erstellung der APK-Datei abgeschlossen ist.
     

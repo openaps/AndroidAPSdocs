@@ -24,7 +24,8 @@ Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **O
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
    -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné).
-   -  **Pour certains modèles de téléphones, ceci peut présenter un problème** : **Sachez que le pilote AAPS Omnipod Dash se connecte avec le Dash POD via le Bluetooth chaque fois qu'il envoie une commande, et il se déconnecte juste après. Les connexions Bluetooth peuvent être perturbées par d'autres périphériques connectés au téléphone qui exécutent AAPS, comme les écouteurs etc... (qui peuvent occasionner, dans des rares occasions, des problèmes de connexion ou des erreurs/perte de pod lors de l'activation ou par la suite pour certains téléphones), ou être perturbés par elle.**
+   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AndroidAPS, especially with other Bluetooth devices connected!**  
+     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
    -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
 * [**Moniteur Glycémie continue (MGC)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
@@ -94,7 +95,7 @@ Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proxim
 
 **NOTE**: Au cas où vous obtiendrez le message d'erreur ci-dessous (ce qui peut se produire), ne paniquez pas. Cliquez sur le bouton **Réessayer**. Dans la plupart des cas, l'activation se poursuivra avec succès.
 
-![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_pod_error.png)
+![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
 3. Sur l'écran **Initialiser le Pod** le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce).  Une coche verte s'affichera en cas d'amorçage réussi, et le bouton **Suivant** sera activé. Cliquer sur le bouton **Suivant** pour terminer l'initialisation de l'amorçage du pod et afficher l'écran **Attacher Pod**.
 

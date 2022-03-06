@@ -2,7 +2,7 @@ Objectives as of Android APS 2.8.2.1
 **************************************************
 This is not the latest version of the Android APS Objectives.  This page details the Objectives that were in place prior to version 3.0.  Anyone using an older version of Android (i.e. prior to Android 9) and Android APS version 2.8.2.1 should refer to this page.  
 
-Please see `this page <../Usage/Objectives.rst>`_ for the current set of Objectives.
+Please see `this page <../Usage/Objectives.html>`_ for the current set of Objectives.
 
 A AndroidAPS possui uma série de objetivos que precisam ser completados para o encaminhar pelos recursos e configurações de um loop seguro.  Eles garantem que configurou corretamente tudo o que foi detalhado nas seções acima e que entende o que o seu sistema está a fazer e por que assim pode confiar nele.
 

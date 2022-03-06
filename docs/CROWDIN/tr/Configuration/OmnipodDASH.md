@@ -4,7 +4,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 
 **Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
-## Omnipod DASH specifications
+## Omnipod DASH özellikleri
 
 **Omnipod DASH**'ın özellikleri ve onu **Omnipod EROS**'dan ayıran özellikler şunlardır:
 
@@ -16,7 +16,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 * Aktifleştirmede, AAPS yeni bir DASH podunu bulacak ve bağlayacaktır.
 * Beklenen menzil: 5-10 metre (YMMV)
 
-## Hardware/Software Requirements
+## Donanım/Yazılım Gereksinimleri
 
 * Yeni bir **Omnipod DASH Pod** (Mavi iğne kapağıyla anlaşılır)
 
@@ -24,9 +24,9 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
 
 * BLE Bluetooth bağlantısına sahip **Uyumlu Android telefon**
    -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Lütfen [**DASH Test Edilen telefonları**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) kontrol edin veya sadece telefonunuzla deneyin ve sonucu bize bildirin (telefon referansı ve coğrafi bölge, Android sürümü, "çalıştı / bazı zorluklar mevcut / çalışmadı" şeklinde).
-   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using Android 12 together with pod that have firmware version 3.XX.X. Avoid using Android 12 with these old firmware pods for now!**  
-     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
+   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AndroidAPS, especially with other Bluetooth devices connected!**  
+     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. Bluetooth bağlantıları AAPS çalıştıran telefona bağlı olan kulaklık vb. diğer cihazlar tarafından bozulabilir, (bazı telefon modellerinde ender durumlarda bağlantı sorununa veya etkinleştirme sırasında veya sonrasında pod hatalarına/kaybına neden olabilir) veya etkilenebilir.
+   -  [**APK Derle**](../Installing-AndroidAPS/Building-APK.html#) talimatları kullanılarak **AndroidAPS'nin 3.0 veya daha yeni sürümü derleyin ve yükleyin**.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayacaktır; durum böyle değilse, lütfen sabırlı olun ve bir sonraki pod değişikliğinizde bu işleme başlayın.
@@ -43,11 +43,11 @@ Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayacaktır; durum b
 
 **30 dk Bazal Oranı Profilleri AndroidAPS'de DESTEKLENMEZ.** **AndroidAPS Profili, 30 dakikalık bir bazal oran zaman dilimini desteklemiyor.** AndroidAPS'de yeniyseniz ve bazal oran profilinizi ilk kez oluşturuyorsanız, yarım saatlik bazal oranların desteklenmediğini ve başlangıç için bazal oran profilinizi saatlik olarak ayarlamanız gerekeceğini lütfen unutmayın. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 birimlik bir bazal oranınız varsa, bu çalışmayacaktır. Bu 1,1 birim bazal oranını 9:00-11:00 veya 10:00-12:00 zaman aralığına değiştirmeniz gerekecektir. Omnipod Dash donanımının kendisi 30 dakikalık bazal oran profili artışlarını desteklese de, AndroidAPS şu anda algoritmalarıyla bunları hesaba katamıyor.
 
-## Enabling the Dash Driver in AAPS
+## AAPS'de Dash Sürücüsünü Etkinleştirme
 
 Dash sürücüsünü AAPS'de **iki şekilde** etkinleştirebilirsiniz:
 
-### Option 1: New installations
+### Seçenek 1: Yeni kurulum
 
 AndroidAPS'yi ilk kez kurarken, **Kurulum Sihirbazı**, AndroidAPS'yi yüklemeniz için size rehberlik edecektir. Pompa seçimine ulaştığınızda “DASH” seçeneğini seçin.
 
@@ -73,11 +73,11 @@ Eğer kutucuğu (4) işaretlediyseniz, AAPS'de Dash pompasını etkinleştirdiğ
 
 ![Enable_Dash_4](../images/DASH_images/Enable_Dash/Enable_Dash_4.jpg)
 
-## Dash Configuration
+## Dash Konfigürasyonu
 
 Lütfen **sola kaydırıp** tüm pod işlevlerini yönetebileceğiniz **DASH** sekmesine ulaşın.(bu işlevlerden bazıları etkin bir pod oturumu olmadan etkinleştirilmez veya görünmez):
 
-![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
+![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Pod bağlantısını ve durumunu yenileyin, pod bip sesleri pod alarmlarında susturabilir.
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal ve Pod geçmişi)
 
@@ -178,7 +178,7 @@ Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatm
 
 ![Resume_4](../images/DASH_images/Resume/Resume_4.jpg)
 
-### Silencing Pod Alerts
+### Pod Alarmlarını Susturma
 
 *NOT - ALARMLARI SUSTUR butonu yalnızca **DASH** sekmesinde pod sona erme veya düşük rezervuar uyarısı tetiklendiğinde kullanılabilir. Alarmları Sustur butonu görünmüyorsa ve poddan bip sesleri duyuyorsanız, 'Pod durumunu yenilemeyi' deneyin.*
 
@@ -216,7 +216,7 @@ Bu özellik, pod'a gönderilen bolusların, GBO'larin ve bazal komutların doğr
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-## DASH Tab
+## DASH Sekmesi
 
 Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum satırlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
 
@@ -278,7 +278,7 @@ Aşağıda, **DASH** sekmesindeki **POD YNTM (0)** butonuna basılarak erişilen
 * 3 - **Test Bip Sesi Çal** : Basıldığında pod'dan test bip sesi çalar.
 * 4 - [**Pod geçmişi**](#view-pod-history) : Pod etkinlik geçmişini görüntüler.
 
-## Dash Settings
+## Dash Ayarları
 
 Dash sürücüsü ayarları, sol üst köşedeki **hamburger menüsüne** basılıp **Konfigürasyon ayarları (1)**\ ➜\ **Pompa**\ ➜\ **Dash**\ ➜\ **Dişli Çark (3)**, **Dash** başlıklı **radyo düğmesi (2)** seçerek yapılandırılabilir. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
 
@@ -362,7 +362,7 @@ Ek not:
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
      - AAPS, her 15 dakikada bir yeni bazal profili ayarlamaya çalışacaktır.
      - APPS, iletim hala askıya alınmışsa iletimin her 15 dakikada bir askıya alındığını bildiren bir bildirim gösterecektir. (iletim devam ettirilemedi)
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - [**İletime devam et**](#resuming-insulin-delivery) butonu etkin olacak ve kullanıcı iletimi manuel olarak sürdürmeyi seçebilecektir.
      - AAPS kendi kendine iletimi sürdüremezse (bu, Pod'a ulaşılamıyorsa, ses kapatılmışsa vb. olabilir), pod 3 dakika için her dakikada bir 4 kez bip sesi çıkarmaya başlar, ardından iletim 20 dakikadan daha uzun süre askıda kalırsa bu her 15 dakikada bir tekrarlanır.
   * Onaylanmamış komutlar için "pod durumunu yenile" komutu, bunları onaylamalı/reddetmelidir.
 
@@ -431,9 +431,9 @@ Etkin bir pod kullanırken, mevcut pod oturumu için bir dışa aktarılan dosya
 
 ### AndroidAPS'i daha yeni bir sürüme güncelleme
 
-Çoğu durumda, mevcut kurulumu kaldırmaya gerek yoktur. Yeni sürüm için kurulumu başlatarak “üzerine” kurulum yapabilirsiniz. This is also possible when on an active Pod  session.
+Çoğu durumda, mevcut kurulumu kaldırmaya gerek yoktur. Yeni sürüm için kurulumu başlatarak “üzerine” kurulum yapabilirsiniz. Bu aktif bir Pod kullanırken de mümkündür.
 
-1. Export your settings.
+1. Ayarlarınızı dışa aktarın.
 2. Yeni AndroidAPS sürümünü yükleyin.
 3. Kurulumun başarılı olduğunu doğrulayın
 4. Mevcut pod'a DEVAM EDİN veya yeni bir pod etkinleştirin.
@@ -455,5 +455,5 @@ Omnipod DASH sürücüsü için tüm geliştirme çalışmaları topluluk taraf�
 
 -  **Seviye 0:** Sorun yaşadığınız işlevin nasıl çalışması gerektiğini anladığınızdan emin olmak için bu dokümantasyonun ilgili bölümünü okuyun.
 -  **Seviye 1:** Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen [bu davet bağlantısını](https://discord.gg/4fQUWHZ4Mw) kullanarak **Discord**'da * #androidaps* kanalına gidin.
--  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AndroidAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
+-  **Seviye 2:** Sorununuzun daha önce [ sorunlar adresinde ](https://github.com/nightscout/AndroidAPS/issues)bildirilmiş olup olmadığını görmek için mevcut sorunları arayın. Sorunuz burada mevcutsa, lütfen onaylayın/yorum yapın/ekleyin. Yoksa, lütfen bir [yeni sorun](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı ekleyin](../Usage/Accessing-logfiles.md).
 -  **Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.**

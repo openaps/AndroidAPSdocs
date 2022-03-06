@@ -270,7 +270,7 @@ Du kannst die Pumpe zum Duschen oder Baden ablegen. Für diesen kurzen Zeitraum 
 
 ### Arbeit
 
-Je nach Job können Sie verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper sollten Sie einen [-Profil-Wechsel](../Usage/Profiles.md) für Ihren typischen Arbeitstag in Betracht ziehen. Zum Beispiel können Sie zu einem Profil über 100% wechseln, wenn Sie einen weniger anspruchsvollen Job haben (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Sie aktiv sind und den ganzen Tag aktiv sind. How können sich ein höheres oder niedrigeres temporäres Ziel oder eine [Zeit-Verschiebung des Profils](../Usage/Profiles#time-shift) wählen, wenn viel früher oder später als üblich arbeiten, oder Schichtdienst haben. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Je nach Job können Sie verschiedene Behandlungsfaktoren an Werktagen anwenden. Als Looper sollten Sie einen [-Profil-Wechsel](../Usage/Profiles.md) für Ihren typischen Arbeitstag in Betracht ziehen. Zum Beispiel können Sie zu einem Profil über 100% wechseln, wenn Sie einen weniger anspruchsvollen Job haben (z. B. an einem Schreibtisch) oder weniger als 100%, wenn Sie aktiv sind und den ganzen Tag aktiv sind. How können sich ein höheres oder niedrigeres temporäres Ziel oder eine [Zeit-Verschiebung des Profils](../Usage/Profiles#time-shift) wählen, wenn viel früher oder später als üblich arbeiten, oder Schichtdienst haben. Du kannst auch ein zweites Profil erstellen (z.B. 'zu Hause' und 'Werktag') und einen täglichen Profilwechsel machen, auf das Profil, das du gerade brauchst.
 
 ## Freizeitaktivitäten
 
