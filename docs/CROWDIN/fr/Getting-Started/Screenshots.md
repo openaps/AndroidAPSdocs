@@ -436,7 +436,7 @@ Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.co
 ![Statut de la pompe](../images/Screenshot_PumpStatus.png)
 
 * Contient différentes informations sur l'état de la pompe. Les informations affichées dépendent du modèle de votre pompe.
-* Voir la page [Pompes](../Hardware/pumps.rst) pour plus de détails.
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Careportal
 
