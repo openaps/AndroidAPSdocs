@@ -17,7 +17,7 @@
 -   Select xdrip in ConfigBuilder (setting in AndroidAPS).
 -   If AAPS does not receive BG values when phone is in airplane mode
     use 'Identify receiver' as describe on [xDrip+ settings
-    page](../Configuration/xdrip.html) .
+    page](../Configuration/xdrip.md) .
 
 ## If using G5 with patched Dexcom app
 
