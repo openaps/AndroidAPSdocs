@@ -30,7 +30,7 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 3. 혈당 추이를 예측하기 위한 부가적인 계산, 즉, UAM (un-announced meals, 입력되지 않은 음식 섭취). 사용자로부터 수동으로 탄수화물 섭취가 입력되지 않은 경우에도, 식사/아드레날린 또는 다른 영향들에 의해 상당히 상승한 혈당 수준을 UAM이 자동으로 검출할 수 있습니다. SMB를 사용하여 이러한 혈당 상승을 조절해볼 수 있습니다. 안전 측면에서 이는 반대로 작동하며, 예상치 못한 혈당의 급격한 감소가 발생하는 경우 SMB를 일찍 중단할 수 있습니다. 이것이 SMB 사용 시 UAM이 항상 활성화되어야 하는 이유입니다.
 
-**SMB를 사용하기 위해서는 [목표 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)을 시행 중이어야 합니다.**
+**You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -263,18 +263,18 @@ Default value: 2
   <tr>
     <td>MAXIOB_AMA</td>
     <td>3,0</td>
-    <td>3,5</td>
+    <td>5,0</td>
     <td>7,0</td>
     <td>12,0</td>
     <td>25,0</td>
   </tr>
   <tr>
     <td>MAXIOB_SMB</td>
-    <td>3,0</td>
     <td>7,0</td>
-    <td>12,0</td>
-    <td>25,0</td>
-    <td>45,0</td>
+    <td>13,0</td>
+    <td>22,0</td>
+    <td>30,0</td>
+    <td>70,0</td>
   </tr>
   <tr>
     <td>MAXBASAL</td>
