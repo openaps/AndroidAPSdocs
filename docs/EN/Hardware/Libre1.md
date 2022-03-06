@@ -21,7 +21,7 @@ As it currently stands, if using Libre 1 as BG source you cannot
 activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB
 algorithm. The BG values of Libre 1 are not smooth enough to use it
 safely. See [Smoothing blood glucose
-data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html) for more
+data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more
 details.
 
 ## If using xDrip+
@@ -39,11 +39,11 @@ details.
     Less Common Settings > Advanced Calibration Settings.
 -   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 -   For settings in xDrip+ with screenshots see [xDrip+ settings
-    page](../Configuration/xdrip.html). There is a part for basic xDrip+
+    page](../Configuration/xdrip.md). There is a part for basic xDrip+
     settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode,
     use 'Identify receiver' as describe on [xDrip+ settings
-    page](../Configuration/xdrip.html).
+    page](../Configuration/xdrip.md).
 
 ## If using Glimp
 
