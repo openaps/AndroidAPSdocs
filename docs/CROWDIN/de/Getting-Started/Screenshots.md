@@ -436,7 +436,7 @@ Und noch mehr bei: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/201
 ![Status der Pumpe](../images/Screenshot_PumpStatus.png)
 
 * Verschiedene Informationen über den Status Deiner Pumpe. Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
-* Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.rst).
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Careportal (Behandlungen)
 
