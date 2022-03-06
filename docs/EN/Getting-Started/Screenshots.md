@@ -410,7 +410,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 ![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Care Portal
 
