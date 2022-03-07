@@ -212,6 +212,77 @@ Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpa
   * _None_: Disables tap action on AAPS complications
 * **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
 
+
+## Wear OS Tiles
+
+Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+
+Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user. 
+
+The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them. 
+
+Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+
+
+## How to add Tiles
+
+Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+
+![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+
+Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+1. On your watch, from your watch face;
+    - Swipe right to left till you reach the "+ Add tiles" 
+    - Select one of the tiles.
+2. On your phone open the companion app for your watch. 
+    - For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+   - In the click on the section "Tiles", followed by "+ Add" button
+   - Find the AAPS tile you like to add by selecting it.
+    ![Wear phone add tile](../images/wear_companion_app_add_tile.png)
+The order of the tiles can be changed by dragging and dropping
+
+The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+
+
+### APS(Actions) Tile
+
+The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+
+Actions supported in the Action tile can request the AAPS phone app for:
+
+* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
+* **Insulin**; request insulin delivery by entering the unit of insulin
+* **Treatment**; request both insulin delivery and add carbs
+* **Carbs**; add (extended) carbs
+* **TempT**; set a custom temporary target and duration
+
+![Wear action tile, sample calculator](../images/wear_actions.png)
+
+[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+
+
+### AAPS(Temp Target) Tile
+
+The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets)  and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+
+* **Activity**; for sport
+* **Hypo**; to raise the target during hypo treatment
+* **Eating soon**; to lower the target to raise the insulin on board
+* **Manual**; set a custom temporary target and duration
+* **Cancel**; to stop the current temporary target
+
+![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+
+
+### AAPS(QuickWizard)Tile
+
+The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+
+![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+
+[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+
+
 ## Always on
 
 Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
