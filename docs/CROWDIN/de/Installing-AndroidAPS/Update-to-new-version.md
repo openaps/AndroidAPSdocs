@@ -63,22 +63,28 @@ Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge di
 
 ## 3. Erstelle die signierte APK
 
-* Dein Sourcecode ist jetzt die aktuelle veröffentlichte Version. Es ist an der Zeit, die signierte apk wie im [Build signed apk Abschnitt](../Installing-AndroidAPS/Building-APK#generate-signed-apk) beschrieben.
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Übertrage die APK-Datei
 
-Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können. Siehe die Anleitung für [APK auf Smartphone übertragen](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it.
 
-## 5. AAPS-Version auf dem Smartphone überprüfen
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
-Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
+## 5. Install apk
 
-![Installierte AAPS version](../images/Update_VersionCheck282.png)
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
+
+## 6. Check AAPS version on phone
+
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 # Problembehandlung
 
-Keine Panik, wenn irgendetwas schief läuft.
+If anything goes wrong, don't panic.
 
-Tief durchatmen!
+Take a breath!
 
-Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
