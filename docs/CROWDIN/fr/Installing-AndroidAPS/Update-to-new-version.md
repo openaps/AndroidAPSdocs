@@ -16,7 +16,7 @@
 
 1. [Exporter les paramètres](../Usage/ExportImportSettings#exporter-les-parametres) à partir de la version AAPS existante sur votre téléphone. Vous n'en avez peut-être pas besoin, mais mieux vaut les sauver que regretter de ne pas l'avoir fait.
 2. [Mettez à jour la copie locale](../Installing-AndroidAPS/Update-to-new-version#mettez-a-jour-votre-copie-locale) des fichiers sources d'AndroidAPS (Git -> Fetch et Git -> Pull)
-3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
+3. [Constuire un apk signé](../Installing-AndroidAPS/Update-to-new-version#constuire-un apk-signe)
 4. [Transférez l'apk généré](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone) sur votre téléphone et installez le
 5. [Vérifier la version](#verifier-la-version-d-aaps-sur-le-telephone) dans AndroidAPS
 6. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip#identifier-le-recepteur) dans xDrip+ ou utilisez l'application [BYODA (Construisez votre propre application Dexcom)](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom).
@@ -63,28 +63,28 @@ Si vous avez déjà modifié l'URL ou ou que vous faite la mise à jour à parti
 
 ## 3. Construisez l'APK signé
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Votre code source est maintenant la version actuellement publiée. Il est maintenant temps de construire l'apk signé comme c'est décrit dans la section [Générer un APK signé](../Installing-AndroidAPS/Building-APK#generer-un-apk-signe).
 
 ## 4. Transférez l'apk
 
-You need to transfer the apk to your phone so you can install it.
+Vous devez transférer l'apk sur votre téléphone pour pouvoir l'installer.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+Consultez les instructions pour [Transférer le fichier APK sur le smartphone](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone)
 
-## 5. Install apk
+## 5. Installer l'apk
 
 Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Les explications peuvent être trouvées sur internet (par ex. [ici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.androidcentral.com/unknown-sources)).
 
-## 6. Check AAPS version on phone
+## 6. Vérifier la version d'AAPS sur le téléphone
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Après avoir installer le nouvel apk, vous pouvez vérifier la version AAPS sur votre téléphone en cliquant sur le menu 3 points en haut à droite puis sur "à propos". Vous devriez voir la version actuelle en résultat.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Version installée d'AAPS](../images/Update_VersionCheck282.png)
 
 # Résolution de problèmes
 
-If anything goes wrong, don't panic.
+Si quelque chose ne va pas, ne paniquez pas.
 
-Take a breath!
+Respirez un bon coup !
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Ensuite, consultez la page [de dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) pour voir si votre problème est déjà documenté !
