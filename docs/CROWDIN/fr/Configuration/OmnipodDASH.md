@@ -24,9 +24,9 @@ Ce sont les spécifications du **Omnipod DASH** et ce qui le différencie du **O
 
 * **Un téléphone Android compatible** avec une connexion Bluetooth BLE
    -  Tous les téléphones et versions d'Android ne sont pas garanties de fonctionner. Veuillez vérifier [**les téléphones testés avec DASH**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) ou essayez simplement avec votre téléphone et dites-nous le résultat (référence du téléphone et région géographique, version d'Android, fonctionné / quelques difficultés / n'a pas fonctionné).
-   - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AndroidAPS, especially with other Bluetooth devices connected!**  
-     Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
+   - **Remarque importante : Il y a eu de multiples cas de pertes de connexion permanentes et non récupérables lors de l'utilisation de pods anciens avec la version 3.XX.X. Soyez prudent lorsque vous utilisez ces vieux pods avec AndroidAPS, en particulier en même temps que d'autres périphériques Bluetooth !**  
+     Sachez que le pilote AAPS Omnipod Dash se connecte au POD DASH via Bluetooth chaque fois qu'il envoie une commande, et il se déconnecte juste après. Les connexions Bluetooth peuvent être perturbées par d'autres périphériques connectés au téléphone qui exécutent AAPS, comme les écouteurs etc... (qui peuvent occasionner, dans des rares occasions, des problèmes de connexion ou des erreurs/perte de pod lors de l'activation ou par la suite pour certains téléphones), ou être perturbés par elle.
+   -  **Version 3.0 ou plus récente d'AndroidAPS construit et installé** en utilisant les instructions [**Build APK**](../Installing-AndroidAPS/Building-APK.html#).
 * [**Moniteur Glycémie continue (MGC)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 Ces instructions supposent que vous commencez une nouvelle session de pod; si ce n'est pas le cas, soyez patient et essayez de commencer ce processus lors de votre prochain changement de pod.
@@ -123,40 +123,40 @@ Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proxim
 
 ![Activate_Pod_13](../images/DASH_images/Activate_Pod/Activate_Pod_13.jpg)
 
-10. The **Pod management** menu screen should now display the **Activate Pod (1)** button *disabled* and the **Deactivate Pod (2)** button *enabled*. Ceci est dû au fait qu'un pod est maintenant actif et que vous ne pouvez pas activer un pod supplémentaire sans désactiver d'abord le pod actuellement actif.
+10. L'écran de menu **Gestion pod** devrait maintenant afficher le bouton **Activer Pod (1)** *désactivé* et le **Désactiver Pod (2)** bouton *activé*. Ceci est dû au fait qu'un pod est maintenant actif et que vous ne pouvez pas activer un pod supplémentaire sans désactiver d'abord le pod actuellement actif.
 
-    Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+    Cliquez sur le bouton Retour de votre téléphone pour retourner à l'onglet **DASH** qui affichera maintenant les informations du Pod pour votre session active de pod, y compris le débit de basal actuel, le niveau du réservoir de pod, l'insuline délivrée, les erreurs de pod et les alertes.
 
     For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
+Il est recommandé d'exporter les paramètres APRES l'activation du pod. Faites cela à chaque changement de pod et une fois par mois, copiez le fichier exporté sur votre lecteur Internet. voir le [**Doc paramètres d'exportation**](../Usage/ExportImportSettings.html?highlight=exporting#export-import-des-parametres).
 
 
 ### Désactiver Pod
 
-Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
+Dans des circonstances normales, la durée de vie prévue d'un pod est de trois jours (72 heures) et de 8 heures supplémentaires après l'avertissement d'expiration du pod pour un total de 80 heures d'utilisation du pod.
 
 Pour désactiver un pod (soit après son expiration soit à cause d'une erreur du pod) :
 
-1. Go to the **DASH** tab, click on the **POD MGMT (1)** button, on the **Pod management** screen click on the **Deactivate Pod (2)** button.
+1. Allez à l'onglet **DASH** , cliquez sur le bouton **POD MGMT (1)** , sur l'écran de **Gestion du pod** cliquez sur le bouton **Désactiver Pod (2)**.
 
 ![Deactivate_Pod_1](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_1.jpg)    ![Deactivate_Pod_2](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_2.png)
 
-2. On the **Deactivate Pod** screen, click on the **Next** button to begin the process of deactivating the pod. You will receive a confirmation beep from the pod that deactivation was successful.
+2. Sur l'écran **Désactiver Pod** , cliquez sur le bouton **Suivant** pour commencer le processus de désactivation du pod. Vous recevrez un bip de confirmation du pod indiquant une désactivation réussie.
 
 ![Deactivate_Pod_3](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_3.jpg) ![Deactivate_Pod_4](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_4.jpg)
 
-3. Une coche verte apparaîtra une fois la désactivation réussie. Click on the **Next** button to display the pod deactivated screen. Vous pouvez maintenant supprimer votre pod car la session active a été désactivée.
+3. Une coche verte apparaîtra une fois la désactivation réussie. Cliquer sur le bouton **Suivant** pour afficher l'écran désactivé du pod. Vous pouvez maintenant supprimer votre pod car la session active a été désactivée.
 
 ![Deactivate_Pod_5](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_5.jpg)
 
-4. Click on the green button to return to the **Pod Management** screen.
+4. Cliquez sur le bouton vert pour retourner à l'écran de **Gestion du Pod**.
 
 ![Deactivate_Pod_6](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_6.jpg)
 
-5. You are now on the **Pod Management** menu; press the back button on your phone to return to the **DASH** tab. Verify that the **Pod status:** field displays a **No active Pod** message.
+5. Vous êtes maintenant dans le menu **Gestion de pod** ; appuyez sur le bouton retour de votre téléphone pour retourner à l'onglet **DASH**. Verify that the **Pod status:** field displays a **No active Pod** message.
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
