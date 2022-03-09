@@ -3,12 +3,12 @@ Mises à jour et modifications de la documentation
 
 Février 2022
 ==================================================
-* `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
-* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
-* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
-* `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @ robertrub @vanelsberg
-* Update docs for AAPS 3.0 (partly) @xJoe
-* `Wear OS for AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
+* `Avertissement sur la qualité de la Glycémie <../Getting-Started/Screenshots.html#avertissement-glycemie>`_ @tanja
+* `Mise à jour pompe Medtronic <../Configuration/MedtronicPump.html>`_ @dottedfingertips
+* `Vérification nécessaire après la mise à jour vers AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @robertrub @vanelsberg
+* Mise à jour des docs pour AAPS 3.0 (en partie) @xJoe
+* `Wear OS pour AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
 
 Janvier 2022
 ==================================================
@@ -21,7 +21,7 @@ Décembre 2021
 
 Novembre 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Meilleures pratiques pour calibrer un `capteur libre 2 <../Hardware/Libre2.html#meilleures-pratiques-pour-calibrer-un-capteur-libre-2>`_
 * `SI <../Getting-Started/FAQ.html#impact>`_ reformulation de l'impact
 * Mise à jour `dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Suppression de l'appli `Dexcom patchée<../Hardware/DexcomG6.html>`_ car elle est obsolète
@@ -108,8 +108,8 @@ Février 2020
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* `Bolus étendu <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_ - la boucle fermée sera désactivée
+* Nouveau `Plugin Profil Local <../Configuration/Config-Builder.html#profil-local>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
@@ -131,7 +131,7 @@ Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
