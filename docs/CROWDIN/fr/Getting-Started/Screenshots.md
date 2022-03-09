@@ -73,7 +73,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
-#### BG warning sign
+#### Avertissement Glycémie
 
 Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
