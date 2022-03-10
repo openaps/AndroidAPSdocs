@@ -435,21 +435,21 @@ Ve daha da fazlası: [Üssel İnsülin Eğrileri + Fiasp](https://seemycgm.com/2
 
 ![Pompa Durumu](../images/Screenshot_PumpStatus.png)
 
-* Pompa durumu hakkında farklı bilgiler. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.md) for details.
+* Pompa durumu hakkında farklı bilgiler. Görüntülenen bilgiler pompa modelinize bağlıdır.
+* Ayrıntılar için [pompalar sayfasına](../Hardware/pumps.md) bakın.
 
-## Care Portal
+## Bakım portalı
 
 Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır.
 
-### Review carb calculation
+### Karbonhidrat hesaplamasını inceleyin
 
 ![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* İnsülin dozunu hesaplamak için [Bolus Sihirbazını](../Getting-Started/Screenshots#bolus-wizard) kullandıysanız, bu hesaplamayı daha sonra tedaviler sekmesinde inceleyebilirsiniz.
+* Sadece yeşil Hesap bağlantısına basın. (Pompaya göre kullanılan insülin ve karbonhidratlar da tedavilerde tek satırda gösterilebilir.)
 
-### Carb correction
+### Karbonhidrat düzeltme
 
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
