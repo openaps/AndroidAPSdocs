@@ -393,7 +393,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Bakım portalı - bölüm O
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
