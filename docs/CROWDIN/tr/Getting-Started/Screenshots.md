@@ -323,7 +323,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * Yenecek karbonhidratlar için alarm onay kutusu işaretlenebilir. Böylece AndroidAPS'e girdiğiniz karbonhidratları ne zaman yemeniz gerektiği size hatırlatılabilir. (Girilen süre sonunda karbonhidratlar sisteme ilave edilir.)
    
-   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![Yemek Hatırlatıcılı Bolus Sihirbazı](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Bölüm J
 
@@ -352,7 +352,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 #### Yanlış Aktif Karbonhidrat tespiti
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
 * Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan COB değerinin yanlış olabileceğini algılamıştır. 
 * Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
@@ -360,7 +360,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ## Eylem Sekmesi
 
-![Actions tab](../images/Home2021_Action.png)
+![Eylem Sekmesi](../images/Home2021_Action.png)
 
 ### Eylemler - bölüm M
 
@@ -391,7 +391,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * Eşikler [tercihlerde](../Configuration/Preferences#status-lights) ayarlanabilir.
 * Sensör seviyesi, telefonun pil seviyesiyle aynıysa, xDrip+ sürümünüz muhtemelen çok eskidir ve güncellenmesi gerekir.
    
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+   ![Sensör seviyeleri telefonun pil seviyesine eşit](../images/Home2021_ActionSensorBat.png)
 
 ### Bakım portalı - bölüm O
 
@@ -413,7 +413,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * Diğerleri, TTB için GTD'nin %32 ila %37 aralığını tercih eder. 
 * Bu genel kuralların çoğu gibi, geçerliliği sınırlıdır. Not: Diyabetiniz değişiklik gösterebilir!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Geçmiş tarayıcı + GTD](../images/Home2021_Action_HB_TDD.png)
 
 ## İnsülin Profili
 
@@ -444,14 +444,14 @@ Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtla
 
 ### Karbonhidrat hesaplamasını inceleyin
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Tedavi sekmesinde karbonhidrat hesaplamasını inceleyin](../images/Screenshots_TreatCalc.png)
 
 * İnsülin dozunu hesaplamak için [Bolus Sihirbazını](../Getting-Started/Screenshots#bolus-wizard) kullandıysanız, bu hesaplamayı daha sonra tedaviler sekmesinde inceleyebilirsiniz.
 * Sadece yeşil Hesap bağlantısına basın. (Pompaya göre kullanılan insülin ve karbonhidratlar da tedavilerde tek satırda gösterilebilir.)
 
 ### Karbonhidrat düzeltme
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![1 veya 2 satırda tedavi](../images/Treatment_1or2_lines.png)
 
 Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (yani, karbonhidratları fazla veya az tahmin etmişsinizdir).
 
@@ -500,7 +500,7 @@ Aşağıdaki tedavilerin geçmişini görüntüler:
 
 ## KŞ Kaynağı - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![KŞ Kaynağı sekmesi - burada xDrip](../images/Screenshots_BGSource.png)
 
 * KŞ kaynağı ayarlarınıza bağlı olarak bu sekme farklı şekilde adlandırılır.
 * CGM okumalarının geçmişini gösterir ve arıza durumunda (örn. sıkıştırma düşük) okumayı kaldırma seçeneği sunar.
