@@ -397,30 +397,30 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* Bölüm O, Nightscout portalını yansıtır. Yani alıştırma, duyuru ve soru notların özel biçimleridir.
 
-### Tools - section P
+### Araçlar - bölüm P
 
-#### History Browser
+#### Geçmiş Tarayıcısı
 
-* Allows you to ride back in AAPS history.
+* AAPS geçmişinde geri dönmenizi sağlar.
 
 #### GTD
 
-* Total daily dose = bolus + basal per day
+* Toplam günlük doz = bolus + günlük bazal
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
-* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
-* Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Bu nedenle oran GTD / 2 * TTB (Temel Toplam Bazal = 24 saat içindeki bazal oranın toplamı) olarak hesaplanır. 
+* Diğerleri, TTB için GTD'nin %32 ila %37 aralığını tercih eder. 
+* Like most of these rules-of-thumb it is of limited real validity. Not: Diyabetiniz değişiklik gösterebilir!
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
-## Insulin Profile
+## İnsülin Profili
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![İnsülin Profili](../images/Screenshot_insulin_profile.png)
 
 * This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
+* MOR çizgi zamanla bozulduğu için enjekte edildikten sonra ne kadar insülin kaldığını, MAVİ çizgi ise ne kadar aktif olduğunu gösterir.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
 * However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
