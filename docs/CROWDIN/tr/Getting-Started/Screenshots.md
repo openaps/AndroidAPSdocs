@@ -453,9 +453,9 @@ Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtla
 
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (yani, karbonhidratları fazla veya az tahmin etmişsinizdir).
 
-1. Check and remember actual COB and IOB on homescreen.
+1. Ana ekranda güncel COB ve IOB'yi kontrol edin ve hatırlayın.
 2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
 3. Remove the entry with the faulty carb amount.
 4. Make sure carbs are removed successfully by checking COB on homescreen again.
