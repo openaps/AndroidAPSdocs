@@ -2,7 +2,7 @@
 
 ## Giriş Ekranı
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Anaekran V2.7](../images/Home2020_Homescreen.png)
 
 Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gün ihtiyaç duyacağınız bilgilerin çoğunu içerir.
 
@@ -16,7 +16,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Geçerli Profil
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Profil değişimi kalan süre](../images/Home2020_ProfileSwitch.png)
 
 * Mevcut profil sol çubukta görüntülenir.
 * Profil çubuğuna kısa basarak profil ayrıntılarını görüntüleyebilirsiniz
@@ -25,7 +25,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Hedef
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Geçici hedef kalan süre](../images/Home2020_TT.png)
 
 * Mevcut hedefiniz sağ çubukta görüntülenir.
 * [Geçici hedef](../Usage/temptarget.md) belirlemek için hedef çubuğuna kısa basın.
@@ -33,7 +33,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Dinamik hedef ayarının görselleştirilmesi
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Dinamik hedef ayarının görselleştirilmesi](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS, SMB algoritması kullanıyorsanız, hedefinizi hassasiyete göre dinamik olarak ayarlayabilir.
 * [Aşağıdaki seçeneklerden](../Configuration/Preferences#openaps-smb-settings) birini veya her ikisini etkinleştirin 
@@ -71,7 +71,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
    
    * Döngü simgesine kısa basarsanız, iletişim kutusundaki seçimden sonra bir onay istenecektir. (Uzun basarak diyalog penceresi açarsanız istenmez)
    
-   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+   ![Döngü durumu menüsü](../images/Home2020_Loop_Dialog.png)
 
 #### KŞ uyarı işareti
 
@@ -117,7 +117,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ### Bölüm D - IOB, COB, BO ve OD
 
-![Section D](../images/Home2020_TBR.png)
+![Bölüm D](../images/Home2020_TBR.png)
 
 * Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
    
@@ -142,7 +142,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ### Bölüm E - Durum ışıkları
 
-![Section E](../images/Home2020_StatusLights.png)
+![Bölüm E](../images/Home2020_StatusLights.png)
 
 * Durum ışıkları için görsel bir uyarı verir 
    * Kanül yaşı
@@ -174,7 +174,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Ana grafikte hangi bilgilerin görüntüleneceğini seçmek için ana grafiğin sağ tarafındaki üçgene tıklayın.
 * Ana grafik için sadece "\---\---- Grafik 1 \---\----" satırının üzerindeki üç seçenek mevcuttur.
    
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Ana grafik ayarı](../images/Home2020_MainGraphSetting.png)
 
 #### Tahmin çizgileri
 
@@ -213,7 +213,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 * Ana grafiğin altında en fazla dört ek grafik etkinleştirebilirsiniz.
 * Ek grafikler için ayarları açmak için [ana grafiğin](../Getting-Started/Screenshots#section-f-main-graph) sağ tarafındaki üçgeni tıklayın ve aşağı kaydırın.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Ek grafik ayarları](../images/Home2020_AdditionalGraphSetting.png)
 
 * Ek bir grafik eklemek için adının sol tarafındaki kutuyu işaretleyin (yani \---\---- Grafik 1 \---\----).
 
@@ -259,7 +259,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 ### Bölüm H - Butonlar
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Anaekran butonları](../images/Home2020_Buttons.png)
 
 * İnsülin, karbonhidrat ve hesap makinesi butonları neredeyse her zaman açıktır.
    
@@ -269,7 +269,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 #### İnsülin
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![İnsülin butonu](../images/Home2020_ButtonInsulin.png)
 
 * [Bolus hesaplayıcı](#bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
 * [Yakında Öğün GH](../Configuration/Preferences#default-temp-targets) kutusunu işaretleyerek otomatik olarak yakında öğün hedefinizi başlatabilirsiniz.
@@ -277,7 +277,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 #### Karbonhidrat
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Karbonhidrat butonu](../images/Home2020_ButtonCarbs.png)
 
 * Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 * Belirli [önceden ayarlanmış geçici hedefler](../Configuration/Preferences#default-temp-targets) ilgili kutu işaretlenerek doğrudan ayarlanabilir.
@@ -308,7 +308,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 ## Bolus Sihirbazı
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus sihirbazı](../images/Home2020_BolusWizard_v2.png)
 
 Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
@@ -503,12 +503,12 @@ Aşağıdaki tedavilerin geçmişini görüntüler:
 ![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * KŞ kaynağı ayarlarınıza bağlı olarak bu sekme farklı şekilde adlandırılır.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* CGM okumalarının geçmişini gösterir ve arıza durumunda (örn. sıkıştırma düşük) okumayı kaldırma seçeneği sunar.
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Nightscout sitenizle bağlantının durumunu görüntüler.
+* Ayarlar [tercihlerde](../Configuration/Preferences#nsclient) yapılır. Ekranın sağ üst köşesindeki dişli çarka tıklayarak ilgili bölümü açabilirsiniz.
+* Sorun giderme için bu [sayfaya](../Usage/Troubleshooting-NSClient.md) bakın.
