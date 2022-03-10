@@ -482,12 +482,12 @@ Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabil
    * DIA (Duration of Insulin Action)
    * IC or I:C: Insulin to Carb ratio
    * ISF: Insulin Sensitivity Factor
-   * Basal rate
+   * Bazal oranı
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
-## Treatment
+## Tedavi
 
 History of the following treatments:
 
