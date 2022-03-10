@@ -364,8 +364,8 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ### Eylemler - bölüm M
 
-* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* [Profil değiştir](../Usage/Profiles#profile-switch) butonu, ana ekrandaki [mevcut profil](../Getting-Started/Screenshots#section-b-profile-target) butonuna basmaya bir alternatiftir.
+* [Geçici hedef](../Usage/temptarget#temp-targets) butonu, ana ekrandaki [mevcut hedef](../Getting-Started/Screenshots#section-b-profile-target) butonuna basmaya bir alternatif.
 * Geçici bir bazal oranı başlatma veya iptal etme düğmesi. Geçici bir bazal oranı ayarlandığında düğmenin "GEÇICIBAZAL" yerine "İPTAL x%" olarak değiştiğini lütfen unutmayın.
 * [Yayma boluslar](../Usage/Extended-Carbs#extended boluses) kapalı döngü ortamında gerçekten çalışmasa da, bazı insanlar yine de yayma bolus kullanma seçeneği istiyordu.
    
@@ -386,8 +386,8 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 #### Sensör seviyesi (pil)
 
-* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
-* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
+* xDrip+'ın güncel veya en eski 10 Aralık 2020 sürümü gerekiyor.
+* Libre sensör için MiaoMiao 2 gibi ek verici ile CGM gibi çalışır. (Teknik olarak sensör pil seviyesi bilgilerini xDrip+'a göndermesi gerekir.)
 * Eşikler [tercihlerde](../Configuration/Preferences#status-lights) ayarlanabilir.
 * Sensör seviyesi, telefonun pil seviyesiyle aynıysa, xDrip+ sürümünüz muhtemelen çok eskidir ve güncellenmesi gerekir.
    
@@ -395,8 +395,8 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ### Bakım portalı - bölüm O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
-* Prime/Fill allows you to record pump site and insulin cartridge change.
+* [Bölüm N](#careportal-section-n)'de görüntülenen KŞ kontrolü, hazırlama/doldurma, sensör yerleştirme ve pompa pil değişimi gibi verilerin temel dayanağı olan butonlardır.
+* Hazırlama/Doldurma, pompa set değişimi, insülin kartuş değişimi ve sensör değişimini kaydetmenizi sağlar.
 * Bölüm O, Nightscout portalını yansıtır. Yani alıştırma, duyuru ve soru notların özel biçimleridir.
 
 ### Araçlar - bölüm P
@@ -408,10 +408,10 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 #### GTD
 
 * Toplam günlük doz = bolus + günlük bazal
-* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
+* Doktorlar özellikle yeni pompaya başlayanlar için % 50:50'lik bir bazal bolus oranı kullanır. 
 * Bu nedenle oran GTD / 2 * TTB (Temel Toplam Bazal = 24 saat içindeki bazal oranın toplamı) olarak hesaplanır. 
 * Diğerleri, TTB için GTD'nin %32 ila %37 aralığını tercih eder. 
-* Like most of these rules-of-thumb it is of limited real validity. Not: Diyabetiniz değişiklik gösterebilir!
+* Bu genel kuralların çoğu gibi, geçerliliği sınırlıdır. Not: Diyabetiniz değişiklik gösterebilir!
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
@@ -419,7 +419,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ![İnsülin Profili](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
+* Bu [Konfigürasyon ayarları](../Configuration/Config-Builder#insulin)'nda seçtiğiniz insülinin aktivite profilini gösterir. 
 * MOR çizgi zamanla bozulduğu için enjekte edildikten sonra ne kadar insülin kaldığını, MAVİ çizgi ise ne kadar aktif olduğunu gösterir.
 * Sürecin genel olarak varsayıldığından çok daha uzun sürdüğünü not etmek önemlidir. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
