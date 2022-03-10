@@ -379,7 +379,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
    
    * sensor age & level (battery percentage)
    * insulin age & level (units)
-   * cannula age
+   * kanül yaşı
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
