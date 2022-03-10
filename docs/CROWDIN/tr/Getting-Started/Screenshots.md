@@ -384,12 +384,12 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
 
-#### Sensor level (battery)
+#### Sensör seviyesi (pil)
 
 * Needs xDrip+ nightly build Dec. 10, 2020 or newer.
 * Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
 * Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
-* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+* Sensör seviyesi, telefonun pil seviyesiyle aynıysa, xDrip+ sürümünüz muhtemelen çok eskidir ve güncellenmesi gerekir.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
 
