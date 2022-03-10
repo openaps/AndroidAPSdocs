@@ -130,7 +130,7 @@ Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevle
 
 ## Spesifik Insight hataları
 
-### Yayma Bolus
+### Extended bolus
 
 Aynı anda birden fazla yayma bolus hatalara neden olabileceğinden, bir seferde yalnızca bir yayma bolus kullanın.
 
