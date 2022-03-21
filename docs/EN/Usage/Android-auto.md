@@ -5,10 +5,7 @@
 ## AndroidAPS settings for Android Auto
 
 Use system notifications for alerts and notifications: 
-* Open 3-dot-menu on top right of home screen
-* Preferences
-* Scroll all the way down
-* Activate "Use system notifications..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
 ![Use system notifications for alerts and notifications](../images/AndroidAuto_01.png)
    
