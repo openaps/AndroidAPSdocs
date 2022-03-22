@@ -1,8 +1,8 @@
-# Temp-Targets
+# Geçici-Hedefler
 
-## What are Temp-Targets and where can I set and configure them?
+## Geçici Hedefler nedir ve bunları nerede ayarlayabilir ve yapılandırabilirim?
 
-With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets.
+“Geçici-Hedefler” (veya kısa GH) ile belirli bir süre içinde kan şekeri hedefinizi değiştirebilirsiniz. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets.
 
 ![Set default temp targets](../images/TempTarget_Default.png)
 
