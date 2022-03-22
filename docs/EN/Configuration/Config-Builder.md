@@ -57,7 +57,9 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 #### Change profile in Nighscout profile editor
 You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-It is necessary to clone the entire data set and not just a profile with the blue arrow! The new data set then carries the current date and can be activated via the tab "local profile".
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Profile helper
 
