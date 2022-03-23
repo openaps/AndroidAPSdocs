@@ -20,7 +20,7 @@ Bu en önemli Geçici-Hedef olarak kabul edilebilir. Bunun birkaç nedeni var:
 1. Hipoalgı: Normalde döngü KŞ düşüşünü yakalamalıdır, ancak bazen bunu döngüden daha iyi tahmin edebilirsiniz. Daha yüksek bir KŞ hedefi belirlerseniz döngü daha hızlı tepki verebilir.
 2. Hipo tedavi karbonhidratları yediğinizde, kan şekeriniz çok hızlı yükselecektir. Döngü, yükselişe karşı düzeltme yapar ve hatta SMB etkinse mikro boluslar verir. "Hipo Geçici-Hedef" bunu önleyebilir. 
 3. (gelişmiş, [Görev 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): OpenAPS SMB'de 100mg/dl veya 5.5mmol/l veya daha yüksek Geçici Hedefler için “Yüksek Geçici-Hedefler duyarlılığı arttırır” seçeneğini etkinleştirebilirsiniz. Bu durumda AndroidAPS duyarlılığı artar.
-4. (gelişmiş, [Görev 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): COB (Aktif karbonhidrat) > 0 ve "SMB'yi her zaman etkinleştir" seçili ise OpenAPS SMB etkin olsa bile, “Yüksek geçici hedeflerle SMB'yi etkinleştir"i devre dışı bırakarak geçici hedefler ekinken AndroidAPS'in SMB'leri vermesini engelleyebilirsiniz. 
+4. (advanced, [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active. 
 
 Not: Karbonhidrat butonu ile karbonhidrat girerseniz ve kan şekeriniz 72 mg/dl veya 4mmol/l'den düşükse, Hipo geçici hedefi otomatik olarak devreye girer.
 
