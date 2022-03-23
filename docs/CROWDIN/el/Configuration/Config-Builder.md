@@ -21,7 +21,9 @@
 ## Προφίλ
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
+* As of AAPS 3.0, only the local profile is available.
+
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 ### Local profile
 
@@ -56,6 +58,14 @@ You can easily create a new local profile from a profile switch. In this case ti
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+
+#### Change profile in Nighscout profile editor
+
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Profile helper
 
