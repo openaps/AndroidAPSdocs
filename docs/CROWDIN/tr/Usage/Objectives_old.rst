@@ -1,8 +1,8 @@
-Objectives as of Android APS 2.8.2.1
+Android APS 2.8.2.1 itibariyle görevler
 **************************************************
-This is not the latest version of the Android APS Objectives.  This page details the Objectives that were in place prior to version 3.0.  Anyone using an older version of Android (i.e. prior to Android 9) and Android APS version 2.8.2.1 should refer to this page.  
+Bu, Android APS Görevlerinin en son sürümü değil.  Bu sayfa, sürüm 3.0'dan önce yürürlükte olan görevleri detaylandırır.  Android'in daha eski bir sürümünü kullanan herkes (ör. Android 9) öncesi ve Android APS 2.8.2.1 sürümü bu sayfaya başvurmalıdır.  
 
-Please see `this page <../Usage/Objectives.html>`_ for the current set of Objectives.
+Geçerli görevler kümesi için lütfen `bu sayfaya <../Usage/Objectives.html>`_ bakın.
 
 AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
 
@@ -125,23 +125,23 @@ Objective 8: Adjust basals and ratios if needed, and then enable autosens
 *Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
 
-Objective 9: Try additional features for daytime use and gain confidence in your closed loop system
+Görev 9: Gündüz kullanımı için ek özellikleri deneyin ve kapalı döngü sisteminize güvenin
 ====================================================================================================
-* Before AAPS version 2.7 meal assist (MA) was the basic algorithm for AAPS and completing objective 8 was necessary to activate `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
+* AAPS sürüm 2.7'den önce öğün desteği (MA), AAPS için temel algoritmaydı ve görev 8'i tamamlamak, 'gelişmiş öğün desteğini (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__etkinleştirmek için gerekliydi.
+* 'Gelişmiş yemek yardımı (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>'__, AAPS sürüm 2.7'den itibaren standart algoritma olduğundan, takip eden 28 günü henüz kullanmadığınız özellikleri denemek için kullanın ve kapalı döngü sisteminize daha fazla güvenin.
 
 
-Objective 10: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+Görev 10: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
 ====================================================================================================
 * You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
 * Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
 * min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
 
 
-Objective 11: Automation
+Görev 11: Otomasyon
 ====================================================================================================
-* You have to start objective 11 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
+* `Otomasyonu <../Usage/Automation.html>`_ kullanabilmek için görev 11'e başlamanız gerekir.
+* `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ sınav dahil tüm göevleri tamamladığınızdan emin olun.
 * Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
 
 

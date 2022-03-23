@@ -6,12 +6,9 @@
 
 Benutze Systemmeldungen für Alarme und Meldungen:
 
-* 3-Punkt-Menü auf der rechten Seite des Home-Bildschirms öffnen
-* Einstellungen
-* Ganz nach unten scrollen
-* Aktiviere "Benutze Systemmeldungen für Alarme..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Benutze Systemmeldungen für Alarme und Meldungen](../images/AndroidAuto_01.png)
+![Benutze Systemmeldungen für Alarme und Meldungen](../images/AndroidAuto_01v2.png)
 
 ## Einstellungen in der Android Auto App auf dem Smartphone
 

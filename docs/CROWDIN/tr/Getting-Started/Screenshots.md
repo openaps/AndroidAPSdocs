@@ -2,7 +2,7 @@
 
 ## Giriş Ekranı
 
-![Homescreen V2.7](../images/Home2020_Homescreen.png)
+![Anaekran V2.7](../images/Home2020_Homescreen.png)
 
 Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gün ihtiyaç duyacağınız bilgilerin çoğunu içerir.
 
@@ -16,7 +16,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Geçerli Profil
 
-![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
+![Profil değişimi kalan süre](../images/Home2020_ProfileSwitch.png)
 
 * Mevcut profil sol çubukta görüntülenir.
 * Profil çubuğuna kısa basarak profil ayrıntılarını görüntüleyebilirsiniz
@@ -25,7 +25,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Hedef
 
-![Temp target remaining duration](../images/Home2020_TT.png)
+![Geçici hedef kalan süre](../images/Home2020_TT.png)
 
 * Mevcut hedefiniz sağ çubukta görüntülenir.
 * [Geçici hedef](../Usage/temptarget.md) belirlemek için hedef çubuğuna kısa basın.
@@ -33,7 +33,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
 
 #### Dinamik hedef ayarının görselleştirilmesi
 
-![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
+![Dinamik hedef ayarının görselleştirilmesi](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS, SMB algoritması kullanıyorsanız, hedefinizi hassasiyete göre dinamik olarak ayarlayabilir.
 * [Aşağıdaki seçeneklerden](../Configuration/Preferences#openaps-smb-settings) birini veya her ikisini etkinleştirin 
@@ -71,7 +71,7 @@ Bu AndroidAPS'i açtığınızda karşılaşacağınız ilk ekrandır ve her gü
    
    * Döngü simgesine kısa basarsanız, iletişim kutusundaki seçimden sonra bir onay istenecektir. (Uzun basarak diyalog penceresi açarsanız istenmez)
    
-   ![Loop status menu](../images/Home2020_Loop_Dialog.png)
+   ![Döngü durumu menüsü](../images/Home2020_Loop_Dialog.png)
 
 #### KŞ uyarı işareti
 
@@ -117,7 +117,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ### Bölüm D - IOB, COB, BO ve OD
 
-![Section D](../images/Home2020_TBR.png)
+![Bölüm D](../images/Home2020_TBR.png)
 
 * Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
    
@@ -142,7 +142,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ### Bölüm E - Durum ışıkları
 
-![Section E](../images/Home2020_StatusLights.png)
+![Bölüm E](../images/Home2020_StatusLights.png)
 
 * Durum ışıkları için görsel bir uyarı verir 
    * Kanül yaşı
@@ -174,7 +174,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 * Ana grafikte hangi bilgilerin görüntüleneceğini seçmek için ana grafiğin sağ tarafındaki üçgene tıklayın.
 * Ana grafik için sadece "\---\---- Grafik 1 \---\----" satırının üzerindeki üç seçenek mevcuttur.
    
-   ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+   ![Ana grafik ayarı](../images/Home2020_MainGraphSetting.png)
 
 #### Tahmin çizgileri
 
@@ -213,7 +213,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 * Ana grafiğin altında en fazla dört ek grafik etkinleştirebilirsiniz.
 * Ek grafikler için ayarları açmak için [ana grafiğin](../Getting-Started/Screenshots#section-f-main-graph) sağ tarafındaki üçgeni tıklayın ve aşağı kaydırın.
 
-![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
+![Ek grafik ayarları](../images/Home2020_AdditionalGraphSetting.png)
 
 * Ek bir grafik eklemek için adının sol tarafındaki kutuyu işaretleyin (yani \---\---- Grafik 1 \---\----).
 
@@ -259,7 +259,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 ### Bölüm H - Butonlar
 
-![Homescreen buttons](../images/Home2020_Buttons.png)
+![Anaekran butonları](../images/Home2020_Buttons.png)
 
 * İnsülin, karbonhidrat ve hesap makinesi butonları neredeyse her zaman açıktır.
    
@@ -269,7 +269,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 #### İnsülin
 
-![Insulin button](../images/Home2020_ButtonInsulin.png)
+![İnsülin butonu](../images/Home2020_ButtonInsulin.png)
 
 * [Bolus hesaplayıcı](#bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
 * [Yakında Öğün GH](../Configuration/Preferences#default-temp-targets) kutusunu işaretleyerek otomatik olarak yakında öğün hedefinizi başlatabilirsiniz.
@@ -277,7 +277,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 #### Karbonhidrat
 
-![Carbs button](../images/Home2020_ButtonCarbs.png)
+![Karbonhidrat butonu](../images/Home2020_ButtonCarbs.png)
 
 * Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 * Belirli [önceden ayarlanmış geçici hedefler](../Configuration/Preferences#default-temp-targets) ilgili kutu işaretlenerek doğrudan ayarlanabilir.
@@ -308,7 +308,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 ## Bolus Sihirbazı
 
-![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
+![Bolus sihirbazı](../images/Home2020_BolusWizard_v2.png)
 
 Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
@@ -323,7 +323,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 * Yenecek karbonhidratlar için alarm onay kutusu işaretlenebilir. Böylece AndroidAPS'e girdiğiniz karbonhidratları ne zaman yemeniz gerektiği size hatırlatılabilir. (Girilen süre sonunda karbonhidratlar sisteme ilave edilir.)
    
-   ![BolusWizard with Eating Reminder](../images/Home2021_BolusWizard_EatingReminder.png)
+   ![Yemek Hatırlatıcılı Bolus Sihirbazı](../images/Home2021_BolusWizard_EatingReminder.png)
 
 ### Bölüm J
 
@@ -352,7 +352,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 #### Yanlış Aktif Karbonhidrat tespiti
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
 * Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan COB değerinin yanlış olabileceğini algılamıştır. 
 * Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
@@ -360,155 +360,155 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ## Eylem Sekmesi
 
-![Actions tab](../images/Home2021_Action.png)
+![Eylem Sekmesi](../images/Home2021_Action.png)
 
 ### Eylemler - bölüm M
 
-* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* [Profil değiştir](../Usage/Profiles#profile-switch) butonu, ana ekrandaki [mevcut profil](../Getting-Started/Screenshots#section-b-profile-target) butonuna basmaya bir alternatiftir.
+* [Geçici hedef](../Usage/temptarget#temp-targets) butonu, ana ekrandaki [mevcut hedef](../Getting-Started/Screenshots#section-b-profile-target) butonuna basmaya bir alternatif.
+* Geçici bir bazal oranı başlatma veya iptal etme düğmesi. Geçici bir bazal oranı ayarlandığında düğmenin "GEÇICIBAZAL" yerine "İPTAL x%" olarak değiştiğini lütfen unutmayın.
+* [Yayma boluslar](../Usage/Extended-Carbs#extended boluses) kapalı döngü ortamında gerçekten çalışmasa da, bazı insanlar yine de yayma bolus kullanma seçeneği istiyordu.
    
-   * This option is only available for Dana RS and Insight pumps. 
-   * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
+   * Bu seçenek yalnızca Dana RS ve Insight pompaları için mevcuttur. 
+   * Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
+   * Bu seçeneği kullanmadan önce [ayrıntıları](../Usage/Extended-Carbs#extended boluses) okuduğunuzdan emin olun.
 
-### Careportal - section N
+### Bakım portalı - bölüm N
 
-* Displays information on
+* İçinde görüntülebilir bilgiler
    
-   * sensor age & level (battery percentage)
-   * insulin age & level (units)
-   * cannula age
-   * pump battery age & level (percentage
+   * sensör yaşı & seviyesi (yüzdelik pil)
+   * insülin yaşı & seviyesi (ünite bazında)
+   * kanül yaşı
+   * pompa pil yaşı & seviyesi (yüzdelik bazda
 
-* Less information will be shown if [low resolution skin](../Configuration/Preferences#skin) is used.
+* [düşük çözünürlüklü dış görünüm](../Configuration/Preferences#skin) kullanılırsa daha az bilgi gösterilir.
 
-#### Sensor level (battery)
+#### Sensör seviyesi (pil)
 
-* Needs xDrip+ nightly build Dec. 10, 2020 or newer.
-* Works for CGM with additional transmitter such as MiaoMiao 2. (Technically sensor has to send cat level information to xDrip+.)
-* Thresholds can be set in [preferences](../Configuration/Preferences#status-lights).
-* If sensor level is the same as phone battery level you xDrip+ version is probably too old and needs an update.
+* xDrip+'ın güncel veya en eski 10 Aralık 2020 sürümü gerekiyor.
+* Libre sensör için MiaoMiao 2 gibi ek verici ile CGM gibi çalışır. (Teknik olarak sensör pil seviyesi bilgilerini xDrip+'a göndermesi gerekir.)
+* Eşikler [tercihlerde](../Configuration/Preferences#status-lights) ayarlanabilir.
+* Sensör seviyesi, telefonun pil seviyesiyle aynıysa, xDrip+ sürümünüz muhtemelen çok eskidir ve güncellenmesi gerekir.
    
-   ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
+   ![Sensör seviyeleri telefonun pil seviyesine eşit](../images/Home2021_ActionSensorBat.png)
 
-### Careportal - section O
+### Bakım portalı - bölüm O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
-* Prime/Fill allows you to record pump site and insulin cartridge change.
-* Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
+* [Bölüm N](#careportal-section-n)'de görüntülenen KŞ kontrolü, hazırlama/doldurma, sensör yerleştirme ve pompa pil değişimi gibi verilerin temel dayanağı olan butonlardır.
+* Hazırlama/Doldurma, pompa set değişimi, insülin kartuş değişimi ve sensör değişimini kaydetmenizi sağlar.
+* Bölüm O, Nightscout portalını yansıtır. Yani alıştırma, duyuru ve soru notların özel biçimleridir.
 
-### Tools - section P
+### Araçlar - bölüm P
 
-#### History Browser
+#### Geçmiş Tarayıcısı
 
-* Allows you to ride back in AAPS history.
+* AAPS geçmişinde geri dönmenizi sağlar.
 
 #### GTD
 
-* Total daily dose = bolus + basal per day
-* Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
-* Therefore ratio is calculated as TDD / 2 * TBB (Total base basal = sum of basal rate within 24 hours). 
-* Others prefer range of 32% to 37% of TDD for TBB. 
-* Like most of these rules-of-thumb it is of limited real validity. Note: Your diabetes may vary!
+* Toplam günlük doz = bolus + günlük bazal
+* Doktorlar özellikle yeni pompaya başlayanlar için % 50:50'lik bir bazal bolus oranı kullanır. 
+* Bu nedenle oran GTD / 2 * TTB (Temel Toplam Bazal = 24 saat içindeki bazal oranın toplamı) olarak hesaplanır. 
+* Diğerleri, TTB için GTD'nin %32 ila %37 aralığını tercih eder. 
+* Bu genel kuralların çoğu gibi, geçerliliği sınırlıdır. Not: Diyabetiniz değişiklik gösterebilir!
 
-![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+![Geçmiş tarayıcı + GTD](../images/Home2021_Action_HB_TDD.png)
 
-## Insulin Profile
+## İnsülin Profili
 
-![Insulin Profile](../images/Screenshot_insulin_profile.png)
+![İnsülin Profili](../images/Screenshot_insulin_profile.png)
 
-* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder#insulin). 
-* The PURPLE line shows how much insulin remains after it has been injected as it decays with time and the BLUE line shows how active it is.
-* The important thing to note is that the decay has a long tail. 
-* If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
-* However, when you are looping the long tail matters as the calculations are far more precise and these small amounts add up when they are subjected to the recursive calculations in the AndroidAPS algorithm.
+* Bu [Konfigürasyon ayarları](../Configuration/Config-Builder#insulin)'nda seçtiğiniz insülinin aktivite profilini gösterir. 
+* MOR çizgi zamanla bozulduğu için enjekte edildikten sonra ne kadar insülin kaldığını, MAVİ çizgi ise ne kadar aktif olduğunu gösterir.
+* Sürecin genel olarak varsayıldığından çok daha uzun sürdüğünü not etmek önemlidir. 
+* Pompa ile elle bolus gönderiyorsanız, muhtemelen insülinin yaklaşık 3.5 saat içinde azaldığını varsayıyorsunuz. 
+* Ancak, döngü ile pompa kullanırken uzun insülin zamanı önemlidir. Çünkü hesaplamalar çok daha kesindir ve bu küçük miktarlar, AndroidAPS algoritmasındaki hesaplamalara eklenirler.
 
-For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni IOB Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
 
-And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+Ve bununla ilgili mükemmel bir blog makalesini burada [Kullandığımız insülin etki (DIA) sürelerinde neden düzenli olarak yanılıyoruz ve neden önemli…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action -dia-times-we-use-and-why-it-matters/) okuyabilirsiniz.
 
-And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+Ve daha da fazlası: [Üssel İnsülin Eğrileri + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## Pompa Durumu
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+![Pompa Durumu](../images/Screenshot_PumpStatus.png)
 
-* Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.md) for details.
+* Pompa durumu hakkında farklı bilgiler. Görüntülenen bilgiler pompa modelinize bağlıdır.
+* Ayrıntılar için [pompalar sayfasına](../Hardware/pumps.md) bakın.
 
-## Care Portal
+## Bakım portalı
 
 Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır.
 
-### Review carb calculation
+### Karbonhidrat hesaplamasını inceleyin
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Tedavi sekmesinde karbonhidrat hesaplamasını inceleyin](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* İnsülin dozunu hesaplamak için [Bolus Sihirbazını](../Getting-Started/Screenshots#bolus-wizard) kullandıysanız, bu hesaplamayı daha sonra tedaviler sekmesinde inceleyebilirsiniz.
+* Sadece yeşil Hesap bağlantısına basın. (Pompaya göre kullanılan insülin ve karbonhidratlar da tedavilerde tek satırda gösterilebilir.)
 
-### Carb correction
+### Karbonhidrat düzeltme
 
-![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
+![1 veya 2 satırda tedavi](../images/Treatment_1or2_lines.png)
 
-Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
+Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (yani, karbonhidratları fazla veya az tahmin etmişsinizdir).
 
-1. Check and remember actual COB and IOB on homescreen.
-2. Depending on pump in treatment tab carbs might be shown together with insulin in one line or as a separate entry (i.e. with Dana RS).
-3. Remove the entry with the faulty carb amount.
-4. Make sure carbs are removed successfully by checking COB on homescreen again.
-5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
+1. Ana ekranda güncel COB ve IOB'yi kontrol edin ve hatırlayın.
+2. Tedavi sekmesinde pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir giriş olarak (örn. Dana RS ile) gösterilebilir.
+3. Hatalı karbonhidrat girişini kaldırın.
+4. Ana ekranda COB'u tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
+5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, IOB için de aynısını yapın.
    
-   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
+   -> Karbonhidratlar anlatıldığı gibi çıkarılmazsa ve burada (6.madde) açıklandığı gibi ilave karbonhidrat eklerseniz, COB çok yüksek olur ve bu da çok yüksek insülin iletimine yol açabilir.
 
-6. Enter correct carb amount through carbs button on homescreen and make sure to set the correct event time.
+6. Ana ekrandaki karbonhidrat butonu aracılığıyla doğru karbonhidrat miktarını girin ve doğru etkinlik zamanını ayarladığınızdan emin olun.
 
-7. If there is just one line in treatment tab including carbs and insulin you have to add also the amount of insulin. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
+7. Tedavi sekmesinde karbonhidrat ve insülin içeren tek satır varsa, insülin miktarını da eklemeniz gerekir. Doğru etkinlik saatini ayarladığınızdan emin olun ve yeni girişi onayladıktan sonra ana ekranda IOB'u kontrol edin.
 
-## Loop, AMA / SMB
+## Döngü, AMA / SMB
 
-* These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
-* Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* Bu sekmeler, algoritmanın hesaplamaları ve AAPS'nin neden böyle davrandığı hakkında ayrıntıları gösterir.
+* Sistemin CGM'den yeni bir okuma aldığı her sefer yeniden hesaplama yapılır.
+* Daha fazla ayrıntı için [Konfigürasyon ayarları sayfasındaki APS bölümüne](../Configuration/Config-Builder#aps) bakın.
 
 ## Profil
 
 ![Profil](../images/Screenshots_Profile.png)
 
-* Profile contains information on your individual diabetes settings:
+* Profil, kişisel diyabet ayarlarınız hakkında bilgiler içerir:
    
-   * DIA (Duration of Insulin Action)
-   * IC or I:C: Insulin to Carb ratio
-   * ISF: Insulin Sensitivity Factor
-   * Basal rate
-   * Target: Blood glucose level that you want AAPS to be aiming for
+   * İES (İnsülin Etki Süresi)
+   * IC veya I:C: Karbonhidrat insülin oranı
+   * IDF: İnsülin Duyarlılık Faktörü
+   * Bazal oranı
+   * HDF: AAPS'in hedeflemesini istediğiniz kan şekeri seviyesi
 
-* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
+* 3.0 sürümünden itibaren yalnızca [yerel profil](../Configuration/Config-Builder#local-profile) mümkündür. Yerel profil akıllı telefonunuzda düzenlenebilir ve Nightscout sitenizle senkronize edilebilir.
 
-## Treatment
+## Tedavi
 
-History of the following treatments:
+Aşağıdaki tedavilerin geçmişini görüntüler:
 
-* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
-* [Yayma Bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-* Temporary basal rate
-* [Temporary target](../Usage/temptarget.md)
-* [Profile switch](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* Bolus & karbonhidrat -> geçmişi düzeltmek için [kaldır](../Getting-Started/Screenshots#carb-correction) seçeneği
+* [Extended bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Geçici bazal oranı
+* [Geçici hedef](../Usage/temptarget.md)
+* [Profil değiştir](../Usage/Profiles.md)
+* [Bakım portalı](../Usage/CPbefore26#careportal-discontinued) Eylem sekmesinden girilen notlar ve diyaloglardaki notlar
 
-## BG Source - xDrip+, BYODA...
+## KŞ Kaynağı - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![KŞ Kaynağı sekmesi - burada xDrip](../images/Screenshots_BGSource.png)
 
-* Depending on your BG source settings this tab is named differently.
-* Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
+* KŞ kaynağı ayarlarınıza bağlı olarak bu sekme farklı şekilde adlandırılır.
+* CGM okumalarının geçmişini gösterir ve arıza durumunda (örn. sıkıştırma düşük) okumayı kaldırma seçeneği sunar.
 
 ## NSClient
 
 ![NSClient](../images/Screenshots_NSClient.png)
 
-* Displays status of the connection with your Nightscout site.
-* Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.
-* For troubleshooting see this [page](../Usage/Troubleshooting-NSClient.md).
+* Nightscout sitenizle bağlantının durumunu görüntüler.
+* Ayarlar [tercihlerde](../Configuration/Preferences#nsclient) yapılır. Ekranın sağ üst köşesindeki dişli çarka tıklayarak ilgili bölümü açabilirsiniz.
+* Sorun giderme için bu [sayfaya](../Usage/Troubleshooting-NSClient.md) bakın.

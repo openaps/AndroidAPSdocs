@@ -19,7 +19,7 @@ Paramètres
   .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Débits de Basal non alignés sur les heures
 
-* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+* `Pompe - données provenant de différentes pompes <../Installing-AndroidAPS/update3_0.html#message-d-erreur-donnees-provenant-de-pompes-differentes>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Message d'échec : Données provenant de pompes différentes

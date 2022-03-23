@@ -227,7 +227,7 @@ Les options de développement Android permettent à votre montre de rester réve
 
 Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une détérioration de l'écran, en particulier sur les anciens écrans OLED. Les montres diminueront généralement l'éclairage de l'écran pour éviter le déteriorer; veuillez consulter le manuel utilisateur, le fabricant ou internet pour obtenir des conseils.
 
-![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+![Cadran Mode Nuit](../images/Watchface_nightstand.jpg)
 
 ![Interface simplifiée](../images/Watchface_simplified_ui.png)
 

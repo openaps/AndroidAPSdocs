@@ -73,9 +73,9 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
-#### BG warning sign
+#### Avertissement Glycémie
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
 *Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
@@ -91,7 +91,7 @@ However, when there are a lot of duplicates, it might be easier to
 
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
 You need to find out why you get duplicate BGs:
 
@@ -104,7 +104,7 @@ You need to find out why you get duplicate BGs:
 
 * The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
 * Usually you do not have to take any action. The closed loop will continue to work!
 

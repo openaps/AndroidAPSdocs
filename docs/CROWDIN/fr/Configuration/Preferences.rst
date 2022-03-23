@@ -308,7 +308,7 @@ Paramètres avancés (OpenAPS AMA)
 Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
-* You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+* Vous devez avoir démarré `l'objectif 9 <../Usage/Objectives.html#objectif-9-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb>`_ pour utiliser les SMB.
 
 * Les trois premiers paramètres sont expliqués `ci-dessus <../Configuration/Preferences.html#debit-max-en-u-h-pour-une-temp-basal>`__.
 * Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.

@@ -39,19 +39,19 @@
 * Pour Dash: Le numéro de série est imprimé sur le Pod.
 * Pour EROS, il est également listé dans l'onglet POD dans "Numéro de série"
 
-## Warning signal beneath BG
+## Signal d'avertissement à côté de la glycémie
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
-  ![Red BG warning](../images/bg_warn_red.png)
+  ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
-  ![Yellow BG warning](../images/bg_warn_yellow.png)
+  ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+Pour plus de détails, voir la page [écrans AAPS](../Getting-Started/Screenshots#avertissement-glycemie)
 
 
-## Failure message: Data from different pump
+## Message d'erreur : Données provenant de pompes différentes
 
-   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+   ![Message d'erreur : Données provenant de pompes différentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Pour résoudre ce problème, allez dans la [Configuration](../Configuration/Config-Builder#pompe). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.

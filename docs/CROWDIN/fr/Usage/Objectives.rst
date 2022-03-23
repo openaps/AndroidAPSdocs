@@ -143,6 +143,6 @@ Si vous voulez revenir en arrière sur les objectifs terminés pour quelque rais
 .. image:: ../images/Objective_ClearFinished.png
   :alt: Retour arrières objectifs
 
-Objectives in Android APS before version 3.0
+Objectifs dans Android APS avant la version 3.0
 ====================================================================================================
-One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.html>`_.
+Un objectif a été supprimé lors de la sortie d'Android APS 3.0.  Les utilisateurs d'Android APS version 2.8.2.1 qui sont sur des version d'Android plus anciens (par ex. antérieur à la version 9) utiliseront un jeu d'objectifs plus ancien qui peut être trouvé `ici <../Usage/Objectives_old.html>`_.
