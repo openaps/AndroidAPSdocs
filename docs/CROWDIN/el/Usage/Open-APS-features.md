@@ -30,7 +30,7 @@
 
 3. Πρόσθετοι υπολογισμοί για την πρόβλεψη της πορείας της γλυκόζης, π.χ. από UAM (μη αναγγελθέντα γεύματα). Ακόμα και χωρίς την εισαγωγή υδατανθράκων από τον χρήστη, το UAM μπορεί να ανιχνεύσει αυτόματα μια σημαντική αύξηση των επιπέδων γλυκόζης λόγω γευμάτων, αδρεναλίνης ή άλλων επιδράσεων και να προσπαθήσει να το προσαρμόσει με SMB. Για να είμαστε στην ασφαλή πλευρά, αυτό λειτουργεί και στην άλλη κατεύθυνση και μπορεί να σταματήσει την SMB νωρίτερα, εάν εμφανιστεί μια απροσδόκητα γρήγορη πτώση της γλυκόζης. Αυτός είναι ο λόγος για τον οποίο η UAM πρέπει να είναι πάντα ενεργή στην SMB.
 
-**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -263,18 +263,18 @@ Default value: 2
   <tr>
     <td>MAXIOB_AMA</td>
     <td>3,0</td>
-    <td>3,5</td>
+    <td>5,0</td>
     <td>7,0</td>
     <td>12,0</td>
     <td>25,0</td>
   </tr>
   <tr>
     <td>MAXIOB_SMB</td>
-    <td>3,0</td>
     <td>7,0</td>
-    <td>12,0</td>
-    <td>25,0</td>
-    <td>45,0</td>
+    <td>13,0</td>
+    <td>22,0</td>
+    <td>30,0</td>
+    <td>70,0</td>
   </tr>
   <tr>
     <td>MAXBASAL</td>

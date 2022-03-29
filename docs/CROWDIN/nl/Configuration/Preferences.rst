@@ -308,7 +308,8 @@ Geavanceerde instellingen (OpenAPS AMA)
 OpenAPS SMB instellingen
 -----------------------------------------------------------
 * In tegenstelling tot AMA gebruikt `SMB <../Usage/Open-APS-functies.html#super-micro-bolus-smb>`_ meestal geen tijdelijke basaalstanden om glucosewaarden bij te sturen, maar voornamelijk kleine bolusen: de zgn super micro bolussen.
-* Je moet `Doel 10 <../Usage/Objectives.html#doel-10-activeren-van-extra-functies-overdag-zoals-smb-super-micro-bolus>`_ hebben voltooid om SMB te kunnen gebruiken.
+* You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+
 * De eerste drie instellingen worden `hierboven <../Configuration/Preferences.html#maximaal-instelbaar-basaal-e-u>`_ uitgelegd.
 * De verschillende opties voor inschakelen van SMB worden beschreven op de pagina met `OpenAPS functies <../Usage/Open-APS-features.html#activeer-smb>`_.
 * *Tijdsinterval in minuten tussen afgeven van SMBs* is een beperking voor hoe snel na elkaar twee SMBs mogen worden gegeven, dit staat standaard op 4 min. Deze waarde voorkomt dat het systeem te vaak SMB afgeeft (bijvoorbeeld in geval van een tijdelijk streefdoel). Wijzig deze instelling alleen als je precies weet wat de gevolgen zijn. 

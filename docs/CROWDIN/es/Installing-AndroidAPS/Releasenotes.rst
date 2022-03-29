@@ -58,7 +58,7 @@ Pasos de preparación
 Cambios
 ----------------------
 * 100k lineas cambiadas, 105k nuevas líneas de código
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Soporte para Glunovo

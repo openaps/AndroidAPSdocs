@@ -20,7 +20,7 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 
 * `Evènement d'automatisation <../Usage/Automation.html>`_
 * Paramètres du `Générateur de configuration <../Configuration/Config-Builder.html>`_
-* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
+* Paramètres des `Profils locaux <../Configuration/Config-Builder.html#profil-local>`_
 * Résultats des `Objectifs <../Usage/Objectives.html>`_ y compris les résultats de l'objectif 3 `Prouver ses connaissances <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_
 * `Préférences <../Configuration/Preferences.html>`__ y compris les paramètres `NSClient <../Configuration/Preferences.html#nsclient>`_
 

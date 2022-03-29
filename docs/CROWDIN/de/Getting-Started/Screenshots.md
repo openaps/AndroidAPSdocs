@@ -73,47 +73,47 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    
    ![Statusmenü Loop](../images/Home2020_Loop_Dialog.png)
 
-#### BG warning sign
+#### BG Warnzeichen
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Hinweis*: Für AAPS-Berechnungen werden bis zu 30 Stunden berücksichtigt. Daher kann es auch nach der Lösung des zugrunde liegenden Problems bis zu 30 Stunden dauern, bis das gelbe Dreieck nach dem letzten unregelmäßigen Intervall verschwunden ist.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Um es sofort zu entfernen, musst Du ein paar Einträge manuell aus der Registerkarte Dexcom/xDrip+ löschen.
 
-However, when there are a lot of duplicates, it might be easier to
+Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
-* [backup your settings](../Usage/ExportImportSettings.rst),
-* reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.rst) again
+* [sichere deine Einstellungen](../Usage/ExportImportSettings.rst),
+* setze deine Datenbank im Wartungsmenü zurück und
+* [Importiere deine Einstellungen](../Usage/ExportImportSettings.rst) erneut
 
-##### Red warning sign: Duplicate BG data
+##### Rotes Warndreieck: Doppelte BG-Daten
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erhältst doppelte BG-Daten, die den Loop daran hindern seine Arbeit richtig zu machen. Daher wird der Loop so lange deaktiviert, bis das Problem gelöst ist.
 
-![Red BG warning](../images/bg_warn_red.png)
+![Rotes BG-Warndreieck](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your NS site?
-* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+* Ist Dexcom Bridge auf deiner NS-Seite aktiviert? Deaktiviere die Dexcom Bridge, indem Du zu heroku (oder einem anderen Hosting-Provider) gehst, dort die "enable" Variable bearbeitest und den "bridge" Teil dort entfernst. (Details zu heroku [findest Du hier](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Laden mehrere Quellen deine BG zu NS hoch? Wenn Du die BYODA-App verwendest, aktiviere den Upload in AAPS, aber aktiviere ihn nicht in xDrip+, falls das der Fall ist.
+* Hast du Follower die deine BG erhalten und die diese auch wieder auf deine NS-Seite hochladen?
+* Letzter Ausweg: In AAPS in den NS Client Einstellungen die Sync-Einstellungen auswählen und die Option "CGM Daten von NS akzeptieren" deaktivieren.
 
-##### Yellow warning sign
+##### Gelbes Warndreieck
 
-* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+* Das gelbe Warnsignal weist darauf hin, dass BG-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige BGs fehlen.
    
-   ![Yellow BG warning](../images/bg_warn_yellow.png)
+   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-* Usually you do not have to take any action. The closed loop will continue to work!
+* Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
 
-* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
-* Special note for libre users:
+* Da ein Sensorwechsel den konstanten Fluss der BG-Daten unterbricht, ist ein gelbes Warndreieck nach dem Wechsel des Sensors normal und es gibt nichts zu befürchten.
+* Spezieller Hinweis für Libre-Nutzer:
    
-   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-   * Also jumpy readings interrupt the continous flow.
-   * Therefore the yellow warning sign will be 'always on' for libre users.
+   * Alle Libre-Sensoren springen alle paar Stunden um ein oder zwei Minuten, was dazu führt, dass es nie zu einen perfekten Strom von regulären BG-Intervallen kommt.
+   * Auch sprunghafte Änderungen der Messwerte unterbrechen den kontinuierlichen Datenstrom.
+   * Daher bleibt das gelbe Warndreieck für Libre-Nutzer immer sichtbar.
 
 ### Abschnitt D - IOB, COB, BR und AS
 
@@ -226,7 +226,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält Insulin aus Bolus und temporärem Basal (** schließt aber Basalraten aus deinem Profil aus**).
 * Wenn es keine [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), keine Boli und keine TBR während der DIA-Zeit gäbe, wäre dies Null.
 * Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
+* Das Abklingverhalten hängt von den [Einstellungen zum Insulin und zum DIA im Profil](../Configuration/Config-Builder#local-profile) ab. 
 
 #### Aktive Kohlenhydrate
 
@@ -261,9 +261,9 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are almost'always on'.
+* Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind "immer an".
    
-   * If connection to pump is lost, the insulin button will not be visible.
+   * Wenn die Verbindung zur Pumpe unterbrochen ist, ist die Schaltfläche 'Insulin' nicht sichtbar.
 
 * Andere Schaltflächen müssen in den [Einstellungen ](../Configuration/Preferences#schaltflachen) konfiguriert werden.
 
@@ -436,7 +436,7 @@ Und noch mehr bei: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/201
 ![Status der Pumpe](../images/Screenshot_PumpStatus.png)
 
 * Verschiedene Informationen über den Status Deiner Pumpe. Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
-* Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.rst).
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Careportal (Behandlungen)
 
@@ -485,7 +485,7 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
+* Ab Version 3.0 ist nur ein [lokales Profil](../Configuration/Config-Builder#local-profile) möglich. Das lokale Profil kann auf Deinem Smartphone bearbeitet und mit Deiner Nightscout-Seite synchronisiert werden.
 
 ## Bolus
 

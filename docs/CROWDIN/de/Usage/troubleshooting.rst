@@ -19,10 +19,10 @@ Einstellungen
   .. image:: ../images/Screen_DifferentPump.png
     :alt: Fehler: Basal ist nicht auf Stunden ausgerichtet
 
-* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+* `Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber<../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
-    :alt: Failure message: Data from different pump
+    :alt: Fehlermeldung: Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber
 
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_

@@ -63,13 +63,19 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 ## 3. Build the Signed APK
 
-* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Transfer the apk
 
-You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it.
 
-## 5. Check AAPS version on phone
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+
+## 5. Install apk
+
+Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
+
+## 6. Check AAPS version on phone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 

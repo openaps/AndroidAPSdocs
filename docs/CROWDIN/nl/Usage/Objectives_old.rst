@@ -2,7 +2,7 @@ Objectives as of Android APS 2.8.2.1
 **************************************************
 This is not the latest version of the Android APS Objectives.  This page details the Objectives that were in place prior to version 3.0.  Anyone using an older version of Android (i.e. prior to Android 9) and Android APS version 2.8.2.1 should refer to this page.  
 
-Please see `this page <../Usage/Objectives.rst>`_ for the current set of Objectives.
+Please see `this page <../Usage/Objectives.html>`_ for the current set of Objectives.
 
 AndroidAPS heeft een reeks leerdoelen die je moet doorlopen, zodat je alle opties en instellingen leert kennen om veilig te kunnen loopen.  De leerdoelen zorgen ervoor dat je alles goed hebt ingesteld, en dat je snapt wat het systeem doet en waarom. Zodat je erop kunt vertrouwen dat het de juiste keuzes maakt.
 

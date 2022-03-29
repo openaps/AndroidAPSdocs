@@ -1,11 +1,11 @@
 Préférences
 ***********************************************************
-* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+* **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Ouvrir les préférences
 
-* Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. pump tab) by opening this tab and clicking Plugin preferences.
+* Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Ouvrir les préférences du plugin
@@ -34,8 +34,8 @@ Général
 **Langue**
 
 * Nouvelle option pour utiliser la langue par défaut du téléphone (recommandé). 
-* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
-* Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. This is due to an android issue that overriding the default android language sometimes doesn't work.
+* Si vous voulez AAPS dans une autre langue que la langue du téléphone, vous pouvez choisir parmi une large variété.
+* Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Préférences > Général
@@ -49,9 +49,9 @@ Protection
 Mot de passe principal
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Nécessaire pour pouvoir `exporter les paramètres <../Usage/ExportImportSettings.html>`_ car ils sont chiffrés depuis la version 2.7.
-  **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. This is a known issue of OnePlus on some phones.**
+  **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
-* Open Preferences (three-dot menu on top right of home screen)
+* Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 * Cliquez sur le triangle sous " Général "
 * Cliquez sur " Mot de passe principal "
 * Entrez le mot de passe, confirmez le et cliquez sur OK.
@@ -94,12 +94,12 @@ Thème
 Orientation portrait
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Thème d'origine** et **Les boutons sont toujours affichés en bas de l'écran** sont identiques
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
 Orientation paysage
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * En utilisant **Thème d'origine** et **Grand écran**, vous devez défiler vers le bas pour voir les boutons en bas de l'écran
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Thèmes selon l'orientation du téléphone
@@ -137,7 +137,7 @@ Assistant Rapide
   
 Cibles Temporaires par défaut
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
+* Les `Cibles Temporaires (CT) <../Usage/temptarget.html#cibles-temporaires>`_ vous permettent de définir une nouvelle cible de glycémie pour une certaine durée.
 * Avec la configuration de CT par défaut, vous pouvez facilement changer vos cibles d'activité, de repas imminent, etc.
 * Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
 
@@ -205,7 +205,7 @@ Injecter cette partie de Bolus calculée par l’assistant
 Assistant bolus
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Si vous exécutez `l'assistant de Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`__ et que la glycémie est supérieure à 10 mmol (180 mg/dl) un bolus de correction sera proposé.
-* If correction bolus is accepted **no carbs** will be recorded.
+* Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 * Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
 * Vous devez à nouveau sélectionner l'`Assistant Bolus <../Getting-Started/Screenshots.html#assistant-bolus>`__ et entrer la quantité de glucides que vous voulez manger.
 
@@ -223,7 +223,7 @@ Age du patient
 -----------------------------------------------------------
 * Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre. 
 * Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran. 
-* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
+* C’est une mauvaise idée de selectionner un âge supérieur a l'âge réel car cela peut conduire à un surdosage lorsque l'on entre une valeur incorrecte dans la boîte de dialogue de l’insuline (en oubliant le point décimal ou la virgule par exemple). 
 * Si vous voulez connaître les valeurs réelles de ces limites de sécurité codées en dur, faites défiler jusqu'à l'algorithme que vous utilisez sur `cette page <../Usage/Open-APS-features.html>`_.
 
 Maximum Bolus autorisé [U]
@@ -244,7 +244,7 @@ Boucle
 Mode APS
 -----------------------------------------------------------
 * Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
-* **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. After manual confirmation, the command to dose insulin will be transferred to pump. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
+* **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
 * **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.  
 * **Arrêt Glycémie Basse** vous donne la possibilité de revenir au mode Arrêt Glycémie basse sans avoir besoin de refaire un objectif.
 
@@ -308,7 +308,8 @@ Paramètres avancés (OpenAPS AMA)
 Paramètres OpenAPS SMB
 -----------------------------------------------------------
 * Contrairement à AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ n'utilise pas de les débits de basal temporaires pour contrôler la glycémie, mais principalement les petits super micro-bolus.
-* Vous devez avoir démarré `l'objectif 10 <../Usage/Objectives.html#objectif-10-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb>`_ pour utiliser les SMB.
+* Vous devez avoir démarré `l'objectif 9 <../Usage/Objectives.html#objectif-9-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb>`_ pour utiliser les SMB.
+
 * Les trois premiers paramètres sont expliqués `ci-dessus <../Configuration/Preferences.html#debit-max-en-u-h-pour-une-temp-basal>`__.
 * Les détails sur les différentes options d'activation sont décrits dans la section `Fonctionnalités OpenAPS <../Usage/Open-APS-features.html#activer-smb>`_.
 * *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences. 
@@ -324,7 +325,7 @@ Notification glucides requis
 * Il sera suggéré de manger des glucides supplémentaires quand l'algorithme détecte que des glucides sont requis.
 * Dans ce cas, vous recevrez une notification qui peut être reportée pendant 5, 15 ou 30 minutes.
 * De plus, les glucides requis seront affichés dans la section GA sur votre écran d'accueil.
-* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
+* Un seuil peut être défini - Glucides minimum requis pour suggestion. 
 * Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +346,7 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * L'algorithme utilise l'IGly (impact glycémique) pour déterminer quand les glucides sont absorbés. 
 * La valeur n'est utilisée que pendant les lacunes dans les lectures MGC ou lorsque l'activité physique "consomme" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. 
-* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
+* Parfois, lorsque l'absorption de glucides ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
 * Pour le dire simplement: L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc. 
 * Chaque fois qu'il y a un écart positif par rapport au comportement attendu, certains glucides sont absorbés/décomposés. Gros changement = beaucoup de glucides, etc. 
 * Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. Pour plus de détails, voir la `documentation OpenAPS <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
@@ -387,7 +388,7 @@ NSClient
 * Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
 * **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
 * *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
+* Si activé, les modifications du `profil local <../Configuration/Config-Builder.html#profil-local>`_ sont envoyées sur votre site Nightscout.
 
 Paramètres de connexion
 -----------------------------------------------------------

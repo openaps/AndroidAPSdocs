@@ -21,7 +21,9 @@ Con la casilla de verificación, bajo el símbolo de ojo, puede decidir cómo ab
 ## Perfil
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
+* As of AAPS 3.0, only the local profile is available.
+
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 ### Local profile
 
@@ -56,6 +58,14 @@ You can easily create a new local profile from a profile switch. In this case ti
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+
+#### Change profile in Nighscout profile editor
+
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Asistente de perfil
 
@@ -115,7 +125,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DIA = at least 5.0h
 * Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-#### Free-Peak Oref
+#### Free Peak Oref
 
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
@@ -178,7 +188,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 

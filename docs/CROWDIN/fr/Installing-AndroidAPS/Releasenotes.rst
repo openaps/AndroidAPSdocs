@@ -58,7 +58,7 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Support de Glunovo
@@ -275,7 +275,7 @@ Nouvelles fonctionnalités majeures
 ------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* Nouveau `Plugin Profil Local <../Configuration/Config-Builder.html#profil-local>`_
 
   * Le profil local peut contenir plusieurs profils
   * Les profils peuvent être dupliqués et modifiés
@@ -283,7 +283,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* `Bolus étendu <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_ - la boucle fermée sera désactivée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage

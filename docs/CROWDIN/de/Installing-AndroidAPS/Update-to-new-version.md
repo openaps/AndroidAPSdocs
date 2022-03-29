@@ -19,7 +19,7 @@
 3. [Erstelle signierte APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Übertrage die erstellte APK-Datei](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) auf Dein Smartphone und installiere sie.
 5. [Prüfe die Version](#aaps-version-auf-dem-smartphone-uberprufen) in AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
+6. Stelle abhängig von Deiner [BZ-Quelle](../Configuration/BG-Source.rst) sicher, dass Du ['identify receiver'](../Configuration/xdrip#identify-receiver) in xDrip+ gesetzt hast oder verwende die ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
 
 Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der separaten Seite für [Fehlerbehebung von Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
@@ -63,22 +63,28 @@ Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge di
 
 ## 3. Erstelle die signierte APK
 
-* Dein Sourcecode ist jetzt die aktuelle veröffentlichte Version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Übertrage die APK-Datei
 
-Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it.
 
-## 5. AAPS-Version auf dem Smartphone überprüfen
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
-Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
+## 5. Install apk
 
-![Installierte AAPS version](../images/Update_VersionCheck282.png)
+Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
+
+## 6. Check AAPS version on phone
+
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 # Problembehandlung
 
-Keine Panik, wenn irgendetwas schief läuft.
+If anything goes wrong, don't panic.
 
-Tief durchatmen!
+Take a breath!
 
-Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!

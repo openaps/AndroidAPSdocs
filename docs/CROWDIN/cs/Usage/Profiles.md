@@ -1,44 +1,47 @@
 # Přepínání profilu
 
-Po prvním spuštění AndroidAPS a výběru profilu budete potřebovat ještě provést "Přepnutí profilu" s nulovým trváním (viz dále). Tím začne AAPS sledovat historii profilů a každá nová změna profilu vyžaduje další "Přepnutí profilu", přestože změny na profilu provádíte v Nightscoutu. Aktualizovaný profil je do AAPS načtený okamžitě, ale potřebujete ještě přepnutí stejného profilu (v NS nebo AAPS), abyste tyto změny začali reálně používat.
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
 
-AAPS si vnitřně dělá snímek profilu s datumem zahájení a s trváním a používá ho v rámci stanovené doby. Nulové trvání znamená nekonečně (pořád). Takový profil je platný až do dalšího "Přepnutí profilu".
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
-![Přepínání profilu](../images/ProfileSwitch_HowTo.png)
+* Duration of zero means infinite. Such profile is valid until new "Profile switch".
+* Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
 
-Pokud použijete "Přepnutí profilu" s určením doby, profil se automaticky po uplynutí času přepne zpět do posledního platného "Přepnutí profilu"
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-Pokud používáte lokální AAPS profily (jednoduchý, místní, CPP), musíte stisknout tlačítko, abyste změny použili (vytvoří to správnou událost "Přepnutí profilu").
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+
+![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
 V rámci „Přepnutí profilu“ můžete ještě upravit následující dva parametry (což bývalo součástí Cirkadiánního procentuálního profilu):
 
 ## Procento
 
-* Toto uplatní stejný procentní přepočet na všechny parametry. 
-* Pokud toto pole nastavíte na 130 % (což značí, že jste o 30 % více rezistentní na inzulín), navýší to váš bazál o 30 %. Dále se také adekvátně sníží ISF - citlivost a IC - sacharidový poměr (děleno 1,3 v našem příkladě).
+* This applies the same percentage to all parameters. 
+* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
   
   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
-* Bazální dávka bude odeslaná do pumpy jako výchozí (údaje v pumpě se přepíší).
+* It will be sent to the pump and then be the default basal rate.
 
-* Algoritmus smyčky (otevřené nebo uzavřené) bude dále pracovat se zvoleným procentuálním profilem. Tak například mohou být samostatné procentuální profily nastavené pro různé fáze hormonálního cyklu.
+* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
 ## Posun času
 
 ![Profilový procentní podíl a časový posun](../images/ProfileSwitchTimeShift2.png)
 
-* Tato volba vše posouvá o uvedený počet hodin. 
-* Například, pokud pracujete na noční směny, upravte počet hodin o kolik později/dříve jdete spát nebo se probouzíte.
-* Často se ptáte, kterým směrem posouvat profil v čase. Čas je nutné posunout o x hodin. Myslete proto na směr posunu, jak je popsáno v následujícím příkladu: 
-  * Aktuální čas: 12:00
-  * **Posun času dopředu** 
+* This moves everything round the clock by the number of hours entered. 
+* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
+  * Current time: 12:00
+  * **Positive** time shift 
     * 2:00 **+10 h** -> 12:00
-    * Nastavení platná od 2:00 budou použita namísto těch, která normálně platí ve 12:00, protože posouváme profil dopředu.
-  * **Dozadu** 
+    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
+  * **Negative** time shift 
     * 22:00 **-10 h** -> 12:00
-    * Nastavení platná od 22:00 budou použita namísto těch, která normálně platí ve 12:00, protože posouváme profil dozadu.
+    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
 ![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
 

@@ -34,14 +34,14 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
-Version 3.0.0
+Sürüm 3.0.0
 ================
-Release date: 31-01-2022
+Yayınlanma tarihi: 31-01-2022
 
 Important hints
 ----------------------
 * **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
+* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
 * Use the same version of AAPS and NSClient
 
 **Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
@@ -58,7 +58,7 @@ Preparation steps
 Changes
 ----------------------
 * 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Glunovo support
