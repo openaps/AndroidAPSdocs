@@ -475,11 +475,13 @@ Icons
 * **SUSPEND:**
 
     |suspend|
+
     Suspends the active pod
 
 * **RESUME DELIVERY:**
 
     |resume|
+
 	Resumes the currently suspended, active pod
 
 
