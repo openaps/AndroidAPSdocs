@@ -296,33 +296,49 @@ If you want to share some information about AndroidAPS and DIY looping with your
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
 
-## Frequent questions on Discord and their answers...
+# Frequent questions on Discord and their answers...
 
-### AAPS stops everyday around the same time.
+## My problem is not listed here.
+
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+
+## My problem is not listed here but I found the solution
+
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+
+.. note::
+    Note
+    
+    Remind us to add your solution to this list!
+
+## AAPS stops everyday around the same time.
 
 Stop Google Play Protect. 
 Check for "cleaning" apps (ie CCleaner etc) and uninstall them.
 AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
 
-### How to organize my backups ?
+## How to organize my backups ?
 
 Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
 
 Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
 
-### I have problems, errors building the app.
+## I have problems, errors building the app.
 
-Use this link https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po for a step by step help.
+Please 
 
-### I'm stuck on an objective and need help.
+* check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
+* the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+
+## I'm stuck on an objective and need help.
 
 Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
 
-### How to reset the password in AAPS v2.8.x ?
+## How to reset the password in AAPS v2.8.x ?
 
 Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
 
-### How to reset the password in AAPS v3.x
+## How to reset the password in AAPS v3.x
 
 If you forgot your password:
 Close AAPS.
@@ -331,7 +347,7 @@ phone_main_memory/AAPS/extra directory.
 Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241.
 You can change the password via 3 dots menu, configuration wizard, unlock parameters.
 
-### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
 With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...). 
 
@@ -347,7 +363,7 @@ The easiest way to get all these parts working together is :
 6/Start AAPS
 7/Pod tab, 3 dot menu, search and connect Link
 
-### Build error: file name too long
+## Build error: file name too long
 
 While trying to build I get an error stating the file name is too long. Possible solutions:
 Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
@@ -357,7 +373,7 @@ Make sure "Gradle" is done syncing and indexing after opening the project and pu
 Execute a Build->Clean Project before doing a Rebuild Project.
 Execute File->Invalidate Caches and Restart Android Studio.
 
-### Alert: Running dev version. Closed loop is disabled
+## Alert: Running dev version. Closed loop is disabled
 
 AndroidAPS is not running in "developer mode".
 AAPS shows the following message: "running dev version. Closed loop is disabled".
@@ -368,12 +384,12 @@ Make sure to restart AndroidAPS for it to find the file and go into "developer m
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!). 
 
-### Where can I find settings files?
+## Where can I find settings files?
 
 Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences".
 WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
 
-### How to configure battery savings?
+## How to configure battery savings?
 
 Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors.
 On the phone, go to settings->Apps and disable battery savings for:
@@ -384,26 +400,16 @@ Alternatively, fully disable all battery savings on the phone. As a result your 
 The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you.
 For additional information, see also Don't kill my app
 
-### Pump unreachable alerts several times a day or at night.
+## Pump unreachable alerts several times a day or at night.
 
 Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings)
 Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
 
-### My problem is not listed here.
-
-Join our Discord channel and ask for help.https://discord.gg/un2ChUushY
-Report your issue on GitHub
-
-### My problem is not listed here but I found the solution
-
-Join our Discord channel and share this information : https://discord.gg/un2ChUushY
-Remind us to add your solution to this list.
-
-### Where can I delete treatments in AAPS v3 ?
+## Where can I delete treatments in AAPS v3 ?
 
 3 dots menu, select treatements, then 3 dots menu again and you have different options available.
 
-### Configuring and Using the NSClient remote app
+## Configuring and Using the NSClient remote app
 
 AAPS can be monitored and controlled remotely via the NSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the NSClient (remote) app is distinct from the NSClient configuration in AAPS, and the NSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'NSClient remote' and 'NSClient remote Wear' apps.
 
