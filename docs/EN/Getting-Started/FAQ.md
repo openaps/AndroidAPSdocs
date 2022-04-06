@@ -294,3 +294,128 @@ If you want to share some information about AndroidAPS and DIY looping with your
 
 #### Reporting
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+
+
+## Frequent questions on Discord and their answers...
+
+### AAPS stops everyday around the same time.
+
+Stop Google Play Protect. 
+Check for "cleaning" apps (ie CCleaner etc) and uninstall them.
+AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+
+### How to organize my backups ?
+
+Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+
+Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+
+### I have problems, errors building the app.
+
+Use this link https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po for a step by step help.
+
+### I'm stuck on an objective and need help.
+
+Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+
+### How to reset the password in AAPS v2.8.x ?
+
+Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+
+### How to reset the password in AAPS v3.x
+
+If you forgot your password:
+Close AAPS.
+Put an empty file named PasswordReset (without any extensions) in 
+phone_main_memory/AAPS/extra directory.
+Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241.
+You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+
+### My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...). 
+
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+
+The easiest way to get all these parts working together is :
+1/ Delete Link from AAPS
+2/ Power off Link
+3/ AAPS 3 dot menu, quit AAPS
+4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !)
+4bis/ Rarely some phones may need a reboot here. You can try without reboot.
+5/Power on Link
+6/Start AAPS
+7/Pod tab, 3 dot menu, search and connect Link
+
+### Build error: file name too long
+
+While trying to build I get an error stating the file name is too long. Possible solutions:
+Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+
+From Android Studio:
+Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub.
+Execute a Build->Clean Project before doing a Rebuild Project.
+Execute File->Invalidate Caches and Restart Android Studio.
+
+### Alert: Running dev version. Closed loop is disabled
+
+AndroidAPS is not running in "developer mode".
+AAPS shows the following message: "running dev version. Closed loop is disabled".
+
+Make sure AndroidAPS is running in "developer mode":
+Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named.
+Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+
+Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!). 
+
+### Where can I find settings files?
+
+Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences".
+WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+
+### How to configure battery savings?
+
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors.
+On the phone, go to settings->Apps and disable battery savings for:
+AndroidAPS
+xDrip or BYODA/Dexcom app
+The Bluetooth system app (you may need to select for viewing system apps first)
+Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem.
+The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you.
+For additional information, see also Don't kill my app
+
+### Pump unreachable alerts several times a day or at night.
+
+Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings)
+Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+
+### My problem is not listed here.
+
+Join our Discord channel and ask for help.https://discord.gg/un2ChUushY
+Report your issue on GitHub
+
+### My problem is not listed here but I found the solution
+
+Join our Discord channel and share this information : https://discord.gg/un2ChUushY
+Remind us to add your solution to this list.
+
+### Where can I delete treatments in AAPS v3 ?
+
+3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+
+### Configuring and Using the NSClient remote app
+
+AAPS can be monitored and controlled remotely via the NSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the NSClient (remote) app is distinct from the NSClient configuration in AAPS, and the NSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'NSClient remote' and 'NSClient remote Wear' apps.
+
+To enable NSClient remote functionality you must:
+1) Install the NSClient remote app (the version should match the version of AAPS being used)
+2) Run the NSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site.
+3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the NSClient remote app to your Nightscout site.
+Once this is done, NSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set.
+4) To activate the profile:
+- Enable remote profile synchronization in AAPS > NSClient > Options
+- Activate the profile in NSClient remote > Profile
+After doing so, the profile will be set, and NSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update.
+5) To enable remote control by the AAPS NSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or NSClient remote.
+
+If you'd like to monitor/control AAPS via the NSClient remote Wear App, you'll need both NSClient remote and the associated Wear app to be installed. To compile the NSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the NSClient variant.
