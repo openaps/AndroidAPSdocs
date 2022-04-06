@@ -307,9 +307,9 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 [Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 .. note::
-    Note
-    
-    Remind us to add your solution to this list!
+   Note
+ 
+   Remind us to add your solution to this list!
 
 ## AAPS stops everyday around the same time.
 
