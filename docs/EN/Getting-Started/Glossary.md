@@ -106,7 +106,7 @@
 <tr>
  <td><strong>Closed Loop</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
- <td>Open loop</td>
+ <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
@@ -250,7 +250,7 @@
 <tr>
  <td><strong>Open Loop</strong></td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
- <td>Closed Loop</td>
+ <td>Open Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -370,7 +370,7 @@
 <tr>
  <td><strong>Virtual pump</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Open Loop</td>
+ <td>Virtual pump</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
