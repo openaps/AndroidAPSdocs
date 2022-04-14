@@ -35,8 +35,6 @@ After that there is a subsection `General Hints <Usage/Timezone-traveling.html>`
 Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for `translation of the documentation <translations.html>`_ By the way, it also helps us a lot if you send links to the corresponding documentation when answering questions from other users.
 
 .. note::
-   **Disclaimer And Warning**
-
    Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 
 .. image:: images/modules-female.png
