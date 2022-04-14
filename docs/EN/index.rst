@@ -22,7 +22,7 @@ The subsection `Where to go for help? <Where-To-Go-For-Help/Connect-with-other-u
 
 In the subsection `Glossary <Getting-Started/Glossary.html>`_ we have compiled a list of the short terms used, where you can look up what ISF, TT, etc. stands for.
 
-For parents who want to build AndroidAPS for their children, we recommend the subsection `AndroidAPS for children <../Children/Children.html>`, as they have more advanced questions compared to the adult. You need to be able to support your children and understand the concept that AndroidAPS offers there.
+For parents who want to build AndroidAPS for their children, we recommend the subsection `AndroidAPS for children <Children/Children.html>`_ , as they have more advanced questions compared to the adult. You need to be able to support your children and understand the concept that AndroidAPS offers there.
 
 If you now understand the concept, have the necessary tools and know where to get help in case of an emergency, it is the right time to start building the app. The subsection `How to install AndroidAPS? <Installing-AndroidAPS/Building-APK.html>`_ shows you this in detail. Since the requirements are very different, we recommend that you really follow the instructions step by step for the first build. Please take some time the first time. Later this will go very quickly when you build the app again for a new version. It is important to save the keystore in a safe place, so that you can later create a new version for your app with the same key and thus ensure that the updates go as smoothly as possible. On average, you can assume that there will be one new version and 2-3 updates per year. This number is based on experience and may change in the future. But we want to give you a guideline here. When you are experienced - later on - building the app will take 15-30 minutes on average. At the beginning this can be half a day or a whole day with some help from the community. Unfortunately, this is quite normal. By the way, we have compiled the typical errors in the FAQ section as well as in an extra subsection of "How to install AndroidAPS?" and provide additional help in the subsection "Troubleshooting".
 
@@ -37,7 +37,7 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
 .. note::
    **Disclaimer And Warning**
 
-   All information, thought, and code described here is intended for Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
+   Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 
 .. image:: images/modules-female.png
   :alt: Components
