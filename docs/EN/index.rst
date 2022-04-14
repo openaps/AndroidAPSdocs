@@ -32,6 +32,8 @@ This is followed by the particularly important subsection `AndroidAPS Usage <Get
 
 After that there is a subsection `General Hints <Usage/Timezone-traveling.html>`_ with e.g. information on how to deal with the time change and the use of AndroidAPS.
 
+There is a subsection for the `clinicians <Resources/clinician-guide-to-AndroidAPS.html>`_ who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+
 Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for `translation of the documentation <translations.html>`_ By the way, it also helps us a lot if you send links to the corresponding documentation when answering questions from other users.
 
 .. note::
