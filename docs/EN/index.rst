@@ -49,7 +49,7 @@ For more details, please read on here.
    :glob:
    :caption: Change language
 
-   Change language <./changelanguage2.rst>
+   Change language <./changelanguage.rst>
 
 .. _getting-started:
 
@@ -101,7 +101,7 @@ For more details, please read on here.
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
 
-.. _configuration:
+.. _configurationAAPS:
 
 .. toctree::
    :maxdepth: 1
