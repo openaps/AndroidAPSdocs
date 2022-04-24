@@ -48,9 +48,11 @@ This is the first screen you will come across when you open AndroidAPS and it co
 #### Current blood glucose
 * Latest blood glucose reading from your CGM is shown on the left side.
 * Color of the BG value reflects the status to the defined [range](../Configuration/Preferences#range-for-visualization).
+
    * green = in range
    * red = below range
    * yellow = above range
+
 * The greyish block in the middle shows minutes since last reading and changes since last reading, in the last 15 and 40 minutes.
 
 #### Loop status
