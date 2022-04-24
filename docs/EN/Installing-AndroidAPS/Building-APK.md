@@ -268,7 +268,7 @@ Signing means that you indicate your app to be your own creation but in a digita
    ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
 
  * **_Warning:_**  If errors occur, do not continue with the following steps.
-  \
+
   Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
 
    ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
@@ -343,8 +343,10 @@ Signing means that you indicate your app to be your own creation but in a digita
 * Click on the link "locate".
 
    ![Locate build](../images/studioSetup/52_BuildLocate.png)
- * If the notification is gone, you can always open the "Event log" and select the same link there.
-    ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
+
+* If the notification is gone, you can always open the "Event log" and select the same link there.
+
+   ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
 
 * Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
 
