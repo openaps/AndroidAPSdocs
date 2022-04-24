@@ -49,7 +49,7 @@ For more details, please read on here.
    :glob:
    :caption: Change language
 
-   Change language <./changelanguage.rst>
+   Change language <./changelanguage2.rst>
 
 .. _getting-started:
 
