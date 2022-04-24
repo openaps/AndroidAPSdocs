@@ -5,14 +5,14 @@ Watch version of AAPS allows you to:
 * **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc.
 
-### Before you buy watch...
+## Before you buy watch...
 
-* Some features like _complications_ require Wear OS version 2.0 or newer to work
+* Some features like *complications* require Wear OS version 2.0 or newer to work
 * Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
 * If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
 * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
-### Building Wear OS version of AAPS
+## Building Wear OS version of AAPS
 
 The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
 
@@ -22,7 +22,7 @@ b) setup the Android Debugger on the wear
 c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile.
 Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
-### Setup on the Phone
+## Setup on the Phone
 
 Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
 

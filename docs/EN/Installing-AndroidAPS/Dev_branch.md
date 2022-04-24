@@ -1,13 +1,10 @@
 # Development branch 
 
-:::{admonition} **Attention:**
+:::{admonition} Attention
 :class: warning
 
 Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing **not for actual looping!**!
 :::
-
-<font color="#FF0000">**Attention:**</font>
-Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
 
 The most stable version of AndroidAPS to use is that in the [Master branch](https://github.com/nightscout/AndroidAPS/tree/master).  It is advised to stay on the Master branch for actual looping.
 
