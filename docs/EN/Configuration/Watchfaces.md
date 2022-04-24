@@ -247,7 +247,7 @@ Main battery-demanding areas are:
 * Rendering on screen
 * Radio communication over Bluetooth
 
-Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in _display time_ area:
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
 * Stock watchfaces are usually better optimized than custom one, downloaded from the store.
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.

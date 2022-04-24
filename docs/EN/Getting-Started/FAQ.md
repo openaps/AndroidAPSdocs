@@ -47,6 +47,7 @@ For safety, recommendations made are based on not one CGM reading but the averag
 
 ### Further readings
 There are several blogs with good tips to help you understand the practicalities of looping:
+
   * [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
   * [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
   * [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
