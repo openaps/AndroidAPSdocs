@@ -36,6 +36,7 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'myst-parser',
     'sphinx.ext.ifconfig',
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
