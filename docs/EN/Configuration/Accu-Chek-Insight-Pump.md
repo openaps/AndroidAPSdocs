@@ -84,13 +84,13 @@ In the Insight settings in AndroidAPS you can enable the following options:
 * "Recovery duration": This defines how long AndroidAPS will wait before trying again after a failed connection attempt. You can choose from 0 to 20 seconds. If you experience connection problems, choose a longer wait time. 
     <br><br>Example for min. recovery duration = 5 and max. recovery duration = 20
     <br><br>no connection -> wait <b>5</b> sec.
-      <br>  retry -> no connection -> wait <b>6</b> sec.
-      <br>  retry -> no connection -> wait <b>7</b> sec.
-      <br>  retry -> no connection -> wait <b>8</b> sec.
-      <br>...
-      <br>retry -> no connection -> wait <b>20</b> sec.
-      <br>retry -> no connection -> wait <b>20</b> sec.
-      <br>...
+    <br>  retry -> no connection -> wait <b>6</b> sec.
+    <br>  retry -> no connection -> wait <b>7</b> sec.
+    <br>  retry -> no connection -> wait <b>8</b> sec.
+    <br>...
+    <br>retry -> no connection -> wait <b>20</b> sec.
+    <br>retry -> no connection -> wait <b>20</b> sec.
+    <br>...
     
 * "Disconnect delay": This defines how long (in seconds) AndroidAPS will wait to disconnect from the pump after an operation is finished. Default value is 5 seconds.
 
