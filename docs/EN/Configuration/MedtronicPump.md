@@ -146,6 +146,7 @@ There are a number of options to try and resolve connectivity issues.
 - Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
 - Reset the Rileylink device.  You must then use the "Reset Rileylink Config" button in the ACT tab.
 - Other users have found the following steps  to be effective in restoring connectivity when other methods have not:
+
     1. Restart the phone
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AndroidAPS and allow the connection to restore
