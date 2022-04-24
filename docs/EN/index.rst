@@ -201,22 +201,22 @@ For more details, please read on here.
 .. toctree::
    :hidden:
 
-  <./Configuration/Accu-Chek-Combo-Pump.md>
-  <./Configuration/Accu-Chek-Insight-Pump.md>
-  <./Configuration/DanaR-Insulin-Pump.md>
-  <./Configuration/DanaRS-Insulin-Pump.md>
-  <./Configuration/DiaconnG8.rst>
-  <./Configuration/MedtronicPump.md>
-  <./Configuration/OmnipodDASH.md>
-  <./Configuration/OmnipodEros.rst>
-  <./Configuration/Watchfaces.md>
-  <./Getting-Started/Future-possible-Pump-Drivers.md>
-  <./Getting-Started/Phones.md>
-  <./Getting-Started/Sample-Setup.md>
-  <./Usage/Objectives_old.rst>
-  <./Usage/SonySW3.rst>
-  <./Usage/huawei.md>
-  <./Usage/jelly.md>
+  a <./Configuration/Accu-Chek-Combo-Pump.md>
+  b <./Configuration/Accu-Chek-Insight-Pump.md>
+  c <./Configuration/DanaR-Insulin-Pump.md>
+  d <./Configuration/DanaRS-Insulin-Pump.md>
+  e <./Configuration/DiaconnG8.rst>
+  f <./Configuration/MedtronicPump.md>
+  g <./Configuration/OmnipodDASH.md>
+  h <./Configuration/OmnipodEros.rst>
+  i <./Configuration/Watchfaces.md>
+  j <./Getting-Started/Future-possible-Pump-Drivers.md>
+  k <./Getting-Started/Phones.md>
+  l <./Getting-Started/Sample-Setup.md>
+  m <./Usage/Objectives_old.rst>
+  n <./Usage/SonySW3.rst>
+  p <./Usage/huawei.md>
+  q <./Usage/jelly.md>
 
 .. note:: 
 	**Disclaimer And Warning**
