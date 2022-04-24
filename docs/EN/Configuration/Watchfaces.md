@@ -8,8 +8,8 @@ Watch version of AAPS allows you to:
 ### Before you buy watch...
 
 * Some features like _complications_ require Wear OS version 2.0 or newer to work
-* Google rebranded _Android Wear 1.x_ to _Wear OS_ from version 2.x, so when it says _Android Wear_ it may indicate older 1.x version of system
-* If description of smartwatch indicates only compatibility with _Android_ and _iOS_ - it **does not** means it runs on _Wear OS_ - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
+* Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
+* If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
 * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Building Wear OS version of AAPS
@@ -37,10 +37,10 @@ The following functions can be triggered from the watch:
 * administer a bolus (insulin + carbs)
 * watch settings
 * status
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+  * check pump status
+  * check loop status
+  * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
+  * show TDD (Total daily dose = bolus + basal per day)
 
 ## AAPS Watchfaces
 
