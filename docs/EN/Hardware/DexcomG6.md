@@ -102,11 +102,8 @@ published by Tim Street at
 *   Do not enable "restart sensors" while setting a new sensor
 *   Do not start new sensor before the following information is shown in
     Classic Status Page -> G5/G6 status -> PhoneServiceState:
-    *   Transmitter serial starting with 80 or 81: "Got data hh:mm"
-        (i.e. "Got data 19:04")
-    *   Transmitter serial starting with 8G or 8H: "Got glucose hh:mm"
-        (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now
-        raw 19:04")
+    *   Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
+    *   Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
 
 ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
