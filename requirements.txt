@@ -1,6 +1,12 @@
-recommonmark==0.4.0
-sphinx==1.5.6
-sphinx-rtd-theme<0.5
+#recommonmark==0.4.0
+#sphinx==1.5.6
+#sphinx-rtd-theme<0.5
 
-mkdocs==1.2.3
-jinja2==3.0.0
+#mkdocs==1.2.3
+#jinja2==3.0.0
+
+recommonmark
+sphinx
+sphinx-rtd-theme
+
+#jinja2
