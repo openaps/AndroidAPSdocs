@@ -1,4 +1,10 @@
-## Development branch 
+# Development branch 
+
+:::{admonition} **Attention:**
+:class: warning
+
+Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing **not for actual looping!**!
+:::
 
 <font color="#FF0000">**Attention:**</font>
 Dev branch is for the further development of AndroidAPS only. It should be used on a separate phone for testing <font color="#FF0000">**not for actual looping!**</font>
