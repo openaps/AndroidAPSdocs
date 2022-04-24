@@ -37,10 +37,10 @@
 * **Required settings** (marked green in screenshots):
     
    * Set/leave the menu configuration as "Standard", this will show only the supported menus/actions on the pump and hide those which are unsupported (extended/multiwave bolus, multiple basal rates), which cause the loop functionality to be restricted when used because it's not possible to run the loop in a safe manner when used.
-   * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-   * Set TBR _Maximum Adjustment_ to 500%
-   * Disable _Signal End of Temporary Basal Rate_
-   * Set TBR _Duration increment_ to 15 min
+   * Verify the *Quick Info Text* is set to "QUICK INFO" (without the quotes, found under *Insulin Pump Options*).
+   * Set TBR *Maximum Adjustment* to 500%
+   * Disable *Signal End of Temporary Basal Rate*
+   * Set TBR *Duration increment* to 15 min
    * Enable Bluetooth
    
 * **Recommended settings** (marked blue in screenshots)
@@ -77,7 +77,7 @@
 - If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
 - Before enabling the Combo plugin in AAPS make sure your profile is set up
   correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile
-  to the pump. Then activate the Combo plugin. Press the _Refresh_ button on the Combo tab to initialize the 
+  to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the 
   pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
