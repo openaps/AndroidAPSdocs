@@ -198,26 +198,6 @@ For more details, please read on here.
    How to translate the app and docs <./translations.md>
    How to edit the docs <./make-a-PR>
 
-.. toctree::
-   :hidden:
-
-  a <./Configuration/Accu-Chek-Combo-Pump.md>
-  b <./Configuration/Accu-Chek-Insight-Pump.md>
-  c <./Configuration/DanaR-Insulin-Pump.md>
-  d <./Configuration/DanaRS-Insulin-Pump.md>
-  e <./Configuration/DiaconnG8.rst>
-  f <./Configuration/MedtronicPump.md>
-  g <./Configuration/OmnipodDASH.md>
-  h <./Configuration/OmnipodEros.rst>
-  i <./Configuration/Watchfaces.md>
-  j <./Getting-Started/Future-possible-Pump-Drivers.md>
-  k <./Getting-Started/Phones.md>
-  l <./Getting-Started/Sample-Setup.md>
-  m <./Usage/Objectives_old.rst>
-  n <./Usage/SonySW3.rst>
-  p <./Usage/huawei.md>
-  q <./Usage/jelly.md>
-
 .. note:: 
 	**Disclaimer And Warning**
 
