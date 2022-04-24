@@ -89,7 +89,7 @@
 <td><strong>CAGE</strong></td>
 <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
 <td>Nightscout</td>
- <td>&nbsp;</td>
+<td>&nbsp;</td>
 </tr>
 <tr>
 <td><strong>CAN</strong></td>
@@ -392,6 +392,6 @@
 <td>&nbsp;</td>
 </tr>
 <tr>
- <td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
+<td colspan=4>See also <a href="https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html">https://openaps.readthedocs.io/en/latest/docs/Resources/glossary.html</a></td>
 </tr>
 </table>
