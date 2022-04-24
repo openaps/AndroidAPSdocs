@@ -160,8 +160,8 @@ Select the pump you are using.
 * [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
 * [Diaconn G8](DiaconnG8.rst)
-- MDI (receive AAPS suggestions for your multiple daily injections therapy)
-- Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 ## Sensitivity Detection
 Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual.  More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).  
