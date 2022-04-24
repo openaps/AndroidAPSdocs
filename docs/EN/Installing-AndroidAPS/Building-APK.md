@@ -150,7 +150,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
   In this case click on the folder icon (2).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin\** folder.
+* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in ** \bin\ ** folder.
 
 * Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
 
