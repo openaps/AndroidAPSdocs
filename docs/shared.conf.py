@@ -20,9 +20,9 @@ import os
 #sys.path.insert(0, os.path.abspath('.'))
 
 
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
-import alabaster
+# PL from recommonmark.parser import CommonMarkParser
+# PL from recommonmark.transform import AutoStructify
+# PL import alabaster
 
 # -- General configuration ------------------------------------------------
 
@@ -39,15 +39,15 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    # 'alabaster',
+# PL 'alabaster',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../../_templates'] # path relative to languages conf.py
 
-source_parsers = {
-  '.md': CommonMarkParser,
-}
+# PL source_parsers = {
+# PL   '.md': CommonMarkParser,
+# PL }
 
 
 # The suffix(es) of source filenames.
