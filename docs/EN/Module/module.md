@@ -19,7 +19,7 @@ substitutions:
 
 # Component Overview
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.md#component-setup), too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index.md:component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
@@ -153,7 +153,7 @@ It sometimes takes a while to get all modules for closing the loop. But no worri
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](../index.md#component-setup).
+If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index.md:component-setup).
 
 % Image aliases resource for referencing images by name with more positioning flexibility
 
