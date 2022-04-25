@@ -288,7 +288,7 @@
 - **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
-### Minimal request change \[%\]
+### Minimal request change
 
 - When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.

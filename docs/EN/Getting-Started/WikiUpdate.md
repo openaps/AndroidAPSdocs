@@ -99,7 +99,7 @@
 
 - [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
 - [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AndroidAPS!**
-- [Extended bolus and switch to open loop](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus and switch to open loop](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 
 ## February 2020

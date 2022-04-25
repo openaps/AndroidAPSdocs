@@ -345,7 +345,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Actions - section M
 * Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
 * Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway. 
 
@@ -374,7 +374,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Careportal - section O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N(./Screenshots.md#careportal-section-n.
 * Prime/Fill allows you to record pump site and insulin cartridge change.
 * Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 
