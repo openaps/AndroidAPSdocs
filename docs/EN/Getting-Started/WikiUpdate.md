@@ -92,7 +92,7 @@
 
 ## April 2020
 
-- [Backdate insulin](../Usage/CPbefore26.md#carbs-bolus) (i.e. given by syringe)
+- [Backdate insulin](../Usage/CPbefore26.md#carbs--bolus) (i.e. given by syringe)
 - [Android 6 support will be discontinued in next master version](../Module/module.md#phone)
 
 ## March 2020
@@ -169,5 +169,5 @@
 
 - Dexcom G6 patched app region
 - [Dexcom G6 new transmitter](../Configuration/xdrip.md#connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- [What do I need?](../index.md#what-do-i-need) - new structure & additional information
+- [What do I need?](../) - new structure & additional information
 - New structure
