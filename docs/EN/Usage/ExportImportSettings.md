@@ -18,11 +18,11 @@ On a Windows 10 computer it looks like this:
 
 Among others the following information is part of the settings export:
 
-- [Automation](../Usage/Automation.html) events
-- [Config builder](../Configuration/Config-Builder.html) settings
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
 - [Local profile](../Configuration/Config-Builder.md#local-profile) settings
-- [Objectives](../Usage/Objectives.html) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.html) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Encrypted backup format
 

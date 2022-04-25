@@ -7,7 +7,7 @@
 ## Check BG source
 
 - Check if BG source is correct after update.
-- Especially when using [xDrip+](../Configuration/xdrip.html) it might happen, that BG source is changed to Dexcom app (patched).
+- Especially when using [xDrip+](../Configuration/xdrip.md) it might happen, that BG source is changed to Dexcom app (patched).
 - Open [Config builder](../Configuration/Config-Builder.md#bg-source) (hamburger menu on top left side of home screen)
 - Scroll down to "BG source".
 - Select correct BG source if changes are necessary.
@@ -18,14 +18,14 @@
 
 ## Finish exam
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.html).
-- You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives.html#objective-10-automation).
-- If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation).
+- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.md).
+- You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives.md#objective-10-automation).
+- If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation).
 - This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ## Set master password
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.html) as they are encrypted as of version 2.7.
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
 - Open Preferences (three-dot-menu on top right of home screen)
 - Click triangle below "General"
 - Click "Master-Password"
@@ -38,7 +38,7 @@
 ## Export settings
 
 - AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](../Usage/ExportImportSettings.html) after updating to version 2.7.
+- You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
 - Settings files from previous versions can only be imported in AAPS 2.7. Export will be in new format.
 - Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
 - If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
@@ -53,7 +53,7 @@
 
 ## Set Pump Password for Dana RS (if using Dana RS)
 
-- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.html) was not checked in previous versions.
+- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) was not checked in previous versions.
 - Open Preferences (three-dot-menu on top right of screen)
 - Scroll down and click triangle next to "Dana RS".
 - Click "Pump password (v1 only)"

@@ -102,8 +102,8 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
    `.. image:: ../images/modules.png`<br>`  :alt: alt text`
 #### Links
 * external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
+* internal link to .md page: `` `alt text <../folder/file.md>_` ``
+* internal link to .rst page: `` `alt text <../folder/file.md>_` ``
 * internal link to headline: `` `alt text <../folder/file.md#headline>_` ``
 
 ### Internal links

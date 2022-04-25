@@ -55,7 +55,7 @@
 
 #### Master password
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.html) as they are encrypted as of version 2.7.
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
   **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 - Open Preferences (three-dot menu on top right of home screen)
@@ -72,9 +72,9 @@
 
 #### Settings protection
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.html)).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.html).
+- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.md#master-password).
 
@@ -89,7 +89,7 @@
 
 #### Bolus protection
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.html).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
 
 - In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
@@ -163,7 +163,7 @@
 
 ### Default temp targets
 
-- [Temp targets (TT)](../Usage/temptarget.html) allow you to define change your blood glucose target for a certain time period.
+- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
 
 - With setting of default TT you can easily change your target for activity, eating soon etc.
 
@@ -264,7 +264,7 @@
 - Safety limits are set based on the age you select in this setting.
 - If you start hitting these hard limits (like max bolus) it's time to move one step up.
 - It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.html).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
 ### Max allowed bolus \[U\]
 
@@ -296,7 +296,7 @@
 
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../Configuration/Config-Builder.html) you can choose between two algorithms:
+Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
 - [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm for advanced users
@@ -429,11 +429,11 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Pair and set your pump up according to the pump related instructions:
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.html)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.html)
-- [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.html)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.html)
-- [Medtronic Pump](../Configuration/MedtronicPump.html)
+- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
+- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md)
+- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Medtronic Pump](../Configuration/MedtronicPump.md)
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
@@ -486,7 +486,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.html).
+- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
 ## Automation
@@ -524,7 +524,7 @@ Select which location service shall be used:
 
 ## Open Humans
 
-- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.html).
+- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
 
 - In Preferences you can define when data shall be uploaded
 

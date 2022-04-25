@@ -37,4 +37,4 @@ If you're ready for the challenge, please read on.
 ## How to start
 
 Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the [Module Overview](../Module/module.html) and the [Objectives](../Usage/Objectives.html).
+A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).

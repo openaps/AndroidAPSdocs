@@ -3,31 +3,31 @@
 ## February 2022
 
 - [BG quality warning sign](../Getting-Started/Screenshots.md#bg-warning-sign) @tanja
-- [Medtronic pump update](../Configuration/MedtronicPump.html) @dottedfingertips
+- [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
 - [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.html) @tanja
-- [Omnipod Dash](../Configuration/OmnipodDASH.html) @Freloner @ robertrub @vanelsberg
+- [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../Configuration/Watchfaces.html) @peterleimbach
+- [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
 
 ## January 2022
 
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.html) - update @tanja
+- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - update @tanja
 
 ## December 2021
 
-- [Building the APK](../Installing-AndroidAPS/Building-APK.html) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.html) information added @MilosKozak
+- [Building the APK](../Installing-AndroidAPS/Building-APK.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) information added @MilosKozak
 
 ## November 2021
 
 - Best practices for calibrating a [libre 2 sensor](../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../Getting-Started/FAQ.md#impact) reformulation of impact
-- Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
+- Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - Removed patched [Dexcom](../Hardware/DexcomG6.html) app as it is obsolete
 
 ## October 2021
 
-- [Release notes](../Installing-AndroidAPS/Releasenotes.html) AAPS 3.0 beta
+- [Release notes](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
 
 ## September 2021
 
@@ -35,7 +35,7 @@
 
 ## June 2021
 
-- [Watchface sideload](../Configuration/Watchfaces.html)
+- [Watchface sideload](../Configuration/Watchfaces.md)
 
 ## April 2021
 
@@ -48,7 +48,7 @@
 
 ## February 2021
 
-- New navigation bar and [language switch](../changelanguage.html)
+- New navigation bar and [language switch](../changelanguage.md)
 
 ## January 2021
 
@@ -68,9 +68,9 @@
 
 - Accu-Chek Combo - update [time adjustment daylight savings time](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
 - Accu-Chek Insight - Option to [upload absolute values](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
-- Logs - more details about [folder location](../Usage/Accessing-logfiles.html)
+- Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
 - Omnipod Eros - status update
-- [SMS commands - time sync](../Children/SMS-Commands.html)
+- [SMS commands - time sync](../Children/SMS-Commands.md)
 
 ## September 2020
 
@@ -80,7 +80,7 @@
 ## June 2020
 
 - [Libre 2](../Hardware/Libre2.html) - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../Usage/Timezone-traveling.html) with Libre 2
+- [Time zone travelling](../Usage/Timezone-traveling.md) with Libre 2
 
 ## May 2020
 
@@ -97,10 +97,10 @@
 
 ## March 2020
 
-- [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.html)
-- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.html) **cannot currently be used with AndroidAPS!**
+- [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
+- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AndroidAPS!**
 - [Extended bolus and switch to open loop](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.html)
+- [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
 
 ## February 2020
 
@@ -109,9 +109,9 @@
 - [Careportal alternatives](../Usage/CPbefore26.html)
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
-- [Sample Setup](../Getting-Started/Sample-Setup.html) - update Dexcom G6
+- [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
 - [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-2-6-0) - major new features
-- [Wear complications](../Configuration/Watchfaces.html)
+- [Wear complications](../Configuration/Watchfaces.md)
 
 ## January 2020
 
@@ -120,10 +120,10 @@
 
 ## December 2019
 
-- [Android auto](../Usage/Android-auto.html) - setup with screenshots
+- [Android auto](../Usage/Android-auto.md) - setup with screenshots
 - [Accu-Chek Insight & Autotune](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps) - workaround for usage
 - [Glimp](../Configuration/Config-Builder.md#bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../Configuration/Watchfaces.html) - major update, way more details
+- [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details
 - [Watchface complications](../Configuration/Watchfaces.md#complications) - use your favorite watchface with AAPS data
 
 ## November 2019
@@ -134,36 +134,36 @@
 - [FAQ - sports](../Getting-Started/FAQ.md#sports)
 - [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f-main-graph)
 - [Insight - Disable absolute values in NS Client](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
-- [Medtronic pump - possible double entries](../Configuration/MedtronicPump.html)
+- [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
 - [New Freestyle Libre 2 tutorial](../Hardware/Libre2.html)
-- [Profile switch with percentage - example](../Usage/Profiles.html)
-- [SMS commands update](../Children/SMS-Commands.html)
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
-- [Troubleshooting - link collection](../Usage/troubleshooting.html)
+- [Profile switch with percentage - example](../Usage/Profiles.md)
+- [SMS commands update](../Children/SMS-Commands.md)
+- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- [Troubleshooting - link collection](../Usage/troubleshooting.md)
 - Update - quick walk-through for experienced users
-- Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations.html#translate-docs-pages).
+- Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations.md#translate-docs-pages).
 
 ## October 2019
 
-- [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.html))
+- [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.md))
 - [AccuChek Insight - log options](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
-- [COB calculation on separate page](../Usage/COB-calculation.html)
+- [COB calculation on separate page](../Usage/COB-calculation.md)
 - [COB - wrong COB value detection](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 - [Dexcom G6 specific troubleshooting](../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting)
-- [Objectives update version 2.5](../Usage/Objectives.html)
-- [Preferences update](../Configuration/Preferences.html)
+- [Objectives update version 2.5](../Usage/Objectives.md)
+- [Preferences update](../Configuration/Preferences.md)
 - [SGLT-2 inhibitors - do not use when looping](../Module/module.md#no-use-of-sglt-2-inhibitors)
 - [SMS Commands Troubleshooting](../Children/SMS-Commands.md#troubleshooting)
 - [xDrip - update G6 transmitter replacement](../Configuration/xdrip.md#replace-transmitter)
 
 ## September 2019
 
-- [Automate](../Usage/Automation.html)
+- [Automate](../Usage/Automation.md)
 - [Bolus calculator](../Getting-Started/Screenshots.md#wrong-cob-detection) - slow carb absorption
 - [Nightscout security](../Installing-AndroidAPS/Nightscout.md#security-considerations)
 - [Profile timeshift](../Usage/Profiles.md#time-shift) (more details)
-- [Remote monitoring](../Children/Children.html)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.html)
+- [Remote monitoring](../Children/Children.md)
+- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
 
 ## August 2019
 

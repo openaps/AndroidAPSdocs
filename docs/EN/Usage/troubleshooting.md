@@ -2,14 +2,14 @@
 
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.md).
 
 ## AndroidAPS app
 
 ### Building & updating
 
 - [Lost keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
-- [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
+- [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Settings
 
@@ -25,7 +25,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
   :alt: 'Failure message: Data from different pump'
   ```
 
-- [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
+- [Nightscout Client](../Usage/Troubleshooting-NSClient.md)
 
 ### Usage
 
@@ -48,15 +48,15 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ## Pumps
 
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
-- [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
+- [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 - [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
 - [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Phones
 
-- [Jelly](../Usage/jelly.html)
-- [Huawei bluetooth & battery optimization](../Usage/huawei.html)
+- [Jelly](../Usage/jelly.md)
+- [Huawei bluetooth & battery optimization](../Usage/huawei.md)
 
 ## Smartwatches
 

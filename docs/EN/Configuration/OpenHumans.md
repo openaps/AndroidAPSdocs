@@ -26,7 +26,7 @@ Secret or private information such as your Nightscout URL or API secret will not
 ## Setup
 
 1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
-2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.html).
+2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.md).
 3. Open its setting using the cog wheel button. You can restrict upload to times when phone uses Wi-Fi and/or is charged.
 4. Open the Open Humans Plugin (either trough OH tab or hamburger menu) and click 'LOGIN'.
 

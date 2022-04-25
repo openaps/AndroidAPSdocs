@@ -69,17 +69,17 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 
 AndroidAPS **currently** works with
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.html) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.html)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.html)
-- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.html)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.html) from upcoming version 2.4 ([additional communication device](../Module/module.md#additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.html) ([additional communication device](../Module/module.md#additional-communication-device) needed)
-- [Omnipod DASH](../Configuration/OmnipodDASH.html)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md)
+- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
+- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](../Module/module.md#additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](../Module/module.md#additional-communication-device) needed)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.html) page.
+**Other pumps** that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
 
 If you need to **privately buy** a pump then you can find various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
 
@@ -108,14 +108,14 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 ### BG Source
 
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look [here](../Configuration/BG-Source.html). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
 - [Dexcom G6](../Hardware/DexcomG6.html): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../Hardware/DexcomG5.html): It works with xDrip+ app or patched Dexcom app
 - [Dexcom G4](../Hardware/DexcomG4.html): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
 - [Libre 2](../Hardware/Libre2.html): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
 - [Libre 1](../Hardware/Libre1.html): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-- [Eversense](../Hardware/Eversense.html): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+- [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
 - [Enlite (MM640G/MM630G)](../Hardware/MM640g.html): quite complicated with a lot of extra stuff
 
 ### Nightscout
@@ -124,11 +124,11 @@ Nightscout is a open source web application that can log and display your CGM da
 
 Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found [here](../Installing-AndroidAPS/Nightscout.html).
+Additional information on how to configure Nightscout for use with AndroidAPS can be found [here](../Installing-AndroidAPS/Nightscout.md).
 
 ### AAPS-.apk file
 
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.html).
+The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  [here](../Installing-AndroidAPS/Building-APK.md).
 
 ## Optional Modules
 
@@ -136,7 +136,7 @@ The basic component of the system. Before installing the app, you have to build 
 
 You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see [this documentation](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5) for more details).
 
-Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AndroidAPS, which you can find [here](../Configuration/Watchfaces.html).
+Users are creating a [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). There are different watchfaces for use with AndroidAPS, which you can find [here](../Configuration/Watchfaces.md).
 
 To record a phone or watch that isn't already listed in the spreadsheet then please fill in the [form](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
 
@@ -144,16 +144,16 @@ Any problems with the spreadsheet please send an email to [hardware@androidaps.o
 
 ### xDrip+
 
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.html). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found [here](../Configuration/xdrip.md). Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
 
 ## What to do while waiting for modules
 
 It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.html) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.html) before each new Objective and setup up your [hardware](../index.md#component-setup).
+If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](../index.md#component-setup).
 
 % Image aliases resource for referencing images by name with more positioning flexibility
 

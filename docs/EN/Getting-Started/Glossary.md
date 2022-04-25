@@ -22,14 +22,14 @@
 <td><strong>Android Auto</strong></td>
 <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
 <td>&nbsp;</td>
-<td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
+<td><a href="../Usage/Android-auto.md">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
 </tr>
 <tr>
 <td><strong>APK</strong></td>
 <td>software installation file (Android application package)</td>
 <td>&nbsp;</td>
-<td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
+<td><a href="../Installing-AndroidAPS/Building-APK.md">Wiki - Building APK</a></td>
 </tr>
 <tr>
 <td><strong>Autosens</strong></td>
@@ -47,7 +47,7 @@
 <td><strong>BAT</strong></td>
 <td>status light low battery on homescreen</td>
 <td>CAN / RES / SEN</td>
-<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
 <td><strong>BG</strong></td>
@@ -95,7 +95,7 @@
 <td><strong>CAN</strong></td>
 <td>status light overdue cannula change on homescreen</td>
 <td>BAT / RES / SEN</td>
-<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
 <td><strong>CGM</strong></td>
@@ -137,13 +137,13 @@
 <td><strong>FGM</strong></td>
 <td>flash glucose monitor (Freestyle Libre)</td>
 <td>CGM</td>
-<td><a href="../Configuration/BG-Source.html">Wiki - BG source</a></td>
+<td><a href="../Configuration/BG-Source.md">Wiki - BG source</a></td>
 </tr>
 <tr>
 <td><strong>git</strong></td>
 <td>git in our context here is the tool to mainly download the AndrdoidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
 <td>&nbsp;</td>
-<td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - update APK</a></td>
+<td><a href="../Installing-AndroidAPS/Update-to-new-version.md">Wiki - update APK</a></td>
 </tr>
 <tr>
 <td><strong>GitHub</strong></td>
@@ -203,7 +203,7 @@
 <td><strong>maxIOB</strong></td>
 <td>safety feature - maximum total IOB AAPS can't go over</td>
 <td>&nbsp;</td>
-<td><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+<td><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
 <td><strong>MiaoMiao</strong></td>
@@ -239,7 +239,7 @@
 <td><strong>Objectives</strong></td>
 <td>learning program within AAPS guiding you step by step from open to closed loop</td>
 <td>&nbsp;</td>
-<td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+<td><a href="../Usage/Objectives.md">Wiki - objectives</a></td>
 </tr>
 <tr>
 <td><strong>OpenAPS</strong></td>
@@ -287,13 +287,13 @@
 <td><strong>Profile switch</strong></td>
 <td>(temporary) change of profile used or percentual increase/decrease</td>
 <td>&nbsp;</td>
-<td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+<td><a href="../Usage/Profiles.md">Wiki - profile switch</a></td>
 </tr>
 <tr>
 <td><strong>RES</strong></td>
 <td>status light overdue reservoir change on homescreen</td>
 <td>BAT / CAN / SEN</td>
-<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
 <td><strong>RileyLink</strong></td>
@@ -311,7 +311,7 @@
 <td><strong>SEN</strong></td>
 <td>status light sensor change on homescreen</td>
 <td>BAT / CAN / RES</td>
-<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+<td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
 <td><strong>Sensivity detection</strong></td>
@@ -365,7 +365,7 @@
 <td><strong>UAM</strong></td>
 <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
 <td>SMB</td>
-<td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+<td><a href="../Usage/Open-APS-features.md?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
 <td><strong>Virtual pump</strong></td>
