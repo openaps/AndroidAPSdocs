@@ -5,7 +5,7 @@ With “Temp-Targets” (or short TT), you can change your blood glucose target 
 
 ![Set default temp targets](../images/TempTarget_Default.png)
 
-To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget.md#custom-temp-target) (BG value and/or duration), short click on  your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder#actions).
+To use one of the set “Default-Temp-Targets”, you can short click on your target in the right corner on the top in the overview-tab to show Temp Target dialog and click on Eating Soon, Activity or Hypo button, or use the shortcuts in the orange “Carbs” button. To manually set a [“Custom Temp-Target”](../Usage/temptarget.md#custom-temp-target) (BG value and/or duration), short click on  your target in the top right corner or use the “Temporary Target“ button in the [actions tab / menu](../Configuration/Config-Builder.md#actions).
 
 ![Set temp target](../images/TempTarget_Set2.png)
 
