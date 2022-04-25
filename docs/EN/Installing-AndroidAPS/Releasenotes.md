@@ -312,7 +312,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - SimpleProfile is removed
 
-- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 
 - MDT plugin: Fixed bug with duplicated entries
 

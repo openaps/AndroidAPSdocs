@@ -84,7 +84,7 @@
 
 ## May 2020
 
-- [Extended bolus only for Dana + Insight pumps](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus only for Dana + Insight pumps](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [Insight deactivate vibration](../Configuration/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
 - [Minimal request rate](../Configuration/Preferences.md#minimal-request-change) to reduce number of notifications in open loop mode
 - [Patched Libre Link app](../Hardware/Libre2.md#step-1-build-your-own-patched-librelink-app) - check if correctly patched
@@ -107,7 +107,7 @@
 - [Automation caveats](../Usage/Automation.md#good-practice-caveats)
 - [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
-- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
 - [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-2-6-0) - major new features
@@ -130,7 +130,7 @@
 
 - [Automation - deactivate when disabling loop](../Usage/Automation.md#important-note)
 - [Dexcom G6 replace transmitter update](../Configuration/xdrip.md#replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md##extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [FAQ - sports](../Getting-Started/FAQ.md#sports)
 - [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)

@@ -463,7 +463,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
-* [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
 * [Profile switch](../Usage/Profiles.md)
