@@ -43,7 +43,7 @@ published by Tim Street at
     cannot connect xDrip+ and Dexcom app with the transmitter at the
     same time!**
 *   If you need Clarity and want to profit from xDrip+ alarms use the
-    [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+    [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
     with local broadcast to xDrip+.
 *   If not already set up then download
     [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow

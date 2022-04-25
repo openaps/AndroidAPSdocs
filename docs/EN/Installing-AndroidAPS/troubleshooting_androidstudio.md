@@ -190,7 +190,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## No CGM data is received by AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
 
