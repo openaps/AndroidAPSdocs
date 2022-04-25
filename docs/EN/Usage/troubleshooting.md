@@ -51,7 +51,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 - [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md)
 - [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
-- [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+- [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-andor-pump)
 
 ## Phones
 

@@ -26,7 +26,7 @@ AAPS warns you if you are about to bolus with COB from a previous meal and the a
 
 ### How does AndroidAPS detect wrong COB values?
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md#absorption-settings?highlight=min_5m_carbimpact) method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: Hint on wrong COB value
