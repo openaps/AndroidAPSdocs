@@ -84,9 +84,9 @@ Up to 30h hours are taken into accord for AAPS calculations. So even after you s
 To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
 However, when there are a lot of duplicates, it might be easier to
-* [backup your settings](../Usage/ExportImportSettings.rst),
+* [backup your settings](../Usage/ExportImportSettings.md),
 * reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.rst) again
+* [import your settings](../Usage/ExportImportSettings.md) again
 
 ##### Red warning sign: Duplicate BG data
 
@@ -123,7 +123,7 @@ You need to find out why you get duplicate BGs:
    * IOB may be negative if there have recently been periods of reduced basal.
    * Press the icon to see the split of bolus and basal insulin
    
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before
   -> icon pulses if carbs are required 
 * Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%)
    * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
@@ -173,7 +173,7 @@ You need to find out why you get duplicate BGs:
 
 #### Prediction lines
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
 
    Prediction line shows where your BG (not where COB itself!) will go based on the current pump settings and assuming that the deviations due carb absorption remain constant. This line only appears if there are known COB.
 
@@ -273,7 +273,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * To record carbs without bolusing.
 * Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Time offset: When will you / have you been eaten carbs (in minutes).
-* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.rst)
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
 * You can use the buttons to quickly increase carb amount.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
