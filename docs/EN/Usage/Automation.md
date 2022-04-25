@@ -6,7 +6,7 @@ For the same frequent events, you might always have to change the same settings.
 
 I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.md) or profile switches.
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
@@ -163,4 +163,4 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 
 ## Alternatives
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.md).

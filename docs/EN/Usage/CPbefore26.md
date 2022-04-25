@@ -19,7 +19,7 @@ This page will show where you can find the functions previously available in car
 - Temporary target was moved to actions tab / menu.
 - Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](./CPbefore26.md#carbs-bolus) on this page).
 
-## Carbs & bolus
+## Carbs bolus
 
 ```{image} ../images/Careportal_25_26_2_IIa.png
 :alt: Careportal carbs & bolus
