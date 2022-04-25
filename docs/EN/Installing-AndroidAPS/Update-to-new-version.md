@@ -16,10 +16,10 @@
 
 1. [Export your settings](../Usage/ExportImportSettings.md#export-settings) from the existing AAPS version on your phone.
 You might not need it, but better be save than sorry.
-2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version.md#build-the-signed-apk)
+2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version.md#2-update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version.md#3-build-the-signed-apk)
 4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) to your phone and install it
-5. [Check the version](6-check-aaps-version-on-phone) in AndroidAPS
+5. [Check the version](../Installing-AndroidAPS/Update-to-new-version.md#6-check-aaps-version-on-phone) in AndroidAPS
 6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](../Configuration/xdrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

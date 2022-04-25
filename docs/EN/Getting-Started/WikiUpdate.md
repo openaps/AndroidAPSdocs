@@ -104,7 +104,7 @@
 
 ## February 2020
 
-- [Automation caveats](../Usage/Automation.md#good-practice-caveats)
+- [Automation caveats](../Usage/Automation.md#good-practice--caveats)
 - [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
 - [Careportal alternatives](../Usage/CPbefore26.md)
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
@@ -130,7 +130,7 @@
 
 - [Automation - deactivate when disabling loop](../Usage/Automation.md#important-note)
 - [Dexcom G6 replace transmitter update](../Configuration/xdrip.md#replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md##extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
+- [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only)
 - [FAQ - sports](../Getting-Started/FAQ.md#sports)
 - [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)

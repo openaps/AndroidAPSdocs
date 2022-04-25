@@ -352,7 +352,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Release date: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-250) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-250).
+Please note the [important notes](Releasenotes.md:important-notes-250) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-250).
 \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 \* New versioning that will allow to do minor updates without triggering the update-notification.
 
@@ -360,7 +360,7 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#impor
 
 Release date: 26-10-2019
 
-(important-notes-2-5-0)=
+(Releasenotes.md:important-notes-250)=
 
 ### Important notes
 
