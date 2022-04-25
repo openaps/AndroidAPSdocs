@@ -35,7 +35,7 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 
-   Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+   Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR.md#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -142,7 +142,7 @@ If you are planning to make a lot of edits, including adding images to help illu
  
  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
  
- 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst).
+ 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR.md#code-syntax) for the page type you are on (.md or .rst).
    The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
         (That code is exactly how the image below is embedded to be displayed.)

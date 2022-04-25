@@ -67,7 +67,7 @@ When a proofreader approves a translation it will be added to the next version o
 
 #### Link translation in Markdown files (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+At the moment two [markup languages](./make-a-PR.md#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
 ----
 
@@ -85,7 +85,7 @@ click on the cogwheel to open settings, select "Show" and click "Save".
 
 ![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.md#translate-headline-links).
 
 ![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
