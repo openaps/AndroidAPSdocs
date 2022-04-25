@@ -109,8 +109,7 @@ published by Tim Street at
 
 ### General troubleshooting
 
-General Troubleshoothing for CGMs can be found
-[here](./GeneralCGMRecommendation#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.md#troubleshooting).
 
 ### New transmitter with running sensor
 

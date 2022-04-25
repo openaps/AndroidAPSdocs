@@ -203,7 +203,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Usag
 - using modules for Dana pumps @MilosKozak
 - [new layout, layout selection](../Getting-Started/Screenshots.md) @MilosKozak
 - new [status lights layout](../Configuration/Preferences.md#status-lights) @MilosKozak
-- [multiple graphs support](../Getting-Started/Screenshots.md#section-f-main-graph) @MilosKozak
+- [multiple graphs support](../Getting-Started/Screenshots.md#section-f---main-graph) @MilosKozak
 - [Profile helper](../Configuration/profilehelper.md) @MilosKozak
 - visualization of [dynamic target adjustment](../Getting-Started/Screenshots.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - new [preferences layout](../Configuration/Preferences.md) @MilosKozak

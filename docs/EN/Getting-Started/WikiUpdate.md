@@ -132,7 +132,7 @@
 - [Dexcom G6 replace transmitter update](../Configuration/xdrip.md#replace-transmitter)
 - [Extended bolus - why they do not work in a loop context](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [FAQ - sports](../Getting-Started/FAQ.md#sports)
-- [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f-main-graph)
+- [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f---main-graph)
 - [Insight - Disable absolute values in NS Client](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
 - [New Freestyle Libre 2 tutorial](../Hardware/Libre2.md)
