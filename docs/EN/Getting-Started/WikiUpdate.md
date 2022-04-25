@@ -56,7 +56,7 @@
 - Dexcom G6 with [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
 - [Objectives](../Usage/Objectives.md#objective-3-prove-your-knowledge) - new questions
-- Other [new AndroidAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-2-8-0)
+- Other [new AndroidAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-280)
 
 ## December 2020
 
@@ -110,7 +110,7 @@
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop---dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
-- [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-2-6-0) - major new features
+- [Version 2.6.0](../Installing-AndroidAPS/Releasenotes.md#version-260) - major new features
 - [Wear complications](../Configuration/Watchfaces.md)
 
 ## January 2020
@@ -145,7 +145,7 @@
 
 ## October 2019
 
-- [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.md))
+- [AAPS version 2.5](../Installing-AndroidAPS/Releasenotes.md#version-250) updates (especially on [update page](../Installing-AndroidAPS/Update-to-new-version.md))
 - [AccuChek Insight - log options](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [COB calculation on separate page](../Usage/COB-calculation.md)
 - [COB - wrong COB value detection](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
@@ -169,5 +169,5 @@
 
 - Dexcom G6 patched app region
 - [Dexcom G6 new transmitter](../Configuration/xdrip.md#connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- [What do I need?](../) - new structure & additional information
+- [What do I need?](index.md:what-do-i-need) - new structure & additional information
 - New structure

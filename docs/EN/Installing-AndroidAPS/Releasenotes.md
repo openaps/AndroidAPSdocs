@@ -175,7 +175,7 @@ Release date: 01-01-2021
 
 - [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](../Configuration/Preferences.md#bolus-advisor) & [eating reminder](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
-- [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-androidaps-2-8) @rICTx-T1D
+- [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-androidaps-28) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 - New [Low Ressolution Skin](../Configuration/Preferences.md#skin)
@@ -352,7 +352,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Release date: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0).
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-250) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-250).
 \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
 \* New versioning that will allow to do minor updates without triggering the update-notification.
 

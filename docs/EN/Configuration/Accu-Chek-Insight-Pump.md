@@ -117,7 +117,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Firmware 1.x: No vibration by design.
 * Firmware 2.x: Vibration cannot be disabled.
-* Firmware 3.x: AndroidAPS delivers bolus silently. minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4)
+* Firmware 3.x: AndroidAPS delivers bolus silently. minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2614)
 
 Firmware version can be found in the menu.
 
