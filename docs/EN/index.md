@@ -49,7 +49,7 @@ For more details, please read on here.
 :glob: true
 :maxdepth: 1
 
-Change language <./changelanguage.rst>
+Change language <./changelanguage.md>
 ```
 
 ```{toctree}
@@ -57,11 +57,11 @@ Change language <./changelanguage.rst>
 :glob: true
 :maxdepth: 1
 
-Safety first <./Getting-Started/Safety-first.rst>
-What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>
+Safety first <./Getting-Started/Safety-first.md>
+What is a closed loop system <./Getting-Started/ClosedLoop.md>
+What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
 Pump choices <./Getting-Started/Pump-Choices.md>
-Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
 (index.md:what-do-i-need)=
@@ -71,7 +71,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 :glob: true
 :maxdepth: 1
 
-Module <./Module/module.rst>
+Module <./Module/module.md>
 ```
 
 ```{toctree}
@@ -82,10 +82,10 @@ Module <./Module/module.rst>
 Building the APK <./Installing-AndroidAPS/Building-APK.md>
 Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-Install git <./Installing-AndroidAPS/git-install.rst>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Install git <./Installing-AndroidAPS/git-install.md>
 Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-Release notes <./Installing-AndroidAPS/Releasenotes.rst>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 ```
 
@@ -96,12 +96,12 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :glob: true
 :maxdepth: 1
 
-CGM/FGM <./Configuration/BG-Source.rst>
+CGM/FGM <./Configuration/BG-Source.md>
 xDrip Settings <./Configuration/xdrip.md>
-Pumps <./Hardware/pumps.rst>
-Phones <./Hardware/Phoneconfig.rst>
+Pumps <./Hardware/pumps.md>
+Phones <./Hardware/Phoneconfig.md>
 Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-Smartwatch  <./Hardware/Smartwatch.rst>
+Smartwatch  <./Hardware/Smartwatch.md>
 ```
 
 (index.md:configuration)=
@@ -112,7 +112,7 @@ Smartwatch  <./Hardware/Smartwatch.rst>
 :maxdepth: 1
 
 Config builder <./Configuration/Config-Builder.md>
-Preferences <./Configuration/Preferences.rst>
+Preferences <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
@@ -121,16 +121,16 @@ Preferences <./Configuration/Preferences.rst>
 :maxdepth: 1
 
 AndroidAPS screens <./Getting-Started/Screenshots.md>
-Objectives <./Usage/Objectives.rst>
+Objectives <./Usage/Objectives.md>
 OpenAPS features <./Usage/Open-APS-features.md>
-COB calculation <./Usage/COB-calculation.rst>
+COB calculation <./Usage/COB-calculation.md>
 Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
 Profile switch <./Usage/Profiles.md>
 Temp-targets <./Usage/temptarget.md>
-Extended carbs <./Usage/Extended-Carbs.rst>
-Automation <./Usage/Automation.rst>
-Careportal (discontinued) <./Usage/CPbefore26.rst>
-Open Humans Uploader <./Configuration/OpenHumans.rst>
+Extended carbs <./Usage/Extended-Carbs.md>
+Automation <./Usage/Automation.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
 Automation with 3rd party apps <./Usage/automationwithapp.md>
 Android auto <./Usage/Android-auto.md>
 ```
@@ -143,7 +143,7 @@ Android auto <./Usage/Android-auto.md>
 Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 Accessing logfiles <./Usage/Accessing-logfiles.md>
 Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-Export/Import Settings <./Usage/ExportImportSettings.rst>
+Export/Import Settings <./Usage/ExportImportSettings.md>
 xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 ```
 
@@ -152,9 +152,9 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 :glob: true
 :maxdepth: 1
 
-Remote monitoring <./Children/Children.rst>
-SMS commands <./Children/SMS-Commands.rst>
-Profile helper <./Configuration/profilehelper.rst>
+Remote monitoring <./Children/Children.md>
+SMS commands <./Children/SMS-Commands.md>
+Profile helper <./Configuration/profilehelper.md>
 ```
 
 ```{toctree}
@@ -162,7 +162,7 @@ Profile helper <./Configuration/profilehelper.rst>
 :glob: true
 :maxdepth: 1
 
-Troubleshooting <./Usage/troubleshooting.rst>
+Troubleshooting <./Usage/troubleshooting.md>
 Nightscout client <./Usage/Troubleshooting-NSClient.md>
 ```
 
@@ -189,7 +189,7 @@ Glossary <./Getting-Started/Glossary.md>
 
 Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
 Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
 ```{toctree}
