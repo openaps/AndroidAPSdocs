@@ -20,8 +20,9 @@ import os
 #sys.path.insert(0, os.path.abspath('.'))
 
 
-from recommonmark.parser import CommonMarkParser
-from recommonmark.transform import AutoStructify
+# PL from recommonmark.parser import CommonMarkParser
+# PL from recommonmark.transform import AutoStructify
+
 # PL import alabaster
 
 # -- General configuration ------------------------------------------------
@@ -36,18 +37,18 @@ on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-#    'myst_parser',
+    'myst_parser',
     'sphinx.ext.ifconfig',
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
 # PL 'alabaster',
 ]
 
-#myst_enable_extensions = [
-#  "colon_fence",
-#]
+myst_enable_extensions = [
+  "colon_fence",
+]
 
-#myst_heading_anchors = 3
+myst_heading_anchors = 3
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../../_templates'] # path relative to languages conf.py
@@ -380,7 +381,7 @@ def setup(app):
             # 'url_resolver': lambda url: github_doc_root + url,
             'url_resolver': lambda url: hosted_root + url + '.html',
             'auto_toc_tree_section': 'Summary',
-# PL            'enable_auto_doc_ref': True,
+            'enable_auto_doc_ref': True,
             'enable_eval_rst': True,
             }, True)
     app.add_transform(AutoStructify)
