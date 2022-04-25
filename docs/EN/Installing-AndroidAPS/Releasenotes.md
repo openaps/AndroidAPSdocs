@@ -84,9 +84,9 @@ Release date: 31-01-2022
 
 - You can start activity temporary target during creation of profile switch @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Installing-AndroidAPS/update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](../Installing-AndroidAPS/update3_0.html#reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](../Installing-AndroidAPS/update3_0.md#reset-master-password) @MilosKozak
 
 - User actions tracing @Philoul
 
@@ -195,7 +195,7 @@ Release date: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.html).
 
-You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation). This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ### Major new features
 

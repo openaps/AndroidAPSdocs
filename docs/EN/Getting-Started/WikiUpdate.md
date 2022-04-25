@@ -20,7 +20,7 @@
 
 ## November 2021
 
-- Best practices for calibrating a [libre 2 sensor](../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor)
+- Best practices for calibrating a [libre 2 sensor](../Hardware/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../Getting-Started/FAQ.md#impact) reformulation of impact
 - Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - Removed patched [Dexcom](../Hardware/DexcomG6.html) app as it is obsolete
@@ -53,7 +53,7 @@
 ## January 2021
 
 - [Action tab](../Getting-Started/Screenshots.md#action-tab) - more details on page 'AndroidAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app)
+- Dexcom G6 with [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 - Libre smart reader [battery level](../Getting-Started/Screenshots.md#sensor-level-battery)
 - [Objectives](../Usage/Objectives.md#objective-3-prove-your-knowledge) - new questions
 - Other [new AndroidAPS 2.8.0 functions](../Installing-AndroidAPS/Releasenotes.md#version-2-8-0)
@@ -87,12 +87,12 @@
 - [Extended bolus only for Dana + Insight pumps](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 - [Insight deactivate vibration](../Configuration/Accu-Chek-Insight-Pump.md#vibration) (firmware 3.x only)
 - [Minimal request rate](../Configuration/Preferences.md#minimal-request-change) to reduce number of notifications in open loop mode
-- [Patched Libre Link app](../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app) - check if correctly patched
+- [Patched Libre Link app](../Hardware/Libre2.md#step-1-build-your-own-patched-librelink-app) - check if correctly patched
 - [Prediction lines](../Getting-Started/Screenshots.md#prediction-lines) - more details
 
 ## April 2020
 
-- [Backdate insulin](../Usage/CPbefore26.html#carbs-bolus) (i.e. given by syringe)
+- [Backdate insulin](../Usage/CPbefore26.md#carbs-bolus) (i.e. given by syringe)
 - [Android 6 support will be discontinued in next master version](../Module/module.md#phone)
 
 ## March 2020
@@ -149,7 +149,7 @@
 - [AccuChek Insight - log options](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [COB calculation on separate page](../Usage/COB-calculation.md)
 - [COB - wrong COB value detection](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
-- [Dexcom G6 specific troubleshooting](../Hardware/DexcomG6.html#dexcom-g6-specific-troubleshooting)
+- [Dexcom G6 specific troubleshooting](../Hardware/DexcomG6.md#dexcom-g6-specific-troubleshooting)
 - [Objectives update version 2.5](../Usage/Objectives.md)
 - [Preferences update](../Configuration/Preferences.md)
 - [SGLT-2 inhibitors - do not use when looping](../Module/module.md#no-use-of-sglt-2-inhibitors)

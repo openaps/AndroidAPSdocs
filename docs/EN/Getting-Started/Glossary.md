@@ -83,7 +83,7 @@
 <td><strong>BYODA</strong></td>
 <td>Build your own Dexcom App - it's a special way to generate your own Dexcom App for reading out the sensor data</td>
 <td>&nbsp;</td>
-<td><a href="../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
+<td><a href="../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
 </tr>
 <tr>
 <td><strong>CAGE</strong></td>

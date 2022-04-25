@@ -19,7 +19,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
   :alt: 'Error: Basal not aligned to hours'
   ```
 
-- [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+- [Pump - data from different pump](../Installing-AndroidAPS/update3_0.md#failure-message-data-from-different-pump)
 
   ```{image} ../images/BasalNotAlignedToHours2.png
   :alt: 'Failure message: Data from different pump'
@@ -40,8 +40,8 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ## CGM
 
 - [General](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
-- [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
-- [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
+- [Dexcom G6](../Hardware/DexcomG6.md#troubleshooting-g6)
+- [Libre 2](../Hardware/Libre2.md#experiences-and-troubleshooting)
 - [xDrip - no CGM data](../Configuration/xdrip.md#identify-receiver)
 - [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
 
