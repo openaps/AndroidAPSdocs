@@ -64,7 +64,7 @@ Pump choices <./Getting-Started/Pump-Choices.md>
 Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 ```
 
-(what-do-i-need)=
+(index.md:what-do-i-need)=
 
 ```{toctree}
 :caption: What do I need?
@@ -104,7 +104,7 @@ Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
 Smartwatch  <./Hardware/Smartwatch.rst>
 ```
 
-(configurationaaps)=
+(index.md:configuration)=
 
 ```{toctree}
 :caption: Configuration
