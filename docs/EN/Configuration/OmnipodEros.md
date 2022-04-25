@@ -332,7 +332,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 > Component that will operate AndroidAPS and send control commands to the Pod communication device.
 >
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](../index.md#component-setup)
+> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [release notes](../Installing-AndroidAPS/Releasenotes.md)
 
 - {{ Omnipod_Pod }}  **Insulin Delivery Device**
 
