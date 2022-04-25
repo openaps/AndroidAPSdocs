@@ -89,7 +89,7 @@ Release notes <./Installing-AndroidAPS/Releasenotes.rst>
 Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 ```
 
-(component-setup)=
+(index.md:component-setup)=
 
 ```{toctree}
 :caption: Component Setup
