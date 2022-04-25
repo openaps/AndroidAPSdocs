@@ -43,7 +43,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 - [Dexcom G6](../Hardware/DexcomG6.md#troubleshooting-g6)
 - [Libre 2](../Hardware/Libre2.md#experiences-and-troubleshooting)
 - [xDrip - no CGM data](../Configuration/xdrip.md#identify-receiver)
-- [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
+- [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5g6-and-xdrip)
 
 ## Pumps
 

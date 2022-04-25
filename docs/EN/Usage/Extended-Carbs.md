@@ -2,7 +2,7 @@
 
 ## What are eCarbs and when are they useful?
 
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
+With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) below.
 
 The need to deal with such meals still exists though. Which is why AndroidAPS as of version 2.0 supports so called extended carbs or eCarbs.
 
@@ -47,7 +47,7 @@ With low carb, high fat/protein meals it may be enough to only use eCarbs withou
 
 ## Extended bolus and why they won't work in closed-loop environment?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-wont-work-in-a-closed-loop-environment) for details
 
 ### Extended bolus and switch to open loop - Dana and Insight pump only
 

@@ -25,7 +25,7 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
 
 These are the usual gradle sync failures:
 * [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolve-no-cached-version)
+* [No cached version of ... available](#could-not-resolveno-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
 *Important*:
@@ -55,7 +55,7 @@ If you receive a failure message like
     ```
     your Git installation is not right.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install.md#check-git-settings-in-android-studio)
+  * [Check git installation](../Installing-AndroidAPS/git-install.md#4-check-git-settings-in-android-studio)
 
   * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
@@ -211,7 +211,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## App installed but old version
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#2-update-your-local-copy)
 
 ## None of the above worked
 
