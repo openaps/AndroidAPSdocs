@@ -81,7 +81,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
 * internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
+* internal link to headline: `[alt text](../folder/file.md#headline)`
 
 ### .rst files
 #### Text format
@@ -114,7 +114,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
 * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
 * To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
-  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+  * `[text](../Usage/Test.md#anchor)` instead of `[text](../Usage/Test#anchor)`
 
 #### In files with **.rst** ending:
 * `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. 

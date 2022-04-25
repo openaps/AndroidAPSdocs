@@ -47,7 +47,7 @@ When configuring your Medtronic pump with the setup wizard it is possible that y
 While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select):
+- **Pump Frequency**: There are two options based on where your pump was originally distributed.  Please check the [FAQ](../Configuration/MedtronicPump.md#faq) if you are unsure which option to select):
 
     - for US & Canada, frequency used is 916 Mhz
     - for Worldwide, frequency used is 868 Mhz
@@ -86,8 +86,8 @@ When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in
 
 At the bottom of the screen there are three buttons:
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
+- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
 
 ## Pump History
 ![Pump History Dialog](../images/Medtronic03.png)
