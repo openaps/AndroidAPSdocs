@@ -61,4 +61,4 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ## Smartwatches
 
 - [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
-- [Sony Smartwatch 3](../Usage/SonySW3.html)
+- [Sony Smartwatch 3](../Usage/SonySW3.md)

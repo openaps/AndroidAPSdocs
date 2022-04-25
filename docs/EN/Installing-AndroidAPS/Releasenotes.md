@@ -45,7 +45,7 @@ Release date: 31-01-2022
 - **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
 - Use the same version of AAPS and NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.html).
+**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
 
 ### Preparation steps
 
@@ -63,7 +63,7 @@ Release date: 31-01-2022
 
 - [Dana-i support](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 support](../Configuration/DiaconnG8.html)
+- [DiaconnG8 support](../Configuration/DiaconnG8.md)
 
 - Glunovo support
 
@@ -193,7 +193,7 @@ Release date: 01-01-2021
 
 Release date: 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.html).
+**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
 
 You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation). This will not effect other objectives you have already finished. You will keep all finished objectives!
 
@@ -300,7 +300,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Small design changes (startpage...)
 
-- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.html)
+- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
 
 - New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 

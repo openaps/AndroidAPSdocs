@@ -110,13 +110,13 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
-- [Dexcom G6](../Hardware/DexcomG6.html): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.html): It works with xDrip+ app or patched Dexcom app
-- [Dexcom G4](../Hardware/DexcomG4.html): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-- [Libre 2](../Hardware/Libre2.html): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-- [Libre 1](../Hardware/Libre1.html): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
+- [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+- [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+- [Libre 1](../Hardware/Libre1.md): You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
 - [Eversense](../Hardware/Eversense.md): It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.html): quite complicated with a lot of extra stuff
+- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): quite complicated with a lot of extra stuff
 
 ### Nightscout
 

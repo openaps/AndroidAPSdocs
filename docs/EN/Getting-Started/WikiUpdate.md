@@ -4,7 +4,7 @@
 
 - [BG quality warning sign](../Getting-Started/Screenshots.md#bg-warning-sign) @tanja
 - [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.html) @tanja
+- [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
 - Update docs for AAPS 3.0 (partly) @xJoe
 - [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
@@ -23,7 +23,7 @@
 - Best practices for calibrating a [libre 2 sensor](../Hardware/Libre2.md#best-practices-for-calibrating-a-libre-2-sensor)
 - [ISF](../Getting-Started/FAQ.md#impact) reformulation of impact
 - Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- Removed patched [Dexcom](../Hardware/DexcomG6.html) app as it is obsolete
+- Removed patched [Dexcom](../Hardware/DexcomG6.md) app as it is obsolete
 
 ## October 2021
 
@@ -60,9 +60,9 @@
 
 ## December 2020
 
-- [Libre 2](../Hardware/Libre2.html) - patched app does not work with US sensors
+- [Libre 2](../Hardware/Libre2.md) - patched app does not work with US sensors
 - [OpenAPS hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.html)
+- Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
 
 ## October 2020
 
@@ -79,7 +79,7 @@
 
 ## June 2020
 
-- [Libre 2](../Hardware/Libre2.html) - more details patched Libre Link app & use of bluetooth transmitters
+- [Libre 2](../Hardware/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
 - [Time zone travelling](../Usage/Timezone-traveling.md) with Libre 2
 
 ## May 2020
@@ -106,7 +106,7 @@
 
 - [Automation caveats](../Usage/Automation.md#good-practice-caveats)
 - [Autosens](../Usage/Open-APS-features.md#autosens) - short explanation
-- [Careportal alternatives](../Usage/CPbefore26.html)
+- [Careportal alternatives](../Usage/CPbefore26.md)
 - [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 - New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 - [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
@@ -135,7 +135,7 @@
 - [Homescreen - lines on graph](../Getting-Started/Screenshots.md#section-f-main-graph)
 - [Insight - Disable absolute values in NS Client](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps)
 - [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../Hardware/Libre2.html)
+- [New Freestyle Libre 2 tutorial](../Hardware/Libre2.md)
 - [Profile switch with percentage - example](../Usage/Profiles.md)
 - [SMS commands update](../Children/SMS-Commands.md)
 - [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
