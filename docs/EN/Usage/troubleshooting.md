@@ -8,12 +8,12 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ### Building & updating
 
-- [Lost keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore)
+- [Lost keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
 - [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
 
 ### Settings
 
-- [Profile](../Usage/Profiles.html#troubleshooting-profile-errors)
+- [Profile](../Usage/Profiles.md#troubleshooting-profile-errors)
 
   ```{image} ../images/Screen_DifferentPump.png
   :alt: 'Error: Basal not aligned to hours'
@@ -29,29 +29,29 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ### Usage
 
-- [Wrong carb values](../Usage/COB-calculation.html#detection-of-wrong-cob-values)
+- [Wrong carb values](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
   ```{image} ../images/Calculator_SlowCarbAbsorption.png
   :alt: 'Error: Slow carb absorption'
   ```
 
-- [SMS commands](../Children/SMS-Commands.html#troubleshooting)
+- [SMS commands](../Children/SMS-Commands.md#troubleshooting)
 
 ## CGM
 
-- [General](../Hardware/GeneralCGMRecommendation.html#troubleshooting)
+- [General](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
 - [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
 - [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
-- [xDrip - no CGM data](../Configuration/xdrip.html#identify-receiver)
-- [xDrip - Dexcom troubleshooting](../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip)
+- [xDrip - no CGM data](../Configuration/xdrip.md#identify-receiver)
+- [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Pumps
 
-- [DanaRS](../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors)
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
 - [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
-- [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.html#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors)
-- [Medtronic + RileyLink](../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+- [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
+- [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Phones
 
@@ -60,5 +60,5 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ## Smartwatches
 
-- [Troubleshooting Wear app](../Configuration/Watchfaces.html#troubleshooting-the-wear-app)
+- [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 - [Sony Smartwatch 3](../Usage/SonySW3.html)

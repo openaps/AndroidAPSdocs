@@ -79,7 +79,7 @@
 
 ## Use SMS commands
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.html#commands) below.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.md#commands) below.
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
@@ -93,7 +93,7 @@
 
 ## Commands
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.html#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: SMS Commands Example

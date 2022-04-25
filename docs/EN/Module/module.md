@@ -19,7 +19,7 @@ substitutions:
 
 # Component Overview
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.html#component-setup), too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.md#component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
@@ -73,8 +73,8 @@ AndroidAPS **currently** works with
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.html)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.html)
 - [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.html)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.html) from upcoming version 2.4 ([additional communication device](../Module/module.html#additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.html) ([additional communication device](../Module/module.html#additional-communication-device) needed)
+- [some old Medtronic pumps](../Configuration/MedtronicPump.html) from upcoming version 2.4 ([additional communication device](../Module/module.md#additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.html) ([additional communication device](../Module/module.md#additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.html)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
@@ -110,7 +110,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look [here](../Configuration/BG-Source.html). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
-- [Dexcom G6](../Hardware/DexcomG6.html): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G6](../Hardware/DexcomG6.html): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../Hardware/DexcomG5.html): It works with xDrip+ app or patched Dexcom app
 - [Dexcom G4](../Hardware/DexcomG4.html): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
 - [Libre 2](../Hardware/Libre2.html): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
@@ -153,7 +153,7 @@ It sometimes takes a while to get all modules for closing the loop. But no worri
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.html) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.html) before each new Objective and setup up your [hardware](../index.html#component-setup).
+If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.html) before each new Objective and setup up your [hardware](../index.md#component-setup).
 
 % Image aliases resource for referencing images by name with more positioning flexibility
 

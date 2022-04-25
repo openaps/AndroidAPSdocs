@@ -76,7 +76,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.html).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.html#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.md#master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Protection
@@ -175,7 +175,7 @@
 
 ### Fill/Prime standard insulin amounts
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.html#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
 ### Range for visualization
@@ -209,7 +209,7 @@
 - Status lights give a visual warning for
 
   - Sensor age
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.html#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - Insulin age (days reservoir is used)
   - Reservoir level (units)
   - Cannula age
@@ -240,13 +240,13 @@
 
 #### Bolus advisor
 
-- If you run [Bolus wizard](../Getting-Started/Screenshots.html#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+- If you run [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
 - If correction bolus is accepted **no carbs** will be recorded.
 
 - An alarm will be started when glucose value is in good level to start eating.
 
-- You have to enter [Bolus wizard](../Getting-Started/Screenshots.html#bolus-wizard) again and enter the amount of carbs you want to eat.
+- You have to enter [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Bolus advisor message
@@ -298,8 +298,8 @@
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.html) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.html#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.html#super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### OpenAPS AMA settings
 
@@ -312,7 +312,7 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.h
 - The value is measured in units per hour (U/h).
 - It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
@@ -336,7 +336,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features.html#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 - If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
@@ -347,17 +347,17 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### OpenAPS SMB settings
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.html#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.html#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.html#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - If target is modified it will be displayed with a green background on your home screen.
 
@@ -422,12 +422,12 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### Advanced settings - autosens ratio
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.html#autosens) ratio.
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.html#pump).  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Pair and set your pump up according to the pump related instructions:
 
 - [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.html)
 - [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.html)
@@ -448,7 +448,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](../Configuration/Config-Builder.html#local-profile) are uploaded to your Nightscout site.
+- If activated changes in [local profile](../Configuration/Config-Builder.md#local-profile) are uploaded to your Nightscout site.
 
 ### Connection settings
 
@@ -478,13 +478,13 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 - *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
 
-  - You need to [go through AAPS](../Configuration/Config-Builder.html#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - You need to [go through AAPS](../Configuration/Config-Builder.md#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
 - *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
 
 ## SMS Communicator
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.html#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
 - Further information is described in [SMS Commands](../Children/SMS-Commands.html).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
@@ -520,7 +520,7 @@ Select which location service shall be used:
 ```
 
 - Standard recipient of logs is <mailto:logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences.html#master-password). In this case master password has to be entered each time settings are exported or imported.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences.md#master-password). In this case master password has to be entered each time settings are exported or imported.
 
 ## Open Humans
 

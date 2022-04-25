@@ -104,7 +104,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * external link: `` `alt text <www.url.tld>_` ``
 * internal link to .md page: `` `alt text <../folder/file.html>_` ``
 * internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
+* internal link to headline: `` `alt text <../folder/file.md#headline>_` ``
 
 ### Internal links
 
@@ -122,7 +122,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
    Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
 * `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
 * To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
+  * `[text](../Usage/Test.md#anchor)` instead of `[text](../Usage/Test#anchor)`
   
 ## Adding multiple images to documentation
 

@@ -20,13 +20,13 @@ Among others the following information is part of the settings export:
 
 - [Automation](../Usage/Automation.html) events
 - [Config builder](../Configuration/Config-Builder.html) settings
-- [Local profile](../Configuration/Config-Builder.html#local-profile) settings
-- [Objectives](../Usage/Objectives.html) status incl. [exam results](../Usage/Objectives.html#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.html) incl. [NS Client settings](../Configuration/Preferences.html#nsclient)
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.html) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.html) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Encrypted backup format
 
-Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.html#master-password) .
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Export settings
 
@@ -40,7 +40,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
-- Enter [master password](../Configuration/Preferences.html#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
@@ -49,7 +49,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ## Import settings
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.html#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
 - Hamburger menu (top left corner of screen)
 - Maintenance
@@ -62,7 +62,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
 - Select file.
 - Confirm import by clicking 'OK'.
-- Enter [master password](../Configuration/Preferences.html#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS import settings 2

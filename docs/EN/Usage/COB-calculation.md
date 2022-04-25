@@ -50,4 +50,4 @@ In the screenshot above, 41% of time the carb absorption was mathematically calc
 
 ## Manual correction of carbs entered
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.html#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).
