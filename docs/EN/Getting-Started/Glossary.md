@@ -249,7 +249,7 @@
 </tr>
 <tr>
  <td><strong>Open Loop</strong></td>
- <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
+ <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
  <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
