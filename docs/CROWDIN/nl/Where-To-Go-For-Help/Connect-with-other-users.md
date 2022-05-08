@@ -18,8 +18,9 @@ Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.c
 
 * [Looped Facebookgroep](https://www.facebook.com/groups/TheLoopedGroup): voor alle DIY closed loop systemen (OpenAPS, Loop en AndroidAPS)
 * [xDrip + - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in de cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in het algemeen
-* [AndroidAPS op Discord](https://discord.gg/4fQUWHZ4Mw)
+* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
 
