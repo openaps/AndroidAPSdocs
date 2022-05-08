@@ -170,7 +170,7 @@ Release datum: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. Je behoudt alle reeds afgeronde doelen!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. This will not effect other objectives you have already finished. Je behoudt alle reeds afgeronde doelen!
 
 Belangrijkste nieuwe functies
 ----------------------
@@ -193,7 +193,7 @@ Belangrijkste nieuwe functies
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
