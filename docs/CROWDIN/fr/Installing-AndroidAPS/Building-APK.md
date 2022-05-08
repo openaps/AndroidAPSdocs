@@ -47,7 +47,7 @@
 </tbody>
 </table>
 
-Veuillez garder à l'esprit que le processeur **64 bits et le système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prendra moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que ce n'est pas obligatoire. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Veuillez garder à l'esprit que le processeur **64 bits et le système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prendra moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que ce n'est pas obligatoire. Cependant, vous pouvez toujours utiliser un disque dur lorsque vous construisez un fichier apk, mais notez que le processus de construction peut prendre beaucoup de temps à s'exécuter, si bien qu'une fois démarré, vous pouvez le laisser fonctionner sans surveillance.
 
 * * *
 
@@ -83,9 +83,9 @@ Les captures d'écran suivantes ont été prises à partir de Android Studio Ver
 
 Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient !** Au cours de l'installation et de la configuration, Android Studio télécharge beaucoup de choses ce qui prendra du temps.
 
-Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+Téléchargez [Android Studio ici](https://developer.android.com/studio/install.html) et installez le sur votre ordinateur.
 
-On first start you will find the setup wizard:
+Au premier démarrage, vous trouverez l'assistant d'installation :
 
 Sélectionnez "Do not import settings" car vous n'avez pas eu d'utilisation préalable.
 
@@ -105,7 +105,7 @@ Sélectionnez l'installation "Standard" et cliquez sur "Next".
 
 Sélectionnez le thème de l'interface utilisateur que vous souhaitez (dans ce manuel, nous avons utilisé "Light"). Cliquez ensuite sur "Next".
 
-> ***Note:*** This is just the color scheme. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
+> ***Remarque :*** Ce n'est que le modèle de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK, mais les captures d'écran suivantes peuvent être différentes.
 
 ![Couleur de l'interface](../images/studioSetup/05_UITheme.png)
 
@@ -119,43 +119,43 @@ Attendez qu'Android Studio télécharge des composants supplémentaires et soyez
 
 ## Définir le chemin de git dans les préférences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
+Assurez-vous que [git est installé](../Installing-AndroidAPS/git-install.rst) sur votre ordinateur et que vous avez redémarré votre ordinateur après l'installation.
 
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, puis sélectionnez le lien "All settings..." (2):
 
 ![Paramètres Android Studio à partir de l'écran d'accueil](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
+* En tant qu'utilisateur de Windows, assurez-vous que vous avez redémarré votre ordinateur après [avoir installé Git](../Installing-AndroidAPS/git-install.rst).
 
-* Double-click "Version Control" (1) to open the sub-menu.
+* Double-cliquez sur "Version Control" (1) pour ouvrir le sous-menu.
 
 * Cliquez sur Git (2).
-* Make sure update method "Merge" (3) is selected.
+* Assurez-vous que la méthode de mise à jour "Merge" (3) est sélectionnée.
 * Vérifiez si Android Studio peut localiser le chemin d'accès à git.exe automatiquement en cliquant sur le bouton "Test" (4).
     
     ![Paramètres Android Studio](../images/studioSetup/11_GitPath.png)
 
-* If automatic setting is successful git version will be displayed next to the path.
+* Si la configuration automatique est réussie, la version de git s'affiche sous chemin d'accès.
     
     ![Git version displayed](../images/studioSetup/12_GitVersion.png)
 
-* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+* Éventuellement git.exe peut ne pas être trouvé automatiquement ou le test entraînera une erreur (1) :
     
     ![Git not found](../images/studioSetup/13_GitVersionError.png)
     
-    In this case click on the folder icon (2).
+    Dans ce cas, cliquez sur l'icône de dossier (2).
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+* Utilisez la [fonction de recherche](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) dans l'explorateur windows pour trouver "git.exe" si vous n'êtes pas sûr de l'endroit ou il a été installé. Vous cherchez un fichier nommé "git.exe", situé dans le dossier **\bin**.
 
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+* Sélectionnez le chemin d'accès à git.exe et vérifiez que vous avez sélectionné le dossier ** \bin\ ** (3) et cliquez sur "OK" (4).
     
     ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
 
-* Check your selected git path again with the "Test" button as described above.
+* Vérifiez à nouveau votre chemin d'accès git sélectionné avec le bouton "Test" comme décrit ci-dessus.
 
-* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+* Lorsque la version de git est affichée sous le chemin (voir la capture d'écran ci-dessus), fermez la fenêtre de configuration en cliquant sur le bouton "OK" (5).
 
 ### Mac
 
