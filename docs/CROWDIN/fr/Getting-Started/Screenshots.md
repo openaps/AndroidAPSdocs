@@ -77,43 +77,43 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Remarque* : Jusqu'à 30 heures sont prises en compte pour les calculs AAPS. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Pour le supprimer immédiatement, vous devez supprimer manuellement quelques entrées dans l'onglet Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
-* [backup your settings](../Usage/ExportImportSettings.rst),
-* reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.rst) again
+* [sauvegardez vos paramètres](../Usage/ExportImportSettings.rst),
+* réinitialiser votre base de données dans le menu de maintenance et
+* [importez à nouveau vos paramètres](../Usage/ExportImportSettings.rst)
 
-##### Red warning sign: Duplicate BG data
+##### Signe d'alerte rouge : données Gly dupliquées
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Le signe d'alerte rouge vous demande d'être actif immédiatement : vous recevez des données de glycémie dupliquées, qui empèche la boucle de faire son travail correctement. Par conséquent, votre boucle sera désactivée jusqu'à ce que ce soit résolu.
 
 ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your NS site?
-* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+* Est-ce que le passerelle Dexcom Bridge est activé dans votre site NS ? Désactivez le pont de connexion en allant sur heroku (ou tout autre fournisseur d'hébergement), éditez la variable "activer" et retirez la partie "bridge" à cet endroit. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Est-ce que plusieurs sources téléchargent votre Gly vers NS ? Si vous utilisez l'application BYODA, activez le téléchargement dans AAPS mais ne l'activez pas dans xDrip+, si vous l'utilisez.
+* Avez-vous des abonnés qui pourraient recevoir votre glycémie mais qui la téléchargeraient également sur votre site NS ?
+* Dernier recours : Dans AAPS, allez dans les paramètres NSClient, sélectionnez les paramètres de synchronisation et désactivez l'option "Accepter les données MGC de NS".
 
-##### Yellow warning sign
+##### Signe d'alerte jaune
 
-* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+* Le signal d'alerte jaune indique que votre Gly est arrivée dans des intervalles de temps irréguliers ou qu'il manque des Gly.
    
    ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
-* Usually you do not have to take any action. The closed loop will continue to work!
+* Habituellement, vous n'avez rien à faire. La boucle fermée va continuer à fonctionner !
 
-* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
-* Special note for libre users:
+* Comme un changement de capteur interrompt le flux constant de données Gly, un signe d'avertissement jaune après le changement de capteur est normal et il n'y a rien à craindre.
+* Note spéciale pour les utilisateurs du freestyle libre :
    
-   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
-   * Also jumpy readings interrupt the continous flow.
-   * Therefore the yellow warning sign will be 'always on' for libre users.
+   * Chaque capteur FSL glisse d'une ou deux minutes toutes les quelques heures, ce qui signifie que vous n’obtenez jamais un flux parfaitement régulier de glycémie.
+   * En outre, des sauts de lectures interrompent le flux continu.
+   * Par conséquent, le signe d'avertissement jaune sera 'toujours activé' pour les utilisateurs du FSL.
 
 ### Section D - IA, GA, Basal et AS
 
@@ -226,7 +226,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
 * S'il n'y avait pas de [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), ni de bolus et aucun DBT pendant une durée de DIA, l'Insuline Active serait à zéro.
 * L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
+* La décomposition de l'insuline dépend de votre [DAI et des paramètrages de l'insuline](../Configuration/Config-Builder#profil-local). 
 
 #### Glucides actifs
 
@@ -261,9 +261,9 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are almost'always on'.
+* Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "quasiment toujours affichés".
    
-   * If connection to pump is lost, the insulin button will not be visible.
+   * Si la connexion à la pompe est perdue, le bouton d'insuline ne sera pas visible.
 
 * Les autres boutons doivent être configurés dans les [préférences](../Configuration/Preferences#boutons).
 
@@ -436,7 +436,7 @@ Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.co
 ![Statut de la pompe](../images/Screenshot_PumpStatus.png)
 
 * Contient différentes informations sur l'état de la pompe. Les informations affichées dépendent du modèle de votre pompe.
-* See [pumps page](../Hardware/pumps.md) for details.
+* Voir la page [Pompes](../Hardware/pumps.md) pour plus de détails.
 
 ## Careportal
 
@@ -485,7 +485,7 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
    * Débit de Basal
    * Cible : Niveau de glycémie que vous voulez que AAPS vise
 
-* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
+* Depuis la version 3.0, seulement [le profil local](../Configuration/Config-Builder#profil-local) est possible. Le profil local peut être modifié sur votre smartphone et synchronisé sur votre site Nightscout.
 
 ## Traitement
 
