@@ -18,8 +18,9 @@ Tritt der [AndroidAPS Facebook Gruppe (englisch)](https://www.facebook.com/group
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): deckt alle DIY Closed Loop Systeme ab (OpenAPS, Loop und AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM im Allgemeinen
-* [AndroidAPS bei Discord](https://discord.gg/4fQUWHZ4Mw)
+* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Länder- bzw. sprachspezifische Informationsquellen
 
