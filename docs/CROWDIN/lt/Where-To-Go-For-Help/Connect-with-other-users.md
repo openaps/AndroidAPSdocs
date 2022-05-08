@@ -18,7 +18,8 @@ Prisijunkite prie pagrindinės [AndroidAPS Facebook grupės](https://www.faceboo
 
 * [Looped Facebook grupė](https://www.facebook.com/groups/TheLoopedGroup): apima visus Pasidaryk Pats uždarojo ciklo sistemas (OpenAPS, Loop ir AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): bendri NGJ
+* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
