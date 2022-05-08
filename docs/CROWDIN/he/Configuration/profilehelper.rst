@@ -35,7 +35,7 @@
 השוואת פרופילים
 =======================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+ניתן להשתמש בעוזר הפרופילים גם כדי להשוות בין פרופילים או החלפות פרופילים (כלומר בין אחוזים שונים של הפרופילים שאותם מגדירים ב`החלפת פרופיל <../Usage/Profiles.html>`_).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 שכפול הפרופיל
 =======================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
+אם אתם משתמשים `בפרופילים מקומיים <../Configuration/Config-Builder.html#local-profile>`_ תוכלו לשכפל פרופיל\להחליף פרופיל ישירות מעוזר הפרופיל.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profile Helper Clone profile / profile switch
