@@ -63,7 +63,7 @@ Sur le coin en haut à gauche dans le ** menu hamburger** sélectionnez **Config
 
 La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**. Cocher cette case facilitera votre accès aux commandes DASH lorsque vous utilisez AAPS.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**REMARQUE :** Un moyen plus rapide d'accéder aux [**réglages du DASH**](#parametres-dash) peut être trouvé ci-dessous dans la section Paramètres du DASH de ce document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -127,7 +127,7 @@ Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proxim
 
     Cliquez sur le bouton Retour de votre téléphone pour retourner à l'onglet **DASH** qui affichera maintenant les informations du Pod pour votre session active de pod, y compris le débit de basal actuel, le niveau du réservoir de pod, l'insuline délivrée, les erreurs de pod et les alertes.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    Pour plus de détails sur les informations affichées, allez dans la section [**de l'onglet DASH**](#onglet-dash) de ce document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
@@ -216,7 +216,7 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
-## DASH Tab
+## Onglet DASH
 
 Below is an explanation of the layout and meaning of the icons and status fields on the **DASH** tab in the main AAPS interface.
 
@@ -278,7 +278,7 @@ Below is the meaning of the icons on the **Pod Management** menu accessed by pre
 * 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
 * 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
 
-## Dash Settings
+## Paramètres Dash
 
 The Dash driver settings are configurable from the top-left hand corner **hamburger menu** under **Config Builder (1)**\ ➜\ **Pump**\ ➜\ **Dash**\ ➜\ **Settings Gear (3)** by selecting the **radio button (2)** titled **Dash**. La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**.
 
