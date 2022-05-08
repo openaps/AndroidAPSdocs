@@ -170,7 +170,7 @@ Datum vydání: 24. 09. 2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-Abyste mohli pokračovat v používání `Automatizace <../Usage/Automation.html>`_, potřebujete alespoň spustit plnění `cíle 11 <../Usage/Objectives.html#objective-11-automation>`_ (všechny předchozí cíle musí být splněny, aby šlo spustit cíl 11). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 Hlavní nové funkce
 ----------------------
@@ -193,7 +193,7 @@ Hlavní nové funkce
 * drobná vylepšení pro pumpu Insight @TebbeUbben @MilosKozak
 * `"System default" volba jazyka nastaveného v telefonu <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vektorové ikony @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * vylepšení prohlížení historie @MilosKozak
 * odstraněn OpenAPS MA algoritmus @Tornado-Tim
 * odstraněna Oref0 senzitivita @Tornado-Tim
