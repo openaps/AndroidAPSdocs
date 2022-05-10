@@ -1,9 +1,9 @@
-# Glossário<table style="width:100%" border=1 cellpadding=5>
+# Glossary<table style="width:100%" border=1 cellpadding=5>
 <tr>
- <th>Termo</th>
- <th>Descrição</th>
- <th>Ver também</th>
- <th>Mais detalhes</th>
+ <th>Term</th>
+ <th>Description</th>
+ <th>see also</th>
+ <th>more details @</th>
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
@@ -17,7 +17,7 @@
   </td>
   
   <td>
-    assistente de refeição avançado-algoritmo avançado para tratar de hidratos de carbono
+    advanced meal assist - advanced algorithm to handle carbs
   </td>
   
   <td>
@@ -25,7 +25,7 @@
   </td>
   
   <td>
-    <a href="../Uso/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
+    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
@@ -36,13 +36,13 @@
 </tr>
 <tr>
  <td><strong>APK</strong></td>
- <td>arquivo de instalação de software (pacote de aplicação Android)</td>
+ <td>software installation file (Android application package)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Criando APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - Building APK</a></td>
 </tr>
 <tr>
  <td><strong>Autosens</strong></td>
- <td>cálculo da sensibilidade à insulina como resultado do exercício, das hormonas, etc.</td>
+ <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -54,13 +54,13 @@
 </tr>
 <tr>
  <td><strong>BAT</strong></td>
- <td>luz de aviso de bateria fraca no ecrã inicial</td>
+ <td>status light low battery on homescreen</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>GLIC</strong></td>
- <td>Glicose no Sangue</td>
+ <td><strong>BG</strong></td>
+ <td>blood glucose</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -71,10 +71,10 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
-<td><strong>Origem da Glicemia</strong></td>
+<td><strong>BG source</strong></td>
  <td>The blod glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
- <td>MCG / MFG</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Fonte Glic</a></td>
+ <td>CGM / FGM</td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - BG source</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
@@ -83,7 +83,7 @@
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
- <td><strong>DB</strong></td>
+ <td><strong>BR</strong></td>
  <td>The abbrevation stand for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
  <td>IC / ISF</td>
  <td>&nbsp;</td>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>status light overdue cannula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -113,7 +113,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>Loop Fechado</strong></td>
+ <td><strong>Closed Loop</strong></td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
@@ -146,7 +146,7 @@
  <td><strong>FGM</strong></td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>CGM</td>
- <td><a href="../Configuration/BG-Source.html">Wiki - Fonte Glic</a></td>
+ <td><a href="../Configuration/BG-Source.html">Wiki - BG source</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
@@ -216,7 +216,7 @@
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
- <td>transmissor bluetooth para usar o Freestyle Libre como CGM</td>
+ <td>bluetooth transmitter to use Freestyle Libre as CGM</td>
  <td>BlueReader / Blucon Nightreader</td>
  <td><a href="https://www.miaomiao.cool/">MiaoMiao</a></td>
 </tr>
@@ -245,7 +245,7 @@
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
- <td><strong>Objetivos</strong></td>
+ <td><strong>Objectives</strong></td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
@@ -257,9 +257,9 @@
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
 <tr>
- <td><strong>Loop Aberto</strong></td>
+ <td><strong>Open Loop</strong></td>
  <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
- <td>Loop Fechado</td>
+ <td>Closed Loop</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
@@ -281,19 +281,19 @@
  <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
 </tr>
 <tr>
- <td><strong>Previsão</strong></td>
+ <td><strong>Predictions</strong></td>
  <td>predictions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
- <td><strong>Perfil</strong></td>
+ <td><strong>Profile</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
 </tr>
 <tr>
- <td><strong>Troca de Perfil</strong></td>
+ <td><strong>Profile switch</strong></td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,11 +320,11 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferências</a><br><a href="../Getting-Started/Screenshots.html">Capturas de tela</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
- <td>cálculo da sensibilidade à insulina como resultado do exercício, das hormonas, etc.</td>
+ <td>calculation of sensitivity to insulin as a result of exercise, hormones etc.</td>
  <td>&nbsp;</td>
  <td><a href="https://www.diabettech.com/openaps/what-conclusions-can-we-draw-when-investigating-insulin-sensitivity-using-the-autosens-function-within-openaps-an-n1-study/">DIABETTECH - Autosens</a></td>
 </tr>
@@ -359,7 +359,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DDT</strong></td>
+ <td><strong>TDD</strong></td>
  <td>total daily dose (bolus + basal per day)</td>
  <td>TBB / TBR</td>
  <td>&nbsp;</td>
@@ -379,7 +379,7 @@
 <tr>
  <td><strong>Virtual pump</strong></td>
  <td>option to try AAPS functions or for PWD using a pump model with no AndroidAPS driver for looping</td>
- <td>Loop Aberto</td>
+ <td>Open Loop</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
