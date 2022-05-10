@@ -1,4 +1,4 @@
-mComponent Overview 
+Component Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -48,12 +48,15 @@ Insulin pump
 --------------------------------------------------
 AndroidAPS **currently** works with 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
 
@@ -63,11 +66,11 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **So what's the best pump for looping with AndroidAPS?**
 
