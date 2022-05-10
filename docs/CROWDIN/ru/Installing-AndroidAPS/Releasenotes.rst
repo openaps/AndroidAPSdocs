@@ -35,11 +35,31 @@ Android 7
 * Пользуйтесь AAPS версии **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Важные Примечания
+----------------------
+* after update uninstall Wear app and install new version
+
+Изменения
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+
 Version 3.0.0
 ================
 Release date: 31-01-2022
 
-Важные Примечания
+Важные подсказки
 ----------------------
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
@@ -115,7 +135,7 @@ Release date: 31-01-2022
 ================
 Дата выпуска: 12-01-2021
 
-Важные подсказки
+Важные Примечания
 ----------------------
 * Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1.
 * Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.).
