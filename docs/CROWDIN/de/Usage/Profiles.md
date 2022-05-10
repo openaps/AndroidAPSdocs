@@ -11,7 +11,7 @@ Internally AAPS creates snapshot of profile with start date and duration and is 
 
 If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
@@ -24,9 +24,9 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
   
   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
-* It will be sent to the pump and then be the default basal rate.
+* Das wird an die Pumpe gesendet und ist dann die standardmäßig verwendete Basalrate.
 
-* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
 ## Zeitverschiebung
 
@@ -36,12 +36,12 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
 * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
   * Current time: 12:00
-  * **Positive** time shift 
+  * **Positive** Zeitverschiebung 
     * 2:00 **+10 h** -> 12:00
     * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+  * **Negative** Zeitverschiebung 
     * 22:00 **-10 h** -> 12:00
-    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
+    * Die Einstellungen von 22:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
 
 ![Richtung der Zeitverschiebung für Profile](../images/ProfileSwitch_PlusMinus2.png)
 
@@ -53,14 +53,14 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
-* These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
+* These error messages will appear if you have any basal rates or I:C rates not on the hour. (Die Pumpen Dana R und Dana RS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
   ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
 
-* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
+* Merke bzw. notiere Dir das in der Fehlermeldung angegebene Datum und die Uhrzeit (26/07/2019 5:45 pm im Bildschirmfoto oben).
 
-* Go to Treatments tab
-* Select ProfileSwitch
+* Gehe zum Behandlungs-Tab.
+* Wähle Profilwechsel.
 * Scroll until you find date and time from error message.
 * Use remove function.
 * Sometimes there is not only one faulty profile switch. In this case remove also the others.
@@ -72,15 +72,15 @@ Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben
 ### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
 
 * The requested profile was not synced correctly from Nightscout.
-* Follow instructions from above to delete the profile switch
+* Lösche den Profilwechsel wie oben beschrieben.
 
 Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 
-* Go to your mlab collection
-* Search in the treatments for profile switch
-* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
+* Öffne Deine mLab Datensammlung.
+* Suche in den Behandlungen nach “Profile switch”.
+* Lösche dann dort den Eintrag, der dem Datum und der Zeit der Fehlermeldung entspricht. ![mlab](../images/mLabDeletePS.png)
 
 ### “DIA 3 h zu kurz”
 
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
+* Die Fehlermeldung erscheint, wenn die Wirkdauer des Insulins in Deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. 
 * Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

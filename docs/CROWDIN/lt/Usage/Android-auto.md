@@ -6,12 +6,9 @@
 
 Naudoti sistemos perspėjimus aliarmams ir įspėjimams:
 
-* Atidarykite trijų taškų meniu dešinėje pagrindinio ekrano pusėje
-* Nustatymai
-* Slinkite iki galo
-* Įjungti "Naudoti sistemos pranešimus..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Naudoti sistemos perspėjimus aliarmams ir įspėjimams](../images/AndroidAuto_01.png)
+![Naudoti sistemos perspėjimus aliarmams ir įspėjimams](../images/AndroidAuto_01v2.png)
 
 ## Android Auto programos išmaniajame telefone nustatymai
 

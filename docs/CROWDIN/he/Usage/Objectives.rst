@@ -1,148 +1,150 @@
-Objectives
+משימות
 **************************************************
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+ל-AndroidAPS מספר משימות שנועדו ללמד אתכם את ההגדרות ואת היכולות של לופ, באופן בטיחותי.  המשימות נועדו להבטיח שהגדרתם כראוי את כל מה שתואר בפרקים הקודמים ושאתם מבינים מה המערכת עושה ולמה, כדי שתוכלו לבטוח בה.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+אם אתם **משדרגים טלפונים**, תוכלו `לייצא את הגדרותיכם <../Usage/ExportImportSettings.html>`_ ע"מ לשמור את התקדמותכם במשימות. לא רק שהתקמותכם במשימות תישמר, גם הגדרות הבטיחות כגון בולוס מקסימלי וכו'.  אם לא תייצאו ותייבאו את הגדרותיכם אתם תהיו חייבים להתחיל את המשימות מההתחלה.  יהיה זה רעיון טוב `לגבות את הגדרותיכם <../Usage/ExportImportSettings.html>`_ לעיתים קרובות ליתר ביטחון.
 
-If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+אם ברצונכם לחזור אחורה במשימות, ראו את `ההסבר מטה <../Usage/Objectives.html#go-back-in-objectives>`_.
  
 משימה 1: הגדרת ויזואליזציה, ניטור, ניתוח המינון הבזאלי והיחסים
 ====================================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
+* בחרו את מקור נתוני רמת הסוכר המתאים למערכת שלכם.  ראו `מקור נתוני סוכר <../Configuration/BG-Source.html>`_ לפרטים נוספים.
+* בחרו את המשאבה הנכונה לגביכם בבונה התצורה (בחרו במשאבה וירטואלית אם אתם משתמשים במשאבה שלה אין התאמה ל-) ע"מ להבטיח שהמשאבה תקושר ל-AndroidAPS.  
+* אם משתמשים במשאבת DanaR וודאו שקראתם את הוראות `משאבת DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ כדי להבטיח את חיבור המשאבה ל-AndroidAPS.
+* עקבו אחר הוראות `נייטסקאוט <../Installing-AndroidAPS/Nightscout.html>`_ כדי לוודא שנייטסקאוט מקבל ומציג את הנתונים.
+* שימו לב שכתובת אתר הנייטסקאוט שב-NSClient **חייב להיות ללא הסיומת /api/v1/** - ראו `הגדרות NSClient בהעדפות <../Configuration/Preferences.html#nsclient>`__.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+* ייתכן שתצטרכו להמתין עד למדידת הסוכר הבאה כדי שתזוהה ע"י AndroidAPS.*
 
-Objective 2: Learn how to control AndroidAPS
+משימה 2: למדו כיצד לשלוט בממשק AndoridAPS
 ==================================================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* בצעו מספר פעולות ב-AndroidAPS כמתואר במשימה זו.
+* לחצו על הטקסט הכתום "עוד לא הושלם" כדי לפתוח את סעיפי המשימה.
+* מצורפים קישורים על מנת להדריך אתכם בביצוע הסעיפים.
 
   .. image:: ../images/Objective2_V2_5.png
     :alt: Screenshot objective 2
 
-Objective 3: Prove your knowledge
+משימה 3: הוכיחו את הידע שלכם
 ==================================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* היבחנו במבחן אמריקאי שיבדוק את ידיעתכם ב-AndroidAPS.
+* לחצו על הטקסט הכתום "עוד לא הושלם" על מנת לפתוח את השאלה ולענות עליה.
 
   .. image:: ../images/Objective3_V2_5.png
     :alt: Screenshot objective 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
-* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
-* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
-* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
+* מצורפים קישורים על ללמדכם את התשובה אם אתם עוד לא יודעים אותה.
+* השאלות שבמשימה 3 שוכתבו לחלוטין ע"י דוברי שפת אם החל מגרסת AAPS 2.8. השאלות החדשות מכסות את אותם נושאים בסיסיים בתוספת מספר נושאים נוספים.
+* שאלות משוכתבות אלה יגרמו לכך שתהיה תוספת של מספר שאלות שלא נענו למרות סיום המשימה בגרסאות קודמות.
+* שאלות שלא נענו ישפיעו רק אם תתחילו משימה חדשה. או במילים אחרות: אם סיימתם את כבר סיימתם את כל המשימות, תוכלו להמתין ולענות על השאלות החדשות אחר כך ללא איבוד פונקציות AAPS שבמשימות מאוחרות יותר.
 
-Objective 4: Starting on an open loop
+משימה 4: התחלת לופ פתוח
 ==================================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* בחרו לולאה פתוחה בהעדפות או ע"י לחיצה ארוכה על צלמית הלופ בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
+* עברו והגדירו את `ההעדפות <../Configuration/Preferences.html>`__ כדי להתאים את לכם את המערכת.
+* הפעילו ידנית לפחות 20 שינויים זמניים במינון הבזאלי בהמלצת הלופ על פני 7 ימים; אם סוג המשאבה משאבה וירטואלית, בצעו את השינוי במשאבה ואשרו את השינוי ב-AndroidAPS.  וודאו ששינוי המינון נרשם ב-AndroidAPS וגם ב-Nightscout.
+אפשרו `ערכי מטרה זמניים <../Usage/temptarget.html>`_ במקרה הצורך. הפעילו ערך מטרה זמני היפו כדי למנוע מהמערכת לתקן ביתר עליות ברמת הסוכר בעת יציאה מהיפוגליקמיה. 
 
-Reduce number of notifications
+צמצום מספר התראות הלולאה הפתוחה
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
-* You might even want to wider upper limit (or disable Open Loop) at night. 
-* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+* על מנת לצמצם את מספר ההמלצות של הלולאה הפתוחה, הגדירו טווח ערכי מטרה רחב כמו לדוגמה 90-150 mg/dl או 5-8.5 mmol/l.
+* תוכלו גם להגדיר ערך מטרה עליון גבוה עוד יותר ואף לכבות את הלופ בלילה. 
+בהעדפות אתם יכולים להגדיר את אחוז השינוי המינימלי לשינוי במינונים הבזאליים.
 
   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
     :alt: Open Loop minimal request change
      
-* Also, you do not need to act every 5 minutes on all suggestions...
+* זכרו שאתם לא חייבים להגיב לכל המלצה של הלופ, כל 5 דקות...
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* התחילו לנסות להבין את המחשבה שמאחורי המלצת המינון הבזאלי הזמני ע"י קריאת `לוגיקת קביעת מינון בזאלי <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ , את `עקום התחזית במסך הבית <../Getting-Started/Screenshots.html#prediction-lines>`_ או בנייטסקאוט ואת סיכום הפלטים של החישובים המופיעים בכרטיסיית OpenAPS.
  
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.  המערכת מאפשרת
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* ערך מטרה תחתון 72 mg/dl עד 180 mg/dl 
+* ערך מטרה עליון 90 mg/dl עד 225 mg/dl
+* ערך מטרה זמני כערך יחיד יכול להיות בטווח 72 עד 225 mg/dl
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+ערך המטרה הוא הערך עליו מבוססים החישובים והוא לא ערך הסוכר אליו אתם מתכוונים להגיע בפועל.  אם טווח המטרה שלכם רחב מאוד (לדוגמה טווח של 50 mg/dl), אתם תראו מעט פעילות של AAPS. זה בגלל שרמת הסוכר בדם צפויה להיות בתוך הטווח המטרה הרחב הזה ולכן לא יומלצו הרבה שינויים במינון הבזאלי. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+ייתכן שתרצו להתנסות בכיוונונים של ערכי המטרה להקטנת טווח המטרה (20 mg/dl ואף פחות) ולצפות בהתנהגות המערכת כתוצאה מכך.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
+תוכלו לצפות בטווח רחב יותר (עקום ירוק) בגרף עבור ערכי סוכר בהם אתם מעוניינים ע"י בחירת ערכים `בהעדפות <../Configuration/Preferences.html>`__ > סקירה כללית > טווח הצגה.
  
 .. image:: ../images/sign_stop.png
   :alt: Stop sign
 
-Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+עצרו כאן אם אתם משתמשים במשאבה וירטואלית - אל תלחצו על "אמת" לסיום משימה זו.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. image:: ../images/blank.png
   :alt: blank
 
-Objective 6: Starting to close the loop with Low Glucose Suspend
+משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 ====================================================================================================
 .. image:: ../images/sign_warning.png
   :alt: Warning sign
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. High bg values have to be corrected manually by you!
+הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך. עליכם לתקן סוכר גבוה ידנית בעצמכם!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
-* You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
-* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
+* בחרו בלולאה סגורה `בהעדפות <../Configuration/Preferences.html>`__ או ע"י לחיצה ארוכה על צלמית הלולאה הפתוחה בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
+* הגדירו טווח מטרה גבוה במעט מזה שבו השתמשתם, ליתר ביטחון.
+* צפו בפעילות המינונים הבזאליים הזמניים ע"י קריאתם בטקסט כחול במסך הראשי ובצפייה בגרף הבזאלי הכחול שבתחתית הגרף הראשי.
+* וודאו שההגדרות שלכם אפשרו לכם להמנע מהיפוגלקמיות במשך 5 ימים.  אם אתם עדיין חווים היפוגליקמיות תכופות, שקלו לבצע שינויים ב-DIA, במינונים הבזאליים, ביחס הפחמימות וביחס התיקון.
+* אין חובה לשנות את הגדרותיכם. לאורך משימה 6, ערכו של maxIOB מוגדר כ-0 מאחורי הקלעים באופן אוטומטי. הגדרה זו תבוטל לאחר התחלת משימה 7.
+המערכת תתעלם מהגדרת ה-maxIOB ותאפס אותה. משמעות הדבר היא שכשרמת הסוכר יורדת המערכת תוריד את המינון הבזאלי בעצמה אך אם רמת הסוכר עולה, היא תגביר את המינון הבזאלי רק אם האינסולין הפעיל (IOB) הבזאלי הנוכחי שלילי (ממצב השהייה קודם), אחרת המינון הבזאלי יהיה כמו שהוא בפרופיל.  
 
   .. image:: ../images/Objective6_negIOB.png
     :alt: Example negative IOB
 
-* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* אם האינסולין הבזאלי הפעיל שלילי (ראו תמונה מעלה), מינון בזאלי זמני > 100% יכול להינתן גם במסגרת משימה 6.
+* ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
-Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 ====================================================================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* העלו את 'מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג' (נקרא גם 'max-IOB' ב-OpenAPS) ליותר מ-0 במשך יממה אחת. 
+המלצת ברירת המחדל היא X3 המינון הבזאלי המקסימלי (עבור אלגוריתם AMA הישן, שנמצא בשימוש של משתמשים חדשים) או X3 המינון הבזאלי המקסימלי + בולוס ארוחה ממוצע (עבור אלגוריתם SMB). עליכם להתקדם אל ערך זה באופן מדורג עד שהגדרה זו עובדת היטב. 
+מינון בזאלי מקסימלי = המינון הבזאלי המרבי שניתן מכל שעה שהיא ביממה.
 
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  המלצה זו היא נקודת התחלה. אם הגדרתם X3 בזאלי מרבי ואתם חווים תגובות חריפות ומהירות ברמת הסוכר, הורידו את ערך. אם יש לכם תנגודת גבוהה, הגדילו את הערך בעדינות ובאופן מדורג.
 
   .. image:: ../images/MaxDailyBasal2.png
     :alt: max daily basal
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* כאשר תרגישו שערך האינסולין הפעיל מתאים לפעולת הלופ שלכם, הורידו את ערכי מטרה שלכם כרצונכם.
 
 
-Objective 8: Adjust basals and ratios if needed, and then enable autosens
+משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+תוכלו להשתמש ב-`autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ באופן חד פעמי לבדיקת השינוי במינון הבזאלי או שתעשו בדיקת בזאלי מסורתית.
+* הפעילו `autosens <../Usage/Open-APS-features.html>`_ במשך 7 ימים וצפו בהתנהגות עקום הרגישות הלבן בגרף במסך הבית (גרף משני) כתוצאה משינויים הורמונליים, פעילות גופנית וכו'. שימו עין על כרטיסיית OpenAPS לצפייה בויסות המינון הבזאלי ו\או ערכי המטרה.
 
-*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*אל תשכחו לרשום את עצמכם *`בטופס הזה <https://bit.ly/nowlooping>`_* לרישום סוג הלופ שלכם כ-AndroidAPS אם טרם עשיתם זאת.*
 
 
-Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
+משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
 ====================================================================================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+* חובה עליכם לקרוא את `הפרק על SMB באתר הבא <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ואת פרק `oref1 באתר openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ כדי להבין כיצד SMB פועל ובמיוחד כיצד פועל איפוס בזאלי זמני.
+* לאחר מכן, עליכם `להעלות את האינסולין הפעיל המרבי (maxIOB) <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ כדי לאפשר ל-SMB לתפקד כראוי. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק בזאלי. כלומר, אם תתנו בולוס בגודל 8 יחידות על ארוחה והאינסולין הפעיל המרבי הוא 7 יחידות, הלופ לא יזריק SMB לפני שהאינסולין שבגוף ירד אל מתחת ל-7 יחידות. אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 ערך הבזאלי המרבי שיש ביממה - ראו איור ב`משימה 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_
+* ערך ברירת המחדל של min_5m_carbimpact בהגדרות הספיגה השתנו מ-3 ל-8 במעבר מ-AMA ל-SMB. אם אתם עוברים מ-AMA ל-SMB, עליכם לעדכן זאת ידנית.
 
 
-Objective 10: Automation
+משימה 10: אוטומציות
 ====================================================================================================
-* You have to start objective 10 to be able to use `Automation <../Usage/Automation.html>`_.
-* Make sure you have completed all objectives including exam `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* עליכם להתחיל את משימה 10 כדי להשתמש `באוטומציות <../Usage/Automation.html>`_.
+* וודאו שסיימתם את כל המשימות הקודמות, כולל כל השאלות `שבמשימה 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_.
+* סיום משימות קודמות לא ישפיע על משימות שאותן כבר השלמתם. המשימות שכבר הושלמו יישמרו כך!
 
 
-Go back in objectives
+חזרה על משימות
 ====================================================================================================
-If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+אם ברצונכם לחזור על משימה מכל סיבה שהיא, ניתן לעשות זאת ע"י לחיצה על "ביטול השלמה".
 
 .. image:: ../images/Objective_ClearFinished.png
   :alt: Go back in objectives
 
-Objectives in Android APS before version 3.0
+משימות ב- AndroidAPS לפני גרסה 3.0
 ====================================================================================================
-One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.html>`_.
+מטרה אחת הוסרה כאשר AndroidAPS 3.0 שוחרר.  משתמשי AndroidAPS גרסה 2.8.2.1 המשתמשים בגרסת אנדרואיד ישנה יותר (כלומר לפני גרסה 9) יצטרכו לכעמוד במשימות הישנות שאפשר לקרוא עליהן `כאן <../Usage/Objectives_old.html>`_.

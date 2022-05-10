@@ -171,7 +171,7 @@ Release date: 31-01-2022
 
 **Не забудьте проверить и исправить настройки после обновления до 2.7, описание см. ** `здесь <../Installing-AndroidAPS/update2_7.html>`__.
 
-Чтобы заработала автоматизация необходимо начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_ <. /Usage/Automation.html>`_ (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например, вы не прошли экзамен в `цели 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 Новые возможности
 ----------------------
@@ -194,7 +194,7 @@ Release date: 31-01-2022
 * небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
 * `"Язык по умолчанию" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * векторные иконки @Philoul
-* `установить нейтральные временные для MDT <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Улучшения в браузере истории @MilosKozak
 * удалён алгоритм OpenAPS MA @Tornado-Tim
 * Удалена чувствительность Oref0 @Tornado-Tim

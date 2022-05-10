@@ -6,7 +6,7 @@
 
 Utiliser le système des notifications :
 
-* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
+* Ouvrir le menu à 3 points en haut à droite de l'écran d'accueil et sélectionner **Préférences** <unk> **Alertes locales** <unk> et activer **Utiliser les notifications système pour les alertes et les notifications** 
 
 ![Utiliser les notifications système pour les alertes et les notifications](../images/AndroidAuto_01v2.png)
 

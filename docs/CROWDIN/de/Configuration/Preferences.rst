@@ -309,7 +309,6 @@ OpenAPS SMB-Einstellungen
 -----------------------------------------------------------
 * Im Gegensatz zu AMA verwendet `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
 * You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
-
 * Die ersten drei Einstellungen sind `oben beschrieben <../Configuration/Preferences.html#maximales-basal-iob-das-openaps-abgeben-darf-u>`__.
 * Details zu den verschiedenen Optionen sind auf der Seite `OpenAPS-Funktionen <../Usage/Open-APS-features.html#aktiviere-smb>`_ beschrieben.
 * *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid. 

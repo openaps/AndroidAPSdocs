@@ -1,44 +1,47 @@
 # Αλλαγή Προφίλ
 
-Κατά την εκκίνηση του AndroidAPS και την επιλογή του προφίλ σας, θα χρειαστεί να πραγματοποιήσετε ένα συμβάν "Προφίλ αλλαγής" με μηδενική διάρκεια (εξηγείται αργότερα). Με τον τρόπο αυτό, το AAPS ξεκινά την παρακολούθηση του ιστορικού των προφίλ και κάθε νέα αλλαγή προφίλ απαιτεί ένα άλλο "προφίλ" ακόμα και όταν αλλάζετε το περιεχόμενο του προφίλ στο NS. Το ενημερωμένο προφίλ μεταφέρεται αμέσως στο AAPS, αλλά πρέπει να αλλάξετε ξανά το ίδιο προφίλ (σε NS ή AAPS) για να αρχίσετε να χρησιμοποιείτε αυτές τις αλλαγές.
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
 
-Το εσωτερικό του AAPS δημιουργεί στιγμιότυπο προφίλ με ημερομηνία έναρξης και διάρκεια και το χρησιμοποιεί σε επιλεγμένη περίοδο. Η διάρκεια του μηδενός σημαίνει άπειρη. Το συγκεκριμένο προφίλ ισχύει έως τη νέα αλλαγή "Προφίλ".
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
-![Κάντε αλλαγή προφίλ](../images/ProfileSwitch_HowTo.png)
+* Duration of zero means infinite. Such profile is valid until new "Profile switch".
+* Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
 
-Εάν χρησιμοποιείτε το "Προφίλ αλλαγής" με προφίλ διάρκειας επιστρέφει σε προηγούμενη έγκυρη "Αλλαγή προφίλ"
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-Εάν χρησιμοποιείτε τοπικά προφίλ AAPS (Simple, Local, CPP), πρέπει να πατήσετε το κουμπί εκεί για να εφαρμόσετε αυτές τις αλλαγές (δημιουργεί το σωστό συμβάν "Προφίλ αλλαγής").
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+
+![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
 Μέσα στο "διακόπτη προφίλ" μπορείτε να επιλέξετε δύο αλλαγές που ήταν μέρος του Προφίλ ποσοστών του Κιρκαδικού ρυθμου:
 
 ## Ποσοστό
 
-* Αυτό εφαρμόζει το ίδιο ποσοστό σε όλες τις παραμέτρους. 
+* This applies the same percentage to all parameters. 
 * If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
   
   ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
 * It will be sent to the pump and then be the default basal rate.
 
-* Ο αλγόριθμος κυκλώματος (ανοιχτός ή κλειστός) θα συνεχίσει να λειτουργεί πάνω από το επιλεγμένο ποσοστό προφίλ. Έτσι, για παράδειγμα, μπορούν να δημιουργηθούν ξεχωριστά προφίλ ποσοστών για διαφορετικά στάδια του κύκλου ορμονών.
+* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
 ## Αλλαγή της ώρας
 
 ![Αλλαγή προφίλ ποσοστιαία και χρονικά](../images/ProfileSwitchTimeShift2.png)
 
-* Αυτό μετακινεί όλο το 24ωρο σύμφωνα με τον αριθμό των ωρών που εισάγονται. 
-* Έτσι, για παράδειγμα, όταν εργάζεστε νυχτερινές βάρδιες, αλλάξτε τον αριθμό των ωρών ανάλογα με το σε αργότερα / νωρίτερα πηγαίνετε στο κρεβάτι ή ξυπνάτε.
-* Είναι πάντοτε θέμα των ρυθμίσεων του προφίλ ώρας που πρέπει να αντικαταστήσουν τις ρυθμίσεις της τρέχουσας ώρας. Αυτή η ώρα πρέπει να μετατοπιστεί κατά x ώρες. Γι 'αυτό πρέπει να γνωρίζετε τις οδηγίες που περιγράφονται στο παρακάτω παράδειγμα: 
-  * Τρέχουσα ώρα: 12:00
-  * **Θετική** αλλαγή της ώρας 
+* This moves everything round the clock by the number of hours entered. 
+* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
+  * Current time: 12:00
+  * **Positive** time shift 
     * 2:00 **+10 h** -> 12:00
-    * Θα χρησιμοποιηθούν ρυθμίσεις από τις 2:00 αντί για τις ρυθμίσεις που χρησιμοποιούνται κανονικά στις 12:00 λόγω της θετικής χρονικής μετατόπισης.
-  * **Αρνητική** αλλαγή της ώρας 
+    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
+  * **Negative** time shift 
     * 22:00 **-10 h** -> 12:00
-    * Θα χρησιμοποιηθούν οι ρυθμίσεις από τις 22:00 (10 μ.μ.) αντί των ρυθμίσεων που χρησιμοποιούνται κανονικά στις 12:00 λόγω της αρνητικής χρονικής μετατόπισης.
+    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
 ![Προσανατολισμοί των χρονικών μετατοπίσεων προφίλ](../images/ProfileSwitch_PlusMinus2.png)
 

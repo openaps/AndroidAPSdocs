@@ -23,7 +23,7 @@ The following data will be uploaded to your Open Humans account:
 
 Secret or private information such as your Nightscout URL or API secret will not be uploaded.
 
-Setup
+תצורה
 ========================================
 1. Create your account on `Open Humans <https://www.openhumans.org>`_ if not already done. You can reuse your existing Google or Facebook accounts if you wish to.
 2. Enable the “Open Humans” plugin in `Config Builder <../Configuration/Config-Builder.html>`_.

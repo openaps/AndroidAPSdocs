@@ -402,7 +402,7 @@ Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder
 
 *HINWEIS: Wenn in den Statusfeldern der Registerkarte Omnipod (POD) eine Meldung erscheint (unsicher), musst Du die Schaltfläche Aktualisieren drücken, um sie zu löschen und den Pod-Status zu aktualisieren.*
 
-|Omnipod_Tab|
+   |Omnipod_Tab|
 
 Felder
 ------
@@ -442,37 +442,47 @@ Felder
 Symbole
 -----
 
-.. list-table:: 
-      
-    * - |refresh_pod_status|
-      - **AKTUALISIEREN:** 
-			
-	Sendet einen Befehl an den aktiven Pod, um die Kommunikation zu aktualisieren
-			 
-	* Verwende diese Option, um den Pod-Status zu aktualisieren und die Statusfelder zu erneuern, die den Text (unsicher) enthalten.
-	* Weitere Informationen zur `Problembehandlung <#problembehandlung>`__ findest du im Abschnitt unten.
-    * - |pod_management|  	 
-      - **POD MGMT:**
+* **REFRESH:**
 
-	Navigiert zum Pod Management Menü   
-    * - |ack_alerts|		 
-      - **ALARM BESTÄTIGEN:**
-   			 
-	Durch Drücken dieser Taste werden die Signaltöne und Benachrichtigungen zum Ablauf des Pods deaktiviert. 
-			 
-	* Der Button wird nur angezeigt, wenn die aktuelle Zeit des Pods nach dem Pod-Ablaufdatum liegt.
-	* Nach erfolgreicher Bestätigung wird dieses Symbol nicht mehr angezeigt.			 
-    * - |set_time|	 
-      - **ZEIT EINSTELLEN:**
-   
-	Durch Drücken dieser Taste wird die Uhrzeit auf dem Pod mit der aktuellen Uhrzeit des Smartphones aktualisiert.
-    * - |suspend|  		 
-      - **UNTERBRECHEN:**
-   
-	Setzt den aktiven Pod aus
-    * - |resume|	 
-      - **ABGABE FORTSETZEN:**
-   
+    |refresh_pod_status|
+
+    Sendet einen Befehl an den aktiven Pod, um die Kommunikation zu aktualisieren
+
+    Verwende diese Option, um den Pod-Status zu aktualisieren und die Statusfelder zu erneuern, die den Text 'unsicher' enthalten.
+
+    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+* **POD MGMT:**
+
+    |pod_management|
+
+    Navigiert zum Pod Management Menü
+
+* **ACK ALERTS:**
+
+    |ack_alerts|
+
+    Durch Drücken dieser Taste werden die Signaltöne und Benachrichtigungen zum Ablauf des Pods deaktiviert.
+
+    Button is displayed only when pod time is past expiration warning time
+    Nach erfolgreicher Bestätigung wird dieses Symbol nicht mehr angezeigt.
+
+* **SET TIME:**
+
+    |set_time|
+
+    Durch Drücken dieser Taste wird die Uhrzeit auf dem Pod mit der aktuellen Uhrzeit des Smartphones aktualisiert.
+
+* **SUSPEND:**
+
+    |suspend|
+
+    Setzt den aktiven Pod aus
+
+* **RESUME DELIVERY:**
+
+    |resume|
+
 	Setzt den derzeit angehaltenen, aktiven Pod fort
 
 
@@ -481,63 +491,78 @@ Pod Management Menu
 
 Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod Management** erläutert, das über die Registerkarte **Omnipod (POD)** aufgerufen wird.
 
-|Omnipod_Tab_Pod_Management|
+    |Omnipod_Tab_Pod_Management|
 
-.. list-table:: 
+* **Activate Pod**
 
-    * - |activate_pod|
-      - **Pod aktivieren**
-   
-        Startet und aktiviert einen neuen Pod
-    * - |deactivate_pod|
-      - **Pod deaktivieren**
- 
-        Deaktiviert den aktuell aktiven Pod.
-		 
-	* Ein unvollständig verbundener Pod ignoriert diesen Befehl.
-	* Verwende diesen Befehl, um einen heulenden Pod zu deaktivieren (Fehler 49).
-	* Wenn die Schaltfläche deaktiviert (ausgegraut) ist, verwende **Pod verwerfen**.
-    * - |play_test_beep|
-      - **Testton abspielen**
- 
- 	Gibt beim Drücken einen einzelnen Testton auf dem Pod wieder.
-    * - |discard_pod|
-      - **Pod verwerfen**
+    |activate_pod|
 
-	Durch Drücken wird der Pod-Status eines nicht reagierenden Pods deaktiviert und verworfen.
-			      
-	Die Schaltfläche wird nur in ganz bestimmten Fällen angezeigt, da eine ordnungsgemäße Deaktivierung nicht mehr möglich ist:
+    Startet und aktiviert einen neuen Pod
+
+* **Deactivate Pod**
+
+    |deactivate_pod|
+
+    Deaktiviert den aktuell aktiven Pod.
+
+    A partially paired pod ignores this command.
+
+    Use this command to deactivate a screaming pod (error 49).
+
+    If the button is disabled (greyed out) use the Discard Pod button.
+
+* **Play test beep**
+
+    |play_test_beep|
+
+    Gibt beim Drücken einen einzelnen Testton auf dem Pod wieder.
+
+* **Discard pod**
+
+    |discard_pod|
+
+    Durch Drücken wird der Pod-Status eines nicht reagierenden Pods deaktiviert und verworfen.
+
+    Die Schaltfläche wird nur in ganz bestimmten Fällen angezeigt, da eine ordnungsgemäße Deaktivierung nicht mehr möglich ist:
 
 	* Ein **Pod ist nicht vollständig verbunden** und ignoriert daher die Befehle zum Deaktivieren.
 	* Ein **Pod hängt** während des Kopplungsvorgangs zwischen den Schritten fest
 	* Ein **Pod lässt sich überhaupt nicht verbinden.**
-    * - |pod_history|
-      - **Pod Historie** 
-   
-   	Zeigt den Aktivitätsverlauf des aktiven Pods an
-    * - |rileylink_stats|
-      - **RileyLink Status:**
-   
-        Navigiert zum Bildschirm "RileyLink Status", der die aktuellen Einstellungen und den Verlauf der RileyLink-Verbindung anzeigt
+
+* **Pod history**
+
+    |pod_history|
+
+    Zeigt den Aktivitätsverlauf des aktiven Pods an
+
+* **RileyLink stats:**
+
+    |rileylink_stats|
+
+    Navigiert zum Bildschirm "RileyLink Status", der die aktuellen Einstellungen und den Verlauf der RileyLink-Verbindung anzeigt
 
 	* **Einstellungen** - zeigt Informationen zum RileyLink und aktiven Pod-Einstellungen an
 	* **Historie** - zeigt den Verlauf der RileyLink- und Pod-Kommunikation an
-    * - |reset_rileylink_config|
-      - **RileyLink-Konfiguration zurücksetzen** 
-   
-   	Durch Drücken dieser Taste wird die Konfiguration des aktuell angeschlossenen Pod-Kommunikationsgeräts zurückgesetzt. 
-			      
-	* Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt 
-			      
+
+* **Reset RileyLink Config**
+
+    |reset_rileylink_config|
+
+    Durch Drücken dieser Taste wird die Konfiguration des aktuell angeschlossenen Pod-Kommunikationsgeräts zurückgesetzt.
+
+	* Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt
+
 	    - Speicherregister werden gesetzt
 	    - Kommunikationsprotokolle werden eingestellt
 	    - Eingestellte Funkfrequenz wird gesetzt
-				
+
 	* Beachte die `zusätzlichen Hinweise <#hinweise-zum-zurucksetzen-der-rileylink-konfiguration>`__ am Ende dieser Tabelle
-    * - |pulse_log|
-      - **Pulse-Log lesen:** 
-    
-    	Sendet das Pulse-Log des aktiven Pods in die Zwischenablage		    
+
+* **Read pulse log:**
+
+    |pulse_log|
+
+    	Sendet das Pulse-Log des aktiven Pods in die Zwischenablage
 
 *Hinweise zum Zurücksetzen der RileyLink-Konfiguration*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -18,8 +18,9 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 * [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): cubre todos los sistemas de lazo cerrado de DIY (OpenAPS, Loop y AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM en la nube](https://www.facebook.com/groups/cgminthecloud/): CGM en general
-* [AndroidAPS en Discord](https://discord.gg/4fQUWHZ4Mw)
+* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
+* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources
 

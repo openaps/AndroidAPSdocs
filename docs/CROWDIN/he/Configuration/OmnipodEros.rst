@@ -302,7 +302,7 @@
 *הערה:*
 **פקודות לא בטוחות** יופיעו בהיסטוריית הפוד, אולם בשל אופיין אינכם יכולים להבטיח את נכונותן.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. נווטו ללשונית **OMNIPOD (POD)** ולחצו על **ניהול הפוד (1)** ולאחר מכן בחרו **היסטוריית פוד (2)** כדי לפתוח את מסך היסטוריית הפוד.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@
 
 מסך זה יספק מידע, סטטוס והגדרות הריילילינק והפוד הפעיל. 
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. בלשונית **OMNIPOD (POD)** בחרו ב**ניהול הפוד (1)** ולאחר לחצו על **סטטיסטיקת ריילילינק (2)** כדי הציג את ההגדרות של **ריילילינק (3)** ושל הפוד הפעיל כ**מכשיר (4)**.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -360,7 +360,7 @@
 	* **כתובת:** כתובת MAC של הריילינק שהפעיל את הפוד.
 	* **שם:** השם איתו מזוהה הריילילינק כמוגדר בהגדרות הבלוטות' של הטלפון.
 	* **רמת סוללה:** מציג את רמת הסוללה הנוכחית של הריילילינק.
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
+	* **מכשיר מחובר:** דגם האומניפוד השמתקשר כעת עם הריילילינק.
 	* **סטטוס חיבור**: הסטטוס הנוכחי של חיבור הבלוטות' בין הריילילינק לבין הטלפון שמריץ AAPS.
 	* **שגיאת חיבור:** אם ישנה שגיאה בריילילינק יופיעו כאן פרטי חיבור הבלוטות'.
 	* **גרסת קושחה:** גרסת הקושחה של הריילילינק.
@@ -381,7 +381,7 @@
 
 מסך זה מספק מידע של כל מצב או פעולה שהריילילינק או הפוד נקטו, בסדר כרונולוגי הפוך. ההיסטוריה כולה זמינה רק לפוד הפעיל כרגע, לאחר החלפת הפוד ההיסטוריה הזו תימחק ורק אירועים של הפוד החדש יקלטו ויוצגו.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. לחצו על הטקסט **היסטוריה (3)** כדי להציג את כל ההיסטוריה של הריילילינק ושל הפוד הנוכחי.
+1. בלשונית **OMNIPOD (POD)** בחרו ב**ניהול הפוד (1)** ולאחר לחצו על **סטטיסטיקת ריילילינק (2)** כדי הציג את מסך ההגדרות וההיסטוריה. לחצו על הטקסט **היסטוריה (3)** כדי להציג את כל ההיסטוריה של הריילילינק ושל הפוד הנוכחי.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
@@ -401,7 +401,7 @@
 
 *הערה: אם הודעה כלשהי בשדות הסטטוס מדווחת "(לא בטוח)", יהיה עליכם ללחוץ על כפתור הרענון כדי לרענן את מצב הפוד.*
 
-|Omnipod_Tab|
+   |Omnipod_Tab|
 
 שדות
 ------
@@ -441,37 +441,47 @@
 אייקונים
 -----
 
-.. list-table:: 
-      
-    * - |refresh_pod_status|
-      - **רענן:** 
-			
-	שולח פקודת רענון לפוד לעדכון התקשורת
-			 
-	* השתמשו כדי לרענן את מצב הפוד ולבטל סטטוסים המכילים את הטקסט "(לא בטוח)".
-	ראו את פרק `פתרון בעיות <#troubleshooting>`__ מטה לקריאה נוספת.
-    * - |pod_management|  	 
-      - **ניהול הפוד:**
+* **REFRESH:**
 
-	מנווט אל תפריט ניהול הפוד   
-    * - |ack_alerts|		 
-      - **קבל התראות:**
-   			 
-	לחיצה תשבית את צפצופי התראת התפוגה של הפוד. 
-			 
-	* הלחצן מוצג רק לאחר אזהרת התפוגה של הפוד
-	* לאחר קבלת ההתראה, אייקון זה יפסיק להופיע.			 
-    * - |set_time|	 
-      - **הגדרת שעה:**
-   
-	לחיצה תסנכרן את השעה בפוד עם השעה הנוכחית בטלפון.
-    * - |suspend|  		 
-      - **השהיה:**
-   
-	משהה את פעילות הפוד
-    * - |resume|	 
-      - **חידוש הזרקה:**
-   
+    |refresh_pod_status|
+
+    שולח פקודת רענון לפוד לעדכון התקשורת
+
+    השתמשו כדי לרענן את מצב הפוד ולבטל סטטוסים המכילים את הטקסט "(לא ודאי)".
+
+    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+* **POD MGMT:**
+
+    |pod_management|
+
+    מנווט אל תפריט ניהול הפוד
+
+* **ACK ALERTS:**
+
+    |ack_alerts|
+
+    לחיצה תשבית את צפצופי התראת התפוגה של הפוד.
+
+    Button is displayed only when pod time is past expiration warning time
+    לאחר קבלת ההתראה, אייקון זה יפסיק להופיע.
+
+* **SET TIME:**
+
+    |set_time|
+
+    לחיצה תסנכרן את השעה בפוד עם השעה הנוכחית בטלפון.
+
+* **SUSPEND:**
+
+    |suspend|
+
+    משהה את פעילות הפוד
+
+* **RESUME DELIVERY:**
+
+    |resume|
+
 	מחדש את פעילות הפוד המושהה
 
 
@@ -480,63 +490,78 @@
 
 להלן הסבר על מבנה ומשמעות של האייקונים בתפריט **ניהול הפוד** אליו נכנסים מהלשונית **OMNIPOD (POD)**.
 
-|Omnipod_Tab_Pod_Management|
+    |Omnipod_Tab_Pod_Management|
 
-.. list-table:: 
+* **Activate Pod**
 
-    * - |activate_pod|
-      - **הפעל פוד**
-   
-        מתחל ומפעיל את הפוד החדש
-    * - |deactivate_pod|
-      - **כבה פוד**
- 
-        מכבה את הפוד הנוכחי.
-		 
-	* פוד מצומד חלקית יתעלם מהפקודה הזו.
-	* השתמשו בפקודה זו כדי לבטל תרמיל "צורח" (שגיאה 49).
-	* אם הכפתור מושבת (אפור) השתמשו בלחצן "היפטר מהפוד".
-    * - |play_test_beep|
-      - **השמע צפצוף ניסיון**
- 
- 	משמיע צפצוף בדיקה יחיד על הפוד.
-    * - |discard_pod|
-      - **היפטר מהפוד**
+    |activate_pod|
 
-	מכבה את הפוד ומבטל את מצב "פוד לא מגיב".
-			      
-	הכפתור מוצג רק במקרים ספציפיים בהם אין אפשרות לבטל את ההפעלה כרגיל:
+    מתחל ומפעיל את הפוד החדש
+
+* **Deactivate Pod**
+
+    |deactivate_pod|
+
+    מכבה את הפוד הנוכחי.
+
+    A partially paired pod ignores this command.
+
+    Use this command to deactivate a screaming pod (error 49).
+
+    If the button is disabled (greyed out) use the Discard Pod button.
+
+* **Play test beep**
+
+    |play_test_beep|
+
+    משמיע צפצוף בדיקה יחיד על הפוד.
+
+* **Discard pod**
+
+    |discard_pod|
+
+    מכבה את הפוד ומבטל את מצב "פוד לא מגיב".
+
+    הכפתור מוצג רק במקרים ספציפיים בהם אין אפשרות לבטל את ההפעלה כרגיל:
 
 	* פוד **מצומד חלקית** ולכן מתעלם מפקודות השבתה.
 	* **פוד נתקע** בין השלבים בתהליך הצימוד
 	**הפוד לא מצליח לעבור צימוד כלל. **
-    * - |pod_history|
-      - **היסטוריית הפוד** 
-   
-   	מציג את היסטוריית פעילות הפוד הפעיל
-    * - |rileylink_stats|
-      - **סטטיסטיקת ריילילינק:**
-   
-        מנווט למסך סטטיסטיקת ריילילנק המציג הגדרות עדכניות והיסטוריית חיבורי ריילילינק
+
+* **Pod history**
+
+    |pod_history|
+
+    מציג את היסטוריית פעילות הפוד הפעיל
+
+* **RileyLink stats:**
+
+    |rileylink_stats|
+
+    מנווט למסך סטטיסטיקת ריילילנק המציג הגדרות עדכניות והיסטוריית חיבורי ריילילינק
 
 	* **הגדרות** - מציג מידע על הגדרות הריילילינק והפוד
 	* **היסטוריה** - מציג את היסטוריית התקשורת של הריילילינק והפוד
-    * - |reset_rileylink_config|
-      - **איפוס תצורת ריילילינק** 
-   
-   	מאפס את תצורת הריילילינק המחובר כעת. 
-			      
-	* כאשר התקשורת מופעלת, נתונים ספציפיים נשלחים ומוגדרים בריילילינק 
-			      
+
+* **Reset RileyLink Config**
+
+    |reset_rileylink_config|
+
+    מאפס את תצורת הריילילינק המחובר כעת.
+
+	* כאשר התקשורת מופעלת, נתונים ספציפיים נשלחים ומוגדרים בריילילינק
+
 	    - רישומי זיכרון
 	    - פרוטוקולי תקשורת
 	    - תדר רדיו
-				
+
 	* ראו `הערות נוספות <#reset-rileylink-config-notes>` __ בסוף טבלה זו
-    * - |pulse_log|
-      - **קרא יומן פעימות:** 
-    
-    	שולח את יומן הפעימות הפעיל ללוח העריכה		    
+
+* **Read pulse log:**
+
+    |pulse_log|
+
+    	שולח את יומן הפעימות הפעיל ללוח העריכה
 
 *איפוס הערות תצורת ריילילינק*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -566,15 +591,15 @@
 RileyLink - ריילילינק
 ---------
 
-Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
+מאפשר סריקת מכשיר ריילילינק. מנהל התקן הריילילינק לא יכול להשתמש ביותר ממכשיר ריילילינק אחד בבת אחת.
 
-* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+* **הצג את רמת הסוללה המדווחת על-ידי OrangeLink\Emalink\DiaLink:** מדווח את רמת הסוללה של מכשיר הריילילינק עצמו. הפעלת אפשרות זו מומלצת בחום לכל משתמשי OrangeLink/EmaLink.
 
 	+ לא עובד עבור הריילילינק המקורי.
 	+ עלול שלא לעבוד במכשירי ריילילינקים מדגמים אלטרנטיביים.
 	+ כשמאופשר - מדווח את רמת הסוללה של ריילילינקים מדגמים נתמכים.
 	+ כשאינו מאופשר - מדווח "לא זמין".
-* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  חלק מדגמי הריילילינק כיום משתמשים בסוללות רגילות הניתנות להחלפה.  אפשרות זו מאפשרת לכם לבצע רישום ואיפוס של מונה של גיל הסוללה.
+* **אפשר רישום החלפת סוללה בפעולות:** בלשונית פעולות כפתור החלפת הסוללה מופעל אם הפעלתם הגדרה זו והגדרת דיווח הסוללה למעלה.  חלק מדגמי הריילילינק כיום משתמשים בסוללות רגילות הניתנות להחלפה.  אפשרות זו מאפשרת לכם לבצע רישום ואיפוס של מונה של גיל הסוללה.
 
 צפצופי אישור
 ------------------
@@ -698,14 +723,14 @@ Allows for scanning of a pod communication device. The Omnipod driver cannot sel
 
 **רמת הסוללה**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  חומרת הריילילינק המקורי אינה מסוגלת לדווח על רמת הסוללה שלה.  רמת הסוללה מדווחת לאחר כל תקשורת עם הפוד, כך שלא ניתן להבחין בעלייה לינארית בעת הטעינה.  רענון ידני יעדכן את רמת הסוללה הנוכחית.  כאשר הריילינק מתנתק, ידווח ערך של 0%.
+דיווח על רמת סוללה הוא הגדרה שניתן לאפשר כדי לאחזר את רמת הסוללה הנוכחית של OrangeLink, DiaLink ו- EmaLink.  חומרת הריילילינק המקורי אינה מסוגלת לדווח על רמת הסוללה שלה.  רמת הסוללה מדווחת לאחר כל תקשורת עם הפוד, כך שלא ניתן להבחין בעלייה לינארית בעת הטעינה.  רענון ידני יעדכן את רמת הסוללה הנוכחית.  כאשר הריילינק מתנתק, ידווח ערך של 0%.
 
-  * **RileyLink hardware is NOT capable of reporting battery level** 
-  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
+  * **חומרת ריילינק המקורית אינה מסוגלת לדווח על רמת הסוללה** 
+  * **"שימוש ברמת הסוללה המדווחת על ידי OrangeLink/DiaLink/EmaLink חייב להיות מופעל בהגדרות Omnipod לדיווח על ערכי רמת הסוללה**
+  * **חיווי רמת הסוללה פועלת רק למכשירי OrangeLink, DiaLink ו-EmaLink**
   * **דיווח על רמת סוללה עשוי לעבוד במכשירים אחרים (לא כולל RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+  * **SMS** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר
+  * **נייטסקאוט** - מאחזר את רמת הסוללה הנוכחית כתגובה כאשר קיימת רמה בפועל, ערך של n/a לא יאוחזר
 
 
 פתרון בעיות
@@ -894,7 +919,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 .. |Deactivate_Pod_10|                  image:: ../images/omnipod/Deactivate_Pod_10.png
 
 ..
-	הפעלת מנהל ההתקן של Omnipod ב- AAPS
+	Enabling the Omnipod Driver in AAPS
 .. |Enable_Omnipod_Driver_1|            image:: ../images/omnipod/Enable_Omnipod_Driver_1.png
 .. |Enable_Omnipod_Driver_2|            image:: ../images/omnipod/Enable_Omnipod_Driver_2.png
 .. |Enable_Omnipod_Driver_3|            image:: ../images/omnipod/Enable_Omnipod_Driver_3.png
@@ -907,7 +932,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 .. |Toroid_w_CS|                  		image:: ../images/omnipod/Toroid_w_CS.png
 
 ..
-	הגדרות אומניפוד
+	Omnipod Settings
 .. |Omnipod_Settings_1|                 image:: ../images/omnipod/Omnipod_Settings_1.png
 .. |Omnipod_Settings_2|                 image:: ../images/omnipod/Omnipod_Settings_2.png
 .. |Omnipod_Settings_3|                 image:: ../images/omnipod/Omnipod_Settings_3.png
@@ -940,7 +965,7 @@ Battery level reporting is a setting that can be enabled to return the current b
 .. |RileyLink_Bluetooth_Reset_5|        image:: ../images/omnipod/RileyLink_Bluetooth_Reset_5.png
 
 ..
-	תצורת RileyLink
+	RileyLink Setup
 .. |RileyLink_Setup_1|                  image:: ../images/omnipod/RileyLink_Setup_1.png
 .. |RileyLink_Setup_2|                  image:: ../images/omnipod/RileyLink_Setup_2.png
 .. |RileyLink_Setup_3|                  image:: ../images/omnipod/RileyLink_Setup_3.png

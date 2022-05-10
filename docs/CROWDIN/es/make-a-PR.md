@@ -64,7 +64,7 @@ En este momento se utilizan dos idiomas para las páginas de los documentos:
 * Markdown (.md) - el lenguaje de marcado utilizado originalmente para las páginas de wiki
 * texto reStructuredText (.rst) - el nuevo lenguaje de códigos
 
-Cambiaremos todas las páginas de documentos de Markdown a reStructuredText bit a bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. Mientras tanto, es importante que utilice la sintaxis correcta al formatear texto o enlazar. Si no está seguro de tener un vistazo a los códigos de formato/enlace en las páginas existentes.
 
 ### Tamaño de la imagen
 

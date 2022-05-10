@@ -18,7 +18,8 @@ Připojte se k hlavní skupině [AndroidAPS na Facebooku](https://www.facebook.c
 
 * [Facebooková skupina Looped](https://www.facebook.com/groups/TheLoopedGroup): najdete zde vše, co se týká DIY systémů uzavřené smyčky (OpenAPS, Loop a AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): obecné informace o CGM
+* [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
+* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
 * [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
 
 ## Country / language specific resources

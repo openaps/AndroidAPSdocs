@@ -1,17 +1,17 @@
-# Pump choices
+# מבחר המשאבות
 
-AndroidAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
+AndroidAPS עובד עם מספר משאבות אינסולין. הרשימה הבאה מציגה את המכשירים הנתמכים כעת ומציינת בסוגריים אם AndroidAPS מתקשר עם המשאבה באמצעות תקשורת בלוטות' ישירה עם הטלפון או אם נדרש מכשיר תואם ריילילינק.
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (Bluetooth)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
-- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
-- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Compatible Device)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
-- Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (בלוטות')
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (בלוטות')
+- [DanaR](../Configuration/DanaR-Insulin-Pump.md) (בלוטות')
+- [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (בלוטות')
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (בלוטות')
+- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (בלוטות')
+- [Omnipod Eros](../Configuration/OmnipodEros.rst) (תואמת ריילילינק)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md) (בלוטות')
+- משאבות [Medtronic](../Configuration/MedtronicPump.md) ישנות מסויימות (תואמות ריילילינק)
 
-Details of the status of other pumps that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](Future-possible-Pump-Drivers.md) page.
+פרטים על משאבות אחרות שעשויות לעבוד עם AndroidAPS מפורטות בדף [משאבות עתידיות (אפשריות)](Future-possible-Pump-Drivers.md).
 
-If you need to choose a pump to upgrade to or buy then people often ask which to choose. Details of the various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
+אנשים שואלים לעתים קרובות באיזו לבחור אם צריכים לבחור משאבה לשדרוג או לקנייה. הפרטים של המפיצים השונים נמצאים ב[גיליון אלקטרוני זה](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), אנא שתפו את הפרטים אם הם עדיין לא רשומים.

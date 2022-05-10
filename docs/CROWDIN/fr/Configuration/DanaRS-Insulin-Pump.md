@@ -38,7 +38,7 @@
 * Sélectionner la vitesse de Bolus pour changer la vitesse de Bolus par défaut souhaitée (12 sec par 1 U, 30 sec par 1 U ou 60 sec par 1 U).
 
 * Régler l'incrément Basale sur pompe à 0,01 U/h en utilisant le menu Médecin (voir le guide de l’utilisateur de la pompe).
-* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
+* Régler l'incrément Bolus sur la pompe à 0,05 U/h en utilisant le menu de Médecin (voir le guide de l’utilisateur de la pompe).
 * Activez les Bolus Étendus sur la pompe
 
 ### Mot de passe par défaut

@@ -1,4 +1,4 @@
-mComponent Overview 
+Component Overview 
 **************************************************
 AndroidAPS není jen (vlastnoručně sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <../index.html#component-setup>`_.
    
@@ -48,12 +48,15 @@ Inzulinová pumpa
 --------------------------------------------------
 AndroidAPS **v současné době** funguje s 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ s nadcházející verzí 2.4 (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ s nadcházející verzí (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce `Pumpy potenciálně použitelné v budoucnu <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -63,11 +66,11 @@ Přídavná komunikační zařízení
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Pro staré pumpy Medtronic je potřeba přídavné komunikační zařízení (spojené s telefonem), aby dělalo "tlumočníka" překládajícího rádiový signál z pumpy na bluetooth pro komunikaci s telefonem. Nezapomeňte vybrat správné zařízení, které odpovídá vaší pumpě.
 
-   -  |OrangeLink|  `Domovská stránka OrangeLink <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Domovská stránka Emalink <https://github.com/sks01/EmaLink>`__ - `Kontakt  <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `Domovská stránka LoopLink <https://www.getlooplink.org/>`__ - `Kontakt <https://jameswedding.substack.com/>`__ - Netestováno
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Která pumpa je pro provozování uzavřené smyčky s AndroidAPS nejlepší?**
 

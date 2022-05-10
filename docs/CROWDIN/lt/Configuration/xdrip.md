@@ -1,14 +1,16 @@
 # xDrip+ Nustatymai
 
-Jei dar jo nenustatėte, atsisiųskite [xDrip+](https://jamorham.github.io/#xdrip-plus).
+(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
 
-**Šios instrukcijos yra skirtos tik xDrip+ Android sistemai.** Yra programa „xDrip for iOS“, kuri neturi nieko bendra su originalia xDrip+ Android sistemai.
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. pradeda su 8G..., 8H... ar 8J... naudokite vieną iš [naujausių nightly versijų](https://github.com/NightscoutFoundation/xDrip/releases).
+Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, galite išbandyti [nightly 2019/12/31 versiją ar vėlesnę](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Pagrindiniai visų stebėjimo sistemų nustatymai
 
@@ -76,11 +78,11 @@ Jei naudojate Android 10 ir kyla problemų dėl xDrip+ pagrindinės versijos, ga
 
 ### Pakartoninis paleidimas nerekomenduojamas
 
-**Su Dexcom siųstuvais, kurių serijos nr. pradeda su 8G, 8H ar 8J, pakartotinis paleidimas iš naujo neveikia ir gali sugadinti jutiklį visiškai!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-Nerekomenduojama automatiškai pratęsti Dexcom jutiklio veikimo (`Pakartotinis paleidimas (preemptive restarts)`), nes tai gali sukelti glikemijų reikšmių šuolius 9 dieną po pakartotinio paleidimo.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ šuolis po paleidimo iš naujo](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Naudoti G6 yra šiek tiek sudėtingiau, nei atrodė anksčiau. Norint jį naudoti saugiai, yra keletas niuansų, kuriuos reikia žinoti:
 
@@ -125,7 +127,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
    
    -> Near the bottom of the screen `Warm Up x,x hours left` must be displayed after a few minutes.
 
--> Jei jūsų siųstuvo serijos nr. neprasideda reikšme 8G, 8H ar 8J ir po keleto minučių nerodo sensoriaus įšilimo (warm-up) laiko, sustabdykite ir paleiskite sensorių iš naujo.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Paleiskite kolektorių iš naujo (sistemos būsena - jei nekeičiamas sensorius}
 * Neįjunkite originalaus Dexcom imtuvo (jei jį naudojate), kol xDrip+ nepasirodys pirmieji duomenys.
@@ -177,7 +179,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
-Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite vieną iš paskutinių [nightly versijų](https://github.com/NightscoutFoundation/xDrip/releases).
+Jei jūsų Dexcom G6 siųstuvo serijos nr. is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Išjunkite originalų „Dexcom“ imtuvą (jei naudojate).
 * Sustabdykite sensorių (tik keičiant sensorių)
@@ -308,7 +310,7 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
 
 ### Problemos paleidžiant naują sensorių
 
-Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. prasideda 8G, 8H ar 8J.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * Natyvinis sensorius pažymimas kaip: „KLAIDA: Sensoriaus nepavyko startuoti“
 * Sustabdykite sensorių
@@ -318,7 +320,7 @@ Atminkite, kad šis metodas gali neveikti, jei jūsų siųstuvo serijos Nr. pras
 * Sustabdykite sensorių
 * Startuokite sensorių su tikru kodu (atspausdintu ant apsauginės plėvelės)
 
-Patikrinkite xDrip+ žurnalus, ar xDrip+ pradeda skaičiuoti „Trukmė: 1 minutė“ (ir pan.). Tik xDrip+ žurnaluose galite iš anksto nustatyti, ar xDrip+ sustabdė sensorių. Pradinio ekrano apačioje vėliausia būsena ne visada rodoma teisingai.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
@@ -345,8 +347,8 @@ Patikrinkite xDrip+ žurnalus, ar xDrip+ pradeda skaičiuoti „Trukmė: 1 minut
 
 ### Connect Libre Transmitter & start sensor
 
-![xDrip+ Startuoti Libre siųstuvą & Sensorių 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Startuoti Libre siųstuvą & Sensorių 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Startuoti Libre siųstuvą & Sensorių 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
