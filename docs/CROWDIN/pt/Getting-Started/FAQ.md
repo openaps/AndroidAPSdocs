@@ -1,54 +1,54 @@
-# FAQ para loopers
+# FAQ for loopers
 
-Como adicionar perguntas para a FAQ: Siga estas [instruções](../make-a-PR.md)
+How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
 
-# Geral
+# General
 
-## Posso apenas fazer o download do arquivo de instalação da AndroidAPS?
+## Can I just download the AndroidAPS installation file?
 
-Não. Não há nenhum arquivo apk para download para AndroidAPS. Você mesmo tem que [compilar](../Installing-AndroidAPS/Building-APK.md). Aqui está a razão pela qual:
+No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
 
-A AndroidAPS é usada para controlar a sua bomba e administrar insulina. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distribuir um dispositivo não regulamentado é ilegal. Regulamentações semelhantes existem noutras partes do mundo.
+AndroidAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
 
 This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
 
-É por isso que os apks não estão disponíveis.
+That’s why apks aren’t available.
 
-## Como começar?
+## How to begin?
 
-Em primeiro lugar, você tem que **obter componentes de hardware capazes de construir o loop**:
+First of all, you have to **get loopable hardware components**:
 
-- Uma [bomba de insulina suportada](./Pump-Choices.md), 
-- um [smartphone Android](Phones.md) (O Apple iOS não é suportado pelo AndroidAPS - pode verificar [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
-- um [sistema de monitorização contínua de glicose ](../Configuration/BG-Source.rst). 
+- A [supported insulin pump](./Pump-Choices.md), 
+- an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
+- a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
 
-Em segundo lugar, tem que **configurar o seu hardware**. Veja [o exemplo de configuração com tutorial passo a passo](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Em terceiro lugar, tem que **configurar os seus componentes de software**: AndroidAPS e fonte MCG/MFG.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Em quarto lugar, deve aprender e **compreender o design de referência da OpenAPS para verificar os seus fatores de tratamento**. O princípio principal do loop fechado é que a sua dose basal e a proporção de hidratos de carbono estão corretas (bem afinadas). Todas as recomendações presumem que suas necessidades basais são atendidas e quaisquer picos ou descidas que veja são resultado de outros fatores que, portanto, requerem alguns ajustes únicos (exercício, stress, etc.). Os ajustes que o loop fechado pode fazer para a segurança foram limitados (ver máximo de dose basal temporária permitida em [OpenAPS Reference Design](https://openaps.org/reference-design/)), o que significa que você não quer desperdiçar a dosagem permitida corrigindo uma basal subjacente incorreta. Se, por exemplo, você está frequentemente com baixa glicemia ao se aproximar de uma refeição, então é provável que as suas necessidades básicas precisem de ajustes. Pode usar o [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para considerar um grande conjunto de dados para sugerir se, e como, as basais e/ou FSI precisam ser ajustados e também se a razão dos hidratos de carbono precisa ser alterada. Ou você pode testar e definir a seu basal à [maneira antiga](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
-## Que aspectos práticos de looping eu tenho?
+## What practicalities of looping do I have?
 
-### Proteção por senha
+### Password protection
 
-Se não deseja que as suas preferências sejam facilmente alteradas, então pode proteger o menu de preferências, selecionando no menu preferências "senha para configurações" e digite a senha escolhida. Da próxima vez que você aceder ao menu de preferências, ele solicitará a senha antes de prosseguir. Se mais tarde quiser remover a opção de senha, vá em “senha para configurações” e exclua o texto.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Android Wear Smartwatches
 
-Se planeia usar o aplicativo android wear para bólus ou alterar as configurações, precisa garantir que as notificações da AndroidAPS não são bloqueadas. A confirmação da ação vem por meio de notificação.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
 
-### Desconetar a bomba
+### Disconnect pump
 
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
 The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
-### As recomendações não são baseadas numa única leitura do MCG
+### Recommendations not only based on one single CGM reading
 
 For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
-### Mais leituras
+### Further readings
 
 There are several blogs with good tips to help you understand the practicalities of looping:
 
@@ -57,7 +57,7 @@ There are several blogs with good tips to help you understand the practicalities
 - [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
-## Que equipamento de emergência é recomendado para transportar comigo?
+## What emergency equipment is recommended to take with me?
 
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
@@ -71,7 +71,7 @@ You can tape it. There are several pre-perforated 'overpatches' for common CGM s
 
 You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
-# Definições AndroidAPS
+# AndroidAPS settings
 
 The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
@@ -176,7 +176,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 
 If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
 
-# Algoritmo APS
+# APS algorithm
 
 ## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
 
@@ -184,7 +184,7 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
-## Perfil
+## Profile
 
 ### Why using min. 5h DIA (insulin end time) instead of 2-3h?
 
@@ -200,27 +200,27 @@ First of all, check your basal rate and make a no-carb basal rate test. If it is
 
 First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
-# Outras configurações
+# Other settings
 
-## Configurações do Nightscout
+## Nightscout settings
 
-### AndroidAPS NSClient says 'not allowed' and does not upload data. O que posso fazer?
+### AndroidAPS NSClient says 'not allowed' and does not upload data. What can I do?
 
 In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
-## Configurações CGM
+## CGM settings
 
 ### Why does AndroidAPS say 'BG source doesn't support advanced filtering'?
 
 If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
-## Bomba
+## Pump
 
-### Onde colocar a bomba?
+### Where to place the pump?
 
 There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
-### Batterias
+### Batteries
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
 
@@ -260,7 +260,7 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 ## Daily usage
 
-### Higiene
+### Hygiene
 
 #### What to do when taking a shower or bath?
 
@@ -272,7 +272,7 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ## Leisure activities
 
-### Desporto
+### Sports
 
 You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
@@ -290,11 +290,11 @@ If you do sports regularly at the same time (i.e. sports class in your gym) you 
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
-### Sexo
+### Sex
 
 You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
-### Beber álcool
+### Drinking alcohol
 
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
@@ -304,15 +304,15 @@ Drinking alcohol is risky in closed loop mode as the algorithm cannot predict th
 
 When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
-### A dormir
+### Sleeping
 
 #### How can I loop during the night without mobile and WIFI radiation?
 
 Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
-1. Active o modo avião no seu telemóvel.
+1. Turn on airplane mode in your mobile.
 2. Wait until the airplane mode is active.
-3. Ligar o Bluetooth.
+3. Turn on Bluetooth.
 
 You are not receiving calls now, nor are you connected to the internet. But the loop is still running.
 
@@ -320,7 +320,7 @@ Some people have discovered problems with local broadcast (AAPS not receiving BG
 
 ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
-### Viagem
+### Travelling
 
 #### How to deal with time zone changes?
 
@@ -328,13 +328,13 @@ With Dana R and Dana R Korean you don't have to do anything. For other pumps see
 
 ## Medical topics
 
-### Hospitalização
+### Hospitalization
 
 If you want to share some information about AndroidAPS and DIY looping with your clinicians, you can print out the [guide to AndroidAPS for clinicians](../Resources/clinician-guide-to-AndroidAPS.md).
 
 ### Medical appointment with your endocrinologist
 
-#### A reportar
+#### Reporting
 
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
