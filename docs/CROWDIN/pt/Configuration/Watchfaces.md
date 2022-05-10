@@ -24,11 +24,11 @@ Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Conf
 
 ## Controlling AAPS from Watch
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. Se você quiser dar bólus, etc. pelo relógio, dentro da opção "Definições do Wear", necessita de ativar a opção "Controlos pelo Relógio".
+AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 The following functions can be triggered from the watch:
 
-* definir um alvo temporário
+* set a temporary target
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * administer eCarbs
 * administer a bolus (insulin + carbs)
@@ -268,7 +268,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
 
-## Ver dados do Nightscout
+## View Nightscout data
 
 If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
