@@ -1,24 +1,24 @@
-# Config Builder
+# Configurador
 
-Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
+Dependendo de suas configurações pode-se abrir o Configurador através de um separador na parte superior do ecrã ou através do menu hambúrguer.
 
-![Open config builder](../images/ConfBuild_Open_AAPS30.png)
+![Abrir configurador](../images/ConfBuild_Open_AAPS30.png)
 
-Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+O Configurador (Conf) é o separador onde ativa e desativa os módulos de configurações. As caixas do lado esquerdo (A) permitem selecionar qual usar, as caixas do lado direito (C) permitem que as veja como um separador (E) no AndroidAPS. Caso a caixa direita não esteja ativada, pode chegar à função utilizando o menu hamburger (D) no topo esquerdo do ecrã.
 
-Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
+Onde existem configurações adicionais disponíveis dentro do módulo, pode clicar na roda dentada (B) que o levará para as configurações específicas dentro das preferências.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+**Primeira configuração:** Desde AAPS 2.0 um assistente de instalação guia através do processo de configuração do AndroidAPS. Carregue no menu de 3 pontos no lado superior direito do ecrã (F) e selecione 'Assistente de instalação' para usá-lo.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
+![Caixas de seleção do configurador e roda dentada](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
-## Tab or hamburger menu
+## Separador ou menu Hambúrguer
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Com a caixa de seleção sob o símbolo de olho, pode decidir como abrir a seção de programa correspondente.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+![Separador ou menu Hambúrguer](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-## Profile
+## Perfil
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 * As of AAPS 3.0, only the local profile is available.
@@ -41,7 +41,7 @@ Buttons:
 
 If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
-#### Clone profile switch
+#### Fazer Mudança De Perfil
 
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
@@ -51,9 +51,9 @@ You can easily create a new local profile from a profile switch. In this case ti
 4. Select the desired profile switch and press "Clone".
 5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+![Fazer Mudança De Perfil](../images/LocalProfile_ClonePS_AAPS30.png)
 
-#### Upload local profiles to Nightscout
+#### Enviar perfis locais para o Nightscout
 
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
@@ -67,16 +67,16 @@ It is necessary to clone the actual active entire Nightscout database records fo
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
-### Profile helper
+### Assistente de Perfil
 
-Profile helper offers two functions:
+Assistentes de perfis oferecem duas funções:
 
-1. Find a profile for kids
-2. Compare two profiles or profile switches in order to clone a new profile
+1. Encontre um perfil para crianças
+2. Compare dois perfis ou trocas de perfis de modo a clonar um novo perfil
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
-## Insulin
+## Insulina
 
 ![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
@@ -133,7 +133,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-## BG Source
+## Fonte de Glic.
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
@@ -149,7 +149,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * Random BG: Generates random BG data (Demo mode only)
 
-## Pump
+## Bomba
 
 Select the pump you are using.
 
@@ -173,7 +173,7 @@ Select the pump you are using.
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
-## Sensitivity Detection
+## Detecção de Sensibilidade
 
 Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
@@ -196,13 +196,13 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
-### Open Loop
+### Loop Aberto
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
 * This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
-### Closed Loop
+### Loop Fechado
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
 * The Closed Loop works within numerous safety limits, which you can be set individually.
@@ -222,7 +222,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
 * This defines the relative change required to trigger a notification.
 
-## Objectives (learning program)
+## Objectivos (programa de aprendizagem)
 
 AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
@@ -230,13 +230,13 @@ You should [export your settings](../Usage/ExportImportSettings.rst) (including 
 
 See [Objectives](../Usage/Objectives.rst) page for more information.
 
-## Treatments
+## Tratamentos
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
-## General
+## Geral
 
-### Overview
+### Visão Geral
 
 Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
@@ -248,9 +248,9 @@ Option 'Keep screen on' will force Android to keep the screen on at all times. T
 
 Define which Buttons are shown on the home screen.
 
-* Treatments
-* Calculator
-* Insulin
+* Tratamentos
+* Calculadora
+* Insulina
 * Carbs
 * CGM (opens xDrip+)
 * Calibration
@@ -289,7 +289,7 @@ Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE
 
 Choose if you want to have a notes field when entering treatments or not.
 
-#### Status lights
+#### Luzes de Estado
 
 Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
@@ -299,16 +299,16 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-### Actions
+### Ações
 
 * Some buttons to quickly access common features.
 * See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
-### Automation
+### Automatização
 
 User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
-### SMS Communicator
+### Comunicador SMS
 
 Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
@@ -322,7 +322,7 @@ Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
 Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
-If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+Se você quiser dar bólus, etc. pelo relógio, dentro da opção "Definições do Wear", necessita de ativar a opção "Controlos pelo Relógio".
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
@@ -335,7 +335,7 @@ Through Wear tab or hamburger menu (top left of screen, if tab is not displayed)
 
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
-### NSClient
+### ClienteNS
 
 * Setup sync of your AndroidAPS data with Nightscout.
 * Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
@@ -344,6 +344,6 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Config Builder
+### Configurador
 
 Use tab for config builder instead of hamburger menu.
