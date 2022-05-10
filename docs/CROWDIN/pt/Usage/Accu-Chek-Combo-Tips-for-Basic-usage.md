@@ -1,83 +1,83 @@
-# Accu-Chek Combo - Dicas para uso básico
+# Accu-Chek Combo Tips for basic usage
 
-## Como assegurar operações suaves
+## How to ensure smooth operations
 
 * Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
-* Certifique-se sempre de que a bateria da bomba está o mais completa possível. Consulte a seção da bateria para dicas sobre a bateria.
-* É melhor **não mexer na app ruffy** enquanto o sistema está em execução. Se a app for iniciada novamente, a conexão com a bomba pode ser interrompida. Uma vez que a bomba esteja conectada ao ruffy, não há necessidade de se reconectar. Mesmo após um reinício do telefone, a conexão é restabelecida automaticamente. Se possível, mova a app para um ecrã não utilizado ou para uma pasta no seu smartphone para que não a abra acidentalmente.
-* Se abrir involuntariamente a app ruffy durante o loop, é melhor reiniciar o smartphone logo de seguida.
-* Sempre que possível, opere com a bomba apenas através da app AndroidAPS. Para facilitar isto, ative o Key lock na bomba em **CONFIGURAÇÕES DE BOMBA / BLOQUEIO DE CHAVE / ON**. Somente ao trocar a bateria ou o cartucho, é necessário utilizar as chaves da bomba. ![Bloqueio](../images/combo/combo-tips-keylock.png)
+* Always make sure that the pump battery is as full as possible. See the battery section for tipps regarding the battery.
+* It is best to **not touch the app ruffy** while the system is running. If the app is started again, the connection to the pump can break off. Once the pump is connected to ruffy, there is no need to re-connect. Even after a restart of the phone, the connection is automatically re-established. If possible, move the app to an unused screen or in a folder on your smartphone so you do not accidentally open it.
+* If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
+* Whenever possible, only operate the pump via the AndroidAPS app. To facilitate this, activate the key lock on the pump under **PUMP SETTINGS / KEY LOCK / ON**. Only when changing the battery or the cartridge, it is necessary to use the pump's keys. ![Keylock](../images/combo/combo-tips-keylock.png)
 
-## Bomba inacessível. O que fazer?
+## Pump not reachable. What to do?
 
-### Ativar alarme da bomba inacessível
+### Activate pump unreachable alarm
 
-* Na AndroidAPS, vá até **Preferências / Alertas locais** e ative o **Alertar caso não seja possível alcançar a bomba** e configure o **Limite para bomba inacessível [Min]** para **31** minutos. 
-* Isto dar-lhe-á tempo suficiente para não ativar o alarme ao sair da sala enquanto o seu telefone é deixado na mesa de secretária, mas informará se a bomba não pode ser alcançada durante o tempo que excede a duração de uma taxa basal temporária.
+* In AndroidAPS, go to **Settings / Local Alarms** and activate **alarm when pump is unreachable** and set **pump not reachable limit [Min]** to **31** minutes. 
+* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
 
-### Restaurar o alcance da bomba
+### Restore reachability of the pump
 
-* Quando a AndroidAPS reporta um alarme de **Bomba inacessível** , primeiro solte o bloqueio de teclas e **pressione qualquer tecla na bomba** (por exemplo, botão "para baixo"). Assim que o ecrã da bomba se desligar, pressione **ATUALIZAR** no separador **Combo** na AndroidAPS. Na maior parte dos casos, a comunicação volta a funcionar.
-* Se isto não ajudar, reinicie o smartphone. Após o reinício, a AndroidAPS e o ruffy serão reativados e uma nova conexão será estabelecida com a bomba.
-* Os testes com smartphones diferentes mostraram que certos smartphones acionam o erro "bomba inacessível" com mais frequência do que outros. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lista de smartphones testados com sucesso. 
+* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
+* If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
+* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
 
-### Raiz das causas, e consequências, de erros de comunicação frequentes
+### Root causes and consequences of frequent communication errors
 
-* Em telefones com **pouca memória** (ou **configurações agressivas de poupança de bateria** ), a AndroidAPS é frequentemente encerrada. Pode identificar isto quando os botões Insulina e Calculadora no ecrã inicial não são exibidos ao abrir a AAPS, porque o sistema está a iniciar. Isto pode ativar alarmes de "bomba inacessível" na inicialização. No campo **Última Ligação** do separador Combo, é possível verificar quando a AndroidAPS comunicou pela última vez com a bomba. 
+* On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
-![Bomba inacessível](../images/combo/combo-tips-pump-unreachable.png) ![Sem ligação à bomba](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
 
-* Este erro pode gastar a bateria da bomba rapidamente porque o perfil basal é lido pela bomba quando a aplicação é reiniciada.
-* Aumenta também a probabilidade de causar o erro que faz com que a bomba rejeite todas as conexões de entrada até que um botão na bomba seja pressionado. 
+* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
+* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
 
-## Falha do cancelamento de uma basal temporária
+## Cancellation of temporary basal rate fails
 
-* Ocasionalmente, a AndroidAPS pode não cancelar automaticamente um alerta de **DBT CANCELADA**. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
+* Occasionally, AndroidAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
 
-## Considerações sobre a bateria da bomba
+## Pump battery considerations
 
-### Trocar a bateria
+### Changing the battery
 
-* Após um alarme de **bateria fraca** a bateria deve ser mudada o mais rápido possível para ter energia suficiente para uma comunicação Bluetooth confiável com o smartphone, mesmo que o telefone esteja a uma distância mais larga da bomba.
-* Mesmo depois de um alarme de **de bateria baixa** , a bateria pode ser usada por algum tempo. No entanto, recomenda-se sempre ter uma bateria nova consigo após um alarme de "bateria baixa".
+* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
+* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
 * Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
-![Bluetooth activado](../images/combo/combo-tips-compo.png)
+![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
 * If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
-### Tipo de bateria e causas de curta duração da bateria
+### Battery type and causes of short battery life
 
 * As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
-![Energizar](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Intervalos de tempo de vida habituais dos diferentes tipos de bateria:
+Ranges for typical life time of the different battery types are as follows:
 
-* **Energizer Ultimate Lithium**: 4 a 7 semanas
-* **Power One Alkaline** (Varta) Accu-chek: 2 to 4 semanas
+* **Energizer Ultimate Lithium**: 4 to 7 weeks
+* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
 * **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
 If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
 
 * Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
-* Existem algumas variantes da tampa de bateria da bomba Combo, que colocam a bateria em curto circuito e assim gasta a sua energia. As tampas sem este problema podem ser reconhecidas pelos contatos dourados.
-* Se o relógio da bomba não "sobreviver" a uma curta mudança de bateria, é provável que o capacitor (o que mantém o relógio a funcionar durante uma breve interrupção de energia) esteja estragado. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
-* O hardware e software do telemóvel (sistema operacional Android e bluetooth) também têm impacto no tempo de vida da bateria da bomba, mesmo que os fatores exatos não sejam completamente conhecidos ainda. Se tiver oportunidade, teste outro smartphone e compare o tempo de vida da bateria.
+* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
+* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
+* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
 
-## Mudanças de Hora
+## Daylight saving time changes
 
-* Atualmente, o controlador da Combo não suporta o ajuste automático do horário da bomba.
-* Durante a noite de uma mudança de horário, o tempo do telemóvel é atualizado, mas o tempo da bomba permanece inalterado. Isto leva a um alarme devido a tempos diferentes entre os sistemas.
+* Currently the combo driver does not support automatic adjustment of the pump's time.
+* During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.
 * If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning. A good way to deal with daylight saving time changes is to switch to a different time zone located on the same longitude you are located at but closer to the equator, where usually no daylight saving time is observed. Example: For Central Europe on Summer Time (CEST/GMT+2), you could switch to the time zone of Zimbabwe on your phone the night before the switch to winter time and then switch back to Central European Time CET/GMT+1 the next morning while changing the clock on your pump at the same time. The other way aroud, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Look at https://www.timeanddate.com/time/map/ to find a suitable country.
 
-## Bólus prolongado, bólus multiondas
+## Extended bolus, multiwave bolus
 
-O algoritmo OpenAPS não suporta um bólus prolongado ou bólus multiondas criados na bomba. But a similar treatment can be achieved by the following alternatives:
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
 * Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
@@ -85,15 +85,15 @@ O algoritmo OpenAPS não suporta um bólus prolongado ou bólus multiondas criad
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Loop desativado após bólus multionda](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
-## Alarmes na administração de bólus
+## Alarms at bolus delivery
 
 * If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Há que evitar tratamentos repetidos.
+* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Here indistinguishable entries must be prevented.
 
-![Bólus duplo](../images/combo/combo-tips-doppelbolus.png)
+![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
-* Esse mecanismo também é responsável por uma segunda causa do erro: se durante o uso da calculadora do bólus outro bólus for administrado através da bomba e, assim, a história do bólus mudar, a base do cálculo do bólus está errada e o bólus é abortado. 
+* This mechanism is also responsible for a second cause of the error: If during the use of the bolus calculator another bolus is delivered via the pump and thereby the bolus history changes, the basis of the bolus calculation is wrong and the bolus is aborted. 
 
-![Bólus cancelado](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/combo/combo-tips-history-changed.png)
