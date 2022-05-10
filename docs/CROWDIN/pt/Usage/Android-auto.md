@@ -4,11 +4,11 @@
 
 ## AndroidAPS settings for Android Auto
 
-Use system notifications for alerts and notifications:
+Usar as notificações do sistema para alertas e notificações:
 
 * Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Use system notifications for alerts and notifications](../images/AndroidAuto_01v2.png)
+![Usar as notificações do sistema para alertas e notificações](../images/AndroidAuto_01v2.png)
 
 ## Settings in Android Auto app on your phone
 
@@ -39,6 +39,6 @@ As AAPS is no official Android Auto app notifications have to be activated in An
 
 ![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
 
-## Troubleshooting:
+## Resolução de Problemas:
 
 * If you don't see the notification, check if you [allowed AAPS to show notifications](#androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](#settings-in-android-auto-app-on-your-phone).
