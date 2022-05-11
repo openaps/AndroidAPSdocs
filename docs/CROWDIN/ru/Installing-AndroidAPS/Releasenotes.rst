@@ -42,6 +42,7 @@ Release date: XX-XX-2022
 Важные Примечания
 ----------------------
 * after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
 
 Изменения
 ----------------------
