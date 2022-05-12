@@ -1,23 +1,23 @@
-What is a Closed Loop System?
+O que é um Sistema de Loop Fechado?
 **************************************************
 
 .. image:: ../images/autopilot.png
-  :alt: AAPS is like an autopilot
+  :alt: AAPS é como um piloto automático
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+Um sistema de pâncreas artificial de loop fechado combina diversos componentes para facilitar o gerenciamento do diabetes para você. 
+Em seu ótimo livro `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, uma das fundadoras do movimento do loop fechado de código aberto, o chama de `"piloto automático para a sua diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Mas o que isso significa?
 
-**Autopilot in an aircraft**
+**Piloto automático em um avião**
 
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
+O piloto automático não faz o trabalho completo e não dá a possibilidade ao piloto de dormir ao longo de todo o voo. Ele facilita o trabalho dos pilotos. Liberta-os do fardo de uma vigilância constante do avião e da atitude de voo. Isto permite que o piloto se concentre no monitoramento do espaço aéreo e no controle das funções do piloto automático.
 
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
+O piloto automático recebe sinais de vários sensores, um computador avalia-os em conjunto com as especificações do piloto e então executa os ajustes necessários. O piloto não precisa mais se preocupar com os ajustes constantes.
 
-**Closed Loop System**
+**Sistema de Loop Fechado**
 
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
+O mesmo se aplica a um sistema de pâncreas artificial de loop fechado. Ele não faz todo o trabalho, você ainda tem de cuidar do seu diabetes. Um sistema de loop fechado combina os dados do sensor de um CGM/FGM com as especificações de gerenciamento de diabetes, como taxa de basal, fator de sensibilidade à insulina e relação de carboidratos. A partir daí, calcula as sugestões de tratamento e implementa esses pequenos ajustes permanentes a fim de manter seu diabetes dentro do intervalo de meta para aliviá-lo. Isso deixa mais tempo para a sua vida "ao lado do" diabetes.
 
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
+Assim como não quer entrar num avião onde apenas o piloto automático voa sem supervisão humana, um sistema de loop fechado ajuda-o com o gerenciamento do seu diabetes, mas sempre precisa do seu apoio! **Mesmo com um loop fechado, você não pode simplesmente esquecer o diabetes!**
 
 Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
 
