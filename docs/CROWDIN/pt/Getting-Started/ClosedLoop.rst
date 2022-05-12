@@ -19,39 +19,39 @@ O mesmo se aplica a um sistema de pâncreas artificial de loop fechado. Ele não
 
 Assim como não quer entrar num avião onde apenas o piloto automático voa sem supervisão humana, um sistema de loop fechado ajuda-o com o gerenciamento do seu diabetes, mas sempre precisa do seu apoio! **Mesmo com um loop fechado, você não pode simplesmente esquecer o diabetes!**
 
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+Assim como o piloto automático depende dos valores dos sensores e das especificações do piloto, um sistema de loop fechado precisa de entradas apropriadas, como taxas de basal, FS e I:C (relação número de gramas de carboidratos para uma unidade de insulina) para apoiar você com sucesso.
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+Sistemas de Pâncreas Artificial de Loop Fechado de Código Aberto
 ===================================================
-At present there are three major open source closed loop systems available:
+Atualmente existem três principais sistemas de loop fechado de código aberto disponíveis:
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+O AndroidAPS é descrito em detalhes `nesta documentação <./WhatisAndroidAPS.html>`_. Ele usa um Smartphone Android para cálculo e controle da sua bomba de insulina. Está em forte colaboração com o OpenAPS (ou seja, eles compartilham algoritmos).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
+`Bombas <../Hardware/pumps.html>`_ compatíveis:
 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Diaconn G8 <../Configuration/DiaconnG8.html>`_
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* algumas `bombas Medtronic <../Configuration/MedtronicPump.html>`_ antigas
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ foi o primeiro Sistema de Loop Fechado de Código Aberto. Ele usa um pequeno computador como Raspberry Pi ou Intel Edison.
 
-Compatible pumps are:
+Bombas compatíveis:
 
-* some old Medtronic pumps
+* algumas bombas Medtronic antigas
 
-Loop for iOS
+Loop para iOS
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`Loop para iOS <https://loopkit.github.io/loopdocs/>`_ é o Sistema de Loop Fechado de Código Aberto a ser usado com iPhones Apple.
 
-Compatible pumps are:
+Bombas compatíveis:
 
 * Omnipod Eros
-* some old Medtronic pumps
+* algumas bombas Medtronic antigas
