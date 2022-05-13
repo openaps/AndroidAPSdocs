@@ -1,32 +1,32 @@
-# FAQ for loopers
+# FAQ para loopers
 
-How to add questions to the FAQ: Follow the these [instructions](../make-a-PR.md)
+Como adicionar perguntas ao FAQ: Siga estas [instruções](../make-a-PR.md)
 
 # General
 
-## Can I just download the AndroidAPS installation file?
+## Posso apenas baixar o arquivo de instalação do AndroidAPS?
 
-No. There is no downloadable apk file for AndroidAPS. You have to [build](../Installing-AndroidAPS/Building-APK.md) it yourself. Here's the reason why:
+Não. Não há nenhum arquivo apk para download e instalação do AndroidAPS. Você mesmo precisa [compilar](../Installing-AndroidAPS/Building-APK.md), a partir do código fonte. Veja o motivo:
 
-AndroidAPS is used to control your pump and give insulin. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. Distributing an unregulated device is illegal. Similar regulations exist in other parts of the world.
+AndroidAPS é usado para controlar a sua bomba e administrar insulina. Nos termos da regulamentação atual na Europa, todos os sistemas classificados como IIa ou IIb são dispositivos médicos que requerem aprovação regulamentar (marca CE) e necessitam de vários estudos e assinaturas. A distribuição de um dispositivo não regulamentado é ilegal. Existem regulamentações semelhantes noutras partes do mundo.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Este regulamento não se restringe apenas às vendas (no sentido de obter dinheiro para alguma coisa) mas aplica-se a qualquer distribuição (mesmo distribuindo gratuitamente). Construir um dispositivo médico para você mesmo é a única maneira de usar o aplicativo dentro destas regulamentações.
 
-That’s why apks aren’t available.
+É por isso que os apks não estão disponíveis.
 
-## How to begin?
+## Como começar?
 
-First of all, you have to **get loopable hardware components**:
+Antes de tudo, você deve **obter componentes de hardware que possam fechar um loop**:
 
-- A [supported insulin pump](./Pump-Choices.md), 
-- an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-- a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+- Uma [bomba de insulina suportada](./Pump-Choices.md), 
+- um [smartphone Android](Phones.md) (Apple iOS não é suportado pelo AndroidAPS - pode verificar o [Loop iOS](https://loopkit.github.io/loopdocs/)) e 
+- um [sistema de monitoramento contínuo de glicose (CGM)](../Configuration/BG-Source.rst). 
 
-Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
+Em segundo lugar, você deve **configurar seu hardware**. Veja o [exemplo de configuração com o tutorial passo-a-passo](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+Em terceiro lugar, você deve **configurar seus componentes de software**: AndroidAPS e a fonte de CGM/FGM.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Em quarto lugar, você tem que aprender e **entender o design de referência do OpenAPS para verificar seus fatores de tratamento**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## What practicalities of looping do I have?
 
