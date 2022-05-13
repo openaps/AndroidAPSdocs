@@ -12,42 +12,42 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Facebook'ta AndroidAPS kullanıcı grubuna katılmayı unutmayın!
 
-Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
+Ana [AndroidAPS Facebook grubuna](https://www.facebook.com/groups/1900195340201874/) katılın. Algoritmayla ilgili tüm sorularınızı, Android Studio'da ve APK'yı oluşturmada yaşadığınız tüm kurulum sorunlarını, uygulamanın kullanımıyla ilgili tüm sorularınızı ve uygulamadan en iyi şekilde nasıl yararlanabileceğinizle ilgili ipuçlarını buraya gönderebilirsiniz. Ayrıca [AAPSCombo](https://www.facebook.com/groups/127507891261169/) Combo pompa kullanıcıları için biraz daha özel bir kuruluma sahip bir grup var.
 
-## Other resources in English
+## İngilizce diğer kaynaklar
 
-* [Looped Facebook group](https://www.facebook.com/groups/TheLoopedGroup): covers all DIY closed loop systems (OpenAPS, Loop and AndroidAPS)
+* [Looped Facebook grubu](https://www.facebook.com/groups/TheLoopedGroup): Tüm DIY kapalı döngü sistemlerini kapsar (OpenAPS, Loop ve AndroidAPS)
 * [xDrip+ - Facebook](https://www.facebook.com/groups/xDripG5/)
 * [xDrip+ - ](https://xdrip.readthedocs.io/en/latest/)
-* [CGM in the cloud](https://www.facebook.com/groups/cgminthecloud/): CGM in general
-* [AndroidAPS on Discord](https://discord.gg/4fQUWHZ4Mw)
+* [Bulutta CGM](https://www.facebook.com/groups/cgminthecloud/): Genel olarak CGM
+* [Discord'da AndroidAPS](https://discord.gg/4fQUWHZ4Mw)
 
-## Country / language specific resources
+## Ülkeye / dile özel kaynaklar
 
-### Australia
+### Avustralya
 
-* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Australian users of OpenAPS, Loop and AndroidAPS
+* [Aussie Aussie Aussie Loop Loop Loop](https://www.facebook.com/groups/AussieLooping/): Avustralyalı OpenAPS, Loop ve AndroidAPS kullanıcıları
 
-### Czech and Slovak
+### Çekçe ve Slovakça
 
-* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Czech speaking users of AndroidAPS
+* [DanaR, Insight a AndroidAPS CZ](https://www.facebook.com/groups/AndroidAPSCZ/): Çekçe konuşan AndroidAPS kullanıcıları
 
-### Germany
+### Almanya
 
-* [Open Source Looper Community](https://de.loopercommunity.org/): German looper community for Open Source Loop, diabetes in general, communication, support and local meet-up
-* [Looper Meetings Germany, Austria & Switzerland](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
-* [Freestyle Libre Freaks Facebook group](https://www.facebook.com/groups/FreestyleLibreFreaks/): Libre as CGM/FGM
-* [NightscoutDE Facebook group](https://www.facebook.com/groups/nightscoutDE/)
+* [Açık Kaynak Döngü Topluluğu](https://de.loopercommunity.org/): Açık Kaynak Döngüsü, genel olarak diyabet, iletişim, destek ve yerel buluşma için Alman döngü kullanıcılar topluluğu
+* [Looper Toplantıları Almanya, Avusturya & İsviçre](https://de.loopercommunity.org/c/veranstaltungen/l/calendar)
+* [Freestyle Libre Freaks Facebook grubu](https://www.facebook.com/groups/FreestyleLibreFreaks/): CGM/FGM olarak Libre
+* [NightscoutDE Facebook grubu](https://www.facebook.com/groups/nightscoutDE/)
 
-### Netherlands
+### Hollanda
 
-* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Dutch speaking users of OpenAPS, Loop and AndroidAPS
-* [CGM in the cloud Nederlands](https://www.facebook.com/groups/1764754560436596)
+* [Looped-NL-BE](https://www.facebook.com/groups/117102135652893): Hollandaca konuşan OpenAPS, Loop ve AndroidAPS kullanıcıları
+* [Bulutta CGM Hollanda](https://www.facebook.com/groups/1764754560436596)
 
-### Sweden
+### İsveç
 
-* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (Sweden based users of OpenAPS, Loop and AndroidAPS)
+* [Looped Sweden](https://www.facebook.com/groups/661514380864081/) (OpenAPS, Loop ve AndroidAPS'in İsveç merkezli kullanıcıları)
 
-### UK
+### İngiltere
 
-* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (UK based users of OpenAPS, Loop and AndroidAPS)
+* [Looped UK](https://www.facebook.com/groups/LoopedUK/) (İngiltere merkezli OpenAPS, Loop ve AndroidAPS kullanıcıları)
