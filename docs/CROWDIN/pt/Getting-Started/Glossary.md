@@ -287,7 +287,7 @@
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - prediction lines</a></td>
 </tr>
 <tr>
- <td><strong>Profile</strong></td>
+ <td><strong>Perfil</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
