@@ -18,7 +18,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-## Profile
+## Perfil
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
 * As of AAPS 3.0, only the local profile is available.
@@ -149,7 +149,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * Random BG: Generates random BG data (Demo mode only)
 
-## Pump
+## Bomba
 
 Select the pump you are using.
 
