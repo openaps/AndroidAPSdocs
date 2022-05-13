@@ -6,11 +6,11 @@ Bu proje gönüllü çalışmaya dayanmaktadır, bu nedenle zamanlarını ve bec
 * seviye 2: Facebook grubunda arama yapın, henüz bir yanıt yoksa sorunuzu [AndroidAPS Kullanıcıları Facebook grubunda](https://www.facebook.com/groups/1900195340201874/) sorun
 * seviye 3: facebook sonuç alamadıysa [discord](https://discord.gg/4fQUWHZ4Mw)'da sorun. Yinelenen yanıtları önlemek için doğrudan çapraz paylaşımlar her iki kanalda da yoksayılacak/silinecektir. Geliştiricilerin çoğunluğunun Avrupa'da olduğunu unutmayın, bu nedenle yanıt 7/24 olmayabilir; özellikle hafta sonları ve tatil günlerinde birkaç saat beklemeniz gerekebilir.
 * 4. düzey: Bir [Hata](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) ekleyin
-* level 5: email *developers@androidaps.org* (only if personal data is involved that should not go in a public channel and your problems have not been resolved in the other levels)
+* seviye 5: e-posta *developers@androidaps.org* (yalnızca genel bir kanala girmemesi gereken kişisel veriler söz konusuysa ve sorunlarınız diğer seviyelerde çözülmediyse)
 
 For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
-## Make sure to join the AndroidAPS users group on Facebook!
+## Facebook'ta AndroidAPS kullanıcı grubuna katılmayı unutmayın!
 
 Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
