@@ -8,7 +8,7 @@ Bu proje gönüllü çalışmaya dayanmaktadır, bu nedenle zamanlarını ve bec
 * 4. düzey: Bir [Hata](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) ekleyin
 * seviye 5: e-posta *developers@androidaps.org* (yalnızca genel bir kanala girmemesi gereken kişisel veriler söz konusuysa ve sorunlarınız diğer seviyelerde çözülmediyse)
 
-For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
+CGM kaynaklarıyla ilgili destek için lütfen söz konusu sistem için Facebook gruplarını veya discord kanallarını kullanın (örn. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 serisi yükleyici](https://www.facebook.com/groups/NightscoutForMedtronic/)) veya Nightscout desteği [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) kullanın. Oradaki kullanıcılar, burada farklı sistemler kullanan insanlardan daha fazla uzmanlığa sahip olacaklardır.
 
 ## Facebook'ta AndroidAPS kullanıcı grubuna katılmayı unutmayın!
 
