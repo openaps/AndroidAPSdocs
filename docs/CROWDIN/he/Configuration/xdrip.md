@@ -53,7 +53,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * ניתן לחבר בו-זמנית משדר דקסקום G6 למקלט דקסקום (או לחילופין את המשאבה t:slim) ואפליקציה אחת בטלפון.
 * בעת שימוש ב-xDrip+ כמקלט הסירו תחילה את אפליקציית דקסקום. **לא ניתן לחבר את xDrip+ וגם את אפליקציית דקסקום למשדר בו-זמנית!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* אם אתם צריכים להשתמש ב-Clarity ורוצים ליהנות מהתראות ש-xDrip+ מציע, השתמשו ב-[BYODA - "בנה אפליקציית דקסקום בעצמך" ](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), המציעה שידור מקומי ל-xDrip+.
 
 ### גרסת xDrip+ בהתאם למספר הסידורי של משדר G6
 
