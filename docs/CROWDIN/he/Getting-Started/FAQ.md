@@ -338,102 +338,102 @@
 
 ניתן להציג לרופא את הדוחות של Nightscout בכתובת https://YOUR-NS-SITE.com/report או להשתמש ב-[Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-# Frequent questions on Discord and their answers...
+# שאלות נפוצות שנשאלו ב-Discord
 
-## My problem is not listed here.
+## הבעיה שלי לא כלולה כאן.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[מידע לקבלת עזרה.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-## My problem is not listed here but I found the solution
+## הבעיה שלי לא מופיעה כאן אבל מצאתי פתרון
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[מידע לקבלת עזרה.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-**Remind us to add your solution to this list!**
+**הזכירו לנו להוסיף את הפתרון שלכם לרשימה זו!**
 
-## AAPS stops everyday around the same time.
+## AAPS עוצר כל יום בערך באותה שעה.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+עצרו את Google Play Protect. בדקו אם יש אפליקציות "ניקוי" (לדוגמה CCleaner וכו') והסירו אותן. AAPS > תפריט 3 נקודות > אודות > עקבו אחר ההוראות שבקישור "איך לא להשבית את האפליקציה שלי?" כדי לעצור את כל אופטימיזציות הסוללה.
 
-## How to organize my backups ?
+## איך לארגן את הגיבויים שלי?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+ייצוא הגדרות בקביעות רבה: לאחר כל שינוי פוד, לאחר שינוי בפרופיל שלכם, לאחר סיום משימה, אם משנים את סוג המשאבה... גם אם שום דבר לא משתנה, ייצאו פעם בחודש. שמרו כמה קבצי ייצוא ישנים.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+העתיקו לכונן אינטרנט (Dropbox, Google וכו'): כל קבצי ה-APK שבהם השתמשתם כדי להתקין אפליקציות בטלפון (AAPS, xDrip, BYODA, Patched LibreLink...) כמו גם את קבצי ההגדרות המיוצאים מכל האפליקציות.
 
-## I have problems, errors building the app.
+## יש לי בעיות ושגיאות בבניית האפליקציה.
 
-Please
+בבקשה
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- ראו [פתרון בעיות ב-Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) עבור שגיאות אופייניות
+- הטיפים שב[מדריך הבניה שלב אחר שלב](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
-## I'm stuck on an objective and need help.
+## אני תקוע\ה במשימה וצריכ\ה עזרה.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+צלמו את המסך עם השאלה והתשובות. פרסמו בערוץ ה-AAPS ב-Discord. אל תשכחו לספר באילו אפשרויות אתם בוחרים (או לא) ומדוע. אתם תקבלו רמזים ועזרה אבל תצטרכו להגיע לתשובה בעצמכם.
 
-## How to reset the password in AAPS v2.8.x ?
+## כיצד לאפס את הסיסמה ב-AAPS v2.8.x?
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+פתחו את תפריט ההמבורגר, הפעילו את אשף התצורה והזינו סיסמה חדשה כשתתבקשו. ניתן לצאת מהאשף לאחר שלב בחירת הסיסמה.
 
-## How to reset the password in AAPS v3.x
+## כיצד לאפס את הסיסמה ב-AAPS v3.x?
 
-If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+אם שכחתם את הסיסמה: סגרו את AAPS. הכניסו קובץ ריק בשם PasswordReset (ללא כל סיומת) אל התיקייה AAPS/extra בזיכרון הטלפון. הפעילו מחדש את AAPS. סיסמת AAPS החדשה היא המספר הסידורי של המשאבה. הסדרה עבור הפוד Omnipod DASH הוא 4241. אפשר לשנות את הסיסמה באמצעות תפריט 3 נקודות, אשף התצורה, פרמטרים של ביטול נעילה.
 
-## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+## מכשיר הקישור\משאבה\פוד שלי לא מגיב (RileyLink/OrangeLink/EmaLink...)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+בטלפונים מסוימים, יש ניתוק בלוטות' ממכשירי הקישור (RL/AOL/Email...).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+לחלקם יש גם קישורים שאינם מגיבים (AAPS אומר שהם מחוברים אבל מכשירי הקישור לא יכולים להגיע למשאבה או לפקד עליה)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+הדרך הקלה ביותר לגרום לכל החלקים הללו לעבוד יחד היא: (1) מחקו את מכשיר הקישור מ-AAPS. (2) כיבוי מכשיר הקישור. (3) תפריט 3 נקודות > יציאה. (4) לחיצה ארוכה על סמל AAPS, תפריט אנדרואיד, מידע על אפליקציית AAPS, עצירת AAPS בכוח ולאחר מכן מחקו זיכרון מטמון (אל תמחקו את הזיכרון הראשי!) לעיתים נדירות טלפונים מסוימים עשויים להזדקק לאתחול בנקודה זו. אפשר לנסות בלי לאתחל. (5) הפעלת מכשיר הקישור (6) הפעלת AAPS (7) לשונית הפוד > תפריט 3 נקודות > חיפוש וחיבור מכשיר הקישור
 
-## Build error: file name too long
+## שגיאת בבנייה: שם הקובץ ארוך מדי
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+בזמן ניסיון לבנות אני מקבל\ת שגיאה המציינת ששם הקובץ ארוך מדי. פתרונות אפשריים: העבירו את המקורות שלכם לספריה קרובה יותר לספריית הבסיס של הכונן שלך (למשל "c:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+מאנדרואיד סטודיו: ודאו שהסנכרון והאינדקס של "Gradle" בוצע לאחר פתיחת הפרוייקט והעתקה מ-GitHub. בצעו Build->Clean Project לפני ביצוע פרויקט בנייה מחדש. הפעילו File->Invalidate Caches והפעל מחדש את Android Studio.
 
-## Alert: Running dev version. Closed loop is disabled
+## התראה: פועל בגרסת הפיתוח. לולאה סגורה מושבתת
 
-AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההודעה הבאה: "מריץ את גרסת הפיתוח. לולאה סגורה מושבתת".
 
-Make sure AndroidAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+ודאו ש-AndroidAPS פועל ב"מצב מפתחים": מקמו קובץ בשם "engineering_mode" במיקום "AAPS/extra". כל קובץ יצליח כל עוד הוא נקרא כראוי. הקפידו להפעיל מחדש את AndroidAPS כדי שימצא את הקובץ ויעבור ל"מצב מפתחים".
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+רמז: צרו עותק של קובץ יומן קיים ושנו את שמו ל-"engineering_mode" (שים לב: אין סיומת לשם הקובץ! ושיש רק קו תחתון אחד בשם).
 
-## Where can I find settings files?
+## איפה אפשר למצוא קבצי הגדרות?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+קבצי ההגדרות יאוחסנו באחסון הפנימי של הטלפון בספרייה "/AAPS/preferences". אזהרה: הקפידו לא לאבד את הסיסמה שלכם כי בלעדיה לא תוכלו לייבא קובץ הגדרות כי הוא מוצפן!
 
-## How to configure battery savings?
+## כיצד להגדיר חיסכון בסוללה?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AndroidAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+הגדרה נכונה של ניהול צריכת החשמל חשובה כדי למנוע ממערכת ההפעלה של הטלפון להשעות את AndroidAPS ואפליקציות ושירותים הקשורים כאשר הטלפון אינו בשימוש. כתוצאה מכך AAPS לא יכול לעשות את עבודתו ו\או חיבורי בלוטות' לחיישן ולריילילינק Rileylink עלולים להיסגר ולגרום להתראות "המשאבה מנותקת" ולשגיאות תקשורת. בטלפון, עברו אל הגדרות -> אפליקציות והשביתו את החיסכון בסוללה עבור: AndroidAPS, xDrip או BYODA/Dexcom אפליקציית מערכת הבלוטות' (ייתכן שתצטרכו לבחור לאפשר תחילה לצפייה באפליקציות מערכת) לחלופין, השביתו לחלוטין את כל החיסכון בסוללה בטלפון. כתוצאה מכך הסוללה שלך עשויה להתרוקן מהר יותר, אבל זו דרך טובה לגלות אם חיסכון בסוללה גורם לבעיה. האופן שבו חיסכון בסוללה מיושם תלוי מאוד במותג, דגם ו\או גרסת מערכת ההפעלה של הטלפון. כתוצאה מכך כמעט בלתי אפשרי לתת הוראות להגדרה נכונה של חיסכון בסוללה עבור המערכת הספציפית שלכם. נסו וגלו אילו הגדרות עובדות הכי טוב עבורכם. למידע נוסף, ראו גם איך לא להשבית את האפליקציה שלי?
 
-## Pump unreachable alerts several times a day or at night.
+## התראות המשאבה אינה זמינה מופיעות מספר פעמים ביום או בלילה.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+ייתכן שהטלפון שלך עוצר את שירותי AAPS או אפילו בלוטות' מה שגורם לו להתנתק מהריילילינק (ראו חיסכון בסוללה) שקלו להגדיר התראות על אי השגה ל-120 דקות על ידי מעבר לתפריט שלוש הנקודות בצד שמאל למעלה, בחירה בהעדפות->התראות מקומיות-> סף משאבה בלתי נגישה [min].
 
-## Where can I delete treatments in AAPS v3 ?
+## היכן אוכל למחוק טיפולים ב-AAPS v3?
 
-3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+תפריט 3 נקודות, בחרו טיפולים ואז שוב תפריט 3 נקודות שם יש אפשרויות זמינות שונות.
 
-## Configuring and Using the NSClient remote app
+## הגדרה ושימוש באפליקציית NSClient מרחוק
 
-AAPS can be monitored and controlled remotely via the NSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the NSClient (remote) app is distinct from the NSClient configuration in AAPS, and the NSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'NSClient remote' and 'NSClient remote Wear' apps.
+ניתן לנטר ולשלוט על AAPS מרחוק באמצעות אפליקציית NSClient ובאופן אופציונלי באמצעות אפליקציית Wear המשויכת הפועלת בשעוני Android Wear. שימו לב שהאפליקציה NSClient (העוקבת) נבדלת מתצורת NSClient ב-AAPS, ואפליקציית Wear NSClient (העוקבת) נבדלת מאפליקציית AAPS Wear--למען הבהירות, האפליקציות המרוחקות יכונו 'NSClient remote' ו-' אפליקציות Wear' של NSClient מרוחק.
 
-To enable NSClient remote functionality you must: 1) Install the NSClient remote app (the version should match the version of AAPS being used) 2) Run the NSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the NSClient remote app to your Nightscout site. Once this is done, NSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+כדי להפעיל פונקציונליות מרחוק של NSClient, עליכם: (1) להתקין את האפליקציה העוקבת NSClient (הגרסה צריכה להתאים לגרסה של AAPS שבה נעשה שימוש) (2) הפעלה של אפליקציית NSClient עוקבת והמשך דרך אשף התצורה כדי להעניק הרשאות נדרשות ולהגדיר גישה לאתר Nightscout האישי. (3) בשלב זה ייתכן שתרצו להשבית חלק מאפשרויות האזעקה ו\או הגדרות מתקדמות אשר רושמות את ההתחלה של אפליקציית NSClient מרחוק באתר ה-Nightscout. ברגע שזה נעשה, NSClient העוקב יוריד נתוני פרופיל מאתר ה-Nightscout, הכרטיסייה 'סקירה כללית' תציג נתוני חיישן סוכר ונתוני AAPS, אך ייתכן שלא יציג נתוני גרפים, ותציין שפרופיל עדיין לא הוגדר. (4) כדי להפעיל את הפרופיל:
 
-- Enable remote profile synchronization in AAPS > NSClient > Options
-- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and NSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPS NSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or NSClient remote.
+- אפשרו סנכרון פרופיל מרחוק ב-AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון 
+- הפעילו את הפרופיל בעוקב NSClient > פרופיל לאחר שתעשו כך, הפרופיל יוגדר, ועוקב NSClient אמור להציג את כל הנתונים מ-AAPS. רמז: אם הגרף עדיין חסר, נסו לשנות את הגדרות הגרף כדי לאלץ עדכון. (5) כדי לאפשר שליטה מרחוק על ידי NSClient, הפעילו באופן סלקטיבי את האפשרויות של AAPS (שינויי פרופיל, ערכי מטרה זמניים, פחמימות וכו') שבהם תרצו להיות מסוגלים לשלוט מרחוק דרך AAPS > מסך NSClient > תפריט 3 נקודות או גלגל שיניים > העדפות NSClient > סינכרון. לאחר ביצוע שינויים אלה, תוכלו לשלוט מרחוק ב-AAPS באמצעות אתר Nightscout או אפליקציית NSClient.
 
-If you'd like to monitor/control AAPS via the NSClient remote Wear App, you'll need both NSClient remote and the associated Wear app to be installed. To compile the NSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the NSClient variant.
+אם תרצו לנטר\לשלוט ב-AAPS באמצעות אפליקציית Wear של NSClient מרחוק, תצטרכו להתקין גם את האפליקציית המעקב NSClient וגם את אפליקציית Wear המשויכת לה. כדי להרכיב את אפליקציית Wear של NSClient, עקבו אחר ההוראות הסטנדרטיות להתקנה\הגדרה של אפליקציית AAPS wear, למעט לקראת בנייתה, בחרו בגרסה של NSClient.
 
-## I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+## יש לי משולש אדום \ AAPS לא מאפשר לולאה סגורה \ לולאות נשארות בהשהייה עקב סוכר נמוך \ יש לי משולש צהוב
 
-The red and yellow triangles are a security feature in AAPS v3.
+המשולשים האדומים והצהובים הם תכונת אבטחה ב-AAPS v3.
 
-Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+משולש אדום אומר שיש נתוני סוכר כפולים ו-AAPS לא יכול לחשב במדויק את ההפרשים. עקב כך אי אפשר לסגור את הלולאה. עליכם למחוק את כל הנתונים הכפולים כדי להעלים את המשולש האדום. עברו ללשונית BYODA או xDrip, לחצו לחיצה ארוכה על שורה אחת שברצונך למחוק, סמנו כל שורה שהוכפלה (או דרך תפריט 3 נקודות ומחיקה, בהתאם לגרסת ה-AAPS). ייתכן שיהיה עליכם לאפס את מסדי הנתונים של AAPS אם יש יותר מדי ערכי סוכר כפולים. במקרה זה, תאבדו גם נתונים סטטיסטיים, פחמימות פעילות, אינסולין פעיל ופרופיל הנבחר.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+מקור אפשרי לבעיה: הופעלה הורדת נתוני סוכר מ-NS בהגדרות AAPS או ב-xDrip.
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours. In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+המשולש הצהוב פירושו הפרש זמנים לא קבוע בין כל קריאת סוכר. כלומר לא מקבלים נתוני סוכר כל 5 דקות באופן קבוע או שנתונים חסרים. לעתים קרובות זו בעיה של Libre. זה קורה גם כאשר מחליפים משדר G6. אם המשולש הצהוב קשור להחלפת משדר G6, הוא ייעלם מעצמו לאחר מספר שעות. במקרה של Libre, המשולש הצהוב יישאר. הלולאה ניתנת לסגירה ופועלת כהלכה.
