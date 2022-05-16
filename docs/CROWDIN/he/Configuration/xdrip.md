@@ -1,10 +1,10 @@
 # הגדרות xDrip+
 
-(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
+(לקבלת מידע נוסף אודות xDrip+ גשו לכתובת https://xdrip.readthedocs.io/en/latest/)
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+אם עוד לא התקנתם, הורידו [מכאן את xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**תיעוד זה נועד ל-xDrip במכשירי אנדרואיד בלבד.** ישנו "xDrip for iOS" ולו אין כל קשר עם xDrip+ של מכשירי אנדרואיד.
 
 עבור משדרי G6 המיוצרים לאחר סתיו/סוף 2018 (כלומר מספר סידורי starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
