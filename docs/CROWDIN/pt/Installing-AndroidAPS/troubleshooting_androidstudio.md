@@ -202,7 +202,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 2. Uninstall AAPS on your phone.
 3. Enable airplane mode & turn off bluetooth.
 4. Install new version (“app-full-release.apk”)
-5. [Import settings](../Usage/ExportImportSettings)
+5. [Importar configurações](../Usage/ExportImportSettings)
 6. Turn bluetooth back on and disable airplane mode
 
 ## App installed but old version
