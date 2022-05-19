@@ -54,6 +54,7 @@ Cambios
 * Wear code refactored. Not backward compatible anymore @MilosKozak
 * a11y improvements @Andries-Smith
 * new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
 
 Versión 3.0.0
 ================
