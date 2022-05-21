@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
+ <td>AndroidAPS הוא השם של אפליקציית אנדרואיד - AAPS הוא הקיצור - APS הוא קיצור המשמש למערכת הלבלב המלאכותית</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
+ <td>Android Auto היא מערכת שפותחה על ידי Google LLC כדי להשתמש בפונקציות של סמארטפון אנדרואיד עם מערכת המידע והבידור בכלי רכב ממונעים. באמצעות Android Auto אפליקציית AndroidAPS יכולה לשלוח הודעות למערכת המידע והבידור התואמת והמוגדרת שלך.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -48,7 +48,7 @@
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>cloud computing platform to host Nightscout web app</td>
+ <td>שירות מחשוב ענן שאירח את Nightscout (בעבר)</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
@@ -72,31 +72,31 @@
 </tr>
 <tr>
 <td><strong>BG source - מקור נתוני הסוכר</strong></td>
- <td>The blod glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
+ <td>מקור הסוכר בדם הוא המקור הנתונים של ערכי הגלוקוז בדם. הם מגיעים מחיישני CGM או FGM שאתם קוראים בעזרת תוכנת אינטגרציה כמו BYODA, +xDrip וכו'.</td>
  <td>חיישן סוכר רציף \ פלאש</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - מקור נתוני הסוכר</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightrider</strong></td>
- <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile activley very near to the sensor. The Blucon Nightreader closed this gap. Newer versions work in other ways! Please inform yourself about the actual state before buying something.</td>
+ <td>הגרסאות הראשונות של Freestyle Libre מסוגלות לתקשר רק באמצעות NFC, מה שאומר שהמטופל נאלץ להחזיק את המכשיר הנייד שלו קרוב מאוד לחיישן. ה-Blucon Nightrider סגר את הפער הזה. גרסאות חדשות יותר פועלות בדרכים אחרות! יש לברר את הדגם המתאים לכם לפני קנייה.</td>
  <td>Nightrider / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightrider</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>The abbrevation stand for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
+ <td>הקיצור מייצג מינון בזאלי. מינון האינסולין שמוזרק בשעה נתונה לצורך שמירה על יציבות של רמת הסוכר בדם.</td>
  <td>IC / ISF</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>BYODA</strong></td>
- <td>Build your own Dexcom App - it's a special way to generate your own Dexcom App for reading out the sensor data</td>
+ <td>בנה אפליקציית Dexcom משלך - זו דרך מיוחדת ליצור אפליקציית Dexcom משלכם לקריאת נתוני החיישן</td>
  <td>&nbsp;</td>
  <td><a href="../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
 </tr>
 <tr>
  <td><strong>גיל צינ'</strong></td>
- <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>גיל החיישן - מוצג במסך הראשי של AndroidAPS וב-Nightscout אם נתון זה הוזן בלשונית או בתפריט פעולות</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -120,7 +120,7 @@
 </tr>
 <tr>
  <td><strong>פחמ' פעילות</strong></td>
- <td>carbs on board - Carbs on board is the amount of carbohydrates currently available for digestion.</td>
+ <td>פחמימות פעילות - כמות הפחמימות הזמינה כעת לעיכול.</td>
  <td>אינ' פעיל</td>
  <td>&nbsp;</td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AndrdoidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
+ <td>git בהקשר שלנו כאן הוא הכלי להורדת קוד המקור של AndrdoidAPS מ-Github לצורך תהליך הבנייה. מערכת בקרת גרסאות למעקב אחר שינויים בקבצי מחשב ותיאום עבודה על אותם קבצים.<br> דרוש לעדכוני APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - עדכון APK</a></td>
 </tr>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>cloud computing platform to host Nightscout web app</td>
+ <td>שירות מחשוב ענן שאירח את Nightscout (בעבר)</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -228,19 +228,19 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. AndroidAPS is storing there the data. It's available e.g. for parents follwing their childs diabetes management or reporting of the historically data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentil chart etc..</td>
+ <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. AndroidAPS מאחסן שם את הנתונים. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'.</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
+ <td>כלי שכתב משתמש לופ להפקת דוחות בקובצי PDF מנתוני אפליקציות אינטרנט של Nightscout, להצגה בפגישות עם צוות הסוכרת שלכם.</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>NS Client - קליינט נייטסקאוט</strong></td>
+ <td>רכיב של AAPS שמתחבר אל אתר הנייטסקאוט של המשתמש</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td><strong>לולאה פתוחה</strong></td>
- <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
+ <td>המערכת תציע התאמות מומלצות שיש לבצע באופן ידני על המשאבה או לאשר ידנית</td>
  <td>לולאה סגורה</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - בונה התצורה</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PH - היסטוריית משאבה</strong></td>
- <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
+ <td>היסטוריית משאבות - ניגשה בטיפולים הממוקמים בתפריט 3 הנקודות בצד שמאל של המסך הראשי של AndroidAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">צילומי מסך</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>פרופיל</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
+ <td>הגדרות טיפול בסיסיות (מינון בזאלי, DIA, IC, ISF, ערכי מטרה)<br>AndroidAPS v3 תומך רק בפרופילים מקומיים אך ניתן להעתיק (לסנכרן) פרופילי Nightscout אל AndroidAPS</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Wiki - פרופיל</a></td>
 </tr>
@@ -355,18 +355,18 @@
 <tr>
  <td><strong>TBR - מינון בזאלי זמני</strong></td>
  <td>מינון בזאלי זמני</td>
- <td>TBB / TDD</td>
+ <td>TBR / TDD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TDD - סה"כ מינון אינסולין יומי</strong></td>
  <td>תצרוכת האינסולין הכללית (סיכום יומי של הבולוסים יחד עם המינונים הבזאליים)</td>
- <td>TBB / TBR</td>
+ <td>TBR / TDD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TT</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range) e.g. for eating or sport activities</td>
+ <td>ערך מטרה זמני<br>העלאה\הורדה זמנית של מטרת הסוכר (טווח) למשל לקראת אכילה או פעילויות ספורט</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Wiki - מטרות זמניות</a></td>
 </tr>
