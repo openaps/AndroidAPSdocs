@@ -1,9 +1,9 @@
 # עבור משתמשי Eversense
 
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
+הדרך הפשוטה ביותר לשימוש בחיישן Eversense עם AndroidAPS היא להתקין את הגרסה הלא אמריקאית של [אפליקציית Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (יש למחוק את הגרסה המקורית מראש).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**אזהרה: בעת מחיקת האפליקציה הישנה, ההיסטוריה שנשמרה בה, שישנה יותר מהשבוע, תימחק!**
 
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+על מנת להעביר את הנתונים אל AndroidAPS, יש להתקין את [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) ולאפשר בה את "Send to AAPS and xDrip" וב-AndroidAPS לבחור ב[בונה התצורה](../Configuration/Config-Builder.md) את מקור הנתונים כ-MM640g. היות ונתוני הסוכר של Eversense רועשים לפעמים, מומלץ לאפשר ב-ESEL את "Smooth Data", שעדיפה על האפשרות "התבסס על הפרש ממוצע קצר במקום הפרש פשוט\רגיל" ב-AAPS.
 
-You can find all APKs including the one for the US and another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+ניתן למצוא את כל קבצי ה-APK, כולל את זה המותאם לארה"ב וגם הוראות לשימוש ב-Eversense ב-xDrip [כאן](https://github.com/BernhardRo/Esel/tree/master/apk).
