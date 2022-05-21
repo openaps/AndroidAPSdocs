@@ -1,6 +1,6 @@
 # Android Auto
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![נתוני סוכר של AAPS ב-Android Auto](../images/AndroidAuto_05.png)
 
 ## הגדרות AndroidAPS עבור Android Auto
 
@@ -19,13 +19,13 @@
 * בחרו הגדרות
 * גללו מטה עד לתחתית הרשימה והקישו על מס' גרסה 10 פעמים עד שתוצג ההודעה "מצב מפתח מופעל".
 
-![Enable developer mode](../images/AndroidAuto_02.png)
+![הפעל מצב מפתח](../images/AndroidAuto_02.png)
 
 * לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה
 * בחר "אפשרויות מפתחים"
 * גללו מטה עד לתחתית הרשימה והפעילו את "מקורות לא ידועים"
 
-![Enable unknown sources](../images/AndroidAuto_03.png)
+![אפשר מקורות לא ידועים](../images/AndroidAuto_03.png)
 
 * כעת תוכלו לצאת ממצב מפתח אם תרצו. הקישו על לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה כדי לעשות זאת.
 
@@ -33,11 +33,11 @@
 
 * הקישו על סמל הפעמון בשורת התפריטים התחתונה ב-Android Auto במכונית
 
-![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
+![סמל פעמון - אנדרואיד אוטו ברכב](../images/AndroidAuto_04.png)
 
 * ערכי הסוכר יוצגו באופן הבא:
 
-![AAPS CGM data on Android Auto](../images/AndroidAuto_05.png)
+![נתוני סוכר של AAPS ב-Android Auto](../images/AndroidAuto_05.png)
 
 ## פתרון בעיות:
 
