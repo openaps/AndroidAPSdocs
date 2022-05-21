@@ -30,7 +30,7 @@ To learn more about the details and reasons for these recommendations read the [
 ## אם משתמשים ב-G6 עם Build Your Own Dexcom App (BYODA)
 
 -   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
--   This app lets you use your Dexcom G6 with any Android smartphone.
+-   אפליקציה זו מאפשרת להשתמש ב-Dexcom G6 עם כל סמארטפון אנדרואיד.
 -   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
 -   Install downloaded apk
 -   Enter sensor code and transmitter serial no. in patched app.
