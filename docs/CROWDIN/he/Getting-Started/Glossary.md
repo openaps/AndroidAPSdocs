@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>גיל סנס'</strong></td>
- <td>sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>גיל החיישן - מוצג במסך הראשי של AndroidAPS וב-Nightscout אם נתון זה הוזן בלשונית או בתפריט פעולות</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
