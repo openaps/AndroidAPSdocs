@@ -502,13 +502,13 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
     |deactivate_pod|
 
-    Deactivates the currently active pod.
+    O anda etkin olan podu devre dışı bırakır.
 
     A partially paired pod ignores this command.
 
-    Use this command to deactivate a screaming pod (error 49).
+    Çığlık atan bir podu devre dışı bırakmak için bu komutu kullanın (hata 49).
 
-    If the button is disabled (greyed out) use the Discard Pod button.
+    Buton devre dışıysa (gri ise), "Pod'u çıkart" butonunu kullanın.
 
 * **Play test beep**
 
@@ -516,7 +516,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
     Basıldığında pod'tan tek bir test bip sesi çalar.
 
-* **Discard pod**
+* **Pod'u çıkart**
 
     |discard_pod|
 
@@ -557,7 +557,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
 	* Bu tablonun sonundaki `ek notlar <#reset-rileylink-config-notes>`__ bölümüne bakın
 
-* **Read pulse log:**
+* **Sinyal günlüğünü oku:**
 
     |pulse_log|
 
