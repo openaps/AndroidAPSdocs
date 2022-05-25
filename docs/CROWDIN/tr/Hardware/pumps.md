@@ -1,11 +1,11 @@
 # Pompa Kanfigürasyonu
 
-- [Dana-R pump](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-RS pump](../Configuration/DanaRS-Insulin-Pump.md)
-- [Accu-Chek Combo pump](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu-Chek Insight pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Diaconn G8 insulin pump](../Configuration/DiaconnG8.rst)
+- [Dana-R pompası](../Configuration/DanaR-Insulin-Pump.md)
+- [Dana-RS pompası](../Configuration/DanaRS-Insulin-Pump.md)
+- [Accu-Chek Combo pompası](../Configuration/Accu-Chek-Combo-Pump.md)
+- [Accu-Chek Insight pompası](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Diaconn G8 insulin pompası](../Configuration/DiaconnG8.rst)
 - [Omnipod Eros](../Configuration/OmnipodEros.rst)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtronic pump](../Configuration/MedtronicPump.md)
-- [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
+- [Medtronic Pompaları](../Configuration/MedtronicPump.md)
+- [Gelecekteki (olası) Pompa Sürücüleri](../Getting-Started/Future-possible-Pump-Drivers.md)
