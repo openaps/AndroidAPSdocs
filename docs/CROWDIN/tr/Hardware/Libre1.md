@@ -24,6 +24,6 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 
 ## Glimp kullanıyorsanız
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
--   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
+-   You will need Glimp version 4.15.57 or newer. Daha eski sürümler desteklenmez.
+-   Henüz kurulmadıysa, Glimp'i indirin ve [Nightscout](https://nightscout.github.io/uploader/setup/#glimp) üzerindeki talimatları izleyin.
 -   Konfigürasyon ayarlarında Glimp'i seçin (AndroidAPS'de).
