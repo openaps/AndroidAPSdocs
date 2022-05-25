@@ -46,8 +46,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Identify receiver
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps`.
-* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.androidaps`. Capital I would prevent AAPS from receiving BG values from xDrip+.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.aapspumpcontrol` (for AndroidAPS v3.0 and above) `info.nightscout.androidaps` (for older versions of Android APS).
+* Pay attention: Auto-correction sometimes tend to change i to capital letter. You **must use only lowercase letters** when typing `info.nightscout.aapspumpcontrol`. Capital I would prevent AAPS from receiving BG values from xDrip+.
 
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
