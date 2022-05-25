@@ -502,7 +502,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
     |deactivate_pod|
 
-    O anda etkin olan bölmeyi devre dışı bırakır.
+    Deactivates the currently active pod.
 
     A partially paired pod ignores this command.
 
