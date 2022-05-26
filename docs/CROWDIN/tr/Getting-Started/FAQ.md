@@ -32,13 +32,13 @@ Dördüncüsü, tedavi faktörlerinizi kontrol etmek için **OpenAPS referans ta
 
 ### Parola koruması
 
-Tercihlerinizin kolayca değiştirilmesini istemiyorsanız, tercihler menüsünden "ayarlar için şifre" seçeneğini seçerek tercihler menüsüne şifre korumalı yapabilir ve seçtiğiniz şifreyi yazabilirsiniz. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
+Tercihlerinizin kolayca değiştirilmesini istemiyorsanız, tercihler menüsünden "ayarlar için şifre" seçeneğini seçerek tercihler menüsüne şifre korumalı yapabilir ve seçtiğiniz şifreyi yazabilirsiniz. Tercihler menüsüne bir sonraki girişinizde, daha ileri gitmeden önce bu şifreyi isteyecektir. Daha sonra şifre seçeneğini kaldırmak isterseniz, "ayarlar için şifre" bölümüne gidin ve metni silin.
 
 ### Android Wear Smartwatches
 
-If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kullanmayı planlıyorsanız, AndroidAPS'den gelen bildirimlerin engellenmediğinden emin olmanız gerekir. Eylemin onayı bildirim yoluyla gelir.
 
-### Disconnect pump
+### Pompayı ayırın
 
 If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
