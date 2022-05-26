@@ -40,26 +40,26 @@ Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kull
 
 ### Pompayı ayırın
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye IOB'yi doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+[AndroidAPS Ana Ekranında](./Screenshots.md#loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
 
-### Recommendations not only based on one single CGM reading
+### Öneriler yalnızca tek bir CGM değerlerine dayalı değildir
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
-### Further readings
+### Diğer okumalar
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları içeren birkaç blog var:
 
 - [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- [DIA neden önemlidir](https://seemycgm.com/2017/08/09/why-dia-matters/) CGM'ime bakın
+- [Öğün ani artışlarını sınırlama](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+- [Hormonlar ve Otoduyarlılık](https://seemycgm.com/2017/06/06/hormones-2/) CGM'ime bakın
 
-## What emergency equipment is recommended to take with me?
+## Yanıma hangi acil durum ekipmanının alınması önerilir?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
+İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AndroidAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
