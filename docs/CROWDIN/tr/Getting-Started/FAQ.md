@@ -28,13 +28,13 @@ Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 Dördüncüsü, tedavi faktörlerinizi kontrol etmek için **OpenAPS referans tasarımını öğrenmeli ve anlamalısınız**. Kapalı döngünün temel prensibi, bazal oranınızın ve karbonhidrat oranınızın doğru olmasıdır. Tüm öneriler, temel ihtiyaçlarınızın karşılandığını ve gördüğünüz herhangi bir tepe veya dip noktasının, bu nedenle bazı tek seferlik ayarlamalar (egzersiz, stres vb.) gerektiren diğer faktörlerin bir sonucu olduğunu varsayar. Kapalı döngünün güvenlik için yapabileceği ayarlamalar sınırlandırılmıştır ([OpenAPS Referans Tasarımında](https://openaps.org/reference-design/) izin verilen maksimum geçici bazal oranına bakın), bu izin verilen dozun temeldeki yanlış bir bazalı düzeltmek için boşa harcamak istemediğiniz anlamına gelir. Örneğin, yemekten önce genellikle düşük seviyeniz varsa, muhtemelen bazal oranınızın ayarlanması gerekir. Bazalların ve/veya İDF'nin ayarlanması gerekip gerekmediği ve ayrıca karbonhidrat oranının değiştirilmesi gerekip gerekmediğini önermek için geniş bir veri havuzunu değerlendirmek için [Otoayar](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig)'ı kullanabilirsiniz. Veya bazalınızı [eski moda bazal oranı ayarı](https://integrateddiabetes.com/basal-testing/) şekilde test edip ayarlayabilirsiniz.
 
-## What practicalities of looping do I have?
+## Hangi döngü pratiklerine sahibim?
 
 ### Parola koruması
 
 Tercihlerinizin kolayca değiştirilmesini istemiyorsanız, tercihler menüsünden "ayarlar için şifre" seçeneğini seçerek tercihler menüsüne şifre korumalı yapabilir ve seçtiğiniz şifreyi yazabilirsiniz. Tercihler menüsüne bir sonraki girişinizde, daha ileri gitmeden önce bu şifreyi isteyecektir. Daha sonra şifre seçeneğini kaldırmak isterseniz, "ayarlar için şifre" bölümüne gidin ve metni silin.
 
-### Android Wear Smartwatches
+### Android Wear Akıllı saatler
 
 Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kullanmayı planlıyorsanız, AndroidAPS'den gelen bildirimlerin engellenmediğinden emin olmanız gerekir. Eylemin onayı bildirim yoluyla gelir.
 
@@ -46,13 +46,13 @@ Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pom
 
 ### Öneriler yalnızca tek bir CGM değerlerine dayalı değildir
 
-Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Güvenlik için yapılan öneriler bir CGM okumasına değil, ortalama deltaya dayanmaktadır. Bu nedenle, bazı okumaları kaçırırsanız, AndroidAPS'in tekrar döngüye girmesi, verileri geri aldıktan sonra biraz zaman alabilir.
 
 ### Diğer okumalar
 
 Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları içeren birkaç blog var:
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+- [İnce Ayarlar](https://seemycgm.com/2017/10/29/fine-tuning-settings/) CGM'ime bakın
 - [DIA neden önemlidir](https://seemycgm.com/2017/08/09/why-dia-matters/) CGM'ime bakın
 - [Öğün ani artışlarını sınırlama](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormonlar ve Otoduyarlılık](https://seemycgm.com/2017/06/06/hormones-2/) CGM'ime bakın
