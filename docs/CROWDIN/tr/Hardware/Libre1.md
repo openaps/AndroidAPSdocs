@@ -17,13 +17,13 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 -   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+-   Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
 -   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ## Glimp kullanıyorsanız
 
--   You will need Glimp version 4.15.57 or newer. Daha eski sürümler desteklenmez.
+-   Glimp sürüm 4.15.57 veya daha yenisine ihtiyacınız olacak. Daha eski sürümler desteklenmez.
 -   Henüz kurulmadıysa, Glimp'i indirin ve [Nightscout](https://nightscout.github.io/uploader/setup/#glimp) üzerindeki talimatları izleyin.
 -   Konfigürasyon ayarlarında Glimp'i seçin (AndroidAPS'de).
