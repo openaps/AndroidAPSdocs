@@ -1,4 +1,4 @@
-Troubleshooting
+Resolução de Problemas
 **************************************************
 You can find troubleshooting info on many pages in the wiki. This page is a collection of links to help you find the information to solve your problem.
 
@@ -12,7 +12,7 @@ Building & updating
 * `Lost keystore <../Installing-AndroidAPS/troubleshooting_androidstudio.html#lost-keystore>`_
 * `Troubleshooting AndroidStudio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 
-Settings
+Configurações
 --------------------------------------------------
 * `Profile <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
@@ -27,7 +27,7 @@ Settings
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 
-Usage
+Utilização
 --------------------------------------------------
 * `Wrong carb values <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 
@@ -44,7 +44,7 @@ CGM
 * `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
 
-Pumps
+Bombas
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo general <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
@@ -52,7 +52,7 @@ Pumps
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
-Phones
+Telefones
 ==================================================
 * `Jelly <../Usage/jelly.html>`_
 * `Huawei bluetooth & battery optimization <../Usage/huawei.html>`_
