@@ -1,4 +1,4 @@
-Preferências
+Preferences
 ***********************************************************
 * **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
@@ -10,7 +10,7 @@ Preferências
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
 
-* **Sub-Menus** podem ser abertos clicando no triângulo abaixo do título do sub-menu.
+* **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
   .. image:: ../images/Pref2020_Submenu2.png
     :alt: Open submenu
@@ -24,7 +24,7 @@ Preferências
    :backlinks: entry
    :depth: 2
 
-Geral
+General
 ===========================================================
 
 **Units**
@@ -42,7 +42,7 @@ Geral
 
 **Patient name**
 
-* Can be used if you have to differentiate between multiple setups (i.e. duas crianças com diabetes Tipo I na sua família).
+* Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
 Protection
 -----------------------------------------------------------
@@ -71,19 +71,19 @@ Settings protection
 Application protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-* A App será encerrada imediatamente se for introduzida a palavra-passe errada, contudo continuará a ser executada em segundo plano no caso de ter sido previamente iniciada com sucesso.
+* App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
 
-Proteção de Bólus
+Bolus protection
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* A proteção de bólus pode ser útil se a AAPS for usada por uma criança jovem e se forem utilizados os bólus via SMS <../Children/SMS-Commands.html> ` _.
-* No exemplo abaixo poderá ver o prompt para a proteção biométrica. Se a autenticação biométrica não funcionar, clique no espaço acima do prompt branco e digite a palavra-passe mestre.
+* Bolus protection might be useful if AAPS is used by a small child and you `bolus via SMS <../Children/SMS-Commands.html>`_.
+* In the example below you see the prompt for biometric protection. If biometric authentication does not work, click in the space above the white prompt and enter master password.
 
   .. image:: ../images/Pref2020_PW.png
     :alt: Prompt biometric protection
 
-Tema gráfico
+Skin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-* Pode escolher um de entre os quatro tipos de temas:
+* You can choose from four types of skins:
 
   .. image:: ../images/Pref2021_SkinWExample.png
     :alt: Select skin + examples
@@ -104,7 +104,7 @@ Landscape orientation
   .. image:: ../images/Screenshots_Skins.png
     :alt: Skins depending on phone's display orientation
 
-Visão Geral
+Overview
 ===========================================================
 
 * In overview section you can define preferences for home screen.
@@ -171,7 +171,7 @@ Show notes field in treatments dialogs
   .. image:: ../images/Pref2020_OV_Notes.png
     :alt: Preferences > Notes in treatment dialogs
   
-Luzes de Estado
+Status lights
 -----------------------------------------------------------
 * Status lights give a visual warning for 
 
@@ -376,7 +376,7 @@ The options here will vary depending on which pump driver you have selected in `
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
-ClienteNS
+NSClient
 ===========================================================
 
 .. image:: ../images/Pref2020_NSClient.png
@@ -420,14 +420,14 @@ Advanced settings (NSClient)
   
 * *Always use basal absolute values* must be activated if you want to use Autotune properly. See `OpenAPS documentation <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html>`_ for more details on Autotune.
 
-Comunicador SMS
+SMS Communicator
 ===========================================================
 * Options will only be displayed if SMS communicator is selected in `Config Builder <../Configuration/Config-Builder.html#sms-communicator>`__.
 * This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.  
 * Further information is described in `SMS Commands <../Children/SMS-Commands.html>`_.
 * Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
-Automatização
+Automation
 ===========================================================
 Select which location service shall be used:
 
