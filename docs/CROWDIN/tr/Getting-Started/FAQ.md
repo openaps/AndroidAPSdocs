@@ -61,51 +61,51 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 İnsülin pompası tedavisi olan diğer tüm T1D'ler gibi aynı acil durum ekipmanına sahip olmalısınız. AndroidAPS ile döngü kurarken, yanınızda veya yakınında aşağıdaki ek ekipmanın bulunması şiddetle tavsiye edilir:
 
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
+- Pompa pilleri
+- AndroidAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.rst).
 
-## How can I safely and securely attach the CGM/FGM?
+## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
-You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Bantlayabilirsiniz. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
+Siz bunu düzeltebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
 
-# AndroidAPS settings
+# AndroidAPS ayarları
 
-The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
+Aşağıdaki liste, ayarları optimize etmenize yardımcı olmayı amaçlamaktadır. En baştan başlamak ve en alta kadar çalışmak en iyisi olabilir. Diğerini değiştirmeden hemen önce bir ayarı almayı hedefleyin. Tek seferde büyük değişiklikler yapmak yerine küçük adımlarla çalışın. [Otoayar](https://autotuneweb.azurewebsites.net/)'ı düşüncenize rehberlik etmesi için kullanabilirsiniz, ancak körü körüne takip edilmemelidir: sizin için veya her durumda iyi çalışmayabilir. Ayarların birbiriyle etkileşime girdiğine dikkat edin - bazı durumlarda birlikte iyi çalışan 'yanlış' ayarlarınız olabilir (örneğin, çok yüksek bir bazal, çok yüksek bir Karbonhidrat oranı ile aynı anda olursa), ancak diğerlerinde çalışmaz. Bu tüm ayarları göz önünde bulundurmanız ve çeşitli koşullarda birlikte çalıştıklarını kontrol etmeniz gerektiği anlamına gelir.
 
-## Duration of insulin activity (DIA)
+## İnsülin Etki Süresi (İES)
 
-### Description & testing
+### Açıklama & test yapmak
 
-The length of time that insulin decays to zero.
+İnsülinin metabolizmada tamamen parçalanması için geçen süre.
 
-This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+Bu genellikle çok kısa ayarlanır. Çoğu insanın en az 5 saat, bazen 6 veya 7 saate ihtiyacı vardır.
 
-### Impact
+### Etki
 
-Too short DIA can lead to low BGs. And vice-versa.
+Çok kısa İES, düşük KŞ'lere yol açabilir. And vice-versa.
 
-If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
+İES çok kısa ayarlanırsa, AAPS çok yakında önceki bolusun tamamen "kullanıldığını" varsayacak ve glikoz seviyeleri yükseldikçe ek insülin verecektir. (Aslında o kadar da beklemez ama ne olacağını tahmin eder ve insülin eklemeye devam eder). Bu esasen AAPS'nin farkında olmadan 'insülin yığını'na yol açar.
 
-Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
+Çok kısa bir İES örneği, yüksek KŞ takibende AAPS'nin aşırı düzeltme yapması ve düşük KŞ yol açması.
 
-## Basal rate schedule (U/h)
+## Bazal Oran Programı (Ü/sa)
 
-### Description & testing
+### Açıklama & test yapmak
 
-The amount of insulin in a given hour time block to maintain BG at a stable level.
+KŞ'yi sabit bir seviyede tutmak için belirli bir saat zaman bloğundaki insülin miktarı.
 
-Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
+Döngüyü askıya alarak, aç kalarak, örneğin yemekten sonra 5 saat bekleyerek ve KŞ'nin nasıl değiştiğini görerek bazal oranlarınızı test edin. Birkaç kez tekrarlayın.
 
-If BG is dropping, basal rate is too high. And vice-versa.
+KŞ düşüyorsa, bazal oran çok yüksektir. And vice-versa.
 
-### Impact
+### Etki
 
-Too high basal rate can lead to low BGs. And vice-versa.
+Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. And vice-versa.
 
-AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
+Varsayılan bazal orana karşı AAPS "temel çizgileri". If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
 So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
 
@@ -113,7 +113,7 @@ Conversely a basal rate too low can lead to high BGs, and a failure to bring lev
 
 ## Insulin sensitivity factor (ISF) (mmol/l/U or mg/dl/U)
 
-### Description & testing
+### Açıklama & test yapmak
 
 The drop in BG expected from dosing 1U of insulin.
 
@@ -123,7 +123,7 @@ Then take an estimated amount of insulin (as per current 1/ISF) to get to your t
 
 Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
-### Impact
+### Etki
 
 **Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
@@ -142,7 +142,7 @@ Conversely, an ISF set too high can result in under-corrections, meaning your BG
 
 ## Insulin to carb ratio (IC) (g/U)
 
-### Description & testing
+### Açıklama & test yapmak
 
 The grams of carbohydrate for each unit of insulin.
 
@@ -168,7 +168,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
 
-### Impact
+### Etki
 
 **Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
