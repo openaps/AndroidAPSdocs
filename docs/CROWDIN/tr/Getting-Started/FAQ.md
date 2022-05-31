@@ -136,7 +136,7 @@ Bu genellikle çok düşük ayarlandığından dikkatli olun. Too low means 1 U 
 - İDF = 30 -> 90 / 30 = 3 ünite insülin
 - İDF = 45 -> 90 / 45 = 2 ünite insülin
 
-AAPS, yüksek bir KŞ'yi düzeltmek için gerçekte olduğundan daha fazla insüline ihtiyaç duyduğunu düşündüğünden, çok düşük (nadir olmayan) bir İDF "aşırı düzeltmelere" neden olabilir. This can lead to ‘roller coaster’ BGs (esp. oruçluyken). Bu durumda İDF'nizi artırmanız gerekir. Bu AAPS'nin daha küçük düzeltme dozları verdiği anlamına gelir ve bu düşük KŞ ile sonuçlanan yüksek bir KŞ'nin aşırı düzeltilmesini önler.
+AAPS, yüksek bir KŞ'yi düzeltmek için gerçekte olduğundan daha fazla insüline ihtiyaç duyduğunu düşündüğünden, çok düşük (nadir olmayan) bir İDF "aşırı düzeltmelere" neden olabilir. Bu da 'hız treni misali' KŞ'nin inişli çıkışlı olmasına sebep olur. (özellikle. oruçluyken). Bu durumda İDF'nizi artırmanız gerekir. Bu AAPS'nin daha küçük düzeltme dozları verdiği anlamına gelir ve bu düşük KŞ ile sonuçlanan yüksek bir KŞ'nin aşırı düzeltilmesini önler.
 
 Tersine, çok yüksek bir İDF ayarı eksik düzeltmelere neden olabilir, bu da KŞ'nizin hedefin üzerinde kaldığı anlamına gelir - özellikle gece boyunca fark edilir.
 
@@ -154,7 +154,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 > 
 > Bazı Avrupa ülkelerinde, gıda için ne kadar insüline ihtiyaç olduğunun belirlenmesi için dilim ekmek birimi kullanılmıştır. Başlangıçta 1 dilim ekmek 12 gr karbonhidrata eşitken, bazıları daha sonra 10 gr karbonhidrata dönüştürdü.
 > 
-> Bu modelde karbonhidrat miktarı sabit ve insülin miktarı değişkendi. ("How much insulin is needed to cover one bread unit?")
+> Bu modelde karbonhidrat miktarı sabit ve insülin miktarı değişkendi. ("Bir dilim ekmeğin üstesinden gelebilmek için ne kadar insülin gerekir?")
 > 
 > IC kullanırken insülin miktarı sabittir ve karbonhidrat miktarı değişkendir. ("Bir ünite insülin kaç gram karbonhidratı karşılayabilir?")
 > 
@@ -166,7 +166,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 > 
 > BU faktörü 2,4 U / 12g ===> IC = 12g / 2,4 U = 5,0 g/U
 > 
-> Conversion tables are available online i.e. [here](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf).
+> Dönüşüm tabloları çevrimiçi olarak mevcuttur, [buradan](https://www.mylife-diabetescare.com/files/media/03_Documents/11_Software/FAS/SOF_FAS_App_KI-Verha%CC%88ltnis_MSTR-DE-AT-CH.pdf) ulaşabilirsiniz.
 
 ### Etki
 
@@ -174,7 +174,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 
 **Daha yüksek IC** = birim başına daha fazla yiyecek, yani sabit miktarda karbonhidrat için daha az insülin alıyorsunuz. "Daha az agresif" olarak da adlandırılabilir.
 
-If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
+Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Conversely if your BG is lower than before food, IC is too small.
 
 # APS algoritması
 
