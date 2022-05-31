@@ -67,7 +67,7 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 ## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
-Bantlayabilirsiniz. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
+Bantlayabilirsiniz. Yaygın CGM sistemleri için önceden delinmiş birkaç çeşit sensör bantları mevcuttur. (Google, eBay veya Amazon'da arama yapın). Bazı looper'lar daha ucuz standart kinesiyoloji bandı veya tıbbi rulo bant kullanır.
 
 Siz bunu düzeltebilirsiniz. CGM/FGM'yi bir bantla sabitleyen üst kol bilezikleri de satın alabilirsiniz (Google, eBay veya Amazon'da arama yapın).
 
@@ -85,7 +85,7 @@ Bu genellikle çok kısa ayarlanır. Çoğu insanın en az 5 saat, bazen 6 veya 
 
 ### Etki
 
-Çok kısa İES, düşük KŞ'lere yol açabilir. And vice-versa.
+Çok kısa İES, düşük KŞ'lere yol açabilir. Veya tam tersi.
 
 İES çok kısa ayarlanırsa, AAPS çok yakında önceki bolusun tamamen "kullanıldığını" varsayacak ve glikoz seviyeleri yükseldikçe ek insülin verecektir. (Aslında o kadar da beklemez ama ne olacağını tahmin eder ve insülin eklemeye devam eder). Bu esasen AAPS'nin farkında olmadan 'insülin yığını'na yol açar.
 
@@ -99,11 +99,11 @@ KŞ'yi sabit bir seviyede tutmak için belirli bir saat zaman bloğundaki insül
 
 Döngüyü askıya alarak, aç kalarak, örneğin yemekten sonra 5 saat bekleyerek ve KŞ'nin nasıl değiştiğini görerek bazal oranlarınızı test edin. Birkaç kez tekrarlayın.
 
-KŞ düşüyorsa, bazal oran çok yüksektir. And vice-versa.
+KŞ düşüyorsa, bazal oran çok yüksektir. Veya tam tersi.
 
 ### Etki
 
-Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. And vice-versa.
+Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. Veya tam tersi.
 
 Varsayılan bazal orana karşı AAPS "temel çizgileri". Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif IOB (insulin on board - metabolizmada aktif insülin) ile sonuçlanır. Bu AAPS'nin IOB'yi nihai olarak sıfıra getirmek için gerekenden daha fazla düzeltme yapmasına yol açacaktır.
 
@@ -178,7 +178,7 @@ If after meal has digested and IOB has returned to zero, your BG remains higher 
 
 # APS algoritması
 
-## Why does it show "dia:3" in the "OPENAPS AMA"-tab even though I have a different DIA in my profile?
+## Profilimde farklı bir İES olmasına rağmen "OPENAPS AMA" sekmesinde neden "ies:3" gösteriyor?
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
