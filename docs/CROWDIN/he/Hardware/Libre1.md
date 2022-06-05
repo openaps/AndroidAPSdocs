@@ -1,29 +1,29 @@
 # Freestyle Libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+על מנת להשתמש בחיישן Libre כחיישן רציף המספק מדידה כל 5 דקות יש לקנות מתאם NFC לבלוטות' כדוגמת:
 
--   MiaoMiao Reader (version 1 or 2) <https://www.miaomiao.cool/>
+-   MiaoMiao (גרסה 1 או 2) <https://www.miaomiao.cool/>
 -   Blucon Nightrider <https://www.ambrosiasys.com/our-products/blucon/>
--   Bubble <https://bubbleshop.eu/> or for Russian users <https://vk.com/saharmonitor/>
+-   Bubble  <https://bubbleshop.eu/> או למשתמשים ברוסיה   <https://vk.com/saharmonitor/>
 
-Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which has an NFC chip which can be enabled and can be used as a NFC collector. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
+בנוסף אפשר להשתמש בשעון ספציפי, Sony Smartwatch 3, לו מקלט NFC שניתן להפעילו כקורא NFC. המתאמים הרשומים מעלה הם פתרונות פשוטים ועדיפים במרבית המקרים בהם משתמשים ב-Libre 1 כחיישן רציף.
 
 -   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+נכון להיום, אם משתמשים ב-Libre 1 כמקור נתונים, לא ניתן להפעיל את האפשרויות ‘הפעל SMB תמיד’ ו-‘הפעל SMB אחרי פחמימות‘ בהגדרות אלגוריתם ה-SMB. מדידות הסוכר של Libre 1 אינן חלקות מספיק לשימוש בטוח עם SMB. ראו [שיפור נתוני סוכר](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) לקבלת פרטים נוספים.
 
 ## אם משתמשים ב-xDrip+
 
--   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   אם עוד לא התקנתם את xDrip+, הורידו ועקבו אחר ההוראות של [LimiTTEer](https://github.com/JoernL/LimiTTer) או [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
+-   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > הפץ על הטלפון והפעילו.
+-   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל טיפולים ובחרו כבוי.
+-   אם ברצונכם לבצע כיול דרך AndroidAPS, נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל כיולים והפעילו. ייתכן שתצטרכו לבדוק את ההגדרות שבהגדרות > הגדרות פחות נפוצות > כיול מתקדם.
 -   בחרו ביישום xDrip+ בבונה התצורה (הגדרה ב- AndroidAPS).
--   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+-   התאימו את ההגדרות ב-xDrip+ לפי [דף הוראות   xDrip+](../Configuration/xdrip.md). ישנו חלק להגדרה בסיסית של xDrip+ והגדרות מיוחדות לשימוש ב-Freestyle Libre עם xDrip+.
+-   אם AAPS אינו מקבל ערכי סוכר כאשר הטלפון במצב טיסה השתמשו ב'זהה מקלט' כפי שמתואר בהגדרות [xDrip+ דף](../Configuration/xdrip.md).
 
 ## אם משתמשים ב-Glimp
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
--   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AndroidAPS).
+-   תצטרכו להשתמש בגרסת Glimp 4.15.57 ומעלה. גרסאות ישנות יותר לא נתמכות.
+-   אם לא הוגדרה כבר, אפשר להוריד את Glimp ולעקוב אחר ההוראות ב[נייטסקאוט](https://nightscout.github.io/uploader/setup/#glimp).
+-   בחרו ביישום Glimp בבונה התצורה (הגדרה ב- AndroidAPS).
