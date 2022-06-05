@@ -121,7 +121,7 @@ Doğru bazal varsayarak, döngüyü askıya alarak, IOB'nin sıfır olduğunu ko
 
 Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF'ine göre) alın.
 
-Bu genellikle çok düşük ayarlandığından dikkatli olun. Too low means 1 U will drop BG faster than expected.
+Bu genellikle çok düşük ayarlandığından dikkatli olun. Çok düşük ayarlamak, 1 Ü insülininin, KŞ'ni beklenenden daha hızlı düşüreceği anlamına gelir.
 
 ### Etki
 
@@ -174,7 +174,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 
 **Daha yüksek IC** = birim başına daha fazla yiyecek, yani sabit miktarda karbonhidrat için daha az insülin alıyorsunuz. "Daha az agresif" olarak da adlandırılabilir.
 
-Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Conversely if your BG is lower than before food, IC is too small.
+Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
 
 # APS algoritması
 
