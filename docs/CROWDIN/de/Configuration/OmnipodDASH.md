@@ -325,10 +325,6 @@ Ermöglicht AAPS-Benachrichtigungen und akustische Telefon-Warnungen, wenn unsic
 * **Ton für unsichere Bolus-Benachrichtigung aktiviert:** Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob ein Bolus erfolgreich abgegeben wurde.
 * **Ton bei unterbrochener Abgabe aktiviert:** Aktivieren oder deaktivieren Sie diese Einstellung, um eine akustische Benachrichtigung und visuelle Benachrichtigung auszulösen, wenn die Unterbrechung der Insulinabgabe erfolgreich durchgeführt wurde.
 
-### Andere
-
-* **Sommerzeit/Zeitzonen-Erkennung aktiviert:** Ermöglicht die automatische Erkennung von Zeitzonenänderungen, wenn das Telefon in einem Gebiet verwendet wird, in dem die Sommerzeit gilt.
-
 ## Actions (ACT) Tab
 
 Diese Registerkarte ist in der AAPS-Hauptdokumentation gut dokumentiert, aber es gibt einige Punkte auf dieser Registerkarte, die sich speziell darauf beziehen, wie sich der DASH-Pod von schlauchbasierten Pumpen unterscheidet, insbesondere nach dem Anbringen eines neuen Pods.
@@ -345,26 +341,26 @@ Diese Registerkarte ist in der AAPS-Hauptdokumentation gut dokumentiert, aber es
 
 Der angezeigte Insulinlevel ist der von Omnipod DASH gemeldete Betrag an verbleibenden Einheiten. Der Pod meldet allerdings den tatsächlichen Insulinlevel erst dann, wenn er unter 50 Einheiten liegt. Bis dahin wird „Über 50 Einheiten“ angezeigt. Die gemeldete Menge ist nicht genau: Wenn der Pod „leer“ meldet, wird das Reservoir in den meisten Fällen noch einige zusätzliche Einheiten Insulin enthalten. Auf der Registerkarte DASH wird die Übersicht angezeigt wie unten beschrieben:
 
-  * **Mehr als 50 IE verbleibend** - Der Pod meldet mehr als 50 Einheiten im Reservoir.
-  * **Unter 50 Einheiten** - Die Menge an Insulin, die noch im Reservoir vorhanden ist, wie vom Pod gemeldet.
+  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
+  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
 
 Sonstiges
-  * **SMS** - Aus dem Pod übernommener Wert oder 50+ IE für SMS-Antworten
-  * **Nightscout** - Lädt den Wert 50 hoch, wenn mehr als 50 Einheiten angezeigt werden (Nightscout Version 14.07 und älter).  Neuere Versionen melden einen Wert von 50+, wenn sich mehr als 50 Einheiten im Reservoir befinden.
+  * **SMS** - Returns value or 50+U for SMS responses
+  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Neuere Versionen melden einen Wert von 50+, wenn sich mehr als 50 Einheiten im Reservoir befinden.
 
 ## Problembehandlung
 
-### Insulinabgabe unterbrochen
+### Delivery suspended
 
-  * Es gibt keine Unterbrechen-Taste mehr. Wenn Du die Insulinabgabe unterbrechen möchtest, kannst Du eine Null-TBR für x Minuten setzen.
-  * Während eines Profilwechsels muss der DASH die Insulinabgabe unterbrechen, bevor das neue Basal-Profil gesetzt wird. Wenn die Kommunikation zwischen den beiden Befehlen fehlschlägt, kann die Insulinabgabe unterbrochen bleiben. Wenn das passiert:
-     - Es wird gibt dann keine Insulinabgabe; dies schließt Basal-, SMB-, manuelle Boli usw. ein.
-     - Es kann eine Benachrichtigung geben, dass einer der Befehle unbestätigt blieb: Dies hängt davon ab, wann der Fehler aufgetreten ist.
-     - AAPS wird alle 15 Minuten versuchen, das neue Basalprofil zu setzen.
-     - AAPS wird alle 15 Minuten eine Benachrichtigung anzeigen, dass die Insulinabgabe unterbrochen ist, wenn die Abgabe weiterhin unterbrochen ist (Insulinabgabe konnte nicht gestartet werden).
-     - Die [**Abgabe fortsetzen**](#resuming-insulin-delivery) Schaltfläche ist aktiv, wenn der Benutzer die Abgabe manuell fortsetzen möchte.
-     - Wenn AAPS die Abgabe nicht alleine fortsetzen kann (dies geschieht, wenn der Pod nicht erreichbar ist, der Ton stumm geschaltet ist, etc.), beginnt der Pod für 3 Minuten jede Minute viermal zu piepen, dies wird alle 15 Minuten wiederholt, wenn die Abgabe mehr als 20 Minuten ausgesetzt ist.
-  * Für unbestätigte Befehle sollte "Aktualisieren" des Podstatus diese bestätigen oder ablehnen.
+  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
+  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
+     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
+     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
+     - AAPS will try to set the new basal profile every 15 minutes.
+     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
+     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
+  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
 
 **Hinweis:** Wenn Du Pieptöne vom Pod hörst, kannst Du nicht davon ausgehen, dass die Insulinabgabe ohne Überprüfung im Smartphone fortgesetzt wird. Die Abgabe könnte weiterhin ausgesetzt bleiben, **also musst Du prüfen, was los ist!**
 
@@ -380,7 +376,7 @@ Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder ei
 
 Wenn für eine voreingestellte Zeitspanne keine Kommunikation mit dem Pod hergestellt werden kann, wird eine „Pumpe nicht erreichbar“ Alarmmeldung angezeigt. Pump nicht erreichbar Alarme können über das Drei-Punkte-Menü oben rechts konfiguriert werden. Wählen Sie **Einstellungen** \ ➜ \ **Lokale Alarme** \ ➜ \ ** Grenzwert Pumpe ist nicht erreichbar [min]**. Empfohlener Wert ist eine Alarmierung nach **120** Minuten.
 
-### Exporteinstellungen
+### Export  Settings
 
 Durch den Export der AndroidAPS-Einstellungen kannst Du alle Deine Einstellungen - und vielleicht noch wichtiger - alle Deine Objectives (Ziele) wiederherstellen. Es kann passieren, dass die Einstellungen in der „letzten bekannten funktionierenden Fassung“ wieder hergestellt werden müssen, etwa nach der Deinstallation/Neuinstallation von AndroidAPS oder im Falle eines Telefonverlustes auf dem neuen Telefon.
 
@@ -390,7 +386,7 @@ Hinweis: Die Informationen des aktiven Pod sind in den exportierten Einstellunge
 
 Kopiere die exportierten Einstellungen regelmäßig an einen sicheren Ort (z. B. in der Cloud), der bei Bedarf von jedem Telefon aus zugänglich ist (z. B. im Falle eines Telefonverlustes oder dem Rücksetzen auf die Werkseinstellung des aktuellen Telefons).
 
-### Importeinstellungen
+### Import Settings
 
 **WARNUNG** Bitte beachte, dass durch das Importieren von Einstellungen möglicherweise ein veralteter Pod-Status importiert wird. Dadurch besteht die Gefahr, dass der aktive Pod eingebüßt wird! (siehe **Exporteinstellungen**). Es ist besser, dies nur dann auszuprobieren, wenn keine anderen Optionen verfügbar sind.
 
@@ -409,13 +405,13 @@ Wenn Du die Einstellungen mit einem aktiven Pod importierst, stelle sicher, dass
 3. Alle Voreinstellungen kontrollieren.
 4. Es kann erforderlich sein, einen in den importierten Einstellungen enthaltenen, aber nicht mehr vorhandenen Pod zu **deaktivieren**.
 
-### Importieren von Einstellungen, die den Pod-Status von einem inaktiven Pod enthalten
+### Importing settings that contain Pod state from an inactive Pod
 
 Beim Importieren von Einstellungen, die Daten für einen Pod enthalten, der nicht mehr aktiv ist, wird AndroidAPS versuchen, sich mit diesem zu verbinden, was vorhersehbar fehlschlagen wird. Du kannst in dieser Situation keinen neuen Pod aktivieren.
 
 Um die alte Pod-Sitzung zu entfernen „probiere“ den Pod zu deaktivieren. Die Deaktivierung wird fehlschlagen. Wähle "Wiederholen". Nach der zweiten oder dritten Wiederholung erhälst Du die Möglichkeit, den Pod zu entfernen. Sobald der alte Pod entfernt ist, kannst du einen neuen Pod aktivieren.
 
-### Neuinstallation von AndroidAPS
+### Reinstalling AndroidAPS
 
 Beim Deinstallieren von AndroidAPS verlierst Du alle Einstellungen, Objectives (Ziele) und die aktuelle Pod-Sitzung. Um sie wiederherzustellen, stelle sicher, dass Du eine kürzlich exportierte Einstellungsdatei zur Verfügung hast!
 
@@ -429,7 +425,7 @@ Wenn ein Pod aktiv ist, stelle sicher, dass Du einen Export für die aktuelle Po
 6. Einen neuen Pod aktivieren
 7. Anschließend: Aktuelle Einstellungen exportieren
 
-### AndroidAPS auf eine neuere Version aktualisieren
+### Updating AndroidAPS to a newer version
 
 In den meisten Fällen ist eine Deinstallation nicht erforderlich. Du kannst eine „in-place“ Installation durchführen, indem Du die Installation für die neue Version startest. Dies ist auch möglich, wenn ein Pod aktiv ist.
 
@@ -443,17 +439,17 @@ In den meisten Fällen ist eine Deinstallation nicht erforderlich. Du kannst ein
 
 Bitte beachte, dass der Omnipod-Treiber auf der Registerkarte **DASH** eine Vielzahl eindeutiger Warnungen anzeigt. Die meisten davon sind informativ und können ignoriert werden, während einige dem Benutzer eine Aktion vorschlagen, um die Ursache für die ausgelöste Warnung zu beheben. Im Folgenden findest du eine Zusammenfassung der wichtigsten Warnmeldungen, die dir begegnen können:
 
-* Kein aktiver Pod Keine aktive Pod Sitzung erkannt. Dieser Alarm kann vorübergehend durch Drücken von **Schlummern** deaktiviert werden, wird aber weiterhin ausgelöst, solange kein neuer Pod aktiviert wurde. Einmal aktiviert, wird dieser Alarm automatisch ausgeschaltet.
-* Pod unterbrochen Hinweis, dass der Pod angehalten wurde.
-* Setzen des Basalprofils fehlgeschlagen: Insulinabgabe könnte ausgesetzt werden! Bitte aktualisiere den Pod-Status manuell auf der Registerkarte Omnipod und setze die Übertragung bei Bedarf fort. Hinweis, dass die Einstellung des Pod-Basalprofils fehlgeschlagen ist und Du auf der Registerkarte DASH auf *Aktualisieren* drücken musst.
-* Es kann nicht überprüft werden, ob der SMB-Bolus erfolgreich war. Wenn du sicher bist, dass der Bolus nicht erfolgreich war, solltest du den SMB-Eintrag manuell auf der Registerkarte Behandlungen entfernen. Warnung, dass der Erfolg eines Befehls für einen SMB-Bolus nicht überprüft werden konnte. Du musst das Feld *Letzter Bolus* auf der Registerkarte DASH überprüfen, um zu sehen, ob der SMB-Bolus erfolgreich war, und wenn nicht, den Eintrag auf der Registerkarte Behandlungen entfernen.
+* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
+* Pod suspended Informational alert that Pod has been suspended.
+* Setting basal profile failed : Delivery might be suspended! Bitte aktualisiere den Pod-Status manuell auf der Registerkarte Omnipod und setze die Übertragung bei Bedarf fort. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+* Es kann nicht überprüft werden, ob der SMB-Bolus erfolgreich war. Wenn du sicher bist, dass der Bolus nicht erfolgreich war, solltest du den SMB-Eintrag manuell auf der Registerkarte Behandlungen entfernen. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 * Unsicher, ob die "Ereignis Bolus/TBR/SMB" abgeschlossen wurde. Bitte überprüfe manuell, ob sie erfolgreich war.
 
 ## Wo bekomme ich Hilfe für den Omnipod-Treiber?
 
 Die gesamte Entwicklungsarbeit für den Omnipod-Treiber wird von der Community auf **freiwilliger** Basis geleistet. Wir bitten dich, rücksichtsvoll zu sein und die folgenden Richtlinien zu befolgen, bevor du um Unterstützung bittest:
 
--  **Level 0:** Lies den entsprechenden Abschnitt dieser Dokumentation um sicherzustellen, dass du verstehst, wie die Funktion, mit der Du Schwierigkeiten hast, funktionieren soll.
--  **Level 1:** Wenn Du immer noch Probleme hast, die du mit diesem Dokument nicht lösen kannst, dann gehe bitte in den *#androidaps* Channel auf **Discord**, indem du [diesen Einladungslink <https://discord.gg/4fQUWHZ4Mw>](https://discord.gg/4fQUWHZ4Mw) benutzt.
--  **Level 2:** Vorhandene 'Issues' durchsuchen um zu sehen, ob Dein Problem bereits in den [Issues](https://github.com/nightscout/AndroidAPS/issues) gemeldet wurde. Falls vorhanden, bitte bestätige/kommentiere/ergänze Informationen zu Deinem Problem. Wenn nicht, erstelle bitte ein [neues Issue](https://github.com/nightscout/AndroidAPS/issues) und füge [Deine Logdateien](../Usage/Accessing-logfiles.md) an.
--  **Sei geduldig - die meisten Mitglieder unserer Community sind gutmütige Freiwillige und die Lösung von Problemen erfordert oft Zeit und Geduld von Nutzern und Entwicklern.**
+-  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
+-  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
