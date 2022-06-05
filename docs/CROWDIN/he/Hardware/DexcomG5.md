@@ -20,7 +20,7 @@
 
 -   Stop sensor and uninstall the original Dexcom app, if not already done.
 
--   Install downloaded apk
+-   התקינו את קובץ ה-APK של יישום שהורדתם
 
 -   Start sensor
 

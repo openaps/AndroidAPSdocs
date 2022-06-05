@@ -1,6 +1,6 @@
 # AndroidAPS screens
 
-## The Homescreen
+## Ecrã inicial
 
 ![Homescreen V2.7](../images/Home2020_Homescreen.png)
 
@@ -165,7 +165,7 @@ You need to find out why you get duplicate BGs:
 * Blue triangles show [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences#openaps-smb-settings).
 * Optional information:
    
-   * Predictions
+   * Previsão
    * Basals
    * Activity - insulin activity curve
 
@@ -267,7 +267,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
-#### Insulin
+#### Insulina
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
@@ -286,7 +286,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * You can use the buttons to quickly increase carb amount.
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences#nsclient).
 
-#### Calculator
+#### Calculadora
 
 * See Bolus Wizard [section below](#bolus-wizard)
 
@@ -405,7 +405,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 * Allows you to ride back in AAPS history.
 
-#### TDD
+#### DDT
 
 * Total daily dose = bolus + basal per day
 * Some doctors use - especially for new pumpers - a basal-bolus-ratio of 50:50. 
@@ -431,9 +431,9 @@ And you can read an excellent blog article about it here: [Why we are regularly 
 
 And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
-## Pump Status
+## Estado da Bomba
 
-![Pump Status](../images/Screenshot_PumpStatus.png)
+![Estado da Bomba](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
 * See [pumps page](../Hardware/pumps.md) for details.
@@ -473,9 +473,9 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 * Calculations are each time the system gets a fresh reading from the CGM.
 * For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
 
-## Profile
+## Perfil
 
-![Profile](../images/Screenshots_Profile.png)
+![Perfil](../images/Screenshots_Profile.png)
 
 * Profile contains information on your individual diabetes settings:
    
@@ -492,10 +492,10 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
-* [Extended bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* [Bólus estendido](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
-* [Profile switch](../Usage/Profiles.md)
+* [Troca de Perfil](../Usage/Profiles.md)
 * [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## BG Source - xDrip+, BYODA...
@@ -505,9 +505,9 @@ History of the following treatments:
 * Depending on your BG source settings this tab is named differently.
 * Shows history of CGM readings and offers option to remove reading in case of failure (i.e. compression low).
 
-## NSClient
+## ClienteNS
 
-![NSClient](../images/Screenshots_NSClient.png)
+![ClienteNS](../images/Screenshots_NSClient.png)
 
 * Displays status of the connection with your Nightscout site.
 * Settings are made in [preferences](../Configuration/Preferences#nsclient). You can open the corresponding section by clicking the cog wheel on the top right side of the screen.

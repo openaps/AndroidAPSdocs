@@ -1,9 +1,9 @@
-# For users of Eversense
+# Eversense kullanıcıları için
 
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
+Eversense'i AndroidAPS ile kullanmanın en kolay yolu, ABD dışı için modifiye edilmiş [Eversense uygulamasını](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) yüklemektir (öncelikle orijinalini telefonunuzdan kaldırın).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Uyarı: Eski uygulamayı kaldırdığınızda, bir haftadan eski yerel geçmiş verileriniz kaybolacak!**
 
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Sonunda verilerinizi AndroidAPS'e almayı başardınız, [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) yüklemelisiniz ve ESEL'de "AAPS ve xDrip'e Gönder"i etkinleştirmeniz gerekir ve ardından AndroidAPS [Konfigürasyon ayarları](../Configuration/Config-Builder.md) içinde KŞ kaynağı olarak "MM640g" etkinleştirmeniz gerekir. Eversense'den gelen KŞ verileri bazen gürültülü olabileceğinden, ESEL'de "Smooth Data"yı etkinleştirmek önemlidir; bu AAPS'de "Basit delta yerine her zaman kısa ortalama delta kullan"ı etkinleştirmekten daha iyidir.
 
-You can find all APKs including the one for the US and another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+ABD için olanı ve diğerleri ile birlikte xDrip'i bir Eversense ile kullanma talimatı da dahil olmak üzere tüm APK'ları [burada](https://github.com/BernhardRo/Esel/tree/master/apk) bulabilirsiniz.

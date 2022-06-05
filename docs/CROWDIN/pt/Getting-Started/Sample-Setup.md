@@ -1,8 +1,8 @@
 # Sample setup: Samsung S7, Dana RS, Dexcom G6 and Sony Smartwatch
 
-![Sample Setup](../images/SampleSetup.png)
+![Configuração de Exemplo](../images/SampleSetup.png)
 
-## Description
+## Descrição
 
 In this setup, the Samsung Galaxy S7 smartphone is used as control center of the loop. The slightly modified Dexcom App reads glucose values from the Dexcom G6 CGM. AndroidAPS is used to control the Dana RS insulin pump from Korean manufacturer SOOIL via bluetooth. Further devices are not required.
 
@@ -37,7 +37,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
     
     * Alternatives: All [watches with Google Wear OS](https://wearos.google.com/intl/de_de/#find-your-watch) should work fine, for details see [list of tested phones and watches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) for AndroidAPS (OS must be Android Wear)
 
-## Nightscout setup
+## Configuração do Nightscout
 
 See detailed [Nightscout setup](../Installing-AndroidAPS/Nightscout.md)
 
@@ -62,7 +62,7 @@ Menu > Settings > Device security > Unknown sources > slider to right side (= ac
 
 For security reasons this setting should be set back to inactive once the installation of all apps described here has been completed.
 
-### Enable Bluetooth
+### Activar bluetooth
 
 1. Menu > Settings > Connections > Bluetooth > slider to right side (= active)
 2. Menu > Settings > Connections > Location > slider to right side (= active)
@@ -146,6 +146,6 @@ Details about the information displayed on the watchface can be found [here](../
 * On your smartwatch: Long press display to change watchface and select `AAPSv2`
 * If necessary restart both devices once.
 
-## Pump setup
+## Configurações da bomba
 
 see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)

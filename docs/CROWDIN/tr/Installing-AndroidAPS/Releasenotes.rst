@@ -34,6 +34,29 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Important hints
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Changes
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
+
 Sürüm 3.0.0
 ================
 Yayınlanma tarihi: 31-01-2022

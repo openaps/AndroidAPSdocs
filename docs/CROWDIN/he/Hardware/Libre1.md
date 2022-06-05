@@ -18,7 +18,7 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 -   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   בחרו ביישום xDrip+ בבונה התצורה (הגדרה ב- AndroidAPS).
 -   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
