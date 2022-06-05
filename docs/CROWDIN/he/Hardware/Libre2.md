@@ -86,10 +86,10 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 -   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
 -   In xDrip+ select "Libre2 (patched App)" as data source
 -   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+-   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > הפץ על הטלפון והפעילו.
+-   ב-xDrip+ נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל טיפולים ובחרו כבוי.
 -   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   אם ברצונכם לבצע כיול דרך AndroidAPS, נווטו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > קבל כיולים והפעילו. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
