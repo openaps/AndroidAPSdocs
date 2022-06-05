@@ -463,3 +463,12 @@ _Wait!_ You still have the main phone thinking it can reconnect to the same DASH
 
 When Discarded, verify AAPS is reporting "No Active Pod".
 You can now safely disable airplane mode again.
+
+## How do I import settings from earlier versions of AAPS into AAPS v3 ?
+
+You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+
+If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+
+There were some new objectives added. You'll need to validate them. 
+
