@@ -325,10 +325,6 @@
 * **התראת צליל של בולוס לא ברור מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS אינו בטוח אם בולוס הוזרק בהצלחה.
 * **השמע כשהתראת הפסקת ההזרקה מאופשרת:** הפעילו או השביתו הגדרה זו כדי להפעיל התראה קולית והתראה חזותית כאשר AAPS מעביר בהצלחה פקודת הפסקת הזרקה.
 
-### אחר
-
-* **זיהוי אזור שעון קיץ\אזור זמן מופעל:** מאפשר לזהות שינויים באזור זמן באופן אוטומטי אם נעשה שימוש בטלפון באזור שבו יש שעון קיץ.
-
 ## לשונית פעולות (ACT)
 
 לשונית זו נסקרה היטב בתיעוד הראשי של AAPS אך ישנם בלשונית זו מספר פריטים שמשתנים בשימוש באומניפוד לעומת משאבות מבוססות צינוריות, במיוחד תהליכי תיחול פודים חדשים.
@@ -339,32 +335,32 @@
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### כמות במכל
+### Level
 
 **יתרת אינסולין**
 
 יתרת האינסולין המוצגת מדווחת ע"י הפוד. עם זאת, הוא מדווח רק על יתרת האינסולין המדוייקת רק כאשר היא מתחת ל-50 יחידות. עד אז יוצג "מעל 50 יחידות". הכמות המדווחת אינה מדויקת: כאשר הפוד מדווח על 'ריק' ברוב המקרים עדיין יישארו מספר יחידות אינסולין נוספות. לשונית הסקירה הכללית של DASH תוצג כמתואר להלן:
 
-  * **מעל 50 יחידות** - הפוד מדווח על יותר מ-50 יחידות שנמצאות כעת במכל.
-  * **מתחת ל-50 יחידות** - כמות האינסולין שנותרה במכל כפי שדווח על ידי הפוד.
+  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
+  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
 
 הערות נוספות:
-  * **SMS** - מחזירה ערך או 50+U בתגובות של SMS
-  * **נייטסקאוט** - העלאת ערך של 50 כאשר מעל 50 יחידות לנייטסקאוט (גרסה 14.07 ומעלה).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
+  * **SMS** - Returns value or 50+U for SMS responses
+  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
 
 ## פתרון בעיות
 
-### הפסקת הזרקה
+### Delivery suspended
 
-  * אין יותר כפתור של הפסקת הזרקה. אם ברצונכם "להשהות" את הפוד, אפשר להגדיר מינון בזאלי זמני 0% למשך x דקות.
-  * במהלך החלפת פרופיל, Dash חייב להשעות את ההזרקה לפני הגדרת הפרופיל הבזאלי החדש. אם התקשורת נכשלת בין שתי הפקודות, אז ניתן להשהות את ההזרקה. כשזה קורה:
-     - לא יהיה מתן אינסולין, כולל בזאלי, SMB, בולוס ידני וכו'.
-     - ייתכן שתהיה הודעה על כך שאחת הפקודות אינה מאושרת: זה תלוי במועד התרחשות הכשל.
-     - AAPS ינסה להגדיר את הפרופיל הבזאלי החדש כל 15 דקות.
-     - APPS יציג הודעה המודיעה שההזרקה הופסקה כל 15 דקות, אם ההזרקה עדיין מופסקת (חידוש ההזרקה נכשל).
-     - הלחצן [**חידוש הזרקה**](#resuming-insulin-delivery) יהיה פעיל אם המשתמש יבחר לחדש את ההזרקה באופן ידני.
-     - אם AAPS לא מצליח לחדש את ההזרקה בעצמו (זה קורה אם הפוד אינו נגיש, הצליל מושתק וכו'), הפוד יתחיל לצפצף 4 פעמים בכל דקה למשך 3 דקות ולאחר מכן יחזור על עצמו כל 15 דקות אם ההזרקה עדיין מופסקת למשך יותר מ-20 דקות.
-  * עבור פקודות לא ודאיות, "רענון סטטוס הפוד" אמור לאשר\לדחות אותן.
+  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
+  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
+     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
+     - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
+     - AAPS will try to set the new basal profile every 15 minutes.
+     - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
+     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
+  * For unconfirmed commands, "refresh pod status" should confirm/deny them.
 
 **הערה:** כאשר שומעים צפצופים מהפוד, אל תניחו שההזרקה תימשך מבלי לבדוק את הטלפון, ההזרקה עלולה להישאר מופסקת **ולכן עליכם לוודא!**
 
@@ -380,7 +376,7 @@
 
 כאשר לא ניתן ליצור תקשורת עם הפוד למשך זמן מוגדר מראש תוצג התראה "משאבה בלתי ניתנת להשגה". ניתן להגדיר התראות על שלא ניתן להגיע למשאבה על ידי מעבר לתפריט שלוש הנקודות בצד שמאל למעלה, בחירה ב**העדפות** ← **התראות מקומיות** ← ** סף משאבה בלתי נגישה [min]**. הערך המומלץ הוא התראה לאחר **120** דקות.
 
-### ייצוא הגדרות
+### Export  Settings
 
 ייצוא הגדרות AndroidAPS מאפשר לשחזר את כל ההגדרות שלכם ואולי חשוב מכך, את כל המשימות שהשלמתם. ייתכן שיהיה עליכם לשחזר את ההגדרות ל"מצב העובד הידוע האחרון" או לאחר הסרה\התקנה מחדש של AndroidAPS או במקרה של אובדן טלפון, התקנה מחדש בטלפון החדש.
 
@@ -390,7 +386,7 @@
 
 העתיקו באופן קבוע את ההגדרות המיוצאות למקום בטוח (לדוגמה לכונן ענן) שניתן לגשת אליו בכל טלפון בעת הצורך (למשל במקרה של אובדן טלפון או איפוס להגדרות היצרן של הטלפון).
 
-### יבוא הגדרות
+### Import Settings
 
 **אזהרה** שימו לב שייבוא הגדרות עלול לייבא סטטוס פוד מיושן. כתוצאה מכך, קיים סיכון לאיבוד הפוד הפעיל! (ראו **ייצוא הגדרות**). עדיף לנסות זאת רק כאשר אין אפשרויות אחרות זמינות.
 
@@ -409,13 +405,13 @@
 3. בדיקת על ההגדרות.
 4. ייתכן שיהיה עליכם **לבטל** את הפוד "הלא קיים" אם הגדרות הייבוא כוללות נתוני פוד פעילים כלשהם.
 
-### ייבוא הגדרות המכילות מצב פוד מפוד לא פעיל
+### Importing settings that contain Pod state from an inactive Pod
 
 בעת ייבוא הגדרות המכילות נתונים עבור פוד שכבר אינו פעיל, AndroidAPS ינסה להתחבר אליו, מה שכמובן ייכשל. אין באפשרותכם להפעיל פוד חדש במצב זה.
 
 כדי להסיר את הפוד הישן "נסו" לכבות את הפוד. הכיבוי ייכשל. בחרו "נסה שוב". לאחר הניסיון השני או השלישי תקבלו את האפשרות להסיר את הפוד. כשהפוד הישן כבוי תוכלו להפעיל אחד חדש.
 
-### התקנה מחדש של AndroidAPS
+### Reinstalling AndroidAPS
 
 בעת הסרת AndroidAPS תאבדו את כל ההגדרות, ההתקדמות במשימות וההפעלה הנוכחית של הפוד. ע"מ לשחזר אותם ודאו שיש לכם קובץ הגדרות שיוצא לאחרונה זמין!
 
@@ -429,7 +425,7 @@
 6. הפעילו פוד חדש
 7. לבסוף: ייצאו קובץ הגדרות
 
-### עדכון AndroidAPS לגרסה חדשה יותר
+### Updating AndroidAPS to a newer version
 
 ברוב המקרים אין צורך להסיר את ההתקנה. ניתן לבצע התקנה "דורסת" על ידי התחלת ההתקנה של הגרסה החדשה. זה אפשרי גם עם פוד פעיל.
 
@@ -443,17 +439,17 @@
 
 לידיעתכם, מנהל ההתקן של Dash מציג מגוון התראות ייחודיות בלשונית **סקירה כללית**, רובן אינפורמטיביות וניתנות לביטול בעוד שחלקן מספקות למשתמש פעולה לבצע על מנת לפתור את הסיבה להתראה המופעלת. להלן סיכום של ההתראות העיקריות בהן אתם עשויים להיתקל:
 
-* אין פוד פעיל לא נמצא פוד פעיל. ניתן לבטל התראה זו זמנית על ידי לחיצה על **השתקה** אך היא תמשיך לפעול כל עוד לא הופעל פוד חדש. לאחר הפעלת פוד, ההתראה הזו מושתקת אוטומטית.
-* התראה אינפורמטיבית כי פוד הושהה.
-* הגדרת הפרופיל הבזאלי נכשלה: ההזרקה עלולה להפסק! נא לרענן ידנית את סטטוס הפוד בלשונית Omnipod ולחדש את ההזרקה במידת הצורך. התראה אינפורמטיבית על כך שהגדרת הפרופיל הבזאלי של פוד נכשלה, ויהיה עליכם ללחוץ על *רענן* בלשונית DASH.
-* לא ניתן לאמת אם בולוס SMB הצליח. אם אתם בטוחים שהבולוס לא הצליח, עליכם למחוק את ערך SMB באופן ידני מטיפולים. התראה כי לא ניתן לאמת את הצלחת בולוס ה-SMB, יהיה עליכם לאמת את השדה *בולוס אחרון* בלשונית DASH כדי לראות האם ה-SMB הצליח ואם לא, להסיר את הערך מהלשונית טיפולים.
+* No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
+* Pod suspended Informational alert that Pod has been suspended.
+* Setting basal profile failed : Delivery might be suspended! נא לרענן ידנית את סטטוס הפוד בלשונית Omnipod ולחדש את ההזרקה במידת הצורך. Informational alert that the Pod basal profile setting has failed, and you will need to hit *Refresh* on the Omnipod tab.
+* לא ניתן לאמת אם בולוס SMB הצליח. אם אתם בטוחים שהבולוס לא הצליח, עליכם למחוק את ערך SMB באופן ידני מטיפולים. Alert that the SMB bolus command success could not be verified, you will need to verify the *Last bolus* field on the DASH tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
 * לא בטוח אם "בולוס/בזאלי זמני/SMB" הושלם, אנא ודאו ידנית אם הוא הצליח.
 
 ## היכן ניתן לקבל עזרה בשימוש במנהל התקן DASH
 
 כל עבודות פיתוח מנהל התקן האומניפוד נעשות על ידי הקהילה **בהתנדבות**; אנו מבקשים מכם להתחשב ולהשתמש בהנחיות הבאות בעת בקשת עזרה:
 
--  **רמה 0** קראו את הסעיף הרלוונטי בתיעוד זה כדי להבטיח שאתם מבינים כיצד להשתמש במה שאתם מתקשים איתו.
--  **רמה 1:** אם אתם עדיין נתקלים בבעיות שאתם לא מצליחים לפתור באמצעות מסמך זה, אנא עברו לערוץ *#androidaps* ב-**Discord** באמצעות [קישור ההזמנה](https://discord.gg/4fQUWHZ4Mw).
--  **רמה 2:** חפשו בעיות קיימות כדי לראות אם הבעיה שלכם כבר דווחה ב-[בעיות](https://github.com/nightscout/AndroidAPS/issues) אם היא קיימת, אנא אשרו/הגיבו/הוסיפו מידע על הבעיה שלכם. אם לא, צרו [בעיה חדשה](https://github.com/nightscout/AndroidAPS/issues) וצרפו את [קובצי היומן (Log) שלכם](../Usage/Accessing-logfiles.md).
--  **היו סבלניים - רוב חברי הקהילה שלנו מורכבים ממתנדבים בעלי אופי טוב, ופתרון בעיות דורש לעתים קרובות זמן וסבלנות מצד המשתמשים והמפתחים כאחד.**
+-  **Level 0:** Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+-  **Level 1:** If you are still encountering problems that you are not able to resolve by using this document, then please go to the *#androidaps* channel on **Discord** by using [this invite link](https://discord.gg/4fQUWHZ4Mw).
+-  **Level 2:** Search existing issues to see if your issue has already been reported at [Issues](https://github.com/nightscout/AndroidAPS/issues) if it exists, please confirm/comment/add information on your problem. If not, please create a [new issue](https://github.com/nightscout/AndroidAPS/issues) and attach [your log files](../Usage/Accessing-logfiles.md).
+-  **Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.**
