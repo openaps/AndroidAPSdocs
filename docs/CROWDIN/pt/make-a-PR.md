@@ -4,7 +4,7 @@
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
 
-## Geral
+## General
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). Doing a PR isn't difficult, but we can help you editing the documentation.
 
@@ -64,7 +64,7 @@ At the moment there are two languages used for docs pages:
 * Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Image size
 

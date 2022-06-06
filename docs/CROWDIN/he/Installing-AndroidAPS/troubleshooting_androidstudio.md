@@ -1,236 +1,236 @@
-# Troubleshooting Android Studio
+# פתרון תקלות ב-Android Studio
 
-## Lost keystore
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+## אבד ה-keystore
+אם אתם משתמשים באותו מאגר מפתחות בעת עדכון AndroidAPS, אינכם צריכים להסיר את ההתקנה של הגרסה הקודמת מהסמארטפון שלכם. זו הסיבה שמומלץ לשמור את מאגר המפתחות במקום בטוח.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+אם תנסו להתקין את ה-apk שחתום עם מאגר מפתחות שונה מבעבר, תקבלו הודעת שגיאה שההתקנה נכשלה!
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+במקרה שאינכם יכולים למצוא את מאגר המפתחות הישן שלך או את הסיסמה שלו, המשיכו כדלקמן:
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+1. [ייצוא הגדרות](../Usage/ExportImportSettings#export-settings) בטלפון.
+2. העתיקו או העלו את קובץ ההגדרות מהטלפון שלך למיקום חיצוני (כלומר למחשב, שירות אחסון בענן...).
+4. צרו apk חתום של גרסה חדשה כמתואר ב[מדריך העדכון](../Installing-AndroidAPS/Update-to-new-version) והעבירו אותו אל הטלפון.
+5. הסירו את ההתקנה של גרסת ה-AAPS הקודמת מהטלפון.
+6. התקינו את גרסת ה-AAPS החדשה בטלפון.
+7. [ייבוא הגדרות](../Usage/ExportImportSettings#import-settings) כדי לשחזר את ההתקדמות במשימות ואת הגדרות התצורה.
+8. בדקו את אפשרויות אופטימיזציית הסוללה שלכם והשביתו אותן שוב.
 
-   If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+   אם אינכם מוצאים אותן בטלפון, העתיקו אותן מהאחסון החיצוני אל הטלפון.
+8. המשיכו להשתמש בלופ.
 
 ## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+סנכרון Gradle יכול להכשל בגלל מגוון סיבות. כאשר מופיעה הודעה שאומרת שסנכרון gradle נכשל, פתחו את הלשונית "Build" (1) בתחתית Android Studio ובדקו איזו הודעת שגיאה (2) מוצגת.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
-* [Uncommitted changes](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
+אלה הם כשלי סנכרון ה-gradle הנפוצים:
+* [שינויים שלא הוגשו](#uncommitted-changes)
+* [אין גרסה שמור של ... זמינה](#could-not-resolve-no-cached-version)
+* [Android Gradle דורש Java 11 כדי לפעול](#android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*חשוב*: לאחר שביצעתם את ההוראות של הבעיה הספציפית שלכם, עליכם להפעיל שוב את [gradle sync](#gradle-resync).
 
-### Uncommitted changes
+### שינויים שלא הוגשו
 
-If you receive a failure message like
+אם מופיעה הודעת כשל כמו
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### שלב 1 - בדקו את התקנת git
+  * פתחו את לשונית terminal (1) בתחתית Android Studio, העתקו והדבקו את הטקסט הבא או הקלדו בטרמינל:
     ```
     git --version
     ```
 
     ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    הערה: יש רווח ושני מקפים בין git ל-version!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * עליכם לקבל הודעה שאומרת איזו גרסת git מותקנת, כפי שניתן לראות בצילום המסך למעלה. במקרה זה, עברו אל [שלב 2](#step-2-check-for-uncommitted-changes).
 
-  * In case you get an message saying
+  * למקרה שתקבלו את ההודעה
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    התקנת Git שלכם בעייתית.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [בדקו את התקנת git](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * אם אתם משתמשי Windows ו-git הותקן זה עתה, עליכם להפעיל מחדש את המחשב כדי להפוך את git לזמינה גלובלית לאחר ההתקנה
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+  * אם Git מותקן והפעלתם מחדש (אם על Windows), ו-git עדיין לא נמצא:
 
-  * Search your computer for a file "git.exe".
+  * חפשו במחשבכם את הקובץ "git.exe".
 
-    Note for yourself, what directory it is in.
+    זכרו באיזו ספרייה הקובץ נמצא.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * עברו אל Environment variables (משתני הסביבה) בחלונות, בחרו את המשתנה "PATH" ולחצו על ערוך. הוסיפו את הספרייה בה מצאתם את התקנת git שלכם.
 
-  * Save and close.
+  * שמירו וסגירו.
 
-  * Restart Android Studio.
+  * הפעילו מחדש את Android Studio.
 
-#### Step 2: Check for uncommitted changes.
+#### שלב 2: בדקו אם יש שינויים לא שלא הוגשו (uncommitted changes).
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * ב-Android Studio, פתחו את הלשונית "Commit" (1) בצד שמאל.![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * אתם יכולים לראות "Default changeset" (2) או "Unversioned files" (3):
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+    * עבור "Default changeset", כנראה עדכנתם את Gradle או שיניתם בטעות חלק מתוכן הקובץ.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * לחצו לחיצה ימנית על "Default Changeset" ובחרו "Rollback"
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+    * הקבצים נשלפים שוב משרת ה-Git. אם אין שינויים אחרים בלשונית ה-commit, עברו אל [שלב 3](#step-3-resync-gradle-again).
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+  * אם אתם יכולים לראות "Unversioned Files", ייתכן שאחסנתם קבצים בספריית sourecode שלך שצריכה להיות במקומות אחרים, למשל קובץ מאגר המפתחות שלך.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * השתמשו בסייר הקבצים הרגיל במחשב כדי להעביר או לגזור ולהדביק את הקובץ למקום אחר.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+    * חזרו ל-Android Studio ולחצו על כפתור רענן (4) בלשונית Commit כדי לוודא שהקובץ אינו מאוחסן יותר בספריית AndroidAPS.
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+      אם אין שינויים אחרים בלשונית ה-commit, עברו אל [שלב 3](#step-3-resync-gradle-again).
 
 
-#### Step 3: Resync Gradle (again)
+#### שלב 3: סנכרן מחדש את Gradle (שוב)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+עקבו אחר ההוראות ב[סינכרון מחדש של Gradle ](#gradle-resync).
 
-### Android Gradle plugin requires Java 11 to run
+### Android Gradle דורש Java 11 כדי לפעול
 
-  You might experience this error message:
+  ייתכן שתתקלו בהודעת השגיאה הזו:
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle דורש Java 11 כדי לפעול](../images/studioTroubleshooting/11_GradleJDK.png)
 
-  Click on "Gradle Settings" (1) to go to open the gradle settings.
+  לחצו על "Gradle Settings" (1) כדי לעבור לפתיחת הגדרות Gradle.
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  אם אין לכם הקישור ל"Gradle Settings", פתחו את הגדרות Gradle ידנית על ידי בחירה בלשונית Gradle בגבול הימני (1), בחרו בסמל הכלים (2) ושם את הפריט 'Gradle Settings' (3).
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  לאחר שפתחתם את תיבת הדו-שיח של הגדרות Gradle, פתחו את האפשרויות (1) ב-"Gradle JDK" ובחרו ב-"Embedded JDK version" (2).
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Press "OK" to save and close the settings dialog.
+  לחץ על "OK" כדי לשמור ולסגור את תיבת הדו-שיח של ההגדרות.
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+  *חשוב*: אם אינכם רואים את ההגדרה "Gradle JDK", ייתכן שלא עדכנתם את Android Studio. ודא שאתם משתמשים ב-Android Studio 2021.1.1 Bumblebee) או חדש יותר.
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
+  עכשיו עליכם להפעיל [Gradle Resync](#gradle-resync)
 
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  ייתכן שתתקלו בהודעת השגיאה הזו:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * בצד ימין, פתחו את הלשונית Gradle (1).
 
-    Make sure the button shown at (2) is *NOT* selected.
+    ודאו שהלחצן המוצג ב-(2) *לא נבחר*.
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * עכשיו עליכם להפעיל [Gradle Resync](#gradle-resync)
 
-### Unable to start daemon process
+### לא ניתן להפעיל את תהליך daemon
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  אם אתם רואים הודעת שגיאה כמו זו למטה, כנראה שאתם משתמשים במערכת ההפעלה Windows 10 עם 32 ביט (סיביות). החל מ-Android Studio 3.5.1 ומעלה אין תמיכה במערכת זו ולמרבה הצער אין מה לעשות בנידון.
 
-  If you are using Windows 10 you must use a 64-bit operating system.
+  לכן אם משתמשים ב-Windows 10, חובה להשתמש בגרסת 64 סיביות.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  יש הרבה מדריכים באינטרנט לקביעה האם יש לכם מערכת הפעלה של 32 סיביות או 64 סיביות - לדוגמה [זו](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
   ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  אם אתo עדיין יכולים לראות את ההודעה שסינכרון gradle נכשל, לחצו על הקישור "Try again".![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the a message anymore, you can still trigger this manually:
+  אם אינכם רואים את ההודעה יותר, עדיין אפשר להפעיל זאת באופן ידני:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * פתחו את הלשונית Gradle (1) בגבול הימני של Android Studio.
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AndroidAPS (2)
+  * לחצו לחיצה ימנית על AndroidAPS (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * לחצו על "Reload Gradle Project" (3)
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+כאשר אתם יוצרים את ה-APK החתום, אתם עשויים לקבל את ההודעה שהיצירה עברה בהצלחה, אך נאמר לך שנוצרו 0 גרסאות בנייה:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
+זוהי אזהרת שווא. בדקו את הספרייה שבחרתם כ"תיקיית יעד" ליצירת הקובץ (שלב [יצירת APK חתום](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) ושם תמצאו את ה-APK שנוצר!
 
 
-## App was created with compiler/kotlin warnings
+## האפליקציה נוצרה עם אזהרות compiler/kotlin
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+אם הבנייה הושלמה בהצלחה אבל אתם מקבלים אזהרות compiler או kotlin (מסומן בסימן קריאה צהוב או כחול) אז ניתן פשוט להתעלם מהאזהרות אלו.
 
  ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Your app was build successfully and can be transferred to phone!
+האפליקציה שלכם נבנתה בהצלחה וניתן להעביר אותה לטלפון!
 
 
 ## Key was created with errors
 
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+בעת יצירת מאגר מפתחות חדש לבניית ה-APK החתום ב-Windows, עלולה להופיע הודעת השגיאה הבאה:
 
 ![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+נראה שזה באג ב-Android Studio 3.5.1 ובסביבת ה-Java ב-Windows. המפתח נוצר בצורה נכונה אך האזהרה מוצגת בטעות כשגיאה. אפשר להתעלם מכך.
 
 
-## No CGM data is received by AndroidAPS
+## נתוני סוכר אינם מתקבלים על ידי AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* במקרה שאתם משתמשים באפליקציית Dexcom G6 הפרוצה: אפליקציה זו מיושנת. יש לעבור להשתמש באפליקציית [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+* במקרה שאתם משתמשים ב-xDrip+: עקבו אחר ההוראות לגבי זיהוי מקלט כמתואר ב[דף ההגדרות של xDrip+](../Configuration/xdrip#identify-receiver).
 
 
-## App not installed
+## אפליקציה לא הותקנה
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* ודאו שהעברתם את הקובץ "app-full-release.apk" לטלפון שלכם.
+* אם הטלפון מציג הודעת "אפליקציה לא מותקנת", בצעו את השלבים הבאים:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
-2. Uninstall AAPS on your phone.
-3. Enable airplane mode & turn off bluetooth.
-4. Install new version (“app-full-release.apk”)
+1. [ייצוא הגדרות](../Usage/ExportImportSettings) (בגרסת AAPS שכבר מותקנת בטלפון שלך)
+2. הסירו את AAPS מהטלפון.
+3. הפעילו מצב טיסה וכבו את הבלוטות'.
+4. התקינו גרסה חדשה ("app-full-release.apk")
 5. [ייבוא הגדרות](../Usage/ExportImportSettings)
-6. Turn bluetooth back on and disable airplane mode
+6. הפעילו שוב את הבלוטות' והשביתן את מצב הטיסה
 
-## App installed but old version
+## האפליקציה מותקנת אך הגרסה ישנה
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+אם בניתם בהצלחה את האפליקציה, העברתם אותה לטלפון והתקנתם אותה בהצלחה אבל מספר הגרסה נשאר זהה אז אולי לא [עדכנתם את עותק הקוד ב-android studio.](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
 
-## None of the above worked
+## אף אחת מהאפשרויות לא עזרה
 
-If non of the above tips helped you might consider building the app from scratch:
+אם אף אחד מהטיפים לעיל לא עזר, אולי תשקלו לבנות את האפליקציה מאפס:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [ייצוא הגדרות](../Usage/ExportImportSettings) (בגרסת AAPS שכבר מותקנת בטלפון שלך)
 
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+2. הכינו את סיסמת המפתח וסיסמת מאגר המפתחות שלכם. במקרה ששכחתם את הסיסמאות, תוכלו לנסות למצוא אותן בקבצי הפרויקט כפי שמתואר [כאן](https://youtu.be/nS3wxnLgZOo).
 
-    Or you just use a new keystore.
+    או שתצרו מאגר מפתחות חדש.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
+3. בנו אפליקציה מאפס כפי שמתואר [כאן](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
 
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. לאחר בניית ה-APK, מחקו את האפליקציה שבטלפון, העבירו את ה-APK החדש לטלפון והתקינו.
+5. [ייבאו הגדרות](../Usage/ExportImportSettings) שוב כדי לשחזר את המשימות ואת ההגדרות שלכם.
+6. בדקו את אפשרויות אופטימיזציית הסוללה שלכם והשביתו אותן שוב.
 
-## Worst case scenario
+## במקרה הגרוע ביותר
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+במקרה שאפילו בניית האפליקציה מאפס לא תפתור את הבעיה, אולי תרצו לנסות להסיר את ההתקנה של Android Studio לחלוטין. חלק מהמשתמשים דיווחו שזה פתר את הבעיה שלהם.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**הקפידו להסיר את כל הקבצים המשויכים ל-Android Studio.** אם לא תסירו לחלוטין את Android Studio עם כל הקבצים המוסתרים, הסרת ההתקנה עלולה לגרום לבעיות חדשות במקום לפתור את הקיימות. ניתן למצוא באינטרנט מדריכים להסרה מלאה כמו
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+בנו אפליקציה מאפס כפי שמתואר [כאן](../Installing-AndroidAPS/Building-APK#install-android-studio).

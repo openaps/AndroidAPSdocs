@@ -21,7 +21,9 @@ Met het selectievakje onder het oog icoontje, kun je instellen hoe een sectie be
 ## Profiel
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
+* As of AAPS 3.0, only the local profile is available.
+
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 ### Local profile
 
@@ -57,6 +59,14 @@ Local profiles can also be uploaded to Nightscout. The settings can be found in 
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
+#### Change profile in Nighscout profile editor
+
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+
 ### Profiel hulp
 
 De Profiel hulp kan je helpen met twee verschillende dingen:
@@ -91,7 +101,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
 * You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-#### Snel-werkende Oref
+#### Rapid-Acting Oref
 
 ![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
@@ -115,7 +125,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DIA = at least 5.0h
 * Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-#### Free-Peak Oref
+#### Free Peak Oref
 
 ![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
 
@@ -130,7 +140,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -247,7 +257,7 @@ Define which Buttons are shown on the home screen.
 
 Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### Vaste maaltijd instellingen
+#### QuickWizard settings
 
 Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
@@ -255,7 +265,7 @@ Note: Button will not be visible if outside the specified time range or if you h
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Standaard tijdelijke streefdoelen
+#### Default Temp-Targets
 
 Choose default temp-targets (duration and target). Preset values are:
 
@@ -267,7 +277,7 @@ Choose default temp-targets (duration and target). Preset values are:
 
 Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
-#### Bereik voor visualisatie
+#### Range of visualization
 
 Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
@@ -275,7 +285,7 @@ Choose the high and low marks for the BG-graph on AndroidAPS overview and smart 
 
 Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
-#### Toon notities veld in behandeling dialoogvensters
+#### Show notes field in treatment dialogs
 
 Choose if you want to have a notes field when entering treatments or not.
 
@@ -283,7 +293,7 @@ Choose if you want to have a notes field when entering treatments or not.
 
 Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
-#### Geavanceerde instellingen
+#### Advanced settings
 
 **Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 

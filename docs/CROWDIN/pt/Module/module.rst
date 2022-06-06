@@ -1,20 +1,20 @@
-mComponent Overview 
+Component Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
 .. image:: ../images/modules.png
   :alt: Components overview
 
-.. nota:: 
+.. note:: 
    **IMPORTANT SAFETY NOTICE**
 
    The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
    
-   Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.
+   Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 
-Módulos Necessários
+Necessary Modules
 ==================================================
 Good individual dosage algorithm for your diabetes therapy
 ----------------------------------------------------------
@@ -22,9 +22,9 @@ Even though this is not something to create or buy, this is the 'module' which i
 Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
 Most loopers use circadian BR, ISF and CR, which adapt hormonal insulin sensitivity during the day.
 
-O perfil inclui
+The profile includes
 
-* RB (Rácio de Basal)
+* BR (Basal rates)
 * ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
 * CR (carb ratio) is grams carbohydrate per one unit insulin
 * DIA (duration of insulin acting).
@@ -33,7 +33,7 @@ No use of SGLT-2 inhibitors
 --------------------------------------------------
 SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 
-Telefone
+Phone
 --------------------------------------------------
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
 Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
@@ -44,16 +44,19 @@ To record a phone or watch that isn't already listed in the spreadsheet then ple
 
 Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
 
-Bomba de Insulina
+Insulin pump
 --------------------------------------------------
 AndroidAPS **currently** works with 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
 
@@ -63,11 +66,11 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **So what's the best pump for looping with AndroidAPS?**
 
@@ -82,7 +85,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
 - All pumps AndroidAPS can talk with are waterproof on delivery. Only the Dana pumps are also "waterproof by warranty" due to the sealed battery compartment and reservoir filling system. 
 
-Fonte de Glic.
+BG Source
 --------------------------------------------------
 This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
@@ -103,11 +106,11 @@ Nightscout is independent of the other modules. You will need it to fulfill Obje
 
 Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
 
-Ficheiro AAPS-.apk
+AAPS-.apk file
 --------------------------------------------------
 The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
 
-Módulos Opcionais
+Optional Modules
 ==================================================
 Smartwatch
 --------------------------------------------------

@@ -63,11 +63,11 @@ Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge di
 
 ## 3. Erstelle die signierte APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Your sourcecode is now the current released version. Es ist an der Zeit, die signierte apk wie im [Build signed apk Abschnitt](../Installing-AndroidAPS/Building-APK#generate-signed-apk) beschrieben.
 
 ## 4. Übertrage die APK-Datei
 
-You need to transfer the apk to your phone so you can install it.
+Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können.
 
 See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
 
@@ -75,11 +75,11 @@ See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/B
 
 Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)).
 
-## 6. Check AAPS version on phone
+## 6. AAPS-Version auf dem Smartphone überprüfen
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Installierte AAPS Version](../images/Update_VersionCheck282.png)
 
 # Problembehandlung
 
@@ -87,4 +87,4 @@ If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.

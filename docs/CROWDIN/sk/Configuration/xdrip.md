@@ -1,5 +1,7 @@
 # xDrip+ settings
 
+(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
+
 If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
 **This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.

@@ -21,9 +21,9 @@ Göz simgesinin altındaki onay kutusu ile ilgili program bölümünün nasıl a
 ## Profil
 
 * Kullanmak istediğiniz bazal profili seçin. Daha fazla kurulum bilgisi için [Profiller](../Usage/Profiles.md) sayfasına bakın.
-* As of AAPS 3.0, only the local profile is available.
+* AAPS 3.0'dan itibaren yalnızca yerel profil kullanılabilir.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu yapmak için Nightscout editöründe birkaç profilden oluşan tüm veritabanı kaydını klonlamak önemlidir. Lütfen aşağıdaki talimatlara bakın. Eğer kapsamlı bir profildeki büyük değişiklikleri web arayüzü aracılığıyla yapacaksanız, bu işlem verilerin daha kolay girilebilmesine yardımcı olabilir, örn. verileri bir elektronik tablodan manuel olarak kopyalamak.
 
 ### Yerel profil
 
@@ -55,15 +55,15 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 #### Yerel profilleri Nightscout'a yükleyin
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Change profile in Nighscout profile editor
+#### Nighscout profil düzenleyicide profili değiştir
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Nightscout profil düzenleyicisindeki profildeki değişiklikleri yerel profillerle senkronize edebilirsiniz. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
 
-It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+Sadece mavi oklu bir profili değil, tüm aktif profiller için Nightscout veritabanı kayıtlarını klonlamak gerekir. Yeni veritabanı kayıtları daha sonra güncel tarihi taşır ve "yerel profil" sekmesi aracılığıyla etkinleştirilebilir.
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
@@ -140,7 +140,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - AAPS 3.0'dan itibaren Dexcom G6 için KŞ alıcısı olarak kullanılamaz (detay için [sürüm notları](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints)na bakınız.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - Sadece versiyon 4.15.57 ve daha yenisi için desteklenir.
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -188,7 +188,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA (gelişmiş yemek yardımı, algoritmanın 2017'deki durumu) Basit bir ifadeyle faydası, yemek bolusu verdikten sonra eğer karbonhidratları doğru bir şekilde girerseniz, sistem daha hızlı bir şekilde kan şekerine yüksek geçici bazal oranları ile müdahale eder.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (süper mikro bolus, ileri düzey kullanıcılar için en yeni algoritma) [9. Görevde olmanız gerekir](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) ve OpenAPS SMB'yi kullanmak için min_5m_carbimpact değeri Konfigürasyon ayarları> Duyarlılık algılaması > Oref1 Duyarlılık ayarlarında 8 olarak ayarlanmalıdır.
 
 ## Döngü
 

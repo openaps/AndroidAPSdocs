@@ -6,12 +6,9 @@
 
 Gebruik systeem notificaties voor waarschuwingen en notificaties:
 
-* Klik op 3 puntjes in rechterbovenhoek van AAPS
-* Instellingen
-* Scroll helemaal naar beneden
-* Activeer "Gebruik systeem notificaties voor waarschuwingen..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Gebruik systeem notificaties voor waarschuwingen en notificaties](../images/AndroidAuto_01.png)
+![Gebruik systeem notificaties voor waarschuwingen en notificaties](../images/AndroidAuto_01v2.png)
 
 ## Instellingen in Android Auto app op jouw telefoon
 

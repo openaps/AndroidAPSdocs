@@ -27,12 +27,35 @@ Android 9 et supérieur
 Android 8
 ------------------------------------
 * Utiliser la version **2.8.2.1** d'AAPS
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.8.2.1
+* Téléchargez le code AAPS depuis https://github.com/nightscout/AndroidAPS branche 2.8.2.1
 
 Android 7
 ------------------------------------
 * Utiliser la version **2.6.2** d'AAPS
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS branche 2.6.2
+
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Conseils importants
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Modifications
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
 
 Version 3.0.0
 ================
@@ -58,9 +81,9 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
+* `Support de la DiaconnG8 <../Configuration/DiaconnG8.html>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -170,7 +193,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -193,7 +216,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim

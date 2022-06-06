@@ -34,6 +34,29 @@ Android 7
 * Verwende AAPS Version **2.6.2**.
 * Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Wichtige Hinweise
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Änderungen
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
+
 Version 3.0.0
 ================
 Erscheinungsdatum: 31.01.2022
@@ -170,7 +193,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -193,7 +216,7 @@ Wichtige neue Funktionen
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 * `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim

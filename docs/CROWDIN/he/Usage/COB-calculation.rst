@@ -1,58 +1,58 @@
-COB calculation
+חישוב פחמימות פעילות (COB)
 **************************************************
 
-How does AndroidAPS calculate the COB value?
+איך AndroidAPS מחשב את הפחמימות הפעילות?
 ==================================================
 
 Oref1
 --------------------------------------------------
 
-Unabsorbed carbs are cut off after specified time
+פחמימות שלא נספגו נעלמות לאחר זמן מוגדר
 
 .. image:: ../images/cob_oref0_orange_II.png
   :alt: Oref1
 
-AAPS, WeightedAverage
+רגישות AAPS, רגישות משוקללת ממוצעת
 --------------------------------------------------
 
-absorption is calculated to have ``COB == 0`` after specified time
+הספיגה מחושבת כך ש-``COB == 0`` לאחר זמן שצויין
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
 
-If minimal carbs absorption (min_5m_carbimpact) is used instead of value calculated from BG deviations, an orange dot appears on COB graph.
+אם נעשה שימוש בספיגת פחמימות מינימלית (min_5m_carbimpact) במקום בערך המחושב לפי סטיות ברמת הסוכר, מופיעה נקודה כתומה על גרף הפחמ' הפעילות (COB). 
 
-Detection of wrong COB values
+זיהוי ערכי פחמ' פעילות שגויים
 ==================================================
 
-AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. In this case it will give you an additional hint on the confirmation screen after usage of bolus wizard. 
+AAPS מזהיר אם אתם עומדים לקבל בולוס עם COB מארוחה קודמת והאלגוריתם חושב שחישוב ה-COB הנוכחי עלול להיות שגוי. במקרה זה הוא יציג הודעה נוספת עח כך במסך האישור לאחר השימוש באשף הבולוס. 
 
-How does AndroidAPS detect wrong COB values? 
+כיצד AndroidAPS מזהה ערכי COB שגויים? 
 --------------------------------------------------
 
-Normally AAPS detects carb absorption through BG deviations. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ method to calculate the absorption instead (so called 'fallback'). As this method calculates only the minimal carb absorption without considering BG deviations, it might lead to incorrect COB values.
+בדרך כלל AAPS מזהה ספיגת פחמימות באמצעות סטיות ברמת הסוכר. במקרה שרשמתם פחמימות אך AAPS לא יכול לראות את הספיגה המשוערת שלהן באמצעות סטיות ברמת הסוכר, הוא ישתמש בשיטת החישוב `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorption-settings>`_ כדי לחשב את הספיגה במקום (כאפשרות שניה). מכיוון ששיטה זו מחשבת רק את ספיגת הפחמימות המינימלית מבלי להתחשב בסטיות של רמת הסוכר, היא עלולה להוביל לערכי COB שגויים.
 
 .. image:: ../images/Calculator_SlowCarbAbsorption.png
   :alt: Hint on wrong COB value
 
-In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  This means that maybe you are having less carbs on board than calculated by the algorithm. 
+בצילום המסך למעלה, 41% מזמן ספיגת הפחמימות חושב מתמטית לפי min_5m_carbimpact במקום הערך שזוהה מהסטיות.  זה אומר שאולי יש לכם פחות פחמימות פעילות ממה שחושב על ידי האלגוריתם. 
 
-How to deal with this warning? 
+איך מתמודדים עם האזהרה הזו? 
 --------------------------------------------------
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- שקלו לבטל את הטיפול - לחצו על ביטול במקום אישור.
+- חשבו שוב את הארוחה הקרובה עם אשף הבולוס ולהשאיר את COB ללא סימון.
+- במקרה שאתם בטוחים שאתם צריכים בולוס תיקון, הזינו אותו ידנית.
+- בכל מקרה יש להיזהר מהזרקת יתר!
 
-Why does the algorithm not detect COB correctly? 
+מדוע האלגוריתם אינו מזהה נכונה את COB? 
 --------------------------------------------------
 
-- Maybe you overestimated carbs when entering them.  
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- אולי הערכתם ביתר את הפחמימות שהזנתם.  
+- פעילות גופנית לאחר הארוחה הקודמת
+יחס הפחמימות דורש כיוונון
+- הערך של min_5m_carbimpact שגוי (המומלץ הוא 8 בשביל SMB ו-3 עם AMA)
 
-Manual correction of carbs entered
+תיקון ידני של פחמימות שנרשמו
 ==================================================
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described `here <../Getting-Started/Screenshots.html#carb-correction>`_.
+אם הערכתם את הפחמימות ביתר או בחסר, תוכלו לתקן זאת בלשונית הטיפולים ובלשונית\תפריט הפעולות כמתואר `כאן <../Getting Started/Screenshots.html#carb-correction>`_.

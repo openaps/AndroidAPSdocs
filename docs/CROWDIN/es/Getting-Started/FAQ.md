@@ -18,9 +18,9 @@ Esta es la razón por lo que las apks no están disponibles.
 
 En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 
-* A [supported insulin pump](./Pump-Choices.md), 
-* un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
-* un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
+- A [supported insulin pump](./Pump-Choices.md), 
+- un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
+- un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
 
 Secondly, you have to **setup your hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
@@ -52,18 +52,18 @@ For safety, recommendations made are based on not one CGM reading but the averag
 
 There are several blogs with good tips to help you understand the practicalities of looping:
 
-* [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-* [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-* [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-* [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
+- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
+- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
 
 ## ¿Qué equipo de emergencia se recomienda llevar?
 
 You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
-* Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-* Pump batteries
-* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
+- Pump batteries
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -131,10 +131,10 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Ejemplo:**
 
-* BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
-* So, you want correction of 90 mg/dl (= 190 - 110).
-* ISF = 30 -> 90 / 30 = 3 units of insulin
-* ISF = 45 -> 90 / 45 = 2 units of insulin
+- BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
+- So, you want correction of 90 mg/dl (= 190 - 110).
+- ISF = 30 -> 90 / 30 = 3 units of insulin
+- ISF = 45 -> 90 / 45 = 2 units of insulin
 
 An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
@@ -224,33 +224,33 @@ There are innumerable possibilities to place the pump. It does not matter if you
 
 Looping can reduce the pump battery faster than normal use because the system interacts through bluetooth far more than a manual user does. It is best to change battery at 25% as communication becomes challenging then. You can set warning alarms for pump battery by using the PUMP_WARN_BATT_P variable in your Nightscout site. Tricks to increase battery life include:
 
-* reduce the length of time the LCD stays on (within pump settings menu)
-* reduce the length of time the backlight stays on (within pump settings menu)
-* select notification settings to a beep rather than vibrate (within pump settings menu)
-* only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
-* AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
+- reduce the length of time the LCD stays on (within pump settings menu)
+- reduce the length of time the backlight stays on (within pump settings menu)
+- select notification settings to a beep rather than vibrate (within pump settings menu)
+- only press the buttons on the pump to reload, use AndroidAPS to view all history, battery level and reservoir volume.
+- AndroidAPS app may often be closed to save energy or free RAM on some phones. When AndroidAPS is reinitialized at each startup it establishes a Bluetooth connection to the pump, and re-reads the current basal rate and bolus history. This consumes battery. To see if this is happening, go to Preferences > NSClient and enable 'Log app start to NS'. Nightscout will receive an event at every restart of AndroidAPS, which makes it easy to track the issue. To reduce this happening, whitelist AndroidAPS app in the phone battery settings to stop the app power monitor closing it down.
     
     For example, to whitelist on a Samsung phone running Android Pie:
     
-    * Go to Settings -> Device Care -> Battery 
-    * Scroll until you find AndroidAPS and select it 
-    * De-select "Put app to sleep"
-    * ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
-    * Scroll to AndroidAPS and make sure it is de-selected.
+    - Go to Settings -> Device Care -> Battery 
+    - Scroll until you find AndroidAPS and select it 
+    - De-select "Put app to sleep"
+    - ALSO go to Settings -> Apps -> (Three circle symbol in the top-right of the screen) select "special access" -> Optimize battery usage
+    - Scroll to AndroidAPS and make sure it is de-selected.
 
-* clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
+- clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
-* for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-* see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+- for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
 
 ### Cambiando cánulas y cartuchos
 
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
-* Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-* Now disconnect the pump and change the reservoir as per pump instructions.
-* Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
-* Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
+- Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
+- Now disconnect the pump and change the reservoir as per pump instructions.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+- Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
 The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
@@ -280,9 +280,9 @@ Así que usted tendría más hidratos de carbono a bordo, pero al mismo tiempo e
 
 Cuando utilices lazo, debe intentar estos pasos:
 
-* Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-* If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+- Make a [profile switch](../Usage/Profiles.md) < 100%.
+- Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
@@ -298,9 +298,9 @@ You can remove the pump to be 'free', but you should tell AndroidAPS so that the
 
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
 
-* Deactivating closed loop mode and treating the diabetes manually or
-* setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
-* do a profile switch to noticeably less than 100% 
+- Deactivating closed loop mode and treating the diabetes manually or
+- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
+- do a profile switch to noticeably less than 100% 
 
 When drinking alcohol, you always have to have an eye on your CGM to manually avoid a hypoglycemia by eating carbs.
 
@@ -337,3 +337,103 @@ If you want to share some information about AndroidAPS and DIY looping with your
 #### Informes
 
 You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or check [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
+
+# Frequent questions on Discord and their answers...
+
+## My problem is not listed here.
+
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+
+## My problem is not listed here but I found the solution
+
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+
+**Remind us to add your solution to this list!**
+
+## AAPS stops everyday around the same time.
+
+Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+
+## How to organize my backups ?
+
+Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+
+Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+
+## I have problems, errors building the app.
+
+Please
+
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
+- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+
+## I'm stuck on an objective and need help.
+
+Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+
+## How to reset the password in AAPS v2.8.x ?
+
+Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+
+## How to reset the password in AAPS v3.x
+
+If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+
+## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+
+With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+
+Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+
+The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+
+## Build error: file name too long
+
+While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+
+From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+
+## Alert: Running dev version. Closed loop is disabled
+
+AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+
+Make sure AndroidAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+
+Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+
+## Where can I find settings files?
+
+Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+
+## How to configure battery savings?
+
+Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AndroidAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+
+## Pump unreachable alerts several times a day or at night.
+
+Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+
+## Where can I delete treatments in AAPS v3 ?
+
+3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+
+## Configuring and Using the NSClient remote app
+
+AAPS can be monitored and controlled remotely via the NSClient app and optionally via the associated Wear app running on Android Wear watches. Note that the NSClient (remote) app is distinct from the NSClient configuration in AAPS, and the NSClient (remote) Wear app is distinct from the AAPS Wear app--for clarity the remote apps will be referred to as 'NSClient remote' and 'NSClient remote Wear' apps.
+
+To enable NSClient remote functionality you must: 1) Install the NSClient remote app (the version should match the version of AAPS being used) 2) Run the NSClient remote app and proceed through the configuration wizard to grant required permissions and configure access to your Nightscout site. 3) At this point you may want to disable some of the Alarm options, and/or advanced settings which log the start of the NSClient remote app to your Nightscout site. Once this is done, NSClient remote will download Profile data from your Nightscout site, the 'Overview' tab will display CGM data and some AAPS data, but but may not display graph data, and will indicate that a profile isn't yet set. 4) To activate the profile:
+
+- Enable remote profile synchronization in AAPS > NSClient > Options
+- Activate the profile in NSClient remote > Profile After doing so, the profile will be set, and NSClient remote should display all data from AAPS. Hint: If the graph is still missing, try changing the graph settings to trigger an update. 5) To enable remote control by the AAPS NSClient, selectively enable the aspects of AAPS (Profile changes, Temp Targets, Carbs, etc.) that you would like to be able to control remotely via AAPS > NSClient > Options . Once these changes are made, you'll be able to remotely control AAPS via either Nightscout or NSClient remote.
+
+If you'd like to monitor/control AAPS via the NSClient remote Wear App, you'll need both NSClient remote and the associated Wear app to be installed. To compile the NSClient remote Wear app, follow the standard instructions for installing/configuring the AAPS wear app, except when compiling it, choose the NSClient variant.
+
+## I have a red triangle / AAPS won't enable closed loop / Loops stays in LGS / I have a yellow triangle
+
+The red and yellow triangles are a security feature in AAPS v3.
+
+Red triangle means that you have duplicate BGs and AAPS can't calculate precisely the deltas. You can't close the loop. You need to delete one BG of each duplicated value in order to clear the red triangle. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+
+Possible origin of the problem: xDrip and/or NS backfilling BGs.
+
+The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours. In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.

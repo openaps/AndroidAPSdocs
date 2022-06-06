@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## בנייה עצמית במקום הורדה
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
 
 ## Important notes
 
@@ -73,7 +73,7 @@ See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/B
 
 ## 5. Install apk
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)).
 
 ## 6. Check AAPS version on phone
 
@@ -81,7 +81,7 @@ After you installed the new apk, you can check the AAPS version on your phone by
 
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
-# Troubleshooting
+# פתרון בעיות
 
 If anything goes wrong, don't panic.
 

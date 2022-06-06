@@ -401,7 +401,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 *NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.*
 
-|Omnipod_Tab|
+   |Omnipod_Tab|
 
 Fields
 ------
@@ -441,37 +441,47 @@ Fields
 Icons
 -----
 
-.. list-table:: 
-      
-    * - |refresh_pod_status|
-      - **REFRESH:** 
-			
-	Sends a refresh command to the active pod to update communication
-			 
-	* Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
-	* See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
-    * - |pod_management|  	 
-      - **POD MGMT:**
+* **REFRESH:**
 
-	Navigates to the Pod management menu   
-    * - |ack_alerts|		 
-      - **ACK ALERTS:**
-   			 
-	When pressed this will disable the pod expiration beeps and notifications. 
-			 
-	* Button is displayed only when pod time is past expiration warning time
-	* Upon successful dismissal, this icon will no longer appear.			 
-    * - |set_time|	 
-      - **SET TIME:**
-   
-	When pressed this will update the time on the pod with the current time on your phone.
-    * - |suspend|  		 
-      - **SUSPEND:**
-   
-	Suspends the active pod
-    * - |resume|	 
-      - **RESUME DELIVERY:**
-   
+    |refresh_pod_status|
+
+    Sends a refresh command to the active pod to update communication
+
+    Use to refresh the pod status and dismiss status fields that contain the text (uncertain).
+
+    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+* **POD MGMT:**
+
+    |pod_management|
+
+    Navigates to the Pod management menu
+
+* **ACK ALERTS:**
+
+    |ack_alerts|
+
+    When pressed this will disable the pod expiration beeps and notifications.
+
+    Button is displayed only when pod time is past expiration warning time
+    Upon successful dismissal, this icon will no longer appear.
+
+* **SET TIME:**
+
+    |set_time|
+
+    When pressed this will update the time on the pod with the current time on your phone.
+
+* **SUSPEND:**
+
+    |suspend|
+
+    Suspends the active pod
+
+* **RESUME DELIVERY:**
+
+    |resume|
+
 	Resumes the currently suspended, active pod
 
 
@@ -480,63 +490,78 @@ Pod Management Menu
 
 Below is an explanation of the layout and meaning of the icons on the **Pod Management** menu accessed from the **Omnipod (POD)** tab.
 
-|Omnipod_Tab_Pod_Management|
+    |Omnipod_Tab_Pod_Management|
 
-.. list-table:: 
+* **Activate Pod**
 
-    * - |activate_pod|
-      - **Activate Pod**
-   
-        Primes and activates a new pod
-    * - |deactivate_pod|
-      - **Deactivate Pod**
- 
-        Deactivates the currently active pod.
-		 
-	*  A partially paired pod ignores this command.
-	*  Use this command to deactivate a screaming pod (error 49).
-	*  If the button is disabled (greyed out) use the Discard Pod button.
-    * - |play_test_beep|
-      - **Play test beep**
- 
- 	Plays a single test beep on the pod when pressed.
-    * - |discard_pod|
-      - **Discard pod**
+    |activate_pod|
 
-	Deactivates and discards the pod state of an unresponsive pod when pressed.
-			      
-	Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
+    Primes and activates a new pod
+
+* **Deactivate Pod**
+
+    |deactivate_pod|
+
+    Deactivates the currently active pod.
+
+    A partially paired pod ignores this command.
+
+    Use this command to deactivate a screaming pod (error 49).
+
+    If the button is disabled (greyed out) use the Discard Pod button.
+
+* **Play test beep**
+
+    |play_test_beep|
+
+    Plays a single test beep on the pod when pressed.
+
+* **Discard pod**
+
+    |discard_pod|
+
+    Deactivates and discards the pod state of an unresponsive pod when pressed.
+
+    Button is only displayed when very specific cases are met as proper deactivation is no longer possible:
 
 	* A **pod is not fully paired** and thus ignores deactivate commands.
 	* A **pod is stuck** during the pairing process between steps
 	* A **pod simply does not pair at all.**
-    * - |pod_history|
-      - **Pod history** 
-   
-   	Displays the active pod activity history
-    * - |rileylink_stats|
-      - **RileyLink stats:**
-   
-        Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
+
+* **Pod history**
+
+    |pod_history|
+
+    Displays the active pod activity history
+
+* **RileyLink stats:**
+
+    |rileylink_stats|
+
+    Navigates to the RileyLink Statistics screen displaying current settings and RileyLink Connection history
 
 	* **Settings** - displays RileyLink and active pod settings information
 	* **History** - displays RileyLink and Pod communication history
-    * - |reset_rileylink_config|
-      - **Reset RileyLink Config** 
-   
-   	When pressed this button resets the currently connected pod communication device configuration. 
-			      
-	* When communication is started, specific data is sent to and set in the RileyLink 
-			      
+
+* **Reset RileyLink Config**
+
+    |reset_rileylink_config|
+
+    When pressed this button resets the currently connected pod communication device configuration.
+
+	* When communication is started, specific data is sent to and set in the RileyLink
+
 	    - Memory Registers are set
 	    - Communication Protocols are set
 	    - Tuned Radio Frequency is set
-				
+
 	* See `additional notes <#reset-rileylink-config-notes>`__ at the end of this table
-    * - |pulse_log|
-      - **Read pulse log:** 
-    
-    	Sends the active pod pulse log to the clipboard		    
+
+* **Read pulse log:**
+
+    |pulse_log|
+
+    	Sends the active pod pulse log to the clipboard
 
 *Reset RileyLink Config Notes*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

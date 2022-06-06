@@ -59,4 +59,5 @@ Telefoons
 
 Smartwatch
 ==================================================
+* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

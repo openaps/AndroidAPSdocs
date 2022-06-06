@@ -21,7 +21,9 @@
 ## 프로파일
 
 * Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AndroidAPS 3.0 only Nightscout profile can no longer be used but local profile can be synced to NS.
+* As of AAPS 3.0, only the local profile is available.
+
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 ### Local profile
 
@@ -56,6 +58,14 @@ You can easily create a new local profile from a profile switch. In this case ti
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+
+#### Change profile in Nighscout profile editor
+
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Profile helper
 
@@ -130,7 +140,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)

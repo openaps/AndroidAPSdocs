@@ -35,7 +35,7 @@ Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez `dupl
 Comparer deux profils
 =======================================
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
+Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage de l'un des profils utilisés dans un précédent `changement de profil <../Usage/Profiles.html>`_).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Assistant Profil 1
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 Dupliquer le profil
 =======================================
 
-If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
+Si vous utilisez des `profils locaux <../Configuration/Config-Builder.html#profil-local>`_, vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Assistant profile Dupliquer le Profil / Changement de profil

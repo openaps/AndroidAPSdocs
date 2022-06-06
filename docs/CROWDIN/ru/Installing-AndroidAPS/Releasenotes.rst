@@ -35,11 +35,34 @@ Android 7
 * Пользуйтесь AAPS версии **2.6.2**
 * Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
 
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Важные Примечания
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Изменения
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
+
 Version 3.0.0
 ================
 Release date: 31-01-2022
 
-Важные Примечания
+Важные подсказки
 ----------------------
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
@@ -115,7 +138,7 @@ Release date: 31-01-2022
 ================
 Дата выпуска: 12-01-2021
 
-Важные подсказки
+Важные Примечания
 ----------------------
 * Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1.
 * Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.).
@@ -171,7 +194,7 @@ Release date: 31-01-2022
 
 **Не забудьте проверить и исправить настройки после обновления до 2.7, описание см. ** `здесь <../Installing-AndroidAPS/update2_7.html>`__.
 
-Чтобы заработала автоматизация необходимо начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_ <. /Usage/Automation.html>`_ (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например, вы не прошли экзамен в `цели 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 Новые возможности
 ----------------------
@@ -194,7 +217,7 @@ Release date: 31-01-2022
 * небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
 * `"Язык по умолчанию" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * векторные иконки @Philoul
-* `установить нейтральные временные для MDT <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Улучшения в браузере истории @MilosKozak
 * удалён алгоритм OpenAPS MA @Tornado-Tim
 * Удалена чувствительность Oref0 @Tornado-Tim

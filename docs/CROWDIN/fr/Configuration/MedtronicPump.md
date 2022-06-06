@@ -23,7 +23,7 @@ Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documenta
     - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
     - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
 
-A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+Un graphique de comparaison pour les différents appareils compatibles avec Rileylink peut être trouvé sur [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 ## Configuration de la pompe
 
@@ -35,7 +35,7 @@ The following settings should be configured on the pump in order for AndroidAPS 
 - **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AndroidAPS will manage different profiles on your phone. No other patterns are required.
 - **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
 
-## Medtronic Configuration of Phone/AndroidAPS
+## Configuration Medtronic du téléphone / AndroidAPS
 
 - **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AndroidAPS from seeing your Rileylink Compatible device when you follow the instructions below. 
 - Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
@@ -126,9 +126,9 @@ OpenAPS users should note that AndroidAPS with Medtronic uses a completely diffe
 
 In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
 
-### Medtronic CGM
+### MGC Medtronic 
 
-Medtronic CGM is currently NOT supported.
+La MGC Medtronic n'est actuellement PAS prise en charge.
 
 ### Utilisation manuelle de la pompe
 

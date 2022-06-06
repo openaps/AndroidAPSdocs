@@ -1,4 +1,4 @@
-# Configuraciones
+# Tabla de configuraciones
 
 Dependiendo de sus ajustes, puede abrir el administrador de configuraciones a través de una pestaña en la parte superior de la pantalla o a través del menú de la hamburguesa.
 
@@ -140,7 +140,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.rst) p
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.html?highlight=glunovo#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -344,6 +344,6 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 
 Email and number of logs to be send. Normally no change necessary.
 
-### Configuraciones
+### Tabla de configuraciones
 
 Use tab for config builder instead of hamburger menu.
