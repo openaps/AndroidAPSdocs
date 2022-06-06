@@ -18,6 +18,21 @@ SMS 통신기
 * AndroidAPS는 문자 메세지를 통해 아이의 폰을 원격으로 조정할 수 있게 해줍니다. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)을 도난 맞을 수도 있다는 사실에 항상 유념하셔야 합니다. 따라서 최소한 PIN 코드 이상의 보안으로 폰을 보호하십시오.
 * Bolus 또는 프로파일 변경 등의 원격 명령들이 수행된 경우, AndroidAPS 역시 문자 메시지로 알려줄 것입니다. 수신 폰 중 하나가 도난 당할 경우를 대비하여, 적어도 2개 이상의 다른 폰에 확인 문자 메시지가 전송되도록 설정하는 것을 권장합니다.
 
+AndroidAPS can also be used by blind people
+===========================================
+
+On Android devices TalkBack is part of the operating system. It is a program for screen orientation via voice output. With TalkBack you can operate your smartphone as well as AndroidAPS blind.
+
+We users create the AndroidAPS app ourselves with Android Studio. Many use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the "Java Access Bridge" component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+
+To do this, please proceed as follows:  
+
+* Press WINDOWSTASTE and enter "Control Panel" in the search field, open with Enter. It opens: "All Control Panel Items". 
+* Press the letter C to get to "Center for Ease of Use", open with Enter.  
+* Then open "Use computer without a screen" with Enter. 
+* There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it. 
+* Done, just close the window! The screen reader should work now.
+
 .. 참고:: 
    ** 중요 안전 수칙 **
 
