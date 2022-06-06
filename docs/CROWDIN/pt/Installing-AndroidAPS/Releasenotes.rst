@@ -1,4 +1,4 @@
-Release notes
+Notas das Versões
 **************************************************
 Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
@@ -7,7 +7,7 @@ You will receive the following information as soon as a new update is available:
 .. image:: ../images/AAPS_LoopDisable90days.png
   :alt: Update info
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+Depois tem 60 dias para atualizar. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
 If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
 
@@ -38,12 +38,12 @@ Version 3.1.0
 ================
 Release date: XX-XX-2022
 
-Important hints
+Notas importantes
 ----------------------
 * after update uninstall Wear app and install new version
 * Omnipod users: update on pod change
 
-Changes
+Alterações
 ----------------------
 * fixed issues from 3.0 version
 * fixed DASH driver @avereha
@@ -59,53 +59,53 @@ Changes
 
 Version 3.0.0
 ================
-Release date: 31-01-2022
+Data de lançamento: 31-01-2022
 
-Important hints
+Notas importantes
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Plan the update carefully!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **A versão mínima do Android é 9.0 agora.**
+* **Os dados não são migrados para a nova base de dados.** Não se queixe, a mudança é tão grande que simplesmente, é impossível. Assim, após a atualização, IOB, COB, tratamentos, etc. serão eliminados. Tem que criar uma nova `troca de perfil <../Usage/Profiles.html>`_ e começar com zero IOB e COB. Planeie a atualização com cuidado!!! A melhor ocasião será sem insulina ativa e hidratos de carbono
+* Use a mesma versão da AAPS e NSClient
 
 **Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
 
-Preparation steps
+Passos preparatórios
 ----------------------
-**At least two days before update:**
+**Pelo menos dois dias antes de atualizar:**
 
-* disable Dexcom bridge in Nightscout
+* Desative Dexcom bridge no Nightscout
 * if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
 * if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
 
-Changes
+Alterações
 ----------------------
-* 100k lines changed, 105k new lines of code
+* 100k linhas alteradas, 105k novas linhas de código
 * `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `Suporte Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
-* Glunovo support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* Suporte a Glunovo
+* Banco de dados interno atualizado para a sala @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Muito código reescrito para o Kotlin @MilosKozak
+* Nova interface interna para drivers da bomba
+* NSCliente reescrito para melhor sincronização e personalização mais detalhada @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * Eliminação de registos de NS não é permitida (apenas invalidação através de NSClient)
+  * Gravar modificações de NS não é permitido
+  * Configuração de sincronização disponível sem o modo engineering (para pais)
+  * Capacidade de resincronizar dados
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
+* Alteração do comportamento da mudança de perfil. Agora há uma distinção entre Troca de Perfil *(algo que o utilizador quer) * e Mudança de Perfil *(quando a alteração é executada pela bomba)* @MilosKozak @Tebbe
+* Pode iniciar um Alvo temporário para Atividade durante a criação da Troca de perfil @MilosKozak
 * NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
 * Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
+* Ações do utilizador guardadas @Philoul
+* Nova automação para TempTargetValue @Philoul
 * New automation Careportal action @Philoul
 * Add Bolus reminder in Carbs Dialog @Philoul
-* Bolus Wizard improvement
-* UI improvements @MilosKozak
-* New user buttons for automations @MilosKozak
+* Melhoria do Assistente de Bólus
+* Melhorias na interface do utilizador @MilosKozak
+* Novos botões de utilizador para automações @MilosKozak
 * New automation layout @MilosKozak
 * History browser updated and fixed @MilosKozak
 * Objective9 removed @MilosKozak
@@ -118,13 +118,13 @@ Changes
    * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
 
-Version 2.8.2
+Versão 2.8.2
 ================
-Release date: 23-01-2021
+Data de lançamento: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
-Changes
+Alterações
 ----------------------
 * stability improvements
 * more tweaking for Android 8+
@@ -135,9 +135,9 @@ Changes
 
 Version 2.8.1.1
 ================
-Release date: 12-01-2021
+Data de lançamento: 12-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
@@ -160,9 +160,9 @@ Major changes
 
 Version 2.8.0
 ================
-Release date: 01-01-2021
+Data de lançamento: 01-01-2021
 
-Important hints
+Notas importantes
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
@@ -189,11 +189,11 @@ Major new features
 
 Version 2.7.0
 ================
-Release date: 24-09-2020
+Data de lançamento: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. This will not effect other objectives you have already finished. Vai manter todos os objetivos acabados!
 
 Major new features
 ----------------------
@@ -227,7 +227,7 @@ Major new features
 
 Version 2.6.1.4
 ================
-Release date: 04-05-2020
+Data de lançamento: 04-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -238,7 +238,7 @@ Major new features
 
 Version 2.6.1.3
 ================
-Release date: 03-05-2020
+Data de lançamento: 03-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -249,7 +249,7 @@ Major new features
 
 Version 2.6.1.2
 ================
-Release date: 19-04-2020
+Data de lançamento: 19-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -260,7 +260,7 @@ Major new features
 
 Version 2.6.1.1
 ================
-Release date: 06-04-2020
+Data de lançamento: 06-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -271,7 +271,7 @@ Major new features
 
 Version 2.6.1
 ==============
-Release date: 21-03-2020
+Data de lançamento: 21-03-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -290,7 +290,7 @@ Major new features
 
 Version 2.6.0
 ==============
-Release date: 29-02-2020
+Data de lançamento: 29-02-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -327,7 +327,7 @@ Major new features
 
 Version 2.5.1
 ==================================================
-Release date: 31-10-2019
+Data de lançamento: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
@@ -335,11 +335,11 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 
 Version 2.5.0
 ==================================================
-Release date: 26-10-2019
+Data de lançamento: 26-10-2019
 
 .. _important-notes-2-5-0:
 
-Important notes
+Notas importantes
 --------------------------------------------------
 * Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
@@ -363,16 +363,16 @@ Major new features
 * Rendering insulin activity
 * Adjusting IOB predictions by autosens result
 * New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
+* Verificador de assinatura
 * Allow to bypass objectives for OpenAPS users
 * New `objectives <../Usage/Objectives.html>`_ - exam, application handling
   (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
 * Fixed bug in Dana* drivers where false time difference was reported
 * Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
 
-Version 2.3
+Versão 2.3
 ==================================================
-Release date: 25-04-2019
+Data de lançamento: 25-04-2019
 
 Major new features
 --------------------------------------------------
@@ -387,9 +387,9 @@ Major new features
 * New Version-Checker
 
 
-Version 2.2.2
+Versão 2.2.2
 ==================================================
-Release date: 07-04-2019
+Data de lançamento: 07-04-2019
 
 Major new features
 --------------------------------------------------
@@ -399,9 +399,9 @@ Major new features
 * SMS plugin fix
 
 
-Version 2.2
+Versão 2.2
 ==================================================
-Release date: 29-03-2019
+Data de lançamento: 29-03-2019
 
 Major new features
 --------------------------------------------------
@@ -412,9 +412,9 @@ Major new features
 * Stop loop if phone disk is full
 
 
-Version 2.1
+Versão 2.1
 ==================================================
-Release date: 03-03-2019
+Data de lançamento: 03-03-2019
 
 Major new features
 --------------------------------------------------
@@ -432,9 +432,9 @@ Misc
 * If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
 
-Version 2.0
+Versão 2.0
 ==================================================
-Release date: 03-11-2018
+Data de lançamento: 03-11-2018
 
 Major new features
 --------------------------------------------------
@@ -447,11 +447,11 @@ Settings to adjust when switching from AMA to SMB
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
-* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
+* Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Se a construção falhar com um erro em relação à "on demand configuration" pode fazer o seguinte:
 
-  * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  * In the left pane, click Build, Execution, Deployment > Compiler.
-  * Uncheck the Configure on demand checkbox.
+  * Abra a janela Preferências clicando em Arquivo> Configurações (no Mac, Android Studio> Preferências).
+  * No painel esquerdo, clique em Build, Execution, Deployment > Compiler.
+  * Desmarque a caixa de opção Configure on demand.
   * Click Apply or OK.
 
 Overview tab
@@ -462,7 +462,7 @@ Overview tab
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-Watch
+Relógio
 --------------------------------------------------
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
