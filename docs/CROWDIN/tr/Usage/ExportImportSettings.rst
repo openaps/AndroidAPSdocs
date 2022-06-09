@@ -46,13 +46,13 @@ Dışa aktarma ayarları
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS export settings 2
   
-Import settings
+İçe aktarma ayarları
 ==================================================
 **Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Hamburger menu (top left corner of screen)
 * Bakım
-* Import settings
+* İçe aktarma ayarları
 
 .. image:: ../images/AAPS_ImportSettings1.png
   :alt: AndroidAPS import settings 1
