@@ -177,9 +177,9 @@ The Droplet transmitter is working with Libre2 also but uses an internet service
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
--   the BG readings are identical to the reader results
--   the Libre2 sensor can be used 14.5 days as with the Libre1 before
--   8 hours Backfilling is fully supported.
+-   KŞ okumaları kendi okuyucusu ile aynıdır
+-   Libre2 sensörü, daha önce Libre1'de olduğu gibi 14.5 gün kullanılabilir
+-   8 saatlik geriye dönük ölçümler eklenir.
 -   get BG readings during the one hour startup time of a new sensor
 
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
