@@ -32,7 +32,7 @@ Settings backup is encrypted by a master password that can be set in `Preference
 Dışa aktarma ayarları
 ==================================================
 * Hamburger menu (top left corner of screen)
-* Maintenance
+* Bakım
 * Export settings
 
 .. image:: ../images/AAPS_ExportSettings1.png
@@ -51,7 +51,7 @@ Import settings
 **Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
 * Hamburger menu (top left corner of screen)
-* Maintenance
+* Bakım
 * Import settings
 
 .. image:: ../images/AAPS_ImportSettings1.png
