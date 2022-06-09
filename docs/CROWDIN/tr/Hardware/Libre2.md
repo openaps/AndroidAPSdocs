@@ -30,11 +30,11 @@ Now start the Libre2 sensor with the patched app by simply scanning the sensor. 
 
 Başarılı sensör başlatma için zorunlu ayarlar:
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+-   NFC etkin / BT etkin
+-   hafıza ve konum izni etkin
+-   konum hizmeti etkin
+-   otomatik saat ve saat dilimi ayarı
+-   yamalı uygulamada en az bir alarm ayarlayın
 
 Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. This is not the app location permission which has to be set also!
 
@@ -55,10 +55,10 @@ If the exclamation mark remains or you get an error message, this can have sever
 -   Android location service is not granted - please enable it in the system settings
 -   automatic time and time zone not set - please change the settings accordingly
 -   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
+-   Bluetooth kapalı - lütfen açın
 -   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
+-   Uygulama bildirimleri engellenmiş
+-   Kilit ekranı bildirimleri engellenmiş
 -   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
 
 Telefonu yeniden başlatmak yardımcı olabilir, bunu birkaç kez yapmanız gerekebilir. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. Her iki durumda da sıkıntı yok endişelenmeyin. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
@@ -84,7 +84,7 @@ However there is a variant of the patched app supporting LibreView with enabled 
 Kan şekeri değerleri akıllı telefonda xDrip+ uygulaması tarafından alınır.
 
 -   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 (patched App)" as data source
+-   xDrip+'da veri kaynağı olarak "Libre2 (Yamalı uyg)" öğesini seçin
 -   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
 -   xdrip'te Ayarlar > Yerel-Uygulama ayarlarına gidin ve > Verileri Yerel Olarak Yayınlayını AÇIK seçin.
 -   xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
