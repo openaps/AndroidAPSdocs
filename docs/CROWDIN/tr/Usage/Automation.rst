@@ -29,7 +29,7 @@ Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bırak
 
 Otomasyon nerede bulunur
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
+Hamburger menüsünde veya sekmede `Konfigürasyon ayarları içerisinde <../Configuration/Config-Builder.html#sekme-veya-hamburger-menusu>`_ içindeki ayarlarınıza bağlı olarak, `Otomasyon <../Configuration/Config-Builder.html#otomasyon> öğesini bulacaksınız. `__
 
 Genel
 --------------------------------------------------
@@ -41,8 +41,8 @@ There are some limits:
 
 **Lütfen dikkatli olun:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* **-2'den küçük şu anlama gelir: -3 ve altı (-4,-10, vb.)**
+* **-2'den büyük şu anlama gelir: -1 ve üstü (-1, 0, +10, vb.)**
 
 
 Şart
@@ -72,86 +72,86 @@ Bir veya daha fazla eylem seçebilirsiniz:
 
 * geçici hedefi başlat 
 
-  * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  * works only if there is no previous temp target
+  * 72 mg/dl ile 270 mg/dl (4 mmol/l ve 15 mmol/l) arasında olmalıdır
+  * yalnızca önceki geçici hedef yoksa çalışır
    
-* stop temp target
-* notification
-* profile percentage
+* geçici hedefi durdur
+* bildirim
+* profil yüzdesi
 
-  * must be between 70% and 130% 
-  * works only if the previous percentage is 100%
+  * %70 ile %130 arasında olmalıdır 
+  * yalnızca önceki yüzde %100 olduğunda çalışır
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan değerleri** ihtiyacınız olanla değiştirmeyi unutmayın.
  
 .. image:: ../images/Automation_Default_V2_5.png
-  :alt: Automation default vs. set values
+  :alt: Otomasyon varsayılanı vs. değerlerini ayarlayın
 
-Sort automation rules
+Otomasyon kurallarını sıralama
 ---------------------
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satırlı düğmeyi basılı tutun ve yukarı veya aşağı hareket ettirin.
 
 .. image:: ../images/Automation_Sort.png
-  :alt: Sort automation rules
+  :alt: Otomasyon kurallarını sıralama
   
-Delete automation rules
+Otomasyon kurallarını silme
 -----------------------
-To delete an automation rule click on trash icon.
+Bir otomasyon kuralını silmek için çöp kutusu simgesine tıklayın.
 
 .. image:: ../images/Automation_Delete.png
-  :alt: Delete automation rule
+  :alt: Otomasyon kuralını silme
 
-Good practice & caveats
+Alıştırma & uyarılar
 ==================================================
-* When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Watch the rule results.
-* Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* Otomasyonu kullanmaya başladığınızda veya yeni bir kural oluşturduğunuzda, önce kuralın iyi çalıştığından emin olana kadar sadece bir bildirim ekleyin.
+* Kural sonuçlarını izleyin.
+* Koşulları çok kolaylaştırmaya çalışmayın (yani: IF KŞ> 80 mg/dl VE KŞ< 180 mg/dl)
 
-  **Doubly important if action is a profile switch!**
+  **İşlem bir profil değiştirme ise iki kat önemlidir!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* Profil değiştirme yerine Geçici Hedefleri kullanmayı deneyin. Geçici Hedefler, `Autosens <../Usage/Open-APS-features.html#autosens>`__ öğesini 0'a resetlemez.
+* Profil değiştirmeyi az miktarda ve tercihen son çare olarak yapıldığından emin olun.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
+  * Profil değiştirme, `Autosens <../Usage/Open-APS-features.html#autosens>`__ en az 6 saat boyunca işe yaramaz hale getirir.
 
-* Profile switching will not reset the profile back to your base profile
+* Profil değiştirme, profili temel profilinize geri döndürmez
 
-  * You have to make another rule to set this back or do it manually!
-  * Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  * Geri döndürmek için başka bir kural yapmalı veya manuel olarak ayarlamalısın!
+  * Profil değiştirme sona ermezse veya temel profile dönüş olmazsa hipoglisemi riski artabilir.
 
-Examples
+Örnekler
 ==================================================
-These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
+Bunlar sadece otomasyon örnekleridir, tavsiye değildir. Gerçekte ne yaptığınızın veya neden ihtiyaç duyduğunuzun farkında olmadan onları uygulamayın.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location, connection to a bluetooth device...
-* Setting eating soon temp targets based on time, location...
+* Coğrafi konum, wifi, zaman vb. kullanarak günlük aktiviteleriniz (okul, spor salonu, hafta sonu, iş günü gibi) için profil değiştirme.
+* Zamana, konuma, bluetooth cihazına bağlantıya dayalı etkinlikler için geçici hedef belirleme...
+* Zamana, konuma göre yakında yemek yeme geçici hedeflerinin belirlenmesi...
 
-Low Glucose Temp Target
+Düşük Glikoz Geçici Hedefi
 --------------------------------------------------
 .. image:: ../images/Automation2.png
-  :alt: Automation2
+  :alt: Otomasyon2
 
-This is made by someone who wants to get a hypo temp target automatically when having low glucose.
+Bu, düşük glikoza sahipken otomatik olarak hipo geçici hedefi'ne geçmek isteyen biri tarafından yapılır.
 
-Lunch Time Temp Target
+Öğle Yemeği Geçici Hedefi
 --------------------------------------------------
 .. image:: ../images/Automation3.png
-  :alt: Automation3
+  :alt: Otomasyon3
   
-This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
+Bu örnek, hafta boyunca her gün aynı saatte işyerinde öğle yemeği yiyen biri tarafından yapılmıştır. Eğer kişi öğle yemeği vaktinde aynı lokasyonda belirli bir zaman aralığında kalıyorsa, otomasyon öğle yemeğini beklerken düşük geçici hedef (yakında yemek yeme) belirleyecektir. "Ve" bağlantısı nedeniyle, yalnızca seçilen zamanda ve seçilen yerdeyse gerçekleşir. Yani bu lokasyondan başka herhangi bir zamanda veya kişinin evde kaldığı bu saatte çalışmaz. 
 
-Incorrect use of automation
+Otomasyonun yanlış kullanımı
 --------------------------------------------------
-Please be aware to use automation incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+Otomasyonu yanlış kullanmadığınıza lütfen dikkat edin. Yanlış kullanım sağlığınızı tehlikeye atabilir. Yanlış kullanım örnekleri:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* Yalnızca yardım yerine algoritmayı geçersiz kılmaya çalışmak (ör. bazal, IC vb. ayarlamak yerine profili değiştirerek)
+* Yiyecekleri telafi etmek için profil ayarlama
+* Süresiz profil ayarlama
+* Tek yönlü kurallar oluşturma (ör. bir şey yap ama başka bir kuralla geri alma)
+* Uzun süreli kurallar oluşturmak
 
-Alternatives
+Alternatifler
 ==================================================
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+İleri düzey kullanıcılar için, IFTTT veya Automate adlı üçüncü taraf Android uygulamasını kullanarak görevleri otomatikleştirmenin başka olanakları da vardır. Bazı örnekleri `burada <./automationwithapp.html>`_ bulabilirsiniz.
