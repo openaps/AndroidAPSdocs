@@ -1,30 +1,30 @@
-Export & import settings
+Dışa aktarma/içe aktarma ayarları
 **************************************************
 
-When should I export settings?
+Ayarları ne zaman dışa aktarmalıyım?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+Öngörülemeyenlere hazırlıklı olun. Önemli ayarları yanlışlıkla değiştirebilir ve değişiklikleri geri almakta sorun yaşayabilirsiniz. Telefonunuz kırılabilir veya çalınabilir. Bulunduğunuz duruma kolayca geri dönmek için ayarlar düzenli olarak dışa aktarılmalıdır.
 
-Best practice is to export after change of settings or completing an objective. 
+En iyi zamanlama, ayarların değiştirilmesinden veya bir hedefin tamamlanmasından sonra dışa aktarmaktır. 
 
-Exported settings should be copied to a cloud storage or your computer, better two different locations. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+Dışa aktarılan ayarlar, telefondan bir buluta veya bilgisayarınıza kopyalanmalıdır, en iyisi iki farklı konuma da kopyalamaktır. Böylece AAPS telefonunuzun kaybolmasına veya zarar görmesine hazırsınız ve sıfırdan başlamak zorunda değilsiniz.
 
-On a Windows 10 computer it looks like this:
+Bir Windows 10 bilgisayarında şöyle görünür:
   
 .. image:: ../images/AAPS_ExImportSettingsWin.png
-  :alt: AndroidAPS Preferences phone connected to computer
+  :alt: Bilgisayara bağlı AndroidAPS telefonda Preferences klasörü
 
-Exported information
+Dışa aktarılan bilgiler
 ==================================================
-Among others the following information is part of the settings export:
+Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bir parçasıdır:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* `Otomasyon <../Usage/Automation.html>`_ olayları
+* `Konfigürasyon ayarları <../Configuration/Config-Builder.html>`_
+* `Yerel profil <../Configuration/Config-Builder.html#local-profile>`_ ayarları
+* `Görevler <../Usage/Objectives.html>`_ durum dahil. `durumları dahil <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `Tercihler <../Configuration/Preferences.html>`__ NS Client ayarları `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
-Encrypted backup format
+Şifreli yedekleme formatı
 ==================================================
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
