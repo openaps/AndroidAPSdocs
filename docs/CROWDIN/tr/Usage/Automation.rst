@@ -5,29 +5,29 @@ Otomasyon Nedir?
 ==================================================
 Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerekebilir. Bundan kaçınmak için, olayı yeterince iyi tanımlayıp otomatikleştirmeyi deneyerek, sizin için otomatik olarak yapmasına izin verebilirsiniz. 
 
-Örneğin when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
+Örneğin KŞ'niz çok düşük olduğunda, otomatik olarak yüksek bir geçici hedefe sahip olmaya karar verebilirsiniz. Veya fitness merkezinizdeyseniz, otomatik olarak geçici bir hedef alırsınız. 
 
-Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+Otomasyonu kullanmadan önce, manuel `geçici hedeflere <./temptarget.html>`_ veya profil anahtarlarından emin olmalısınız. 
 
-Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Aksiyon yerine AAPS'nin önce yalnızca bir bildirim göstermesine izin verin.** Otomasyonun doğru zamanda tetiklendiğinden eminseniz, bildirimi gerçek eylemle değiştirin.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Automation condition + action
+  :alt: Otomasyon koşulu + eylem
 
-How to use it
+Bu nasıl kullanılır
 ==================================================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir eylem seçmeniz gerekir. 
 
-Important note
+Önemli Not
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+**Döngüyü devre dışı bıraktığınızda otomasyon hala etkindir!**
 
-So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
+Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bıraktığınızdan emin olun. Bunu otomasyon kuralınızın adının solundaki kutunun işaretini kaldırarak yapabilirsiniz.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+  :alt: Otomasyon kuralını etkinleştirin ve devre dışı bırakın
 
-Where to find Automation
+Otomasyon nerede bulunur
 --------------------------------------------------
 Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
 
