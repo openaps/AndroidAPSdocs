@@ -65,7 +65,7 @@ Nightscout profil düzenleyicisindeki profildeki değişiklikleri yerel profille
 
 Sadece mavi oklu bir profili değil, tüm aktif profiller için Nightscout veritabanı kayıtlarını klonlamak gerekir. Yeni veritabanı kayıtları daha sonra güncel tarihi taşır ve "yerel profil" sekmesi aracılığıyla etkinleştirilebilir.
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Veritabanı kayıtlarını klonla](../images/Nightscout_Profile_Editor.PNG)
 
 ### Profil yardımcısı
 
