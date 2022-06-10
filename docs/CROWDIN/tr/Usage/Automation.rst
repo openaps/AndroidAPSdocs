@@ -35,42 +35,42 @@ Genel
 --------------------------------------------------
 There are some limits:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* Glikoz değeri 72 ile 270 mg/dl arasında veya 4 ile 15 mmol/l arasında olmalıdır.
+* Profil yüzdesi %70 ile %130 arasında olmalıdır.
+* 5 dk vardır. yürütmeler (ve ilk yürütme) arasındaki zaman sınırı.
 
-**Please be careful:**
+**Lütfen dikkatli olun:**
 
 * **less than -2 means: -3 and lower (-4,-10, etc)**
 * **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 
-Condition
+Şart
 --------------------------------------------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+Birkaç koşul arasından seçim yapabilirsiniz. Burada yalnızca birkaçından bahsedilmiştir, ancak çoğu kendi kendini açıklayıcı niteliktedir ve bu nedenle burada açıklanmamıştır:
 
-* connect conditions: you can have several conditions and can link them with 
+* bağlantı koşulları: birkaç koşula sahip olabilirsiniz ve bunları aşağıdakilerle bağlayabilirsiniz 
 
   * "Ve"
   * "Veya"
-  * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  * "Dışlamalı veya" (bu koşullardan yalnızca birinin geçerli olması durumunda, eylem(ler) in gerçekleşeceği anlamına gelir)
    
-* Time vs. recurring time
+* Zaman vs. yinelenen zaman
 
-  * time =  single time event
-  * recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+  * zaman = tek seferlik olay
+  * yinelenen zaman = düzenli olarak gerçekleşen bir şey (ör. haftada bir, her iş günü vb.)
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* konum: konfiguration oluşturucuda (Otomasyon), kullanmak istediğiniz konum hizmetini seçebilirsiniz:
 
-  * Use passive location: AAPS only takes locations when other apps are requesting it
-  * Use network location: Location of your Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ettiğinde konum alır
+  * Ağ konumunu kullan: Wifi'nizin konumu
+  * GPS konumunu kullanın (Dikkat! Aşırı pil tüketimine neden olabilir!)
   
-Action
+Eylem
 --------------------------------------------------
-You can choose one or more actions: 
+Bir veya daha fazla eylem seçebilirsiniz: 
 
-* start temp target 
+* geçici hedefi başlat 
 
   * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
   * works only if there is no previous temp target
