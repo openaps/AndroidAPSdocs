@@ -1,58 +1,58 @@
-Manual Installation of Google Play Service for  Sony Smartwatch 3
+Sony Smartwatch 3 için Google Play Hizmetinin Manuel Kurulumu
 #####################################################################
 
-The Sony Smartwatch 3 is one of the most popular watches to be used with AAPS. Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above. 
+Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir. Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AndroidAPS 2.7 ve üstü ile kullanırken sorunlara yol açar. 
 
-The following workaround should extend the time the Sony Smartwatch 3 can be used but keep in mind that the need to switch to a new smartwatch will come sooner or later.
+Aşağıdaki geçici çözüm, Sony Smartwatch 3'ün kullanım süresini uzatacaktır, ancak yeni bir akıllı saate geçme ihtiyacının er ya da geç geleceğini unutmayın.
 
-1. Download the latest GService for Wear OS
+1. Wear OS için en son GService'i indirin
 --------------------------------------------------------
-* Using `apkmirror website <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ you can find the latest apk for "Google Play Services (Wear OS)".
+* `apkmirror web sitesini <https://www.apkmirror.com/apk/google-inc/google-play-services-android-wear/>`_ kullanarak "Google Play Hizmetleri (Wear OS) için en son apk'yı bulabilirsiniz. ".
 
-  Architecture: armeabi-v7a, Minimum Version: Android 6.0+, Screen DPI: nodpi
+  Mimari: armeabi-v7a, Minimum Sürüm: Android 6.0+, Ekran DPI: nodpi
 
-* You must ensure 2 things:
+* 2 şeyi sağlamalısınız:
 
-  * Is it the latest version?
-  * Is it compatible with Android 6.0+ (as it's the wear android version, 7.0+ and above will not work)?
+  * En son sürüm mü?
+  * Android 6.0+ ile uyumlu mu (wear android sürümü olduğu için, 7.0+ ve üstü çalışmayacaktır)?
 
-* Sooner or later, Google will definitely drop Android 6.0. When this will happen, the latest version will not be available anymore for Android 6.0+, therefore it will be the end.
+* Er ya da geç Google, Android 6.0'ı kesinlikle bırakacaktır. Bu olduğunda, en son sürüm artık Android 6.0+ için mevcut olmayacak, bu nedenle son olacak.
 
-2. Download/Install adb debugging tools on your computer
+2. Adb hata ayıklama araçlarını bilgisayarınıza indirin/yükleyin
 --------------------------------------------------------
-* There are multiple ways to install the adb debugging tool.
-* It is recommended to use `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_: Just download zip file and unzip to a directory of your choice.
+* Adb hata ayıklama aracını kurmanın birden çok yolu vardır.
+* `SDK Platform Tools <https://developer.android.com/studio/releases/platform-tools>`_ kullanılması önerilir: Zip dosyasını indirin ve istediğiniz bir dizine açın.
 
-3. Enable ADB Debugging options on your watch
+3. Saatinizde ADB Hata Ayıklama seçeneklerini etkinleştirin
 --------------------------------------------------------
-* Enable developer mode by going to Settings --> About --> Build number
-* Click it 7 times.
-* Now go to Settings --> Developer Options --> ADB Debugging (enable)
+* Ayarlar --> Hakkında --> Yapı numarası'na giderek geliştirici modunu etkinleştirin
+* 7 kez tıklayın.
+* Şimdi Ayarlar --> Geliştirici Seçenekleri --> ADB Hata Ayıklama'ya gidin (etkinleştir)
 
-4. Connect your watch to your computer
+4. Saatinizi bilgisayarınıza bağlayın
 --------------------------------------------------------
-* Then plug your smartwatch to PC.
-* Rename latest downloaded google services APK using some short and simple name (let's say SW3fix.apk).
-* Place this APK to the directory of your adb tool (in our case: the directory of unzipped SDK Platform Tools).
-*	Open Windows terminal using command „cmd“ in Windows start menu.
-*	In terminal, go to the directory that includes your adb tool and google services APK (type command „cd [your path]“, e.g. „cd C:\Users\SWR50looper\sdktools“).
-* Then type “adb devices”.
-* After a moment, you should get a prompt asking for debugging permission on your watch: accept.
-* In the terminal, you should now see something like "14452D11F536B52 device" when typing "adb devices" again.
-* If you see "unauthorized" or else, you're not ready for the next step, go back and try again.
-* If you struggle at this step, you may need specific drivers or else for your watch. Google will be your best friend at this point.
-* Then wait, the installation can take several minutes. 
+* Akıllı saatinizi PC'ye takın.
+* En son indirilen google hizmetleri APK'sini kısa ve basit bir isim kullanarak yeniden adlandırın (örn: SW3fix.apk).
+* Bu APK'yı adb aracınızın dizinine yerleştirin (sıkıştırılmamış SDK Platform Araçları dizini).
+* Windows başlat menüsünde "cmd" komutunu kullanarak Windows komut istemini açın.
+* Terminalde, adb aracınızı ve google hizmetleri APK'nizi içeren dizine gidin ("cd [yolunuz]" komutunu yazın, ör. „cd C:\Users\SWR50looper\sdktools“).
+* Ardından “adb devices” yazın.
+* Bir süre sonra, saatinizde hata ayıklama izni isteyen bir istem almalısınız: kabul et.
+* Terminalde şimdi tekrar "adb devices" yazarken "14452D11F536B52 device" gibi bir şey görmelisiniz.
+* "unauthorized" ifadesini görürseniz veya bir sonraki adıma hazır değilseniz, geri dönün ve tekrar deneyin.
+* Bu adımda zorlanıyorsanız, saatiniz için belirli sürücülere veya başka bir şeye ihtiyacınız olabilir. Google bu noktada en iyi arkadaşınız olacak.
+* Bekleyin, kurulum birkaç dakika sürebilir. 
 
-5. Send the app to your watch
+5. Uygulamayı saatinize gönderin
 --------------------------------------------------------
-* In terminal enter this command „adb install -r -g aplicationname.apk“ (so in our case „adb install -r -g SW3fix.apk“).
+* Komut isteminde „adb install -r -g aplicationname.apk“ komutunu girin (bizim durumumuzda „adb install -r -g SW3fix.apk“).
 
   .. image:: ../images/SonySW3_Terminal1.png
-    :alt: Terminal command
+    :alt: Terminal komutu
 
-* Wait for about 4–5 minutes for installation to complete. 
+* Kurulumun tamamlanması için yaklaşık 4-5 dakika bekleyin. 
 
   .. image:: ../images/SonySW3_Terminal2.png
-    :alt: Terminal successful installation
+    :alt: Terminal başarılı kurulum
 
-* Once it's done, restart your watch and you should see the apps beginning to synchronize themself promptly.
+* Bittiğinde, saatinizi yeniden başlatın ve uygulamaların kendisini hemen senkronize etmeye başladığını görmelisiniz.
