@@ -48,31 +48,31 @@ If you receive a failure message like
 
   * Yukarıdaki ekran görüntüsünde görebileceğiniz gibi, hangi git sürümünün kurulu olduğunu söyleyen bir mesaj almalısınız. Bu durumda, [2. Adım](#step-2-check-for-uncommitted-changes)'a gidin.
 
-  * In case you get an message saying
+  * Diyen bir mesaj alırsanız
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    git kurulumunuz doğru değil.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [Git kurulumunu kontrol et](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * windows'ta ve git yeni kurulduysa, kurulumdan sonra git'i global olarak kullanılabilir hale getirmek için bilgisayarınızı yeniden başlatmanız gerekir
 
   * If Git is installed, you have restarted (if on windows), and git still couldn't found:
 
-  * Search your computer for a file "git.exe".
+  * Bilgisayarınızda "git.exe" dosyasını arayın.
 
-    Note for yourself, what directory it is in.
+    Hangi dizinde olduğunu kendiniz not edin.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * Pencerelerde Ortam değişkenlerine gidin, "PATH" değişkenini seçin ve düzenle'ye tıklayın. Git kurulumunuzu bulduğunuz dizini ekleyin.
 
-  * Save and close.
+  * Kaydedin ve çıkın.
 
-  * Restart Android Studio.
+  * Android Studio tekrar başlatın.
 
-#### Step 2: Check for uncommitted changes.
+#### Adım 2: Taahhüt edilmemiş değişiklikleri kontrol edin.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Android Studio'da: soldaki "Commit" sekmesini (1) açın. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
   * You can see either a "Default changeset" (2) or "Unversioned files" (3):
 
     * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
@@ -81,34 +81,34 @@ If you receive a failure message like
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+    * Dosyalar tekrar Git sunucusundan alınır. Commit sekmesinde başka bir değişiklik yoksa, [3. Adım](#step-3-resync-gradle-again)'a gidin.
 
   * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * Bu dosyayı bir kaydetme yerine taşımak veya kesmek ve yapıştırmak için bilgisayarınızdaki normal dosya gezgininizi kullanın.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+    * Dosyanın artık AndroidAPS dizininde saklanmadığından emin olmak için Android Studio'ya geri dönün ve Commit sekmesindeki Yenile düğmesine (4) tıklayın.
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+      Commit sekmesinde başka bir değişiklik yoksa, [3. Adım](#step-3-resync-gradle-again)'a gidin.
 
 
-#### Step 3: Resync Gradle (again)
+#### Adım 3 - Resync Gradle (tekrar)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+[Gradle Resync](#gradle-resync)'deki talimatları izleyin.
 
-### Android Gradle plugin requires Java 11 to run
+### Android Gradle eklentisinin çalışması için Java 11 gerekir
 
-  You might experience this error message:
+  Bu hata mesajıyla karşılaşabilirsiniz:
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle eklentisinin çalışması için Java 11 gerekir](../images/studioTroubleshooting/11_GradleJDK.png)
 
-  Click on "Gradle Settings" (1) to go to open the gradle settings.
+  Gradle ayarlarını açmak için "Gradle Settings" (1) üzerine tıklayın.
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  "Gradle Settings" bağlantınız yoksa, sağ kenardaki Gradle Sekmesini (1) seçerek Gradle ayarlarını manuel olarak açın, araçlar simgesini (2) ve orada 'Gradle Settings' öğesini seçin (3).
 
   ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  Gradle ayarları iletişim kutusunu açtığınızda, "Gradle JDK" da seçenekleri (1) açın ve "Gömülü JDK sürümü"nü (2) seçin.
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
