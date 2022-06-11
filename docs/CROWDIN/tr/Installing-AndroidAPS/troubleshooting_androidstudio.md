@@ -21,7 +21,7 @@ Eski keystore'unuzu veya parolasını artık bulamıyorsanız, aşağıdakileri 
 ## Gradle Sync başarısız oldu
 Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkronizasyonunun başarısız olduğunu söyleyen bir mesaj aldığınızda, Android Studio'nun altındaki "Oluştur" sekmesini (1) açın ve hangi hata mesajının (2) görüntülendiğini kontrol edin.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+  ![Gradle Başarısız](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
 * [Uncommitted changes](#uncommitted-changes)
@@ -42,7 +42,7 @@ If you receive a failure message like
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle Git Sürümü](../images/studioTroubleshooting/03_GitVersion.png)
 
     Not: Git ve version arasında bir boşluk ve iki tire vardır!
 
