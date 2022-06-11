@@ -112,25 +112,25 @@ If you receive a failure message like
 
   ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Press "OK" to save and close the settings dialog.
+  Ayarlar iletişim kutusunu kaydetmek ve kapatmak için "Tamam"a basın.
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+  *Önemli*: "Gradle JDK" ayarını görmüyorsanız, Android Studio'yu güncellememiş olabilirsiniz. Android Studio 2021.1.1 Bumblebee) veya daha yenisini kullandığınızdan emin olun.
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
+  Şimdi bir [Gradle Resync](#gradle-resync) tetiklemeniz gerekiyor
 
-### Could not resolve/No cached version
+### Çözülemedi/Önbelleğe alınmış sürüm yok
 
-  You might get this error message:
+  Bu hata mesajını alabilirsiniz:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Sağ tarafta Gradle sekmesini (1) açın.
 
-    Make sure the button shown at (2) is *NOT* selected.
+    (2)'de gösterilen düğmenin Seçili *OLMADIĞINDAN* emin olun.
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Şimdi bir [Gradle Resync](#gradle-resync) tetiklemeniz gerekiyor
 
 ### Unable to start daemon process
 
