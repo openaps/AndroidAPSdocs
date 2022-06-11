@@ -1,25 +1,25 @@
 # Android Studio'da Sorun Giderme
 
-## Lost keystore
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+## Kayıp keystore
+AndroidAPS'yi güncellerken aynı keystore kullanırsanız, akıllı telefonunuzdaki önceki sürümü kaldırmanız gerekmez. Bu nedenle keystore'u bir kaydetme yerinde saklamanız önerilir.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+Öncekinden farklı bir keystore'la imzalanmış apk'yı yüklemeye çalışırsanız, yüklemenin başarısız olduğuna dair bir hata mesajı alırsınız!
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+Eski keystore'unuzu veya parolasını artık bulamıyorsanız, aşağıdakileri yapın:
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+1. Telefonunuzdaki [Ayarları dışa aktarın](../Usage/ExportImportSettings#export-settings).
+2. Ayarlar dosyasını telefonunuzdan harici bir konuma kopyalayın veya yükleyin (örn. bilgisayarınız, bulut depolama hizmetiniz...).
+4. [Güncelleme kılavuzunda](../Installing-AndroidAPS/Update-to-new-version) açıklandığı gibi yeni sürümün imzalı apk'sını oluşturun ve telefonunuza aktarın.
+5. Telefonunuzdaki önceki AAPS sürümünü kaldırın.
+6. Telefonunuza yeni AAPS sürümünü yükleyin.
+7. Hedeflerinizi ve yapılandırmanızı geri yüklemek için [ayarları içe aktarın](../Usage/ExportImportSettings#import-settings).
+8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
 
-   If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+   Bunları telefonunuzda bulamazsanız, harici depolama biriminden telefonunuza kopyalayın.
+8. Döngü yapmaya devam edin.
 
-## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+## Gradle Sync başarısız oldu
+Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkronizasyonunun başarısız olduğunu söyleyen bir mesaj aldığınızda, Android Studio'nun altındaki "Oluştur" sekmesini (1) açın ve hangi hata mesajının (2) görüntülendiğini kontrol edin.
 
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
