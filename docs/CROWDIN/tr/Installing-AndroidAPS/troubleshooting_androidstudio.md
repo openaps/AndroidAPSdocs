@@ -28,7 +28,7 @@ These are the usual gradle sync failures:
 * [No cached version of ... available](#could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Önemli*: Sorununuzla ilgili talimatları izledikten sonra, [gradle sync](#gradle-resync)'i yeniden tetiklemeniz gerekir.
 
 ### Uncommitted changes
 
