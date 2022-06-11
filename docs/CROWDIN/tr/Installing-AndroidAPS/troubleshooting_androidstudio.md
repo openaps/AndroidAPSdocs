@@ -23,7 +23,7 @@ Gradle Synchronize çeşitli nedenlerle başarısız olabilir. Gradle senkroniza
 
   ![Gradle Başarısız](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-These are the usual gradle sync failures:
+Bunlar olağan gradle senkronizasyon hatalarıdır:
 * [Uncommitted changes](#uncommitted-changes)
 * [No cached version of ... available](#could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
@@ -32,7 +32,7 @@ These are the usual gradle sync failures:
 
 ### Uncommitted changes
 
-If you receive a failure message like
+Şayet böyle bir hata mesajı alırsanız
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
