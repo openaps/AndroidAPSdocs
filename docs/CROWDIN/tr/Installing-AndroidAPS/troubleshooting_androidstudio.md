@@ -36,17 +36,17 @@ If you receive a failure message like
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Adım 1 - Git kurulumunu kontrol edin
+  * Android Studio'nun altındaki terminal sekmesini (1) açın ve aşağıdaki metni kopyalayın ve terminale yapıştırın veya yazın.
     ```
     git --version
     ```
 
     ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    Not: Git ve version arasında bir boşluk ve iki tire vardır!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Yukarıdaki ekran görüntüsünde görebileceğiniz gibi, hangi git sürümünün kurulu olduğunu söyleyen bir mesaj almalısınız. Bu durumda, [2. Adım](#step-2-check-for-uncommitted-changes)'a gidin.
 
   * In case you get an message saying
     ```
