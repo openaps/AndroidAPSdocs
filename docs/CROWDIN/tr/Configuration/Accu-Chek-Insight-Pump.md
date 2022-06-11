@@ -23,7 +23,7 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
 * AndroidAPS uygulamasının [Konfigürasyon ayarları](../Configuration/Config-Builder) bölümünün, pompa kısmında Accu-Chek Insight'ı seçin
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Insight ayarlarını açmak için dişli çarka dokunun.
 
@@ -130,7 +130,7 @@ Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevle
 
 ## Spesifik Insight hataları
 
-### Yayma Bolus
+### Extended bolus
 
 Aynı anda birden fazla yayma bolus hatalara neden olabileceğinden, bir seferde yalnızca bir yayma bolus kullanın.
 

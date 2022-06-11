@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Загрузите Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Постройте приложение ](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (сгенерируйте подписанный apk)
 7. [Перенесите файл apk на телефон](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Идентифицируйте ресивер при использовании xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Идентифицируйте ресивер при использовании xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Пошаговое руководство
 
@@ -259,7 +259,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) for known problems!
+    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Build finished](../images/studioSetup/51_BuildFinished.png)
 
-* В случае, если сборка не удалась, обратитесь к разделу [поиск и устранение неисправностей ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Click on the notification to expand it.
 
@@ -341,10 +341,10 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Перенос приложения на смартфон
 
-Самый простой способ перенести приложение на ваш телефон - [через кабель USB или Google Drive](https://support.google.com/android/answer/9064445?hl=en). Обратите внимание, что передача по почте может вызвать трудности и не является предпочтительным способом.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-На вашем телефоне необходимо разрешить установку из неизвестных источников. Инструкции, как это сделать, можно найти в интернете (например [здесь](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) или [здесь](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Устранение неполадок
 
-См. отдельную страницу [ устранение неполадок Android Studio ](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

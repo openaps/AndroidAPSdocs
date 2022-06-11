@@ -3,7 +3,7 @@
 Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**. AAPS na hodinkách umožňuje:
 
 * **zobrazovat různé informace**: pomocí [vlastních ciferníků](#aaps-watchfaces) nebo standardních ciferníků s možností používat různé [komplikace](#complications)
-* **ovládat AAPS na telefonu z hodinek**: vydání bolusu, nastavení dočasného cíle atd. 
+* **ovládat AAPS na telefonu z hodinek**: vydání bolusu, nastavení dočasného cíle atd.
 
 ### Dříve než si koupíte hodinky…
 
@@ -14,9 +14,9 @@ Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**
 
 ### Sestavení verze AAPS pro Wear OS
 
-Chcete-li sestavit verzi AAPS pro Wear OS, je nutné při [sestavování APK](../Installing-AndroidAPS/Building-APK.md) vybrat build variant s názvem "fullRelease" (nebo "pumpRelease", pokud chcete pouze dálkový ovladač k pumpě bez funkcí smyčky).
+The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
 
-Od března 2021 již není možné AAPS pro hodinky stáhnout z Google Play Store. Můžete to obejít pomocí [Wear instalátoru](https://youtu.be/8HsfWPTFGQI), který je potřeba nainstalovat do telefonu i hodinek. Jakmile vyberete AndroidAPS jako aplikaci k nahrání na hodinky, budete moct použít ciferník, komplikace a ovládání AAPS.
+Od března 2021 již není možné AAPS pro hodinky stáhnout z Google Play Store. Můžete to obejít pomocí [Wear instalátoru](https://youtu.be/8HsfWPTFGQI), který je potřeba nainstalovat do telefonu i hodinek. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Nastavení na telefonu
 
@@ -209,19 +209,41 @@ Navíc existují tři druhy komplikací </code>VELKÝ OBRÁZEK</0> **Tmavá tape
     * *None*: Zakáže akci klepnutím na komplikace AAPS
 * **Unicode v komplikacích** (výchozí hodnota `On`): Pokud je`On`, komplikace bude používat Unicode znaky pro symboly jako `Δ` Delta, `⁞` vertikální oddělovač teček nebo `⎍` symbol hodnoty bazálu. Vykreslování závisí na typu písma, které může být u každého ciferníku jiné. Tato volba umožňuje symboly Unicode `Vypnout` v případě potřeby – pokud písmo používané vlastním ciferníkem tyto symboly nepodporuje – aby se zabránilo chybám v zobrazení grafiky.
 
-## Tipy pro lepší chod a delší výdrž baterie
+## Always on
 
-Wear OS hodinky jsou zařízení s velmi omezenou kapacitou. Velikost hodinek omezuje kapacitu vestavěné baterie. Navzdory nedávnému vylepšení na straně hardwaru i softwaru hodinky Wear OS stále vyžadují denní nabíjení.
+Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
 
-Pokud je výdrž baterie hodinek kratší než jeden den (od rána do večera), existuje pár tipů, jak se s tím vypořádat.
+Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
 
-Baterii nejvíce vybíjejí:
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+
+### Night-time mode
+
+While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+
+Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
+
+![Watchface Nightstand](../images/Watchface_nightstand.jpg)
+
+![Simplified UI](../images/Watchface_simplified_ui.png)
+
+### Performance and battery life tips
+
+Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+
+If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+
+Main battery-demanding areas are:
 
 * Aktivní displej se zapnutým podsvícením (LED), nebo max. intenzita (OLED)
 * Vykreslování na obrazovce
 * Bezdrátová komunikace přes Bluetooth
 
-Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, aby se zobrazovaly nejnovější údaje, většinu optimalizací lze provést v oblasti * doba zobrazení *:
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
 * Originální ciferník je obvykle lépe optimalizován než vlastní, stažený z obchodu.
 * Je lepší použít ciferníky, které omezují množství přenesených dat v režimu neaktivní/ztlumený režim.
@@ -242,14 +264,14 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 
 ### Sony Smartwatch 3
 
-* Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS. 
+* Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS.
 * Společnost Google od podzimu 2020 již bohužel nepodporuje zařízení s OS 1.5. To vede k problémům při používání hodinek Sony SW3 s AndroidAPS 2.7 a vyšší.
 * Možný postup, jak to vyřešit, najdete na stránce [odstraňování potíží](../Usage/SonySW3.rst).
 
 ## Zobrazení dat z Nightscoutu
 
-Pokud používáte jiný systém smyčky a chtěli byste si *prohlédnout* detailní informace o své smyčce na hodinkách s Wear OS nebo byste chtěli sledovat smyčku svého dítěte, pak vám bude stačit stáhnout pouze aplikaci NSClient. V tom případě se řiďte [pokyny, jak sestavit APK](../Installing-AndroidAPS/Building-APK.md) a vyberte variantu sestavení „NSClientRelease“. Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Lze si vybrat z několika ciferníků (watchfaces), které zobrazují průměrnou hodnotu delta, IOB, aktuálně aktivní bazál a bazální profil + graf hodnot glykémie z CGM.
 
 # Pebble
 
-Uživatelé hodinek Pebble mohou také použít [Watchface Urchin](https://github.com/mddub/urchin-cgm), který umožňuje *zobrazovat* informace o smyčce (pokud jsou nahrávané do Nightscoutu), ale nebudou přes hodinky schopní ovládat AndroidAPS. Můžete si zvolit údaje, které se mají zobrazovat, např. IOB, aktuální dočasný bazál a predikce. Jestliže používáte otevřenou smyčku, můžete využít [IFTTT](https://ifttt.com/), abyste vytvořili applet, který říká: „Pokud je od AndroidAPS přijatá notifikace, tak buď odešli SMS, nebo push notifikaci“.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.

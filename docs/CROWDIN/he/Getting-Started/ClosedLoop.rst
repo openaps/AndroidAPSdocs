@@ -1,56 +1,78 @@
-What is a Closed Loop System?
+מהי מערכת לולאה סגורה (לופ סגור)?
 **************************************************
 
 .. image:: ../images/autopilot.png
   :alt: AAPS is like an autopilot
 
-An artificial pancreas closed loop system combines different components in order to make diabetes management easier for you. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. But what does that mean?
+מערכת לבלב מלאכותי בלולאה סגורה משלבת רכיבים שונים על מנת להקל את ניהול הסוכרת.
+ 
+בספרה הנהדר 'אספקת אינסולין אוטומטי <https://www.artificialpancreasbook.com/>' _ מאת דנה מ' לואיס, אחת ממייסדות תנועת הלולאה הסגורה בקוד הפתוח, קוראת לזה `"טייס אוטומטי לסוכרת שלך" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. מה זה אומר?
 
-**Autopilot in an aircraft**
-
-The autopilot does not do the complete job and does not give the possibility to the pilot to sleep throughout the entire flight. It facilitates the work of the pilots. It relieves them of the burden of permanently monitoring the aircraft and the flight attitude. This allows the pilot to concentrate on monitoring the airspace and controlling the autopilot's functions.
-
-The autopilot receives signals from various sensors, a computer evaluates them together with the pilot's specifications and then makes the necessary adjustments. The pilot no longer has to worry about the constant adjustments.
-
-**Closed Loop System**
-
-The same applies to an artificial pancreas closed loop system. It does not do the whole job, you still have to take care of your diabetes. A closed loop system combines the sensor data from a CGM/FGM with your diabetes management specifications such as basal rate, insulin sensitivity factor and carb ratio. From this it calculates treatment suggestions and implements these permanent small adjustments in order to keep your diabetes within the target range and to relieve you. This leaves more time for your life "next to" diabetes.
-
-Just as you don't want to get on a plane where only the autopilot flies without human supervision, a closed loop system helps you with your diabetes management, but always needs your support! **Even with a closed loop you can't just forget your diabetes!**
-
-Just as the autopilot depends on the sensor values as well as the pilot's specifications, a closed loop system needs appropriate input such as basal rates, ISF and carb ratio to support you successfully.
+** טייס אוטומטי במטוס **
 
 
-Open Source Artificial Pancreas Closed Loop Systems
+הטייס האוטומטי אינו עושה את העבודה כולה ואינו נותן אפשרות לטייס לישון לאורך כל הטיסה.
+ אך זה מקל על עבודת הטייסים.
+ זה משחרר אותם מהנטל של ניטור קבוע של מצב המטוס.
+ כך מתאפשר לטייס להתרכז בניטור המרחב האווירי ובבקרה על תפקודי הטייס האוטומטי.
+
+הטייס האוטומטי מקבל אותות מחיישנים שונים, מחשב אותם יחד עם דרישות הטייס ולאחר מכן מבצע את ההתאמות הנדרשות.
+ הטייס כבר לא צריך לדאוג מכיוונונים תכופים.
+
+** מערכת לולאה סגורה **
+
+
+אותו דבר לגבי מערכת לולאה סגורה של לבלב מלאכותי.
+ המערכת לא עושה את כל העבודה, עליכם עדיין יש חובה לדאוג לסוכרת.
+ מערכת לולאה סגורה משלבת את נתוני חיישני הסוכר עם מפרטי ניהול הסוכרת שלכם כגון המינון הבזאלי, יחס התיקון ויחס הפחמימות.
+ מכאן הוא מחשב הצעות טיפול ומיישם התאמות קטנות וקבועות אלה על מנת לשמור על איזון הסוכרת בטווח המטרה ולהקל עליך את הטיפול.
+ זה משאיר יותר זמן לחיים "ליד" הסוכרת.
+
+
+בדיוק כפי שאינכם רוצים לעלות על מטוס שבו תמיד הטייס האוטומטי טס ללא פיקוח אנושי, מערכת לולאה סגורה עוזרת בניהול הסוכרת, אך תמיד זקוקה לתמיכתכם!
+ ** אפילו עם לולאה סגורה אי אפשר פשוט לשכוח את הסוכרת שלכם! **
+
+
+בדיוק כפי שהטייס האוטומטי תלוי בערכי החיישן וגם בדרישות הטייס, מערכת לולאה סגורה זקוקה לקלט מתאים כגון ערכי מינון בזאלי, יחס תיקון ויחס פחמימות כדי לאזן אתכם בהצלחה.
+
+
+
+מערכות לבלב מלאכותיות בלולאה סגורה בקוד פתוח
+
 ===================================================
-At present there are three major open source closed loop systems available:
+כיום קיימות שלוש מערכות קוד פתוח עיקריות:
+
 
 AndroidAPS (AAPS)
 --------------------------------------------------
-AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.html>`_. It uses an Android Smartphone for calculation and control of your insulin pump. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
+AndroidAPS המתוארת בפירוט `בתיעוד זה <./WhatisAndroidAPS.html>`_.
+ המערכת משתמשת בסמארטפון אנדרואיד לחישוב ולשליטה על משאבת האינסולין.
+ היא פותחה בשיתוף פעולה עם OpenAPS (כלומר
+ הם חולקים אלגוריתמים).
 
-Compatible `pumps <../Hardware/pumps.html>`_ are:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+`משאבות תואמות pumps <../Hardware/pumps.html>`_:
+
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
-* some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
+* משאבות `Medtronic ישנות מסויימות <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
 --------------------------------------------------
-`OpenAPS <https://openaps.readthedocs.io>`_ was the first Open Source Closed Loop System. It uses a small computer such as Raspberry Pi or Intel Edison.
+`OpenAPS <https://openaps.readthedocs.io>`_ היתה מערכת הלולאה הסגורה בקוד פתוח הראשונה. היא משתמשת במחשבים זעירים כמו Raspberry Pi ו-Intel Edison.
 
-Compatible pumps are:
+משאבות תואמות:
 
-* some old Medtronic pumps
+* משאבות Medtronic ישנות מסויימות
 
-Loop for iOS
+Loop ל-iOS
 --------------------------------------------------
-`Loop for iOS <https://loopkit.github.io/loopdocs/>`_ is the Open Source Closed Loop System to be used with Apple iPhones.
+`Loop ל-iOS <https://loopkit.github.io/loopdocs/>`_ הינה מערכת הלולאה הסגורה בקוד פתוח לשימוש במכשירי Apple iPhone.
 
-Compatible pumps are:
+משאבות תואמות:
 
-* Omnipod Eros
-* some old Medtronic pumps
+* אומניפוד Eros
+* משאבות Medtronic ישנות מסויימות

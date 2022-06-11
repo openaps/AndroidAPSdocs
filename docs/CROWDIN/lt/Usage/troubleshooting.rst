@@ -16,8 +16,14 @@ Parametrai
 --------------------------------------------------
 * `Profilis <../Usage/Profiles.html#troubleshooting-profile-errors>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Basal not aligned to hours
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Nightscout klientas <../Usage/Troubleshooting-NSClient.html>`_
 
@@ -42,7 +48,7 @@ Pompos
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#dana-rs-specific-errors>`_
 * `Accu-Chek Combo bendrieji <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-does-pairing-with-the-pump-not-work-with-the-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specific-errors>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
@@ -53,4 +59,5 @@ Telefonai
 
 Išmanieji laikrodžiai
 ==================================================
+* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

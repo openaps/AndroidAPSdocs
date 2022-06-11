@@ -10,7 +10,7 @@ Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovac�
 
 ### Nastavení AndroidAPS
 
-V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). Tím AAPS nebude provádět změny zadané v Nightscoutu, jako jsou dočasné cíle nebo budoucí sacharidy. Pokud používáte [NS Profil](../Configuration/Config-Builder#ns-profile), budou profily synchronizovány mezi AAPS a Nightscoutem i přes nastavení „pouze nahrávání“.
+V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). Tím AAPS nebude provádět změny zadané v Nightscoutu, jako jsou dočasné cíle nebo budoucí sacharidy.
 
 * Klepněte na menu (3 tečky v pravém horním rohu) na hlavní obrazovce AAPS.
 * Zvolte „Nastavení“.

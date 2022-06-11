@@ -73,6 +73,48 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
+#### Avertissement Glycémie
+
+À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
+
+*Remarque* : Jusqu'à 30 heures sont prises en compte pour les calculs AAPS. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
+
+Pour le supprimer immédiatement, vous devez supprimer manuellement quelques entrées dans l'onglet Dexcom/xDrip+.
+
+Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
+
+* [sauvegardez vos paramètres](../Usage/ExportImportSettings.rst),
+* réinitialiser votre base de données dans le menu de maintenance et
+* [importez à nouveau vos paramètres](../Usage/ExportImportSettings.rst)
+
+##### Signe d'alerte rouge : données Gly dupliquées
+
+Le signe d'alerte rouge vous demande d'être actif immédiatement : vous recevez des données de glycémie dupliquées, qui empèche la boucle de faire son travail correctement. Par conséquent, votre boucle sera désactivée jusqu'à ce que ce soit résolu.
+
+![Avertissement de glycémie rouge](../images/bg_warn_red.png)
+
+Vous devez savoir pourquoi vous avez des Gly dupliquées :
+
+* Est-ce que le passerelle Dexcom Bridge est activé dans votre site NS ? Désactivez le pont de connexion en allant sur heroku (ou tout autre fournisseur d'hébergement), éditez la variable "activer" et retirez la partie "bridge" à cet endroit. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Est-ce que plusieurs sources téléchargent votre Gly vers NS ? Si vous utilisez l'application BYODA, activez le téléchargement dans AAPS mais ne l'activez pas dans xDrip+, si vous l'utilisez.
+* Avez-vous des abonnés qui pourraient recevoir votre glycémie mais qui la téléchargeraient également sur votre site NS ?
+* Dernier recours : Dans AAPS, allez dans les paramètres NSClient, sélectionnez les paramètres de synchronisation et désactivez l'option "Accepter les données MGC de NS".
+
+##### Signe d'alerte jaune
+
+* Le signal d'alerte jaune indique que votre Gly est arrivée dans des intervalles de temps irréguliers ou qu'il manque des Gly.
+   
+   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
+
+* Habituellement, vous n'avez rien à faire. La boucle fermée va continuer à fonctionner !
+
+* Comme un changement de capteur interrompt le flux constant de données Gly, un signe d'avertissement jaune après le changement de capteur est normal et il n'y a rien à craindre.
+* Note spéciale pour les utilisateurs du freestyle libre :
+   
+   * Chaque capteur FSL glisse d'une ou deux minutes toutes les quelques heures, ce qui signifie que vous n’obtenez jamais un flux parfaitement régulier de glycémie.
+   * En outre, des sauts de lectures interrompent le flux continu.
+   * Par conséquent, le signe d'avertissement jaune sera 'toujours activé' pour les utilisateurs du FSL.
+
 ### Section D - IA, GA, Basal et AS
 
 ![Section D](../images/Home2020_TBR.png)
@@ -85,7 +127,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
-* Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de basal temporaires (plat à 100%) 
+* Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de base temporaires (plat à 100%) 
    * Appuyez sur l'icône pour voir le débit de basal du profil et les détails de n'importe quel basal temporaire (y compris la durée restante)
 * Flèches haut & bas : indique le statut [autosens](../Usage/Open-APS-features#autosens) (activé ou désactivé) et la valeur est affichée sous l'icône
 
@@ -106,7 +148,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * Âge de la canule
    * Âge de l'insuline (jours d'utilisation du réservoir)
    * Niveau du réservoir (unités)
-   * Âge du capteur
+   * Age du capteur
    * Âge et niveau de la pile (%)
 * Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
@@ -118,7 +160,7 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 * Le graphique montre votre glycémie (Gly) telle qu'elle est lue par votre capteur de glycémie (MGC). 
 * Les notes saisies dans l'onglet de l'action telles que les calibrations capillaires, les entrées de glucides et les changements de profil sont affichés ici. 
-* Une pression longue sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
+* Un appui long sur le graphique permet de changer l'échelle de temps. Vous pouvez choisir 6, 12, 18 ou 24 heures.
 * La zone verte reflète votre fourchette cible. Elle peut être configurée dans les [préférences](../Configuration/Preferences#fourchette-de-visualisation).
 * Les triangles bleus montrent les [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - s'ils sont activés dans les [préférences](../Configuration/Preferences#parametres-openaps-smb).
 * Information optionnelle :
@@ -184,7 +226,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Affiche la quantité d'insuline que vous avez à chaque instant (= insuline active dans votre corps). Il inclut l'insuline des bolus et des débits de basal temporaires, (**mais exclut les débits de basal intégrés dans votre profil**).
 * S'il n'y avait pas de [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), ni de bolus et aucun DBT pendant une durée de DIA, l'Insuline Active serait à zéro.
 * L'IA peut être négative si vous n'avez pas de bolus restants et et que vous avez eu une zéro/faible basal temp pendant longtemps.
-* La décomposition de l'insuline dépend de votre [DAI et des paramètrages de l'insuline](../Configuration/Config-Builder#profil-local-recommande). 
+* La décomposition de l'insuline dépend de votre [DAI et des paramètrages de l'insuline](../Configuration/Config-Builder#profil-local). 
 
 #### Glucides actifs
 
@@ -219,7 +261,10 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
 
-* Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "toujours affichés". 
+* Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "quasiment toujours affichés".
+   
+   * Si la connexion à la pompe est perdue, le bouton d'insuline ne sera pas visible.
+
 * Les autres boutons doivent être configurés dans les [préférences](../Configuration/Preferences#boutons).
 
 #### Insuline
@@ -256,7 +301,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Le bouton Retour permet de revenir à AAPS.
 * Doit être activé dans les [préférences](../Configuration/Preferences#boutons).
 
-#### Assistant rapide
+#### Assistant Rapide
 
 * Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
 * Les détails sont configurés dans les [préférences](../Configuration/Preferences#assistant-rapide).
@@ -269,10 +314,10 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section I
 
-* Le champ "Gly" est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC, il sera vide. 
-* Dans le champ "Glucides", vous indiquez votre estimation de la quantité de glucides pour laquelle vous voulez faire le bolus. 
+* Le champ "Gly" est normalement déjà renseigné avec la dernière lecture de votre MGC. Si vous n'avez pas de MGC en cours, il sera vide. 
+* Dans le champ Glucides, vous ajoutez votre estimation de la quantité de glucides -ou équivalent- que vous souhaitez pour le bolus. 
 * Le champ "Corr" vous permet de modifier le dosage final pour une raison quelconque.
-* Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre un nombre négatif dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+* Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre une valeur négative dans ce champ si vous faites un bolus pour des glucides déjà consommés.
 
 #### Rappel repas
 
@@ -282,7 +327,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 ### Section J
 
-* SUPER BOLUS : permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences#superbolus) est activé" dans les [préférences de l'aperçu](../Configuration/Preferences#apercu).
+* La case Superbolus permet d'ajouter l'insuline basale des 2 prochaines heures au bolus immédiat, et un débit basal temporaire (DBT) à 0 est défini pour les 2 prochaines heures afin de ne pas avoir d'insuline supplémentaire. L'option n'est disponible que lorsque "[Activer les superbolus dans l'Assistant](../Configuration/Preferences#superbolus) est activé" dans les [préférences de l'aperçu](../Configuration/Preferences#apercu).
 * L'idée est de fournir l'insuline plus tôt et, espérons-le, de réduire les pointes.
 * Pour plus de détails, voir [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -303,7 +348,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Pour des raisons de sécurité, les IA ne peuvent pas être décochés lorsque la case GA est cochée car vous risqueriez d'avoir trop d'insuline, AAPS ne tient pas compte de ce qui a déjà été donné.
 * Si vous cochez COB et IOB, les glucides non absorbés qui ne sont pas couverts par de l'insuline + toute l'insuline qui a été délivrée en TBR (basal temporaire) ou SMB seront pris en compte.
 * Si vous cochez l’IA sans GA, AAPS prendra en compte l’insuline déjà délivrée, mais pas les glucides absorbés. Cela conduit à un avis de « manque de glucides ».
-* Si vous faites un bolus pour de la **nourriture supplémentaire** rapidement après un bolus de repas (par exemple pour un dessert supplémentaire) il peut être utile de **décocher toutes les cases**. De cette façon, les nouveaux glucides seront juste additionnés car le repas principal ne sera pas nécessairement absorbé et l'IOB ne correspondra pas avec le COB aussi prêt d'un bolus de repas.
+* Si vous faites un bolus pour de la **nourriture supplémentaire** rapidement après un bolus de repas (par exemple pour un dessert supplémentaire) il peut être utile de **décocher toutes les cases**. De cette façon, les nouveaux glucides seront juste additionnés car le repas principal ne sera pas nécessairement absorbé et l'IA ne correspondra pas avec le GA aussi prêt d'un bolus de repas.
 
 #### Détection incorrecte des GA
 
@@ -311,7 +356,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
-* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-de-ga-errones).
+* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
 
 ## Onglet Actions
 
@@ -334,7 +379,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    
    * âge du capteur & niveau (pourcentage de la batterie)
    * âge & niveau d'insuline (unités)
-   * âge de la canule
+   * âge canule
    * âge de la batterie de la pompe & niveau (pourcentage)
 
 * Les libellés "âge" et "niveaux" ne seront pas affichés si le thème [Basse résolution](../Configuration/Preferences#theme) est utilisé.
@@ -342,7 +387,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 #### Niveau du capteur (batterie)
 
 * Nécessite xDrip+ nightly build du 10 décembre 2020 ou plus récent.
-* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
+* Fonctionne pour les MGC qui ont des émetteurs supplémentaires tels que MiaoMiao 2. (Techniquement le capteur doit envoyer les informations de niveau de pile à xDrip+).
 * Les limites peuvent être définies dans [les préférences](../Configuration/Preferences#voyants-d-etat).
 * Si le niveau du capteur est le même que celui de la batterie du téléphone, la version xDrip+ est probablement trop ancienne et nécessite une mise à jour.
    
@@ -391,7 +436,7 @@ Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.co
 ![Statut de la pompe](../images/Screenshot_PumpStatus.png)
 
 * Contient différentes informations sur l'état de la pompe. Les informations affichées dépendent du modèle de votre pompe.
-* Voir la page [Pompes](../Hardware/pumps.rst) pour plus de détails.
+* Voir la page [Pompes](../Hardware/pumps.md) pour plus de détails.
 
 ## Careportal
 
@@ -440,18 +485,18 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
    * Débit de Basal
    * Cible : Niveau de glycémie que vous voulez que AAPS vise
 
-* Vous pouvez soit utiliser un [profil local](../Configuration/Config-Builder#profil-local-recommande) qui peut être édité sur votre smartphone ou un [profil Nightscout](../Configuration/Config-Builder#profil-ns) qui doit être modifié sur votre page NS et ensuite transféré sur votre téléphone. Pour plus de détails, voir les sections correspondantes sur la page du [Générateur de configuration](../Configuration/Config-Builder.md).
+* Depuis la version 3.0, seulement [le profil local](../Configuration/Config-Builder#profil-local) est possible. Le profil local peut être modifié sur votre smartphone et synchronisé sur votre site Nightscout.
 
 ## Traitement
 
 Historique des traitements suivants :
 
 * Bolus (& glucides) -> option permettant de [supprimer des entrées](../Getting-Started/Screenshots#correction-de-glucides) pour corriger l'historique
-* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus)
+* [Bolus étendu](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Basal temporaire
-* [Cible temp.](../Usage/temptarget.md)
+* [Cible Temp](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
+* [Careportal](../Usage/CPbefore26.html#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
 ## Source Glycémie - xDrip+, BYODA...
 

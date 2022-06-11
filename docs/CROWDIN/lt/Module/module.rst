@@ -1,4 +1,4 @@
-Komponentų Apžvalga 
+Component Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -48,12 +48,15 @@ Insulino pompa
 --------------------------------------------------
 AndroidAPS **šiuo metu** veikia su 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (papildomai reikia: Ruffy programėlės, LineageOS ar Android 8.1 savo telefone)
-- `Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>`_ 
-- `Dana R pompa <../Configuration/DanaR-Insulin-Pump.md>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 ** Kitos pompos**, kurios ateityje gali veikti su AndroidAPS, yra išvardytos puslapyje „Ateityje galimos naudoti pompos" <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -63,11 +66,11 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Kuri pompa labiausiai tinka uždaro ciklo sistemai su AndroidAPS?**
 
@@ -84,9 +87,9 @@ Visos pompos, palaikančio AndroidAPS, yra atsparios vandeniui (bent jau naujos)
 
 Glikemijos šaltinis
 --------------------------------------------------
-Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`__. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
+Tai tik trumpa su AndroidAPS suderinamų NGJ monitoringo sistemų apžvalga. For further details, look `here <../Configuration/BG-Source.html>`_. Tiesiog trumpa pastaba: jei galite pateikti gliukozės duomenis xDrip+ programoje ar Nightscout svetainėje, galite pasirinkti xDrip+ (arba Nightscout su interneto ryšiu) kaip AAPS KG šaltinį.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Veikia su xDrip+ arba modifikuota Dexcom programa
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Šie sensoriai yra gana seni, bet jūs galite rasti instrukcijas apie tai, kaip naudoti juos su xDrip+ programa
 * `Libre 2 <../Hardware/Libre2.html>`_: Veikia su xDrip+ (nereikia siųstuvo), tačiau taip pat turite sukurti savo modifikuotą programą Libre 2.
@@ -122,17 +125,6 @@ Praneškite apie bet kokias lentelės problemas el. paštu `hardware@androidaps.
 xDrip+
 --------------------------------------------------
 Net jei jums nereikia xDrip+ programos kaip KG duomenų šaltinio, vis tiek galite ja naudotis aliarmams arba patogų glikemijos duomenų rodymą. xDrip+ galite nustatyti norimus įspėjimo signalų, apibrėžti laiką, kada jie turėtų būti aktyvūs, ar jie gali nepaisyti išmaniojo telefono nutildymo ir pan. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Atminkite, kad xDrip+ tobulinimas yra labai aktyvus ir dokumentacija kartais negali jo sekti, todėl ne visada gali būti atnaujinta.
-
-Pavyzdinis nustatymas
-==================================================
-Žingsnis po žingsnio instrukcijas rasite Pavyzdiniame nustatyme. Pavyzdinio nustatymo rekomendacijos yra gana senos, tačiau vis dar aktualios.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Pavyzdinis Nustatymas <../Getting-Started/Sample-Setup.rst>
- 
   
 Ką daryti laukiant modulių
 ==================================================

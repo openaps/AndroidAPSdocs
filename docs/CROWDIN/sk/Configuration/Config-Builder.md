@@ -2,7 +2,7 @@
 
 Depending on your settings you can open Config Builder through a tab at the top of the screen or through hamburger menu.
 
-![Open config builder](../images/ConfBuild_Open.png)
+![Open config builder](../images/ConfBuild_Open_AAPS30.png)
 
 Config Builder (Conf) is the tab where you turn the modular features on and off. The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS. In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
@@ -10,19 +10,22 @@ Where there are additional settings available within the module, you can click o
 
 **First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
 
-![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder.png)
+![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 ## Tab or hamburger menu
 
 With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH.png)
+![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 ## Profile
 
-Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* As of AAPS 3.0, only the local profile is available.
 
-### Local profile (recommended)
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+
+### Local profile
 
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
@@ -42,31 +45,27 @@ If you make any changes to your profile, make sure, you are editing the correct 
 
 You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
-1. Go to treatments tab.
-2. Select ProfileSwitch.
-3. Press "Clone".
-4. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Click 3-dots-menu in upper right corner.
+2. Select 'Treatments'.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and press "Clone".
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clone profile switch](../images/LocalProfile_ClonePS.png)
-
-If you want to switch from Nightscout profile to local profile just do a profile switch on your NS profile and clone the profile switch as described above.
+![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Upload local profiles to Nightscout
 
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS2.png)
+![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-Advantage:
+#### Change profile in Nighscout profile editor
 
-* no internet connection necessary to change profile settings
-* profile changes can be made directly on the phone
-* new profile can be created from profile switch
-* local profiles can be uploaded to Nightscout
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-Disadvantage:
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
-* none
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Profile helper
 
@@ -77,25 +76,9 @@ Profile helper offers two functions:
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
-### NS Profile
-
-NS Profile uses the profiles you have saved on your Nightscout site (https://[yournightscoutsiteaddress]/profile). You can use the [Profile Switch](../Usage/Profiles.md) to change which of those profiles is active, this writes the profile to the pump in case of AndroidAPS failure. This allows you to easily create multiple profiles in Nightscout (i.e.. work, home, sports, holidays, etc.). Shortly after clicking on "Save" they will be transferred to AAPS if your smartphone is online. Even without an Internet connection or without a connection to Nightscout, the Nightscout profiles are available in AAPS once they have been synchronized.
-
-Do a [profile switch](../Getting-Started/Screenshots.md#current-profile) to activate a profile from Nightscout. AAPS will write the selected profile into the pump after the profile change, so that it is available without AAPS in an emergency and continues to run.
-
-Advantage:
-
-* multiple profiles
-* easy to edit via PC or tablet
-
-Disadvantage:
-
-* no local changes to profile settings
-* profile cannot be changed directly on the phone
-
 ## Insulin
 
-![Insulin type](../images/ConfBuild_Insulin.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Select the type of insulin curve you are using.
 * The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
@@ -120,11 +103,15 @@ Disadvantage:
 
 #### Rapid-Acting Oref
 
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+
 * recommended for Humalog, Novolog and Novorapid
 * DIA = at least 5.0h
 * Max. peak = 75 minutes after injection (fixed, not adjustable)
 
 #### Ultra-Rapid Oref
+
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
 
 * recommended for FIASP
 * DIA = at least 5.0h
@@ -132,13 +119,17 @@ Disadvantage:
 
 #### Lyumjev
 
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+
 * special insulin profile for Lyumjev
 * DIA = at least 5.0h
 * Max. peak = 45 minutes after injection (fixed, not adjustable)
 
 #### Free Peak Oref
 
-* With the "Free Peak 0ref" profile you can individually enter the peak time.
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
@@ -146,36 +137,41 @@ Disadvantage:
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* NSClient BG
+![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
-* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
-    
-    ![Config Builder BG source](../images/ConfBuild_BGSource.png)
-
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-
 * [Tomato App](http://tomato.cool/) for MiaoMiao device
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * Random BG: Generates random BG data (Demo mode only)
 
 ## Pump
 
 Select the pump you are using.
 
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+
 * [Dana R](DanaR-Insulin-Pump.md)
 * Dana R Korean (for domestic DanaR pump)
 * Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana-i/RS](DanaRS-Insulin-Pump.md)
+    
+    * For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
+* [Diaconn G8](DiaconnG8.rst)
 * MDI (receive AAPS suggestions for your multiple daily injections therapy)
 * Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
-
-For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
-
-[Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
 
 ## Sensitivity Detection
 
@@ -192,7 +188,7 @@ If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Loop
 

@@ -15,7 +15,7 @@ Por favor, entienda que este cambio no tiene la intención de molestarlo, sino q
 
 Versión de Android y versión de AAPS
 ====================================
-Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9. 
+Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
@@ -27,40 +27,63 @@ Android 9 y superiores
 Android 8
 ------------------------------------
 * Usar la versión de AAPS **2.8.2.1**
-* Hasta que se publique la versión 3 de AAPS, selecciona **master** ya que se corresponde con la versión 2.8.2.1. ;-)
-* Descargar el código fuente de AAPS desde https://github.com/nightscout/AndroidAPS
+* Descargar el código de AAPS desde https://github.com/nightscout/AndroidAPS branch 2.8.2.1
 
 Android 7
 ------------------------------------
 * Usar la versión de AAPS **2.6.2**
-* Descargar el código fuente de AAPS desde https://github.com/MilosKozak/AndroidAPS
+* Descargar el código de AAPS desde https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Notas importantes
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Cambios
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
 
 Versión 3.0.0
 ================
-Fecha de lanzamiento: XX-XX-2022
+Fecha de lanzamiento: 31-01-2022
 
 Notas importantes
 ----------------------
 * **La versión mínima de Android requerida es la 9.0.**
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
-* Existe un problema con el modo nativo en xDrip+ y Dexcom, que está provocando duplicidad de datos, lo que impide que AAPS se ejecute en modo de lazo cerrado. Hasta que se solucione el problema, es obligatorio usa BYODA. También se recomienda usar BYODA para aprovechar el suavizado que aplica Dexcom.
+
+**Asegúrate de comprobar y ajustar las configuraciones después de actualizar a la versión 3.0, tal y como se describe** `aquí<../Installing-AndroidAPS/update3_0.html>`__.
 
 Pasos de preparación
 ----------------------
 **Al menos dos días antes de la actualización:**
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
-
-* Si estás usando G5/G6 cambia a BYODA (si estás usando xDrip+). Todavía se puede usar xDrip+, pero no como recolector de datos (xDrip+ puede recibir datos de BOYDA)
+* Si estás usando Dexcom G5/G6 y xDrip+ como recolector, tienes que actualizar al menos a la versión de xDrip+ del 14 de Enero de 2022 
+* if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
 
 Cambios
 ----------------------
-* XXXXk de líneas cambiadas, XXXXk de nuevas líneas de código
-* Soporte para Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100k lineas cambiadas, 105k nuevas líneas de código
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* Soporte para DiaconnG8
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
@@ -74,10 +97,12 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* Se ha eliminado NSProfile. DEP. Sólo se pueden usar perfiles locales y se puede habilitar la sincronización con NS @MilosKozak. Para actualizar el perfil desde Nightscout usa la opción "Clonar" (¡¡registro!!, no perfil) y guarda los cambios. Deberías ver "Perfil válido desde:" con la fecha actual
-* Procedimiento para restablecer la contraseña maestra olvidada. Para restablecer la contraseña maestra, coloca un fichero con el nombre PasswordReset en el directorio /AAPS/extra y reinicia AAPS. La nueva contraseña maestra será el número de serie de tu bomba @MilosKozak
+* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
+* Procedimiento de `restablecimiento de la contraseña maestra <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
+* Nueva acción de automatización Careportal @Philoul
+* Añadido recordatorio de bolo en el diálogo de carbohidratos @Philoul
 * Asistente de bolos mejorado
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak
@@ -87,13 +112,11 @@ Cambios
 * Corregido un problema asociado a datos inestables del MCG @MilosKozak
 * Mejoras de comunicación para DanaR y DanaRS @MilosKozak
 * Integración con CircleCI @MilosKozak
-* Cambios en la ubicación de ficheros: 
+* Cambios en la ubicación de ficheros:
 
-   * /AAPS/extra (modo ingeniearía) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (modo ingeniearía)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
-
-
 
 Versión 2.8.2
 ================
@@ -116,8 +139,8 @@ Fecha de lanzamiento: 12-01-2021
 
 Notas importantes
 ----------------------
-* Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1. 
-* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.) 
+* Opción **NS_UPLOAD_ONLY** ha sido forzada a ON para todos los usuarios de la versión 2.8.1.
+* Si estás usando NSClient para establecer objetevos temporales (OT) carbohidratos (COB) o para realizar cambios de perfil, debes desactivar esta opción en AAPS, pero **sólo en caso de que la sincronización funcione bien (p. ej.  no ves cambios no deseados, como la mofificación automática de OT, TBR, etc.)
 * ATENCIÓN: No hagas esto si usas otras aplicaciones para gestionar tratamientos (como xDrip+ con emisión de datos locales/subidas/sincronización,...).
 * NS_UPLOAD_ONLY sólo puede desactivarse si tenemos activo el modo de ingeniería.
 
@@ -141,28 +164,28 @@ Fecha de lanzamiento: 01-01-2021
 
 Notas importantes
 ----------------------
-* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo. 
+* **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
 * Repository location still on https://github.com/nightscout/AndroidAPS . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a `new clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Please use `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
 Nuevas características importantes
 ----------------------
-* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org 
-* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak 
+* `Omnipod Eros support <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
+* `bolus advisor <../Configuration/Preferences.html#bolus-advisor>`_ & `eating reminder <../Getting-Started/Screenshots.html#eating-reminder>`_ @MilosKozak
 * `New watchface <../Configuration/Watchfaces.html#new-watchface-as-of-androidaps-2-8>`_ @rICTx-T1D
-* Dana RS connection improvements @MilosKozak 
+* Dana RS connection improvements @MilosKozak
 * Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 * New `Low Ressolution Skin <../Configuration/Preferences.html#skin>`_
 * New `"Pregnant" patient type <../Usage/Open-APS-features.html#overview-of-hard-coded-limits>`_ @Brian Quinion
-* New NSClient tablet layout @MilosKozak 
-* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak 
+* New NSClient tablet layout @MilosKozak
+* NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
 * `Preferences filter <../Configuration/Preferences.html>`_ @Brian Quinion
 * New pump icons @Rig22 @@teleriddler @osodebailar
 * New `insulin type Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* SetupWizard improvements @MilosKozak 
-* Security improvements @dlvoy 
-* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* SetupWizard improvements @MilosKozak
+* Security improvements @dlvoy
+* Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 Versión 2.7.0
 ================
@@ -170,7 +193,7 @@ Fecha de lanzamiento: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Nuevas características importantes
 ----------------------
@@ -193,7 +216,7 @@ Nuevas características importantes
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim
@@ -211,7 +234,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 ----------------------
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
-* Otherwise is equal to 2.6.1.3. La actualización es opcional. 
+* Otherwise is equal to 2.6.1.3. La actualización es opcional.
 
 Versión 2.6.1.3
 ================
@@ -222,7 +245,7 @@ Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or ne
 Nuevas características importantes
 ------------------
 * Insight: Disable vibration on bolus for firmware version 3
-* Otherwise is equal to 2.6.1.2. La actualización es opcional. 
+* Otherwise is equal to 2.6.1.2. La actualización es opcional.
 
 Versión 2.6.1.2
 ================
@@ -275,7 +298,7 @@ Nuevas características importantes
 ------------------
 * Small design changes (startpage...)
 * Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Local profile can hold more than 1 profile
   * Profiles can be cloned and edited
@@ -283,7 +306,7 @@ Nuevas características importantes
   * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
   * Veritical NumberPicker for targets
 * SimpleProfile is removed
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * MDT plugin: Fixed bug with duplicated entries
 * Units are not specified in profile but it's global setting
 * Added new settings to startup wizard
@@ -306,7 +329,7 @@ Versión 2.5.1
 ==================================================
 Fecha de lanzamiento: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Se corrigió un error en el receptor de estado de red que conduce a muchos fallos (no críticos, sino que desperdiciarían mucha energía en el recálculo de cosas).
 * Nuevo mantenimiento de versiones que permitirá realizar actualizaciones menores sin activar la notificación de actualización.
 

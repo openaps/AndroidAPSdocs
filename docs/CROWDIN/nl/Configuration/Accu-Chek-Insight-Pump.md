@@ -23,7 +23,7 @@ Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in 
 
 * In de [Configurator](../Configuration/Config-Builder) van AndroidAPS: selecteer Accu-Chek Insight in de pomp sectie
     
-    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot van Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Tik op het tandwiel-icoon naast Insight om de instellingen te openen.
 

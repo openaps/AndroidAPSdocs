@@ -122,22 +122,16 @@ Cíl 8: Upravit bazály a poměry, když bude potřeba, a povolit automatickou d
 *Nezapomeňte zaznamenat své zkušenosti se smyčkou do* `tohoto formuláře <https://bit.ly/nowlooping>`_ *a označte tam AndroidAPS jako váš typ DIY softwaru uzavřené smyčky, pokud jste tak ještě neučinili.*
 
 
-Cíl 9: Vyzkoušejte další funkce pro každodenní používání a získejte důvěru v systém uzavřené smyčky
-====================================================================================================
-* Před AAPS verze 2.7 byl meal assist (MA) základním algoritmem AAPS a dokončení cíle 8 bylo nezbytné pro aktivaci `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__.
-* As `advanced meal assist (AMA) <../Usage/Open-APS-features.html#advanced-meal-assist-ama>`__ is the standard algorithm from AAPS version 2.7 onwards use the following 28 days to try features you haven't used yet and get more confident with you closed loop system.
-
-
-Cíl 10: Povolit další funkce oref1 pro běžné používání, jako je SMB (super micro bolus)
+Objective 9: Enabling additional oref1 features for daytime use, such as super micro bolus (SMB)
 ====================================================================================================
 * Musíte si přečíst `Kapitolu o SMB zde na wiki<../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ a `Kapitolu oref1 v dokumentaci k openAPS <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_, abyste porozuměli tomu, jak SMB funguje, zejména na čem stojí princip nulových dočasných bazálů.
 * Následně byste měli `zvýšit maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ tak, aby SMB správně fungovaly. maxIOB nyní zahrnuje veškerý IOB, nejen ten z bazálů. To znamená, že pokud byl vydán bolus 8 U na jídlo a maxIOB je 7 U, nebudou vydány žádné SMB, dokud IOB neklesne pod 7 U. Pro začátek je dobré nastavit hodnotu maxIOB jako „průměrný bolus k jídlu + 3× maximální denní bazální dávka“ (maximální denní bazální dávka = maximální bazální dávka za hodinu během dne – např. viz `<../Usage/Objectives2019.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>Cíl 7`_)
 * Výchozí hodnota absorpce „min_5m_carbimpact“ se při přechodu z AMA na SMB mění ze 3 na 8. Přecházíte-li z AMA na SMB, musíte to změnit ručně.
 
 
-Cíl 11: Automatizace
+Objective 10: Automation
 ====================================================================================================
-* Musíte začít plnit cíl 11, abyste mohli začít používat `Automatizaci <../Usage/Automation.html>`_.
+* You have to start objective 10 to be able to use `Automation <../Usage/Automation.html>`_.
 * Ujistěte se, že jste splnili všechny zkoušky v cíli 3 `<../Usage/Objectives.html#cil-3-prokazat-sve-znalosti>`_.
 * Dokončení předchozích cílů nebude mít vliv na další cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
@@ -148,3 +142,7 @@ Chcete-li se z jakéhokoliv důvodu vrátit k předchozímu cíli, stačí tak u
 
 .. image:: ../images/Objective_ClearFinished.png
   :alt: Návrat zpět
+
+Objectives in Android APS before version 3.0
+====================================================================================================
+One objective was removed when Android APS 3.0 was released.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found `here <../Usage/Objectives_old.html>`_.

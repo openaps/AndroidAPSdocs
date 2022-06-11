@@ -38,7 +38,7 @@
 * Select Bolus Speed to change the default bolus speed used (12sec per 1u, 30sec per 1u or 60sec per 1u).
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
-* Set bolus step on pump to 0.1 U/h using Doctors menu (see pump user guide).
+* Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Įgalinkite ištęstus bolusus pompoje
 
 ### Numatytasis slaptažodis

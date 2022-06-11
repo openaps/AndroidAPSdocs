@@ -35,7 +35,7 @@ Once you are fine with the profile adjustments you can `clone the profile <../Co
 Compară două profiluri
 =======================================
 
-Puteți utiliza asistentul de profil de asemenea pentru a face comparații cu diferite profiluri sau schimbări de profil (procent din profilurile dumneavoastră utilizate într-o schimbare de profil <../Usage/Profiles.html>` _ înainte).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. imagine:: ../images/ProfileHelper1.png
   :alt: Profile Helper 1
@@ -57,7 +57,7 @@ Puteți utiliza asistentul de profil de asemenea pentru a face comparații cu di
 Copiere profil
 =======================================
 
-Dacă folosiți `profile locale <../Configuration/Config-Builder.html#local-profile-recommended>`_ puteți copia un profil / schimba profilul direct din asistentul de profil.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. imagine:: ../images/ProfileHelperClone.png
   :alt: Profile Helper copiere profil / schimbare profil

@@ -4,17 +4,9 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ## Pompes qui sont Bouclable
 
-### Omnipod DASH ([Page d'accueil](https://www.myomnipod.com/DASH))
-
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
-
-**Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
-
-* * *
-
 ### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2Q/2018) ne sont pas candidates à la boucle. Bien qu'elles aient le BT, la communication est très limitée et uni directionnelle: Pompe->App. Fin de 2021, il est prévu que la société sorte la nouvelle version appelée DOSE (1.6), ce qui permettra de définir des Bolus et des TBR à partir de leur application. Ils prévoient d'implémenter leur propre Boucle en 2022, avec leur propre application. Plus d'infos voir cette page [](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. Bien qu'elles aient le BT, la communication est très limitée et uni directionnelle: Pompe->App. Fin 2021, il est prévu que la société sorte la nouvelle version appelée DOSE (1.6), ce qui permettra de définir des Bolus et des TBR à partir de leur application. Ils prévoient d'implémenter leur propre Boucle en 2022, avec leur propre application. Plus d'infos voir cette page [](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Configuration matérielle requise pour AAPS :** Aucune. Elle dispose du Bluetooth.
 
@@ -60,7 +52,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 **Etat de la boucle :** Non bouclable pour l'instant.
 
-Alors que dans le passé, la société avait décidé d'interdire le contrôle de leurs pompes par des dispositifs externes, Il semble que ces dernières années les règles du jeu aient changées. L'entreprise a décidé de mettre à jour sa pompe t:slim X2 pour pouvoir la contrôler à distance (via l'application t:connect), ce qui signifie que des pistes sont ouvertes que nous puissions être en mesure d'intégrer la pompe dans AAPS à l'avenir. Un nouveau firmware de pompe est prévu bientôt (cette année ou l'année prochaine, avant la sortie de leur pompe sans tubulure t:sport). Il n'y a pas encore de détails sur les opérations possibles à partir de t:connect (Bolus sans aucun doute, tout le reste est inconnu).
+Alors que dans le passé, la société avait décidé d'interdire le contrôle de leurs pompes par des dispositifs externes, Il semble que ces dernières années les règles du jeu aient changées. L'entreprise a décidé de mettre à jour sa pompe t:slim X2 pour pouvoir la contrôler à distance (via l'application t:connect), ce qui signifie que des pistes sont ouvertes et que nous pourrions être en mesure d'intégrer la pompe dans AAPS à l'avenir. Un nouveau firmware de pompe est prévu bientôt (cette année ou l'année prochaine, avant la sortie de leur pompe sans tubulure t:sport). Il n'y a pas encore de détails sur les opérations possibles à partir de t:connect (Bolus sans aucun doute, tout le reste est inconnu).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
@@ -80,7 +72,7 @@ Alors que dans le passé, la société avait décidé d'interdire le contrôle d
 
 ### Pompe Insuline Willcare ([Homepage](http://en.shinmyungmedi.com))
 
-**Etat de la boucle :** Pour le moment non candidat à la boucle, mais nous avons contacté leurs équipes et ils sont intéresser à étendre les fonctionnalités de leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de récupération et de définition des profils).
+**Etat de la boucle :** Pour le moment non candidat à la boucle, mais nous avons contacté leurs équipes et ils sont intéressés à étendre les fonctionnalités de leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de récupération et de définition des profils).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 

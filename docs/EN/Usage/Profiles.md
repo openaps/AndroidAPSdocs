@@ -1,16 +1,18 @@
 # Profile switch
 
-On starting your AndroidAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again (in NS or AAPS) to start using these changes.
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period. Duration of zero means infinite. Such profile is valid until new "Profile switch".
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below).
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
+* Duration of zero means infinite. Such profile is valid until new "Profile switch".
+* Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
+
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
+
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
-
-If you use "Profile switch" with duration profile is switched back to previous valid "Profile switch"
-
-If you use local AAPS profiles (Simple, Local, CPP) you have to press button there to apply these changes (it creates proper "Profile switch" event).
 
 Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
@@ -41,7 +43,6 @@ Within the "profile switch" you can choose two additional changes which used to 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
-
 
 ## Troubleshooting Profile Errors
 

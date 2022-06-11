@@ -1,5 +1,5 @@
-Fuentes de datos de glucemia (BG)
-***********************************
+Origen de Glucosa
+**********************
 
 
 .. toctree::
@@ -8,7 +8,7 @@ Fuentes de datos de glucemia (BG)
    
    General <../Hardware/GeneralCGMRecommendation.rst>
    Suavizado de datos <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
-   xDrip+ Ajustes <./xdrip.md>
+   Ajustes de xDrip+ <./xdrip.md>
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
@@ -17,4 +17,4 @@ Fuentes de datos de glucemia (BG)
    Eversense <../Hardware/Eversense.rst>
    MM640g/MM630g <../Hardware/MM640g.rst>
    PocTech <../Hardware/PocTech.rst>   
-   Nightscout as BG Source <../Hardware/CgmNightscoutUpload.rst>
+   Nightscout como origen de datos de glucosa (BG)  <../Hardware/CgmNightscoutUpload.rst>

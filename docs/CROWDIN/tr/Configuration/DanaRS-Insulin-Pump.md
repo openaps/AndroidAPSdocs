@@ -38,7 +38,7 @@
 * Kullanılan varsayılan bolus hızını değiştirmek için Bolus Hızı'nı seçin (1u başına 12sn, 1u başına 30sn veya 1u başına 60sn).
 
 * Doktorlar menüsünü kullanarak pompadaki bazal adımı 0,01 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
-* Doktorlar menüsünü kullanarak pompadaki bolus adımını 0,1 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
+* Doktorlar menüsünü kullanarak pompadaki bolus adımını 0,05 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
 * Pompada yayma bolusları etkinleştir
 
 ### Varsayılan parola

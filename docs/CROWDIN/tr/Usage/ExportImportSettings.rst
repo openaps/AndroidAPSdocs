@@ -20,7 +20,7 @@ Among others the following information is part of the settings export:
 
 * `Automation <../Usage/Automation.html>`_ events
 * `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
+* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
 * `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
 * `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
 
@@ -29,7 +29,7 @@ Encrypted backup format
 Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
 
 
-Export settings
+Dışa aktarma ayarları
 ==================================================
 * Hamburger menu (top left corner of screen)
 * Maintenance

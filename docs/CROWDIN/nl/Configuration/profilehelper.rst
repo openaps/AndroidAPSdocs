@@ -35,7 +35,7 @@ Zodra je klaar bent met het aanpassen van het profiel kun je `het profiel duplic
 Vergelijk twee profielen
 =======================================
 
-Je kunt de profiel hulp ook gebruiken om twee verschillende profielen of profielwissels (van een eerder gemaakte `percentage profielwissel <../Usage/Profiles.html>`_ ) te vergelijken.
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a `profile switch <../Usage/Profiles.html>`_ before).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Profiel Hulp 1
@@ -57,7 +57,7 @@ Je kunt de profiel hulp ook gebruiken om twee verschillende profielen of profiel
 Profiel dupliceren
 =======================================
 
-Als je `lokale profielen <../Configuration/Config-Builder.html#lokaal-profiel-aanbevolen>`_ gebruikt, dan kun je een profiel dupliceren / profiel wissel doen rechtstreeks vanuit de profiel hulp.
+If you use `local profiles <../Configuration/Config-Builder.html#local-profile>`_ you can clone a profile / profile switch directly from profile helper.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profiel hulp Profiel dupliceren / profiel wisselen

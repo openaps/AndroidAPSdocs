@@ -11,5 +11,6 @@ Pompa Kanfigürasyonu
    Accu-Chek Insight pompa <../Configuration/Accu-Chek-Insight-Pump.md>
    Diaconn G8 insulin pompa <../Configuration/DiaconnG8.rst>
    Omnipod Eros <../Configuration/OmnipodEros.rst>
+   Omnipod DASH <../Configuration/OmnipodDASH.md>
    Medtronic pompaları <../Configuration/MedtronicPump.md>
    Dahil olacak pompalar<../Getting-Started/Future-possible-Pump-Drivers.md>

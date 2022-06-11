@@ -1,174 +1,173 @@
 # Pumpy Medtronic
 
-**>>>> Ovladač pump Medtronic je od verze 2.5 součástí AndroidAPS (master). Přesto byste však měli ovladač Medtronic stále považovat za beta software. K instalaci přistupujte pouze v případě, že jste zkušený uživatel. V současné době se stále potýkáme s problémem dvojitých bolusů (V ošetřeních se objeví 2 bolusy, které vedou k chybnému výpočtu IOB (jestliže se s tímto problémem setkáte, povolte prosím možnost Logování dvojitých bolusů v konfiguraci Medtronic a pošlete nám své logy)), v následující verzi aplikace by již tento problém měl být odstraněn. <<<<**
+The driver does not work with any newer models, including all models ending in G (530G, 600-series [630G, 640G, 670G], 700-series [770G, 780G], etc.).
 
-* * *
+The following model and firmware combinations are compatible:
 
-Pracuje pouze se staršími pumpami Medtronic (podrobnosti viz níže). Nefunguje s Medtronic 640G nebo 670G.
+- 512/712 (any firmware version)
+- 515/715 (any firmware version)
+- 522/722 (any firmware version)
+- 523/723 (firmware 2.4A or lower)
+- 554/754 EU release (firmware 2.6A or lower)
+- 554/754 Canada release (firmware 2.7A or lower)
 
-* * *
-
-Jestliže jste začali používat ovladač Medtronic, zapište se prosím na tento [seznam](https://docs.google.com/spreadsheets/d/16XIjviXe8b-12PrB6brGubNFuAEsFZr10pjLt_SpSFQ/edit). Slouží jen k tomu, abychom viděli, které telefony s tímto ovladačem pracují správně a které hůře (chybně). Je v něm jeden sloupec s názvem „BT restart“. Slouží ke kontrole, zda váš telefon podporuje možnost zapnutí/vypnutí BT, kterou lze použít, jestliže se pumpa nedokáže připojit, což se občas stane. Pokud si všimnete jakýchkoli jiných problémů, napište to prosím ve sloupci Komentáře.
-
-* * *
+You can find out how to check the firmware on the pumps at [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) or [LoopDocs](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
 
 ## Hardwarové a softwarové požadavky
 
-- **Telefon:** Ovladač Medtronic by měl pracovat s jakýmkoli telefonem s podporou BLE. **DŮLEŽITÉ: Ačkoli ovladač pracuje správně na všech telefonech, zapnutí/vypnutí Bluetooth všude nefunguje (to je požadováno, když ztratíte připojení k RileyLink a systém se nemůže zotavit automaticky – čas od času se to stává). Takže budete potřebovat získat zařízení s Android 7.0-8.1, v nejhorším případě můžete na svůj telefon nainstalovat LineeaeOS 15.1 (povinné 15.1 nebo nižší). Zabýváme se problémem se systémem Android 9, ale dosud jsme nenalezli řešení (zdá se, že funguje na některých modelech a ne na jiných, a také někdy pracuje jen na některých modelech).**
-- Pro komunikaci s pumpou je třeba zařízení, které převádí příkazy BT z telefonu na příkazy RF, kterým pumpa rozumí. Viz seznam [přídavných komunikačních zařízení](../Module/module#additional-communication-device). Potřebujete stabilní verzi zařízení, což je pro starší modely firmware 0.9 (starší verze nemusí fungovat správně) nebo pro novější modely 2.2 (existují možnosti upgradu dostupné na serveru RL). Pokud máte dobrodružnou povahu, můžete také zkusit Gnarl ([zde](https://github.com/ecc1/gnarl)), který je něco jako RileyLink klon. 
-- **Pumpa:** Ovladač funguje pouze s následujícími modely a verzemi firmwaru: 
-    - 512/712
-    - 515/715
-    - 522/722
-    - 523/723 (firmware 2.4A nebo nižší)
-    - 554/754 EU verze (firmware 2.6A nebo nižší)
-    - 554/754 verze pro Kanadu (firmware 2.7A nebo nižší)
-- Zkontrolujte, zda je firmware popsán v souboru [ OpenAPS docs ](https://openaps.readthedocs.io/en/latest/docs/Gear%20Up/pump.html#how-to-check-pump-firmware-check-for-absence-of-pc-connect) a [ LoopDocs ](https://loopkit.github.io/loopdocs/build/step3/#medtronic-pump-firmware).
+- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AndroidAPS needs to reconnect to your Rileylink type device.**
+- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+    
+    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+
+A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
 ## Nastavení pumpy
 
-- **Povolit vzdálený režim na pumpě** (Utilities -> Remote Options, vybrat Ano a na další obrazovce Přidat ID a přidat fiktivní ID (111111 nebo něco podobného). Musíte mít alespoň jedno ID na tomto seznamu vzdálených ID. Tyto volby mohou na jiném modelu pumpy vypadat jinak. Tento krok je důležitý, protože při nastavení bude pumpa naslouchat častěji kvůli vzdálené komunikaci.
-- **Nastavte maximální hodnotu bazálu** na své pumpě na „maximální bazál ve vašem profilu STD“ * 4 (pokud chcete mít 400% TBR jako max). Toto číslo musí být pod 35 (jak můžete vidět na pumpě).
-- **Nastavte maximální hodnotu bolusu** na své pumpě (maximum je 25)
-- **Nastavte profil na STD**. To bude jediný profil, který budeme používat. Můžete to také zakázat.
-- **Nastavit typ TBR** na absolutní hodnotu (nikoli v procentech)
+The following settings should be configured on the pump in order for AndroidAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
 
-## Konfigurace telefonu/AndroidAPS
+- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
+- **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
+- **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
+- **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AndroidAPS will manage different profiles on your phone. No other patterns are required.
+- **Set Temporary Basal Rate type** (On the pump press Act and go to Basal and then Temp Basal Type). Select Absolute (not Percent).
 
-- **Nepárujte RileyLink se svým telefonem.** Pokud jste spárovali RileyLink, pak ho AndroidAPS nedokáže najít v konfiguraci.
-- Zakažte funkci Auto-rotate na telefonu (některé zařízení automaticky restartují BT spojení, což není něco, co bychom chtěli).
-- Pumpu v AndroidAPS můžete nastavit dvěma způsoby: 
+## Medtronic Configuration of Phone/AndroidAPS
 
-1. Použití průvodce (při nové instalaci)
-2. Přímo na kartě Konfigurace (ikona ozubeného kola u ovladače Medtronic)
+- **Do not pair RileyLink compatible device with the Bluetooth menu on your phone.** Pairing via the Bluetooth menu on your phone will stop AndroidAPS from seeing your Rileylink Compatible device when you follow the instructions below. 
+- Disable automatic screen rotation on your phone. On certain devices automatic screen rotation causes Bluetooth sessions to restart which would cause issues for your Medtronic pump. 
+- There are two ways to configure your Medtronic pump in AndroidAPS: 
 
-Pokud děláte novou instalaci, skočíte přímo do průvodce. Někdy, když vaše připojení BT není plně funkční (nelze se připojit k pumpě), nebudete možná moci úplně dokončit konfiguraci. V takovém případě vyberte virtuální pumpu a po dokončení průvodce můžete použít možnost 2, která obejde detekci pumpy.
+1. Using the setup wizard as part of a fresh install
+2. By selecting the cog icon beside the Medtronic selection in the pump selection option in Config Builder
 
-![Nastavení MDT](../images/Medtronic01a.png)
+When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-Je třeba nastavit následující položky: (viz obrázek výše)
+![Medtronic Settings](../images/Medtronic01a.png)
 
-- ** Sériové číslo pumpy**: Můžete ho najít na zadní straně, SN. Použijte pouze číslice, vaše sériové číslo je 6 čísel.
-- **Typ pumpy**: Typ pumpy, který máte (tj. 522). 
-- **Frekvence pumpy**: Podle frekvence pumpy existují dvě verze pumpy Medtronic (pokud si nejste jisti, jakou frekvenci využívá vaše pumpa, podívejte se na [FAQ](../Configuration/MedtronicPump#faq)): 
-    - pro USA & Kanadu je frekvence 916 MHz
-    - pro zbytek světa je frekvence 868 MHz
-- **Maximální bolus na pumpě(U)** (za hodinu): Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující možnou velikost bolusu. Pokud zadáte větší hodnotu, bolus nebude proveden a bude vrácena chyba. Maximální hodnota, kterou lze použít, je 25. Prosím, nastavte správnou hodnotu pro sebe tak, aby nemohlo dojít k předávkování.
-- **Maximální bazál na pumpě(U/h)**: Toto musí být nastaveno stejně jako na pumpě. Jde o nastavení omezující maximální hodinový bazál. Například, pokud chcete mít nastaveno maximální množství TBR na 500 % a nejvyšší bazál je 1,5 U, pak byste měli nastavit maximální bazál na alespoň 7,5. Pokud je toto nastavení chybné (například pokud by nějaký z vašich bazálů byl vyšší, pumpa by vrátila chybu).
-- **Prodleva před spuštěním bolusu (s)**: Toto je prodleva před odesláním bolusu do pumpy, takže pokud změníte názor, můžete bolus zrušit. Zrušení výdeje bolusu po jeho spuštění není pumpou podporováno (pokud chcete zastavit bolus během vydávání, musíte pozastavit pumpu a pak pokračovat).
-- **Kódování Medtronic**: Toto nastavení určuje, zda se kódování 4b6b provádí v AndroidAPS nebo na RileyLink. Máte-li produkt RileyLink s firmwarem verze 2.x, výchozí hodnota bude používat kódování hardwarové (v RileyLinku), pokud máte firmware verze 0.x, toto nastavení bude ignorováno.
-- **Typ baterie (Power View)**: Pokud chcete vidět stav baterie v pumpě, musíte vybrat typ baterie, kterou používáte (momentálně jsou podporované lithiové nebo alkalické), což změní zobrazení vypočítané z procent a voltů.
-- **Konfigurace RieyLink**: Toto vyhledá vaše zařízení RileyLink/GNARL.
-- **Nastavení neutrálních dočasných bazálů** je možnost, která může pomoci zabránit tomu, aby se pumpa Medtronic pípala každou hodinu. Je-li to povoleno, bude dočasný bazál ukončen před celou hodinou, aby se tomu zabránilo.
+While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
+
+- **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
+- **Pump Type**: The model pump you are using (e.g. 522). 
+- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select): 
+    - for US & Canada, frequency used is 916 Mhz
+    - for Worldwide, frequency used is 868 Mhz
+- **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
+- **Max Bolus on Pump (U)** (in an hour): This needs to match the setting set on your pump (see Configuration of the pump above). This setting should be carefully considered as it determines how large a bolus AndroidAPS can ever set.
+- **Delay before Bolus is started (s)**: The number of seconds after a bolus is issued before the command is actually sent to the pump. This period of time allows the user to cancel the bolus in the event a bolus command is sent in error. It is not possible to cancel a bolus that has started via AndroidAPS. The only way to cancel a bolus that has already started is to suspend the pump manually followed by resuming it.
+- **Medtronic Encoding**: Determines if the medtronic encoding is carried out. Selecting Hardware encoding (i.e. carried out by the Rileylink compatible device) is preferred as this results in less data being sent. Selecting Software encoding (i.e. carried out by AndroidAPS) can help in the event frequent disconnects are seen. This setting will be ignored if you have firmware version 0.x on Rileylink devices.
+- **Battery Type (Power View)**: In order to correctly determine the remaining battery power level you should select the type of AAA battery in use. When a value other than simple view is selected AndroidAPS will display the remaining calculated battery percentage level and volts. The following options are available:
+    
+    - Not selected (Simple view)
+    - Alkaline (Extended view)
+    - Lithium (Extended view)
+    - NiZn (Extended view)
+    - NiMH (Extended view)
+- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+
+- **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
+- **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
+- **Show battery level reported by OrangeLink/EmaLink/DiaLink** This feature is only supported on newer link devices such as the EmaLink or OrangeLink. Values will be shown in the Medtronic tab in AnroidAPS. 
+- **Set neutral temp basals** By default Medtronic pumps beep on the hour when a temporary basal rate is active. Enabling this option can help reduce the number of beeps heard by interupting a temporary basal at the hour change in order to supress the beep.
 
 ## Záložka MEDTRONIC (MDT)
 
-![Záložka MDT](../images/Medtronic02.png)
+![MDT Tab](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
 
-Na záložce pumpy můžete vidět několik řádků, které zobrazují aktuální stav pumpy (a připojení).
+- **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
+- **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
+- **Pump Status**: The current status of the pump connection. As the pump will not be constantly connected this will primarily show the sleep icon. There are a number of possible other status including "Waking Up" when AndroidAPS is trying to issue a command or other possible pump commands such as "Get Time", "Set TBR", etc. 
+- **Battery**: Shows battery status based on the value chosen for Battery Type (Power View) in the Medtronic Pump Configuration menu. 
+- **Last connection**: How long ago the last succesful pump connection happened.
+- **Last Bolus**: How long ago the last succesful bolus was delivered.
+- **Base Basal Rate**: This is the base basal rate that runs on pump at this hour in your active Profile.
+- **Temp basal**: Temp basal currently being delivered which can be 0 units per hour.
+- **Reservoir**: How much insulin is in reservoir (updated at least every hour).
+- **Errors**: Error string if there is problem (mostly shows if there is error in configuration).
 
-- **RileyLink Status**: Zobrazuje stav připojení RileyLink. Telefon by měl být připojen k RileyLink celou dobu.
-- **Stav pumpy**: Stav připojení pumpy může mít několik hodnot, ale většinou se zobrazí ikona spánku (když není aktivní připojení k pumpě). Když je příkaz spuštěn, možná uvidíte „Waking Up“, což znamená, že se AAPS snaží navázat spojení s pumpou, nebo popis jiného příkazu, který může být na pumpě spuštěn (např.: Get Time, Set TBR atd.).
-- **Baterie**: Ukazuje stav baterie v závislosti na vaší konfiguraci. To může být jednoduchá ikona zobrazující, zda je baterie prázdná nebo plná (červená, pokud je baterie kritická, pod 20 %), nebo procenta a napětí.
-- **Poslední připojení**: Čas posledního úspěšného připojení k pumpě.
-- **Poslední bolus**: Kdy byl vydán poslední bolus.
-- **Základní bazál**: Toto je základní bazální dávka, která právě beží.
-- **Dočasný bazál**: Dočasný bazál, který je právě spuštěn nebo je nulový.
-- **Zásobník**: Kolik inzulínu je v zásobníku (aktualizováno nejméně každou hodinu).
-- **Chyby**: Chyba, pokud existuje (většinou ukazuje, zda došlo k chybě v konfiguraci).
+At the bottom of the screen there are three buttons:
 
-Ve spodní části máme 3 tlačítka:
-
-- **Obnovit** pro obnovení stavu pumpy. To by mělo být použito až po dlouhé době bez připojení, protože tato akce resetuje data o pumpě (načtení historie, času, profilu, stavu baterie atd.).
-- **Historie**: Zobrazí historii z pumpy (viz [níže](../Configuration/MedtronicPump#pump-history))
-- **Statistiky RL**: Zobrazí statistiku RL (viz [níže](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
+- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
+- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
 
 ## Historie pumpy
 
-![Dialog Historie pumpy](../images/Medtronic03.png)
+![Pump History Dialog](../images/Medtronic03.png)
 
-Historie pumpy se načítá každých 5 minut a ukládá se místně. Uchovává se pouze historie za posledních 24 hodin, takže při přidání nových položek jsou ty starší odstraněny. To je jednoduchý způsob, jak vidět historii pumpy (některé položky z pumpy se nemusí zobrazit, protože nejsou relevantní – například konfigurace funkcí, které nejsou používány programem AndroidAPS).
+Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
 ## Stav RL (Stav RileyLink)
 
-![RileyLink Stav – Nastavení](../images/Medtronic04.png) ![Stav RileyLink – Historie](../images/Medtronic05.png)
+![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
-Dialogové okno má dvě záložky:
+The RL Status dialog has two tabs:
 
-- **Nastavení**: Zobrazí nastavení RileyLinku: Konfigurovaná adresa, Připojené zařízení, Stav připojení, Chyba připojení a verze firmwaru RileyLink. „Typ zařízení“ je vždy Medtronic, „model“ bude váš model, „sériové číslo“ je konfigurované sériové číslo, „frekvence“ udává, jakou frekvenci používáte, „poslední frekvence“ je poslední použitá frekvence.
-- **Historie**: Zobrazuje historii komunikace, položky u RileyLink ukazují změny stavu pro RileyLink a položky Medtronic ukazují, které příkazy byly odeslány do pumpy.
+- **Settings**: Shows settings about the RileyLink compatible device: Configured Address, Connected Device, Connection Status, Connection Error and RileyLink Firmware versions. Device Type is always Medtronic Pump, Model would be your model, Serial number is configured serial number, Pump Frequency shows which frequency you use, Last Frequency is last frequency used.
+- **History**: Shows communication history, items with RileyLink shows state changes for RileyLink and Medtronic shows which commands were sent to pump.
 
 ## Akce
 
-Je-li vybrán ovladač Medtronic, lze na kartu Akce přidat 3 možné akce:
+When the Medtronic driver is used, two additional actions are added to Actions Tab:
 
-- **Probudit a Naladit** - Pokud zjistíte, že AndroidAPS nekontaktoval vaší pumpu po nějakou dobu (měl by to dělat každých 5 minut), můžete vynutit Ladění. V tom případě se bude AndroidAPS snažit kontaktovat pumpu prohledáním všech dílčích frekvencí, na kterých lze pumpu kontaktovat. Pokud ji nalezne, nastaví ji jako výchozí frekvenci. 
-- **Obnovit konfiguraci RileyLinku** - Pokud resetujete RileyLink/GNARL, musíte tuto akci použít, aby bylo možné překonfigurovat zařízení (sada frekvencí, sada typů frekvencí, kódování).
-- **Vymazat blokování bolusu** - Když spustíte bolus, nastavíme blokování bolusu, které brání dalším příkazům, které by mohly být odeslány do pumpy. Pokud pumpu pozastavíte a znovu spustíte (chcete-li zrušit bolus), můžete toto blokování odstranit. Volba je tam jen tehdy, když je vydáván bolus... 
+- **Wake and Tune Up** - In the event that AndroidAPS hasn't connected to your pump for a sustained period (it should connect every 5 minutes), you can force a Tune Up. This will try to contact your pump, by searching all of the possible radio frequencies used by your pump. In the event a succesful connection is made the succesful frequency will be set as the default. 
+- **Reset RileyLink Config** - If you reset your RileyLink compatible device you may need to use this action so that device can be reconfigured (frequency set, frequency type set, encoding configured).
 
 ## Důležité poznámky
 
 ### Uživatelé OpenAPS
 
-Když začnete používat AndroidAPS, primárním ovladačem je AndroidAPS a všechny příkazy by měly projít přes něj. Bolusy by měly být odeslány prostřednictvím AAPS a nikoli z pumpy. Aplikace sice využívá kód, který detekuje jakékoli příkazy zadané na pumpě, ale pokud můžete, snažte se to nedělat (mám za to, že jsme odstranili veškeré problémy se synchronizací historie pumpy a historie AAPS, ale stále může docházet k drobným problémům, zejména v případě, že „svou konfiguraci“ používáte tak, jak původně nebylo zamýšleno). Od té doby, co používám AndroidAPS, jsem s výjimkou výměny zásobníku na pumpu nesáhl. A tak by se měl systém AndroidAPS používat.
+OpenAPS users should note that AndroidAPS with Medtronic uses a completely different approach than OpenAPS. Using AndroidAPS the primary method of interacting with th pump is via your phone. In normal use cases it is likely that the only time it is required to use the pump menu is when changing resevoirs. This is very different when using OpenAPS where at least some of a bolus is usually delivered via the quick bolus buttons. In the event the pump is used to manually deliver a bolus there can be issues if AndroidAPS attempts to deliver one at the same time. There are checks to try and prevent issues in such cases but this should still be avoided where possible.
 
 ### Logování
 
-Vzhledem k tomu, že ovladač Medtronic je velmi nový, musíte povolit protokolování, abychom mohli ladit a opravit problémy, pokud nastanou. Klepněte na ikonu v levém horním rohu, vyberte volbu Údržba a Nastavení logování. Volby Pump, PumpComm, PumpBTComm musí být zašktnuté.
+In the event you need to troubleshoot your Medtronic pump function select the menu icon in the upper left corner of the screen, select Maintainance and Log Settings. For troubleshooting any Medtronic issues Pump, PumpComm, PumpBTComm should be checked.
 
-### RileyLink/GNARL
+### Medtronic CGM
 
-Když restartujete RileyLink nebo GNARL, musíte buď provést nové ladění (akce „Probudit a naladit“), nebo znovu odeslat komunikační parametry (akce „Reset RieyLink konfigurace“), jinak komunikace selže.
+Medtronic CGM is currently NOT supported.
 
-### CGM
+### Manual use of pump
 
-Medtronic CGM v současné době NENÍ podporován.
+You should avoid manually bolusing or setting TBRs on your pump. All such commands should be sent via AndroidAPS. In the event manual commands are used there must be a delay of at least 3 minutes between them in order to reduce the risk of any issues.
 
-### Ruční použití pumpy
+### Timezone changes and DST (Daylight Saving Time) or Traveling with Medtronic Pump and AndroidAPS
 
-Měli byste se vyhnout manuálním zásahům ve své pumpě. Všechny příkazy (bolus, TBR) by měly projít přes AndroidAPS, ale pokud se stane, že provedete ruční příkazy, NEspouštějte příkazy s frekvencí méně než 3 minuty (takže pokud provedete 2× bolus (z jakéhokoli důvodu), druhý by měl být spuštěn nejméně 3 minuty po prvním).
+AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-## Změna časového pásma a letní čas (Letní čas) nebo Cestování s Medtronic pumpou a AndroidAPS
+Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
 
-Důležité je, abyste nezapomínali, že byste nikdy neměli zakazovat smyčku, když cestujete (kromě případu, že vaše CGM nemůže pracovat v offline režimu). AAPS automaticky zjistí změny v časovém pásmu a jakmile se čas v telefonu změní, odešle příkaz do pumpy, aby se změnil čas v pumpě.
+The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
-Nyní, pokud cestujete na východ a časové pásmo se mění do plusu (např. z GMT+0 na GMT+2), nebude problém s historíí pumpy a nemusíte se obávat…, ale pokud cestujete na západ a vaše časové pásmo se mění do mínusu (GMT+2 na GMT+0), pak může být synchronizace trochu ošemetná. Konkrétně to znamená, že na dalších x hodin budete muset být opatrní, protože vaše hodnota IOB by nemusela tak úplně souhlasit.
+### Is a GNARL a fully compatible Rileylink combatible device?
 
-Jsme si vědomi tohoto problému a již hledáme možné řešení (viz https://github.com/andyrozman/RileyLinkAAPS/issues/145), ale prozatím je nutné při cestování vést tento problém v patrnosti.
+The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-## Nejčastější dotazy
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-### Můžu se podívat na stav baterie RileyLink/GNARL?
+## FAQ
 
-Ne. V současné době žádné z těchto zařízení toto nepodporuje a pravděpodobně nebude ani v budoucnu.
+### What to do if I loose connection to RileyLink and/or pump?
 
-### Je GNARL úplná náhrada za RileyLink?
+There are a number of options to try and resolve connectivity issues.
 
-Ano. Autor GNARL přidal všechny funkce používané ovladačem Medtronic. Veškerá komunikace je podporována (v době vzniku tohoto textu – červen 2019). GNARL nemůže být použit pro komunikaci s Omnipodem. Nevýhodou GNARL je, že si jej musíte postavit sami a musíte mít kompatibilní verzi hardwaru.
+- Use the "Wake Up and Tune" button in the ACT tab as detailed above.
+- Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
+- Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
+- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
+    1. Restart the phone
+    2. *While* the phone is restarting restart the Rileylink device
+    3. Open AndroidAPS and allow the connection to restore
 
-**Poznámka od autora:** Všimněte si prosím, že software GNARL je stále experimentální, není dostatečně otestovaný a neměl by být považován za bezpečný pro použití jako RileyLink.
+### How to determine what Frequency my pump uses
 
-### Kde získám RileyLink nebo GNARL?
+![Pump Model](../images/Medtronic06.png)
 
-Jak je uvedeno výše, zařízení můžete získat zde:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 
-- RileyLink - Je možné získat zde - [getrileylink.org](https://getrileylink.org/).
-- GNARL - Zde můžete získat informace, ale zařízení je třeba objednat jinde ([github.com/ecc1/gnarl](https://github.com/ecc1/gnarl)).
-
-### Co mám dělat, když ztratím spojení s RileyLink a/nebo pumpou?
-
-1. Spusťte akci „Probouzení a ladění“. AAPS se pokusí najít správnou frekvenci pro komunikaci s pumpou.
-2. Vypněte Bluetooth, počkejte 10 s a znovu zapněte. To vynutí opětovné připojení k RileyLinku.
-3. Resetujte RileyLink. Poté, co to uděláte, nezapomeňte spustit akci „Reset RileyLink konfigurace“.
-4. Zkuste body 3 a 2 dohromady.
-5. Resetujte RileyLink a resetujte telefon.
-
-### Jak určit, jakou frekvenci má moje pumpa používat
-
-![Model pumpy](../images/Medtronic06.png)
-
-Pokud zapnete pumpu, vpravo na prvním řádku uvidíte speciální 3písmenný kód. První dvě písmena určují typ frekvence a poslední z nich určuje barvu. Zde jsou možné hodnoty pro frekvence:
-
-- NA - Severní Amerika (ve výběru frekvencí je třeba vybrat „US & Kanada (916 MHz)“)
-- CA - Kanada (ve výběru frekvence je třeba vybrat „US & Kanada (916 MHz)“)
-- WW - Worldwide (ve výběru frekvence je třeba vybrat „Worldwide (868 MHz)“)
+- NA - North America (in frequency selection you need to select "US & Canada (916 MHz)")
+- CA - Canada (in frequency selection you need to select "US & Canada (916 MHz)")
+- WW - Worldwide (in frequency selection you need to select "Worldwide (868 Mhz)")

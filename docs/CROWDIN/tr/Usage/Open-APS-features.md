@@ -6,7 +6,7 @@
 * It will try and figure out how sensitive/resistant you are based on these deviations.
 * The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
 * In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
-* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive. 
+* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. Hangisinin daha hassas olduğunu kendi seçecektir. 
 * If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
@@ -30,7 +30,7 @@ The SMB feature contains some safety mechanisms:
 
 3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
 
-**You must have started [objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -38,7 +38,7 @@ See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/e
 
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
 
-Example:
+Örnek kullanım:
 
 Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
 
@@ -263,18 +263,18 @@ Default value: 2
   <tr>
     <td>MAXIOB_AMA</td>
     <td>3,0</td>
-    <td>3,5</td>
+    <td>5,0</td>
     <td>7,0</td>
     <td>12,0</td>
     <td>25,0</td>
   </tr>
   <tr>
     <td>MAXIOB_SMB</td>
-    <td>3,0</td>
     <td>7,0</td>
-    <td>12,0</td>
-    <td>25,0</td>
-    <td>45,0</td>
+    <td>13,0</td>
+    <td>22,0</td>
+    <td>30,0</td>
+    <td>70,0</td>
   </tr>
   <tr>
     <td>MAXBASAL</td>

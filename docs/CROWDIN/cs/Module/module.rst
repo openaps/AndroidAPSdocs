@@ -1,4 +1,4 @@
-Přehled komponent 
+Component Overview 
 **************************************************
 AndroidAPS není jen (vlastnoručně sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na `nastavení komponent <../index.html#component-setup>`_.
    
@@ -48,12 +48,15 @@ Inzulinová pumpa
 --------------------------------------------------
 AndroidAPS **v současné době** funguje s 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (vyžaduje navíc: aplikaci Ruffy, LineageOS nebo Android 8.1 nainstalované v telefonu)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `některé staré pumpy Medtronic <../Configuration/MedtronicPump.html>`_ s nadcházející verzí 2.4 (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ s nadcházející verzí (`s přídavným komunikačním zařízením <../Module/module.html#pridavna-komunikacni-zarizeni>`_)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce `Pumpy potenciálně použitelné v budoucnu <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -63,11 +66,11 @@ Přídavná komunikační zařízení
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Pro staré pumpy Medtronic je potřeba přídavné komunikační zařízení (spojené s telefonem), aby dělalo "tlumočníka" překládajícího rádiový signál z pumpy na bluetooth pro komunikaci s telefonem. Nezapomeňte vybrat správné zařízení, které odpovídá vaší pumpě.
 
-   -  |OrangeLink|  `Domovská stránka OrangeLink <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Domovská stránka Emalink <https://github.com/sks01/EmaLink>`__ - `Kontakt  <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `Domovská stránka LoopLink <https://www.getlooplink.org/>`__ - `Kontakt <https://jameswedding.substack.com/>`__ - Netestováno
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Která pumpa je pro provozování uzavřené smyčky s AndroidAPS nejlepší?**
 
@@ -84,9 +87,9 @@ The advantages of the DanaR/RS and Dana-i vs. Combu:
 
 Zdroj glykémií
 --------------------------------------------------
-Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. Další podrobnosti naleznete `zde <../Configuration/BG-Source.html>`__. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
+Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_: Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
@@ -122,17 +125,6 @@ V případě jakýchkoli problémů s tabulkou napište prosím na e-mail `hardw
 xDrip+
 --------------------------------------------------
 I když aplikaci xDrip+ nepotřebujete jako zdroj glykémie, stále ji můžete používat např. pro výstrahy a zobrazování glykémie. Můžete tak mít libovolný počet výstrah, specifikovat časy, kdy budou aktivní, zda mají přebít tichý režim telefonu apod. Některé informace o aplikaci xDrip+ najdete `zde <../Configuration/xdrip.html>`__. Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
-
-Ukázková instalace
-==================================================
-Pokud chcete příklad krok za krokem, můžete se podívat na ukázkovou instalaci. První příklad je poměrně starý, ale stále je aktuální.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Ukázková instalace <../Getting-Started/Sample-Setup.rst>
- 
   
 Co dělat při čekání na moduly
 ==================================================

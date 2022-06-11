@@ -2,7 +2,7 @@ Ištęsti angliavandeniai / "iAV"
 **************************************************
 What are eCarbs and when are they useful?
 ==================================================
-Vykdant įprastą pompos terapiją, ištęstos dozės yra tinkamas būdas susitvarkyti su riebiu ar kitokiu lėtai įsisavinamu maistu, kuris padidina gliukozės kiekį kraujyje ilgiau nei daro insulinas. Tačiau ištęsti bolusai neturi prasmės (ir sukelia techninių sunkumų), nes jie iš esmės reiškia fiksuotą aukštą laikiną valandinę bazę, o tai prieštarauja normaliam uždaro ciklo veikimui - jis dinamiškai sureguliuoja bazinius dažnius. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
+Vykdant įprastą pompos terapiją, ištęstos dozės yra tinkamas būdas susitvarkyti su riebiu ar kitokiu lėtai įsisavinamu maistu, kuris padidina gliukozės kiekį kraujyje ilgiau nei daro insulinas. Tačiau ištęsti bolusai neturi prasmės (ir sukelia techninių sunkumų), nes jie iš esmės reiškia fiksuotą aukštą laikiną valandinę bazę, o tai prieštarauja normaliam uždaro ciklo veikimui - jis dinamiškai sureguliuoja bazinius dažnius. For details see `extended bolus <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`__ below.
 
 Tačiau vis tiek reikia susitvarkyti su tokiais patiekalais. Štai kodėl AndroidAPS“ nuo 2.0 versijos palaiko vadinamuosius ištęstinius angliavandenius arba "iAV".
 

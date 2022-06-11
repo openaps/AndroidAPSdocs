@@ -8,8 +8,8 @@
 * Dans les versions antérieures à AAPS 2.7, l'utilisateur devait choisir manuellement entre 8 heures ou 24 heures.
 * A partir de la version 2.7 d'AAPS, l'Autosens basculera entre une fenêtre de 24 heures et 8 heures pour calculer la sensibilité. Il choisira celle qui est le plus sensible. 
 * Les utilisateurs qui utilisaient oref1 remarqueront probablement que le système peut être moins dynamique en raison de la variation de sensibilité entre 24 heures et 8 heures.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
-* Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
+* Changer une canule ou modifier un profil réinitialisera l'autosens à 100% (un changement de profil avec durée ne réinitialisera pas l'autosens).
+* Autosens ajuste votre basal et votre SI (c.-à-d. qu'il imite ce que fait un changement de profil).
 * Si vous mangez continuellement des glucides sur une période prolongée, l'Autosens sera moins efficace pendant cette période car les glucides sont exclus les calculs des écarts de glycémie.
 
 ## Super Micro Bolus (SMB)
@@ -30,7 +30,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 3. Des calculs supplémentaires sont effectués pour prédire l'évolution de la glycémie, par ex. RNS (ou Repas Non Signalés). Même si aucun glucide n'est renseigné par l'utilisateur, RNS peut détecter automatiquement une augmentation significative des niveaux de glycémie liés à des repas, l'adrénaline ou d'autres facteurs et essaiera de les ajuster avec des SMB. Pour être en sécurité, cela marche aussi dans l'autre sens et peut arrêter les SMB plus tôt si une chute rapide inattendue de la glycémie survient. C'est pourquoi RNS doit toujours être activé avec les SMB.
 
-**Vous devez avoir démarré [l'objectif 10](../Usage/Objectives#objectif-10-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser les SMB.**
+**Vous devez avoir démarré [l'objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser les SMB.**
 
 Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -97,13 +97,13 @@ SMB fonctionne lorsqu'il existe une cible temporaire élevée active (activité,
 
 ### Activer en permanence les SMB
 
-SMB fonctionne en permanence (indépendamment des GA, des cibles temp ou des bolus). Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+SMB fonctionne en permanence (indépendamment des GA, des cibles temp ou des bolus). Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour le moment, il ne fonctionne qu'avec un Dexcom G5 ou G6, si vous utilisez ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera désactivé jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Activer SMB après ingestion de glucides
 
-Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
+Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour le moment, il ne fonctionne qu'avec un Dexcom G5 ou G6, si vous utilisez ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -187,7 +187,7 @@ Ici, vous pouvez choisir si vous voulez utiliser la [détection de sensibilité]
 
 ### Autosens ajuste aussi les cibles temp
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. Cela permet à AndroidAPS d'être plus ou moins "agressif". La cible réelle peut être atteinte plus rapidement avec ceci.
+Si cette option est activée, autosens peut également ajuster les cibles (à côté du débit de base et la SI). Cela permet à AndroidAPS d'être plus ou moins "agressif". La cible réelle peut être atteinte plus rapidement avec ceci.
 
 ### Paramètres Avancés
 
@@ -263,18 +263,18 @@ Valeur par défaut : 2
   <tr>
     <td>IA MAX AMA</td>
     <td>3,0</td>
-    <td>3,5</td>
+    <td>5,0</td>
     <td>7,0</td>
     <td>12,0</td>
     <td>25,0</td>
   </tr>
   <tr>
     <td>IA MAX SMB</td>
-    <td>3,0</td>
     <td>7,0</td>
-    <td>12,0</td>
-    <td>25,0</td>
-    <td>45,0</td>
+    <td>13,0</td>
+    <td>22,0</td>
+    <td>30,0</td>
+    <td>70,0</td>
   </tr>
   <tr>
     <td>BASAL MAX</td>

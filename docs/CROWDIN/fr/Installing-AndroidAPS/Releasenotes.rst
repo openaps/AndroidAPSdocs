@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version d'Android et version AAPS
 ====================================
-Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS 3. .0 et supérieur car il nécessite au moins Android 9. 
+Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS 3. .0 et supérieur car il nécessite au moins Android 9.
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
@@ -27,40 +27,63 @@ Android 9 et supérieur
 Android 8
 ------------------------------------
 * Utiliser la version **2.8.2.1** d'AAPS
-* Jusqu'à ce que AAPS version 3 soit publiée, il suffit de sélectionner **master** car il s'agit de 2.8.2.1. ;-)
-* Téléchargez le code AAPS depuis https://github.com/nightscout/AndroidAPS
+* Téléchargez le code AAPS depuis https://github.com/nightscout/AndroidAPS branche 2.8.2.1
 
 Android 7
 ------------------------------------
 * Utiliser la version **2.6.2** d'AAPS
-* Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS
+* Téléchargez le code AAPS depuis https://github.com/MilosKozak/AndroidAPS branche 2.6.2
 
-Version 3.0.0
+Version 3.1.0
 ================
 Release date: XX-XX-2022
 
 Conseils importants
 ----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Modifications
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
+
+Version 3.0.0
+================
+Date de sortie : 31-01-2022
+
+Conseils importants
+----------------------
 * **La version minimale d'Android est maintenant 9.0.**
-* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
+* **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront supprimés. Vous devez créer un nouveau `changement de profil <../Usage/Profiles.html>`_ et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
 * Utiliser la même version d'AAPS et de NSClient
-* Il y a un bogue dans xDrip et le mode Dexcom natif produisant des données dupliquées et qui empêche AAPS de fonctionner en mode boucle fermée. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 3.0 comme c'est décrit ici** `ici <../Installing-AndroidAPS/update3_0.html>`__.
 
 Etapes de préparation
 ----------------------
-**At least two days before update:**
+**Au moins deux jours avant la mise à jour :**
 
 * Désactivez Dexcom Bridge dans Nightscout
-
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* si vous utilisez G5/G6 et xDrip en tant que collecteur, vous devez mettre à jour xDrip vers une version "nocturne" plus récente que le 14 janvier 2022
+* si vous utilisez G5/G6 et allez basculer vers BYODA car elle est recommandée pour tirer parti du lissage à postérioiri (vous pouvez toujours utiliser xDrip à d'autres fins, xDrip peut recevoir des données de BYODA)
 
 
 Modifications
 ----------------------
-* XXXXk lignes changées, XXXXk nouvelles lignes de code
-* Support Omnipod DASH @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100k lignes changées, 105k nouvelles lignes de code
+* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* Support de DiaconnG8
+* `Support de la DiaconnG8 <../Configuration/DiaconnG8.html>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -74,11 +97,13 @@ Modifications
 
 * Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 * Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
-* NSProfile a disparu. RIP Seul le profil local est disponible et vous pouvez activer la synchronisation avec NS @MilosKozak. To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date
-* Procédure de réinitialisation du mot de passe maître en cas d'oubli. Pour réinitialiser le mot de passe maître mettez le fichier s'appelant PasswordReset dans le répertoire /AAPS/extra et redémarrez AAPS. Le nouveau mot de passe principal sera alors le numéro de série de votre pompe active @MilosKozak
+* NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être `synchronisé avec NS <../Installing-AndroidAPS/update3_0.html#profil-nightscout-ne-peut-plus-etre-selectionne>`_. @MilosKozak.
+* Procédure de `réinitialisation du mot de passe principal <../Installing-AndroidAPS/update3_0.html#reinitialiser-le-mot-de-passe-principal>`_ en cas d'oubli @MilosKozak
 * Enregisrement des Actions utilisateur @Philoul
 * Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
-* Bolus Wizard improvement
+* Nouvelle action d'automatisation Careportal @Philoul
+* Ajout un rappel bolus dans le dialogue Glucides @Philoul
+* Amélioration de l'Assistant Bolus
 * Améliorations de l'interface utilisateur @MilosKozak
 * Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
 * Nouvelle mise en page de l'automatisation @MilosKozak
@@ -87,13 +112,11 @@ Modifications
 * Correction d'un bug associé aux données instables de la MGC @MilosKozak
 * Amélioration de la communication DanaR et DanaRS @MilosKozak
 * Intégration de CircleCI @MilosKozak
-* Files location change: 
+* Changement d'emplacement des fichiers:
 
-   * /AAPS/extra (engineering mode) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (mode ingénierie)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
-
-
 
 Version 2.8.2
 ================
@@ -116,8 +139,8 @@ Date de sortie : 12-01-2021
 
 Conseils importants
 ----------------------
-* L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1. 
-* Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.). 
+* L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1.
+* Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.).
 * ATTENTION : NE PAS le faire si vous avez une autre application qui gère les traitements (comme xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY ne peut être désactivé que si le mode ingénierie est activé.
 
@@ -141,28 +164,28 @@ Date de sortie : 01-01-2021
 
 Conseils importants
 ----------------------
-* **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt. 
+* **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt.
 * `Les objectifs ont changé. <../Usage/Objectives.html#objectif-3-prouver-ses-connaissances>`_ **Finissez les objectifs non terminés avant la mise à jour.**
 * Le dossier github est toujours sur https://github.com/nightscout/AndroidAPS. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un `nouveau clone <../Installing-AndroidAPS/Building-APK.html>`_.
 * Utilisez `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ ou une version plus récente pour construire l'apk.
 
 Nouvelles fonctionnalités majeures
 ----------------------
-* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org 
-* `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak 
+* `Support de l'Omnipod Eros <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org
+* `Assistant bolus <../Configuration/Preferences.html#assistant-bolus>`_ & `Rappel repas <../Getting-Started/Screenshots.html#rappel-repas>`_ @MilosKozak
 * `Nouveau cadran <../Configuration/Watchfaces.html#nouveau-cadran-depuis-androidaps-2-8>`_ @rICTx-T1D
-* Améliorations de la connexion Dana RS @MilosKozak 
+* Améliorations de la connexion Dana RS @MilosKozak
 * Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 * Nouveau thème `Basse résolution <../Configuration/Preferences.html#theme>`_
 * Nouveau type de patient `"Grossesse" <../Usage/Open-APS-features.html#apercu-des-limites-codees-en-dur>`_ @Brian Quinion
-* Nouvelle présentation tablette de NSClient @MilosKozak 
-* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak 
+* Nouvelle présentation tablette de NSClient @MilosKozak
+* NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
 * `Filtre des préférences <../Configuration/Preferences.html>`_ @Brian Quinion
 * Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 * Nouveau `type d'insuline Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* Améliorations de l'assistant de configuration @MilosKozak 
-* Améliorations de la sécurité @dlvoy 
-* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion 
+* Améliorations de l'assistant de configuration @MilosKozak
+* Améliorations de la sécurité @dlvoy
+* Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 Version 2.7.0
 ================
@@ -170,7 +193,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -193,7 +216,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
@@ -211,7 +234,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 ----------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
-* Sinon, identique à 2.6.1.3. La mise à jour est facultative. 
+* Sinon, identique à 2.6.1.3. La mise à jour est facultative.
 
 Version 2.6.1.3
 ================
@@ -222,7 +245,7 @@ Utilisez `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ ou une 
 Nouvelles fonctionnalités majeures
 ------------------
 * Insight: Désactivation de la vibration sur bolus pour le firmware version 3
-* Sinon, identique à 2.6.1.2. La mise à jour est facultative. 
+* Sinon, identique à 2.6.1.2. La mise à jour est facultative.
 
 Version 2.6.1.2
 ================
@@ -275,7 +298,7 @@ Nouvelles fonctionnalités majeures
 ------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`__
-* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+* Nouveau `Plugin Profil Local <../Configuration/Config-Builder.html#profil-local>`_
 
   * Le profil local peut contenir plusieurs profils
   * Les profils peuvent être dupliqués et modifiés
@@ -283,7 +306,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
+* `Bolus étendu <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_ - la boucle fermée sera désactivée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage
@@ -306,7 +329,7 @@ Version 2.5.1
 ==================================================
 Date de sortie : 31-10-2019
 
-Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__. 
+Veuillez lire les `Remarques importantes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ et`limitations <../Installing-AndroidAPS/Releasenotes.html#cette-mise-a-jour-est-elle-pour-moi-n-est-actuellement-pas-pris-en-charge>`_ listées pour la `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie).
 * Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
@@ -320,7 +343,7 @@ Remarques importantes
 --------------------------------------------------
 * Veuillez utiliser `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ ou plus récent pour `construire l'apk <../Installing-AndroidAPS/Building-APK.html>`_ ou le `mettre à jour <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Si vous utilisez xDrip `identify receiver <../Configuration/xdrip.html#identifier-le-recepteur>`_ doit être défini.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Si vous utilisez le Dexcom G6 avec l'application Dexcom patchée, vous aurez besoin de la version présente dans le `dossier 2.4 <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge

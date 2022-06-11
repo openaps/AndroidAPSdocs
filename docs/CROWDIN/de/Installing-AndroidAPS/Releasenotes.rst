@@ -15,7 +15,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Android Version und AAPS Version
 ====================================
-Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert. 
+Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -27,40 +27,63 @@ Ab Android 9
 Android 8
 ------------------------------------
 * Verwende AAPS Version **2.8.2.1**.
-* Bis zur Veröffentlichung von AAPS Version 3 verwende einfach die **AAPS master**-Version, denn diese ist momentan 2.8.2.1. ;-)
-* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS branch 2.8.2.1
 
 Android 7
 ------------------------------------
 * Verwende AAPS Version **2.6.2**.
-* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS
+* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+
+Version 3.1.0
+================
+Release date: XX-XX-2022
+
+Wichtige Hinweise
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change
+
+Änderungen
+----------------------
+* fixed issues from 3.0 version
+* fixed DASH driver @avereha
+* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @markvader @andyrozman
+* Wear tiles @Andries-Smith
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smith
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
 
 Version 3.0.0
 ================
-Erscheinungsdatum: XX.XX.2022
+Erscheinungsdatum: 31.01.2022
 
 Wichtige Hinweise
 ----------------------
 * **Es wird nun mindestens Android 9.0 benötigt.**
 * **Es findet keine Migration der Daten in die neue Datenbank statt.** Beklagt Euch bitte nicht, es sind einfach zu tiefgreifende Änderungen und damit ist eine Übernahme nicht möglich. Daher werden nach dem Update IOB, COB, Behandlungen etc. leer sein. Du musst einen `Profilwechsel <../Usage/Profiles.html>`_ vornehmen und mit Null IOB und COB starten. Plane das Update sorgfältig!!! Die beste Situation wäre eine ohne aktives Insulin und ohne Kohlenhydrate an Bord.
 * Verwende immer die gleiche Version von AAPS und NSClient.
-* Es gibt einen Fehler im nativen xDrip und Dexcom-Modus, der doppelte Daten erzeugt. Dies hindert AAPS daran hindert, im Closed Loop-Modus zu laufen. Until this get fixed using BYODA in mandatory. Using BYODA is also recommended to take advantage of Dexcom back-smoothing
+
+**Prüfe nach dem Update auf 3.0 auf jeden Fall deine Einstellungen und passe sie ggf. an wie** `hier beschrieben <../Installing-AndroidAPS/update3_0.html>`__.
 
 Vorbereitende Schritte
 ----------------------
 **Spätestens zwei Tage vor dem Update:**
 
 * Deaktiviere Dexcom Bridge in Nightscout
-
-* if you are using G5/G6 switch to BYODA (if you were using xDrip). You still can use xDrip but not as collector (xDrip can receive data from BYODA)
+* Wenn Du den Dexcom G5 oder G6 mit xDrip+ nutzt, musst Du xDrip+ auf eine nightly Version nach dem 14.01.2022 updaten.
+* Wenn Du den Dexcom G5 oder G6 verwendest, wird der Wechsel zur BYODA als Empfänger empfohlen, um von der rückwirkenden Glättung der BZ-Werte zu profitieren. Du kannst xDrip+ weiter für andere Zwecke verwenden, denn xDrip+ kann Werte von der BYODA empfangen.
 
 
 Änderungen
 ----------------------
-* XXXXk Zeilen geändert, XXXXk neue Codezeilen
-* Omnipod DASH Unterstützung @AdrianLxM @avereha @bartsopers @vanelsberg
+* 100-tausend Zeilen geändert, 105-tausend neue Codezeilen
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* * Unterstützung für DiaconnG8
+* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Glunovo Unterstützung
 * Interne Datenbank aktualisiert auf Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Viel Code umgeschrieben zu Kotlin @MilosKozak
@@ -74,11 +97,13 @@ Vorbereitende Schritte
 
 * Änderung am Verhalten von Profilwechseln. Jetzt wird zwischen Profilwechsel [Profile switch] *(was der Benutzer will)* und Profiländerung [Profile change] *(wenn Änderungen von Pump)* unterschieden. @MilosKozak
 * Beim Erstellen eines Profilwechsels kann ein temporäres Ziel für Aktivität gestartet werden. @MilosKozak
-* Das Nightscout-Profil gibt es nicht  mehr. Es wird nur noch das lokale Profil verwendet. Dieses kann aber mit Nightscout synchronisiert werden.  @MilosKozak. Um das Profil von Nightscout aus zu aktualisieren, musst Du 'Clone' verwenden (den Eintrag, nicht das Profil) und die Änderungen speichern. Du solltest "Profil gültig ab: <aktuelles Datum>" sehen.
-* Verfahren zum Zurücksetzen eines vergessenen Master-Passworts. Um das Master-Passwort zurückzusetzen muss eine Datei mit Namen PasswordReset im Verzeichnis /AAPS/extra abgelegt und AAPS neu gestartet werden. Das neue Master-Passwort ist dann die Seriennummer Deiner Pumpe.
+* NSProfil ist weg, nur lokales Profil kann verwendet werden. Lokales Profil kann mit NS synchronisiert werden mit NS <../Installing-AndroidAPS/update3_0#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
+* Möglichkeit, das `Master Password zurückzusetzen <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Rückverfolgung der Benutzereingaben @Philoul
 * Neue Automation TempTargetValue Trigger @Philoul
-* Bolus Wizard improvement
+* Neue Automatisierung Careportal Aktion @Philoul
+* Bolus Erinnerung im KH-Dialog @Philoul
+* Verbesserung Bolus Assistent
 * Verbesserung der Anzeige (user interface) @MilosKozak
 * Neue Anwender-Buttons für Automatisierungen @MilosKozak
 * Neues Automatisierungs-Layout @MilosKozak
@@ -87,13 +112,11 @@ Vorbereitende Schritte
 * Fehler bei instabilen CGM-Werten behoben @MilosKozak
 * Verbesserung der Kommunikation mit DanaR und DanaRS @MilosKozak
 * CircleCI-Integration @MilosKozak
-* Änderung des Speicherorts: 
+* Änderung des Speicherorts:
 
-   * /AAPS/extra (engineering mode) 
-   * /AAPS/logs /AAPS/exports 
+   * /AAPS/extra (engineering mode)
+   * /AAPS/logs /AAPS/exports
    * /AAPS/preferences
-
-
 
 Version 2.8.2
 ================
@@ -116,8 +139,8 @@ Erscheinungsdatum: 12.01.2021
 
 Wichtige Hinweise
 ----------------------
-* Option **Zu Nightscout nur hochladen** ist verpflichtend für alle 2.8.1.1 Nutzer aktiviert. 
-* Falls du den NSClient zur Eingabe von temporären Zielen, Kohlenhydraten oder Profilwechseln verwendest, musst du diese Option in AAPS deaktivieren - **aber nur dann, wenn deine Synchronisierung gut funktioniert** (z.B. keine unerwünschten Änderungen wie selbstständige Änderungen der temporären Ziele, temporären Basalraten etc.). 
+* Option **Zu Nightscout nur hochladen** ist verpflichtend für alle 2.8.1.1 Nutzer aktiviert.
+* Falls du den NSClient zur Eingabe von temporären Zielen, Kohlenhydraten oder Profilwechseln verwendest, musst du diese Option in AAPS deaktivieren - **aber nur dann, wenn deine Synchronisierung gut funktioniert** (z.B. keine unerwünschten Änderungen wie selbstständige Änderungen der temporären Ziele, temporären Basalraten etc.).
 * ACHTUNG: KEINESFALLS deaktivieren, wenn irgendeine andere App Behandlungen zu Nightscout hochlädt (z.B. xDrip+ broadcast/upload/sync).
 * Die Option kann nur deaktiviert werden, wenn der engineering mode aktiviert ist.
 
@@ -141,28 +164,28 @@ Erscheinungsdatum: 01.01.2021
 
 Wichtige Hinweise
 ----------------------
-* **Mindestvoraussetzung ist nun Android 8.0.** Falls Du ein Smartphone mit einer älteren AndroidVersion verwendest, kannst Du immer noch die Version 2.6.1.4 aus dem alten Repository verwenden. 
+* **Mindestvoraussetzung ist nun Android 8.0.** Falls Du ein Smartphone mit einer älteren AndroidVersion verwendest, kannst Du immer noch die Version 2.6.1.4 aus dem alten Repository verwenden.
 * `Objectives (Ziele) wurden geändert. <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ **Wenn du dein aktuelles Ziel noch nicht abgeschlossen hast, so beende dieses vor dem Update.**
 * Repository weiterhin auf https://github.com/nightscout/AndroidAPS . Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die App-Erstellung `von vorne beginnst <../Installing-AndroidAPS/Building-APK.html>`_.
 * Nutze bitte `Android Studio 4.1.1 <https://developer.android.com/studio/>`_ oder neuer um die apk zu erstellen.
 
 Wichtige neue Funktionen
 ----------------------
-* `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org 
-* `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak 
+* `Omnipod Eros Unterstützung <../Configuration/OmnipodEros.html>`_ @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda und besonderer Dank an @ps2 @itsmojo, alle anderen am Loop-Treiber für Omnipod Beteiligten, sowie @jlucasvt von GetRileyLink.org
+* `Bolus-Berater <../Configuration/Preferences.html#bolus-berater>`_ & `Essens-Erinnerung <../Getting-Started/Screenshots.html#essens-erinnerung>`_ @MilosKozak
 * `Neues Watchface <../Configuration/Watchfaces.html#neues-watchface-ab-version-2-8>`_ @rICTx-T1D
-* Verbesserung der Verbindung zur Dana RS @MilosKozak 
+* Verbesserung der Verbindung zur Dana RS @MilosKozak
 * Bei Verwendung der nativen Dexcom App werden über mehr als 45 Minuten unveränderte CGM-Werte in SMB weiter berücksichtigt.
 * Neues `Erscheinungsbild für niedrige Bildschirmauflösungen <../Configuration/Preferences.html#erscheinungsbild>`_
 * Neuer Patiententyp `"Schwanger" <../Usage/Open-APS-features.html#ubersicht-der-fest-programmierten-limits>`_ @Brian Quinion
-* Neues NSClient-Layout für Tablets @MilosKozak 
-* NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak 
+* Neues NSClient-Layout für Tablets @MilosKozak
+* NSClient überträgt Insulin, Senstivität und Anzeige-Einstellungen direkt von AAPS @MilosKozak
 * `Filter für Einstellungen im 3-Punkte-Menü <../Configuration/Preferences.html>`_ @Brian Quinion
 * Neue Pumpensymbole @Rig22 @@teleriddler @osodebailar
 * Neuer `Insulintyp Lyumjev <../Configuration/Config-Builder.html#lyumjev>`_
-* Verbesserungen im Einrichtungsassitenten @MilosKozak 
-* Verbesserung der Sicherheit @dlvoy 
-* Verschiedene Verbesserungen und Fehlerbehebungen @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion 
+* Verbesserungen im Einrichtungsassitenten @MilosKozak
+* Verbesserung der Sicherheit @dlvoy
+* Verschiedene Verbesserungen und Fehlerbehebungen @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
 
 Version 2.7.0
 ================
@@ -170,7 +193,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -193,7 +216,7 @@ Wichtige neue Funktionen
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 * `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
@@ -211,7 +234,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 Wichtige neue Funktionen
 ----------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x) - zweiter Versuch
-* Sonst identisch mit 2.6.1.3. Update ist optional. 
+* Sonst identisch mit 2.6.1.3. Update ist optional.
 
 Version 2.6.1.3
 ================
@@ -222,7 +245,7 @@ Nutze bitte `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ oder
 Wichtige neue Funktionen
 ------------------
 * Insight: Vibration bei Bolus deaktivieren (Nur Firmware Version 3.x)
-* Sonst identisch mit 2.6.1.2. Update ist optional. 
+* Sonst identisch mit 2.6.1.2. Update ist optional.
 
 Version 2.6.1.2
 ================
@@ -275,7 +298,7 @@ Wichtige neue Funktionen
 ------------------
 * Kleinere Designänderungen (Startseite...)
 * Careportal Tab / Menü entfernt - weitere Details dazu `hier <../Usage/CPbefore26.html>`__
-* Neues `Plugin Lokales Profil <../Configuration/Config-Builder.html#lokales-profil-empfohlen>`_
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 
   * Im lokalen Profil können mehrere Profile gespeichert werden.
   * Profile können geklont und bearbeitet werden.
@@ -283,7 +306,7 @@ Wichtige neue Funktionen
   * Profilwechsel können in ein neues lokales Profil geklont werden (Zeitverschiebung und Prozentsatz werden berücksichtigt).
   * Neue Eingabemöglichkeit für Zielwerte
 * Einfaches Profil wurde entfernt.
-* `Verzögerter Bolus <../Usage/Extended-Carbs.html#id1>`_ - der Closed Loop wird unterbrochen
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
 * Medtronic Pumpe: Fehler mit doppelten Einträgen behoben
 * Maßeinheiten (mmol / mg/dl) werden nicht mehr im Profil angegeben, sondern als globale Einstellung.
 * Neue Einstellungen zum Einrichtungsassistenten hinzugefügt.
@@ -306,7 +329,7 @@ Version 2.5.1
 ==================================================
 Erscheinungsdatum: 31.10.2019
 
-Bitte beachte die `wichtigen Hinweise <../Installing-AndroidAPS/Releasenotes.html#wichtige-hinweise-2-5-0>`_ und `Beschränkungen <../Installing-AndroidAPS/Releasenotes.html#kann-ich-dieses-update-nutzen-aktuell-werden-noch-nicht-unterstutzt>`_, die bei `Version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ aufgeführt sind. 
+Bitte beachte die `wichtigen Hinweise <../Installing-AndroidAPS/Releasenotes.html#wichtige-hinweise-2-5-0>`_ und `Beschränkungen <../Installing-AndroidAPS/Releasenotes.html#kann-ich-dieses-update-nutzen-aktuell-werden-noch-nicht-unterstutzt>`_, die bei `Version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ aufgeführt sind.
 * Es wurde ein Fehler im Netzwerk-Status-Empfänger behoben, der zu einigen Abstürzen geführt hat (nicht kritisch, würde aber viel Energie verbrauchen auf Grund der ständigen Neuberechnungen).
 * Eine neue Versionssteuerung, die es ermöglicht, kleinere Aktualisierungen durchzuführen, ohne die Aktualisierungsbenachrichtigung auszulösen.
 
@@ -320,7 +343,7 @@ Wichtige Hinweise
 --------------------------------------------------
 * Verwende `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ oder neuer `um die App zu erstellen <../Installing-AndroidAPS/Building-APK.html>`_ oder `ein Update durchzuführen <../Installing-AndroidAPS/Update-to-new-version.html>`_.
 * Wenn Du xDrip verwendest, muss `identify receiver <../Configuration/xdrip.html#identifiziere-empfanger>`_ gesetzt sein.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
+* Wenn du Dexcom G6 mit der gepatchten Dexcom App verwendest, benötigst du die Version vom `2.4 Ordner <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
 * Glimp wird ab Version 4.15.57 und neuer unterstützt.
 
 Kann ich dieses Update nutzen? Aktuell werden NOCH NICHT unterstützt:

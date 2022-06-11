@@ -10,7 +10,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### AndroidAPS parametrai
 
-Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose. Ją pasirinkus, AAPS neįkels pakeitimų, atliktų Nightscout, tokių kaip laikini tikslai ar būsimi angliavandeniai. Jei naudojate [NS profilį](../Configuration/Config-Builder#ns-profile), profiliai bus sinchronizuojami tarp AAPS ir Nightscout nepaisant nustatymo "įkelti tik".
+Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose. Ją pasirinkus, AAPS neįkels pakeitimų, atliktų Nightscout, tokių kaip laikini tikslai ar būsimi angliavandeniai.
 
 * Bakstelėkite 3-taškų meniu viršutiniame dešiniajame kampe savo AAPS pradžios ekrane.
 * Pasirinkite "Nustatymai".

@@ -24,7 +24,7 @@ Používáte-li G6 s aplikací xDrip+
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
 * If you need Clarity and want to profit from xDrip+ alarms use the `BYODA <../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app>`_ with local broadcast to xDrip+.
-* Pokud jste ještě nic nenastavovali, tak stáhněte `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ a postupujte podle instrukcí na Nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 * Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 * Nastavte xDrip+ podle popisu konfigurace na stránce <../Configuration/xdrip.html>`__
 * Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte 'Identify receiver' tak, jak je popsáno v `popisu nastavení xDrip+ <../Configuration/xdrip.html>`_.

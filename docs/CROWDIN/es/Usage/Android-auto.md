@@ -6,12 +6,9 @@
 
 Usa avisos del sistema para alarmas y avisos:
 
-* Abrir el menú de 3 puntos en la parte superior derecha de la pantalla de inicio
-* Preferencias
-* Desplácese hasta abajo
-* Activar "Utilizar el sistema de notificaciones..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Usa avisos del sistema para alarmas y avisos](../images/AndroidAuto_01.png)
+![Usa avisos del sistema para alarmas y avisos](../images/AndroidAuto_01v2.png)
 
 ## Ajustes en la aplicación Android Auto en tu teléfono
 

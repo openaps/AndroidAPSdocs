@@ -1,4 +1,4 @@
-# İlk PR'nizi yapmak (çekme isteği)
+# How to edit the docs
 
 **Bu açıklama yalnızca İngilizce belgeleri düzenlemek içindir. Tüm yeni bilgiler önce İngilizce olarak eklenmelidir. Diğer dillere çeviri yapmak istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın.**
 
@@ -41,7 +41,7 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 4. You have been working in the "<>Edit file" tab. Select the "Preview changes" tab for a fresh look to make sure everything you changed looks like you meant it to (typpos sic.). If you see a needed improvement, go back to the edit tab to make more improvements. 
 
-![preview mode](./images/PR5.png)
+![önizleme modu](./images/PR5.png)
 
 5. When you have finished your edits, scroll to the bottom of the page. In the box at the bottom, provide your comments in the text field that reads, "Add an optional extended description...". The default title has the file name. Try to include a sentence explaining the **reason** for the change. Relating the reason helps reviewers understand what you are attempting to do with the PR.
 
@@ -64,7 +64,7 @@ At the moment there are two languages used for docs pages:
 * Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Image size
 

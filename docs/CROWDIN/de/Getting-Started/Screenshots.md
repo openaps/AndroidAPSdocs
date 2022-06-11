@@ -73,6 +73,48 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    
    ![Statusmenü Loop](../images/Home2020_Loop_Dialog.png)
 
+#### BG Warnzeichen
+
+Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal neben der BG-Ziffer, links auf dem Hauptbildschirm.
+
+*Hinweis*: Für AAPS-Berechnungen werden bis zu 30 Stunden berücksichtigt. Daher kann es auch nach der Lösung des zugrunde liegenden Problems bis zu 30 Stunden dauern, bis das gelbe Dreieck nach dem letzten unregelmäßigen Intervall verschwunden ist.
+
+Um es sofort zu entfernen, musst Du ein paar Einträge manuell aus der Registerkarte Dexcom/xDrip+ löschen.
+
+Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
+
+* [sichere deine Einstellungen](../Usage/ExportImportSettings.rst),
+* setze deine Datenbank im Wartungsmenü zurück und
+* [Importiere deine Einstellungen](../Usage/ExportImportSettings.rst) erneut
+
+##### Rotes Warndreieck: Doppelte BG-Daten
+
+Das rote Warndreieck signalisiert, dass Du sofort aktiv werden solltest: Du erhältst doppelte BG-Daten, die den Loop daran hindern seine Arbeit richtig zu machen. Daher wird der Loop so lange deaktiviert, bis das Problem gelöst ist.
+
+![Rotes BG-Warndreieck](../images/bg_warn_red.png)
+
+Du musst herausfinden, warum du doppelte BG-Daten erhältst:
+
+* Ist Dexcom Bridge auf deiner NS-Seite aktiviert? Deaktiviere die Dexcom Bridge, indem Du zu heroku (oder einem anderen Hosting-Provider) gehst, dort die "enable" Variable bearbeitest und den "bridge" Teil dort entfernst. (Details zu heroku [findest Du hier](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Laden mehrere Quellen deine BG zu NS hoch? Wenn Du die BYODA-App verwendest, aktiviere den Upload in AAPS, aber aktiviere ihn nicht in xDrip+, falls das der Fall ist.
+* Hast du Follower die deine BG erhalten und die diese auch wieder auf deine NS-Seite hochladen?
+* Letzter Ausweg: In AAPS in den NS Client Einstellungen die Sync-Einstellungen auswählen und die Option "CGM Daten von NS akzeptieren" deaktivieren.
+
+##### Gelbes Warndreieck
+
+* Das gelbe Warnsignal weist darauf hin, dass BG-Daten in unregelmäßigen Zeitintervallen angekommen sind oder einige BGs fehlen.
+   
+   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
+
+* Normalerweise musst Du in diesem Falle nichts tun. Der closed loop funktioniert weiter!
+
+* Da ein Sensorwechsel den konstanten Fluss der BG-Daten unterbricht, ist ein gelbes Warndreieck nach dem Wechsel des Sensors normal und es gibt nichts zu befürchten.
+* Spezieller Hinweis für Libre-Nutzer:
+   
+   * Alle Libre-Sensoren springen alle paar Stunden um ein oder zwei Minuten, was dazu führt, dass es nie zu einen perfekten Strom von regulären BG-Intervallen kommt.
+   * Auch sprunghafte Änderungen der Messwerte unterbrechen den kontinuierlichen Datenstrom.
+   * Daher bleibt das gelbe Warndreieck für Libre-Nutzer immer sichtbar.
+
 ### Abschnitt D - IOB, COB, BR und AS
 
 ![Abschnitt D](../images/Home2020_TBR.png)
@@ -148,7 +190,7 @@ Wenn du AndroidAPS öffnest, ist dies der erste Bildschirm. Er enthält die meis
    
    Die Prognoselinie zeigt, wie sich die IOB-Kurve ändern würde, wenn die Pumpe die Insulinabgabe komplett stoppen würde (0% TBR).
 
-* **Dunkelgelbe** Zeile: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivitat-oref1) (nicht ankündigte Mahlzeiten)
+* **Dunkelgelbe** Zeile: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (nicht ankündigte Mahlzeiten)
    
    Unannounced meals (nicht angekündigte Mahlzeiten) bedeutet, dass ein signifikanter Anstieg des Glukosespiegels durch Mahlzeiten, Adrenalin oder andere Einflüsse festgestellt wird. Die Prognoselinie ähnelt der ORANGE COB-Linie, geht aber davon aus, dass die Abweichungen mit konstanter Rate abnehmen werden (durch Verlängerung der aktuellen Reduktionsrate).
 
@@ -184,7 +226,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Zeigt das Insulin, das an Bord ist (= aktives Insulin im Körper). Es enthält Insulin aus Bolus und temporärem Basal (** schließt aber Basalraten aus deinem Profil aus**).
 * Wenn es keine [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), keine Boli und keine TBR während der DIA-Zeit gäbe, wäre dies Null.
 * Das IOB kann negativ sein, wenn Sie längere Zeit keinen verbleibenden Bolus und keine oder nur niedrige Basalrate hatten.
-* Das Abklingverhalten hängt von den Einstellungen des DIA [und den Einstellungen im Insulinprofil](../Configuration/Config-Builder#lokales-profil-empfohlen) ab. 
+* Das Abklingverhalten hängt von den [Einstellungen zum Insulin und zum DIA im Profil](../Configuration/Config-Builder#local-profile) ab. 
 
 #### Aktive Kohlenhydrate
 
@@ -219,7 +261,10 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 
 ![Buttons für den Homescreen](../images/Home2020_Buttons.png)
 
-* Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind "immer an". 
+* Schaltflächen für Insulin, Kohlenhydrate und Bolus-Rechner sind "immer an".
+   
+   * Wenn die Verbindung zur Pumpe unterbrochen ist, ist die Schaltfläche 'Insulin' nicht sichtbar.
+
 * Andere Schaltflächen müssen in den [Einstellungen ](../Configuration/Preferences#schaltflachen) konfiguriert werden.
 
 #### Insulin
@@ -272,7 +317,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 * Das Feld BZ (BG) ist in der Regel mit dem letzten CGM-Wert vorbefüllt. Falls Du keine aktuellen CGM-Werte hast, ist das Feld leer. 
 * Unter CARBS (Kohlenhydrate) trägst Du Deine Schätzung der Kohlenhydrate - oder deren Äquivalent - ein. 
 * Das Korr-Feld (CORR) wird benutzt, wenn Du die vorgeschlagene Dosis ändern möchtest.
-* Das Feld KH-Zeit (CARB TIME) ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohlenhydrate also schon zu Dir genommen hast.
+* Das Feld KH-Zeit (CARB TIME) ist für einen Spritz-Ess-Abstand gedacht, so dass Du dem System mitteilen kannst, dass die Kohlenhydrate erst später gegessen werden. Gib einen negativen Wert ein, wenn Du nach dem Essen spritzt, die Kohelnhydrate also schon zu Dir genommen hast.
 
 #### Essens-Erinnerung
 
@@ -289,13 +334,13 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 ### Abschnitt K
 
 * Zeigt den errechneten Bolus. 
-* Falls IOB (Insulin on board) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
+* Falls IOB (Insulin on bord) den berechneten Bolus bereits übersteigt, wird nur die Menge der fehlenden Kohlenhydrate angezeigt.
 * Notizen werden in Nightscout hochgeladen - abhängig von Deinen Einstellungen für den [NS-Client](../Configuration/Preferences#nightscout-client).
 
 ### Abschnitt L
 
 * Details zum Bolus-Rechner.
-* Du kannst einzelne davon abwählen, wenn du sie nicht berücksichtigen willst, dies wird aber die Ausnahme sein.
+* Du kannst einzelne davon abwählen, wenn du sie ncht berücksichtigen willst, dies wird aber die Ausnahme sein.
 * Aus Sicherheitsgründen muss das Feld **TT manuell aktiviert werden**, wenn der Bolus-Rechner ein vorhandenes temporäres Ziel berücksichtigen soll.
 
 #### Kombinationen von COB und IOB und deren Bedeutung
@@ -334,7 +379,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
    
    * Sensoralter & -level (Batterieladestand in %)
    * Insulinalter & Reservoirstand (Einheiten)
-   * kanülenalter
+   * Kanülenalter
    * Alter & Ladestand (in %) der Pumpenbatterie
 
 * Falls Du die [Darstellung für niedrige Auflösungen](../Configuration/Preferences#erscheinungsbild) gewählt hast, werden weniger Informationen angezeigt.
@@ -377,10 +422,10 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 * Dies zeigt das Aktivitätsprofil des Insulins, das Du im [Konfigurations-Generator](../Configuration/Config-Builder#insulin) ausgewählt hast. 
 * Die LILA Linie zeigt an, wie viel Insulin nach der Injektion verbleibt und wie es im Zeitverlauf abnimmt. Die BLAUE Linie veranschaulicht die Aktivität des Insulins.
 * Wichtig zu beachten ist, dass der Ablauf deutlich länger dauert, als gemein hin angenommen. 
-* Von der klassischen Pumpentherapie bist du es vermutlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
-* Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle, da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
+* Von der klassischen umpentherapie bist du es wahrscheinlich gewohnt anzunehmen, dass das Insulin nach ca. 3 1/2 Stunden vollständig abgebaut ist. 
+* Allerdings spielt der langsamere Abbau beim Loopen eine wichtige Rolle da die Berechnungen deutlich präziser sind und sich diese geringen Mengen unter den rekursiven Berechnungen des AndroidAPS Algorithmus summieren.
 
-Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt findest du in diesem Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+Weitere Informationen zu den verschiedenen Insulintypen, ihren Aktivitätsprofilen und warum dies alles eine Rolle spielt lies bitte diesen Artikel: [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves).
 
 Du solltest auch einen Blick in diesen exzellenten Blog-Artikel werfen: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
@@ -391,7 +436,7 @@ Und noch mehr bei: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/201
 ![Status der Pumpe](../images/Screenshot_PumpStatus.png)
 
 * Verschiedene Informationen über den Status Deiner Pumpe. Die angezeigten Informationen hängen von Deinem Pumpenmodell ab.
-* Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.rst).
+* Weitere Informationen findest Du auf der [Pumpen Seite](../Hardware/pumps.md).
 
 ## Careportal (Behandlungen)
 
@@ -440,14 +485,14 @@ Der Behandlungs-Tab kann verwendet werden, um fehlerhafte Kohlenhydrat-Einträge
    * Basalrate
    * BZ-Ziel: Wert, den die AAPS-Berechnungen anstreben sollen
 
-* Du kannst entweder ein [lokales Profil](../Configuration/Config-Builder#lokales-profil-empfohlen) verwenden, das auf deinem Smartphone bearbeitet werden kann oder ein [Nightscout Profil](../Configuration/Config-Builder#nightscout-profil), das auf deiner NS-Seite bearbeitet und anschließend auf dein Telefon übertragen werden muss. Details findest Du in den entsprechenden Abschnitten auf der [Konfigurations-Seite](../Configuration/Config-Builder.md).
+* Ab Version 3.0 ist nur ein [lokales Profil](../Configuration/Config-Builder#local-profile) möglich. Das lokale Profil kann auf Deinem Smartphone bearbeitet und mit Deiner Nightscout-Seite synchronisiert werden.
 
 ## Bolus
 
 Historie der folgenden Behandlungen:
 
 * Bolus & Kohlenhydrate -> Option zum [Entfernen von Einträgen](../Getting-Started/Screenshots#kohlenhydrat -korrektur) zur Korrektur der Historie
-* [Verzögerter Bolus](../Usage/Extended-Carbs#extended-bolus)
+* [Verzögerter Bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporäre Basalrate (TBR)
 * [Temporäres Ziel](../Usage/temptarget.md)
 * [Profilwechsel](../Usage/Profiles.md)

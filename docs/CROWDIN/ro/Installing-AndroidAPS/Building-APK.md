@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Step by step walkthrough
 
@@ -259,7 +259,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) for known problems!
+    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Build finished](../images/studioSetup/51_BuildFinished.png)
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Click on the notification to expand it.
 
@@ -347,4 +347,4 @@ On your phone you have to allow installation from unknown sources. Manuals how t
 
 ## Depanare
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

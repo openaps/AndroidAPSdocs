@@ -2,10 +2,10 @@
 **************************************************
 
 .. imagen:: ../images/autopilot.png
-  :alt: AAPS es como un autopiloto
+  :alt: AAPS como un piloto automático
 
 Un sistema de páncreas artificial de lazo cerrado combina diferentes componentes para facilitarte la gestión de la diabetes. 
-In her great book `Automated Insulin Delivery <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an `"autopilot for your diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. ¿Qué quiere decir eso?
+En su gran libro `Entrega automática de insulina <https://www.artificialpancreasbook.com/>`_ Dana M. Lewis, una de las fundadoras del movimiento de código abierto de lazo cerrado, lo menciona como un `"piloto automático para tu diabetes" <https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>`_. Pero, ¿Qué quiere decir esto?
 
 **Piloto automático de un avión**
 
@@ -32,10 +32,11 @@ AndroidAPS is described in detail in `this documentation <./WhatisAndroidAPS.htm
 
 Las bombas compatibles <../Hardware/pumps.html>`_ son:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
 
 OpenAPS

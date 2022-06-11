@@ -1,4 +1,4 @@
-Vue d'ensemble des composants 
+Component Overview 
 **************************************************
 AndroidAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Avant de décider des composants, ce serait une bonne idée de jeter un oeil à la `configuration des composants <../index.html#configuration-des-composants>`_.
    
@@ -48,12 +48,15 @@ Pompe à insuline
 --------------------------------------------------
 AndroidAPS fonctionne **actuellement** avec 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (également nécessaire : application Ruffy, LineageOS ou Android 8.1 sur votre téléphone)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `certaines anciennes pompes Medtronic <../Configuration/MedtronicPump.html>`_ de la version 2.4 à venir (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`__ nécessaires)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`__ nécessaire)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -63,11 +66,11 @@ Périphérique de communication additionnel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Pour les anciennes pompes medtronic, un périphérique de communication supplémentaire (en plus de votre téléphone) est nécessaire pour "traduire" le signal radio de la pompe vers le Bluetooth. Assurez-vous de choisir la bonne version en fonction de votre pompe.
 
-   -  |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__  
-   - |DiaLink| DiaLink - `Informations de contact <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Alors quelle est la meilleure pompe pour boucler avec AndroidAPS ?**
 
@@ -84,9 +87,9 @@ Les avantages de la DanaR/RS et Dana-i vs. la Combo comme choix de pompe de choi
 
 Source GLY
 --------------------------------------------------
-Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`__. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
+Voici un bref aperçu de tous les MGC/MGF compatibles avec AndroidAPS. Pour plus de détails, consultez `ceci <../Configuration/BG-Source.html>`_. Juste une petite astuce : si vous voulez afficher vos glycémies dans l'application xDrip+ ou dans le site web Nightscout, vous pouvez choisir xDrip+ (ou Nightscout avec connexion web) comme source de glycémie dans AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA est recommandée depuis la version 3.0 (voir `release notes <../Installing-AndroidAPS/Releasenotes.html#conseils-importants>`_ pour plus de détails). xDrip+ doit être au moins la version 2022.01.14 ou plus récente
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_ : Il fonctionne avec l'application xDrip+ ou l'application Dexcom patchée
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_ : Ces capteurs sont assez anciens, mais vous pouvez trouver les instructions sur la façon de les utiliser avec l'application xDrip+
 * `Libre 2 <../Hardware/Libre2.html>`_ : Il fonctioinne avec xDrip+ (pas besoin de transmetteur), mais vous devez compiler votre propre application patchée
@@ -122,17 +125,6 @@ En cas de problème avec la feuille de calcul, merci d'envoyer un mail à `hardw
 xDrip+
 --------------------------------------------------
 Même si vous n'avez pas besoin d'avoir l'application xDrip+ en tant que Source GLY, vous pouvez toujours l'utiliser par ex. pour les alertes ou pour un bon affichage des glycémies. Vous pouvez avoir autant d'alarmes que vous le souhaitez, spécifier l'heure à laquelle l'alarme doit être active, si elle peut remplacer le mode silencieux, etc. Certaines informations xDrip+ peuvent être trouvées `ici <../Configuration/xdrip.html>`__. Veuillez noter que les documentations de cette application ne sont pas toujours à jour car leur progression est assez rapide.
-
-Exemple de configuration
-==================================================
-Si vous souhaitez obtenir un exemple d'étape par étape, vous pouvez consulter un exemple de configuration. Le premier exemple de configuration est assez ancien, mais il doit être encore à jour.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Exemple de configuration <../Getting-Started/Sample-Setup.rst>
- 
   
 Que faire en attendant les composants
 ==================================================

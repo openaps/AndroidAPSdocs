@@ -1,16 +1,19 @@
 # Changement de profil
 
-Lors du démarrage de votre AndroidAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau (dans NS ou dans AAPS) pour commencer à utiliser ces changements.
+La documentation sur les profils en général peut être trouvée sur [Générateur de configuration - Profil](../Configuration/Config-Builder#profil).
 
-En interne, AAPS crée une capture instantanée du profil avec la date et la durée et l’utilise dans la période sélectionnée. La durée zéro signifie infinie. Ce profil est actif jusqu'à ce qu'il y ait un nouveau "Changement de Profil".
+Lors du démarrage d'AAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau pour commencer à utiliser ces changements.
 
-Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous).
+En interne, AAPS crée une capture instantanée du profil avec la date et la durée et l’utilise dans la période sélectionnée.
+
+* La durée zéro signifie infinie. Ce profil est actif jusqu'à ce qu'il y ait un nouveau "Changement de Profil".
+* La durée de x minutes signifie x minutes d'utilisation de ce profil. Après cette durée, le profil est basculé vers le précédent "Changement de profil" valide.
+
+Si vous avez modifié votre profil dans l'onglet "Profil local", vous pouvez y activer le profil, ce qui permet également de faire un changement de profil implicite.
+
+Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous) dans la page d'accueil d'AndroidAPS.
 
 ![Faire un changement de profil](../images/ProfileSwitch_HowTo.png)
-
-Si vous faites un « Changement de profil » avec une durée, le précédent profil activé est remis à la fin de la période.
-
-Si vous utilisez des profils AAPS locaux, vous devez appuyer sur le bouton "Activer le profil" pour appliquer ces changements (cela crée un événement "Changement de profil").
 
 Dans le "Changement de profil", vous pouvez choisir deux paramètres supplémentaires qui font partie du profil circadien :
 
@@ -36,7 +39,7 @@ Dans le "Changement de profil", vous pouvez choisir deux paramètres supplément
   * **Positif** décalage horaire +10h 
     * 2:00 **+10 h** -> 12:00
     * Les paramètres à partir de 2:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire positif.
-  * **Négatif** décalage horaire -10h 
+  * **Négatif** décalage horaire +10h 
     * 22:00 **-10 h** -> 12:00
     * Les paramètres à partir de 22:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire négatif.
 

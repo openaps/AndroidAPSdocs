@@ -23,7 +23,7 @@ Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din
 
 * În [Config builder](../Configuration/Config-Builder) din aplicaţia AndroidAPS selecteaza cu Accu-Chek Insight în secţiunea pompei
     
-    ![Captura de ecran Insight ConfigBuilder](../images/Insight_ConfigBuilder.png)
+    ![Captura de ecran Insight ConfigBuilder](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Atinge roata pentru a deschide setările Insight.
 

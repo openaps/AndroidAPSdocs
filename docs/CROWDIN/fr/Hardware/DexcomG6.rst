@@ -24,7 +24,7 @@ Si vous utilisez le G6 avec xdrip+
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter en même temps xDrip+ et l'application Dexcom avec le transmetteur !**
 * Si vous avez besoin de Clarity et que vous voulez profiter des alertes xDrip+, utilisez `BYODA <../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom>`_ avec la diffusion locale vers xDrip+.
-* Si vous ne l'avez pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur nightscout (`G5 <http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* Si ce n'est pas déjà configuré, téléchargez `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ et suivez les instructions sur la page de configuration `xDrip+ <../Configuration/xdrip.html>`_.
 * Sélectionnez xDrip dans le Générateur de configuration (dans AndroidAPS).
 * Réglez les paramètres dans xDrip+ comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__
 * Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identifier le récepteur" comme c'est décrit dans la page `Paramètres xDrip+ <../Configuration/xdrip.html>`__.
@@ -73,4 +73,4 @@ Les dépannages généraux concernant les MGC peuvent être trouvés `ici <./Gen
 
 Nouvel émetteur avec capteur en cours
 --------------------------------------------------
-Si vous changez de transmetteur avec un capteur en cours d'exécution, vous pouvez essayer de retirer le transmetteur sans endommager le montage du capteur. A video can be found at `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.
+Si vous changez de transmetteur avec un capteur en cours d'exécution, vous pouvez essayer de retirer le transmetteur sans endommager le montage du capteur. Une vidéo peut être trouvée ici `https://youtu.be/tx-kTsrkNUM <https://youtu.be/tx-kTsrkNUM>`_.

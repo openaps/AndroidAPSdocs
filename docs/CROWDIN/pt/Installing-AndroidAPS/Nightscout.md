@@ -10,7 +10,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### Definições AndroidAPS
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. If you are using [NS profile](../Configuration/Config-Builder#ns-profile) the profiles will be synced between AAPS and Nightscout despite the setting "upload only".
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Tap 3-dot menu on top right corner on your AAPS homescreen.
 * Select "Preferences".

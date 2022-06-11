@@ -6,12 +6,9 @@
 
 Utiliser le système des notifications :
 
-* Ouvrez le menu 3 points en haut à droite de l'écran d'accueil
-* Sélectionnez Préférences
-* Faites défiler complètement en bas
-* Activez "Utiliser les notifications système ..."
+* Ouvrir le menu à 3 points en haut à droite de l'écran d'accueil et sélectionner **Préférences** <unk> **Alertes locales** <unk> et activer **Utiliser les notifications système pour les alertes et les notifications** 
 
-![Utiliser les notifications système pour les alertes et les notifications](../images/AndroidAuto_01.png)
+![Utiliser les notifications système pour les alertes et les notifications](../images/AndroidAuto_01v2.png)
 
 ## Paramètres dans l'application Android Auto sur votre téléphone
 

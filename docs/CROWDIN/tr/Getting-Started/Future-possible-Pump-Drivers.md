@@ -1,20 +1,12 @@
-# Future (possible) Pump Drivers
+# Gelecekteki (olası) Pompa Sürücüleri
 
-This is list of some Pumps floating around there, and status of support for them in any of Looping systems and then status in AAPS. On end there is some info, what is required for a pump to be "Loop capable".
+Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemindeki destek durumu ile AAPS'deki durumu anlatılmaya çalışılacaktır. Bölüm sonunda bir pompanın "Döngü özellikli" olması için gerekli olan bazı bilgiler vardır.
 
-## Pumps that are Loopable
+## Döngü yapılabilen Pompalar
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
+### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
-
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
-
-* * *
-
-### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
-
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimi olmasına rağmen iletişim çok sınırlı ve tek yönlüdür: Şirket 2021'in sonunda pompa uygulamasından bolus ve TBR'yi ayarlamaya izin verecek olan DOSE (1.6) adlı yeni sürümü piyasaya sürmeyi planlıyor. Kendi döngü uygulamasını da 2022'de hayata geçirmeyi planlıyorlar. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
 **Hardware requirement for AAPS:** None. It's BT enabled.
 
@@ -110,14 +102,14 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
-## Requirements for pumps being loopable
+## Döngü yapılabilecek pompalar için gereksinimler
 
-**Prerequisite**
+**Ön Şart**
 
-- Pump has to support some kind of remote control. (BT, Radio frequency, etc)
-- Protocol is hacked/documented/etc.
+- Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
+- Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimal requirement**
+**Minimum gereksinim**
 
 - Set Temporary Basal Rate
 - Get Status

@@ -35,7 +35,7 @@ Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez `dupl
 Comparer deux profils
 =======================================
 
-Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage d'activation de vos profils utilisés dans un précédent `changement de profil <../Usage/Profiles.html>`_).
+Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage de l'un des profils utilisés dans un précédent `changement de profil <../Usage/Profiles.html>`_).
 
 .. image:: ../images/ProfileHelper1.png
   :alt: Assistant Profil 1
@@ -57,7 +57,7 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 Dupliquer le profil
 =======================================
 
-Si vous utilisez des `profils locaux <../Configuration/Config-Builder.html#profil-local-recommande>`_, vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
+Si vous utilisez des `profils locaux <../Configuration/Config-Builder.html#profil-local>`_, vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Assistant profile Dupliquer le Profil / Changement de profil

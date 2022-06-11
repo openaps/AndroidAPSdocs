@@ -2,7 +2,7 @@
 
 În funcție de setările tale poti deschide Config Sistem printr-o filă din partea de sus a ecranului sau prin meniul principal.
 
-![Deschidere Configurarea sistemului](../images/ConfBuild_Open.png)
+![Deschidere Configurarea sistemului](../images/ConfBuild_Open_AAPS30.png)
 
 Configurarea sistemului (Conf) este fila unde activezi sau dezactivezi optiuni ale modulelor. Casetele din partea stângă (A) permit să selectezi ce optiune să folosesti, casetele din partea dreaptă (C) permit să vizualizezi optiunile ca filă (E) în AndroidAPS. În cazul în care caseta din dreapta nu este activa, ajungi la funcție folosind meniul (D) din stânga sus.
 
@@ -10,63 +10,62 @@ Configurarea sistemului (Conf) este fila unde activezi sau dezactivezi optiuni a
 
 **Prima configurare:** Începând cu versiunea AAPS 2.0, există un Asistent de Configurare care te orienteaza in stabilire a parametrilor de functionare a AndroidAPS. Apasa meniul reprezentat prin 3 puncte in partea dreaptă sus a ecranului (F) și selecteaza 'Asistent Configurare' pentru a îl folosi.
 
-![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder.png)
+![Casuta Configurare sistem şi rotita](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 ## Fila sau meniul principal
 
 Cu bifa de sub simbol poti stabili cum să deschizi secţiunea corespunzătoare a programului.
 
-![Fila sau meniul principal](../images/ConfBuild_TabOrHH.png)
+![Fila sau meniul principal](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 ## Profil
 
-Selecteaza profilul bazal pe care vrei să îl folosesti. Vezi pagina [Profile](../Usage/Profiles.md) pentru mai multe informații despre modul de configurare.
+* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
+* As of AAPS 3.0, only the local profile is available.
 
-### Profil local (recomandat)
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
-Profilul local folosește ratele bazale introduse manual în pompă. La selectarea Profilului Local se creaza o filă nouă în AAPS, in care ratele bazalei citite de la pompa se pot modifica, dacă este necesar. La următoarea schimbare de profil, acestea sunt scrise în pompă la profilul 1. Acest profil este recomandat pentru că nu se bazează pe conexiunea la internet.
+### Local profile
 
-Profilurile locale fac parte din [setările exportate](../Usage/ExportImportSettings.rst). Deci asigură-te că ai o copie de rezervă într-un loc sigur.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-![Setările profilului local](../images/LocalProfile_Settings.png)
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
 
-Butoane:
+![Local Profile settings](../images/LocalProfile_Settings.png)
 
-* verde plus: adăugare
-* roşu X: ştergere
-* săgeată albastră: dublare
+Buttons:
 
-Dacă faci modificări la profilul tau, asigura-te că editezi profilul corect. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+* green plus: add
+* red X: delete
+* blue arrow: duplicate
+
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clonează schimbarea de profil
 
-Poți crea cu ușurință un nou profil local dintr-un comutator de profil. În acest caz, decalajul de timp sau procentul vor fi aplicate noului profil local.
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
-1. Du-te la fila de tratamente.
-2. Select ProfileSwitch.
-3. Apasa „Clone”.
-4. Poti edita noul profil local în fila Profil Local (LP) sau prin meniul principal.
+1. Click 3-dots-menu in upper right corner.
+2. Select 'Treatments'.
+3. Press star symbol to access profile switch page.
+4. Select the desired profile switch and press "Clone".
+5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
 
-![Clonează schimbarea de profil](../images/LocalProfile_ClonePS.png)
-
-Dacă doresti să treci de la profilul Nightscout la Profilul Local, faci Schimbare de profil in profilul NS și clonezi comutatorul de profil cum e descris mai sus.
+![Clonează schimbarea de profil](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Încarcă profiluri locale în Nightscout
 
-Profilurile locale pot fi de asemenea încărcate în Nightscout. Setările pot fi găsite în [preferinţe NSClient](../Configuration/Preferences#nsclient).
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-![Încarcă profiluri locale în Nightscout](../images/LocalProfile_UploadNS2.png)
+![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
-Avantaje:
+#### Change profile in Nighscout profile editor
 
-* nu este necesară conexiune la internet pentru a schimba Setările profilului
-* modificări de profil se pot face direct pe telefon
-* un profil nou poate fi creat prin Schimbarea de Profil
-* profilurile locale pot fi încărcate în Nightscout
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
 
-Dezavantaj:
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
-* nimic
+![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### Ajutor Profil
 
@@ -75,279 +74,276 @@ Profilul de ajutor are două funcţii:
 1. Găseşte un profil pentru copii
 2. Compară două profiluri sau Schimbări de Profil pentru a clona un nou profil
 
-Detaliile sunt explicate pe pagina separată de [ajutor profil](../Configuration/profilehelper.rst).
-
-### Profil NS
-
-Profil NS folosește profilele pe care le-ai salvat în site-ul tau Nightscout (https://[yournightscoutsiteaddress]/profile). Poți folosi [Schimbare Profil](../Usage/Profiles.md) pentru a alege care dintre profiluri este activ; acesta functie scrie profilul în pompă în cazul unei erori AndroidAPS. Asa se pot creea cu ușurință mai multe profiluri în Nightscout (ex.. munca, acasa, sporturi, vacante, etc). La scurt timp după ce ai făcut clic pe "Salvare", acestea vor fi transferate la AAPS dacă smartphone-ul este online. Chiar şi fără conexiune la Internet sau fără conexiune la Nightscout, profilurile Nightscout sunt disponibile în AAPS după ce au fost sincronizate.
-
-Fă o [schimbare de profil](../Getting-Started/Screenshots.md#current-profile) pentru a activa un profil din Nightscout. După schimbarea profilului, AAPS va înscrie profilul selectat în pompă, astfel încât acesta sa fie disponibil în caz de urgentă si să continue să ruleze fară AAPS.
-
-Avantaje:
-
-* profiluri multiple
-* uşor de editat pe PC sau tabletă
-
-Dezavantaj:
-
-* fara modificări locale la setările de profil
-* fara posibilitatea schimbarii profilului direct de pe telefon
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
 
 ## Insulină
 
-![Tip insulină](../images/ConfBuild_Insulin.png)
+![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
 
-* Alegeți tipul de curbă de acțiune a insulinei pe care o folosiți.
-* Toate opțiunile 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' și 'Free-Peak Oref' au formă exponențială. Mai multe informaţii sunt listate în [Documentație OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* Curbele vor varia în funcţie de DIA şi de momentul de vârf.
+* Select the type of insulin curve you are using.
+* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* The curves will vary based on the DIA and the time to peak.
     
-    * Linia VIOLET arată cât de multă **insulină rămâne** după ce a fost injectată in timp ce se consumă.
-    * Linia ALBASTRĂ arată **cât de activă** este insulina.
+    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
+    * BLUE line shows **how active** insulin is.
 
 ### DIA
 
-* DIA (duration of insulin acting = durata de actiune a insulinei) nu este la fel pentru toata lumea. Trebuie să te testezi ca sa stabilesti care este durata de actiune a insulinei asupra ta. 
-* Dar trebuie ca durata sa fie de cel puţin 5 ore.
-* Pentru multe persoane care utilizează insuline ultra-rapide cum ar fi Fiasp, practic nu mai există nici un efect vizibil după 3-4 ore, chiar dacă de regulă mai sunt disponibile 0,0xx unităţi. Cantitatea reziduală totusi ar putea avea efect, de exemplu în timpul sportului. De aceea AndroidAPS utilizează minim 5 ore ca DIA.
-* Poti citi mai multe despre DIA in sectiunea Insulin Profile pe [aceasta pagina](../Getting-Started/Screenshots#insulin-profile). 
+* The DIA is not the same for each person. That's why you have to test it for yourself. 
+* But it must always be at least 5 hours.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
 
-### Diferenţe între tipurile de insulină
+### Insulin type differences
 
-* Pentru insuline cu durata de 'Actiune-Rapidă', 'Ultra-Rapida' și 'Lyumjev', DIA este singura variabilă pe care o poti modifica, durata până la vârf este prestabilita. 
-* Optiunea Insulina Fara-Varf (Free-Peak) permite să ajusezi atât DIA cât şi dutata pana la vârf; trebuie să fie folosita numai de utilizatori avansați cand cunosc efectele acestor setări. 
-* [Graficul curbe insulina](../Getting-Started/Screenshots#insulin-profile) ajută să înţelegi diferite curbe. 
-* Îl poti vizualiza ca o fila activand bifa, in caz contrar va fi în meniul principal.
+* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
+* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
+* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
+* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
 
-#### Oref Insulină-Rapidă
+#### Rapid-Acting Oref
 
-* recomandat pentru Humalog, Novolog şi Novorapid
-* DIA = cel puţin 5 ore
-* Durata pana la Vârf = 75 minute după injectare (prestabilita, nemodificabila)
+![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
 
-#### Oref Insulină-UltraRapidă
+* recommended for Humalog, Novolog and Novorapid
+* DIA = at least 5.0h
+* Max. peak = 75 minutes after injection (fixed, not adjustable)
 
-* recomandat pentru FIASP
-* DIA = cel puţin 5 ore
-* Durata pana la Vârf Durata pana la Varf = 55 minute după injecţie (prestabilita, nemodificabila)
+#### Ultra-Rapid Oref
+
+![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+
+* recommended for FIASP
+* DIA = at least 5.0h
+* Max. peak = 55 minutes after injection (fixed, not adjustable)
 
 #### Lyumjev
 
-* profil special de insulină pentru Lyumjev
-* DIA = cel puţin 5 ore
-* Durata pana la Vârf = 45 minute după injectare (prestabilita, nemodificabila)
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-#### Oref Fara-Vârf
+* special insulin profile for Lyumjev
+* DIA = at least 5.0h
+* Max. peak = 45 minutes after injection (fixed, not adjustable)
 
-* La profilul "0ref Fara-Varf" poti introduce individual durata pana la vârf.
-* DIA este setata automat la 5 ore dacă in profil nu se specifica o durata mai mare.
-* Acest profil este recomandat in situatia in care se utilizează o insulină nelistata in aplicatie sau cand se utilizeaza amestec de insuline.
+#### Free Peak Oref
+
+![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+
+* With the "Free Peak 0ref" profile you can individually enter the peak time. To do so click to cogwheel to enter advanced settings.
+* The DIA is automatically set to 5 hours if it is not specified higher in the profile.
+* This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## Sursă valoare glicemie
 
-Selecteaza sursa valorilor glicemiei pe care o utilizezi- vezi pagina [BG Source](BG-Source.rst) pentru mai multe informații despre configurare.
+Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
 
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk)
-* Glicemie NSClient
+![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+
+* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
-* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - doar versiunea 4.15.57 sau versiuni mai recente sunt compatibile
-* [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) - Select 'Send BG data to xDrip+' if you want to use xDrip+ alarms.
-    
-    ![Configurați sursa glicemiilor](../images/ConfBuild_BGSource.png)
-
+* [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
-
-* [Aplicație Tomato](http://tomato.cool/) pentru dispozitivul MiaoMiao
-* Glicemie aleatorie: generează valori aleatorii ale glicemiei (doar în modul DEMO)
+* [Tomato App](http://tomato.cool/) for MiaoMiao device
+* [Glunovo App](https://infinovo.com/) for Glunovo CGM system
+* NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
+* Random BG: Generates random BG data (Demo mode only)
 
 ## Pompă
 
-Alegeți tipul de pompă pe care îl folosiți.
+Select the pump you are using.
+
+![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](DanaR-Insulin-Pump.md)
-* Dana R Coreeană (pentru pompa DanaR națională)
-* Dana Rv2 (Pompa DanaR cu actualizare de firmware neoficială)
+* Dana R Korean (for domestic DanaR pump)
+* Dana Rv2 (DanaR pump with unofficial firmware upgrade)
 * [Dana-i/RS](DanaRS-Insulin-Pump.md)
-* [Accu-Chek Insight](Accu-Chek-Insight-Pump.md)
-* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (necesită instalare ruffy)
+    
+    * For dana pumps, use **Advanced settings** to activate BT watchdog if necessary. It switches off bluetooth for one second if no connection to the pump is possible. This may help on some phones where the bluetooth stack freezes.
+    * [Password for Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md) must be entered correctly. Password was not checked in previous versions.
+
+* [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
+
+* [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
+* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
-* MDI (primesti sugestii de AAPS pentru tratament cu injectii multiple zilnice)
-* Pompă virtuală (buclă deschisă pentru pompă care încă nu are niciun driver- doar sugestii AAPS)
-
-Pentru pompele Dana utilizeaza **Setări avansate** pentru a activa BT Watchdog, dacă este necesar. Asta va opri bluetooth pentru o secundă daca nu este posibilă conexiunea la pompă. Oprirea, la unele telefoane, poate debloca Bluetooth.
-
-[Parola pentru pompa Dana RS,](../Configuration/DanaRS-Insulin-Pump.md) trebuie introdusă corect. Parola nu a fost verificată în versiunile precedente.
+* [Diaconn G8](DiaconnG8.rst)
+* MDI (receive AAPS suggestions for your multiple daily injections therapy)
+* Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
 ## Detectare Sensibilitate
 
-Alegeți tipul de detecție a sensibilității. Pentru mai multe detalii despre diferite modele [citeste aici](../Configuration/Sensitivity-detection-and-COB.md). Aceasta functie analizeaza in timp real datele istorice și face ajustari dacă considera că reacționezi mai sensibil (sau invers, mai rezistent) la insulină decât de obicei. Mai multe detalii despre algoritmul Sensibilității la Insulina pot fi citite în [OpenAPS doc](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-Poti vedea Sensibilitatea la Insulina pe ecranul principal selectând SEN și urmărind linia albă in grafic. Notă, trebuie să fi în [Obiectivul 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) pentru ca Detectariea Sensibilității/[Autosens](../Usage/Open-APS-features#autosens) să ajusteze automat cantitatea de insulină livrată. Înainte de a ajunge la acest obiectiv, procentajul Autosens / linia din grafic este afișata doar pentru informare.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
 ### Setări absorbție
 
-Dacă folosești Oref1 cu SMB, trebuie să schimbi **min_5m_carbimpact** la 8. Valoarea este utilizată în timpul intreruperii CGM sau atunci când activitatea fizică „foloseşte” întreaga creştere a glicemiei, care altfel ar determina AAPS să scada COB. În momente în care [ absorbția de carbohidrați ](../Usage/COB-calculation.rst) nu poate fi stabilita dinamic în funcție de reacțiile glicemiei, introduce o scadere implicită a carbohidraților. Practic, este un eşec.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Practic, este un eşec.
 
 ## APS
 
-Selecteaza algoritmul APS dorit pentru ajustări de tratament. Puteți vedea detaliile despre algoritmul ales în secțiunea OpenAPS (OAPS).
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA (advanced meal assist, state of the algorithm in 2017) In simple terms the benefits are after you give yourself a meal bolus the system can high-temp more quickly IF you enter carbs reliably.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 10](../Usage/Objectives#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Buclă
 
-* Comuteaza între Buclă Deschisă, Buclă Inchisă și Suspendare pentru Prevenire Hipoglicemie (LGS).
+* Switch between Open Loop, Closed Loop and Low Glucose Suspend (LGS).
 
-![Configurare Sistem - mod buclă](../images/ConfigBuilder_LoopLGS.png)
+![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
 ### Buclă Deschisă
 
-* AAPS evaluează în mod continuu toate datele disponibile (IOB, COB, BG...) şi cand este necesar face sugestii de ajustare a tratamentului. 
-* Sugestiile nu vor fi executate automat (ca la bucla inchisa), trebuie introduse manual in pompa sau, in cazul in care se utilizeaza o pompa compatibilă (Dana R/RS sau Accu Chek Combo), trebuie introduse prin utilizarea unui buton. 
-* Această opțiune este ca sa afli cum funcționează AndroidAPS sau pentru cazul in care utilizezi o pompă nelistata in aplicatie.
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
+* The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
+* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
 
 ### Buclă închisă
 
-* AAPS evaluează în mod continuu toate datele disponibile (IOB, COB, BG...) şi, atunci cand este necesar, ajustează tratamentul (bolus, rata bazală temporară, anulare livrare insulina pentru evitarea hipoglicemiei etc.) in mod automat (fără intervenţia ta) pentru a ajunge in intervalul sau la valoarea ţintă a glicemiei. 
-* Bucla închisă funcționează cu numeroase limitari pentru siguranță, pe care le poți stabili individual.
-* Bucla închisă este posibila doar daca esti în [Obiectivul 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) sau mai mare și daca folosesti o pompă compatibilă.
-* Reţine: În modul Buclă Inchisă este recomandat sa stabilesti o valoare ţintă în loc de un interval ţintă (adică 5,5 mmol/l sau 100 mg/dl în loc de 5,0-7,0 mmol/l sau 90-125 mg/dl).
+* AAPS continuously evaluates all available data (IOB, COB, BG...) and automatically adjusts the treatment if necessary (i.e. without further intervention by you) to reach the set target range or value (bolus delivery, temporary basal rate, insulin switch-off to avoid hypo etc.). 
+* The Closed Loop works within numerous safety limits, which you can be set individually.
+* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Please note: In closed loop mode a single target instead of target range (i.e. 5,5 mmol or 100 mg/dl instead of 5,0 - 7,0 mmol or 90 - 125 mg/dl) is recommended.
 
-### Suspendare la Hipoglicemie (LGS =Low Glucose Suspend)
+### Low Glucose Suspend (LGS)
 
-* maxIOB este setat la zero
-* Adică, in cazul in care glicemia este in scadere, poate reduce bazala.
-* Iar dacă glicemia creşte nu va face automat corecţie. Ratele bazale vor rămâne la valorile stabilite in profilul selectat.
-* Numai dacă IOB bazal este negativ (după o suspendare anterioară la valori scăzute ale glicemiei) se va administra suplimentar insulină pentru scaderea glicemiei.
+* maxIOB is set to zero
+* This means if blood glucose is dropping it can reduce basal for you.
+* But if blood glucose is rising no automatic correction will be made. Your basal rates will remain the same as your selected profile.
+* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
-### Cereri minime pentru modificari
+### Minimal request change
 
-* Daca utilizezi sistemul bucla deschisă vei fi notificat de fiecare dată când AAPS recomandă ajustarea ratei bazale. 
-* Pentru a reduce numărul de notificări, fie utilizezi un interval larg al glicemiei tinta fie crești procentajul ratei minime.
-* Aceasta defineşte modificarea relativa care declanşeaza o notificare.
+* When using open loop you will receive notifications every time AAPS recommends to adjust basal rate. 
+* To reduce number of notifications you can either use a wider bg target range or increase percentage of the minimal request rate.
+* This defines the relative change required to trigger a notification.
 
 ## Obiective (program de instruire)
 
-AndroidAPS are un program de invatare (obiective) pe care trebuie să il parcurgi pas cu pas. Acesta ar trebui să te ghideze sa configurezi un sistem securizat de buclă închisă. Parcurgerea programului de instruire garantează că ai setat totul corect și înțelegi exact face sistemul. Numai asa poți avea încredere în sistem.
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-Trebuie frecvent sa [exporti setarile](../Usage/ExportImportSettings.rst) (inclusiv evolutia obiectivelor). În cazul în care va trebui să înlocuiesti smartphone-ul (achiziționezi alt telefon, se deterioreaza afisajul etc.), pur si simplu poti să importi aceste setări.
+You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
-Vezi pagina [Obiective](../Usage/Objectives.rst) pentru mai multe informații.
+See [Objectives](../Usage/Objectives.rst) page for more information.
 
 ## Tratamente
 
-În secțiunea Tratamente (Trat), puteți vedea tratamentele înregistrate în Nightscout. Dacă doresti să modifici sau să ștergi date introduse (de ex cand ai mâncat mai puțini carbohidrați decât ai estimat), selecteaza 'Șterge' și scrie noua valoare (schimba și ora, dacă este necesar) la  buton carbohidrati din ecranul principal<0>.</p> 
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots#carb-correction).
 
 ## General
 
 ### Privire de ansamblu
 
-Afişează starea actuala a buclei şi butoanele acţionate frecvent (vezi secţiunea [Ecranul principal](../Getting-Started/Screenshots.md) pentru detalii). Setările pot fi accesate făcând clic pe rotita.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
 #### Menține ecranul deschis
 
-Opțiunea „tine ecranul deschis” face ca Android să pastreze ecranul aprins tot timpul. Acest lucru este folositor pentru prezentări etc. Dar consumă repede bateria. Ca urmare e recomandabil sa conectezi smartphone-ul la un încărcător.
+Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 #### Butoane
 
-Defineste care sunt butoanele afişate pe ecranul principal.
+Define which Buttons are shown on the home screen.
 
 * Tratamente
 * Calculator
 * Insulină
 * CH
-* CGM (deschide xDrip+)
+* CGM (opens xDrip+)
 * Calibrare
 
-In plus poti seta comenzi rapide pentru insulină şi cresteri carbohidraţi şi poti decide dacă se afiseaza notitele.
+Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
-#### Setări AsistentRapid
+#### QuickWizard settings
 
-Creaza un buton pentru o anumită masă standard (carbohidrați și metoda de calcul pentru bolus) care sa fie afișat pe ecranul de pornire. A se utiliza pentru mese standard consumate frecvent. Dacă ai specificat la anumite ore mese diferite, pe ecranul principal va fi intotdeauna butonul pentru masa standard corespunzătoare orei curente.
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
-Notă: Butonul nu va fi vizibil dacă nu esti în intervalul de timp specificat pentru masa sau dacă ai suficient IOB pentru a acoperi carbohidrații definiți în butonul Asistent Rapid.
+Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
-![Setări AsistentRapid](../images/ConfBuild_QuickWizard.png)
+![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
-#### Ținte-Temporare implicite
+#### Default Temp-Targets
 
-Stabileste ţinte temporare implicite (durată şi valoare). Valorile prestabilite sunt:
+Choose default temp-targets (duration and target). Preset values are:
 
-* mananca in curand: tinta 72 mg/dl/4.0 mmol/l, durata 45 min
-* activitate fizica: ţinta 140 mg/dl / 7,8 mmol/l, durată 90 min
-* hipo: ţintă 125 mg/dl / 6,9 mmol/l, durată 45 min
+* eating soon: target 72 mg/dl / 4.0 mmol/l, duration 45 min
+* activity: target 140 mg/dl / 7.8 mmol/l, duration 90 min
+* hypo: target 125 mg/dl / 6.9 mmol/l, duration 45 min
 
 #### Umplere/Amorsare - cantități standard de insulină
 
-Alege butonul corespunzator cantităţii implicite de insulina pentru umplere / amorsare, în funcţie de lungimea cateterului.
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
-#### Interval pentru vizualizare
+#### Range of visualization
 
-Alege in prezentarea generală a AndroidAPS și a smart-watch-ului, afisare mare sau mica a graficului glicemiei. Este doar pentru vizualizare, nu este despre intervalul ţintă al glicemie. Exemplu: 70-180 mg/dl sau 3,9-10 mmol/l
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### Scurtează titlurile secțiunilor
 
-Alege dacă titlurile filei din AndroidAPS sa fie lungi (de ex. ACTIONS, PROFILIE LOCALĂ, AUTOMATIONARE) sau prescurtate (de ex. ACT, LP, AUTO)
+Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
-#### Afișează câmp pentru note în dialogurile de tratamente
+#### Show notes field in treatment dialogs
 
-Alege dacă vrei sau nu să ai zona pentru notite când introduci tratamente.
+Choose if you want to have a notes field when entering treatments or not.
 
 #### Lumini de stare
 
-Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. Când nivelul de avertizare este atins, culoarea luminii de stare va comuta la galben. La atingerea nivelului critic culoarea luminii de stare va fi rosie.
+Choose if you want to have [status lights](../Configuration/Preferences#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
-#### Setări avansate
+#### Advanced settings
 
-**Livrează partial bolusul calculat de Asistentul Rapid **: Cand utilizeaza SMB (super micro bolus), multe persoane vor sa nu primeasca 100% bolusul de insulină necesar, ci doar partial (ex.. 75 %) și permit SMB prin UAM (unattended meal detection = detectarea mesei nesupravegheate) să facă restul. În această setare poti alege o valoare implicită pentru procentul cu care Asistentul sa calculeze bolusul. Dacă in această setare valoarea implicita este stabilita la 75% şi ar trebuit să ai bolus de 10ui, Asistentul va propune bolus de doar 7,5 unităţi.
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-** Activeaza super bolus Asistent ** (Este diferita de * super micro bolus *!): Utilizeaza cu precauție și nu activa până nu sti cu adevărat ce face. Practic, bazala pentru următoarele două ore este adăugată la bolus si se activeaza in urmatoarele doua ore o bazala temporala zero. **Funcțiile buclei AAPS vor fi dezactivate - așa că utilizați cu grijă! Daca utilizezi SMB AAPS functiile de buclare presetate vor fi dezactivate la [ „Durata maxima (minute) a bazalei pentru limitarea SMB la” ](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), dacă nu utilizezi SMB funcțiile de buclare vor fi dezactivate timp de două ore. </ 1> Detalii despre super bolus găsesti [ aici ](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).</p> 
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
 ### Acțiuni
 
-* Butoane pentru accesarea celor mai comune facilităţi.
-* Vezi [Capturi de ecran AAPS](../Getting-Started/Screenshots#action-tab) pentru detalii.
+* Some buttons to quickly access common features.
+* See [AAPS screenshots](../Getting-Started/Screenshots#action-tab) for details.
 
 ### Automatizare
 
-Taskuri de automatizare definite de utilizator ('if-then-then-else ' daca-atunci). Te rog [citeste aici](../Usage/Automation.rst).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
 
 ### Comunicator SMS
 
-Permite aparținătorilor să controleze de la distanță anumite functii ale AndroidAPS prin SMS. Vedeți [Comenzi SMS](../Children/SMS-Commands.rst) pentru mai multe informații privind configurarea.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
 
-### Mâncare
+### Food
 
-Afişează presetările alimentare definite în baza de date Nightscout, vezi [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) pentru mai multe informaţii despre configurare.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Notă: Intrările nu pot fi utilizate în calculatorul AndroidAPS. (Numai vizualizare)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
-### Ceas
+### Wear
 
-Monitorizează și controlează AAPS folosind ceasul Android Wear (vezi [page Watchfaces](../Configuration/Watchfaces.md)). Utilizeaza setările facand clik pe rotită pentru a stabili variabilele care ar trebui luate în considerare la calcularea bolusului dat de ceas (de ex. trendul de 15 minute, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 Dacă doriţi să bolusați etc. de pe ceas, în "Setari Wear", trebuie să activaţi "Control de pe Ceas".
 
-![Setări Wear](../images/ConfBuild_Wear.png)
+![Wear settings](../images/ConfBuild_Wear.png)
 
-Prin fila Ceas (Wear) sau prin meniul principal (sus stânga ecranului, dacă tab-ul nu este afişat) poti
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
-* Retrimite toate datele. Ar putea fi de ajutor dacă ceasul nu a fost conectat de ceva timp şi doresti să colectezi informaţiile in ceas.
-* Deschideți setările pe ceas direct de pe telefon.
+* Resend all data. Might be helpful if watch was not connected for some time and you want to push the information to the watch.
+* Open settings on your watch directly from your phone.
 
-### Linie de status xDrip (ceas)
+### xDrip Statusline (watch)
 
-Afișează informații despre buclă pe ceasul xDrip+ (dacă nu utilizezi AAPS/[watchface AAPSv2](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### Client NS
 
-* Configureaza sincronizarea datelor AndroidAPS cu Nightscout.
-* Setările din [preferințe](../Configuration/Preferences#nsclient) pot fi deschise făcând clic pe rotița.
+* Setup sync of your AndroidAPS data with Nightscout.
+* Settings in [preferences](../Configuration/Preferences#nsclient) can be opened by clicking the cog wheel.
 
-### Mentenanță
+### Maintenance
 
-E-mailul și numărul de inregistrari care vor fi trimise. În mod normal nu este necesară modificarea.
+Email and number of logs to be send. Normally no change necessary.
 
 ### Configurarea Sistemului (Config Builder)
 
-Foloste fila pentru Configurarea sistemului în locul meniului principal.
+Use tab for config builder instead of hamburger menu.

@@ -24,7 +24,7 @@ Dexcom G6
 * Трансмиттер Dexcom G6 может одновременно подключаться к ресиверу Dexcom (или к помпе T:slim) и одному приложению на вашем телефоне.
 * При использовании xDrip+ в качестве ресивера сначала удалите приложение Dexcom. **Невозможно одновременно подключить к трансмиттеру приложения xDrip+ и Dexcom!**
 * Если вам нужен функционал оригинального приложения Clarity и оповещения от xDrip +, пользуйтесь `самостоятельно собранным модифицированным приложением BYODA Dexcom <../Hardware/DexcomG6.html#if-using-g6-with-patched-dexcom-app>`_ с локальной передачей данных в xDrip +.
-* Если это еще не сделано, скачайте `xdrip <https://github.com/NightscoutFoundation/xDrip>`_ и следуйте инструкциям на Nightscout (G5<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>`_).
+* If not already set up then download `xDrip+ <https://github.com/NightscoutFoundation/xDrip>`_ and follow instructions on `xDrip+ settings page <../Configuration/xdrip.html>`_.
 В конфигуратоге (настройки AndroidAPS) выберите xdrip+.
 * Настройте параметры в xDrip+ в соответствии со страницей настроек `xDrip+ <../Configuration/xdrip.html>`__
 Если AAPS не получает значения ГК, когда телефон находится в режиме авиаперелета пользуйтесь функцией 'identify receiver (идентифицировать приемник)' в соответствии с описанием на странице настроек `xDrip+ <../Configuration/xdrip.html>`_.

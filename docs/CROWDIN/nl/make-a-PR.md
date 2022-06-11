@@ -1,4 +1,4 @@
-# Maak je eerste PR (pull request)
+# How to edit the docs
 
 ** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
 
@@ -64,7 +64,7 @@ At the moment there are two languages used for docs pages:
 * Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Image size
 

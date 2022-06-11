@@ -32,10 +32,11 @@ AndroidAPS wordt in detail beschreven in `deze documentatie <./WhatisAndroidAPS.
 
 Te gebruiken `pompen <../Hardware/pumps.html>`_ zijn:
 
-* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * bepaalde oudere `Medtronic <../Configuration/MedtronicPump.html>`_ modellen
 
 OpenAPS

@@ -1,4 +1,4 @@
-De verschillende onderdelen 
+Component Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Voordat je kiest welke onderdelen je wilt gebruiken, is het goed om eens te kijken naar de `Onderdelen instellen <../index.html#onderdelen-instellen>`_ sectie.
    
@@ -48,12 +48,15 @@ Insulinepomp
 --------------------------------------------------
 AndroidAPS werkt momenteel met 
 
-- `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (extra nodig: Ruffy app, minimaal Android 8.1 of anders LineageOS op jouw telefoon)
-- `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Andere pompen** die mogelijk in de toekomst geschikt zullen zijn vind je op de `Mogelijk toekomstige insulinepompen <../Getting-Started/Future-possible-Pump-Drivers.html>`_ pagina.
 
@@ -63,11 +66,11 @@ Extra communicatie apparaatje (Link)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Zorg ervoor dat je de juiste versie kiest, afhankelijk van jouw pomp.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Informatie <mailto:getemalink@gmail.com>`__  
-   - |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Informatie <https://jameswedding.substack.com/>`__ - Niet getest
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 **Dus wat is de beste pomp om te loopen met AndroidAPS?**
 
@@ -84,9 +87,9 @@ The advantages of the DanaR/RS and Dana-i vs. de Combo zijn echter:
 
 BG bron
 --------------------------------------------------
-Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. Zie meer informatie `hier <../Configuration/BG-Source.html>`__. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
+Dit is slechts een kort overzicht van alle compatibele CGMs/FGM met AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Even kort samengevat: als je jouw glucosewaardes kunt laten weergeven in de xDrip+ app of op jouw Nightscout site, dan kun je in AAPS als "BG bron" kiezen voor xDrip+ (of voor Nightscout, maar dan heb je wel continu een internetverbinding nodig).
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `Dexcom G5 <../Hardware/DexcomG5.html>`_: Werkt met xDrip+ app of aangepaste Dexcom app
 * `Dexcom G4 <../Hardware/DexcomG4.html>`_: Deze sensors zijn vrij oud, maar er zijn instructies te vinden om hem met de xDrip+ app te gebruiken
 * `Libre 2 <../Hardware/Libre2.html>`_: Werkt met xDrip+ (geen zender nodig), maar je moet je eigen gepatchte app bouwen.
@@ -122,17 +125,6 @@ Bij eventuele problemen met de spreadsheet stuur een e-mail naar `hardware@andro
 xDrip+
 --------------------------------------------------
 Zelfs als je de xDrip+ App niet als BG bron nodig hebt, kun je hem nog steeds gebruiken voor bijvoorbeeld alarmen of om jouw bloedglucose te laten weergeven op een smartwatch. Je kunt in xDrip+ zoveel alarmen aanmaken als je wilt, en zelf tijdvakken specificeren wanneer een alarm actief moet zijn, of het alarm toch moet afgaan wanneer de telefoon in 'stille modus' staat, etc. Meer informatie over xDrip+ vind je `hier <../Configuration/xdrip.html>`__. Houd er rekening mee dat de documentatie van deze app niet altijd up-to-date is, aangezien hij zeer regelmatig wordt geupdatet.
-
-Gebruiksvoorbeeld
-==================================================
-Als je wilt weten hoe je stap voor stap een werkend systeem kunt maken, dan is hier een gebruiksvoorbeeld. Dit voorbeeld is al vrij oud, maar is als het goed is nog steeds up-to-date.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   Gebruiksvoorbeeld <../Getting-Started/Sample-Setup.rst>
- 
   
 Wat te doen tijdens het wachten op onderdelen
 ==================================================

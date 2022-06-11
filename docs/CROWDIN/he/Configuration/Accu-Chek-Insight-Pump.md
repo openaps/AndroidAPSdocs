@@ -15,7 +15,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 * An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
 * The AndroidAPS app installed on your phone
 
-## Setup
+## תצורה
 
 * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
@@ -23,7 +23,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
 * In [Config builder](../Configuration/Config-Builder) of the AndroidAPS app select Accu-Chek Insight in the pump section
     
-    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder.png)
+    ![Screenshot of Config Builder Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Tap the cog-wheel to open Insight settings.
 
@@ -130,7 +130,7 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ## Insight specific errors
 
-### Extended bolus
+### בולוס ממושך
 
 Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 

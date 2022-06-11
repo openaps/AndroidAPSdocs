@@ -1,14 +1,16 @@
 # xDrip+ ayarları
 
-Henüz kurulu değilse [xDrip+](https://jamorham.github.io/#xdrip-plus)'ı indirin.
+(xDrip+ ile ilgili ek bilgi için lütfen https://xdrip.readthedocs.io/en/latest/ adresine bakın)
 
-**Bu dokümantasyon yalnızca Android telefonlara yüklü xDrip+ içindir.** Orjinal Android xDrip+ ile hiçbir ilgisi olmayan "iOS için xDrip" uygulaması da mevcuttur.
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [ana](https://jamorham.github.io/#xdrip-plus) sürümünü kullanabilirsiniz.
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Dexcom G6 vericinizin seri numarası 8G...,8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
+2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili sorun yaşıyorsanız [nightly build 2019/12/31 veya sonrasını](https://github.com/NightscoutFoundation/xDrip/releases) deneyin.
+Dexcom G6 vericinizin seri numarası is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Tüm CGM & FGM sistemleri için temel ayarlar
 
@@ -76,11 +78,11 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 ### "Önleyici yeniden başlatma" önerilmez
 
-**8G, 8H veya 8J ile başlıyan Dexcom verici numaralarında, önleyici yeniden başlatmalar çalışmıyor ve sensörü tamamen kullanılmaz hale getirebilir!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-Dexcom sensörlerinde otomatik olarak süre uzatma (`önleyici yeniden başlatma`), yeniden başlatmanın ardından 9. günde KŞ değerlerinde "atlamalara" yol açabileceğinden önerilmez.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![Öncelikli Yeniden Başlatmadan Sonra xDrip+ ölçüm farkı](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Açık olan şu ki, G6'yı kullanmak, başlangıçta düşünülenden biraz daha karmaşık olabilir. Güvenli bir şekilde kullanmak için dikkat edilmesi gereken birkaç nokta vardır:
 
@@ -90,11 +92,11 @@ Açık olan şu ki, G6'yı kullanmak, başlangıçta düşünülenden biraz daha
 * Fabrika kalibrasyonu ile "Pre-soaking" ön ısınma denilen sensörü daha önce verici olmadan doku sıvısına "alışacak" şekilde yerleştirmek, muhtemelen glikoz değerlerinde sapmalara yol açar. 'pre-soak' ön ısınma yapıyorsanız, en iyi sonuçları almak için muhtemelen sensörü kalibre etmeniz gerekecektir.
 * Meydana gelebilecek değişiklikler konusunda dikkatli değilseniz, fabrikada kalibre edilmemiş moda dönmek ve sistemi bir G5 gibi kullanmak daha iyi olabilir.
 
-Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek için Tim Street tarafından yayınlanan [www.diabettech.com](https://www.diabettech.com) adresindeki [makalenin tamamını](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) okuyun.
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
 ### G6 vericisine ilk kez bağlanma
 
-**İkinci ve sonraki vericiler için aşağıdaki [Verici ömrünü uzatma](#extend-transmitter-life) konusuna bakın.**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
 
@@ -125,7 +127,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    -> Ekranın alt kısmına yakın bir yerde, birkaç dakika sonra `Isınma x,x saat kaldı` görüntülenmelidir.
 
--> Vericinizin seri numarası 8G, 8H veya 8J ile başlamıyorsa ve herhangi bir zaman bildirimi yoksa, birkaç dakika sonra sensörü durdurup yeniden başlatın.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Toplayıcıyı yeniden başlatın (sistem durumu - sensörü değiştirmediyseniz)
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom alıcısını (kullanılıyorsa) açmayın.
@@ -177,7 +179,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 
 2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
 
-Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nightly build derlemelerinden](https://github.com/NightscoutFoundation/xDrip/releases) birini kullanabilirsiniz.
+Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Orijinal Dexcom alıcısını kapatın (kullanılıyorsa).
 * Sensörü Durdurun (yalnızca sensör değiştiriliyorsa)
@@ -308,7 +310,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [latest nig
 
 ### Yeni sensör başlatılırken oluaşabilecek sorunlar
 
-Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aşağıdaki yöntemin çalışmayabileceğini unutmayın.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * Sistem durumunda sensör "FAILED: Sensor Failed Start" olarak göründüğünde;
 * Sensörü durdurun
@@ -318,7 +320,7 @@ Lütfen Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa aş
 * Sensörü durdurun
 * Sensörü "gerçek" kodla başlatın (yapışkan koruyucunun üzerine basılmıştır)
 
-xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edin. Yalnızca xDrip+ günlüklerinde, xdrip+'ın bir sensörü durdurup durdurmadığını erken bir aşamada tespit edebilirsiniz. En son durum, başlangıç ekranının altında her zaman doğru gösterilmiyor.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
@@ -345,8 +347,8 @@ xDrip "Süre: 1 dakika" (vb.) saymaya başlarsa xDrip günlüklerini kontrol edi
 
 ### Libre Vericiyi Bağla & sensörü başlat
 
-![xDrip+ Libre Verici & Sensör başlatma 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Libre Verici & Sensör başlatma 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Libre Verici & Sensör başlatma 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

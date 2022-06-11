@@ -32,10 +32,11 @@ O AndroidAPS é descrito em detalhes `nesta documentação <./WhatisAndroidAPS.h
 
 As `bombas <../Hardware/pumps.html>`_ compatíveis são:
 
-* ` DanaR <../Configuration/DanaR-Insulin-Pump.html> ` _ / ` DanaRS <../Configuration/DanaRS-Insulin-Pump.html> ` _
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ / `DanaRS & Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `Accu-Chek Combo <./Configuration/Accu-Chek-Combo-Pump.md>`_
 * ` Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html> ` _
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
+* `Diaconn G8 <../Configuration/DiaconnG8.html>`_
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
 * algumas bombas antigas da `Medtronic <../Configuration/MedtronicPump.html>`_
 
 OpenAPS

@@ -1,8 +1,8 @@
 # Update to a new version or branch
 
-## Build yourself instead of download
+## בנייה עצמית במקום הורדה
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
 
 ## Important notes
 
@@ -16,11 +16,12 @@
 
 1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone. You might not need it, but better be save than sorry.
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Generate signed APK](../Installing-AndroidAPS/Update-to-new-version#generate-signed-apk)
+3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
 5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
+6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
 
-In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 ## 1. Export your settings
 
@@ -62,22 +63,28 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 ## 3. Build the Signed APK
 
-* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Transfer the apk
 
-You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it.
 
-## 5. Check AAPS version on phone
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+
+## 5. Install apk
+
+בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)).
+
+## 6. Check AAPS version on phone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
-# Troubleshooting
+# פתרון בעיות
 
 If anything goes wrong, don't panic.
 
 Take a breath!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) if your problem is already documented!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!

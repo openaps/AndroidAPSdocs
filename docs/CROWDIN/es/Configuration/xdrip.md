@@ -1,12 +1,14 @@
 # Configuración de xDrip+
 
-Si todavía no lo has hecho, descarga [xDrip+](https://jamorham.github.io/#xdrip-plus).
+(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
 
-**Esta documentación es para xDrip + sólo para Android.** Hay una app "xDrip para iOS" que nada tiene que ver con el xDrip + original para Android.
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Si el número de serie de su transmisor Dexcom G6 que empieza por 8G o 8H... or 8J... utiliza una de las [últimas compilaciones ](https://github.com/NightscoutFoundation/xDrip/releases).
+For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+
+Si el número de serie de su transmisor Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
@@ -78,9 +80,9 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 **With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-No se recomienda la extensión automática de los sensores Dexcom (`reinicios preventivos`) ya que esto podría conducir a "saltos" en los valores BG el día 9 después del reinicio.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Salta después de un reinicio preventivo](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta:
 
@@ -318,7 +320,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Detener Sensor
 * Iniciar sensor con el código "real" (impreso en el protector adhesivo)
 
-Consulte los registros de xDrip+ si xDrip+ inicia el conteo de "Duración: 1 minuto" (y siguiendo). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. El estado más reciente no se muestra siempre correctamente en la parte inferior de la pantalla de inicio.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ & Freestyle Libre
 
@@ -345,8 +347,8 @@ Consulte los registros de xDrip+ si xDrip+ inicia el conteo de "Duración: 1 min
 
 ### Connect Libre Transmitter & start sensor
 
-![xDrip+ iniciar transmisor Libre & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ iniciar transmisor Libre & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ iniciar transmisor Libre & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)

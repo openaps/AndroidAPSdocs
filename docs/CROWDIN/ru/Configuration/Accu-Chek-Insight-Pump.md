@@ -23,7 +23,7 @@
 
 * В [Конфигураторе](../Configuration/Config-Builder) приложения AndroidAPS выберите Accu-Chek Insight в разделе помпа
     
-    ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder.png)
+    ![Снимок экрана конфигуратора Config Builder помпы Insight](../images/Insight_ConfigBuilder_AAPS3_0.jpg)
 
 * Нажмите на значок шестеренки, чтобы открыть настройки Insight.
 

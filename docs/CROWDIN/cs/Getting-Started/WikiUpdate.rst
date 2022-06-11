@@ -1,6 +1,19 @@
 Docs updates & changes
 **************************************************
 
+February 2022
+==================================================
+* `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
+* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
+* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @ robertrub @vanelsberg
+* Update docs for AAPS 3.0 (partly) @xJoe
+* `Wear OS for AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
+
+January 2022
+==================================================
+* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+
 December 2021
 ==================================================
 * `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
@@ -8,7 +21,7 @@ December 2021
 
 November 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
 * Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
@@ -95,8 +108,8 @@ February 2020
 * `Automation caveats <../Usage/Automation.html#good-practice-caveats>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - short explanation
 * `Careportal alternatives <../Usage/CPbefore26.html>`_
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`_ feature - closed loop will be disabled
-* Nový `plugin Místního profilu <../Configuration/Config-Builder.html#local-profile-recommended>`_
+* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
 * `Sample Setup <../Getting-Started/Sample-Setup.html>`_ - update Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - major new features
 * `Komplikace pro Wear <../Configuration/Watchfaces.html>`_
@@ -118,7 +131,7 @@ November 2019
 ==================================================
 * `Automation - deactivate when disabling loop <../Usage/Automation.html#important-note>`_
 * `Dexcom G6 replace transmitter update <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Homescreen - lines on graph <../Getting-Started/Screenshots.html#section-f-main-graph>`_
 * `Insight - Disable absolute values in NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_

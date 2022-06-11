@@ -73,6 +73,48 @@ This is the first screen you will come across when you open AndroidAPS and it co
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
+#### BG warning sign
+
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+
+However, when there are a lot of duplicates, it might be easier to
+
+* [backup your settings](../Usage/ExportImportSettings.rst),
+* reset your database in the maintenance menu and
+* [import your settings](../Usage/ExportImportSettings.rst) again
+
+##### Red warning sign: Duplicate BG data
+
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+
+![Red BG warning](../images/bg_warn_red.png)
+
+You need to find out why you get duplicate BGs:
+
+* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
+* Do you have any followers that might receive your BG but do also upload it again to your NS site?
+* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+
+##### Yellow warning sign
+
+* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+   
+   ![Yellow BG warning](../images/bg_warn_yellow.png)
+
+* Usually you do not have to take any action. The closed loop will continue to work!
+
+* As a sensor change is interupting the constant flow of BG data a yellow warning sign after sensor change is normal and nothing to worry about.
+* Special note for libre users:
+   
+   * Every single libre slips a minute or two every few hours, meaning you never get a perfect flow of regular BG intervals.
+   * Also jumpy readings interrupt the continous flow.
+   * Therefore the yellow warning sign will be 'always on' for libre users.
+
 ### Section D - IOB, COB, BR and AS
 
 ![Section D](../images/Home2020_TBR.png)
@@ -184,7 +226,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Shows the insulin you have on board (= active insulin in your body). It includes insulin from bolus and temporary basal (**but excludes basal rates set in your profile**).
 * If there were no [SMBs](../Usage/Open-APS-features#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
-* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile-recommended). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder#local-profile). 
 
 #### Carbs On Board
 
@@ -219,7 +261,10 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Homescreen buttons](../images/Home2020_Buttons.png)
 
-* Buttons for insulin, carbs and Calculator are 'always on'. 
+* Buttons for insulin, carbs and Calculator are almost'always on'.
+   
+   * If connection to pump is lost, the insulin button will not be visible.
+
 * Other Buttons have to be setup in [preferences](../Configuration/Preferences#buttons).
 
 #### Insulin
@@ -391,7 +436,7 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 ![Pump Status](../images/Screenshot_PumpStatus.png)
 
 * Different information on pump status. Displayed information depends on your pump model.
-* See [pumps page](../Hardware/pumps.rst) for details.
+* See [pumps page](../Hardware/pumps.md) for details.
 
 ## Care Portal
 
@@ -440,14 +485,14 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Basal rate
    * Target: Blood glucose level that you want AAPS to be aiming for
 
-* You can either use a [local profile](../Configuration/Config-Builder#local-profile-recommended) that can be edited on your smartphone or a [Nightscout profile](../Configuration/Config-Builder#ns-profile) which must be edited on your NS page and transferred to your phone afterwards. For details see the corresponding sections on the [config builder page](../Configuration/Config-Builder.md).
+* As of version 3.0 only [local profile](../Configuration/Config-Builder#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
 
 ## Treatment
 
 History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots#carb-correction) to correct history
-* [Extended bolus](../Usage/Extended-Carbs#extended-bolus)
+* [Extended bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Temporary basal rate
 * [Temporary target](../Usage/temptarget.md)
 * [Profile switch](../Usage/Profiles.md)

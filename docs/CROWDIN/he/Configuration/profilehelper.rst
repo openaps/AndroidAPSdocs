@@ -57,7 +57,7 @@
 שכפול הפרופיל
 =======================================
 
-אם אתם משתמשים `בפרופילים מקומיים <../Configuration/Config-Builder.html#local-profile-recommended>`_ תוכלו לשכפל פרופיל/ החלפת פרופיל ישירות מעוזר הפרופיל.
+אם אתם משתמשים `בפרופילים מקומיים <../Configuration/Config-Builder.html#local-profile>`_ תוכלו לשכפל פרופיל\להחליף פרופיל ישירות מעוזר הפרופיל.
 
 .. image:: ../images/ProfileHelperClone.png
   :alt: Profile Helper Clone profile / profile switch

@@ -16,8 +16,14 @@ Instellingen
 --------------------------------------------------
 * `Profiel <../Usage/Profiles.html#profiel-foutmeldingen-oplossen>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: fout: Basaal profiel niet ingesteld in hele uren
+
+* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Failure message: Data from different pump
+
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
 
@@ -42,7 +48,7 @@ Pomp
 ==================================================
 * `DanaRS <../Configuration/DanaRS-Insulin-Pump.html#foutmeldingen-specifiek-voor-de-danars>`_
 * `Accu-Chek Combo algemeen <../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html>`_
-* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#waarom-werkt-de-koppeling-met-de-pomp-niet-met-de-app-ruffy>`_
+* `Accu-Chek Combo + Ruffy <../Configuration/Accu-Chek-Combo-Pump.html#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html#insight-specifieke-foutmeldingen>`_
 * `Medtronic + RileyLink <../Configuration/MedtronicPump.html#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump>`_
 
@@ -53,4 +59,5 @@ Telefoons
 
 Smartwatch
 ==================================================
+* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

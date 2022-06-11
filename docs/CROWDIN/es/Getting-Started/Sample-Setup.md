@@ -75,23 +75,20 @@ Servicios de ubicación ("GPS") se debe activar para que Bluetooth funcione corr
 
 La aplicación de Dexcom original de Google Play Store no funcionará porque no difunde los valores a otras aplicaciones. Por lo tanto, se requiere una versión ligeramente modificada por la comunidad. Sólo esta aplicación de Dexcom modificada se puede comunicar con AAPS. Además, la aplicación Dexcom modificada se puede utilizar con todos los smartphones de Android y no sólo con los que están en la lista de compatibilidad de [Dexcom](https://www.dexcom.com/dexcom-international-compatibility).
 
-A mmol/l version and a mg/dl version of the modified Dexcom G6 app are available at <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>. You have to choose G6 app for your region.
-
-Para ello, realice los pasos siguientes en el smartphone:
+To do this perform the following steps on your smartphone:
 
 1. Si la aplicación Dexcom original ya está instalada: 
     * Detener Sensor
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download modified Dexcom app (check unit mg/dl or mmol/l and [region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>
-3. Install modified Dexcom G6 app on your smartphone (= select the downloaded APK file)
-4. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
-5. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
-    * Urgente baja `55mg/dl` / `3.1mmol/l` (no se puede inhabilitar)
-    * Baja `OFF`
-    * Alta `OFF`
-    * Tasa de subida `OFF`
-    * Tasa de bajada `OFF`
-    * Pérdida de señal `OFF`
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
+4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
+    * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
+    * Low `OFF`
+    * High `OFF`
+    * Rise rate `OFF`
+    * Fall rate `OFF`
+    * Signal loss `OFF`
 
 ## Instalar AndroidAPS
 
@@ -104,7 +101,7 @@ Para ello, realice los pasos siguientes en el smartphone:
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
-* NS Client activated (see [NS Client](../Configuration/Config-Builder#ns-profile) and [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## Instalar xDrip+
 
@@ -113,7 +110,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
 1. Descarga la última versión estable de xDrip+ con tu smartphone <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - ¡no la versión de Google Play Store!
 2. Instala xDrip+ seleccionando el archivo APK descargado.
 3. Inicia xDrip+ y haz los siguientes ajustes (menú hamburguesa en la parte superior izquierda) 
-    * Configuración > Alarmas y Alertas > Lista de nivel de Glucosa de Alertas > Crear Alertas (alta y baja) de acuerdo a sus necesidades. 
+    * Configuración > Alarmas y Alertas > Lista de nivel de Glucosa de Alertas > Crear Alertas (alta y baja) de acuerdo a sus necesidades.
     * Las alarmas existentes pueden ser cambiadas con una pulsación larga en la alarma.
     * Configuración > Alarmas y Alertas > Calibración de Alertas: deshabilitado (recordado a través de la modificación de Dexcom app)
     * Ajustes > Hardware de Origen de Datos > 640G/EverSense
@@ -142,7 +139,7 @@ With an Android Wear smartwatch life with diabetes can be made even more inconsp
 
 ![Smartwatches (Relojes inteligentes)](../images/SampleSetupSmartwatch.png)
 
-Detalles sobre la información mostrada en el watchface se pueden encontrar [aquí](../Configuration/Watchfaces.md).
+Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
 
 * Install the app "Android Wear" on your smartphone via the Google Play Store and connect the smartwatch according to the instructions there.
 * En AAPS elija el menú de hamburguesa (esquina superior izquierda) > Configurar Builder > General (al final de la lista) > Usar > activar en el lado izquierdo, haga clic en el engranaje > Usar ajustes y activar `Controles desde el reloj`

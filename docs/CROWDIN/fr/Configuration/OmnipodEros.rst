@@ -302,7 +302,7 @@ Cette fonction est utile pour vérifier les bolus, les DBT, les changements de b
 *REMARQUE :*
 Les commandes **incertaines** apparaîtront dans l'historique du pod, cependant en raison de leur nature, vous ne pouvez pas être sûr de leur exactitude.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu and then press the **Pod history (2)** button to access the pod history screen.
+1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du pod** puis appuyez sur le bouton **Historique pod (2)** pour accéder à l'écran d'historique du pod.
 
     |Pod_History_1| |Pod_History_2|
 
@@ -348,7 +348,7 @@ Paramètres du périphérique de communication pod et du Pod Actif
 
 Cet écran vous montre les informations, états et paramètres de configuration à la fois du périphérique de communication pod actuellement configuré, et du pod Omnipod Eros actuellement actif. 
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod management** menu, then press the **RileyLink stats (2)** button to view your currently configured **RileyLink (3)** and active pod **Device (4)** settings.
+1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du Pod** puis appuyez sur le bouton **Stats RileyLink (2)** pour afficher les paramètres du **RileyLink (3)** et du pod actif **Appareil (4)**.
 
     |RileyLink_Statistics_Settings_1| |RileyLink_Statistics_Settings_2|
 
@@ -360,7 +360,7 @@ Champs RileyLink (3)
 	* **Adresse :** Adresse MAC du périphérique de communication pod sélectionné défini dans les paramètres Omnipod.
 	* **Nom :** Nom d’identification Bluetooth du périphérique de communication pod sélectionné défini dans les paramètres Bluetooth de votre téléphone.
 	* **Niveau batterie :** Affiche le niveau de batterie actuel du périphérique de communication pod connecté
-	* **Connected Device:** Model of the Omnipod pod currently communicating with the pod communication device
+	* **Périphérique connecté :** Modèle du pod Omnipod qui communique actuellement avec le périphérique de communication pod
 	* **État de la connexion :** l'état actuel de la connexion Bluetooth entre le périphérique de communication pod et le téléphone qui exécute AAPS.
 	* **Erreur de Connexion :** S'il y a une erreur Bluetooth avec le périphérique de communication pod, les détails seront affichés ici.
 	* **Version du firmware :** Version actuelle du firmware installée sur le périphérique de communication pod connecté.
@@ -381,7 +381,7 @@ RileyLink et historique du Pod Actif
 
 Cet écran montre les informations dans l'ordre chronologique inverse de chaque état ou action que le RileyLink ou le pod actuellement connecté fait ou a fait. L'historique complet n'est disponible que pour le pod actuellement actif, après un changement de pod, cet historique sera effacé et seuls les événements du pod nouvellement activé seront enregistrés et affichés.
 
-1. Go to the **Omnipod (POD)** tab and press the **POD MGMT (1)** button to access the **Pod Management** menu, then press the **Pod History (2)** button to view the **Settings** and **History** screen. Cliquez sur le texte **HISTORIQUE (3)** pour afficher l'historique complet du RileyLink et de la session du pod actif.
+1. Allez dans l'onglet **Omnipod (POD)** et appuyez sur le bouton **GEST. POD (1)** pour accéder au menu de **Gestion du pod** puis appuyez sur le bouton **Historique Pod (2)** pour accéder à l'écran **Paramètres** et **Historique**. Cliquez sur le texte **HISTORIQUE (3)** pour afficher l'historique complet du RileyLink et de la session du pod actif.
 
     |RileyLink_Statistics_History_1| |RileyLink_Statistics_History_2|
 
@@ -401,7 +401,7 @@ Vous trouverez ci-dessous une explication de la mise en page et la signification
 
 *REMARQUE : Si un message dans les champs d'état de l'onglet Omnipod (POD) indique (incertain), vous devez appuyer sur le bouton Actualiser pour l'effacer et actualiser l'état du pod.*
 
-|Omnipod_Tab|
+   |Omnipod_Tab|
 
 Champs
 ------
@@ -441,37 +441,47 @@ Champs
 Icônes
 -----
 
-.. liste-table:: 
-      
-    * - |refresh_pod_status|
-      - **ACTUALISER:** 
-			
-	Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
-			 
-	* A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
-	* Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
-    * - |pod_management|  	 
-      - **GEST. POD:**
+* **REFRESH:**
 
-	Permet d'accéder au menu de gestion du pod   
-    * - |ack_alerts|		 
-      - **ACCEPTER ALERTES:**
-   			 
-	Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications. 
-			 
-	* Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
-	* En cas de désactivation réussi, cette icône n'apparaîtra plus.			 
-    * - |set_time|	 
-      - **DÉFINIR L'HEURE:**
-   
-	Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
-    * - |suspend|  		 
-      - **SUSPENDRE:**
-   
-	Suspend le pod actif
-    * - |resume|	 
-      - **REPRENDRE L'INJECTION:**
-   
+    |refresh_pod_status|
+
+    Envoie une commande d'actualisation au pod actif pour mettre à jour la communication
+
+    A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
+
+    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+* **POD MGMT:**
+
+    |pod_management|
+
+    Permet d'accéder au menu de gestion du pod
+
+* **ACK ALERTS:**
+
+    |ack_alerts|
+
+    Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications.
+
+    Button is displayed only when pod time is past expiration warning time
+    En cas de désactivation réussi, cette icône n'apparaîtra plus.
+
+* **SET TIME:**
+
+    |set_time|
+
+    Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
+
+* **SUSPEND:**
+
+    |suspend|
+
+    Suspend le pod actif
+
+* **RESUME DELIVERY:**
+
+    |resume|
+
 	Réactive l'injection d'insuline du pod actif actuellement suspendu
 
 
@@ -480,63 +490,78 @@ Menu de Gestion du pod
 
 Vous trouverez ci-dessous une explication de la mise en page et de la signification des icônes de la page **Gestion du Pod** accessible depuis l'onglet **Omnipod (POD)**.
 
-|Omnipod_Tab_Pod_Management|
+    |Omnipod_Tab_Pod_Management|
 
-.. liste-table:: 
+* **Activate Pod**
 
-    * - |activate_pod|
-      - **Activer Pod**
-   
-        Amorce et active un nouveau pod
-    * - |deactivate_pod|
-      - **Désactiver Pod**
- 
-        Désactive le pod actuellement actif.
-		 
-	* Un pod partiellement appairé ignore cette commande.
-	* Utilisez cette commande pour désactiver un pod urlant (erreur 49).
-	* Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
-    * - |play_test_beep|
-      - **Tester les bips**
- 
- 	Joue un bip de test unique sur le pod quand vous cliquez dessus.
-    * - |discard_pod|
-      - **Supprimer Pod**
+    |activate_pod|
 
-	Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
-			      
-	Le bouton ne s'affiche que dans des cas très particuliers où la désactivation correcte n'est plus possible :
+    Amorce et active un nouveau pod
+
+* **Deactivate Pod**
+
+    |deactivate_pod|
+
+    Désactive le pod actuellement actif.
+
+    A partially paired pod ignores this command.
+
+    Use this command to deactivate a screaming pod (error 49).
+
+    If the button is disabled (greyed out) use the Discard Pod button.
+
+* **Play test beep**
+
+    |play_test_beep|
+
+    Joue un bip de test unique sur le pod quand vous cliquez dessus.
+
+* **Discard pod**
+
+    |discard_pod|
+
+    Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
+
+    Le bouton ne s'affiche que dans des cas très particuliers où la désactivation correcte n'est plus possible :
 
 	* Un **pod n'est pas complètement appairé** et ignore donc les commandes de désactivation.
 	* Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
 	* Un **pod ne s'appaire tout simplement pas.**
-    * - |pod_history|
-      - **Historique du Pod** 
-   
-   	Affiche l'historique de l'activité du pod actif
-    * - |rileylink_stats|
-      - **Stats RileyLink:**
-   
-        Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
+
+* **Pod history**
+
+    |pod_history|
+
+    Affiche l'historique de l'activité du pod actif
+
+* **RileyLink stats:**
+
+    |rileylink_stats|
+
+    Naviguer vers l'écran des statistiques du RileyLink qui affiche les paramètres actuels et l'historique de la connexion du RileyLink
 
 	* **Paramètres** - affiche les paramètres du RileyLink et du pod actif
 	* **Historique** - affiche l'historique de communication du RileyLink et du Pod
-    * - |reset_rileylink_config|
-      - **Réinitialiser la config. RileyLink** 
-   
-   	Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté. 
-			      
-	* Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink 
-			      
+
+* **Reset RileyLink Config**
+
+    |reset_rileylink_config|
+
+    Lorsque vous cliquez dessus, ce bouton réinitialise la configuration du périphérique de communication pod actuellement connecté.
+
+	* Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink
+
 	    - Les registres de mémoire sont définis
 	    - Les protocoles de communication sont définis
 	    - La fréquence radio réglée est définie
-				
+
 	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
-    * - |pulse_log|
-      - **Lire Journal d'impulsions:** 
-    
-    	Copie le journal d'impulsion du pod actif dans le presse-papiers		    
+
+* **Read pulse log:**
+
+    |pulse_log|
+
+    	Copie le journal d'impulsion du pod actif dans le presse-papiers
 
 *Remarque concernant Réinit config. RileyLink*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -566,15 +591,15 @@ Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou l
 RileyLink
 ---------
 
-Allows for scanning of a pod communication device. The Omnipod driver cannot select more than one pod communication device at a time.
+Permet le balayage d'un périphérique de communication pod. Le pilote Omnipod ne peut pas sélectionner plus d'un périphérique de communication pod à la fois.
 
-* **Show battery level reported by OrangeLink/EmaLink/DiaLink:** Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is **strongly recommended** that all OrangeLink/EmaLink/DiaLink users enable this setting.
+* **Afficher le niveau de batterie transmis par OrangeLink/EmaLink/Dialink :** indique le niveau de batterie réel de l'OrangeLink/EmaLink/Dialink. Il est **fortement recommandé** à tous les utilisateurs d'OrangeLink/EmaLink/Dialink d'activer ce paramètre.
 
 	+ NE FONCTIONNE PAS avec le RileyLink original.
 	+ Peut ne pas marcher avec des alternatives au RileyLink.
 	+ Activé - Indique le niveau de batterie actuel des périphériques de communication de pod.
 	+ Désactivé - Indique n/a.
-* **Enable battery change logging in Actions:** In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
+* **Activer l'enregistrement des changements de pile dans Actions :** Dans le menu Actions le bouton de changement de pile est activé SI vous avez activé ce paramètre ET le paramètre de rapport de la batterie ci-dessus.  Certains appareils de communication pods ont maintenant la possibilité d’utiliser des piles ordinaires qui peuvent être changées.  Cette option vous permet d'enregistrer et de réinitialiser l'âge de la pile.
 
 Bips de confirmation
 ------------------
@@ -696,14 +721,14 @@ L'affichage de la quantité d'insuline dans le Pod Omnipod Eros n'est pas exact.
 
 **Niveau batterie**
 
-Battery level reporting is a setting that can be enabled to return the current battery level of pod communication devices, such as the OrangeLink, EmaLink or DiaLink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
+L'affichage du niveau de la batterie est un paramètre qui peut être activé pour afficherer le niveau de batterie actuel des périphériques de communication pod comme l'OrangeLink, EmaLink ou Dialink.  Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie.  Le niveau batterie est actualisé après chaque communication avec le pod, donc lors de la charge on peut ne pas avoir une augmentation linéaire.  Une mise à jour manuelle actualisera le niveau de batterie.  Lorsqu'un périphérique de communication Pod est déconnecté, la valeur 0% sera indiquée.
 
-  * **RileyLink hardware is NOT capable of reporting battery level** 
-  * **"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values**
-  * **Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices**
+  * **Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie** 
+  * **Le paramètre "Afficher le niveau batterie remonté par OrangeLink/EmaLink/Dialink" DOIT être activé dans les paramètres Omnipod**
+  * **Le niveau batterie ne fonctionne que pour les périphériques OrangeLink, EmaLink et Dialink**
   * **L'affichage du niveau de batterie PEUT fonctionner pour d'autres appareils (en dehors du RileyLink)**
-  * **SMS** - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
-  * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
+  * **SMS** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas renvoyée
+  * **Nightscout** - Renvoie en retour le niveau de batterie actuel quand une valeur existe, la valeur n/a ne sera pas envoyée
 
 
 Résolution de problèmes

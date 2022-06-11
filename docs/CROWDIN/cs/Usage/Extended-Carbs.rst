@@ -2,7 +2,7 @@ Rozložené sacharidy / "eCarbs"
 **************************************************
 What are eCarbs and when are they useful?
 ==================================================
-S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see `extended bolus <../Usage/Extended-Carbs.html#extended-bolus>`__ below.
+S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see `extended bolus <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`__ below.
 
 Potřeba řešit taková jídla však stále zůstává. To je důvod, proč AndroidAPS od verze 2.0 podporuje takzvané rozložené sacharidy neboli eCarbs.
 

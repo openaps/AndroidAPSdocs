@@ -67,7 +67,7 @@ Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [App erstellen](../Installing-AndroidAPS/Building-APK#signierte-apk-erstellen-generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
-8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip#identify-receiver)
 
 ## Schritt für Schritt Anleitung
 
@@ -259,7 +259,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
     
     ![Auf Hintergrundaufgaben warten](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Schaue auf der [Seite zur Problembehebung in Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) nach bekannten Problemen!
+    * ***Warnung:*** Fahre mit den folgenden Schritten nicht fort, wenn Fehler auftreten. \ Schaue auf der [Seite zur Problembehebung in Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) nach bekannten Problemen!
     
     ![Gradle Sync Fehler](../images/studioSetup/41_GradleSyncError.png)
 
@@ -317,13 +317,13 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Android Studio zeigt im unteren Teil des Fensters "Gradle Build running" an. Dies dauert eine Weile je nach Computer und Internetverbindung. **Sei geduldig!**
     
-    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
+    ![Gradle läuft](../images/studioSetup/50_GradleRunning.png)
 
 * Android Studio zeigt "Generate Signed APK" an, so bald die Erstellung der APK-Datei abgeschlossen ist.
     
     ![Build abgeschlossen](../images/studioSetup/51_BuildFinished.png)
 
-* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* Falls beim Erstellen Fehler auftreten, findest Du Lösungsansätze auf den Seiten zur [Fehlerbehebung](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Klicke auf die Benachrichtigung, um sie zu vergrößern.
 
@@ -347,4 +347,4 @@ Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. A
 
 ## Problembehandlung
 
-Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+Siehe die separate Seite zur [Problembehandlung bei Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

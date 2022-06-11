@@ -1,11 +1,11 @@
 Nustatymai
 ***********************************************************
-* **Open preferences** by clicking three-dot-menu on top right side of home screen.
+* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Open preferences
 
-* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and click Plugin preferences.
+* You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Open plugin preferences
@@ -34,8 +34,8 @@ Bendrieji
 **Language**
 
 * New option to use phone's default language (recommended). 
-* In case you want AAPS in different language than standard phone language you can choose from a broad variety.
-* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding default android language sometimes doesn't work.
+* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+* If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Preferences > General
@@ -49,9 +49,9 @@ Protection
 Master password
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Jis yra būtinas, kad būtų galima `eksportuoti nustatymus <../Usage/ExportImportSettings.html>`_, nes versijoje 2.7 jie yra užkoduoti.
-  **Biometric protection may not work on OnePlus phones. This is a know issue of OnePlus on some phones.**
+  **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-* Atidarykite Nustatymus (trijų taškų meniu dešinėje viršutinėje pagrindinio ekrano pusėje)
+* Open Preferences (three-dot menu on top right of home screen)
 * Spustelėkite trikampį žemiau "Bendrieji"
 * Spauskite "Pagrindinis Slaptažodis"
 * Įveskite slaptažodį, patvirtinkite slaptažodį ir spustelėkite Ok.
@@ -94,12 +94,12 @@ Skin
 Portrait orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Large Display** has an increased size of all graphs compared to other skins
 
 Landscape orientation
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
-* **Large Display** has an increased size of all graphs compare to other skins
+* **Large Display** has an increased size of all graphs compared to other skins
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Skins depending on phone's display orientation
@@ -125,7 +125,7 @@ Mygtukai
   .. image:: ../images/Pref2020_OV_Buttons.png
     :alt: Preferences > Buttons
 
-Greitas vedlys
+Quick Wizard
 -----------------------------------------------------------
 * If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 * In setup you define during which time period the button will be visible on your home screen - just one button per period.
@@ -137,7 +137,7 @@ Greitas vedlys
   
 Default temp targets
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html#temp-targets>`_ allow you to define change your blood glucose target for a certain time period.
+* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
 * With setting of default TT you can easily change your target for activity, eating soon etc.
 * Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
@@ -205,7 +205,7 @@ Deliver this part of bolus wizard result
 Bolus advisor
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * If you run `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
-* If correction bolus is accepted **no carbs** will recorded.
+* If correction bolus is accepted **no carbs** will be recorded.
 * An alarm will be started when glucose value is in good level to start eating.
 * You have to enter `Bolus wizard <../Getting-Started/Screenshots.html#bolus-wizard>`__ again and enter the amount of carbs you want to eat.
 
@@ -223,7 +223,7 @@ Patient age
 -----------------------------------------------------------
 * Safety limits are set based on the age you select in this setting. 
 * If you start hitting these hard limits (like max bolus) it's time to move one step up. 
-* It's a bad idea to select higher then real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
+* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
 * If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on `this page <../Usage/Open-APS-features.html>`_.
 
 Max allowed bolus [U]
@@ -244,7 +244,7 @@ Ciklas
 APS mode
 -----------------------------------------------------------
 * Toggle between open and closed looping as well as low glucose suspend (LGS)
-* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation the command to dose insulin will be transferred to pump.. Only if you use virtual pump you have to enter it manually.
+* **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation, the command to dose insulin will be transferred to pump. Only if you use virtual pump you have to enter it manually.
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
 * **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
 
@@ -308,7 +308,7 @@ Advanced settings (OpenAPS AMA)
 OpenAPS SMB settings
 -----------------------------------------------------------
 * In contrast to AMA, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
-* You must have started `objective 10 <../Usage/Objectives.html#objective-10-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
+* You must have started `objective 9 <../Usage/Objectives.html#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>`_ to use SMB.
 * The first three settings are explained `above <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__.
 * Details on the different enable options are described in `OpenAPS feature section <../Usage/Open-APS-features.html#enable-smb>`_.
 * *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences. 
@@ -324,7 +324,7 @@ Carb required notification
 * Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
 * In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 * Additionally the required carbs will be displayed in the COB section on your home screen.
-* A threshold can  be defined - minimum amount of carbs needed to trigger notification. 
+* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
 * Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,7 +345,7 @@ min_5m_AV_įtaka
 -----------------------------------------------------------
 * The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed. 
 * The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
-* At times when carb absorption can’t be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Iš esmės tai yra saugiklis.
+* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Iš esmės tai yra saugiklis.
 * To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc. 
 * Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Big change=many carbs etc. 
 * The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see `OpenAPS docs <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact>`__.
@@ -387,7 +387,7 @@ NSClient
 * Double check for typos here if you are stuck in Objective 1.
 * **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 * *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS). 
-* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ are uploaded to your Nightscout site.
+* If activated changes in `local profile <../Configuration/Config-Builder.html#local-profile>`_ are uploaded to your Nightscout site.
 
 Connection settings
 -----------------------------------------------------------

@@ -75,17 +75,14 @@ Standortdienste ("GPS") müssen aktiviert sein, damit Bluetooth ordnungsgemäß 
 
 Die Original-App von Dexcom aus dem Google Play Store wird nicht funktionieren, weil sie die Werte nicht an andere Apps weitergibt. Darum ist eine von der Community leicht modifizierte Version erforderlich. Nur sie kann später mit AAPS kommunizieren. Außerdem kann die modifizierte Dexcom App mit allen Android Smartphones verwendet werden, nicht nur mit den in der [Dexcom Kompatibilitätsliste](https://www.dexcom.com/dexcom-international-compatibility) aufgeführten.
 
-Eine mmol/l Version und eine mg/dl Version der modifizierten Dexcom G6 App sind unter <https://github.com/dexcomapp/dexcomapp/tree/master/2.4> verfügbar. You have to choose G6 app for your region.
-
 Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 1. Falls die Original-Dexcom-App bereits installiert sein sollte: 
     * Sensor stoppen
     * App deinstallieren über Menü > Einstellungen > Apps > Dexcom G6 Mobile > Deinstallieren
-2. Lade die modifizierte Dexcom App (achte auf die Einheit mg/dl oder mmol/l und [Region](../Hardware/DexcomG6#if-using-g6-with-patched-dexcom-app) according to your needs): <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>.
-3. Modifizierte Dexcom G6-App auf dem Smartphone installieren (= die heruntergeladene APK-Datei auswählen)
-4. Modifizierte Dexcom G6-App starten, den Sensor nach Anweisung aktivieren / kalibrieren und die Aufwärmphase abwarten.
-5. Wenn die modifizierte Dexcom-App den aktuellen Wert anzeigt, dann im Hamburger-Menü (= drei waagerechte Striche links oben in der App) auf “Warnungen” und folgende Konfiguration einstellen: 
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+3. Modifizierte Dexcom G6-App starten, den Sensor nach Anweisung aktivieren / kalibrieren und die Aufwärmphase abwarten.
+4. Wenn die modifizierte Dexcom-App den aktuellen Wert anzeigt, dann im Hamburger-Menü (= drei waagerechte Striche links oben in der App) auf “Warnungen” und folgende Konfiguration einstellen: 
     * Akut niedrig: `55mg/dl` / `3.1mmol/l` (kann nicht deaktiviert werden)
     * Niedrig `OFF`
     * Hoch `OFF`
@@ -104,7 +101,7 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 
 ![G5 Einstellungen](../images/SampleSetupG5Settings.png)
 
-* Nightscout Client aktivieren (siehe [Nightscout-Client](../Configuration/Config-Builder#nightscout-profil) und [Nightscout Setup](../Installing-AndroidAPS/Nightscout.md))
+* NS Client activated (see [Nightscout setup](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+ installieren
 
@@ -113,7 +110,7 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
 1. Letzte stabile APK-Version von xDrip+ mit dem Smartphone herunterladen unter <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - nicht die Version aus dem GooglePlay-Store!
 2. xDrip+ installieren, indem die heruntergeladene APK-Datei ausgewählt wird.
 3. xDrip+ starten und im Hamburger-Menü (drei waagerechte Striche links oben) folgende Einstellungen vornehmen: 
-    * Einstellungen > Warnungen > Glukose-Alarm-Liste > Warnungen (niedrig) und (hoch) je nach Bedarf erstellen. 
+    * Einstellungen > Warnungen > Glukose-Alarm-Liste > Warnungen (niedrig) und (hoch) je nach Bedarf erstellen.
     * Die bestehenden Alarme können mit einem langen Fingerdruck geändert werden.
     * Einstellungen > Kalibrierungs-Erinnerungen: deaktiviert (wird über die Dexcom-App erinnert)
     * Einstellungen > Datenquelle > 640G/EverSense

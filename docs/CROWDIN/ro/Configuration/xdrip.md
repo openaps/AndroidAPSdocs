@@ -1,14 +1,16 @@
 # Cofigurare xDrip+
 
-Dacă nu este deja configurat de cand ai descărct [xDrip+](https://jamorham.github.io/#xdrip-plus).
+(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
 
-**Această documentaţie este pentru xDrip+ for Android.** Documentatia nu se aplica in cazul utilizarii aplicaţiei "xDrip for iOS".
+If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) se va folosi versiunea [master](https://jamorham.github.io/#xdrip-plus).
+**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
 
-Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J se va folosi una din [versiunile mai recente](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
 
-În cazul în care telefonul rulează cu Android 10 și ai dificultăți cu Xdrip+ master, încearca [Nightscout 31/12/2019 sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele a caror serie is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+
+If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Setari de baza pentru toate sistemele CGM & FGM
 
@@ -76,11 +78,11 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J se va folosi un
 
 ### Nu se recomandă repornirea preventivă
 
-**La transmiţătorii Dexcom a caror serie. începe cu 8G, 8H sau 8J repornirea preventiva nu funcționează și ar putea chiar sa distruga senzorul!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-Extensia automata a senzorilor Dexcom (` repornire`) nu este recomandata deoarece ar putea duce la "salturi bruste" ale valorii glicemiei in ziua 9 după repornire.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ salt după repornirea preventivă](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Ceea ce e clar este că utilizarea G6 este poate un pic mai complexă decât pare la prima vedere. Pentru a fi utilizat în condiţii de siguranţă, există câteva aspecte de care trebuie să fiți conștienți:
 
@@ -125,7 +127,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
    
    -> In partea de jos a ecranului, după câteva minute, trebuie sa apara textul `Incalzire x, x ore rămase`.
 
--> Dacă seria transmițătorului nu incepe cu 8G, 8H sau 8J iar dupa cateva minute de la oprire-repornirea senzorului nu se afiseaza textul cu durata ramasa:
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Restart collector (system status - if not replacing sensor}
 * Nu reporni receptorul Dexcom original (dacă este utilizat) înainte ca xDrip+ să afișeze primele citiri.
@@ -177,7 +179,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
 
 Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) foloseste versiunea [master](https://jamorham.github.io/#xdrip-plus).
 
-Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nightscout din iulie sau mai recent](https://github.com/NightscoutFoundation/xDrip/releases).
+Pentru transmițătoarele a caror serie is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Dezactivează receptorul Dexcom original (dacă este utilizat).
 * Oprește senzorul (doar dacă înlocuiește senzorul)
@@ -308,7 +310,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
    
    ### Problemă la pornirea unui senzor nou
    
-   Vă rugăm să reţineţi că este posibil ca următoarea metodă să nu funcţioneze dacă seria transmiţătorului Dexcom G6 începe cu 8G, 8H sau 8J.
+   Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
    
    * Senzorul nativ este marcat ca "EȘUAT: Pornirea senzorului eșuată"
    * Stop sensor
@@ -318,7 +320,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
    * Stop sensor
    * Porniţi senzorul cu codul "real" (tipărit pe hârtia adezivă de protecţie)
    
-   Verificați în jurnalele xDrip+ dacă xDrip+ începe să numere "Durată: 1 minut" (și așa mai departe). Doar în jurnalele xDrip+ puteți detecta într-un stadiu incipient dacă xDrip+ a oprit un senzor. Ultima stare nu este întotdeauna afișată corect în partea de jos a ecranului.
+   Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
    
    ## xDrip+ & Freestyle Libre
    

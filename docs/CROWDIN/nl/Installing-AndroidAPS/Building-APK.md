@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Android SDK downloaden](../Installing-AndroidAPS/Building-APK#android-sdk-downloaden)
 6. [Bouw de app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (ondertekende apk genereren)
 7. [Apk-bestand overzetten naar je telefoon](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver (identificeer ontvanger) bij gebruik van xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identify receiver (identificeer ontvanger) bij gebruik van xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Step by step walkthrough
 
@@ -259,7 +259,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) for known problems!
+    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Build finished](../images/studioSetup/51_BuildFinished.png)
 
-* In het geval dat de APK niet succesvol is gebouwd, verwijzen we je naar de pagina [Problemen oplossen](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Click on the notification to expand it.
 
@@ -341,10 +341,10 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Overzetten van de APK naar je telefoon
 
-De eenvoudigste manier om app-full-release.apk over te zetten op je telefoon is via [USB-kabel of Google Drive](https://support.google.com/android/answer/9064445?hl=en). Overdracht per e-mail kan leiden tot problemen (veel e-mailprogramma's blokkeren apk-bestanden als bijlage) en is dus niet de makkelijkste manier.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-Op jouw telefoon moet je installatie uit onbekende bronnen toestaan. Je vindt dit ergens in je telefooninstellingen, waarschijnlijk onder Beveiliging. Handleidingen hoe dit te doen kun je op internet vinden (bijv. [hier](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) of [hier](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Problemen oplossen
 
-Zie afzonderlijke pagina over [Probleemoplossing Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

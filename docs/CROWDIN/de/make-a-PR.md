@@ -1,4 +1,4 @@
-# Wie man den ersten PR (Pull Request) macht
+# Wie man die Dokumentation bearbeitet
 
 **An dieser Stelle wird nur die Bearbeitung der englischen Dokumentation erläutert. Alle neuen Informationen müssen zuerst in Englisch eingegeben werden. Falls du diese in eine andere Sprache übersetzen willst (Danke dafür!), nutze bitte [crowdin](https://crowdin.com/project/androidapsdocs).**
 
@@ -64,7 +64,7 @@ Momentan werden in den Docs zwei Code-Sprachen eingesetzt:
 * Markdown (.md) - die ursprünglich für Docs-Seiten verwendete Markup-Sprache
 * reStructuredText (.rst) - die neue Markup-Sprache
 
-Wir werden schrittweise alle Docs-Seiten auf reStructuredText umstellen. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In der Zwischenzeit ist es wichtig, dass Du beim Formatieren von Text oder dem Setzen von Links den richtigen Syntax verwendest. Wenn Du Dir nicht sicher bist, schaue einfach bei existierenden Seiten wie dort formatiert bzw. die Links gesetzt wurden.
 
 ### Bildgröße
 

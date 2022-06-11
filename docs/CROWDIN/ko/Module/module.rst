@@ -1,4 +1,4 @@
-구성 요소 개요 
+Component Overview 
 **************************************************
 AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
    
@@ -48,12 +48,15 @@ Users are strongly encouraged to keep their build of AndroidAPS up to date for s
 --------------------------------------------------
 안드로이드APS는 **현재** 아래의 펌프와 호환됩니다. 
 
-* 아큐첵 콤보 <../Configuration/Accu-Chek-Combo-Pump.html>`_ (추가적으로 필요한 사항: Ruffy 애플리케이션, LineageOS 또는 안드로이드 8.1 스마트폰)
-- 아큐첵 인사이트 <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
-- 다나R <../Configuration/DanaR-Insulin-Pump.html>`_ 
-- `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-- `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-- `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
+* `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
+* `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
+* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+
+If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 AndroidAPS와 호환될 수 있는 가능성이 있는 **그외 펌프**는 <../Getting-Started/Future-possible-Pump-Drivers.html>`_ 페이지 '미래(가능한) 펌프'에 목록이 나와있습니다.
 
@@ -63,11 +66,11 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-   -  |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-   -  |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-   -  |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-   -  |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-   -  |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
 
 ** 그래서 어떤 펌프가 AndroidAPS의 최적된 펌프일까요?**
 
@@ -84,9 +87,9 @@ The advantages of the DanaR/RS and Dana-i vs. 콤보의 장점들은 다음과 �
 
 혈당정보
 --------------------------------------------------
-다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. For further details, look `here <../Configuration/BG-Source.html>`__. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
+다음은 AndroidAPS와 호환이 가능한 CGM/ FGM의 짧은 개요입니다. For further details, look `here <../Configuration/BG-Source.html>`_. 짧은 힌트: 만약 혈당 정보가 xdrip 앱 혹은 나이트스카운트 웹에서 보여지고 있는 경우에는 AAPS에서 xdrip (혹은 인터넷이 연결된 상태에서 나이트스카웃) 을 혈당 소스로 선택할수 있습니다.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: It works with xDrip+ app or BYODA
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
 * `덱스콤 G5 <../Hardware/DexcomG5.html>`_: xdrip앱이나 패치된 덱스콤앱에서 작동합니다.
 * 덱스콤 G4 <../Hardware/DexcomG4.html>`_: 이 센서들은 꽤 오래되었지만, xdrip에서 어떻게 사용하는 방법에 대한 설명을 찾아볼 수 있습니다.
 * 리브레 2 <../Hardware/Libre2.html>`_: xdrip+(트란스미터가 필요하지 않음)에서 작동하지만 스스로 패치앱을 빌드해야 합니다.
@@ -122,17 +125,6 @@ AAPS -.apk 파일
 xDrip+
 --------------------------------------------------
 Xdrip앱을 혈당소스로 해야할 필요는 없지만 예시로 사용해볼 수 있습니다. 알림과 혈당이 보여지는 것이 좋습니다. 원하는 만큼의 알림을 설정할 수 있고, 알림의 활성 시간을 구체적으로 설정할 수 있으며 무음모드 또한 무시할 수 있는 기능이 있습니다. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. 이 앱에 대한 진행상태가 상당히 빠르기 때문에 문서가 항상 최신으로 업데이트가 되어 있지 않을 수 있음을 유의해주시기 바랍니다.
-
-샘플 설정
-==================================================
-만약 단계별로 예시가 보고싶은 경우에는, 샘플 설정을 확인해보시기 바랍니다. 첫 번째의 샘플 설정은 매우 오래되었지만 최신 상태일 것입니다.
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
-   샘플 설정<../Getting-Started/Sample-Setup.rst>
- 
   
 모듈을 대기하는 동안 수행할 작업들
 ==================================================

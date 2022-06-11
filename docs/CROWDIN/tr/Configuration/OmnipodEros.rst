@@ -401,7 +401,7 @@ Aşağıda, ana AAPS arayüzündeki **Omnipod (POD)** sekmesindeki simgelerin ve
 
 *NOT: Omnipod (POD) sekmesi durum alanlarındaki herhangi bir mesaj raporlanırsa (belirsiz), o zaman bunu temizlemek ve bölme durumunu yenilemek için Yenile düğmesine basmanız gerekir.*
 
-|Omnipod_Tab|
+   |Omnipod_Tab|
 
 Alanlar
 ------
@@ -441,37 +441,47 @@ Alanlar
 Simgeler
 -----
 
-.. liste-table:: 
-      
-    * - |refresh_pod_status|
-      - **YENİLE:** 
-			
-	İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir
-			 
-	* Pod durumunu yenilemek ve metni içeren (belirsiz) durum alanlarını yenilemek için bu seçeneği kullanın.
-	* Ek bilgi için aşağıdaki `Sorun giderme <#troubleshooting>`__ bölümüne bakın.
-    * - |pod_management|  	 
-      - **POD YNTM:**
+* **REFRESH:**
 
-	Pod yönetimi menüsüne yönlendirir   
-    * - |ack_alerts|		 
-      - **BİLGİ UYARILARI:**
-   			 
-	Bu düğmeye basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır. 
-			 
-	* Bu düğme, yalnızca pod'un geçerli saati pod sona erme tarihinden sonraysa görüntülenir
-	* Başarılı bir şekilde görevden alma durumunda, bu simge artık görünmeyecektir.			 
-    * - |set_time|	 
-      - **SAATİ AYARLA:**
-   
-	Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
-    * - |suspend|  		 
-      - **ASKIYA AL:**
-   
-	Etkin pod'u askıya alır
-    * - |resume|	 
-      - **İLETİME DEVAM ET:**
-   
+    |refresh_pod_status|
+
+    İletişimi güncellemek için aktif pod'a bir yenileme komutu gönderir
+
+    Pod durumunu yenilemek ve metin içeren (belirsiz) durum satırlarını yenilemek için kullanın.
+
+    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+
+* **POD MGMT:**
+
+    |pod_management|
+
+    Pod yönetimi menüsüne yönlendirir
+
+* **ACK ALERTS:**
+
+    |ack_alerts|
+
+    Bu düğmeye basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır.
+
+    Button is displayed only when pod time is past expiration warning time
+    Başarılı bir devre dışı bırakmanın ardından bu simge artık görünmeyecektir.
+
+* **SET TIME:**
+
+    |set_time|
+
+    Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
+
+* **SUSPEND:**
+
+    |suspend|
+
+    Etkin pod'u askıya alır
+
+* **RESUME DELIVERY:**
+
+    |resume|
+
 	Şu anda askıya alınmış, etkin pod'u devam ettirir
 
 
@@ -480,63 +490,78 @@ Pod Yönetim Menüsü
 
 Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsündeki simgelerin düzeni ve anlamının bir açıklaması bulunmaktadır.
 
-|Omnipod_Tab_Pod_Management|
+    |Omnipod_Tab_Pod_Management|
 
-.. liste-table:: 
+* **Activate Pod**
 
-    * - |activate_pod|
-      - **Pod Etkinleştir**
-   
-        Yeni bir pod hazırlar ve etkinleştirir
-    * - |deactivate_pod|
-      - **Pod'u Devre Dışı Bırak**
- 
-        O anda etkin olan bölmeyi devre dışı bırakır.
-		 
-	*  Kısmen eşleştirilmiş bir pod bu komutu yok sayar.
-	* Çığlık atan bir pod devre dışı bırakmak için bu komutu kullanın (hata 49).
-	* Düğme devre dışıysa (gri renkteyse), (Discard Pod) Pod'u Atın düğmesini kullanın.
-    * - |play_test_beep|
-      - **Test bip sesi çal**
- 
- 	Basıldığında pod'tan tek bir test bip sesi çalar.
-    * - |discard_pod|
-      - **Pod'u atın**
+    |activate_pod|
 
-	Basıldığında, yanıt vermeyen bir Pod'un Pod durumunu devre dışı bırakacak ve iptal edecektir.
-			      
-	Düğme yalnızca, uygun şekilde devre dışı bırakma artık mümkün olmadığı zaman, çok özel durumlarda görüntülenir:
+    Yeni bir pod hazırlar ve etkinleştirir
+
+* **Deactivate Pod**
+
+    |deactivate_pod|
+
+    O anda etkin olan podu devre dışı bırakır.
+
+    A partially paired pod ignores this command.
+
+    Çığlık atan bir podu devre dışı bırakmak için bu komutu kullanın (hata 49).
+
+    Buton devre dışıysa (gri ise), "Pod'u çıkart" butonunu kullanın.
+
+* **Play test beep**
+
+    |play_test_beep|
+
+    Basıldığında pod'tan tek bir test bip sesi çalar.
+
+* **Pod'u çıkart**
+
+    |discard_pod|
+
+    Basıldığında, yanıt vermeyen bir Pod'un Pod durumunu devre dışı bırakacak ve iptal edecektir.
+
+    Düğme yalnızca, uygun şekilde devre dışı bırakma artık mümkün olmadığı zaman, çok özel durumlarda görüntülenir:
 
 	* **pod tam olarak eşlenmemişse** ve bu nedenle devre dışı bırakma komutlarını yok sayar.
 	*Adımlar arasındaki eşleştirme işlemi sırasında **pod takıldı** hatası alındığında
 	* **pod hiçbir şekilde eşleşmez.** ise
-    * - |pod_history|
-      - **Pod geçmişi** 
-   
-   	Etkin Pod'un etkinlik geçmişini görüntüler
-    * - |rileylink_stats|
-      - **RileyLink durumu:**
-   
-        Geçerli ayarları ve RileyLink Bağlantı geçmişini gösteren RileyLink İstatistikleri ekranına gider
+
+* **Pod history**
+
+    |pod_history|
+
+    Etkin Pod'un etkinlik geçmişini görüntüler
+
+* **RileyLink stats:**
+
+    |rileylink_stats|
+
+    Geçerli ayarları ve RileyLink Bağlantı geçmişini gösteren RileyLink İstatistikleri ekranına gider
 
 	* **Ayarlar** - RileyLink ve aktif pod ayarları bilgilerini görüntüler
 	* **Geçmiş** - RileyLink ve Pod iletişim geçmişini görüntüler
-    * - |reset_rileylink_config|
-      - **RileyLink Yapılandırmasını Sıfırla** 
-   
-   	Bu düğmeye basıldığında, o anda bağlı olan pod iletişim cihazı (örn. RileyLink) yapılandırmasını sıfırlar. 
-			      
-	* İletişim başlatıldığında, belirli veriler RileyLink'e gönderilir ve ayarlanır 
-			      
+
+* **Reset RileyLink Config**
+
+    |reset_rileylink_config|
+
+    Bu düğmeye basıldığında, o anda bağlı olan pod iletişim cihazı (örn. RileyLink) yapılandırmasını sıfırlar.
+
+	* İletişim başlatıldığında, belirli veriler RileyLink'e gönderilir ve ayarlanır
+
 	    - Hafıza Kayıtları ayarlandı
 	    - İletişim Protokolleri ayarlandı
 	    - Ayarlı Radyo Frekansı ayarlandı
-				
+
 	* Bu tablonun sonundaki `ek notlar <#reset-rileylink-config-notes>`__ bölümüne bakın
-    * - |pulse_log|
-      - ** Nabız günlüğünü oku:** 
-    
-    	Aktif pod sinyal günlüğünü panoya gönderir		    
+
+* **Sinyal günlüğünü oku:**
+
+    |pulse_log|
+
+    	Aktif pod sinyal günlüğünü panoya gönderir
 
 *RileyLink Yapılandırma Sıfırlama Notları*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

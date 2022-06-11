@@ -1,29 +1,42 @@
 Mises à jour et modifications de la documentation
 **************************************************
 
-December 2021
+Février 2022
 ==================================================
-* `Building the APK <../Installing-AndroidAPS/Building-APK.html>`_ - update Android Studio Arctic Fox | 2020.3.1 @tanja
-* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information added @MilosKozak
+* `Avertissement sur la qualité de la Glycémie <../Getting-Started/Screenshots.html#avertissement-glycemie>`_ @tanja
+* `Mise à jour pompe Medtronic <../Configuration/MedtronicPump.html>`_ @dottedfingertips
+* `Vérification nécessaire après la mise à jour vers AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @robertrub @vanelsberg
+* Mise à jour des docs pour AAPS 3.0 (en partie) @xJoe
+* `Wear OS pour AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
 
-November 2021
+Janvier 2022
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
-* `ISF <../Getting-Started/FAQ.html#impact>`_ reformulation of impact
-* Update `troubleshooting Android stduio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
-* Removed patched `Dexcom <../Hardware/DexcomG6.html>`_ app as it is obsolete
+* `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ mise à jour @tanja
 
-October 2021
+Décembre 2021
 ==================================================
-* `Release notes <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+* `Construire l'APK <../Installing-AndroidAPS/Building-APK.html>`_ - mettre à jour Android Studio Arctic Fox | 2020.3.1 @tanja
+* `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ information ajoutée @MilosKozak
 
-September 2021
+Novembre 2021
 ==================================================
-* Recommended computer specification to `build AAPS app <../Installing-AndroidAPS/Building-APK.html#recommended-specification-of-computer-for-building-apk-file>`_
+* Meilleures pratiques pour calibrer un `capteur libre 2 <../Hardware/Libre2.html#meilleures-pratiques-pour-calibrer-un-capteur-libre-2>`_
+* `SI <../Getting-Started/FAQ.html#impact>`_ reformulation de l'impact
+* Mise à jour `dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
+* Suppression de l'appli `Dexcom patchée<../Hardware/DexcomG6.html>`_ car elle est obsolète
 
-June 2021
+Octobre 2021
 ==================================================
-* `Watchface sideload <../Configuration/Watchfaces.html>`_ 
+* `Notes de version <../Installing-AndroidAPS/Releasenotes.html>`_ AAPS 3.0 beta
+
+Septembre 2021
+==================================================
+* Configuration d'ordinateur recommandée pour `construire l'application AAPS <../Installing-AndroidAPS/Building-APK.html#configuration-recommandee-de-l-ordinateur-pour-construire-un-fichier-apk>`_
+
+Juin 2021
+==================================================
+* `Installation des Cadrans WearOS <../Configuration/Watchfaces.html>`_ 
 
 Avril 2021
 ==================================================
@@ -95,8 +108,8 @@ Février 2020
 * `Avertissement pour l'automatisation <../Usage/Automation.html#bonnes-pratiques-et-avertissements>`_
 * `Autosens <../Usage/Open-APS-features.html#autosens>`_ - courte explication
 * `Alternatives à Careportal <../Usage/CPbefore26.html>`_
-* La fonction `Bolus étendus <../Usage/Extended-Carbs.html#bolus-etendu>`_ désactive la boucle fermée
-* Nouveau `plugin Profil Local <../Configuration/Config-Builder.html#profil-local-recommande>`_
+* `Bolus étendu <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_ - la boucle fermée sera désactivée
+* Nouveau `Plugin Profil Local <../Configuration/Config-Builder.html#profil-local>`_
 * `Exemple de configuration <../Getting-Started/Sample-Setup.html>`_ - mise à jour Dexcom G6
 * `Version 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6-0>`_ - Nouvelles fonctions majeures
 * `Complications pour la montre <../Configuration/Watchfaces.html>`_
@@ -118,7 +131,7 @@ Novembre 2019
 ==================================================
 * `Automatisation - Désactiver quand vous désactivez la boucle <../Usage/Automation.html#remarque-importante>`_
 * `Remplacement du transmetteur Dexcom G6 <../Configuration/xdrip.html#remplacement-du-transmetteur>`_
-* `Bolus étendus - pourquoi ils ne fonctionnent pas dans le cadre d'une boucle <../Usage/Extended-Carbs.html#extended-bolus>`_
+* `Bolus étendus uniquement pour les pompes Dana + Insight <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_
 * `FAQ - sports <../Getting-Started/FAQ.html#sports>`_
 * `Écran d'accueil - lignes sur le graphique <../Getting-Started/Screenshots.html#section-f-graphique-principal>`_
 * `Insight - Désactiver les valeurs absolues dans NS Client <../Configuration/Accu-Chek-Insight-Pump.html#parametres-dans-aaps>`_
@@ -128,7 +141,7 @@ Novembre 2019
 * `Mise à jour commandes SMS <../Children/SMS-Commands.html>`_
 * `Dépannage d'Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_
 * `Dépannage - collection de liens <../Usage/troubleshooting.html>`_
-* Update - quick walk-through for experienced users
+* Mise à jour - Accès rapide aux utilisateurs expérimentés
 * Wiki - mise à jour `Edition <../make-a-PR.html#syntaxe-du-code>`_ et `Traduction <../translations.html#traduire-les-pages-de-documentation>`_.
 
 Octobre 2019
@@ -155,7 +168,7 @@ Septembre 2019
 
 Août 2019
 ==================================================
-* Dexcom G6 patched app region
+* Région de l'application Dexcom G6 patchée
 * `Nouvel émetteur Dexcom G6 <../Configuration/xdrip.html#connecter-l-emetteur-g6-pour-la-premiere-fois>`_ ("firefly" / 8G...)
 * `Ce dont j'ai besoin? <../index.html#what-do-i-need>`_ - nouvelle structure & informations supplémentaires
 * Nouvelle structure

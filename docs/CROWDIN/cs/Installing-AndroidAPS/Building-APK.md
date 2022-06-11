@@ -67,7 +67,7 @@ In general, the steps necessary to build the APK file:
 5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Sestavte aplikaci](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (vygenerujte podepsaný soubor apk)
 7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip#identify-receiver)
 
 ## Průvodce krok za krokem
 
@@ -259,7 +259,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) for known problems!
+    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Build finished](../images/studioSetup/51_BuildFinished.png)
 
-* V případě, že sestavění neproběhlo úspěšně, přejděte do části [řešení problémů](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Click on the notification to expand it.
 
@@ -341,10 +341,10 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Přeneste soubor APK do telefonu
 
-Nejjednodušší způsob, jak přenést soubor app-full-release.apk do telefonu, je přes [USB kabel nebo Google Drive](https://support.google.com/android/answer/9064445?hl=en). Vezměte prosím na vědomí, že přenos e-mailem může být problematický, a není to tedy preferovaná varianta přenosu.
+Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-V telefonu musíte povolit instalaci aplikací z neznámých zdrojů. Návody, jak to udělat, naleznete na internetu (např. [zde](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) nebo [zde](https://www.androidcentral.com/unknown-sources)).
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
 ## Řešení problémů
 
-Viz samostatná stránka [odstraňování potíží s Android Studiem](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

@@ -60,14 +60,14 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 In general, the steps necessary to build the APK file:
 
-1. [Install git](../Installing-AndroidAPS/git-install.rst)
+1. [Git yükleyin](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver-if-using-xdrip)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Step by step walkthrough
 
@@ -162,7 +162,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * Any git version should work. For example <https://git-scm.com/download/mac>.
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
+* If you install git via homebrew there is no need to change any preferences. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
 
 ## Download AndroidAPS code
 
@@ -259,7 +259,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst) for known problems!
+    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -323,7 +323,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Build finished](../images/studioSetup/51_BuildFinished.png)
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 * Click on the notification to expand it.
 
@@ -343,8 +343,8 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
 
-## Troubleshooting
+## Sorun giderme
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).

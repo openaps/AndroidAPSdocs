@@ -1,89 +1,89 @@
-Export & import settings
+ייבוא\ייצוא הגדרות
 **************************************************
 
-When should I export settings?
+מתי כדאי לייצא הגדרות?
 ==================================================
-Be prepared for the unforeseen. You might change important settings by accident and have problems to undo the changes. Your phone might break or get stolen. To easily return to status you've been at, settings should be exported on a regular basis.
+חשוב להיות מוכנים לבלתי צפוי. ייתכן שתשנו הגדרות חשובות בטעות ושתחוו בקשיים בביטול השינויים הללו. הטלפון שלכם עלול להתקלקל, להישבר או להיגנב. על מנת לחזור חזרה להגדרות בהם הייתם, עליכם לייצא את הגדרותיכם על בסיס קבוע.
 
-Best practice is to export after change of settings or completing an objective. 
+מומלץ לייצא לאחר שינויים בהגדרות ובסיום משימות. 
 
-Exported settings should be copied to a cloud storage or your computer, better two different locations. So you are prepared for loss or damage of your AAPS phone and do not have to start from zero.
+יש להעתיק את ההגדרות המיוצאות לאחסון בענן או למחשב האישי, עדיף לשני מיקומים שונים. כך תהיו מוכנים לאובדן או נזק לטלפון ה-AAPS שלכם ולא תצטרכו להתחיל מאפס.
 
-On a Windows 10 computer it looks like this:
+במחשב Windows 10 זה נראה כך:
   
 .. image:: ../images/AAPS_ExImportSettingsWin.png
   :alt: AndroidAPS Preferences phone connected to computer
 
-Exported information
+מידע מיוצא
 ==================================================
-Among others the following information is part of the settings export:
+המידע המיוצא כולל בין השאר:
 
-* `Automation <../Usage/Automation.html>`_ events
-* `Config builder <../Configuration/Config-Builder.html>`_ settings
-* `Local profile <../Configuration/Config-Builder.html#local-profile-recommended>`_ settings
-* `Objectives <../Usage/Objectives.html>`_ status incl. `exam results <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
-* `Preferences <../Configuration/Preferences.html>`__ incl. `NS Client settings <../Configuration/Preferences.html#nsclient>`_
+* אירועים של `אוטומציה <../Usage/Automation.html>`_
+* הגדרות `בונה התצורה <../Configuration/Config-Builder.html>`_
+* הגדרות `פרופיל מקומי <../Configuration/Config-Builder.html#local-profile>`_
+* התקדמות במשימות `Objectives <../Usage/Objectives.html>`_ כולל `תוצאות הבחינה של משימה 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
+* `העדפות <../Configuration/Preferences.html>`__ כולל `הגדרות קליינט NS <../Configuration/Preferences.html#nsclient>`_
 
-Encrypted backup format
+פורמט הגיבוי המוצפן
 ==================================================
-Settings backup is encrypted by a master password that can be set in `Preferences <../Configuration/Preferences.html#master-password>`__ .
+גיבוי ההגדרות מוצפן על ידי הסיסמה הראשית שניתן להגדיר ב'העדפות <../Configuration/Preferences.html#master-password>`__ .
 
 
-Export settings
+ייצוא הגדרות
 ==================================================
-* Hamburger menu (top left corner of screen)
+* תפריט המבורגר (פינה הימנית העליונה של המסך)
 * תחזוקה
 * ייצא הגדרות
 
 .. image:: ../images/AAPS_ExportSettings1.png
   :alt: AndroidAPS export settings 1
 
-* Date and time of export will be added to the file name automatically and displayed together with the path.
-* Click 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
-* Successful export will be prompted at bottom of the screen.
+* התאריך ושעת הייצוא יתווספו לשם הקובץ באופן אוטומטי ויוצגו יחד עם הנתיב.
+* לחצו על 'אישור'.
+* הזינו `סיסמה ראשית <../Configuration/Preferences.html#master-password>`__ ולחצו על 'אישור'.
+* ייצוא מוצלח יוצג בתחתית המסך.
 
 .. image:: ../images/AAPS_ExportSettings2.png
   :alt: AndroidAPS export settings 2
   
 ייבוא הגדרות
 ==================================================
-**Do not import settings while on an active Pod session** - see `Omnipod page for details <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
+**אל תייבאו הגדרות בזמן פעילות של פוד** - ראו `הוראות Omnipod לפרטים <../Configuration/OmnipodEros.html#import-settings-from-previous-aaps>`_.
 
-* Hamburger menu (top left corner of screen)
+* תפריט המבורגר (פינה הימנית העליונה של המסך)
 * תחזוקה
 * יבא הגדרות
 
 .. image:: ../images/AAPS_ImportSettings1.png
   :alt: AndroidAPS import settings 1
 
-* All files from folder AAPS/preferences/ on your phone will be shown in the list.
-* Select file.
-* Confirm import by clicking 'OK'.
-* Enter `master password <../Configuration/Preferences.html#master-password>`__ and click 'OK'.
+* כל הקבצים מהתיקייה /AAPS/preferences בטלפון יוצגו ברשימה.
+* בחרו קובץ.
+* אשרו ייבוא על ידי לחיצה על 'אישור'.
+* הזינו `סיסמה ראשית <../Configuration/Preferences.html#master-password>`__ ולחצו על 'אישור'.
 
 .. image:: ../images/AAPS_ImportSettings2.png
   :alt: AndroidAPS import settings 2
 
-* Details on the preference file will be shown.
-* Last option to cancel import.
-* Click 'Import'.
-* Confirm message by clicking 'OK'.
-* AAPS will be restarted in order to activate imported preferences.
+* יוצגו פרטים על קובץ ההעדפות.
+*זוהי ההזדמנות האחרונה לביטול הייבוא.
+* לחצו על 'ייבוא'.
+* אשרו את ההודעה על ידי לחיצה על 'אישור'.
+* AAPS יופעל מחדש כדי להפעיל העדפות מיובאות.
 
-Note for Dana RS users
+הערה למשתמשי Dana RS
 ------------------------------------------------------------
-* As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. 
-* Please pair new phone and pump manually.
+* מכיוון שגם הגדרות חיבור המשאבה מיובאות, AAPS בטלפון החדש כבר "יכיר" את המשאבה ולכן לא יתחיל סריקת בלוטות'. 
+* יש לצמד טלפון חדש עם המשאבה באופן ידני.
 
-Import settings from previous versions (before AAPS 2.7)
+ייבוא הגדרות מגרסאות קודמות (לפני AAPS 2.7)
 ------------------------------------------------------------
-* The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-* Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-* You will find the "old" file on the bottom of the list in the import dialogue.
+* קובץ ההגדרות "הישן" (הנקרא 'AndroidAPSPreferences' - ללא סיומת קובץ) חייב להיות בתיקיית השורש של הטלפון החכם שלך (/storage/emulated/0).
+* אין לשים את הקובץ ה"ישן" באותה תיקיה כמו ההגדרות המיוצאות החדשות (AAPS/העדפות).
+* את הקובץ ה"ישן" תמצאו בתחתית הרשימה בדיאלוג הייבוא.
 
-Transfer settings file
+העברת קובץ הגדרות
 ==================================================
-* Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-* Manuals can be found on the web, i.e. `Android help pages <https://support.google.com/android/answer/9064445?hl=en>`_.
-* If you experience problems with the transferred file try another way to transfer file.
+* הדרך הטובה ביותר להעביר קובץ הגדרות לטלפון חדש היא באמצעות כבל USB או שירות ענן (כלומר Google Drive).
+* מדריכים ניתן למצוא באינטרנט לדוגמה `דפי עזרה של Android <https://support.google.com/android/answer/9064445?hl=iw>`_.
+* אם אתם נתקלים בבעיות עם הקובץ המועבר נסו דרך אחרת להעביר קובץ.

@@ -6,12 +6,9 @@
 
 Používat systémové notifikace pro výstrahy a oznámení:
 
-* Open 3-dot-menu on top right of home screen
-* Nastavení
-* Scroll all the way down
-* Activate "Use system notifications..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Používat systémové notifikace pro výstrahy a oznámení](../images/AndroidAuto_01.png)
+![Používat systémové notifikace pro výstrahy a oznámení](../images/AndroidAuto_01v2.png)
 
 ## Settings in Android Auto app on your phone
 

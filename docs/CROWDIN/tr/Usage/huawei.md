@@ -1,36 +1,36 @@
-# How-to configure a Huawei phone
+# Huawei telefonlar nasıl yapılandırılır
 
-There are different options, some Android specific, some Huawei specific:
+Bazıları Android'e özel, bazıları Huawei'ye özgü olmak üzere farklı seçenekler vardır:
 
-* Add AndroidAPS and xdrip+ to apps list which ignore battery optimisations:
+* Pil optimizasyonlarını göz ardı eden uygulamalar listesine AndroidAPS ve xdrip+'ı ekleyin:
   
-  * Settings / App / Settings / Special autorisations / Ignore battery optimisation / Select "All applications" / Set app to allowed
+  * Ayarlar / Uygulamalar / ayarlar / Özel erişim / Pil optimizasyonunu yoksay / "Tüm uygulamalar"ı seçin / Uygulamayı izin verilen olarak ayarla
     
-    ![Huawei - ignore battery optimization](../images/Huawei_BatteryOptimization.png)
+    ![Huawei - pil optimizasyonunu yoksay](../images/Huawei_BatteryOptimization.png)
 
-* Set battery option settings:
+* Pil seçeneği ayarlarını yapın:
   
-  * Settings / App / Select AndroidAPS/xdrip+ / Under Battery / App launch
+  * Ayarlar / Uygulama / AndroidAPS/xdrip+ öğesini seçin / Pil Altında / Uygulama başlatma
     
-    * Make sure to remove "automatic management"
-    * Allow:
+    * "Otomatik yönetimi" kaldırdığınızdan emin olun
+    * İzin ver:
       
-      * Automatic launch
-      * Secondary launch (can be launched from other apps)
-      * Background run
+      * Otomatik başlatma
+      * İkincil başlatma (diğer uygulamalardan başlatılabilir)
+      * Arka planda çalıştırma
         
-        ![Huawei - battery options](../images/Huawei_BatteryOptions.png)
+        ![Huawei - pil seçenekleri](../images/Huawei_BatteryOptions.png)
 
-* Lock App
+* Uygulamayı kilitle
   
-  * Go into App recent list and select the lock icon
+  * Son uygulamalar listesine gidin ve kilit simgesini seçin
     
-    ![Huawei - lock app](../images/Huawei_LockApp.png)
+    ![Huawei - kilit uygulaması](../images/Huawei_LockApp.png)
 
-For xdrip+, you can also enable persistent notifications (within xdrip+ app):
+xdrip+ için kalıcı bildirimleri de etkinleştirebilirsiniz (xdrip+ uygulaması içinden):
 
-* Setttings / less common settings / other misc options / Run Collector in foreground
+* Ayarlar / gelişmiş ayarlar / diğer çeşitli seçenekler / Toplayıcıyı ön planda çalıştır
   
-  ![xdrip+ settings - collector in foreground](../images/xdrip_collector_foreground.png)
+  ![xdrip+ ayarları - toplayıcı ön planda](../images/xdrip_collector_foreground.png)
 
-Depending on Android version, these settings are somewhere else. These explanations are for Android 8.1.
+Android sürümüne bağlı olarak, bu ayarlar başka bir yerde olabilir. Bu açıklamalar Android 8.1 içindir.

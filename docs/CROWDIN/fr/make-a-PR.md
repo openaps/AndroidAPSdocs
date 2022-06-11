@@ -1,4 +1,4 @@
-# Faire votre premier PR (Pull Request)
+# Comment éditer la documentation
 
 **Cette description est juste pour l'édition de la documentation en anglais. Toutes les nouvelles informations doivent être ajoutées d'abord en Anglais. Si vous voulez traduire la documentation dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs).**
 
@@ -64,7 +64,7 @@ Pour le moment, il y a deux langages utilisés pour les pages de documents :
 * Markdown (.md) - le langage utilisé à l'origine pour les pages de documentation
 * reStructuredText (.rst) - le nouveau langage utilisé
 
-Nous allons changer toutes les pages de documentation de Markdown à reStructuredText peu à peu. En attendant, il est important que vous utilisez la syntaxe correcte lors de la mise en forme du texte ou des liens. Si vous n'êtes pas sûr, regardez juste le code des formats/liens sur les pages existantes.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. En attendant, il est important que vous utilisez la syntaxe correcte lors de la mise en forme du texte ou des liens. Si vous n'êtes pas sûr, regardez juste le code des formats/liens sur les pages existantes.
 
 ### Taille des images
 

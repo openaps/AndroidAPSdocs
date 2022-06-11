@@ -3,7 +3,7 @@
 Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de:
 
 * **afficher les données sur votre montre** : en fournissant des [cadrans personnalisés](#cadrans-aaps) ou dans des cadrans standards avec l'utilisation de [complications](#complications)
-* **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc. 
+* **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc.
 
 ### Avant d'acheter la montre...
 
@@ -14,9 +14,9 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 
 ### Construction de la version Wear OS d'AAPS
 
-Pour compiler la version Wear OS de AAPS vous devez choisir la version "fullRelease" quans vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou "pumpRelease" qui permet juste de contrôler à distance la pompe sans boucle).
+L’application Wear OS de AAPS a été séparée de la compilation de AAPS pour Android mobile. Par conséquent, vous devez générer un second APK signé. Sélectionnez le module "AndroidAPS.wear" avec la variante "fullRelease" et un 2ème fichier apk pour la montre Wear OS est généré quand vous [générez l'APK](../Installing-AndroidAPS/Building-APK.md) (ou encore "pumpcontrolRelease" qui vous permettra de juste controler la pompe sans boucler).
 
-À partir de mars 2021, vous devez mettre AAPS sur la montre, il n'est plus accessible via le Google Play Store de la montre. Vous pouvez utiliser [Wear Installer](https://youtu.be/8HsfWPTFGQI) que vous devrez installer sur votre montre et votre téléphone. Une fois que vous aurez sélectionné AndroidAPS comme application pour la télécharger sur la montre, vous serez en mesure d'utiliser les cadrans, les complications et les contrôles AAPS.
+À partir de mars 2021, vous devez mettre AAPS sur la montre, il n'est plus accessible via le Google Play Store de la montre. Vous pouvez utiliser [Wear Installer](https://youtu.be/8HsfWPTFGQI) que vous devrez installer sur votre montre et votre téléphone. L'application Wear Installer peut être téléchargée depuis le Google Play Store. La vidéo liée de Malcolm Bryant le développeur de Wear Installer vous donne des instructions détaillées pour a) télécharger l'apk sur votre mobile b) configurer le Débogueur Android sur la montre c) utiliser Wear Installer sur le mobile et la montre pour installer la version Wear OS de AAPS sur la montre. Une fois que vous aurez sélectionné AndroidAPS comme application pour la télécharger sur la montre, vous serez en mesure d'utiliser les cadrans, les complications et les contrôles AAPS.
 
 ### Configuration sur le téléphone
 
@@ -209,7 +209,29 @@ De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir
     * *Aucun* : Désactive l'action sur les complications AAPS
 * **Unicode dans Complications** (par défaut `On`) : Si `On`, la complication utilise des caractères Unicode pour les symboles tels que `Δ` Delta, `⁞` séparateur de point vertical ou `⎍` symbole du débit de basal. Le rendu de ces symboles dépend de la police, et cela peut être très spécifique au cadran. Cette option permet de désactiver les symboles `Unicode` quand c'est nécessaire - si la police utilisée par le cadran personnalisé ne prend pas en charge ces symboles - pour éviter les problèmes graphiques.
 
-## Conseils sur les performances et la durée de vie des batteries
+## Toujours actif
+
+La durée de vie de la batterie pour les montres Android Wear OS est un défi. Certaines montres tiennent jusqu'à 30 heures avant de les recharger. L'écran doit être éteint pour avoir une économie d'énergie optimale lorsqu'il n'est pas utilisé. La plupart des montres prennent en charge l'affichage "Toujours actif".
+
+Depuis AAPS version 3, nous pouvons utiliser une « interface utilisateur simplifiée » en mode toujours actif. Cette interface utilisateur ne contient que la glycémie, la direction et l'heure. Cette interface est optimisée avec des mises à jour moins fréquentes, montrant moins d’informations et allumant moins de pixels pour économiser de l’énergie sur les écrans OLED.
+
+Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, Grand-graph, Digital, Steampunk et Cockpit. L'interface simplifiée est optionnelle et est configurée via les paramètres du cadran de la montre. (faites un appui long sur le cadran et cliquez sur "Editer" ou sur la roue crantée).Sélectionnez la configuration "Interface simplifiée" et activez "Toujours allumé" ou "Toujours allumé et pendant la charge".
+
+### Mode nuit
+
+Lors de la charge, il serait utile que l'affichage reste « toujours actif » et montre votre glycémie pendant la nuit. Cependant, les cadrans standards de la montre sont trop clairs et ont trop d'informations, et les détails sont difficiles à lire avec des yeux endormis. Par conséquent, nous avons ajouté une option pour la montre face afin de simplifier l'interface utilisateur lors de la charge si c'est activé dans les paramètres.
+
+Le mode Interface simplifiée est disponible pour les montres : AAPS, AAPS V2, Grand-graph, Digital, Steampunk et Cockpit. L'interface simplifiée est optionnelle et est configurée via les paramètres du cadran de la montre. (faites un appui long sur le cadran et cliquez sur "Editer" ou sur la roue crantée).Sélectionnez la configuration "Interface simplifiée" et activez "Pendant la charge" ou "Toujours allumé et pendant la charge".
+
+Les options de développement Android permettent à votre montre de rester réveillée pendant la charge. Pour rendre les options de développement disponibles, consultez https://developer.android.com/training/wearables/get-started/debugging. Activez le paramètre "Laisser activé pendant la charge" dans les options du développeur.
+
+Remarque : tous les afficheurs ne sont pas bien gérés. Il peut entrainer une détérioration de l'écran, en particulier sur les anciens écrans OLED. Les montres diminueront généralement l'éclairage de l'écran pour éviter le déteriorer; veuillez consulter le manuel utilisateur, le fabricant ou internet pour obtenir des conseils.
+
+![Cadran Mode Nuit](../images/Watchface_nightstand.jpg)
+
+![Interface simplifiée](../images/Watchface_simplified_ui.png)
+
+### Conseils sur les performances et la durée de vie des batteries
 
 Les montres Wear OS sont des appareils très limités en énergie. La taille de la montre limite la capacité de la batterie incluse. Même avec les progrès récents tant du côté matériel que du côté logiciel, les montres Wear OS nécessitent toujours une charge quotidienne.
 
@@ -242,7 +264,7 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 
 ### Sony Smartwatch 3
 
-* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS. 
+* La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS.
 * Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS 2.7 et plus.
 * Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.rst).
 

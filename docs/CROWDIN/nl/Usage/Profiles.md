@@ -1,44 +1,47 @@
 # Profiel wissel
 
-Bij het in gebruik nemen van AndroidAPS, moet je een profiel selecteren en ook een "Profiel wissel" doen met een duur van nul minuten (wordt verderop uitgelegd). Hierdoor begint AAPS met het bijhouden van jouw profiel geschiedenis. Elke keer wanneer je iets aan je profiel verandert dan zul je opnieuw een "Profiel wissel" moeten doen om deze wijzigingen te activeren. Wanneer je Nightscout profielen gebruikt en je jouw profiel hebt gewijzigd dan worden deze wijzigingen direct naar AAPS doorgestuurd, maar vergeet niet om een "Profiel wissel" te doen in NS of AAPS om de wijzigingen te activeren (zelfs al heb je wijzigingen doorgevoerd aan je actieve profiel).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
 
-Wanneer je een Profiel wissel doet, dan maakt AAPS een momentopname van jouw profiel, met een startdatum en een tijdsduur en gebruikt dit profiel binnen deze door jou gespecificeerde periode. Een tijdsduur van nul betekent 'oneindig lang'. Dan wordt dat profiel gebruikt totdat je een volgende Profiel wissel doet. Je hoeft overigens geen nul in te vullen, het vakje leeg laten kan ook.
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-Om een Profiel wissel te doen, houd de de naam van jouw profiel ("Tuned 03/11" in de foto hieronder) lang ingedrukt.
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
-![Profiel wissel](../images/ProfileSwitch_HowTo.png)
+* Duration of zero means infinite. Such profile is valid until new "Profile switch".
+* Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
 
-Als je wel een tijdsduur invult bij de Profiel wissel, dan zal AAPS na afloop weer terugschakelen naar het profiel dat actief was vóórdat je de tijdelijke Profiel wissel deed.
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-Wanneer je lokale AAPS profielen gebruikt (Eenvoudig, Lokaal) dan moet je ook steeds een Profiel wissel uitvoeren nadat je iets aan jouw profiel hebt gewijzigd. Anders zullen je wijzigingen niet actief worden.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+
+![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
 Bij een Profiel wissel zijn er nog 2 (optionele) keuzes die je kunt invullen:
 
 ## Percentage
 
-* Percentage - hiermee verander je alle parameters met hetzelfde percentage. 
-* Als je het op 130% instelt (wat betekent dat je 30% meer insuline resistent bent), dan zullen je basaalstanden met 30 procent stijgen. Ook worden je KH ratio en ISF (insuline gevoeligheids factor) dienovereenkomstig verlaagd (in dit voorbeeld met een factor 1,3).
+* This applies the same percentage to all parameters. 
+* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
   
-  ![Voorbeeld Profiel wissel percentage](../images/ProfileSwitchPercentage.png)
+  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
 
-* De nieuwe waardes worden naar je pomp gestuurd en dat zijn vanaf dan je nieuwe basaalstanden.
+* It will be sent to the pump and then be the default basal rate.
 
-* Het loop algoritme (open of closed loop) zal zijn aanpassingen doen bovenop het geselecteerde percentage profiel. Op deze manier kunnen vrouwelijke AAPS gebruikers bijvoorbeeld afzonderlijke percentages kiezen voor verschillende stadia van hun menstruatiecyclus.
+* The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
 ## Tijd verschuiving
 
 ![Profiel wissel percentage en tijdverschuiving](../images/ProfileSwitchTimeShift2.png)
 
-* Tijd verschuiving - hiermee verschuif je alles in de tijd, met het aantal uren dat je hebt ingevoerd. 
-* Het ingevulde getal kan positief of negatief zijn. Handig als je bijvoorbeeld wisselende werktijden hebt, en je jouw profiel wilt laten meeschuiven met hoeveel eerder/later je slapen gaat of wakker wordt.
-* Bedenk hierbij naar welk tijdstip (plus bijbehorende profiel instellingen) je toewilt. En bereken het aantal uren dat tussen dat moment en de huidige tijd in zit. Bijvoorbeeld: 
-  * Huidige tijd: 12:00
-  * **Positieve** tijd verschuiving 
-    * 2:00 ** + 10 h**-> 12:00
-    * De profiel instellingen van 2:00 uur worden gebruikt in plaats van de instellingen die normaal worden gebruikt om 12:00 vanwege de positieve tijdverschuiving.
-  * **Negatieve** tijd verschuiving 
-    * 22:00 ** - 10 h**-> 12:00
-    * De profiel instellingen van 22:00 uur (10 uur 's avonds) worden gebruikt in plaats van de instellingen die normaal worden gebruikt om 12:00 vanwege de positieve tijdverschuiving.
+* This moves everything round the clock by the number of hours entered. 
+* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
+* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
+  * Current time: 12:00
+  * **Positive** time shift 
+    * 2:00 **+10 h** -> 12:00
+    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
+  * **Negative** time shift 
+    * 22:00 **-10 h** -> 12:00
+    * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
 ![Profiel wissel tijdwissel instructies](../images/ProfileSwitch_PlusMinus2.png)
 
@@ -50,34 +53,34 @@ Deze werkwijze om snapshots van het profiel te maken zorgt ervoor dat gegevens u
 
 ![Basal niet ingesteld op hele uren](../images/BasalNotAlignedToHours2.png)
 
-* Deze foutmeldingen verschijnen als je de basaalstanden of KH ratio's niet hebt ingesteld op hele uren. (De DanaR en DanaRS-pompen bijvoorbeeld, staan geen veranderingen op het halve uur toe.)
+* These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
   
-  ![Voorbeeld Profiel niet ingesteld op hele uren](../images/ProfileNotAlignedToHours.png)
+  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
 
-* Onthoud de datum en tijd in het foutbericht (26/07/2019 5:45 in schermafdruk hierboven).
+* Remember / note down date and time shown in the error message (26/07/2019 5:45 pm in screenshot above).
 
-* Ga naar het tabblad Behandelingen
-* Kies Profiel Wissel
-* Scroll naar beneden totdat je bij datum en tijd van het foutbericht bent aangekomen.
-* Kies Verwijder bij die regel
-* Soms is er meer dan één foutieve Profiel wissel. In dit geval moet je ook de anderen verwijderen.
+* Go to Treatments tab
+* Select ProfileSwitch
+* Scroll until you find date and time from error message.
+* Use remove function.
+* Sometimes there is not only one faulty profile switch. In this case remove also the others.
   
-  ![Profiel wissel verwijderen](../images/PSRemove.png)
+  ![Remove profile switch](../images/PSRemove.png)
 
 Een alternatieve manier is om de Profiel wissel direct in mLab te verwijderen zoals hieronder beschreven.
 
 ### 'Profiel Wissel ontvangen van NS maar profiel bestaat niet lokaal'
 
-* Het gevraagde profiel is niet correct gesynchroniseerd met Nightscout.
+* The requested profile was not synced correctly from Nightscout.
 * Follow instructions from above to delete the profile switch
 
 Een alternatieve manier is om de Profiel wissel direct in mLab te verwijderen:
 
-* Ga naar je mlab collectie
-* Zoek in de treatments (behandelingen) naar de Profile switch (Profiel wissel)
-* Delete (verwijder) de Profile switch (Profiel wissel) met de datum en tijd uit de foutmelding. ![mlab](../images/mLabDeletePS.png)
+* Go to your mlab collection
+* Search in the treatments for profile switch
+* Delete the profile switch with date and time that was mentioned in the error message. ![mlab](../images/mLabDeletePS.png)
 
 ### "DIA 3u te kort"
 
-* Een 'DIA 3u te kort' foutmelding zal verschijnen als je de DIA (duur insuline activiteit) in jouw profiel op een te lage waarde hebt gezet. AndroidAPS hanteert een minimumwaarde. 
-* Lees meer (in het Engels) over het [Selecteren van de juiste DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), pas je profiel aan naar een correcte waarde en doe een [Profiel wissel](../Usage/Profiles) om deze wijziging te activeren.
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate. 
+* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

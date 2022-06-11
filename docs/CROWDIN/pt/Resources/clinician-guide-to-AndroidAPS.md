@@ -8,9 +8,9 @@ This guide has some high-level information about DIY closed looping and specific
 
 To start using AndroidAPS, the following steps should be taken:
 
-* Find a [compatible pump](../Hardware/pumps.rst), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.rst#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
 
 ### How A DIY Closed Loop Works
 
@@ -89,7 +89,7 @@ Additionally, human behavior (learned from manual diabetes mode) often influence
 
 **This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
 
-### Resumo
+### Summary
 
 This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
 

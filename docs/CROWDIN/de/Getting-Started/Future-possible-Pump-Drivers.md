@@ -4,14 +4,6 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ## Pumpen, die für den Loop geeignet sind
 
-### Omnipod DASH ([Homepage](https://www.myomnipod.com/DASH))
-
-**Loop status:** Omnipod DASH is expected to be available in [AndroidAPS 3.0.0.](../Installing-AndroidAPS/Releasenotes#version-3-0-0)
-
-**Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
-
-* * *
-
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Beide haben zwar Bluetooth, die Kommunikation ist aber sehr eingeschränkt und funktioniert nur von der Pumpe zur App. Der Hersteller will bis Ende 2021 eine neue Version - Nickname DOSE (1.6) - herausbringen, die Bolus- und TBR-Kommandos von der App erlauben soll. Sie planen eine eigene Loop-App in 2021. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
@@ -24,7 +16,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Kaleido ([Homepage](https://www.hellokaleido.com/))
 
-**Loop-Status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
+**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
@@ -92,7 +84,7 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ### Cellnovo Pump ([siehe Artikel bei businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop-Status:** Aktuell von keinem der Loop-Systeme unterstützt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
+**Loop Status:** Zur Zeit nicht umgesetzt. Die Pumpe ist möglicherweise zum Loopen geeignet, aber da das Protokoll derzeit nicht bekannt ist, ist eine zeitnahe Umsetzung unwahrscheinlich.
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 

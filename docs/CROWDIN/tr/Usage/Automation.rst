@@ -1,7 +1,7 @@
 Otomasyon
 **************************************************
 
-What is Automation
+Otomasyon Nedir?
 ==================================================
 Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerekebilir. Bundan kaçınmak için, olayı yeterince iyi tanımlayıp otomatikleştirmeyi deneyerek, sizin için otomatik olarak yapmasına izin verebilirsiniz. 
 
@@ -51,8 +51,8 @@ You can choose between several conditions. Here are some things explained, but m
 
 * connect conditions: you can have several conditions and can link them with 
 
-  * "And"
-  * "Or"
+  * "Ve"
+  * "Veya"
   * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
    
 * Time vs. recurring time

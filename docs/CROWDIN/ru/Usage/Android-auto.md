@@ -6,12 +6,9 @@
 
 Использовать системные уведомления для предупреждений и уведомлений:
 
-* Откройте меню в правом верхнем углу главного экрана
-* Настройки
-* Прокрутите все вниз
-* Включите "Использовать системные уведомления..."
+* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
 
-![Использовать системные уведомления для предупреждений и уведомлений](../images/AndroidAuto_01.png)
+![Использовать системные уведомления для предупреждений и уведомлений](../images/AndroidAuto_01v2.png)
 
 ## Настройки в Android Auto app на телефоне
 

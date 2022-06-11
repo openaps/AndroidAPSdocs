@@ -64,24 +64,24 @@ AndroidAPS подает оповещение, если время на помп�
 
 1. Выключите настройки, которые автоматически устанавливают часовой пояс, чтобы принудительно изменять время, когда захотите. Как это сделать, будет зависеть от вашего смартфона и его версии Android.
    
-   * Some have two settings, one for automatic setting of the time (which ideally should remain on) and one for automatic setting of the timezone (which you must turn OFF).
-   * Unfortunately some Android versions have a single switch to enable automatic setting of both the time and the timezone. You’ll have to turn this off for now.
+   * Некоторые из них имеют два параметра, предназначена для автоматической установки времени (которая в идеале должна оставаться) и автоматической установки часового пояса (которую вы должны выключить).
+   * К сожалению, некоторые версии Android имеют один переключатель автоматической настройки как времени, так и часового пояса. Его надо пока что отключить.
 
-2. Find a time zone that has the same time as your current location but doesn't use DST.
+2. Найдите часовой пояс, который имеет то же время, что и ваше текущее местоположение, но не использует автоматический переход на летнее/зимнее время (DST).
    
-   * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
-   * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
+   * Список таких стран здесь [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
+   * Для среднеевропейского времени CET это может быть "Браззавиль" (Kongo). Измените часовой пояс телефона на Kongo.
 
-3. In AndroidAPS refresh your pump.
+3. В AndroidAPS обновите связь с помпой.
 
-4. Check the Treatments tab... If you see any duplicate treatments:
+4. Перейдите на вкладку терапии... Если видите дублирующие записи:
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
-### Actions to take after the clock change
+### Действия после перевода времени
 
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
@@ -90,10 +90,10 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 3. On the AndroidAPS “Combo” screen, press Refresh.
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
-   * DON'T press "delete treatments in the future"
-   * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * НЕ нажимайте "Удалить записи в будущем"
+   * Нажмите «удалить» все будущие записи и дубликаты. Это должно сделать недействительными записи терапии но не удалить их, так что они больше не будут влиять на активный инсулин IOB.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Если ситуация с активными инсулином/углеводами IOB/COB непонятна, в целях безопасности отключите цикл по крайней мере на один DIA или Max-Carb-Time - в зависимости от того, что больше.*
 
 6. Continue as normal.
 

@@ -16,8 +16,14 @@ Paramètres
 --------------------------------------------------
 * `Profils <../Usage/Profiles.html#depannage-des-erreurs-de-profil>`_
 
-  .. image:: ../images/BasalNotAlignedToHours2.png
+  .. image:: ../images/Screen_DifferentPump.png
     :alt: Error: Débits de Basal non alignés sur les heures
+
+* `Pompe - données provenant de différentes pompes <../Installing-AndroidAPS/update3_0.html#message-d-erreur-donnees-provenant-de-pompes-differentes>`_
+
+  .. image:: ../images/BasalNotAlignedToHours2.png
+    :alt: Message d'échec : Données provenant de pompes différentes
+
 
 * `Client Nightscout <../Usage/Troubleshooting-NSClient.html>`_
 
@@ -53,4 +59,5 @@ Téléphones
 
 Montres connectées
 ==================================================
+* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

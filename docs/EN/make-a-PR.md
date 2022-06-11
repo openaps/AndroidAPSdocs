@@ -1,4 +1,4 @@
-# Making your first PR (pull request)
+# How to edit the docs
 
 **This description is just for editing the English documentation. All new information must be added in English first.
 If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
@@ -63,7 +63,7 @@ At the moment there are two languages used for docs pages:
 * Markdown (.md) - the markup language originally used for docs pages
 * reStructuredText (.rst) - the new markup language
 
-We will change all docs pages from Markdown to reStructuredText bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
 
 ### Image size
 If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
