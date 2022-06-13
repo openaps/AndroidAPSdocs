@@ -36,10 +36,10 @@ Within the "profile switch" you can choose two additional changes which used to 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
 * It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
   * Current time: 12:00
-  * **Positive** time shift 
+  * **Positive** zaman kaydırma 
     * 2:00 **+10 h** -> 12:00
     * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
-  * **Negative** time shift 
+  * **Negative** zaman kaydırma 
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
