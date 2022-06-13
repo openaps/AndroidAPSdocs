@@ -50,7 +50,7 @@ Release date: XX-XX-2022
 * fixed DASH driver @avereha
 * UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
-* Aidex CGM support @markvader @andyrozman
+* Aidex CGM support @markvader @andyrozman (Pumpcontrol only)
 * Wear tiles @Andries-Smith
 * Wear code refactored. Not backward compatible anymore @MilosKozak
 * a11y improvements @Andries-Smith
