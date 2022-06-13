@@ -1,4 +1,4 @@
-# Como ajudar com o AndroidAPS
+# How to help with AndroidAPS
 
 ## AndroidAPS operates entirely on volunteer efforts and has no paid staff.
 
