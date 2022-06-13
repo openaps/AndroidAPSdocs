@@ -6,7 +6,7 @@ AAPS'nizi başlatırken ve profilinizi seçerken, sıfır süreli (daha sonra a�
 
 Dahili olarak AAPS, profilin başlangıç tarihi ve süresi ile anlık görüntüsünü oluşturur ve seçilen süre içinde kullanır.
 
-* Süresi olarak sıfır sonsuz anlamına gelir. Bu profil, yeni "Profil değiştirme"ye kadar geçerlidir.
+* Duration of zero means infinite. Bu profil, yeni "Profil değiştirme"ye kadar geçerlidir.
 * Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
 
 If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
@@ -17,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
-## Percentage
+## Yüzde
 
 * This applies the same percentage to all parameters. 
 * If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
@@ -28,7 +28,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
-## Time shift
+## Zaman kaydırma
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
