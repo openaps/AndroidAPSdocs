@@ -194,7 +194,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. Eskiden İES
 
 Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. Çok düşük bir İDF tipik olarak şöyle görünür:
 
-![ISF too low](../images/isf.jpg)
+![İDF çok düşük](../images/isf.jpg)
 
 ### Kapalı döngüde yüksek tokluk KŞ'i zirvelerine ne sebep olur?
 
