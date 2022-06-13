@@ -1,4 +1,4 @@
-# Pump choices
+# Escolhas de bomba
 
 AndroidAPS works with a number of insulin pumps. The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets.
 
