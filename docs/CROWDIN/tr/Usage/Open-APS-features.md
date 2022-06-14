@@ -1,6 +1,6 @@
-# OpenAPS features
+# OpenAPS özellikleri
 
-## Autosens
+## Otoduyarlılık
 
 * Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
 * It will try and figure out how sensitive/resistant you are based on these deviations.
