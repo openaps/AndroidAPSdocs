@@ -7,7 +7,7 @@
 * The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
 * In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
 * From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. Hangisinin daha hassas olduğunu kendi seçecektir. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
+* Kullanıcılar oref1'den geldiyse, 24 veya 8 saatlik hassasiyetin değişmesi nedeniyle muhtemelen sistemin değişikliklere karşı daha az dinamik olabileceğini fark edeceklerdir.
 * Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
 * Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
 * If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
@@ -131,7 +131,7 @@ If you have this option enabled, the insulin sensitivity will be increased while
 
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
 
-### Advanced Settings
+### Gelişmiş Ayarlar
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -189,7 +189,7 @@ Here, you can chose, if you want to use the [sensitivity detection](../Configura
 
 If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Advanced Settings
+### Gelişmiş Ayarlar
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -212,10 +212,10 @@ Default value: 2
 <thead>
   <tr>
     <th width="200"></th>
-    <th width="75">Child</th>
+    <th width="75">Çocuk</th>
     <th width="75">Teenager</th>
-    <th width="75">Adult</th>
-    <th width="75">Insulin resistant adult</th>
+    <th width="75">Yetişkin</th>
+    <th width="75">Yetişkin İnsülin direnci</th>
     <th width="75">Pregnant</th>
   </tr>
 </thead>
