@@ -58,7 +58,7 @@ AndroidAPS **на данный момент** работает с
 - `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`требуется дополнительное устройство коммуникации <../Module/module.html#additional-communication-device>`)
 * `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+Если не упомянуто дополнительное коммуникационное устройство, то связь между помпой и AndroidAPS происходит за счет встроенного модуля bluetooth без необходимости дополнительного протокола коммуникации.
 
 **Другие помпы** которые потенциально могут работать с AndroidAPS перечислены на странице `Будущие (возможные) помпы <../Getting-Started/Future-possible-Pump-Drivers.html>`.
 
