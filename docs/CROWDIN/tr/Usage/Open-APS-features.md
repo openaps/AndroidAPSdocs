@@ -95,7 +95,7 @@ SMB is working when there is a low or high temporary target active (eating soon,
 
 SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
-### Enable SMB always
+### SMB'yi her zaman etkinleştir
 
 SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
 
