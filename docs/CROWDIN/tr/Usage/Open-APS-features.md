@@ -83,11 +83,11 @@ Here, you can choose if you want to use the [sensitivity detection](../Configura
 
 Here you can enable or completely disable SMB feature.
 
-### Enable SMB with COB
+### SMB'yi COB ile etkinleştir
 
 SMB is working when there is COB active.
 
-### Enable SMB with temp targets
+### Geçici hedeflerle SMB'yi etkinleştir
 
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
