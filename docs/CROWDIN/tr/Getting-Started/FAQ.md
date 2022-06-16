@@ -194,7 +194,7 @@ In AMA, DIA actually doesn't mean the 'duration of insulin acting'. Eskiden İES
 
 Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. Çok düşük bir İDF tipik olarak şöyle görünür:
 
-![ISF too low](../images/isf.jpg)
+![İDF çok düşük](../images/isf.jpg)
 
 ### Kapalı döngüde yüksek tokluk KŞ'i zirvelerine ne sebep olur?
 
@@ -432,26 +432,34 @@ AAPS'yi NSClient Remote Wear Uygulaması aracılığıyla izlemek/kontrol etmek 
 
 Kırmızı ve sarı üçgenler, AAPS v3'te bir güvenlik özelliğidir.
 
-Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. Go to BYODA or xDRIP tab, long press one line you want to delete, check one of each lines that are doubled (or via 3 dots menu and Delete, depending on your AAPS version). You may need to reset the AAPS databases if there are too many double BGs. In this case, you'll also loose stats, IOB, COB, selected profile.
+Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. BYODA veya xDRIP sekmesine gidin, silmek istediğiniz satırlardan birine uzun basın, çift satırlardan birini işaretleyin (veya AAPS sürümünüze bağlı olarak 3 nokta menüsü ve sil komutu ile). Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. Bu durumda, istatistikleri, IOB, COB, seçilen profili de kaybedersiniz.
 
-Possible origin of the problem: xDrip and/or NS backfilling BGs.
+Sorunun olası kaynağı: xDrip ve/veya NS geri döngülü KŞ girdileridir.
 
-The yellow triangle means unstable delay between each BG reading. You don't receive BGs every 5 min regularly or missing BGs. It is often a Libre problem. It also happens when you change G6 transmitter. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). In case of Libre, the yellow triangle will stay. The loop can be closed and works correctly.
+Sarı üçgen, her bir KŞ okuması arasında kararsız gecikme anlamına gelir. Her 5 dakikada bir düzenli olarak KŞ bilgisi alamıyorsunuz veya eksik KŞ bilgisi alıyorsunuz. Bu genellikle bir Libre sensör sorunudur. G6 vericisini değiştirdiğinizde de olabilir. Sarı üçgen G6 verici değişikliği ile ilgiliyse, birkaç saat sonra (yaklaşık 24 saat) kendi kendine kaybolacaktır. Libre sensör kullanıyorsanız, sarı üçgen kalacaktır. Kapalı Döngü yapılabilir ve düzgün çalışır.
 
-## Can I move an active DASH Pod to other hardware?
+## Etkin bir DASH Pod'unu başka bir donanıma taşıyabilir miyim?
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+Bu mümkündür. Yalnız taşımanın "desteklenmediği" ve "denenmediği" için bazı risklerin olduğunu unutmayın. Taşıma prosedürünü Pod'unuzun süresi dolmak üzereyken denemek en iyisidir, böylece işler ters gittiğinde fazla bir şey kaybetmezsiniz.
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+AAPS ve DASH eşleşmesindeki pompa "durumu" (MAC adresini içerir) kritiktir
 
-## Procedure I follow in this:
+## Taşıma Prosedürü aşağıdaki gibidir:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) DASH pompasını askıya alın. Bu komut DASH bağlantıyı kaybettiğinde çalışan veya sıraya alınmış komutların etkin olmamasını sağlar. 2) Bluetoothu devre dışı bırakmak için telefonu uçak moduna alın. (aynı zamanda WiFi ve Mobil veri için) Bu şekilde AAPS ve DASH'ın iletişim kuramaması garanti edilir. 3) Ayarları dışa aktarın (DASH durumunu içerir) 4) Telefondan yeni dışa aktarılan ayar dosyasını kopyalayın (uçak modunda olduğu ve bunu değiştirmek istemediğimiz için en kolay yol USB kablosu kullanmaktır) 5) Ayarlar dosyasını taşımak istediğiniz telefona kopyalayın. 6) Yeni telefonda AAPS ayarlarını içe aktarın. 7) Pod'u gördüğünü doğrulamak için DASH sekmesini kontrol edin. 8) Askıya almayı kaldırın. 9) DASH sekmesini kontrol edin ve Pod ile iletişim kurduğunu onaylayın (yenile düğmesini kullanın)
 
-Congratulations: you did it!
+Tebrikler: başardın!
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*Bekleyin!* Hala aynı DASH'a yeniden bağlanabilen bir telefona sahipsiniz:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) Eski telefonda "devre dışı bırak"ı seçin. Bu güvenlidir çünkü telefonun, Pod'u fiilen devre dışı bırakmak için DASH ile iletişim kurmasının hiçbir yolu yoktur (çünkü hala uçak modunda) 2) Devre dışı bırakma bir iletişim hatasına neden olur - (beklenen birşey). 3) AAPS, Pod'u "İptal Etme" seçeneği sunana kadar birkaç kez "tekrar dene" düğmesine basın.
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+İptal edildiğinde, AAPS'in "Etkin Pod Yok" bildirdiğini doğrulayın. Artık uçak modundan güvenle çıkabilirsiniz.
+
+## AAPS'in önceki sürümlerinden ayarları AAPS v3'e nasıl aktarırım?
+
+Yalnızca AAPS v2.8x veya v3.x kullanılarak dışa aktarılan ayarları AAPS v3'te içe aktarabilirsiniz. AAPS'in v2.8x'ten daha eski bir sürümünü kullanıyorsanız veya v2.8x'ten daha eski dışa aktarma ayarlarını kullanmanız gerekiyorsa, önce AAPS v2.8'i yüklemeniz gerekir. v2.x'in eski ayarlarını v2.8'e aktarın. Her şeyin yolunda olduğunu kontrol ettikten sonra ayarları v2.8'den dışa aktarabilirsiniz. AAPS v3'ü yükleyin ve v2.8 ayarlarını v3'e aktarın.
+
+v2.8 ve v3'ü oluşturmak için Androidstudio'da aynı anahtarı kullanırsanız, ayarları içe aktarmanız bile gerekmez. v2.8 üzerinden v3 yükleyebilirsiniz.
+
+Bazı yeni görevler eklendi. Onları doğrulamanız gerekecek.

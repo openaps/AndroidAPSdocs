@@ -3,9 +3,9 @@
 * **Minimum Android sürümü artık 9.0'dır.**
 * **Veriler yeni veritabanına taşınmaz.**
 
-  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. Yeni [profil ](../Usage/Profiles) oluşturmanız ve yeni Aktif İnsülin ve Aktif Karbonhidrat değerleri ile başlamanız gerekir.
 
-  Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
+  Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
 
 * Yeni ve değiştirilen özelliklerle ilgili ayrıntılar için lütfen [Sürüm Notlarına](../Installing-AndroidAPS/Releasenotes) bakın.
 
@@ -39,7 +39,7 @@
 * For Dash: The serial number is printed on the Pod.
 * For EROS it is also listed on the POD tab as "Sequence Number"
 
-## Warning signal beneath BG
+## KŞ'nin altındaki uyarı sinyali
 
 Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
@@ -47,11 +47,11 @@ Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinya
 
   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+Ayrıntılar için [AAPS ekranları sayfasına](../Getting-Started/Screenshots#bg-warning-sign) bakın
 
 
-## Failure message: Data from different pump
+## Hata mesajı: Farklı pompadan gelen veriler
 
-   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+   ![Hata mesajı: Farklı pompadan gelen veriler](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+Bu sorunu çözmek için [Konfigürasyon ayarları](../Configuration/Config-Builder#pump)'na gidin. Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.

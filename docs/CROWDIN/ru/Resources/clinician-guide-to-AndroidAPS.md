@@ -8,9 +8,9 @@
 
 Для начала работы с AndroidAPS необходимо выполнить следующие действия:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Найдите [ совместимую помпу ](../Hardware/pumps.md), [совместимое устройство Android ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), и [ совместимый мониторинг ГК ](../Configuration/BG-Source.rst).
 * [Скачайте исходный код AndroidAPS и постройте программное обеспечение](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
+* [ Сконфигурируйте программу для работы с устройствами, настройте и задайте параметры защиты ](../index#configuration).
 
 ### Как работает замкнутый цикл
 
