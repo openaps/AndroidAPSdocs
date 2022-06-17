@@ -139,55 +139,55 @@ Bu seçeneği etkinleştirirseniz, geçici bir hedef 100 mg/dl veya 5.6 mmol/l'd
 
 Varsayılan değer: 3 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymuyorsanız değiştmeyin.)
 
-**Mevcut Bazal güvenlik çarpanı** Bu, başka bir önemli güvenlik limitidir. Varsayılan ayar (farklı bir ayar gerektirmez) 4'tür. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Mevcut Bazal güvenlik çarpanı** Bu, başka bir önemli güvenlik limitidir. Varsayılan ayar (farklı bir ayar gerektirmez) 4'tür. Bu, AndroidAPS'in bir kullanıcının pompasında programlanan mevcut saatlik bazal oranın 4 katından daha fazla geçici bir bazal oranı ayarlamasına izin verilmeyeceği anlamına gelir.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Varsayılan değer: 4 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymuyorsanız değiştmeyin.)
 
 * * *
 
-## Advanced Meal Assist (AMA)
+## Gelişmiş Yemek Yardımı (AMA)
 
-AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
+"Gelişmiş yemek yardımı"nın kısaltması olan AMA, 2017'den beri (oref0) bir OpenAPS özelliğidir. OpenAPS Advanced Meal Assist (AMA), karbonhidratları güvenilir bir şekilde girerseniz, bir yemek bolusundan sonra sistemin daha hızlı yüksek- geçici oranlara ulaşmasını sağlar.
 
-You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
+Daha fazla bilgiyi [OpenAPS dokümantasyonu](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama)nda bulabilirsiniz.
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+### Maks Ü/s geçici bazal (OpenAPS “maks-bazal”) nasıl ayarlanabilir
 
-This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. Mantıklı bir değer ayarlamanız önerilir. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
+Bu güvenlik ayarı, AndroidAPS'in tehlikeli derecede yüksek bir bazal oran vermesini engeller ve geçici bazal oranını x Ü/s ile sınırlar. Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki en yüksek bazal oranı alıp 4 veya en az 3 ile çarpmanız iyi bir tavsiyedir. Örneğin, profilinizdeki en yüksek bazal oran 1,0 Ü/s ise, 4 Ü/s değerini elde etmek için bunu 4 ile çarpabilir ve güvenlik parametreniz olarak 4'ü ayarlayabilirsiniz.
 
-You cannot chose any value: For safety reason, there is a 'hard limit', which depends on the patient age. The 'hard limit' for maxIOB is lower in AMA than in SMB. For children, the value is the lowest while for insulin resistant adults, it is the biggest.
+Herhangi bir değer seçemezsiniz: Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir 'sabit limit' vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür. Çocuklar için değer en düşükken, insüline dirençli yetişkinler için değer en büyüktür.
 
-The hardcoded parameters in AndroidAPS are:
+AndroidAPS'deki sabit kodlanmış parametreler şunlardır:
 
 * Çocuk: 2
 * Genç: 5
 * Yetişkin: 10
-* Insulin resistant adult: 12
+* İnsüline dirençli yetişkin: 12
 * Hamile: 25
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### OpenAPS'in gönderebileceği maksimum bazal IOB \[U\] (OpenAPS "maks-iob")
 
-This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
+Bu parametre, AndroidAPS'in çalışacağı maksimum aktif insüline göre bazalı sınırlar. Aktif insülin yüksekse, maks aktif insülin limitin altına düşene kadar ek bazal insülin vermeyi durdurur.
 
-The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. The 'hard limit' for maxIOB is lower in AMA than in SMB.
+Varsayılan değer 2'dir, ancak sizi ne kadar etkilediğini ve hangi değerin en uygun olduğunu görmek için bu parametreyi yavaşça yükseltmelisiniz. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür.
 
 * Çocuk: 3
 * Genç: 5
-* Adult: 7
-* Insulin resistant adult: 12
+* Yetişkin: 7
+* İnsüline dirençli yetişkin: 12
 * Hamile: 25
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
 ### AMA Otoduyarlılığı Etkinleştirme
 
-Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
+[Duyarlılık algılaması](../Configuration/Sensitivity-detection-and-COB.md) kısmında 'otoduyarlılık' özelliğini kullanmak isteyip istemediğinizi seçebilirsiniz.
 
-### Autosens adjust temp targets too
+### Otoduyarlılık geçici hedefleri de ayarlar
 
-If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
+Bu seçeneği etkinleştirdiyseniz, otoduyarlılık hedefleri de ayarlayabilir (bazal ve İDF'nin yanında). AndroidAPS'in daha 'agresif' çalışıp çalışmayacağına izin verir. Bununla asıl KŞ hedefine daha hızlı ulaşılabilir.
 
 ### Gelişmiş Ayarlar
 
@@ -197,9 +197,9 @@ If you have this option enabled, autosens can adjust targets (next to basal and 
 
 Varsayılan değer: 3 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymuyorsanız değiştmeyin.)
 
-**Mevcut Bazal güvenlik çarpanı** Bu, başka bir önemli güvenlik limitidir. Varsayılan ayar (farklı bir ayar gerektirmez) 4'tür. This means that AndroidAPS will never be allowed to set a temporary basal rate that is more than 4x the current hourly basal rate programmed in a user’s pump.
+**Mevcut Bazal güvenlik çarpanı** Bu, başka bir önemli güvenlik limitidir. Varsayılan ayar (farklı bir ayar gerektirmez) 4'tür. Bu, AndroidAPS'in bir kullanıcının pompasında programlanan mevcut saatlik bazal oranın 4 katından daha fazla geçici bir bazal oranı ayarlamasına izin verilmeyeceği anlamına gelir.
 
-Default value: 4 (shouldn’t be changed unless you really need to and know, what you are doing)
+Varsayılan değer: 4 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymuyorsanız değiştmeyin.)
 
 **Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
 
