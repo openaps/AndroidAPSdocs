@@ -14,9 +14,9 @@ AndroidAPS yalnızca (kendin-yap) bir uygulama değildir, kapalı döngü sistem
    
    Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inanılmaz derecede düşürdükleri için bu programla beraber bu ilaçları kullanmamalısınız.  Kan Şekerini artırmak için bazal oranları düşüren bir sistemle kombinasyon tehlikelidir. Çünkü gliflozin nedeniyle Kan Şekerindeki bu artış gerçekleşmeyebilir ve tehlikeli bir insülin eksikliği durumu meydana gelerek ketoasidoza sebep olabilir.
 
-Necessary Modules
+Gerekli Modüller
 ==================================================
-Good individual dosage algorithm for your diabetes therapy
+Diyabet tedaviniz için iyi bir kişisel dozaj algoritması
 ----------------------------------------------------------
 Even though this is not something to create or buy, this is the 'module' which is probably underestimated the most but essential. When you let an algorithm help manage your diabetes, it needs to know the right settings to not make severe mistakes.
 Even if you are still missing other modules, you can already verify and adapt your 'profile' in collaboration with your diabetes team. 
