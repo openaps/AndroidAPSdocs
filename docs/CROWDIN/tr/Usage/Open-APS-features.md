@@ -201,7 +201,7 @@ Varsayılan değer: 3 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymu
 
 Varsayılan değer: 4 (Gerçekten ne yaptığınızı bilmiyor ve ihtiyaç duymuyorsanız değiştmeyin.)
 
-**Bolus snooze dia divisor** The feature “bolus snooze” works after a meal bolus. AAPS doesn’t set low temporary basal rates after a meal in the period of the DIA divided by the “bolus snooze”-parameter. The default value is 2. That means with a DIA of 5h, the “bolus snooze” would be 5h : 2 = 2.5h long.
+**Bolus erteleme ies böleni** Bolus erteleme özelliği, yemek bolusaundan sonra çalışır. AAPS, "bolus erteleme" parametresine bölünen İES döneminde bir yemekten sonra düşük geçici bazal oranları belirlemez. Varsayılan değer 2'dir. Bu, 5 saatlik bir İES ile "bolus ertelemenin" 5s : 2 = 2.5s uzunluğunda olacağı anlamına gelir.
 
 Varsayılan değer: 2
 
@@ -221,7 +221,7 @@ Varsayılan değer: 2
 </thead>
 <tbody>
   <tr>
-    <td>MAXBOLUS</td>
+    <td>MAKSBOLUS</td>
     <td>5,0</td>
     <td>10,0</td>
     <td>17,0</td>
@@ -229,7 +229,7 @@ Varsayılan değer: 2
     <td>60,0</td>
   </tr>
   <tr>
-    <td>MINDIA</td>
+    <td>MİNİES</td>
     <td>5,0</td>
     <td>5,0</td>
     <td>5,0</td>
@@ -237,7 +237,7 @@ Varsayılan değer: 2
     <td>5,0</td>
   </tr>
   <tr>
-    <td>MAXDIA</td>
+    <td>MAKSİES</td>
     <td>7,0</td>
     <td>7,0</td>
     <td>7,0</td>
@@ -245,7 +245,7 @@ Varsayılan değer: 2
     <td>10,0</td>
   </tr>
   <tr>
-    <td>MINIC</td>
+    <td>MİNIC</td>
     <td>2,0</td>
     <td>2,0</td>
     <td>2,0</td>
@@ -253,7 +253,7 @@ Varsayılan değer: 2
     <td>0,3</td>
   </tr>
   <tr>
-    <td>MAXIC</td>
+    <td>MAKSIC</td>
     <td>100,0</td>
     <td>100,0</td>
     <td>100,0</td>
@@ -261,7 +261,7 @@ Varsayılan değer: 2
     <td>100,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_AMA</td>
+    <td>MAKSIOB_AMA</td>
     <td>3,0</td>
     <td>5,0</td>
     <td>7,0</td>
@@ -269,7 +269,7 @@ Varsayılan değer: 2
     <td>25,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_SMB</td>
+    <td>MAKSIOB_SMB</td>
     <td>7,0</td>
     <td>13,0</td>
     <td>22,0</td>
@@ -277,7 +277,7 @@ Varsayılan değer: 2
     <td>70,0</td>
   </tr>
   <tr>
-    <td>MAXBASAL</td>
+    <td>MAKSBAZAL</td>
     <td>2,0</td>
     <td>5,0</td>
     <td>10,0</td>
