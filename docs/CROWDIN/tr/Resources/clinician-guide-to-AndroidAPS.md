@@ -71,13 +71,13 @@ Bu örnekteki tahmin, yakın gelecekte hedef değerin altına bir düşüş bekl
 
 #### Senaryo 4 - Güvenlik nedenleriyle insülin dozunun azaltılması
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+Bu örnekte, AndroidAPS, KŞ'i hedefin oldukça üzerinde arttığını görüyor. Bununla birlikte, insülinin zamanlaması nedeniyle, vücutta zaten KŞ'i sonunda aralığa getirmek için yeterli insülin vardır. In fact, BG is predicted to eventually be below target. Bu nedenle, AndroidAPS orta vadede hipoglisemiye neden olmamak için herhangi bir ek insülin vermeyecektir. KŞ yüksek ve yükseliyor olsa da, AndroidAPS'nin böyle bir senaryoda bazal oranı düşürmesi daha olasıdır.
 
 ![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Ayarları optimize etme ve değişiklik yapma
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+AndroidAPS veya DIY kapalı döngülerle deneyimi olmayan bir klinisyen olarak, hastanızın ayarlarını optimize etmesine veya sonuçlarını iyileştirmek için değişiklikler yapmasına yardımcı olmakta zorlanabilirsiniz. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
 The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
 
