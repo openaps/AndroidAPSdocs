@@ -66,11 +66,11 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |OrangeLink|  `OrangeLink Websitesi <https://getrileylink.org/product/orangelink>`_    
 * |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |EmaLink|  `Emalink Websitesi <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `İletişim Bilgileri <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Websitesi <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Test edilmedi
 
 **Peki AndroidAPS ile döngü için en iyi pompa hangisi?**
 
