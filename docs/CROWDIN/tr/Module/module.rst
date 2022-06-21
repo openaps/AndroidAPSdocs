@@ -112,7 +112,7 @@ The basic component of the system. Before installing the app, you have to build 
 
 Optional Modules
 ==================================================
-Smartwatch
+Akıllı saat
 --------------------------------------------------
 You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
 
