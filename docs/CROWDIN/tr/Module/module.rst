@@ -36,35 +36,35 @@ Gliflozinler olarak da adlandırılan SGLT-2 inhibitörleri, böbrekte glikozun 
 Telefon
 --------------------------------------------------
 AndroidAPS'nin mevcut sürümü, Google Android 8.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 8.1 önerilir, ancak optimal olarak Android 9 veya 10'u seçin.
-Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the `old repository. <https://github.com/miloskozak/androidaps>`_
+Kullanıcıların, güvenlik nedeniyle AndroidAPS yapılarını güncel tutmaları şiddetle tavsiye edilir, ancak minimum Android 8.0 sürümüne sahip bir cihazı olmayan kullanıcılar için, daha eski Android sürümleri için uygun olan AndroidAPS sürüm 2.6.1.4, `eski depo. <https://github.com/miloskozak/androidaps>`_ adresinden yükleyebilirler
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
+Kullanıcılar `test edilmiş telefon ve saatlerin bir listesini oluşturuyor <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+E-tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen `formu <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ doldurun.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+E-tabloyla ilgili herhangi bir sorun varsa lütfen `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ adresine bir e-posta gönderin, test edilmesini istediğiniz farklı model telefon/saat bağışları için lütfen `donations@androidaps.org <mailto:hardware@androidaps.org>`_ adresine bir e-posta gönderin.
 
-Insulin pump
+İnsülin pompası
 --------------------------------------------------
-AndroidAPS **currently** works with 
+AndroidAPS'in **şu anda** çalıştığı pompalar 
 
-* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (ek olarak: Ruffy uygulaması, telefonda LineageOS veya Android 8.1 gereklidir)
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* 2.4 ve önceki sürüm `bazı eski Medtronic pompaları <../Configuration/MedtronicPump.html>`_ (`ek iletişim cihazı <../Module/module.html#additional-communication-device>`__ gerekli)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`ek iletişim cihazı <../Module/module.html#additional-communication-device>`__ gerekli)
 * `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+Ek bir iletişim cihazından bahsedilmiyorsa, insülin pompası ve AndroidAPS arasındaki iletişim, iletişim protokolünü çevirmek için ek bir iletişim cihazına ihtiyaç duymadan Android'in entegre bluetooth yığınına dayanır.
 
-**Other pumps** that may have the potential to work with AndroidAPS are listed on the `Future (possible) Pumps <../Getting-Started/Future-possible-Pump-Drivers.html>`_ page.
+**AndroidAPS ile çalışma potansiyeline sahip olabilecek diğer pompalar**, `Gelecek (olası) Pompalar <../Getting-Started/Future-possible-Pump-Drivers.html>`_ sayfasında listelenmiştir.
 
-If you need to **privately buy** a pump then you can find various distributors is in `this spreadsheet <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_, please share the details of yours if not already listed.
+Bir pompayı **özel olarak satın almanız** gerekiyorsa, çeşitli distribütörleri `bu e-tabloda <https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0>`_ bulabilirsiniz, sizin detayınız henüz listelenmemişse, lütfen paylaşın.
 
-Additional communication device
+Ek iletişim cihazı
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
+Eski medtronic pompaları için, radyo sinyalini pompadan bluetooth'a "çevirmek" için ek bir iletişim cihazı (telefonunuzun yanı sıra) gereklidir. Pompanıza bağlı olarak doğru sürümü seçtiğinizden emin olun.
 
 * |OrangeLink|  `OrangeLink Websitesi <https://getrileylink.org/product/orangelink>`_    
 * |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
@@ -74,12 +74,12 @@ For old medtronic pumps an additional communication device (besides your phone) 
 
 **Peki AndroidAPS ile döngü için en iyi pompa hangisi?**
 
-The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
+Combo, Insight ve eski Medtronic pompaları, sağlam pompalardır ve döngüye alınabilir. Combo, standart bir luer kilidine sahip olduğundan, aralarından seçim yapabileceğiniz daha birçok infüzyon seti tipinin avantajına sahiptir. Ve pili herhangi bir benzin istasyonundan, 24 saat açık marketten satın alabileceğiniz varsayılan bir pildir ve gerçekten ihtiyacınız varsa, otel odasındaki uzaktan kumandadan ödünç alabilirsiniz ;-).
 
-The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+Pompa seçiminde DanaR/RS and Dana-i vs. 'nin Combo'ya karşı avantajları:
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
-- Initial pairing is simpler with the Dana-i/RS. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
+- Dana pompaları, Lineage işletim sistemine gerek kalmadan Android >= 5.1 olan hemen hemen tüm telefonlara bağlanır. Telefonunuz bozulursa, Dana pompalarıyla çalışan herhangi bir telefonu kolayca bulabilirsiniz... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
+- Dana-i/RS ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
 - So far the Combo works with screen parsing. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
 - The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir.  The Dana-i/RS is configurable that it does neither beep or vibrate.
 - Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
@@ -118,9 +118,9 @@ You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear
 
 Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
 
-To record a phone or watch that isn't already listed in the spreadsheet then please fill in the `form <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_.
+E-tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen `formu <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ doldurun.
 
-Any problems with the spreadsheet please send an email to `hardware@androidaps.org <mailto:hardware@androidaps.org>`_, any donations of phone/watch models that still need testing please send an email to `donations@androidaps.org <mailto:hardware@androidaps.org>`_.
+E-tabloyla ilgili herhangi bir sorun varsa lütfen `hardware@androidaps.org <mailto:hardware@androidaps.org>`_ adresine bir e-posta gönderin, test edilmesini istediğiniz farklı model telefon/saat bağışları için lütfen `donations@androidaps.org <mailto:hardware@androidaps.org>`_ adresine bir e-posta gönderin.
 
 xDrip+
 --------------------------------------------------
