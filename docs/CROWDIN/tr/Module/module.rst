@@ -80,43 +80,43 @@ Pompa seçiminde DanaR/RS and Dana-i vs. 'nin Combo'ya karşı avantajları:
 
 - Dana pompaları, Lineage işletim sistemine gerek kalmadan Android >= 5.1 olan hemen hemen tüm telefonlara bağlanır. Telefonunuz bozulursa, Dana pompalarıyla çalışan herhangi bir telefonu kolayca bulabilirsiniz... Combo ile bu o kadar kolay değildir. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
 - Dana-i/RS ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
-- Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking. 
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir.  The Dana-i/RS is configurable that it does neither beep or vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+- Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Yine de bağlantınız uzun zaman alabilir, bu nedenle BT bağlantısının kopabileceği yerlerde bağlantı için daha fazla zamana ihtiyaç var, bu da bolus yaparken veya yemek yerken telefonunuzdan uzaklaşırsanız o kadar kolay değil. 
+Combo, GBO'larin sonunda titreşir, Dana* R, SMB'de titreşir (veya bip sesi çıkarır). Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir.  Dana-i/RS, ne bip sesi çıkaracak ne de titreyecek şekilde yapılandırılabilir.
+- Dana-i/RS'deki geçmişi birkaç saniyede karbonhidratla okumak, çevrimdışıyken telefonları kolayca değiştirmeyi ve bazı CGM değerleri girer girmez döngüye devam etmeyi mümkün kılar.
 - AndroidAPS'nin konuşabileceği tüm pompalar iletim sırasında su geçirmezdir. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir". 
 
 KŞ kaynağı
 --------------------------------------------------
-This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look `here <../Configuration/BG-Source.html>`_. Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
+Bu, AndroidAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. Daha fazla ayrıntı için `buraya <../Configuration/BG-Source.html>`_ bakın. Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
-* `Dexcom G5 <../Hardware/DexcomG5.html>`_: It works with xDrip+ app or patched Dexcom app
-* `Dexcom G4 <../Hardware/DexcomG4.html>`_: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
-* `Libre 2 <../Hardware/Libre2.html>`_: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
-* `Libre 1 <../Hardware/Libre1.html>`_: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
-* `Eversense <../Hardware/Eversense.html>`_: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
-* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: quite complicated with a lot of extra stuff
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_: Sürüm 3.0'dan itibaren BYODA önerilir (ayrıntılar için `sürüm notlarına <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ bakın). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
+* `Dexcom G5 <../Hardware/DexcomG5.html>`_: xDrip+ uygulamasıyla veya yamalı Dexcom uygulamasıyla çalışır
+* `Dexcom G4 <../Hardware/DexcomG4.html>`_: Bu sensörler oldukça eskidir, ancak bunların xDrip+ uygulamasıyla nasıl kullanılacağına ilişkin talimatları bulabilirsiniz.
+* `Libre 2 <../Hardware/Libre2.html>`_: xDrip+ ile çalışır (verici gerekmez), ancak kendi yamalı uygulamanızı oluşturmanız gerekir.
+* `Libre 1 <../Hardware/Libre1.html>`_: Bunun için xDrip+ uygulamasına ve Bluecon veya MiaoMiao gibi bir vericiye ihtiyacınız var (oluşturun veya satın alın)
+* `Eversense <../Hardware/Eversense.html>`_: Yalnızca ESEL uygulaması ve yamalı Eversense-App ile birlikte çalışır (Dana RS ve LineageOS ile çalışmaz, DanaRS ve Android veya Combo ve Lineage OS ile çalışır)
+* `Enlite (MM640G/MM630G) <../Hardware/MM640g.html>`_: Birçok ekstra şey gerekmekte ve oldukça karmaşık
 
 
 Nightscout
 --------------------------------------------------
-Nightscout is a open source web application that can log and display your CGM data and AndroidAPS data and creates reports. You can find more information on the `website of the Nightscout project <http://nightscout.github.io/>`_. You can create your own `Nightscout website <https://nightscout.github.io/nightscout/new_user/>`_, use the semi-automated Nightscout setup on `zehn.be <https://ns.10be.de/en/index.html>`_ or host it on your own server (this is for IT experts).
+Nightscout, CGM verilerinizi ve AndroidAPS verilerinizi kaydedip görüntüleyebilen ve raporlar oluşturan açık kaynaklı bir web uygulamasıdır. `Nightscout projesinin web sitesinde <http://nightscout.github.io/>`_ daha fazla bilgi bulabilirsiniz. Kendi `Nightscout web sitenizi <https://nightscout.github.io/nightscout/new_user/>`_ oluşturabilir, `zehn.be <https://ns.10be.de/en/index.html>`_ adresinde yarı otomatik Nightscout kurulumunu kullanabilirsiniz. Veya kendi sunucunuzda barındırabilirsiniz. (BT uzmanları içindir)
 
-Nightscout is independent of the other modules. You will need it to fulfill Objective 1.
+Nightscout diğer modüllerden bağımsızdır. Görev 1'i yerine getirmek için Nightscout'a ihtiyacınız olacak.
 
-Additional information on how to configure Nightscout for use with AndroidAPS can be found `here <../Installing-AndroidAPS/Nightscout.html>`__.
+AndroidAPS ile kullanım için Nightscout'un nasıl yapılandırılacağına ilişkin ek bilgileri `burada <../Installing-AndroidAPS/Nightscout.html>`__ bulabilirsiniz.
 
-AAPS-.apk file
+AAPS-.apk dosyası
 --------------------------------------------------
-The basic component of the system. Before installing the app, you have to build the apk-file (which is the filename extension for an Android App) first. Instructions are  `here <../Installing-AndroidAPS/Building-APK.html>`__.  
+Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Talimatları `burada <../Installing-AndroidAPS/Building-APK.html>`__ bulabilirsiniz.  
 
-Optional Modules
+Opsiyonel Modüller
 ==================================================
 Akıllı saat
 --------------------------------------------------
-You can choose any smartwatch with Android Wear 1.x and above. Most loopers wear a Sony Smartwatch 3 (SWR50) as it is the only watch that can get readings from Dexcom G5/G5 when phone is out of range. Some other watches can be patched to work as a standalone receiver as well (see `this documentation <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5>`_ for more details).
+Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için 'bu dokümantasyona <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the- G5>`_ bakın).
 
-Users are creating a `list of tested phones and watches <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_. There are different watchfaces for use with AndroidAPS, which you can find `here <../Configuration/Watchfaces.html>`__.
+Kullanıcılar, `test edilmiş telefon ve saatlerin <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ listesini oluşturuyor. AndroidAPS ile kullanım için `burada <../Configuration/Watchfaces.html>`__ bulabileceğiniz farklı saat arayüzleri vardır.
 
 E-tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen `formu <https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform>`_ doldurun.
 
@@ -124,19 +124,19 @@ E-tabloyla ilgili herhangi bir sorun varsa lütfen `hardware@androidaps.org <mai
 
 xDrip+
 --------------------------------------------------
-Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. You can have as many as alarms as you want, specify the time when the alarm should be active, if it can override silent mode, etc. Some xDrip+ information can be found `here <../Configuration/xdrip.html>`__. Please be aware that the documentations to this app are not always up to date as its progress is quite fast.
+KŞ Kaynağı olarak xDrip+ uygulamasına sahip olmanız gerekmese bile, ör. görüntüsü için xDrip+ kullanabilirsiniz. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri `burada <../Configuration/xdrip.html>`__ bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
   
-What to do while waiting for modules
+Modülleri beklerken yapılması gerekenler
 ==================================================
-It sometimes takes a while to get all modules for closing the loop. But no worries, there are a lot of things you can do while waiting. It is NECESSARY to check and (where appropriate) adapt basal rates (BR), insulin-carbratio (IC), insulin-sensitivity-factors (ISF) etc. And maybe open loop can be a good way to test the system and get familiar with AndroidAPS. Using this mode, AndroidAPS gives treatment advices you can manually execute.
+Kapalı döngüye geçmek için için tüm modülleri elde etmek bazen biraz zaman alabilir. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. Bazal oranları (BO), insülin-karbonhidrat oranını (IC), insülin-duyarlılık-faktörünü (İDF) vb. (uygun olduğunda) kontrol etmek GEREKLİDİR. Ve bu sırada açık döngü ile sistemi test etme ve AndroidAPS'i tanımak için bir fırsat olabilir. Bu modu kullanarak (açık döngü) AndroidAPS, manuel olarak uygulayabileceğiniz tedavi önerileri verir.
 
-You can keep on reading through the docs here, get in touch with other loopers online or offline, `read <../Where-To-Go-For-Help/Background-reading.html>`_ documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, `<../Where-To-Go-For-Help/Background-reading.html>'_ belgelerini veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 
-**Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the `Objective description <../Usage/Objectives.html>`_ before each new Objective and setup up your `hardware <../index.html#component-setup>`_.
+**Tamamlandı?**
+AAPS bileşenleriniz tamamlandıysa (tebrikler!) veya en azından açık döngü modunda başlamaya yetecek kadar varsa, her yeni görev ve `donanım <../index.html#component-setup>`_ kurulumundan önce ilk olarak 'Görev açıklaması <../Usage/Objectives.html>'_ bölümünü okumalısınız.
 
 ..
-	Image aliases resource for referencing images by name with more positioning flexibility
+	Daha fazla konumlandırma esnekliği ile görüntülere ada göre referans vermek için görüntü takma adı kaynağı
 
 
 ..
