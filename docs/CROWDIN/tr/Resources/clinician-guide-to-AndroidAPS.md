@@ -47,7 +47,7 @@ AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır
 
 #### İşte mor tahmin çizgilerinin örnekleri ve bunların nasıl farklı olabileceği:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Mor tahmin satırı örnekleri](../images/Prediction_lines.jpg)
 
 #### İnsülin iletiminde gerekli ayarlamaları etkileyen farklı zaman dilimlerine ilişkin örnekler aşağıda verilmiştir:
 
@@ -55,47 +55,47 @@ AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır
 
 Bu örnekte, KŞ kısa vadede yükseliyor; ancak, daha uzun bir zaman diliminde düşük olacağı tahmin edilmektedir. Aslında, hedef *ve* güvenlik eşiğinin altına ineceği tahmin edilmektedir. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Senaryo 1](../images/Dosing_scenario_1.jpg)
 
 #### Senaryo 2 - Güvenlik için sıfır geçici
 
 Bu örnekte, KŞ'nin yakın vadede düşeceği, ancak sonunda hedefin üzerinde olacağı tahmin edilmektedir. Ancak, kısa vadeli beklenen değer güvenlik eşiğinin altında olduğundan, AndroidAPS, beklenen KŞ değeri artık herhangi bir zamanda eşiğin altında kalmayana kadar tekrar "sıfır geçici" kullanır.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Senaryo 2](../images/Dosing_scenario_2.jpg)
 
 #### Senaryo 3 - Daha fazla insülin gerekli
 
 Bu örnekteki tahmin, yakın gelecekte hedef değerin altına bir düşüş beklemektedir. Ancak güvenlik eşiğinin altında olması beklenmiyor. Nihai KŞ hedefin üzerindedir. Bu nedenle, eklenen insülin tahmini eşiğin altına getireceğinden, AndroidAPS kısa vadeli hipoya katkıda bulunacak insülin vermekten kaçınacaktır. Daha sonra, güvenli olduğunda, nihai olarak tahmin edilen KŞ'nin en düşük seviyesini hedefe indirmek için insülin eklenmesini değerlendirecektir. *(Gereken insülinin ayarına ve miktarına ve süresine bağlı olarak, bu insülin geçici bir bazal oran veya SMB (Süper Mikro Bolus) yoluyla iletilebilir).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Senaryo 3](../images/Dosing_scenario_3.jpg)
 
 #### Senaryo 4 - Güvenlik nedenleriyle insülin dozunun azaltılması
 
 Bu örnekte, AndroidAPS, KŞ'i hedefin oldukça üzerinde arttığını görüyor. Bununla birlikte, insülinin zamanlaması nedeniyle, vücutta zaten KŞ'i sonunda aralığa getirmek için yeterli insülin vardır. In fact, BG is predicted to eventually be below target. Bu nedenle, AndroidAPS orta vadede hipoglisemiye neden olmamak için herhangi bir ek insülin vermeyecektir. KŞ yüksek ve yükseliyor olsa da, AndroidAPS'nin böyle bir senaryoda bazal oranı düşürmesi daha olasıdır.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Senaryo 4](../images/Dosing_scenario_4.jpg)
 
 ### Ayarları optimize etme ve değişiklik yapma
 
 AndroidAPS veya DIY kapalı döngülerle deneyimi olmayan bir klinisyen olarak, hastanızın ayarlarını optimize etmesine veya sonuçlarını iyileştirmek için değişiklikler yapmasına yardımcı olmakta zorlanabilirsiniz. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). İnsan eğilimi, tüm düğmeleri çevirmek ve her şeyi bir anda değiştirmektir; ama eğer biri bunu yaparsa, o zaman gelecek için daha fazla optimal olmayan ayarlarla karşılaşabilir ve bilinen iyi bir duruma geri dönmeyi zorlaştırabilir.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AndroidAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AndroidAPS as well. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Ayar değişiklikleri yapmak için en güçlü araçlardan biri, bazal oranlar, İDF ve karbonhidrat oranı için otomatik bir hesaplama aracıdır. Buna "[Otoayar](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)" denir. Bağımsız/manuel olarak çalıştırılmak üzere tasarlanmıştır ve verilerin, ayarlarda artımlı değişiklikler yaparken size veya hastanıza rehberlik etmesine izin verir. Ayarlarda manuel ayarlamalar yapmaya çalışmadan önce, ilk olarak Otoayar raporlarını çalıştırmak (veya gözden geçirmek) topluluktaki en iyi uygulamadır. AndroidAPS ile, Otoayar "tek seferlik" olarak çalıştırılacak, ancak onu doğrudan AndroidAPS'ye dahil etmek için devam eden çabalar var. Bu parametreler hem standart pompalı insülin iletimi hem de kapalı döngü insülin iletimi için bir ön koşul olduğundan, otomatik ayar sonuçlarının tartışılması ve bu parametrelerin ayarlanması klinisyene doğal bağlantı olacaktır.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Ek olarak, manuel diyabet tedavisinde öğrenilen insan davranışı, bir DIY kapalı döngü ile bile sonuçları sıklıkla etkiler. Örneğin, KŞ'nin düşeceği tahmin ediliyorsa ve AndroidAPS düşerken insülini azaltıyorsa, KŞ'yi 70 mg/dl'den (3,9 mmol) yükseltmek için yalnızca az miktarda karbonhidrat (örn. 3-4 g karbonhidrat) gerekebilir. Bununla birlikte, birçok durumda, birileri daha fazla karbonhidratla (örneğin 15 kuralına bağlı kalmak) tedavi etmeyi seçebilir, bu da hem ekstra glikozdan daha hızlı bir artışa neden olur hem de insülin zaman çerçevesinde azaltıldığından, düşük seviyeye yol açabilir.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+**Bu kılavuz [Klinisyenin OpenAPS kılavuzundan](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) uyarlanmıştır.** OpenAPS, küçük bir taşınabilir bilgisayarda (genellikle "teçhizat" olarak anılır) çalıştırılmak üzere geliştirilmiş bir sistemdir. AndroidAPS, OpenAPS'de uygulanan tekniklerin çoğunu kullanır ve mantık ve algoritmaların çoğunu paylaşır, bu yüzden bu kılavuz orijinal kılavuza çok benzer. OpenAPS ile ilgili bilgilerin çoğu, AndroidAPS'ye kolayca uyarlanabilir, ana fark, yazılımın üzerinde çalıştığı donanım platformudur.
 
-### Summary
+### Özet
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Bu AndroidAPS'nin nasıl çalıştığına genel bir bakış olarak tasarlanmıştır. Daha fazla ayrıntı için hastanıza sorun, topluluğa ulaşın veya çevrimiçi olarak sunulan AndroidAPS belgelerinin tamamını okuyun.
 
-Additional recommended reading:
+Ek önerilen dökümanlar:
 
-* The [full AndroidAPS documentation](../index)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Tam AndroidAPS belgeleri](../index)
+* OpenAPS'in güvenlik için nasıl tasarlandığını açıklayan [OpenAPS Referans Tasarımı](https://OpenAPS.org/reference-design/): https://openaps.org/reference-design/
+* [Tam OpenAPS belgeleri](https://openaps.readthedocs.io/en/latest/index.html) 
+  * [OpenAPS hesaplamalarıyla ilgili daha fazla ayrıntı](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
