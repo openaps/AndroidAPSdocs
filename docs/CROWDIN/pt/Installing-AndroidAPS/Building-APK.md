@@ -1,12 +1,12 @@
-# Construir o ficheiro APK
+# Building the APK
 
-## Construa você em vez de fazer download
+## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! Consulte a [página de perguntas frequentes-FAQ](../Getting-Started/FAQ.md) para mais detalhes.**
+**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
-## Notas importantes
+## Important notes
 
-* Por favor, use o **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** ou um mais recente para construir o apk.
+* Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 ## Recommended specification of computer for building apk file
@@ -51,23 +51,23 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 * * *
 
-### Este artigo é dividido em duas partes.
+### This article is divided into two parts.
 
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
 * In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
-## Visão Geral
+## Overview
 
 In general, the steps necessary to build the APK file:
 
-1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
-2. [Instalar o Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Definir o caminho git nas preferências do Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Baixar o código da AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download do Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Construir a app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (gerar o apk assinado)
-7. [Transferir o arquivo apk para o seu telefone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identificar o receptor de estiver a utilizar o xDrip+](..//Configuration/xdrip#identify-receiver)
+1. [Install git](../Installing-AndroidAPS/git-install.rst)
+2. [Install Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
+3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
+7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver)
 
 ## Step by step walkthrough
 
@@ -77,7 +77,7 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
 
-## Instalar o Android Studio
+## Install Android Studio
 
 The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
 
@@ -164,7 +164,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-## Baixar o código da AndroidAPS
+## Download AndroidAPS code
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
@@ -210,7 +210,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     Don't worry, this will be solved soon!
 
-## Download do Android SDK
+## Download Android SDK
 
 * In the menu, go to File (1) > Settings (2).
     
@@ -345,6 +345,6 @@ Easiest way to transfer app-full-release.apk to your phone is via [USB cable or 
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
 
-## Resolução de Problemas
+## Troubleshooting
 
 See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
