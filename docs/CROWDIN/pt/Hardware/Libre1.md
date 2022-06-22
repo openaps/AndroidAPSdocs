@@ -22,7 +22,7 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 -   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-## If using Glimp
+## Se usa Glimp
 
 -   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
 -   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
