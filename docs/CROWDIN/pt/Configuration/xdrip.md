@@ -1,4 +1,4 @@
-# Definições xDrip+
+# xDrip+ settings
 
 (For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
 
@@ -84,7 +84,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-O que é claro, é que usar o G6 é talvez seja um pouco mais complexo do que o que sugere inicialmente. Para usá-lo com segurança, há alguns pontos que têm de ser conhecidos:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
@@ -314,7 +314,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 
 * Native sensor is marked as "FAILED: Sensor Failed Start"
 * Stop sensor
-* Reinicie o seu telefone
+* Restart your phone
 * Start sensor with code 0000 (four times zero)
 * Wait 15 minutes
 * Stop sensor
