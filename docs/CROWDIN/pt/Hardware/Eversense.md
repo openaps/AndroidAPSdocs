@@ -1,4 +1,4 @@
-# For users of Eversense
+# Para utilizadores de Eversense
 
 The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
 
