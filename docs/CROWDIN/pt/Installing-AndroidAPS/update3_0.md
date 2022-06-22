@@ -5,7 +5,7 @@
 
   Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
 
-  Plan the update carefully!!! Best in situation without active insulin and carbs
+  Planeie a atualização com cuidado!!! A melhor ocasião será sem insulina ativa e hidratos de carbono
 
 * Please see the [Release Notes](../Installing-AndroidAPS/Releasenotes) for details on new and changed features.
 
@@ -29,7 +29,7 @@
 * To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
 * Search for a profile switch with 100% and press clone.
 * A new local profile is added, valid from the current date.
-* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
+* Para atualizar o perfil a partir do NS, use "Clone" e salve as alterações. You should see "Profile valid from:" set to currrent date.
 
 ## Reset master password
 * You can now reset your master password in case you have forgotten it.
