@@ -32,7 +32,7 @@ Android 8
 Android 7
 ------------------------------------
 * Use AAPS version **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
 
 Version 3.1.0
 ================
@@ -46,16 +46,19 @@ Important hints
 Changes
 ----------------------
 * fixed issues from 3.0 version
+* fix application freezing @MilosKozak
 * fixed DASH driver @avereha
-* UI cleanup and unification, migration to material design, styles, white theme. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* fixed Dana drivers @MilosKozak
+* huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
 * Aidex CGM support @markvader @andyrozman (Pumpcontrol only)
-* Wear tiles @Andries-Smith
+* Wear tiles, translations @Andries-Smith
 * Wear code refactored. Not backward compatible anymore @MilosKozak
 * a11y improvements @Andries-Smith
 * new protection option PIN @Andries-Smit
 * allow graph scale from menu @MilosKozak
 * more statistics available @MilosKozak
+* MDI plugin removed in favor of VirtualPump
 
 Sürüm 3.0.0
 ================
