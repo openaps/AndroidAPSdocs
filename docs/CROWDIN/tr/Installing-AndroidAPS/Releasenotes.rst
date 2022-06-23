@@ -83,28 +83,28 @@ Hazırlık adımları
 
 Değişiklikler
 ----------------------
-* 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
-* `Dana-i support <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
-* Glunovo support
-* Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
-* Lot of code rewritten to Kotlin @MilosKozak
-* New internal interface for pump drivers
-* NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+* 100k satır değişti, 105k satır yeni kod
+* `Omnipod DASH desteği <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Dana-i desteği <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
+* `DiaconnG8 desteği <../Configuration/DiaconnG8.html>`_
+* Glunovo desteği
+* Dahili veritabanı Room'a yükseltildi @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+* Kotlin'e yeniden yazılan birçok kod @MilosKozak
+* Pompa sürücüleri için yeni dahili arayüz
+* NSClient, daha iyi senkronizasyon ve daha ayrıntılı özelleştirme için yeniden yazıldı @MilosKozak
 
-  * Record deletion from NS is not allowed (only invalidation through NSClient)
-  * Record modification from NS is not allowed
-  * Sync setting available without engineering mode (for parents)
-  * Ability to resync data
+  * NS'den kayıt silmeye izin verilmez (yalnızca NSClient aracılığıyla geçersiz kılma)
+  * NS'den kayıt değişikliğine izin verilmez
+  * Mühendislik modu olmadan kullanılabilen senkronizasyon ayarı (ebeveynler için)
+  * Verileri yeniden senkronize etme yeteneği
 
-* Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
-* You can start activity temporary target during creation of profile switch @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
-* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
-* User actions tracing @Philoul
-* New automation TempTargetValue trigger @Philoul
-* New automation Careportal action @Philoul
+* Profil anahtarı davranış değişikliği. Artık Profil Anahtarı *(kullanıcının istediği bir şey)* ve Profil değişikliği *(değişiklik pompa tarafından yapıldığında)* arasında ayrım yapılır* @MilosKozak @Tebbe
+* Profil anahtarının oluşturulması sırasında aktivite geçici hedefi başlatabilirsiniz @MilosKozak
+* NSProfile is gone, just local profile can be used. Yerel profil `NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pused>` ile senkronize edilebilir. @MilosKozak.
+* Unutulan `ana şifre sıfırlama prosedürü <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
+* Kullanıcı eylemleri izleme @Philoul
+* Yeni otomasyon TempTargetValue tetikleyicisi @Philoul
+* Yeni otomasyon Bakım Portalı eylemi @Philoul
 * Add Bolus reminder in Carbs Dialog @Philoul
 * Bolus Wizard improvement
 * UI improvements @MilosKozak
