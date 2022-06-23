@@ -22,7 +22,7 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 Android 9 ve üstü
 ------------------------------------
 * En son AAPS sürümünü kullanın
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS
+* AAPS Kodunu https://github.com/nightscout/AndroidAPS adresinden indirin
 
 Android 8
 ------------------------------------
@@ -34,7 +34,7 @@ Android 7
 * Use AAPS version **2.6.2**
 * Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
 
-Version 3.1.0
+Sürüm 3.1.0
 ================
 Release date: XX-XX-2022
 
