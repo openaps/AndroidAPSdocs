@@ -142,7 +142,7 @@ Görev 11: Otomasyon
 ====================================================================================================
 * `Otomasyonu <../Usage/Automation.html>`_ kullanabilmek için görev 11'e başlamanız gerekir.
 * `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ sınav dahil tüm göevleri tamamladığınızdan emin olun.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* Completing previous objectives will not effect other objectives you have already finished. Tüm tamamlanmış görevler korunacaktır!
 
 
 Go back in objectives
