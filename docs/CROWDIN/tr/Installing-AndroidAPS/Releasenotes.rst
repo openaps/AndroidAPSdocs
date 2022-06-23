@@ -66,17 +66,17 @@ Yayınlanma tarihi: 31-01-2022
 
 Önemli ipuçları
 ----------------------
-* **Minimum Android version is 9.0 now.**
-* **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
-* Use the same version of AAPS and NSClient
+* **Minimum Android sürümü artık 9.0'dır.**
+* **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Böylece güncellemeden sonra IOB, COB, tedaviler vb. temizlenecektir. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
+* AAPS ve NSClient'in aynı sürümünü kullanın
 
 **Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
 
-Preparation steps
+Hazırlık adımları
 ----------------------
-**At least two days before update:**
+**Güncellemeden en az iki gün önce:**
 
-* disable Dexcom bridge in Nightscout
+* Nightscout'ta Dexcom bridge'ı devre dışı bırakın
 * if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
 * if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
