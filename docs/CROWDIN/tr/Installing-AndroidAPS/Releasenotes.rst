@@ -228,9 +228,9 @@ Başlıca yeni özellikler
 * `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
 * New documentation @Achim
 
-Version 2.6.1.4
+Sürüm 2.6.1.4
 ================
-Release date: 04-05-2020
+Yayınlanma tarihi: 04-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -239,9 +239,9 @@ Başlıca yeni özellikler
 * Insight: Disable vibration on bolus for firmware version 3 - second attempt
 * Otherwise is equal to 2.6.1.3. Update is optional.
 
-Version 2.6.1.3
+Sürüm 2.6.1.3
 ================
-Release date: 03-05-2020
+Yayınlanma tarihi: 03-05-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
@@ -250,9 +250,9 @@ Başlıca yeni özellikler
 * Insight: Disable vibration on bolus for firmware version 3
 * Otherwise is equal to 2.6.1.2. Update is optional.
 
-Version 2.6.1.2
+Sürüm 2.6.1.2
 ================
-Release date: 19-04-2020
+Yayınlanma tarihi: 19-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
