@@ -190,9 +190,9 @@ Başlıca yeni özellikler
 * Security improvements @dlvoy
 * Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
-Version 2.7.0
+Sürüm 2.7.0
 ================
-Release date: 24-09-2020
+Yayınlanma tarihi: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
