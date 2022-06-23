@@ -105,17 +105,17 @@ Değişiklikler
 * Kullanıcı eylemleri izleme @Philoul
 * Yeni otomasyon TempTargetValue tetikleyicisi @Philoul
 * Yeni otomasyon Bakım Portalı eylemi @Philoul
-* Add Bolus reminder in Carbs Dialog @Philoul
-* Bolus Wizard improvement
-* UI improvements @MilosKozak
-* New user buttons for automations @MilosKozak
-* New automation layout @MilosKozak
-* History browser updated and fixed @MilosKozak
+* Karbonhidrat İletişim Kutusuna Bolus hatırlatıcısı ekleyin @Philoul
+* Bolus Sihirbazı iyileştirmesi
+* UI (Kullanıcı arayüzü) iyileştirmeleri @MilosKozak
+* Otomasyonlar için yeni kullanıcı butonları @MilosKozak
+* Yeni otomasyon düzeni @MilosKozak
+* Geçmiş tarayıcısı güncellendi ve düzeltildi @MilosKozak
 * Objective9 removed @MilosKozak
 * Fixed bug associated to unstable CGM data @MilosKozak
-* DanaR and DanaRS communication improvement @MilosKozak
-* CircleCI integration @MilosKozak
-* Files location change:
+* DanaR ve DanaRS iletişim iyileştirmesi @MilosKozak
+* CircleCI entegrasyonu @MilosKozak
+* Dosya konumu değişikliği:
 
    * /AAPS/extra (engineering mode)
    * /AAPS/logs /AAPS/exports
@@ -123,26 +123,26 @@ Değişiklikler
 
 Sürüm 2.8.2
 ================
-Release date: 23-01-2021
+Yayınlanma tarihi: 23-01-2021
 
-* Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
+* Lütfen aşağıdaki `2.8.1.1 sürümü için önemli ipuçlarına da bakın <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_.
 
 Değişiklikler
 ----------------------
-* stability improvements
-* more tweaking for Android 8+
-* improved icons
-* watch improvements
-* NSClient fixes
-* Bolus advisor now works with Pumpcontrol and NSClient
+* kararlılık iyileştirmeleri
+* Android 8+ için daha fazla ince ayar
+* geliştirilmiş simgeler
+* akıllı saat iyileştirmeleri
+* NSClient düzeltmeleri
+* Bolus danışmanı artık Pumpcontrol ve NSClient ile çalışıyor
 
-Version 2.8.1.1
+Sürüm 2.8.1.1
 ================
-Release date: 12-01-2021
+Yayınlanma tarihi: 12-01-2021
 
 Önemli ipuçları
 ----------------------
-* Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
+* Seçenek **NS_UPLOAD_ONLY**, tüm 2.8.1 kullanıcıları için AÇIK olmaya zorlanmıştır.
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
 * ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
 * NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
@@ -161,9 +161,9 @@ Major changes
 * UI fixes and improvements
 * new translations
 
-Version 2.8.0
+Sürüm 2.8.0
 ================
-Release date: 01-01-2021
+Yayınlanma tarihi: 01-01-2021
 
 Önemli ipuçları
 ----------------------
