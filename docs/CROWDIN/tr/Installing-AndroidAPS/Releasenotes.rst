@@ -11,17 +11,17 @@ O zaman güncellemek için 60 gününüz var. If you do not update within these 
 
 30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
 
-Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. AndroidAPS'nin yeni sürümleri yalnızca yeni özellikler sağlamakla kalmaz, aynı zamanda önemli güvenlik düzeltmeleri de sağlar. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. AndroidAPS'nin yeni sürümleri yalnızca yeni özellikler sağlamakla kalmaz, aynı zamanda önemli güvenlik düzeltmeleri de sağlar. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Anlayışınız için teşekkür ederiz.
 
-Android version and AAPS version
+Android sürümü ve AAPS sürümü
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9.
+Akıllı telefonunuz Android 9'dan daha eski bir Android Sürümü kullanıyorsa, en az Android 9 gerektirdiğinden AAPS 3.0.0 ve sonraki sürümleri kullanamazsınız.
 
-In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
+Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmasına izin vermek için, yalnızca sürüm doğrulamasını değiştiren yeni sürümler gönderildi. Başka hiçbir iyileştirme dahil değildir.
 
-Android 9 and up
+Android 9 ve üstü
 ------------------------------------
-* Use latest AAPS version
+* En son AAPS sürümünü kullanın
 * Download AAPS Code from https://github.com/nightscout/AndroidAPS
 
 Android 8
@@ -430,7 +430,7 @@ Major new features
 * G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
 * Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
-Misc
+Diğer
 --------------------------------------------------
 * If you are using non default ``smbmaxminutes`` value you have to setup this value again
 
@@ -465,7 +465,7 @@ Overview tab
 * Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
 * Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
-Watch
+Saat
 --------------------------------------------------
 * Separate build variant dropped, included in regular full build now. To use bolus controls from watch, enable this setting on the phone
 * Wizard now only asks for carbs (and percentage if enabled in watch settings). Which parameters are included in the calculation can be configured in the settings on the phone
@@ -478,7 +478,7 @@ New plugins
 * Dexcom patched app as BG source
 * oref1 sensitivity plugin
 
-Misc
+Diğer
 --------------------------------------------------
 * App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
 * Overhaul for config builder and objectives tabs, adding descriptions
