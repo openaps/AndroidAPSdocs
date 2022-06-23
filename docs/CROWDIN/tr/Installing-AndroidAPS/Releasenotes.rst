@@ -1,17 +1,17 @@
 Sürüm notları
 **************************************************
-Please follow the instructions in the `update manual <../Installing-AndroidAPS/Update-to-new-version.html>`_. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
+Lütfen `güncelleme kılavuzundaki <../Installing-AndroidAPS/Update-to-new-version.html>`_ talimatlarını takip edin. You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
 
-You will receive the following information as soon as a new update is available:
+Yeni bir güncelleme çıkar çıkmaz aşağıdaki bilgileri alacaksınız:
 
 .. image:: ../images/AAPS_LoopDisable90days.png
-  :alt: Update info
+  :alt: Güncelleme bilgisi
 
-Then you have 60 days to update. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
+O zaman güncellemek için 60 gününüz var. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see `glossary <../Getting-Started/Glossary.html>`_) as in `objective 6 <../Usage/Objectives.html>`_.
 
-If you do not update for another 30 days (90 days from new release date) AAPS will switch to Open Loop.
+30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
 
-Please understand that this change is not intended to bug you but is due to safety reasons. New versions of AndroidAPS do not only provide new features but also important safety fixes. Therefore it is necessary that every user updates a.s.a.p.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
+Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. AndroidAPS'nin yeni sürümleri yalnızca yeni özellikler sağlamakla kalmaz, aynı zamanda önemli güvenlik düzeltmeleri de sağlar. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Unfortunately there are still bug reports from very old versions so this is a try to improve safety for every single user and the whole DIY community. Thanks for your understanding.
 
 Android version and AAPS version
 ====================================
@@ -38,12 +38,12 @@ Version 3.1.0
 ================
 Release date: XX-XX-2022
 
-Important hints
+Önemli ipuçları
 ----------------------
 * after update uninstall Wear app and install new version
 * Omnipod users: update on pod change
 
-Changes
+Değişiklikler
 ----------------------
 * fixed issues from 3.0 version
 * fix application freezing @MilosKozak
@@ -64,7 +64,7 @@ Sürüm 3.0.0
 ================
 Yayınlanma tarihi: 31-01-2022
 
-Important hints
+Önemli ipuçları
 ----------------------
 * **Minimum Android version is 9.0 now.**
 * **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Thus after update IOB, COB, treatments etc. will be cleared. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
@@ -81,7 +81,7 @@ Preparation steps
 * if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
 
-Changes
+Değişiklikler
 ----------------------
 * 100k lines changed, 105k new lines of code
 * `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
@@ -127,7 +127,7 @@ Release date: 23-01-2021
 
 * Please see also `important hints for version 2.8.1.1 <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ below.
 
-Changes
+Değişiklikler
 ----------------------
 * stability improvements
 * more tweaking for Android 8+
@@ -140,7 +140,7 @@ Version 2.8.1.1
 ================
 Release date: 12-01-2021
 
-Important hints
+Önemli ipuçları
 ----------------------
 * Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
 * If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
@@ -165,7 +165,7 @@ Version 2.8.0
 ================
 Release date: 01-01-2021
 
-Important hints
+Önemli ipuçları
 ----------------------
 * **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 * `Objectives have changed. <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ **Finish not completed objectives before update.**
