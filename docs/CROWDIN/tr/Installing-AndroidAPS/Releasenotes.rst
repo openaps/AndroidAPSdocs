@@ -261,9 +261,9 @@ Başlıca yeni özellikler
 * Fix crashing in Insight service
 * Otherwise is equal to 2.6.1.1. If you are not affected by this bug you don't need to upgrade.
 
-Version 2.6.1.1
+Sürüm 2.6.1.1
 ================
-Release date: 06-04-2020
+Yayınlanma tarihi: 06-04-2020
 
 Please use `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ or newer to build the apk.
 
