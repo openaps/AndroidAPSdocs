@@ -27,28 +27,28 @@ Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu
 
 ### Yerel profil
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Yerel profil, telefona manuel olarak girilen bazal profili kullanır. Seçilir seçilmez, gerekirse pompadan okunan profil verilerini değiştirebileceğiniz AAPS'de yeni bir sekme görünür. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Yerel profilleriniz, [dışa aktarılan ayarların](../Usage/ExportImportSettings.rst) bir parçasıdır. Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Yerel Profil ayarları](../images/LocalProfile_Settings.png)
 
-Buttons:
+Butonlar:
 
 * yeşil artı: profil ekleme
 * kırmızı X: profil silme
 * mavi ok: profil kopyalama
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Profilinizde herhangi bir değişiklik yaparsanız, doğru profili düzenlediğinizden emin olun. Profil sekmesinde, he zaman kullanılan gerçek profil gösterilmez - ör. ana ekrandaki profil sekmesini kullanarak bir profil geçişi yaptıysanız, bunlar arasında bağlantı olmadığı için sekmede gösterilen profil, gerçek profilinizden farklı olabilir.
 
 #### Klon profil değişikliği
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Bir profil değiştir'me ile kolayca yeni bir yerel profil oluşturabilirsiniz. Bu durumda, yeni yerel profile zaman kayması ve yüzdesel değişim uygulanabilecektir.
 
 1. Sağ üst köşedeki 3 nokta menüsüne tıklayın.
 2. 'Tedaviler'i seçin.
 3. Profil değiştirme sayfasına erişmek için yıldız sembolüne basın.
-4. Select the desired profile switch and press "Clone".
+4. İstediğiniz profil anahtarını seçin ve "Klonla"ya basın.
 5. Yeni yerel profili Yerel Profil (YP) sekmesinden veya hamburger menüsünde "profil"den düzenleyebilirsiniz.
 
 ![Klon profil değişikliği](../images/LocalProfile_ClonePS_AAPS30.png)
@@ -57,7 +57,7 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 Yerel profiller ayrıca Nightscout'a yüklenebilir. Ayarlar [NSClient tercihlerinde](../Configuration/Preferences#nsclient) bulunabilir.
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+![Yerel profili NS'a yükleyin](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Nighscout profil düzenleyicide profili değiştir
 
@@ -74,11 +74,11 @@ Profil yardımcısı iki işlev sunar:
 1. Çocuklar için bir profil bulmak
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.rst) açıklanmıştır.
 
 ## İnsülin
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![İnsülin Tipi](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Kullanmakta olduğunuz insülin eğrisinin türünü seçin.
 * 'Hızlı Etkili Oref', Ultra Hızlı Oref', 'Lyumjev' ve 'Serbest Tepe Oref' seçeneklerinin tümü üstel bir şekle sahiptir. Daha fazla bilgi [OpenAPS dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) sayfasında listelenmiştir. 
@@ -101,17 +101,17 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * [İnsülin eğrisi grafiği](../Getting-Started/Screenshots#insulin-profile), farklı eğrileri anlamanıza yardımcı olur. 
 * Yukarıda bir sekme olarak görüntülemek için onay kutusunu etkinleştirebilirsiniz. Diğer türlü hamburger menüsünde olacaktır.
 
-#### Rapid-Acting Oref
+#### Hızlı etkili Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![İnsülin tipi Hızlı Etkili Oref](../images/ConfBuild_Insulin_RAO.png)
 
 * Humalog, Novolog ve Novorapid için önerilir
 * İES = en az 5.0s
 * Maks. zirve = enjeksiyondan 75 dakika sonra (sabit, ayarlanabilir değil)
 
-#### Ultra-Rapid Oref
+#### Ultra Hızlı Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![İnsülin tipi Ultra Hızlı Oref](../images/ConfBuild_Insulin_URO.png)
 
 * FIASP için önerilir
 * İES = en az 5.0s
@@ -119,15 +119,15 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![İnsülin tipi Lyumjev](../images/ConfBuild_Insulin_L.png)
 
 * Lyumjev için özel insülin profili
 * İES = en az 5.0s
 * Maks. zirve = enjeksiyondan 45 dakika sonra (sabit, ayarlanabilir değil)
 
-#### Free Peak Oref
+#### Serbest Zirve Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![İnsülin tipi Serbest Tepe Oref](../images/ConfBuild_Insulin_FPO.png)
 
 * Serbest zirve Oref "Free Peak 0ref" profili ile zirve zamanını kendiniz girebilirsiniz. Bunu yapmak için gelişmiş ayarlarda dişli çarka tıklayın.
 * Profilde daha yüksek belirtilmemişse, İES otomatik olarak 5 saate ayarlanır.
@@ -135,9 +135,9 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ## KŞ kaynağı
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Kullanmakta olduğunuz kan şekeri kaynağını seçin - daha fazla kurulum bilgisi için [KŞ Kaynağı](BG-Source.rst) sayfasına bakın.
 
-![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+![Konfigürasyon ayarları KŞ kaynağı](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
 * [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
