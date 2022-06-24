@@ -222,11 +222,11 @@ Başlıca yeni özellikler
 * `MDT pompası için nötr geçici değerleri ayarlama <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Geçmiş tarayıcı geliştirmeleri @MilosKozak
 * OpenAPS MA algoritması kaldırıldı @Tornado-Tim
-* removed Oref0 sensitivity @Tornado-Tim
-* `Biometric or password protection <../Configuration/Preferences.html#protection>`_ for settings, bolus @MilosKozak
-* `new automation trigger <../Usage/Automation.html>`_ @PoweRGbg
-* `Open Humans uploader <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
-* New documentation @Achim
+* Oref0 duyarlılığı kaldırıldı @Tornado-Tim
+* Bolus ayarları için `Biyometrik veya şifre koruması <../Configuration/Preferences.html#protection>`_ @MilosKozak
+* `yeni otomasyon tetikleyicisi <../Usage/Automation.html>`_ @PoweRGbg
+* `Open Humans yükleyici <../Configuration/OpenHumans.html>`_ @TebbeUbben @AdrianLxM
+* Yeni dokümantasyon @Achim
 
 Sürüm 2.6.1.4
 ================
