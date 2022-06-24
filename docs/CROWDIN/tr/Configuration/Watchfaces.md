@@ -41,65 +41,65 @@ The following functions can be triggered from the watch:
 
 ## AAPS Saat Yüzleri
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Ortalama delta, IOB, şu anda aktif olan geçici bazal oranı ve bazal profiller + CGM okumaları grafiğini içeren birkaç izleme yüzü vardır.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+AndroidAPS'den gelen bildirimlerin saatte engellenmediğinden emin olun. Eylemin onayı (örn. bolus, geçici hedef), kaydırmanız ve işaretlemeniz gereken bildirim yoluyla gelir.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğrisine iki kez dokunarak zaman ölçeğini değiştirebilirsiniz..
 
-## Watchfaces available
+## Mevcut saat yüzleri
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Mevcut saat yüzleri](../images/Watchface_Types.png)
 
-### New watchface as of AndroidAPS 2.8
+### AndroidAPS 2.8'den itibaren yeni saat yüzü
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Watchface Dijital Stil](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* Renk, çizgiler ve daire, watchface seçici menüsünün dişli işareti üzerindeki ayar menüsünde yapılandırılabilir.
 
 ## AAPSv2 watchface - Legend
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - son döngü çalıştırmasından beri geçen süre
 
-B - CGM reading
+B - CGM okuması
 
 C - minutes since last CGM reading
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - son CGM okumasına kıyasla değişiklik (mmol veya mg/dl olarak)
 
-E - average change CGM reading last 15 minutes
+E - son 15 dakikadaki ortalama değişiklik CGM okuması
 
-F - phone battery
+F - telefon pili
 
 G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - KŞE (kan şekeri etkileşimi) -> KŞ'nin yalnızca insülin aktivitesine bağlı olarak yükselmesi veya düşmesi "gerektiği" derece.
 
 I - carbs (carbs on board | e-carbs in the future)
 
 J - insulin on board (from bolus | from basal)
 
-## Accessing main menu of AAPS
+## AAPS ana menüsüne erişim
 
-To access main menu of AAPS you can use on of following options:
+AAPS ana menüsüne erişmek için aşağıdaki seçeneklerden birini kullanabilirsiniz:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* KŞ değerinize iki kez tıklayın
+* saat uygulaması menüsünde AAPS simgesini seçin
+* AAPS komplikasyonuna tıklayın (menü için yapılandırılmışsa)
 
-## Settings (in wear watch)
+## Ayarlar (wear saati içinde)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Saat yüzü ayarlarına erişmek için AAPS ana menüsüne girin, yukarı kaydırın ve "Ayarlar" öğesini seçin.
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Dolgulu yıldız etkin (**Açık**) durumu içindir ve içi boş yıldız simgesi ayarın devre dışı olduğunu gösterir (**Kapalı**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Ayarlar açık/kapalı](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### AAPS tamamlayıcı parametreleri
 
-* **Vibrate on Bolus** (default `On`):
+* **Bolus'ta Titreşim** (varsayılan `Açık`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
 ### Watchface settings
@@ -270,7 +270,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Ortalama delta, IOB, şu anda aktif olan geçici bazal oranı ve bazal profiller + CGM okumaları grafiğini içeren birkaç izleme yüzü vardır.
 
 # Pebble
 
