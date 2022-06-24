@@ -330,7 +330,7 @@ Başlıca yeni özellikler
 
 Sürüm 2.5.1
 ==================================================
-Release date: 31-10-2019
+Yayınlanma tarihi: 31-10-2019
 
 Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
 * Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
@@ -338,9 +338,9 @@ Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#imp
 
 Sürüm 2.5.0
 ==================================================
-Release date: 26-10-2019
+Yayınlanma tarihi: 26-10-2019
 
-.. _important-notes-2-5-0:
+.. _önemli-notlar-2-5-0:
 
 Önemli notlar
 --------------------------------------------------
