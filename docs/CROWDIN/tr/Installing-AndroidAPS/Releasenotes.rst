@@ -269,8 +269,8 @@ Lütfen apk oluşturmak için `Android Studio 3.6.1 <https://developer.android.c
 
 Başlıca yeni özellikler
 ------------------
-* Resolves SMS CARBS command issue while using Combo pump
-* Otherwise is equal to 2.6.1. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
+* Combo pompa kullanırken SMS CARBS komut sorununu çözer
+* Aksi takdirde 2.6.1 ile aynıdır. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
 
 Sürüm 2.6.1
 ==============
@@ -280,16 +280,16 @@ Lütfen apk oluşturmak için `Android Studio 3.6.1 <https://developer.android.c
 
 Başlıca yeni özellikler
 ------------------
-* Allow to enter only ``https://`` in NSClient settings
-* Fixed `BGI <../Getting-Started/Glossary.html>`_ displaying bug on watches
-* Fixed small UI bugs
-* Fixed Insight crashes
-* Fixed future carbs with Combo pump
-* Fixed `LocalProfile -> NS sync <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>`_
-* Insight alerts improvements
-* Improved detection of boluses from pump history
-* Fixed NSClient connection settings (wifi, charging)
-* Fixed sending of calibrations to xDrip
+* NSClient ayarlarında yalnızca ``https://`` girişine izin verir
+* Saatlerdeki `BGI <../Getting-Started/Glossary.html>`_ hatası düzeltildi
+* Ufak kullanıcı arayüzü hataları düzeltildi
+* Insight çökme hataları düzeltildi
+* Combo pompadaki gelecekteki karbonhidratlar düzeltildi
+* `Yerel Profil -> NS senkronizasyonu <../Configuration/Config-Builder.html#upload-local-profiles-to-nightscout>` düzeltildi
+* Insight uyarıları iyileştirmeleri
+* Pompa geçmişinden bolus algılaması iyileştirildi
+* NSClient bağlantı ayarları (wifi, şarj) düzeltildi
+* Kalibrasyonların xDrip'e gönderilmesi düzeltildi
 
 Sürüm 2.6.0
 ==============
@@ -299,42 +299,42 @@ Lütfen apk oluşturmak için `Android Studio 3.6.1 <https://developer.android.c
 
 Başlıca yeni özellikler
 ------------------
-* Small design changes (startpage...)
-* Careportal tab / menu removed - more details `here <../Usage/CPbefore26.html>`__
+* Küçük tasarım değişiklikleri (başlangıç sayfası...)
+* Bakım portalı sekmesi / menüsü kaldırıldı - daha fazla ayrıntı `burada <../Usage/CPbefore26.html>`__
 * Yeni `Yerel Profil eklentisi <../Configuration/Config-Builder.html#local-profile>`_
 
-  * Local profile can hold more than 1 profile
-  * Profiles can be cloned and edited
-  * Ability of upload profiles to NS
-  * Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  * Veritical NumberPicker for targets
-* SimpleProfile is removed
+  * Yerel profil 1'den fazla profil tutabilir
+  * Profiller klonlanabilir ve düzenlenebilir
+  * NS'ye profil yükleme yeteneği
+  * Eski profil değişimleri Yerel Profil'de yeni profile kopyalanabilir (zaman kaydırma ve yüzde uygulanır)
+  * Hedefler için Dikey NumberPicker
+* Basit profil kaldırıldı
 * `Yayma bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only>`_ özelliği - kapalı döngü devre dışı bırakılacak
-* MDT plugin: Fixed bug with duplicated entries
-* Units are not specified in profile but it's global setting
-* Added new settings to startup wizard
-* Different UI and internal improvements
+* MDT eklentisi: Yinelenen girişlerle ilgili hata düzeltildi
+* Birimler profilde belirtilmemiş ancak genel ayarlardır
+* Başlangıç sihirbazına yeni ayarlar eklendi
+* Farklı kullanıcı arayüzü ve dahili iyileştirmeler
 * `Wear komplikasyonları <../Configuration/Watchfaces.html>`_
-* New `SMS commands <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
-* Fixed language support
-* Objectives: `Allow to go back <../Usage/Objectives.html#go-back-in-objectives>`_, Time fetching dialog
-* Automation: `allow sorting <../Usage/Automation.html#sort-automation-rules>`_
-* Automation: fixed bug when automation was running with disabled loop
-* New status line for Combo
-* GlucoseStatus improvement
-* Fixed TempTarget NS sync
-* New statistics activity
-* Allow Extended bolus in open loop mode
-* Android 10 alarm support
-* Tons on new translations
+* Yeni `SMS komutları <../Children/SMS-Commands.html>`_ BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+* Dil desteği düzeltildi
+* Görevler: `Geri gitmeye izin ver <../Usage/Objectives.html#go-back-in-objectives>`_, Zaman getirme iletişim kutusu
+* Otomasyon: `sıralamaya izin ver <../Usage/Automation.html#sort-automation-rules>`_
+* Otomasyon: devre dışı bırakılmış döngüde çalışan otomasyon hatası düzeltildi
+* Combo için yeni durum satırı
+* GlikozDurumu iyileştirme
+* Geçici Hedef NS senkronizasyonu düzeltildi
+* Yeni istatistik etkinliği
+* Açık döngü modunda yayma bolusa izin ver
+* Android 10 alarm desteği
+* Tonlarca yeni çeviri
 
 Sürüm 2.5.1
 ==================================================
 Yayınlanma tarihi: 31-10-2019
 
-Please note the `important notes <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ and `limitations <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ listed for `version 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__.
-* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things).
-* New versioning that will allow to do minor updates without triggering the update-notification.
+Lütfen `sürüm 2.5.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`__ için listelenen `önemli notlara <../Installing-AndroidAPS/Releasenotes.html#important-notes-2-5-0>`_ ve `sınırlamalara <../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported>`_ dikkat edin.
+* Ağ durumu alıcısında birçok kişinin çökmesine neden olan bir hata düzeltildi (kritik değil ama yeniden hesaplamada çok fazla enerji israfına neden oluyor).
+* Güncelleme bildirimini tetiklemeden küçük güncellemelerin yapılmasına izin verecek yeni sürüm.
 
 Sürüm 2.5.0
 ==================================================
@@ -344,34 +344,34 @@ Yayınlanma tarihi: 26-10-2019
 
 Önemli notlar
 --------------------------------------------------
-* Please use `Android Studio Version 3.5.1 <https://developer.android.com/studio/>`_ or newer to `build the apk <../Installing-AndroidAPS/Building-APK.html>`_ or `update <../Installing-AndroidAPS/Update-to-new-version.html>`_.
-* If you are using xDrip `identify receiver <../Configuration/xdrip.html#identify-receiver>`_ must be set.
-* If you are using Dexcom G6 with the patched Dexcom app you will need the version from the `2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_.
-* Glimp is supported from version 4.15.57 and newer.
+* Lütfen `apk oluşturmak <../Installing-AndroidAPS/Building-APK.html>` için `Android Studio Sürüm 3.5.1 <https://developer.android.com/studio/>`_ kullanın veya `güncelleme <../Installing-AndroidAPS/Update-to-new-version.html>`_ yapın.
+* xDrip kullanıyorsanız `alıcıyı tanımla <../Configuration/xdrip.html#identify-receiver>`_ ayarlanmalıdır.
+* Yamalı Dexcom uygulamasıyla Dexcom G6 kullanıyorsanız, `2.4 klasöründeki <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_ sürümüne ihtiyacınız olacaktır.
+* Glimp, 4.15.57 ve daha yeni sürümlerde desteklenmektedir.
 
-Is this update for me? Currently is NOT supported
+Bu güncelleme benim için mi? Şu anda DESTEKLENMİYOR
 --------------------------------------------------
-* Android 5 and lower
+* Android 5 ve altı
 * Poctech
-* 600SeriesUploader
-* Patched Dexcom from 2.3 directory
+* 600SerisiYükleyici
+* 2.3 dizininden Yamalı Dexcom
 
 Başlıca yeni özellikler
 --------------------------------------------------
-* Internal change of targetSDK to 28 (Android 9), jetpack support
-* RxJava2, Okhttp3, Retrofit support
-* Old `Medtronic pumps <../Configuration/MedtronicPump.html>`_ support (RileyLink need)
-* New `Automation plugin <../Usage/Automation.html>`_
-* Allow to `bolus only part <../Configuration/Preferences.html#advanced-settings-overview>`_ from bolus wizard calculation
-* Rendering insulin activity
-* Adjusting IOB predictions by autosens result
-* New support for patched Dexcom apks (`2.4 folder <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
-* Signature verifier
-* Allow to bypass objectives for OpenAPS users
-* New `objectives <../Usage/Objectives.html>`_ - exam, application handling
-  (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-* Fixed bug in Dana* drivers where false time difference was reported
-* Fixed bug in `SMS communicator <../Children/SMS-Commands.html>`_
+* Dahili TargetSDK 28 (Android 9) olarak değiştirilmesi, jetpack desteği
+* RxJava2, Okhttp3, Retrofit desteği
+* Eski `Medtronic pompaları <../Configuration/MedtronicPump.html>`_ desteği (RileyLink gerekir)
+* Yeni `Otomasyon eklentisi <../Usage/Automation.html>`_
+* Bolus sihirbazı hesaplamasından `sadece bolus parçasına <../Configuration/Preferences.html#advanced-settings-overview>`_ izin ver
+* İnsülin aktivitesi oluşturma
+* IOB tahminlerini otoduyarlılık sonucuna göre ayarlama
+* Yamalı Dexcom apk'leri için yeni destek (`2.4 klasörü <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
+* İmza doğrulayıcı
+* OpenAPS kullanıcıları için hedeflerin atlanmasına izin ver
+* Yeni `görevler <../Usage/Objectives.html>`_ - sınav, uygulama yönetimi
+  (Önceki sürümlerde "Açık döngüde başlama" görevini tamamladıysanız sınav isteğe bağlıdır.)
+* Dana* sürücülerinde yanlış zaman farkının bildirildiği hata düzeltildi
+* `SMS Kominikatör <../Children/SMS-Commands.html>`` içindeki hata düzeltildi
 
 Sürüm 2.3
 ==================================================
@@ -379,15 +379,15 @@ Yayınlanma tarihi: 25-04-2019
 
 Başlıca yeni özellikler
 --------------------------------------------------
-* Important safety fix for Insight (really important if you use Insight!)
-* Fix History-Browser
-* Fix delta calculations
-* Language updates
-* Check for GIT and warn on gradle upgrade
-* More automatic testing
-* Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-* Fix broadcast of BG data (works independently of SMS permission now!)
-* New Version-Checker
+* Insight için önemli güvenlik düzeltmesi (Insight kullanıyorsanız gerçekten önemlidir!)
+* Geçmiş-Tarayıcısı düzeltmesi
+* Delta hesaplaması düzeltmesi
+* Dil güncellemeleri
+* GIT'i kontrol etme ve kademeli yükseltme konusunda uyarı
+* Birçok otomatik test
+* AlarmSound Hizmetindeki olası çökmeyi düzeltme (teşekkürler @lee-b!)
+* KŞ verilerinin yayını düzeltildi (şimdi SMS izninden bağımsız çalışıyor!)
+* Yeni Sürüm Denetleyicisi
 
 
 Sürüm 2.2.2
@@ -396,10 +396,10 @@ Yayınlanma tarihi: 07-04-2019
 
 Başlıca yeni özellikler
 --------------------------------------------------
-* Autosens fix: deactivate TT raises/lowers target
-* New translations
-* Insight driver fixes
-* SMS plugin fix
+* Otoduyarlılık düzeltmesi: GH hedefi yükseltme/düşürme devre dışı bırakma
+* Yeni çeviriler
+* Insight sürücü düzeltmesi
+* SMS eklentisi düzeltmesi
 
 
 Sürüm 2.2
@@ -437,7 +437,7 @@ Diğer
 
 Sürüm 2.0
 ==================================================
-Release date: 03-11-2018
+Yayınlanma tarihi: 03-11-2018
 
 Başlıca yeni özellikler
 --------------------------------------------------
