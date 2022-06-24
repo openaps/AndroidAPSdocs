@@ -32,14 +32,14 @@ The following functions can be triggered from the watch:
 * use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
 * administer eCarbs
 * administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+* saat ayarları
+* durum 
+    * pompa durumunu kontrol etme
+    * döngü durumunu kontrol etme
+    * profili kontrol etme ve değiştirme, CPP (Sirkadiyen Yüzde Profili = zaman kayması + yüzde)
+    * GTD gösterme (Günlük toplam doz = bolus + günlük bazal)
 
-## AAPS Watchfaces
+## AAPS Saat Yüzleri
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
