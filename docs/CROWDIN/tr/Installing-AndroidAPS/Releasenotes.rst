@@ -449,7 +449,7 @@ Settings to adjust when switching from AMA to SMB
 --------------------------------------------------
 * Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 * maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
-* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
+* min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
 * Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! If your build fails with an error regarding "on demand configuration" you can do the following:
 
   * Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
