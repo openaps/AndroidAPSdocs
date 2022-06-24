@@ -274,7 +274,7 @@ Başlıca yeni özellikler
 
 Sürüm 2.6.1
 ==============
-Release date: 21-03-2020
+Yayınlanma tarihi: 21-03-2020
 
 Lütfen apk oluşturmak için `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ veya daha yenisini kullanın.
 
@@ -293,7 +293,7 @@ Başlıca yeni özellikler
 
 Sürüm 2.6.0
 ==============
-Release date: 29-02-2020
+Yayınlanma tarihi: 29-02-2020
 
 Lütfen apk oluşturmak için `Android Studio 3.6.1 <https://developer.android.com/studio/>`_ veya daha yenisini kullanın.
 
