@@ -8,7 +8,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimi olmasına rağmen iletişim çok sınırlı ve tek yönlüdür: Şirket 2021'in sonunda pompa uygulamasından bolus ve TBR'yi ayarlamaya izin verecek olan DOSE (1.6) adlı yeni sürümü piyasaya sürmeyi planlıyor. Kendi döngü uygulamasını da 2022'de hayata geçirmeyi planlıyorlar. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
-**Hardware requirement for AAPS:** None. It's BT enabled.
+**Hardware requirement for AAPS:** None. BT etkin.
 
 **Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
 
@@ -18,7 +18,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. BT etkin.
 
 * * *
 
@@ -86,7 +86,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 **Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. It's BT enabled.
+**Hardware requirement for AAPS:** Probably none. BT etkin.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
