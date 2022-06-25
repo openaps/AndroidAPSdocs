@@ -34,26 +34,26 @@ Android 7
 * Usar la versión de AAPS **2.6.2**
 * Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
 
-Version 3.1.0
+Versión 3.1.0
 ================
-Release date: XX-XX-2022
+Fecha de lanzamiento: XX-XX-2022
 
 Notas importantes
 ----------------------
-* after update uninstall Wear app and install new version
-* Omnipod users: update on pod change
+* Después de actualizar, desinstalar la aplicación Wear del reloj e instalar la nueva versión (no se puede actualizar directamente)
+* Usuarios de Omnipod: Actualizar cuando toque cambio del POD
 
 Cambios
 ----------------------
-* fixed issues from 3.0 version
-* fix application freezing @MilosKozak
-* fixed DASH driver @avereha
-* fixed Dana drivers @MilosKozak
-* huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
-* widget @MilosKozak
-* Aidex CGM support @markvader @andyrozman (Pumpcontrol only)
-* Wear tiles, translations @Andries-Smith
-* Wear code refactored. Not backward compatible anymore @MilosKozak
+* Corrección de errores de la versión 3.0
+* Corrección de congelación de la aplicación @MilosKozak
+* Correcciones de los controladores de las bombas DASH @avereha
+* Corrección de controladores de las bombas Dana @MilosKozak
+* Importantes mejoras de la interfaz gráfica (UI), limpieza y unificación. Migración a "Material Design", estilos, tema claro, nuevos iconos, etc. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* Añadido Widget @MilosKozak
+* Soporte al MCG Aidex  @markvader @andyrozman (sólo Pumpcontrol)
+* Tarjetas Wear y traducciones @Andries-Smith
+* Código Wear refactorizado No compatible con versiones anteriores @MilosKozak
 * a11y improvements @Andries-Smith
 * new protection option PIN @Andries-Smit
 * allow graph scale from menu @MilosKozak
