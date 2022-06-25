@@ -32,7 +32,7 @@ Android 8
 Android 7
 ------------------------------------
 * Usar la versión de AAPS **2.6.2**
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
+* Descargar el código de AAPS desde https://github.com/nightscout/AndroidAPS branch 2.6.2
 
 Versión 3.1.0
 ================
