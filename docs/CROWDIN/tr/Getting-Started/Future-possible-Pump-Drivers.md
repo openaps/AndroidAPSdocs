@@ -10,13 +10,13 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **Hardware requirement for AAPS:** None. BT etkin.
 
-**Comments:** There are currently 2 groups working on driver, so after new version is released, we can expect to have AAPS support soon thereafter. One group is being supported by YpsoMed and helping with Medical trials that are happening in Australia, 2nd is working independently by reverse engineering original app.
+**Yorumlar:** Şu anda sürücü üzerinde çalışan 2 grup var, bu nedenle yeni sürüm yayınlandıktan sonra yakında AAPS desteği almayı bekleyebiliriz. Bir grup YpsoMed tarafından destekleniyor ve Avustralya'da gerçekleşen Tıbbi denemelere yardımcı oluyor, 2. grup ise tersine mühendislik orijinal uygulamasıyla bağımsız olarak çalışıyor.
 
 * * *
 
-### Kaleido ([Homepage](https://www.hellokaleido.com/))
+### Kaleido ([Ana Sayfa](https://www.hellokaleido.com/))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware requirement for AAPS:** Probably none. BT etkin.
 
@@ -84,7 +84,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Loop status:** Currently not supported by any of loop system. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
 **Hardware requirement for AAPS:** Probably none. BT etkin.
 
