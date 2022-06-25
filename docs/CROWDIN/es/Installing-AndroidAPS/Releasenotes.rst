@@ -54,11 +54,11 @@ Cambios
 * Soporte al MCG Aidex  @markvader @andyrozman (sólo Pumpcontrol)
 * Tarjetas Wear y traducciones @Andries-Smith
 * Código Wear refactorizado No compatible con versiones anteriores @MilosKozak
-* a11y improvements @Andries-Smith
-* new protection option PIN @Andries-Smit
-* allow graph scale from menu @MilosKozak
-* more statistics available @MilosKozak
-* MDI plugin removed in favor of VirtualPump
+* Mejoras A11Y (Mejoras de accesibilidad) @Andries-Smith
+* Nueva opción de protección PIN @Andries-Smit
+* Permite cambiar la escala gráfica desde el menú @MilosKozak
+* Más estadísticas disponibles @MilosKozak
+* Complemento MDI eliminado en favor de la Bomba Virtual
 
 Versión 3.0.0
 ================
@@ -78,15 +78,15 @@ Pasos de preparación
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
 * Si estás usando Dexcom G5/G6 y xDrip+ como recolector, tienes que actualizar al menos a la versión de xDrip+ del 14 de Enero de 2022 
-* if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+* Si estás usando G5/G6, es recomendable cambiar a BYODA, ya que permite el suavizado de datos (puedes seguir usando xDrip+ para otros propósitos, xDrip puede recibir los datos de BYODA)
 
 
 Cambios
 ----------------------
 * 100k lineas cambiadas, 105k nuevas líneas de código
-* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Soporte Omnipod DASH <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
+* `Soporte DiaconnG8 <../Configuration/DiaconnG8.html>`_
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
@@ -100,7 +100,7 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
+* NSProfile ha desaparecido, sólo se puede utilizar el perfil local. El perfil local puede ser `Sincronizado a Nightscout <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
 * Procedimiento de `restablecimiento de la contraseña maestra <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
