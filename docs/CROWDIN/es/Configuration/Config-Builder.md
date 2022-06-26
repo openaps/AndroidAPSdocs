@@ -4,17 +4,17 @@ Dependiendo de sus ajustes, puede abrir el administrador de configuraciones a tr
 
 ![Abrir configuraciones](../images/ConfBuild_Open_AAPS30.png)
 
-Tabla de configuraciones (CONF) es la pestaña en la donde se activan y desactivan las características de los diferentes módulos. Las opciones del lado izquierdo (A) permiten seleccionar cuál utilizar, las opciones del lado derecho (C) permite mostrarlas como pestañas (E) en AndroidAPS. En caso de que el recuadro correcto no esté activado, puede llegar a la función utilizando el menú de hamburguesa (D) en la parte superior izquierda de la pantalla.
+Tabla de configuraciones (CONF) es la pestaña en la donde se activan y desactivan las características de los diferentes módulos. Las opciones del lado izquierdo (A) permiten seleccionar cuál utilizar, las opciones del lado derecho (C) permite mostrarlas como pestañas (E) en AndroidAPS. En caso de que no esté activada la casilla correcta, puedes ir a la función utilizando el menú de hamburguesa (D) desde la parte superior izquierda de la pantalla.
 
-Cuando hay opciones adicionales disponibles en el módulo, puede hacer clic en la rueda dentada (B), que te llevará a la configuración específica dentro de las preferencias.
+Cuando el módulo dispone de configuraciones adicionales, podemos pulsar sobre la rueda dentada (B), para acceder a la configuración específica desde las preferencias.
 
-**Primera configuración:** En AAPS 2.0 un asistente de instalación le guía a través del proceso de configuración de AndroidAPS. Presione los 3 puntos en la parte superior derecha de la pantalla (F) y seleccione 'Asistente de configuración' para usarlo.
+**Primera configuración:** Desde AAPS 2.0 un asistente de instalación te guía te guiará a realizar el proceso de configuración de AndroidAPS. Pulsa sobre los 3 puntos en la parte superior derecha de la pantalla (F) y selecciona 'Asistente de configuración' para usar esta funcionalidad.
 
 ![Caja de configuraciones y engranaje](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
 ## Pestañas o menú de hamburguesa
 
-Con la casilla de verificación, bajo el símbolo de ojo, puede decidir cómo abrir la sección correspondiente del programa.
+Marcando o descarmando la casilla de verifiación debajo del símbolo del ojo, podemos decidir como se abrirá esa sección del programa.
 
 ![Pestañas o menú de hamburguesa](../images/ConfBuild_TabOrHH_AAPS30.png)
 
