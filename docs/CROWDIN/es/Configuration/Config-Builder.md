@@ -20,10 +20,10 @@ Marcando o descarmando la casilla de verifiación debajo del símbolo del ojo, p
 
 ## Perfil
 
-* Select the basal profile you wish to use. See [Profiles](../Usage/Profiles.md) page for more setup information.
-* As of AAPS 3.0, only the local profile is available.
+* Selecciona el perfil basal que quieres utilizar. Consulta la página [Perfiles](../Usage/Profiles.md) para obtener más información de configuración.
+* A partir de AAPS 3.0, sólo está disponible el perfil local.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+Sin embargo, es posible sincronizar un perfil Nightscout con un perfil local. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
 ### Local profile
 
