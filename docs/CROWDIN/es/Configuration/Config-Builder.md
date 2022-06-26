@@ -4,7 +4,7 @@ Dependiendo de sus ajustes, puede abrir el administrador de configuraciones a tr
 
 ![Abrir configuraciones](../images/ConfBuild_Open_AAPS30.png)
 
-Configuraciones (Conf.) es la pestaña en la donde se activan y desactivan las características modulares. Las opciones en el lado izquierdo (A) le permiten seleccionar cuál utilizar, las opciones del lado derecho (C) le permiten ver estas como pestañas. (E) en AndroidAPS. En caso de que el recuadro correcto no esté activado, puede llegar a la función utilizando el menú de hamburguesa (D) en la parte superior izquierda de la pantalla.
+Tabla de configuraciones (CONF) es la pestaña en la donde se activan y desactivan las características de los diferentes módulos. Las opciones del lado izquierdo (A) permiten seleccionar cuál utilizar, las opciones del lado derecho (C) permite mostrarlas como pestañas (E) en AndroidAPS. En caso de que el recuadro correcto no esté activado, puede llegar a la función utilizando el menú de hamburguesa (D) en la parte superior izquierda de la pantalla.
 
 Cuando hay opciones adicionales disponibles en el módulo, puede hacer clic en la rueda dentada (B), que te llevará a la configuración específica dentro de las preferencias.
 
