@@ -21,7 +21,7 @@ Finish exam
 * AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for `automation <../Usage/Automation.html>`_.
 * You have to finish exam (`objective 3 and 4 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) in order to complete `objective 11 <../Usage/Objectives.html#objective-10-automation>`__.
 * If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`__. 
-* This will not effect other objectives you have already finished. You will keep all finished objectives!
+* This will not effect other objectives you have already finished. Vai manter todos os objetivos acabados!
 
 Set master password
 -----------------------------------------------------------
@@ -34,7 +34,7 @@ Set master password
 .. image:: ../images/MasterPW.png
   :alt: Set master password
   
-Export settings
+Exportar definições
 -----------------------------------------------------------
 * AAPS 2.7 uses a new encrypted backup format. 
 * You must `export your settings <../Usage/ExportImportSettings.html>`_ after updating to version 2.7.
