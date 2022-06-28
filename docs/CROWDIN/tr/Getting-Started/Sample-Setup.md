@@ -148,4 +148,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Pompa Ayarları
 
-see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
+[Dana RS pompasına](../Configuration/DanaRS-Insulin-Pump.md) bakın

@@ -34,86 +34,86 @@
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Disk</td>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD is recommended.</td>
+    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD önerilir.</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Resolution</td>
-    <td class="tg-baqh" colspan="3"><p align="center">1280 x 800 Minimum <br></td>
+    <td class="tg-baqh"><p align="center">Çözünürlük</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Minimum 1280 x 800 <br></td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Internet</td>
-    <td class="tg-baqh" colspan="3"><p align="center">Broadband</td>
+    <td class="tg-baqh"><p align="center">İnternet</td>
+    <td class="tg-baqh" colspan="3"><p align="center">Geniş bant</td>
   </tr>
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Lütfen hem **64 bit CPU hem de 64 bit işletim sisteminin zorunlu koşul olduğunu unutmayın.** Sisteminiz bu koşulu karşılamıyorsa, etkilenen donanımı veya yazılımı veya tüm sistemi değiştirmeniz gerekir. **APS kurulum apk dosyasını oluştururken daha az zaman alacağından HDD (Sabit Disk Sürücüsü) yerine SSD (Katı Hal Diski) kullanılması şiddetle tavsiye edilir.** Sadece tavsiye edilir ancak zorunlu değildir. Bununla birlikte, apk dosyası oluştururken yine de bir HDD kullanabilirsiniz, ancak oluşturma işleminin tamamlanmasının uzun zaman alabileceğini unutmayın, ancak bir kez başlatıldığında, gözetimsiz çalışır durumda bırakabilirsiniz.
 
 * * *
 
-### This article is divided into two parts.
+### Bu makale iki bölüme ayrılmıştır.
 
-* In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
+* Genel bakış bölümünde, APK dosyasını oluşturmak için hangi adımların gerekli olduğuna dair bir açıklama vardır.
+* Adım adım izleme bölümünde, somut bir kurulumun ekran görüntülerini bulacaksınız. APK'yı oluşturmak için kullanacağımız yazılım geliştirme ortamı olan Android Studio'nun sürümleri çok hızlı değişeceğinden, bu sizin kurulumunuzla aynı olmayacak ancak size iyi bir başlangıç noktası sunacaktır. Android Studio ayrıca Windows, Mac OS X ve Linux üzerinde çalışır ve her platform arasında bazı yönlerden küçük farklılıklar olabilir. Önemli bir şeyin yanlış veya eksik olduğunu fark ederseniz, lütfen "AndroidAPS kullanıcıları" facebook grubuna haber verin veya Discord chat sohbet grubu altında [Android APS](https://discord.gg/4fQUWHZ4Mw)'a bir göz atabilirsiniz.
 
 ## Genel Bakış
 
-In general, the steps necessary to build the APK file:
+Genel olarak, APK dosyasını oluşturmak için gerekli adımlar:
 
 1. [Git yükleyin](../Installing-AndroidAPS/git-install.rst)
 2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Set git path in Android Studio preferences](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Download AndroidAPS code](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generate signed apk)
-7. [Transfer apk file to your phone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identify receiver if using xDrip+](..//Configuration/xdrip#identify-receiver)
+3. [Android Studio tercihlerinde git yolunu ayarlayın](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
+4. [AndroidAPS kodlarını indirin](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+5. [Android SDK'i indirin](../Installing-AndroidAPS/Building-APK#download-android-sdk)
+6. [Uygulamayı oluşturun](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (imzalı apk oluşturun)
+7. [Telefonunuza apk dosyasını aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+8. [Eğer xDrip+ kullanıyorsanız, alıcıyı tanımlayın](..//Configuration/xdrip#identify-receiver)
 
-## Step by step walkthrough
+## Adım adım izlenecek yol
 
-Detailed description of the steps necessary to build the APK file.
+APK dosyasını oluşturmak için gerekli adımların ayrıntılı açıklaması.
 
-## Install git (if you don't have it)
+## Git'i kurun (eğer yüklü değilse)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+[git kurulum sayfasındaki](../Installing-AndroidAPS/git-install.rst) kılavuzu izleyin.
 
 ## Android Studio'yu yükleyin
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Aşağıdaki ekran görüntüleri Android Studio Arctic Fox | 2020.3.1 Versiyonu. Android Studio'nun gelecekteki sürümlerinde ekranlar değişebilir. Ama üstesinden gelebilmelisiniz. [Topluluktan yardım](../Where-To-Go-For-Help/Connect-with-other-users.md) alınabilir.
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Android Studio'yu kurarken en önemli şeylerden biri: **Sabırlı olun!** Kurulum ve kurulum sırasında Android Studio, zaman alacak pek çok şey indirecektir.
 
-Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+[Android Studio'yu buradan](https://developer.android.com/studio/install.html) indirin ve bilgisayarınıza kurun.
 
-On first start you will find the setup wizard:
+İlk çalıştırmada kurulum sihirbazıyla karşılaşacaksınız:
 
-Select "Do not import settings" as you have not used it before.
+Daha önce kullanmadığınız için "Ayarları içe aktarmayın" seçeneğini seçin.
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+![Ayarları içe aktarmayın](../images/studioSetup/01_ImportSettings.png)
 
-Decide whether you want to share data with Google or not.
+Google ile veri paylaşmak isteyip istemediğinize karar verin.
 
-![Share data with Google](../images/studioSetup/02_DataSharing.png)
+![Google ile veri paylaşın](../images/studioSetup/02_DataSharing.png)
 
-On the following screen click "Next".
+Aşağıdaki ekranda "İleri" ye tıklayın.
 
-![Welcome screen](../images/studioSetup/03_Welcome.png)
+![Hoşgeldin ekranı](../images/studioSetup/03_Welcome.png)
 
-Select "Standard" installation and click "Next".
+"Standart" kurulumu seçin ve "İleri"ye tıklayın.
 
-![Standard installation](../images/studioSetup/04_InstallType.png)
+![Standart kurulum](../images/studioSetup/04_InstallType.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
+Beğendiğiniz kullanıcı arayüzü için temayı seçin. (Bu kılavuzda biz "Light" kullandık.) Ardından "İleri" ye tıklayın.
 
-> ***Note:*** This is just the color scheme. You can select whatever you like (i.e. "Darcula" for dark mode). This selection has no influence on building the APK but the following screenshots might look different.
+> ***Not:*** Bu yalnızca renk şemasıdır. İstediğinizi seçebilirsiniz (yani karanlık mod için "Darcula"). Bu seçimin APK oluşturma üzerinde hiçbir etkisi yoktur, ancak aşağıdaki ekran görüntüleri farklı görünebilir.
 
-![UI color scheme](../images/studioSetup/05_UITheme.png)
+![UI renk şeması](../images/studioSetup/05_UITheme.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+"Ayarları Doğrula" iletişim kutusunda "Finish" düğmesini tıklayın.
 
-![Verify settings](../images/studioSetup/06_Verify.png)
+![Ayarları doğrulayın](../images/studioSetup/06_Verify.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Android Studio ek bileşenleri indirirken bekleyin ve sabırlı olun. Her şey indirildikten sonra "Finish" düğmesi maviye döner. Şimdi düğmeye tıklayın.
 
 ![Downloading components](../images/studioSetup/07_Downloading.png)
 
@@ -164,7 +164,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
 
-## Download AndroidAPS code
+## AndroidAPS kodlarını indirin
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
@@ -200,48 +200,48 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
 
-* Grant access if your firewall is asking for permission.
+* Güvenlik duvarınız izin istiyorsa erişim izni verin.
     
-    ![Firewall permission java](../images/AndroidStudio361_18.png)
+    ![Güvenlik duvarı izni Java](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
+* Arka plan görevleri bittiğinde, muhtemelen (1) veya (2) veya (3) hataların oluştuğunu söyleyen bir hata göreceksiniz.
     
-    ![SDK licence](../images/studioSetup/25_SyncFailed.png)
+    ![SDK lisansı](../images/studioSetup/25_SyncFailed.png)
     
-    Don't worry, this will be solved soon!
+    Endişelenmeyin, bu yakında çözülecek!
 
-## Download Android SDK
+## Android SDK'i indirin
 
-* In the menu, go to File (1) > Settings (2).
+* Menüde File (1) > Settings (2)'ye gidin.
     
-    ![Open settings](../images/studioSetup/30_Settings.png)
+    ![Ayarları aç](../images/studioSetup/30_Settings.png)
 
-* Double-click on Appearance & Behaviour to open its submenu (1).
+* Alt menüsünü (1) açmak için "Appearance & Behaviour" üzerine çift tıklayın.
 
-* Double-click on System Settings (2) and select Android SDK (3).
-* Tick the box left of "Android 9.0 (Pie)" (4) (API Level 28).
+* System Settings'e (2) çift tıklayın ve Android SDK'yı (3) seçin.
+* "Android 9.0 (Pie)" (4) (API Level 28) öğesinin solundaki kutuyu işaretleyin.
     
-    ![SDK settings](../images/studioSetup/31_AndroidSDK.png)
+    ![SDK ayarları](../images/studioSetup/31_AndroidSDK.png)
 
-* Confirm changes by clicking OK.
+* Ok tıklatarak değişiklikleri onaylayın.
     
-    ![Confirm SDK changes](../images/studioSetup/32_ConfirmSDK.png)
+    ![SDK değişikliklerini onaylayın](../images/studioSetup/32_ConfirmSDK.png)
 
-* Accept licence agreement (1) and click "Next" (2).
+* Lisans sözleşmesini (1) kabul edin ve "Next"ye (2) tıklayın.
     
-    ![Accept SDK licence](../images/studioSetup/33_ConfirmLicense.png)
+    ![SDK lisansını kabul et](../images/studioSetup/33_ConfirmLicense.png)
 
-* Wait until the SDK download and installation is finished.
+* SDK indirmesi ve kurulumu tamamlanana kadar bekleyin.
     
-    ![Wait during SDK installation](../images/studioSetup/34_DownloadSDK.png)
+    ![SDK kurulumu sırasında bekleyin](../images/studioSetup/34_DownloadSDK.png)
 
-* When SDK installation is completed the "Finish" button will turn blue. Click this button.
+* SDK kurulumu tamamlandığında "Finish" düğmesi maviye döner. Bu düğmeye tıklayın.
     
-    ![Finish SDK installation](../images/studioSetup/35_DownloadSDKfinished.png)
+    ![SDK kurulumunu tamamlayın](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* Android Studio might recommend to update the gradle system. **Never update gradle!** This will lead to difficulties!
+* Android Studio, gradle sistemini güncellemenizi önerebilir. **Gradle'ı asla güncellemeyin!** Bu zorluklara yol açacaktır!
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
+* Android Studio pencerenizin sağ alt tarafında Android Gradle Plugin'in güncellemeye hazır olduğuna dair bir bilgi görürseniz, "güncelleme" (1) metnine tıklayın.
     
     ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 

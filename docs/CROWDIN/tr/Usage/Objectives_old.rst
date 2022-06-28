@@ -85,19 +85,19 @@ Stop here if you are open looping with a virtual pump - do not click Verify at t
 .. image:: ../images/blank.png
   :alt: blank
 
-Objective 6: Starting to close the loop with Low Glucose Suspend
+Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 ====================================================================================================
 .. image:: ../images/sign_warning.png
   :alt: Warning sign
   
-Closed loop will not correct high bg values in objective 6 as it is limited to low glucose suspend. High bg values have to be corrected manually by you!
+Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. High bg values have to be corrected manually by you!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 * Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
 * Set your target range slightly higher than you usually aim for, just to be safe.
 * Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
 * You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
-* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative (from a previous Low Glucose Suspend), otherwise basal rates will remain the same as your selected profile.  
+* Sistem, maxIOB ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal IOB negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
 
   .. image:: ../images/Objective6_negIOB.png
     :alt: Example negative IOB
@@ -142,7 +142,7 @@ Görev 11: Otomasyon
 ====================================================================================================
 * `Otomasyonu <../Usage/Automation.html>`_ kullanabilmek için görev 11'e başlamanız gerekir.
 * `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ sınav dahil tüm göevleri tamamladığınızdan emin olun.
-* Completing previous objectives will not effect other objectives you have already finished. You will keep all finished objectives!
+* Completing previous objectives will not effect other objectives you have already finished. Tüm tamamlanmış görevler korunacaktır!
 
 
 Go back in objectives

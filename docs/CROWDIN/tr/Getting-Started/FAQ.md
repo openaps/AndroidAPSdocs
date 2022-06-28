@@ -182,7 +182,7 @@ Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de 
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-In AMA, DIA actually doesn't mean the 'duration of insulin acting'. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. IOB'nin hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
+AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. IOB'nin hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
 
 ## Profil
 

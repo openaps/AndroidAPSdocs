@@ -10,7 +10,7 @@ Go to NSClient tab in AAPS and watch the log. The expected behavior is to receiv
 
 Since AndroidAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
 
-* Restart
+* Reiniciar
 
 What you should try as a first step is restart both: Nightscout and then phone to see if the issue is permanent
 

@@ -18,20 +18,20 @@ SMS Kommunikator
 * AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code.
 * AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Befehle, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 
-AndroidAPS can also be used by blind people
+AndroidAPS kann auch von Blinden genutzt werden
 ===========================================
 
-On Android devices TalkBack is part of the operating system. It is a program for screen orientation via voice output. With TalkBack you can operate your smartphone as well as AndroidAPS blind.
+Auf Android Geräten ist TalkBack Teil des Betriebssystems. Es handelt sich um ein Programm zur Bildschirmorientierung über die Sprachausgabe. Mit TalkBack können Sie sowohl Ihr Smartphone als auch AndroidAPS blind betreiben.
 
-We users create the AndroidAPS app ourselves with Android Studio. Many use Microsoft Windows for this purpose, where there is the Screenreader analogous to TalkBack. Since Android Studio is a Java application, the "Java Access Bridge" component must be enabled in the Control Panel. Otherwise, the screen reader of the PC will not speak in Android Studio.
+Wir Benutzer erstellen die AndroidAPS-App selbst mit Android Studio. Viele verwenden Microsoft Windows zu diesem Zweck, wo es den Screenreader analog zu TalkBack gibt. Da Android Studio eine Java-Anwendung ist, muss die Komponente "Java Access Bridge" in der Systemsteuerung aktiviert sein. Andernfalls wird der Screenreader des PCs nicht in Android Studio sprechen.
 
-To do this, please proceed as follows:  
+Bitte gehen Sie dazu wie folgt vor:  
 
-* Press WINDOWSTASTE and enter "Control Panel" in the search field, open with Enter. It opens: "All Control Panel Items". 
-* Press the letter C to get to "Center for Ease of Use", open with Enter.  
-* Then open "Use computer without a screen" with Enter. 
-* There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it. 
-* Done, just close the window! The screen reader should work now.
+* Drücken Sie WINDOWSTASTE und geben Sie in das Suchfeld "Systemsteuerung" ein, öffnen Sie mit Enter. Es öffnt: "Alle Systemsteuerungselemente". 
+* Drücken Sie den Buchstaben C, um zu "Center für erleichterte Bedienung" zu gelangen, öffnen Sie mit Enter.  
+* Dann öffnen Sie "Computer ohne Bildschirm verwenden" mit Enter. 
+* Dort unten finden Sie das Kontrollkästchen "Java Access Bridge aktivieren". 
+* Fertig, einfach das Fenster schließen! Der Screenreader sollte jetzt funktionieren.
 
 .. note:: 
    **WICHTIGER SICHERHEITSHINWEIS**

@@ -39,7 +39,7 @@
 
 * Set basal step on pump to 0.01 U/h using Doctors menu (see pump user guide).
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
-* Enable extended boluses on pump
+* Habilitar bolus estendido na bomba
 
 ### Default password
 

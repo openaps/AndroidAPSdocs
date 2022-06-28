@@ -8,94 +8,94 @@ Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştı�
 
 AndroidAPS'i kullanmaya başlamak için aşağıdaki adımlar izlenmelidir:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
-* [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
+* [Uyumlu bir pompa](../Hardware/pumps.md), [uyumlu bir Android cihaz](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) ve [uyumlu bir CGM kaynağı](../Configuration/BG-Source.rst) bulun.
+* [AndroidAPS kaynak kodunu indirin ve yazılımı derleyin](../Installing-AndroidAPS/Building-APK.md).
+* [Yazılımı diyabet cihazlarıyla konuşacak ve ayarları ve güvenlik tercihlerini belirleyecek şekilde yapılandırın](../index#configuration).
 
-### How A DIY Closed Loop Works
+### Bir KENDİN YAP Kapalı Döngü Nasıl Çalışır
 
-Without a closed loop system, a person with diabetes gathers data from their pump and CGM, decides what to do, and takes action.
+Kapalı döngü sistemi olmadan, diyabetli bir kişi pompasından ve CGM'sinden veri toplar, ne yapacağına karar verir ve harekete geçer.
 
-With automated insulin delivery, the system does the same thing: it gathers data from the pump, CGM, and anywhere else information is logged (such as Nightscout), uses this information to do the maths and decide how much more or less insulin is needed (above or below the underlying basal rate), and uses temporary basal rates to make the necessary adjustments to keep or eventually bring BGs into target range.
+Otomatik insülin iletimi ile sistem aynı şeyi yapar: pompadan, CGM'den ve günlüğe kaydedilen diğer bilgilerden (örneğin Nightscout aracılığıyla) verileri toplar. Bu bilgiyi hesaplamaları için bir temel olarak kullanır ve ne kadar daha fazla veya daha az insülin gerektiğine karar verir (geçici bazal oranlarını üstünde veya altında). KŞ'yi sabit veya hedef aralıkta tutmak için gerekli ayarlamaları yapmak için geçici bazal oranlar kullanılır.
 
-If the device running AndroidAPS breaks or goes out of range of the pump, once the latest temporary basal rate ends, the pump falls back to being a standard pump with the preprogrammed basals rates runnning.
+AndroidAPS çalıştıran cihaz pompanın bağlantısını koparırsa veya menzil dışına çıkarsa, en son geçici bazal oranı sona erdiğinde, pompa, önceden programlanmış bazal oranları çalıştıran varsayılan programa geri döner.
 
-### How data is gathered:
+### Veriler nasıl toplanır:
 
-With AndroidAPS, an Android device runs a special app to do the math, the device communicates using Bluetooth with a supported pump. AndroidAPS can communicate with other devices and to the cloud via wifi or mobile data to gather additional information, and to report to the patient, caregivers, and loved ones about what it’s doing and why.
+AndroidAPS ile, bir Android cihaz matematik yapmak için özel bir uygulama çalıştırır, cihaz desteklenen bir pompa ile Bluetooth kullanarak iletişim kurar. AndroidAPS, ek bilgi toplamak ve hastaya, bakıcılara ve sevdiklerine ne ve neden yaptığı hakkında rapor vermek için diğer cihazlarla ve bulutla wifi veya mobil veriler aracılığıyla iletişim kurabilir.
 
-The Android device needs to:
+Android cihazın şunları yapması gerekir:
 
-* communicate with the pump and read history - how much insulin has been delivered
-* communicate with the CGM (either directly, or via the cloud) - to see what BGs are/have been doing
+* pompa ile iletişim kurma ve geçmişi okuma - ne kadar insülin verildi
+* CGM ile iletişim kurmak (doğrudan veya bulut aracılığıyla) - KŞ'lerinin ne olduğunu/ne yaptığını görmek için
 
-When the device has collected this data, the algorithm runs and does the decision-making based on the settings (ISF, carb ratio, DIA, target, etc.). If required, it then issues commands to the pump to modify insulin delivery rate.
+Cihaz bu verileri topladıktan sonra algoritma çalışır ve ayarlara (İDF, karbonhidrat oranı, İES, hedef vb.) göre karar verir. Gerekirse, insülin iletim oranını değiştirmek için pompaya komutlar verir.
 
-It will also gather any information about boluses, carbohydrate consumption, and temporary target adjustments from the pump or from Nightscout to use it for the calculation of insulin delivery rates.
+Ayrıca, insülin iletim oranlarının hesaplanmasında kullanmak üzere pompadan veya Nightscout'tan boluslar, karbonhidrat tüketimi ve geçici hedef ayarlamaları hakkında her türlü bilgiyi toplayacaktır.
 
-### How does it know what to do?
+### Ne yapacağını nasıl biliyor?
 
-The open source software is designed to make it easy for the device to do the work people used to do (in manual mode) to calculate how insulin delivery should be adjusted. It first collects data from all the supporting devices and from the cloud, prepares the data and runs the calculations, makes predictions of expected BG-levels during the next hours will be expected to do in different scenarios, and calculates the needed adjustments to keep or bring BG back into target range. Next it sends any necessary adjustments to the pump. Then it reads the data back, and does it over and over again.
+Açık kaynaklı yazılım, insülin iletiminin nasıl ayarlanması gerektiğini hesaplamak için insanların yaptığı işi (manuel modda) cihazın yapmasını kolaylaştırmak için tasarlanmıştır. Önce tüm destekleyici cihazlardan ve buluttan veri toplar, verileri hazırlar ve hesaplamaları çalıştırır, sonraki saatlerde beklenen KŞ seviyelerine ilişkin tahminler yapar ve KŞini hedef aralıkta tutmak veya geri getirmek için gerekli ayarlamaları hesaplar. Ardından gerekli ayarlamaları pompaya gönderir. Sonra verileri geri okur ve tekrar tekrar yapar.
 
-As the most important input parameter is the blood glucose level coming from the CGM, it is important to have high-quality CGM data.
+En önemli girdi parametresi CGM'den gelen kan şekeri seviyesi olduğundan, yüksek kaliteli CGM verilerine sahip olmak önemlidir.
 
-AndroidAPS is designed to transparently track all input data it gathers, the resulting recommendation, and any action taken. It is therefore easy to answer the question at any time, “why is it doing X?” by reviewing the logs.
+AndroidAPS, topladığı tüm girdi verilerini, ortaya çıkan tavsiyeyi ve gerçekleştirilen herhangi bir eylemi şeffaf bir şekilde izlemek için tasarlanmıştır. Bu nedenle, günlükleri gözden geçirerek. “Neden X yapıyor?” Sorusuna herhangi bir zamanda cevap vermek kolaydır.
 
-### Examples of AndroidAPS algorithm decision making:
+### AndroidAPS algoritması karar verme örnekleri:
 
-AndroidAPS uses the same core algorithm and feature set as OpenAPS. The algorithm makes multiple predictions (based on settings, and the situation) representing different scenarios of what might happen in the future. In Nightscout, these are displayed as “purple lines”. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes#overview-tab). In the logs, it will describe which of these predictions and which time frame is driving the necessary actions.
+AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır. Algoritma, gelecekte neler olabileceğine dair farklı senaryoları temsil eden (ayarlara ve duruma göre) birden fazla tahminde bulunur. Nightscout'ta bunlar “mor çizgiler” olarak görüntülenir. AndroidAPS, bu [tahmin satırlarını](../Installing-AndroidAPS/Releasenotes#overview-tab) ayırmak için farklı renkler kullanır. Günlüklerde, bu tahminlerden hangisinin ve hangi zaman diliminin gerekli eylemleri yönlendirdiğini izlenebilir.
 
-#### Here are examples of the purple prediction lines, and how they might differ:
+#### İşte mor tahmin çizgilerinin örnekleri ve bunların nasıl farklı olabileceği:
 
-![Purple prediction line examples](../images/Prediction_lines.jpg)
+![Mor tahmin satırı örnekleri](../images/Prediction_lines.jpg)
 
-#### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+#### İnsülin iletiminde gerekli ayarlamaları etkileyen farklı zaman dilimlerine ilişkin örnekler aşağıda verilmiştir:
 
-#### Scenario 1 - Zero Temp for safety
+#### Senaryo 1 - Güvenlik için Sıfır Geçici
 
-In this example, BG is rising in the near-term time frame; however, it is predicted to be low over a longer time frame. In fact, it is predicted to go below target *and* the safety threshold. For safety to prevent the low, AndroidAPS will issue a zero temp (temporary basal rate at 0%), until the eventualBG (in any time frame) is above threshold.
+Bu örnekte, KŞ kısa vadede yükseliyor; ancak, daha uzun bir zaman diliminde düşük olacağı tahmin edilmektedir. Aslında, hedef *ve* güvenlik eşiğinin altına ineceği tahmin edilmektedir. Güvenlik amacıyla düşüğü önlemek için AndroidAPS, nihai KŞ (herhangi bir zaman aralığında) eşiğin üzerine çıkana kadar sıfır geçici (%0'da geçici bazal oran) verecektir.
 
-![Dosing scenario 1](../images/Dosing_scenario_1.jpg)
+![Senaryo 1](../images/Dosing_scenario_1.jpg)
 
-#### Scenario 2 - Zero temp for safety
+#### Senaryo 2 - Güvenlik için sıfır geçici
 
-In this example, BG is predicted to go low in the near-term, but is predicted to eventually be above target. However, because the near-term low is actually below the safety threshold, AndroidAPS will issue a zero temp, until there is no longer any point of the prediction line that is below threshold.
+Bu örnekte, KŞ'nin yakın vadede düşeceği, ancak sonunda hedefin üzerinde olacağı tahmin edilmektedir. Ancak, kısa vadeli beklenen değer güvenlik eşiğinin altında olduğundan, AndroidAPS, beklenen KŞ değeri artık herhangi bir zamanda eşiğin altında kalmayana kadar tekrar "sıfır geçici" kullanır.
 
-![Dosing scenario 2](../images/Dosing_scenario_2.jpg)
+![Senaryo 2](../images/Dosing_scenario_2.jpg)
 
-#### Scenario 3 - More insulin needed
+#### Senaryo 3 - Daha fazla insülin gerekli
 
-In this example, a near-term prediction shows a dip below target. However, it is not predicted to be below the safety threshold. The eventual BG is above target. Therefore, AndroidAPS will restrain from adding any insulin that would contribute to a near-term low (by adding insulin that would make the prediction go below threshold). It will then assess adding insulin to bring the lowest level of the eventual predicted BG down to target, once it is safe to do so. *(Depending on settings and the amount and timing of insulin required, this insulin may be delivered via temp basals or SMB's (super micro boluses) ).*
+Bu örnekteki tahmin, yakın gelecekte hedef değerin altına bir düşüş beklemektedir. Ancak güvenlik eşiğinin altında olması beklenmiyor. Nihai KŞ hedefin üzerindedir. Bu nedenle, eklenen insülin tahmini eşiğin altına getireceğinden, AndroidAPS kısa vadeli hipoya katkıda bulunacak insülin vermekten kaçınacaktır. Daha sonra, güvenli olduğunda, nihai olarak tahmin edilen KŞ'nin en düşük seviyesini hedefe indirmek için insülin eklenmesini değerlendirecektir. *(Gereken insülinin ayarına ve miktarına ve süresine bağlı olarak, bu insülin geçici bir bazal oran veya SMB (Süper Mikro Bolus) yoluyla iletilebilir).*
 
-![Dosing scenario 3](../images/Dosing_scenario_3.jpg)
+![Senaryo 3](../images/Dosing_scenario_3.jpg)
 
-#### Scenario 4 - Low temping for safety
+#### Senaryo 4 - Güvenlik nedenleriyle insülin dozunun azaltılması
 
-In this example, AndroidAPS sees that BG is spiking well above target. However, due to the timing of insulin, there is already enough insulin in the body to bring BG into range eventually. In fact, BG is predicted to eventually be below target. Therefore, AndroidAPS will not provide extra insulin so it will not contribute to a longer-timeframe low. Although BG is high/rising, a low temporary basal rate is likely here.
+Bu örnekte, AndroidAPS, KŞ'i hedefin oldukça üzerinde arttığını görüyor. Bununla birlikte, insülinin zamanlaması nedeniyle, vücutta zaten KŞ'i sonunda aralığa getirmek için yeterli insülin vardır. Aslında, KŞ sonunda hedefin altında olacağı tahmin edilmektedir. Bu nedenle, AndroidAPS orta vadede hipoglisemiye neden olmamak için herhangi bir ek insülin vermeyecektir. KŞ yüksek ve yükseliyor olsa da, AndroidAPS'nin böyle bir senaryoda bazal oranı düşürmesi daha olasıdır.
 
-![Dosing scenario 4](../images/Dosing_scenario_4.jpg)
+![Senaryo 4](../images/Dosing_scenario_4.jpg)
 
-### Optimizing settings and making changes
+### Ayarları optimize etme ve değişiklik yapma
 
-As a clinician who may not have experience with AndroidAPS or DIY closed loops, you may find it challenging to help your patient optimize their settings or make changes to improve their outcomes. We have multiple tools and [guides](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) in the community that help patients make small, tested adjustments to improve their settings.
+AndroidAPS veya DIY kapalı döngülerle deneyimi olmayan bir klinisyen olarak, hastanızın ayarlarını optimize etmesine veya sonuçlarını iyileştirmek için değişiklikler yapmasına yardımcı olmakta zorlanabilirsiniz. Toplulukta hastaların ayarlarını iyileştirmek için küçük, test edilmiş ayarlamalar yapmasına yardımcı olabilecek birden fazla aracımız ve [kılavuzumuz](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) mevcuttur.
 
-The most important thing for patients to do is make one change at a time, and observe the impact for 2-3 days before choosing to change or modify another setting (unless it’s obviously a bad change that makes things worse, in which case they should revert immediately to the previous setting). The human tendency is to turn all the knobs and change everything at once; but if someone does so, then they may end up with further sub-optimal settings for the future, and find it hard to get back to a known good state.
+Hastaların yapması gereken en önemli şey, her seferinde bir değişiklik yapmak ve başka bir ayar değişikliğine gitmeden önce 2-3 gün boyunca etkisini gözlemlemektir (böylelikle yapılan değişikliklik işleri kötüleştirdi ise, bu durumda hemen önceki ayara dönülebilir). İnsan eğilimi, tüm düğmeleri çevirmek ve her şeyi bir anda değiştirmektir; ama eğer biri bunu yaparsa, o zaman gelecek için daha fazla optimal olmayan ayarlarla karşılaşabilir ve bilinen iyi bir duruma geri dönmeyi zorlaştırabilir.
 
-One of the most powerful tools for making settings changes is an automated calculation tool for basal rates, ISF, and carb ratio. This is called “[Autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)”. It is designed to be run independently/manually, and allow the data to guide you or your patient in making incremental changes to settings. It is best practice in the community to run (or review) Autotune reports first, prior to attempting to make manual adjustments to settings. With AndroidAPS, Autotune will be run as a "one-off", although there are ongoing efforts to incorporate it directly into AndroidAPS as well. As these parameters are a prerequisite both for standard pump insulin delivery and for closed loop insulin delivery, discussion of the autotune results and adustment of these parameters would be the natural link to the clinician.
+Ayar değişiklikleri yapmak için en güçlü araçlardan biri, bazal oranlar, İDF ve karbonhidrat oranı için otomatik bir hesaplama aracıdır. Buna "[Otoayar](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html)" denir. Bağımsız/manuel olarak çalıştırılmak üzere tasarlanmıştır ve verilerin, ayarlarda artımlı değişiklikler yaparken size veya hastanıza rehberlik etmesine izin verir. Ayarlarda manuel ayarlamalar yapmaya çalışmadan önce, ilk olarak Otoayar raporlarını çalıştırmak (veya gözden geçirmek) topluluktaki en iyi uygulamadır. AndroidAPS ile, Otoayar "tek seferlik" olarak çalıştırılacak, ancak onu doğrudan AndroidAPS'ye dahil etmek için devam eden çabalar var. Bu parametreler hem standart pompalı insülin iletimi hem de kapalı döngü insülin iletimi için bir ön koşul olduğundan, otomatik ayar sonuçlarının tartışılması ve bu parametrelerin ayarlanması klinisyene doğal bağlantı olacaktır.
 
-Additionally, human behavior (learned from manual diabetes mode) often influences outcomes, even with a DIY closed loop. For example, if BG is predicted to go low and AndroidAPS reduces insulin on the way down, only a small amount of carbs (e.g. 3-4g carbs) may be needed to bring BG up from 70 mg/dl (3.9 mmol). However, in many cases, someone may choose to treat with many more carbs (e.g. sticking to the 15 rule), which will cause a resulting faster spike both from the extra glucose and because insulin had been reduced in the timeframe leading up to the low.
+Ek olarak, manuel diyabet tedavisinde öğrenilen insan davranışı, bir DIY kapalı döngü ile bile sonuçları sıklıkla etkiler. Örneğin, KŞ'nin düşeceği tahmin ediliyorsa ve AndroidAPS düşerken insülini azaltıyorsa, KŞ'yi 70 mg/dl'den (3,9 mmol) yükseltmek için yalnızca az miktarda karbonhidrat (örn. 3-4 g karbonhidrat) gerekebilir. Bununla birlikte, birçok durumda, birileri daha fazla karbonhidratla (örneğin 15 kuralına bağlı kalmak) tedavi etmeyi seçebilir, bu da hem ekstra glikozdan daha hızlı bir artışa neden olur hem de insülin zaman çerçevesinde azaltıldığından, düşük seviyeye yol açabilir.
 
 ### OpenAPS
 
-**This guide was adopted from [The clinician's guide to OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS is a system developed to be run on a small portable computer (generally referred to as the "rig"). AndroidAPS uses many of the techniques implemented in OpenAPS, and shares much of the logic and algorithms, which is why this guide is very similar to the original guide. Much of the information about OpenAPS can be easily adapted to AndroidAPS, with the main difference being the hardware platform where each peace of software is run.
+**Bu kılavuz [Klinisyenin OpenAPS kılavuzundan](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) uyarlanmıştır.** OpenAPS, küçük bir taşınabilir bilgisayarda (genellikle "teçhizat" olarak anılır) çalıştırılmak üzere geliştirilmiş bir sistemdir. AndroidAPS, OpenAPS'de uygulanan tekniklerin çoğunu kullanır ve mantık ve algoritmaların çoğunu paylaşır, bu yüzden bu kılavuz orijinal kılavuza çok benzer. OpenAPS ile ilgili bilgilerin çoğu, AndroidAPS'ye kolayca uyarlanabilir, ana fark, yazılımın üzerinde çalıştığı donanım platformudur.
 
-### Summary
+### Özet
 
-This is meant to be a high-level overview of how AndroidAPS works. For more details, ask your patient, reach out to the community, or read the full AndroidAPS documentation available online.
+Bu AndroidAPS'nin nasıl çalıştığına genel bir bakış olarak tasarlanmıştır. Daha fazla ayrıntı için hastanıza sorun, topluluğa ulaşın veya çevrimiçi olarak sunulan AndroidAPS belgelerinin tamamını okuyun.
 
-Additional recommended reading:
+Ek önerilen dökümanlar:
 
-* The [full AndroidAPS documentation](../index)
-* The [OpenAPS Reference Design](https://OpenAPS.org/reference-design/), which explains how OpenAPS is designed for safety: https://openaps.org/reference-design/
-* The [full OpenAPS documentation](https://openaps.readthedocs.io/en/latest/index.html) 
-  * More [details on OpenAPS calculations](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)
+* [Tam AndroidAPS belgeleri](../index)
+* OpenAPS'in güvenlik için nasıl tasarlandığını açıklayan [OpenAPS Referans Tasarımı](https://OpenAPS.org/reference-design/): https://openaps.org/reference-design/
+* [Tam OpenAPS belgeleri](https://openaps.readthedocs.io/en/latest/index.html) 
+  * [OpenAPS hesaplamalarıyla ilgili daha fazla ayrıntı](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html#understanding-the-determine-basal-logic)

@@ -451,13 +451,13 @@ Simgeler
 
     See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
 
-* **POD MGMT:**
+* **POD YNTM:**
 
     |pod_management|
 
     Pod yönetimi menüsüne yönlendirir
 
-* **ACK ALERTS:**
+* **BİLGİ UYARILARI:**
 
     |ack_alerts|
 
@@ -472,7 +472,7 @@ Simgeler
 
     Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
 
-* **SUSPEND:**
+* **ASKIYA AL:**
 
     |suspend|
 
@@ -528,7 +528,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 	*Adımlar arasındaki eşleştirme işlemi sırasında **pod takıldı** hatası alındığında
 	* **pod hiçbir şekilde eşleşmez.** ise
 
-* **Pod history**
+* **Pod geçmişi**
 
     |pod_history|
 
