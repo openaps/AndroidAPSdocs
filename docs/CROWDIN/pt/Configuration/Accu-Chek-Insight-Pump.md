@@ -1,12 +1,12 @@
-# Accu-Chek Insight Pump
+# Bomba Accu-Check Insight
 
-**This software is part of a DIY artificial pancreas solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you but allows you to improve your diabetes and your quality of life, if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
+**Este software é parte de uma solução DIY (faça você mesmo) e não é um produto, no entanto é necessário que VOCÊ leia, aprenda e compreenda o sistema, incluindo a forma de o usar. Não é algo que faz a gestão total da sua diabetes, mas permite melhorá-la, bem como a sua qualidade de vida se estiver disposto a dar-lhe o tempo necessário para isso. Não tenha demasiada pressa, permita-se ter tempo para aprender. Você é o responsável como utiliza e configura o sistema.**
 
 * * *
 
 ## ***WARNING:** If you have been using the Insight with **SightRemote** in the past, please **update to the newest AAPS version** and **uninstall SightRemote**.*
 
-## Hardware and software requirements
+## Requisitos de hardware e software
 
 * A Roche Accu-Chek Insight pump (any firmware, they all work)
 
@@ -15,7 +15,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 * An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module#phone) page which Android version is required to run AndroidAPS.)
 * The AndroidAPS app installed on your phone
 
-## Setup
+## Instalação
 
 * The Insight pump should only be connected to one device at a time. If you have previously used the Insight remote control (meter), you must remove the meter from the paired devices list of your pump: Menu > Settings > Communication > Remove device
     
@@ -50,7 +50,7 @@ Note: AAPS will write data always in **first basal rate profile in the pump**.
 
 Note: There will be no permanent connection between pump and phone. A connection will only be established if necessary (i.e. setting temporary basal rate, giving bolus, reading pump history...). Otherwise battery of phone and pump would drain way too fast.
 
-## Settings in AAPS
+## Configurações no AAPS
 
 **Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
 
@@ -102,7 +102,7 @@ In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump an
     
     ![Screenshot of Insight Status](../images/Insight_Status2.png)
 
-## Settings in the pump
+## Configurações na bomba
 
 Configure alarms in the pump as follows:
 
@@ -130,7 +130,7 @@ The Insight pump has a small internal battery to keep essential functions like t
 
 ## Insight specific errors
 
-### Extended bolus
+### Bólus estendido
 
 Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
