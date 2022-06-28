@@ -528,7 +528,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 	*Adımlar arasındaki eşleştirme işlemi sırasında **pod takıldı** hatası alındığında
 	* **pod hiçbir şekilde eşleşmez.** ise
 
-* **Pod history**
+* **Pod geçmişi**
 
     |pod_history|
 
