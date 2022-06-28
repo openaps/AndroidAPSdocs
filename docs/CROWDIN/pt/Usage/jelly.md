@@ -17,9 +17,9 @@
 
 The following settings and handling advice (use watch for daily operations instead of Jelly smartphone) lead to approx. 35 hours of battery life. An additional battery saving mode is not necessary, rather counterproductive, therefore turn off.
 
-![Jelly smartphone](../images/jelly_01.jpg)
+![Telemóvel Jelly](../images/jelly_01.jpg)
 
-### First setup
+### Primeira configuração
 
 <b><font color="#FF0000">Very important:</b></font> If you don't need Android 8.1 (i.e. to loop with an Accu-Check Combo) stay with android 7.0!
 
@@ -32,9 +32,9 @@ Follow these rules to stay with Android 7.0:
 * Every time you activate the wifi or mobile network you will be notified that a system update is available. Do not update! It is best to delete the notification so that you do not accidentally update. This would not be so easy to undo. 
 * Installed apps can and should be upgraded.
 
-![Jelly settings](../images/jelly_02.jpg)
+![Configurações do Jelly](../images/jelly_02.jpg)
 
-### Settings
+### Configurações
 
 * Use Jelly only for looping.
 * Set up wifi to install xDrip, AAPS and WearOS, otherwise wifi off. 
@@ -49,7 +49,7 @@ Follow these rules to stay with Android 7.0:
 * The daily operations only via the watch. Other settings and display use only during charging. 
 * Jelly, just like the pump, remains untouched under clothing all day long.
 
-## Tips
+## Dicas
 
 * The Jelly is a not always intuitive to use and sometimes acts like a baby diva. A restart (button on the right) every now and then might be a good idea.
 * In portrait view not all buttons might be displayed. So it is worth turning Jelly by 90 degrees.
