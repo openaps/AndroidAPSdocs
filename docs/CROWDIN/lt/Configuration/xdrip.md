@@ -44,8 +44,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Nustatyti gavėjus
 
-* Jei aptikote problemų su lokaliu duomenų perdavimu (AAPS negauna KG iš xDrip+), eikite į Nustatymai > Vidiniai nustatymai > Identifikuoti siųstuvą ir spauskite `info.nightscout.androidaps`.
-* Dėmesio: automatinis taisymas kartais keičia raidę i iš mažosios į didžiąją I raidę. Turite naudoti tik **mažąsias raides**, jei įvedate `info.nightscout.androidaps`. Didžioji I raidė neleidžia AAPS gauti glikemijos reikšmes iš xDrip+.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Dėmesio: automatinis taisymas kartais keičia raidę i iš mažosios į didžiąją I raidę. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 
