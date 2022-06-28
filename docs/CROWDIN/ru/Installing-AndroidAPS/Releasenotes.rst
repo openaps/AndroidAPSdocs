@@ -52,7 +52,7 @@ Release date: XX-XX-2022
 * fixed Dana drivers @MilosKozak
 * huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
-* Aidex CGM support @markvader @andyrozman (Pumpcontrol only)
+* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
 * Wear tiles, translations @Andries-Smith
 * Wear code refactored. Not backward compatible anymore @MilosKozak
 * a11y improvements @Andries-Smith
