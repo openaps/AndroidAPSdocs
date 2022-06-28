@@ -451,13 +451,13 @@ Simgeler
 
     See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
 
-* **POD MGMT:**
+* **POD YNTM:**
 
     |pod_management|
 
     Pod yönetimi menüsüne yönlendirir
 
-* **ACK ALERTS:**
+* **BİLGİ UYARILARI:**
 
     |ack_alerts|
 
@@ -472,7 +472,7 @@ Simgeler
 
     Basıldığında, pod'taki saat, telefonunuzdaki geçerli saatle güncellenir.
 
-* **SUSPEND:**
+* **ASKIYA AL:**
 
     |suspend|
 
