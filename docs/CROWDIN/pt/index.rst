@@ -1,14 +1,15 @@
-Welcome to the AndroidAPS documentation
+Bem-vindo à documentação da AndroidAPS
 ***************************************
 
 .. image:: images/modules-female.png
-  :alt: Components
+  :alt: Componentes
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter. 
+A AndroidAPS é uma aplicação de código aberto para pessoas que vivem com diabetes, insulino dependentes. 
+Atua como um sistema de pâncreas artificial em smartphones Google Android . Os principais componentes são diferentes algoritmos de software openAPS que têm como objetivo fazer o que um pâncreas humano faz: manter os níveis de açúcar no sangue dentro de limites saudáveis usando dosagem de insulina automatizada (AID). Adicionalmente, precisará de, pelo menos, um dispositivo de perfusão subcutânea de insulina (vulgarmente conhecida como bomba de insulina) e um medidor contínuo de glicose. 
 
-The app does NOT use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons. 
+A aplicação NÃO utiliza inteligência artificial auto-inteligente. Em vez disso, os cálculos do AndroidAPS são baseados no algoritmo de dosagem individual e ingestão de hidratos de carbono que o utilizador coloca manualmente no seu perfil de tratamentos, mas estes são verificados pelo sistema por razões de segurança. 
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+A app não é fornecida no Google Play Store. Terá de ser cada utilizador a construí-la individualmente a partir de código-fonte por motivos legais.
 
 How to read the documentation?
 ==============================
@@ -40,173 +41,173 @@ There is a subsection for the `clinicians <Resources/clinician-guide-to-AndroidA
 Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for `translation of the documentation <translations.html>`_ By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
 
-.. note::
+.. nota::
    Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 
-For more details, please read on here.
+Para mais detalhes, leia o seguinte.
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: Alterar idioma
 
-   Change language <./changelanguage.rst>
+   Alterar idioma <./changelanguage.rst>
 
-.. _getting-started:
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Getting started
-
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-
-.. _what-do-i-need:
+.. _Guia de Iniciação:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: Guia de Iniciação
 
-   Module <./Module/module.rst>
+   Segurança primeiro <./Getting-Started/Safety-first.rst>
+   O que é um sistema Closed Loop (Loop Fechado) <./Getting-Started/ClosedLoop.rst>
+   O que é um sistema de Closed Loop (Loop Fechado) com AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
+   Escolha da Bomba / Bombas "compatíveis" <./Getting-Started/Pump-Choices.md>
+   Atualizações de Documentos & alterações<./Getting-Started/WikiUpdate.rst>
+
+.. _do-que-preciso:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to Install AndroidAPS
+   :caption: Do que preciso? 
 
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+   Módulo <./Module/module.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Como Instalar a AndroidAPS
+
+   Construindo o APK <./Installing-AndroidAPS/Building-APK.md>
+   Actualizar para uma nova versão ou branch <./Installing-AndroidAPS/Update-to-new-version.md>
    Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-   Install git <./Installing-AndroidAPS/git-install.rst>
+   Verificações após a atualização para a AAPS 2.7 <./Instalando AndroidAPS/update2_7.rst>
+   Instalar o git <./Installing-AndroidAPS/git-install.rst>
    Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+   Notas de lançamento <./Installing-AndroidAPS/Releasenotes.md>
+   Branch Dev <./Installing-AndroidAPS/Dev_branch.md>
 
-.. _component-setup:
+.. _configuracao-dos-componentes:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: Configuração dos Componentes
 
-   CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+   CGM/FGM <./Configuration/BG-Source.md>
+   Configurações xDrip+ <./Configuration/xdrip.md>
+   Bombas de Insulina<./Hardware/pumps.rst>
+   Telefones <./Hardware/Phoneconfig.rst>
+   Configuração do Nightscout <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
 
-.. _configuration:
+.. _configuração:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: Configuração
 
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   Configurador<./Configuração/Config-Builder.md>
+   Preferências <./Configuration/Preferences.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: Utilização da AndroidAPS
 
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   Ecrãs do AndroidAPS <./Getting-Started/Screenshots.md>
+   Objetivos <./Usage/Objectives.md>
+   Recursos OpenAPS <./Usage/Open-APS-features.md>   
+   Cálculo COB <./Usage/COB-calculation.rst>
+   Detecção do fator de sensibilidade <./Configuration/Sensitivity-detection-and-COB.md>
+   Troca de Perfil <./Usage/Profiles.md>
+   Alvos-Temporários <./Usage/temptarget.md>   
+   Hidratos de carbono lentos <./Usage/Extended-Carbs.md>
+   Automação <./Usage/automation.md>
+   Careportal (descontinuado) <./Usage/CPbefore26.rst>
    Open Humans Uploader <./Configuration/OpenHumans.rst>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   Automação com outras apps <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: Dicas gerais 
 
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   Troca de fusos horários com bombas de insulina <./Usage/Timezone-traveling.md>
+   Aceder a registos <./Usage/Accessing-logfiles.md>
+   Accu-Chek Combo dicas uso básico <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   Exportar/Importar Configurações <./Usage/ExportImportSettings.rst>
+   Modo de engenheiro xDrip <./Uso/Enabling-Engineering-Mode-in-xDrid>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: AndroidAPS para crianças
 
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   Monitorização remota <./Crianças/Crianças.rst>
+   Comandos SMS<./Usage/SMS-Commands.md>
+   Auxiliar de perfil <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: Resolução de problemas
 
-   Troubleshooting <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: FAQ
-
-   FAQ <./Getting-Started/FAQ.md>
+   Resolução de Problemas <./Usage/troubleshooting.rst>
+   NSClient <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Glossary
+   :caption: Perguntas Frequentes
 
-   Glossary <./Getting-Started/Glossary.md>
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Where to go for help 
-
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   Perguntas Frequentes <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: Glossário
 
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   Glossário <./Getting-Started/Glossary.md>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Onde procurar ajuda 
+
+   Recursos úteis para ler antes de iniciar <./Where-To-Go-For-Help/Background-reading.md>
+   Onde pedir ajuda <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   Atualizações de Documentos & alterações<./Getting-Started/WikiUpdate.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: Para Equipas Médicas
+
+   Para Clínicos <./Resources/clinician-guide-to-AndroidAPS>
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: Como ajudar
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   Como ajudar <./Getting-Started/How-can-help.md>
+   Como traduzir a aplicação e a documentação <./translations.md>
+   Como editar a wiki <./make-a-PR>
 
 
-.. note:: 
-	**Disclaimer And Warning**
+.. nota:: 
+	* * Aviso e Isenção de Responsabilidade * *
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* Todas as informações, pensamento e código descritas aqui são destinadas apenas para fins informativos e educacionais. Nightscout atualmente não faz nenhuma tentativa de conformidade de privacidade do HIPAA. Use o Nightscout e a AndroidAPS sob a sua responsabilidade, e não use a informação ou código para tomar decisões médicas.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* O uso do código do github.com é sem garantia ou suporte formal de qualquer espécie. Por favor, consulte a LICENÇA deste repositório para detalhes.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
+	* Todos os nomes de produtos e empresas, marcas comerciais, marcas de serviços, marcas comerciais registadas e atendimentos de serviços registados são propriedade dos seus respetivos titulares. A sua utilização é para fins informativos e não implica nenhuma afiliação ou apoio por parte deles.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	Atenção- este projeto não tem nenhuma associação com nem é apoiado por: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ ou `Medtronic <https://www.medtronic.com/>`_
