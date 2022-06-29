@@ -44,8 +44,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Идентификатор ресивера
 
-* Если вы обнаружили проблемы с локальной трансляцией (AAPS не получает значения ГК из xDrip +), перейдите в Параметры > Взаимодействие приложений > Идентификация получателя и введите ` info.nightscout.androidaps `.
-* Внимание: Автокоррекция, как правило, меняет i на прописную букву. **Необходимо использовать только строчные буквы ** при вводе ` info.nightscout.androidaps `. Прописная I не позволит AAPS получать данные ГК из xDrip+.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Внимание: Автокоррекция, как правило, меняет i на прописную букву. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 

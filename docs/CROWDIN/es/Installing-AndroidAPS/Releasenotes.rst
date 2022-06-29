@@ -51,7 +51,7 @@ Cambios
 * Corrección de controladores de las bombas Dana @MilosKozak
 * Importantes mejoras de la interfaz gráfica (UI), limpieza y unificación. Migración a "Material Design", estilos, tema claro, nuevos iconos, etc. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * Añadido Widget @MilosKozak
-* Soporte al MCG Aidex  @markvader @andyrozman (sólo Pumpcontrol)
+* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
 * Tarjetas Wear y traducciones @Andries-Smith
 * Código Wear refactorizado No compatible con versiones anteriores @MilosKozak
 * Mejoras A11Y (Mejoras de accesibilidad) @Andries-Smith

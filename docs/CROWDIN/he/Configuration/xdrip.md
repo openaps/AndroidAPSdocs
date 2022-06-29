@@ -44,8 +44,8 @@
 
 ### זיהוי מקלט
 
-* אם אתם חווים בעיות בשידור מקומי (AAPS שאינו מקבל ערכי סוכר מ-xDrip+) גשו להגדרות > הגדרות לשיתוף פעולה בין אפליקציות > זיהוי מקלט והזינו `info.nightscout.androidaps`.
-* שימו לב: תיקון אוטומטי נוטה לפעמים לשנות את האות הראשונה לאות גדולה. **עליכם להשתמש באותיות קטנות בלבד** בעת הקלדת `info.nightscout.androidaps`. אותיות גדולות מונעות מ-AAPS לקבל את ערכי הסוכר מ-xDrip+.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* שימו לב: תיקון אוטומטי נוטה לפעמים לשנות את האות הראשונה לאות גדולה. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Basic Inter-app Settings Identify receiver](../images/xDrip_InterApp_NS.png)
 

@@ -44,8 +44,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Identificare receptor
 
-* Dacă apar probleme cu transmiterea locală (AAPS nu primește valorile glicemiei din xDrip+) mergi la Setări > Setări Inter-app > Identifica destinatarul și inscrie `info.nightscout.androidaps`.
-* Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. **Trebuie să utilizezi doar litere minuscule** la tastarea `info.nightscut.androids`, i scris I, ca majuscula, ar împiedica AAPS să primească valori ale glicemiei de la xDrip +.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Atenție: Auto-corectarea tinde uneori să schimbe litera i în majuscula I. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ identificare receptor prin setări de bază inter-aplicații](../images/xDrip_InterApp_NS.png)
 
