@@ -1,6 +1,6 @@
-# General CGM recommendations
+# Recomendações Gerais de CGM
 
-## CGM hygiene
+## Higiene CGM
 
 Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
@@ -16,7 +16,7 @@ When setting sensor, it is recommended not to press the inserter too firmly in o
 
 After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
 
-## Troubleshooting
+## Resolução de Problemas
 
 ### Connection problems
 
