@@ -1,13 +1,21 @@
 # Zoznam testovaných Telefónov
 
-Používatelia vytvárajú [zoznam otestovaných telefónov a hodiniek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
 
-Môžete použiť rôzne filtre pre zobrazenie konkrétnych púmp a telefónov. Prosím nastavte filtre naspäť do pôvodného stavu aby si ich aj ďalší čo prídu po Vás mohli pozrieť všetky.
+If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
 
-Pre pridanie telefónu alebo hodiniek, ktoré tam ešte nie sú, použite [formulár](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)
+The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
 
-V prípade akýchkoľvek problémov s tabuľkou napíšte na hardware@androidaps.org. Ak máte telefóny/hodinky, ktoré môžete darovať na testovanie, napíšte na donations@androidaps.org.
+## Omnipod
+
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+
+With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+
+After you fill in the form data the maintainer will check the data and approve it for publishing!
+
+Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
 
 # Pozadie na telefón
 
-![pozadie na telefón](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Ak si chcete telefón vyzdobiť ešte väčšou porciou AndroidAPS, môžete si stiahnuť toto pozadie: ![Pozadie vo vysokom rozlíšení.](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
