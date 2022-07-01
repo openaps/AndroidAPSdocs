@@ -1,13 +1,21 @@
 # Lijst van geteste telefoons en smartwatches
 
-Gebruikers houden een [lijst van geteste telefoons en horloges](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) bij
+Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
 
-Je kunt de lijst filteren op bepaalde pompen of telefoons maar zet de filters weer terug op 'alles weergeven' als je klaar bent, zodat de persoon na jou alles weer in beeld krijgt.
+If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
 
-Om een telefoon of horloge toe te voegen aan de lijst kun je dit [formulier](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) invullen
+The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
 
-Bij eventuele problemen met de spreadsheet, stuur een e-mail naar hardware@androidaps.org. Als je een telefoon/horloge die nog niet getest is wilt doneren, kunt je ook een e-mail sturen naar donations@androidaps.org.
+## Omnipod
+
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+
+With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+
+After you fill in the form data the maintainer will check the data and approve it for publishing!
+
+Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
 
 # Telefoon achtergrond
 
-![telefoon achtergrond](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> wanneer je je telefoon wilt verfraaiien met het AndroidAPS logo, kun je hier een achtergrondafbeelding downloaden: ![Achtergrond in hoge resolutie.](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
