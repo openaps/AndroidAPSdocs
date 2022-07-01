@@ -1,21 +1,21 @@
 # Liste der getesteten Smartphones
 
-Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
+Derzeit betreut ein freundlicher Betreuer eine Liste für AndroidAPS auf Handys, die mit den Omnipods Insulinpumpen verwendet werden, da die letzte Entwicklung eines Pumpentreibers für diese war und es notwendig war, dort mehr zwischen den frühen Anwendern zu kommunizieren.
 
-If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
+Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
 
-The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
+Der aktuelle Betreuer der Liste hat viel Zeit und Mühe aufgewendet, damit es einerseits einfach ist, die Daten einzugeben aber andererseits auch sicher ist, dass vorhandene Daten nicht versehentlich überschrieben oder gelöscht werden können. Auf diesen Erfahrungen mit Google Sheets kann aufgebaut werden und sicherlich einiges an Zeit gespart werden.
 
 ## Omnipod
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+Die Liste des getesteten Telefons kann über den folgenden Link [Liste der getesteten Telefone mit Omnipod-Insulinpumpe aufgerufen werden](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. Um den Test eines Telefons aufzunehmen, fülle bitte das [-Formular](https://forms.gle/g7GbSkMCTfFrWKjSA) aus.
 
-After you fill in the form data the maintainer will check the data and approve it for publishing!
+Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten überprüfen und sie zur Veröffentlichung freigeben!
 
-Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
 
 # Handy Hintergrundbild
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Wenn du dein Smartphone mit AndroidAPS verschönern willst, kannst du das Hintergrundbild hier herunterladen: ![Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)
