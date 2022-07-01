@@ -1,12 +1,20 @@
 # Liste der getesteten Smartphones
 
-Benutzer haben eine [Liste von getesteten Handys und Smartwatches](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) erstellt.
+Derzeit betreut ein freundlicher Betreuer eine Liste für AndroidAPS auf Handys, die mit den Omnipods Insulinpumpen verwendet werden, da die letzte Entwicklung eines Pumpentreibers für diese war und es notwendig war, dort mehr zwischen den frühen Anwendern zu kommunizieren.
 
-Man kann Filter benutzen, um nach bestimmten Pumpen oder Handys zu sortieren, aber bitte denke daran, die Filter zurückzusetzen wenn du fertig bist, damit die nächste Person die ganze Liste sehen kann.
+Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
 
-Um ein Handy oder eine Smartwatch einzutragen welches noch nicht in der Liste ist, bitte das [Formular](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) ausfüllen.
+Der aktuelle Betreuer der Liste hat viel Zeit und Mühe aufgewendet, damit es einerseits einfach ist, die Daten einzugeben aber andererseits auch sicher ist, dass vorhandene Daten nicht versehentlich überschrieben oder gelöscht werden können. Auf diesen Erfahrungen mit Google Sheets kann aufgebaut werden und sicherlich einiges an Zeit gespart werden.
 
-Bei Problemen mit der Liste bitten wir um eine Nachricht an hardware@androidaps.org. Falls Du ein Smartphone oder eine Smartwatch, die noch getestet werden sollten, zur Verfügung stellen kannst, schreibe bitte an donations@androidaps.org.
+## Omnipod
+
+Die Liste des getesteten Telefons kann über den folgenden Link [Liste der getesteten Telefone mit Omnipod-Insulinpumpe aufgerufen werden](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+
+Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. Um den Test eines Telefons aufzunehmen, fülle bitte das [-Formular](https://forms.gle/g7GbSkMCTfFrWKjSA) aus.
+
+Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten überprüfen und sie zur Veröffentlichung freigeben!
+
+Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
 
 # Handy Hintergrundbild
 

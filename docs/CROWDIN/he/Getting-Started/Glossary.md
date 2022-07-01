@@ -72,19 +72,19 @@
 </tr>
 <tr>
 <td><strong>BG source - מקור נתוני הסוכר</strong></td>
- <td>מקור הסוכר בדם הוא המקור הנתונים של ערכי הגלוקוז בדם. הם מגיעים מחיישני CGM או FGM שאתם קוראים בעזרת תוכנת אינטגרציה כמו BYODA, +xDrip וכו'.</td>
+ <td>The blood glucose source is the source where your blood glucose values come from. הם מגיעים מחיישני CGM או FGM שאתם קוראים בעזרת תוכנת אינטגרציה כמו BYODA, +xDrip וכו'.</td>
  <td>חיישן סוכר רציף \ פלאש</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - מקור נתוני הסוכר</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightrider</strong></td>
- <td>הגרסאות הראשונות של Freestyle Libre מסוגלות לתקשר רק באמצעות NFC, מה שאומר שהמטופל נאלץ להחזיק את המכשיר הנייד שלו קרוב מאוד לחיישן. ה-Blucon Nightrider סגר את הפער הזה. גרסאות חדשות יותר פועלות בדרכים אחרות! יש לברר את הדגם המתאים לכם לפני קנייה.</td>
+ <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile actively very near to the sensor. ה-Blucon Nightrider סגר את הפער הזה. גרסאות חדשות יותר פועלות בדרכים אחרות! יש לברר את הדגם המתאים לכם לפני קנייה.</td>
  <td>Nightrider / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightrider</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>הקיצור מייצג מינון בזאלי. מינון האינסולין שמוזרק בשעה נתונה לצורך שמירה על יציבות של רמת הסוכר בדם.</td>
+ <td>The abbrevation stands for basal rate. מינון האינסולין שמוזרק בשעה נתונה לצורך שמירה על יציבות של רמת הסוכר בדם.</td>
  <td>IC / ISF</td>
  <td>&nbsp;</td>
 </tr>
@@ -138,7 +138,7 @@
 </tr>
 <tr>
  <td><strong>eCarbs - פחמימות ממושכות</strong></td>
- <td>"פחמימות ממושכות" - פחמימות פרוסות על פני מספר שעות (הרבה שומן/חלבון)<br>בולוסים מושהים שאולי אתם מכירים מטיפול רגיל במשאבות אינם הגיוניים בשיטת הטיפול עם לולאה</td>
+ <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">דוגמה לשימוש פחמימות ממושכות</a></td>
 </tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git בהקשר שלנו כאן הוא הכלי להורדת קוד המקור של AndrdoidAPS מ-Github לצורך תהליך הבנייה. מערכת בקרת גרסאות למעקב אחר שינויים בקבצי מחשב ותיאום עבודה על אותם קבצים.<br> דרוש לעדכוני APK</td>
+ <td>git in our context here is the tool to mainly download the AndroidAPS sources from Github for the build process. מערכת בקרת גרסאות למעקב אחר שינויים בקבצי מחשב ותיאום עבודה על אותם קבצים.<br> דרוש לעדכוני APK</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - עדכון APK</a></td>
 </tr>
@@ -180,7 +180,7 @@
 </tr>
 <tr>
  <td><strong>אינ' פעיל</strong></td>
- <td>אינסולין פעיל בגוף</td>
+ <td>insulin on board -  Units of insulin currently active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -204,7 +204,7 @@
 </tr>
 <tr>
  <td><strong>Log files - קבצי יומן רישום</strong></td>
- <td>רישום של כל פעולות ה-AAPS (שימושי לפתרון בעיות ולטיפול בבאגים)</td>
+ <td>record of all AAPS actions (useful for troubleshooting and debugging)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - קבצי רישום</a></td>
 </tr>
@@ -222,19 +222,19 @@
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact (השפעת פחמימות מינימלית ב-5 דקות)</strong></td>
- <td>אמצעי בטיחות - ברירת מחדל של דעיכת פחמימות בזמנים בהם לא ניתן לחשב את ספיגת הפחמימות באופן דינמי על סמך תגובות הסוכר בדם</td>
+ <td>safety feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your BG reactions</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - בונה התצורה</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. AndroidAPS מאחסן שם את הנתונים. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'.</td>
+ <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>כלי שכתב משתמש לופ להפקת דוחות בקובצי PDF מנתוני אפליקציות אינטרנט של Nightscout, להצגה בפגישות עם צוות הסוכרת שלכם.</td>
+ <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
@@ -252,7 +252,7 @@
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>מערכת לבלב מלאכותית בקוד פתוח<br>פועלת על מחשבים קטנים (לדוגמה Raspberry Pi)<br> AAPS משתמשת בחלק מתכונותיה של OpenAPS</td>
+ <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pi)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">OpenAPS docs</a></td>
 </tr>
