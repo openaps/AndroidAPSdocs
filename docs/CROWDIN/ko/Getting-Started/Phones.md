@@ -1,13 +1,21 @@
 # 테스트 완료된 폰 목록
 
-사용자들이 직접 [테스트한 폰과 워치의 리스트](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)를 작성하고 있습니다.
+Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
 
-특정 펌프 혹은 스마트폰을 필터하여 볼 수 있습니다. 다만 확인 후에는 다음 사람들이 확인할 수 있도록 모두 원상복구해주세요.
+If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
 
-스프레드시트에 기록되어 있지 않은 스마트폰 혹은 워치를 추가하려면 다음 [양식](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform)을 작성해주세요.
+The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
 
-목록상에 어떠한 문제가 있으면 hardware@androidaps.org로 이메일을 보내어 주세요. 테스트 되지 않은 폰/워치를 기부를 원하시면 donations@androidaps.org로 이메일을 보내어 주세요.
+## Omnipod
+
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+
+With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+
+After you fill in the form data the maintainer will check the data and approve it for publishing!
+
+Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
 
 # 스마트폰 배경화면
 
-![스마트폰 배경화면](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> AndroidAPS로 당신의 스마트폰을 꾸미고 싶다면, 아래에서 배경화면을 다운로드 할 수 있습니다. ![고해상도 배경화면](../images/bg_phone.jpg)
+![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
