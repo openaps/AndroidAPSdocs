@@ -64,7 +64,7 @@ Pour le moment, il y a deux langages utilisés pour les pages de documents :
 * Markdown (.md) - le langage utilisé à l'origine pour les pages de documentation
 * reStructuredText (.rst) - le nouveau langage utilisé
 
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. En attendant, il est important que vous utilisez la syntaxe correcte lors de la mise en forme du texte ou des liens. Si vous n'êtes pas sûr, regardez juste le code des formats/liens sur les pages existantes.
+Nous allons convertir toutes les pages docs à moyen terme de ReStructuredText à un format MarkDown petit à petit. En attendant, il est important que vous utilisez la syntaxe correcte lors de la mise en forme du texte ou des liens. Si vous n'êtes pas sûr, regardez juste le code des formats/liens sur les pages existantes.
 
 ### Taille des images
 
