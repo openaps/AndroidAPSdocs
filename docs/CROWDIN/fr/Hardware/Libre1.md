@@ -15,15 +15,15 @@ As it currently stands, if using Libre 1 as BG source you cannot activate ‘Ena
 ## Si vous utilisez xDrip+
 
 -   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
+-   Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
+-   Sélectionnez xDrip dans la Configuration (dans AndroidAPS).
 -   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ## Si vous utilisez Glimp
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
+-   Vous aurez besoin de Glimp version 4.15.57 ou plus récente. Older versions are not supported.
 -   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AndroidAPS).
+-   Sélectionnez Glimp dans la Configuration (Menu hamburger dans AndroidAPS).
