@@ -441,7 +441,7 @@ Champs
 Icônes
 -----
 
-* **REFRESH:**
+* **ACTUALISER:**
 
     |refresh_pod_status|
 
@@ -449,36 +449,36 @@ Icônes
 
     A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
 
-    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    Voir la section `Dépannage <#depannage>`__ ci-dessous pour plus d'informations.
 
-* **POD MGMT:**
+* **GEST. POD:**
 
     |pod_management|
 
     Permet d'accéder au menu de gestion du pod
 
-* **ACK ALERTS:**
+* **ACCEPTER ALERTES:**
 
     |ack_alerts|
 
     Lorsque vous cliquez dessus, cela désactivera les bips d'expiration du pod et les notifications.
 
-    Button is displayed only when pod time is past expiration warning time
+    Le bouton ne s'affiche que lorsque la durée d'utilisation du pod dépasse le seuil d'alerte d'expiration
     En cas de désactivation réussi, cette icône n'apparaîtra plus.
 
-* **SET TIME:**
+* **DÉFINIR L'HEURE:**
 
     |set_time|
 
     Lorsque vous cliquez dessus, cela mettra à jour l'heure du pod avec l'heure actuelle de votre téléphone.
 
-* **SUSPEND:**
+* **SUSPENDRE:**
 
     |suspend|
 
     Suspend le pod actif
 
-* **RESUME DELIVERY:**
+* **REPRENDRE L'INJECTION:**
 
     |resume|
 
@@ -492,13 +492,13 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
     |Omnipod_Tab_Pod_Management|
 
-* **Activate Pod**
+* **Activer Pod**
 
     |activate_pod|
 
     Amorce et active un nouveau pod
 
-* **Deactivate Pod**
+* **Désactiver Pod**
 
     |deactivate_pod|
 
@@ -510,13 +510,13 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
     If the button is disabled (greyed out) use the Discard Pod button.
 
-* **Play test beep**
+* **Tester les bips**
 
     |play_test_beep|
 
     Joue un bip de test unique sur le pod quand vous cliquez dessus.
 
-* **Discard pod**
+* **Supprimer Pod**
 
     |discard_pod|
 
@@ -528,13 +528,13 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	* Un **pod est bloqué** pendant le processus d'appairage entre deux étapes
 	* Un **pod ne s'appaire tout simplement pas.**
 
-* **Pod history**
+* **Historique du Pod**
 
     |pod_history|
 
     Affiche l'historique de l'activité du pod actif
 
-* **RileyLink stats:**
+* **Stats RileyLink:**
 
     |rileylink_stats|
 
@@ -543,7 +543,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 	* **Paramètres** - affiche les paramètres du RileyLink et du pod actif
 	* **Historique** - affiche l'historique de communication du RileyLink et du Pod
 
-* **Reset RileyLink Config**
+* **Réinitialiser la config. RileyLink**
 
     |reset_rileylink_config|
 
@@ -557,7 +557,7 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
 	* Voir les `remarques additionnelles <#remarque-concernant-reinit-config-rileyLink>`__ à la fin de ce tableau
 
-* **Read pulse log:**
+* **Lire Journal d'impulsions:**
 
     |pulse_log|
 
