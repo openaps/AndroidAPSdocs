@@ -79,7 +79,7 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
 2. Désactivez ou supprimez tous les autres périphériques bluetooth afin qu'ils ne soient pas en mesure d'établir une connexion au téléphone pendant que l'appairage est en cours. Toute communication bluetooth parallèle ou demande de connexions peut perturber le processus d'appairage.
 
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
+3. Supprimez tous les appareils connectés dans le menu Bluetooth de la pompe : **RÉGLAGE BLUETOOTH / CONNEXION / SUPPR. APPAREIL** jusqu'à ce que **AUCUN APPAREIL LIÉ** soit affiché.
 
 4. Supprimer une pompe déjà connecté au téléphone via Bluetooth : dans Paramètres / Bluetooth, retirez l'appareil couplé "**SpiritCombo**"
 5. Assurez-vous que AAPS n'exécute pas la boucle en arrière-plan. Désactiver la boucle dans AAPS.
