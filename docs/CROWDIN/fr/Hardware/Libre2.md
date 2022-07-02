@@ -1,52 +1,52 @@
 # Freestyle Libre 2
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone.
+Le système Freestyle Libre 2 peut automatiquement signaler des niveaux de glycémie dangereux. Le capteur Libre2 envoie le taux de glycémie actuel à un récepteur (lecteur ou smartphone) chaque minute. Le récepteur déclenche une alarme si nécessaire. Avec une application LibreLink modifiée par vous-même et l'application xDrip+, vous pouvez recevoir en permanence votre taux de sucre dans le sang sur votre smartphone.
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+Le capteur peut être étalonné de -40 mg/dl à +20 mg/dl (-2,2 mmol/l à +1,1 mmol/l) pour ajuster les différences entre les glycémies capillaires et les lectures des capteurs.
 
-BG readings can also be done using a BT transmitter like with the Libre1.
+Les glycémies peuvent également être transmise avec un émetteur BT comme avec le Libre1.
 
-Important note : This does not work with the US version of the Freestyle 2 sensor ! La version US ne se connectera qu'à un lecteur, pas à un téléphone.
+Remarque importante : Ceci ne fonctionne pas avec la version US du capteur Freestyle 2 ! La version US ne se connectera qu'à un lecteur, pas à un téléphone.
 
 ## Étape 1 : Construire votre propre application Librelink patchée
 
-Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. There are mainly two variants: The recommended original patched app blocks any internet traffic to avoid tracking. The other variant supports LibreView which may be needed by your doctor.
+Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. Il y a deux principales variantes : L'application patchée d'origine recommandée bloque tout trafic Internet pour éviter le suivi. L'autre variante supporte LibreView qui peut être nécessaire pour votre médecin.
 
-The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
+L'application patchée doit être installée au lieu de l'application originale. Le prochain capteur démarré avec celle-ci transmettra les valeurs actuelles de glycémie à l'application xDrip+ exécutée sur votre smartphone via Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. Cela ne consomme pas plus d'énergie. Installez ensuite l'application patchée.
+Important : Pour éviter d'éventuels problèmes, il peut être utile dans un premier temps d'installer et de désinstaller l'application originale sur un smartphone compatible NFC. Le NFC doit être activé. Cela ne consomme pas plus d'énergie. Installez ensuite l'application patchée.
 
-The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
+L'application patchée peut être identifiée par la notification d'autorisation au premier plan. Le service d'autorisation au premier plan améliore la stabilité de la connexion par rapport à l'application d'origine qui n'utilise pas ce service.
 
 ![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
+D'autres indications pourraient être le logo du pingouin Linux à trois points -> Info ou la police de l'application patchée. Ces critères sont facultatifs en fonction de la source de l'application que vous choisissez.
 
 ![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
-Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
+Assurez-vous que NFC est activé, activez l'autorisation de mémoire et d'emplacement pour l'application corrigée, activez l'heure et le fuseau horaire automatiques et définissez au moins une alarme dans l'application patchée.
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Assurez-vous d'avoir défini tous les paramètres.
+Maintenant, démarrez le détecteur Libre2 avec l'application patchée en scannant simplement le capteur. Assurez-vous d'avoir défini tous les paramètres.
 
 Paramètres obligatoires pour réussir le démarrage du capteur :
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+-   NFC activé / BT activé
+-   autorisation de mémoire et d'emplacement activée
+-   service d'emplacement activé
+-   réglage automatique de l'heure et du fuseau horaire
+-   définir au moins une alarme dans l'application patchée
 
-Veuillez noter que l'activation du service de localisation est primordial. This is not the app location permission which has to be set also!
+Veuillez noter que l'activation du service de localisation est primordial. Il ne s'agit pas de l'autorisation d'application qui doit être également définie !
 
 ![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
 ![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
-Le capteur se souvient de l'appareil avec lequel il a été démarré. Only this device can receive alarms in the future.
+Le capteur se souvient de l'appareil avec lequel il a été démarré. Seul cet appareil peut recevoir les alarmes à l'avenir.
 
-La première configuration de connexion au capteur est critique. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. Si un ou plusieurs paramètres obligatoires sont manquants, ils doivent être renseignés. Vous n'avez pas de limite de temps pour le faire. The sensor is constantly trying to setup the connection. Même si cela dure plusieurs heures. Be patient and try different settings before even think of changing the sensor.
+La première configuration de connexion au capteur est critique. L'application LibreLink tente d'établir une connexion sans fil au capteur toutes les 30 secondes. Si un ou plusieurs paramètres obligatoires sont manquants, ils doivent être renseignés. Vous n'avez pas de limite de temps pour le faire. Le capteur essaye constamment de configurer la connexion. Même si cela dure plusieurs heures. Soyez patient et essayez différents paramétres avant d'envisager de changer le capteur.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
+Tant que vous voyez un point d'exclamation rouge ("!") dans le coin supérieur gauche de l'écran de démarrage de LibreLinks, il n'y a pas de connexion ou d'autres blocs de configuration LibreLink pour signaler des alarmes. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
@@ -86,10 +86,10 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 -   Si ce n'est pas déjà configuré, alors téléchargez l'application xDrip+ et installez une des dernières pre-release à partir  [d'ici](https://github.com/NightscoutFoundation/xDrip/releases).
 -   Dans xDrip+ sélectionnez "Libre2 (patched App)" comme source de données matérielle
 -   Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Extra Logging Settings -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
 -   pour permettre à AAPS de recevoir des taux de glycémie (version 2.5. et plus récentes) de xDrip+ veuillez définir <a href="../Configuration/xdrip#identifier-recepteur" > Paramètres > Paramètres Interapp > Identifier le récepteur "info. ightscout.androidaps"</a>
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
+-   Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
