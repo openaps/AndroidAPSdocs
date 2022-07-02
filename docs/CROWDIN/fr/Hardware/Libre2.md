@@ -46,50 +46,50 @@ Le capteur se souvient de l'appareil avec lequel il a été démarré. Only this
 
 La première configuration de connexion au capteur est critique. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. Si un ou plusieurs paramètres obligatoires sont manquants, ils doivent être renseignés. Vous n'avez pas de limite de temps pour le faire. The sensor is constantly trying to setup the connection. Même si cela dure plusieurs heures. Be patient and try different settings before even think of changing the sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
 
 ![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Si le point d'exclamation reste ou si vous obtenez un message d'erreur, cela peut avoir plusieurs raisons :
 
--   Android location service is not granted - please enable it in the system settings
--   automatic time and time zone not set - please change the settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
--   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
--   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+-   le service de localisation Android n'est pas autorisé - veuillez l'activer dans les paramètres système
+-   le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
+-   activez les alarmes - au moins une des trois alarmes doit être activée dans LibreLink
+-   le Bluetooth est éteint - veuillez l'activer
+-   le son est bloqué
+-   les notifications de l'application sont bloquées
+-   les notifications de l'écran de veille sont bloqués
+-   vous avez un capteur Libre 2 défectueux provenant d'un LOT avec un 'K' suivi de 8 chiffres. Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
 
-Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. Dans les deux cas, c'est bon. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver, selon les paramètres du système, que le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
 
 ![LibreLink connection established](../images/Libre2_Connected.png)
 
-In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
+Dans de rares cas, cela peut aider de vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique. Cette procédure est enregistrée car le capteur démarré est mémorisé par l'application LibreLink patchée . Il ne faut rien faire de plus ici. Il suffit d'attendre que l'application patchée se connecte au capteur.
 
-After a successful connection the smartphone settings can be changed if necessary. Cela n'est pas recommandé, mais vous pouvez vouloir économiser de l'énergie. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The blood sugar levels are transferred anyway.
+Après une connexion réussie, les paramètres du smartphone peuvent être modifiés si nécessaire. Cela n'est pas recommandé, mais vous pouvez vouloir économiser de l'énergie. Le service de localisation peut être éteint, le volume peut être réglé à zéro ou les alarmes peuvent être à nouveau désactivées. Les glycémies sont de toute façon transmises.
 
 Toutefois, lors du démarrage du capteur suivant, tous les paramètres devront à nouveau être définis !
 
-Remark: The patched app needs the mandatory settings set in that hour after warmup to enable a connection. For the 14 days operation time they are not needed. In most cases when you have problems with starting a sensor the location service was switched off. For Android it is needed for proper bluetooth operation(!) to connect. Please refer to Google's Android documentation.
+Remarque: L'application patchée en a besoin dans l'heure qui suit le préchauffage pour activer une connexion. Pour les 14 jours de fonctionnement, ils ne sont pas nécessaires. Dans la plupart des cas, lorsque vous rencontrez des problèmes avec le démarrage d'un capteur, le service de localisation a été désactivé. Sur Android c'est nécessaire pour la bonne connection bluetooth (!). Reportez-vous à la documentation Android de Google.
 
-During the 14 days you can use in parallel one or more NFC capable smartphones (not the reader device!) running the original LibreLink app for scanning via NFC. Il n'y a pas de limite de temps pour les démarrer. You could use a parallel phone for example on day 5 or so. The parallel phones(s) could upload the blood sugar values into the Abbott Cloud (LibreView). LibreView peut générer des rapports pour votre équipe soignante. Il y a beaucoup de parents qui en ont absolument besoin.
+Pendant les 14 jours, vous pouvez utiliser un ou plusieurs smartphones NFC (pas le lecteur !) avec l'application LibreLink pour le scanner via NFC. Il n'y a pas de limite de temps pour les démarrer. Vous pouvez par exemple utiliser un téléphone en parallèle à partir du 5ème jour. Le second téléphone peut télécharger les glycémies dans le Cloud d'Abbott (LibreView). LibreView peut générer des rapports pour votre équipe soignante. Il y a beaucoup de parents qui en ont absolument besoin.
 
-Please note that the original patched app **does not have any connection to the internet** to avoid tracking.
+Veuillez noter que l'application patchée d'origine **n'a aucune connection Internet** pour éviter le tracking.
 
-However there is a variant of the patched app supporting LibreView with enabled internet access. Please be aware that your data is transferred to the cloud then. But your diadoc tool- and reporting chain is fully supported then. With that variant it is also possible to move the alarms of a running sensor to a different device which not has started the sensor. Please google in diabetes related German forums how this could be done.
+Cependant, il existe une variante de l'application patchée supportant LibreView avec un accès Internet activé. Veuillez noter que vos données sont ensuite transférées dans le cloud. Mais votre outil diadoc et les rapports sont entièrement pris en charge ensuite. Avec cette variante il est également possible de déplacer les alarmes vers un autre appareil qui n'a pas démarré le capteur. Cherchez avec google dans les forums allemands sur le diabète pour voir comment cela peut être fait.
 
 ## Étape 2 : Installer et configurer l'application xDrip+
 
 Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 
--   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 (patched App)" as data source
--   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
+-   Si ce n'est pas déjà configuré, alors téléchargez l'application xDrip+ et installez une des dernières pre-release à partir  [d'ici](https://github.com/NightscoutFoundation/xDrip/releases).
+-   Dans xDrip+ sélectionnez "Libre2 (patched App)" comme source de données matérielle
+-   Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Extra Logging Settings -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   pour permettre à AAPS de recevoir des taux de glycémie (version 2.5. et plus récentes) de xDrip+ veuillez définir <a href="../Configuration/xdrip#identifier-recepteur" > Paramètres > Paramètres Interapp > Identifier le récepteur "info. ightscout.androidaps"</a>
+-   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
@@ -177,12 +177,12 @@ The Droplet transmitter is working with Libre2 also but uses an internet service
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
--   the BG readings are identical to the reader results
--   the Libre2 sensor can be used 14.5 days as with the Libre1 before
--   8 hours Backfilling is fully supported.
--   get BG readings during the one hour startup time of a new sensor
+-   les GLY sont identiques aux résultats du lecteur
+-   le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1
+-   8 heures d'historique sont entièrement pris en charge.
+-   obtenir des glycémies pendant l'heure de démarrage d'un nouveau capteur
 
-Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
+Remarque : L'émetteur peut être utilisé en parallèle avec l'application LibreLink. It doesn't disturb the patched LibreLink app operation.
 
 Remarque 2: L'algorithme OOP ne peut pas encore être calibré. This will be changed in the future.
 
