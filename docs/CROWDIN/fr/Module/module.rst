@@ -54,9 +54,9 @@ AndroidAPS fonctionne **actuellement** avec
 * `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
 * `certaines anciennes pompes Medtronic <../Configuration/MedtronicPump.html>`_ de la version 2.4 à venir (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`__ nécessaires)
 * `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`dispositif de communication supplémentaire <../Module/module#peripherique-de-communication-additionnel>`__ nécessaire)
-* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+* `Pompe Omnipod Dash <../Configuration/OmnipodDASH.html>`_ 
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+Si aucun périphérique de communication supplémentaire n'est indiqué, la communication entre la pompe à insuline et AndroidAPS est basée sur la puce bluetooth intégrée dans Android sans avoir besoin d'un boitier supplémentaire.
 
 **D'autres pompes**, qui peuvent potentiellement fonctionner avec AndroidAPS, sont listées sur la page `Futures pompes (possible) <../Getting-Started/Future-possible-Pump-Drivers.html>`_.
 
@@ -69,7 +69,7 @@ Pour les anciennes pompes medtronic, un périphérique de communication supplém
 * |OrangeLink|  `Site internet OrangeLink <https://getrileylink.org/product/orangelink>`_    
 * |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
 * |EmaLink|  `Site internet Emalink <https://github.com/sks01/EmaLink>`__ - `Contact <mailto:getemalink@gmail.com>`__  
-* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
+* |DiaLink| DiaLink - `Informations de contact <mailto:Boshetyn@ukr.net>`__     
 * |LoopLink|  `Site internet LoopLink <https://www.getlooplink.org/>`__ - `Contact <https://jameswedding.substack.com/>`__ - Non testé
 
 **Alors quelle est la meilleure pompe pour boucler avec AndroidAPS ?**
