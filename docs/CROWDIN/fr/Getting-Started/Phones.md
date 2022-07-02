@@ -18,4 +18,4 @@ Any problems with the spreadsheet please contact us directly or via a GitHub iss
 
 # Fond d'écran
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![fond d'écran](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Si vous voulez décorer votre téléphone avec plus d'AndroidAPS, vous pouvez télécharger votre image d'arrière-plan ici : ![Fond d'écran en haute résolution.](../images/bg_phone.jpg)
