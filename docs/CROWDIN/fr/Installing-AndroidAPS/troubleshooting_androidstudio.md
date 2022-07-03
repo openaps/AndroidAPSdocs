@@ -188,7 +188,7 @@ Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java liv
 
 * Si vous utilisez l'application Dexcom G6 patchée, cette application est obsolète. Utilisez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom) à la place.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+* Dans le cas où vous utilisez xDrip+ : Identifiez le récepteur tel que décrit sur la page de configuration [xDrip+](../Configuration/xdrip#identifier-le-recepteur).
 
 
 ## Application non installée.

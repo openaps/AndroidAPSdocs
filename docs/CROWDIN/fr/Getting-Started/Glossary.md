@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
+ <td>projet open source pour accéder aux données MGC (CGM) et faire des rapports. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
@@ -236,11 +236,11 @@
  <td><strong>Nightscout Reporter</strong></td>
  <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a> <br> <a href="https://www.facebook.com/nightrep/">NS Reporter @Facebook</a></td>
 </tr>
 <tr>
  <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td>fait partie d'AAPS pour se connecter à votre site Nightscout</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
