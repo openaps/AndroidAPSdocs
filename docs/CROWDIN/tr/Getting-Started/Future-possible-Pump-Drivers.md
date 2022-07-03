@@ -6,7 +6,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimi olmasına rağmen iletişim çok sınırlı ve tek yönlüdür: Şirket 2021'in sonunda pompa uygulamasından bolus ve TBR'yi ayarlamaya izin verecek olan DOSE (1.6) adlı yeni sürümü piyasaya sürmeyi planlıyor. Kendi döngü uygulamasını da 2022'de hayata geçirmeyi planlıyorlar. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. BT etkin.
 
@@ -58,9 +58,11 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US).
+**Loop status:** All 3 pumps will be Loop candidates.
+
+They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
@@ -104,12 +106,12 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ## Döngü yapılabilecek pompalar için gereksinimler
 
-**Ön Şart**
+**Prerequisite**
 
 - Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
 - Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimum gereksinim**
+**Minimal requirement**
 
 - Set Temporary Basal Rate
 - Get Status
