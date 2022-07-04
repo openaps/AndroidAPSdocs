@@ -242,7 +242,7 @@
  <td><strong>NS Client (Nightscout İstemcisi)</strong></td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Viki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Görevler</strong></td>
