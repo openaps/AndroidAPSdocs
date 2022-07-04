@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi. Tüm diyabet verileriniz için merkezi veri merkezidir. AndroidAPS orada verileri depoluyor. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
+ <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi. Tüm diyabet verileriniz için merkezi veri merkezidir. AndroidAPS orada verileri depoluyor. Çocuklarının diyabet yönetimini izleyen ebeveynler için veya diyabet kontrolünün gerçek durumunu (beklenen HbA1c, aralıktaki süre) elde etmek veya yüzdelik çizelgesi vb. yoluyla verilerdeki kalıpları aramak için geçmiş verilerin raporlanması için kullanılabilir..</td>
  <td>NightScout raporları</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
