@@ -6,7 +6,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Beide haben zwar Bluetooth, die Kommunikation ist aber sehr eingeschränkt und funktioniert nur von der Pumpe zur App. Der Hersteller will bis Ende 2021 eine neue Version - Nickname DOSE (1.6) - herausbringen, die Bolus- und TBR-Kommandos von der App erlauben soll. Sie planen eine eigene Loop-App in 2021. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware Voraussetzungen für AAPS:** Keine, da die Pumpe über Bluetooth kommuniziert.
 
@@ -58,9 +58,11 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 * * *
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop-status** Ist ein Loop-Kandidat. Pumpe wurde noch nicht veröffentlicht, aber der FDA-Prozess läuft bereits, also sollte sie eher früher als später in den USA veröffentlicht werden.
+**Loop status:** All 3 pumps will be Loop candidates.
+
+They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
 **Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
 
@@ -68,15 +70,15 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ### Medtronic Bluetooth
 
-**Kommentare:** Diese Pumpe soll in den kommenden Jahren auf den Markt kommen und von der Tidepool Loop Software unterstützt werden ([siehe dieser Artikel [englisch]](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 ### Willcare Insulin Pumpe ([Homepage](http://en.shinmyungmedi.com/))
 
-**Loop-Status:** Momentan kein Loop-Kandidat. Aber wir wurden von Mitarbeitern des Herstellers kontaktiert, da sie daran interessiert sind, ihre Pumpe loopfähig zu machen. Momentan fehlen wohl nur Kommandos zum Lesen und Schreiben der Profile.
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
 **Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-**Kommentare:** Da das Unternehmen Interesse an der Integration mit AAPS hat, könnten sie evtl. selbst die Umsetzung vornehmen.
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
@@ -94,39 +96,39 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ### Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
+**Loop Status:** Nicht zum Loopen geeignet. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
+**Loop Status:** Nicht zum Loopen geeignet. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
-**Voraussetzungen**
+**Prerequisite**
 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
 
-**Mindestanforderungen**
+**Minimal requirement**
 
 - Temporäre Basalraten setzen
 - Status abrufen
 - Temporäre Basalraten abbrechen
 
-**Für oref1(SMB) oder Bolusing:**
+**For oref1(SMB) or Bolusing:**
 
 - Mahlzeiten Bolus abgeben
 
-**Sinnvoll außerdem**
+**Good to have**
 
 - Bolus abbrechen
 - Basalprofil abrufen (fast eine Anforderung)
 - Basal Profil einstellen (nice to have)
 - History auslesen 
 
-**Weitere Anforderungen (nicht notwendig, aber Verfügbarkeit wäre gut)**
+**Other (not required but good to have)**
 
 - Verlängerten Bolus setzen
 - Verlängerten Bolus abbrechen
@@ -137,4 +139,4 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ### Unterstützung weiterer Pumpen
 
-Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere uns auf discord.
+If you have any other pumps you would like to see status on, please contact us on discord.

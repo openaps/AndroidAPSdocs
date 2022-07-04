@@ -64,7 +64,8 @@ You can choose between several conditions. Here are some things explained, but m
 
   * Use passive location: AAPS only takes locations when other apps are requesting it
   * Use network location: Location of your Wifi
-  * Use GPS location (Attention! May cause excessive battery drain!)
+  * השתמש במיקום GPS (שימו לב!
+ עלול לגרום לניצול מוגבר של הסוללה!)
   
 Action
 --------------------------------------------------

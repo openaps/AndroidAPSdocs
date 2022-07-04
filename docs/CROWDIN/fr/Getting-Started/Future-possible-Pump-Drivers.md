@@ -6,7 +6,7 @@ Voici une liste de certaines pompes et leur statut de prise en charge dans l'un 
 
 ### Pompe Ypsomed ([Page d'accueil](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. Bien qu'elles aient le BT, la communication est très limitée et uni directionnelle: Pompe->App. Fin 2021, il est prévu que la société sorte la nouvelle version appelée DOSE (1.6), ce qui permettra de définir des Bolus et des TBR à partir de leur application. Ils prévoient d'implémenter leur propre Boucle en 2022, avec leur propre application. Plus d'infos voir cette page [](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Etat de la boucle :** Version 1-1.5 (2ème trimestre 2018) ne sont pas candidates à la boucle. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Configuration matérielle requise pour AAPS :** Aucune. Elle dispose du Bluetooth.
 
@@ -58,9 +58,11 @@ Alors que dans le passé, la société avait décidé d'interdire le contrôle d
 
 * * *
 
-### Tandem : t:sport ([Page d'accueil](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Etat de la boucle :** Candidat à la boucle. La pompe n'est pas encore sortie, mais le processus FDA est déjà en cours, donc elle devrait être disponible sans doute rapidement (aux US).
+**Loop status:** All 3 pumps will be Loop candidates.
+
+They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
@@ -68,15 +70,15 @@ Alors que dans le passé, la société avait décidé d'interdire le contrôle d
 
 ### Medtronic Bluetooth
 
-**Commentaires :** Cette pompe sortira dans les prochaines années et devrait être prise en charge par le logiciel Tidepool Loop ([voir cet article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 ### Pompe Insuline Willcare ([Homepage](http://en.shinmyungmedi.com))
 
-**Etat de la boucle :** Pour le moment non candidat à la boucle, mais nous avons contacté leurs équipes et ils sont intéressés à étendre les fonctionnalités de leur pompe pour la rendre bouclable (pour le moment, je pense qu'il ne manque que les commandes de récupération et de définition des profils).
+**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
 **Configuration matérielle requise pour AAPS :** Aucune. Il semble qu'elle dispose du Bluetooth.
 
-**Remarque :** Comme l'entreprise est intéressée elle même à l'intégration à AAPS, elle pourrait mettre en œuvre cette implémentation elle-même.
+**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
 * * *
 
@@ -88,45 +90,45 @@ Alors que dans le passé, la société avait décidé d'interdire le contrôle d
 
 **Configuration matérielle requise pour AAPS :** Probablement aucune. Elle dispose du Bluetooth.
 
-**Remarque sur le produit :** Il semble que l'entreprise ait décidé d'abandonner le business des pompes. Vous pouvez en voir plus dans cet [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pompes qui ne sont pas bouclable
 
 ### Animas Vibe
 
-**Etat de la boucle :** Non bouclable. Aucune possibilité de contrôle à distance. **Remarque :** La pompe n'est plus vendue. L'entreprise a abandonné le business de la pompe (J&J).
+**Etat de la boucle :** Non bouclable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
 
 * * *
 
 ### Animas Ping
 
-**Etat de la boucle :** Non bouclable. Il a une possibilité de bolus, mais pas de DBT. **Remarque** N'est plus vendue depuis la sortie de la Vibe.
+**Etat de la boucle :** Non bouclable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
 
 ## Exigences pour que les pompes soient bouclables
 
-**Pré-requis**
+**Prerequisite**
 
 - La pompe doit prendre en charge un contrôle à distance (Bluetooth, fréquence radio, etc.).
 - Le protocole est piraté/documenté/etc.
 
-**Exigences minimales**
+**Minimal requirement**
 
 - Définir le Débit de Basal Temporaire
 - Obtenir l'état de la pompe
 - Annuler le Débit de Basal Temporaire
 
-**Pour oref1 (SMB) :**
+**For oref1(SMB) or Bolusing:**
 
 - Définir le Bolus
 
-**Préférable d'avoir**
+**Good to have**
 
 - Annuler le Bolus en cours
 - Obtenir le profil de basal (presque requis)
 - Définir le profil de basal (souhaitable)
 - Lire l'historique 
 
-**Autres (pas nécessaire, mais souhaitable)**
+**Other (not required but good to have)**
 
 - Définir un bolus étendu
 - Annuler Bolus étendu
@@ -137,4 +139,4 @@ Alors que dans le passé, la société avait décidé d'interdire le contrôle d
 
 ### Prise en charge d'autres pompes
 
-Si vous avez d'autres pompes dont vous aimeriez voir l'état de bouclage, veuillez nous contacter sur discord.
+If you have any other pumps you would like to see status on, please contact us on discord.
