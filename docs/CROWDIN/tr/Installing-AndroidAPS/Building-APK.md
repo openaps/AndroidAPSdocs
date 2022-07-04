@@ -25,16 +25,16 @@
   <tr>
     <td class="tg-baqh"><p align="center">CPU (Sadece 64 bit)</td>
     <td class="tg-baqh">x86_64 2. nesil CPU mimarisi Intel Core veya daha yenisi ya da<br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-windows" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Windows Hypervisor</span></a> desteğine sahip AMD CPU</td>
-    <td class="tg-baqh">ARM-based chips, or 2nd generation Intel Core or newer with support for <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a></td>
-    <td class="tg-baqh">x86_64 CPU architecture; 2nd generation Intel Core or newer, or AMD processor with support for AMD Virtualization (AMD-V) and SSSE3</td>
+    <td class="tg-baqh">ARM tabanlı yongalar veya <br><a href="https://developer.android.com/studio/run/emulator-acceleration#vm-mac" target="_blank" rel="noopener noreferrer"><span style="text-decoration:var(--devsite-link-text-decoration,none)">Hypervisor.Framework</span></a> desteğine sahip 2. nesil Intel Core veya daha yenisi</td>
+    <td class="tg-baqh">x86_64 CPU mimarisi; 2. nesil Intel Core veya daha yenisi veya AMD Sanallaştırma (Virtualization) (AMD-V) ve SSSE3 desteğine sahip AMD işlemci</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">RAM</td>
-    <td class="tg-baqh" colspan="3"><p align="center">8GB or more</td>
+    <td class="tg-baqh"><p align="center">Bellek(RAM)</td>
+    <td class="tg-baqh" colspan="3"><p align="center">8Gb veya daha fazla</td>
   </tr>
   <tr>
-    <td class="tg-baqh"><p align="center">Disk</td>
-    <td class="tg-baqh" colspan="3"><p align="center">At least 30GB free space. SSD önerilir.</td>
+    <td class="tg-baqh"><p align="center">Depolama alanı</td>
+    <td class="tg-baqh" colspan="3"><p align="center">En az 30GB boş alan. SSD önerilir.</td>
   </tr>
   <tr>
     <td class="tg-baqh"><p align="center">Çözünürlük</td>
@@ -115,29 +115,29 @@ Beğendiğiniz kullanıcı arayüzü için temayı seçin. (Bu kılavuzda biz "L
 
 Android Studio ek bileşenleri indirirken bekleyin ve sabırlı olun. Her şey indirildikten sonra "Finish" düğmesi maviye döner. Şimdi düğmeye tıklayın.
 
-![Downloading components](../images/studioSetup/07_Downloading.png)
+![Bileşenlerin indirilmesi](../images/studioSetup/07_Downloading.png)
 
-## Set git path in preferences
+## Git yolunu tercihlerde ayarla
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
+Bilgisayarınızda [git'in kurulu olduğundan](../Installing-AndroidAPS/git-install.rst) ve kurduktan sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
 
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) öğesini tıklayın ve ardından "All settings..." (Tüm ayarlar...) bağlantısını seçin (2):
 
-![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+![Karşılama ekranından Android Studio ayarları](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
+* Windows kullanıcısı olarak, [Git'i yükledikten](../Installing-AndroidAPS/git-install.rst) sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
 
-* Double-click "Version Control" (1) to open the sub-menu.
+* Alt menüyü açmak için "Version Control" (1) (Sürüm Kontrolü) üzerine çift tıklayın.
 
-* Click Git (2).
-* Make sure update method "Merge" (3) is selected.
-* Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4).
+* Git (2)'e tıklayın.
+* Güncelleme yönteminin "Merge" (3) (Birleştir) seçili olduğundan emin olun.
+* "Test" (4) düğmesini tıklayarak Android Studio'nun git.exe yolunu otomatik olarak bulup bulamayacağını kontrol edin.
     
-    ![Android Studio settings](../images/studioSetup/11_GitPath.png)
+    ![Android Studio ayarları](../images/studioSetup/11_GitPath.png)
 
-* If automatic setting is successful git version will be displayed next to the path.
+* Otomatik ayar başarılı olursa, yolun yanında git sürümü görüntülenecektir.
     
     ![Git version displayed](../images/studioSetup/12_GitVersion.png)
 
@@ -194,11 +194,11 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * You will be asked whether you want to trust the project. Click on "Trust project"!
     
-    ![Trust project](../images/studioSetup/23_TrustProject.png)
+    ![Projeye güven](../images/studioSetup/23_TrustProject.png)
 
-* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
+* Alttaki durum çubuğunda, Android Studio'nun arka plan görevlerini çalıştırdığı bilgisini göreceksiniz.
     
-    ![Background tasks](../images/studioSetup/24_GradleSyncRunning.png)
+    ![Arkaplan işlemleri](../images/studioSetup/24_GradleSyncRunning.png)
 
 * Güvenlik duvarınız izin istiyorsa erişim izni verin.
     
@@ -243,79 +243,79 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Android Studio pencerenizin sağ alt tarafında Android Gradle Plugin'in güncellemeye hazır olduğuna dair bir bilgi görürseniz, "güncelleme" (1) metnine tıklayın.
     
-    ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
+    ![Gradle güncellemesi yok](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* In the dialog box the select "Don't remind me again for this project" (2).
+* İletişim kutusunda "Bana bu proje için bir daha hatırlatma" (2) öğesini seçin.
     
-    ![No gradle update](../images/studioSetup/37_GradleUpdateDeny.png)
+    ![Gradle güncellemesi yok](../images/studioSetup/37_GradleUpdateDeny.png)
 
-* Restart Android Studio before you continue.
+* Devam etmeden önce Android Studio'yu yeniden başlatın.
 
-## Generate signed APK
+## İmzalı APK oluştur
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+İmzalama, uygulamanızın kendi eseriniz olduğunu, ancak uygulamanın içinde bir tür dijital parmak izi olarak dijital bir şekilde belirtmeniz anlamına gelir. Bu gereklidir, çünkü Android'in güvenlik nedenleriyle çalıştırmak için yalnızca imzalı kodu kabul ettiğine dair bir kuralı vardır. Bu konu hakkında daha fazla bilgi için [bu bağlantıyı](https://developer.android.com/studio/publish/app-signing.html#generate-key) izleyin.
 
-* After Android Studio is started, wait until all background tasks are finished.
+* Android Studio başlatıldıktan sonra tüm arka plan görevleri bitene kadar bekleyin.
     
-    ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
+    ![Arka plan görevlerini bekleyin](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
+    * ***Uyarı:*** Hata oluşursa, aşağıdaki adımlara devam etmeyin. \ Bilinen sorunlar için [sorun giderme bölümüne](../Installing-AndroidAPS/troubleshooting_androidstudio) bakın!
     
-    ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
+    ![Gradle Sync Hatası](../images/studioSetup/41_GradleSyncError.png)
 
-* Click "Build" (1) in the menu bar and select "Generate Signed Bundle / APK..." (2).
+* Menü çubuğunda "Build"a (1) tıklayın ve "Generate Signed Bundle / APK..." (2) öğesini seçin.
     
-    ![Build apk](../images/studioSetup/42_MenuBuild.png)
+    ![Apk derleme](../images/studioSetup/42_MenuBuild.png)
 
-* Select "APK" (1) instead of "Android App Bundle" and click "Next" (2).
+* "Android App Bundle" yerine "APK"yı (1) seçin ve "İleri"ye (2) tıklayın.
     
-    ![APK instead of bundle](../images/studioSetup/43_Apk.png)
+    ![Bundle yerine APK](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AndroidAPS.app" (1).
+* Modülün "AndroidAPS.app" (1) olarak ayarlandığından emin olun.
 
-* Click "Create new..." (2) to start creating your key store.
+* Kendi "key store" oluşturmaya başlamak için "Create new..." (2) öğesini tıklayın.
     
-    ***Note:*** A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
+    ***Not:*** Bu durumda bir key store imzalama bilgilerinin depolandığı bir dosyadan başka bir şey değildir. Şifrelenir ve bilgiler şifrelerle güvence altına alınır.
     
-    ![Create key store](../images/studioSetup/44_KeystoreNew.png)
+    ![Key store oluştur](../images/studioSetup/44_KeystoreNew.png)
 
-* Click the folder symbol to select a path on your computer for your key store.
+* Anahtar deponuz için bilgisayarınızda bir yol seçmek için klasör sembolüne tıklayın.
     
-    ![Create key store](../images/studioSetup/45_KeystoreDialog.png)
+    ![Key store oluştur](../images/studioSetup/45_KeystoreDialog.png)
 
-* Select the path where your key store shall be saved (1).
+* Key store'un kaydedileceği yolu seçin (1).
     
-    ![Create key store](../images/studioSetup/46_KeystorePath.png)
+    ![Key store oluştur](../images/studioSetup/46_KeystorePath.png)
     
-    ***Warning: Do not save in same folder as project. You must use a different directory!*** A good location would be your home folder.
+    ***Uyarı: Proje ile aynı klasöre kaydetmeyin. Farklı bir dizin kullanmalısınız!*** İyi bir konum, Ev klasörünüz olacaktır.
 
-* Type a file name for your key store (2) and confirm with "OK" (3).
+* Key store (2) için bir dosya adı yazın ve "OK" (3) ile onaylayın.
 
-* Enter (2) and confirm (3) the password for your key store. ![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
+* Key store parolasına girin (2) ve onaylayın(3). ![Key store yolunu seçin](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Note:*** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+    ***Not:*** key store ve key için parolaların çok karmaşık olması gerekmez. Bunları hatırladığınızdan veya güvenli bir yere not aldığınızdan emin olun. Gelecekte şifrelerinizi hatırlamayacaksanız, [kayıp key store için sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore) konusuna bakın.
 
-* Enter an alias (4) for your key. Choose whatever you like.
+* Key için bir takma ad alias (4) girin. Ne isterseniz seçebilirsiniz.
 
-* Enter (5) and confirm (6) the password for your key
+* Girin (5) ve key parolasını onaylayın (6)
 
-* Validity (7) is 25 years by default. You do not have to change the default value.
+* Geçerlilik Validity (7) varsayılan olarak 25 yıldır. Varsayılan değeri değiştirmeniz gerekmez.
 
-* First and last name must be entered (8). All other information is optional.
+* Adı ve soyadı girilmelidir (8). Diğer tüm bilgiler isteğe bağlıdır.
 
-* Click "OK" (9) when you are done.
+* İşiniz bittiğinde "OK"yi (9) tıklayın.
 
-* Make sure the box to remember passwords is checked (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Şifreleri hatırlama kutusunun işaretli olduğundan emin olun (1). Böylece, apk'yi bir sonraki oluşturduğunuzda (yani yeni bir AndroidAPS sürümüne güncelleme yaparken) bunları tekrar girmeniz gerekmez.
 
-* Click "Next" (2).
+* "Next"i (2) tıklayın.
     
-    ![Remember passwords](../images/studioSetup/48_KeystoreSave.png)
+    ![Parolaları hatırla](../images/studioSetup/48_KeystoreSave.png)
 
-* Select build variant "fullRelease" (1) and press "Finish".
+* Derleme varyantını seçin "fullRelease" (1) seçin ve "Finish"e basın.
     
-    ![Select build variant](../images/studioSetup/49_BuildVariant.png)
+    ![Derleme varyantı seçin](../images/studioSetup/49_BuildVariant.png)
 
-* Android Studio will show "Gradle Build running" at the bottom. This takes some time, depending on your computer and internet connection. **Be patient!**
+* Android Studio, altta "Gradle Build running" gösterecektir. Bu, bilgisayarınıza ve internet bağlantınıza bağlı olarak biraz zaman alır. **Be patient!**
     
     ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
 
