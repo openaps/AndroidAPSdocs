@@ -6,9 +6,9 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
-**Hardware requirement for AAPS:** None. BT etkin.
+**AAPS için donanım gereksinimi:** Yok. BT etkin.
 
 **Yorumlar:** Şu anda sürücü üzerinde çalışan 2 grup var, bu nedenle yeni sürüm yayınlandıktan sonra yakında AAPS desteği almayı bekleyebiliriz. Bir grup YpsoMed tarafından destekleniyor ve Avustralya'da gerçekleşen Tıbbi denemelere yardımcı oluyor, 2. grup ise tersine mühendislik orijinal uygulamasıyla bağımsız olarak çalışıyor.
 
@@ -18,43 +18,43 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. BT etkin.
+**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin.
 
 * * *
 
-### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
+### Medtrum A6/P6/C6 ([Ana Sayfa](https://www.medtrum.com/product/nanopump.html))
 
-**Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
+**Döngü durumu:** Bir Döngü adayıdır. Şirketin kendi sınırlı yarım döngü sistemi çalışıyor (A6). Iphone Uygulaması ile kontrol edilebilir. Şu anda mevcut bir Android uygulaması yok.
 
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
-* * *
-
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
-
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
 * * *
 
-### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
+### EOFLOW ([Ana Sayfa](http://www.eoflow.com/eng/main/main.html))
 
-**Loop status:** Is a Loop candidate.
+**Döngü durumu:** Bir Döngü adayıdır. Kullandıkları uzaktan kumanda aslında değiştirilmiş Android cihazıdır. (Pompa şu anda yalnızca Kore'de mevcuttur).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
-
-**Comments:** There are some developers looking into decoding the protocol, but so far this is only in preliminary phases.
+**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
 * * *
 
-### Tandem: t:slim X2 ([Homepage](https://www.tandemdiabetes.com/))
+### Accu-Chek Solo ([Ana Sayfa](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
-**Loop status:** Not yet loopable.
+**Döngü durumu:** Bir Döngü adayıdır.
 
-While in the past company has decided not to allow their pumps to be controlled by external devices, it seems that last few years have been a game changer. Company decided to upgrade their t:slim X2 pump to be able to be controlled remotely (via t:connect app), which means that avenues are opened that we might be able to look forward to have control of pump via AAPS in the future. New pump firmware is planned to be released soon (this or next year, before their tubeless pump t:sport comes out). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+**AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**Yorumlar:** Protokolün kodunu çözmek isteyen bazı geliştiriciler var, ancak şu ana kadar bu yalnızca ön aşamalarda.
+
+* * *
+
+### Tandem: t:slim X2 ([Ana Sayfa](https://www.tandemdiabetes.com/))
+
+**Döngü durumu:** Henüz Döngü yapılabilir değil.
+
+Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesine izin vermemeye karar vermiş olsa da, son birkaç yılın oyunun kurallarını değiştirdiği görülüyor. Şirket, t:slim X2 pompasını uzaktan kontrol edilebilmesi için yükseltmeye karar verdi (t:connect uygulaması aracılığıyla), bu da gelecekte pompanın AAPS aracılığıyla kontrol edilmesini dört gözle bekleyebileceğimiz yolların açıldığı anlamına geliyor. Yeni pompa donanım yazılımının yakında piyasaya sürülmesi planlanıyor (bu veya gelecek yıl, hortumsuz pompaları t:sport çıkmadan önce). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+
+**AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
 * * *
 
@@ -64,7 +64,7 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
 * * *
 
@@ -76,7 +76,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
 
-**Hardware requirement for AAPS:** None. It seems to be BT enabled.
+**AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
 **Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
 
@@ -88,7 +88,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
 
-**Hardware requirement for AAPS:** Probably none. BT etkin.
+**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin.
 
 **Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
