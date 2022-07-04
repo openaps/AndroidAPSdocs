@@ -4,7 +4,7 @@
 
 İleride başka bir donanım listesine ihtiyaç duyulursa ve birileri bu listeyle ilgilenmek isterse, lütfen bizimle iletişime geçin!
 
-The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. Bu deneyim, Google E-Tablolar ile yeniden oluşturulabilir.
+Listenin şu anki yöneticisi, veri girmeyi kolaylaştırmak, ancak aynı zamanda mevcut verilerin yanlışlıkla üzerine yazılmamasını veya silinmemesini sağlamak için çok zaman ve çaba harcadı. Bu deneyim, Google E-Tablolar ile yeniden oluşturulabilir.
 
 ## Omnipod
 
