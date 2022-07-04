@@ -1,4 +1,4 @@
-# Accu-Chek Combo Tips for basic usage
+# Temel kullanım için Accu-Chek Combo İpuçları
 
 ## How to ensure smooth operations
 
