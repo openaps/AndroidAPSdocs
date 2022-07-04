@@ -53,38 +53,38 @@ If you have already changed the URL or update from version 2.8.x, follow these s
     
     ![Android Studio - Git - Pull dialog](../images/update/05_GitPullOptions.png)
 
-* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Note: The files that were updated may vary! This is not an indication
+* Wait while download is in progress, you will see this as info in the bottom bar. When it's done, you will see a success message. Not: Güncellenen dosyalar değişiklik gösterebilir! Bu bir gösterge değildir
     
-    ![Android Studio - Pull successful](../images/update/06_GitPullSuccess.png)
+    ![Android Studio - Git - Pull başarılı](../images/update/06_GitPullSuccess.png)
 
-* Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
+* Gradle Sync, bazı bağımlılıkları indirmek için birkaç saniye çalışacaktır. Tamamlanana kadar bekleyin.
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
 ## 3. Build the Signed APK
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Kaynak kodunuz artık yayınlanan güncel sürümdür. [İmzalı apk derle bölümünde](../Installing-AndroidAPS/Building-APK#generate-signed-apk) açıklandığı gibi bundan imzalı apk derlemenin zamanı geldi.
 
-## 4. Transfer the apk
+## 4. Apk dosyasını aktarma
 
-You need to transfer the apk to your phone so you can install it.
+Yükleyebilmeniz için apk'yı telefonunuza aktarmanız gerekir.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+[APK'yi akıllı telefona aktarma](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) talimatlarına bakın
 
-## 5. Install apk
+## 5. Apk dosyasını kurun
 
 Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
 
-## 6. Check AAPS version on phone
+## 6. Telefondaki AAPS sürümünü kontrol edin
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Yeni apk'yı yükledikten sonra, sağ üstteki üç nokta menüsüne ve ardından Hakkında'ya tıklayarak telefonunuzdaki AAPS sürümünü kontrol edebilirsiniz. Mevcut sürümü görmelisiniz.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Yüklü AAPS sürümü](../images/Update_VersionCheck282.png)
 
 # Sorun giderme
 
-If anything goes wrong, don't panic.
+Bir şeyler ters giderse, panik yapmayın.
 
-Take a breath!
+Bir Nefes Alın!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Ardından, sorununuz zaten belgelenmişse, [Android Studio sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın!
