@@ -61,7 +61,7 @@ If you have already changed the URL or update from version 2.8.x, follow these s
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-## 3. Build the Signed APK
+## 3. İmzalı APK'yı Derleyin
 
 Kaynak kodunuz artık yayınlanan güncel sürümdür. [İmzalı apk derle bölümünde](../Installing-AndroidAPS/Building-APK#generate-signed-apk) açıklandığı gibi bundan imzalı apk derlemenin zamanı geldi.
 
