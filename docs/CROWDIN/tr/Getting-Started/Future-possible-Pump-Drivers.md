@@ -6,7 +6,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Ypsomed Pompası ([Pompa ana sayfası](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
+**Döngü durumu:** Sürüm 1 - 1.5 (2018/2Ç) döngü adayı değildir. BT iletişimi olmasına rağmen iletişim çok sınırlı ve tek yönlüdür: Haziran 2022'de (Almanya'da) şirket uygulamalarında bolus ve TBR'yi ayarlamaya izin veren DOSE (1.6) adlı yeni sürümü yayınladı. Bu pompa yavaş yavaş Avrupa'da kullanıma sunuluyor, ancak tüm dünyada kullanıma sunulması biraz zaman alacak. Kendi döngülerini uygulama planı iptal edildi ve CamAPS ile ortak olmaya (destek verildi) ve döngü çözümlerini kullanmaya karar verdiler. Daha fazla bilgi için bu [sayfaya](https://www.mylife-diabetescare.com/en/loop-program.html) bakın
 
 **AAPS için donanım gereksinimi:** Yok. BT etkin.
 
@@ -16,7 +16,7 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ### Kaleido ([Ana Sayfa](https://www.hellokaleido.com/))
 
-**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pompa bir döngü adayıdır, fakat protokol bilinmediğinden bu pompanın çok yakında destekleneceğini zannetmiyoruz.
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin.
 
@@ -52,91 +52,91 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 **Döngü durumu:** Henüz Döngü yapılabilir değil.
 
-Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesine izin vermemeye karar vermiş olsa da, son birkaç yılın oyunun kurallarını değiştirdiği görülüyor. Şirket, t:slim X2 pompasını uzaktan kontrol edilebilmesi için yükseltmeye karar verdi (t:connect uygulaması aracılığıyla), bu da gelecekte pompanın AAPS aracılığıyla kontrol edilmesini dört gözle bekleyebileceğimiz yolların açıldığı anlamına geliyor. Yeni pompa donanım yazılımının yakında piyasaya sürülmesi planlanıyor (bu veya gelecek yıl, hortumsuz pompaları t:sport çıkmadan önce). There are no details yet, what operations will be possible from t:connect (Bolus definitely, everything else unknown).
+Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesine izin vermemeye karar vermiş olsa da, son birkaç yılın oyunun kurallarını değiştirdiği görülüyor. Şirket, t:slim X2 pompasını uzaktan kontrol edilebilmesi için yükseltmeye karar verdi (t:connect uygulaması aracılığıyla), bu da gelecekte pompanın AAPS aracılığıyla kontrol edilmesini dört gözle bekleyebileceğimiz yolların açıldığı anlamına geliyor. Yeni pompa donanım yazılımının yakında piyasaya sürülmesi planlanıyor (bu veya gelecek yıl, hortumsuz pompaları t:sport çıkmadan önce). t:connect'ten hangi operasyonların mümkün olacağı hakkında henüz ayrıntı yok, (Bolus kesinlikle var, diğerleri bilinmiyor).
 
 **AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
 * * *
 
-### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi hortumsuz ([Ana sayfa](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Döngü durumu:** Tüm 3 pompa da döngü adayıdır.
 
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
+İlk olarak t:Mobi'yi (eski adıyla t:sport) 2022'nin sonunda veya 2023'te piyasaya sürmeyi planlıyorlar. Daha sonra t:slim X3 (belki 2023) ve ondan sonra t:Mobi hortumsuzu piyasaya sürecekler. t:mobi'ler yalnızca telefon uygulaması üzerinden kontrol edilebilirken, X3 bazı yeni şık özelliklerle (ürün yazılımının uzaktan güncellenmesi, telefon uygulaması üzerinden uzaktan kumanda vb.) X2'ye benzer görünecek.
 
 **AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
 * * *
 
-### Medtronic Bluetooth
+### Medtronik Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Yorumlar:** Bu önümüzdeki birkaç yıl içinde çıkacak olan ve Tidepool Loop yazılımında desteklenmesi planlanan pompadır. ([bu makaleye bakın](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Willcare İnsülin pompası ([Ana Sayfa](http://en.shinmyungmedi.com))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Döngü durumu:** Şu anda döngü adayı değil, ancak çalışanları tarafından bizimle iletişime geçildi ve pompalarını döngüye dahil olacak şekilde genişletmekle ilgilendiler (şu anda yalnızca get/set profile komutlarının eksik olduğunu düşünüyorum).
 
 **AAPS için donanım gereksinimi:** Yok. BT etkin görünüyor.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Yorumlar:** Şirket, AAPS ile entegrasyonla ilgilendiğinden, uygulamayı kendileri yapabilir.
 
 * * *
 
-## Pumps no longer sold (companies no longer operating)
+## Pompalar artık satılmıyor (şirketler artık çalışmıyor)
 
-### Cellnovo Pump ([see businesswire.com](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
+### Cellnovo Pompa ([businesswire.com'a bakın](https://www.businesswire.com/news/home/20190328005829/en/Cellnovo-Stops-Manufacturing-and-Commercial-Operations))
 
-**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pump is a Loop candidate, but since protocol is unknown at the time, I am not seeing this pump supported very soon.
+**Döngü durumu:** Şu anda herhangi bir döngü sistemi tarafından desteklenmiyor. Pompa bir döngü adayıdır, fakat protokol bilinmediğinden bu pompanın çok yakında destekleneceğini zannetmiyoruz.
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Ürünle ilgili not:** Görünüşe göre şirket, Pompa İşinden ayrılmaya karar verdi. Bu [makalede](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU) daha fazlasını görebilirsiniz
 
-## Pumps that aren't Loopable
+## Döngü yapılamayan pompalar
 
 ### Animas Vibe
 
-**Loop status:** Not loopable. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Döngü durumu:** Döngü yapılamıyor. Uzaktan kumanda imkanı yok. **Not:** Pompa artık satılmamaktadır. Şirket, Pompa işinde (J&J) çalışmayı durdurdu.
 
 * * *
 
 ### Animas Ping
 
-**Loop status:** Not loopable. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Döngü durumu:** Döngü yapılamıyor. Bolus imkanı var ama GBO yok. **Not** Vibe çıktığında satışı durduruldu.
 
 ## Döngü yapılabilecek pompalar için gereksinimler
 
-**Prerequisite**
+**Ön Şart**
 
 - Pompanın bir çeşit uzaktan kumandayı desteklemesi gerekir. (BT, Radyo frekansı, vb)
 - Saldırıya uğramış/dokümante edilmiş/vb. protokeller.
 
-**Minimal requirement**
+**Minimum gereksinim**
 
-- Set Temporary Basal Rate
-- Get Status
-- Cancel Temporary Basal Rate
+- Geçici Bazal Oranı Ayarla
+- Durum Al
+- Geçici Bazal Oranı İptal Et
 
-**For oref1(SMB) or Bolusing:**
+**Oref1(SMB) veya Bolus için:**
 
-- Set Bolus
+- Bolusu Ayarla
 
-**Good to have**
+**Bulunması daha iyi,**
 
-- Cancel Bolus
-- Get Basal Profile (almost requirement)
-- Set Basal Profile (nice to have)
-- Read History 
+- Bolus iptal Etme
+- Bazal Profili Alma (ne zaman gerekirse)
+- Bazal Profili Ayarlama (olması güzel)
+- Geçmişi Okuma 
 
 **Other (not required but good to have)**
 
-- Set Extended Bolus
-- Cancel Extended Bolus
-- Read History
-- Read TDD
+- Yayma Bolusu Ayarlama
+- Yayma Bolusu iptal etme
+- Geçmişi Okuma
+- GTD'yi okuma
 
 * * *
 
-### Other pumps support
+### Diğer pompa destekleri
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Durumunu görmek istediğiniz başka pompalarınız varsa lütfen discord üzerinden bizimle iletişime geçin.
