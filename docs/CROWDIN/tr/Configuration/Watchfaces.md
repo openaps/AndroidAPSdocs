@@ -232,7 +232,7 @@ AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirs
     
     ![Basitleştirilmiş Kullanıcı Arayüzü](../images/Watchface_simplified_ui.png)
     
-    ### Performance and battery life tips
+    ### Performans ve pil ömrü ipuçları
     
     Wear OS saatleri, güç kısıtlaması çok olan cihazlardır. Saat kasasının boyutu, birlikte verilen pilin kapasitesini sınırlar. Hem donanım hem de yazılım tarafındaki son gelişmelere rağmen, Wear OS saatleri hala günlük şarj gerektiriyor.
     
