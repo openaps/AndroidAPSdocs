@@ -128,7 +128,7 @@ Geçmişte şirket, pompalarının harici cihazlar tarafından kontrol edilmesin
 - Bazal Profili Ayarlama (olması güzel)
 - Geçmişi Okuma 
 
-**Other (not required but good to have)**
+**Diğer gereksinimler (gerekli değil, ancak kullanılırsa iyi olur)**
 
 - Yayma Bolusu Ayarlama
 - Yayma Bolusu iptal etme
