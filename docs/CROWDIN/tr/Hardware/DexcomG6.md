@@ -33,13 +33,13 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 -   Bu uygulama, Dexcom G6'nızı herhangi bir Android akıllı telefonla kullanmanızı sağlar.
 -   Daha önce bunlardan birini kullandıysanız, orijinal Dexcom uygulamasını veya yamalı Dexcom uygulamasını kaldırın.
 -   İndirilen apk'yı yükleyin
--   Enter sensor code and transmitter serial no. in patched app.
+-   Yamalı uygulamada sensör kodunu ve verici seri numarasını girin.
 -   Telefon ayarlarından uygulamalara gidin > Dexcom G6 > izinler > ek izinler ve 'Dexcom uygulamasına eriş' düğmesine basın.
 -   Kısa bir süre sonra BYODA verici sinyalini almalıdır. (eğer değilse sensörü durdurmanız ve yenisini başlatmanız gerekecektir.)
 
 ### AndroidAPS ayarları
 
--   Select 'Dexcom App (patched)' in config builder.
+-   Konfigürasyon ayarları'nda 'Dexcom Uygulaması (yamalı)' seçin.
 -   Herhangi bir değer almazsanız, başka bir veri kaynağı seçin, ardından AAPS ve BYODA yayını arasında bağlantı kurmak için izin talebini tetiklemek için 'Dexcom Uygulaması (yamalı)' öğesini yeniden seçin.
 
 ### xDrip+ için ayarlar
@@ -52,10 +52,10 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 ### Dexcom G6'ya özel sorun giderme
 
 -   80 veya 81 ile başlayan seri nolu vericiler için en az Mayıs 2019'daki kararlı xDrip+ sürümü veya daha yeni gecelik derlemeye ihtiyaç duyar.
--   Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
+-   8G seri no ile başlayan vericiler için en az  25 Temmuz 2019 veya daha yeni sürüm gereklidir.
 -   xDrip+ ve Dexcom uygulaması vericiye aynı anda bağlanamaz.
--   Wait at least 15 min. between stopping and starting a sensor.
--   Başlatma ​​zamanını geriye almayın. Answer question "Did you insert it today?" always with "Yes, today".
+-   Sensörü durdurmak ve başlatmak arasında en az 15 dk bekleyin.
+-   Başlatma ​​zamanını geriye almayın. "Sensörü bugün mü eklediniz?" sorusunu her zaman "Evet, bugün" şeklinde yanıtlayın.
 -   Yeni bir sensör ayarlarken "sensörleri yeniden başlat" özelliğini etkinleştirmeyin
 -   Aşağıdaki bilgiler ekranda gösterilmeden yeni sensörü çalıştırmayın. Klasik Durum Sayfası -> G5/G6 durumu -> TelefonHizmetDurumu:
     -   80 veya 81 seri no ile başlayan verici için: "Got data ss:dd" (i.e. "Got data 19:04")
