@@ -46,63 +46,63 @@ Görev 4: Bir Açık döngüye başlamak
 * 7 günlük bir süre boyunca geçici bazal oran önerilerinin en az 20'sini manuel olarak yürürlüğe koyun; bunları pompanıza girin ve AndroidAPS'de kabul ettiğinizi onaylayın.  Bu verilerin AndroidAPS ve Nightscout'ta gösterildiğinden emin olun.
 * Gerekirse `geçici hedefleri <../Usage/temptarget.html>`_ etkinleştirin. Bir hipodan sonra yükselen kan şekeri nedeniyle sistemin çok güçlü düzeltme yapmasını önlemek için hipo geçici hedeflerini kullanın. 
 
-Reduce number of notifications
+Bildirim sayısını azaltın
 --------------------------------------------------
-* To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
-* You might even want to wider upper limit (or disable Open Loop) at night. 
-* In Preferences you can set a minimum percentage for suggestion of basal rate change.
+* Açık Döngüdeyken alınacak karar sayısını azaltmak için 90 - 150 mg/dl veya 5,0 - 8,5 mmol/l gibi geniş bir hedef aralığı belirleyin.
+* Hatta geceleri üst sınırı genişletmek (veya Açık Döngüyü devre dışı bırakmak) isteyebilirsiniz. 
+* Tercihler'de bazal oran değişikliği önerisi için bir minimum yüzde belirleyebilirsiniz.
 
   .. image:: ../images/OpenLoop_MinimalRequestChange2.png
-    :alt: Open Loop minimal request change
+    :alt: Açık Döngü minimum istek değişikliği
      
-* Also, you do not need to act every 5 minutes on all suggestions...
+* Ayrıca her öneriye her 5 dakikada bir cevap vermek zorunda da değilsiniz...
 
-Objective 5: Understanding your open loop, including its temp basal recommendations
+Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak
 ====================================================================================================
 * Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
  
-You will want to set your target higher than usual until you are confident in the calculations and settings.  System allows
+Hesaplamalardan ve ayarlardan emin olana kadar hedefinizi normalden daha yükseğe koymak isteyeceksiniz.  Sistem izin verdiğince
 
-* a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl) 
-* a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-* a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+* düşük hedef için minimum 4 mmol (72 mg/dl) veya maksimum 10 mmol (180 mg/dl) olacak şekilde 
+* yüksek hedef için minimum 5 mmol (90 mg/dl) veya maksimum 15 mmol (225 mg/dl) olacak şekilde
+* tek bir değer olacak şekilde geçici bir hedef, 4 mmol ila 15 mmol (72 mg/dl ila 225 mg/dl) aralığında herhangi bir yerde olabilir
 
-The target is the value that calculations are based on, and not the same as where you aim to keep your blood glucose values within.  If your target is very wide (say, 3 or more mmol [50 mg/dl or more] wide), you will often find little AAPS action. This is because blood glucose is eventually predicted to be somewhere in that wide range and therefore not many fluctuating temporary basal rates are suggested. 
+Hedef hesaplamaların dayandığı değerdir ve kan şekeri değerlerinizi içinde tutmayı amaçladığınız değerle aynı değildir.  Hedefiniz çok genişse (örneğin, 3 veya daha fazla mmol [50 mg/dl veya daha fazla] genişlik), genellikle çok az AAPS eylemi bulacaksınız. Bunun nedeni, kan şekerinin eninde sonunda bu geniş aralıkta bir yerde olacağı tahmin edilmesidir ve bu nedenle çok fazla dalgalı geçici bazal hız önerilmemektedir. 
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol [20 mg/dl or less] wide) and observe how the behavior of your system changes as a result.  
+Hedeflerinizi birbirine daha yakın bir aralıkta (örneğin 1 veya daha az mmol [20 mg/dl veya daha az] genişlikte) olacak şekilde ayarlamayı deneyebilir ve sonuç olarak sisteminizin davranışının nasıl değiştiğini gözlemleyebilirsiniz.  
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in `Preferences <../Configuration/Preferences.html>`__ > Range for Visualisation.
+Görselleştirme Aralığı'na farklı değerler buradan `Tercihler <../Configuration/Preferences.html>`__ > girerek kan şekerinizi tutmayı amaçladığınız değerler için grafikte daha geniş bir aralık (yeşil çizgiler) görüntüleyebilirsiniz.
  
 .. image:: ../images/sign_stop.png
-  :alt: Stop sign
+  :alt: Dur işareti
 
-Stop here if you are open looping with a virtual pump - do not click Verify at the end of this objective.
+Sanal bir pompa ile açık döngü yapıyorsanız burada durun - bu hedefin sonunda sakın Doğrula'ya tıklamayın.
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .. image:: ../images/blank.png
-  :alt: blank
+  :alt: boş
 
 Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 ====================================================================================================
 .. image:: ../images/sign_warning.png
-  :alt: Warning sign
+  :alt: Uyarı işareti
   
-Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. High bg values have to be corrected manually by you!
+Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. Yüksek kş değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Set your target range slightly higher than you usually aim for, just to be safe.
-* Watch  how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
-* Ensure your settings have supported AndroidAPS to avoid having to treat a low glucose over a period of 5 days.  If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios.
-* You don't have to change your settings. During objective 6 maxIOB setting is internally set to zero automatically. This override will be reversed when moving to objective 7.
+* `Tercihler <../Configuration/Preferences.html>`__ içinden veya ana ekranın sol üst köşesindeki Açık Döngü düğmesini basılı tutarak Kapalı Döngü'yü seçin.
+* Güvende olmak için hedef aralığınızı genellikle hedeflediğinizden biraz daha yükseğe ayarlayın.
+* Ana ekranda mavi bazal metnini veya ana ekran grafiğinde mavi bazal oluşturmayı görüntüleyerek geçici bazallerin nasıl aktif olduğunu izleyin.
+* 5 günlük bir süre boyunca düşük glikozu tedavi etmekten kaçınmak için ayarlarınızın AndroidAPS'yi desteklediğinden emin olun.  Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, DIA, bazal, ISF ve karbonhidrat oranlarınızı iyileştirmeyi düşünün.
+* Ayarlarınızı değiştirmeniz gerekmez. Görev 6 sırasında maxIOB ayarı dahili olarak otomatik olarak sıfıra ayarlanır. Görev 7'ye geçildiğinde bu geçersiz kılma tersine çevrilecektir.
 * Sistem, maxIOB ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal IOB negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
 
   .. image:: ../images/Objective6_negIOB.png
     :alt: Örnek negatif IOB
 
 * Bazal IOB'niz negatifse (üstteki ekran görüntüsüne bakın) görev 6'da da bir GBO > %100 verilebilir.
-* You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
+* Tedavi edilen hipoları takiben, geri tepmede bazal artırma yeteneği olmadan geçici olarak ani artışlar yaşayabilirsiniz.
 
-Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
+Görev 7: Kapalı döngüyü ayarlamak, maksimum IOB'yi 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
 ====================================================================================================
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
 
