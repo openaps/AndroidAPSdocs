@@ -43,8 +43,8 @@ CGM ve OpenAPS
 Pompa
 ==============================
 .. image:: ../images/Careportal_25_26_4_IIb.png
-  :alt: Careportal Pump
+  :alt: Bakım Portalı Pompa
 
-* Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.
-* Profile switch was moved to actions tab / menu.
-* Pump battery change was moved to actions tab / menu.
+* İşlemler sekmesi/menüsündeki "hazırla/doldur" butonunu kullanarak pompa yeri ve insülin rezervuarı değişimine ulaşılabilir.
+* Profil değiştirme işlemler sekmesine / menüsüne taşındı.
+* Pompa pil değişimi işlemler sekmesi / menüsüne taşındı.
