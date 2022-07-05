@@ -139,11 +139,11 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * Otomatik ayar başarılı olursa, yolun yanında git sürümü görüntülenecektir.
     
-    ![Git version displayed](../images/studioSetup/12_GitVersion.png)
+    ![Git sürümü görüntülendi](../images/studioSetup/12_GitVersion.png)
 
 * Eventually git.exe cannot be found automatically or the Test will result in an error (1):
     
-    ![Git not found](../images/studioSetup/13_GitVersionError.png)
+    ![Git bulunamadı](../images/studioSetup/13_GitVersionError.png)
     
     In this case click on the folder icon (2).
 
@@ -151,7 +151,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
     
-    ![Select git manually](../images/studioSetup/14_GitManualSelection.png)
+    ![Git'i manuel olarak seçilmesi](../images/studioSetup/14_GitManualSelection.png)
 
 * Check your selected git path again with the "Test" button as described above.
 
@@ -168,11 +168,11 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
     
-    ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
+    ![Android Studio sihirbazı](../images/studioSetup/20_ProjectVCS.png)
     
     * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
         
-        ![Check out project from version control within Android Studio](../images/AndroidStudio_FileNew.PNG)
+        ![Android Studio içindeki sürüm kontrolünden projeye göz atın](../images/AndroidStudio_FileNew.PNG)
     
     * We will now tell Android Studio were to get the code from:
     
@@ -182,11 +182,11 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AndroidAPS repository into the URL textbox (3).
     * Choose the directory where you want to save the cloned code (4).
         
-        ![Clone Git](../images/studioSetup/21_CloneURL.png)
+        ![Git'i Klonla](../images/studioSetup/21_CloneURL.png)
 
 * Click button "Clone" (5).
     
-    ![Clone repository](../images/studioSetup/22_Cloning.png)
+    ![Klon deposu](../images/studioSetup/22_Cloning.png)
 
 * Do not click "Background" while repository is cloned!
 
@@ -317,34 +317,34 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * Android Studio, altta "Gradle Build running" gösterecektir. Bu, bilgisayarınıza ve internet bağlantınıza bağlı olarak biraz zaman alır. **Be patient!**
     
-    ![Gradle Running](../images/studioSetup/50_GradleRunning.png)
+    ![Gradle Çalışıyor](../images/studioSetup/50_GradleRunning.png)
 
-* Android Studio will display the information "Generate Signed APK" after build is finished.
+* Android Studio, derleme tamamlandıktan sonra "Generate Signed APK" bilgisini görüntüler.
     
-    ![Build finished](../images/studioSetup/51_BuildFinished.png)
+    ![Derleme tamamlandı](../images/studioSetup/51_BuildFinished.png)
 
-* In case build was not successful refer to the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio).
+* Derlemenin başarılı olmaması durumunda [sorun giderme bölümüne](../Installing-AndroidAPS/troubleshooting_androidstudio) bakın.
 
-* Click on the notification to expand it.
+* Genişletmek için bildirime tıklayın.
 
-* Click on the link "locate".
+* "Bul" bağlantısını tıklayın.
     
     ![Locate build](../images/studioSetup/52_BuildLocate.png)
     
-    * If the notification is gone, you can always open the "Event log" and select the same link there. ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
+    * Bildirim kaybolursa, her zaman "Olay günlüğü"nü açabilir ve orada aynı bağlantıyı seçebilirsiniz. ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
 
-* Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
+* Dosya yöneticiniz (Windows Gezgini) açılacaktır. "full" (1) > "release" (2) dizinine gidin.
     
     ![File location apk](../images/studioSetup/54_APKlocation.png)
 
-* "app-full-release.apk" (3) is the file you are looking for!
+* "app-full-release.apk" (3) aradığınız dosyadır!
 
-## Transfer APK to smartphone
+## APK'yı akıllı telefona aktarın
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+App-full-release.apk dosyasını telefonunuza aktarmanın en kolay yolu [USB kablosu veya Google Drive](https://support.google.com/android/answer/9064445?hl=en) kullanmaktır. Lütfen posta yoluyla transferin zorluklara neden olabileceğini ve tercih edilen yol olmadığını unutmayın.
 
 Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)).
 
 ## Sorun giderme
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+[Android Studio'da sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın.
