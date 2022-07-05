@@ -3,4 +3,4 @@
 Verilerinizi [Nightscout](https://nightscout.github.io/) gönderen başka bir CGM kurulumunuz varsa,
 
 -   AndroidAPS Tercihlerinde Nightscout web sitenizi ve API secret'inizi girin.
--   Select NSClient in ConfigBuilder (setting in AndroidAPS).
+-   Konfigürasyon Ayarları'nda (AndroidAPS ayarlar) NSClient'i seçin.
