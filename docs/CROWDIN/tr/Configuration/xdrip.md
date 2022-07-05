@@ -44,7 +44,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 ### Alıcı tanımlama
 
-* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Yerel yayınla ilgili sorunlar keşfederseniz (AAPS, xDrip+'dan KŞ değerleri almıyor) Ayarlar > Uygulamalar arası ayarlar > Alıcıyı tanımlayın'a gidin ve AndroidAPS derlemesi için `info.nightscout.androidaps` girin (PumpControl yapısını kullanıyorsanız `info.nightscout.aapspumpcontrol` girin!!).
 * Lütfen Dikkat: Otomatik düzeltme bazen i'yi büyük harfe çevirme eğilimindedir. `info.nightscout.androidaps` yazarken **yalnızca küçük harf kullanmalısınız** (veya PumpControl için `info.nightscout.aapspumpcontrol`). I büyük harf olursa, APPS xDrip+'dan KŞ değerlerini alamaz.
    
    ![xDrip+ Temel Uyg.-Arası Ayarlar Alıcıyı tanımlayın](../images/xDrip_InterApp_NS.png)
