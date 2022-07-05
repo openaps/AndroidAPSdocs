@@ -51,7 +51,7 @@ Değişiklikler
 * Dana sürücüsü düzeltildi @MilosKozak
 * büyük kullanıcı arayüzü iyileştirmesi, temizleme ve birleştirme, malzeme tasarımına geçiş, stiller, beyaz tema, yeni simgeler. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
-* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+* Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
 * Wear kodları, çeviriler @Andries-Smith
 * Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
 * a11y iyileştirmeleri @Andries-Smith
