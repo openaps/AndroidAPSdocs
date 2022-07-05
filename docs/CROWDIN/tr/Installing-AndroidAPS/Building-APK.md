@@ -61,12 +61,12 @@ Lütfen hem **64 bit CPU hem de 64 bit işletim sisteminin zorunlu koşul olduğ
 Genel olarak, APK dosyasını oluşturmak için gerekli adımlar:
 
 1. [Git yükleyin](../Installing-AndroidAPS/git-install.rst)
-2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Android Studio tercihlerinde git yolunu ayarlayın](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [AndroidAPS kodlarını indirin](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
+2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
+3. [Android Studio tercihlerinde git yolunu ayarlayın](../Installing-AndroidAPS/Building-APK#git-pfad-in-android-studio-eintragen)
+4. [AndroidAPS kodlarını indirin](../Installing-AndroidAPS/Building-APK#androidaps-code-herunterladen)
 5. [Android SDK'i indirin](../Installing-AndroidAPS/Building-APK#download-android-sdk)
 6. [Uygulamayı oluşturun](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (imzalı apk oluşturun)
-7. [Telefonunuza apk dosyasını aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+7. [Telefonunuza apk dosyasını aktarın](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
 8. [Eğer xDrip+ kullanıyorsanız, alıcıyı tanımlayın](..//Configuration/xdrip#identify-receiver)
 
 ## Adım adım izlenecek yol
@@ -141,58 +141,58 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Git sürümü görüntülendi](../images/studioSetup/12_GitVersion.png)
 
-* Eventually git.exe cannot be found automatically or the Test will result in an error (1):
+* Sonunda git.exe otomatik olarak bulunamaz veya Test bir hatayla (error) (1) sonuçlanır :
     
     ![Git bulunamadı](../images/studioSetup/13_GitVersionError.png)
     
-    In this case click on the folder icon (2).
+    Bu durumda klasör simgesine (2) tıklayın.
 
-* Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where git has been installed. You are looking for a file named "git.exe", located in **\bin** folder.
+* Git'in nereye kurulduğundan emin değilseniz, "git.exe"yi bulmak için Windows Gezgini'nde [arama işlevini](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) kullanın. **\bin** klasöründe bulunan "git.exe" adlı bir dosya arıyorsunuz.
 
-* Select path to git.exe and make sure you selected the one in ** \bin\ ** folder (3) and click "OK" (4).
+* git.exe yolunu seçin ve ** \bin\ ** klasöründe (3) olanı seçtiğinizden emin olun ve "OK" (4) Tamam'a tıklayın.
     
     ![Git'i manuel olarak seçilmesi](../images/studioSetup/14_GitManualSelection.png)
 
-* Check your selected git path again with the "Test" button as described above.
+* Seçtiğiniz git yolunu yukarıda açıklandığı gibi "Test" düğmesiyle tekrar kontrol edin.
 
-* When the git version is displayed next to the path (see screenshot above), close settings window by clicking "OK" button (5).
+* Yolun yanında git sürümü görüntülendiğinde (yukarıdaki ekran görüntüsüne bakın), "OK" düğmesini (5) tıklayarak ayarlar penceresini kapatın.
 
 ### Mac
 
-* Any git version should work. For example <https://git-scm.com/download/mac>.
-* Use homebrew to install git: ```$ brew install git```.
-* For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-* If you install git via homebrew there is no need to change any preferences. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
+* Herhangi bir git sürümü çalışması gerekir. Örneğin <https://git-scm.com/download/mac>.
+* Git'i kurabilmek için homebrew kullanın: ```$ brew install git```.
+* Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
+* Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
 
 ## AndroidAPS kodlarını indirin
 
-* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
+* Android Studio karşılama ekranında soldaki "Projects" (1) projeler ve ardından "Get from VCS" (2) VCS'den Alın öğesini seçin.
     
     ![Android Studio sihirbazı](../images/studioSetup/20_ProjectVCS.png)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
+    * Android Studio'yu zaten açtıysanız ve artık hoş geldiniz ekranını görmüyorsanız, Sürüm Kontrolünden Dosya (1) > Yeni (2) > Proje'yi seçin... (3)
         
         ![Android Studio içindeki sürüm kontrolünden projeye göz atın](../images/AndroidStudio_FileNew.PNG)
     
-    * We will now tell Android Studio were to get the code from:
+    * Şimdi Android Studio'ya kodu nereden alacağını söyleyeceğiz:
     
-    * Make sure you have selected "Repository URL" on the left (1).
+    * Solda (1) taraftaki "Repository URL"ni seçtiğinizden emin olun.
     
-    * Check if "Git" is selected as version control (2).
-    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AndroidAPS repository into the URL textbox (3).
-    * Choose the directory where you want to save the cloned code (4).
+    * Versiyon kontrolü (2) olarak "Git"in seçili olup olmadığını kontrol edin.
+    * URL'yi kopyalayıp yapıştırın ```https://github.com/nightscout/AndroidAPS``` ana AndroidAPS deposuna URL metin kutusuna (3) kopyalayıp yapıştırın.
+    * Klonlanmış kodu (4) kaydetmek istediğiniz dizini seçin.
         
         ![Git'i Klonla](../images/studioSetup/21_CloneURL.png)
 
-* Click button "Clone" (5).
+* "Klonla" (5) düğmesine tıklayın.
     
     ![Klon deposu](../images/studioSetup/22_Cloning.png)
 
-* Do not click "Background" while repository is cloned!
+* Depo klonlanırken "Arka Plan"a tıklamayın!
 
-* After the repository is cloned successfully, Android Studio will open the cloned project.
+* Depo başarıyla klonlandıktan sonra, Android Studio klonlanan projeyi açacaktır.
 
-* You will be asked whether you want to trust the project. Click on "Trust project"!
+* Projeye güvenmek isteyip istemediğiniz sorulacak. "Trust project" (Projeye güven) üzerine tıklayın!
     
     ![Projeye güven](../images/studioSetup/23_TrustProject.png)
 
@@ -315,7 +315,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
     
     ![Derleme varyantı seçin](../images/studioSetup/49_BuildVariant.png)
 
-* Android Studio, altta "Gradle Build running" gösterecektir. Bu, bilgisayarınıza ve internet bağlantınıza bağlı olarak biraz zaman alır. **Be patient!**
+* Android Studio, altta "Gradle Build running" gösterecektir. Bu, bilgisayarınıza ve internet bağlantınıza bağlı olarak biraz zaman alır. **Sabırlı olun!**
     
     ![Gradle Çalışıyor](../images/studioSetup/50_GradleRunning.png)
 
@@ -329,13 +329,13 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 * "Bul" bağlantısını tıklayın.
     
-    ![Locate build](../images/studioSetup/52_BuildLocate.png)
+    ![Derleneni bul](../images/studioSetup/52_BuildLocate.png)
     
-    * Bildirim kaybolursa, her zaman "Olay günlüğü"nü açabilir ve orada aynı bağlantıyı seçebilirsiniz. ![Build successfully - event log](../images/studioSetup/53_EventLog.png)
+    * Bildirim kaybolursa, her zaman "Olay günlüğü"nü açabilir ve orada aynı bağlantıyı seçebilirsiniz. ![Başarıyla Derlendi - event log](../images/studioSetup/53_EventLog.png)
 
 * Dosya yöneticiniz (Windows Gezgini) açılacaktır. "full" (1) > "release" (2) dizinine gidin.
     
-    ![File location apk](../images/studioSetup/54_APKlocation.png)
+    ![Apk dosya konumu](../images/studioSetup/54_APKlocation.png)
 
 * "app-full-release.apk" (3) aradığınız dosyadır!
 
