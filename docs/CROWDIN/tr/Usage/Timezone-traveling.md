@@ -24,7 +24,7 @@ Bunu önlemek için iki olasılık vardır:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Yeni bir Libre 2 sensörünü başlatmak için eğer [yama uygulanmış LibreLink uygulaması](../Hardware/Libre2#time-zone-travelling) kullanıyorsanız, otomatik saat dilimi ayarlanmalıdır ve bu seçeneği kullanamazsınız.
 
 ### Seçenek 2: Pompa geçmişini sil
 
@@ -48,7 +48,7 @@ Insight, aynı zamanda, hangi andaki zamanın ve hangi (eski) zamandan hangi (ye
 
 GTD'larda yanlışlıklara neden olabilir. Ama sorun olmamalı.
 
-Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. Pilin değiştirilmesi uzun sürerse bu dahili pilin enerjisi biterse saat sıfırlanır ve yeni pil taktıktan sonra saat ve tarih girmeniz istenir. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
+Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. Pilin değiştirilmesi uzun sürerse bu dahili pilin enerjisi biterse saat sıfırlanır ve yeni pil taktıktan sonra saat ve tarih girmeniz istenir. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
 
 # Zaman ayarı yaz saati uygulaması (DST)
 
