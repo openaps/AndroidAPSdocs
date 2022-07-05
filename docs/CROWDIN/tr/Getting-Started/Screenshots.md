@@ -137,7 +137,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 * Algoritma, Kş'nizin çok düşmesini önlemek için bir şeyler yemeniz gerektiğini anlarsa, önerilen karbonhidrat miktarı görüntülenir.
 * Bu oref algoritmasının, seni 0 (sıfır) geçici bazal oranı ile kurtaramayacağı ve düzeltmek için karbonhidrata ihtiyacın olacağı anlamına gelir.
-* The carb notifications are much more sophisticated than the bolus calculator ones. You might see carbs suggestion whilst bolus calculator does not show missing carbs.
+* Karbonhidrat bildirimleri, bolus hesaplayıcılardan çok daha karmaşıktır. Bolus hesaplayıcı eksik karbonhidratları göstermezken karbonhidrat önerisi görebilirsiniz.
 * İstenirse karbonhidrat ihtiyacı bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilir ve yayınlanır.
 
 ### Bölüm E - Durum ışıkları
@@ -156,7 +156,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ### Bölüm F - Ana grafik
 
-![Section F](../images/Home2020_MainGraph.png)
+![Bölüm F](../images/Home2020_MainGraph.png)
 
 * Grafik, glikoz monitörünüzden (CGM) okunan kan şekerinizi (KŞ) gösterir. 
 * Parmak ucundan alınan kalibrasyonları ve karbonhidrat girişleri gibi işlem sekmesine girilen notların yanı sıra profil geçişleri burada gösterilir. 
