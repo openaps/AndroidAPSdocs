@@ -1,18 +1,18 @@
-# Automation with third party Android Automate App
+# Üçüncü taraf Android Automate Uygulaması ile otomasyon
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Bu makale AndroidAPS sürüm 2.5'ten önce yazılmıştır. AndroidAPS sürüm 2.5 ile [AndroidAPS içinde bir otomasyon eklentisi](./Automation.rst) vardır. Bazıları için burası hala yararlı olabilir, ancak yalnızca ileri düzey kullanıcılar tarafından kullanılmalıdır.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+AndroidAPS hibrit bir kapalı döngü sistemi olduğundan, yine de bazı kullanıcı etkileşimi gereklidir (örneğin, döngüye yürüdüğünüzü, birazdan yemek yediğinizi, koltukta uzandığınızı söyleyin...). En son AndroidAPS işlevselliğini genişletmek için sık manuel kullanıcı girişleri, Otomatikleştirme veya IFTTT gibi harici araçlar aracılığıyla otomatikleştirilebilir.
 
-## Android Automate App
+## Android Otomatikleştirme Uygulaması
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+Ücretsiz Android™ uygulaması Automate, akıllı telefonunuzdaki çeşitli görevleri otomatikleştirmenize olanak sağlar. Akış şemaları ile otomasyonlarınızı oluşturun, cihazınızın Bluetooth, Wi-Fi, NFC gibi ayarları otomatik olarak değiştirmesini sağlayın veya bulunduğunuz yere, günün saatine veya diğer herhangi bir “olay tetikleyicisine” göre SMS, e-posta gönderme gibi işlemleri gerçekleştirin. Cihazınızdaki hemen hemen her şeyi otomatikleştirebilirsiniz, Tasker ve Locale için yapılmış eklentileri bile destekler.
 
-Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
+Bu aracı kullanarak diyabetinizi çeşitli koşullara göre otomatik olarak tedavi etmek için iş akışlarını 'eğer bu (if this..) şeklinde kolayca oluşturabilirsiniz... ve bu... bunu değil... o zaman şunu yap... ve şu...'. Konfigüre edebileceğiniz binlerce olasılık vardır.
 
-Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
+Şimdiye kadar **Nightscout Profili üzerinden döngü yapmak gerekliydi**, Automate, komutları HTTP isteği aracılığıyla doğrudan nightscout web sitenizde yürütür ve ardından onu AndroidAPS uygulamanızla eşitler.
 
-**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**Çevrimdışı döngü (Automate ve AndroidAPS uygulaması arasında doğrudan iletişim) henüz desteklenmemektedir**, ancak teknolojik olarak mümkündür. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
 
 ### Basic requirements
 
@@ -99,7 +99,7 @@ Edit the sling by tapping on the edit pencil > Flowchart
 
 Customize the workflow according to your wishes as follows:
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+'Bildirim yayınlandı mı?' tetikleyiciyi başlatmak için 'TITLE' öğesini, tetikleyiciyi tetiklemesi gereken xDrip+ uyarınızın adına ayarlamanız ve bu addan önce ve sonra bir * değişkeni eklemeniz gerekir.
 
 ![Automate sling](../images/automate-app7.png)
 
@@ -109,18 +109,18 @@ Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cg
 
 Request content:
 
-* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
-* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
+* targetTop / targetBottom: Düşük GH değeri (üst ve alt aynı değer olmalıdır)
+* süre: Düşük GH'in süresi (bir süre sonra normal profil hedefine geri döner). xDrip+ uyarısı 'Standart erteleme' ile aynı süreyi kullanmanız önerilir
 * secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
 
 Save: Tap on 'Done' and on the hook
 
 Start sling: Tap on Play button
 
-#### Example 3: To be added by you!!!
+#### Örnek 3: Sizin tarafınızdan eklenecek!!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Lütfen .flo dosyasını Automate topluluğuna yükleyerek ('Nightscout' anahtar kelimesi altında) başka iş akışları ekleyin ve bunu [AndroidAPSdocs deposunda Çekme İsteği](../make-a-PR.md) yaparak burada açıklayın.
 
-## If this, then that (IFTTT)
+## Eğer buysa, o zaman (IFTTT)
 
-Feel free to add a Howto by PR...
+PR ile bir Howto eklemekten çekinmeyin...
