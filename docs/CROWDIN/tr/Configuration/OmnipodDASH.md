@@ -335,26 +335,26 @@ Bu sekme, ana AAPS dokümantasyonunda detaylı bir şekilde anlatılmıştır. A
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Seviye
 
 **İnsülin Seviyesi**
 
 Görüntülenen insülin seviyesi, Omnipod DASH tarafından bildirilen miktardır. Bununla birlikte, pod sayısal insülin rezervuar seviyesini yalnızca 50 ünitenin altında olduğunda bildirir. O zamana kadar “50 ünitenin üzerinde” şeklinde görüntülenecektir. Bildirilen miktar kesin değildir: pod çoğu durumda "boş" olduğunu bildirdiğinde bile rezervuarda hala biraz ek insülin kalacaktır. Omnipod DASH sekmesi, aşağıda açıklandığı gibi görüntülenecektir:
 
-  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **50 Ünitenin Üzerinde** - Pod, şu anda rezervuarda 50 üniteden fazla insülin olduğunu rapor ediyor.
+  * **50 Ünitenin Altında** - Pod tarafından bildirilen rezervuarda kalan insülin miktarı.
 
 Ek not:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
+  * **SMS** - SMS yanıtlarında insülin seviyesi 50+Ü veya değer görünür.
+  * **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
 
 ## Sorun giderme
 
-### Delivery suspended
+### İletimi askıya alma
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
-  * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
-     - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
+  * Artık iletimi askıya alma butonu yok. Pod insülin iletimini "askıya almak" istiyorsanız, x dakika için sıfır GBO ayarlayabilirsiniz.
+  * Profil geçişleri sırasında, dash pompa yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Bu olduğunda:
+     - Bazal, SMB, Manuel bolus vb. içeren insülin iletimi olmayacaktır.
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
      - AAPS, her 15 dakikada bir yeni bazal profili ayarlamaya çalışacaktır.
      - APPS, iletim hala askıya alınmışsa iletimin her 15 dakikada bir askıya alındığını bildiren bir bildirim gösterecektir. (iletim devam ettirilemedi)
