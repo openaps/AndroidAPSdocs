@@ -2,19 +2,19 @@
 
 ## G5'i xdrip+ ile kullanıyorsanız
 
--   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
--   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
--   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
--   Select xdrip in ConfigBuilder (setting in AndroidAPS).
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+-   Henüz kurulmadıysa [xdrip](https://github.com/NightscoutFoundation/xDrip)'i indirin ve nightcout'taki talimatları izleyin ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
+-   xdrip'te Ayarlar > Yerel-Uygulama ayarlarına gidin ve > Verileri Yerel Olarak Yayınlayını AÇIK'ı seçin.
+-   xdrip'te Ayarlar > Uygulamalar arası ayarlar > Tedavileri Kabul Et'e gidin ve KAPALI'yı seçin.
+-   Kalibre etmek için AndroidAPS'yi kullanabilmek istiyorsanız, xdrip'te Ayarlar > Uygulamalar Arası Uyumluluğu > Kalibrasyonları Kabul Et'e gidin ve AÇIK'ı seçin. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+-   Konfigürasyon Ayarları'nda xdrip'i seçin (AndroidAPS'deki ayar).
+-   AAPS, telefon uçak modundayken KŞ değerlerini almıyorsa, [xDrip+ ayarlar sayfasında](../Configuration/xdrip.md) açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
-## If using G5 with patched Dexcom app
+## Yamalı Dexcom uygulamasıyla G5 kullanıyorsanız
 
 -   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
 
     -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Region will be visible in URL.
+    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Bölge URL'de görünecektir.
 
     ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
 
