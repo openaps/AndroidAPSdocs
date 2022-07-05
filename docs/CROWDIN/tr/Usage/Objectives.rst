@@ -59,7 +59,7 @@ Bildirim sayısını azaltın
 
 Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak
 ====================================================================================================
-* Start to understand the thinking behind the temp basal recommendations by looking at the `determine basal logic <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>`_ and both the `forecast line in AndroidAPS homescreen <../Getting-Started/Screenshots.html#prediction-lines>`_/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+* Geçici bazal önerilerin ardındaki düşünceyi, aşağıdakilere bakarak anlamaya başlayın 'Temel mantığı belirleme <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html>'_ ve hem 'AndroidAPS ana ekranındaki tahmin satırına <../Getting-Started/Screenshots.html#prediction-lines>' _/Nightscout ve OpenAPS sekmenizdeki hesaplamalardan elde edilen çıktıların özeti.
  
 Hesaplamalardan ve ayarlardan emin olana kadar hedefinizi normalden daha yükseğe koymak isteyeceksiniz.  Sistem izin verdiğince
 
@@ -104,7 +104,7 @@ Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6
 
 Görev 7: Kapalı döngüyü ayarlamak, maksimum IOB'yi 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
 ====================================================================================================
-* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+* 'Maksimum toplam Aktif İnsülin (IOB) değerinizi OpenAPS aşamaz' (OpenAPS'de 'maks-iob' olarak adlandırılır) değerini 1 günlük bir süre boyunca 0'ın üzerine yükseltin, varsayılan öneri "ortalama yemek bolusu + 3x maksimum günlük bazal" (SMB algoritması için) veya "3x maks günlük bazal" (daha eski AMA algoritması için) Ancak ayarların sizde nasıl tepki verdiğini bilene kadar bu değeri yavaş yavaş yükseltmelisiniz. (maks günlük bazal = günün herhangi bir zaman dilimindeki maksimum saatlik değer).
 
   Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
