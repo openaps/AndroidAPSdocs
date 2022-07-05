@@ -27,7 +27,7 @@ To learn more about the details and reasons for these recommendations read the [
 -   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 -   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-## If using G6 with Build Your Own Dexcom App
+## Kendi Dexcom Uygulamanızı Oluşturun ile G6 kullanıyorsanız
 
 -   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
 -   This app lets you use your Dexcom G6 with any Android smartphone.
@@ -37,36 +37,36 @@ To learn more about the details and reasons for these recommendations read the [
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
 -   After short time BYODA should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
 
-### Settings for AndroidAPS
+### AndroidAPS ayarları
 
 -   Select 'Dexcom App (patched)' in config builder.
 -   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
 
-### Settings for xDrip+
+### xDrip+ için ayarlar
 
 -   Select '640G/Eversense' as data source.
 -   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
 
-## Troubleshooting G6
+## Sorun giderme G6
 
-### Dexcom G6 specific troubleshooting
+### Dexcom G6'ya özel sorun giderme
 
 -   Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
 -   Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
 -   xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
 -   Wait at least 15 min. between stopping and starting a sensor.
 -   Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
--   Do not enable "restart sensors" while setting a new sensor
--   Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
-    -   Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-    -   Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+-   Yeni bir sensör ayarlarken "sensörleri yeniden başlat" özelliğini etkinleştirmeyin
+-   Aşağıdaki bilgiler ekranda gösterilmeden yeni sensörü çalıştırmayın. Klasik Durum Sayfası -> G5/G6 durumu -> TelefonHizmetDurumu:
+    -   80 veya 81 seri no ile başlayan verici için: "Got data ss:dd" (i.e. "Got data 19:04")
+    -   8G veya 8H ile başlayan verici serisi: "Glikoz var ss:dd" (örneğin, "Glikoz 19:04 var") veya "Ham yok ss:dd" (örneğin, "Şimdi ham var 19:04")
 
 ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 ### Genel sorun giderme
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation#troubleshooting).
+CGM'ler için Genel Sorun Giderme [burada](./GeneralCGMRecommendation#troubleshooting). bulunabilir.
 
 ### Çalışan sensörle yeni verici
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+Çalışan bir sensör oturumu sırasında vericiyi değiştirirseniz, sensör yuvasına zarar vermeden vericiyi çıkarmayı deneyebilirsiniz. Bu konu hakkında video şu adreste bulunabilir <https://youtu.be/tx-kTsrkNUM>.
