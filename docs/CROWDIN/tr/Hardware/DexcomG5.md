@@ -11,19 +11,19 @@
 
 ## Yamalı Dexcom uygulamasıyla G5 kullanıyorsanız
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+-   APK'yi buradan <https://github.com/dexcomapp/dexcomapp> indirin ve ihtiyaçlarınıza uyan sürümü seçin (mg/dl veya mmol/l sürümü, G5).
 
-    -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Bölge URL'de görünecektir.
+    -   2.3 Klasörü, AndroidAPS 2.3 kullanıcıları içindir, klasör 2.4 ise AAPS 2.5 kullanıcıları içindir.
+    -   Bilgisayarınızda <https://play.google.com/store/search?q=dexcom%20g5> bağlantısını açın. Bölge URL'de görünecektir.
 
-    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
+    ![Dexcom G5 URL'sindeki Bölge](../images/DexcomG5regionURL.PNG)
 
 -   Stop sensor and uninstall the original Dexcom app, if not already done.
 
 -   İndirilen apk'yı yükleyin
 
--   Start sensor
+-   Sensörü başlatın
 
 -   Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
 
--   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+-   Yerel yayın yoluyla xDrip alarmlarını kullanmak istiyorsanız: xDrip'te hamburger menüsü > ayarlar > donanım veri kaynağı > 640G /EverSense.
