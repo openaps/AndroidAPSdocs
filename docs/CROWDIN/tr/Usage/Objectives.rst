@@ -42,9 +42,9 @@ Görev 3: Bilginizi kanıtlayın
 Görev 4: Bir Açık döngüye başlamak
 ==================================================
 * Tercihler'den veya ana ekranın sol üst köşesindeki Döngü düğmesini basılı tutarak Döngü Aç'ı seçin.
-* Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
-* Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
-* Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
+* AndroidAPS'yi ihtiyaçlarınıza göre özelleştirmek için `Tercihler <../Configuration/Preferences.html>`__ üzerinden çalışın.
+* 7 günlük bir süre boyunca geçici bazal oran önerilerinin en az 20'sini manuel olarak yürürlüğe koyun; bunları pompanıza girin ve AndroidAPS'de kabul ettiğinizi onaylayın.  Bu verilerin AndroidAPS ve Nightscout'ta gösterildiğinden emin olun.
+* Gerekirse `geçici hedefleri <../Usage/temptarget.html>`_ etkinleştirin. Bir hipodan sonra yükselen kan şekeri nedeniyle sistemin çok güçlü düzeltme yapmasını önlemek için hipo geçici hedeflerini kullanın. 
 
 Reduce number of notifications
 --------------------------------------------------
@@ -97,9 +97,9 @@ Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6
 * Sistem, maxIOB ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal IOB negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
 
   .. image:: ../images/Objective6_negIOB.png
-    :alt: Example negative IOB
+    :alt: Örnek negatif IOB
 
-* If your basal IOB is negative (see screenshot above) a TBR > 100% can be issued also in objective 6.
+* Bazal IOB'niz negatifse (üstteki ekran görüntüsüne bakın) görev 6'da da bir GBO > %100 verilebilir.
 * You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
 
 Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lowering BG targets
