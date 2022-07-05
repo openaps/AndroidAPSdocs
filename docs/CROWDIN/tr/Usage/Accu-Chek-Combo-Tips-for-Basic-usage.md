@@ -13,17 +13,17 @@
 ### Pompaya ulaşılamıyor alarmını etkinleştirin
 
 * AndroidAPS'de, **Ayarlar / Yerel Alarmlar**'a gidin ve **pompaya ulaşılamadığında alarmı** etkinleştirin ve **pompaya erişilemiyor sınırı [Min]**'i **31** dakika olarak ayarlayın. 
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+* Bu telefonunuz masanın üzerindeyken odadan çıkarken alarmı tetiklememek için size yeterli süreyi verir, ancak geçici bir bazal oran süresini aşan bir süre boyunca pompaya ulaşılamazsa sizi bilgilendirir.
 
-### Restore reachability of the pump
+### Pompanın erişilebilirliğini geri yükleyin
 
-* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
+* AndroidAPS bir **pompaya erişilemiyor** alarmı bildirdiğinde, önce tuş kilidini kaldırın ve **pompadaki herhangi bir tuşa basın** (ör. "aşağı" düğmesi). Pompa ekranı kapanır kapanmaz, AndroidAPS'de **Kombo Sekmesi**'nde **GÜNCELLE**'ye basın. Çoğunlukla iletişim tekrar çalışır.
+* Bu işe yaramazsa, akıllı telefonunuzu yeniden başlatın. Yeniden başlatmanın ardından AndroidAPS ve ruffy yeniden etkinleştirilecek ve pompa ile yeni bir bağlantı kurulacaktır.
+* Farklı akıllı telefonlarla yapılan testler, bazı akıllı telefonların "pompa ulaşılamaz" hatasını diğerlerinden daha sık tetiklediğini göstermiştir. [AAPS Telefonları](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) başarıyla test edilmiş akıllı telefonlar listesi. 
 
-### Root causes and consequences of frequent communication errors
+### Sık sık yapılan iletişim hatalarının temel nedenleri ve sonuçları
 
-* On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
+* **Düşük bellek** (veya **agresif güç tasarrufu** ayarları) olan telefonlarda, AndroidAPS genellikle kapatılır. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
 ![Pompa ulaşılamıyor](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
 
