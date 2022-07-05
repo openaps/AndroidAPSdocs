@@ -83,7 +83,7 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 
 ### Actions to take after the clock change
 
-A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. COB ve IOB'nizin her ikisi de sıfıra yakın olmalıdır.)
+Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. COB ve IOB'nizin her ikisi de sıfıra yakın olmalıdır.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
 2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
