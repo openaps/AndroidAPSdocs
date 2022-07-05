@@ -12,92 +12,92 @@ Bu aracı kullanarak diyabetinizi çeşitli koşullara göre otomatik olarak ted
 
 Şimdiye kadar **Nightscout Profili üzerinden döngü yapmak gerekliydi**, Automate, komutları HTTP isteği aracılığıyla doğrudan nightscout web sitenizde yürütür ve ardından onu AndroidAPS uygulamanızla eşitler.
 
-**Çevrimdışı döngü (Automate ve AndroidAPS uygulaması arasında doğrudan iletişim) henüz desteklenmemektedir**, ancak teknolojik olarak mümkündür. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**Çevrimdışı döngü (Automate ve AndroidAPS uygulaması arasında doğrudan iletişim) henüz desteklenmemektedir**, ancak teknolojik olarak mümkündür. Belki ileride bir çözüm bulunur. Bunu yapmanın bir yolunu bulduysanız, lütfen bunu bu belgelere ekleyin veya bir geliştiriciyle iletişime geçin.
 
-### Basic requirements
+### Temel gereksinimler
 
-#### Automate App
+#### Automate Uygulaması
 
-Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AndroidAPS runs.
+Android Automate'i Google Play Store'dan veya <https://llamalab.com/automate/> adresinden indirin ve AndroidAPS'nin çalıştığı akıllı telefonunuza yükleyin.
 
-In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+Otomatikleştir'de, ekranın sol üst kısmındaki hamburger menüsüne dokunun > Ayarlar > 'Sistem başlangıcında çalıştır' seçeneğini işaretleyin. Bu sistem başlangıcında iş akışlarınızı otomatik olarak çalıştıracaktır.
 
-![Automate HTTP request](../images/automate-app2.png)
+![Automate HTTP isteği](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Bağlantı ayarları > 'Yalnızca WiFi bağlantısını kullan' ve 'Yalnızca şarj oluyorsa' seçeneklerinin işaretini kaldırın, çünkü otomatik tedavi yalnızca AndroidAPS gerçek bir nightcout bağlantısı olduğunda çalışır.
 
-![Nightscout connection preferences](../images/automate-aaps1.jpg)
+![Nightscout bağlantı tercihleri](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
+AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Gelişmiş Ayarlar > 'Yalnızca NS yükle (senkronizasyon devre dışı)' ve 'NS'ye yükleme yok' seçeneğinin işaretini kaldırın.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Oluşabilecek [güvenlik sorunlarının](../Installing-AndroidAPS/Nightscout#security-considerations) farkında olun ve bir [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) kullanıyorsanız çok dikkatli olun.
 
-![Nightscout download preferences](../images/automate-aaps2.jpg)
+![Nightscout indirme tercihleri](../images/automate-aaps2.jpg)
 
-### Workflow examples
+### İş akışı örnekleri
 
-#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+#### Örnek 1: Aktivite (örneğin yürüme veya koşma) algılanırsa, yüksek bir GH ayarlayın. Ve aktivite biterse, 20 dakika bekleyin ve ardından GH'i iptal edin
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+Bu iş akışı, aktivite davranışını algılayan akıllı telefon sensörlerini (pedometre, yerçekimi sensörü...) dinleyecektir. Yürüme, koşma veya bisiklete binme gibi yakın zamanda bir etkinlik mevcutsa, Otomatikleştirme, kullanıcı tarafından belirlenen süre için kullanıcı tarafından belirlenen yüksek bir geçici hedef belirleyecektir. Aktivite sona ererse, akıllı telefonunuz bunu algılar, 20 dakika bekleyin ve ardından hedefi normal profil değerine geri ayarlayın.
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Otomatikleştirme komut dosyasını <https://llamalab.com/automate/community/flows/27808> indirin.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+İş akışını isteklerinize göre aşağıdaki gibi özelleştirin:
 
 ![Automate sling](../images/automate-app6.png)
 
-1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of activity
+1. = Yüksek GH ayarla
+2. = Aktivitenin bitiminden 20 dakika sonra normal hedefe geri dönün
 
 1 ![Automate sling](../images/automate-app1.png)
 
 2 ![Automate sling](../images/automate-app5.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+İstek URL'si: /api/v1/treats.json ile biten NS-URL'niz (ör. https://my-cgm.herokuapp.com/api/v1/treats.json)
 
-Request content:
+İçerik talebi:
 
-* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* targetTop / targetBottom: Yüksek GH değeri (üst ve alt aynı değer olmalıdır)
+* süre: Yüksek GH'inin süresi (bir süre sonra etkinlik devam etmedikçe normal profil hedefine geri döner). 
+* secret: API SHA1 hash'ınız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
 
-Save: Tap on 'Done' and on the hook
+Kaydet: 'Bitti'ye ve kancaya dokunun
 
-Start sling: Tap on Play button
+Askıyı başlat: Oynat düğmesine dokunun
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... dakika.
+#### Örnek 2: xDrip+ bir KŞ yüksek alarmı uyarırsa, o zaman ... için düşük bir GH ayarlayın. dakika.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+Bu iş akışı, xDrip+ bildirim kanalını dinleyecektir. Kullanıcı tarafından belirlenen bir xDrip+ yüksek KŞ uyarısı tetiklenirse, Otomatikleştirme, kullanıcı tarafından belirlenen süre için kullanıcı tarafından belirlenen bir düşük geçici hedef ayarlar. Bir süre sonra, başka bir olası uyarı, düşük GH'in süresini uzatacaktır.
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+İlk olarak, xDrip+'a aşağıdaki gibi bir KŞ yüksek uyarısı eklemelisiniz:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![xDrip+ uyarı ayarları](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Uyarı adı: (Dikkat edin!) Bu ad, tetikleyiciyi ateşlemek için gereklidir. Açık olmalı ve diğer uyarı adlarına benzememelidir. Örnek: '80alarm' yanında '180alarm' bulunmamalıdır.
 
-Threshold: BG value that should fire the high alert.
+Eşik: Yüksek alarmı tetiklemesi gereken KŞ değeri.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Varsayılan Erteleme: Düşük GH'iniz için ayarlamayı planladığınız süreyi buraya girin, çünkü uyarı tekrar gelir ve belki de düşük GH'in süresini uzatır.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![xDrip+ uyarı ayarları](../images/automate-xdrip2.png)
 
 ##### Automate
 
 Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+İş akışını isteklerinize göre aşağıdaki gibi özelleştirin:
 
 'Bildirim yayınlandı mı?' tetikleyiciyi başlatmak için 'TITLE' öğesini, tetikleyiciyi tetiklemesi gereken xDrip+ uyarınızın adına ayarlamanız ve bu addan önce ve sonra bir * değişkeni eklemeniz gerekir.
 
@@ -105,17 +105,17 @@ Customize the workflow according to your wishes as follows:
 
 ![Automate sling](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+İstek URL'si: /api/v1/treats.json ile biten NS-URL'niz (ör. https://my-cgm.herokuapp.com/api/v1/treats.json)
 
-Request content:
+İçerik talebi:
 
 * targetTop / targetBottom: Düşük GH değeri (üst ve alt aynı değer olmalıdır)
 * süre: Düşük GH'in süresi (bir süre sonra normal profil hedefine geri döner). xDrip+ uyarısı 'Standart erteleme' ile aynı süreyi kullanmanız önerilir
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* secret: API SHA1 hash'ınız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
 
-Save: Tap on 'Done' and on the hook
+Kaydet: 'Bitti'ye ve kancaya dokunun
 
-Start sling: Tap on Play button
+Askıyı başlat: Oynat düğmesine dokunun
 
 #### Örnek 3: Sizin tarafınızdan eklenecek!!!
 
