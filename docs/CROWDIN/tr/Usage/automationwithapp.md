@@ -91,7 +91,7 @@ Varsayılan Erteleme: Düşük GH'iniz için ayarlamayı planladığınız süre
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+İkinci olarak, Automate komut dosyasını <https://llamalab.com/automate/community/flows/27809> indirin.
 
 Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
@@ -111,7 +111,7 @@ Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
 * targetTop / targetBottom: Düşük GH değeri (üst ve alt aynı değer olmalıdır)
 * süre: Düşük GH'in süresi (bir süre sonra normal profil hedefine geri döner). xDrip+ uyarısı 'Standart erteleme' ile aynı süreyi kullanmanız önerilir
-* secret: API SHA1 hash'ınız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
+* secret: API SHA1 karmanız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
 
 Kaydet: 'Bitti'ye ve kancaya dokunun
 
