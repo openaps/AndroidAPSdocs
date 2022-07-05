@@ -18,12 +18,12 @@
 
     ![Dexcom G5 URL'sindeki Bölge](../images/DexcomG5regionURL.PNG)
 
--   Stop sensor and uninstall the original Dexcom app, if not already done.
+-   Eğer daha önce yapmadıysanız sensörü durdurun ve orijinal Dexcom uygulamasını kaldırın.
 
 -   İndirilen apk'yı yükleyin
 
 -   Sensörü başlatın
 
--   Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+-   * Konfigürasyon Ayarları'nda (AndroidAPS'deki ayar) Dexcom Uygulamasını (yamalı) seçin.
 
 -   Yerel yayın yoluyla xDrip alarmlarını kullanmak istiyorsanız: xDrip'te hamburger menüsü > ayarlar > donanım veri kaynağı > 640G /EverSense.
