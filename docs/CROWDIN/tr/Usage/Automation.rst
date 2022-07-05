@@ -33,7 +33,7 @@ Hamburger menüsünde veya sekmede `Konfigürasyon ayarları içerisinde <../Con
 
 Genel
 --------------------------------------------------
-There are some limits:
+Bazı sınırlar vardır:
 
 * Glikoz değeri 72 ile 270 mg/dl arasında veya 4 ile 15 mmol/l arasında olmalıdır.
 * Profil yüzdesi %70 ile %130 arasında olmalıdır.
