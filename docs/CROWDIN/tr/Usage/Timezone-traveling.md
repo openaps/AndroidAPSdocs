@@ -1,12 +1,12 @@
-# Timezone traveling with pumps
+# İnsülin pompasıyla farklı zaman diliminde seyahat
 
-## DanaR, Korean DanaR
+## DanaR, Koreli DanaR
 
-There is no issue with changing timezone in phone because pump doesn't use history
+Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle ilgili bir sorun yok
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+AndroidAPS, pompanın geçmişini kullandığından ancak pompadaki kayıtların saat dilimi damgasına sahip olmadığı için bu pompalar özel bir bakıma ihtiyaç duyar. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
 
 To avoid this there are two possibilities:
 
