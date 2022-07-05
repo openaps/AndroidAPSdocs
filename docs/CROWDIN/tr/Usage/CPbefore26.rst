@@ -37,8 +37,8 @@ CGM ve OpenAPS
 .. image:: ../images/Careportal_25_26_3_IIa.png
   :alt: Bakım Portalı CGM ve OpenAPS
   
-* CGM sensor insert can now be found in the actions tab / menu.
-* All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (bölümündeki ekran görüntüsüne `karbonhidrat ve bolus <#carbs-bolus>`__ bu sayfadan bakın).
+* CGM sensör eki artık eylemler sekmesinde / menüsünde bulunabilir.
+* Bu bölümdeki diğer tüm işlevler kaldırılmıştır. Bolus verme vb. bir işlem yaparken diyalog kutusundaki not alanını kullanabilirsiniz. (bölümündeki ekran görüntüsüne `karbonhidrat ve bolus <#carbs-bolus>`__ bu sayfadan bakın).
 
 Pompa
 ==============================
