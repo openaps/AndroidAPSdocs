@@ -8,22 +8,22 @@ Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle il
 
 AndroidAPS, pompanın geçmişini kullandığından ancak pompadaki kayıtların saat dilimi damgasına sahip olmadığı için bu pompalar özel bir bakıma ihtiyaç duyar. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
 
-To avoid this there are two possibilities:
+Bunu önlemek için iki olasılık vardır:
 
-### Option 1: Keep home time and timeshift profile
+### Seçenek 1: Yerel saati koruyarak profilde zaman kaydırma
 
-* Turn off 'Automatic date and time' in your phone settings (manual time zone change).
-* Phone must keep your standard time as at home for the whole travel period.
-* Time-shift your profile according to time difference between home time and destination time.
+* Telefon ayarlarınızda 'Otomatik tarih ve saat'i özelliğini kapatın (manuel saat dilimi değişikliği).
+* Telefon, tüm seyahat süresi boyunca standart saatinizi yerelde olduğu gibi tutmalıdır.
+* Ev konumunuz ile varış noktanız arasındaki zaman farkına göre zaman kaydırmalı bir profil değişikliği gerçekleştirin.
    
-   * Long-press profile name (middle of top section on homescreen)
-   * Select 'Profile Switch'
-   * Set 'Time shift' according to your destination.
+   * Profil adına uzun basın (ana ekranın üst ortası)
+   * 'Profil Değiştir'i seçin
+   * 'Zaman farkını' varış noktanıza göre ayarlayın.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Zaman kaydırmalı profil değişikliği](../images/ProfileSwitchTimeShift2.png)
    
-   * i.e. Vienna -> New York: profile switch +6 hours
-   * i.e. Vienna -> Sydney: profile switch -8 hours
+   * ör. Viyana -> New York: profil değiştirme +6 saat
+   * ör. Viyana -> Sidney: profil değiştirme -8 saat
 * Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Delete pump history
@@ -83,26 +83,26 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 
 ### Actions to take after the clock change
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. COB ve IOB'nizin her ikisi de sıfıra yakın olmalıdır.)
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the AndroidAPS “Combo” screen, press Refresh.
-4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
+1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
+2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
+3. AndroidAPS "Combo" ekranında Yenile'ye basın.
+4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
    
    * DON'T press "delete treatments in the future"
    * Hit "remove" on all future treatments and duplicate ones. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
-6. Continue as normal.
+6. Normal şekilde devam edin.
 
 ## Accu-Chek Insight
 
-* Change to DST is done automatically. No action required.
+* DST'ye geçiş otomatik olarak yapılır. Herhangi bir işlem gerekmez.
 
-## Other pumps
+## Diğer Pompalar
 
-* This feature is available since AndroidAPS version 2.2.
-* To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* Bu özellik, AndroidAPS sürüm 2.2'den beri mevcuttur.
+* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle IOB çok yüksek).
+* DST değişikliğinden önce ana ekranda, döngünün geçici olarak devre dışı bırakılacağına dair bir bildirim alacaksınız. Bu mesaj uyarı, titreşim veya herhangi bir şey olmadan görünecektir.
