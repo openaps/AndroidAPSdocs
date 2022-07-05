@@ -4,47 +4,47 @@ Bu, Android APS Görevlerinin en son sürümü değil.  Bu sayfa, sürüm 3.0'da
 
 Geçerli görevler kümesi için lütfen `bu sayfaya <../Usage/Objectives.html>`_ bakın.
 
-AndroidAPS has a series of Objectives that need to be completed to walk you through the features and settings of safe looping.  They ensure you have configured everything detailed in the sections above correctly, and that you understand what your system is doing and why so you can trust it.
+AndroidAPS, güvenli döngü özellikleri ve ayarlarında size yol göstermek için tamamlanması gereken bir dizi Görevlere sahiptir.  Yukarıdaki bölümlerde ayrıntıları verilen her şeyi doğru bir şekilde yapılandırdığınızdan ve sisteminizin ne yaptığını ve neden ona güvenebileceğinizi anladığınızdan emin olurlar.
 
-If you are **upgrading phones** then you can `export your settings <../Usage/ExportImportSettings.html>`_ to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to `backup your settings <../Usage/ExportImportSettings.html>`_ frequently just in case.
+**Telefonları yükseltiyorsanız**, görevlerde ilerlemenizi sürdürmek için `ayarlarınızı dışa aktarabilirsiniz <../Usage/ExportImportSettings.html>`_. Yalnızca görevlerdeki ilerlemeniz kaydedilmeyecek, aynı zamanda maksimum bolus vb. güvenlik ayarlarınız da kaydedilecektir.  Ayarlarınızı dışa ve içe aktarmazsanız, görevlere en baştan başlamanız gerekir.  Her ihtimale karşı `ayarlarınızı sıklıkla yedeklemek <../Usage/ExportImportSettings.html>`_ iyi bir fikirdir.
 
-If you want to go back in objectives see `explanation below <../Usage/Objectives.html#go-back-in-objectives>`_.
+Görevlere geri dönmek istiyorsanız, `aşağıdaki açıklamaya bakın <../Usage/Objectives.html#görevlere-geri-dönme>`_.
  
-Objective 1: Setting up visualization and monitoring, analysing basals and ratios
+Görev 1: Görselleştirme ve izleme ayarları, bazal ve oranlarını analize etme
 ====================================================================================================
-* Select the right blood glucose source for your setup.  See `BG Source <../Configuration/BG-Source.html>`_ for more information.
-* Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.  
-* If using DanaR pump then ensure you have followed `DanaR Insulin Pump <../Configuration/DanaR-Insulin-Pump.html>`_ instructions to ensure the link between pump and AndroidAPS.
-* Follow instructions in `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ page to ensure Nightscout can receive and display this data.
-* Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see `NSClient settings in Preferences <../Configuration/Preferences.html#nsclient>`__.
+* Kurulumunuz için doğru kan şekeri kaynağını seçin.  Daha fazla bilgi için `KŞ Kaynağı <../Configuration/BG-Source.html>`_ bölümüne bakın.
+* Pompa durumunuzun AndroidAPS ile iletişim kurabilmesini sağlamak için Konfrigasyon Ayarlarında doğru Pompayı seçin (döngü için AndroidAPS sürücüsü olmayan bir pompa modeli kullanıyorsanız Sanal Pompa'yı seçin).  
+* DanaR pompa kullanıyorsanız, pompa ile AndroidAPS arasındaki bağlantıyı sağlamak için `DanaR İnsülin Pompası <../Configuration/DanaR-Insulin-Pump.html>`_ talimatlarını uyguladığınızdan emin olun.
+* Nightscout'un bu verileri alıp görüntüleyebildiğinden emin olmak için `Nightscout <../Installing-AndroidAPS/Nightscout.html>`_ sayfasındaki talimatları izleyin.
+* NSClient'teki URL'nin sonunda **/api/v1/** kısmı OLMADAN olması gerektiğini unutmayın - `Tercihler'deki NSClient ayarlarına bakın <../Configuration/Preferences.html#nsclient>`__.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*AndroidAPS'in tanıması için bir sonraki kan şekeri ölçümünün gelmesini beklemeniz gerekebilir.*
 
-Objective 2: Learn how to control AndroidAPS
+Görev 2: AndroidAPS'yi nasıl kontrol edeceğinizi öğrenin
 ==================================================
-* Perform several actions in AndroidAPS as described in this objective.
-* Click on the orange text "Not completed yet" to access the to-dos.
-* Links will be provided to guide you in case you are not familiar with a specific action yet.
+* Bu görevde açıklandığı gibi AndroidAPS'de çeşitli eylemler gerçekleştirin.
+* Tek tek görevlere ulaşmak için turuncu renkli "Henüz tamamlanmadı" metnine tıklayın.
+* Henüz belirli bir eyleme aşina değilseniz, size rehberlik edecek bağlantılar sağlanacaktır.
 
   .. image:: ../images/Objective2_V2_5.png
-    :alt: Screenshot objective 2
+    :alt: Screenshot Görev 2
 
-Objective 3: Prove your knowledge
+Görev 3: Bilginizi kanıtlayın
 ==================================================
-* Pass a multiple-choice exam testing your AndroidAPS knowledge.
-* Click on the orange text "Not completed yet" to access the page with the question and answering options.
+* Çeşitli AndroidAPS ve kapalı döngü konularında çok seçmeli soruları yanıtlayın.
+* Soru ve cevap seçeneklerinin bulunduğu sayfaya erişmek için turuncu renkli "Henüz tamamlanmadı" yazısına tıklayın.
 
   .. image:: ../images/Objective3_V2_5.png
-    :alt: Screenshot objective 3
+    :alt: Screenshot Görev 3
 
-* Links will be provided to guide you in case you are unsure about the correct answers yet.
-* The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. The new ones cover the same basic topics plus a few new ones.
-* These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
-* Unanswered questions will affect you only if you start a new objective. In other words: If you have already completed all objectives you can wait and answer the new questions later without loosing AAPS functions.
+* Henüz doğru cevaplardan emin değilseniz, size rehberlik edecek bağlantılar sağlanacaktır.
+* Görev 3 için sorular, AAPS 2.8'den itibaren anadili İngilizce olan kişiler tarafından tamamen yeniden yazılmıştır. Yenileri aynı temel konuları ve birkaç yeni konuyu kapsar.
+* Bu yeni sorular, önceki sürümlerde 3. görev başarıyla tamamlamış olsanız bile, bazı cevaplanmayan sorulara yol açacaktır.
+* Cevaplanmamış sorular, yalnızca yeni bir göreve başlarsanız sizi etkileyecektir. Başka bir deyişle: Tüm görevleri zaten tamamladıysanız, daha sonra AAPS işlevlerini kaybetmeden bekleyebilir ve yeni soruları yanıtlayabilirsiniz.
 
-Objective 4: Starting on an open loop
+Görev 4: Bir Açık döngüye başlamak
 ==================================================
-* Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
+* Tercihler'den veya ana ekranın sol üst köşesindeki Döngü düğmesini basılı tutarak Döngü Aç'ı seçin.
 * Work through the `Preferences <../Configuration/Preferences.html>`__ to set up for you.
 * Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Ensure this data shows in AndroidAPS and Nightscout.
 * Enable `temp targets <../Usage/temptarget.html>`_ if necessary. Use hypo temp targets to prevent that the system will correct too strong because of a raising blood glucose after a hypo. 
@@ -109,20 +109,20 @@ Objective 7: Tuning the closed loop, raising max IOB above 0 and gradually lower
 ====================================================================================================
 * Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0 over a period of 1 day, the default recommendation is "average mealbolus + 3x max daily basal"(for SMB algorithm) or "3x max daily basal" (for older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
 
-  This recommendation should be seen as a starting point. If you set to the 3x and you are seeing moves that push you to hard and fast then lower that number. If you are very resistant raise it a very little at a time.
+  Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
   .. image:: ../images/MaxDailyBasal2.png
-    :alt: max daily basal
+    :alt: maks günlük bazal
 
-* Once confident on how much IOB suits your looping patterns then reduce your targets to your desired level.
+* Döngü modellerinize ne kadar IOB uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
 
 
-Objective 8: Adjust basals and ratios if needed, and then enable autosens
+Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin
 ====================================================================================================
-* You can use `autotune <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ as a one off to check your basals remain accurate or do a traditional basal test.
-* Enable `autosens <../Usage/Open-APS-features.html>`_ over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+* Bazallerinizin doğruluğunu kontrol etmek veya geleneksel bir bazal testi yapmak için `Otoayar <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html>`_ özelliğini bir defaya mahsus olarak kullanabilirsiniz.
+* 7 günlük bir süre boyunca `Otoduyarlılık <../Usage/Open-APS-features.html>`_ özelliğini etkinleştirin ve ana ekran grafiğindeki beyaz çizginin, insülin duyarlılığınızın bir sonucu olarak egzersiz veya hormonlar vb. durumlarda nasıl yükseldiğini veya düştüğünü göstermesini izleyin. ve AndroidAPS'nin bazalları ve/veya hedefleri buna göre nasıl ayarladığını OpenAPS rapor sekmesinde izleyin.
 
-*Don’t forget to record your looping in* `this form <https://bit.ly/nowlooping>`_ *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*Daha önce yapmadıysanız, * `bu forumdan <https://bit.ly/nowlooping>`_ * kendin yap DIY döngü yazılımınız olarak AndroidAPS'yi günlüğe kaydetmeyi unutmayın.*
 
 
 Görev 9: Gündüz kullanımı için ek özellikleri deneyin ve kapalı döngü sisteminize güvenin
@@ -133,21 +133,21 @@ Görev 9: Gündüz kullanımı için ek özellikleri deneyin ve kapalı döngü 
 
 Görev 10: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
 ====================================================================================================
-* You must read the `SMB chapter in this wiki <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ and `chapter oref1 in openAPSdocs <https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html>`_ to understand how SMB works, especially what's the idea behind zero-temping.
-* Then you ought to `rise maxIOB <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ to get SMBs working fine. maxIOB now includes all IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see `objective 7 <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_ for an illustration)
-* min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually.
+* Bu wiki'deki `SMB bölümünü <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ve openAPSdocs <https://openaps.readthedocs içindeki `oref1 bölümünü okumalısınız. io/en/latest/docs/Customize-Iterate/oref1.html>`_ SMB'nin nasıl çalıştığını, özellikle (zero-temping) uygulamasının ardındaki fikri anlamak için.
+* O zaman SMB'ların sorunsuz çalışmasını sağlamak için `maxIOB yükseltmeniz <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ gerekir. maxIOB artık yalnızca eklenmiş bazal değil, tüm IOB'leri içeriyor. Yani bir öğün için 8 Ü bolus verilirse ve maksIOB 7 Ü ise, IOB 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez. İyi bir başlangıç maksIOB = ortalama yemek bolusu + 3x maks günlük bazaldir (maks günlük bazal = günün herhangi bir zaman diliminde maksimum saatlik değer - bir örnek için `Görev 7'ye bakın <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
+* absorpsiyon ayarlarındaki min_5m_carbimpact varsayılanı, AMA'dan SMB'ye giderken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir.
 
 
 Görev 11: Otomasyon
 ====================================================================================================
 * `Otomasyonu <../Usage/Automation.html>`_ kullanabilmek için görev 11'e başlamanız gerekir.
 * `<../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ sınav dahil tüm göevleri tamamladığınızdan emin olun.
-* Completing previous objectives will not effect other objectives you have already finished. Tüm tamamlanmış görevler korunacaktır!
+* Önceki görevleri tamamlamak, halihazırda tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 
-Go back in objectives
+Görevlere geri dön
 ====================================================================================================
-If you want to go back in objectives for whatever reason you can do so by clicking at "clear finished".
+Herhangi bir nedenle görevlere geri dönmek istiyorsanız, bunu "Komple tamamlandı" seçeneğine tıklayarak yapabilirsiniz.
 
 .. image:: ../images/Objective_ClearFinished.png
-  :alt: Go back in objectives
+  :alt: Görevlere geri dön
