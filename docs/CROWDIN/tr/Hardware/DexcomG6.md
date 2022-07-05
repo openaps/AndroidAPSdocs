@@ -63,10 +63,10 @@ To learn more about the details and reasons for these recommendations read the [
 
 ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
-### General troubleshooting
+### Genel sorun giderme
 
 General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation#troubleshooting).
 
-### New transmitter with running sensor
+### Çalışan sensörle yeni verici
 
 If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
