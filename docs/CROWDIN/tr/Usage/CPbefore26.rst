@@ -8,43 +8,43 @@ Bakım portalının çoğu işlevi hala eylemlerde veya başlangıç ekranında 
 
 Bu sayfa, daha önce bakım portalında mevcut olan işlevleri nerede bulabileceğinizi gösterecektir.
 
-Activity & feedback
+Etkinlik & geri bildirim
 ==============================
 .. image:: ../images/Careportal_25_26_1_IIb.png
-  :alt: Careportal activity & feedback
+  :alt: Bakım Portalı etkinlik ve geri bildirim
   
-* Age information was moved to actions tab / menu.
-* BG check was moved to actions tab / menu.
-* Temporary target was moved to actions tab / menu.
-* Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`__ on this page).
+* Yaş bilgisi işlemler sekmesine / menüsüne taşındı.
+* KŞ kontrolü işlemler sekmesine / menüsüne taşındı.
+* Geçici hedef, işlemler sekmesine / menüsüne taşındı.
+* Egzersiz artık mevcut değil, ancak bolus verme vb. bir eylem gerçekleştirirken diyalog kutusundaki not alanını kullanabilirsiniz. (bölümündeki ekran görüntüsüne `karbonhidrat ve bolus <#carbs-bolus>`__ bu sayfadan bakın).
 
-Carbs & bolus
+Karbonhidrat ve Bolus
 ==============================
 .. image:: ../images/Careportal_25_26_2_IIa.png
-  :alt: Careportal carbs & bolus
+  :alt: Bakım Portalı karbonhidrat ve bolus
   
-* To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
-* Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
+* Bir bolusu not etmek için - ne için olursa olsun ister atıştırmalık ister öğün veya düzeltme için - ana ekrandaki insülin düğmesini kullanın ** ve "Bolus Yapma, sadece kaydedin"i işaretlediğinizden emin olun!**
+* Geçmişte insülin girişleri yapma seçeneği - örn. Şırıngayla verilen insülini kaydetmeyi unuttuysanız - yalnızca "Bolus yapma, yalnızca kaydet" onay kutusu işaretliyse kullanılabilir.
 
   .. image:: ../images/Careportal_25_26_5.png
-    :alt: Backdate insulin via insulin button
+    :alt: İnsülin düğmesi aracılığıyla insülinin tarihini geri alın
 
-* For carbs correction use the carbs button on the homescreen.
-* Temporary basal rates can be started and stopped through the button in actions tab / menu. Please note that the button changes from "TEMPBASAL" to "CANCEL x%" when a temporary basal rate is set.
+* Karbonhidrat düzeltmesi için ana ekrandaki karbonhidrat düğmesini kullanın.
+* Geçici bazal oranları işlemler sekmesi/menüsündeki buton ile başlatılıp durdurulabilir. Geçici bir bazal oranı ayarlandığında düğmenin "GEÇİCİ BAZAL" yerine "İPTAL x%" olarak değiştiğini lütfen unutmayın.
 
-CGM & OpenAPS
+CGM ve OpenAPS
 ==============================
 .. image:: ../images/Careportal_25_26_3_IIa.png
-  :alt: Careportal CGM & OpenAPS
+  :alt: Bakım Portalı CGM ve OpenAPS
   
-* CGM sensor insert can now be found in the actions tab / menu.
-* All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section `carbs & bolus <#carbs-bolus>`__ on this page).
+* CGM sensör eki artık eylemler sekmesinde / menüsünde bulunabilir.
+* Bu bölümdeki diğer tüm işlevler kaldırılmıştır. Bolus verme vb. bir işlem yaparken diyalog kutusundaki not alanını kullanabilirsiniz. (bölümündeki ekran görüntüsüne `karbonhidrat ve bolus <#carbs-bolus>`__ bu sayfadan bakın).
 
 Pompa
 ==============================
 .. image:: ../images/Careportal_25_26_4_IIb.png
-  :alt: Careportal Pump
+  :alt: Bakım Portalı Pompa
 
-* Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.
-* Profile switch was moved to actions tab / menu.
-* Pump battery change was moved to actions tab / menu.
+* İşlemler sekmesi/menüsündeki "hazırla/doldur" butonunu kullanarak pompa yeri ve insülin rezervuarı değişimine ulaşılabilir.
+* Profil değiştirme işlemler sekmesine / menüsüne taşındı.
+* Pompa pil değişimi işlemler sekmesi / menüsüne taşındı.

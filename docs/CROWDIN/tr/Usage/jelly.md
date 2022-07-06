@@ -54,7 +54,7 @@ Android 7.0'da kalmak için şu kuralları izleyin:
 * Jelly kullanımı her zaman sezgisel değildir ve bazen bir bebek diva gibi davranır. Arada bir yeniden başlatma (sağdaki düğme) iyi bir fikir olabilir.
 * Telefon dikey konumda iken tüm butonlar görüntülenmeyebilir. Bu yüzden Jelly'yi 90 derece döndürebilirsiniz.
 
-![Jelly portrait + landscape view](../images/jelly_04.jpg)
+![Jelly dikey + yatay görünüm](../images/jelly_04.jpg)
 
 * Telefonun başlangıç ekranındaki başlık, sağda en fazla 6 simge tutabilir. Saatin 2 taneye ihtiyacı var. Bu nedenle, 5 yer zaten meşgulse (yani bluetooth, rahatsız etmeyin, SIM kart yok, uçuş modu ve pil göstergesi), saat görüntülenmez. Sol üst köşedeki düğmeyle sesi kısaca artırın, ardından başlıkta saat görünür. ;-)
 * Başlangıçta (fabrika ayarlarıyla) Ana ekranda saatin altında görüntülenen "alarm saati", muhtemelen ikinci bir saat dilimidir. AAPS yanlış saat dilimine erişebileceğinden bunu kapatın (Ayarlar > Sistem > Tarih ve Saat > Otomatik Saat Dilimi > KAPALI). Bunun yerine ağ tarafından sağlanan zamanı kullanın.

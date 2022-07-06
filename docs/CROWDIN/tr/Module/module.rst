@@ -1,4 +1,4 @@
-Component Overview 
+Bileşenlere Genel Bakış 
 **************************************************
 AndroidAPS yalnızca (kendin-yap) bir uygulama değildir, kapalı döngü sisteminizin birkaç modülünden yalnızca biridir. Bileşenlere karar vermeden önce, `bileşen kurulumuna <../index.html#bileşen-kurulumu>`_ da bir göz atmak iyi bir fikir olacaktır.
    

@@ -13,63 +13,63 @@
 ### Pompaya ulaşılamıyor alarmını etkinleştirin
 
 * AndroidAPS'de, **Ayarlar / Yerel Alarmlar**'a gidin ve **pompaya ulaşılamadığında alarmı** etkinleştirin ve **pompaya erişilemiyor sınırı [Min]**'i **31** dakika olarak ayarlayın. 
-* This will give you enough time to not trigger the alarm when leaving the room while your phone is left on the desk, but informs you if the pump cannot be reached for a time that exceeds the duration of a temporary basal rate.
+* Bu telefonunuz masanın üzerindeyken odadan çıkarken alarmı tetiklememek için size yeterli süreyi verir, ancak geçici bir bazal oran süresini aşan bir süre boyunca pompaya ulaşılamazsa sizi bilgilendirir.
 
-### Restore reachability of the pump
+### Pompanın erişilebilirliğini geri yükleyin
 
-* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
-* The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
+* AndroidAPS bir **pompaya erişilemiyor** alarmı bildirdiğinde, önce tuş kilidini kaldırın ve **pompadaki herhangi bir tuşa basın** (ör. "aşağı" düğmesi). Pompa ekranı kapanır kapanmaz, AndroidAPS'de **Kombo Sekmesi**'nde **GÜNCELLE**'ye basın. Çoğunlukla iletişim tekrar çalışır.
+* Bu işe yaramazsa, akıllı telefonunuzu yeniden başlatın. Yeniden başlatmanın ardından AndroidAPS ve ruffy yeniden etkinleştirilecek ve pompa ile yeni bir bağlantı kurulacaktır.
+* Farklı akıllı telefonlarla yapılan testler, bazı akıllı telefonların "pompa ulaşılamaz" hatasını diğerlerinden daha sık tetiklediğini göstermiştir. [AAPS Telefonları](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) başarıyla test edilmiş akıllı telefonlar listesi. 
 
-### Root causes and consequences of frequent communication errors
+### Sık sık yapılan iletişim hatalarının temel nedenleri ve sonuçları
 
-* On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
+* **Düşük bellek** (veya **agresif güç tasarrufu** ayarları) olan telefonlarda, AndroidAPS genellikle kapatılır. Ana ekrandaki Bolus ve Hesap Makinesi düğmelerinin, sistem başlatılmakta olduğu için AAPS'yi açarken gösterilmemesinden anlayabilirsiniz. Bu başlangıçta "pompa ulaşılamaz alarmlarını" tetikleyebilir. Combo sekmesinin **Son Bağlantı** alanında, AndroidAPS'nin pompayla en son ne zaman iletişim kurduğunu kontrol edebilirsiniz. 
 
-![Pompa ulaşılamıyor](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pompa ulaşılamıyor](../images/combo/combo-tips-pump-unreachable.png) ![Pompayla bağlantı yok](../images/combo/combo-tips-no-connection-to-pump.png)
 
-* This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
-* It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
+* Uygulama yeniden başlatıldığında bazal profil pompadan okunduğu için bu hata pompanın pilini daha hızlı tüketebilir.
+* Ayrıca pompa üzerindeki bir düğmeye basılana kadar pompanın gelen tüm bağlantıları reddetmesine neden olan hataya neden olma olasılığını da artırır. 
 
-## Cancellation of temporary basal rate fails
+## Geçici bazal oranın iptali başarısız
 
-* Occasionally, AndroidAPS can not automatically cancel a **TBR CANCELED** alert. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
+* Bazen AndroidAPS bir **GBO İPTAL EDİLDİ** uyarısını otomatik olarak iptal edemez. Ardından AndroidAPS **Combo sekmesinde** **GÜNCELLE** tuşuna basmanız gerekir veya pompadaki alarmın onaylanması gerekir.
 
-## Pump battery considerations
+## Pompa pili ile ilgili hususlar
 
-### Changing the battery
+### Pili değiştirme
 
-* After a **low battery** alarm, the battery should be changed as soon as possible to always have enough energy for a reliable Bluetooth communication with the smartphone, even if the phone is within a wider distance of the pump.
-* Even after a **low battery** alarm, the battery might be used for a significant amount of time. However, it is recommended to always have a fresh battery with you after a "low battery" alarm rang.
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* Bir **pil zayıf** alarmından sonra, akıllı telefon pompadan daha uzakta olsa bile akıllı telefonla güvenilir bir Bluetooth bağlantısı için yeterli gücün olduğundan emin olmak için pil mümkün olan en kısa sürede değiştirilmelidir.
+* Bir **düşük pil** alarmından sonra bile pil önemli bir süre kullanılabilir. Ancak "düşük pil" alarmı verdikten sonra her zaman yanınızda yeni bir pil bulundurmanız önerilir.
+* Pili değiştirmeden önce, ana ekrandaki **Döngü** sembolüne basın ve **Döngüyü 1 saat askıya al** öğesini seçin. 
+* AndroidAPS'nin pompayla iletişimini bitirmesini ve pompadaki Bluetooth logosu kaybolmasını bekleyin.
 
-![Bluetooth enabled](../images/combo/combo-tips-compo.png)
+![Bluetooth etkin](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* Pompa üzerindeki tuş kilidini serbest bırakın, pompayı durdurma moduna getirin, muhtemelen iptal edilmiş bir geçici bazal oranı onaylayın ve pili hızlı bir şekilde değiştirin.
+* Pompanın üzerindeki saat, pil değişiminden sonra sıfırlandıysa, pompadaki tarih ve saati, AAPS çalıştıran telefonunuzdaki tarih/saat ile aynı olacak şekilde ayarlayın.
+* Ardından ana ekranda **Askıya Alınan Döngü** simgesine basarken pompayı tekrar çalışma moduna getirin **Devam et** öğesini seçin.
+* AndroidAPS, bir sonraki kan şekeri değerinin gelmesiyle gerekli bir geçici bazal oranını yeniden ayarlayacaktır. 
 
-### Battery type and causes of short battery life
+### Pil tipi ve kısa pil ömrünün nedenleri
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Yoğun Bluetooth iletişimi çok fazla enerji tükettiğinden, yalnızca Energizer Ultimate Lithium gibi **yüksek kaliteli piller** kullanın, "büyük" Accu-Chek hizmet paketinden "güçlü olanlar" veya şarj edilebilir pil için Eneloop pilleri kullanın. 
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
+Farklı pil türlerinin tipik kullanım ömrü aralıkları aşağıdaki gibidir:
 
-* **Energizer Ultimate Lithium**: 4 to 7 weeks
-* **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
-* **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
+* **Energizer Ultimate Lithium**: 4 ila 7 hafta
+* Hizmet paketinden **Power One Alkaline** (Varta): 2 ila 4 hafta
+* **Eneloop şarj edilebilir** piller (BK-3MCCE): 1 ila 3 hafta
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Pil ömrünüz yukarıda belirtilen aralıklardan önemli ölçüde kısaysa, lütfen aşağıdaki olası nedenleri kontrol edin:
 
-* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
-* There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
-* If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
-* The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
+* [ruffy Uygulamasının](https://github.com/MilosKozak/ruffy) vMarch 2018'den sonraki sürümleri, pompa pil ömrünü önemli ölçüde iyileştirdi. Kısa pil ömrüyle ilgili sorunlarınız varsa en yeni sürümde olduğunuzdan emin olun.
+* Pilleri kısmen kısa devre yapan ve hızlı bir şekilde boşaltan Combo pompanın vidalı pil kapağının bazı çeşitleri vardır. Bu sorunu olmayan kapaklar, altın metal kontaklardan tanınabilir.
+* Pompa saati kısa bir pil değişiminde "hayatta kalmazsa", kısa bir elektrik kesintisi sırasında saati çalıştıran kapasitör arızalı olabilir. Bu durumda, pompanın Roche tarafından değiştirilmesi yardımcı olabilir, bu garanti süresi boyunca bir sorun teşkil etmez. 
+* Akıllı telefon donanımı ve yazılımı (Android işletim sistemi ve bluetooth stack), tam faktörler henüz tam olarak bilinmese de, pompanın pil ömrünü de etkiler. İmkanınız varsa, başka bir akıllı telefon deneyin ve pil ömürlerini karşılaştırın.
 
-## Daylight saving time changes
+## Gün ışığından yararlanma saati değişiklikleri
 
 * Şu anda birleşik sürücü, pompanın zamanının otomatik olarak ayarlanmasını desteklememektedir.
 * Gün ışığından yararlanma saati değişikliği gecesinde, akıllı telefonun saati güncellenir, ancak pompanın saati değişmez. Bu sistemler arasında saat 3'te farklılık gösterdiği için bir alarma yol açar.

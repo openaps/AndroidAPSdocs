@@ -441,7 +441,7 @@ Alanlar
 Simgeler
 -----
 
-* **REFRESH:**
+* **YENİLE:**
 
     |refresh_pod_status|
 
@@ -449,7 +449,7 @@ Simgeler
 
     Pod durumunu yenilemek ve metin içeren (belirsiz) durum satırlarını yenilemek için kullanın.
 
-    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    Ek bilgi için aşağıdaki `Sorun giderme <#troubleshooting>`__ bölümüne bakın.
 
 * **POD YNTM:**
 
@@ -463,10 +463,10 @@ Simgeler
 
     Bu düğmeye basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır.
 
-    Button is displayed only when pod time is past expiration warning time
+    Bu düğme, yalnızca pod'un geçerli saati pod sona erme tarihinden sonraysa görüntülenir
     Başarılı bir devre dışı bırakmanın ardından bu simge artık görünmeyecektir.
 
-* **SET TIME:**
+* **SAATİ AYARLA:**
 
     |set_time|
 
@@ -478,7 +478,7 @@ Simgeler
 
     Etkin pod'u askıya alır
 
-* **RESUME DELIVERY:**
+* **İLETİME DEVAM ET:**
 
     |resume|
 
@@ -492,25 +492,25 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
     |Omnipod_Tab_Pod_Management|
 
-* **Activate Pod**
+* **Pod Etkinleştir**
 
     |activate_pod|
 
     Yeni bir pod hazırlar ve etkinleştirir
 
-* **Deactivate Pod**
+* **Pod'u Devre Dışı Bırak**
 
     |deactivate_pod|
 
     O anda etkin olan podu devre dışı bırakır.
 
-    A partially paired pod ignores this command.
+    Kısmen eşleştirilmiş bir pod bu komutu yok sayar.
 
     Çığlık atan bir podu devre dışı bırakmak için bu komutu kullanın (hata 49).
 
     Buton devre dışıysa (gri ise), "Pod'u çıkart" butonunu kullanın.
 
-* **Play test beep**
+* **Test bip sesi çal**
 
     |play_test_beep|
 
@@ -534,7 +534,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 
     Etkin Pod'un etkinlik geçmişini görüntüler
 
-* **RileyLink stats:**
+* **RileyLink durumu:**
 
     |rileylink_stats|
 
@@ -543,7 +543,7 @@ Aşağıda, **Omnipod (POD)** sekmesinden erişilen **Pod Yönetimi** menüsünd
 	* **Ayarlar** - RileyLink ve aktif pod ayarları bilgilerini görüntüler
 	* **Geçmiş** - RileyLink ve Pod iletişim geçmişini görüntüler
 
-* **Reset RileyLink Config**
+* **RileyLink Yapılandırmasını Sıfırla**
 
     |reset_rileylink_config|
 
