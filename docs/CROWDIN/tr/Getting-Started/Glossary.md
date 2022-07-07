@@ -119,7 +119,7 @@
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Viki kapalı döngü</a></td>
 </tr>
 <tr>
- <td><strong>COB Aktif Karbonhidrat</strong></td>
+ <td><strong>COB</strong></td>
  <td>aktif karbonhidrat - Aktif karbonhidrat, sindirim için halihazırda mevcut olan karbonhidrat miktarıdır.</td>
  <td>IOB Aktif İnsülin</td>
  <td>&nbsp;</td>
