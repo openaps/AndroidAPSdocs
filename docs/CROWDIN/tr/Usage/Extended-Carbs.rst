@@ -17,7 +17,7 @@ yKarb girmek için, genel bakış (Giriş) sekmesindeki *Karbonhidrat* iletişim
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Karbonhidrat girişi
 
-Genel bakış (Giriş) sekmesindeki yKarb, gelecekte karbonhidratları gösteren COB alanındaki parantez içindeki karbonhidratları not edin:
+The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
 
 .. image:: ../images/eCarbs_Graph.png
   :alt: Grafikteki yKarb
@@ -36,7 +36,7 @@ Aşağıdaki linkte özellikle yağ ve proteini işlemenin bir yolu açıklanmak
 
 Önerilen kurulum, örnek senaryo ve önemli notlar
 =====================================================================
-Önerilen kurulum, SMB'ler etkinken ve *COB ile SMB'yi Etkinleştir* tercihi etkinken OpenAPS SMB APS eklentisini kullanmaktır.
+The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
 
 Bir senaryo ör. Bir Pizza için, *hesap makinesi* aracılığıyla önden (kısmi) bir bolus vermek ve ardından 1 veya 2 saat sonra başlamak üzere 4-6 saat süreyle *karbonhidrat* düğmesini kullanarak kalan karbonhidratları girmek olabilir. 
 
