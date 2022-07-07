@@ -77,13 +77,13 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
 4. Tedaviler sekmesini kontrol edin... Yinelenen tedaviler görürseniz:
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
-Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. COB ve IOB'nizin her ikisi de sıfıra yakın olmalıdır.)
+A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. Your COB and IOB should both be close to zero.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
 2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
@@ -91,7 +91,7 @@ Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. 
 4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
 
 5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
@@ -104,5 +104,5 @@ Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. 
 ## Diğer Pompalar
 
 * Bu özellik, AndroidAPS sürüm 2.2'den beri mevcuttur.
-* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle IOB çok yüksek).
+* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
 * DST değişikliğinden önce ana ekranda, döngünün geçici olarak devre dışı bırakılacağına dair bir bildirim alacaksınız. Bu mesaj uyarı, titreşim veya herhangi bir şey olmadan görünecektir.
