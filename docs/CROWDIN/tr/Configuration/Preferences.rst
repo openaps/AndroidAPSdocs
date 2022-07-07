@@ -274,25 +274,25 @@ Maks Ü/s geçici Bazal ayarlanabilir
 * Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
 * Ayrıca bkz. `ayrıntılı özellik açıklaması <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-OpenAPS tarafından aşılmayacak, maksimum toplam IOB(Aktif İnsülin)[U]
+Maximum basal IOB OpenAPS can deliver [U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normal bazal profilinizin üzerine vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak). 
-* Bu değere ulaşıldığında, AAPS, Aktif insülin (IOB) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır. 
+* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
 * Bu değer **bolus aktif insülini** dikkate almaz, yalnızca bazal insülin için hesaplanır.
 * Bu değer, normal profildeki bazal oranınızdan bağımsız olarak hesaplanır ve izlenir. Normal bazal oranınızın üzerindeki ek bazal insülin dikkate alınır.
 
-Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal IOB'yi 0'a ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
 
 * AAPS sistemine alışmak ve nasıl güvenli çalıştığını izlemek için kendinize süre ayırmak.
 * Bazal profilinizi ve İnsülin Duyarlılık Faktörünüzü (ISF) mükemmelleştirme fırsatını yakalamak.
 * AAPS'in hipoglisemiyi önlemek için bazal insülininizi nasıl sınırladığını görmek.
 
-Kendinizi rahat hissettiğinizde, Maks Bazal IOB değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
+When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
 
 * Bu değerle ihtiyatlı başlayabilir ve zamanla yavaş yavaş artırabilirsiniz. 
 * Bunlar yalnızca yönergedir; herkesin vücudu farklıdır. Burada önerilenden daha fazlasına veya daha azına ihtiyacınız olduğunu fark edebilirsiniz, ancak her zaman ihtiyatlı başlayın ve yavaş yavaş ayarlayın.
 
-**Not: Bir güvenlik özelliği olarak, Max Basal IOB üst sınırı 7ü dir.**
+**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
 
 Otoduyarlılık
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
