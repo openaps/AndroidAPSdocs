@@ -40,7 +40,7 @@ Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kull
 
 ### Pompayı ayırın
 
-Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye IOB'yi doğru tutmak için insülin verilmediğini bildirmelisiniz.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
 [AndroidAPS Ana Ekranında](./Screenshots.md#loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
 
@@ -105,7 +105,7 @@ KŞ düşüyorsa, bazal oran çok yüksektir. Veya tam tersi.
 
 Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. Veya tam tersi.
 
-Varsayılan bazal orana karşı AAPS "temel çizgileri". Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif IOB (insulin on board - metabolizmada aktif insülin) ile sonuçlanır. Bu AAPS'nin IOB'yi nihai olarak sıfıra getirmek için gerekenden daha fazla düzeltme yapmasına yol açacaktır.
+Varsayılan bazal orana karşı AAPS "temel çizgileri". If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
 Dolayısıyla, çok yüksek bir bazal oran, hem varsayılan oranla hem de AAPS'nin hedefi düzeltmesiyle birkaç saat sonra düşük KŞ'ler yaratacaktır.
 
@@ -117,7 +117,7 @@ Tersine, çok düşük bir bazal oran, yüksek KŞ'lere ve seviyelerin hedef de�
 
 1Ü insülin dozundan beklenen KŞ'deki düşüş.
 
-Doğru bazal varsayarak, döngüyü askıya alarak, IOB'nin sıfır olduğunu kontrol ederek ve kararlı bir "yüksek" seviyeye ulaşmak için birkaç glikoz tableti alarak bunu test edebilirsiniz.
+Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
 Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF'ine göre) alın.
 
@@ -148,7 +148,7 @@ Her birim ünite insülin için karbonhidrat gramı.
 
 Bazı insanlar ayrıca IC yerine kısaltma olarak I:C kullanır veya karbonhidrat oranı (CR) hakkında bahseder.
 
-Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta olduğunuzu, tam olarak bilinen karbonhidratları yediğinizi ve mevcut insülin / karbonhidrat oranına göre tahmini bir miktarda insülin aldığınızı kontrol ederek test edebilirsiniz. En iyisi, normalde yediğiniz yemeği günün o saatinde yemek ve karbonhidratlarını tam olarak saymaktır.
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. En iyisi, normalde yediğiniz yemeği günün o saatinde yemek ve karbonhidratlarını tam olarak saymaktır.
 
 > **NOT:**
 > 
@@ -174,7 +174,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 
 **Daha yüksek IC** = birim başına daha fazla yiyecek, yani sabit miktarda karbonhidrat için daha az insülin alıyorsunuz. "Daha az agresif" olarak da adlandırılabilir.
 
-Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
+If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
 
 # APS algoritması
 
@@ -182,7 +182,7 @@ Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de 
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. IOB'nin hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
+AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. It has nothing to do with the calculation of the IOB. OpenAPS SMB'de artık bu parametreye gerek yoktur.
 
 ## Profil
 
@@ -264,7 +264,7 @@ Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Gett
 
 #### Duş alırken veya banyo yaparken ne yapmalı?
 
-Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak IOB hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Duş veya banyo yaparken pompayı çıkarabilirsiniz. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
 
 ### İş
 
@@ -292,14 +292,14 @@ Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve deği
 
 ### Cinsel ilişki
 
-Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye IOB hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
 
 ### Alkol tüketimi
 
 Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. AndroidAPS'de aşağıdaki işlevleri kullanarak bunu tedavi etmek için kendi yönteminizi kontrol etmeniz gerekir:
 
 - Kapalı döngü modunun devre dışı bırakılması ve diyabetin manuel olarak tedavi edilmesi veya
-- gözetimsiz bir yemek nedeniyle döngüyü artıran IOB'yi önlemek için yüksek geçici hedefleri belirlemek ve bildirilmeyen Öğünleri (UAM)'yi devre dışı bırakmak veya
+- setting high temp targets and deactivating UAM to avoid the loop increasing IOB due to an unattended meal or
 - % 100'den belirgin şekilde daha az bir profil geçişi yapın 
 
 Alkol içerken, karbonhidrat yiyerek hipoglisemiyi manuel olarak önlemek için CGM'nize her zaman göz kulak olmalısınız.
