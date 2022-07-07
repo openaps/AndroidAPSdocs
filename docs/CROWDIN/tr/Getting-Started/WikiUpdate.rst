@@ -148,8 +148,8 @@ Ekim 2019
 ==================================================
 * `AAPS sürüm 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ güncellemeleri (özellikle `güncelleme sayfasında <../Installing-AndroidAPS/Update-to-new-version. html>`_)
 * `AccuChek Insight - günlük seçenekleri <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
-* `COB calculation on separate page <../Usage/COB-calculation.html>`_
-* `COB - wrong COB value detection <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `AKRB hesaplaması ayrı sayfada <../Usage/COB-calculation.html>`_
+* `AKRB - yanlış AKRB değeri tespiti <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 * `Dexcom G6'ya özel sorun giderme <../Hardware/DexcomG6.html#dexcom-g6-special-troubleshooting>`_
 * `Görevler sürüm 2.5 güncellemesi <../Usage/Objectives.html>`_
 * `Tercihler güncellemesi <../Configuration/Preferences.html>`_
