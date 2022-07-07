@@ -67,7 +67,7 @@ Yayınlanma tarihi: 31-01-2022
 Önemli ipuçları
 ----------------------
 * **Minimum Android sürümü artık 9.0'dır.**
-* **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Böylece güncellemeden sonra IOB, COB, tedaviler vb. temizlenecektir. Yeni `profil değişimi <../Usage/Profiles.html>`_ oluşturmanız ve sıfır IOB ve COB ile başlamanız gerekir. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
+* **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Thus after update IOB, COB, treatments etc. temizlenecektir. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
 * AAPS ve NSClient'in aynı sürümünü kullanın
 
 **** `Burada <../Installing-AndroidAPS/update3_0.html>`__ açıklandığı üzere 3.0'a güncelledikten sonra ayarları kontrol ettiğinizden ve tamamladığınızdan emin olun.
