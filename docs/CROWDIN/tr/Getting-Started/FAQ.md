@@ -198,7 +198,7 @@ Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal
 
 ### Kapalı döngüde yüksek tokluk KŞ'i zirvelerine ne sebep olur?
 
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AndroidAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra çok düşükse, diyabet uzmanınızla IC faktörlerinizi artırıp artırmayacağınızı düşünün ve uygun bir insülin yemek arası izleyin.
+Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AndroidAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Diğer ayarlar
 
