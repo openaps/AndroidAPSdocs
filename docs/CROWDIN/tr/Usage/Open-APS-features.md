@@ -26,7 +26,7 @@ SMB özelliği bazı güvenlik mekanizmalarını içerir:
     * şu anda gerekli olan insülin miktarının yarısı veya
     * ayarlarda maxIOB değerinizin kalan kısmı.
 
-2. Muhtemelen genellikle düşük geçici bazal oranları ("düşük geçici" olarak adlandırılır) veya 0 Ü/s'de geçici bazal oranları ("sıfır-geçici bazal " olarak adlandırılır) fark edeceksiniz. Bu güvenlik nedenleriyle tasarım gereğidir ve profil doğru ayarlanmışsa olumsuz bir etkisi yoktur. IOB eğrisi, geçici bazal oranların seyrinden daha anlamlıdır.
+2. Muhtemelen genellikle düşük geçici bazal oranları ("düşük geçici" olarak adlandırılır) veya 0 Ü/s'de geçici bazal oranları ("sıfır-geçici bazal " olarak adlandırılır) fark edeceksiniz. Bu güvenlik nedenleriyle tasarım gereğidir ve profil doğru ayarlanmışsa olumsuz bir etkisi yoktur. The IOB curve is more meaningful than the course of the temporary basal rates.
 
 3. Glikozun seyrini tahmin etmek için ek hesaplamalar, örn. UAM tarafından (bildirilmemiş öğünler). Kullanıcıdan manuel karbonhidrat girişi olmasa bile UAM, yemekler, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışı otomatik olarak algılayabilir ve bunu SMB ile ayarlamaya çalışabilir. Güvenilir olması için bu aynı zamanda tam tersi şekilde çalışır ve glikozda beklenmedik bir şekilde hızlı bir düşüş meydana gelirse SMB'yi daha erken durdurabilir. Bu nedenle UAM, SMB'de her zaman aktif olmalıdır.
 
@@ -83,9 +83,9 @@ Ayrıca [SMB için OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/
 
 Burada SMB özelliğini etkinleştirebilir veya tamamen devre dışı bırakabilirsiniz.
 
-### SMB'yi COB ile etkinleştir
+### Enable SMB with COB
 
-COB aktif olduğunda SMB çalışır.
+SMB is working when there is COB active.
 
 ### Geçici hedeflerle SMB'yi etkinleştir
 
@@ -93,23 +93,23 @@ SMB, düşük veya yüksek bir geçici hedef etkin olduğunda çalışır (yakı
 
 ### Yüksek geçici hedeflerle SMB'yi etkinleştir
 
-SMB, yüksek bir geçici hedef etkin (aktivite, hipo) olduğunda çalışır. Bu seçenek diğer SMB ayarlarını sınırlayabilir, yani 'geçici hedeflerle SMB' etkinse ve 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, SMB sadece düşük geçici hedeflerle çalışır. COB ile etkin SMB de aynıdır: Eğer 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, COB olsa bile yüksek geçici hedefte SMB verilmeyecektir.
+SMB, yüksek bir geçici hedef etkin (aktivite, hipo) olduğunda çalışır. Bu seçenek diğer SMB ayarlarını sınırlayabilir, yani 'geçici hedeflerle SMB' etkinse ve 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, SMB sadece düşük geçici hedeflerle çalışır. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
 ### SMB'yi her zaman etkinleştir
 
-SMB her zaman çalışır (COB'dan, geçici hedeflerden veya boluslardan bağımsız). Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
+SMB is working always (independent of COB, temp targets or boluses). Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
 
 Freestyle Libre gibi diğer CGM/FGM için, xDrip+ daha iyi bir gürültü yumuşatma eklentisine sahip olana kadar 'SMB her zaman' devre dışı bırakılır. Daha fazla bilgiyi [burada](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bulabilirsiniz.
 
 ### Yemeklerden sonra SMB'yi etkinleştir
 
-SMB, COB 0 olsa bile karbonhidrat alındıktan 6 saat süreyle çalışır. Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
+SMB is working for 6h after carbohydrates , even if COB is at 0. Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
 
 Freestyle Libre gibi diğer CGM/FGM için, 'Karbonhidrattan sonra SMB'yi etkinleştir', xDrip+ daha iyi bir gürültü yumuşatma eklentisine sahip olana kadar devre dışı bırakılır. Daha fazla bilgiyi [burada](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bulabilirsiniz.
 
 ### SMB'yi sınırlamak için maksimum bazal dakika
 
-Bu önemli bir güvenlik ayarıdır. Bu değer, belirli bir zaman aralığında verilen bazal insülin miktarına göre aktif karbonhidratları (COB) kapsayacak ne kadar SMB verilebileceğini belirler.
+Bu önemli bir güvenlik ayarıdır. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
 Bu, SMB'yi daha agresif hale getirir. Başlangıç için, varsayılan değer olan 30 dakika ile başlamalısınız. Biraz deneyimden sonra 15 dakikalık adımlarla değeri artırabilir ve bu değişikliklerin nasıl etkilediğini izleyebilirsiniz.
 
