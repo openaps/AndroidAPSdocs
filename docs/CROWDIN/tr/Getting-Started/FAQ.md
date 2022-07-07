@@ -190,7 +190,7 @@ AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez
 
 [Bu makalede](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) iyi bir şekilde açıklanmıştır. İES'ini değiştirdikten sonra `PROFİLİ ETKİNLEŞTİR` yapmayı unutmayın.
 
-### Döngünün COB olmadan KŞ'inin hipoglisemik değerlere sık sık düşürmesine neden olan nedir?
+### What causes the loop to frequently lower my BG to hypoglycemic values without COB?
 
 Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. Çok düşük bir İDF tipik olarak şöyle görünür:
 
@@ -432,7 +432,7 @@ AAPS'yi NSClient Remote Wear Uygulaması aracılığıyla izlemek/kontrol etmek 
 
 Kırmızı ve sarı üçgenler, AAPS v3'te bir güvenlik özelliğidir.
 
-Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. BYODA veya xDRIP sekmesine gidin, silmek istediğiniz satırlardan birine uzun basın, çift satırlardan birini işaretleyin (veya AAPS sürümünüze bağlı olarak 3 nokta menüsü ve sil komutu ile). Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. Bu durumda, istatistikleri, IOB, COB, seçilen profili de kaybedersiniz.
+Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. BYODA veya xDRIP sekmesine gidin, silmek istediğiniz satırlardan birine uzun basın, çift satırlardan birini işaretleyin (veya AAPS sürümünüze bağlı olarak 3 nokta menüsü ve sil komutu ile). Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. In this case, you'll also loose stats, IOB, COB, selected profile.
 
 Sorunun olası kaynağı: xDrip ve/veya NS geri döngülü KŞ girdileridir.
 
