@@ -67,7 +67,7 @@ Yayınlanma tarihi: 31-01-2022
 Önemli ipuçları
 ----------------------
 * **Minimum Android sürümü artık 9.0'dır.**
-* **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Thus after update IOB, COB, treatments etc. temizlenecektir. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
+* **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Böylece güncellemeden sonra AİNS, AKRB, tedaviler vb. temizlenecektir. Yeni `profil değişimi <../Usage/Profiles.html>`_ oluşturmanız ve sıfır AİNS ve AKRB ile başlamanız gerekir. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
 * AAPS ve NSClient'in aynı sürümünü kullanın
 
 **** `Burada <../Installing-AndroidAPS/update3_0.html>`__ açıklandığı üzere 3.0'a güncelledikten sonra ayarları kontrol ettiğinizden ve tamamladığınızdan emin olun.
@@ -364,7 +364,7 @@ Başlıca yeni özellikler
 * Yeni `Otomasyon eklentisi <../Usage/Automation.html>`_
 * Bolus sihirbazı hesaplamasından `sadece bolus parçasına <../Configuration/Preferences.html#advanced-settings-overview>`_ izin ver
 * İnsülin aktivitesi oluşturma
-* Adjusting IOB predictions by autosens result
+* AİNS tahminlerini otoduyarlılık sonucuna göre ayarlama
 * Yamalı Dexcom apk'leri için yeni destek (`2.4 klasörü <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * İmza doğrulayıcı
 * OpenAPS kullanıcıları için hedeflerin atlanmasına izin ver
@@ -448,7 +448,7 @@ Başlıca yeni özellikler
 AMA'dan SMB'ye geçerken yapılacak ayarlar
 --------------------------------------------------
 * SMB'lerin etkinleştirilmesi için Görev 10'a başlanılmalıdır (SMB sekmesi genellikle hangi kısıtlamaların geçerli olduğunu gösterir)
-* maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
+* maxAİNS artık yalnızca bazal değil, tüm_ AİNS'i içeriyor. Diğer bir deyişle, bir yemek için 8 Ü bolus verilirse ve maksAİNS 7 Ü ise, AİNS 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez.
 * min_5m_carbimpact varsayılanı, AMA'dan SMB'ye geçerken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
 * AndroidAPS 2.0 apk oluştururken dikkat edin: İsteğe bağlı yapılandırma, Android Gradle eklentisinin mevcut sürümü tarafından desteklenmiyor! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
 
