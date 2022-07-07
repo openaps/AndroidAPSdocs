@@ -54,7 +54,7 @@ Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değiş
 
 Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
 
-COB ve IOB'nin kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
 ## Accu-Chek Combo
 
@@ -79,7 +79,7 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
    * "İleriki tedavileri sil" düğmesine basmayın
    * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
 
-5. Ne kadar IOB/COB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
@@ -93,7 +93,7 @@ Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. 
    * "İleriki tedavileri sil" düğmesine basmayın
    * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
 
-5. Ne kadar IOB/COB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
 
 6. Normal şekilde devam edin.
 
