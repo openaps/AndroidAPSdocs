@@ -214,7 +214,7 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 * maxIOB (max.aktif insülin) sıfıra ayarlıdır.
 * Bu, kan şekeri düşüyorsa sizin için bazalı azaltabileceği anlamına gelir.
 * Ancak kan şekeri yükseliyorsa, otomatik düzeltme yapılmayacaktır. Bazal oranlarınız, seçtiğiniz profille aynı kalacaktır.
-* Yalnızca bazal IOB (aktif insülin) negatifse (önceki Düşük Glikoz Süspansiyonundan), KŞ'ni düşürmek için ek insülin verilecektir.
+* Only if basal IOB is negative (from a previous Low Glucose Suspend) additional insulin will be given to lower BG.
 
 ### Minimum istek değişikliği
 
