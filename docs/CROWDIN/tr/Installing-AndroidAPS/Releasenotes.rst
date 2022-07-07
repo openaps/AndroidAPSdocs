@@ -364,7 +364,7 @@ Başlıca yeni özellikler
 * Yeni `Otomasyon eklentisi <../Usage/Automation.html>`_
 * Bolus sihirbazı hesaplamasından `sadece bolus parçasına <../Configuration/Preferences.html#advanced-settings-overview>`_ izin ver
 * İnsülin aktivitesi oluşturma
-* IOB tahminlerini otoduyarlılık sonucuna göre ayarlama
+* Adjusting IOB predictions by autosens result
 * Yamalı Dexcom apk'leri için yeni destek (`2.4 klasörü <https://github.com/dexcomapp/dexcomapp/tree/master/2.4>`_)
 * İmza doğrulayıcı
 * OpenAPS kullanıcıları için hedeflerin atlanmasına izin ver
@@ -448,7 +448,7 @@ Başlıca yeni özellikler
 AMA'dan SMB'ye geçerken yapılacak ayarlar
 --------------------------------------------------
 * SMB'lerin etkinleştirilmesi için Görev 10'a başlanılmalıdır (SMB sekmesi genellikle hangi kısıtlamaların geçerli olduğunu gösterir)
-* maxIOB artık yalnızca bazal değil, tüm_ IOB'yi içeriyor. Diğer bir deyişle, bir yemek için 8 Ü bolus verilirse ve maksIOB 7 Ü ise, IOB 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez.
+* maxIOB now includes _all_ IOB, not just added basal. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U.
 * min_5m_carbimpact varsayılanı, AMA'dan SMB'ye geçerken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
 * AndroidAPS 2.0 apk oluştururken dikkat edin: İsteğe bağlı yapılandırma, Android Gradle eklentisinin mevcut sürümü tarafından desteklenmiyor! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
 
