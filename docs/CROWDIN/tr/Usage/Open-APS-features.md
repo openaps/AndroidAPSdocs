@@ -54,16 +54,16 @@ AndroidAPS, değeri aşağıdaki gibi sınırlar:
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
-### OpenAPS Maksimum toplam Aktif insülin'i geçemez (OpenAPS "maks-iob")
+### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
 
-Kapalı döngü modunda çalışan AAPS tarafından hangi maksIOB değerinin dikkate alınması gerektiğini belirler. Mevcut IOB (örneğin bir yemek bolusundan sonra) tanımlanan değerin üzerindeyse, döngü IOB limiti verilen değerin altına düşene kadar insülin dozlamayı durdurur.
+This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
-OpenAPS SMB kullanılarak hesaplanan max-IOB, OpenAPS AMA'dakinden farklıdır. AMA'da maxIOB, bazal IOB için yalnızca bir güvenlik parametresiyken, SMB modunda bolus IOB'u da içerir. İyi bir başlangıç
+Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. İyi bir başlangıç
 
-    maksIOB = ortalama öğün yemeği + 3x maksimum günlük bazal olacaktır
+    maxIOB = average mealbolus + 3x max daily basal
     
 
-Dikkatli ve sabırlı olun ve ayarlarınızı adım adım değiştirin. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maksIOB sabit limiti, [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)'dan daha yüksektir.
+Dikkatli ve sabırlı olun ve ayarlarınızı adım adım değiştirin. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Çocuk: 3
 * Genç: 7
@@ -155,7 +155,7 @@ Daha fazla bilgiyi [OpenAPS dokümantasyonu](https://newer-docs.readthedocs.io/e
 
 Bu güvenlik ayarı, AndroidAPS'in tehlikeli derecede yüksek bir bazal oran vermesini engeller ve geçici bazal oranını x Ü/s ile sınırlar. Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki en yüksek bazal oranı alıp 4 veya en az 3 ile çarpmanız iyi bir tavsiyedir. Örneğin, profilinizdeki en yüksek bazal oran 1,0 Ü/s ise, 4 Ü/s değerini elde etmek için bunu 4 ile çarpabilir ve güvenlik parametreniz olarak 4'ü ayarlayabilirsiniz.
 
-Herhangi bir değer seçemezsiniz: Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir 'sabit limit' vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür. Çocuklar için değer en düşükken, insüline dirençli yetişkinler için değer en büyüktür.
+Herhangi bir değer seçemezsiniz: Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir 'sabit limit' vardır. The 'hard limit' for maxIOB is lower in AMA than in SMB. Çocuklar için değer en düşükken, insüline dirençli yetişkinler için değer en büyüktür.
 
 AndroidAPS'deki sabit kodlanmış parametreler şunlardır:
 
@@ -167,11 +167,11 @@ AndroidAPS'deki sabit kodlanmış parametreler şunlardır:
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
-### OpenAPS'in gönderebileceği maksimum bazal IOB \[U\] (OpenAPS "maks-iob")
+### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
 Bu parametre, AndroidAPS'in çalışacağı maksimum aktif insüline göre bazalı sınırlar. Aktif insülin yüksekse, maks aktif insülin limitin altına düşene kadar ek bazal insülin vermeyi durdurur.
 
-Varsayılan değer 2'dir, ancak sizi ne kadar etkilediğini ve hangi değerin en uygun olduğunu görmek için bu parametreyi yavaşça yükseltmelisiniz. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür.
+Varsayılan değer 2'dir, ancak sizi ne kadar etkilediğini ve hangi değerin en uygun olduğunu görmek için bu parametreyi yavaşça yükseltmelisiniz. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
 * Çocuk: 3
 * Genç: 5
@@ -261,7 +261,7 @@ Varsayılan değer: 2
     <td>100,0</td>
   </tr>
   <tr>
-    <td>MAKSIOB_AMA</td>
+    <td>MAXIOB_AMA</td>
     <td>3,0</td>
     <td>5,0</td>
     <td>7,0</td>
@@ -269,7 +269,7 @@ Varsayılan değer: 2
     <td>25,0</td>
   </tr>
   <tr>
-    <td>MAKSIOB_SMB</td>
+    <td>MAXIOB_SMB</td>
     <td>7,0</td>
     <td>13,0</td>
     <td>22,0</td>
