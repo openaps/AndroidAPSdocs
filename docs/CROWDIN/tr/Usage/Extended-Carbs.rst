@@ -6,7 +6,7 @@ Düzenli bir pompa tedavisinde yayma boluslar, kan şekerini insülinin etkisind
 
 Döngü kullansanız da bu tip yemeklerle başetme ihtiyacı hala vardır. Bu nedenle, sürüm 2.0'dan itibaren AndroidAPS, yayma karbonhidratları veya yKarb'ları destekler.
 
-yKarb, birkaç saat içinde parçalanan karbonhidratlardır. Yağ/protein içerikli olmayan standart öğünler için, karbonhidratları önden girmek (ve gerekirse ilk bolusu azaltmak) genellikle çok erken insülin verilmesini önlemek için yeterlidir.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. Bu bilgi ile döngü, dinamik yayma bolus olarak görülebilen bu karbonhidratlarla başa çıkmak için SMB'leri daha kademeli olarak yönetebilir (Normalde döngü SMB'ler olmadan da çalışmalıdır, ancak muhtemelen etkisi daha az olacaktır).
+yKarb, birkaç saat içinde parçalanan karbonhidratlardır. Yağ/protein içerikli olmayan standart öğünler için, karbonhidratları önden girmek (ve gerekirse ilk bolusu azaltmak) genellikle çok erken insülin verilmesini önlemek için yeterlidir.  Ancak, tam karbonhidrat girişinin SMB etkisiyle çok fazla AİNS ile sonuçlandığı daha yavaş emilen yemekler için, yKarb, karbonhidratların (ve diğer makrobesinler için girdiğiniz karbonhidrat eşdeğerlerinin) nasıl emildiğini ve kan şekerini nasıl etkilediğini daha doğru bir şekilde simüle etmek için kullanılabilir. Bu bilgi ile döngü, dinamik yayma bolus olarak görülebilen bu karbonhidratlarla başa çıkmak için SMB'leri daha kademeli olarak yönetebilir (Normalde döngü SMB'ler olmadan da çalışmalıdır, ancak muhtemelen etkisi daha az olacaktır).
 
 **Not:** yKarb, yağlı / protein ağırlıklı yemeklerle sınırlı değildir: kan şekerini artıran etkilerin olduğu herhangi bir durumda yardımcı olmak için de kullanılabilirler, örn. kortikosteroidler gibi diğer ilaçlar.
 
@@ -17,7 +17,7 @@ yKarb girmek için, genel bakış (Giriş) sekmesindeki *Karbonhidrat* iletişim
 .. image:: ../images/eCarbs_Dialog.png
   :alt: Karbonhidrat girişi
 
-The eCarbs on the overview tab, note the carbs in brackets at the COB field, which shows the carbs in the future:
+Genel bakış (Giriş) sekmesindeki yKarb, gelecekte karbonhidratları gösteren AKRB alanındaki parantez içindeki karbonhidratları not edin:
 
 .. image:: ../images/eCarbs_Graph.png
   :alt: Grafikteki yKarb
@@ -36,7 +36,7 @@ Aşağıdaki linkte özellikle yağ ve proteini işlemenin bir yolu açıklanmak
 
 Önerilen kurulum, örnek senaryo ve önemli notlar
 =====================================================================
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+Önerilen kurulum, SMB'ler etkinken ve *AKRB ile SMB'yi Etkinleştir* tercihi etkinken OpenAPS SMB APS eklentisini kullanmaktır.
 
 Bir senaryo ör. Bir Pizza için, *hesap makinesi* aracılığıyla önden (kısmi) bir bolus vermek ve ardından 1 veya 2 saat sonra başlamak üzere 4-6 saat süreyle *karbonhidrat* düğmesini kullanarak kalan karbonhidratları girmek olabilir. 
 
@@ -68,4 +68,4 @@ Yayma boluslar neden kapalı döngü ortamında çalışmaz?
    1. Bazal oran ile birlikte nötr olarak kabul edilmeli ve döngüye devam mı edilmeli? O zaman, örneğin, düşük yaşarsanız ve tüm "nötr" insülin alınırsa, döngü de bolusu azaltabilmelidir?
    2. Yayma bolus basitçe eklenmeli mi? Yani döngünün devam etmesine izin verilmeli mi? En kötü hipoda bile mi? Bunun çok iyi olduğunu düşünmüyorum: Bir hipo öngörülüyor ama önlenmemeli mi?
    
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Buna göre, döngü daha az bazal verecektir. Yani pek birdeğişiklik olmayacaktır... hipodan kaçınma olasılığı dışında.
+3. Yayma bolusun oluşturduğu AİNS, algoritmanın bir sonraki çalışmasında yani 5 dakika sonra eklenir. Buna göre, döngü daha az bazal verecektir. Yani pek birdeğişiklik olmayacaktır... hipodan kaçınma olasılığı dışında.
