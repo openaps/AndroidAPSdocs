@@ -54,7 +54,7 @@ Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değiş
 
 Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
 
 ## Accu-Chek Combo
 
@@ -83,7 +83,7 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
-A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. Your COB and IOB should both be close to zero.)
+Bu geçişi yapmak için iyi bir zaman, düşük AİNS ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. AKRB ve AİNS'nizin her ikisi de sıfıra yakın olmalıdır.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
 2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
@@ -104,5 +104,5 @@ A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi
 ## Diğer Pompalar
 
 * Bu özellik, AndroidAPS sürüm 2.2'den beri mevcuttur.
-* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
+* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle AİNS çok yüksek).
 * DST değişikliğinden önce ana ekranda, döngünün geçici olarak devre dışı bırakılacağına dair bir bildirim alacaksınız. Bu mesaj uyarı, titreşim veya herhangi bir şey olmadan görünecektir.
