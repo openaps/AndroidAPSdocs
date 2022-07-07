@@ -26,7 +26,7 @@ Not: Karbonhidrat butonu ile karbonhidrat girerseniz ve kan şekeriniz 72 mg/dl 
 
 ## Aktivite Geçici-Hedefi
 
-Aktivite öncesi veya spor yaparken, hipoyu önlemek için daha yüksek bir hedefiniz olmasını isteyebilirsiniz. Geçici Hedef ayarını basitleştirmek için varsayılan bir "Aktivite Geçici-Hedefi" yapılandırabilirsiniz. İES, IOB ve deneyiminize dayanarak geçici hedefi etkinlikten önce ayarlamak isteyebilirsiniz. Ayrıca [SSS'deki spor bölümüne](../Getting-Started/FAQ#sports) bakın.
+Aktivite öncesi veya spor yaparken, hipoyu önlemek için daha yüksek bir hedefiniz olmasını isteyebilirsiniz. Geçici Hedef ayarını basitleştirmek için varsayılan bir "Aktivite Geçici-Hedefi" yapılandırabilirsiniz. Based on DIA, IOB and your experience you might want to set TT prior to activity. Ayrıca [SSS'deki spor bölümüne](../Getting-Started/FAQ#sports) bakın.
 
 Gelişmiş, [Görev 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb): “Aktivite Geçici Hedefi” ile ilgili avantajlar, OpenAPS SMB'de 100mg/dl veya 5.5mmol/L'ye eşit veya daha yüksek Geçici Hedefler için “Yüksek Geçici-Hedefler duyarlılığı arttırır”ı etkinleştirebilmenizdir. Bu durumda AndroidAPS duyarlılığı artar. Bazı insanlar bunun yerine GH etkinliğinden önce / sırasında bir profil değişikliği yapabilirler, ancak herkesin diyabet yönetimi farklıdır. "Yüksek geçici hedeflerle SMB'yi etkinleştir" devre dışı bırakılırsa, AndroidAPS, Aktif karbonhidrat > 0 ve "SMB'yi her zaman etkinleştir" ve OpenAPS SMB etkin olsa bile SMB'leri kullanmaz.
 
