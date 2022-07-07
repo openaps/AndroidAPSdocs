@@ -323,7 +323,7 @@ Karbonhidrat gerekli bildirimi
 * Bu özellik yalnızca SMB algoritması seçildiğinde kullanılabilir.
 * Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir.
 * Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
-* Ek olarak, gerekli karbonhidratlar ana ekranınızdaki COB bölümünde görüntülenecektir.
+* Additionally the required carbs will be displayed in the COB section on your home screen.
 * Bir eşik tanımlanabilir - bir bildirimi tetiklemek için gereken minimum karbonhidrat miktarı. 
 * İstenirse karbonhidrat gerekli bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilip yayınlanacaktır.
 
@@ -344,16 +344,16 @@ Emilim ayarları
 min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritma, karbonhidratların ne zaman emildiğini belirlemek için BGI (kan şekeri etkisi) kullanır. 
-* Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. 
+* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
 * Karbonhidrat emiliminin kanınızın reaksiyonlarına göre dinamik olarak çalışılamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
 * Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması * gerektiğini* "bilir". 
 * Beklenen davranıştan pozitif bir sapma olduğunda, bazı karbonhidratlar emilir/çürür. Büyük değişiklik=çok karbonhidrat vs. 
 * min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için `OpenAPS dokümantasyonuna bakın <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min- 5m-karbipakt>`__.
 * AMA için standart değer 5, SMB için 8'dir.
-* Ana ekrandaki COB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
+* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB grafiği
+    :alt: COB graph
   
 Maksimum besin emilim süresi
 -----------------------------------------------------------
