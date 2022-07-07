@@ -90,7 +90,7 @@ OpenAPS algoritması paralel yayma bolusu veya çok dalgalı bolusu desteklemez.
 ## Bolus iletiminde uyarılar
 
 * AndroidAPS, aynı bolusun aynı dakikada başarıyla iletildiğini algılarsa, aynı sayıda insülin ünitesiyle bolus iletimi engellenir. Aynı insülini arka arkaya iki kez gerçekten bolus yapmak istiyorsanız, iki dakika daha bekleyin ve ardından bolusu tekrar gönderin. İlk bolus kesintiye uğradıysa veya başka nedenlerle iletilmediyse, AAPS 2.0'dan itibaren bolusu hemen yeniden gönderebilirsiniz.
-* Alarm, bir bolus doğrudan pompadan iletilse bile, aktif insülini (IOB) doğru bir şekilde hesaplamak için yeni bir bolus göndermeden önce pompanın bolus geçmişini okuyan bir güvenlik mekanizmasıdır. Burada ayırt edilemeyen girişler engellenmelidir.
+* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Burada ayırt edilemeyen girişler engellenmelidir.
 
 ![Çift bolus](../images/combo/combo-tips-doppelbolus.png)
 
