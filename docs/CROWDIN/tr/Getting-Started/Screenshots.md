@@ -119,10 +119,10 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 ![Bölüm D](../images/Home2020_TBR.png)
 
-* Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
+* Syringe: insulin on board (IOB) - amount of active insulin inside your body
    
    * Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır. 
-   * Yakın zamanda bazalınız düşürülmüşse, (IOB) aktif insülin negatif olabilir.
+   * IOB may be negative if there have recently been periods of reduced basal.
    * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
 * Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
@@ -182,7 +182,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    
    Tahmin çizgisi, mevcut pompa ayarlarına ve karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak KŞ'nizin nereye gideceğini (Aktif karbonhidratın değil!) gösterir. This line only appears if there are known COB.
 
-* **Koyu mavi** çizgi: IOB Aktif insülin (Bu renk genellikle aktif insülin ve insülini temsil etmek için kullanılır)
+* **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
    
    Tahmin çizgisi, sadece insülinin etkisi altında ne olacağını gösterir. Örneğin biraz insülin gönderip birşey yemediyseniz.
 
@@ -221,14 +221,14 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 * Boluslar dahil aktif insülin **ve bazal**.
 
-#### (IOB) Aktif İnsülin
+#### Insulin on board
 
 * Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
 * Eğer [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) olmazsa, İES süresi boyunca bolus ve GBO da gönderilmezsa bu değer sıfır olur.
-* Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse IOB (Aktif insülin) negatif olabilir.
+* IOB can be negative if you have no remaining bolus and zero/low temp for a longer time.
 * Azalma [İES ve insülin profil ayarlarınıza](../Configuration/Config-Builder#local-profile) bağlıdır. 
 
-#### (COB) Aktif Karbonhidrat
+#### Carbs On Board
 
 * Aktif karbonhidratları gösterir (= vücudunuzdaki aktif, henüz bozulmamış karbonhidratlar). 
 * Bozulma, algoritmanın algıladığı sapmalara bağlıdır. 
@@ -251,7 +251,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 * İnsülin profiliniz tarafından hesaplanan insülin aktivitesini gösterir (Aktif insülin türevi değildir). 
 * İnsülin zirve zamanına daha yakın olduğunda değer daha yüksektir.
-* IOB azalırken negatif olmak anlamına gelir. 
+* It would mean to be negative when IOB is decreasing. 
 
 #### Sapma eğimi
 
@@ -425,7 +425,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * Pompa ile elle bolus gönderiyorsanız, muhtemelen insülinin yaklaşık 3.5 saat içinde azaldığını varsayıyorsunuz. 
 * Ancak, döngü ile pompa kullanırken uzun insülin zamanı önemlidir. Çünkü hesaplamalar çok daha kesindir ve bu küçük miktarlar, AndroidAPS algoritmasındaki hesaplamalara eklenirler.
 
-Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni IOB Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
 Ve bununla ilgili mükemmel bir blog makalesini burada [Kullandığımız insülin etki (DIA) sürelerinde neden düzenli olarak yanılıyoruz ve neden önemli…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action -dia-times-we-use-and-why-it-matters/) okuyabilirsiniz.
 
@@ -455,17 +455,17 @@ Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtla
 
 Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (yani, karbonhidratları fazla veya az tahmin etmişsinizdir).
 
-1. Ana ekranda güncel COB ve IOB'yi kontrol edin ve hatırlayın.
+1. Check and remember actual COB and IOB on homescreen.
 2. Tedavi sekmesinde pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir giriş olarak (örn. Dana RS ile) gösterilebilir.
 3. Hatalı karbonhidrat girişini kaldırın.
-4. Ana ekranda COB'u tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
-5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, IOB için de aynısını yapın.
+4. Make sure carbs are removed successfully by checking COB on homescreen again.
+5. Do the same for IOB if there is just one line in treatment tab including carbs and insulin.
    
-   -> Karbonhidratlar anlatıldığı gibi çıkarılmazsa ve burada (6.madde) açıklandığı gibi ilave karbonhidrat eklerseniz, COB çok yüksek olur ve bu da çok yüksek insülin iletimine yol açabilir.
+   -> If carbs are not removed as intended and you add additional carbs as explained here (6.), COB will be too high and that might lead to too high insulin delivery.
 
 6. Ana ekrandaki karbonhidrat butonu aracılığıyla doğru karbonhidrat miktarını girin ve doğru etkinlik zamanını ayarladığınızdan emin olun.
 
-7. Tedavi sekmesinde karbonhidrat ve insülin içeren tek satır varsa, insülin miktarını da eklemeniz gerekir. Doğru etkinlik saatini ayarladığınızdan emin olun ve yeni girişi onayladıktan sonra ana ekranda IOB'u kontrol edin.
+7. Tedavi sekmesinde karbonhidrat ve insülin içeren tek satır varsa, insülin miktarını da eklemeniz gerekir. Make sure to set the correct event time and check IOB on homescreen after confirming the new entry.
 
 ## Döngü, AMA / SMB
 
