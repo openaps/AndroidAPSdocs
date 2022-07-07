@@ -77,9 +77,9 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
 4. Tedaviler sekmesini kontrol edin... Yinelenen tedaviler görürseniz:
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
@@ -91,9 +91,9 @@ A good time to make this switch would be with low IOB. Örneğin. kahvaltı gibi
 4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. This should invalidate the treatments rather than removing them so they will not be considered for IOB anymore.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
 
-5. If the situation on how much IOB/COB is unclear - for safety please disable the loop for at least one DIA and Max-Carb-Time - whatever is bigger.*
+5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
 
 6. Normal şekilde devam edin.
 
