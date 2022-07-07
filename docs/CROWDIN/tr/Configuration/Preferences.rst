@@ -274,25 +274,25 @@ Maks Ü/s geçici Bazal ayarlanabilir
 * Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
 * Ayrıca bkz. `ayrıntılı özellik açıklaması <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-Maximum basal IOB OpenAPS can deliver [U]
+OpenAPS tarafından aşılmayacak, maksimum toplam AİNS(Aktif İnsülin)[U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normal bazal profilinizin üzerine vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak). 
-* Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again. 
+* Bu değere ulaşıldığında, AAPS, Aktif insülin (AİNS) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır. 
 * Bu değer **bolus aktif insülini** dikkate almaz, yalnızca bazal insülin için hesaplanır.
 * Bu değer, normal profildeki bazal oranınızdan bağımsız olarak hesaplanır ve izlenir. Normal bazal oranınızın üzerindeki ek bazal insülin dikkate alınır.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
+Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal AİNS'i 0'a ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
 
 * AAPS sistemine alışmak ve nasıl güvenli çalıştığını izlemek için kendinize süre ayırmak.
 * Bazal profilinizi ve İnsülin Duyarlılık Faktörünüzü (ISF) mükemmelleştirme fırsatını yakalamak.
 * AAPS'in hipoglisemiyi önlemek için bazal insülininizi nasıl sınırladığını görmek.
 
-When you feel comfortable, you can allow the system to start giving you additional basal insulin, by raising the Max Basal IOB value. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
+Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
 
 * Bu değerle ihtiyatlı başlayabilir ve zamanla yavaş yavaş artırabilirsiniz. 
 * Bunlar yalnızca yönergedir; herkesin vücudu farklıdır. Burada önerilenden daha fazlasına veya daha azına ihtiyacınız olduğunu fark edebilirsiniz, ancak her zaman ihtiyatlı başlayın ve yavaş yavaş ayarlayın.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Not: Bir güvenlik özelliği olarak, Max Basal AİNS üst sınırı 7ü dir.**
 
 Otoduyarlılık
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -323,7 +323,7 @@ Karbonhidrat gerekli bildirimi
 * Bu özellik yalnızca SMB algoritması seçildiğinde kullanılabilir.
 * Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir.
 * Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
-* Additionally the required carbs will be displayed in the COB section on your home screen.
+* Ek olarak, gerekli karbonhidratlar ana ekranınızdaki AKRB bölümünde görüntülenecektir.
 * Bir eşik tanımlanabilir - bir bildirimi tetiklemek için gereken minimum karbonhidrat miktarı. 
 * İstenirse karbonhidrat gerekli bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilip yayınlanacaktır.
 
@@ -344,16 +344,16 @@ Emilim ayarları
 min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritma, karbonhidratların ne zaman emildiğini belirlemek için BGI (kan şekeri etkisi) kullanır. 
-* The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB. 
+* Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. 
 * Karbonhidrat emiliminin kanınızın reaksiyonlarına göre dinamik olarak çalışılamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
 * Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması * gerektiğini* "bilir". 
 * Beklenen davranıştan pozitif bir sapma olduğunda, bazı karbonhidratlar emilir/çürür. Büyük değişiklik=çok karbonhidrat vs. 
 * min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için `OpenAPS dokümantasyonuna bakın <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min- 5m-karbipakt>`__.
 * AMA için standart değer 5, SMB için 8'dir.
-* The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+* Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB graph
+    :alt: AKRB grafiği
   
 Maksimum besin emilim süresi
 -----------------------------------------------------------
