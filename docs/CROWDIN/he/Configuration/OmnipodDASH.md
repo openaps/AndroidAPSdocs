@@ -335,24 +335,24 @@
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### כמות במכל
 
 **יתרת אינסולין**
 
-יתרת האינסולין המוצגת מדווחת ע"י הפוד. עם זאת, הוא מדווח רק על יתרת האינסולין המדוייקת רק כאשר היא מתחת ל-50 יחידות. עד אז יוצג "מעל 50 יחידות". הכמות המדווחת אינה מדויקת: כאשר הפוד מדווח על 'ריק' ברוב המקרים עדיין יישארו מספר יחידות אינסולין נוספות. לשונית הסקירה הכללית של DASH תוצג כמתואר להלן:
+יתרת האינסולין המוצגת מדווחת ע"י הפוד. עם זאת, הוא מדווח רק על יתרת אינסולין מדוייקת רק כאשר היא מתחת ל-50 יחידות. עד אז יוצג "מעל 50 יחידות". הכמות המדווחת אינה מדויקת: כאשר הפוד מדווח על 'ריק' ברוב המקרים עדיין יישארו מספר יחידות אינסולין נוספות. לשונית הסקירה הכללית של DASH תוצג כמתואר להלן:
 
-  * **Above 50 Units** - The Pod reports more than 50 units currently in the reservoir.
-  * **Below 50 Units** - The amount of insulin remaining in the reservoir as reported by the Pod.
+  * **מעל 50 יחידות** - הפוד מדווח על יותר מ-50 יחידות שנמצאות כעת במכל.
+  * **מתחת ל-50 יחידות** - כמות האינסולין שנותרה במכל כפי שדווח על ידי הפוד.
 
 הערות נוספות:
-  * **SMS** - Returns value or 50+U for SMS responses
-  * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
+  * **SMS** - מחזירה ערך או 50+U בתגובות של SMS
+  * **נייטסקאוט** - העלאת ערך של 50 כאשר מעל 50 יחידות לנייטסקאוט (גרסה 14.07 ומעלה).  גרסאות חדשות יותר ידווחו על ערך של 50+ כאשר מעל 50 יחידות.
 
 ## פתרון בעיות
 
-### Delivery suspended
+### הפסקת הזרקה
 
-  * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
+  * אין יותר כפתור של הפסקת הזרקה. אם ברצונכם "להשהות" את הפוד, אפשר להגדיר מינון בזאלי זמני 0% למשך x דקות.
   * During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can stay suspended. When this happens:
      - There will be no insulin delivery, that includes Basal, SMB, Manual bolusing etc.
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
