@@ -436,30 +436,30 @@ AndroidAPS אינו פועל ב"מצב מפתחים". AAPS מציג את ההו�
 
 מקור אפשרי לבעיה: הופעלה הורדת נתוני סוכר מ-NS בהגדרות AAPS או ב-xDrip.
 
-המשולש הצהוב פירושו הפרש זמנים לא קבוע בין כל קריאת סוכר. כלומר לא מקבלים נתוני סוכר כל 5 דקות באופן קבוע או שנתונים חסרים. לעתים קרובות זו בעיה של Libre. זה קורה גם כאשר מחליפים משדר G6. If the yellow triangle is related to the G6 tansmitter change, it will go away by itself after several hours (around 24h). במקרה של Libre, המשולש הצהוב יישאר. הלולאה ניתנת לסגירה ופועלת כהלכה.
+המשולש הצהוב פירושו הפרש זמנים לא קבוע בין כל קריאת סוכר. כלומר לא מקבלים נתוני סוכר כל 5 דקות באופן קבוע או שנתונים חסרים. לעתים קרובות זו בעיה של Libre. זה קורה גם כאשר מחליפים משדר G6. אם המשולש הצהוב קשור להחלפת משדר G6, הוא ייעלם מעצמו לאחר מספר שעות (כ-24 שעות). במקרה של Libre, המשולש הצהוב יישאר. הלולאה ניתנת לסגירה ופועלת כהלכה.
 
-## Can I move an active DASH Pod to other hardware?
+## האם אפשר להעביר פוד Dash פעיל למכשיר אחר?
 
-This is possible. Note that as moving is "unsupported" and "untested" there is some risk involved. Best to try the procedure when your Pod is about to expire so when things go wrong not much is lost.
+זה אפשרי. יש לשים לב שמכיוון שמעבר הוא "לא נתמך" ו"לא נבדק", קיים סיכון מסוים. עדיף לנסות את ההליך כאשר הפוד עומד לפוג, כך שכשדברים משתבשים, לא הרבה ילך לאיבוד.
 
-Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
+זה קריטי ש"מצב" הפוד (הכוללת את כתובת ה-MAC שלו) ב-AAPS ו-DASH יהיו תואמים בחיבור מחדש
 
-## Procedure I follow in this:
+## נוהל הביצוע:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) השעו את פוד ה-DASH. זה מוודא שאין פקודות פועלות או בתור כאשר DASH מאבד את החיבור 2) הכניסו את הטלפון למצב טיסה כדי להשבית את הבלוטות' (כמו גם WiFi ונתונים ניידים). כך מבטיחים ש-AAPS ו-DASH לא יכולים לתקשר. 3) ייצוא ההגדרות בתפריט התחזוקה (הכוללות את מצב DASH) 4) העתקת קובץ ההגדרות שיצא זה עתה מהטלפון (מכיוון שהוא כבר במצב טיסה ואנחנו לא רוצים לשנות זאת, הדרך הקלה ביותר היא באמצעות כבל USB) 5) העברת קובץ ההגדרות אל הטלפון החלופי. 6) ייבוא הגדרות ב-AAPS בטלפון החלופי. 7) בדקו בלשונית DASH שהוא מזהה את הפוד. 8) בטלו את השעיית הפוד. 9) בדקו בלשונית DASH ש-AAPS מתקשרת עם הפוד (השתמש בלחצן הרענון)
 
-Congratulations: you did it!
+ברכות! הצלחתם!
 
-*Wait!* You still have the main phone thinking it can reconnect to the same DASH:
+*רגע!* עדיין יש לכם את הטלפון הראשון והוא חושב שהוא יכול להתחבר מחדש לאותו DASH:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) בטלפון הראשי בחרו "כבה פוד". זה בטוח מכיוון שלטלפון אין דרך לתקשר עם DASH כדי לבטל את הפוד בפועל (כי הוא עדיין במצב טיסה) 2) השבתה תגרום לשגיאת תקשורת - זה צפוי. 3) פשוט לחצו על "נסה שוב" כמה פעמים עד ש-AAPS יציע את האפשרות "להיפטר" מהפוד.
 
-When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
+לאחר ש-"נפטרים" מהפוד, ודאו ש-AAPS מדווח "אין פוד פעיל". כעת תוכלו להשבית בבטחה שוב את מצב המטוס.
 
-## How do I import settings from earlier versions of AAPS into AAPS v3 ?
+## כיצד לייבא הגדרות מגרסאות קודמות של AAPS ל-AAPS v3?
 
-You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
+ניתן לייבא רק הגדרות (ב-AAPS v3) שיוצאו באמצעות AAPS v2.8x או v3.x. אם השתמשתם בגרסה ישנה מ-v2.8x או שאתם צריכים להשתמש בייצוא הגדרות ישנות יותר מ-v2.8x, עליכם להתקין תחילה את AAPS v2.8. ייבאו את ההגדרות הישנות יותר של v2.x ב-v2.8. לאחר בדיקה שהכל תקין, תוכלו לייצא הגדרות מגרסה 2.8. התקינו את AAPS v3 וייבאו הגדרות v2.8 ב-v3.
 
-If you use the same key to build v2.8 and v3, you won't even have to import settings. You can install v3 over v2.8.
+אם אתם משתמשים באותו מפתח לבניית אפליקציות v2.8 ו-v3, אפילו לא תצטרכו לייבא הגדרות. תוכלו להתקין בדריסה את גרסה 3 על גרסה 2.8.
 
-There were some new objectives added. You'll need to validate them.
+נוספו מספר משימות חדשות. תצטרכו לאמת אותן.
