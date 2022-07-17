@@ -52,7 +52,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 ## xDrip+ mit Dexcom G6
 
 * Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
-* Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
+* When using xDrip+ as receiver uninstall Dexcom app first. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 * Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die ['Build Your Own Dexcom App](../Hardware/DexcomG6#g6-mit-build-your-own-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
