@@ -89,7 +89,7 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 -   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
