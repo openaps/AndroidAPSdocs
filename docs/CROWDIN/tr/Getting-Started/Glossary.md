@@ -119,9 +119,9 @@
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Viki kapalı döngü</a></td>
 </tr>
 <tr>
- <td><strong>COB Aktif Karbonhidrat</strong></td>
+ <td><strong>AKRB Aktif Karbonhidrat</strong></td>
  <td>aktif karbonhidrat - Aktif karbonhidrat, sindirim için halihazırda mevcut olan karbonhidrat miktarıdır.</td>
- <td>IOB Aktif İnsülin</td>
+ <td>AİNS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -179,7 +179,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>IOB Aktif İnsülin</strong></td>
+ <td><strong>AİNS</strong></td>
  <td>aktif insülin - vücudunuzda aktif insülin miktarı</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -192,7 +192,7 @@
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca IOB negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
+ <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca AİNS negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">görev 6</a></td>
  <td>&nbsp;</td>
 </tr>
@@ -210,7 +210,7 @@
 </tr>
 <tr>
  <td><strong>makIOB</strong></td>
- <td>güvenlik özelliği -AAPS maksimum toplam IOB (aktif insülini) geçemez</td>
+ <td>güvenlik özelliği -AAPS maksimum toplam AİNS (aktif insülini) geçemez</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - makIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - SMB</a></td>
 </tr>

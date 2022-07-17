@@ -1,8 +1,7 @@
-COB (Aktif Karbonhidrat) hesaplaması
-
+AKRB hesaplaması
 **************************************************
 
-AndroidAPS COB değerini nasıl hesaplar?
+AndroidAPS AKRB değerini nasıl hesaplar?
 ==================================================
 
 Oref1
@@ -16,25 +15,25 @@ Emilmeyen karbonhidratlar belirtilen süreden sonra kesilir.
 AAPS, Ağırlıklı Ortalama
 --------------------------------------------------
 
-Emilim, belirtilen süreden sonra ``COB == 0`` olarak hesaplanır
+Emilim, belirtilen süreden sonra ``AKRB == 0`` olarak hesaplanır
 
 .. image:: ../images/cob_aaps2_orange_II.png
   :alt: AAPS, WheitedAverage
 
-KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, COB grafiğinde turuncu bir nokta görünür.
+KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, AKRB grafiğinde turuncu bir nokta görünür.
 
-Yanlış COB değerlerinin tespiti
+Yanlış AKRB değerlerinin tespiti
 ==================================================
 
-AAPS, bir önceki öğünden COB ile bolus yapmak üzereyseniz, algoritma mevcut COB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir. 
+AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcut AKRB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir. 
 
-AndroidAPS, yanlış COB değerlerini nasıl tespit eder? 
+AndroidAPS, yanlış AKRB değerlerini nasıl tespit eder? 
 --------------------------------------------------
 
-Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorpsiyon-settings>`_ yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış COB değerlerine yol açabilir.
+Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için `min_5m_carbimpact <../Configuration/Config-Builder.html?highlight=min_5m_carbimpact#absorpsiyon-settings>`_ yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 
 .. image:: ../images/Calculator_SlowCarbAbsorption.png
-  :alt: Yanlış COB değerine ilişkin ipucu
+  :alt: Yanlış AKRB değerine ilişkin ipucu
 
 Yukarıdaki ekran görüntüsünde, karbonhidrat emiliminin %41'i sapmalardan tespit edilen değer yerine min_5m_carbimpact tarafından matematiksel olarak hesaplanmıştır.  Bu, belki de algoritma tarafından hesaplanandan daha az aktif karbonhidratınız olduğu anlamına gelir. 
 
@@ -42,11 +41,11 @@ Bu uyarı ile nasıl başa çıkılır?
 --------------------------------------------------
 
 - Tedaviyi iptal etmeyi düşünün - Tamam yerine İptal'e basın.
-- Bolus sihirbazı ile COB'u dikkate almadan (tiki kaldırıp hesaplamaya dahil etmeyerek) yaklaşan öğününüzü tekrar hesaplayın.
+- Bolus sihirbazı ile AKRB'yi dikkate almadan (tiki kaldırıp hesaplamaya dahil etmeyerek) yaklaşan öğününüzü tekrar hesaplayın.
 - Düzeltme bolusuna ihtiyacınız olduğundan, eminseniz manuel olarak girin.
 - Her durumda aşırı doz almamaya dikkat edin!
 
-Algoritma neden COB'u doğru algılamıyor? 
+Algoritma neden AKRB'yi doğru algılamıyor? 
 --------------------------------------------------
 
 - Belki karbonhidratları fazla tahmin ederek girdiniz.  

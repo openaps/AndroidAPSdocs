@@ -40,7 +40,7 @@ Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kull
 
 ### Pompayı ayırın
 
-Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye IOB'yi doğru tutmak için insülin verilmediğini bildirmelisiniz.
+Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
 [AndroidAPS Ana Ekranında](./Screenshots.md#loop-status) Döngü Durumu simgesi kullanılarak pompanın bağlantısı kesilebilir.
 
@@ -105,7 +105,7 @@ KŞ düşüyorsa, bazal oran çok yüksektir. Veya tam tersi.
 
 Çok yüksek bazal oran, düşük KŞ'lere yol açabilir. Veya tam tersi.
 
-Varsayılan bazal orana karşı AAPS "temel çizgileri". Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif IOB (insulin on board - metabolizmada aktif insülin) ile sonuçlanır. Bu AAPS'nin IOB'yi nihai olarak sıfıra getirmek için gerekenden daha fazla düzeltme yapmasına yol açacaktır.
+Varsayılan bazal orana karşı AAPS "temel çizgileri". Bazal oran çok yüksekse, bir 'sıfır geçici' (bazal hızı AAPS ile geçici olarak kapatır), olması gerekenden daha yüksek bir negatif AİNS (metabolizmada aktif insülin) ile sonuçlanır. Bu AAPS'nin AİNS'i nihai olarak sıfıra getirmek için gerekenden daha fazla düzeltme yapmasına yol açacaktır.
 
 Dolayısıyla, çok yüksek bir bazal oran, hem varsayılan oranla hem de AAPS'nin hedefi düzeltmesiyle birkaç saat sonra düşük KŞ'ler yaratacaktır.
 
@@ -117,7 +117,7 @@ Tersine, çok düşük bir bazal oran, yüksek KŞ'lere ve seviyelerin hedef de�
 
 1Ü insülin dozundan beklenen KŞ'deki düşüş.
 
-Doğru bazal varsayarak, döngüyü askıya alarak, IOB'nin sıfır olduğunu kontrol ederek ve kararlı bir "yüksek" seviyeye ulaşmak için birkaç glikoz tableti alarak bunu test edebilirsiniz.
+Doğru bazal varsayarak, döngüyü askıya alarak, AİNS'in sıfır olduğunu kontrol ederek ve kararlı bir "yüksek" seviyeye ulaşmak için birkaç glikoz tableti alarak bunu test edebilirsiniz.
 
 Ardından, hedef KŞ'nize ulaşmak için tahmini miktarda insülin (mevcut 1/İDF'ine göre) alın.
 
@@ -148,7 +148,7 @@ Her birim ünite insülin için karbonhidrat gramı.
 
 Bazı insanlar ayrıca IC yerine kısaltma olarak I:C kullanır veya karbonhidrat oranı (CR) hakkında bahseder.
 
-Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta olduğunuzu, tam olarak bilinen karbonhidratları yediğinizi ve mevcut insülin / karbonhidrat oranına göre tahmini bir miktarda insülin aldığınızı kontrol ederek test edebilirsiniz. En iyisi, normalde yediğiniz yemeği günün o saatinde yemek ve karbonhidratlarını tam olarak saymaktır.
+Bazalın doğru olduğunu varsayarak, AİNS'in sıfır olduğunu ve aralıkta olduğunuzu, tam olarak bilinen karbonhidratları yediğinizi ve mevcut insülin / karbonhidrat oranına göre tahmini bir miktarda insülin aldığınızı kontrol ederek test edebilirsiniz. En iyisi, normalde yediğiniz yemeği günün o saatinde yemek ve karbonhidratlarını tam olarak saymaktır.
 
 > **NOT:**
 > 
@@ -174,7 +174,7 @@ Bazalın doğru olduğunu varsayarak, IOB'nin sıfır olduğunu ve aralıkta old
 
 **Daha yüksek IC** = birim başına daha fazla yiyecek, yani sabit miktarda karbonhidrat için daha az insülin alıyorsunuz. "Daha az agresif" olarak da adlandırılabilir.
 
-Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
+Yemekten sonra sindirim gerçekleşmiş ve AİNS sıfıra dönmüşse, KŞ'niz de yemek öncesi değerden daha yüksekse, IC'nin çok büyük olma ihtimali vardır. Tersine, KŞ'niz yemekten sonra düşükse, IC çok küçüktür.
 
 # APS algoritması
 
@@ -182,7 +182,7 @@ Yemekten sonra sindirim gerçekleşmiş ve IOB sıfıra dönmüşse, KŞ'niz de 
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. IOB'nin hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
+AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez. Eskiden İES'ine bağlanan bir parametreydi. Şimdi ise 'düzeltme bolusunun ne zaman biteceği' anlamına geliyor. AİNS'in hesaplanmasıyla ilgisi yoktur. OpenAPS SMB'de artık bu parametreye gerek yoktur.
 
 ## Profil
 
@@ -190,7 +190,7 @@ AMA algoritmasında, İES aslında 'insülin etkisinin süresi' anlamına gelmez
 
 [Bu makalede](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/) iyi bir şekilde açıklanmıştır. İES'ini değiştirdikten sonra `PROFİLİ ETKİNLEŞTİR` yapmayı unutmayın.
 
-### Döngünün COB olmadan KŞ'inin hipoglisemik değerlere sık sık düşürmesine neden olan nedir?
+### Döngünün AKRB olmadan KŞ'inin hipoglisemik değerlere sık sık düşürmesine neden olan nedir?
 
 Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa, bu davranışa genellikle çok düşük bir İDF neden olur. Çok düşük bir İDF tipik olarak şöyle görünür:
 
@@ -198,7 +198,7 @@ Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal
 
 ### Kapalı döngüde yüksek tokluk KŞ'i zirvelerine ne sebep olur?
 
-Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AndroidAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra çok düşükse, diyabet uzmanınızla IC faktörlerinizi artırıp artırmayacağınızı düşünün ve uygun bir insülin yemek arası izleyin.
+Her şeyden önce, bazal oranınızı kontrol edin ve karbonhidratsız bir bazal oranı testi yapın. Doğruysa ve karbonhidratlar tamamen emildikten sonra KŞ'niz hedefinize düşüyorsa, AndroidAPS'de yemekten bir süre önce bir "yakında yemek yeme" geçici hedefi belirlemeye çalışın veya endokrinologunuzla uygun bir bolus öncesi zamanı düşünün. KŞ'niz yemekten sonra çok yüksekse ve karbonhidratlar tamamen emildikten sonra hala çok yüksekse, endokrinologunuzla IC'nizi azaltmayı düşünün. KŞ değerleriniz aktif karbonhidratlarla çok yüksekse ve tam karbonhidrat emiliminden sonra da çok düşerse, diyabet uzmanınıza Kİ oranınızı artırıp artırmayacağınızı danışın ve uygun bir insülin- yemek arası süre belirleyin.
 
 # Diğer ayarlar
 
@@ -264,7 +264,7 @@ Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Gett
 
 #### Duş alırken veya banyo yaparken ne yapmalı?
 
-Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak IOB hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
 
 ### İş
 
@@ -292,14 +292,14 @@ Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve deği
 
 ### Cinsel ilişki
 
-Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye IOB hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye AİNS hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
 
 ### Alkol tüketimi
 
 Algoritma alkolden etkilenen KŞ'yi doğru bir şekilde tahmin edemediği için kapalı döngü modunda alkol içmek risklidir. AndroidAPS'de aşağıdaki işlevleri kullanarak bunu tedavi etmek için kendi yönteminizi kontrol etmeniz gerekir:
 
 - Kapalı döngü modunun devre dışı bırakılması ve diyabetin manuel olarak tedavi edilmesi veya
-- gözetimsiz bir yemek nedeniyle döngüyü artıran IOB'yi önlemek için yüksek geçici hedefleri belirlemek ve bildirilmeyen Öğünleri (UAM)'yi devre dışı bırakmak veya
+- gözetimsiz bir yemek nedeniyle döngüyü artıran AİNS'i önlemek için yüksek geçici hedefleri belirlemek ve bildirilmeyen Öğünleri (UAM)'yi devre dışı bırakmak veya
 - % 100'den belirgin şekilde daha az bir profil geçişi yapın 
 
 Alkol içerken, karbonhidrat yiyerek hipoglisemiyi manuel olarak önlemek için CGM'nize her zaman göz kulak olmalısınız.
@@ -432,7 +432,7 @@ AAPS'yi NSClient Remote Wear Uygulaması aracılığıyla izlemek/kontrol etmek 
 
 Kırmızı ve sarı üçgenler, AAPS v3'te bir güvenlik özelliğidir.
 
-Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. BYODA veya xDRIP sekmesine gidin, silmek istediğiniz satırlardan birine uzun basın, çift satırlardan birini işaretleyin (veya AAPS sürümünüze bağlı olarak 3 nokta menüsü ve sil komutu ile). Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. Bu durumda, istatistikleri, IOB, COB, seçilen profili de kaybedersiniz.
+Kırmızı üçgen, yinelenen KŞ'niz olduğu ve AAPS'in deltaları tam olarak hesaplayamadığı anlamına gelir. Döngüyü kapalı yapamazsınız. Kırmızı üçgeni temizlemek için, kopyalanan her kan şekeri değerinizi silmeniz gerekir. BYODA veya xDRIP sekmesine gidin, silmek istediğiniz satırlardan birine uzun basın, çift satırlardan birini işaretleyin (veya AAPS sürümünüze bağlı olarak 3 nokta menüsü ve sil komutu ile). Çok fazla çift KŞ varsa AAPS veritabanını sıfırlamanız gerekebilir. Bu durumda, istatistikleri, AİNS, AKRB, seçilen profili de kaybedersiniz.
 
 Sorunun olası kaynağı: xDrip ve/veya NS geri döngülü KŞ girdileridir.
 

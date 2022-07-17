@@ -120,7 +120,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    AndroidAPS ekranları <./Getting-Started/Screenshots.md>
    Hedefler <./Usage/Objectives.rst>
    OpenAPS özellikleri <./Usage/Open-APS-features.md>   
-   Aktif karb. hesaplaması <./Usage/COB-calculation.rst>
+   AKRB hesaplaması <./Usage/COB-calculation.rst>
    Duyarlılık algılama <./Configuration/Sensitivity-detection-and-COB.md>
    Profil değiştirme <./Usage/Profiles.md>
    Geçici hedefler <./Usage/temptarget.md>   

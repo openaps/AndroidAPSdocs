@@ -138,7 +138,7 @@ Pompanızda manuel olarak bolus göndermekten veya GBO'ları ayarlamaktan kaçı
 
 AndroidAPS, Saat Dilimi değişikliklerini otomatik olarak algılar ve telefonunuz yeni saate geçtiğinde Pompanın saatini günceller.
 
-Doğuya seyahat etmek, şimdiki zamana saat ekleyeceğiniz anlamına gelir (ör. GMT+0'dan GMT+2'ye) herhangi bir çakışma olmayacağından (örneğin aynı saatin iki kez tekrar etmesi mümkün olmayacak) herhangi bir soruna yol açmayacaktır. Bununla birlikte, batıya seyahat etmek, mevcut zamanda geriye gittiğiniz için sorunlara neden olabilir ve bu da hatalı IOB verileriyle sonuçlanabilir.
+Doğuya seyahat etmek, şimdiki zamana saat ekleyeceğiniz anlamına gelir (ör. GMT+0'dan GMT+2'ye) herhangi bir çakışma olmayacağından (örneğin aynı saatin iki kez tekrar etmesi mümkün olmayacak) herhangi bir soruna yol açmayacaktır. Bununla birlikte, batıya seyahat etmek, mevcut zamanda geriye gittiğiniz için sorunlara neden olabilir ve bu da hatalı AİNS verileriyle sonuçlanabilir.
 
 Batıya seyahat ederken görülen sorunlar geliştiriciler tarafından biliniyor ve olası bir çözüm üzerinde çalışmalar devam ediyor. Daha fazla ayrıntı için https://github.com/andyrozman/RileyLinkAAPS/issues/145 adresine bakın. Şimdilik lütfen böyle bir sorun ortaya çıkabileceğini unutmayın ve saat dilimlerini değiştirirken dikkatli bir şekilde izleyin.
 

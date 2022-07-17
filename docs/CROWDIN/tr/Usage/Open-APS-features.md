@@ -26,7 +26,7 @@ SMB özelliği bazı güvenlik mekanizmalarını içerir:
     * şu anda gerekli olan insülin miktarının yarısı veya
     * ayarlarda maxIOB değerinizin kalan kısmı.
 
-2. Muhtemelen genellikle düşük geçici bazal oranları ("düşük geçici" olarak adlandırılır) veya 0 Ü/s'de geçici bazal oranları ("sıfır-geçici bazal " olarak adlandırılır) fark edeceksiniz. Bu güvenlik nedenleriyle tasarım gereğidir ve profil doğru ayarlanmışsa olumsuz bir etkisi yoktur. IOB eğrisi, geçici bazal oranların seyrinden daha anlamlıdır.
+2. Muhtemelen genellikle düşük geçici bazal oranları ("düşük geçici" olarak adlandırılır) veya 0 Ü/s'de geçici bazal oranları ("sıfır-geçici bazal " olarak adlandırılır) fark edeceksiniz. Bu güvenlik nedenleriyle tasarım gereğidir ve profil doğru ayarlanmışsa olumsuz bir etkisi yoktur. AİNS eğrisi, geçici bazal oranların seyrinden daha anlamlıdır.
 
 3. Glikozun seyrini tahmin etmek için ek hesaplamalar, örn. UAM tarafından (bildirilmemiş öğünler). Kullanıcıdan manuel karbonhidrat girişi olmasa bile UAM, yemekler, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışı otomatik olarak algılayabilir ve bunu SMB ile ayarlamaya çalışabilir. Güvenilir olması için bu aynı zamanda tam tersi şekilde çalışır ve glikozda beklenmedik bir şekilde hızlı bir düşüş meydana gelirse SMB'yi daha erken durdurabilir. Bu nedenle UAM, SMB'de her zaman aktif olmalıdır.
 
@@ -54,16 +54,16 @@ AndroidAPS, değeri aşağıdaki gibi sınırlar:
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
-### OpenAPS Maksimum toplam Aktif insülin'i geçemez (OpenAPS "maks-iob")
+### OpenAPS Maksimum toplam Aktif insülin'i geçemez (OpenAPS "maks-ains")
 
-Kapalı döngü modunda çalışan AAPS tarafından hangi maksIOB değerinin dikkate alınması gerektiğini belirler. Mevcut IOB (örneğin bir yemek bolusundan sonra) tanımlanan değerin üzerindeyse, döngü IOB limiti verilen değerin altına düşene kadar insülin dozlamayı durdurur.
+Kapalı döngü modunda çalışan AAPS tarafından hangi maksAİNS değerinin dikkate alınması gerektiğini belirler. Mevcut AİNS (örneğin bir yemek bolusundan sonra) tanımlanan değerin üzerindeyse, döngü AİNS limiti verilen değerin altına düşene kadar insülin dozlamayı durdurur.
 
-OpenAPS SMB kullanılarak hesaplanan max-IOB, OpenAPS AMA'dakinden farklıdır. AMA'da maxIOB, bazal IOB için yalnızca bir güvenlik parametresiyken, SMB modunda bolus IOB'u da içerir. İyi bir başlangıç
+OpenAPS SMB kullanılarak hesaplanan max-AİNS, OpenAPS AMA'dakinden farklıdır. AMA'da maxIOB, bazal AİNS için yalnızca bir güvenlik parametresiyken, SMB modunda bolus AİNS'i de içerir. İyi bir başlangıç
 
-    maksIOB = ortalama öğün yemeği + 3x maksimum günlük bazal olacaktır
+    maksIAİNS= ortalama öğün yemeği + 3x maksimum günlük bazal olacaktır
     
 
-Dikkatli ve sabırlı olun ve ayarlarınızı adım adım değiştirin. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maksIOB sabit limiti, [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)'dan daha yüksektir.
+Dikkatli ve sabırlı olun ve ayarlarınızı adım adım değiştirin. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maksAİNS sabit limiti, [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)'dan daha yüksektir.
 
 * Çocuk: 3
 * Genç: 7
@@ -83,9 +83,9 @@ Ayrıca [SMB için OpenAPS dokümantasyonuna](https://openaps.readthedocs.io/en/
 
 Burada SMB özelliğini etkinleştirebilir veya tamamen devre dışı bırakabilirsiniz.
 
-### SMB'yi COB ile etkinleştir
+### SMB'yi AKRB ile etkinleştir
 
-COB aktif olduğunda SMB çalışır.
+AKRB aktif olduğunda SMB çalışır.
 
 ### Geçici hedeflerle SMB'yi etkinleştir
 
@@ -93,23 +93,23 @@ SMB, düşük veya yüksek bir geçici hedef etkin olduğunda çalışır (yakı
 
 ### Yüksek geçici hedeflerle SMB'yi etkinleştir
 
-SMB, yüksek bir geçici hedef etkin (aktivite, hipo) olduğunda çalışır. Bu seçenek diğer SMB ayarlarını sınırlayabilir, yani 'geçici hedeflerle SMB' etkinse ve 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, SMB sadece düşük geçici hedeflerle çalışır. COB ile etkin SMB de aynıdır: Eğer 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, COB olsa bile yüksek geçici hedefte SMB verilmeyecektir.
+SMB, yüksek bir geçici hedef etkin (aktivite, hipo) olduğunda çalışır. Bu seçenek diğer SMB ayarlarını sınırlayabilir, yani 'geçici hedeflerle SMB' etkinse ve 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, SMB sadece düşük geçici hedeflerle çalışır. AKRB ile etkin SMB de aynıdır: Eğer 'yüksek geçici hedeflerle SMB' devre dışı bırakılırsa, AKRB olsa bile yüksek geçici hedefte SMB verilmeyecektir.
 
 ### SMB'yi her zaman etkinleştir
 
-SMB her zaman çalışır (COB'dan, geçici hedeflerden veya boluslardan bağımsız). Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
+SMB her zaman çalışır (AKRB'dan, geçici hedeflerden veya boluslardan bağımsız). Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
 
 Freestyle Libre gibi diğer CGM/FGM için, xDrip+ daha iyi bir gürültü yumuşatma eklentisine sahip olana kadar 'SMB her zaman' devre dışı bırakılır. Daha fazla bilgiyi [burada](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bulabilirsiniz.
 
 ### Yemeklerden sonra SMB'yi etkinleştir
 
-SMB, COB 0 olsa bile karbonhidrat alındıktan 6 saat süreyle çalışır. Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
+SMB, AKRB 0 olsa bile karbonhidrat alındıktan 6 saat süreyle çalışır. Güvenlik nedenleriyle, bu seçenek gürültülü veriler için güzel bir filtreleme sistemine sahip olan KŞ kaynakları içindir. Şimdilik yalnızca Dexcom G5 veya G6 kullanıyorsanız ['Kendi Dexcom uygulamanı yap (Byoda)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) ile veya xDrip+'da "yerel mod" etkin olarak çalışır. Bir KŞ değerinin çok büyük bir sapması varsa, G5/G6 bunu göndermez ve 5 dakika sonra bir sonraki değeri bekler.
 
 Freestyle Libre gibi diğer CGM/FGM için, 'Karbonhidrattan sonra SMB'yi etkinleştir', xDrip+ daha iyi bir gürültü yumuşatma eklentisine sahip olana kadar devre dışı bırakılır. Daha fazla bilgiyi [burada](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bulabilirsiniz.
 
 ### SMB'yi sınırlamak için maksimum bazal dakika
 
-Bu önemli bir güvenlik ayarıdır. Bu değer, belirli bir zaman aralığında verilen bazal insülin miktarına göre aktif karbonhidratları (COB) kapsayacak ne kadar SMB verilebileceğini belirler.
+Bu önemli bir güvenlik ayarıdır. Bu değer, belirli bir zaman aralığında verilen bazal insülin miktarına göre aktif karbonhidratları (AKRB) kapsayacak ne kadar SMB verilebileceğini belirler.
 
 Bu, SMB'yi daha agresif hale getirir. Başlangıç için, varsayılan değer olan 30 dakika ile başlamalısınız. Biraz deneyimden sonra 15 dakikalık adımlarla değeri artırabilir ve bu değişikliklerin nasıl etkilediğini izleyebilirsiniz.
 
@@ -155,7 +155,7 @@ Daha fazla bilgiyi [OpenAPS dokümantasyonu](https://newer-docs.readthedocs.io/e
 
 Bu güvenlik ayarı, AndroidAPS'in tehlikeli derecede yüksek bir bazal oran vermesini engeller ve geçici bazal oranını x Ü/s ile sınırlar. Mantıklı bir değer ayarlamanız önerilir. Profilinizdeki en yüksek bazal oranı alıp 4 veya en az 3 ile çarpmanız iyi bir tavsiyedir. Örneğin, profilinizdeki en yüksek bazal oran 1,0 Ü/s ise, 4 Ü/s değerini elde etmek için bunu 4 ile çarpabilir ve güvenlik parametreniz olarak 4'ü ayarlayabilirsiniz.
 
-Herhangi bir değer seçemezsiniz: Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir 'sabit limit' vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür. Çocuklar için değer en düşükken, insüline dirençli yetişkinler için değer en büyüktür.
+Herhangi bir değer seçemezsiniz: Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir 'sabit limit' vardır. maxAİNS için 'sabit limit' AMA'da SMB'ye göre daha düşüktür. Çocuklar için değer en düşükken, insüline dirençli yetişkinler için değer en büyüktür.
 
 AndroidAPS'deki sabit kodlanmış parametreler şunlardır:
 
@@ -167,11 +167,11 @@ AndroidAPS'deki sabit kodlanmış parametreler şunlardır:
 
 *Ayrıca [sabit kodlanmış limitlere genel bakış](../Usage/Open-APS-features#overview-of-hard-coded-limits) konusuna bakın.*
 
-### OpenAPS'in gönderebileceği maksimum bazal IOB \[U\] (OpenAPS "maks-iob")
+### OpenAPS'in gönderebileceği maksimum bazal AİNS \[U\] (OpenAPS "maks-AİNS")
 
 Bu parametre, AndroidAPS'in çalışacağı maksimum aktif insüline göre bazalı sınırlar. Aktif insülin yüksekse, maks aktif insülin limitin altına düşene kadar ek bazal insülin vermeyi durdurur.
 
-Varsayılan değer 2'dir, ancak sizi ne kadar etkilediğini ve hangi değerin en uygun olduğunu görmek için bu parametreyi yavaşça yükseltmelisiniz. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maxIOB için 'sabit limit' AMA'da SMB'ye göre daha düşüktür.
+Varsayılan değer 2'dir, ancak sizi ne kadar etkilediğini ve hangi değerin en uygun olduğunu görmek için bu parametreyi yavaşça yükseltmelisiniz. Bu ayarlar herkes için farklıdır ve ayrıca ortalama günlük toplam doza (GTD) bağlıdır. Güvenlik nedeniyle, hastanın yaşına bağlı olarak bir sınır vardır. maxAİNS için 'sabit limit' AMA'da SMB'ye göre daha düşüktür.
 
 * Çocuk: 3
 * Genç: 5
@@ -261,7 +261,7 @@ Varsayılan değer: 2
     <td>100,0</td>
   </tr>
   <tr>
-    <td>MAKSIOB_AMA</td>
+    <td>MAKSAİNS_AMA</td>
     <td>3,0</td>
     <td>5,0</td>
     <td>7,0</td>
@@ -269,7 +269,7 @@ Varsayılan değer: 2
     <td>25,0</td>
   </tr>
   <tr>
-    <td>MAKSIOB_SMB</td>
+    <td>MAKSAİNS_SMB</td>
     <td>7,0</td>
     <td>13,0</td>
     <td>22,0</td>

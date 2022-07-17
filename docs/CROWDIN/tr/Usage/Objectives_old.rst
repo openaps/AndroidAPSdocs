@@ -96,25 +96,25 @@ Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6
 * Güvende olmak için hedef aralığınızı genellikle hedeflediğinizden biraz daha yükseğe ayarlayın.
 * Ana ekranda mavi bazal metnini veya ana ekran grafiğinde mavi bazal oluşturmayı görüntüleyerek geçici bazallerin nasıl aktif olduğunu izleyin.
 * 5 günlük bir süre boyunca düşük glikozu tedavi etmekten kaçınmak için ayarlarınızın AndroidAPS'yi desteklediğinden emin olun.  Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, DIA, bazal, ISF ve karbonhidrat oranlarınızı iyileştirmeyi düşünün.
-* Ayarlarınızı değiştirmeniz gerekmez. Görev 6 sırasında maxIOB ayarı dahili olarak otomatik olarak sıfıra ayarlanır. Görev 7'ye geçildiğinde bu geçersiz kılma tersine çevrilecektir.
-* Sistem, maxIOB ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal IOB negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
+* Ayarlarınızı değiştirmeniz gerekmez. Görev 6 sırasında maxAİNS ayarı dahili olarak otomatik olarak sıfıra ayarlanır. Görev 7'ye geçildiğinde bu geçersiz kılma tersine çevrilecektir.
+* Sistem, maxAİNS ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal AİNS negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
 
   .. image:: ../images/Objective6_negIOB.png
-    :alt: Örnek negatif IOB
+    :alt: Örnek negatif AİNS
 
-* Bazal IOB'niz negatifse (üstteki ekran görüntüsüne bakın) görev 6'da da bir GBO > %100 verilebilir.
+* Bazal AİNS'niz negatifse (üstteki ekran görüntüsüne bakın) görev 6'da da bir GBO > %100 verilebilir.
 * Tedavi edilen hipoları takiben, geri tepmede bazal artırma yeteneği olmadan geçici olarak ani artışlar yaşayabilirsiniz.
 
-Görev 7: Kapalı döngüyü ayarlamak, maksimum IOB'yi 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
+Görev 7: Kapalı döngüyü ayarlamak, maksimum AİNS'i 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
 ====================================================================================================
-* 'Maksimum toplam Aktif İnsülin (IOB) değerinizi OpenAPS aşamaz' (OpenAPS'de 'maks-iob' olarak adlandırılır) değerini 1 günlük bir süre boyunca 0'ın üzerine yükseltin, varsayılan öneri "ortalama yemek bolusu + 3x maksimum günlük bazal" (SMB algoritması için) veya "3x maks günlük bazal" (daha eski AMA algoritması için) Ancak ayarların sizde nasıl tepki verdiğini bilene kadar bu değeri yavaş yavaş yükseltmelisiniz. (maks günlük bazal = günün herhangi bir zaman dilimindeki maksimum saatlik değer).
+* 'Maksimum toplam Aktif İnsülin (AİNS) değerinizi OpenAPS aşamaz' (OpenAPS'de 'maks-ains' olarak adlandırılır) değerini 1 günlük bir süre boyunca 0'ın üzerine yükseltin, varsayılan öneri "ortalama yemek bolusu + 3x maksimum günlük bazal" (SMB algoritması için) veya "3x maks günlük bazal" (daha eski AMA algoritması için) Ancak ayarların sizde nasıl tepki verdiğini bilene kadar bu değeri yavaş yavaş yükseltmelisiniz. (maks günlük bazal = günün herhangi bir zaman dilimindeki maksimum saatlik değer).
 
   Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
   .. image:: ../images/MaxDailyBasal2.png
     :alt: maks günlük bazal
 
-* Döngü modellerinize ne kadar IOB uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
+* Döngü modellerinize ne kadar AİNS uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
 
 
 Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin
@@ -134,7 +134,7 @@ Görev 9: Gündüz kullanımı için ek özellikleri deneyin ve kapalı döngü 
 Görev 10: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
 ====================================================================================================
 * Bu wiki'deki `SMB bölümünü <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ ve openAPSdocs <https://openaps.readthedocs içindeki `oref1 bölümünü okumalısınız. io/en/latest/docs/Customize-Iterate/oref1.html>`_ SMB'nin nasıl çalıştığını, özellikle (zero-temping) uygulamasının ardındaki fikri anlamak için.
-* O zaman SMB'ların sorunsuz çalışmasını sağlamak için `maxIOB yükseltmeniz <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ gerekir. maxIOB artık yalnızca eklenmiş bazal değil, tüm IOB'leri içeriyor. Yani bir öğün için 8 Ü bolus verilirse ve maksIOB 7 Ü ise, IOB 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez. İyi bir başlangıç maksIOB = ortalama yemek bolusu + 3x maks günlük bazaldir (maks günlük bazal = günün herhangi bir zaman diliminde maksimum saatlik değer - bir örnek için `Görev 7'ye bakın <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
+* O zaman SMB'ların sorunsuz çalışmasını sağlamak için `maxAİNS yükseltmeniz <../Usage/Open-APS-features.html#maximum-total-iob-openaps-cant-go-over-openaps-max-iob>`_ gerekir. maxAİNS artık yalnızca eklenmiş bazal değil, tüm AİNS'leri içeriyor. Yani bir öğün için 8 Ü bolus verilirse ve maksAİNS 7 Ü ise, IOB 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez. İyi bir başlangıç maksAİNS = ortalama yemek bolusu + 3x maks günlük bazaldir (maks günlük bazal = günün herhangi bir zaman diliminde maksimum saatlik değer - bir örnek için `Görev 7'ye bakın <../Usage/Objectives.html#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets>`_)
 * absorpsiyon ayarlarındaki min_5m_carbimpact varsayılanı, AMA'dan SMB'ye giderken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir.
 
 

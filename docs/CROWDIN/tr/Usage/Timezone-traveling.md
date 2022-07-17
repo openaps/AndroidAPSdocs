@@ -54,7 +54,7 @@ Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değiş
 
 Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
 
-COB ve IOB'nin kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
+AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
 
 ## Accu-Chek Combo
 
@@ -77,13 +77,13 @@ Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. N
 4. Tedaviler sekmesini kontrol edin... Yinelenen tedaviler görürseniz:
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
 
-5. Ne kadar IOB/COB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
 
 ### Saat değişikliğinden sonra yapılacak işlemler
 
-Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. COB ve IOB'nizin her ikisi de sıfıra yakın olmalıdır.)
+Bu geçişi yapmak için iyi bir zaman, düşük AİNS ile olacaktır. Örneğin. kahvaltı gibi bir yemekten bir saat önce (pompa geçmişindeki son boluslar küçük SMB düzeltmeleri olacaktır. AKRB ve AİNS'nizin her ikisi de sıfıra yakın olmalıdır.)
 
 1. Android saat dilimini tekrar geçerli konumunuza değiştirin ve otomatik saat dilimini yeniden etkinleştirin.
 2. AndroidAPS yakında Combo'nun saatinin eşleşmediği konusunda sizi uyarmaya başlayacak. Bu nedenle, pompanın ekranı ve düğmeleri aracılığıyla pompanın saatini manuel olarak güncelleyin.
@@ -91,9 +91,9 @@ Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. 
 4. Ardından Tedaviler ekranına gidin ve gelecekte olabilecek olayları arayın. Çok fazla olmamalı.
    
    * "İleriki tedavileri sil" düğmesine basmayın
-   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık IOB için dikkate alınmayacaktır.
+   * İlerideki tüm tedavilerde "kaldır"a basın ve tedavileri çoğaltın. Bu tedavileri kaldırmak yerine geçersiz kılmalıdır, böylece artık AİNS için dikkate alınmayacaktır.
 
-5. Ne kadar IOB/COB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
+5. Ne kadar AİNS/AKRB ile ilgili durum net değilse - kendi güvenliğiniz için lütfen en az bir İES ve Max-Carb-Time (Maksimum Karbonhidrat Süresi) için döngüyü devre dışı bırakın - hangisi daha büyükse.*
 
 6. Normal şekilde devam edin.
 
@@ -104,5 +104,5 @@ Bu geçişi yapmak için iyi bir zaman, düşük IOB ile olacaktır. Örneğin. 
 ## Diğer Pompalar
 
 * Bu özellik, AndroidAPS sürüm 2.2'den beri mevcuttur.
-* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle IOB çok yüksek).
+* Zorlukları önlemek için Döngü, DST anahtarından SONRA 3 saat süreyle devre dışı bırakılacaktır. Bu güvenlik nedenleriyle yapılır (DST değişikliğinden önce yinelenen bolus nedeniyle AİNS çok yüksek).
 * DST değişikliğinden önce ana ekranda, döngünün geçici olarak devre dışı bırakılacağına dair bir bildirim alacaksınız. Bu mesaj uyarı, titreşim veya herhangi bir şey olmadan görünecektir.

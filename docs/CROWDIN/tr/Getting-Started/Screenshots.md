@@ -115,17 +115,17 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Ayrıca atlamalı okumalar sürekli akışı keser.
    * Bu nedenle, libre kullanıcıları için sarı uyarı işareti 'her zaman açık' olacaktır.
 
-### Bölüm D - IOB, COB, BO ve OD
+### Bölüm D - AİNS, AKRB, BO ve OD
 
 ![Bölüm D](../images/Home2020_TBR.png)
 
-* Şırınga: aktif insülin (IOB) - vücudunuzdaki aktif insülin miktarı
+* Şırınga: aktif insülin (AİNS) - vücudunuzdaki aktif insülin miktarı
    
    * Yalnızca standart bazalınız çalışıyorsa ve önceki boluslardan insülin kalmamışsa, aktif insülin rakamı sıfır olacaktır. 
-   * Yakın zamanda bazalınız düşürülmüşse, (IOB) aktif insülin negatif olabilir.
+   * Yakın zamanda bazalınız düşürülmüşse, (AİNS) aktif insülin negatif olabilir.
    * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
-* Tahıl: [Aktif karbonhidrat (COB)](../Usage/COB-calculation.rst) - daha önce yediğiniz henüz emilmemiş karbonhidratlar -> karbonhidrat gerekiyorsa simge yanıp söner
+* Tahıl: [Aktif karbonhidrat (AKRB)](../Usage/COB-calculation.rst) - daha önce yediğiniz henüz emilmemiş karbonhidratlar -> karbonhidrat gerekiyorsa simge yanıp söner
 
 * Mor çizgi: bazal oran - geçici bazal orandaki değişiklikleri yansıtan simge (%100'de sabit çizgi) 
    * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
@@ -178,11 +178,11 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 #### Tahmin çizgileri
 
-* **Turuncu** çizgi: [COB](../Usage/COB-calculation.rst) (Bu renk genellikle aktif karbonhidrat ve karbonhidratları temsil etmek için kullanılır)
+* **Turuncu** çizgi: [AKRB](../Usage/COB-calculation.rst) (Bu renk genellikle aktif karbonhidrat ve karbonhidratları temsil etmek için kullanılır)
    
-   Tahmin çizgisi, mevcut pompa ayarlarına ve karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak KŞ'nizin nereye gideceğini (Aktif karbonhidratın değil!) gösterir. Bu çizgi yalnızca bilinen COB (Aktif Karbonhidrat) varsa görünür.
+   Tahmin çizgisi, mevcut pompa ayarlarına ve karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak KŞ'nizin nereye gideceğini (Aktif karbonhidratın değil!) gösterir. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
 
-* **Koyu mavi** çizgi: IOB Aktif insülin (Bu renk genellikle aktif insülin ve insülini temsil etmek için kullanılır)
+* **Koyu mavi** çizgi: AİNS (Bu renk genellikle aktif insülin ve insülini temsil etmek için kullanılır)
    
    Tahmin çizgisi, sadece insülinin etkisi altında ne olacağını gösterir. Örneğin biraz insülin gönderip birşey yemediyseniz.
 
@@ -221,14 +221,14 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 * Boluslar dahil aktif insülin **ve bazal**.
 
-#### (IOB) Aktif İnsülin
+#### Aktif İnsülin
 
 * Aktif insülini gösterir (= vücudunuzdaki aktif insülin). Bolus ve geçici bazaldan alınan insülini içerir (**ancak profilinizde ayarlanan bazal oranları hariçtir**).
 * Eğer [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) olmazsa, İES süresi boyunca bolus ve GBO da gönderilmezsa bu değer sıfır olur.
-* Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse IOB (Aktif insülin) negatif olabilir.
+* Daha uzun bir süre boyunca bolus kalmazsa ve sıfır/düşük geçici bazal devam ederse AİNS negatif olabilir.
 * Azalma [İES ve insülin profil ayarlarınıza](../Configuration/Config-Builder#local-profile) bağlıdır. 
 
-#### (COB) Aktif Karbonhidrat
+#### (AKRB) Aktif Karbonhidrat
 
 * Aktif karbonhidratları gösterir (= vücudunuzdaki aktif, henüz bozulmamış karbonhidratlar). 
 * Bozulma, algoritmanın algıladığı sapmalara bağlıdır. 
@@ -251,7 +251,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 * İnsülin profiliniz tarafından hesaplanan insülin aktivitesini gösterir (Aktif insülin türevi değildir). 
 * İnsülin zirve zamanına daha yakın olduğunda değer daha yüksektir.
-* IOB azalırken negatif olmak anlamına gelir. 
+* AİNS azalırken negatif olmak anlamına gelir. 
 
 #### Sapma eğimi
 
@@ -343,18 +343,18 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * Dahil etmek istemediğiniz herhangi bir hesaplamanın seçimini kaldırabilirsiniz.
 * Bolus sihirbazının mevcut bir geçici hedefe göre hesaplama yapmasını istiyorsanız, güvenlik nedenleriyle **TT kutusunun manuel olarak işaretlenmesi gerekir**.
 
-#### COB ve IOB kombinasyonları ve ne anlama geldikleri
+#### AKRB ve AİNS kombinasyonları ve ne anlama geldikleri
 
-* Güvenlik nedenleriyle, COB (Aktif karbonhidrat) kutusu işaretlendiğinde IOB (Aktif insülin) kutusunun işareti kaldırılamaz, çünkü AAPS halihazırda mevcut insülini hesaba katmadığı için çok fazla insülin riskiyle karşı karşıya kalabilirsiniz.
-* COB ve IOB'u işaretlerseniz, mevcut emilmemiş karbonhidratlar + GBO veya SMB olarak verilen tüm insülinler dikkate alınacaktır.
-* COB işaretlemeden IOB'u işaretlerseniz, AAPS iletilen insülini hesaba katar, ancak bu hesaba hala emilecek karbonhidratlar dahil edilmez. Bu işareleme 'eksik karbonhidrat' bildirimine yol açar.
+* Güvenlik nedenleriyle, AKRB (Aktif karbonhidrat) kutusu işaretlendiğinde AİNS (Aktif insülin) kutusunun işareti kaldırılamaz, çünkü AAPS halihazırda mevcut insülini hesaba katmadığı için çok fazla insülin riskiyle karşı karşıya kalabilirsiniz.
+* AKRB ve AİNS'i işaretlerseniz, mevcut emilmemiş karbonhidratlar + GBO veya SMB olarak verilen tüm insülinler dikkate alınacaktır.
+* AKRB işaretlemeden AİNS'İ işaretlerseniz, AAPS iletilen insülini hesaba katar, ancak bu hesaba hala emilecek karbonhidratlar dahil edilmez. Bu işareleme 'eksik karbonhidrat' bildirimine yol açar.
 * Yemek bolusundan kısa bir süre sonra **ek gıda** için (örn. ilave tatlı) bolus yaparsanız, **tüm kutuların işaretini kaldırmak** yararlı olabilir. Bu şekilde, ana öğün henüz tam olarak emilmemiş olduğundan yalnızca yeni karbonhidratlar ilave edilir, bu nedenle aktif insülin, yemek bolusundan kısa bir süre sonra aktif karbonhidrat ile tam olarak eşleşmeyecektir.
 
 #### Yanlış Aktif Karbonhidrat tespiti
 
 ![Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-* Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan COB değerinin yanlış olabileceğini algılamıştır. 
+* Bolus sihirbazını kullandıktan sonra yukarıdaki uyarıyı görüyorsanız, AndroidAPS hesaplanan AKRB değerinin yanlış olabileceğini algılamıştır. 
 * Bu nedenle, mevcut Aktif Karbonhidrat ile bir yemekten sonra tekrar bolus yapmak istiyorsanız, aşırı dozun farkında olmalısınız! 
 * Ayrıntılar için [COB hesaplama sayfasındaki](../Usage/COB-calculation#detection-of-wrong-cob-values) ipuçlarına bakın.
 
@@ -425,7 +425,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 * Pompa ile elle bolus gönderiyorsanız, muhtemelen insülinin yaklaşık 3.5 saat içinde azaldığını varsayıyorsunuz. 
 * Ancak, döngü ile pompa kullanırken uzun insülin zamanı önemlidir. Çünkü hesaplamalar çok daha kesindir ve bu küçük miktarlar, AndroidAPS algoritmasındaki hesaplamalara eklenirler.
 
-Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni IOB Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
+Farklı insülin türleri, aktivite profilleri ve tüm bunların neden önemli olduğu hakkında daha fazla ayrıntı için [Üstel Etkinlik Eğrilerine Dayalı Yeni AİNS Eğrilerini Anlamak](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves) makalesini okuyabilirsiniz.
 
 Ve bununla ilgili mükemmel bir blog makalesini burada [Kullandığımız insülin etki (DIA) sürelerinde neden düzenli olarak yanılıyoruz ve neden önemli…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action -dia-times-we-use-and-why-it-matters/) okuyabilirsiniz.
 
@@ -455,17 +455,17 @@ Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtla
 
 Tedavi sekmesi, hatalı karbonhidrat girişlerini düzeltmek için kullanılabilir (yani, karbonhidratları fazla veya az tahmin etmişsinizdir).
 
-1. Ana ekranda güncel COB ve IOB'yi kontrol edin ve hatırlayın.
+1. Ana ekranda güncel AKRB ve AİNS'i kontrol edin ve unutmayın.
 2. Tedavi sekmesinde pompaya bağlı olarak karbonhidratlar insülinle birlikte tek satırda veya ayrı bir giriş olarak (örn. Dana RS ile) gösterilebilir.
 3. Hatalı karbonhidrat girişini kaldırın.
-4. Ana ekranda COB'u tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
-5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, IOB için de aynısını yapın.
+4. Ana ekranda AKRB'ı tekrar kontrol ederek karbonhidratların başarıyla kaldırıldığından emin olun.
+5. Tedavi sekmesinde karbonhidrat ve insülin için yalnızca bir satır varsa, AİNS için de aynısını yapın.
    
-   -> Karbonhidratlar anlatıldığı gibi çıkarılmazsa ve burada (6.madde) açıklandığı gibi ilave karbonhidrat eklerseniz, COB çok yüksek olur ve bu da çok yüksek insülin iletimine yol açabilir.
+   -> Karbonhidratlar anlatıldığı gibi çıkarılmazsa ve burada (6.madde) açıklandığı gibi ilave karbonhidrat eklerseniz, AKRB çok yüksek olur ve bu da çok yüksek insülin iletimine yol açabilir.
 
 6. Ana ekrandaki karbonhidrat butonu aracılığıyla doğru karbonhidrat miktarını girin ve doğru etkinlik zamanını ayarladığınızdan emin olun.
 
-7. Tedavi sekmesinde karbonhidrat ve insülin içeren tek satır varsa, insülin miktarını da eklemeniz gerekir. Doğru etkinlik saatini ayarladığınızdan emin olun ve yeni girişi onayladıktan sonra ana ekranda IOB'u kontrol edin.
+7. Tedavi sekmesinde karbonhidrat ve insülin içeren tek satır varsa, insülin miktarını da eklemeniz gerekir. Doğru etkinlik saatini ayarladığınızdan emin olun ve yeni girişi onayladıktan sonra ana ekranda AİNS'İ kontrol edin.
 
 ## Döngü, AMA / SMB
 
