@@ -1,5 +1,5 @@
 # Smartphones
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+- [Liste von getesteten Smartphones](../Getting-Started/Phones.md)
+- [Jelly Pro Einstellungen](../Usage/jelly.md)
+- [Huawei Einstellungen](../Usage/huawei.md)
