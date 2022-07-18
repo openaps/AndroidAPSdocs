@@ -12,18 +12,18 @@ Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which
 
 As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
-## Libre mit xDrip+
+## If using xDrip+
 
 -   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
 -   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. Du solltest auch die Optionen in Einstellungen > Erweiterte Einstellungen > Erweiterte Kalibrierung kontrollieren.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
 -   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
 -   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
-## Libre mit Glimp
+## If using Glimp
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
+-   Du benötigst Glimp Version 4.15.57 oder neuer. Older versions are not supported.
 -   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AndroidAPS).
+-   Wähle in AndroidAPS > Konfigurations-Generator > BZ-Quelle > Glimp.
