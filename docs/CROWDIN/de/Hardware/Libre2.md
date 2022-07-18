@@ -14,7 +14,7 @@ Aus rechtlichen Gründen muss das sogenannte Patchen von Dir selbst erledigt wer
 
 The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. Das verbraucht keine zusätzliche Energie. Erst dann die gepatchte App installieren.
+Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. This costs no extra power. Erst dann die gepatchte App installieren.
 
 The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
 
@@ -55,13 +55,13 @@ If the exclamation mark remains or you get an error message, this can have sever
 -   Android location service is not granted - please enable it in the system settings
 -   automatic time and time zone not set - please change the settings accordingly
 -   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
+-   Bluetooth ist ausgeschaltet - bitte einschalten
 -   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
+-   App-Benachrichtigungen werden blockiert
+-   Benachrichtigung inaktiver Bildschirm ist blockiert
 -   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
 
-Handyneustart kann helfen, muss ggf. mehrmals gemacht werden. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In beiden Fällen funktioniert es. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Handyneustart kann helfen, muss ggf. mehrmals gemacht werden. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
 
 ![LibreLink connection established](../images/Libre2_Connected.png)
 
