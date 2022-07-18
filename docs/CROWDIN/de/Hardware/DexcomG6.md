@@ -23,7 +23,7 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
 -   Falls Du Clarity benötigst und gleichzeitig die xDrip+ Alarme nutzen willst, verwende [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) mit den lokalen Broadcast zu xDrip+.
 -   Falls Du xDrip noch nicht eingerichtet hast, dann lade es Dir herunter [xdrip](https://github.com/NightscoutFoundation/xDrip) und richte es entsprechend der Dokumentation unter[G5](../Configuration/xdrip.md)  ein.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
 -   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
 -   Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
@@ -31,11 +31,11 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 -   Seit Dezember 2020 unterstützt die [BYODA - "Erstelle deine eigene Dexcom App"](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!).
 -   Mit dieser App kannst du den Dexcom G6 mit jedem Android Smartphone verwenden.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
--   Installiere die heruntergeladene APK
+-   Deinstalliere die ursprüngliche Dexcom-App oder die gepatchte Dexcom-App, wenn du diese zuvor verwendet hast.
+-   Installiere die heruntergeladene APK.
 -   Sensorcode und Seriennummer des Senders in der gepatchten App eingeben.
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   Innerhalb kurzer Zeit sollte BYODA das Transmitter-Signal aufnehmen. (If not you will have to stop sensor and start new one.)
+-   Innerhalb kurzer Zeit sollte BYODA das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen Sensor starten.)
 
 ### Einstellungen für AndroidAPS
 
@@ -51,10 +51,10 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Dexcom G6-spezifische Problembehandlung
 
--   Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
+-   Transmitter, deren Seriennummer mit 80 oder 81 beginnen, benötigen mindestens die letzte stabile xDrip+ Version ab Mai 2019 oder einen neueren Nightly-Build.
 -   Transmitter, deren Seriennummer mit 8G beginnt, benötigen mind. die Nightly Build vom 25. Juli 2019 oder ein neueres Nightly Build.
 -   xDrip+ und Dexcom App können nicht gleichzeitig mit dem Transmitter verbunden werden.
--   Wait at least 15 min. between stopping and starting a sensor.
+-   Warte mindestens 15 Min. zwischen dem Stop und dem Start eines Sensors.
 -   Datiere die Setzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
 -   Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.
 -   Neuen Sensor nicht starten, bevor die folgenden Informationen in der klassische Statusseite angezeigt werden -> G5/G6 Status -> TelefonServiceZustand:
