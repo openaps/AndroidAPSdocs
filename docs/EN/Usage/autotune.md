@@ -1,10 +1,10 @@
-# How to use Autotune plugin
+# How to use Autotune plugin (dev only)
 
 Documentation about Autotune algorythm can be found in [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html).
 
 Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
-**Currently Autotune Plugin is only available in dev branch with Engineering mode.**
+**Currently Autotune Plugin is only available in dev branch and with Engineering mode.**
 
 ## Autotune user interface
 

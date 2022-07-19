@@ -122,7 +122,7 @@ For more details, please read on here.
    OpenAPS features <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
    Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Autotune <./Usage/autotune.md>
+   Autotune (dev only) <./Usage/autotune.md>
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
