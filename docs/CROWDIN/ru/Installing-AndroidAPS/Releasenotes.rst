@@ -16,7 +16,7 @@ ContextEdit.
 
 Версия Android и версия AAPS
 ====================================
-Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
@@ -37,12 +37,12 @@ Android 7
 
 Version 3.1.0
 ================
-Release date: XX-XX-2022
+Release date: 19-07-2022
 
 Важные Примечания
 ----------------------
 * after update uninstall Wear app and install new version
-* Omnipod users: update on pod change
+* Omnipod users: update on pod change !!!
 
 Изменения
 ----------------------
@@ -60,6 +60,7 @@ Release date: XX-XX-2022
 * allow graph scale from menu @MilosKozak
 * more statistics available @MilosKozak
 * MDI plugin removed in favor of VirtualPump
+* new automation action: StopProcessing (following rules)
 
 Version 3.0.0
 ================
