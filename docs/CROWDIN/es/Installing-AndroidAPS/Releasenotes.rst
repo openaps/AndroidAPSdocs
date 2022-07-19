@@ -15,7 +15,7 @@ Por favor, entienda que este cambio no tiene la intención de molestarlo, sino q
 
 Versión de Android y versión de AAPS
 ====================================
-Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
@@ -36,12 +36,12 @@ Android 7
 
 Versión 3.1.0
 ================
-Fecha de lanzamiento: XX-XX-2022
+Release date: 19-07-2022
 
 Notas importantes
 ----------------------
 * Después de actualizar, desinstalar la aplicación Wear del reloj e instalar la nueva versión (no se puede actualizar directamente)
-* Usuarios de Omnipod: Actualizar cuando toque cambio del POD
+* Omnipod users: update on pod change !!!
 
 Cambios
 ----------------------
@@ -59,6 +59,7 @@ Cambios
 * Permite cambiar la escala gráfica desde el menú @MilosKozak
 * Más estadísticas disponibles @MilosKozak
 * Complemento MDI eliminado en favor de la Bomba Virtual
+* new automation action: StopProcessing (following rules)
 
 Versión 3.0.0
 ================
