@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version d'Android et version AAPS
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS v3 et supérieur car il nécessite au moins Android 9.
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
@@ -36,12 +36,12 @@ Android 7
 
 Version 3.1.0
 ================
-Release date: 19-07-2022
+Date de sortie : 19-07-2022
 
 Conseils importants
 ----------------------
-* after update uninstall Wear app and install new version
-* Omnipod users: update on pod change !!!
+* après la mise à jour désinstallez l'application Wear et installez la nouvelle version
+* Utilisateurs d'Omnipod : faites la mise à jour lors d'un changement de pod !!!
 
 Modifications
 ----------------------
@@ -49,9 +49,9 @@ Modifications
 * fix application freezing @MilosKozak
 * fixed DASH driver @avereha
 * fixed Dana drivers @MilosKozak
-* huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* Amélioration énorme de l'interface UI, nettoyage et standardisation, migration vers "material design", styles, thème blanc, nouvelles icônes. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
-* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+* support MGC Aidex @andyrozman @markvader (seulement Pumpcontrol)
 * Wear tiles, translations @Andries-Smith
 * Wear code refactored. Not backward compatible anymore @MilosKozak
 * a11y improvements @Andries-Smith
