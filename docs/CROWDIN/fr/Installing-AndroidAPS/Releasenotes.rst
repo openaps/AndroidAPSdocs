@@ -45,21 +45,21 @@ Conseils importants
 
 Modifications
 ----------------------
-* fixed issues from 3.0 version
-* fix application freezing @MilosKozak
-* fixed DASH driver @avereha
-* fixed Dana drivers @MilosKozak
+* correction des problèmes de la version 3.0
+* correction du blocage de l'application @MilosKozak
+* correction du driver DASH @avereha
+* correction du driver Dana @MilosKozak
 * Amélioration énorme de l'interface UI, nettoyage et standardisation, migration vers "material design", styles, thème blanc, nouvelles icônes. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
 * support MGC Aidex @andyrozman @markvader (seulement Pumpcontrol)
-* Wear tiles, translations @Andries-Smith
-* Wear code refactored. Not backward compatible anymore @MilosKozak
-* a11y improvements @Andries-Smith
-* new protection option PIN @Andries-Smit
-* allow graph scale from menu @MilosKozak
-* more statistics available @MilosKozak
-* MDI plugin removed in favor of VirtualPump
-* new automation action: StopProcessing (following rules)
+* tuiles Wear, traductions @Andries-Smith
+* code Wear refactorisé. Plus compatible avec les versions précédentes @MilosKozak
+* améliorations a11y @Andries-Smith
+* nouvelle option de protection par code PIN @Andries-Smit
+* modification de l'échelle graphique possible à partir du menu @MilosKozak
+* plus de statistiques disponibles @MilosKozak
+* Plugin MIQ supprimé en faveur de la pompe virtuelle
+* nouvelle action d'automatisation : Arrêter le traitement (règles suivantes)
 
 Version 3.0.0
 ================
