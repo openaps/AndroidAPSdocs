@@ -36,12 +36,12 @@ Android 7
 
 Version 3.1.0
 ================
-Release date: XX-XX-2022
+Release date: 19-07-2022
 
 Important hints
 ----------------------
 * after update uninstall Wear app and install new version
-* Omnipod users: update on pod change
+* Omnipod users: update on pod change !!!
 
 Changes
 ----------------------
@@ -59,6 +59,7 @@ Changes
 * allow graph scale from menu @MilosKozak
 * more statistics available @MilosKozak
 * MDI plugin removed in favor of VirtualPump
+* new automation action: StopProcessing (following rules)
 
 Version 3.0.0
 ================
