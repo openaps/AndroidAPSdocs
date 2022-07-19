@@ -15,7 +15,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Android Version und AAPS Version
 ====================================
-Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -36,12 +36,12 @@ Android 7
 
 Version 3.1.0
 ================
-Release date: XX-XX-2022
+Release date: 19-07-2022
 
 Wichtige Hinweise
 ----------------------
 * after update uninstall Wear app and install new version
-* Omnipod users: update on pod change
+* Omnipod users: update on pod change !!!
 
 Änderungen
 ----------------------
@@ -59,6 +59,7 @@ Wichtige Hinweise
 * allow graph scale from menu @MilosKozak
 * more statistics available @MilosKozak
 * MDI plugin removed in favor of VirtualPump
+* new automation action: StopProcessing (following rules)
 
 Version 3.0.0
 ================
