@@ -15,7 +15,7 @@ Please understand that this change is not intended to bug you but is due to safe
 
 Android version and AAPS version
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS 3.0.0 and up as it requires at least Android 9.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 In order to allow users with older Android to use older version of AAPS new versions were pushed which only change version verification. No other improvements are included.
 
