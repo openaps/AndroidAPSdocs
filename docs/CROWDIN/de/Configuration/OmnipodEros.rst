@@ -442,7 +442,7 @@ Felder
 Symbole
 -----
 
-* **REFRESH:**
+* **AKTUALISIEREN:**
 
     |refresh_pod_status|
 
@@ -450,7 +450,7 @@ Symbole
 
     Verwende diese Option, um den Pod-Status zu aktualisieren und die Statusfelder zu erneuern, die den Text 'unsicher' enthalten.
 
-    See the `Troubleshooting section <#troubleshooting>`__ below for additional information.
+    Weitere Informationen zur `Problembehandlung <#problembehandlung>`__ findest du im Abschnitt unten.
 
 * **POD MGMT:**
 
@@ -458,28 +458,28 @@ Symbole
 
     Navigiert zum Pod Management Menü
 
-* **ACK ALERTS:**
+* **ALARM BESTÄTIGEN:**
 
     |ack_alerts|
 
     Durch Drücken dieser Taste werden die Signaltöne und Benachrichtigungen zum Ablauf des Pods deaktiviert.
 
-    Button is displayed only when pod time is past expiration warning time
+    Der Button wird nur angezeigt, wenn die aktuelle Zeit des Pods nach dem Pod-Ablaufdatum liegt
     Nach erfolgreicher Bestätigung wird dieses Symbol nicht mehr angezeigt.
 
-* **SET TIME:**
+* **ZEIT EINSTELLEN:**
 
     |set_time|
 
     Durch Drücken dieser Taste wird die Uhrzeit auf dem Pod mit der aktuellen Uhrzeit des Smartphones aktualisiert.
 
-* **SUSPEND:**
+* **UNTERBRECHEN:**
 
     |suspend|
 
     Setzt den aktiven Pod aus
 
-* **RESUME DELIVERY:**
+* **ABGABE FORTSETZEN:**
 
     |resume|
 
@@ -493,31 +493,31 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
 
     |Omnipod_Tab_Pod_Management|
 
-* **Activate Pod**
+* **Pod aktivieren**
 
     |activate_pod|
 
     Startet und aktiviert einen neuen Pod
 
-* **Deactivate Pod**
+* **Pod deaktivieren**
 
     |deactivate_pod|
 
     Deaktiviert den aktuell aktiven Pod.
 
-    A partially paired pod ignores this command.
+    * Ein unvollständig verbundener Pod ignoriert diesen Befehl.
 
-    Use this command to deactivate a screaming pod (error 49).
+    * Verwende diesen Befehl, um einen heulenden Pod zu deaktivieren (Fehler 49).
 
-    If the button is disabled (greyed out) use the Discard Pod button.
+    Wenn der Knopf deaktiviert ist (grau ausgegraut) verwenden Sie die Schaltfläche Pod verwerfen.
 
-* **Play test beep**
+* **Testton abspielen**
 
     |play_test_beep|
 
     Gibt beim Drücken einen einzelnen Testton auf dem Pod wieder.
 
-* **Discard pod**
+* **Pod verwerfen**
 
     |discard_pod|
 
@@ -529,13 +529,13 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
 	* Ein **Pod hängt** während des Kopplungsvorgangs zwischen den Schritten fest
 	* Ein **Pod lässt sich überhaupt nicht verbinden.**
 
-* **Pod history**
+* **Pod Historie**
 
     |pod_history|
 
     Zeigt den Aktivitätsverlauf des aktiven Pods an
 
-* **RileyLink stats:**
+* **RileyLink Status:**
 
     |rileylink_stats|
 
@@ -544,7 +544,7 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
 	* **Einstellungen** - zeigt Informationen zum RileyLink und aktiven Pod-Einstellungen an
 	* **Historie** - zeigt den Verlauf der RileyLink- und Pod-Kommunikation an
 
-* **Reset RileyLink Config**
+* **RileyLink-Konfiguration zurücksetzen**
 
     |reset_rileylink_config|
 
@@ -558,7 +558,7 @@ Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü **Pod
 
 	* Beachte die `zusätzlichen Hinweise <#hinweise-zum-zurucksetzen-der-rileylink-konfiguration>`__ am Ende dieser Tabelle
 
-* **Read pulse log:**
+* **Pulse-Log lesen:**
 
     |pulse_log|
 
