@@ -15,7 +15,7 @@ Bitte verstehe, dass diese Änderung nicht dazu dient, die Anwender zu gängeln,
 
 Android Version und AAPS Version
 ====================================
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+Wenn die Android Version Deines Smartphones älter als 9 ist, kannst Du nicht auf AAPS 3.0.0 updaten, da dieses mindestens Android 9 erfordert.
 
 Damit Benutzer älterer Android-Versionen nicht ausgeschlossen werden, wurden zwei ältere Versionen zur Verfügung gestellt, bei denen die Versionsprüfung angepasst wurde. Es sind keine anderen Verbesserungen enthalten.
 
@@ -32,34 +32,34 @@ Android 8
 Android 7
 ------------------------------------
 * Verwende AAPS Version **2.6.2**.
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS branch 2.6.2
 
 Version 3.1.0
 ================
-Release date: 19-07-2022
+Erscheinungsdatum: 19.07.2022
 
 Wichtige Hinweise
 ----------------------
-* after update uninstall Wear app and install new version
-* Omnipod users: update on pod change !!!
+* Nach dem Update Wear-App deinstallieren und neue Version installieren
+* Omnipod Benutzer: Update auf pod ändern !!!
 
 Änderungen
 ----------------------
-* fixed issues from 3.0 version
-* fix application freezing @MilosKozak
-* fixed DASH driver @avereha
-* fixed Dana drivers @MilosKozak
-* huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
-* widget @MilosKozak
+* Behobene Probleme von 3.0 Version
+* Fix gegen das Einfrieren der Anwendung @MilosKozak
+* Fix für den DASH Treiber @avereha
+* Fix für die Dana Treiber @MilosKozak
+* riesige UI Verbesserung, Bereinigung und Vereinheitlichung, Migration zu Material Design, Stile, weißes Theme, neue Symbole. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* Widget @MilosKozak
 * Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-* Wear tiles, translations @Andries-Smith
-* Wear code refactored. Not backward compatible anymore @MilosKozak
-* a11y improvements @Andries-Smith
-* new protection option PIN @Andries-Smit
-* allow graph scale from menu @MilosKozak
-* more statistics available @MilosKozak
-* MDI plugin removed in favor of VirtualPump
-* new automation action: StopProcessing (following rules)
+* Für die Wear App Kacheln und Übersetzungen @Andries-Smith
+* Wear code refactored. Nicht mehr abwärtskompatibel @MilosKozak
+* a11y Verbesserungen @Andries-Smith
+* neue Schutzoption PIN @Andries-Smit
+* Diagrammskala vom Menü erlauben @MilosKozak
+* Mehr Statistiken verfügbar @MilosKozak
+* MDI-Plugin entfernt zu Gunsten von VirtualPump
+* neue Automatisierungsaktion: Stop-Verarbeitung (nachfolgende Regeln)
 
 Version 3.0.0
 ================
@@ -197,7 +197,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
-You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-10-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------
@@ -220,7 +220,7 @@ Wichtige neue Funktionen
 * Small Fehlerbehebungen für Insight Pumpen @TebbeUbben @MilosKozak
 * `Option "Standardsprache" <../Configuration/Preferences.html#allgemein>`_ @MilosKozak
 * Vector Icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
+* `Neutrale Temps für Medtronic Pumpen <../Configuration/MedtronicPump.html#konfiguration-von-smartphone-androidaps>`_ @Tornado-Tim
 * Verbesserung Historie @MilosKozak
 * OpenAPS MA Algorithmus entfernt @Tornado-Tim
 * Oref0 Sensitivität entfernt @Tornado-Tim
