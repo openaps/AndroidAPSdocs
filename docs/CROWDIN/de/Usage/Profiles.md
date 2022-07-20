@@ -13,7 +13,7 @@ Wenn Du Dein Profil in der Registerkarte "lokales Profil" bearbeitet hast, kanns
 
 Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
-![Do profile switch](../images/ProfileSwitch_HowTo.png)
+![Profilwechsel durchführen](../images/ProfileSwitch_HowTo.png)
 
 Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die früher Teil des Zirkadianen Prozent-Profils waren:
 
@@ -32,13 +32,13 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 
 ![Prozentsatz der Profilumschaltung und Zeitschaltupft](../images/ProfileSwitchTimeShift2.png)
 
-* This moves everything round the clock by the number of hours entered. 
+* Verschiebt alles um die Anzahl der eingegebenen Stunden. 
 * So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
 * Es geht immer um die Frage, die Profileinstellungen welcher Uhrzeit die aktuellen ersetzen sollen. Diese Uhrzeit muss um x Stunden verschoben werden. Achte daher auf die Richtung der Zeitverschiebung wie im folgenden Beispiel beschrieben: 
   * Aktuelle Zeit: 12:00
   * **Positive** Zeitverschiebung 
     * 2:00 **+10 h** -> 12:00
-    * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
+    * Die Einstellungen von 2:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
   * **Negative** Zeitverschiebung 
     * 22:00 **-10 h** -> 12:00
     * Die Einstellungen von 22:00 Uhr werden anstelle der normalerweise um 12:00 Uhr programmierten Einstellungen verwendet.
@@ -53,25 +53,25 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
-* These error messages will appear if you have any basal rates or I:C rates not on the hour. (Die Pumpen Dana R und Dana RS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
+* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen Dana R und Dana RS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
-  ![Example profile not aligned to hours](../images/ProfileNotAlignedToHours.png)
+  ![Beispiel Basalprofil nicht auf Stunden ausgerichtet](../images/ProfileNotAlignedToHours.png)
 
 * Merke bzw. notiere Dir das in der Fehlermeldung angegebene Datum und die Uhrzeit (26/07/2019 5:45 pm im Bildschirmfoto oben).
 
 * Gehe zum Behandlungs-Tab.
 * Wähle Profilwechsel.
-* Scroll until you find date and time from error message.
-* Use remove function.
-* Sometimes there is not only one faulty profile switch. In this case remove also the others.
+* Scrolle zum in der Fehlermeldung angegebenen Zeitpunkt.
+* Klicke auf 'Löschen'.
+* Manchmal gibt es nicht nur einen fehlerhaften Profilwechsel. In diesem Fall musst Du auch alle anderen entfernen.
   
-  ![Remove profile switch](../images/PSRemove.png)
+  ![Profilwechsel löschen](../images/PSRemove.png)
 
 Alternativ kannst Du den Profilwechsel auch direkt in mLab wie unten beschrieben löschen.
 
 ### “Profilwechsel von NS empfangen aber Profil existiert lokal nicht”
 
-* The requested profile was not synced correctly from Nightscout.
+* Das Profil wurde nicht korrekt von Nightscout synchronisiert.
 * Lösche den Profilwechsel wie oben beschrieben.
 
 Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
@@ -83,4 +83,4 @@ Alternativ kannst Du den Profilwechsel auch direkt in mLab löschen:
 ### “DIA 3 h zu kurz”
 
 * Die Fehlermeldung erscheint, wenn die Wirkdauer des Insulins in Deinem Profil mit einem Wert angegeben wird, von dem AndroidAPS annimmt, dass er nicht korrekt ist. 
-* Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.
+* Lies den Abschnitt [Auswahl des richtigen DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), überarbeite dein Profil und führe einen [Profilwechsel](../Usage/Profiles) aus, um es zu aktivieren.
