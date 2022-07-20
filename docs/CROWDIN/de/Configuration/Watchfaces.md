@@ -49,7 +49,7 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 ## Verfügbare Watchfaces
 
-![Verfügbare Watchfaces](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 ### Neues Watchface ab Version 2.8
 
