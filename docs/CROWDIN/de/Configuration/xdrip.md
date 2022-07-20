@@ -1,4 +1,4 @@
-# xDrip+ Einstellungen
+# xDrip+ settings
 
 (For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
 

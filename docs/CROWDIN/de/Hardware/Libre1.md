@@ -6,7 +6,7 @@ Um dein Libre als CGM zu verwenden, das alle 5 Minuten Glukosewerte empfängt, m
 -   Blucon Nightrider <https://www.ambrosiasys.com/our-products/blucon/>
 -   Bubble <https://bubbleshop.eu/> oder für russische Benutzer <https://vk.com/saharmonitor/>
 
-Außerdem kann die Sony Smartwatch 3, die einen NFC Chip eingebaut hat, zum Auslesen verwendet werden. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
+Außerdem kann die Sony Smartwatch 3, die einen NFC Chip eingebaut hat, zum Auslesen verwendet werden. Die oben aufgeführten NFC zu Bluetooth-Adapter bieten aber eine weniger komplexe Lösung und dürften daher für die meisten Nutzer, die ihr Libre 1 als CGM verwenden wollen, die erste Wahl sein.
 
 -   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
 

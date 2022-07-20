@@ -6,7 +6,7 @@ Diese Liste gibt eine Übersicht über alle möglichen Pumpen und inwiefern sie 
 
 ### Ypsomed Pumpe ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
-**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
+**Loop Status:** Version 1 - 1.5 (2Q/2018) sind nicht zum Loopen geeignet. Obwohl sie BT-Kommunikation haben, ist Kommunikation sehr begrenzt und funktioniert nur in die Richtung Pumpe -> App. Im Juni 2022 veröffentlichte das Unternehmen die neue Pumpenversion mit dem Namen DOSE (1.6), was das Setzen von Bolus und TBR aus ihrer App ermöglicht. Diese Pumpe wird langsam in ganz Europa zur Verfügung stehen, aber es wird einige Zeit dauern bis sie überall verfügbar ist. Der Plan zur Implementierung ihres eigenen Algorithmus wurde abgebrochen und es wurde beschlossen mit CamAPS (Unterstützung bereits implementiert) zusammenzuarbeiten und ihre Loop-Lösung zu nutzen. Weitere Infos findest Du auf [dieser Seite.](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware Voraussetzungen für AAPS:** Keine, da die Pumpe über Bluetooth kommuniziert.
 
@@ -60,9 +60,9 @@ Während das Unternehmen in der Vergangenheit entschieden hat, seine Pumpen nich
 
 ### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** All 3 pumps will be Loop candidates.
+**Loop Status:** Alle drei Pumpen werden Loop Kandidaten sein.
 
-They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).
+Sie planen zuerst die t:Mobi (vorher t:sport genannt) Ende 2022 oder 2023 auf den Markt zu bringen. Danach sollen t:slim X3 (vielleicht 2023) und später t:Mobi Tubeless folgen. t:mobi's wird nur über die Telefon-App kontrollierbar sein, während X3 ähnlich aussehen wird wie X2, mit einigen neuen Funktionen (Remote-Update von Firmware, Fernbedienung über Telefon-App, etc.).
 
 **Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
 
@@ -70,15 +70,15 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 ### Medtronic Bluetooth
 
-**Comments:** This is pump that will come out in next few years and is planned to be supported in Tidepool Loop software ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
+**Kommentare:** Diese Pumpe soll in den kommenden Jahren auf den Markt kommen und von der Tidepool Loop Software unterstützt werden ([siehe dieser Artikel [englisch]](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration)).
 
 ### Willcare Insulin Pumpe ([Homepage](http://en.shinmyungmedi.com/))
 
-**Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands).
+**Loop-Status:** Momentan kein Loop-Kandidat. Aber wir wurden von Mitarbeitern des Herstellers kontaktiert, da sie daran interessiert sind, ihre Pumpe loopfähig zu machen (momentan fehlen wohl nur Kommandos zum Lesen und Schreiben der Profile).
 
 **Hardware Voraussetzungen für AAPS:** Keine, Die Pumpe scheint über Bluetooth zu kommunizieren.
 
-**Comments:** Since company is interested in integration with AAPS, they might do implementation themselves.
+**Kommentare:** Da das Unternehmen Interesse an der Integration mit AAPS hat, könnten sie evtl. selbst die Umsetzung vornehmen.
 
 * * *
 
@@ -90,45 +90,45 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 **Hardware-Anforderungen für AAPS:** Vermutlich keine, da die Pumpe über Bluetooth kommuniziert.
 
-**Note about product:** It seems that company decided to exit the Pump Business. You can see more in this [article](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
+**Hinweis zur Pumpe:** Es ist der Eindruck entstanden, dass sich das Unternehmen aus dem Pumpenmarkt zurückzieht. Weitere Informationen dazu findest Du in diesem [Artikel](https://diabetogenic.wordpress.com/2019/04/01/and-then-cellnovo-disappeared/?fbclid=IwAR12Ow6gVbEOuD1zw7aNjBwqj5_aPkPipteHY1VHBvT3mchlH2y7Us6ZeAU)
 
 ## Pumpen, die nicht für den Loop geeignet sind
 
 ### Animas Vibe
 
-**Loop Status:** Nicht zum Loopen geeignet. No remote control possibility. **Note:** Pump is not being sold anymore. Company stopped working in Pump business (J&J).
+**Loop Status:** Nicht zum Loopen geeignet. Keine Fernsteuerung möglich. **Hinweis:** Pumpe wird nicht mehr verkauft. Das Unternehmen (Johnson&Johnson) hat sich aus dem Pumpengeschäft zurückgezogen.
 
 * * *
 
 ### Animas Ping
 
-**Loop Status:** Nicht zum Loopen geeignet. It has bolus possibility, but no TBR one. **Note** Stopped being sold when Vibe came out.
+**Loop Status:** Nicht zum Loopen geeignet. Bolus-Steuerung möglich, aber keine Steuerung von temporären Basalraten (TBR). **Note** Vertrieb nach Erscheinen der Vibe eingestellt.
 
 ## Anforderungen an Pumpen, um loopbar zu sein
 
-**Prerequisite**
+**Grundvoraussetzung**
 
 - Pumpe muss irgendeine Art von Fernbedienung unterstützen. (BT, Radiofrequenz, etc.)
 - Protokoll ist gehackt/dokumentiert/etc.
 
-**Minimal requirement**
+**Mindestanforderungen**
 
 - Temporäre Basalraten setzen
 - Status abrufen
 - Temporäre Basalraten abbrechen
 
-**For oref1(SMB) or Bolusing:**
+**Für oref1(SMB) oder zur Bolusabgabe:**
 
 - Mahlzeiten Bolus abgeben
 
-**Good to have**
+**Von Vorteil**
 
 - Bolus abbrechen
 - Basalprofil abrufen (fast eine Anforderung)
 - Basal Profil einstellen (nice to have)
 - History auslesen 
 
-**Other (not required but good to have)**
+**Weitere Anforderungen (nicht notwendig, aber Verfügbarkeit wäre gut)**
 
 - Verlängerten Bolus setzen
 - Verlängerten Bolus abbrechen
@@ -139,4 +139,4 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 
 ### Unterstützung weiterer Pumpen
 
-If you have any other pumps you would like to see status on, please contact us on discord.
+Falls du noch andere Pumpen hast und du über deren Status Bescheid wissen willst, kontaktiere uns auf discord.

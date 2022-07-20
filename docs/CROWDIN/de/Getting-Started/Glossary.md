@@ -236,11 +236,11 @@
  <td><strong>Nightscout Reporter</strong></td>
  <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter bei Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</strong></td>
+ <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
