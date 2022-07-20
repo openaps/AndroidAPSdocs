@@ -15,7 +15,7 @@ Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güv
 
 Android sürümü ve AAPS sürümü
 ====================================
-Akıllı telefonunuz Android 9'dan daha eski bir Android Sürümü kullanıyorsa, en az Android 9 gerektirdiğinden AAPS 3.0.0 ve sonraki sürümleri kullanamazsınız.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmasına izin vermek için, yalnızca sürüm doğrulamasını değiştiren yeni sürümler gönderildi. Başka hiçbir iyileştirme dahil değildir.
 
@@ -36,12 +36,12 @@ Android 7
 
 Sürüm 3.1.0
 ================
-Yayınlanma tarihi: XX-XX-2022
+Yayınlanma tarihi: 19-07-2022
 
 Önemli ipuçları
 ----------------------
 * güncellemeden sonra Wear uygulamasını kaldırın ve yeni sürümü yükleyin
-* Omnipod kullanıcıları: pod değişikliğinde güncelleme
+* Omnipod users: update on pod change !!!
 
 Değişiklikler
 ----------------------
@@ -59,6 +59,7 @@ Değişiklikler
 * menüde grafik ölçeğine izin verme @MilosKozak
 * daha fazla istatistik seçeneği @MilosKozak
 * VirtualPump lehine MDI eklentisi kaldırıldı
+* new automation action: StopProcessing (following rules)
 
 Sürüm 3.0.0
 ================
