@@ -18,7 +18,7 @@ Prüfe die BZ-Quelle
 
 Prüfung abschließen
 -----------------------------------------------------------
-* AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for `automation <../Usage/Automation.html>`_.
+* AAPS 2.7 enthält neues Ziel 11 (in späteren auf Ziel 10!) für `Automation <../Usage/Automation.html>`_.
 * Du musst die Prüfung erfolgreich beenden (`Objectives 3 und 4 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_), um `Objective 11 <../Usage/Objectives.html#ziel-10-automatisierung>`__ starten zu können.
 * Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-10-automatisierung>`__ starten kannst. 
 * Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
