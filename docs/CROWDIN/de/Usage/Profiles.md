@@ -1,15 +1,15 @@
 # Profilwechsel
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](../Configuration/Config-Builder#profile).
 
-On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
+Wenn du dein AndroidAPS startest und dein Profil auswählst, musst du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
+AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum.
 
-* Duration of zero means infinite. Such profile is valid until new "Profile switch".
-* Duration of x minutes means x minutes use of this profile. After that duration the profile is switched back to the previous valid "Profile switch".
+* Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
+* Dauer von x Minuten bedeutet x Minuten Verwendung dieses Profils. Nach Ablauf dieser Dauer wird das Profil wieder auf das zuvor aktive Profil zurückgestellt.
 
-If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
+Wenn Du Dein Profil in der Registerkarte "lokales Profil" bearbeitet hast, kannst Du das Profil dort aktivieren, was gleichzeitig einen Profilwechsel bewirkt.
 
 Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
@@ -19,23 +19,23 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 
 ## Prozentsatz
 
-* This applies the same percentage to all parameters. 
-* If you set it to 130% (meaning you are 30% more insulin resistant), it will raise the basal rate by 30%. It will also lower the ISF and IC accordingly (divide by 1.3 in this example).
+* Wendet den gleichen Prozentsatz auf alle Parameter des Profils an. 
+* Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt).
   
-  ![Example profile switch percentage](../images/ProfileSwitchPercentage.png)
+  ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentage.png)
 
 * Das wird an die Pumpe gesendet und ist dann die standardmäßig verwendete Basalrate.
 
-* Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
+* Der Loop Algorithmus (Open Loop oder Closed Loop) wird von da an mit dem ausgewählten prozentualen Profil arbeiten. So können zum Beispiel unterschiedliche prozentuale Profile für die verschiedene Phasen des hormonellen Zyklus eingerichtet werden.
 
 ## Zeitverschiebung
 
 ![Prozentsatz der Profilumschaltung und Zeitschaltupft](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
-* So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
-* It is always a question of which hour's profile settings should replace the settings of the current time. This time must be shifted by x hours. So be aware of the directions as described in the following example: 
-  * Current time: 12:00
+* So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
+* Es geht immer um die Frage, die Profileinstellungen welcher Uhrzeit die aktuellen ersetzen sollen. Diese Uhrzeit muss um x Stunden verschoben werden. Achte daher auf die Richtung der Zeitverschiebung wie im folgenden Beispiel beschrieben: 
+  * Aktuelle Zeit: 12:00
   * **Positive** Zeitverschiebung 
     * 2:00 **+10 h** -> 12:00
     * Settings from 2:00 will be used instead of the settings normally used at 12:00 because of the positive time shift.
