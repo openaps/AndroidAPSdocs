@@ -36,7 +36,7 @@ Android 7
 
 Sürüm 3.1.0
 ================
-Release date: 19-07-2022
+Yayınlanma tarihi: 19-07-2022
 
 Önemli ipuçları
 ----------------------
