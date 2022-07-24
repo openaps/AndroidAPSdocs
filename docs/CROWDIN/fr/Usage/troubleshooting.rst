@@ -59,5 +59,5 @@ Téléphones
 
 Montres connectées
 ==================================================
-* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
+* `Dépannage de l'application Wear <../Configuration/Watchfaces.html#depannage-de-l-application-wear>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

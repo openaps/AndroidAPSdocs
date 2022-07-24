@@ -1,9 +1,9 @@
 # Pour les utilisateurs de Eversense
 
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
+La façon la plus simple d'utiliser Eversense avec AndroidAPS est d'installer l'application modifée non US [Eversense](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (après avoir désinstallé l'application originale).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Attention : en désinstallant l'ancienne application, vos données historiques locales de plus d'une semaine seront perdues !**
 
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Pour obtenir enfin vos données à AndroidAPS, vous devez installer [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) et activer "Envoyer à AAPS et xDrip" dans ESEL et "MM640g" comme source BG dans la [Configuration Builder](../Configuration/Config-Builder.md) dans AndroidAPS. Comme les données de glycémie de Eversense peuvent parfois être incohérente, il est bon de permettre "Smooth Data" dans ESEL, ce qui est mieux que d'activer "Toujours utiliser un delta courte moyenne au lieu d'un simple delta" dans AAPS.
 
-You can find all APKs including the one for the US and another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+Vous pouvez trouver tous les APKs y compris celui de la version US et d'autres instructions pour utiliser xDrip avec un capteur Eversense [ici](https://github.com/BernhardRo/Esel/tree/master/apk).
