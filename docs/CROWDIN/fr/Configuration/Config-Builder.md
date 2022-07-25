@@ -140,7 +140,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) est déconseillé comme récepteur pour Dexcom G6 depuis AAPS 3.0 (voir [Notes de version](../Installing-AndroidAPS/Releasenotes.html#conseils-importants) pour plus de détails.
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
