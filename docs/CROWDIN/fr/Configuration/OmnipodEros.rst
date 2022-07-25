@@ -504,11 +504,11 @@ Vous trouverez ci-dessous une explication de la mise en page et de la significat
 
     Désactive le pod actuellement actif.
 
-    A partially paired pod ignores this command.
+    Un pod partiellement appairé ignore cette commande.
 
-    Use this command to deactivate a screaming pod (error 49).
+    Utilisez cette commande pour désactiver un pod urlant (erreur 49).
 
-    If the button is disabled (greyed out) use the Discard Pod button.
+    Si le bouton est désactivé (grisé), utilisez le bouton Supprimer Pod.
 
 * **Tester les bips**
 
