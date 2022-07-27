@@ -54,7 +54,7 @@ Si vous recevez un message d'erreur comme ceci
     ```
     votre installation Git n'est pas correcte.
 
-  * [Vérifiez l'installation de git](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [Vérifiez l'installation de git](../Installing-AndroidAPS/git-install#verifier-les-parametres-de-git-dans-android-studio)
 
   * Quand vous êtes sur Windows et que git vient juste d'être installé, vous devez redémarrer votre ordinateur pour rendre git disponible après l'installation
 
@@ -132,7 +132,7 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
   * Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
 
-### Impossible de démarrer le processus daemon
+### Unable to start daemon process
 
   Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. Ceci n'est pas pris en charge par Android Studio 3.5.1 et plus et il n'y a malheureusement rien que le développeur d'AAPS ne puisse faire.
 
@@ -163,7 +163,7 @@ Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la 
 
 ![APK généré avec 0 variantes de compilation](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-C'est un faux avertissement. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
+C'est un faux avertissement. Vérifiez le répertoire que vous avez sélectionné en tant que "Dossier de destination" pour la génération (étape [Générer l'APK signé](../Installing-AndroidAPS/Building-APK#generer-l-apk-signe)) et vous y trouverez l'apk généré !
 
 
 ## L'application a été créée avec les avertissements du compilateur/kotlin
@@ -219,10 +219,10 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
     Ou vous pouvez recréer un nouveau fichier de clés.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
+3. Construisez l'application à partir de zéro comme c'est décrit [ici](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
 
 4. Quand vous avez construit l'APK avec succès, supprimez l'application existante sur votre téléphone, transférez le nouvel apk sur votre téléphone et installez le.
-5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
+5. [Importer à nouveau les paramètres](../Usage/ExportImportSettings#importer-les-parametres) pour restaurer vos paramètres et objectifs.
 6. Vous devez vérifier vos options d'optimisation de la batterie et désactivez-les à nouveau.
 
 ## Pire scénario
@@ -233,4 +233,4 @@ Dans le cas où même construire l'application à partir de rien ne résout pas 
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Installez Android Studio à partir de zéro comme c'est décrit [ici](../Installing-AndroidAPS/Building-APK#install-android-studio).
