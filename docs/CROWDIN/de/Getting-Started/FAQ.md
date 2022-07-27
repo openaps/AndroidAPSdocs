@@ -340,84 +340,84 @@ Wenn du dem Klinikpersonal einige Informationen über AndroidAPS und DIY Looping
 
 Du kannst entweder deine Nightscout Berichte zeigen (https://DEINE-NS-SITE.com/report) oder den [Nightscout Reporter](https://nightscout-reporter.zreptil.de/) verwenden.
 
-# Frequent questions on Discord and their answers...
+# Häufige Fragen auf Discord und ihre Antworten...
 
-## My problem is not listed here.
+## Mein Problem ist hier nicht aufgeführt.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informationen um Hilfe zu erhalten.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-## My problem is not listed here but I found the solution
+## Mein Problem ist hier nicht aufgeführt, aber ich habe die Lösung gefunden
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informationen um Hilfe zu erhalten.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-**Remind us to add your solution to this list!**
+**Erinnere uns daran, deine Lösung zu dieser Liste hinzuzufügen!**
 
-## AAPS stops everyday around the same time.
+## AAPS stoppt jeden Tag ungefähr zur gleichen Zeit.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Google Play Protect anhalten. Schaue, ob du "Cleaner" oder "Reinigungs" Apps hast und deinstalliere diese. In AAPS gehe auf das 3-Punkte-Menü / Über / "Don't Kill My App?".
 
-## How to organize my backups ?
+## Wie kann ich meine Backups organisieren?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Einstellungen regelmäßig exportieren: Nach jedem Podwechsel, nach der Änderung deines Profils, wenn du ein Ziel validiert hast, wenn du eine neue Pumpe hast… Auch wenn sich nichts ändert, exportiere einmal im Monat. Behalte mehrere alte Exportdateien.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Kopiere auf ein Cloud-Drive (Dropbox, Google etc.): Alle APK's die du benutzt hast, um Apps auf deinem Handy zu installieren (AAPS, xDrip, BYODA, gepatchte LibreLink App…) sowie die exportierten Einstellungsdateien aus allen verwendeten Apps.
 
-## I have problems, errors building the app.
+## Ich habe Probleme und/oder Fehler beim Erstellen der App.
 
-Please
+Bitte
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- Überprüfe [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) auf typische Fehler und
+- die Tipps in dieser [Schritt für Schritt Anleitung](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
-## I'm stuck on an objective and need help.
+## Ich stecke bei einem Ziel fest und brauche Hilfe.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Mache ein Bildschirmfoto der Frage und der Antworten. Poste es auf dem AAPS Discord Kanal. Vergiss nicht zu sagen, welche Optionen du wählst (oder nicht) und warum. Du erhältst Tipps und Hilfe, aber Du musst die Antworten selber finden.
 
-## How to reset the password in AAPS v2.8.x ?
+## Wie kann ich das Passwort in AAPS v2.8.x zurücksetzen?
 
-Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
+Öffne das Hamburger Menü, starte den Konfigurationsassistenten und gebe ein neues Passwort ein, wenn danach gefragt wird. Du kannst den Assistenten nach der Passwortphase verlassen.
 
-## How to reset the password in AAPS v3.x
+## Wie kann ich das Passwort in AAPS v3.x zurücksetzen?
 
-If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+Wenn du dein Passwort vergessen hast: Schließe AAPS. Erstelle eine leere Datei namens PasswordReset (ohne Dateiendung) in dem internen Speicher deines Telefons: Interner Speicher/AAPS/extra. Starte AAPS neu. Das neue AAPS-Passwort ist die Seriennummer deiner Pumpe. Die Seriennummer für Omnipod DASH Pods ist 4241. Sie können das Passwort über das 3-Punkte-Menü, den Einrichtungsassistenten, Einstellungen freischalten ändern.
 
-## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
+## Mein Link/Pumpe/Pod reagiert nicht (RL/OL/EmaLink…)
 
-With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...).
+Bei manchen Telefonen gibt es Bluetooth-Trennung von den Links (RL/OL/EmaLink...).
 
-Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
+Einige haben auch nicht reagierende Links (AAPS sagt, dass sie verbunden sind, aber die Links können die Pumpe nicht erreichen oder Kommandos senden.)
 
 The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
 
-## Build error: file name too long
+## Fehler beim App erstellen: Dateiname zu lang
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+Während des Erstellens bekomme ich einen Fehler, dass der Dateiname zu lang ist. Mögliche Lösungen: Verschiebe die Quelldateien ein Verzeichnis näher an das Stammverzeichnis des Speichers (z.B. "C:\src\AndroidAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Von Android Studio: Stelle sicher, dass "Gradle" nach dem Öffnen des Projekts und dem Download von GitHub synchronisiert und indiziert ist. Führe Build -> Clean Project und danach Build -> Rebuild Project durch. Führe File -> Invalidate Caches... durch und starte Android Studio neu.
 
-## Alert: Running dev version. Closed loop is disabled
+## Alarm: Entwickler-Version. Closed Loop ist nicht verfügbar.
 
-AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AndroidAPS läuft nicht im "Entwicklermodus". AAPS zeigt die folgende Meldung: "Entwickler-Version. Closed Loop ist nicht verfügbar".
 
-Make sure AndroidAPS is running in "developer mode": Place a file named "engineering_mode" at the location "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
+Stelle sicher, dass AndroidAPS im "Entwicklermodus" läuft: Platziere eine leere Datei namens "engineering_mode" in dem Verzeichnis "AAPS/extra". Jede Datei funktioniert so lange wie sie korrekt benannt ist. Stelle sicher das du AndroidAPS neu startest damit es die Datei erkennt und in den "Entwicklermodus" geht.
 
-Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
+Tipp: Machen Sie eine Kopie einer existierenden Logdatei und benennen Sie sie in "engineering_mode" um (Aufpassen: keine Dateiendung!).
 
-## Where can I find settings files?
+## Wo finde ich die Einstellungsdateien?
 
-Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
+Einstellungsdateien werden auf dem internen Speicher Ihres Telefons im Verzeichnis "/AAPS/preferences" gespeichert. WARNUNG: Stelle sicher, dass Du Dein Passwort nicht verlierst, da Du ohne Passwort keine verschlüsselte Einstellungsdatei importieren kannst!
 
-## How to configure battery savings?
+## Wie konfiguriere ich die Akkuoptimierung?
 
-Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AndroidAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
+Das richtige Konfigurieren der Energiespareinstellungen ist wichtig, um zu verhindern, dass das Betriebssystem des Telefons AndroidAPS und anderen wichtigen Apps und Dienste aussetzt, wenn Du Dein Telefon nicht benutzt. Das Ergebnis ist, dass AAPS nicht arbeiten kann und/oder Bluetooth-Verbindungen für Sensor und Rileylink (RL) getrennt werden, was "Pumpe getrennt" Alarme und Kommunikationsfehler verursacht. Auf dem Telefon gehe zu Einstellungen->Apps und deaktiviere die Akkuoptimierung für: AndroidAPS, xDrip oder BYODA/Dexcom-App und die Bluetooth-System-App (Du musst eventuell zuerst die System-Apps einblenden). Alternativ komplett die Akkuoptimierung auf dem Telefon deaktivieren. Das führt dazu, dass der Akku schneller verbraucht wird, aber es ist ein guter Weg, um herauszufinden, ob die Akkuoptimierung das Problem verursacht. Die Akkuoptimierungseinstellungen können, je nach Telefonhersteller und/oder Betriebsystemversion, stark abweichen bzw. anders aussehen. Aus diesem Grund ist es nahezu unmöglich, Anweisungen zur korrekten Einstellung der Akkuoptimierung für Dein Setup zu geben. Experimentiere, welche Einstellungen am besten funktionieren. Für weitere Informationen siehe auch "Dont kill my app"
 
-## Pump unreachable alerts several times a day or at night.
+## Alarm Pumpe nicht erreichbar mehrmals am Tag oder in der Nacht.
 
-Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
+Das Telefon kann AAPS-Dienste oder sogar Bluetooth unterbrechen, wodurch die Verbindung zu RL verloren geht (siehe Akkuoptimierung). Ziehe in Erwägung, den Grenzwert Pumpe nicht erreichbar auf 120min zu setzen, indem Du rechts oben zum Drei-Punkt-Menü gehst, wähle Einstellungen -> Lokale Alarme -> Grenzwert Pumpe ist nicht erreichbar [min].
 
-## Where can I delete treatments in AAPS v3 ?
+## Wo kann ich Behandlungen in AAPS v3 löschen?
 
-3 dots menu, select treatements, then 3 dots menu again and you have different options available.
+3-Punkte-Menü, wähle Behandlungen, dann hast Du verschiedene Optionen zur Verfügung.
 
 ## Configuring and Using the NSClient remote app
 
