@@ -69,7 +69,7 @@
 - Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 - Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
-## Why pairing with the pump does not work with the app "ruffy"?
+## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
 
 Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
@@ -86,11 +86,11 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 6. Essayez d'utiliser la branche '**appairage**' du dépôt [MilosKozak/Ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) pour établir la connexion 
 7. Maintenant, démarrez ruffy sur le téléphone. Vous pouvez appuyer sur Reset! et supprimez l'ancienne connexion. Puis appuyez sur **Connect!**.
 8. Dans le menu Bluetooth de la pompe, allez à **ADD DEVICE / ADD CONNECTION**. Appuyez sur **CONNECTER !** 
-    - The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
+    - Les trois étapes suivantes sont sensibles au timing, donc vous devrez essayer différentes pauses / vitesses si le jumelage échoue. Lisez la séquence complète avant de l'essayer.
 
-9. A présent, la pompe doit afficher le nom BT du téléphone à sélectionner pour l'appairage. Here it is importand to wait at least 5s before you hit the select button on Pump. Sinon, la Pompe n'enverra pas correctement la demande d'appairage au téléphone.
+9. A présent, la pompe doit afficher le nom BT du téléphone à sélectionner pour l'appairage. Ici, il est important d'attendre au moins 5s avant de cliquer sur le bouton de sélection sur la pompe. Sinon, la Pompe n'enverra pas correctement la demande d'appairage au téléphone.
     
-    - Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez faire le test avec 40s (paramètre d'origine). From experiance the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
+    - Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez faire le test avec 40s (paramètre d'origine). Par expérience la durée entre le moment où la pompe est affichée sur le téléphone et celui où le téléphone est sélectionné est d'environ 5-10s. Dans de nombreux autres cas, le couplage expire sans succès. Ultérieurement, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS et accélérer les connexions.
     - If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
 10. Sometimes the phone asks for a (typically 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually, ruffy will set this PIN automatically, but due to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN. This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step. See related [Github issue](https://github.com/MilosKozak/ruffy/issues/14) for details.
