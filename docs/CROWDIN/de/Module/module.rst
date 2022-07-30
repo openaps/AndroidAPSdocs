@@ -1,4 +1,4 @@
-Component Overview 
+Übersicht der Komponenten 
 **************************************************
 AndroidAPS ist nicht einfach eine (selbst erstellte) App, es ist eines von verschiedenen Modulen Deines Closed Loop Systems. Bevor du dich für Komponenten entscheidest, wäre es eine gute Idee, dir das 'Setup der verschiedenen Komponenten < ../index.html#component-setup> `_ anzuschauen.
    
@@ -48,12 +48,12 @@ Insulinpumpe
 --------------------------------------------------
 AndroidAPS funktioniert **derzeit** mit 
 
-* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+* `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_ (zusätzlich werden Ruffy App, LineageOS oder Android 8.1 auf Deinem Smartphone benötigt)
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_ 
 * `DanaR <../Configuration/DanaR-Insulin-Pump.html>`_ 
 * `Dana-i/RS <../Configuration/DanaRS-Insulin-Pump.html>`_
-* `some old Medtronic pumps <../Configuration/MedtronicPump.html>`_ from upcoming version 2.4 (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`additional communication device <../Module/module.html#additional-communication-device>`__ needed)
+* `einige alte Medtronic Pumpen <../Configuration/MedtronicPump.html>`_ ab AAPS Version 2.4 (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ (`zusätzliches Kommunikationsgerät <../Module/module.html#zusatzliches-kommunikationsgerat>`_  erforderlich)
 * `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
@@ -68,9 +68,9 @@ Für alte Medtronic-Pumpen ist ein zusätzliches Kommunikationsgerät (neben Dei
 
 * |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
 * |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Kontakt: <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `Kontakt: <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Kontakt: <https://jameswedding.substack.com/>`__ - nicht getestet
 
 **Welche Pumpe ist am Besten für den Closed Loop mit AndroidAPS geeignet?**
 
