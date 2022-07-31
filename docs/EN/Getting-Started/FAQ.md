@@ -439,7 +439,7 @@ This is possible. Note that as moving is "unsupported" and "untested" there is s
 
 Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH match on reconnecting
 
-##Procedure I follow in this:
+## Procedure I follow in this:
 
 1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection
 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data).
