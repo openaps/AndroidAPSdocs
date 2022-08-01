@@ -36,7 +36,7 @@
 * Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
 * AndroidAPS neu starten.
 * Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
-* Für DASH: Die Seriennummer ist auf dem Pod aufgedruckt.
+* For Dash: The serial number is always 4241.
 * Für den Omnipod EROS ist es die in der Registerkarte 'POD' als "Laufende Nummer" angegebene Zahl.
 
 ## Warnsignal neben BG
