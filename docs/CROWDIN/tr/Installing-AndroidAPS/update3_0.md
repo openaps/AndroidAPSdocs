@@ -36,7 +36,7 @@
 * Telefonunuzun dosya sisteminde `/AAPS/extra` dizinine `PasswordReset` adlı bir dosya eklemeniz gerekiyor.
 * AndroidAPS'yi yeniden başlatın.
 * Yeni şifre, aktif pompanızın seri numarası olacaktır.
-* Dash için: Seri numarası Pod üzerinde basılıdır.
+* For Dash: The serial number is always 4241.
 * EROS için ayrıca POD sekmesinde "Sıra Numarası" olarak listelenir
 
 ## KŞ'nin altındaki uyarı sinyali
