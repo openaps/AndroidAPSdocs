@@ -36,7 +36,7 @@
 * Es necesario añadir un fichero llamado `PasswordReset` en el directorio `/AAPS/extra` de tu teléfono.
 * Reiniciar AndroidAPS.
 * La nueva contraseña será el número de serie de la bomba de insulina que esté activa.
-* Para Dash: El número de serie está impreso en el Pod.
+* For Dash: The serial number is always 4241.
 * Para Eros, aparece en la pestaña del Pod, como "Número de sequencia".
 
 ## Señal de advertencia debajo de la lectura de glucosa
