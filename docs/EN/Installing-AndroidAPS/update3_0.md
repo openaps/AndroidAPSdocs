@@ -36,7 +36,7 @@
 * You need to add a file named ```PasswordReset``` to the ```/AAPS/extra``` directory on your phones fileystem.
 * Restart AndroidAPS.
 * The new password will be the serial number of your active pump.
-* For Dash: The serial number is printed on the Pod.
+* For Dash: The serial number is always 4241.
 * For EROS it is also listed on the POD tab as "Sequence Number"
 
 ## Warning signal beneath BG
