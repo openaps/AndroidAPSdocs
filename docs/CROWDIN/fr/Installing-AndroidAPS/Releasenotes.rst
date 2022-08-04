@@ -197,7 +197,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 10 <../Usage/Objectives.html#objectif-10-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'`objectif 10 (objectif 11 dans les anciennes versions) <../Usage/Objectives.html#objectif-10-automatisation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 10 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 10 <../Usage/Objectives.html#objectif-10-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -220,7 +220,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
+* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-de-la-pompe>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
