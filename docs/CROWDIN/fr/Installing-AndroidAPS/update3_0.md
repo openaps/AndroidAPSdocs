@@ -36,7 +36,7 @@
 * Vous devez ajouter un fichier nommé `PasswordReset` dans le répertoire `/AAPS/extra` du système de fichiers de votre téléphone.
 * Redémarrez AndroidAPS.
 * Le nouveau mot de passe sera le numéro de série de votre pompe active.
-* For Dash: The serial number is always 4241.
+* Pour Dash: Le numéro de série est toujours 4241.
 * Pour EROS, il est également listé dans l'onglet POD dans "Numéro de série"
 
 ## Signal d'avertissement à côté de la glycémie
