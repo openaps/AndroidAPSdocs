@@ -9,111 +9,111 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 
 לפני השימוש באוטומציה, עליכם להיות לשלוט בשימוש ב-"ערכי מטרה זמניים </temptarget.html>`_ או החלפות פרופיל ידניות. 
 
-Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+ודאו שאתם באמת מבינים כיצד אוטומציה פועלת לפני הגדרת התנאי הפשוט הראשון שלכם. **במקום פעולה, תנו ל-AAPS להציג תחילה רק התראה.** כשאתם בטוחים שהאוטומציה מופעלת בזמן הנכון, החליפו את ההתראה בפעולה אמיתית.
 
 .. image:: ../images/Automation_ConditionAction_RC3.png
   :alt: Automation condition + action
 
-How to use it
+הוראות שימוש
 ==================================================
-To set up an automation, you have to give it a title, select at least one condition and one action. 
+כדי להגדיר אוטומציה, מתחילים מלתת לה שם, לבחור לפחות תנאי אחד ופעולה אחת. 
 
-Important note
+הערה חשובה
 --------------------------------------------------
-**Automation is still active when you disable loop!**
+**אוטומציות ממשיכות להיות פעילות בזמן שהלופ מושבת!**
 
-So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
+אז הקפידו במידת הצורך לבטל את כללי האוטומציה במהלך מקרים אלה. ניתן לעשות זאת על ידי ביטול סימון התיבה שלצד השם של האוטומציה.
 
 .. image:: ../images/Automation_ActivateDeactivate.png
   :alt: Activate and deactivaten automation rule
 
-Where to find Automation
+היכן למצוא את הגדרת האוטומציות
 --------------------------------------------------
-Depending on your `settings in config builder <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ you will either find `Automation <../Configuration/Config-Builder.html#automation>`__ in hamburger menu or as a tab.
+בהתאם ל`הגדרותיכם בבונה התצורה <../Configuration/Config-Builder.html#tab-or-hamburger-menu>`_ תמצאו את `אוטומציות <../Configuration/Config-Builder.html#automation> `__ בתפריט ההמבורגר או כלשונית.
 
 כללי
 --------------------------------------------------
-There are some limits:
+ישנן מגבלות:
 
-* The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-* The profile percentage has to be between 70 % and 130%.
-* There is a 5 min. time limit between executions (and first execution).
+* ערך הגלוקוז חייב להיות בין 72 ל-270 mg/dl.
+* אחוז הפרופיל חייב להיות בין 70% ל-130%.
+* ישנו מינימום של 5 דקות בין ביצוע הפעולות.
 
-**Please be careful:**
+**נא לשמור על זהירות:**
 
-* **less than -2 means: -3 and lower (-4,-10, etc)**
-* **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+* **פחות מ-(-2) משמעו (3-) ומטה (-4 וכו')** 
+* **יותר מ-(-2) משמעו (1-) ומעלה (0,10 וכו')**
 
 
-Condition
+תנאי
 --------------------------------------------------
-You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
+ניתן לבחור בין מספר תנאים. להלן הסברים על מספר סוגי תנאים אבל רובם צריכים להיות קלים להבנה ולא הכל מתואר כאן:
 
-* connect conditions: you can have several conditions and can link them with 
+* תנאי חיבור: יכולים להיות לכם מספר תנאים ואפשר לקשר ביניהם עם השערים הלוגיים: 
 
-  * "And"
-  * "Or"
-  * "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  * "וגם"
+  * "או"
+  * "או בררני" (משמעו שאם אך ורק אחד מהתנאים תקף אז הפעולה תופעל)
    
-* Time vs. recurring time
+זמן לעומת  זמן חוזרני
 
-  * time =  single time event
-  * recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+  * זמן = מועד חד פעמי
+  * זמן חוזרני = אירוע שקורה באופן קבוע (לדוגמה פעם בשבוע, בימי עבודה וכו')
    
-* location: in the config builder (Automation), you can select which location service you want to use:
+* מיקום: בבונה ההגדרות (אוטומציה), אפשר לבחור באיזה שירות מיקום אתם רוצה להשתמש:
 
-  * Use passive location: AAPS only takes locations when other apps are requesting it
-  * Use network location: Location of your Wifi
+  * השתמש במיקום פסיבי: AAPS מקבל מיקומים רק אם אפליקציות אחרות מבקשות זאת
+  * השתמש במיקום רשת: מיקום ע"פ רשת ה-WiFi
   * השתמש במיקום GPS (שימו לב!
  עלול לגרום לניצול מוגבר של הסוללה!)
   
-Action
+פעולות
 --------------------------------------------------
-You can choose one or more actions: 
+אפשר לבחור פעולה אחת או יותר: 
 
-* start temp target 
+* הפעלת ערך מטרה זמני 
 
-  * must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  * works only if there is no previous temp target
+  * חייב להיות בתחום 72-270 mg/dl
+  * פועל רק אם אין כבר ערך מטרה זמני בפעולה
    
-* stop temp target
-* notification
-* profile percentage
+* הפסקת ערך מטרה זמני
+* התראה
+* אחוז הפרופיל
 
-  * must be between 70% and 130% 
-  * works only if the previous percentage is 100%
+  מוכרח להיות בתחום 70-130% 
+  * פועל רק אם האחוז הקודם היה 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+לאחר הוספת הפעולה שבחרתם, **אל תשכחו לשנות את ערכי ברירת המחדל** למה שאתם צריכים, על ידי לחיצה על ערכי ברירת המחדל.
  
 .. image:: ../images/Automation_Default_V2_5.png
-  :alt: Automation default vs. set values
+  :alt: אוטומציה לעומת ערכים מוגדרים
 
-Sort automation rules
+מיון כללי אוטומציה
 ---------------------
-To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
+כדי למיין את כללי האוטומציה לחצו כפתור המיון והחזיקו את כפתור ארבע השורות בצד שמאל של המסך וגררו למעלה או למטה.
 
 .. image:: ../images/Automation_Sort.png
   :alt: Sort automation rules
   
-Delete automation rules
+מחיקת כללי אוטומציה
 -----------------------
-To delete an automation rule click on trash icon.
+על מנת למחוק כללי אוטומציה לחצו על סמל הפח.
 
 .. image:: ../images/Automation_Delete.png
   :alt: Delete automation rule
 
-Good practice & caveats
+שיטות עבודה נכונות והסתייגויות
 ==================================================
-* When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-* Watch the rule results.
-* Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg < 180 mg/dl)
+* כאשר אתם מתחילים להשתמש באוטומציה או יוצרים תנאי חדש, הגדירו שהפעולה תהיה הודעה בלבד עד שאתם תהיו בטוחים שהתנאי פועל היטב.
+* עקבו אחר תוצאות התנאי.
+* אל תנסו לעשות תנאים מתירנים מדי (כלומר: אם Bg > 80 mg/dl ו-bg < 180 mg/dl)
 
-  **Doubly important if action is a profile switch!**
+  **חשוב כפליים אם הפעולה היא החלפת פרופיל!**
  
-* Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset `Autosens <../Usage/Open-APS-features.html#autosens>`__ back to 0.
-* Make sure Profile switches are made sparingly and preferably at a last resort.
+* נסו להשתמש בערכי מטרה זמניים במקום בהחלפות פרופיל. החלפות ערכי המטרה הזמניים אינם מאפסים את `Autosens <../Usage/Open-APS-features.html#autosens>`__.
+* ודאו שהחלפות הפרופיל נעשות במשורה ורצוי כמוצא אחרון בלבד.
 
-  * Profile switching renders `Autosens <../Usage/Open-APS-features.html#autosens>`__ useless for a min of 6 hours.
+  * החלפת פרופיל הופכת את `Autosens <../Usage/Open-APS-features.html#autosens>`__ לחסר תועלת למשך 6 שעות לפחות.
 
 * Profile switching will not reset the profile back to your base profile
 
