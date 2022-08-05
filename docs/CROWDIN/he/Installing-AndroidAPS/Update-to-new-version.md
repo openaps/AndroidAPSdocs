@@ -1,4 +1,4 @@
-# Update to a new version or branch
+# עדכון לגרסה חדשה או לענף חדש
 
 ## בנייה עצמית במקום הורדה
 
