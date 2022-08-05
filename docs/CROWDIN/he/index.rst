@@ -43,79 +43,79 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
 .. הערה::
    Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 
-For more details, please read on here.
+לפרטים נוספים, קראו הלאה כאן.
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Change language
+   :caption: שינוי השפה
 
-   Change language <./changelanguage.rst>
+   שינוי השפה <./changelanguage.rst>
 
-.. _getting-started:
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Getting started
-
-   Safety first <./Getting-Started/Safety-first.rst>
-   What is a closed loop system <./Getting-Started/ClosedLoop.rst>
-   What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
-
-.. _what-do-i-need:
+.. _מתחילים:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: What do I need? 
+   :caption: מתחילים
 
-   Module <./Module/module.rst>
+   בטיחות מעל הכול <./Getting-Started/Safety-first.rst>
+   מהי מערכת לולאה סגורה <./Getting-Started/ClosedLoop.rst>
+   מהי מערכת לולאה סגורה ב-AndroidAPS? <./Getting-Started/WhatisAndroidAPS.rst>  
+   מבחר המשאבות <./Getting-Started/Pump-Choices.md>
+   עדכונים ושינויים בתיעוד <./Getting-Started/WikiUpdate.rst>
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: How to Install AndroidAPS
-
-   Building the APK <./Installing-AndroidAPS/Building-APK.md>
-   Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
-   Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-   Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-   Install git <./Installing-AndroidAPS/git-install.rst>
-   Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-   Release notes <./Installing-AndroidAPS/Releasenotes.rst>
-   Dev branch <./Installing-AndroidAPS/Dev_branch.md>
-
-.. _component-setup:
+.. _מה אני צריך\ה:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Component Setup
+   :caption: מה אני צריך\ה? 
 
-   CGM/FGM <./Configuration/BG-Source.rst>
-   xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
-   Phones <./Hardware/Phoneconfig.rst>
-   Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
-   Smartwatch  <./Hardware/Smartwatch.rst>
-
-.. _configuration:
+   מודול <./Module/module.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Configuration
+   :caption: איך להתקין את AndroidAPS
 
-   Config builder <./Configuration/Config-Builder.md>
-   Preferences <./Configuration/Preferences.rst>
+   בניית קובץ ה-APK <./Installing-AndroidAPS/Building-APK.md>
+   עדכון לגרסה חדשה או לענף חדש <./Installing-AndroidAPS/Update-to-new-version.md>
+   טיפים ובדיקות לאחר עדכון ל-AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+   טיפים ובדיקות לאחר עדכון ל-AAPS 2.7<./Installing-AndroidAPS/update2_7.rst>
+   התקנת Git <./Installing-AndroidAPS/git-install.rst>
+   פתרון בעיות באנדרואיד סטודיו <../Installing-AndroidAPS/troubleshooting_androidstudio.html>
+   הערות פרסום <./Installing-AndroidAPS/Releasenotes.rst>
+   ענף הפיתוח <./Installing-AndroidAPS/Dev_branch.md>
+
+.. _הגדרות-הרכיבים:
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS Usage
+   :caption: הגדרת הרכיבים
+
+   חיישני סוכר <./Configuration/BG-Source.rst>
+   הגדרות xDrip <./Configuration/xdrip.md>
+   משאבות <./Hardware/pumps.rst>
+   טלפונים <./Hardware/Phoneconfig.rst>
+   הגדרת Nightscout <./Installing-AndroidAPS/Nightscout.md>
+   שעון חכם <./Hardware/Smartwatch.rst>
+
+.. _תצורה:
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: תצורה
+
+   בונה התצורה <./Configuration/Config-Builder.md>
+   העדפות <./Configuration/Preferences.rst>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: שימוש ב-AndroidAPS
 
    AndroidAPS screens <./Getting-Started/Screenshots.md>
    Objectives <./Usage/Objectives.rst>
@@ -149,12 +149,12 @@ For more details, please read on here.
 
    Remote monitoring <./Children/Children.rst>
    SMS commands <./Children/SMS-Commands.rst>
-   Profile helper <./Configuration/profilehelper.rst>
+   עוזר הפרופילים <./Configuration/profilehelper.rst>
    
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Troubleshooting
+   :caption: פתרון בעיות
 
    Troubleshooting <./Usage/troubleshooting.rst>
    Nightscout client <./Usage/Troubleshooting-NSClient.md>
@@ -180,7 +180,7 @@ For more details, please read on here.
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
-   Docs updates & changes <./Getting-Started/WikiUpdate.rst>
+   עדכונים ושינויים בתיעוד <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
