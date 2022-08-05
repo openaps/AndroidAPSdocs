@@ -121,7 +121,7 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
    Objectives <./Usage/Objectives.rst>
    OpenAPS features <./Usage/Open-APS-features.md>   
    COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+   זיהוי רגישות <./Configuration/Sensitivity-detection-and-COB.md>
    Profile switch <./Usage/Profiles.md>
    Temp-targets <./Usage/temptarget.md>   
    Extended carbs <./Usage/Extended-Carbs.rst>
@@ -176,7 +176,7 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: לאן לגשת לקבלת עזרה 
 
    Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
    Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
