@@ -115,34 +115,34 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 
   * החלפת פרופיל הופכת את `Autosens <../Usage/Open-APS-features.html#autosens>`__ לחסר תועלת למשך 6 שעות לפחות.
 
-* Profile switching will not reset the profile back to your base profile
+* מעבר בין פרופילים לא תאפס את הפרופיל בחזרה לפרופיל הבסיסי
 
-  * You have to make another rule to set this back or do it manually!
-  * Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  * אתם צריכים לקבוע אוטומציה אחרת כדי להחזיר את הפרופיל או לעשות זאת באופן ידני!
+  * סיכון מוגבר להיפוגליקמיה אם החלפת הפרופיל לא תפוג או תוחזר בחזרה לפרופיל הבסיס.
 
-Examples
+דוגמאות
 ==================================================
-These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
+אלו הן רק דוגמאות, לא עצות. אל תעתיקו אותן מבלי להיות מודעים למה שאתם עושים או למה אתה צריכים אותן.
 
-* Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-* Setting temp target for activities based on time, location, connection to a bluetooth device...
-* Setting eating soon temp targets based on time, location...
+* החלפת פרופילים לפעילויות יומיומיות (כמו בית ספר, חדר כושר, סוף שבוע, יום עבודה...) באמצעות מיקום גיאוגרפי, wifi, זמן וכו'.
+* הגדרת ערך מטרה זמני לפעילויות על סמך זמן, מיקום, חיבור למכשיר בלוטות'...
+* הגדרת ערך מטרה זמני לאכילה בקרוב בהתבסס על זמן, מיקום...
 
-Low Glucose Temp Target
+ערך מטרה זמני בתגובה לרמת סוכר נמוכה
 --------------------------------------------------
 .. image:: ../images/Automation2.png
-  :alt: Automation2
+  :alt: אוטומציה2
 
-This is made by someone who wants to get a hypo temp target automatically when having low glucose.
+זה נעשה כדי להפעיל ערך מטרה זמני היפו באופן אוטומטי כאשר ערך הגלוקוז נמוך.
 
-Lunch Time Temp Target
+ערך מטרה זמני לקראת ארוחת צהריים
 --------------------------------------------------
 .. image:: ../images/Automation3.png
-  :alt: Automation3
+  :alt: אוטומציה3
   
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
 
-Incorrect use of automation
+שימוש שגוי באוטומציות
 --------------------------------------------------
 Please be aware to use automation incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
@@ -152,7 +152,7 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 * Creating one way rules (i.e. do something but don't undo it by another rule)
 * Creating long term rules
 
-Alternatives
+אלטרנטיבות
 ==================================================
 
 For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
