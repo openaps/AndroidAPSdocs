@@ -1,13 +1,13 @@
 אוטומציה
 **************************************************
 
-What is Automation
+מהי אוטומציה
 ==================================================
-For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically. 
+עבור אותם אירועים תכופים, ייתכן שתצטרכו תמיד לשנות את אותן הגדרות. על מנת למנוע את התעסוקה העודפת, אפשר פשוט לנסות להפוך את האירוע לאוטומטי אם אתם יכולים לאפיין אותו מספיק טוב ולתת לו להתרחש באופן אוטומטי. 
 
-I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target. 
+I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את ערך המטרה זמנית באופן אוטומטי. אפשרות נוספת היא להגדיר שאם אתם במכון כושר, יוגדר ערך המטרה גבוה. 
 
-Before using Automation, you should be confident with manual `temp targets <./temptarget.html>`_ or profile switches. 
+לפני השימוש באוטומציה, עליכם להיות לשלוט בשימוש ב-"ערכי מטרה זמניים </temptarget.html>`_ או החלפות פרופיל ידניות. 
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
