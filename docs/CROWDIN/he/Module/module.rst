@@ -1,14 +1,14 @@
-Component Overview 
+סקירת רכיבים 
 **************************************************
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the `component setup <../index.html#component-setup>`_, too.
+AndroidAPS הוא לא רק יישום (בבניה עצמית), הוא רק אחד ממספר מודולים של מערכת הלולאה הסגורה שלכם. לפני שמחליטים על רכיבים, יהיה זה רעיון טוב לעיין גם ב'הגדרת הרכיבים <../index.html#component-setup>'_.
    
 .. image:: ../images/modules.png
-  :alt: Components overview
+  :alt: סקירת רכיבים
 
 .. הערה:: 
-   **IMPORTANT SAFETY NOTICE**
+   **הודעת בטיחות חשובה**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   תכונות הבטיחות של AndroidAPS הנדונות בתיעוד זה מבוססות על תכונות הבטיחות של החומרה המשמשת לבניית המערכת שלכם. חשוב מאוד שתשתמשו רק במשאבת אינסולין שנבדקה ואושרה ע"י ה-FDA או CE ובחיישן CGM לסגירת לולאת מינון אינסולין אוטומטית. שינויים בחומרה או בתוכנה ברכיבים אלה עלולים לגרום למינון בלתי צפוי של אינסולין, ולגרום לסיכון משמעותי למשתמש. אם אתם מוצאים או מוצע לכם מקלטי CGM ומשאבות אינסולין שבורות, שעברו שינויים מתוצרת עצמית, *אל תשתמשו* בהן ליצירת מערכת AndroidAPS.
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
    
@@ -66,13 +66,13 @@ Additional communication device
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
 
-* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
+* |OrangeLink|  `אתר אורנג'לינק <https://getrileylink.org/product/orangelink>`_    
 * |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |EmaLink|  `אתר אמה לינק <https://github.com/sks01/EmaLink>`__ - `מייל לפרטים <mailto:getemalink@gmail.com>`__  
+* |DiaLink|  DiaLink - `מייל לפרטים <mailto:Boshetyn@ukr.net>`__     
+* |LoopLink|  `אתר לופלינק<https://www.getlooplink.org/>`__ - `פרטי התקשרות <https://jameswedding.substack.com/>`__ - לא נוסה
 
-**So what's the best pump for looping with AndroidAPS?**
+**אז מה המשאבה הטובה ביותר לשימוש בלופ AndroidAPS?**
 
 The Combo, the Insight and the older Medtronics are solid pumps, and loopable. The Combo has the advantage of many more infusion set types to choose from as it has a standard luer lock. And the battery is a default one you can buy at any gas station, 24 hour convenience store and if you really need one, you can steal/borrow it from the remote control in the hotel room ;-).
 
