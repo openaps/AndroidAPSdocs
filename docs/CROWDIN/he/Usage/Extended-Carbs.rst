@@ -60,12 +60,12 @@
 .. image:: ../images/ExtendedBolus2_6.png
   :alt: Extended bolus in AAPS 2.6
 
-Why extended boluses won't work in a closed loop environment
+הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה
 ----------------------------------------------------------------------------------------------------
-1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
-2. If you had the extended bolus as input, what should happen in the model?
+1. הלופ קובע שיש לספק עכשיו 1.55 יח'\שעה. לא משנה לאלגוריתם אם זה מוזרק כבולוס מושהה או כמינון בזאלי זמני. למעשה, חלק מהמשאבות משתמשות בבולוס המושהה. מה צריך לקרות? רוב מנהלי המשאבות מפסיקים את הבולוס המושהה -> אפילו לא היינו צריכים להפעיל אותו.
+2. אם הזנו בולוס מושהה מראש, מה צריך לקרות באלגוריתם?
 
-   1. Should it be considered neutral together with the BR and looped on it? Then the loop should also be able to reduce the bolus if, for example, you get too low and all the "neutral" insulin is taken away?
-   2. Should the extended bolus simply be added? So the loop should simply be allowed to continue? Even in the worst hypo? I don't think this is so good: A hypo is foreseen but it must not be prevented?
+   1. האם זה אמור להיות מחושב כנייטרלי יחד עם המינון הבזאלי בחישוב של הלולאה? ואז הלולאה אמורה להיות מסוגלת גם להפחית את הבולוס אם למשל יורדים מדי וכל האינסולין ה"נייטרלי" נלקח?
+   2. האם פשוט להוסיף את הבולוס המושהה? אז פשוט צריך לתת ללופ להמשיך? אפילו בהיפו הכי חריף? זהו אינו פיתרון טוב, יש היפו צפוי אבל אסור למנוע אותו?
    
-3. The IOB that the extended bolus builds up materializes after 5 minutes at the next run. Accordingly, the loop would give less basal. So not much changes... except that the possibility of hypo avoidance is taken.
+3. האינסולין הפעיל שהבולוס המושהה מוסיף מתממש לאחר 5 דקות במדידה הבאה. בהתאם, הלולאה תיתן פחות בזאלי. אז אין הרבה שינויים... אלא נלקחת בחשבון האפשרות של הימנעות מהיפו.
