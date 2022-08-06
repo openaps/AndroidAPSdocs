@@ -139,7 +139,7 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
    מעבר בין אזורי זמן עם משאבות <./Usage/Timezone-traveling.md>
    גישה לקבצי הרשומות <./Usage/Accessing-logfiles.md>
    עצות לשימוש בסיסי ב-Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   יבוא\\ייצוא הגדרות <./Usage/ExportImportSettings.rst>
+   יבוא\ייצוא הגדרות <./Usage/ExportImportSettings.rst>
    מצב הנדסה ב-xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
