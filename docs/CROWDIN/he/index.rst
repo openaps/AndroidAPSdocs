@@ -178,7 +178,7 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
    :glob:
    :caption: לאן לגשת לקבלת עזרה 
 
-   חומרי שימושיים לקריאה לפני שמתחילים <./Where-To-Go-For-Help/Background-reading.md>
+   חומרים שימושיים לקריאה לפני שמתחילים <./Where-To-Go-For-Help/Background-reading.md>
    לאן לגשת לקבלת עזרה <./Where-To-Go-For-Help/Connect-with-other-users.md>
    עדכונים ושינויים בתיעוד <./Getting-Started/WikiUpdate.rst>
 
