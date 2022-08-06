@@ -140,19 +140,19 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 .. image:: ../images/Automation3.png
   :alt: אוטומציה3
   
-This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home. 
+דוגמה זו נוצרה על ידי מישהו שאוכל ארוחת צהריים בעבודה באותה שעה בכל יום במהלך ימי עבודה. אם משתמש זה נמצא בשעה מסוימת במיקום ארוחת הצהריים שלו, האוטומציה תגדיר ערך מטרה זמני נמוך (אוכל בקרוב) בזמן ההמתנה לארוחת הצהריים. בגלל השימוש בשער הלוגי "וגם", הפעולה יוצאת לפועל רק בזמן הנבחר כשהמשתמש נמצא במיקום הנבחר. הפעולה לא מופעלת בזמנים אחרים במקום הזה או אם המשתמש נשאר בבית בזמן הזה. 
 
 שימוש שגוי באוטומציות
 --------------------------------------------------
-Please be aware to use automation incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
+יש להיזהר משימוש שגוי באוטומציות. שימוש שגוי עלול להוביל לקשיים ואף לסכנה לבריאותכם. להלן דוגמאות לשימוש לא נכון:
 
-* Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-* Setting profile to compensate food
-* Setting profile without duration
-* Creating one way rules (i.e. do something but don't undo it by another rule)
-* Creating long term rules
+* ניסיון לעקוף לחלוטין את האלגוריתם במקום לכוון אותו (לדוגמה החלפת פרופיל במקום לשפר את הערכים המוגדרים בפרופיל)
+* מעבר בין פרופילים כדי לפצות על מזון
+* החלפת פרופיל ללא הגדרת משך פעולה
+* יצירת אוטומציות חד כיווניות (לדוגמה פעולה שאינה מבוטלת ע"י אוטומציה אחרת)
+* יצירת אוטומציות הפועלות לטווח ארוך
 
 אלטרנטיבות
 ==================================================
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found `here <./automationwithapp.html>`_.
+למשתמשים מתקדמים, ישנן אפשרויות אחרות לבצע אוטומציה של משימות באמצעות IFTTT או אפליקציית אנדרואיד צד שלישי בשם Automate. ניתן למצוא כמה דוגמאות `כאן <./automationwithapp.html>`_.
