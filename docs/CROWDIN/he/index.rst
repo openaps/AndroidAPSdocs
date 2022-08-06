@@ -117,38 +117,38 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
    :glob:
    :caption: שימוש ב-AndroidAPS
 
-   AndroidAPS screens <./Getting-Started/Screenshots.md>
-   Objectives <./Usage/Objectives.rst>
-   OpenAPS features <./Usage/Open-APS-features.md>   
-   COB calculation <./Usage/COB-calculation.rst>
-   Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
-   Profile switch <./Usage/Profiles.md>
-   Temp-targets <./Usage/temptarget.md>   
-   Extended carbs <./Usage/Extended-Carbs.rst>
-   Automation <./Usage/Automation.rst>
-   Careportal (discontinued) <./Usage/CPbefore26.rst>
+   מסכי AndroidAPS <./Getting-Started/Screenshots.md>
+   משימות <./Usage/Objectives.rst>
+   תכונות OpenAPS <./Usage/Open-APS-features.md>   
+   חישוב פחמימות פעילות (COB) <./Usage/COB-calculation.rst>
+   זיהוי רגישות <./Configuration/Sensitivity-detection-and-COB.md>
+   החלפת פרופיל <./Usage/Profiles.md>
+   ערכי מטרה זמניים <./Usage/temptarget.md>   
+   פחמימות ממושכות <./Usage/Extended-Carbs.rst>
+   אוטומציה <./Usage/Automation.rst>
+   פורטל הטיפולים (הופסק) <./Usage/CPbefore26.rst>
    Open Humans Uploader <./Configuration/OpenHumans.rst>
-   Automation with 3rd party apps <./Usage/automationwithapp.md>
+   אוטומציה עם יישומי צד שלישי <./Usage/automationwithapp.md>
    Android auto <./Usage/Android-auto.md>  
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: General Hints 
+   :caption: הנחיות כלליות 
 
-   Crossing timezones with pumps <./Usage/Timezone-traveling.md>
-   Accessing logfiles <./Usage/Accessing-logfiles.md>
-   Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
-   Export/Import Settings <./Usage/ExportImportSettings.rst>
-   xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+   מעבר בין אזורי זמן עם משאבות <./Usage/Timezone-traveling.md>
+   גישה לקבצי הרשומות <./Usage/Accessing-logfiles.md>
+   עצות לשימוש בסיסי ב-Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> 
+   יבוא\\ייצוא הגדרות <./Usage/ExportImportSettings.rst>
+   מצב הנדסה ב-xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: AndroidAPS for children
+   :caption: ילדים ו-AndroidAPS
 
-   Remote monitoring <./Children/Children.rst>
-   SMS commands <./Children/SMS-Commands.rst>
+   ניטור מרחוק <./Children/Children.rst>
+   פקודות SMS <./Children/SMS-Commands.rst>
    עוזר הפרופילים <./Configuration/profilehelper.rst>
    
 .. toctree::
@@ -156,57 +156,62 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
    :glob:
    :caption: פתרון בעיות
 
-   Troubleshooting <./Usage/troubleshooting.rst>
-   Nightscout client <./Usage/Troubleshooting-NSClient.md>
+   פתרון בעיות <./Usage/troubleshooting.rst>
+   פתרון בעיות בקליינט נייטסקאוט <./Usage/Troubleshooting-NSClient.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: FAQ
+   :caption: שאלות נפוצות
 
-   FAQ <./Getting-Started/FAQ.md>
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :caption: Glossary
-
-   Glossary <./Getting-Started/Glossary.md>
+   שאלות נפוצות <./Getting-Started/FAQ.md>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: Where to go for help 
+   :caption: מילון מונחים
 
-   Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
-   Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+   מילון מונחים <./Getting-Started/Glossary.md>
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+   :caption: לאן לגשת לקבלת עזרה 
+
+   חומרי שימושיים לקריאה לפני שמתחילים <./Where-To-Go-For-Help/Background-reading.md>
+   לאן לגשת לקבלת עזרה <./Where-To-Go-For-Help/Connect-with-other-users.md>
    עדכונים ושינויים בתיעוד <./Getting-Started/WikiUpdate.rst>
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: For Clinicians
+   :caption: לקלינאים
 
-   For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+   לקלינאים <./Resources/clinician-guide-to-AndroidAPS>
 
 
 .. toctree::
    :maxdepth: 1
    :glob:
-   :caption: How to help
+   :caption: איך לסייע
 
-   How to help <./Getting-Started/How-can-I-help.md>
-   How to translate the app and docs <./translations.md>
-   How to edit the docs <./make-a-PR>
+   איך לסייע <./Getting-Started/How-can-I-help.md>
+   כיצד לתרגם את היישום ואת התיעוד <./translations.md>
+   כיצד לערוך את התיעוד <./make-a-PR>
 
 
 .. הערה:: 
-	**Disclaimer And Warning**
+	**כתב ויתור ואזהרה**
 
-	* All information, thought, and code described here is intended for informational and educational purposes only. Nightscout currently makes no attempt at HIPAA privacy compliance. Use Nightscout and AndroidAPS at your own risk, and do not use the information or code to make medical decisions.
+	* כל המידע, המחשבה והקוד המתוארים כאן מיועדים למטרות מידע וחינוכיות בלבד.
+ Nightscout לא עושה כרגע ניסיון לתאימות לפרטיות HIPAA. 
+ השימוש ב-Nightscout וב-AndroidAPS הוא על אחריותכם בלבד, ואל תשתמשו במידע או בקוד כדי לקבל החלטות רפואיות.
 
-	* Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
+	* השימוש בקוד מ-github.com הוא ללא אחריות או תמיכה רשמית מכל סוג שהוא. אנא עיינו ברישיון של מאגר זה לפרטים.
 
-	* All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
-	Please note - this project has no association with and is not endorsed by: `SOOIL <https://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_ or `Medtronic <https://www.medtronic.com/>`_
+	* כל שמות המוצרים והחברות, הסימנים המסחריים, סימני השירות, הסימנים המסחריים הרשומים וסימני השירות הרשומים הם רכושם של בעליהם בהתאמה. 
+ השימוש בהם הוא למטרות מידע ואינו מרמז על כל זיקה או אישור על ידם. 
+
+
+	שימו לב - לפרויקט זה אין קשר ואינו מאושר על ידי: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ או `Medtronic <https:// www.medtronic.com/>`_
