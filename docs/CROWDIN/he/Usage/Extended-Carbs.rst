@@ -1,12 +1,12 @@
-Extended carbs / "eCarbs"
+פחמימות ממושכות
 **************************************************
-What are eCarbs and when are they useful?
+מהן פחמימות ממושכות ומתי משתמשים בהן?
 ==================================================
-With a regular pump therapy, extended boluses are a good way to deal with fatty or otherwise slowly-absorbed meals which increase blood glucose longer than the insulin is in effect. In a loop context, however, extended boluses don't make as much sense (and pose technical difficulties), since they're basically a fixed high temporary basal rate, which goes against how the loop works, which is adjusting the basal rate dynamically. For details see `extended bolus <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`__ below.
+בטיפול רגיל במשאבה, בולוסים מושהים הם דרך טובה להתמודד עם ארוחות שומניות או ארוחות אחרות שנספגות לאט ומעלות את רמת הגלוקוז בדם זמן רב יותר מהשפעת האינסולין. עם זאת, בהקשר של לולאה, בולוסים מושהים אינם הגיוניים כל כך (ומציבים קשיים טכניים), מכיוון שהם בעצם מינון בזאלי זמני קבוע גבוה, הנוגד את אופן פעולת הלולאה, שהוא התאמה דינמית של המינון בזאלי. לפרטים נוספים ראו `בולוסים מושהים <../Usage/Extended-Carbs.html#why-extended-boluses-won-t-work-in-a-closed-loop-environment>`__ מטה.
 
-The need to deal with such meals still exists though. Which is why AndroidAPS as of version 2.0 supports so called extended carbs or eCarbs.
+אף על פי כן נותר הצורך להתמודד עם ארוחות כאלה. זו הסיבה ש-AndroidAPS מגרסה 2.0 תומך במה שנקרא פחמימות ממושכות או eCarbs.
 
-eCarbs are carbs that are spilt up over several hours. For standard meals with more carbohydrates than fat/protein, entering the carbs up front (and reducing the initial bolus if needed) is usually sufficient to prevent too-early insulin delivery.  But for slower-absorbing meals where full carb entry up front results in too much IOB from SMB, eCarbs can be used to more accurately simulate how the carbs (and any carb equivalents you enter for other macronutrients) are absorbed and influence the blood glucose. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
+פחמימות ממושכות הן פחמימות שפרוסות על פני מספר שעות. בארוחות סטנדרטיות עם יותר פחמימות מאשר שומן\חלבון, רישום פחמימות מקדים (והפחתת הבולוס הראשוני במידת הצורך) מספיקה בדרך כלל כדי למנוע מתן אינסולין מוקדם מדי.  אבל עבור ארוחות איטיות יותר, בולוס על כל הפחמימות מראש גורם ליותר מדי אינסולין פעיל מ-SMB, ניתן להשתמש בפחמימות ממושכות כדי לדמות בצורה נכונה יותר את ספיגת הפחמימות (או המקבילה לפחמימות שתזינו עבור חלבון או שומן) והשפעתה על רמת הגלוקוז בדם. With this information, the loop can administer SMBs more gradually to deal with those carbs, which can be seen as a dynamic extended bolus (this should also work without SMBs, but is probably less effective).
 
 **Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
 
