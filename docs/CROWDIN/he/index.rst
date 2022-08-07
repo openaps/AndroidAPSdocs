@@ -1,4 +1,4 @@
-Welcome to the AndroidAPS documentation
+ברוכים הבאים לתיעוד של AndroidAPS
 ***************************************
 
 .. image:: images/modules-female.png

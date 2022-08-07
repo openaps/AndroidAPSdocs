@@ -34,9 +34,9 @@ To do this, please proceed as follows:
 * Done, just close the window! The screen reader should work now.
 
 .. הערה:: 
-   **IMPORTANT SAFETY NOTICE**
+   **הודעת בטיחות חשובה**
 
-   The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+   תכונות הבטיחות של AndroidAPS הנדונות בתיעוד זה מבוססות על תכונות הבטיחות של החומרה המשמשת לבניית המערכת שלכם. חשוב מאוד שתשתמשו רק במשאבת אינסולין שנבדקה ואושרה ע"י ה-FDA או CE ובחיישן CGM לסגירת לולאת מינון אינסולין אוטומטית. שינויים בחומרה או בתוכנה ברכיבים אלה עלולים לגרום למינון בלתי צפוי של אינסולין, ולגרום לסיכון משמעותי למשתמש. אם אתם מוצאים או מוצע לכם מקלטי CGM ומשאבות אינסולין שבורות, שעברו שינויים מתוצרת עצמית, *אל תשתמשו* בהן ליצירת מערכת AndroidAPS.
 
    Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
