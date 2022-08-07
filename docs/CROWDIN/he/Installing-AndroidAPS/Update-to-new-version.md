@@ -73,7 +73,7 @@ See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/B
 
 ## 5. Install apk
 
-בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)).
+בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
 
 ## 6. Check AAPS version on phone
 
