@@ -54,8 +54,8 @@ jobs:
     - name: curl
       uses: wei/curl@v1
       with:
-        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_HE }}" https://readthedocs.org/api/v2/webhook/androidaps-tr/209031/
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_HE }}" https://readthedocs.org/api/v2/webhook/androidaps-he/209583/
     - name: curl
       uses: wei/curl@v1
       with:
-        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_TR }}" https://readthedocs.org/api/v2/webhook/androidaps-tr/209030/
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_TR }}" https://readthedocs.org/api/v2/webhook/androidaps-tr/209052/
