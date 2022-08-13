@@ -12,7 +12,7 @@ Fonksiyonlar
 * Ebeveynler, telefonlarında **NSClient uygulamasını** kullanarak, glikoz seviyeleri, aktif karbonhidrat, aktif insülin vb. ilgili tüm verileri görerek uzaktan takip edebilirler. . Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
 * Ebeveynler, telefonlarında **xDrip+ uygulamasını takipçi modunda** kullanarak KŞ uyarılarını alabilirler.
 * `SMS Komutları <../Children/SMS-Commands.html>`_ kullanılarak AndroidAPS'in uzaktan kontrolü, iki faktörlü kimlik doğrulama ile güvence altına alınmıştır.
-* NSClient uygulaması aracılığıyla uzaktan kontrol, yalnızca senkronizasyonunuz iyi çalışıyorsa önerilir (örn. TT, TBR'nin (geçici hedefler, geçici bazal oranları) kendi kendine değişmesi gibi istenmeyen veri değişiklikleri olmamalıdır.) daha fazla ayrıntı için 'Sürüm 2.8.1.1 için sürüm notlarına <../Installing-AndroidAPS/Releasenotes.html#important-hints>'_ bakın.
+* NSClient uygulaması aracılığıyla uzaktan kontrol, yalnızca senkronizasyonunuz iyi çalışıyorsa önerilir (örn. TT, TBR'nin (geçici hedefler, geçici bazal oranları) kendi kendine değişmesi gibi istenmeyen veri değişiklikleri olmamalıdır.) daha fazla ayrıntı için `Sürüm 2.8.1.1 için sürüm notlarına <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ bakın.
 
 Uzaktan izleme için araçlar ve uygulamalar
 ==================================================
@@ -29,4 +29,4 @@ Dikkat edilmesi gereken önemli noktalar
 * AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
 * Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
 * Uzaktan kontrol çalışmadığında acil durum planınız nedir (örn. ağ sorunları)?
-* Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Bu tür bakım planlarına ilişkin örnekler, `Facebook'ta AndroidAPS kullanıcılarının dosyalar <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ bölümünde bulunabilir.
+* Anaokulu ve ilkokulda uzaktan izleme ve tedavi gerçekten yardımcı olabilir. Ancak öğretmenlerin ve eğitimcilerin çocuğunuzun tedavi planından haberdar olmalıdır. Bu tür bakım planlarına ilişkin örnekler, `Facebook'ta AndroidAPS kullanıcılarının dosyaları <https://www.facebook.com/groups/AndroidAPSUsers/files/>`_ bölümünde bulunabilir.
