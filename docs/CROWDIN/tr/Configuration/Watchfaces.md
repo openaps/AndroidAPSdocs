@@ -3,7 +3,7 @@
 AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirsiniz. AAPS'nin akıllı saat sürümü şunları yapmanızı sağlar:
 
 * **verileri saatinizde görüntüleyin**: [özel saat arayüzleri](#aaps-watchfaces) sağlayarak veya standart saat arayüzlerini [komplikasyonlarla](#complications) kullanın
-* **control AAPS on phone**: to bolus, set a temporary target etc.
+* **AAPS'yi telefonda kontrol edin**: bolus için, geçici bir hedef belirleyin vb.
 
 ### Saat satın almadan önce...
 
