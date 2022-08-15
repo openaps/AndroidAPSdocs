@@ -24,7 +24,7 @@ Uzaktan izleme için araçlar ve uygulamalar
 
 Dikkat edilmesi gereken önemli noktalar
 ==================================================
-* Doğru `tedavi faktörlerini <../Getting-Started/FAQ.html#how-to-begin>`_ (bazal oran, DIA, IDF...) ayarlamak, çocuklar için özellikle büyüme hormonları söz konusu olduğunda zor olmaktadır. 
+* Doğru `tedavi faktörlerini <../Getting-Started/FAQ.html#how-to-begin>`_ (bazal oran, İES, İDF...) ayarlamak, çocuklar için özellikle büyüme hormonları söz konusu olduğunda zor olmaktadır. 
 * AndroidAPS ve NSClient uygulamasında ayarlar aynı olmalıdır.
 * AAPS ana telefonunun yalnızca döngü çalıştırıldıktan sonra karşıya bilgi yükleyeceğini, bunun yanı sıra yükleme ve indirme süresi nedeniyle ana ve takipçi arasında bilgide zaman farkının oluşacağını da göz önünde bulundurun.
 * Bu nedenle, uzaktan izleme ve uzaktan tedaviye başlamadan önce, bunları doğru bir şekilde ayarlamak için zaman ayırın ve çocuğunuz yanınızdayken test edin. Okul tatilleri bunun için iyi bir zaman olabilir.
