@@ -52,9 +52,9 @@ Changes
 * huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
 * Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-* Wear tiles, translations @Andries-Smith
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
 * Wear code refactored. Not backward compatible anymore @MilosKozak
-* a11y improvements @Andries-Smith
+* a11y improvements @Andries-Smit
 * new protection option PIN @Andries-Smit
 * allow graph scale from menu @MilosKozak
 * more statistics available @MilosKozak

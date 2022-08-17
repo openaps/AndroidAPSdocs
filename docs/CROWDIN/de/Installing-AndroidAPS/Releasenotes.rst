@@ -52,9 +52,9 @@ Wichtige Hinweise
 * riesige UI Verbesserung, Bereinigung und Vereinheitlichung, Migration zu Material Design, Stile, weißes Theme, neue Symbole. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * Widget @MilosKozak
 * Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-* Für die Wear App Kacheln und Übersetzungen @Andries-Smith
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
 * Wear code refactored. Nicht mehr abwärtskompatibel @MilosKozak
-* a11y Verbesserungen @Andries-Smith
+* a11y improvements @Andries-Smit
 * neue Schutzoption PIN @Andries-Smit
 * Diagrammskala vom Menü erlauben @MilosKozak
 * Mehr Statistiken verfügbar @MilosKozak

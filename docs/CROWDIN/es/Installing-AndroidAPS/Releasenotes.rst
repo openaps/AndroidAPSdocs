@@ -52,9 +52,9 @@ Cambios
 * Importantes mejoras de la interfaz gráfica (UI), limpieza y unificación. Migración a "Material Design", estilos, tema claro, nuevos iconos, etc. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * Añadido Widget @MilosKozak
 * Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-* Tarjetas Wear y traducciones @Andries-Smith
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
 * Código Wear refactorizado No compatible con versiones anteriores @MilosKozak
-* Mejoras A11Y (Mejoras de accesibilidad) @Andries-Smith
+* a11y improvements @Andries-Smit
 * Nueva opción de protección PIN @Andries-Smit
 * Permite cambiar la escala gráfica desde el menú @MilosKozak
 * Más estadísticas disponibles @MilosKozak

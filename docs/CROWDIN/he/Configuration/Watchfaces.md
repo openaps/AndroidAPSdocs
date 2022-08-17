@@ -209,69 +209,133 @@ AndroidAPS מספק את סיבוכים הבאים:
     * *None*: מבטל את הפעולה של הסיבוך של AAPS
 * **יוניקוד בסיבוכים** (ברירת מחדל `On`): כאשר `On`, הסיבוך משתמש בתווי יוניקוד לסמלים כגון דלתא `Δ`, מפריד נקודות אנכי `⁞` או סימן של שיעור בזאלי `⎍`. הצגתם תלויה בגופן והיא יכולה להיות ספציפית לפני שעון מסוים. אפשרות זו מאפשרת להחליף סמלי יוניקוד `Off` כאשר נדרש - אם הגופן שבשימוש פני השעון לא תומך בסמלים אלה - כדי למנוע תקלות גרפיות.
 
-## מופעל תמיד (Always On)
+## Wear OS Tiles
 
-אריכות חיי הסוללה של שעונים חכמים של Wear OS הוא אתגר. לחלק מהם יש עד 30 שעות בין טעינות. התצוגה חייבת להיות כבויה על מנת לחסוך אנרגיה כאשר זו אינה בשימוש. רוב השעונים תומכים בתצוגת "מופעל תמיד".
+Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
 
-החל מגרסה 3 של AAPS, ניתן להשתמש ב-"ממשק משתמש מופשט" בעת שהתצוגה "מופעלת תמיד". ממשק משתמש זה מכיל רק את הגלוקוז בדם, את המגמה ואת מועד המדידה. ממשק זה חוסך אנרגיה עם פחות עדכונים ונתונים ולכן מאיר פחות פיקסלים כדי וכך חוסך סוללה במסכי OLED.
+Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
 
-ממשק המשתמש המופשט זמין לתצוגות פנים הבאים: AAPS, AAPS(v2), תרשים גדול, דיגיטלי, סטימפאנק ותא טייס. ממשק המשתמש המופשט הוא אופציונלי והוא מוגדר בהגדרות של פני השעון. (לחצו לחיצה ממושכת על פני השעון והקישו על "עריכה" או את צלמית גלגל השיניים). בחרו את "פשט את הממשק" וקבעו אותו ל-"מופעל תמיד" או "מופעל תמיד גם בטעינה".
+The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
 
-### מצב זמן לילה
+Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
 
-בעת טעינה, יהיה זה לעזר אם התצוגה תהיה "מופעלת תמיד" ותציג את ערכי הגלוקוז בדם במשך הלילה. אף על פי כן, תצוגות פני השעונים הסטנדרטיים בוהקים מדי, מציגים יותר מדי מידע והפירוט קשה לקריאה עבור עיניים רדומות. לכן, הוספנו חלופה לתצוגת הפנים של השעון, לפשט את ממשק המשתמש במשך זמן הטעינה, כאשר היא מוגדרת כך בתצורה.
+## How to add Tiles
 
-ממשק המשתמש המופשט זמין לתצוגות פנים הבאים: AAPS, AAPS(v2), תרשים גדול, דיגיטלי, סטימפאנק ותא טייס. ממשק המשתמש המופשט הוא אופציונלי והוא מוגדר בהגדרות של פני השעון. (לחצו לחיצה ממושכת על פני השעון והקישו על "עריכה" או את צלמית גלגל השיניים). בחרו את "פשט את הממשק" וקבעו אותו ל-"מופעל תמיד" או "מופעל תמיד גם בטעינה"
+Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
 
-אפשרויות המפתח של אנדרואיד מאפשר לשעונכם להישאר ער במשך הטעינה. על מנת שאפשרויות המפתח יהיו זמינות, ראו https://developer/android.com/trainig/wearables/get-started/debugging. קבעו את "הישאר ער במשך הטעינה" ל-"On" באפשרויות המפתח.
+![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
-הערה: לא כל התצוגות מסוגלות להשתמש ב-"מופעל תמיד" באופן מיטבי. זה עלול לגרום לצריבה על המסך, במיוחד במסכי OLED ישנים. בדרך כלל השעונים יחשיכו את המסך למנוע את צריבתו; אנא בדקו את המדריך למשתמש, היצרן, או את אתר האינטרנט כדי לקבל עצה.
+Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+
+1. On your watch, from your watch face; 
+    * Swipe right to left till you reach the "+ Add tiles" 
+    * Select one of the tiles.
+2. On your phone open the companion app for your watch. 
+    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+    * In the click on the section "Tiles", followed by "+ Add" button
+    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+
+The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+
+### APS(Actions) Tile
+
+The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+
+Actions supported in the Action tile can request the AAPS phone app for:
+
+* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
+* **Insulin**; request insulin delivery by entering the unit of insulin
+* **Treatment**; request both insulin delivery and add carbs
+* **Carbs**; add (extended) carbs
+* **TempT**; set a custom temporary target and duration
+
+![Wear action tile, sample calculator](../images/wear_actions.png)
+
+[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+
+### AAPS(Temp Target) Tile
+
+The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+
+* **Activity**; for sport
+* **Hypo**; to raise the target during hypo treatment
+* **Eating soon**; to lower the target to raise the insulin on board
+* **Manual**; set a custom temporary target and duration
+* **Cancel**; to stop the current temporary target
+
+![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+
+### AAPS(QuickWizard)Tile
+
+The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+
+![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+
+[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+
+## Always on
+
+Long battery life for Android Wear OS smartwatches is a challenge. Some smartwatches get as much as 30 hours before recharging. The display should be switched off for optimal power saving when not in use. Most watches support the “Always on” display.
+
+Since AAPS version 3, we can use a “Simplify UI” during always-on-mode. This UI only contains the blood glucose, direction, and time. This UI is power-optimized with less frequent updates, showing less information and lightening fewer pixels to save power on OLED displays.
+
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “Always on” or “Always on and charging”.
+
+### Night-time mode
+
+While charging, it would be helpful if the display could stay “always-on” and show your blood glucose during the night. However, the standard watch-faces are too bright and have too much information, and the details are hard to read with sleepy eyes. Therefore, we added an option for the watch-face to simplify the UI only during charging when set in the configuration.
+
+The simplified UI mode is available for the watch-faces: AAPS, AAPS V2, Home Big, Digital Style, Steampunk, and Cockpit. The simplified UI is optional and is configured through the watch face settings. (log press the watch face and click “edit” or the gear icon) Select the configuration “Simplify UI" and set it to “During charging” or “Always on and charging”
+
+The Android developer options enable your watch to stay awake during charging. To make the developer options available, see https://developer.android.com/training/wearables/get-started/debugging. Set the “Stay awake when charging” to “on” in the developer options”.
+
+Note: not all displays can handle always-on very well. It can cause screen burn-in, especially on the older OLED displays. The watches will generally dim the display to prevent burn-in; please check your owner’s manual, the manufacturing, or the internet for advice.
 
 ![Watchface Nightstand](../images/Watchface_nightstand.jpg)
 
 ![Simplified UI](../images/Watchface_simplified_ui.png)
 
-### טיפים לשיפור ביצועים וחיי הסוללה
+### Performance and battery life tips
 
-שעוני Wear OS הם התקנים מוגבלים מבחינת חשמל. גודל השעון מגביל את קיבולת הסוללה. למרות חידושים, גם בחומרה וגם בתוכנה, שעוני Wear OS עדיין דורשים טעינה יומית.
+Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
 
-אם משך הזמן של סוללה שנוסתה קצר מיממה, להלן כמה טיפים כדי להתגבר על כך.
+If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
 
-תחומי שימוש סוללה עיקריים הם:
+Main battery-demanding areas are:
 
-* תצוגה פעילה עם תאורה אחורית מופעלת (עבור LED) או בעוצמה מלאה (עבור OLED)
-* תִּיצוּג (רינדור) על המסך
-* תקשורת רדיו דרך בלוטות'
+* Active display with a backlight on (for LED) or in full intensity mode (for OLED)
+* Rendering on screen
+* Radio communication over Bluetooth
 
-מאחר שאיננו מתפשרים על תקשורת (כי אנחנו צריכים נתונים מעודכנים) ורוצים שיוצגו הנתונים האחרונים, רוב האופטימיזציות יכולות להיעשות בתחום *ההצגה על המסך*:
+Since we cannot compromise on communication (we need up-to-date data) and want to have the most recent data rendered, most of the optimizations can be done in *display time* area:
 
-* תצוגות פני שעונים מובנים בדרך כלל עוברים מיטוב טוב מאשר אלה המותאמים אישית, אותם מורידים מהחנות.
-* עדיף להשתמש בפני שעונים אשר מגבילים את כמות הנתונים המוצגים במצב לא פעיל \ מעומעם.
-* שימו לב כאשר מערבבים סיבוכים אחרים, כמו ווידגטים של מזג אוויר של צד שלישי, או אחרים - שמשתמשים בנתונים ממקורות חיצוניים.
-* התחילו בתצוגות פנים פשוטות. הוסיפו סיבוך אחד כל פעם וצפו כיצד זה משפיע על חיי הסוללה.
-* נסו להשתמש בערכת נושא **כהה** עבור תצוגות פנים של AAPS, וב[**מחיצות מותאמות**](#watchface-settings). מסכי OLED יגבילו את כמות הפיקסלים המוארים ואת הבלאי.
-* בחנו מה פועל טוב יותר בשעונכם: תצוגות פנים מובנות של AAPS או תצוגות פנים אחרות עם סיבוכים של AAPS.
-* בחנו זאת במשך כמה ימים, עם פעילות בפרופילים שונים. רוב השעונים מפעילים את המסך על ידי מבט, תנועה וסימני הפעלה אחרים.
-* בחנו את הגדרות המערכת הגלובליות אשר משפיעות על הפעילות: התראות, הארה אחורית\מגבלת זמן של תצוגה פעילה וכאשר ה-GPS מופעל.
-* בדקו את [רשימת הטלפונים והשעונים](../Getting-Started/Phones#list-of-tested-phones) ו[שאלו את הקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md) על דיווחים של נסיון משתמשים אחרים וזמני סוללה.
-* **אנחנו לא יכולים להבטיח שהנתונים המוצגים בתצוגת השעון או הסיבוך מעודכנים**. בסופו של דבר, ההחלטה מתי לעדכן נתונים על פני השעון או בסיבוך תלויה ב-Wear OS. גם כאשר אפליקצית AAPS דורשת עדכון, המערכת של השעון יכולה לדחות או להתעלם מהעדכון לשם שמירת הסוללה. כאשר יש לכם ספקות וסוללת השעון חלשה - תמיד בדקו גם באפליקציה הראשית בטלפון.
+* Stock watchfaces are usually better optimized than custom one, downloaded from the store.
+* It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
+* Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
+* Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
+* Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
+* Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
+* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
-## פיתרון בעיות של אפליקציית Wear:
+## Troubleshooting the wear app:
 
-* לפעמים זה עוזר לסנכרן מחדש את האפליקציה עם השעון, כי היא יכולה להיות קצת איטית לבצע זאת בעצמה: Android Wear > סמל גלגל שיניים > שם השעון > סינכרון אפליקציות מחדש.
-* הפעילו איתור באגים ADB באופציות המפתח (בשעון), חברו את השעון באמצעות כבל USB והתחילו את אפליקצית Wear כשש-Android Studio פועל.
-* אם הסיבוכים לא מעדכנים נתונים - בדקו קודם האם תצוגות הפנים של AAPS עובדות בכלל.
+* Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
+* Enable ADB debugging in Developer Options (on watch), connect the watch via USB and start the Wear app once in Android Studio.
+* If Complications does not update data - check first if AAPS watchfaces work at all.
 
 ### Sony Smartwatch 3
 
-* השעון החכם Sony 3 הוא אחד הפופולריים ביותר בשימוש עם AAPS.
-* לצערנו גוגל הסירה את תמיכתה במכשירי Wear OS 1.5 בסתיו 2020. זה מוביל לבעיות כאשר משתמשים בשעון Sony SW3 עם AndroidAPS 2.7 ומעלה.
-* מעקף אפשרי ניתן למצוא ב-[דף פיתרון בעיות](../Usage/SonySW3.rst) זה.
+* The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
 
-## הצגת נתוני Nightscout
+## View Nightscout data
 
-אם הנכם משתמשים במערכת לופ אחרת ורוצים *לראות* את פרטי הלופ שלכם בשעון Android Wear, או רוצים לצפות בלופ של ילדכם, אז אתם יכולים להסתפק בלבנות\להוריד אפליקציה NSClient בלבד. לביצוע זאת עקבו אחר [הוראות בניית APK](../Installing-AndroidAPS/Building-APK.md) ובחרו בבניית הגרסה "NSClienRelease". ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
 
 # Pebble
 
-משתמשי Pebble יכולים להשתמש ב-[תצוגת פנים Urchin](https://github.com/mddub/urchin-cgm) על מנת *לראות* נתוני לופ (אם הם מועלים לנייטסקאוט), אבל לא תוכלו לתקשר עם AndroidAPS דרך הטלפון. תוכלו לבחור שדות להצגה כגון IOB ומינון בזאלי זמני נוכחי וחיזויים. אם הלופ פתוח אתם יכולים להשתמש ב-[IFTTT](https://ifttt.com/) ליצירת ישומון שמציין אם התראה מתקבלת מ-AndroidAPS אז שלח מסרון או הודעה קופצת.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to *view* looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch. You can choose fields to display such as IOB and currently active temp basal rate and predictions. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.

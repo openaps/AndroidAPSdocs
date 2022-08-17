@@ -52,9 +52,9 @@ Değişiklikler
 * büyük kullanıcı arayüzü iyileştirmesi, temizleme ve birleştirme, malzeme tasarımına geçiş, stiller, beyaz tema, yeni simgeler. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
 * Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
-* Wear kodları, çeviriler @Andries-Smith
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
 * Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
-* a11y iyileştirmeleri @Andries-Smith
+* a11y improvements @Andries-Smit
 * yeni koruma seçeneği PIN @Andries-Smit
 * menüde grafik ölçeğine izin verme @MilosKozak
 * daha fazla istatistik seçeneği @MilosKozak
