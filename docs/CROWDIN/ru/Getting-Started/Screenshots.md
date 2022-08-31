@@ -73,21 +73,21 @@
    
    ![Меню состояния цикла](../images/Home2020_Loop_Dialog.png)
 
-#### BG warning sign
+#### предупреждающий знак ГК
 
-Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
+Начиная с Android 3.0, вы можете увидеть предупреждающий знак под числом ГК на главном экране.
 
-*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
+*Примечание*: Расчеты AAPS учитывают до 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
 
-To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
+Чтобы немедленно удалить его, вам нужно вручную удалить несколько записей из вкладки Dexcom/xDrip+.
 
-However, when there are a lot of duplicates, it might be easier to
+Однако, когда есть много дубликатов, может быть проще
 
-* [backup your settings](../Usage/ExportImportSettings.rst),
-* reset your database in the maintenance menu and
-* [import your settings](../Usage/ExportImportSettings.rst) again
+* [создать резервную копию настроек](../Usage/ExportImportSettings.rst),
+* сбросить базу данных в меню обслуживания и
+* заново [импортировать настройки](../Usage/ExportImportSettings.rst)
 
-##### Red warning sign: Duplicate BG data
+##### Красный предупреждающий знак: Дублирующиеся данные ГК
 
 The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
