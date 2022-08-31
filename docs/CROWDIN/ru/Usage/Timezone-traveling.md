@@ -20,7 +20,7 @@
    * Выберите 'Переключение профиля'
    * Установите 'Сдвиг по времени' в зависимости от места назначения.
    
-   ![Profile switch with time shift](../images/ProfileSwitchTimeShift2.png)
+   ![Переключение профиля с временным сдвигом](../images/ProfileSwitchTimeShift2.png)
    
    * напр. Vienna -> New York: сдвиг профиля +6 часов
    * напр. Vienna -> Sydney: сдвиг профиля --8 часов
@@ -83,7 +83,7 @@ AndroidAPS подает оповещение, если время на помп�
 
 ### Действия после перевода времени
 
-A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Хорошее время для перехода - при малом IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
@@ -105,4 +105,4 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 * This feature is available since AndroidAPS version 2.2.
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
-* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
+* You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. Это сообщение появится без звука, вибрации или чего-нибудь.
