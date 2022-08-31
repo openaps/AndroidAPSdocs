@@ -68,11 +68,11 @@ AndroidAPS **на данный момент** работает с
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Для старых помп Medtronic требуется дополнительное устройство коммуникации (кроме вашего телефона) для "перевода" радиосигнала от помпы на Bluetooth. Убедитесь, что выбрана правильная версия для вашей помпы.
 
-* |OrangeLink|  `OrangeLink Website <https://getrileylink.org/product/orangelink>`_    
-* |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
-* |EmaLink|  `Emalink Website <https://github.com/sks01/EmaLink>`__ - `Contact Info <mailto:getemalink@gmail.com>`__  
-* |DiaLink|  DiaLink - `Contact Info <mailto:Boshetyn@ukr.net>`__     
-* |LoopLink|  `LoopLink Website <https://www.getlooplink.org/>`__ - `Contact Info <https://jameswedding.substack.com/>`__ - Untested
+* |OrangeLink| `сайт OrangeLink <https://getrileylink.org/product/orangelink>`_    
+- |RileyLink| `433MHz RileyLink <https://getrileylink.org/product/rileylink433>`__
+- |EmaLink| `Сайт Emalink <https://github.com/sks01/EmaLink>`__ - `Контактная информация <mailto:getemalink@gmail.com>`__  
+- |DiaLink| DiaLink - `Контактная информация <mailto:Boshetyn@ukr.net>`__     
+- |LoopLink| `Сайт LoopLink  <https://www.getlooplink.org/>`__ - `Контактная информация <https://jameswedding.substack.com/>`__ - Не проверено
 
 **Какая же самая лучшая помпа для работы с AndroidAPS?**
 
@@ -89,9 +89,9 @@ Combo, Insight и старые Medtronic – это надежные помпы,
 
 Источник данных гликемии
 --------------------------------------------------
-Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. For further details, look `here <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
+Это всего лишь краткий обзор совместимых с AndroidAPS систем мониторинга ГК. Для получения дополнительной информации смотрите `здесь <../Configuration/BG-Source.html>`_. Или если проще: если данные ГК могут приниматься приложением xDrip+ или на веб-сайте Nightscout, вы можете выбрать xDrip+ (или Nightscout с интернет-соединением) как источник ГК в AAPS.
 
-* `Dexcom G6 <../Hardware/DexcomG6.html>`_: BOYDA is recommended as of version 3.0 (see `release notes <../Installing-AndroidAPS/Releasenotes.html#important-hints>`_ for details). xDrip+ must be at least version 2022.01.14 or newer
+* `Dexcom G6 <../Hardware/DexcomG6.html>`_:начиная с версии 3.0 рекомендуется самостоятельно собранное приложение dexcom (BYODA - см. `release notes <../Installing -AndroidAPS/Releasenotes.html#important-hints>`_). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
 * ` Dexcom G5 <../Hardware/DexcomG5.html> ` _: Он работает с приложением xDrip + или модифицированным приложением Dexcom
 * Dexcom G4: Эти системы достаточно старые, но вы можете найти инструкции по их использованию с приложением xDrip+
 * ` Libre 2 <../Hardware/Libre2.html> ` _: Он работает с xDrip + (не требуется передатчик), но вы должны собрать собственное модифицированное приложение.
