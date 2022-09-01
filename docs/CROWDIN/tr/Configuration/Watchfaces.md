@@ -209,39 +209,39 @@ Ek olarak, `BÜYÜK GÖRÜNTÜ` türünün üç komplikasyonu vardır: **Koyu Du
     * *Yok*: AAPS komplikasyonlarında dokunma eylemini devre dışı bırakır
 * **Komplikasyonlarda Unicode** (varsayılan `Açık`): `Açık` olduğunda, komplikasyon `Δ` Delta, `⁞` dikey nokta ayırıcı veya `⎍` Bazal Oran sembolü gibi semboller için Unicode karakterlerini kullanır. Bunların oluşturulması, yazı tipine bağlıdır ve bu, saat yüzüne çok özel olabilir. Bu seçenek, grafik hatalarından kaçınmak için, gerektiğinde özel saat arayüzü tarafından kullanılan yazı tipi bu sembolleri desteklemiyorsa - Unicode sembollerinin `Kapalı` olarak değiştirilmesine izin verir.
 
-## Wear OS Tiles
+## Wear OS Kutucukları
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Wear OS kutucukları, yapacağınız herhangi birşey için kullanıcıların bilgilerine ve eylemlerine kolay erişim sağlar. Kutucuklar yalnızca Wear Os sürüm 2.0 ve üzeri sürümlerde çalışan Android akıllı saatlerinde mevcuttur.
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Kutucuklar, saat yüzü menüsüne gerek kalmadan AAPS uygulamasındaki eylemlere hızlı bir şekilde erişmenizi sağlar. Kutucuklar isteğe bağlıdır ve kullanıcı tarafından eklenebilir ve yapılandırılabilir.
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Kutucuklar, herhangi bir saat arayüzünün "yanında" kullanılır. Etkin olduğunda bir kutucuğa erişmek için, saat kadranınızda sağdan sola kaydırın.
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+Not; kutucukların AAPS telefon uygulamasının mevcut durumunun yerini tutmadığını, yalnızca uygulanmadan önce saatte onaylanması gereken bir istekte bulunduğunu unutmayın.
 
-## How to add Tiles
+## Kutucuk nasıl eklenir?
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+Kutucukları kullanmadan önce, Android APS'nin "Wear OS" ayarlarında "Saatten Kontrol" seçeneğini açmanız gerekir.
 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+Wear OS sürümünüze, markanıza ve akıllı telefonunuza bağlı olarak kutucukları etkinleştirmenin iki yolu vardır:
 
-1. On your watch, from your watch face; 
-    * Swipe right to left till you reach the "+ Add tiles" 
-    * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-    * In the click on the section "Tiles", followed by "+ Add" button
-    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. Saatinizde, saat arayüzünüzden; 
+    * "+ Kutucuk ekle"ye ulaşana kadar sağdan sola kaydırın 
+    * Kutucuklardan birini seçin.
+2. Telefonunuzda saatiniz için eşlik eden uygulamayı açın. 
+    * Samsung için "Galaxy Giyilebilir"i veya diğer markalar için "Wear OS" yi açın
+    * "Kutucuk" bölümüne ve ardından "+ Ekle" düğmesine tıklayın
+    * Eklemek istediğiniz AAPS kutucuğunu seçerek bulun. ![Wear -telefon kutucuk ekleme](../images/wear_companion_app_add_tile.png) kutucukların sırası, sürükleyip bırakarak değiştirilebilir
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+Kutucukların içeriği, bir kutucuğa uzun süre basılarak ve "Düzenle" veya "dişli simgesi" düğmesine tıklanarak özelleştirilebilir.
 
-### APS(Actions) Tile
+### APS(Eylemler) Kutucuğu
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+Eylem kutucuğu, 1 ila 4 kullanıcı tanımlı eylem butonunun yerini tutabilir. Yapılandırmak için, seçenekleri gösterecek olan kutucuğa uzun basın. Benzer işlemler, standart saat menüsünden de yapılabilir.
 
-Actions supported in the Action tile can request the AAPS phone app for:
+Eylem kutucuğunda desteklenen eylemler, AAPS telefon uygulamasından şunlar için talepte bulunabilir:
 
 * **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
 * **Insulin**; request insulin delivery by entering the unit of insulin
@@ -253,19 +253,19 @@ Actions supported in the Action tile can request the AAPS phone app for:
 
 [1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
 
-### AAPS(Temp Target) Tile
+### AAPS(Geçici Hedef) Kutucuğu
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+Geçici Hedef Kutucuğu, AAPS telefon ön ayarlarına dayalı olarak geçici bir hedef talep edebilir. "Tercihler", "Genel Bakış", ["Varsayılan Geçici Hedefler"](Config-Builder.html#default-temp-targets) seçeneğine giderek telefon uygulaması ayarı aracılığıyla önceden ayarlanmış süreyi ve hedefleri yapılandırın ve her ön ayar için süreyi ve hedefleri ayarlayın. Kutucuk ayarları aracılığıyla kutucuktaki görünür eylemleri yapılandırın. Yapılandırma seçenekleri için kutucuğa uzun basın ve 1 ile 4 arasında seçim yapın:
 
-* **Activity**; for sport
-* **Hypo**; to raise the target during hypo treatment
-* **Eating soon**; to lower the target to raise the insulin on board
-* **Manual**; set a custom temporary target and duration
-* **Cancel**; to stop the current temporary target
+* **Aktivite**; Spor için
+* **Hipo**; hipo tedavisi sırasında hedefi yükseltmek için
+* **Yakında öğün**; aktif insülini yükseltmek için hedefi düşürme
+* **Manuel**; özel bir geçici hedef ve süre belirleme
+* **İptal**; mevcut geçici hedefi durdurmak için
 
 ![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
-### AAPS(QuickWizard)Tile
+### AAPS(Hızlı asistan) Kutucuğu
 
 The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
 
