@@ -54,7 +54,7 @@ Değişiklikler
 * Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
 * Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
 * Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
-* a11y improvements @Andries-Smit
+* a11y iyileştirmeleri @Andries-Smit
 * yeni koruma seçeneği PIN @Andries-Smit
 * menüde grafik ölçeğine izin verme @MilosKozak
 * daha fazla istatistik seçeneği @MilosKozak
