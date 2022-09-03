@@ -79,7 +79,7 @@ Daha fazla ayrıntı için lütfen burayı okuyun.
    :glob:
    :caption: AndroidAPS nasıl yüklerim
 
-   APK Oluşturma <./Installation-Android APS/Building-APK.mod>
+   APK Oluşturma <./Installing-AndroidAPS/Building-APK.md>
    Yeni bir sürüme veya dala güncelleyin <./Installing-AndroidAPS/Update-to-new-version.md>
    AAPS 3.0 güncellemesinden sonra İpuçları ve Kontroller<./Installing-AndroidAPS/update3_0.md>
    AAPS 2.7 güncellemesinden sonra kontroller <./Installing-AndroidAPS/update2_7.rst>
