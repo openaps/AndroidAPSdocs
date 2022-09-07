@@ -223,7 +223,7 @@ Not; kutucukların AAPS telefon uygulamasının mevcut durumunun yerini tutmadı
 
 Kutucukları kullanmadan önce, Android APS'nin "Wear OS" ayarlarında "Saatten Kontrol" seçeneğini açmanız gerekir.
 
-![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+![Wear telefon tercihleri etkin](../images/wear_phone_preferences.jpg)
 
 Wear OS sürümünüze, markanıza ve akıllı telefonunuza bağlı olarak kutucukları etkinleştirmenin iki yolu vardır:
 
@@ -243,15 +243,15 @@ Eylem kutucuğu, 1 ila 4 kullanıcı tanımlı eylem butonunun yerini tutabilir.
 
 Eylem kutucuğunda desteklenen eylemler, AAPS telefon uygulamasından şunlar için talepte bulunabilir:
 
-* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
-* **Insulin**; request insulin delivery by entering the unit of insulin
-* **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
-* **TempT**; set a custom temporary target and duration
+* **Hesap**; karbonhidrat girdisine ve isteğe bağlı bir yüzdeye dayalı bir bolus hesaplaması yapın [1]
+* **İnsülin**; ünite değeri girerek insülin verilmesini isteyin
+* **Tedavi**; hem insülin iletimini talep edin hem de karbonhidrat ekleyin
+* **Karb**; (yayma) karbonhidrat ekle
+* **GeçiciH**; özel bir geçici hedef ve süre belirleyin
 
-![Wear action tile, sample calculator](../images/wear_actions.png)
+![Wear aksiyon kutucuğu, örnek hesap makinesi](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] Bolus hesaplayıcıda yüzde girişini göstermek için Wear OS menüsü aracılığıyla "Hesap Makinesi Yüzdesi" seçeneğini "AÇIK" olarak ayarlayın. Varsayılan yüzde, "Genel Bakış" bölümündeki telefon ayarlarına bağlıdır ["Bolus sihirbazı sonucunun bu kadarını ilet %"](Config-Builder.html#advanced-settings) Kullanıcı bir yüzde belirtmezse, telefondaki varsayılan değer kullanılır. Bolus hesaplayıcı için diğer parametreleri telefon uygulamasında "Tercihler" "Sihirbaz Ayarları" üzerinden yapılandırın.
 
 ### AAPS(Geçici Hedef) Kutucuğu
 
@@ -263,15 +263,15 @@ Geçici Hedef Kutucuğu, AAPS telefon ön ayarlarına dayalı olarak geçici bir
 * **Manuel**; özel bir geçici hedef ve süre belirleme
 * **İptal**; mevcut geçici hedefi durdurmak için
 
-![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+![Waer aksiyon kutucuk düzenle](../images/wear_tile_tempt_edit.png)
 
 ### AAPS(Hızlı asistan) Kutucuğu
 
-The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+Hızlı asistan kutucuğu, telefon uygulaması[2] ile tanımlanan 1 ila 4 hızlı asistan eylem butonunun yerini tutabilir. [Hızlı asistan](Config-Builder.html#quickwizard-settings)'a bakın. Günün saatine bağlı olarak kutucuk üzerinde görüntülenecek standart öğünleri (karbonhidrat ve bolus için hesaplama yöntemi) ayarlayabilirsiniz. Gün içinde en çok yediğiniz öğünler/atıştırmalıklar için idealdir. Hızlı asistan butonlarının telefonda, saatte veya her ikisinde de gösterilip gösterilmeyeceğini belirleyebilirsiniz. Telefonun aynı anda yalnızca bir hızlı asistan butonu gösterebileceğini lütfen unutmayın. Hızlı asistan kurulumu ayrıca bolus için özel bir insülin yüzdesi belirleyebilir. Özel yüzde, örneğin atıştırmalıkları%120, yavaş emilen kahvaltıyı %80 ve şekersiz atıştırmalıkları %0 olarak değiştirmenizi sağlar.
 
-![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+![Waer aksiyon kutucuk ve telefon konfigürasyonu](../images/quickwizard_watch_phone.png)
 
-[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
+[2] Wear OS, kutucuk güncelleme sıklığını yalnızca her 30 saniyede bir ile sınırlar. Telefonunuzdaki değişikliklerin kutucuklara yansımadığını fark ettiğinizde; AAPS'in Wear OS bölümündeki "Tüm verileri yeniden gönder" butonunu kullanarak veya kutucuğu kaldırıp yeniden ekleyerek 30 saniye bekleyin. Hızlı asistan butonlarının sırasını değiştirmek için bir öğeyi yukarı veya aşağı sürükleyin.
 
 ## Her zaman açık
 
@@ -318,13 +318,13 @@ Pil gerektiren başlıca alanlar şunlardır:
 * Farklı aktivite profilleriyle birkaç gün boyunca gözlem yapın. Çoğu saat, bakış, hareket ve kullanımla ilgili diğer tetikleyicilerde ekranı etkinleştirir.
 * GPS etkinleştirildiğinde, performansı etkileyen global sistem ayarlarınızı kontrol edin: bildirimler, arka ışık/etkin ekran zaman aşımı.
 * [Test edilmiş telefonlar ve saatler listesini kontrol edin](../Getting-Started/Phones#list-of-tested-phones) ve diğer kullanıcıların deneyimleri ve bildirilen pil ömrü için [topluluğa sorun](../Where-To-Go-For-Help/Connect-with-other-users.md).
-* **We cannot guarantee that data displayed on watchface or complication is up-to-date**. Sonunda, bir saat yüzünün veya bir komplikasyonun ne zaman güncelleneceğine karar vermek Wear OS'ye kalmıştır. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. Şüphe duyduğunuzda ve saatinizin pili azaldığında - her zaman telefondaki ana AAPS uygulamasıyla iki kez kontrol edin.
+* **Saat arayüzünde veya komplikasyonda görüntülenen verilerin güncel olduğunu garanti edemeyiz**. Sonunda, bir saat yüzünün veya bir komplikasyonun ne zaman güncelleneceğine karar vermek Wear OS'ye kalmıştır. AAPS uygulaması güncelleme talep ettiğinde bile, sistem pilden tasarruf etmek için güncellemeleri ertelemeye veya yok saymaya karar verebilir. Şüphe duyduğunuzda ve saatinizin pili azaldığında - her zaman telefondaki ana AAPS uygulamasıyla iki kez kontrol edin.
 
 ## Wear uygulamasında sorun giderme:
 
 * Bazen uygulamaları saatle yeniden senkronize etmek yardımcı olur, çünkü bunu yapmak biraz yavaş olabilir: Android Wear > Dişli simgesi > Saat adı > Uygulamaları yeniden eşitle.
 * Geliştirici Seçeneklerinde (saatte) ADB hata ayıklamasını etkinleştirin, saati USB üzerinden bağlayın ve Android Studio'da Wear uygulamasını bir kez başlatın.
-* If Complications does not update data - check first if AAPS watchfaces work at all.
+* Komplikasyonlar verileri güncellemiyorsa - önce AAPS saat arayüzlerinin çalışıp çalışmadığını kontrol edin.
 
 ### Sony Smartwatch 3
 
@@ -338,4 +338,4 @@ Başka bir döngü sistemi kullanıyorsanız ve bir Android Wear saatinde döng�
 
 # Pebble
 
-Pebble kullanıcıları, döngü verilerini *görüntülemek* için [Urchin saat yüzünü](https://github.com/mddub/urchin-cgm) kullanabilir (Nightscout'a yüklenmişse), ancak saat aracılığıyla AndroidAPS ile etkileşime geçemezsiniz. Aktif İnsülin ve şu anda etkin olan geçici bazal oranı ve tahminler gibi görüntülenecek alanları seçebilirsiniz. If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble kullanıcıları, döngü verilerini *görüntülemek* için [Urchin saat yüzünü](https://github.com/mddub/urchin-cgm) kullanabilir (Nightscout'a yüklenmişse), ancak saat aracılığıyla AndroidAPS ile etkileşime geçemezsiniz. Aktif İnsülin ve şu anda etkin olan geçici bazal oranı ve tahminler gibi görüntülenecek alanları seçebilirsiniz. Açık döngü durumunda, bildirimin AndroidAPS'den alınıp alınmadığını ve ardından SMS veya push bildirimi gönderildiğini söyleyen bir uygulama oluşturmak için [IFTTT](https://ifttt.com/)'ı kullanabilirsiniz.
