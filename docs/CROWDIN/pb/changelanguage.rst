@@ -1,4 +1,4 @@
-Change language
+Alterar Idioma
 **************************************************
 
 .. note::
