@@ -83,10 +83,10 @@ AndroidAPS подает оповещение, если время на помп�
 
 ### Действия после перевода времени
 
-Хорошее время для перехода - при малом IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+Хорошее время для перехода - при малом IOB. Например, за час до завтрака, (все болюсы в истории помпы будут представлены в виде небольших SMB. И COB и IOB должны быть близки к нулю)
 
-1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
+1. Измените часовой пояс на ваше текущее местоположение и включите автоматический часовой пояс.
+2. AndroidAPS вскоре начнет оповещать вас, что время устройства не совпадает с Combo. So update the pump’s clock manually via the pump’s screen and buttons.
 3. On the AndroidAPS “Combo” screen, press Refresh.
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
    
