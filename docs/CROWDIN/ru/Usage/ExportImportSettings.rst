@@ -20,7 +20,7 @@
 
 * ` Автоматизация <../Usage/Automation.html> ` _события
 * `Конфигуратор <../Configuration/Config-Builder.html>`_ настройки
-* `Local profile <../Configuration/Config-Builder.html#local-profile>`_ settings
+* `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_ настройки
 * `Цели <../Usage/Objectives.html>`_ статус включая `результаты экзамена <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_
 * `Настройки <../Configuration/Preferences.html>`__ включая `Настройки клиента NS <../Configuration/Preferences.html#nsclient>`_
 
