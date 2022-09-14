@@ -45,14 +45,14 @@
 
 ![Bluetooth включен](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
+* Разблокируйте кнопки на помпе, переведите ее в режим остановки, подтвердите возможно отмененный временный базал, и замените батарею.
+* Если время на помпе не сохранилось при замене батареи, переустановите дату и время помпы в точности с датой/временем телефона, на котором работает AAPS.
+* Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
 * AndroidAPS возобновит подачу необходимого временного базала с получением следующего значения ГК. 
 
 ### Типы батарей и причины их короткой жизни
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Поскольку интенсивная связь Bluetooth потребляет много энергии, пользуйтесь только ** высококачественными батареями **, такими как Energizer Ultimate Lithium, Power One" из "большого" сервисного набора Accu-Chek, или, если вы собираетесь пользоваться перезаряжаемым аккумулятором, используйте аккумуляторы Eneloop. 
 
 ![Энерджайзер](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
@@ -62,11 +62,11 @@
 * ** Power One Alkaline ** (Varta) из сервисного набора: 2-4 недели
 * Перезаряжаемые батареи ** Eenlook ** (BK-3MCCE): от 1 до 3 недель
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Если срок службы батареи значительно короче указанных выше диапазонов, проверьте следующие возможные причины:
 
-* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
+* Свежая версия (март 2018 года) приложения [ ruffy ](https://github.com/MilosKozak/ruffy) значительно улучшила время работы батареи помпы. Убедитесь, что у вас самая свежая версия ruffy, если есть проблемы с коротким сроком жизни батареи.
 * Есть некоторые варианты закручивающегося колпачка батарейного отсека помпы Combo, которые частично замыкают батарейку и быстро ее истощают. Колпачки без этой проблемы можно узнать по золотым металлическим контактам.
-* Если часы помпы не "выдерживают" быстрой замены батареи, то, скорее всего, сломался конденсатор, который поддерживает работу часов во время краткочного отключения питания. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
+* Если часы помпы не "выдерживают" быстрой замены батареи, то, скорее всего, сломался конденсатор, который поддерживает работу часов во время краткочного отключения питания. В этом случае поможет только замена помпы Roche, что не является проблемой в течение гарантийного срока. 
 * Аппаратное и программное обеспечение смартфона (операционная система Android и модуль Bluetooth) также влияют на время работы батареи помпы, хотя точные факторы пока неясны. Если у вас есть возможность, попробуйте другой телефон и сравните время жизни батареи.
 
 ## Переход на летнее время
