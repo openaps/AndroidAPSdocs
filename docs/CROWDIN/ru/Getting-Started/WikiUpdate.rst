@@ -1,18 +1,18 @@
 Обновления и изменения в документации
 **************************************************
 
-February 2022
+Февраль 2022
 ==================================================
-* `BG quality warning sign <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
-* `Medtronic pump update <../Configuration/MedtronicPump.html>`_ @dottedfingertips
-* `Necessary checks after update to AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
+* `Предупреждающий знак о качестве данных ГК <../Getting-Started/Screenshots.html#bg-warning-sign>`_ @tanja
+* `Обновление для помп Medtronic <../Configuration/MedtronicPump.html>`_ @dottedfingertips
+* `Необходимые проверки после обновления до AndroidAPS 3.0 <../Installing-AndroidAPS/update3_0.html>`_ @tanja
 * `Omnipod Dash <../Configuration/OmnipodDASH.html>`_ @Freloner @ robertrub @vanelsberg
-* Update docs for AAPS 3.0 (partly) @xJoe
-* `Wear OS for AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
+* Обновление документации по AAPS 3.0 (частично) @xJoe
+* `Wear OS для AAPS 3.0 <../Configuration/Watchfaces.html>`_ @peterleimbach
 
-January 2022
+Январь 2022
 ==================================================
-* `Troubleshooting Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html>`_ - update @tanja
+* ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _обновление @tanja
 
 Декабрь 2021
 ==================================================
@@ -21,7 +21,7 @@ January 2022
 
 ноябрь 2021
 ==================================================
-* Best practices for calibrating a `libre 2 sensor <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
+* Наилучшие методы калибровки сенсора `libre 2 <../Hardware/Libre2.html#best-practices-for-calibrating-a-libre-2-sensor>`_
 * `ISF <../Getting-Started/FAQ.html#impact>`_ переформулирован impact - воздействин
 * Обновление ` Устранение неполадок Android Studio <../Installing-AndroidAPS/troubleshooting_androidstudio.html> ` _
 * Удалено модифицированное приложение `Dexcom <../Hardware/DexcomG6.html>`_ как устаревшее
@@ -85,7 +85,7 @@ January 2022
 
 Май 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Пролонгированный болюс только для помп Dana + Insight <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * `Отключение вибрации на помпе Insight < ../Configuration/Accu-Ch-Insight-Pump.html#vibration> ` _ (только на прошивке 3.x)
 * `Минимальный уровень запроса на отключение уведомлений <../Configuration/Preferences.html#minimal-request-rate> ` _ для сокращения числа уведомлений в режиме открытого цикла
 * `Модифицированное приложение Libre Link < ../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app> ` _- проверьте правильность патча
@@ -108,8 +108,8 @@ January 2022
 * ` Автоматизация <../usage/Automation.html#good-practice-caveats> ` _
 * ` Autosens <../Usage/Open-APS-features.html#autosens> ` _-краткое объяснение
 * '' Альтернативы порталу терапии <../Usage/CPbefore26.html> ` _
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - замкнутый цикл будет деактивирован
+* Новый плагин `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_
 * `Пример установки <../Getting-Started/Sample-Setup.html>`_ - обновление для Dexcom G6
 * Версия 2.6.0 <../Installing-AndroidAPS/Releasenotes.html#version-2-6>`_ - новые функции
 * `Усложнения Wear <../Configuration/watchfaces.html>`_
@@ -131,7 +131,7 @@ January 2022
 ==================================================
 * ` Автоматизация-деактивировать при выключении цикла <../Usage/Automation.html#important-note> ` _
 Замена трансмиттера Dexcom G6 - обновление <../Configuration/xdrip.html#replace-transmitter>`_
-* `Extended bolus - why they do not work in a loop context <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Пролонгированный болюс - почему он не работает в среде замкнутого цикла <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
 * ` FAQ-занятия спортом <../Начало/FAQ.html#спорт> ` _
 * `Главный экран - линии на графике <../Getting-Started/Screenshots.html#section-e>`_
 * ` Insight-Выключить абсолютные значения в NS Client <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
