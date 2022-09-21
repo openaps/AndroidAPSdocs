@@ -303,7 +303,7 @@ You need at least start `objective 11 (in later versions objective 10!) <../Usag
 ------------------
 * Небольшие изменения дизайна (стартовая страница...)
 * Удалена закладка / меню Careportal - подробнее `здесь <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* Новый плагин `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Локальный профиль может иметь более 1 профиля
   * Профили можно копировать и редактировать
@@ -311,7 +311,7 @@ You need at least start `objective 11 (in later versions objective 10!) <../Usag
   * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
   * Vertical NumberPicker для целей
 * SimpleProfile удален
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - замкнутый цикл будет деактивирован
 * Плагин MDT: Исправлена ошибка с дублирующимися записями
 * Единицы не указаны в профиле, но это глобальные параметры
 * Добавлены новые параметры для мастера установки

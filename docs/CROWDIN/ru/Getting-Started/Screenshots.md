@@ -4,7 +4,7 @@
 
 ![Главный экран V2.7](../images/Home2020_Homescreen.png)
 
-Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть повседной информации.
+Это первый экран, который вы увидите, когда откроете AndroidAPS, и он содержит большую часть текущей информации.
 
 ### Раздел А - Вкладки
 
@@ -89,14 +89,14 @@
 
 ##### Красный предупреждающий знак: Дублирующиеся данные ГК
 
-The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
+Красный предупреждающий знак служит сигналом для немедленных действий: поступают дублирующиеся данные ГК, не позволяющие правильно работать алгоритму цикла. Поэтому замкнутый цикл будет отключен до устранения проблемы.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-You need to find out why you get duplicate BGs:
+Следует выяснить, почему поступают дубликаты ГК:
 
-* Is Dexcom bridge enabled on your NS site? Disable the bridge by going to heroku (or any other hosting provider), edit the "enable" variable and remove the "bridge" part there. (For heroku [details can be found here](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Do multiple sources upload your BG to NS? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
+* Активирован ли мост Dexcom на вашем сайте NS? Отключите мост, перейдя в Heroku (или к другому провайдеру хостинга), отредактируйте переменную «enable» и удалите "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
+* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
 * Do you have any followers that might receive your BG but do also upload it again to your NS site?
 * Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
 
