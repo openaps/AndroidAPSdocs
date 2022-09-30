@@ -114,7 +114,7 @@ Opsiyonel Modüller
 ==================================================
 Akıllı saat
 --------------------------------------------------
-Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için 'bu dokümantasyona <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the- G5>`_ bakın).
+Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için `bu dokümantasyona <https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the- G5>`_ bakın).
 
 Kullanıcılar, `test edilmiş telefon ve saatlerin <https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing>`_ listesini oluşturuyor. AndroidAPS ile kullanım için `burada <../Configuration/Watchfaces.html>`__ bulabileceğiniz farklı saat arayüzleri vardır.
 
@@ -130,10 +130,10 @@ Modülleri beklerken yapılması gerekenler
 ==================================================
 Kapalı döngüye geçmek için için tüm modülleri elde etmek bazen biraz zaman alabilir. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. Bazal oranları (BO), insülin-karbonhidrat oranını (IC), insülin-duyarlılık-faktörünü (İDF) vb. (uygun olduğunda) kontrol etmek GEREKLİDİR. Ve bu sırada açık döngü ile sistemi test etme ve AndroidAPS'i tanımak için bir fırsat olabilir. Bu modu kullanarak (açık döngü) AndroidAPS, manuel olarak uygulayabileceğiniz tedavi önerileri verir.
 
-Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, `<../Where-To-Go-For-Help/Background-reading.html>'_ belgelerini veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
+Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, `<../Where-To-Go-For-Help/Background-reading.html>`_ belgelerini veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 
 **Tamamlandı?**
-AAPS bileşenleriniz tamamlandıysa (tebrikler!) veya en azından açık döngü modunda başlamaya yetecek kadar varsa, her yeni görev ve `donanım <../index.html#component-setup>`_ kurulumundan önce ilk olarak 'Görev açıklaması <../Usage/Objectives.html>'_ bölümünü okumalısınız.
+AAPS bileşenleriniz tamamlandıysa (tebrikler!) veya en azından açık döngü modunda başlamaya yetecek kadar varsa, her yeni görev ve `donanım <../index.html#component-setup>`_ kurulumundan önce ilk olarak `Görev açıklaması <../Usage/Objectives.html>`_ bölümünü okumalısınız.
 
 ..
 	Daha fazla konumlandırma esnekliği ile görüntülere ada göre referans vermek için görüntü takma adı kaynağı
