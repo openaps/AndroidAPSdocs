@@ -130,7 +130,7 @@ Modülleri beklerken yapılması gerekenler
 ==================================================
 Kapalı döngüye geçmek için için tüm modülleri elde etmek bazen biraz zaman alabilir. Ama merak etmeyin, beklerken yapabileceğiniz çok şey var. Bazal oranları (BO), insülin-karbonhidrat oranını (IC), insülin-duyarlılık-faktörünü (İDF) vb. (uygun olduğunda) kontrol etmek GEREKLİDİR. Ve bu sırada açık döngü ile sistemi test etme ve AndroidAPS'i tanımak için bir fırsat olabilir. Bu modu kullanarak (açık döngü) AndroidAPS, manuel olarak uygulayabileceğiniz tedavi önerileri verir.
 
-Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, `<../Where-To-Go-For-Help/Background-reading.html>`_ belgelerini veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
+Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, `bu linkteki <../Where-To-Go-For-Help/Background-reading.html>`_ belgeleri veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 
 **Tamamlandı?**
 AAPS bileşenleriniz tamamlandıysa (tebrikler!) veya en azından açık döngü modunda başlamaya yetecek kadar varsa, her yeni görev ve `donanım <../index.html#component-setup>`_ kurulumundan önce ilk olarak `Görev açıklaması <../Usage/Objectives.html>`_ bölümünü okumalısınız.
