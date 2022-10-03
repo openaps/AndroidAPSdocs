@@ -96,13 +96,13 @@
 Следует выяснить, почему поступают дубликаты ГК:
 
 * Активирован ли мост Dexcom на вашем сайте NS? Отключите мост, перейдя в Heroku (или к другому провайдеру хостинга), отредактируйте переменную «enable» и удалите "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
-* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? If you use the BYODA app, enable the upload in AAPS but do not enable it in xDrip+, if you use that.
-* Do you have any followers that might receive your BG but do also upload it again to your NS site?
-* Last resort: In AAPS, go to your NS Client settings, select the sync settings and disable the "Accept CGM data from NS" option.
+* Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте его в xDrip+.
+* Есть ли подписчики, followers, которые могут получать вашу ГК и также снова передавать ее на ваш сайт NS?
+* Последний вариант: В AAPS перейдите в настройки NS Client выберите настройки синхронизации и отключите опцию "Принимать данные CGM из NS".
 
-##### Yellow warning sign
+##### Желтый предупреждающий знак
 
-* The yellow warning signal is indicating that your BG arrived in irregular time intervals or some BGs are missing.
+* Желтый сигнал предупреждения указывает, что значения вашей ГК получены через нерегулярные промежутки времени или имеются пропуски значений.
    
    ![Yellow BG warning](../images/bg_warn_yellow.png)
 
