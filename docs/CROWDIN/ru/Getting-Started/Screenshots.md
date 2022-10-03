@@ -199,8 +199,8 @@
 #### Базал
 
 * **Сплошная синяя** линия показывает базальную скорость помпы и отражает фактическую подачу инсулина с течением времени.
-* The **dotted blue** line is what the basal rate would be if there were no temporary basal adjustments (TBRs).
-* In times standard basal rate is given the area under the curve is shown in dark blue.
+* **пунктирная синяя** линия - это средняя скорость базы, если не было временных настроек базальной скорости (TBR).
+* При стандартной базальной скорости область под кривой показывается в темно-синем цвете.
 * When the basal rate is temporarily adjusted (increased or decreased) the area under the curve is shown in light blue.
 
 #### Activity
@@ -496,11 +496,11 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26#careportal-discontinued) - notes entered through action tab and notes in dialogues
+* [Портал терапии](../Usage/CPbefore26#careportal-discontinued) - примечания, введенные через вкладку действий и примечания в диалогах
 
 ## Источник ГК - xDrip+, BYODA...
 
-![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
+![Вкладка Источник ГК- здесь xDrip](../images/Screenshots_BGSource.png)
 
 * В зависимости от заданного в параметрах источника ГК эта вкладка называется по-разному.
 * Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
