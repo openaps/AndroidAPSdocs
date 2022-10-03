@@ -117,18 +117,18 @@
 
 ### Раздел D - IOB, COD, BR и AS
 
-![Section D](../images/Home2020_TBR.png)
+![Раздел D](../images/Home2020_TBR.png)
 
-* Syringe: insulin on board (IOB) - amount of active insulin inside your body
+* Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
    
-   * The insulin on board figure would be zero if just your standard basal was running and there was no insulin remaining from previous boluses. 
-   * IOB may be negative if there have recently been periods of reduced basal.
-   * Press the icon to see the split of bolus and basal insulin
+   * Значение активного инсулина Iob будет нулевым при подаче только стандартного базального и когда нет остатков от предыдущих болюсов. 
+   * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
+   * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-* Grain: [carbs on board (COB)](../Usage/COB-calculation.rst) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
+* Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.rst) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
 
-* Purple line: basal rate - icon changes reflecting temporary changes in basal rate (flat at 100%) 
-   * Press the icon to see the base basal rate and details of any temp basal (including remaining duration)
+* Иконка с фиолетовой линией: базальная скорость - иконка изменяется в соответствии с текущими настройками базала (прямая линия при базе 100%) 
+   * Нажмите на иконку (только короткое нажатие), чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
 * Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Carbs required
