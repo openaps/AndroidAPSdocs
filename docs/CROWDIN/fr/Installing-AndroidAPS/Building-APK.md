@@ -166,21 +166,21 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 
 ## Télécharger le code AndroidAPS
 
-* On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
+* Sur l'écran d'accueil d'Android Studio, sélectionnez "Projects" (1) à gauche, puis "Get from VCS" (2).
     
     ![Android Studio wizard](../images/studioSetup/20_ProjectVCS.png)
     
-    * If you already opened Android Studio and do not see the welcome screen anymore select File (1) > New (2) > Project from Version Control... (3)
+    * Si vous avez déjà ouvert Android Studio et que vous ne voyez plus l'écran d'accueil, sélectionnez File (1.) > New (2.) > Project from Version Control ... (3)
         
         ![Charger le projet à partir du contrôle de version dans Android Studio](../images/AndroidStudio_FileNew.PNG)
     
-    * We will now tell Android Studio were to get the code from:
+    * Nous allons maintenant indiquer à Android Studio d'où recevoir le code :
     
-    * Make sure you have selected "Repository URL" on the left (1).
+    * Assurez-vous d'avoir sélectionné "Repository URL" sur la gauche (1).
     
-    * Check if "Git" is selected as version control (2).
-    * Copy and paste the URL ```https://github.com/nightscout/AndroidAPS``` to the main AndroidAPS repository into the URL textbox (3).
-    * Choose the directory where you want to save the cloned code (4).
+    * Vérifier si "Git" est sélectionné comme contrôle de version (2).
+    * Copiez et collez l'URL ```https://github.com/nightscout/AndroidAPS``` dans le dépôt principal d'AndroidAPS dans la zone de texte d'URL (3).
+    * Choisissez le répertoire dans lequel vous voulez enregistrer le code cloné (4).
         
         ![Clone Git](../images/studioSetup/21_CloneURL.png)
 
@@ -190,13 +190,13 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 
 * Ne cliquez pas sur "Background" pendant que le répertoire est cloné !
 
-* After the repository is cloned successfully, Android Studio will open the cloned project.
+* Une fois que le dépôt a été cloné avec succès, Android Studio ouvrira le projet cloné.
 
-* You will be asked whether you want to trust the project. Click on "Trust project"!
+* On vous demandera si vous voulez faire confiance au projet. Cliquez sur "Trust project" !
     
     ![Trust project](../images/studioSetup/23_TrustProject.png)
 
-* In the status bar at the bottom you will see the information that Android Studio is running background tasks.
+* Dans le coin inférieur droit, vous verrez l'information qu'Android Studio exécute les tâches d'arrière-plan.
     
     ![Tâches d'arrière-plan](../images/studioSetup/24_GradleSyncRunning.png)
 
@@ -204,22 +204,22 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     
     ![Autorisation java dans le pare-feu](../images/AndroidStudio361_18.png)
 
-* Once the background tasks are finished you will probably see an error saying that errors occurred (1) or (2) or (3).
+* Une fois que les tâches de fond sont terminées, vous verrez probablement une erreur indiquant que des erreurs se sont produites (1) ou (2) ou (3).
     
     ![Licence SDK](../images/studioSetup/25_SyncFailed.png)
     
-    Don't worry, this will be solved soon!
+    Ne vous inquiétez pas, cela sera bientôt résolu!
 
 ## Télécharger Android SDK
 
-* In the menu, go to File (1) > Settings (2).
+* Dans le menu, allez dans "File" (1) > "Settings" (2).
     
     ![Ouvrir les paramètres](../images/studioSetup/30_Settings.png)
 
-* Double-click on Appearance & Behaviour to open its submenu (1).
+* Double-cliquez sur "Appearance & Behaviour" pour ouvrir son sous-menu (1).
 
-* Double-click on System Settings (2) and select Android SDK (3).
-* Tick the box left of "Android 9.0 (Pie)" (4) (API Level 28).
+* Double-cliquez sur "System Settings" (2) et sélectionnez "Android SDK" (3).
+* Cochez la case à gauche de "Android 9.0 (Pie)" (4.) (API niveau 28).
     
     ![Paramètres SDK](../images/studioSetup/31_AndroidSDK.png)
 
@@ -227,11 +227,11 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     
     ![Confirmer les modifications SDK](../images/studioSetup/32_ConfirmSDK.png)
 
-* Accept licence agreement (1) and click "Next" (2).
+* Acceptez le contrat de licence (1) et cliquez sur « Next» (2).
     
     ![Accepter la licence SDK](../images/studioSetup/33_ConfirmLicense.png)
 
-* Wait until the SDK download and installation is finished.
+* Attendez que le téléchargement et l'installation du SDK soient terminés.
     
     ![Attendre lors de l'installation du SDK](../images/studioSetup/34_DownloadSDK.png)
 
@@ -239,23 +239,23 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
     
     ![Terminer l'installation du SDK](../images/studioSetup/35_DownloadSDKfinished.png)
 
-* Android Studio recommande de mettre à jour le "gradle system". **Never update gradle!** This will lead to difficulties!
+* Android Studio recommande de mettre à jour le "gradle system". **Ne jamais mettre à jour gradle !** Cela pourrait entraîner des difficultés !
 
-* If you see an information on the lower right side of your Android Studio window that Android Gradle Plugin is ready to update click on the text "update" (1).
+* Si vous voyez une information sur le côté inférieur droit de votre fenêtre Android Studio qui indique que le plugin Android Gradle est prêt à mettre à jour, cliquez sur le texte "update" (1).
     
     ![No gradle update](../images/studioSetup/36_GradleUpdateRequest.png)
 
-* In the dialog box the select "Don't remind me again for this project" (2).
+* Dans la boîte de dialogue sélectionnez "Don't remind me again for this project" (2).
     
     ![No gradle update](../images/studioSetup/37_GradleUpdateDeny.png)
 
-* Restart Android Studio before you continue.
+* Redémarrez Android Studio avant de continuer.
 
 ## Générer un APK signé
 
 Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
-* After Android Studio is started, wait until all background tasks are finished.
+* Après le démarrage d'Android Studio, attendez que toutes les tâches en arrière-plan soient terminées.
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
