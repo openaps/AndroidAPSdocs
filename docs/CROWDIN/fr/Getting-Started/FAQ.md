@@ -338,38 +338,38 @@ Si vous souhaitez partager des informations sur AndroidAPS et DIY en boucle avec
 
 Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou consulter [Nightscout Reporter](https://nightscout-reporter.zreptil.de/).
 
-# Frequent questions on Discord and their answers...
+# Questions fréquentes sur Discord et leurs réponses...
 
-## My problem is not listed here.
+## Mon problème n'est pas répertorié ici.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-## My problem is not listed here but I found the solution
+## Mon problème n'est pas listé ici, mais j'ai trouvé la solution
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
-**Remind us to add your solution to this list!**
+**Rappelez-nous d'ajouter votre solution à cette liste!**
 
-## AAPS stops everyday around the same time.
+## AAPS s’arrête tous les jours autour de la même heure.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Arrêter la protection Google Play. Vérifiez que les applications "nettoyant" (par ex. CCleaner, etc.) et désinstallez-les. AAPS / Menu 3 points / À propos / Suivre le lien "Garder l'application en cours d'exécution en arrière-plan" pour arrêter toutes les optimisations de batterie.
 
-## How to organize my backups ?
+## Comment organiser mes sauvegardes ?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Exporter les paramètres très régulièrement : après chaque changement de pod, après modification de votre profil, lorsque vous avez terminé et validé un objectif, si vous changez votre pompe… Même si rien ne change, exportez une fois par mois. Conserver plusieurs anciens fichiers d'exportation.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Copiez sur un lecteur internet (Dropbox, Google etc) : toutes les apks que vous avez utilisés pour installer des applications sur votre téléphone (AAPS, xDrip, BYODA, Patched LibreLink…) ainsi que les fichiers de configuration exportés de toutes vos applications.
 
-## I have problems, errors building the app.
+## J'ai des problèmes, des erreurs lors de la construction de l'application.
 
-Please
+Veuillez
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
-- the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
+- vérifier [Dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) pour les erreurs typiques etr
+- suivre les conseils pour un accompagnement [pas à pas](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
-## I'm stuck on an objective and need help.
+## Je suis coincé sur un objectif et j'ai besoin d'aide.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Effectuez une capure d'écran avec la question et les réponses. Postez les sur le canal AAPS sur Discord. N'oubliez pas de préciser quelles options vous choisissez (ou pas) et pourquoi. Vous obtiendrez des conseils et de l'aide, mais vous devrez trouver les réponses vous-même.
 
 ## How to reset the password in AAPS v2.8.x ?
 
