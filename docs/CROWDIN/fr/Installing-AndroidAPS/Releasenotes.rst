@@ -52,9 +52,9 @@ Modifications
 * Amélioration énorme de l'interface UI, nettoyage et standardisation, migration vers "material design", styles, thème blanc, nouvelles icônes. @Andries-Smit @MilosKozak @osodebailar @Philoul
 * widget @MilosKozak
 * support MGC Aidex @andyrozman @markvader (seulement Pumpcontrol)
-* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
+* Montre `les tuiles de Wear OS <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, traductions @Andries-Smit
 * code Wear refactorisé. Plus compatible avec les versions précédentes @MilosKozak
-* a11y improvements @Andries-Smit
+* améliorations a11y @Andries-Smith
 * nouvelle option de protection par code PIN @Andries-Smit
 * modification de l'échelle graphique possible à partir du menu @MilosKozak
 * plus de statistiques disponibles @MilosKozak
