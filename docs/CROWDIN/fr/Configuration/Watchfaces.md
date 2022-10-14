@@ -209,63 +209,63 @@ De plus, il y a trois complications de type `IMAGE LARGE` : **Fond d'écran noir
     * *Aucun* : Désactive l'action sur les complications AAPS
 * **Unicode dans Complications** (par défaut `On`) : Si `On`, la complication utilise des caractères Unicode pour les symboles tels que `Δ` Delta, `⁞` séparateur de point vertical ou `⎍` symbole du débit de basal. Le rendu de ces symboles dépend de la police, et cela peut être très spécifique au cadran. Cette option permet de désactiver les symboles `Unicode` quand c'est nécessaire - si la police utilisée par le cadran personnalisé ne prend pas en charge ces symboles - pour éviter les problèmes graphiques.
 
-## Wear OS Tiles
+## Tuiles Wear OS
 
-Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+Les tuiles Wear OS fournissent un accès facile aux informations et aux actions utilisateur pour faire les choses. Les tuiles ne sont disponibles que sur montres Android fonctionnant sur Wear Os version 2.0 et supérieure.
 
-Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+Les tuiles vous permettent d'accéder rapidement aux actions de l'application AAPS sans passer par le menu de la montre. Les tuiles sont optionnelles et peuvent être ajoutées et configurées par l'utilisateur.
 
-The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+Les tuiles sont utilisées « à côté » de n'importe quel cadran de montre. Pour accéder à une tuile, une fois activé, glissez de droite à gauche sur votre cadran pour les afficher.
 
-Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+Veuillez noter que les tuiles n'affichent pas l'état courant de l'application AAPS et ne feront qu'une demande, qui devra-t être confirmée sur la montre avant d'être appliquée.
 
-## How to add Tiles
+## Comment ajouter les tuiles :
 
-Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+Avant d'utiliser les tuiles, vous devez activer "Commandes depuis la montre" dans les paramètres "Wear OS" d'Android APS.
 
 ![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
 
-Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+Selon votre version de Wear OS, la marque et le smartphone il y a deux façons d'activer les tuiles :
 
-1. On your watch, from your watch face; 
-    * Swipe right to left till you reach the "+ Add tiles" 
-    * Select one of the tiles.
-2. On your phone open the companion app for your watch. 
-    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
-    * In the click on the section "Tiles", followed by "+ Add" button
-    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+1. Sur votre montre, depuis votre cadran : 
+    * Glissez de droite à gauche jusqu'à ce que vous atteigniez le "+ Ajouter des tuiles" 
+    * Sélectionnez une des tuiles.
+2. Sur votre téléphone, ouvrez l'application compagnon pour votre montre. 
+    * Pour Samsung ouvrez "Galaxy Wearable", ou pour d'autres marques "Wear OS"
+    * Cliquez sur la section "Tuiles", puis sur le bouton "+ Ajouter"
+    * Trouvez la tuile AAPS que vous souhaitez ajouter en la sélectionnant. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) L'ordre des tuiles peut être modifié en glisser-déposer
 
-The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+Le contenu des tuiles peut être personnalisé en appuyant longuement sur une tuile et en cliquant sur le bouton "Éditer" ou l'icône "Engrenage".
 
-### APS(Actions) Tile
+### Tuile APS(Actions)
 
-The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+La tuile d'action peut contenir de 1 à 4 boutons d'action définis par l'utilisateur. Pour configurer, appuyez longuement sur la tuile, qui affichera les options de configuration. Des actions similaires sont également disponibles via le menu de montre standard.
 
-Actions supported in the Action tile can request the AAPS phone app for:
+Les actions prises en charge dans la tuile d'action peuvent envoyer des requêtes dans l'application AAPS pour
 
-* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
-* **Insulin**; request insulin delivery by entering the unit of insulin
-* **Treatment**; request both insulin delivery and add carbs
-* **Carbs**; add (extended) carbs
-* **TempT**; set a custom temporary target and duration
+* **Calc** : faire un calcul de bolus, basé sur l'entrée de glucides et avec un pourcentage optionnel [1]
+* **Insuline** : demander l'injection d'insuline en entrant les unités d'insuline
+* **Traitement** : demander à la fois l'injection d'insuline et ajouter des glucides
+* **Glucides** : ajouter des glucides (étendus)
+* **TempT** : définir une cible temporaire personnalisée ainsi que sa durée
 
 ![Wear action tile, sample calculator](../images/wear_actions.png)
 
-[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+[1] Via, le menu Wear OS, réglez l'option "Pourcentage de Calculateur" à "ON" pour afficher le pourcentage d'entrée dans la calculatrice de bolus. Le pourcentage par défaut est basé sur les paramètres du téléphone dans la section "Aperçu" ["Injecter cette partie de Bolus calculée par l’assistant en %"](Config-Builder.html#parametres-avances) Quand l'utilisateur ne fournit pas de pourcentage, la valeur par défaut du téléphone est utilisée. Configurez les autres paramètres de l'assistant bolus dans l'application téléphone via "Préférences" "Paramètres de l'assistant".
 
-### AAPS(Temp Target) Tile
+### AAPS(Cible Temp)
 
-The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+La tuile cible temporaire peut demander une cible temporaire basée sur les préréglages du téléphone AAPS. Configurez l'heure prédéfinie et les cibles à travers les paramètres de l'application téléphone en allant dans "Préférences", "Aperçu", ["Cibles temporaires par défaut"](Config-Builder.html#cibles-temporaires-par-defaut) et définissez la durée et les cibles pour chaque raccourci. Configurez les actions visibles sur la tuile à travers les paramètres de tuile. Faites un appui long sur la tuile pour afficher les options de configuration et sélectionnez 1 à 4 options :
 
-* **Activity**; for sport
-* **Hypo**; to raise the target during hypo treatment
-* **Eating soon**; to lower the target to raise the insulin on board
-* **Manual**; set a custom temporary target and duration
-* **Cancel**; to stop the current temporary target
+* **Activité** : pour le sport
+* **Hypo** : pour augmenter la cible pendant le traitement d'une hypo
+* **Repas imminent** : pour baisser la cible et augmenter l'insuline à bord
+* **Manuel** : pour définir une cible temporaire personnalisée ainsi que sa durée
+* **Annuler** : pout arrêter la cible temporaire actuelle
 
 ![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
 
-### AAPS(QuickWizard)Tile
+### AAPS(Assistant rapide)
 
 The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
 
