@@ -19,7 +19,7 @@ Einstellungen
   .. image:: ../images/Screen_DifferentPump.png
     :alt: Fehler: Basal ist nicht auf Stunden ausgerichtet
 
-* `Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber<../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+* `Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Fehlermeldung: Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber
