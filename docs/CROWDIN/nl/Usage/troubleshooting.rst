@@ -40,6 +40,7 @@ CGM
 ==================================================
 * `Algemeen <../Hardware/GeneralCGMRecommendation.html#problemen-oplossen>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#problemen-oplossen>`_
+* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip geen CGM-gegevens <../Configuration/xdrip.html#identificeer-ontvanger-identify-receiver>`_
 * `xDrip Dexcom probleemoplossing <../Configuration/xdrip.html#probleemoplossing-dexcom-g5-g6-en-xdrip>`_
