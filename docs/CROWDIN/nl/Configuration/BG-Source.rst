@@ -12,6 +12,7 @@ BG bron
    Dexcom G6 <../Hardware/DexcomG6.rst>
    Dexcom G5 <../Hardware/DexcomG5.rst>
    Dexcom G4 <../Hardware/DexcomG4.rst>
+   Libre 3 <../Hardware/Libre3.rst>
    Libre 2 <../Hardware/Libre2.rst>
    Libre 1 <../Hardware/Libre1.rst>
    Eversense <../Hardware/Eversense.rst>
