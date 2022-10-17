@@ -40,6 +40,7 @@
 ==================================================
 * `כללי <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
+* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - אין נתוני סוכר <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - פתרון בעיות עם דקסקום <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_

@@ -19,7 +19,7 @@ Einstellungen
   .. image:: ../images/Screen_DifferentPump.png
     :alt: Fehler: Basal ist nicht auf Stunden ausgerichtet
 
-* `Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+* `Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber<../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
     :alt: Fehlermeldung: Daten kommen von einer anderen Pumpe. Wechsle den Pumpentreiber
@@ -40,6 +40,7 @@ CGM
 ==================================================
 * `Allgemein <../Hardware/GeneralCGMRecommendation.html#problembehandlung>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#problembehandlung-g6>`_
+* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#erfahrungen-und-troubleshooting>`_
 * `xDrip - fehlende CGM Daten <../Configuration/xdrip.html#identifiziere-empfanger>`_
 * `xDrip - Dexcom Problembehandlung <../Configuration/xdrip.html#fehlerbehebung-dexcom-g5-g6-und-xdrip>`_
