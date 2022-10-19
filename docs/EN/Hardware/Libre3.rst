@@ -63,8 +63,7 @@ It you are done, click on “Save” to confirm your setttings. Awesome, you can
 Step 3: Setup Juggluco
 ==================================================
 
-Download and install `Juggluco app from
-GooglePlay <https://play.google.com/store/apps/details?id=tk.glucodata&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1>`_.
+Download the Juggluco .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk>`_ or `here <https://apkfab.com/juggluco/tk.glucodata/apk?h=1fc401ff9fbe7f56e6a0a7068fed6da96592b13757c3b05cddff893d813e18fd>`_ and install it on your phone.
 
 Now let’s open the app. You will be greeted with this screen below. Just click the “Without sensor” button.
 
