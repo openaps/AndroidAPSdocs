@@ -10,7 +10,7 @@ Mevcut sınırlamalar
 
 -  Bu çözümün Freestyle Libre 3 sensörlerinin ABD versiyonuyla çalışıp çalışmadığı şu anda doğrulanmadı!
 - Uygulama sadece arm64 sistemleri (64 bit sistemler) için çalışacaktır. Çoğu modern telefon desteklenir. Emin değilseniz, yamayı yüklemeyi ve uygulamayı başlatmayı deneyin.
--  If you have a rooted system, you need to cover the root. Burada bazı talimatlar var: `link <https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3>`_.
+-  If you have a rooted system, you need to cover the root. Here you got some instructions: `link <https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3>`_.
 - Juggluco (libre3 okumalarını almak için gerekli uygulama) yalnızca İngilizce, Felemenkçe ve İtalyanca dillerini desteklemektedir. Yamalı Libre3 uygulaması şunları destekler: ar, de, es, fr, hi, in, it, ja, ko, my, nl, pt, ru, th, tr ve vi.
 
 Adım 1: Yamalı LibreLink-App'i indirin ve kurun
@@ -23,70 +23,70 @@ Uygulamayı telefonunuza başarıyla yükledikten sonra uygulamayı açın. Aşa
 .. image:: ../images/libre3/step_1.jpg
    :alt: LibreLink uyarısı
 
-If you are on the screen “Create an Account”, you got the option to create a LibreView account. This might be a good option, as you got the possibility to re-enable a sensor with a different app. It also allows you to share the BG data to LibreView. I you don’t like to, just press “Skip” at the top right.
+“Hesap Oluştur” ekranındaysanız, LibreView hesabı oluşturma seçeneğiniz vardır. Bir sensörü farklı bir uygulamayla yeniden etkinleştirme olanağına sahip olduğunuz için bu iyi bir seçenek olabilir. Ayrıca KŞ verilerini LibreView ile paylaşmanıza da olanak tanır. Beğenmediysen sağ üstteki "Atla"ya bas.
 
 .. image:: ../images/libre3/step_2.jpg
-   :alt: LibreView account
+   :alt: LibreView hesabı
 
-Plese select your Unit of Messurement on this screen. You can change it later as well.
+Lütfen bu ekranda Ölçü Biriminizi seçin. Daha sonra da değiştirebilirsiniz.
 
 .. image:: ../images/libre3/step_3.jpg
-   :alt: Measurement Unit selection
+   :alt: Ölçü Birimi seçimi
 
-If you got a Popup, asking for “Ignore battery optimisation?”, click “ALLOW”. This will keep the Libre3 app running in the background.
+"Pil optimizasyonunu yoksay mı?" diye soran bir Pop-up'ınız varsa, "İZİN VER" seçeneğini tıklayın. Bu Libre3 uygulamasının arka planda çalışmasını sağlar.
 
 .. image:: ../images/libre3/step_4.jpg
-   :alt: Disable battery optimisations
+   :alt: Pil optimizasyonlarını devre dışı bırak
 
-Now you should have set up the Libre3 app. Let’s continue with the connection to Juggluco
+Şimdi Libre3 uygulamasını kurmuş olmalısınız. Juggluco bağlantısı ile devam edelim
 
-Step 2: Connect Libre3 with Juggluco
+Adım 2: Libre3'ü Juggluco ile bağlayın
 ==================================================
 
-Open the Libre3 sidebar and select Juggluco.
+Libre3 kenar çubuğunu açın ve Juggluco'yu seçin.
 
 .. image:: ../images/libre3/step_5.jpg
-   :alt: Juggluco menu
+   :alt: Juggluco menüsü
 
-Within the Juggluco menu, ensure "Port" is set to 7117 and click “Add Connection” on the bottom.
+Juggluco menüsünde, "Port"un 7117 olarak ayarlandığından emin olun ve alttaki "Bağlantı Ekle"ye tıklayın.
 
 .. image:: ../images/libre3/step_6.jpg
-   :alt: Juggluco overview
+   :alt: Juggluco'ya genel bakış
 
-Now, fill in everything, according to the image below:
+Şimdi aşağıdaki resme göre her şeyi doldurun:
 
 .. image:: ../images/libre3/step_7.jpg
-   :alt: Libre Juggluco setup
+   :alt: Libre Juggluco kurulumu
 
-It you are done, click on “Save” to confirm your setttings. Awesome, you can close the Libre3 app now!
+Bitirdiyseniz, ayarlarınızı onaylamak için “Kaydet”e tıklayın. Harika, şimdi Libre3 uygulamasını kapatabilirsiniz!
 
-Step 3: Setup Juggluco
+3. Adım: Juggluco'yu Kurun
 ==================================================
 
-Download and install `Juggluco app from
+`Juggluco uygulamasını indirin ve yükleyin
 GooglePlay <https://play.google.com/store/apps/details?id=tk.glucodata&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1>`_.
 
-Now let’s open the app. You will be greeted with this screen below. Just click the “Without sensor” button.
+Şimdi uygulamayı açalım. Aşağıdaki ekran ile karşılaşacaksınız. “Sensörsüz” düğmesine tıklamanız yeterlidir.
 
 .. image:: ../images/libre3/step_8.jpg
-   :alt: Juggluco welcome screen
+   :alt: Juggluco karşılama ekranı
 
-After that, you get a short introduction text. Click on “OK”.
+Bundan sonra kısa bir tanıtım metni alırsınız. "Tamam"ı tıklayın.
 
 .. image:: ../images/libre3/step_9.jpg
-   :alt: Juggluco instroduction screen
+   :alt: Juggluco tanıtım ekranı
 
-Ok, let’s setup Juggluco! The app itself doesn’t have the best Interface, but it’s a very useful app. To open the settings, click anywhere on the top left screen. Now you should see this menu below. Select “Settings”.
+Tamam, Juggluco'yu kuralım! Uygulamanın kendisi en iyi Arayüze sahip değil, ancak çok kullanışlı bir uygulama. Ayarları açmak için sol üst ekranda herhangi bir yere tıklayın. Şimdi bu menüyü aşağıda görmelisiniz. “Ayarlar”ı seçin.
 
 .. image:: ../images/libre3/step_10.jpg
-   :alt: Juggluco settings menu
+   :alt: Juggluco ayarları menüsü
 
-Within the settings, you can configure the data-connection to xDrip. Click on “Send to xDrip” and press “OK”.
+Ayarlar içinde, xDrip ile veri bağlantısını yapılandırabilirsiniz. "xDrip'e Gönder"e tıklayın ve "Tamam"a basın.
 
 .. image:: ../images/libre3/step_11.jpg
-   :alt: Juggluco settings
+   :alt: Juggluco ayarları
 
-Press on the top left center within the Juggluco app. A new menu should pop up. Please select “Mirror”.
+Juggluco uygulamasında sol üst ortadaki kısma basın. Yeni bir menü açılmalıdır. Please select “Mirror”.
 
 .. image:: ../images/libre3/step_12.jpg
    :alt: Juggluco connection menu
