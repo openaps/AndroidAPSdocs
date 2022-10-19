@@ -1,7 +1,7 @@
 Freestyle Libre 3
 **************************************************
 
-Freestyle Libre 3 sistemi, tehlikeli kan şekeri düzeylerini otomatik olarak bildirebilir. Libre3 Sensörü, mevcut kan şekeri seviyesini her dakika bir alıcıya (okuyucu veya akıllı telefon) gönderir. Alıcı, gerekirse bir alarmı tetikler. Değiştirilmiş bir LibreLink uygulaması, Juggluco uygulaması ve xDrip+ uygulaması ile kan şekeri seviyenizi akıllı telefonunuzda sürekli olarak alabilir ve görüntüleyebilirsiniz. Sensör belleğinden daha eski verileri almak bile mümkündür ( iki saatlik, dakikalık glikoz ve iki haftada bir 5 dakikalık geçmiş verileri). Bu Juggluco'ya gönderilir.
+Freestyle Libre 3 sistemi, tehlikeli kan şekeri düzeylerini otomatik olarak bildirebilir. Libre3 Sensörü, mevcut kan şekeri seviyesini her dakika bir alıcıya (okuyucu veya akıllı telefon) gönderir. Alıcı, gerekirse bir alarmı tetikler. With a modified Libre 3 app, Juggluco app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. Sensör belleğinden daha eski verileri almak bile mümkündür ( iki saatlik, dakikalık glikoz ve iki haftada bir 5 dakikalık geçmiş verileri). Bu Juggluco'ya gönderilir.
 
 Sensör, glikometre ölçümleri ve sensör okumaları arasındaki farkları ayarlamak için -40 mg/dl ila +20 mg/dl (-2,2 mmol/l ila +1,1 mmol/l) aralığında kalibre edilebilir.
 
@@ -63,8 +63,7 @@ Bitirdiyseniz, ayarlarınızı onaylamak için “Kaydet”e tıklayın. Harika,
 3. Adım: Juggluco'yu Kurun
 ==================================================
 
-`Juggluco uygulamasını indirin ve yükleyin
-GooglePlay <https://play.google.com/store/apps/details?id=tk.glucodata&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1>`_.
+Download the Juggluco .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk>`_ or `here <https://apkfab.com/juggluco/tk.glucodata/apk?h=1fc401ff9fbe7f56e6a0a7068fed6da96592b13757c3b05cddff893d813e18fd>`_ and install it on your phone.
 
 Şimdi uygulamayı açalım. Aşağıdaki ekran ile karşılaşacaksınız. “Sensörsüz” düğmesine tıklamanız yeterlidir.
 
