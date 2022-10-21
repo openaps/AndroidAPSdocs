@@ -39,33 +39,33 @@ Buttons:
 * red X: delete
 * blue arrow: duplicate
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+If you make any changes to your profile, make sure, you are editing the correct profile. Na záložce profilu nemusí být pokaždé zobrazen aktuální profil. Například když na domovské obrazovce přepnete přes záložku profilu na jiný profil, může pak být aktuální profil odlišný od toho, který je zobrazen v záložce profil, protože mezi nimi není žádné spojení.
 
 #### Klonování přepnutí profilu
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Z přepnutí profilu můžete snadno vytvořit nový místní profil. Posun času a procentuální změna budou v takovém případě přeneseny do nového místního profilu.
 
-1. Click 3-dots-menu in upper right corner.
-2. Select 'Treatments'.
-3. Press star symbol to access profile switch page.
-4. Select the desired profile switch and press "Clone".
-5. You can edit the new local profile in Local Profile (LP) tab or via the hamburger menu.
+1. Klikněte na 3 tečky v pravém horním rohu.
+2. Vyberte „Ošetření“.
+3. Stiskněte symbol hvězdičky pro přístup na stránku přepnutí profilu.
+4. Vyberte požadovaný přepínač profilu, a stiskněte „Klonovat“.
+5. Nový místní profil můžete upravit na kartě Místní profil (MPRF) nebo prostřednictvím hamburger menu.
 
 ![Klonování přepnutí profilu](../images/LocalProfile_ClonePS_AAPS30.png)
 
 #### Nahrávání místních profilů do Nighscoutu
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [nastavení NSClientu](../Configuration/Preferences#nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+![Nahrávání místního profilu do Nighscoutu](../images/LocalProfile_UploadNS_AASP30.png)
 
-#### Change profile in Nighscout profile editor
+#### Změna profilu v Nightscout editoru profilu
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences#nsclient).
+Změny provedené v Nightscout editoru profilu můžete synchronizovat do místního profilu. Nastavení najdete v [nastavení NSClientu](../Configuration/Preferences#nsclient).
 
-It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Klonovat databázové záznamy](../images/Nightscout_Profile_Editor.PNG)
 
 ### Pomocník s profilem
 
@@ -74,56 +74,56 @@ Pomocník s profilem nabízí dvě funkce:
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.rst).
 
 ## Inzulín
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Typ inzulínu](../images/ConfBuild_Insulin_AAPS30.png)
 
-* Select the type of insulin curve you are using.
-* The options 'Rapid-Acting Oref', Ultra-Rapid Oref', 'Lyumjev' and 'Free-Peak Oref' all have an exponential shape. More information is listed in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
-* The curves will vary based on the DIA and the time to peak.
+* Vyberte typ inzulínové křivky, kterou používáte.
+* Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“, „Lyumjev“ a „Volitelný vrchol Oref“ mají exponenciální tvar. Více informací najdete v [dokumentaci k OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
+* Křivky se liší podle DIA a času max. účinnosti inzulínu.
     
-    * PURPLE line shows how much **insulin remains** after it has been injected as it decays with time.
-    * BLUE line shows **how active** insulin is.
+    * FIALOVÁ linka ukazuje, kolik **inzulínu zbývá** poté, co byl aplikován a postupem času se vstřebává.
+    * MODRÁ linka ukazuje, **jak aktivní** inzulín je.
 
 ### Doba působnosti inzulínu
 
-* The DIA is not the same for each person. That's why you have to test it for yourself. 
-* But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots#insulin-profile) page. 
+* Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
+* Vždy to však musí být alespoň 5 hodin.
+* Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
+* Další informace o tom si můžete přečíst v části Inzulinový profil na [ této ](../Getting-Started/Screenshots#insulin-profile) stránce. 
 
-### Insulin type differences
+### Rozdíly v typu inzulínu
 
-* For 'Rapid-Acting', 'Ultra-Rapid' and 'Lyumjev' the DIA is the only variable you can adjust by yourself, the time to peak is fixed. 
-* Free-Peak allows you to adjust both the DIA and the time to peak, and must only be used by advanced users who know the effects of these settings. 
-* The [insulin curve graph](../Getting-Started/Screenshots#insulin-profile) helps you to understand the different curves. 
-* You can view it by enabling the tickbox to show it as a tab, otherwise it will be in the hamburger menu.
+* Pro „Rychle působící“ a „Ultra rychlý“ a „Lyumjev“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. 
+* „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. 
+* Graf [ Křivka inzulínu ](../Getting-Started/Screenshots#insulin-profile) pomáhá pochopit různé křivky. 
+* Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
-#### Rapid-Acting Oref
+#### Rychle působící - Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Inzulin typu Rychle působící - Oref](../images/ConfBuild_Insulin_RAO.png)
 
-* recommended for Humalog, Novolog and Novorapid
-* DIA = at least 5.0h
-* Max. peak = 75 minutes after injection (fixed, not adjustable)
+* doporučeno pro Humalog, Novolog a Novorapid
+* DIA = alespoň 5 h
+* Max. Max. účinek = 75 minut po podání (pevné hodnota, nelze měnit)
 
-#### Ultra-Rapid Oref
+#### Ultra rychlý - Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Inzulin typu Ultra rychlý - Oref](../images/ConfBuild_Insulin_URO.png)
 
-* recommended for FIASP
-* DIA = at least 5.0h
-* Max. peak = 55 minutes after injection (fixed, not adjustable)
+* doporučeno pro FIASP
+* DIA = alespoň 5 h
+* Max. max. účinek = 55 minut po podání (pevná hodnota, nelze měnit)
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Inzulín typu Lyumjev](../images/ConfBuild_Insulin_L.png)
 
-* special insulin profile for Lyumjev
-* DIA = at least 5.0h
-* Max. peak = 45 minutes after injection (fixed, not adjustable)
+* speciální inzulínový profil pro Lyumjev
+* DIA = alespoň 5 h
+* Max. Max. účinek = 45 minut po podání (pevné hodnota, nelze měnit)
 
 #### Free Peak Oref
 
