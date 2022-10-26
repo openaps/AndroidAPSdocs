@@ -31,11 +31,11 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
 
-## Before You Begin
+## Než začnete
 
 **SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, and phone devices are must-haves).
 
-**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. The device that successfully activates the pod is the only device allowed to communicate with it from that point forward. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
+**Your Omnipod Dash PDM will no longer work after the AAPS Dash driver activates your pod.** Previously you used your Dash PDM to send commands to your Dash pod. An Dash pod only allows a single device to send commands to communicate with it. Zařízení, které úspěšně aktivuje POD, je jediné, které může od tohoto okamžiku komunikovat s pumpou. This means that once you activate an Dash pod with your Android phone through the AAPS Dash driver, **you will no longer be able to use your PDM with that pod**. The AAPS Dash driver in your Android phone is now your acting PDM.
 
 *This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup and for emergencies, for instance when your phone gets lost or AAPS is not working correctly.*
 
@@ -81,13 +81,13 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
 
-### Activate Pod
+### Aktivovat Pod
 
 1. Navigate to the **DASH** tab and click on the **POD MGMT (1)** button, and then click on **Activate Pod (2)**.
 
 ![Activate_Pod_1](../images/DASH_images/Activate_Pod/Activate_Pod_1.png)    ![Activate_Pod_2](../images/DASH_images/Activate_Pod/Activate_Pod_2.png)
 
-2. The **Fill Pod** screen is displayed. Fill a new pod with at least 80 units of insulin and listen for two beeps indicating that the pod is ready to be primed. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
+2. The **Fill Pod** screen is displayed. Naplňte nový POD nejméně 80 jednotkami inzulínu a poslouchejte, zda se ozvou dvě pípnutí, která značí, že POD je připraven k plnění. When calculating the total amount of insulin you need for 3 days, please take into account that priming the pod will use about 3-10 units.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
@@ -134,7 +134,7 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
 
-### Deactivate Pod
+### Deaktivovat Pod
 
 Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
@@ -294,7 +294,7 @@ The settings groups are listed below; you can enable or disable via a toggle swi
 
 *NOTE: An asterisk (\*) denotes the default setting is enabled.*
 
-### Confirmation beeps
+### Potvrzovací pípnutí
 
 Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
@@ -303,7 +303,7 @@ Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery
 * **SMB beeps enabled:** Enable or disable confirmation beeps when a SMB is delivered.
 * **TBR beeps enabled:** Enable or disable confirmation beeps when a TBR is set or canceled.
 
-### Alerts
+### Výstrahy
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
@@ -314,7 +314,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 * **Low reservoir alert enabled:** Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
 * **Number of units:** The number of units at which to trigger the pod low reservoir alert.
 
-### Notifications
+### Oznámení
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
@@ -335,7 +335,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ![ACT_1](../images/DASH_images/Actions_Tab/ACT_1.png)
 
-### Level
+### Úroveň
 
 **Insulin Level**
 
