@@ -4,6 +4,12 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 
 ## Pumpy, které lze provozovat se smyčkou
 
+### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Stav smyčky:** Je kandidátem na smyčku. The remote control they use is actually modified Android device. Pump is currently available only in Korea. **Have a look at the release of AndroidAPS 3.2. There is a good chance that it will be avaiable then. As always keep in mind that a chance is not a commitment!**
+
+**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
+
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
@@ -29,12 +35,6 @@ Toto je seznam vybraných pump, které jsou v oběhu mezi diabetiky, a stav jeji
 **Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
-
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Stav smyčky:** Je kandidátem na smyčku. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
-
-**Hardwarové požadavky pro AAPS:** Zřejmě žádné. Zdá se, že podporuje BT.
 
 * * *
 
