@@ -185,10 +185,21 @@ You need to find out why you get duplicate BGs:
 
    Prediction line shows how the IOB trajectory line would change if the pump stopped all insulin delivery (0% TBR).
 
+   *This line appears only when the [SMB](../Configuration/Preferences.html#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+
 
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)
 
   Unannounced meals means that a significant increase in glucose levels due to meals, adrenaline or other influences is detected. Prediction line is similar to the ORANGE COB line but it assumes that the deviations will taper down at a constant rate (by extending the current rate of reduction).
+
+   *This line appears only when the [SMB](../Configuration/Preferences.html#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+
+* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+
+   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+
+   *This line appears only when the older [AMA](../Configuration/Preferences.html#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+
 
 Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
