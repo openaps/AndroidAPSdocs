@@ -1,6 +1,6 @@
 # EOPatch2 Instruction Manual
 
-**Planned but not commited for AndroidAPS 3.2!**
+**Planned but not commited for AndroidAPS 3.2 (next version)!**
 
 The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
 
