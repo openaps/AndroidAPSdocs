@@ -7,5 +7,6 @@
 - [משאבת Diaconn G8](../Configuration/DiaconnG8.rst)
 - [Omnipod Eros](../Configuration/OmnipodEros.rst)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [משאבת Medtronic](../Configuration/MedtronicPump.md)
-- [משאבות עתידיות אפשריות](../Getting-Started/Future-possible-Pump-Drivers.md)
+- [EOPatch2](../Configuration/EOPatch2.md)
+- [Medtronic pump](../Configuration/MedtronicPump.md)
+- [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
