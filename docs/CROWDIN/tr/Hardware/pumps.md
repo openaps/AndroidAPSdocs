@@ -7,5 +7,6 @@
 - [Diaconn G8 insulin pompası](../Configuration/DiaconnG8.rst)
 - [Omnipod Eros](../Configuration/OmnipodEros.rst)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtronic Pompaları](../Configuration/MedtronicPump.md)
-- [Gelecekteki (olası) Pompa Sürücüleri](../Getting-Started/Future-possible-Pump-Drivers.md)
+- [EOPatch2](../Configuration/EOPatch2.md)
+- [Medtronic pump](../Configuration/MedtronicPump.md)
+- [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
