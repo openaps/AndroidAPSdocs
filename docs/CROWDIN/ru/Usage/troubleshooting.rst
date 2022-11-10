@@ -1,4 +1,4 @@
-Устранение неполадок
+Troubleshooting
 **************************************************
 Вы можете найти много информации об устранении неполадок на страницах этого документа. На этой странице собраны ссылки, которые помогут найти решения вашей проблемы.
 
@@ -40,7 +40,7 @@ CGM/Непрерывный мониторинг ГК
 ==================================================
 * `Общие <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
-* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
+* `Libre 3 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - нет данных мониторинга <../Configuration/xdrip.html#identify-receiver>`_
 * `Неполадки xDrip - Dexcom <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_

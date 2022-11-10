@@ -731,7 +731,7 @@ Battery level reporting is a setting that can be enabled to return the current b
   * **Nightscout** - Battery level is reported when an actual level exists, a value of n/a will not be reported
 
 
-Устранение неполадок
+Troubleshooting
 ===============
 
 Pod Failures

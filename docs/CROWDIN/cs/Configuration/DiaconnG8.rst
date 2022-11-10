@@ -1,7 +1,7 @@
-Diaconn G8 Insulin Pump
+Inzulínová pumpa Diaconn G8
 ************************
 
-Insulin Pump Bluetooth Pairing
+Bluetooth párování inzulínové pumpy
 ===============================
 
 - Click on the hamburger menu in the top left corner.
