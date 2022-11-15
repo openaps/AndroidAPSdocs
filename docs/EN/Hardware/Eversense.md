@@ -1,5 +1,7 @@
 # For users of Eversense
 
+See [this link to latest versions](https://cr4ck3d3v3r53n53.club) of the EverSens app (EU and US versions) that works with AAPS.
+
 The easiest way to use Eversense with AndroidAPS is to install the
 non-US modified [Eversense
 app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk)
