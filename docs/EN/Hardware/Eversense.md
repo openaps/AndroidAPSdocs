@@ -9,7 +9,7 @@ app](https://cr4ck3d3v3r53n53.club)
 than one week will be lost!**
 
 To finally get your data to AndroidAPS, you need to install
-[ESEL](github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and
+[ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and
 enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the
 [Configuration Builder](../Configuration/Config-Builder.md) in
 AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is
