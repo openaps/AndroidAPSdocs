@@ -1,8 +1,8 @@
 # For users of Eversense
 
 The easiest way to use Eversense with AndroidAPS is to install the
-non-US or US modified [Eversense
-app](https://cr4ck3d3v3r53n53.club)
+non-US modified [Eversense
+app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk)
 (and uninstall the original one first).
 
 **Warning: by uninstalling the old app, your local historical data older
@@ -18,4 +18,4 @@ good to enable "Smooth Data" in ESEL, which is better than enabling
 
 You can find all APKs including the one for the US and another
 instruction for using xDrip with an Eversense
-[here](https://cr4ck3d3v3r53n53.club).
+[here](https://github.com/BernhardRo/Esel/tree/master/apk).
