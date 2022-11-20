@@ -124,7 +124,7 @@ Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement.
 
 ### Durée du capteur
 
-La durée d'exécution du capteur est fixée à 14 jours. Les 12 heures supplémentaires du capteur Libre1 n'existent plus. Après avoir activé Paramètres moins courants > Advanced settings for Libre2 > "show Sensors Infos in Status", xDrip+ affiche des informations supplémentaires sur le capteur dans le menu système comme le temps de démarrage. Le temps de capteur restant peut également être vu dans l'application LibreLink patchée. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
+La durée d'exécution du capteur est fixée à 14 jours. Les 12 heures supplémentaires du capteur Libre1 n'existent plus. Après avoir activé Paramètres moins courants > Advanced settings for Libre2 > "show Sensors Infos in Status", xDrip+ affiche des informations supplémentaires sur le capteur dans le menu système comme le temps de démarrage. Le temps de capteur restant peut également être vu dans l'application LibreLink patchée, soit dans l'écran principal avec affiché le jours restants, soit dans le menu à trois points->Aide->Journal d'événement sous "Nouveau capteur trouvé" avec le temps de démarrage du capteur.
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
 
