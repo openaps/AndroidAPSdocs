@@ -19,14 +19,14 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
   :alt: Assistant Profil Enfant 1
 
 1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
-2. Ajustez le profil par défaut (basé sur le jeu de données de l'hôpital) en entrant l'âge de l'enfant et le DTI total **ou** le poids.
+2. Ajustez le profil par défaut (basé sur le jeu de données de l'hôpital) en entrant l'âge de l'enfant et le DTQ **ou** le poids.
 3. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 4. Appuyez sur 'Profil actuel' et sélectionnez 'Profil par défaut DPV'.
 
 .. image:: ../images/ProfileHelperKids2.png
   :alt: Assistant Profil Enfant 2
 
-5. Ajustez le Profil par défaut DPV (basé sur le jeu de données d'un autre hôpital) en entrant l'âge, le pourcentage de basal et aussi le DTI Total **ou** le poids.
+5. Ajustez le Profil par défaut DPV (basé sur le jeu de données d'un autre hôpital) en entrant l'âge, le pourcentage de basal et aussi le DTQ **ou** le poids.
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
@@ -63,7 +63,7 @@ Si vous utilisez des `profils locaux <../Configuration/Config-Builder.html#profi
   :alt: Assistant profile Dupliquer le Profil / Changement de profil
   
 1. Sélectionnez le Profil / Changement de profil désiré comme décrit ci-dessus.
-2. Si vous utilisez « Profil par défaut » ou « Profil par défaut DPV » (basé sur un ensemble de données d'hôpitaux pour enfants) assurez-vous que vous entrez les paramètres corrects pour l'âge, le pourcentage de basal et DTI / poids.
+2. Si vous utilisez « Profil par défaut » ou « Profil par défaut DPV » (basé sur un ensemble de données d'hôpitaux pour enfants) assurez-vous que vous entrez les paramètres corrects pour l'âge, le pourcentage de basal et DTQ / poids.
 3. Appuyez sur le bouton 'DUPLIQUER' en bas de l'écran.
 4. Confirmez avec 'OK'.
 5. Activez le nouveau profil dans l'onglet Profil Local.
