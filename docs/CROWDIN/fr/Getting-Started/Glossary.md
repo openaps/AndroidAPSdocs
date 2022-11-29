@@ -349,7 +349,7 @@
 <tr>
  <td><strong>DTB (TBB)</strong></td>
  <td>Débit Total de Base (somme des débits de base sur 24 heures</td>
- <td>TBR / TDD</td>
+ <td>DBT / DTQ</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -359,7 +359,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DTI</strong></td>
+ <td><strong>DTQ</strong></td>
  <td>Dosage Total d'Insuline (bolus + base par jour)</td>
  <td>TBB / TBR</td>
  <td>&nbsp;</td>
