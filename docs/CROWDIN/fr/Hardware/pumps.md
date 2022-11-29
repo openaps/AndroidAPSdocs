@@ -7,5 +7,5 @@
 - [Pompe Diaconn G8](../Configuration/DiaconnG8.rst)
 - [Omnipod Eros](../Configuration/OmnipodEros.rst)
 - [Omnipod Dash](../Configuration/OmnipodDASH.md)
-- [Medtronic pump](../Configuration/MedtronicPump.md)
-- [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
+- [Pompe Medtronic](../Configuration/MedtronicPump.md)
+- [Futurs pilotes de pompe possibles](../Getting-Started/Future-possible-Pump-Drivers.md)

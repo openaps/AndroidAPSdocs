@@ -1,7 +1,7 @@
 Freestyle Libre 3
 **************************************************
 
-The Freestyle Libre 3 system can automatically report dangerous blood glucose levels. The Libre3 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. Le récepteur déclenche une alarme si nécessaire. With a modified Libre 3 app, Juggluco app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. It's even possible to receives older data out of the sensor memory (two hours minutely glucose and two weeks once per 5 minute history data.) This is sendt to Juggluco.
+Le système Freestyle Libre 3 peut automatiquement signaler des niveaux de glycémie dangereux. The Libre3 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. Le récepteur déclenche une alarme si nécessaire. With a modified Libre 3 app, Juggluco app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. It's even possible to receives older data out of the sensor memory (two hours minutely glucose and two weeks once per 5 minute history data.) This is sendt to Juggluco.
 
 Le capteur peut être étalonné de -40 mg/dl à +20 mg/dl (-2,2 mmol/l à +1,1 mmol/l) pour ajuster les différences entre les glycémies capillaires et les lectures des capteurs.
 
@@ -13,15 +13,15 @@ Current limitations
 -  If you have a rooted system, you need to cover the root. Here you got some instructions: `link <https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3>`_.
 -  Juggluco (required app to receive the libre3 readings) does only support English, Dutch and Italian languages. The patched Libre3 app does support: ar, de, es, fr, hi, in, it, ja, ko, my, nl, pt, ru, th, tr and vi.
 
-Step 1: Download and setup the patched LibreLink-App
+Étape 1 : Téléchargez et configurez l'application LibreLink patchée
 ==================================================
 
-Download the patched .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Patched%20Apk/Libre%203_v3.3.0_apkfab.com.apk>`_ or `here <https://apkfab.com/libre-3/com.freestylelibre3.app.de/apk?h=142cfbb2e0b1f10cd280408b10c5a5127e46e00e78d7775dae382529921487e9>`_ and install it on your phone.
+Téléchargez le fichier .apk patché `ici <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Patched%20Apk/Libre%203_v3.3.0_apkfab.com.apk>`_ ou `ici <https://apkfab.com/libre-3/com.freestylelibre3.app.de/apk?h=142cfbb2e0b1f10cd280408b10c5a5127e46e00e78d7775dae382529921487e9>`_ et installez-le sur votre téléphone.
 
-After you successfully installed the app on your phone, open the app. If you see any warning like the one below, you can ignore it. (The app is working with any EU sensor)
+Une fois que vous avez installé l'application sur votre téléphone, ouvrez l'application. Si vous voyez un avertissement comme celui ci-dessous, vous pouvez l'ignorer. (L'application fonctionne avec n'importe quel capteur européen)
 
 .. image:: ../images/libre3/step_1.jpg
-   :alt: LibreLink warning
+   :alt: avertissement LibreLink
 
 If you are on the screen “Create an Account”, you got the option to create a LibreView account. This might be a good option, as you got the possibility to re-enable a sensor with a different app. It also allows you to share the BG data to LibreView. I you don’t like to, just press “Skip” at the top right.
 
@@ -40,27 +40,27 @@ If you got a Popup, asking for “Ignore battery optimisation?”, click “ALLO
 
 Now you should have set up the Libre3 app. Let’s continue with the connection to Juggluco
 
-Step 2: Connect Libre3 with Juggluco
+Étape 2 : Connectez Libre3 avec Juggluco
 ==================================================
 
 Open the Libre3 sidebar and select Juggluco.
 
 .. image:: ../images/libre3/step_5.jpg
-   :alt: Juggluco menu
+   :alt: menu Juggluco
 
 Within the Juggluco menu, ensure "Port" is set to 7117 and click “Add Connection” on the bottom.
 
 .. image:: ../images/libre3/step_6.jpg
-   :alt: Juggluco overview
+   :alt: Vue d'ensemble Juggluco
 
 Now, fill in everything, according to the image below:
 
 .. image:: ../images/libre3/step_7.jpg
-   :alt: Libre Juggluco setup
+   :alt: configuration Juggluco Libre
 
 It you are done, click on “Save” to confirm your setttings. Awesome, you can close the Libre3 app now!
 
-Step 3: Setup Juggluco
+Étape 3 : Configurez Juggluco
 ==================================================
 
 Download the Juggluco .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk>`_ or `here <https://apkfab.com/juggluco/tk.glucodata/apk?h=1fc401ff9fbe7f56e6a0a7068fed6da96592b13757c3b05cddff893d813e18fd>`_ and install it on your phone.
@@ -106,15 +106,15 @@ Now start the Libre3 sensor with the patched app by simply scanning the sensor. 
 
 Paramètres obligatoires pour réussir le démarrage du capteur :
 
--  NFC enabled / BT enabled
--  memory and location permission enabled
--  location service enabled
--  automatic time and time zone setting
--  set at least one alarm in the patched app
+-  NFC activé / BT activé
+-  autorisation de mémoire et d'emplacement activée
+-  service d'emplacement activé
+-  réglage automatique de l'heure et du fuseau horaire
+-  définir au moins une alarme dans l'application patchée
 
 Veuillez noter que l'activation du service de localisation est primordial. Il ne s'agit pas de l'autorisation d'application qui doit être également définie !
 
-Step 4: Finally set up xDrip
+Étape 4 : enfin configurez xDrip
 ==================================================
 
 Les glycémies sont reçues sur le smartphone par l'application xDrip+. 
@@ -130,7 +130,7 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 .. image:: ../images/Libre2_Tags.jpg
   :alt: xDrip+ journaux LibreLink
 
-Step 5: Start sensor within xDrip
+Étape 5 : Démarrez le capteur dans xDrip
 ==================================================
 
 Dans xDrip+ démarrez le capteur avec "Start Sensor" et "not today". 
@@ -139,7 +139,7 @@ En fait, cela ne démarre aucun capteur Libre2 ou n'interagit en aucun cas avec 
 
 Après un changement de capteur, xDrip+ détectera automatiquement le nouveau capteur et supprimera toutes les données d'étalonnage. Vous pouvez vérifier la glycémie capillaire après l'activation et effectuer un nouvel étalonnage initial.
 
-Step 6: Configure AndroidAPS (for looping only)
+Étape 6 : Configurez AndroidAPS (pour la boucle uniquement)
 ==================================================
 
 * Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+' 
@@ -150,14 +150,14 @@ Jusqu'à présent, en utilisant le Freestyle Libre 2 comme source Gly, vous ne p
 Astuces et Dépannages
 ==================================================
 
-Troubleshooting Libre3 no readings
+Dépannage Libre3 sans lectures
 --------------------------------------------------
 
--  Android location service is not granted - please enable it in the system settings
--  automatic time and time zone not set - please change the settings accordingly
--  Bluetooth is switched off - please switch on
+-  le service de localisation Android n'est pas autorisé - veuillez l'activer dans les paramètres système
+-  le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
+-  le Bluetooth est éteint - veuillez l'activer
 
-Troubleshooting Libre3 -> Juggluco connection
+Dépannage Libre3 -> Connexion Juggluco
 --------------------------------------------------
 
 -  Ensure if Libre3 is receiving any readings
@@ -167,9 +167,9 @@ Troubleshooting Libre3 -> Juggluco connection
 -  Wait some time or try to force close Juggluco
 -  Older versions of Juggluco (below 2.9.6) will not send back-filled data from the Libre3 sensor to connected devices (for example Juggluco on WearOS.) It is possible that you have to press "Resend Data" on within the patched Libre 3 app (Juggluco menu) for this.
 
-Further help
+Aide supplémentaire
 --------------------------------------------------
 
-Original instructions: `jkaltes website <http://jkaltes.byethost16.com/Juggluco/libre3/>`_
+Instructions d'origine : `site web jkaltes <http://jkaltes.byethost16.com/Juggluco/libre3/>`_
 
-Additional Github repo: `Github link <https://github.com/maheini/FreeStyle-Libre-3-patch>`_
+Dépôt Github Supplémentaire : `Lien Github <https://github.com/maheini/FreeStyle-Libre-3-patch>`_

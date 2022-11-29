@@ -37,7 +37,7 @@ Les fonctions suivantes peuvent être déclenchées à partir de la montre :
     * vérifier l'état de la pompe
     * vérifier l'état de la pompe
     * vérifier et modifier le profil (décalage horaire + pourcentage)
-    * montrer le DTI (Dosage Total d'Insuline quotidien = bolus + basale par jour)
+    * montrer la DTQ (Dose Totale Quotidienne = bolus + basale par jour)
 
 ## Cadrans AAPS
 
