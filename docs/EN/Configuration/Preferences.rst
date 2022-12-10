@@ -219,7 +219,7 @@ Superbolus
 
 Treatment safety
 ===========================================================
-Patient age
+Patient type
 -----------------------------------------------------------
 * Safety limits are set based on the age you select in this setting. 
 * If you start hitting these hard limits (like max bolus) it's time to move one step up. 
