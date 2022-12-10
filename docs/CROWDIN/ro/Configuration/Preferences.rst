@@ -219,7 +219,7 @@ Superbolus
 
 Siguranța tratamentului
 ===========================================================
-Vârsta pacientului
+Patient type
 -----------------------------------------------------------
 * Limitele de siguranţă sunt stabilite in baza vârstei selectate în această setare. 
 * Dacă ajungi în situația de a atinge limite de siguranță (de ex. valoarea maximă a bolusului), probabil este cazul să incrementezi varsta. 
@@ -246,7 +246,7 @@ Mod APS
 * Comutare între buclă deschisă și închisă, precum și Suspendare la Hipoglicemie (LGS)
 * La **Buclă deschisă** sugestiile de RBT (rata bazala temporara) făcute pe baza datelor tale apar ca notificare. After manual confirmation, the command to dose insulin will be transferred to pump. La utilizarea pompei virtuale RBT trebuie introdusa manual.
 * La ** Bucla inchisa* * sugestiile de RBT sunt trimise automat la pompă, fără confirmare sau introducere manuala.  
-* La ** Suspendare la Hipoglicemie (LGS = low glucose suspend)**  se intrerupe temporar rata bazala (RB).
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Cerere de schimbare minimală [%]
 -----------------------------------------------------------
