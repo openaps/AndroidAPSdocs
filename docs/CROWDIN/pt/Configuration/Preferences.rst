@@ -219,7 +219,7 @@ Superbolus
 
 Treatment safety
 ===========================================================
-Patient age
+Patient type
 -----------------------------------------------------------
 * Safety limits are set based on the age you select in this setting. 
 * If you start hitting these hard limits (like max bolus) it's time to move one step up. 
@@ -246,7 +246,7 @@ APS mode
 * Toggle between open and closed looping as well as low glucose suspend (LGS)
 * **Open looping** means TBR suggestions are made based on your data and appear as a notification. After manual confirmation, the command to dose insulin will be transferred to pump. Only if you use virtual pump you have to enter it manually.
 * **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.  
-* **Low glucose suspend** gives you the possibility to enter into Low Glucose Suspend without the need for the reverting an objective.
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Minimal request change [%]
 -----------------------------------------------------------
