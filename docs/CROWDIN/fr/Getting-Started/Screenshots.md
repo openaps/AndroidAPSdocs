@@ -410,10 +410,10 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Dosage Total d'Insuline = bolus + base par jour
 * Certains médecins utilisent - en particulier pour les nouveaux utilisateurs de pompes - une proportion basal-bolus de 50:50. 
 * Par conséquent, le rapport est calculé ainsi DTQ/(2*DTB) (Dose Totale de Basale = somme des débits de basal en 24 heures). 
-* D'autres préfèrent une fourchette allant de 32% à 37% de DTI pour DTB. 
+* D'autres préfèrent une fourchette allant de 32% à 37% de DTQ pour DTB. 
 * Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
-![Historique + DTI](../images/Home2021_Action_HB_TDD.png)
+![Historique + DTQ](../images/Home2021_Action_HB_TDD.png)
 
 ## Profil d'Insuline
 

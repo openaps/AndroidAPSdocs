@@ -7,7 +7,7 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 
 ### Voor je een horloge aanschaft...
 
-* Sommige functies zoals *complications* vereisen Wear OS versie 2.0 of recenter om te functioneren
+* Sommige functies zoals *complicaties* vereisen Wear OS versie 2.0 of recenter om te functioneren
 * Google heeft *Android Wear 1.x* omgedoopt naar *Wear OS* vanaf versie 2.x. Indien een smartwatch met *Android Wear* wordt aangeduid, kan het goed zijn dat het de oudere 1.x versie heeft
 * Als in een beschrijving van smartwatch alleen compatibiliteit met *Android* en *iOS* aangegeven wordt, betekent het **niet** dat deze draait op *Wear OS* - het kan net zo goed een ander soort fabrikant specifieke OS zijn **die niet compatibel is met AAPS wear!**.
 * Controleer de [lijst van geteste telefoons en horloges](../Getting-Started/Phones.md) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund

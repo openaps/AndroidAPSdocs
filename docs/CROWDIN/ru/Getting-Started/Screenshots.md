@@ -347,12 +347,12 @@
 
 * По соображениям безопасности галочка активного инсулина IOB не может быть снята когда отмечены активные углеводы COB, из-за риска передозировки инсулина, так как AAPS не может заново пересчитать то, что уже дано.
 * Если отметить галочками COB и IOB, то будут учтены неусвоенные углеводы которые еще не покрыты инсулином + все инсулины, которые были введены в качестве временного базала или супермикроболюса SMB.
-* If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
-* If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
+* Если вы нажимаете IOB без COB, AAPS принимает в расчет уже поданный инсулин, но не углеводы, которые предстоит усвоить. Это приводит к уведомлению о "недостатке углеводов".
+* Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 
-#### Wrong COB detection
+#### Неверное обнаружение активных углеводов COB
 
-![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorption.png)
 
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 

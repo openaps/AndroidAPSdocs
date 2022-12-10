@@ -1,20 +1,20 @@
 # Liste des téléphones testés
 
-Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
+Actuellement, un support amical maintient une liste de téléphones utilisés avec AAPS et les pompes à insuline Omnipods, c'est un des derniers développements de pilote de pompe et il y avait besoin de communication entre les premiers testeurs.
 
-If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
+Si dans le futur il y a à nouveau besoin d'une liste de matériel compatible et que quelqu'un veut prendre soin de cette liste, s'il vous plaît contactez-nous!
 
-The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
+Le responsable actuel de la liste a passé beaucoup de temps et d'efforts pour faciliter la saisie des données. mais aussi pour s'assurer que les données existantes ne peuvent pas être accidentellement écrasées ou supprimées. Cette expérience peut être renouvelée avec Google Sheet.
 
 ## Omnipod
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+La liste du téléphone testé est accessible via le lien suivant [liste de téléphones testés avec la pompe à insuline Omnipod](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
-With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+Avec CRTL-F vous pouvez effectuer une recherche dans le texte de la feuille Google. La feuille est protégée en écriture. Pour enregistrer votre test de téléphone, veuillez remplir le [formulaire](https://forms.gle/g7GbSkMCTfFrWKjSA).
 
-After you fill in the form data the maintainer will check the data and approve it for publishing!
+Après avoir rempli les données du formulaire, le responsable vérifiera les données et les approuvera pour publication!
 
-Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+Pour tout problème constaté dans la feuille de calcul, veuillez nous contacter directement ou via un Issue GitHub dans le projet openaps/AndroidAPSDocs.
 
 # Fond d'écran
 
