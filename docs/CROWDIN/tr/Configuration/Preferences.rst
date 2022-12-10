@@ -219,7 +219,7 @@ Süperbolus
 
 Tedavi güvenliği
 ===========================================================
-Hasta yaşı
+Patient type
 -----------------------------------------------------------
 * Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir. 
 * Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir. 
@@ -246,7 +246,7 @@ APS modu
 * Açık ve kapalı döngü ile düşük glikoz süspansiyonu (DGS) arasında geçiş yapar
 * **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. Manuel onaydan sonra, insülin dozlama komutu pompaya aktarılacaktır. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
 * **Kapalı döngü**, GBO önerilerinin sizden onay veya girdi almadan otomatik olarak pompanıza gönderildiği anlamına gelir.  
-* **Düşük glikoz süspansiyonu**, bitirilmiş bir görevi iptal etmeye gerek kalmadan Düşük Glikoz süspansiyonuna girme imkanı verir.
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Minimum istek değişikliği [%]
 -----------------------------------------------------------
