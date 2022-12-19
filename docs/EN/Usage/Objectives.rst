@@ -98,7 +98,7 @@ Closed loop will not correct high BG values in objective 6 as it is limited to l
     :alt: Example negative IOB
 
 * Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
-* Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon or selecting from `Preferences <../Configuration/Preferences.html>`__.
+* Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
 * Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.
 
