@@ -87,31 +87,34 @@ Tikslas 6: pradėkite Uždaro ciklo (Closed Loop) režimą su pompos stabdymu es
 .. image:: ../images/sign_warning.png
   :alt: Įspėjamasis ženklas
   
-Uždaras ciklas nekoreguos aukštos glikemijos 6 tiksle, nes jį apriboja sustabdymas dėl žemos gliukozės. Todėl jūs turite patys koreguoti aukštą glikemiją!
+Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* Select Closed Loop either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Open Loop button in the top left of the home screen.
-* Nustatykite tikslinę glikemiją šiek tiek didesnę, nei įprastai, kad užtikrintumėte saugumą.
-* Galite analizuoti laikinų valandinių bazių aktyvumą stebėdami mėlyną tekstą pagrindiniame ekrane arba mėlyną sritį grafike.
-* Įsitikinkite, kad jūsų AndroidAPS nustatymai yra teisingi. Stebėkite jo veikimą per 5 dienas. Jei jums nereikia įsikišti rankiniu būdu ir koreguoti žemą glikemiją, nustatymai yra teisingi.  Jei vis tiek pasikartoja dažna ar sunki hipoglikemija, turėtumėte koreguoti IVT, valandinę bazę, JIF ar insulino ir angliavandenių santykio rodiklius.
-* Jums nereikia keisti nustatymų. Kol esate 6 tiksle, maksimalus aktyvaus insulino kiekis organizame automatiškai nustatomas ties nuliu. Šio parametro pakeitimas nuliu bus atšauktas, kai pasieksite 7 tikslą.
-* Sistema pakeis jūsų maxAIO nustatymus iki nulio, o tai reiškia, kad jei cukraus kiekis kraujyje krinta, tai gali sumažinti jūsų valandinę bazę, tačiau jei cukraus kiekis kraujyje didėja, valandinė bazė bus padidinta tik tuo atveju, jei bazės AIO yra neigiama (iš ankstesnio sustabdymo esant žemai glikemijai), kitu atveju, valandinė bazė išliks tokia pati kaip ir jūsų pasirinktas profilis.  
+* Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+* You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
+* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you, but if blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend, otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.** 
+* Jei jūsų bazės AIO yra neigiama (žr. viršuje pateiktą ekrano nuotrauką), 6 tiksle taip pat galima nustatyti laikiną bazė didesnę nei 100%.
 
-  .. image:: ../images/Objective6_negIOB.png
+.. image:: ../images/Objective6_negIOB.png
     :alt: Neigiamo AIO pavyzdys
 
-* Jei jūsų bazės AIO yra neigiama (žr. viršuje pateiktą ekrano nuotrauką), 6 tiksle taip pat galima nustatyti laikiną bazė didesnę nei 100%.
+* Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
+* Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon or selecting from `Preferences <../Configuration/Preferences.html>`__.
+* Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * Dėl to Jūs galite patirti laikinus staigius glikemijos šuolius, ypač po hipoglikemijos korekcijos, nes neturėsite galimybės padidinti valandinės bazės.
 
-Tikslas 7: koreguokite savo uždarąjį ciklą po truputį didindami maks AIO ir mažindami tikslinę glikemijos reikšmę
-====================================================================================================
-* Vienai dienai nustatykite „maksimalų bendrą AIO, kurio negalima viršyti“ (OpenAPS vadinamą „max-iob“) reikšmę, didesnę nei 0. Rekomenduojama numatytoji reikšmė yra „vidutinis valgio boliusas + 3 x didžiausia dienos valandinė bazė" (SMB algoritmui) arba 3x didžiausia dienos valandinė bazė (senesniam AMA algoritmui), tačiau turėtumėte palaipsniui artėkite prie šios reikšmės, kol sužinosite, kad nustatymas jums tinka (didžiausia dienos valandinė bazė = didžiausia valandinė bazė per visą paros laikotarpį).
 
-  Ši rekomendacija turėtų būti laikoma atskaitos tašku. Jei naudosite koeficientą 3x ir pastebėsite, kad AAPS veikia per daug agresyviai, sumažinkite šį koeficientą (pvz., 2x, ...). Jei esate rezistentiškas, galite po truputį jį pakelti.
+Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+====================================================================================================
+* Select 'Closed Loop' either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+
+  Ši rekomendacija turėtų būti laikoma atskaitos tašku. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
 
   .. image:: ../images/MaxDailyBasal2.png
     :alt: max daily basal
 
-* Nustačius jums tinkamo aktyvaus insulino kiekį, sumažinkite savo tikslinę glikemiją iki norimo lygio.
+* Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+
 
 
 Tikslas 8: jei reikia, koreguokite valandinės bazės reikšmes bei pagrindinius parametrus ir įgalinkite Autosens funkciją
