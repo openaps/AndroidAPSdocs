@@ -55,4 +55,4 @@ Algoritma neden AKRB'yi doğru algılamıyor?
 
 Girilen karbonhidratların manuel olarak düzeltilmesi
 ==================================================
-Karbonhidratları gereğinden fazla veya az girdiyseniz, bunu `burada <../Getting-Started/Screenshots.html#carb-correction>` açıklandığı gibi tedaviler sekmesi ve eylemler sekmesi aracılığıyla düzeltebilirsiniz.
+Karbonhidratları gereğinden fazla veya az girdiyseniz, bunu `burada <../Getting-Started/Screenshots.html#carb-correction>`_ açıklandığı gibi tedaviler sekmesi ve eylemler sekmesi aracılığıyla düzeltebilirsiniz.
