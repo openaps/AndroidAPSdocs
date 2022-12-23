@@ -16,34 +16,38 @@ Current restrictions
    (There are several apps to find out if the smartphone is rooted, one of them is e.g. [root-checker.org](https://root-checker.org/))
 -  The Juggluco app only supports English, Dutch and Italian languages.
 
-Step 1: Download and setup the patched LibreLink-App
+Step 1: Download and set up the Libre3 app
 ==================================================
 
-Download the patched .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Patched%20Apk/Libre%203_v3.3.0_apkfab.com.apk>`_ or `here <https://apkfab.com/libre-3/com.freestylelibre3.app.de/apk?h=142cfbb2e0b1f10cd280408b10c5a5127e46e00e78d7775dae382529921487e9>`_ and install it on your phone.
+Install the Libre 3 app from the Playstore and open it. On the home screen, click Sign In. Registration with your Libreview account is mandatory - if you don't have one yet, you can create one.
 
-After you successfully installed the app on your phone, open the app. If you see any warning like the one below, you can ignore it. (The app is working with any EU sensor)
+.. image:: ../images/libre3/1.jpg
+   :alt: Libre3 start screen
 
-.. image:: ../images/libre3/step_1.jpg
-   :alt: LibreLink warning
+.. image:: ../images/libre3/2.jpg
+   :alt: Libreview login
 
-If you are on the screen “Create an Account”, you got the option to create a LibreView account. This might be a good option, as you got the possibility to re-enable a sensor with a different app. It also allows you to share the BG data to LibreView. I you don’t like to, just press “Skip” at the top right.
+You must then accept Abbott's Terms of Service. The last one is optional and can also be rejected.
 
-.. image:: ../images/libre3/step_2.jpg
-   :alt: LibreView account
+.. image:: ../images/libre3/4.jpg
+   :alt: Libre 3 Term
 
-Plese select your Unit of Messurement on this screen. You can change it later as well.
+.. image:: ../images/libre3/5.jpg
+   :alt: Libre 3 Term
 
-.. image:: ../images/libre3/step_3.jpg
-   :alt: Measurement Unit selection
+.. image:: ../images/libre3/6.jpg
+   :alt: Libre 3 Term
 
-If you got a Popup, asking for “Ignore battery optimisation?”, click “ALLOW”. This will keep the Libre3 app running in the background.
+Adjust the app step by step according to your needs. If you see this message about disabling battery optimization, tap "Allow".
 
-.. image:: ../images/libre3/step_4.jpg
-   :alt: Disable battery optimisations
+.. image:: ../images/libre3/10.jpg
+   :alt: Libre 3 battery optimization
 
-Now you should have set up the Libre3 app. Let’s continue with the connection to Juggluco
+After setting up the Libre 3 app, you can already activate your first sensor. To do this, scan the sensor as shown and wait for the sensor to warm up within the next 60 minutes.
 
-Step 2: Connect Libre3 with Juggluco
+.. image:: ../images/libre3/12.jpg
+   :alt: Enable Libre 3 Sensor
+
 ==================================================
 
 Open the Libre3 sidebar and select Juggluco.
