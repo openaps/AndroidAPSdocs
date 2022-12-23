@@ -178,6 +178,16 @@ It is possible to switch back from Juggluco to the Libre 3 app as receiver. The 
 Experiences and Troubleshooting
 ==================================================
 
+Necessary settings for a successful sensor start
+--------------------------------------------------
+
+-  NFC enabled / BT enabled
+-  Storage and location permission enabled
+-  Location service enabled
+-  Automatic time and time zone setting
+
+Please note that the location service is a central setting. It is not about the location permission of the app, which must be set as well!
+
 Troubleshooting Libre3 no readings
 --------------------------------------------------
 
