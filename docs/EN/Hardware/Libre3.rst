@@ -48,26 +48,28 @@ After setting up the Libre 3 app, you can already activate your first sensor. To
 .. image:: ../images/libre3/12.jpg
    :alt: Enable Libre 3 Sensor
 
+Step 2: Stop Libre 3 app
 ==================================================
 
-Open the Libre3 sidebar and select Juggluco.
+After the sensor has started successfully and the first sensor reading is visible, you can continue. Now open the settings and select the menu option for "Apps".
 
-.. image:: ../images/libre3/step_5.jpg
-   :alt: Juggluco menu
+.. image:: ../images/libre3/13.jpg
+   :alt: App settings
 
-Within the Juggluco menu, ensure "Port" is set to 7117 and click “Add Connection” on the bottom.
+You then search for the Libre 3 app. Once you have found it, tap on it.
 
-.. image:: ../images/libre3/step_6.jpg
-   :alt: Juggluco overview
+.. image:: ../images/libre3/14.jpg
+   :alt: Libre 3 app settings
 
-Now, fill in everything, according to the image below:
+Now tap "Stop" or "Force stop". The exact button may vary depending on the Android version.
 
-.. image:: ../images/libre3/step_7.jpg
-   :alt: Libre Juggluco setup
+.. image:: ../images/libre3/15.jpg
+   :alt: Exit Libre 3
 
-It you are done, click on “Save” to confirm your setttings. Awesome, you can close the Libre3 app now!
+If there is another request, you can confirm it with "OK".
 
-Step 3: Setup Juggluco
+.. image:: ../images/libre3/16.jpg
+   :alt: Exit Libre 3
 ==================================================
 
 Download and install `Juggluco app from
