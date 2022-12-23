@@ -193,17 +193,26 @@ Troubleshooting Libre3 no readings
 
 -  Android location service is not granted - please enable it in the system settings
 -  automatic time and time zone not set - please change the settings accordingly
--  Bluetooth is switched off - please switch on
+-  Bluetooth is switched off - please switch on¨
+-  Make sure the Libre 3 sensor is not connected to any other device.
 
-Troubleshooting Libre3 -> Juggluco connection
+Troubleshooting Juggluco no readings
 --------------------------------------------------
 
--  Ensure if Libre3 is receiving any readings
--  Check your settings & password again
--  Click “Sync” within Libre3->Juggluco and “Sync” and “Reinit” button within Juggluco->Mirror
--  It is possible that sometimes after configuring everything, you have to force close Libre3 and restart it.
--  Wait some time or try to force close Juggluco
--  Older versions of Juggluco (below 2.9.6) will not send back-filled data from the Libre3 sensor to connected devices (for example Juggluco on WearOS.) It is possible that you have to press "Resend Data" on within the patched Libre 3 app (Juggluco menu) for this.
+-  Check if the Libre 3 app is stopped.
+-  Rescan the Libre 3 sensor within the Juggluco app
+-  Make sure the sensor has been activated with the current Libreview account
+-  Check if a sensor number is visible in Juggluco
+-  The sensor is usually connected to the smartphone within 3 minutes, but it can also take longer.
+-  If the Bluetooth connection cannot be established, try restarting the smartphone.
+-  Make sure the Libre 3 sensor is not connected to any other device.
+
+Troubleshooting Blood sugar readings not uploading to Libreview
+--------------------------------------------------
+
+-  Check your internet connection
+-  Make sure Juggluco is receiving blood sugar readings
+-  Ensure the "Send to Libreview" checkbox is checked within Juggluco->Settings->Libreview
 
 Further help
 --------------------------------------------------
