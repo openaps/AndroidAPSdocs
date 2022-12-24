@@ -219,7 +219,7 @@ Superbolus
 
 Behandelingen veiligheid
 ===========================================================
-Leeftijd Patiënt
+Patient type
 -----------------------------------------------------------
 * Veiligheidslimieten worden ingesteld op basis van de leeftijd die je in deze instelling selecteert. 
 * Als je tegen de beperkingen van zo'n zogenaamde 'harde limiet' (zoals max bolus) aanloopt, dan is het tijd om te kiezen voor de daaropvolgende categorie. 
@@ -246,7 +246,7 @@ APS Mode
 * Schakelt tussen open loop, gesloten loop en 'stop bij laag'
 * **Open loop** betekent dat AAPS indien nodig suggesties doet voor hogere/lagere basaalstanden. After manual confirmation, the command to dose insulin will be transferred to pump.  
 * **Closed loop** (gesloten loop) betekent dat hogere/lagere basaalstanden (en SMBs, als je dat aan hebt staan) automatisch naar je pomp worden verzonden zonder bevestiging of invoer van jou.  
-* **Stop bij laag** betekent dat AAPS wél lagere basaalstanden instelt als je BG teveel zakt, maar als je BG teveel stijgt, zal hij geen hogere basaalstand instellen (tenzij IOB<0).
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Minimale verzoek voor aanpassing [%]
 -----------------------------------------------------------

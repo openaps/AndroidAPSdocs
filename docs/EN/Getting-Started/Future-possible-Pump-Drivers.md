@@ -4,6 +4,16 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps that are Loopable
 
+***
+
+### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AndroidAPS 3.2.
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+***
+
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 
@@ -31,15 +41,6 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 **Loop status:** Is a Loop candidate. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
 
 **Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
-***
-
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
-
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
 
 ***
 

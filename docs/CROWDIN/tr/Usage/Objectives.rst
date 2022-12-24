@@ -87,31 +87,34 @@ Görev 6: Düşük KŞ'de Duraklatma ile döngüyü kapatmaya başlamak
 .. image:: ../images/sign_warning.png
   :alt: Uyarı işareti
   
-Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek kş değerlerini düzeltmeyecektir. Yüksek kş değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
+Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* `Tercihler <../Configuration/Preferences.html>`__ içinden veya ana ekranın sol üst köşesindeki Açık Döngü düğmesini basılı tutarak Kapalı Döngü'yü seçin.
-* Güvende olmak için hedef aralığınızı genellikle hedeflediğinizden biraz daha yükseğe ayarlayın.
-* Ana ekranda mavi bazal metnini veya ana ekran grafiğinde mavi bazal oluşturmayı görüntüleyerek geçici bazallerin nasıl aktif olduğunu izleyin.
-* 5 günlük bir süre boyunca düşük glikozu tedavi etmekten kaçınmak için ayarlarınızın AndroidAPS'yi desteklediğinden emin olun.  Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, DIA, bazal, ISF ve karbonhidrat oranlarınızı iyileştirmeyi düşünün.
-* Ayarlarınızı değiştirmeniz gerekmez. Görev 6 sırasında maxAİNS ayarı dahili olarak otomatik olarak sıfıra ayarlanır. Görev 7'ye geçildiğinde bu geçersiz kılma tersine çevrilecektir.
-* Sistem, maxAİNS ayarlarınızı sıfır olarak geçersiz kılar; bu kan şekeri düşüyorsa sizin için bazali azaltabileceği anlamına gelir, ancak kan şekeri yükseliyorsa, yalnızca bazal AİNS negatifse (önceki Düşük Glikoz Duraklatmadan) bazal artacaktır. Aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır.  
+* Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+* You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
+* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.** 
+* If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
 
-  .. image:: ../images/Objective6_negIOB.png
+.. image:: ../images/Objective6_negIOB.png
     :alt: Örnek negatif AİNS
 
-* Bazal AİNS'niz negatifse (üstteki ekran görüntüsüne bakın) görev 6'da da bir GBO > %100 verilebilir.
+* Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
+* Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
+* Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * Tedavi edilen hipoları takiben, geri tepmede bazal artırma yeteneği olmadan geçici olarak ani artışlar yaşayabilirsiniz.
 
-Görev 7: Kapalı döngüyü ayarlamak, maksimum AİNS'i 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
-====================================================================================================
-* 'Maksimum toplam Aktif İnsülin (AİNS) değerinizi OpenAPS aşamaz' (OpenAPS'de 'maks-ains' olarak adlandırılır) değerini 1 günlük bir süre boyunca 0'ın üzerine yükseltin, varsayılan öneri "ortalama yemek bolusu + 3x maksimum günlük bazal" (SMB algoritması için) veya "3x maks günlük bazal" (daha eski AMA algoritması için) Ancak ayarların sizde nasıl tepki verdiğini bilene kadar bu değeri yavaş yavaş yükseltmelisiniz. (maks günlük bazal = günün herhangi bir zaman dilimindeki maksimum saatlik değer).
 
-  Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
+Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+====================================================================================================
+* Select 'Closed Loop' either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+
+  Bu öneri bir başlangıç noktası olarak görülmelidir. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
 
   .. image:: ../images/MaxDailyBasal2.png
     :alt: maks günlük bazal
 
-* Döngü modellerinize ne kadar AİNS uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
+* Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+
 
 
 Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin

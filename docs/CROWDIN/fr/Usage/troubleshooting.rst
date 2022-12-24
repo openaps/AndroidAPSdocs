@@ -40,7 +40,7 @@ MGC
 ==================================================
 * `Généralités <../Hardware/GeneralCGMRecommendation.html#resolution-de-problemes>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#depannage-g6>`_
-* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
+* `Libre 3 <../Hardware/Libre3.html#astuces-et-depannages>`_
 * `Libre 2 <../Hardware/Libre2.html#astuces-et-depannages>`_
 * `xDrip - pas de données MGC <../Configuration/xdrip.html#identifier-le-recepteur>`_
 * `Dépannage xDrip - Dexcom <../Configuration/xdrip.html#depannage-dexcom-g5-g6-et-xdrip>`_

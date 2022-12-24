@@ -87,33 +87,34 @@
 .. image:: ../images/sign_warning.png
   :alt: Warning sign
   
-הלולאה הסגורה שבמשימה 6 לא תתקן ערכי סוכר גבוהים כי היא מוגבלת להפסקת הזרקת אינסולין כתיקון לסוכר נמוך. עליכם לתקן סוכר גבוה ידנית בעצמכם!
+Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* בחרו בלולאה סגורה `בהעדפות <../Configuration/Preferences.html>`__ או ע"י לחיצה ארוכה על צלמית הלולאה הפתוחה בחלק העליון של המסך הראשי, בצד שמאל (אם שפת AAPS היא עברית).
-* הגדירו טווח מטרה גבוה במעט מזה שבו השתמשתם, ליתר ביטחון.
-* צפו בפעילות המינונים הבזאליים הזמניים ע"י קריאתם בטקסט כחול במסך הראשי ובצפייה בגרף הבזאלי הכחול שבתחתית הגרף הראשי.
-* וודאו שההגדרות שלכם אפשרו לכם להמנע מהיפוגלקמיות במשך 5 ימים.  אם אתם עדיין חווים היפוגליקמיות תכופות, שקלו לבצע שינויים ב-DIA, במינונים הבזאליים, ביחס הפחמימות וביחס התיקון.
-* אין חובה לשנות את הגדרותיכם. לאורך משימה 6, ערכו של maxIOB מוגדר כ-0 מאחורי הקלעים באופן אוטומטי. הגדרה זו תבוטל לאחר התחלת משימה 7.
-המערכת תתעלם מהגדרת ה-maxIOB ותאפס אותה. משמעות הדבר היא שכשרמת הסוכר יורדת המערכת תוריד את המינון הבזאלי בעצמה אך אם רמת הסוכר עולה, היא תגביר את המינון הבזאלי רק אם האינסולין הפעיל (IOB) הבזאלי הנוכחי שלילי (ממצב השהייה קודם), אחרת המינון הבזאלי יהיה כמו שהוא בפרופיל.  
+* Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
+* You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
+* The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.** 
+* If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
 
-  .. image:: ../images/Objective6_negIOB.png
+.. image:: ../images/Objective6_negIOB.png
     :alt: Example negative IOB
 
-* אם האינסולין הבזאלי הפעיל שלילי (ראו תמונה מעלה), מינון בזאלי זמני > 100% יכול להינתן גם במסגרת משימה 6.
+* Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
+* Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
+* Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 * ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
-משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
-====================================================================================================
-* העלו את 'מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג' (נקרא גם 'max-IOB' ב-OpenAPS) ליותר מ-0 במשך יממה אחת. 
-המלצת ברירת המחדל היא X3 המינון הבזאלי המקסימלי (עבור אלגוריתם AMA הישן, שנמצא בשימוש של משתמשים חדשים) או X3 המינון הבזאלי המקסימלי + בולוס ארוחה ממוצע (עבור אלגוריתם SMB). עליכם להתקדם אל ערך זה באופן מדורג עד שהגדרה זו עובדת היטב. 
-מינון בזאלי מקסימלי = המינון הבזאלי המרבי שניתן מכל שעה שהיא ביממה.
 
-  המלצה זו היא נקודת התחלה. אם הגדרתם X3 בזאלי מרבי ואתם חווים תגובות חריפות ומהירות ברמת הסוכר, הורידו את ערך. אם יש לכם תנגודת גבוהה, הגדילו את הערך בעדינות ובאופן מדורג.
+Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+====================================================================================================
+* Select 'Closed Loop' either from `Preferences <../Configuration/Preferences.html>`__ or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+* Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+
+  המלצה זו היא נקודת התחלה. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
 
   .. image:: ../images/MaxDailyBasal2.png
     :alt: max daily basal
 
-* כאשר תרגישו שערך האינסולין הפעיל מתאים לפעולת הלופ שלכם, הורידו את ערכי מטרה שלכם כרצונכם.
+* Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+
 
 
 משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens

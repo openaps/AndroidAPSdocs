@@ -81,7 +81,7 @@ After you installed the new apk, you can check the AAPS version on your phone by
 
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
-# Устранение неполадок
+# Troubleshooting
 
 If anything goes wrong, don't panic.
 

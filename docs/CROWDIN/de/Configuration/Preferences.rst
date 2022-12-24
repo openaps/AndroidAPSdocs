@@ -219,7 +219,7 @@ Superbolus
 
 Sicherheitseinstellungen der Behandlungen
 ===========================================================
-Alter des Patienten
+Patient type
 -----------------------------------------------------------
 * Sicherheitsgrenzwerte werden auf der Grundlage des Alters festgelegt, das Du in dieser Einstellung auswählst. 
 * Wenn du an diese festen Grenzen (z.B. Maximal-Bolus) kommst, ist es an der Zeit, einen Schritt weiter zu gehen. 
@@ -246,7 +246,7 @@ APS-Modus
 * Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
 * **Open Loop** bedeutet, dass Empfehlungen für temporäre Änderungen der Basalrate als Benachrichtigung auf dem Smartphone gegeben werden. Nach der manuellen Bestätigung wird das Kommando an die Pumpe übertragen und Insulin abgegeben. Nur wenn Du eine virtuelle Pumpe verwendest, musst Du die Änderungen selbst manuell an der Pumpe eingeben.
 * **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.  
-* **Low glucose suspend** gibt Dir die Möglichkeit, in den LGS-Modus (Reduzierung der Basalrate bei niedrigen Glukosewerten) zu wechseln ohne dafür eines der Ziele (objectives) zurücksetzen zu müssen.
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Minimaler Wert zur Anfrage einer Änderung [%]
 -----------------------------------------------------------

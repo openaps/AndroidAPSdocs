@@ -219,7 +219,7 @@ Superbolus
 
 Bezpečnostní omezení ošetření
 ===========================================================
-Věk pacienta
+Patient type
 -----------------------------------------------------------
 * Bezpečnostní limity jsou nastaveny na základě věku, který jste zvolili v tomto nastavení. 
 * Pokud začnete narážet na pevně nastavené limity (jako například na maximální bolus), je čas posunout se o stupeň výš. 
@@ -246,7 +246,7 @@ Typ smyčky
 * Přepíná mezi uzavřenou, otevřenou smyčkou i pozastavením při nízké glykémii (LGS)
 * **Otevřená smyčka** znamená, že návrhy dočasného bazálu jsou provedeny na základě vašich dat, a zobrazí se jako oznámení. After manual confirmation, the command to dose insulin will be transferred to pump. Pouze v případě že máte nastavenou virtuální pumpu je nutné inzulín aplikovat ručně.
 * **Uzavřená smyčka** znamená, že dočasné bazály jsou automaticky, bez jakéhokoliv potvrzení z vaší strany, posílány přímo do pumpy.  
-* **Pozastavení při nízké glykémii** dává možnost vstoupit do režimu Pozastavení při nízké glykémii bez nutnosti měnit aktuální cíl.
+* **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 Minimální změna pro výzvu [%]
 -----------------------------------------------------------

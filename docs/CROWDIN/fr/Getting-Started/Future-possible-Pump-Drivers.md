@@ -133,7 +133,7 @@ They plan to release t:Mobi first (previously called t:sport) at end of 2022 or 
 - Définir un bolus étendu
 - Annuler Bolus étendu
 - Lire l'historique
-- Lire le TDI
+- Lire la TDQ
 
 * * *
 
