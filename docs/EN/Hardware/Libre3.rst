@@ -1,131 +1,145 @@
 Freestyle Libre 3
 **************************************************
 
-The Freestyle Libre 3 system can automatically report dangerous blood glucose levels. The Libre3 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a modified Libre 3 app, Juggluco app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone. It's even possible to receives older data out of the sensor memory (two hours minutely glucose and two weeks once per 5 minute history data.) This is sendt to Juggluco.
+The Freestyle Libre 3 system can automatically report dangerous blood glucose levels. The Libre3 sensor sends the current blood glucose value to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With the help of the Juggluco app, the sensor can be taken over after the start and connected to Xdrip+, AndroidAPS or Libreview. In this way, the blood sugar values can be transmitted directly. It is even possible to receive historical data from the sensor's memory (two hours of minutely glucose and two weeks of once per 5 minute historical data) to be sent to Juggluco.
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
+The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between the bloody reading and the sensor readings.
 
-Current limitations
+Current restrictions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
--  It's currently not confirmed if this solution is working with US version of the Freestyle Libre 3 sensors!
--  The app will only work for arm64 systems (64 bit systems). Most modern phones are supported. If you are unsure, just try to install the patch and try to start the app.
--  If you have a rooted system, you need to cover the root. Here you got some instructions: `link <https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3>`_.
--  Juggluco (required app to receive the libre3 readings) does only support English, Dutch and Italian languages. The patched Libre3 app does support: ar, de, es, fr, hi, in, it, ja, ko, my, nl, pt, ru, th, tr and vi.
+-  This solution currently does not work with the US variant of Libre3
+-  If you have a rooted system, you have to hide it. You can find instructions here: [Link](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share\&utm_medium=web2x\&context=3).
+   (There are several apps to find out if the smartphone is rooted, one of them is e.g. [root-checker.org](https://root-checker.org/))
+-  The Juggluco app only supports English, Dutch and Italian languages.
 
-Step 1: Download and setup the patched LibreLink-App
+Step 1: Download and set up the Libre3 app
 ==================================================
 
-Download the patched .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Patched%20Apk/Libre%203_v3.3.0_apkfab.com.apk>`_ or `here <https://apkfab.com/libre-3/com.freestylelibre3.app.de/apk?h=142cfbb2e0b1f10cd280408b10c5a5127e46e00e78d7775dae382529921487e9>`_ and install it on your phone.
+Install the Libre 3 app from the Playstore and open it. On the home screen, click Sign In. Registration with your Libreview account is mandatory - if you don't have one yet, you can create one.
 
-After you successfully installed the app on your phone, open the app. If you see any warning like the one below, you can ignore it. (The app is working with any EU sensor)
+.. image:: ../images/libre3/1.jpg
+   :alt: Libre3 start screen
 
-.. image:: ../images/libre3/step_1.jpg
-   :alt: LibreLink warning
+.. image:: ../images/libre3/2.jpg
+   :alt: Libreview login
 
-If you are on the screen “Create an Account”, you got the option to create a LibreView account. This might be a good option, as you got the possibility to re-enable a sensor with a different app. It also allows you to share the BG data to LibreView. I you don’t like to, just press “Skip” at the top right.
+You must then accept Abbott's Terms of Service. The last one is optional and can also be rejected.
 
-.. image:: ../images/libre3/step_2.jpg
-   :alt: LibreView account
+.. image:: ../images/libre3/4.jpg
+   :alt: Libre 3 Term
 
-Plese select your Unit of Messurement on this screen. You can change it later as well.
+.. image:: ../images/libre3/5.jpg
+   :alt: Libre 3 Term
 
-.. image:: ../images/libre3/step_3.jpg
-   :alt: Measurement Unit selection
+.. image:: ../images/libre3/6.jpg
+   :alt: Libre 3 Term
 
-If you got a Popup, asking for “Ignore battery optimisation?”, click “ALLOW”. This will keep the Libre3 app running in the background.
+Adjust the app step by step according to your needs. If you see this message about disabling battery optimization, tap "Allow".
 
-.. image:: ../images/libre3/step_4.jpg
-   :alt: Disable battery optimisations
+.. image:: ../images/libre3/10.jpg
+   :alt: Libre 3 battery optimization
 
-Now you should have set up the Libre3 app. Let’s continue with the connection to Juggluco
+After setting up the Libre 3 app, you can already activate your first sensor. To do this, scan the sensor as shown and wait for the sensor to warm up within the next 60 minutes.
 
-Step 2: Connect Libre3 with Juggluco
+.. image:: ../images/libre3/12.jpg
+   :alt: Enable Libre 3 Sensor
+
+Step 2: Stop Libre 3 app
 ==================================================
 
-Open the Libre3 sidebar and select Juggluco.
+After the sensor has started successfully and the first sensor reading is visible, you can continue. Now open the settings and select the menu option for "Apps".
 
-.. image:: ../images/libre3/step_5.jpg
-   :alt: Juggluco menu
+.. image:: ../images/libre3/13.jpg
+   :alt: App settings
 
-Within the Juggluco menu, ensure "Port" is set to 7117 and click “Add Connection” on the bottom.
+You then search for the Libre 3 app. Once you have found it, tap on it.
 
-.. image:: ../images/libre3/step_6.jpg
-   :alt: Juggluco overview
+.. image:: ../images/libre3/14.jpg
+   :alt: Libre 3 app settings
 
-Now, fill in everything, according to the image below:
+Now tap "Stop" or "Force stop". The exact button may vary depending on the Android version.
 
-.. image:: ../images/libre3/step_7.jpg
-   :alt: Libre Juggluco setup
+.. image:: ../images/libre3/15.jpg
+   :alt: Exit Libre 3
 
-It you are done, click on “Save” to confirm your setttings. Awesome, you can close the Libre3 app now!
+If there is another request, you can confirm it with "OK".
 
-Step 3: Setup Juggluco
+.. image:: ../images/libre3/16.jpg
+   :alt: Exit Libre 3
+
+Step 3: Install & set up Juggluco
 ==================================================
 
-Download the Juggluco .apk file `here <https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk>`_ or `here <https://apkfab.com/juggluco/tk.glucodata/apk?h=1fc401ff9fbe7f56e6a0a7068fed6da96592b13757c3b05cddff893d813e18fd>`_ and install it on your phone.
+Now install the `Juggluco App <https://play.google.com/store/apps/details?id=tk.glucodata>`_ from the Playstore (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
 
-Now let’s open the app. You will be greeted with this screen below. Just click the “Without sensor” button.
+After installing Juggluco, several messages may appear. Allow Juggluco to find, locate and connect nearby devices.
 
-.. image:: ../images/libre3/step_8.jpg
-   :alt: Juggluco welcome screen
+.. image:: ../images/libre3/17.jpg
+   :alt: Allow Juggluco connections
 
-After that, you get a short introduction text. Click on “OK”.
+A request to deactivate the battery optimization may appear as well. Tap "Allow". This is important to keep the app running in the background.
 
-.. image:: ../images/libre3/step_9.jpg
-   :alt: Juggluco instroduction screen
+.. image:: ../images/libre3/18.jpg
+   :alt: Disable Juggluco battery optimization
 
-Ok, let’s setup Juggluco! The app itself doesn’t have the best Interface, but it’s a very useful app. To open the settings, click anywhere on the top left screen. Now you should see this menu below. Select “Settings”.
+Tap OK when Juggluco is introduced.
 
-.. image:: ../images/libre3/step_10.jpg
-   :alt: Juggluco settings menu
+.. image:: ../images/libre3/19.jpg
+   :alt: Disable Juggluco battery optimization
 
-Within the settings, you can configure the data-connection to xDrip. Click on “Send to xDrip” and press “OK”.
+Now you will see the Juggluco home screen. Click onto the empty space within the upper left half. You can see the approximate position here.
 
-.. image:: ../images/libre3/step_11.jpg
-   :alt: Juggluco settings
+.. image:: ../images/libre3/20.jpg
+   :alt: Open Juggluco Menu
 
-Press on the top left center within the Juggluco app. A new menu should pop up. Please select “Mirror”.
+This menu will open. Here you can select "Settings".
 
-.. image:: ../images/libre3/step_12.jpg
-   :alt: Juggluco connection menu
+.. image:: ../images/libre3/21.jpg
+   :alt: Juggluco Menu
 
-You should see this screen. Please check the port settings on the top right corner, which should be set to "8795" and after that, tap on "Add Connection". (Keep in mind, within the Juggluco app the ports are switched) 
+This page will then show up. In the selection "1." you have two options:
 
-.. image:: ../images/libre3/step_13.jpg
-   :alt: Juggluco connection screen
+1. "Send to xDrip" -> With this setting, the blood sugar readings are sent to xDrip. Select "Libre2 patched" or "Libre 2 (patched app)" as the recipient within xDrip.
+2. "xDrip broadcast" -> With this setting, the minutely blood sugar reading are sent directly to AndroidAPS. The blood glucose source must be set to "xDrip+" within AndroidAPS.
 
-Now let’s fill in all the settings as shown below and your password according to your Libre3 password. If you did that - press “Save” to confirm.
+To start the sensor, choose "2." the "Libreview" checkbox.
 
-.. image:: ../images/libre3/step_14.jpg
-   :alt: Juggluco connection settings
+.. image:: ../images/libre3/22.jpg
+   :alt: Juggluco Settings
 
-Well done! You can now try to press the “Sync” button within the previous menu. After some time, Juggluco should receive the blood glucose values automatically from Libre3 app.
+In the next screen you have to enter your login data for Libreview. It must be the account with which the sensor was activated. Then click on "Get Account ID".
 
-Now start the Libre3 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done. You can use a sensor that was already used with the original Libre3 app if you specify the same LibreView account name. You have to press "Start New Sensor" and  scan the sensor. If you want to go back to the unpatched Libre 3 app, you have to do the same.
+.. image:: ../images/libre3/23.jpg
+   :alt: Connect Libreview
 
-Mandatory settings for successful sensor start:
+If everything went well, a multi-digit number should now be visible below the "Resend data" button. This process may take some time - if the number still doesn't appear, check your internet connection and try the previous steps again.
 
--  NFC enabled / BT enabled
--  memory and location permission enabled
--  location service enabled
--  automatic time and time zone setting
--  set at least one alarm in the patched app
+**Note:** If you want to upload blood sugar readings to Libreview, you can check the "Send to Libreview" checkbox.
 
-Please note that the location service is a central setting. This is not the app location permission which has to be set also!
+.. image:: ../images/libre3/24.jpg
+   :alt: Check Libreview
 
-Step 4: Finally set up xDrip
+Now it's time to restart the sensor! Go back to the Juggluco home screen and scan your previously activated sensor. The sensor will start and may enter a 60 minute warm-up period again. After the 60 minutes, the readings should be visible on the Juggluco home screen.
+
+.. image:: ../images/libre3/25.jpg
+   :alt: Check Libreview
+
+Done, that's it! If the readings are not visible, you can find more information in the "Experiences and troubleshooting" section.
+
+Step 4: Set up xDrip
 ==================================================
 
 The blood sugar values are received on the smartphone by the xDrip+ App. 
 
-* If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
-* In xDrip+ select "Libre2 (patched App)" as data source
-* If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
-* In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
-* In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
-* to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set `Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps" <../Configuration/xdrip.html#identify-receiver>`_
-* If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+-  If not already set up then download xDrip+ app and install one of the latest nightly builds from `here <https://github.com/NightscoutFoundation/xDrip/releases>`_.
+-  In xDrip+ select "Libre2 patched" or "Libre 2 (patched app)" as data source
+-  disable battery optimization and allow background activity for xDrip+ app
+-  If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. This will log additional error messages for trouble shooting.
+-  In xDrip+ go to Settings -> Interapp Compatibility -> Broadcast Data Locally and select ON.
+-  In xDrip+ go to Settings -> Interapp Compatibility -> Accept Treatments and select OFF.
+-  to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set Settings -> Interapp Settings -> Identify Receiver "info.nightscout.androidaps".
+-  If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings -> Interapp Compatibility -> Accept Calibrations and select ON. You may also want to review the options in Settings -> Less Common Settings -> Advanced Calibration Settings.
 
 .. image:: ../images/Libre2_Tags.jpg
   :alt: xDrip+ LibreLink logging
@@ -133,39 +147,69 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
 Step 5: Start sensor within xDrip
 ==================================================
 
-In xDrip+ start the sensor with "Start Sensor" and "not today". 
+In xDrip+ start the sensor with "Start Sensor" and "not today". It is not necessary to hold the mobile phone onto the sensor. In fact "Start Sensor" will not physically start any Libre 3 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Wait at least 15-20 minutes if there is still no data.
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
-Step 6: Configure AndroidAPS (for looping only)
+Step 6: Configure AndroidAPS
 ==================================================
 
-* In AndroidAPS go to Config Builder > BG Source and check 'xDrip+' 
-* If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on `xDrip+ settings page <../Configuration/xdrip.html#identify-receiver>`_.
+-  In AndroidAPS go to Config Builder -> BG Source and check "xDrip+"
+-  If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See `Smoothing blood glucose data <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html>`_ for more details.
+Until now, using Libre 3 as BG source you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB algorithm. The BG values of Libre 3 are not smooth enough to use it safely.
+
+Switch back to the Libre app from Juggluco
+==================================================
+
+It is possible to switch back from Juggluco to the Libre 3 app as receiver. The following steps are necessary:
+
+1. Reinstall Libre 3 app (Or clear data in settings)
+2. Set up the Libre 3 app with the Libreview account with which the sensor was activated.
+3. Stop the Juggluco app in the settings, similar to the Libre 3 app in the instructions.
+4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
+5. The 60-minute warm-up phase should then begin. This is necessary after every change and cannot be skipped.
 
 Experiences and Troubleshooting
 ==================================================
+
+Necessary settings for a successful sensor start
+--------------------------------------------------
+
+-  NFC enabled / BT enabled
+-  Storage and location permission enabled
+-  Location service enabled
+-  Automatic time and time zone setting
+
+Please note that the location service is a central setting. It is not about the location permission of the app, which must be set as well!
 
 Troubleshooting Libre3 no readings
 --------------------------------------------------
 
 -  Android location service is not granted - please enable it in the system settings
 -  automatic time and time zone not set - please change the settings accordingly
--  Bluetooth is switched off - please switch on
+-  Bluetooth is switched off - please switch on¨
+-  Make sure the Libre 3 sensor is not connected to any other device.
 
-Troubleshooting Libre3 -> Juggluco connection
+Troubleshooting Juggluco no readings
 --------------------------------------------------
 
--  Ensure if Libre3 is receiving any readings
--  Check your settings & password again
--  Click “Sync” within Libre3->Juggluco and “Sync” and “Reinit” button within Juggluco->Mirror
--  It is possible that sometimes after configuring everything, you have to force close Libre3 and restart it.
--  Wait some time or try to force close Juggluco
--  Older versions of Juggluco (below 2.9.6) will not send back-filled data from the Libre3 sensor to connected devices (for example Juggluco on WearOS.) It is possible that you have to press "Resend Data" on within the patched Libre 3 app (Juggluco menu) for this.
+-  Check if the Libre 3 app is stopped.
+-  Rescan the Libre 3 sensor within the Juggluco app
+-  Make sure the sensor has been activated with the current Libreview account
+-  Check if a sensor number is visible in Juggluco
+-  The sensor is usually connected to the smartphone within 3 minutes, but it can also take longer.
+-  If the Bluetooth connection cannot be established, try restarting the smartphone.
+-  Make sure the Libre 3 sensor is not connected to any other device.
+
+Troubleshooting Blood sugar readings not uploading to Libreview
+--------------------------------------------------
+
+-  Check your internet connection
+-  Make sure Juggluco is receiving blood sugar readings
+-  Ensure the "Send to Libreview" checkbox is checked within Juggluco->Settings->Libreview
 
 Further help
 --------------------------------------------------
