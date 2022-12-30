@@ -9,8 +9,9 @@ Current restrictions
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  This solution currently does not work with the US variant of Libre3
--  If you have a rooted system, you have to hide it. You can find instructions here: [Link](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share\&utm_medium=web2x\&context=3).
-   (There are several apps to find out if the smartphone is rooted, one of them is e.g. [root-checker.org](https://root-checker.org/))
+-  If you have a rooted system, you have to hide it. You can find instructions here: `Link <https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share\&utm_medium=web2x\&context=3>`_.
+
+   (There are several apps to find out if the smartphone is rooted, one of them is e.g. `root-checker.org <https://root-checker.org/>`_)
 -  The Juggluco app only supports English, Dutch and Italian languages.
 
 Step 1: Download and set up the Libre3 app
