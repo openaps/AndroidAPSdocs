@@ -4,6 +4,3 @@ recommonmark
 sphinx
 #sphinx-rtd-theme<0.5
 sphinx-rtd-theme
-
-#mkdocs==1.2.3
-#jinja2==3.0.0
