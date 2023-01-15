@@ -2,7 +2,5 @@
 setuptools==65.5.1
 mock==1.0.1
 pillow==9.3.0
-setuptools==65.5.1
-mock==1.0.1
 sphinx-rtd-theme
 readthedocs-sphinx-ext
