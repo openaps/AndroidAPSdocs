@@ -3,7 +3,7 @@
 **This description is just for editing the English documentation. All new information must be added in English first.
 If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR.html#code-syntax) section of this page.
 
 ## General
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). 
@@ -81,7 +81,7 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
 * internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
+* internal link to headline: `[alt text](../folder/file.html#headline)`
 
 ### .rst files
 #### Text format
@@ -113,8 +113,8 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 #### In files with **.md** ending:
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
 * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension
-  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension .md and replace it with .html.
+  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test.md#anchor)`
 
 #### In files with **.rst** ending:
 * `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. 
@@ -142,7 +142,7 @@ If you are planning to make a lot of edits, including adding images to help illu
  
  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
  
- 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst).
+ 6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR.html#code-syntax) for the page type you are on (.md or .rst).
    The main thing is to have a plain text description, followed by a link with a relative path to the image, like this: 
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` 
         (That code is exactly how the image below is embedded to be displayed.)
