@@ -47,7 +47,7 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
    
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+For details see [AAPS screens page](../Getting-Started/Screenshots.html#bg-warning-sign)
 
 
 ## Failure message: Data from different pump
