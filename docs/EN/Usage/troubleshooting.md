@@ -39,15 +39,25 @@ Here are examples how to find them on specific android phones.
 
 #### Pixel phones (stock android)
 * Go to the android settings, select "Apps".
+  
   ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
+  
 * Select "See all apps"
+  
   ![See all apps](../images/troubleshooting/pixel/02_apps.png)
+  
 * On the menu on the right, select "Show system" apps.
+  
   ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
+  
 * Now search and select the app "Bluetooth".
+  
   ![Bluetooth app](../images/troubleshooting/pixel/04_bluetooth.png)
+  
 * Click the "App battery usage" and select "Not optimized".
+  
   ![BT Battery optimization](../images/troubleshooting/pixel/05_btunrestricted.png)
+
 
 #### Samsung phones
 * Go to the android settings, select "Apps"
