@@ -38,6 +38,7 @@ Here are examples how to find them on specific android phones.
 
 
 #### Pixel phones (stock android)
+
 * Go to the android settings, select "Apps".
   
   ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
@@ -60,16 +61,27 @@ Here are examples how to find them on specific android phones.
 
 
 #### Samsung phones
+
 * Go to the android settings, select "Apps"
+
 * On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+
   ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+  
   ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  
 * Now search the bluetooth app and select it to see its settings.
+  
   ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  
 * Select "battery".
+  
   ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  
 * Set it to "Not optimized"
+  
   ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  
 
 ## CGM
 
