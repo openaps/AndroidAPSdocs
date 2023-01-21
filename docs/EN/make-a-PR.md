@@ -1,7 +1,5 @@
 # How to edit the docs
 
-Die ist ein Test!!!
-
 **This description is just for editing the English documentation. All new information must be added in English first.
 If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
