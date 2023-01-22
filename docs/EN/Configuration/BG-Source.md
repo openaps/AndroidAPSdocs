@@ -1,7 +1,6 @@
 :::{toctree}
 :caption: BG Source
-:glob: true
-:maxdepth: 1
+:titlesonly: true
 
    General <../Hardware/GeneralCGMRecommendation.md>
    Data Smoothing <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
