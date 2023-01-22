@@ -45,6 +45,14 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
 
 For more details, please read on here.
 
+:::{toctree}
+:caption: Test Section
+:glob: true
+:maxdepth: 1
+
+Pumps <./Hardware/pumps.md>
+:::
+
 .. toctree::
    :maxdepth: 1
    :glob:
@@ -62,7 +70,7 @@ For more details, please read on here.
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.html>
+   Pump choices <./Getting-Started/Pump-Choices.md>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
