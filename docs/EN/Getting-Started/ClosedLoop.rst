@@ -36,7 +36,8 @@ Compatible `pumps <../Hardware/pumps.html>`_ are:
 * `Accu-Chek Combo <../Configuration/Accu-Chek-Combo-Pump.html>`_
 * `Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.html>`_
 * `Diaconn G8 <../Configuration/DiaconnG8.html>`_
-* `Omnipod Eros <../Configuration/OmnipodEros.html>`_ / Omnipod Dash
+* `Omnipod DASH <../Configuration/OmnipodDASH.html>`_ 
+* `Omnipod Eros <../Configuration/OmnipodEros.html>`_
 * some old `Medtronic pumps <../Configuration/MedtronicPump.html>`_
 
 OpenAPS
@@ -53,5 +54,6 @@ Loop for iOS
 
 Compatible pumps are:
 
+* Omnipod DASH
 * Omnipod Eros
 * some old Medtronic pumps
