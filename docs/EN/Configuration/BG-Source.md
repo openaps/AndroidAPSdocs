@@ -1,11 +1,10 @@
-BG Source
-************
+# BG Source
 
+:::{toctree}
+:caption: BG Source
+:glob: true
+:maxdepth: 1
 
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   
    General <../Hardware/GeneralCGMRecommendation.md>
    Data Smoothing <../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>
    xDrip+Settings <./xdrip.md>
@@ -19,3 +18,5 @@ BG Source
    MM640g/MM630g  <../Hardware/MM640g.md>
    PocTech <../Hardware/PocTech.md>
    Nightscout as BG Source <../Hardware/CgmNightscoutUpload.md>
+
+:::
