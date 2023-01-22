@@ -85,7 +85,7 @@ release = u'3.0'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+#language = None
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
@@ -381,4 +381,4 @@ def setup(app):
             'enable_auto_doc_ref': True,
             'enable_eval_rst': True,
             }, True)
-    app.add_transform(AutoStructify)
+    #app.add_transform(AutoStructify)
