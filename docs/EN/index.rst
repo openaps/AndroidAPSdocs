@@ -43,22 +43,6 @@ Finally, in the subsection `How to help? <make-a-PR.html>`_ we would like to pro
 .. note::
    Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 
-:::{admonition} Peters Note
-:class: note
-
-This is a note.
-:::
-
-For more details, please read on here.
-
-:::{toctree}
-:caption: Test Section
-:glob: true
-:maxdepth: 1
-
-Pumps <./Hardware/pumps.md>
-:::
-
 .. toctree::
    :maxdepth: 1
    :glob:
