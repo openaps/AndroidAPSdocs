@@ -54,8 +54,7 @@ Change language <./changelanguage.md>
 
 ```{toctree}
 :caption: Getting started
-:glob: true
-:maxdepth: 1
+:titlesonly: true
 
 Safety first <./Getting-Started/Safety-first.md>
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
@@ -93,8 +92,7 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```{toctree}
 :caption: Component Setup
-:glob: true
-:maxdepth: 1
+:titlesonly: true
 
 Pumps <./Hardware/pumps.md>
 CGM/FGM <./Configuration/BG-Source.md>
