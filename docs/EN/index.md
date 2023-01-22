@@ -93,6 +93,7 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 ```{toctree}
 :caption: Component Setup
 :titlesonly: true
+:maxdepth: 0
 
 Pumps <./Hardware/pumps.md>
 CGM/FGM <./Configuration/BG-Source.md>
