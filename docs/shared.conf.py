@@ -50,14 +50,14 @@ myst_enable_extensions = [
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['../../_templates'] # path relative to languages conf.py
 
-source_parsers = {
-  '.md': CommonMarkParser,
-}
+#source_parsers = {
+#  '.md': CommonMarkParser,
+#}
 
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-source_suffix = ['.md', '.rst', ]
+#source_suffix = ['.md', '.rst', ]
 # source_suffix = '.rst'
 
 # The encoding of source files.
