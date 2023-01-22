@@ -95,9 +95,9 @@ For more details, please read on here.
    :glob:
    :caption: Component Setup
 
+   Pumps <./Hardware/pumps.md>
    CGM/FGM <./Configuration/BG-Source.rst>
    xDrip Settings <./Configuration/xdrip.md>
-   Pumps <./Hardware/pumps.rst>
    Phones <./Hardware/Phoneconfig.rst>
    Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
    Smartwatch  <./Hardware/Smartwatch.rst>
