@@ -62,7 +62,7 @@ For more details, please read on here.
    Safety first <./Getting-Started/Safety-first.rst>
    What is a closed loop system <./Getting-Started/ClosedLoop.rst>
    What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>  
-   Pump choices <./Getting-Started/Pump-Choices.md>
+   Pump choices <./Getting-Started/Pump-Choices.html>
    Docs updates & changes <./Getting-Started/WikiUpdate.rst>
 
 .. _what-do-i-need:
