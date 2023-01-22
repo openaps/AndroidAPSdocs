@@ -21,7 +21,7 @@ First of all, you have to **get loopable hardware components**:
 
 * A [supported insulin pump](./Pump-Choices.md), 
 * an [Android smartphone](Phones.md) (Apple iOS is not supported by AndroidAPS - you can check [iOS Loop](https://loopkit.github.io/loopdocs/)) and 
-* a [continuous glucose monitoring system](../Configuration/BG-Source.rst). 
+* a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
 Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md). 
 
@@ -57,7 +57,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 * Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 * Pump batteries
-* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+* Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 You can tape it.  There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
@@ -222,17 +222,17 @@ The change of a cannula however does not use the "prime infusion set" function o
 
 ## Wallpaper
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.html#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
 
 ## Daily usage
 
 ### Hygiene
 
 #### What to do when taking a shower or bath?
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.html#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Work
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day.  For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day.  You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.html#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day.  For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day.  You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
 
@@ -243,17 +243,17 @@ So, you would have more carbohydrates on board, but at the same time the loop wo
 
 When looping you should try these steps:
 * Make a [profile switch](../Usage/Profiles.md) < 100%.
-* Set an [activity temp target](../Usage/temptarget.html#activity-temp-target) above your standard target.
+* Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
 * If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct.  See [description above](../Getting-Started/FAQ.html#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct.  See [description above](../Getting-Started/FAQ#disconnect-pump).
 
 ### Drinking alcohol
 Drinking alcohol is risky in closed loop mode as the algorithm cannot predict the alcohol influenced BG correctly. You have to check out your own method for treating this using the following functions in AndroidAPS:
