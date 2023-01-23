@@ -49,7 +49,7 @@ Für weitere Details lies bitte hier weiter.
 :glob: true
 :maxdepth: 1
 
-Sprache wechseln <./changelanguage.rst>
+Sprache wechseln <./changelanguage.md>
 ```
 
 (getting-started)=
@@ -59,11 +59,11 @@ Sprache wechseln <./changelanguage.rst>
 :glob: true
 :maxdepth: 1
 
-Sicherheitshinweise <./Getting-Started/Safety-first.rst>
-Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.rst>
-Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.rst>
+Sicherheitshinweise <./Getting-Started/Safety-first.md>
+Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.md>
+Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
 Insulinpumpen <./Getting-Started/Pump-Choices.md>
-Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
+Docs Updates & Änderungen <./Getting-Started/WikiUpdate.md>
 ```
 
 (what-do-i-need)=
@@ -73,7 +73,7 @@ Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
 :glob: true
 :maxdepth: 1
 
-Module <./Module/module.rst>
+Module <./Module/module.md>
 ```
 
 ```{toctree}
@@ -84,10 +84,10 @@ Module <./Module/module.rst>
 App aus Quellcode erstellen <./Installing-AndroidAPS/Building-APK.md>
 Update auf neue Version oder Branch <./Installing-AndroidAPS/Update-to-new-version.md>
 Hinweise und Prüfungen nach dem Update auf AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
-Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7 <./Installing-AndroidAPS/update2_7.rst>
-Installation git <./Installing-AndroidAPS/git-install.rst>
+Notwendige Überprüfungen nach Aktualisierung auf AndroidAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Installation git <./Installing-AndroidAPS/git-install.md>
 Fehlerbehebung Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
-Release Notes <./Installing-AndroidAPS/Releasenotes.rst>
+Release Notes <./Installing-AndroidAPS/Releasenotes.md>
 Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
 ```
 
@@ -98,12 +98,12 @@ Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
 
 :caption: Komponenten-Setup
 
-CGM/FGM <./Configuration/BG-Source.rst>
+CGM/FGM <./Configuration/BG-Source.md>
 xDrip Einstellungen <./Configuration/xdrip.md>
-Pumpen <./Hardware/pumps.rst>
-Smartphones <./Hardware/Phoneconfig.rst>
+Pumpen <./Hardware/pumps.md>
+Smartphones <./Hardware/Phoneconfig.md>
 Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
-Smartwatch  <./Hardware/Smartwatch.rst>
+Smartwatch  <./Hardware/Smartwatch.md>
 ```
 
 (configuration)=
@@ -114,7 +114,7 @@ Smartwatch  <./Hardware/Smartwatch.rst>
 :caption: AndroidAPS einrichten
 
 Konfigurations-Generator <./Configuration/Config-Builder.md>
-Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
+Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.md>
 ```
 
 ```{toctree}
@@ -123,16 +123,16 @@ Einstellungen im Drei-Punkte-Menü <./Configuration/Preferences.rst>
 :maxdepth: 1
 
 AndroidAPS-Bildschirme <./Getting-Started/Screenshots.md>
-Objectives (Ziele) <./Usage/Objectives.rst>
+Objectives (Ziele) <./Usage/Objectives.md>
 OpenAPS-Funktionen <./Usage/Open-APS-features.md>
 Berechnung der aktiven Kohlenhydrate (COB) <../Usage/COB-calculation.md>
 Empfindlichkeitserkennung <./Configuration/Sensitivity-detection-and-COB.md>
 Profil Wechsel <./Usage/Profiles.md>
 Temporäre Ziele <./Usage/temptarget.md>
-Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.rst>
-Automatisierungen <./Usage/Automation.rst>
-Careportal (eingestellt) <./Usage/CPbefore26.rst>
-Open Humans Uploader <./Configuration/OpenHumans.rst>
+Verzögerte Kohlenhydrate (eCarbs) <./Usage/Extended-Carbs.md>
+Automatisierungen <./Usage/Automation.md>
+Careportal (eingestellt) <./Usage/CPbefore26.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
 Automation mit Drittanbieter-Apps <./Usage/automationwithapp.md>
 Android Auto <./Usage/Android-auto.md>
 ```
@@ -145,7 +145,7 @@ Android Auto <./Usage/Android-auto.md>
 Zeitzonenwechsel auf Reisen <./Usage/Timezone-traveling.md>
 Logfiles erhalten <./Usage/Accessing-logfiles.md>
 Accu Chek Combo - Tipps <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
-Export/Import von Einstellungen <./Usage/ExportImportSettings.rst>
+Export/Import von Einstellungen <./Usage/ExportImportSettings.md>
 xDrip+ engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 ```
 
@@ -154,9 +154,9 @@ xDrip+ engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 :glob: true
 :maxdepth: 1
 
-Kontrolle aus der Ferne <./Children/Children.rst>
-SMS-Befehle <./Children/SMS-Commands.rst>
-Profile helper <./Configuration/profilehelper.rst>
+Kontrolle aus der Ferne <./Children/Children.md>
+SMS-Befehle <./Children/SMS-Commands.md>
+Profile helper <./Configuration/profilehelper.md>
 ```
 
 ```{toctree}
@@ -164,7 +164,7 @@ Profile helper <./Configuration/profilehelper.rst>
 :glob: true
 :maxdepth: 1
 
-Problembehandlung <./Usage/troubleshooting.rst>
+Problembehandlung <./Usage/troubleshooting.md>
 Nightscout Client <./Usage/Troubleshooting-NSClient.html>
 ```
 
@@ -191,7 +191,7 @@ Glossar <./Getting-Started/Glossary.md>
 
 Nützliche Informationsquellen vor dem Start <./Where-To-Go-For-Help/Background-reading.md>
 Hilfe <./Where-To-Go-For-Help/Connect-with-other-users.md>
-Docs Updates & Änderungen <./Getting-Started/WikiUpdate.rst>
+Docs Updates & Änderungen <./Getting-Started/WikiUpdate.md>
 ```
 
 ```{toctree}
