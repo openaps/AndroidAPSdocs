@@ -1,6 +1,0 @@
-Voor MM640g of MM630g gebruikers
-**************************************************
-
-* If not already set up then download `600SeriesAndroidUploader <https://pazaan.github.io/600SeriesAndroidUploader/>`_ and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* In 600 Series Uploader ga naar Instellingen > Send to xdrip+ en selecteer ON (vinkje).
-* Selecteer MM640g in ConfigBuilder (Instelling AndroidAPS).
