@@ -12,4 +12,4 @@
 - [Eversense](../Hardware/Eversense.md)
 - [MM640g/MM630g](../Hardware/MM640g.md)
 - [PocTech](../Hardware/PocTech.md)
-- [Nightscout als BZ-Quelle](../Hardware/CGMNightscoutUpload.md)
+- [Nightscout als BZ-Quelle](../Hardware/CgmNightscoutUpload.md)
