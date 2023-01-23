@@ -18,11 +18,15 @@ Orijinal uygulama yerine yamalı uygulama yüklenmelidir. Onunla başlatılan bi
 
 Yama uygulanmış uygulama, ön plan yetkilendirme bildirimi ile tanımlanabilir. Ön plan yetkilendirme hizmeti, bu hizmeti kullanmayan orijinal uygulamaya kıyasla bağlantı kararlılığını artırır.
 
-![LibreLink Ön Plan Hizmeti](../images/Libre2_ForegroundServiceNotification.png)
+```{image} ../images/Libre2_ForegroundServiceNotification.png
+:alt: "LibreLink \xD6n Plan Hizmeti"
+```
 
 Diğer göstergeler, Linux penguen logosu üç nokta menüsü -> Bilgi veya yamalı uygulamanın yazı tipi olabilir. Bu kriterler, seçtiğiniz uygulama kaynağına bağlı olarak isteğe bağlıdır.
 
-![LibreLink Font Kontrolü](../images/LibreLinkPatchedCheck.png)
+```{image} ../images/LibreLinkPatchedCheck.png
+:alt: "LibreLink Font Kontrol\xFC"
+```
 
 NFC'nin etkinleştirildiğinden emin olun, yamalı uygulama için bellek ve konum iznini etkinleştirin, otomatik saat ve saat dilimini etkinleştirin ve yamalı uygulamada en az bir alarm ayarlayın.
 
@@ -30,17 +34,21 @@ NFC'nin etkinleştirildiğinden emin olun, yamalı uygulama için bellek ve konu
 
 Başarılı sensör başlatma için zorunlu ayarlar:
 
--   NFC etkin / BT etkin
--   hafıza ve konum izni etkin
--   konum hizmeti etkin
--   otomatik saat ve saat dilimi ayarı
--   yamalı uygulamada en az bir alarm ayarlayın
+- NFC etkin / BT etkin
+- hafıza ve konum izni etkin
+- konum hizmeti etkin
+- otomatik saat ve saat dilimi ayarı
+- yamalı uygulamada en az bir alarm ayarlayın
 
 Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. Bu, ayrıca ayarlanması gereken uygulama konumu izni değildir!
 
-![LibreLink izinleri hafıza & konum](../images/Libre2_AppPermissionsAndLocation.png)
+```{image} ../images/Libre2_AppPermissionsAndLocation.png
+:alt: "LibreLink izinleri haf\u0131za ve konum"
+```
 
-![otomatik saat ve saat dilimi + alarm ayarları](../images/Libre2_DateTimeAlarms.png)
+```{image} ../images/Libre2_DateTimeAlarms.png
+:alt: "otomatik saat ve saat dilimi + alarm ayarlar\u0131"
+```
 
 Sensör, başlatıldığı cihazı hatırlar. Yalnızca bu cihaz gelecekte alarm alabilir.
 
@@ -48,22 +56,26 @@ Sensöre ilk bağlantı kurulumu kritiktir. LibreLink uygulaması, sensörle her
 
 LibreLink'in başlangıç ekranının sol üst köşesinde kırmızı bir ünlem işareti ("!") gördüğünüz sürece, bağlantı yoktur veya LibreLink'in alarm sinyali vermesini engelleyen başka bir ayar yoktur. Lütfen sesin etkin olup olmadığını ve her türlü uygulama engelleme bildiriminin devre dışı bırakılıp bırakılmadığını kontrol edin. Ünlem işareti kaybolduğunda bağlantı kurulmalı ve akıllı telefona kan şekeri değerleri gönderilmelidir. Bu en fazla 5 dakika içerisinde gerçekleşmelidir.
 
-![LibreLink bağlantı yok](../images/Libre2_ExclamationMark.png)
+```{image} ../images/Libre2_ExclamationMark.png
+:alt: "LibreLink ba\u011Flant\u0131 yok"
+```
 
 Ünlem işareti kalıyorsa veya bir hata mesajı alıyorsanız, bunun birkaç nedeni olabilir:
 
--   Android konum hizmeti verilmedi - lütfen sistem ayarlarında etkinleştirin
--   Otomatik saat ve saat dilimi ayarlanmadı - lütfen ayarları uygun şekilde değiştirin
--   Alarmları etkinleştirin - LibreLink'te üç alarmdan en az biri etkinleştirilmelidir
--   Bluetooth kapalı - lütfen açın
--   Ses engellenmiş
--   Uygulama bildirimleri engellenmiş
--   Kilit ekranı bildirimleri engellenmiş
--   LOT numarası 'K' ile başlayan 8 basamaklı Libre 2 sensörünüz hatalı. Bunu sensörün sarı ambalajının üzerinde basılı olarak bulabilirsiniz. Bu sensörler bluetooth üzerinde çalışmadıkları için değiştirilmeleri gerekiyor.
+- Android konum hizmeti verilmedi - lütfen sistem ayarlarında etkinleştirin
+- Otomatik saat ve saat dilimi ayarlanmadı - lütfen ayarları uygun şekilde değiştirin
+- Alarmları etkinleştirin - LibreLink'te üç alarmdan en az biri etkinleştirilmelidir
+- Bluetooth kapalı - lütfen açın
+- Ses engellenmiş
+- Uygulama bildirimleri engellenmiş
+- Kilit ekranı bildirimleri engellenmiş
+- LOT numarası 'K' ile başlayan 8 basamaklı Libre 2 sensörünüz hatalı. Bunu sensörün sarı ambalajının üzerinde basılı olarak bulabilirsiniz. Bu sensörler bluetooth üzerinde çalışmadıkları için değiştirilmeleri gerekiyor.
 
 Telefonu yeniden başlatmak yardımcı olabilir, bunu birkaç kez yapmanız gerekebilir. Bağlantı kurulur kurulmaz kırmızı ünlem işareti kaybolur ve en önemli adım aşılmış olur. Sistem ayarlarına bağlı olarak ünlem işareti kalabilir ancak yine de okumalar alabilirsiniz. Her iki durumda da sıkıntı yok endişelenmeyin. Sensör ve telefon artık bağlı, her dakikada bir kan şekeri değeri iletiliyor.
 
-![LibreLink bağlantısı kuruldu](../images/Libre2_Connected.png)
+```{image} ../images/Libre2_Connected.png
+:alt: "LibreLink ba\u011Flant\u0131s\u0131 kuruldu"
+```
 
 Nadir durumlarda, bluetooth önbelleğini boşaltma ve/veya sistem menüsü aracılığıyla tüm ağ bağlantılarını sıfırlama yardımcı olabilir. Bu, uygun bir bluetooth bağlantısı kurmaya yardımcı olabilecek tüm bağlı bluetooth cihazlarını kaldırır. Bu prosedür, yamalı LibreLink uygulaması tarafından başlatılan sensör hatırlandığından kaydedilir. Burada ek bir şey yapılması gerekmez. Yamalı uygulamanın sensöre bağlanmasını bekleyin.
 
@@ -83,15 +95,23 @@ Ancak, etkin internet erişimi ile LibreView'ı destekleyen yamalı uygulamanın
 
 Kan şekeri değerleri akıllı telefonda xDrip+ uygulaması tarafından alınır.
 
--   Henüz kurmadıysanız, xDrip+ uygulamasını indirin ve [buradan](https://github.com/NightscoutFoundation/xDrip/releases) en son derlemelerden birini yükleyin.
--   xDrip+'da veri kaynağı olarak "Libre2 (Yamalı uyg)" öğesini seçin
--   Gerekirse, Gelişmiş Ayarlar-> Ekstra Günlük Ayarları-> Günlük için ekstra etiketler altında "BgReading:d,xdrip libre_receiver:v" girin. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
--   xdrip'te Ayarlar > Yerel-Uygulama ayarlarına gidin ve > Verileri Yerel Olarak Yayınlayını AÇIK seçin.
--   xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
--   AAPS'nin xDrip+'tan kan şekeri düzeylerini (sürüm 2.5.x ve üstü) almasını sağlamak için lütfen xdrip+'ta şu ayarı yapın: [Ayarlar > Uyg.lar-arası ayarlar > Alıcıyı Tanımla "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
--   Kalibre etmek için AndroidAPS'yi kullanabilmek istiyorsanız, xdrip'te Ayarlar > Uygulamalar Arası Uyumluluğu > Kalibrasyonları Kabul Et'e gidin ve  AÇIK'ı seçin. Ayarlar > Daha Az Ortak Ayarlar> Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+- Henüz kurmadıysanız, xDrip+ uygulamasını indirin ve [buradan](https://github.com/NightscoutFoundation/xDrip/releases) en son derlemelerden birini yükleyin.
 
-![xDrip LibreLink oturum açma](../images/Libre2_Tags.png)
+- xDrip+'da veri kaynağı olarak "Libre2 (Yamalı uyg)" öğesini seçin
+
+- Gerekirse, Gelişmiş Ayarlar->Ekstra Günlük Ayarları->Günlük için ekstra etiketler altında "BgReading:d,xdrip libre_receiver:v" girin. Bu, sorun giderme için ek hata mesajlarını günlüğe kaydeder.
+
+- xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Verileri Yerel Olarak Yayınla'ya gidin ve AÇ'ı seçin.
+
+- xDrip+'da Ayarlar > Uyg.lar-arası ayarlar > Tedaviyi Kabul Et'e gidin ve KAPALI'yı seçin.
+
+- AAPS'nin xDrip+'tan kan şekeri düzeylerini (sürüm 2.5.x ve üstü) almasını sağlamak için lütfen Ayarlar > Uyg.lar-arası ayarlar > Alıcıyı Tanımla "info.nightscout.androidaps" öğesini ayarlayın \<../Configuration/xdrip#identify-receiver> \_
+
+- AndroidAPS'i kalibre etmek için kullanmak istiyorsanız, xdrip'te Ayarlar > Uyg.lar-arası ayarlar > Kalibrasyonları Kabul Et'e gidin ve AÇIK'ı seçin.  Ayarlar > Gelişmiş Ayarlar > Gelişmiş Kalibrasyon Ayarları'ndaki seçenekleri de gözden geçirmek isteyebilirsiniz.
+
+```{image} ../images/Libre2_Tags.png
+:alt: "xDrip LibreLink oturum a\xE7ma"
+```
 
 ## Adım 3: Sensörü başlatın
 
@@ -103,10 +123,10 @@ Bir sensör değişikliğinden sonra xDrip+ yeni sensörü otomatik olarak algı
 
 ## Adım 4: AndroidAPS'i yapılandırın (döngü için)
 
--   AndroidAPS'de Konfigürasyon ayarları > KŞ Kaynağı'na gidin ve 'xDrip+' seçeneğini işaretleyin
--   AAPS, telefon uçak modundayken KŞ değerlerini almıyorsa, [xDrip+ ayarlar sayfasında](../Configuration/xdrip#identify-receiver) açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
+- AndroidAPS'de Konfigürasyon ayarları > KŞ Kaynağı'na gidin ve 'xDrip+' seçeneğini işaretleyin
+- Telefon uçak modundayken AndroidAPS KŞ değerlerini almıyorsa, 'xDrip+ ayarlar sayfasında \<../Configuration/xdrip#identify-receiver>'\_ açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
-Halihazırda, Libre 2'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritmasında "SMB'yi her zaman etkinleştir" ve "Karbonhidrattan sonra SMB'yi etkinleştir"i işaretleyemezsiniz. Libre 2'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) konusuna bakın.
+Halihazırda, Libre 2'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritmasında "SMB'yi her zaman etkinleştir" ve "Karbonhidrattan sonra SMB'yi etkinleştir"i işaretleyemezsiniz. Libre 2'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir. Daha fazla ayrıntı için [Kan şekeri verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) bölümüne bakın.
 
 ## Deneyimler ve Sorun Giderme
 
@@ -114,19 +134,23 @@ Halihazırda, Libre 2'i KŞ kaynağı olarak kullanıyorsanız, SMB algoritması
 
 Bağlantı son derecede iyi. Huawei cep telefonları hariç, mevcut tüm akıllı telefonlar iyi çalışıyor gibi görünüyor. Bağlantı kaybı durumunda yeniden bağlanma oranı harika görünüyor. Cep telefonu sensörün karşısındaki cepteyse veya dışarıdaysanız bağlantı kopabilir. Bahçe ile uğraşırken, telefonu sensörlü taraftaki cebe koyarım. Bluetooth'un yansımalar üzerinden yayıldığı odalarda herhangi bir sorun yaşanmamalıdır. Bağlantı sorunlarınız varsa lütfen başka bir telefonda test edin. Sensörü dahili BT anteni aşağı bakacak şekilde ayarlamak da yardımcı olabilir. Sensörü ayarlarken aplikatör üzerindeki yarık aşağıyı göstermelidir.
 
-### Değer yumuşatma & ham değerler
+### Değer yumuşatma ve ham değerler
 
-Teknik olarak mevcut kan şekeri değeri her dakika xDrip+'a iletilir. Ağırlıklı ortalama bir filtre, son 25 dakika boyunca düzleştirilmiş bir değer hesaplar. Bu döngü için zorunludur. Eğriler pürüzsüz görünüyor ve döngü sonuçları harika. Alarmların dayandığı ham değerler biraz daha oynak olabilir, ancak okuyucunun gösterdiği değerlere karşılık gelir. Ayrıca hızlı değişimlere zamanında tepki verebilmek için ham değerler xDrip+ grafiğinde görüntülenebilir. Lütfen Xdrip+'ta Ayarlar \> Gelişmiş Ayarlar \> Libre2 için Gelişmiş Ayarlar "Ham değerleri göster" ve "Sensör Bilgilerini göster"i açın. Daha sonra ham değerler grafikte küçük beyaz noktalar olarak görüntülenir ve sistem menüsünde ek sensör bilgileri bulunur.
+Teknik olarak mevcut kan şekeri değeri her dakika xDrip+'a iletilir. Ağırlıklı ortalama bir filtre, son 25 dakika boyunca düzleştirilmiş bir değer hesaplar. Bu döngü için zorunludur. Eğriler pürüzsüz görünüyor ve döngü sonuçları harika. Alarmların dayandığı ham değerler biraz daha oynak olabilir, ancak okuyucunun gösterdiği değerlere karşılık gelir. Ayrıca hızlı değişimlere zamanında tepki verebilmek için ham değerler xDrip+ grafiğinde görüntülenebilir. Lütfen Xdrip+'ta Ayarlar > Gelişmiş Ayarlar > Libre2 için Gelişmiş Ayarlar > "Ham değerleri göster" ve "Sensör Bilgilerini göster"i açın. Daha sonra ham değerler grafikte küçük beyaz noktalar olarak görüntülenir ve sistem menüsünde ek sensör bilgileri bulunur.
 
 Kan şekeri hızlı hareket ettiğinde ham değerler çok faydalıdır. Noktalar daha atlamalı olsa bile, doğru tedavi kararlarını vermek için düzleştirilmiş çizgiyi kullanarak eğilimi çok daha iyi saptarsınız.
 
-![xDrip+ gelişmiş ayarlar Libre 2 & ham değerler](../images/Libre2_RawValues.png)
+```{image} ../images/Libre2_RawValues.png
+:alt: "xDrip+ geli\u015Fmi\u015F ayarlar Libre 2 ve ham de\u011Ferler"
+```
 
 ### Sensör çalışma zamanı
 
-Sensör çalışma süresi 14 gün olarak sabitlenmiştir. Libre1'deki 12 ekstra saat artık mevcut değil. xDrip+, başlangıç zamanı gibi sistem menüsünde Libre2 için Gelişmiş Ayarlar \> "Sensör Bilgilerini Göster"i etkinleştirdikten sonra ek sensör bilgilerini gösterir. Kalan sensör süresi, yamalı LibreLink uygulamasında da görülebilir. Ya ana ekranda kalan gün sayısı olarak ya da "Yeni sensör bulundu" altındaki üç noktalı menü->Yardım->Olay günlüğü altında sensör başlangıç zamanı olarak görebilirsiniz.
+Sensör çalışma süresi 14 gün olarak sabitlenmiştir. Libre1'deki 12 ekstra saat artık mevcut değil. xDrip+, başlangıç zamanı gibi sistem menüsünde Libre2 için Gelişmiş Ayarlar > "Sensör Bilgilerini Göster"i etkinleştirdikten sonra ek sensör bilgilerini gösterir. Kalan sensör süresi, yamalı LibreLink uygulamasında da görülebilir. Ya ana ekranda kalan gün sayısı olarak ya da "Yeni sensör bulundu" altındaki üç noktalı menü->Yardım->Olay günlüğü altında sensör başlangıç zamanı olarak görebilirsiniz.
 
-![Libre 2 başlangıç zamanı](../images/Libre2_Starttime.png)
+```{image} ../images/Libre2_Starttime.png
+:alt: "Libre 2 ba\u015Flang\u0131\xE7 zaman\u0131"
+```
 
 ### Yeni sensör
 
@@ -136,11 +160,13 @@ Değilse, lütfen telefon ayarlarını kontrol edin ve ilk başlatmada olduğu g
 
 Başarılı okumalardan sonra lütfen xDrip'te "Sensör Durdurma" ve "Yalnızca kalibrasyonu sil"i seçin. Bunu, xDrip+ için yeni bir sensörün kan şekeri seviyelerini ayarlamak ve eski kalibrasyonların artık geçerli olmadığı ve bu nedenle silinmeleri gerektiği için yaparız. Burada Libre2 sensörü ile fiziksel bir etkileşim yapılmaz! Sensörü xDrip+'da başlatmanız gerekmez.
 
-![Libre 2 sensörünü değiştirirken xDrip+'ta eksik veri](../images/Libre2_GapNewSensor.png)
+```{image} ../images/Libre2_GapNewSensor.png
+:alt: "Libre 2 sens\xF6r\xFCn\xFC de\u011Fi\u015Ftirirken xDrip+'ta eksik veri"
+```
 
 ### Kalibrasyon
 
-Libre2'yi -40 mg/dl ila +20 mg/dL [-2,2 mmol/l ila +1,1 mmol/l] ile kalibre edebilirsiniz. Libre2, Libe1'e kıyasla çok daha doğru olduğu için eğimi değiştiremezsiniz. Lütfen yeni bir sensör yerleştirdikten sonra glikometre ile parmaktan ölçüm yapın. Kan ölçümlerinde büyük farklılıklar olabileceği bilinmektedir. Güvenilir olması için her 24 - 48 saatte bir kalibre edin. Ölçümler sensörün bitimine kadar doğrudur ve Libre1'de olduğu gibi titreme yapmaz. Ancak sensör tamamen kapandıysa bu değişmeyecektir. Sensör derhal değiştirilmelidir.
+Libre2'yi -40 mg/dl ila +20 mg/dL \[-2,2 mmol/l ila +1,1 mmol/l\] ile kalibre edebilirsiniz. Libre2, Libe1'e kıyasla çok daha doğru olduğu için eğimi değiştiremezsiniz. Lütfen yeni bir sensör yerleştirdikten sonra glikometre ile parmaktan ölçüm yapın. Kan ölçümlerinde büyük farklılıklar olabileceği bilinmektedir. Güvenilir olması için her 24 - 48 saatte bir kalibre edin. Ölçümler sensörün bitimine kadar doğrudur ve Libre1'de olduğu gibi titreme yapmaz. Ancak sensör tamamen kapandıysa bu değişmeyecektir. Sensör derhal değiştirilmelidir.
 
 ### Olası kontroller
 
@@ -152,8 +178,8 @@ Diğer [zaman dilimlerine](../Usage/Timezone-traveling.md) seyahatte döngü iç
 
 Bunlar,
 
-1.  Akıllı telefon saatini değiştirmeden bırakın ve bazal profili değiştirin (akıllı telefon uçuş modunda) veya
-2.  Pompa geçmişini silin ve akıllı telefon saatini yerel saatle değiştirin.
+1. Akıllı telefon saatini değiştirmeden bırakın ve bazal profili değiştirin (akıllı telefon uçuş modunda) veya
+2. Pompa geçmişini silin ve akıllı telefon saatini yerel saatle değiştirin.
 
 Yöntem 1 seyahat ettiğiniz yerde yeni bir Libre2 sensörü ayarlamak zorunda olmadığınız sürece harikadır. Şüpheniz varsa veya özellikle seyahatiniz daha uzun sürecekse yöntem 2'yi seçin. Yeni bir sensör ayarlarsanız, otomatik saat dilimi ayarlanmalıdır, bu nedenle 1. yöntem uygun olmaz. Eğer başka bir yere seyahat ettiyseniz, lütfen bu kontrolleri seyahat esnasında ya da daha önce yapın, aksi takdirde hızlı bir şekilde problemlerle karşılaşabilirsiniz.
 
@@ -177,23 +203,27 @@ Droplet vericisi de Libre2 ile çalışıyor ancak bunun yerine bir internet hiz
 
 Yamalı LibreLink uygulaması yaklaşımı daha akla yatkın olsa bile, bir bluetooth vericisi kullanmak için bazı nedenler olabilir:
 
--   KŞ okumaları kendi okuyucusu ile aynıdır
--   Libre2 sensörü, daha önce Libre1'de olduğu gibi 14.5 gün kullanılabilir
--   8 saatlik geriye dönük ölçümler eklenir.
--   Yeni bir sensörün bir saatlik başlatma süresi boyunca KŞ okumaları alınabilir.
+- KŞ okumaları kendi okuyucusu ile aynıdır
+- Libre2 sensörü, daha önce Libre1'de olduğu gibi 14.5 gün kullanılabilir
+- 8 saatlik geriye dönük ölçümler eklenir.
+- yeni bir sensörün bir saatlik başlatma süresi boyunca KŞ okumaları alınabilir.
 
 Açıklama: Verici, LibreLink uygulamasına paralel olarak kullanılabilir. Yamalı LibreLink uygulamasının çalışmasını bozmaz.
 
 Açıklama 2: OOP algoritması henüz kalibre edilemez. Bu gelecekte değiştirilecektir.
 
-# Libre 2 sensörünü kalibre etmek için en iyi yöntemler
+## Libre 2 sensörünü kalibre etmek için en iyi yöntemler
 
-Bir libre 2 sensörünü kalibre ederken en iyi sonuçları elde etmek için izlemeniz gereken bazı “kurallar” vardır. Libre 2 değerlerini işlemek için kullanılan (örn. yamalı libre-app, oop2, …) yazılım kombinasyonundan bağımsız olarak uygulanırlar.
+Bir libre 2 sensörünü kalibre ederken en iyi sonuçları elde etmek için izlemeniz gereken bazı “kurallar” vardır.
+Libre 2 değerlerini işlemek için kullanılan (örn. yamalı libre-app, oop2, …) yazılım kombinasyonundan bağımsız olarak uygulanırlar.
 
-1.  En önemli kural, sensörü yalnızca en az 15 dakika boyunca düz bir KŞ seviyeniz olduğunda kalibre etmektir. Son üç okuma arasındaki delta 10 mg/dl'yi geçmemelidir (her okuma arasında 15 dakikadan fazla olmamalıdır). Libre 2, kan şekeri seviyenizi değil, deri altı glikoz seviyenizi ölçtüğünden, özellikle kan şekeri seviyesi yükselirken veya düşerken biraz gecikme olur. Bu zaman gecikmesi, KŞ seviyesi yükselme/düşüş o kadar fazla olmasa bile, elverişsiz durumlarda çok büyük kalibrasyon farklarına yol açabilir. Bu nedenle, mümkün olduğunca, yükselen veya düşen durumlarda kalibrasyon yapmaktan kaçının. ->Düz bir KŞ seviyeniz olmadığında bir kalibrasyon eklemeniz gerekiyorsa (örn. yeni bir sensör başlatırken) bu kalibrasyonu/kalibrasyonları mümkün olan en kısa sürede kaldırmanız ve düz KŞ seviyelerindeyken yeni bir tane eklemeniz önerilir.
-2.  Aslında bu, kural 1'in bir benzeridir ve otomatik olarak dikkate alınması gerekir, ancak emin olmak için: Karşılaştırma ölçümleri yaparken (parmaktan glikometre ile) KŞ seviyeniz yaklaşık 15 dakika boyunca düz olmalıdır. Yükselirken veya düşerken karşılaştırma yapmayın. Önemli: Yine de şüpheye düştüğünüz zamanlarda kan şekeri ölçümleri yapacaksınız, sadece yükselirken veya düşerken sonuçları kalibrasyon için kullanmayın!
-3.  Sensörü düz KŞ seviyelerinde kalibre etmek çok iyi bir başlangıç noktası olduğundan, sensörü yalnızca 70 mg/dl ila 160 mg/dl gibi istediğiniz hedef aralığında kalibre etmeniz şiddetle tavsiye edilir. Libre 2, 50 mg/dl ila 350 mg/dl (en azından doğrusal bir şekilde değil) gibi çok büyük bir aralıkta çalışacak şekilde optimize edilmemiştir, bu nedenle yalnızca hedef aralığınız dahilinde kalibre etmeye çalışın. -> Hedef aralığınızın dışındaki kalibrasyon değerlerinin kan şekeri seviyelerine tam olarak uymayacağını kabul edin.
-4.  Çok sık kalibrasyon yapmayın. Sensörü çok sık kalibre etmek daha kötü sonuçlara yol açar. Sensör düz KŞ koşullarında iyi sonuçlar verdiğinde, herhangi bir -yararlı- etkisi olmadığı için yeni kalibrasyon eklemeyin. Her 3-5 günde bir durumu tekrar kontrol etmek yeterli olmalıdır (elbette düz KŞ koşullarında).
-5.  Gerekli olmadığında kalibrasyondan kaçının. Bu size saçma gelebilir ancak kan şekeri ile deri altı glikoz seviyesi farkı sadece ±10 mg/dl ise (örn. kan şekeri seviyesi: 95, Libre sensörü 100 --> 9mg/DL'yi EKLEMEYİN, kan şekeri seviyesi: 95, Libre sensörü 115 --> kalibrasyon için dikkate alınacak 95'i ekleyin)
+1. En önemli kural, sensörü yalnızca en az 15 dakika boyunca düz bir KŞ seviyeniz olduğunda kalibre etmektir. Son üç okuma arasındaki delta 10 mg/dl'yi geçmemelidir (her okuma arasında 15 dakikadan fazla olmamalıdır). Libre 2, kan şekeri seviyenizi değil, deri altı glikoz seviyenizi ölçtüğünden, özellikle kan şekeri seviyesi yükselirken veya düşerken biraz gecikme olur. Bu zaman gecikmesi, KŞ seviyesi yükselme/düşüş o kadar fazla olmasa bile, elverişsiz durumlarda çok büyük kalibrasyon farklarına yol açabilir. Bu nedenle, mümkün olduğunca, yükselen veya düşen durumlarda kalibrasyon yapmaktan kaçının.  -> Düz bir KŞ seviyeniz olmadığında bir kalibrasyon eklemeniz gerekiyorsa (örn. yeni bir sensör başlatırken) bu kalibrasyonu/kalibrasyonları mümkün olan en kısa sürede kaldırmanız ve düz KŞ seviyelerindeyken yeni bir tane eklemeniz önerilir.
+2. Aslında bu, kural 1'in bir benzeridir ve otomatik olarak dikkate alınması gerekir, ancak emin olmak için: Karşılaştırma ölçümleri yaparken (parmaktan glikometre ile) KŞ seviyeniz yaklaşık 15 dakika boyunca düz olmalıdır. Yükselirken veya düşerken karşılaştırma yapmayın. Önemli: Yine de şüpheye düştüğünüz zamanlarda kan şekeri ölçümleri yapacaksınız, sadece yükselirken veya düşerken sonuçları kalibrasyon için kullanmayın!
+3. Sensörü düz KŞ seviyelerinde kalibre etmek çok iyi bir başlangıç noktası olduğundan, sensörü yalnızca 70 mg/dl ila 160 mg/dl gibi istediğiniz hedef aralığında kalibre etmeniz şiddetle tavsiye edilir. Libre 2, 50 mg/dl ila 350 mg/dl (en azından doğrusal bir şekilde değil) gibi çok büyük bir aralıkta çalışacak şekilde optimize edilmemiştir, bu nedenle yalnızca hedef aralığınız dahilinde kalibre etmeye çalışın. -> Hedef aralığınızın dışındaki kalibrasyon değerlerinin kan şekeri seviyelerine tam olarak uymayacağını kabul edin.
+4. Çok sık kalibrasyon yapmayın. Sensörü çok sık kalibre etmek daha kötü sonuçlara yol açar. Sensör düz KŞ koşullarında iyi sonuçlar verdiğinde, herhangi bir -yararlı- etkisi olmadığı için yeni kalibrasyon eklemeyin. Her 3-5 günde bir durumu tekrar kontrol etmek yeterli olmalıdır (elbette düz KŞ koşullarında).
+5. Gerekli olmadığında kalibrasyondan kaçının. Bu size saçma gelebilir ancak kan şekeri ile deri altı glikoz seviyesi farkı sadece ±10 mg/dl ise (örn. kan şekeri seviyesi: 95, Libre sensörü 100 -> 9mg/DL'yi EKLEMEYİN, kan şekeri seviyesi: 95, Libre sensörü 115 -> kalibrasyon için dikkate alınacak 95'i ekleyin)
 
-Bazı genel notlar: Sensörün kullanım ömrü sona erdiğinde yeni bir sensörü etkinleştirdikten sonra kural no. 4 yerine 3-5 günden daha sık karşılaştırma ölçümleri yapmak mantıklıdır. Yeni ve eski sensörler için ham değerlerin değişmesi olasıdır ve yeniden kalibrasyonun gereklidir. Zaman zaman bir sensör geçerli değerler sağlamaz. Büyük olasılıkla sensör değeri, gerçek kan şekeri düzeyine kıyasla çok düşüktür (örn. sensör: 50 mg/dl, bg: 130 mg/dl) kalibrasyondan sonra bile. Bu durumda sensör, faydalı sonuçları rapor edecek şekilde kalibre edilemez. Ör. yamalı libre uygulamasını kullanırken, maksimum +20 mg/dl'lik bir sapma eklenebilir. Sensör çok düşük değerler verdiğinde, daha iyi olmayacağı için değiştirmekten çekinmeyin. Arızalı bir sensör olsa bile, değiştirdiğiniz sensörler sürekli çok sık düşük değerler veriyorsa, sensörünüzü yerleştirmek için farklı alanlar kullanmayı deneyin. Tavsiye edilen alanda (üst kol) bile sensörlerin geçerli değerler sağlamadığı bazı yerler olabilir. Bu, sizin için işe yarayan alanları bulmada bir tür deneme yanılmadır.
+Bazı genel notlar:
+Sensörün kullanım ömrü sona erdiğinde yeni bir sensörü etkinleştirdikten sonra kural no.4 yerine 3-5 günden daha sık karşılaştırma ölçümleri yapmak mantıklıdır . Yeni ve eski sensörler için ham değerlerin değişmesi olasıdır ve yeniden kalibrasyonun gereklidir.
+Zaman zaman bir sensör geçerli değerler sağlamaz. Büyük olasılıkla sensör değeri, gerçek kan şekeri düzeyine kıyasla çok düşüktür (örn. sensör: 50 mg/dl, bg: 130 mg/dl) kalibrasyondan sonra bile. Bu durumda sensör, faydalı sonuçları rapor edecek şekilde kalibre edilemez. Ör. yamalı libre uygulamasını kullanırken, maksimum +20 mg/dl'lik bir sapma eklenebilir. Sensör çok düşük değerler verdiğinde, daha iyi olmayacağı için değiştirmekten çekinmeyin.
+Arızalı bir sensör olsa bile, değiştirdiğiniz sensörler sürekli çok sık düşük değerler veriyorsa, sensörünüzü yerleştirmek için farklı alanlar kullanmayı deneyin. Tavsiye edilen alanda (üst kol) bile sensörlerin geçerli değerler sağlamadığı bazı yerler olabilir. Bu, sizin için işe yarayan alanları bulmada bir tür deneme yanılmadır.

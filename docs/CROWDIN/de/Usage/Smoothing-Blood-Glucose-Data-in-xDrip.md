@@ -6,7 +6,7 @@ Wenn die BZ-Daten Sprünge haben oder verrauscht sind, kann es dazu kommen, dass
 
 ### Build your own Dexcom App
 
-Wenn Du die [BYODA](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) nutzt, werden die BZ-Daten geglättet und sind konsistent. Außerdem kannst Du die rückwirkende Glättung von Dexcom nutzen. Es gibt keine Einschränkungen bei der Verwendung des SMB.
+Wenn Du die [BYODA](../Hardware/DexcomG6.md#g6-mit-build-your-own-dexcom-app) nutzt, werden die BZ-Daten geglättet und sind konsistent. Außerdem kannst Du die rückwirkende Glättung von Dexcom nutzen. Es gibt keine Einschränkungen bei der Verwendung des SMB.
 
 ### xDrip+ mit Dexcom G5 oder G6
 

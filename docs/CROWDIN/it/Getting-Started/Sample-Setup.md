@@ -28,7 +28,7 @@ Nevertheless, the data is automatically uploaded to Nightscout "in the cloud" wh
 
 3. [Dexcom G5](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. Optional: Sony Smartwatch 3 (SWR50)
     
@@ -95,7 +95,7 @@ To do this perform the following steps on your smartphone:
 3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
 4. In this sample setup we used (among others)
 
-* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G5 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -115,7 +115,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Settings > Inter-app settings > Accept Calibrations > `ON`
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G5 sensor. This is necessary otherwise an error message will appear regularly.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Example of an alarm setup
 

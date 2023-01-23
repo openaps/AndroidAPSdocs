@@ -21,7 +21,7 @@ V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). T
 
 ### Další nastavení zabezpečení
 
-Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](../Getting-Started/Safety-first.rst).
+Udržujte svůj telefon aktualizovaný, jak je popsáno v části [bezpečnost na prvním místě](../Getting-Started/Safety-first.md).
 
 ## Ruční nastavení Nightscoutu
 

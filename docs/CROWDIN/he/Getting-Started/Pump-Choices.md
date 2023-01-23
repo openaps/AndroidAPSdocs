@@ -7,8 +7,8 @@ AndroidAPS עובד עם מספר משאבות אינסולין. הרשימה ה
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (בלוטות')
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (בלוטות')
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (בלוטות')
-- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (בלוטות')
-- [Omnipod Eros](../Configuration/OmnipodEros.rst) (תואמת ריילילינק)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md) (בלוטות')
+- [Omnipod Eros](../Configuration/OmnipodEros.md) (תואמת ריילילינק)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md) (בלוטות')
 - משאבות [Medtronic](../Configuration/MedtronicPump.md) ישנות מסויימות (תואמות ריילילינק)
 

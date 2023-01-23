@@ -330,7 +330,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
 * Leider hat Google die Unterstützung für Wear OS 1.5 Geräte im Herbst 2020 eingestellt. Dies führt zu Problemen bei der Verwendung von Sony SW3 mit AndroidAPS 2.7 und höher.
-* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## View Nightscout data
 

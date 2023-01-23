@@ -1,5 +1,10 @@
 # Telefony
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+```{toctree}
+:glob: true
+:maxdepth: 1
+
+Seznam otestovaných telefonů <../Getting-Started/Phones.md>
+Nastavení Jelly Pro <../Usage/jelly.md>
+Nastavení telefonů Huawei <../Usage/huawei.md>
+```

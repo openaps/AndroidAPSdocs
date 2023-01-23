@@ -48,8 +48,8 @@ When a proofreader approves a translation it will be added to the next version o
 
 ### Translate headline links
 
-* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.html) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles.html#percentage) must be translated as the headline in the other language is different from the English original.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles#percentage) must be translated as the headline in the other language is different from the English original.
 * If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
     Here are some examples:

@@ -48,8 +48,8 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 ### Links zu Überschriften übersetzen
 
-* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.html) verweist, muss er nicht übersetzt werden.
-* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles.html#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
+* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.md) verweist, muss er nicht übersetzt werden.
+* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
 * Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
     
     Hier einige Beispiele:

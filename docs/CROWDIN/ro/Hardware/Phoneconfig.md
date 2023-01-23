@@ -1,5 +1,10 @@
 # Telefoane
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+```{toctree}
+:glob: true
+:maxdepth: 1
+
+Lista de telefoane testate <../Getting-Started/Phones.md>
+Setări Jelly Pro <../Usage/jelly.md>
+Setări Huawei <../Usage/huawei.md>
+```

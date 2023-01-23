@@ -31,7 +31,7 @@ Die Daten werden jedoch automatisch zu Nightscout (Open Source Cloud Service) ho
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternativen: siehe Liste der möglichen [BZ-Quellen](../Configuration/BG-Source.rst)
+    * Alternativen: siehe Liste der möglichen [BZ-Quellen](../Configuration/BG-Source.md)
 
 4. Optional: Sony Smartwatch 3 (SWR50)
     
@@ -97,7 +97,7 @@ Zur Einrichtung im Smartphone folgende Schritte ausführen:
 3. AndroidAPS entsprechend den eigenen Anforderungen mit Hilfe des Einrichtungsassistenten oder manuell [konfigurieren](../Configuration/Config-Builder.md).
 4. In diesem Beispiel haben wir (unter anderem) folgende Einstellungen verwendet:
 
-* BZ-Quelle: `Dexcom G6 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/BG-Source.rst))
+* BZ-Quelle: `Dexcom G6 App (patched)` -- Klicke auf das Zahnrad und aktiviere `Speichere BZ-Werte in Nightscout` und `Sende BZ-Werte zu xDrip+` (siehe [BZ-Quellen](../Configuration/BG-Source.md))
 
 ![G5 Einstellungen](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip + ist eine weitere ausgereifte Open-Source-App, die unzählige Möglichkei
     * Einstellungen > Inter-App-Einstellungen > Accept Calibrations > `AN`
     * Menü > Sensor starten (Ist nur "pro forma" und hat nichts mit dem laufenden G6-Sensor zu tun. Dies ist nötig, da sonst regelmäßig eine Fehlermeldung kommt.) 
 
-Weitere Informationen über xDrip+ findest Du auf der Seite [BZ-Quellen](../Configuration/BG-Source.rst).
+Weitere Informationen über xDrip+ findest Du auf der Seite [BZ-Quellen](../Configuration/BG-Source.md).
 
 ### Beispiel für ein Alarm-Setup:
 

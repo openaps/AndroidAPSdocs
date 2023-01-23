@@ -2,13 +2,13 @@
 
 Deze pagina is bedoeld voor zorgprofessionals (zoals artsen en diabetesverpleegkundigen) die meer willen weten over 'open source' kunstmatige alvleesklier-technologie zoals AndroidAPS, of voor patiënten die informatie zoeken om te delen met hun arts/diabetesverpleegkundige.
 
-We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](../index.rst). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
+We geven u achtergrondinformatie over doe-het-zelf closed loop systemen, en gaan wat dieper in op hoe AndroidAPS werkt. Voor meer details over al deze onderwerpen, bekijk de [uitgebreide AndroidAPS documentatie online](../index.md). Als u vragen hebt, dan kunt u uw patiënt benaderen, of stel uw vraag aan één van de gebruikersgroepen. Als u niet actief bent op sociale media (bijv. [Twitter](https://twitter.com/kozakmilos) of Facebook), schroom dan niet om een email te sturen naar de ontwikkelaars: developers@AndroidAPS.org Verder kunt u [op deze website](https://openaps.org/outcomes/) een aantal van de laatste studies vinden & gegevens over de resultaten van closed loopen.
 
 ### Het bouwen van een doe-het-zelf closed loop
 
 Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download de AndroidAPS broncode en bouw de app](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
 

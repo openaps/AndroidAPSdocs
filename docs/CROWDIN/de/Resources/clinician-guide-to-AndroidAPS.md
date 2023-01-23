@@ -2,13 +2,13 @@
 
 Diese Seite richtet sich an Klinikpersonal, das Interesse an der Open-Source-Technologie der künstlichen Bauchspeicheldrüse wie AndroidAPS haben und an Patienten, die diese Informationen mit ihren Ärzten und Diabetesberatern teilen möchten.
 
-Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping und speziell über die Funktionsweise von AndroidAPS. Für weitere Details zu all diesen Themen lesen Sie bitte die [ausführliche AndroidAPS-Dokumentation online](../index.rst). Bei Fragen wenden Sie sich bitte an Ihren Patienten bezüglich weiterer Details oder zögern Sie nicht, die Community zu kontaktieren. (Wenn Sie nicht auf Social Media (z.B. Twitter<0> oder Facebook) sind, können Sie gerne eine E-Mail an developers@AndroidAPS.org senden.) [Einige der neuesten Studien und ergebnisbezogenen Daten finden Sie unter diesem Link](https://openaps.org/outcomes/).</p> 
+Dieser Leitfaden enthält einige wichtige Informationen über DIY Closed Looping und speziell über die Funktionsweise von AndroidAPS. Für weitere Details zu all diesen Themen lesen Sie bitte die [ausführliche AndroidAPS-Dokumentation online](../index.md). Bei Fragen wenden Sie sich bitte an Ihren Patienten bezüglich weiterer Details oder zögern Sie nicht, die Community zu kontaktieren. (Wenn Sie nicht auf Social Media (z.B. Twitter<0> oder Facebook) sind, können Sie gerne eine E-Mail an developers@AndroidAPS.org senden.) [Einige der neuesten Studien und ergebnisbezogenen Daten finden Sie unter diesem Link](https://openaps.org/outcomes/).</p> 
 
 ### Die Schritte zum Aufbau eines DIY Closed Loop
 
 Um AndroidAPS nutzen zu können, müssen die folgenden Schritte unternommen werden:
 
-* Organisieren Sie sich eine [kompatible Insulinpumpe](../Hardware/pumps.md), ein [kompatibles Android-Gerät](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) und eine [kompatible CGM Quelle](../Configuration/BG-Source.rst).
+* Organisieren Sie sich eine [kompatible Insulinpumpe](../Hardware/pumps.md), ein [kompatibles Android-Gerät](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) und eine [kompatible CGM Quelle](../Configuration/BG-Source.md).
 * [AndroidAPS Quellcode herunterladen und die Software "erstellen"](../Installing-AndroidAPS/Building-APK.md).
 * [Konfigurieren Sie die Software so, dass sie mit Ihren Diabetes-Geräten kommuniziert, richten Sie sie ein und nehmen Sie Sicherheitseinstellungen vor](../index#configuration).
 

@@ -20,7 +20,7 @@ Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 - [destekleyen bir insülin pompası](./Pump-Choices.md), 
 - bir [Android akıllı telefon](Phones.md) (Apple iOS, AndroidAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve 
-- [sürekli glikoz izleme sistemi](../Configuration/BG-Source.rst). 
+- [sürekli glikoz izleme sistemi](../Configuration/BG-Source.md). 
 
 İkinci olarak, **donanımınızı kurmanız** gerekir. [Adım adım öğreticiyle örnek kurulum](Sample-Setup.md)'a bakın.
 
@@ -63,7 +63,7 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 - Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
 - Pompa pilleri
-- AndroidAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.rst).
+- AndroidAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.md).
 
 ## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
@@ -286,7 +286,7 @@ Döngü yaparken şu adımları denemelisiniz:
 
 Bu ayarlar için önce ve sonra çalıştırma önemlidir. Değişiklikleri spordan önce zamanında yapın ve kas dolgusunun etkisini göz önünde bulundurun.
 
-Aynı anda düzenli olarak spor yapıyorsanız (yani spor salonunuzda spor dersi), profil değiştirme ve TT için [otomasyonu](../Usage/Automation.rst) kullanmayı düşünebilirsiniz. Konum tabanlı otomasyon da bir fikir olabilir ancak ön işlemeyi zorlaştırır.
+Aynı anda düzenli olarak spor yapıyorsanız (yani spor salonunuzda spor dersi), profil değiştirme ve TT için [otomasyonu](../Usage/Automation.md) kullanmayı düşünebilirsiniz. Konum tabanlı otomasyon da bir fikir olabilir ancak ön işlemeyi zorlaştırır.
 
 Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve değişiklikler için en iyi zaman bireyseldir. Sizin için doğru değeri arıyorsanız güvenli taraftan başlayın (daha düşük yüzde ve daha yüksek GH ile başlayın).
 

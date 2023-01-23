@@ -20,7 +20,7 @@ AndroidAPS создан для управления помпой и подачи
 
 - [Совместимая с AAPS(ИПЖ) инсулиновая помпа](./Pump-Choices.md) 
 - Смартфон с Андроидом (Apple iOS не поддерживается AndroidAPS - вместо этого изучите вариант [iOS Loop](https://loopkit.github.io/loopdocs/)) 
-- [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.rst). 
+- [Система непрерывного мониторинга глюкозы крови (ГК)](../Configuration/BG-Source.md). 
 
 Во-вторых, вам нужно **настроить ваше оборудование**. Смотрите [пример установки с пошаговым руководством](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ AndroidAPS создан для управления помпой и подачи
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ Depending on your job, you may choose to use different treatment factors on work
 
 Важное значение имеет предварительная и последующая обработка этих настроек. Внесите изменения до занятий спортом и учитывайте эффект наполнения мышц.
 
-Если вы занимаетесь спортом регулярно в одно и то же время (например, спортивные занятия в тренажерном зале), можно пользоваться [ автоматизацией automation ](../Usage/Automation.rst) для изменения профиля и временных целей TT. Автоматизация на основе геолокации также неплохая идея, но делает предварительную обработку более сложной.
+Если вы занимаетесь спортом регулярно в одно и то же время (например, спортивные занятия в тренажерном зале), можно пользоваться [ автоматизацией automation ](../Usage/Automation.md) для изменения профиля и временных целей TT. Автоматизация на основе геолокации также неплохая идея, но делает предварительную обработку более сложной.
 
 Процент изменения профиля, величина временной цели при нагрузках и наилучшее время для внесения изменений индивидуальны. Начните с более безопасных параметров (например с низким процентоом профиля и более высокими временными целями).
 

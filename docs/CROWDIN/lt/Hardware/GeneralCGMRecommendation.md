@@ -2,38 +2,41 @@
 
 ## NGJ higiena
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Nesvarbu, kurį NGJ Jūs naudojate, jeigu kalibracijai atlikti reikalingas kraujo mėginys, tai čia pateikiama keletas aiškių patarimų, kurių turėtumėte laikytis, nesvarbu ar naudojate "Pasidaryk Pats" NGJ sistemą ar kitą oficialią programą.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+- Įsitikinkite, kad rankos ir matavimo reikmenys švarūs.
+- Kalibruokite, kai glikemijos duomenys (taškai) ekrane yra tolygūs (paprastai užtenka 15-30 min intervalo)
+- Venkite kalibracijos, kai glikemijos lygis juda aukštyn ar žemyn.
+- Atlikite pakankamai kalibracijų - oficialiose programose Jūsų bus prašoma tai atlikti vieną ar du kartus per dieną. Pasidaryk-Pats sistemose tokių priminimų nėra, todėl būkite atsargūs ir nepamirškite kalibruoti.
+- Jei įmanoma, kalibruokite su mažesniais rodmenimis (4–5 mmol/l arba 72–90 mg/dl.), Taip pat vidutiniškai (7–9 mmol/l arba 126–160 mg/dl), nes tai suteikia tikslesnį kalibravimą.
 
 ## Sensoriaus nustatymas (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+Įvedant sensorių, nerekomenduojama per daug spausti įšoviklio, kad būtų išvengta kraujavimo. Sensoriaus siūlelis neturėtų kontaktuoti su krauju.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Įspėjimas! First click in the square side and then press down the round side.
+Įvedę sensorių, siųstuvą galima užfiksuoti ant jo platformos. Įspėjimas! Pirmiausia spustelėkite kvadratinę pusę, tada stumkite apvalią pusę.
 
 ## Trikčių šalinimas
 
 ### Ryšio problemos
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Bluetooth ryšį gali nutraukti kiti šalia esantys Bluetooth įrenginiai, tokie kaip gliukozės kiekio kraujyje matuokliai, ausinės, planšetiniai kompiuteriai, virtuvės prietaisai, mikrobangų krosnelės ar keraminės kaitlentės. Šiuo atveju xdrip nerodo jokių glikemijos duomenų. When bluetooth connection is restabilised the data is backfilled.
 
 ### Sensoriaus klaidos
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Jei pasikartoja sensoriaus klaidos, pabandykite pasirinkti kitą kūno vietą sensoriaus įvedimui. Sensoriaus siūlelis neturėtų kontaktuoti su krauju.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Dažnai „Sensoriaus klaidą“ galima ištaisyti geriant daug vandens ir masažuojant aplink sensorių!
 
 ### Šokinėjantys duomenys
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Galite pabandyti pakeisti triukšmo slopinimo parametrus xdrip (Nustatymai - Nustatymai tarp programų - Triukšmo blokavimas), t.y. "Užblokuokite labai didelį ir blogesnį triukšmą".  Taip pat žr. "Duomenų išlyginimas: \<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>\`\_.
 
 ### Neigiamas sensoriaus amžius
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+```{eval-rst}
+.. nuotrauka:: ../images/Troubleshooting_SensorAge.png
+  :alt: Neigiamas jutiklis amžius
+```
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Tai nutinka, kai arba yra įvestas dvigubas "NGS jutiklis įvestas" įrašas veiksmų skirtuke / meniu \<../Configuration/Config-Builder#actions>\`\_ arba jutiklis įvestas su bloga data. Eikite į terapijos nustatymus > priežiūra ir ištrinkite klaidingą įrašą.

@@ -83,9 +83,9 @@ Bunu hemen kaldırmak için Dexcom/xDrip+ sekmesinden birkaç girişi manuel ola
 
 Ancak, çok sayıda kopya olduğunda, aşağıdakileri yapmak daha kolay olabilir
 
-* [ayarlarınızı yedekleyin](../Usage/ExportImportSettings.rst),
+* [ayarlarınızı yedekleyin](../Usage/ExportImportSettings.md),
 * bakım menüsünde veritabanınızı sıfırlayın ve
-* [ayarlarınızı tekrar içe aktarın](../Usage/ExportImportSettings.rst)
+* [ayarlarınızı tekrar içe aktarın](../Usage/ExportImportSettings.md)
 
 ##### Kırmızı uyarı işareti: Yinelenen KŞ verileri
 
@@ -125,7 +125,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
    * Yakın zamanda bazalınız düşürülmüşse, (AİNS) aktif insülin negatif olabilir.
    * Bolus ve bazal insülinin ayrımını görmek için simgeye basın
 
-* Tahıl: [Aktif karbonhidrat (AKRB)](../Usage/COB-calculation.rst) - daha önce yediğiniz henüz emilmemiş karbonhidratlar -> karbonhidrat gerekiyorsa simge yanıp söner
+* Tahıl: [Aktif karbonhidrat (AKRB)](../Usage/COB-calculation.md) - daha önce yediğiniz henüz emilmemiş karbonhidratlar -> karbonhidrat gerekiyorsa simge yanıp söner
 
 * Mor çizgi: bazal oran - geçici bazal orandaki değişiklikleri yansıtan simge (%100'de sabit çizgi) 
    * Herhangi bir geçici bazalın (kalan süre dahil) temel bazal oranını ve ayrıntılarını görmek için simgeye basın
@@ -178,7 +178,7 @@ Neden yinelenen KŞ verileri aldığınızı bulmanız gerekiyor:
 
 #### Tahmin çizgileri
 
-* **Turuncu** çizgi: [AKRB](../Usage/COB-calculation.rst) (Bu renk genellikle aktif karbonhidrat ve karbonhidratları temsil etmek için kullanılır)
+* **Turuncu** çizgi: [AKRB](../Usage/COB-calculation.md) (Bu renk genellikle aktif karbonhidrat ve karbonhidratları temsil etmek için kullanılır)
    
    Tahmin çizgisi, mevcut pompa ayarlarına ve karbonhidrat emiliminden kaynaklanan sapmaların sabit kaldığı varsayılarak KŞ'nizin nereye gideceğini (Aktif karbonhidratın değil!) gösterir. Bu çizgi yalnızca bilinen AKRB (Aktif Karbonhidrat) varsa görünür.
 
@@ -282,7 +282,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 * Karbonhidratları bolus olmadan kaydetmek için kullanılır.
 * Belirli [önceden ayarlanmış geçici hedefler](../Configuration/Preferences#default-temp-targets) ilgili kutu işaretlenerek doğrudan ayarlanabilir.
 * Zaman farkı: Ne zaman karbonhidrat yediniz / yiyeceksiniz (dakika olarak).
-* Süre: ["Yayma karbonhidratlar"](../Usage/Extended-Carbs.rst) için kullanılacak
+* Süre: ["Yayma karbonhidratlar"](../Usage/Extended-Carbs.md) için kullanılacak
 * Karbonhidrat miktarını hızlı bir şekilde artırmak için butonları kullanabilirsiniz.
 * Notlar, [NS client](../Configuration/Preferences#nsclient) için ayarlarınıza bağlı olarak Nightscout'a yüklenecektir.
 

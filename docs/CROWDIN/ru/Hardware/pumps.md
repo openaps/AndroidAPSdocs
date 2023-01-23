@@ -1,11 +1,16 @@
 # Настройка помпы
 
-- [Dana-R pump](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-RS pump](../Configuration/DanaRS-Insulin-Pump.md)
-- [Accu-Chek Combo pump](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu-Chek Insight pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Diaconn G8 insulin pump](../Configuration/DiaconnG8.rst)
-- [Omnipod Eros](../Configuration/OmnipodEros.rst)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
-- [Medtronic pump](../Configuration/MedtronicPump.md)
-- [Future possible pump drivers](../Getting-Started/Future-possible-Pump-Drivers.md)
+```{toctree}
+:glob: true
+:maxdepth: 1
+
+Помпа DanaR <../Configuration/DanaR-Insulin-Pump.md>
+Dana-RS pump <../Configuration/DanaRS-Insulin-Pump.md>
+Помпа Аксу-Чек Комбо <../Configuration/Accu-Chek-Combo-Pump.md>
+Помпа Accu-Chek Insight <../Configuration/Accu-Chek-Insight-Pump.md>
+Инсулиновая помпа Diaconn G8 <../Configuration/DiaconnG8.md>
+Omnippod Eros <../Configuration/OmnipodEros.md>
+Omnipod DASH <../Configuration/OmnipodDASH.md>
+Помпа Medtronic <../Configuration/MedtronicPump.md>
+Будущие возможные драйверы помп <../Getting-Started/Futurepossible-Pump-Drivers.md>
+```

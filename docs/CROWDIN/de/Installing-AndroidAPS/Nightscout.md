@@ -21,7 +21,7 @@ In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzul
 
 ### Weitere Sicherheitseinstellungen
 
-Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-Started/Safety-first.rst) beschrieben ist.
+Halte Dein Smartphone aktuell wie es in den [Sicherheitshinweisen](../Getting-Started/Safety-first.md) beschrieben ist.
 
 ## Manuelles Nightscout-Setup
 

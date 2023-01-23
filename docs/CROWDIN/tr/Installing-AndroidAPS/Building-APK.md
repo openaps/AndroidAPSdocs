@@ -60,7 +60,7 @@ Lütfen hem **64 bit CPU hem de 64 bit işletim sisteminin zorunlu koşul olduğ
 
 Genel olarak, APK dosyasını oluşturmak için gerekli adımlar:
 
-1. [Git yükleyin](../Installing-AndroidAPS/git-install.rst)
+1. [Git yükleyin](../Installing-AndroidAPS/git-install.md)
 2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
 3. [Android Studio tercihlerinde git yolunu ayarlayın](../Installing-AndroidAPS/Building-APK#git-pfad-in-android-studio-eintragen)
 4. [AndroidAPS kodlarını indirin](../Installing-AndroidAPS/Building-APK#androidaps-code-herunterladen)
@@ -75,7 +75,7 @@ APK dosyasını oluşturmak için gerekli adımların ayrıntılı açıklaması
 
 ## Git'i kurun (eğer yüklü değilse)
 
-[git kurulum sayfasındaki](../Installing-AndroidAPS/git-install.rst) kılavuzu izleyin.
+[git kurulum sayfasındaki](../Installing-AndroidAPS/git-install.md) kılavuzu izleyin.
 
 ## Android Studio'yu yükleyin
 
@@ -119,7 +119,7 @@ Android Studio ek bileşenleri indirirken bekleyin ve sabırlı olun. Her şey i
 
 ## Git yolunu tercihlerde ayarla
 
-Bilgisayarınızda [git'in kurulu olduğundan](../Installing-AndroidAPS/git-install.rst) ve kurduktan sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
+Bilgisayarınızda [git'in kurulu olduğundan](../Installing-AndroidAPS/git-install.md) ve kurduktan sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
 
 Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) öğesini tıklayın ve ardından "All settings..." (Tüm ayarlar...) bağlantısını seçin (2):
 
@@ -127,7 +127,7 @@ Android Studio karşılama ekranında soldaki "Customize" (1) (Özelleştir) ö�
 
 ### Windows
 
-* Windows kullanıcısı olarak, [Git'i yükledikten](../Installing-AndroidAPS/git-install.rst) sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
+* Windows kullanıcısı olarak, [Git'i yükledikten](../Installing-AndroidAPS/git-install.md) sonra bilgisayarınızı yeniden başlattığınızdan emin olun.
 
 * Alt menüyü açmak için "Version Control" (1) (Sürüm Kontrolü) üzerine çift tıklayın.
 

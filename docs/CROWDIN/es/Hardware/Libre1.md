@@ -1,29 +1,29 @@
 # Freestyle libre 1
 
-To use your Libre as a CGM that is getting new BG values every 5 minutes you first need to buy a NFC to Bluetooth adapter like:
+Para utilizar su libre como un CGM que obtiene nuevos valores de BG cada 5 minutos, primero tiene que comprar un adaptador NFC a Bluetooth como:
 
--   MiaoMiao Reader (version 1 or 2) <https://www.miaomiao.cool/>
--   Blucon Nightrider <https://www.ambrosiasys.com/our-products/blucon/>
--   Bubble <https://bubbleshop.eu/> or for Russian users <https://vk.com/saharmonitor/>
+- MiaoMiao Reader (version 1 or 2) [https://www.miaomiao.cool/](https://www.miaomiao.cool/)
+- Blucon Nightrider [https://www.ambrosiasys.com/our-products/blucon/](https://www.ambrosiasys.com/our-products/blucon/)
+- Bubble [https://bubbleshop.eu/](https://bubbleshop.eu/)  or for Russian users  [https://vk.com/saharmonitor/](https://vk.com/saharmonitor/)
 
 Additionally it is possible to use a specific watch, the Sony Smartwatch 3 which has an NFC chip which can be enabled and can be used as a NFC collector. However the custom NFC to Bluetooth adapters listed above offer a less complex solution and would be used by the majority of those wanting to use their Libre 1 as a CGM.
 
--   Sony Smartwatch 3 (SWR50) <https://github.com/pimpimmi/LibreAlarm/wiki/>
+- Sony Smartwatch 3 (SWR50) [https://github.com/pimpimmi/LibreAlarm/wiki/](https://github.com/pimpimmi/LibreAlarm/wiki/)
 
-As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. The BG values of Libre 1 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+As it currently stands, if using Libre 1 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within the SMB algorithm. Los valores de BG de Libre 1 no son lo suficientemente estables para usarlo de forma segura. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## If using xDrip+
 
--   If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
--   For settings in xDrip+ with screenshots see [xDrip+ settings page](../Configuration/xdrip.md). There is a part for basic xDrip+ settings and for Freestyle Libre xDrip+ settings.
--   If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+- If not already set up then download xDrip+ and follow instructions on [LimiTTEer](https://github.com/JoernL/LimiTTer) or  [Libre Alarm](https://github.com/pimpimmi/LibreAlarm/wiki).
+- In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
+- In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
+- If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON.  Puede que también desee revisar las opciones en Ajustes > Ajustes Menos Comunes > Ajustes Avanzados de Calibración.
+- Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+- Para los valores de xDrip+ con capturas de pantalla, consulte la sección [xDrip+ página de ajustes](../Configuration/xdrip.md). Hay una parte para los valores básicos de xDrip+ y para los valores de Freestyle Libre xDrip+.
+- If AAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
 ## Si utiliza Glimp
 
--   You will need Glimp version 4.15.57 or newer. Older versions are not supported.
--   If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AndroidAPS).
+- You will need Glimp version 4.15.57 or newer. Older versions are not supported.
+- If not already set up then download Glimp and follow instructions on [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
+- Seleccionar Glimp en ConfigBuilder (ajustes de AndroidAPS).

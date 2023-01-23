@@ -83,9 +83,9 @@ Pour le supprimer immédiatement, vous devez supprimer manuellement quelques ent
 
 Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
-* [sauvegardez vos paramètres](../Usage/ExportImportSettings.rst),
+* [sauvegardez vos paramètres](../Usage/ExportImportSettings.md),
 * réinitialiser votre base de données dans le menu de maintenance et
-* [importez à nouveau vos paramètres](../Usage/ExportImportSettings.rst)
+* [importez à nouveau vos paramètres](../Usage/ExportImportSettings.md)
 
 ##### Signe d'alerte rouge : données Gly dupliquées
 
@@ -125,7 +125,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
    * L'IA peut être négative s’il y a eu récemment des périodes de basal réduit.
    * Appuyez sur l'icône pour voir la répartition entre l'IA bolus et l'IA basale
 
-* Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.rst) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
+* Grain de blé : [glucides actifs (GA)](../Usage/COB-calculation.md) - glucides précédemment mangés et non encore absorbés -> l'icône clignotte (orange/rouge) si des glucides sont requis
 
 * Ligne violette : débits de basal - les changements d'icône reflétant les changements des débits de base temporaires (plat à 100%) 
    * Appuyez sur l'icône pour voir le débit de basal du profil et les détails de n'importe quel basal temporaire (y compris la durée restante)
@@ -178,7 +178,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 
 #### Lignes de prédiction
 
-* Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.rst) (la couleur est généralement utilisée pour représenter les Glucides)
+* Ligne **orange** : [Glucides Actifs (GA)](../Usage/COB-calculation.md) (la couleur est généralement utilisée pour représenter les Glucides)
    
    Cette ligne de prédiction montre comment votre Glycémie (et pas les GA eux mêmes) devrait évoluer sur la base de vos réglages actuels de la pompe, en supposant que les déviations liées à l'absorption des glucides restent constantes. Cette ligne n'apparaît que s'il y a des GA connus.
 
@@ -282,7 +282,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Permet d'enregistrer les glucides sans faire de bolus.
 * Certaines [cibles temporaires par défaut](../Configuration/Preferences#cibles-temporaires-par-defaut) peuvent être définies directement en cochant la case.
 * Décalage horaire : Quand vous avez / allez manger les glucides (en minutes).
-* Durée : A utiliser pour les ["glucides étendus"](../Usage/Extended-Carbs.rst)
+* Durée : A utiliser pour les ["glucides étendus"](../Usage/Extended-Carbs.md)
 * Vous pouvez utiliser les boutons pour augmenter rapidement la quantité de glucides.
 * Les notes seront envoyées sur Nightscout - selon vos paramètres [NSClient](../Configuration/Preferences#nsclient).
 
@@ -356,7 +356,7 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
-* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation.html#detection-de-ga-errones).
+* Pour plus d'informations, voir les conseils sur la [page de calcul des GA](../Usage/COB-calculation#detection-de-ga-errones).
 
 ## Onglet Actions
 
@@ -496,7 +496,7 @@ Historique des traitements suivants :
 * Basal temporaire
 * [Cible Temp](../Usage/temptarget.md)
 * [Changement de profil](../Usage/Profiles.md)
-* [Careportal](../Usage/CPbefore26.html#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
+* [Careportal](../Usage/CPbefore26.md#careportal-arrete) - notes entrées dans l'onglet Action et notes dans les dialogues
 
 ## Source Glycémie - xDrip+, BYODA...
 

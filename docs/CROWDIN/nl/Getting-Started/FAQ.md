@@ -20,7 +20,7 @@ Ten eerste, moet je alle **fysieke onderdelen van een closed loop** verzamelen:
 
 - Een [geschikte insulinepomp](./Pump-Choices.md), 
 - een [Android smartphone](Phones.md) (Apple iOS wordt niet ondersteund door AndroidAPS - je kunt wel [iOS Loop](https://loopkit.github.io/loopdocs/) gebruiken) en 
-- een [glucose sensor](../Configuration/BG-Source.rst). 
+- een [glucose sensor](../Configuration/BG-Source.md). 
 
 Ten tweede, moet je de **fysieke onderdelen instellen**. Zie het [gebruiksvoorbeeld](Sample-Setup.md) met stap voor stap instructies.
 
@@ -63,7 +63,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ Probeer daarvoor deze stappen:
 
 Pre- and post-processing of these settings is important. Houd rekening met de (trage) werkingsduur van insuline, zorg dus dat je enige tijd voorafgaand aan de sport al minder insuline krijgt. Ook na het sporten kun je nog minder (of juist meer!) insuline nodig hebben.
 
-Als je op vaste tijden vaste activiteiten doet, (bijvoorbeeld een klasje in de sportschool) kun je overwegen om [Automatisering](../Usage/Automation.rst) voor een Profiel wissel en Tijdelijk streefdoel te gebruiken. Je kunt de Automatisering ook op basis van GPS locatie instellen, maar dat maakt het timen voorafgaand aan sporten wel lastiger.
+Als je op vaste tijden vaste activiteiten doet, (bijvoorbeeld een klasje in de sportschool) kun je overwegen om [Automatisering](../Usage/Automation.md) voor een Profiel wissel en Tijdelijk streefdoel te gebruiken. Je kunt de Automatisering ook op basis van GPS locatie instellen, maar dat maakt het timen voorafgaand aan sporten wel lastiger.
 
 Het exacte percentage van de Profiel wissel, de waarde voor het Tijdelijke streefdoel en de timing van al deze instellingen zijn voor iedereen anders. Begin aan de veilige kant als je op zoek gaat naar de juiste waarde voor jou (start met een lager percentage en hoger streefdoel).
 

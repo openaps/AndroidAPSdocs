@@ -60,7 +60,7 @@
 
 באופן כללי, השלבים של בניית קובץ ה-APK הם:
 
-1. [התקנת Git](../Installing-AndroidAPS/git-install.rst)
+1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
 2. [התקנת Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [הגדרת נתיב של Git בהעדפות Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [הורדת הקוד של AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
@@ -75,7 +75,7 @@
 
 ## התקינו git (אם לא מותקן כבר)
 
-עקבו אחר המדריך ב[דף התקנת של git](../Installing-AndroidAPS/git-install.rst).
+עקבו אחר המדריך ב[דף התקנת של git](../Installing-AndroidAPS/git-install.md).
 
 ## התקנת Android Studio
 
@@ -119,7 +119,7 @@
 
 ## הגדירו את נתיב git בהעדפות
 
-ודאו ש[git מותקן](../Installing-AndroidAPS/git-install.rst) במחשבכם ושאתחלתם את המחשב לאחר ההתקנתו.
+ודאו ש[git מותקן](../Installing-AndroidAPS/git-install.md) במחשבכם ושאתחלתם את המחשב לאחר ההתקנתו.
 
 במסך הפתיחה של Android Studio לחצו על "Customize" (1) בצד שמאל ולאחר מכן בחרו בקישור "All settings..." (2):
 
@@ -127,7 +127,7 @@
 
 ### Windows
 
-* כמשתמשי Windows, ודאו שהפעלת מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.rst).
+* כמשתמשי Windows, ודאו שהפעלת מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.md).
 
 * לחצו פעמיים על "Version Control" (1) כדי לפתוח את תפריט המשנה.
 

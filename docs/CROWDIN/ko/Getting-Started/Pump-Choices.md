@@ -7,8 +7,8 @@ AndroidAPS works with a number of insulin pumps. The following list shows the cu
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
-- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Compatible Device)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md) (Bluetooth)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) (Rileylink Compatible Device)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
 - Certain older [Medtronic](../Configuration/MedtronicPump.md) (Rileylink Compatible Device)
 
