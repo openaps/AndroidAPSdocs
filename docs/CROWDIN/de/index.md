@@ -1,6 +1,6 @@
 # Willkommen zur AndroidAPS-Dokumentation
 
-```{image} images/modules-female.png
+```{image} ./images/modules-female.png
 :alt: Komponenten
 ```
 
