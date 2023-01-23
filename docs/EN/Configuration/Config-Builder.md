@@ -127,7 +127,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
 ## BG Source
-Select the blood glucose source you are using - see [BG Source](BG-Source.rst) page for more setup information.
+Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
@@ -156,10 +156,10 @@ Select the pump you are using.
 
 * [Accu Chek Insight](Accu-Chek-Insight-Pump.md)
 * [Accu Chek Combo](Accu-Chek-Combo-Pump.md) (requires ruffy installation)
-* [Omnipod Eros](OmnipodEros.rst)
+* [Omnipod Eros](OmnipodEros.md)
 * [Omnipod DASH](OmnipodDASH.md)
 * [Medtronic](MedtronicPump.md)
-* [Diaconn G8](DiaconnG8.rst)
+* [Diaconn G8](DiaconnG8.md)
 - MDI (receive AAPS suggestions for your multiple daily injections therapy)
 - Virtual pump (open loop for pump which don't have any driver yet - AAPS suggestions only)
 
