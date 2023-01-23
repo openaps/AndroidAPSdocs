@@ -19,7 +19,7 @@
 3. [Constuire un apk signé](../Installing-AndroidAPS/Update-to-new-version#constuire-un apk-signe)
 4. [Transférez l'apk généré](../Installing-AndroidAPS/Building-APK#transferer-le-fichier-apk-sur-le-smartphone) sur votre téléphone et installez le
 5. [Vérifier la version](#verifier-la-version-d-aaps-sur-le-telephone) dans AndroidAPS
-6. En fonction de votre [source de glycémie](../Configuration/BG-Source.rst) vérifiez bien [identify receiver](../Configuration/xdrip#identifier-le-recepteur) dans xDrip+ ou utilisez l'application [BYODA (Construisez votre propre application Dexcom)](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom).
+6. En fonction de votre [source de glycémie](../Configuration/BG-Source.md) vérifiez bien [identify receiver](../Configuration/xdrip#identifier-le-recepteur) dans xDrip+ ou utilisez l'application [BYODA (Construisez votre propre application Dexcom)](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom).
 
 Dans le cas où vous auriez des problèmes, allez voir la page spécifique de [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 

@@ -20,7 +20,7 @@ Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
 
 - Une [pompe à insuline prise en charge](./Pump-Choices.md), 
 - un [smartphone Android](Phones.md) (l'iOS d'Apple n'est pas pris en charge par AndroidAPS - vous pouvez vérifier [iOS Loop](https://loopkit.github.io/loopdocs/)), et 
-- un système de [Mesure de Glycémie en Continu (MGC)](../Configuration/BG-Source.rst). 
+- un système de [Mesure de Glycémie en Continu (MGC)](../Configuration/BG-Source.md). 
 
 Deuxièmement, vous devez **configurer votre matériel**. Voir [exemple de configuration avec le tutoriel étape par étape](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres
 
 - Pack de batteries et câbles pour charger votre smartphone, votre montre et, le cas échéant, votre lecteur BT ou votre périphérique de connection
 - Piles de la Pompe
-- L'[apk](../Installing-AndroidAPS/Building-APK.md) actuel et les [fichiers de préférences](../Usage/ExportImportSettings.rst) pour AndroidAPS et toutes les autres applications que vous utilisez (par ex. xDrip+, BYODA Dexcom) localement et dans le cloud (Dropbox, Google Drive).
+- L'[apk](../Installing-AndroidAPS/Building-APK.md) actuel et les [fichiers de préférences](../Usage/ExportImportSettings.md) pour AndroidAPS et toutes les autres applications que vous utilisez (par ex. xDrip+, BYODA Dexcom) localement et dans le cloud (Dropbox, Google Drive).
 
 ## Comment puis-je fixer la MGC/MGF en toute sécurité ?
 
@@ -286,7 +286,7 @@ Lors de la boucle, vous devriez essayer ces étapes :
 
 Le pré-traitement et le post-traitement de ces paramètres sont importants. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
 
-Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.rst) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
+Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.md) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
 
 Le pourcentage du changement de profil, la valeur de votre cible temporaire d'activité et le meilleur moment pour effectuer ces changements sont propres à chacun. Commencez prudemment si vous recherchez la valeur qui vous convient (commencez par un pourcentage faible et une CT plus élevée).
 

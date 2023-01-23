@@ -48,8 +48,8 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 ### Traduire les liens de titre
 
-* Lorsqu'un lien interne ne mène qu'à une page (par ex. ../Usage/Profiles.html), aucune traduction n'est nécessaire.
-* Les liens internes vers un titre spécifique (par ex. ..//Usage/Profiles.html#percentage) doivent être traduits car le titre de l'autre langue est différent de l'original anglais.
+* Lorsqu'un lien interne ne mène qu'à une page (par ex. ../Usage/Profiles.md), aucune traduction n'est nécessaire.
+* Les liens internes vers un titre spécifique (par ex. ..//Usage/Profiles#percentage) doivent être traduits car le titre de l'autre langue est différent de l'original anglais.
 * Si vous traduisez un titre, vous pouvez le transformer en lien d'ancrage (partie après # - par ex. #percentage) en transformant toutes les lettres en minuscules, en transformant les caractères spéciaux en caractères standard, en remplaçant les espaces par - (signe moins) et en ignorant les signes de ponctuation.
     
     Voici quelques exemples :

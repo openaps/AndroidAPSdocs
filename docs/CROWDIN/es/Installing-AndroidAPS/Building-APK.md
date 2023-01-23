@@ -60,7 +60,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 In general, the steps necessary to build the APK file:
 
-1. [Instalar Git](../Installing-AndroidAPS/git-install.rst)
+1. [Instalar Git](../Installing-AndroidAPS/git-install.md)
 2. [Instalar Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
 3. [Establecer la ruta git en las preferencias de Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
 4. [Descargar código de AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
@@ -75,7 +75,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Instalar git (si no lo tienes ya)
 
-Siga el manual en [página de instalación de git](../Installing-AndroidAPS/git-install.rst).
+Siga el manual en [página de instalación de git](../Installing-AndroidAPS/git-install.md).
 
 ## Instalar Android Studio
 
@@ -119,7 +119,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ## Set git path in preferences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
@@ -127,7 +127,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
 
 * Double-click "Version Control" (1) to open the sub-menu.
 

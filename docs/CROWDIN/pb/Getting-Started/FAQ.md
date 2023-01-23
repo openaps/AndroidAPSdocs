@@ -20,7 +20,7 @@ Antes de tudo, você deve **obter componentes de hardware que possam fechar um l
 
 - Uma [bomba de insulina suportada](./Pump-Choices.md), 
 - um [smartphone Android](Phones.md) (Apple iOS não é suportado pelo AndroidAPS - pode verificar o [Loop iOS](https://loopkit.github.io/loopdocs/)) e 
-- um [sistema de monitoramento contínuo de glicose (CGM)](../Configuration/BG-Source.rst). 
+- um [sistema de monitoramento contínuo de glicose (CGM)](../Configuration/BG-Source.md). 
 
 Em segundo lugar, você deve **configurar seu hardware**. Veja o [exemplo de configuração com o tutorial passo-a-passo](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ Você precisa ter o mesmo equipamento de emergência que todos os outros T1D em 
 
 - Carregadores e cabos para seu smartphone, watch e (se necessário) leitor BT ou dispositivo Link
 - Bateria(s) da Bomba
-- Arquivos atuais [apk (instalação)](../Installing-AndroidAPS/Building-APK.md) e [preferências](../Usage/ExportImportSettings.rst) para o AndroidAPS e quaisquer outros apps usados (por exemplo, xDrip+, BYO Dexcom) localmente e na nuvem (Dropbox, Google Drive).
+- Arquivos atuais [apk (instalação)](../Installing-AndroidAPS/Building-APK.md) e [preferências](../Usage/ExportImportSettings.md) para o AndroidAPS e quaisquer outros apps usados (por exemplo, xDrip+, BYO Dexcom) localmente e na nuvem (Dropbox, Google Drive).
 
 ## Como posso anexar de forma segura o CGM/FGM?
 
@@ -286,7 +286,7 @@ When looping you should try these steps:
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 

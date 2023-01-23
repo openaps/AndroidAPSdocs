@@ -1,236 +1,166 @@
 # Problemen met Android Studio oplossen
 
 ## Keystore (digitale handtekening) kwijt
-Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op *.jks) opslaan en bewaren op jouw computer.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op .jks) opslaan en bewaren op jouw computer.
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
+Mocht je jouw oude keystore bestand toch niet meer kunnen vinden, dan heb je een paar extra stappen nodig bij het updaten van de app, om de instellingen in jouw AAPS app te behouden:
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
+1. [Exporteer instellingen](../Usage/ExportImportSettings#instellingen-exporteren) op jouw telefoon.
+2. Kopieer jouw instellingen bestand van jouw telefoon naar een externe locatie (zoals je computer, cloudopslag service...).
+3. Zorg ervoor dat je het bestand met instellingen "AndroidAPS Preferences" opslaat op een veilige plek die je later kunt terugvinden.
+4. Bouwen van de ondertekende apk zoals beschreven op de pagina [Bijwerken naar een nieuwe versie](../Installing-AndroidAPS/Update-to-new-version.md).
 5. Verwijder de vorige AAPS-versie van jouw telefoon.
 6. Installeer de nieuwe AAPS-versie op jouw telefoon.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+7. [Instellingen importeren](../Usage/ExportImportSettings#instellingen-exporteren) - mocht je ze op je telefoon niet kunnen vinden, kopieer ze dan vanaf de externe plek (computer, cloudopslag) waar je ze eerder had opgeslagen.
+8. En je kunt weer doorloopen!
 
-   If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+## Error "on demand" Configuration
 
-## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+Als je een foutmelding krijgt die gaat over "on demand configuration" kun je het volgende doen:
+\* Open het Preferences (Voorkeuren) venster door op File > Settings (Bestand > Instellingen) te klikken (op Mac, Android Studio > Voorkeuren).
+\* In het linkerscherm, klik op Build, Execution, Deployment > Compiler.
+\* Vink de Configure on demand checkbox uit.
+\* Klik op Apply (Toepassen) of OK.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+## Kotlin compiler warning
 
-These are the usual gradle sync failures:
-* [Uncommitted changes (Niet-opgenomen wijzigingen)](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
+Als je de app succesvol hebt gebouwd, maar je krijgt een Kotlin compiler waarschuwing dan kun je deze negeren.
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+Je kunt verdergaan met het overzetten van de app (.apk bestand) naar je telefoon.
 
-### Uncommitted changes (Niet-opgenomen wijzigingen)
+```{image} ../images/GIT_WarningIgnore.PNG
+:alt: negeer Kotlin compiler waarschuwing
+```
 
-If you receive a failure message like
+## Key was created with errors (digitale handtekening bevat een fout)
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+Bij het maken van een nieuw keystore-bestand (digitale handtekening) voor het bouwen van de ondertekende APK, kun je het volgende foutbericht krijgen (in Windows)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
-    ```
-    git --version
-    ```
+```{image} ../images/AndroidStudio35SigningKeys.png
+:alt: Key was created with errors (digitale handtekening bevat een fout)
+```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+Dit lijkt een bug te zijn in Android Studio 3.5.1 en de meegeleverde Java-omgeving in Windows. Het keystore bestand wordt gewoon correct aangemaakt, maar een aanbeveling wordt ten onrechte als een fout weergegeven. Dit kun je nu gewoon negeren.
 
-    Note: There is a space and two hyphens between git and version!
+## Could not download… / Offline Work
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+Als je een foutmelding krijgt over 'Kon niet downloaden/offline werken' zoals dit
 
-  * In case you get an message saying
-    ```
-    Git: command not found
-    ```
-    your Git installation is not right.
+```{image} ../images/GIT_Offline1.jpg
+:alt: Waarschuwing kon niet worden gedownload
+```
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+zorg ervoor dat “Offline work” uitgeschakeld is.
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+File -> Settings (Bestand -> Instellingen)
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+```{image} ../images/GIT_Offline2.jpg
+:alt: Instellingen offline werken
+```
 
-  * Search your computer for a file "git.exe".
+## Error: buildOutput.apkData must not be null
 
-    Note for yourself, what directory it is in.
+Misschien krijg je de volgende foutmelding bij het bouwen van de apk:
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+> `Errors while building APK` (Fouten bij het bouwen van APK)
+>
+> `Cause: buildOutput.apkData must not be null` (Oorzaak: buildOutput.apkData mag niet leeg zijn)
 
-  * Save and close.
+Dit is een bekende bug in Android Studio 3.5 en zal waarschijnlijk niet worden opgelost voordat Android Studio 3.6 uitkomt. Je hebt drie opties:
 
-  * Restart Android Studio.
+1. Verwijder handmatig de drie 'build'-mappen (normale "build" map, build map in "app" en build map in "wear") en bouw vervolgens opnieuw de getekende apk.
+2. Doel map (Destination folder) instellen op project map in plaats van de app map zoals beschreven in [deze video](https://www.youtube.com/watch?v=BWUFWzG-kag).
+3. Wijzig de doel map (destination folder) voor jouw apk-bestand (naar een andere map op jouw computer).
 
-#### Step 2: Check for uncommitted changes.
+## Unable to start daemon process (Kan daemon proces niet starten)
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+Als je een foutmelding ziet zoals hieronder dan heb je waarschijnlijk een 32-bit versie van Windows 10. Deze versie werkt helaas niet met Android Studio 3.5.1 en hoger. Alleen de 64-bit versie van Windows 10 werkt. Je zult dus op jacht moeten naar een computer met de 64-bit versie, of op jouw eigen computer de 64-bit versie moeten installeren.
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+Er zijn veel handleidingen op internet te vinden hoe je kunt checken of jouw computer een 32-bit of 64-bit versie heeft, zoals [deze](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-    * Right click on "Default Changeset" and select "Rollback"
+```{image} ../images/AndroidStudioWin10_32bitError.png
+:alt: Screenshot Unable to start daemon process
+```
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+## Geen CGM gegevens
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+- Wanneer je xDrip+ gebruikt: Ontvanger identificeren zoals beschreven op de [xDrip+ instellingen pagina](../Configuration/xdrip##identificeer-ontvanger-identify-receiver).
+- In case you are using patched Dexcom G6 app: This app is outdated. Use [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) instead.
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+## Uncommitted changes (Niet-opgenomen wijzigingen)
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+Als je een foutmelding ziet zoals
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+```{image} ../images/GIT_TerminalCheckOut0.PNG
+:alt: Failure uncommitted changes
+```
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+### Optie 1 - Controleer of git correct geinstalleerd is
 
+- git is wellicht niet correct geïnstalleerd (moet geïnstalleerd zijn op een locatie waar Android Studio bij kan)
+- wanneer je Windows gebruikt en je hebt git zonet geïnstalleerd, dan moet je je computer opnieuw opstarten of in ieder geval afmelden en opnieuw aanmelden, om git voor andere programma's beschikbaar te maken na de installatie
+- [Controleer git instellingen](../Installing-AndroidAPS/git-install#controleer-de-git-instellingen-in-android-studio)
+- Als je jouw git instellingen gecontroleerd hebt en je ziet geen git versie maar git is wel geïstalleerd op jouw computer, zorg dan dat Android Studio weet [waar git zich bevindt](../Installing-AndroidAPS/git-install#stel-git-path-in-android-studio-in) op jouw computer.
 
-#### Step 3: Resync Gradle (again)
+### Optie 2 - Broncode opnieuw laden
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+- In Android Studio klik op VCS -> GIT -> Reset HEAD
 
-### Android Gradle plugin requires Java 11 to run
+```{image} ../images/GIT_TerminalCheckOut3.PNG
+:alt: Reset HEAD
+```
 
-  You might experience this error message:
+### Optie 3 - Controleren op updates
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+- Kopieer 'git checkout --' naar klembord (zonder aanhalingstekens)
 
-  Click on "Gradle Settings" (1) to go to open the gradle settings.
+- Schakel over naar Terminal in Android Studio (linkerbenedenhoek van Android Studio venster)
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  ```{image} ../images/GIT_TerminalCheckOut1.PNG
+  :alt: Android Studio Terminal
+  ```
 
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+- Plak gekopieerde tekst en druk op return
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  ```{image} ../images/GIT_TerminalCheckOut2.jpg
+  :alt: GIT checkout succes
+  ```
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+## App niet geïnstalleerd
 
-  Press "OK" to save and close the settings dialog.
+```{image} ../images/Update_AppNotInstalled.png
+:alt: phone app not installed
+```
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+- Zorg ervoor dat je het bestand "app-full-release.apk" naar jouw telefoon hebt overgebracht.
+- Als "App niet geïnstalleerd" wordt weergegeven op jouw telefoon volg dan deze stappen:
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
-
-### Could not resolve/No cached version
-
-  You might get this error message:
-
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
-
-  * On the right side, open the Gradle tab (1).
-
-    Make sure the button shown at (2) is *NOT* selected.
-
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
-
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
-
-### Unable to start daemon process (Kan daemon proces niet starten)
-
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
-
-  If you are using Windows 10 you must use a 64-bit operating system.
-
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
-
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
-
-### Gradle Resync
-
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-  If you don't see the a message anymore, you can still trigger this manually:
-
-  * Open the Gradle tab (1) on the right border of Android Studio.
-
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-  * Right-click on AndroidAPS (2)
-
-  * Click on "Reload Gradle Project" (3)
-
-## Generate Signed APK generated successfully with 0 build variants
-
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
-
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
-
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
-
-
-## App was created with compiler/kotlin warnings
-
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
-
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
-
-Your app was build successfully and can be transferred to phone!
-
-
-## Key was created with errors
-
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
-
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
-
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
-
-
-## No CGM data is received by AndroidAPS
-
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
-
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
-
-
-## App not installed
-
-![phone app note installed](../images/Update_AppNotInstalled.png)
-
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
-
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Instellingen exporteren](../Usage/ExportImportSettings.md) (in AAPS-app die al op jouw telefoon is geïnstalleerd)
 2. Verwijder de AndroidAPS app van jouw telefoon.
-3. Enable airplane mode & turn off bluetooth.
+3. Schakel vliegtuigmodus in & schakel bluetooth uit.
 4. Installeer nieuwe versie ("app-full-release.apk”)
-5. [Importeer instellingen](../Usage/ExportImportSettings)
+5. [Instellingen importeren](./Usage/ExportImportSettings.html)
 6. Zet bluetooth weer aan en schakel de vliegtuigmodus uit
 
-## App installed but old version
+## App geïnstalleerd maar oude versie
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+Wanneer je de app succesvol hebt gebouwd, hem naar jouw telefoon hebt overgebracht en geïnstalleerd, maar het versienummer blijft hetzelfde, dan heb je waarschijnlijk de [bijwerken van jouw lokale kopie](../Update-to-new-version#bijwerken-van-jouw-lokale-kopie) stap gemist. Bouw de app opnieuw en vergeet deze stap niet;)
 
-## None of the above worked
+## Geen van de bovengenoemde
 
-If non of the above tips helped you might consider building the app from scratch:
+Als geen van de bovenstaande tips je geholpen heeft, dan zou je de de app helemaal vanaf nul kunnen bouwen:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
-
-2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-
-    Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan.
-
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
-
+1. [Instellingen exporteren](../Usage/ExportImportSettings.md) (in AAPS-app die al op jouw telefoon is geïnstalleerd)
+2. Houd jouw keystore file (digitale handtekening) en keystore wachtwoord bij de hand. In het geval dat je het bestand kwijt bent en/of het wachtwoord bent vergeten dan kun je proberen om ze te vinden in de projectbestanden zoals [hier](https://youtu.be/nS3wxnLgZOo) beschreven. Of je maakt gewoon van een nieuw keystore bestand en wachtwoord aan.
+3. Bouw app vanaf het begin zoals [hier](../Installing-AndroidAPS/Update-to-new-version#bijwerken-van-jouw-lokale-kopie) beschreven.
 4. Als je de APK hebt gebouwd, verwijder eerst de bestaande app van jouw telefoon. Verplaats daarna de nieuwe apk naar je telefoon en installeer.
-5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+5. [Instellingen importeren](./Usage/ExportImportSettings.html)
 
-## Worst case scenario
+## In het ergste geval
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Mocht zelfs het weer vanaf het begin bouwen van de app niet de oplossing zijn voor jouw probleem, dan zou je kunnen overwegen om Android Studio volledig van je computer te verwijderen en helemaal overnieuw te beginnen. Sommige gebruikers hebben gemeld dat dit hun probleem heeft opgelost.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**Zorg ervoor dat echt alle bestanden die zijn gekoppeld aan Android Studio worden verwijderd.** Als je Android Studio en alle verborgen bestanden niet volledig verwijdert, dan kan dit leiden tot nieuwe problemen in plaats van jouw bestaande problemen op te lossen. Handleidingen voor volledige de-installatie kun je online vinden, bijv. [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
-
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Installeer Android Studio zoals [hier](../Installing-AndroidAPS/Building-APK##installeer-git-android-studio) beschreven en **update gradle niet**.

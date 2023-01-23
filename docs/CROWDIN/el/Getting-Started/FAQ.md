@@ -20,7 +20,7 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - Ένα Android κινητό (Για iPhone κινητά, δείτε το [iOS Loop](Phones.md) ) 
-- [Ένα σύστημα συνεχούς καταγραφής γλυκόζης](../Configuration/BG-Source.rst). 
+- [Ένα σύστημα συνεχούς καταγραφής γλυκόζης](../Configuration/BG-Source.md). 
 
 Δεύτερον, πρέπει να **ρυθμίσετε τα εξαρτήματα** που θα χρησιμοποιήσετε. Δείτε το [παράδειγμα εγκατάστασης με αναλυτικές οδηγίες για τις απαραίτητες ρυθμίσεις](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ When looping you should try these steps:
 
 Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.rst) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
 The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 

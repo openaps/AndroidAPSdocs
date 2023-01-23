@@ -60,7 +60,7 @@ Veuillez garder à l'esprit que le processeur **64 bits et le système d'exploit
 
 En général, les étapes nécessaires pour construire le fichier APK sont :
 
-1. [Installer Git](../Installing-AndroidAPS/git-install.rst)
+1. [Installer Git](../Installing-AndroidAPS/git-install.md)
 2. [Installer Android Studio](../Installing-AndroidAPS/Building-APK#installez-android-studio)
 3. [Définir le chemin d’accès git dans Android Studio](../Installing-AndroidAPS/Building-APK#definir-le-chemin-de-git-dans-les-preferences)
 4. [Télécharger le code AndroidAPS](../Installing-AndroidAPS/Building-APK#telecharger-le-code-androidaps)
@@ -75,7 +75,7 @@ Description détaillée des étapes nécessaires à la construction du fichier A
 
 ## Installer git (si vous ne l'avez pas)
 
-Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/git-install.rst).
+Suivez le manuel sur la [page d'installation de git](../Installing-AndroidAPS/git-install.md).
 
 ## Installer Android Studio
 
@@ -119,7 +119,7 @@ Attendez qu'Android Studio télécharge des composants supplémentaires et soyez
 
 ## Définir le chemin de git dans les préférences
 
-Assurez-vous que [git est installé](../Installing-AndroidAPS/git-install.rst) sur votre ordinateur et que vous avez redémarré votre ordinateur après l'installation.
+Assurez-vous que [git est installé](../Installing-AndroidAPS/git-install.md) sur votre ordinateur et que vous avez redémarré votre ordinateur après l'installation.
 
 Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, puis sélectionnez le lien "All settings..." (2):
 
@@ -127,7 +127,7 @@ Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, p
 
 ### Windows
 
-* En tant qu'utilisateur de Windows, assurez-vous que vous avez redémarré votre ordinateur après [avoir installé Git](../Installing-AndroidAPS/git-install.rst).
+* En tant qu'utilisateur de Windows, assurez-vous que vous avez redémarré votre ordinateur après [avoir installé Git](../Installing-AndroidAPS/git-install.md).
 
 * Double-cliquez sur "Version Control" (1) pour ouvrir le sous-menu.
 

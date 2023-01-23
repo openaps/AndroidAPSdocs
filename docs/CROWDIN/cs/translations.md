@@ -48,8 +48,8 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
 
 ### Překlad odkazů v nadpisech
 
-* Pokud interní odkaz vede pouze na konkrétní stránku (tj. ../Usage/Profiles.html), je nutné odkaz nepřekládat.
-* Pokud interní odkaz vede na konkrétní nadpis (tj. ..//Usage/Profiles.html#percentage) musí být odkaz přeložen, protože titulek v jiném jazyce se liší od anglického originálu.
+* Pokud interní odkaz vede pouze na konkrétní stránku (tj. ../Usage/Profiles.md), je nutné odkaz nepřekládat.
+* Pokud interní odkaz vede na konkrétní nadpis (tj. ..//Usage/Profiles#percentage) musí být odkaz přeložen, protože titulek v jiném jazyce se liší od anglického originálu.
 * Pokud překládáte nadpis, můžete jej přeměnit na odkaz na kotvu (část za # - tj. #procenta) otočením všech písmen na malá písmena, transformací speciálních znaků na standardní znaky, nahrazením mezer znamínkem - (minus znaménko) a přeskočením interpunkčních znamének.
     
     Zde je několik příkladů:

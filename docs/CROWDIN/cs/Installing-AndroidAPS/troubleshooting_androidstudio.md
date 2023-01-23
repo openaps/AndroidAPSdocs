@@ -1,236 +1,166 @@
 # Řešení problémů s Android Studiem
 
 ## Ztráta úložiště klíčů
+
 Pokud při aktualizaci AndroidAPS používáte stále stejné úložiště klíčů, nemusíte odinstalovávat předchozí verzi na svém chytrém telefonu. To je důvod, proč je doporučeno uchovávat úložiště klíčů na bezpečném místě.
 
-If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
+V případě, že nemůžete najít své staré úložiště klíčů, postupujte při aktualizaci takto:
 
-In case you cannot find your old keystore or its password anymore, proceed as follows:
-
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
+1. [Exportujte nastavení](../Usage/ExportImportSettings#exportovat-nastaveni) na svém telefonu.
+2. Zkopírujte nastavení ze svého telefonu na externí úložiště (např. váš počítač, cloudové úložiště...).
+3. Ujistěte se, že soubor se zálohou nastavení "AndroidAPS Preferences" je bezpečně uložen.
+4. Vytvořte podepsanou aplikaci v nové verzi tak, jak je popsáno na stránce [Jak aktualizovat na novou verzi](../Installing-AndroidAPS/Update-to-new-version.md).
 5. Odinstalujte předchozí verzi AAPS na svém telefonu.
 6. Nainstalujte novou verzi AAPS na svůj telefon.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+7. [Importujte nastavení](../Usage/ExportImportSettings#exportovat-nastaveni) – pokud nemůžete najít soubor s nastavením na svém telefonu, zkopírujte jej do telefonu z externího úložiště.
+8. Smyčku pak můžete dále používat.
 
-   If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+## Error "on demand" Configuration
 
-## Gradle Sync failed
-Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
+Jestliže vytváření apk selže s chybou "on demand configuration", proveďte následující změnu:
+\* Otevřete okno Preferences klepnutím na File > Settings (na platformě Mac, Android Studio > Preferences).
+\* V levé části pak na Build, Execution, Deployment > Compiler.
+\* Odtrhněte Configure on demand.
+\* Klikněte na Apply nebo OK.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+## Varování kompilátoru Kotlin
 
-These are the usual gradle sync failures:
-* [Neprovedené změny](#uncommitted-changes)
-* [No cached version of ... available](#could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
+Pokud sestavení proběhne úspěšně, ale objeví se varování kompilátoru Kotlin, prostě je ignorujte.
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+Sestavení aplikace bylo úspěšné a můžete ji přenést do telefonu.
 
-### Neprovedené změny
+```{image} ../images/GIT_WarningIgnore.PNG
+:alt: "ignorujte varov\xE1n\xED kompil\xE1toru Kotlin"
+```
 
-If you receive a failure message like
+## Klíč byl vytvořen s chybami
 
-![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+Při vytváření nového úložiště klíčů pro vytvoření podepsané APK se ve Windows může objevit následující chybová zpráva
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
-    ```
-    git --version
-    ```
+```{image} ../images/AndroidStudio35SigningKeys.png
+:alt: "Kl\xED\u010D byl vytvo\u0159en s chybami"
+```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+Zdá se, že se jedná o chybu Android Studia 3.5.1 a jeho prostředí Java ve Windows. Klíč je správně vytvořen, ale doporučení je nesprávně zobrazeno jako chyba. To lze nyní ignorovat.
 
-    Note: There is a space and two hyphens between git and version!
+## Nelze stáhnout… / Práce Offline
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+Pokud se zobrazí podobná chybová zpráva,
 
-  * In case you get an message saying
-    ```
-    Git: command not found
-    ```
-    your Git installation is not right.
+```{image} ../images/GIT_Offline1.jpg
+:alt: Warning could not download
+```
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+ujistěte se, že položka ‘Offline work’ je deaktivována.
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+File -> Settings
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+```{image} ../images/GIT_Offline2.jpg
+:alt: "Nastaven\xED pr\xE1ce offline"
+```
 
-  * Search your computer for a file "git.exe".
+## Error: buildOutput.apkData must not be null
 
-    Note for yourself, what directory it is in.
+Někdy můžete při vytváření APK dostat chybovou zprávu, která říká
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+> `Errors while building APK.`
+>
+> `Cause: buildOutput.apkData must not be null`
 
-  * Save and close.
+Toto je známá chyba v Android Studio 3.5 a pravděpodobně nebude opravena před Androidem Studio 3.6. Tři možnosti:
 
-  * Restart Android Studio.
+1. Ručně smažte tři složky pro sestavení (obvykle "build", složku pro sestavení v "app" a složku sestavení ve "wear") a znovu vygenerujte podepsanou apk.
+2. Nastavte cílovou složku do složky projektu namísto složky aplikace, jak je popsáno v [tomto videu](https://www.youtube.com/watch?v=BWUFWzG-kag).
+3. Změňte cílovou složku APK (jiné umístění).
 
-#### Step 2: Check for uncommitted changes.
+## Unable to start daemon process
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+Pokud vidíte zmíněnou chybovou zprávu, pravděpodobně používáte 32bitový systém Windows 10. Ten není podporován Android Studiem 3.5.1 a novějším. Pokud používáte Windows 10, musíte používat 64bitový operační systém.
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+Na internetu existuje spousta manuálů, jak zjistit, zda máte 32bitový nebo 64bitový OS – například [tento](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-    * Right click on "Default Changeset" and select "Rollback"
+```{image} ../images/AndroidStudioWin10_32bitError.png
+:alt: Screenshot Unable to start daemon process
+```
 
-      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
+## Nejsou dostupná data z CGM
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+- V případě, že používáte xDrip+: Proveďte identifikaci vysílače tak, jak je popsáno na stránce [nastavení xDrip+](../Configuration/xdrip#identify-receiver).
+- In case you are using patched Dexcom G6 app: This app is outdated. Use [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) instead.
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+## Neprovedené změny
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+Pokud se zobrazí podobná chybová zpráva,
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+```{image} ../images/GIT_TerminalCheckOut0.PNG
+:alt: Chyba uncommitted changes
+```
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+### Možnost 1 – Zkontrolujte instalaci gitu
 
+- git nemusel být nainstalován správně (musí být globálně dostupný)
+- pokud jste ve Windows a git byl právě nainstalován, měli byste restartovat počítač nebo se alespoň odhlásit a znovu se přihlásit, aby byl git po své instalaci globálně dostupný
+- [Zkontrolujte instalaci git](../Installing-AndroidAPS/git-install#kontrola-nastaveni-git-v-android-studiu)
+- Pokud se při kontrole nezobrazí žádná verze gitu, ale git je na počítači nainstalován, zkontrolujte, že Android Studio ví, [kde je git v počítači umístěn](../Installing-AndroidAPS/git-install#nastaveni-git-v-android-studiu).
 
-#### Step 3: Resync Gradle (again)
+### Možnost 2 – Znovu načtěte zdrojový kód
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+- V Android Studio zvolte VCS -> GIT -> Reset HEAD
 
-### Android Gradle plugin requires Java 11 to run
+```{image} ../images/GIT_TerminalCheckOut3.PNG
+:alt: Reset HEAD
+```
 
-  You might experience this error message:
+### Možnost 3 – Zkuste stáhnout aktualizace
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+- Zkopírujte ‘git checkout --’ do schránky (bez uvozovek)
 
-  Click on "Gradle Settings" (1) to go to open the gradle settings.
+- Přepněte v Android Studiu na Terminal (ve spodní části vlevo v okně Android Studia)
 
-  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
+  ```{image} ../images/GIT_TerminalCheckOut1.PNG
+  :alt: "Termin\xE1l Android Studia"
+  ```
 
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+- Vložte zkopírovaný text a stiskněte enter
 
-  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
+  ```{image} ../images/GIT_TerminalCheckOut2.jpg
+  :alt: "Va\u0161e v\u011Btev k\xF3du je aktu\xE1ln\xED"
+  ```
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+## Aplikace není nainstalována
 
-  Press "OK" to save and close the settings dialog.
+```{image} ../images/Update_AppNotInstalled.png
+:alt: "aplikace v telefonu nen\xED nainstalov\xE1na"
+```
 
-  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
+- Ujistěte se, že jste do telefonu přenesli soubor „app-full-release.apk“.
+- Pokud se na telefonu zobrazí „Aplikace není nainstalována“, postupujte následovně:
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
-
-### Could not resolve/No cached version
-
-  You might get this error message:
-
-    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
-
-  * On the right side, open the Gradle tab (1).
-
-    Make sure the button shown at (2) is *NOT* selected.
-
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
-
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
-
-### Unable to start daemon process
-
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
-
-  If you are using Windows 10 you must use a 64-bit operating system.
-
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
-
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
-
-### Gradle Resync
-
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
-
-
-  If you don't see the a message anymore, you can still trigger this manually:
-
-  * Open the Gradle tab (1) on the right border of Android Studio.
-
-    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
-
-  * Right-click on AndroidAPS (2)
-
-  * Click on "Reload Gradle Project" (3)
-
-## Generate Signed APK generated successfully with 0 build variants
-
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
-
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
-
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
-
-
-## App was created with compiler/kotlin warnings
-
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
-
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
-
-Your app was build successfully and can be transferred to phone!
-
-
-## Key was created with errors
-
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
-
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
-
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
-
-
-## No CGM data is received by AndroidAPS
-
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
-
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
-
-
-## App not installed
-
-![phone app note installed](../images/Update_AppNotInstalled.png)
-
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
-
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Exportujte nastavení](../Usage/ExportImportSettings.md) (ve verzi AAPS, která je již nainstalována v telefonu)
 2. Odinstalujte aplikaci AAPS ze svého telefonu
-3. Enable airplane mode & turn off bluetooth.
+3. Zapněte režim letadlo a vypněte bluetooth.
 4. Nainstalujte novou verzi (“app-full-release.apk”)
-5. [Importujte nastavení](../Usage/ExportImportSettings)
+5. [Importujte nastavení](../Usage/ExportImportSettings.md)
 6. Znovu zapněte bluetooth a vypněte režim letadlo
 
-## App installed but old version
+## Aplikace je nainstalována, ale ve staré verzi
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+Jestliže jste úspěšně sestavili aplikaci, přenesli ji do telefonu a nainstalovali ji, ale číslo verze zůstává stejné, možná jste zapomněli krok sloučení v [návodu na aktualizaci lokální kopie](../Installing-AndroidAPS/Update-to-new-version#aktualizace-lokalni-kopie).
 
-## None of the above worked
+## Nic z výše uvedeného nefunguje
 
-If non of the above tips helped you might consider building the app from scratch:
+Jestliže žádný z uvedených tipů nepomáhá, zvažte sestavení aplikace úplně od začátku:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
-
-2. Zálohujte si úložiště klíčů a heslo k němu. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
-
-    Nebo můžete vytvořit a použít nové úložiště klíčů.
-
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
-
+1. [Exportujte nastavení](../Usage/ExportImportSettings.md) (ve verzi AAPS, která je již nainstalována v telefonu)
+2. Zálohujte si úložiště klíčů a heslo k němu. V případě, že jste hesla zapomněli, můžete je zkusit najít v projektových souborech, jak je popsáno [zde](https://youtu.be/nS3wxnLgZOo). Nebo můžete vytvořit a použít nové úložiště klíčů.
+3. Vytvořte aplikaci úplně od začátku, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#stahnete-si-kod-androidaps).
 4. Jestliže jste úspěšně sestavili APK, odstraňte stávající aplikaci z telefonu a přeneste do něj a nainstalujte nový soubor apk.
-5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+5. [Importujte nastavení](../Usage/ExportImportSettings.md)
 
-## Worst case scenario
+## Nejčernější scénář
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+V případě, že ani sestavení aplikace úplně od začátku nevyřeší váš problém, zkuste úplně odinstalovat Android Studio. Někteří uživatelé uvedli, že to jejich problém vyřešilo.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**Ujistěte se, že jsou odinstalovány všechny soubory spojené s Android Studiem.** Pokud zcela neodstraníte Android Studio se všemi skrytými soubory, odinstalování může způsobit nové problémy namísto vyřešení těch stávajících. manuály pro kompletní odinstalaci můžete najít na internetu, například [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
-
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Znovu od začátku nainstalujte Android Studio, jak je popsáno [zde](../Installing-AndroidAPS/Building-APK#instalace-android-studio) a **neaktualizujte gradle**.

@@ -21,7 +21,7 @@ Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose.
 
 ### Tolimesni saugumo nustatymai
 
-Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Getting-Started/Safety-first.rst).
+Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Getting-Started/Safety-first.md).
 
 ## Rankinis Nightscout diegimas
 

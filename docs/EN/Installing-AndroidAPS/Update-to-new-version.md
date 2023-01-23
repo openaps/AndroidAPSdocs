@@ -6,7 +6,7 @@
 
 ## Important notes
 
-* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.html#release-notes) about the new version.
+* Please update as soon as possible after a new release is available. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes#release-notes) about the new version.
 * As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 * Please use **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
@@ -14,18 +14,18 @@
 
 ## Overview for updating your AndroidAPS version
 
-1. [Export your settings](../Usage/ExportImportSettings.html#export-settings) from the existing AAPS version on your phone.
+1. [Export your settings](../Usage/ExportImportSettings#export-settings) from the existing AAPS version on your phone.
 You might not need it, but better be save than sorry.
 2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
 3. [Build signed APK](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) to your phone and install it
 5. [Check the version](#check-aaps-version-on-phone) in AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.rst) make sure to [identify receiver](../Configuration/xdrip.html#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app).
+6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](../Configuration/xdrip#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
 
 In case you experience problems, see separate page for [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 ## 1. Export your settings
-See the [Export & import settings](../Usage/ExportImportSettings.html#export-settings) page if you don't remember how to do this.
+See the [Export & import settings](../Usage/ExportImportSettings#export-settings) page if you don't remember how to do this.
 
 ## 2. Update your local copy
 

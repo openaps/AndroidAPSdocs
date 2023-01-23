@@ -29,7 +29,7 @@ Cependant, il est possible de synchroniser un profil Nightscout dans un profil l
 
 Le profil local utilise le profil de basal entré manuellement sur le téléphone. Dès qu'il est sélectionné, un nouvel onglet apparaît dans AAPS, où vous pouvez modifier les données de profil lues à partir de la pompe si nécessaire. Avec le changement de profil suivant, les données sont ensuite écrites dans la pompe dans le profil 1. Ce profil est recommandé car il ne dépend pas de la connectivité Internet.
 
-Vos profils locaux font partie des [paramètres exportés](../Usage/ExportImportSettings.rst). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
+Vos profils locaux font partie des [paramètres exportés](../Usage/ExportImportSettings.md). Donc assurez vous d'avoir une sauvegarde dans un endroit sûr.
 
 ![Paramètres profil local](../images/LocalProfile_Settings.png)
 
@@ -74,7 +74,7 @@ L'assistant profil a deux fonctions :
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
-Les détails sont expliqués sur la [page d'aide des profils](../Configuration/profilehelper.rst).
+Les détails sont expliqués sur la [page d'aide des profils](../Configuration/profilehelper.md).
 
 ## Insuline
 
@@ -140,7 +140,7 @@ Sélectionnez la source de glycémie que vous utilisez - consultez la page [Sour
 ![Générateur de Configuration Source de Glycémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) est déconseillé comme récepteur pour Dexcom G6 depuis AAPS 3.0 (voir [Notes de version](../Installing-AndroidAPS/Releasenotes.html#conseils-importants) pour plus de détails.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) est déconseillé comme récepteur pour Dexcom G6 depuis AAPS 3.0 (voir [Notes de version](../Installing-AndroidAPS/Releasenotes#conseils-importants) pour plus de détails.
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -181,7 +181,7 @@ Vous pouvez voir votre sensibilité sur l'écran d'accueil en sélectionnant Sen
 
 ### Paramètres d’absorption
 
-Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbimpact** à 8. La valeur n'est utilisée que pendant les lacunes dans les lectures de CGM ou lorsque l'activité physique "utilise" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. Parfois, lorsque l'[absorption de glucides](../Usage/COB-calculation.rst) ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
+Si vous utilisez le type Oref1 avec les SMB, vous devez modifier **min_5m_carbimpact** à 8. La valeur n'est utilisée que pendant les lacunes dans les lectures de CGM ou lorsque l'activité physique "utilise" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS. Parfois, lorsque l'[absorption de glucides](../Usage/COB-calculation.md) ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
 
 ## APS
 
@@ -227,9 +227,9 @@ Sélectionnez l'algorithme APS souhaité pour les ajustements de thérapie. Vous
 
 AndroidAPS a un programme d'apprentissage (objectifs) que vous devez réaliser étape par étape. Cela devrait vous guider en toute sécurité à travers la mise en place d'un système de boucle fermée. Ce programme d'apprentissage garantit que vous avez tout mis en place correctement et que vous comprenez ce que le système fait exactement. C'est la seule façon pour vous de faire confiance au système.
 
-Vous devez [exporter régulièrement vos paramètres](../Usage/ExportImportSettings.rst) (y compris la progression des objectifs). Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
+Vous devez [exporter régulièrement vos paramètres](../Usage/ExportImportSettings.md) (y compris la progression des objectifs). Au cas où vous devrez remplacer votre smartphone plus tard (nouvel achat, problème d'écran, etc.) vous pouvez simplement importer ces paramètres.
 
-Voir la page [Objectifs](../Usage/Objectives.rst) pour plus d'informations.
+Voir la page [Objectifs](../Usage/Objectives.md) pour plus d'informations.
 
 ## Traitements
 
@@ -307,11 +307,11 @@ Choisissez si vous voulez avoir des [voyants d'état](../Configuration/Preferenc
 
 ### Automatisation
 
-Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.rst).
+Tâches d'automatisation définies par l'utilisateur ('si-alors-sinon'). Veuillez [lire ici](../Usage/Automation.md).
 
 ### Communicateur SMS
 
-Permet aux aidants à distance de contrôler certaines fonctionnalités d'AndroidAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.rst) pour plus d'informations sur la configuration.
+Permet aux aidants à distance de contrôler certaines fonctionnalités d'AndroidAPS via SMS, voir [Commandes SMS](../Children/SMS-Commands.md) pour plus d'informations sur la configuration.
 
 ### Aliments
 

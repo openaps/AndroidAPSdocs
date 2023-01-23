@@ -29,7 +29,7 @@ Nicméně i nadále je možné synchronizovat Nightscout profil do lokálního p
 
 Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy jako profil 1. Tento profil je doporučen, protože nevyžaduje připojení k internetu.
 
-Vaše místní profily jsou součástí [exportovaného nastavení](../Usage/ExportImportSettings.rst). Proto se ujistěte, že máte zálohu bezpečně uloženou.
+Vaše místní profily jsou součástí [exportovaného nastavení](../Usage/ExportImportSettings.md). Proto se ujistěte, že máte zálohu bezpečně uloženou.
 
 ![Nastavení Místního profilu](../images/LocalProfile_Settings.png)
 
@@ -74,7 +74,7 @@ Pomocník s profilem nabízí dvě funkce:
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
-Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.rst).
+Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.md).
 
 ## Inzulín
 
@@ -181,7 +181,7 @@ Průběh citlivosti můžete na hlavní stránce zobrazit vybráním políčka C
 
 ### Nastavení absorpce sacharidů
 
-Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. V situacích, kdy [absorpci sacharidů](../Usage/COB-calculation.rst) nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
+Pokud používáte Oref1 s SMB, musíte změnit **min_5m_carbimpact** na 8. Tato hodnota se používá pouze při výpadcích hodnot odečítaných z CGM nebo v případech, kdy se fyzickou aktivitou vyrovná vzestup glykémie, který by jinak vedl k tomu, že by systém AAPS odbourával COB. V situacích, kdy [absorpci sacharidů](../Usage/COB-calculation.md) nelze počítat dynamicky na základě reakcí vaší glykémie, je použita tato výchozí hodnota absorpce. V podstatě jde o bezpečnostní pojistku.
 
 ## APS
 
@@ -226,9 +226,9 @@ Vyberte požadovaný algoritmus APS pro úpravy léčby. Detaily vybraného algo
 
 Součástí AndroidAPS je výukový program (cíle), které musíte splnit krok za krokem. Měly by vás bezpečně provést nastavením uzavřené smyčky. Postupným splněním cílů je zajištěno, že přesně porozumíte tomu, jak systém pracuje. Jedině touto cestou můžete svému systému plně důvěřovat.
 
-Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.rst) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
+Měli byste pravidelně [exportovat svá nastavení](../Usage/ExportImportSettings.md) (včetně pokroku v plnění cílů). V případě, že v budoucnosti budete muset svůj smartphone nahradit (nové zařízení, poškození displeje atd.), můžete tato nastavení jednoduše importovat.
 
-Více informací naleznete na stránce [Cíle](../Usage/Objectives.rst).
+Více informací naleznete na stránce [Cíle](../Usage/Objectives.md).
 
 ## Ošetření
 
@@ -306,11 +306,11 @@ Vyberte chcete-li mít zobrazené [stavové indikátory](../Configuration/Prefer
 
 ### Automatizace
 
-Uživatelem vytvořené úlohy automatizace ('if-then-else'). Prosím, [přečtěte si zde](../Usage/Automation.rst).
+Uživatelem vytvořené úlohy automatizace ('if-then-else'). Prosím, [přečtěte si zde](../Usage/Automation.md).
 
 ### SMS komunikátor
 
-**SMS komunikátor** umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [SMS příkazy](../Children/SMS-Commands.rst), kde najdete další informace o nastavení.
+**SMS komunikátor** umožňuje vzdálené ovládání některých funkcí AndroidAPS prostřednictvím SMS, viz [SMS příkazy](../Children/SMS-Commands.md), kde najdete další informace o nastavení.
 
 ### Jídlo
 

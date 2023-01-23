@@ -20,7 +20,7 @@ Zunächst einmal musst du dir **loopbare Hardware-Komponenten** besorgen:
 
 - Eine [unterstützte Insulinpumpe](./Pump-Choices.md), 
 - ein [Android-Smartphone](Phones.md) (Apple iOS wird von AndroidAPS nicht unterstützt - du kannst dir einmal [iOS Loop](https://loopkit.github.io/loopdocs/) anschauen) und 
-- einem [kontinuierliches Glukose-Mess-System](../Configuration/BG-Source.rst). 
+- einem [kontinuierliches Glukose-Mess-System](../Configuration/BG-Source.md). 
 
 Zweitens musst du deine **Hardware einrichten**. Siehe [Beispiel-Setup mit Schritt für Schritt Tutorial](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ Zunächst musst du natürlich dieselbe Notfall-Ausrüstung mitnehmen wie jeder a
 
 - Powerbar und Kabel, um bei Bedarf Dein Smartphone, Deine Uhr und ggf. Dein Bluetooth Reader laden zu können.
 - Pumpenbatterien
-- Aktuelle [apk](../Installing-AndroidAPS/Building-APK.md) und [Einstellungs-Dateien](../Usage/ExportImportSettings.rst) für AndroidAPS und alle anderen von Ihnen verwendeten Apps (e.. xDrip+, BYO Dexcom) sowohl lokal als auch in der Cloud (Dropbox, Google Drive).
+- Aktuelle [apk](../Installing-AndroidAPS/Building-APK.md) und [Einstellungs-Dateien](../Usage/ExportImportSettings.md) für AndroidAPS und alle anderen von Ihnen verwendeten Apps (e.. xDrip+, BYO Dexcom) sowohl lokal als auch in der Cloud (Dropbox, Google Drive).
 
 ## Wie kann ich den CGM/FGM sicher und zuverlässig befestigen?
 
@@ -288,7 +288,7 @@ Beim Loopen solltest Du diese drei Schritte ausprobieren:
 
 Für diese Einstellungen ist ein Vor- und Nachlauf wichtig. Nimm die Änderungen rechtzeitig vor Deinen sportlichen Aktivitäten vor und bedenke den Muskelauffülleffekt im Nachgang.
 
-Wenn Du regelmäßig zur gleichen Zeit Sport machst (z.B. ein Kurs in Deinem Fitnessstudio) könntest Du [Automation](../Usage/Automation.rst) für den Profilwechsel und das TT nutzen. Auch standortbasierte Automation-Regeln kommen in Frage, allerdings musst Du Dir hier überlegen, wie Du den Vorlauf am besten realisieren kannst.
+Wenn Du regelmäßig zur gleichen Zeit Sport machst (z.B. ein Kurs in Deinem Fitnessstudio) könntest Du [Automation](../Usage/Automation.md) für den Profilwechsel und das TT nutzen. Auch standortbasierte Automation-Regeln kommen in Frage, allerdings musst Du Dir hier überlegen, wie Du den Vorlauf am besten realisieren kannst.
 
 Der Prozentsatz des Profilwechsels, der Wert für das temporäre Ziel und die beste Zeit für die Änderungen, sind individuell. Taste Dich vorsichtig heran und baue ausreichend Sicherheit ein (starte mit einem niedrigeren Prozentsatz und einem höheren TT).
 
@@ -310,7 +310,7 @@ Wenn du Alkohol trinkst musst du immer dein CGM im Blick haben, um eine Hypoglyk
 
 #### Wie kann ich nachts loopen, ohne Handy- und WLAN-Strahlung ausgesetzt zu sein?
 
-Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die ['Build your own Dexcom App'](../Hardware/DexcomG6.html#g6-mit-build-your-own-dexcom-app) verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
+Viele Nutzer stellen nachts im Handy den Flugzeugmodus ein. Wenn du willst, dass der Loop dich auch im Schlaf unterstützt, dann gehe wie folgt vor (dies wird aber nur funktionieren, wenn du eine lokale BZ-Quelle wie xDrip+ oder die ['Build your own Dexcom App'](../Hardware/DexcomG6.md#g6-mit-build-your-own-dexcom-app) verwendest, es geht NICHT wenn du die Glukose-Werte über Nightscout erhältst):
 
 1. Aktiviere im Handy den Flugzeugmodus.
 2. Warte, bis der Flugzeugmodus aktiv ist.

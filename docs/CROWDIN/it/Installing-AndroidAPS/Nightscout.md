@@ -21,7 +21,7 @@ There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS
 
 ### Further security settings
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## Manual Nightscout setup
 

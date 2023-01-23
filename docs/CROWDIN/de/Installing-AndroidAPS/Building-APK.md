@@ -60,7 +60,7 @@ Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem 
 
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
-1. [Git installieren](../Installing-AndroidAPS/git-install.rst)
+1. [Git installieren](../Installing-AndroidAPS/git-install.md)
 2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
 3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](../Installing-AndroidAPS/Building-APK#git-pfad-in-android-studio-eintragen)
 4. [AndroidAPS-Code herunterladen](../Installing-AndroidAPS/Building-APK#androidaps-code-herunterladen)
@@ -75,7 +75,7 @@ Detaillierte Beschreibung der notwendigen Schritte.
 
 ## Installiere git (falls du es noch nicht hast)
 
-Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.rst).
+Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.md).
 
 ## Android Studio installieren
 
@@ -119,7 +119,7 @@ Warte während Android Studio zusätzliche Komponenten herunterlädt und bleibe 
 
 ## Git-Pfad in Android Studio eintragen
 
-Stelle sicher, dass [git auf Deinem PC installiert](../Installing-AndroidAPS/git-install.rst) ist und dass Du den PC nach der git-Installation neu gestartet hast.
+Stelle sicher, dass [git auf Deinem PC installiert](../Installing-AndroidAPS/git-install.md) ist und dass Du den PC nach der git-Installation neu gestartet hast.
 
 Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\] (1) auf der linken Seite und wähle dann den Link "All settings..." \[Alle Einstellungen...\] (2):
 
@@ -127,7 +127,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
 
 ### Windows
 
-* Stelle als Windows Nutzer sicher, dass Du den PC neu gestartet hast, nachdem Du [Git installiert](../Installing-AndroidAPS/git-install.rst) hast.
+* Stelle als Windows Nutzer sicher, dass Du den PC neu gestartet hast, nachdem Du [Git installiert](../Installing-AndroidAPS/git-install.md) hast.
 
 * Doppelklicke auf "Version Control" (1), um das Untermenü zu öffnen.
 

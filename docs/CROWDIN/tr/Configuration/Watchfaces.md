@@ -330,7 +330,7 @@ Pil gerektiren başlıca alanlar şunlardır:
 
 * Sony Smartwatch 3, APPS ile kullanılacak en popüler saatlerden biridir.
 * Maalesef Google, 2020 sonbaharında wear OS 1.5 cihazları için desteği bıraktı. Bu Sony SW3'ü AndroidAPS 2.7 ve üstü ile kullanırken sorunlara yol açar.
-* Bu soruna [sorun giderme sayfasında](../Usage/SonySW3.rst) olası bir geçici çözüm bulunabilir.
+* Bu soruna [sorun giderme sayfasında](../Usage/SonySW3.md) olası bir geçici çözüm bulunabilir.
 
 ## Nightscout verilerini görüntüleyin
 

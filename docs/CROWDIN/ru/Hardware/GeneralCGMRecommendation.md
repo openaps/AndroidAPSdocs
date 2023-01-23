@@ -2,38 +2,42 @@
 
 ## Гигиена мониторинга
 
-Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
+Вне зависимости от того, какой у вас мониторинг - официальная система или самодельная, следует соблюдать определенные правила калибровок.
 
--   Make sure hands and kit are clean.
--   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
--   Avoid calibrating when glucose levels are moving up or down.
--   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
--   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
+- Убедитесь, что руки и комплект чисты.
+- Старайтесь калибровать на ровных значениях ГК (обычно достаточно 15-30 минут с плоской шкалой)
+- Избегайте калибровки при повышении или понижении уровня глюкозы.
+- По возможности проводите «достаточно» калибровок – на официальных приложениях раз или два раза за сутки появляется предложение откалибровать систему. В самодельных системах таких напоминаний не бывает, поэтому будьте внимательны и не забывайте калибровать.
+- По возможности калибруйте, имея показания в нижнем диапазоне (4-5 ммоль/л или 72-90мг/дл.) а также в среднем (7-9 ммоль/л или 126-160мг/дл.), поскольку это обеспечивает более широкий охват диапазона калибровок.
 
 ## Установка сенсора (G6)
 
-When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
+При установке сенсора не рекомендуется слишком сильно давить на манипулятор, чтобы избежать кровотечения. Нить сенсора не должна вступать в контакт с кровью.
 
-After setting the sensor, the transmitter can be clicked into the sensor holder. Осторожно! First click in the square side and then press down the round side.
+После установки сенсора трансмиттер может быть защелкнут на его платформе. Осторожно! Сначала защелкните квадратную сторону, затем надавите на круглую.
 
-## Troubleshooting
+## Устранение неполадок
 
 ### Проблемы с подключением
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Соединение Bluetooth может быть нарушено другими близлежащими устройствами Bluetooth, такими как глюкометры, гарнитуры, планшеты, кухонные устройства, микроволновые печи или керамические плиты. В этом случае xdrip не отображает данные ГК. Когда соединение Bluetooth восстанавливается, пропущенные данные заполняются.
 
 ### Ошибки сенсора
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Если возникают повторяющиеся ошибки сенсора, попробуйте выбрать другое место на теле для его установки. Нить сенсора не должна вступать в контакт с кровью.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Часто "Ошибка сенсора" может быть исправлена обильным питьем и массажем вокруг сенсора!
 
 ### Скачки данных
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Можно попробовать изменить настройки блокировки шума в xdrip (Настройки - Настройки между приложениями - Блокировка шумов), напр. "Блокировать Очень высокий шум и хуже".  См. также [Сглаживание данных ГК](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Отрицательный срок работы сенсора
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+```{image} ../images/Troubleshooting_SensorAge.png
+:alt: "\u041E\u0442\u0440\u0438\u0446\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439\
+:  \ \u0441\u0440\u043E\u043A \u0440\u0430\u0431\u043E\u0442\u044B \u0434\u0430\u0442\
+:  \u0447\u0438\u043A\u0430"
+```
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Это происходит, если на вкладке\`действия / menu \<../Configuration/Config-Builder#actions>\`\_ имеется двойная запись или неверно проставлена дата установки сенсора. Перейдите на вкладку назначений > портал терапии и удалите неверную запись.

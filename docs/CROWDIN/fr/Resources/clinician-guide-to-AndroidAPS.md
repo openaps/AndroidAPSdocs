@@ -2,13 +2,13 @@
 
 Cette page est destinée aux professionels de santé qui ont exprimé leur intérêt pour la technologie du pancréas artificiel en open source comme AndroidAPS, ou pour les patients qui veulent partager ces informations avec leur équipe médicale.
 
-Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AndroidAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AndroidAPS en ligne](../index.rst). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (Si vous n'êtes pas sur les réseaux sociaux (par ex. [Twitter](https://twitter.com/kozakmilos) ou Facebook), n'hésitez pas à envoyer un email à developers@AndroidAPS.org). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
+Ce guide contient des informations de haut niveau sur la boucle fermée DIY et plus précisément sur la façon dont AndroidAPS fonctionne. Pour plus de détails sur tous ces sujets, veuillez consulter la [documentation complète AndroidAPS en ligne](../index.md). Si vous avez des questions, demandez à votre patient pour plus de détails, ou n'hésitez pas à rejoindre la communauté. (Si vous n'êtes pas sur les réseaux sociaux (par ex. [Twitter](https://twitter.com/kozakmilos) ou Facebook), n'hésitez pas à envoyer un email à developers@AndroidAPS.org). [Vous pouvez également trouver quelques-unes des dernières études & et les données relatives aux résultats ici](https://openaps.org/outcomes/).
 
 ### Les étapes pour construire une boucle fermée DIY :
 
 Pour commencer à utiliser AndroidAPS, les étapes suivantes doivent être faites :
 
-* Trouver une [pompe compatible](../Hardware/pumps.md), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](../Configuration/BG-Source.rst).
+* Trouver une [pompe compatible](../Hardware/pumps.md), un [équipement Android compatible](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), et une [source MGC compatible](../Configuration/BG-Source.md).
 * [Télécharger le code source AndroidAPS et compiler le logiciel](../Installing-AndroidAPS/Building-APK.md).
 * [Configurer le logiciel pour qu'il dialogue avec ses périphériques et définir les préférences et les paramètres de sécurité](../index#configuration).
 

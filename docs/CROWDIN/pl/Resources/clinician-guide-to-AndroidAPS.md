@@ -2,13 +2,13 @@
 
 Ta strona jest przeznaczona dla lekarzy specjalistów, którzy wyrazili zainteresowanie technologią sztucznej trzustki open source, taką jak AndroidAPS, lub dla pacjentów, którzy chcą podzielić się takimi informacjami ze swoimi lekarzami.
 
-Ten przewodnik zawiera trochę specjalistycznych informacji na temat zamkniętej pętli typu "zrób to sam", w szczególności jak działa AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.rst). Jeśli masz pytania, o więcej szczegółów proszę zapytać pacjenta ewentualnie ni krępuj się kierować pytań do naszej społeczności. (Jeśli nie korzystasz z mediów społecznościowych (np. [Twitter](https://twitter.com/kozakmilos) lub Facebook), prosimy o kontakt mailowy na adres developers@AndroidAPS.org). [Tutaj można również znaleźć niektóre z najnowszych badań i danych dotyczących wyników](https://openaps.org/outcomes/).
+Ten przewodnik zawiera trochę specjalistycznych informacji na temat zamkniętej pętli typu "zrób to sam", w szczególności jak działa AndroidAPS. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.md). Jeśli masz pytania, o więcej szczegółów proszę zapytać pacjenta ewentualnie ni krępuj się kierować pytań do naszej społeczności. (Jeśli nie korzystasz z mediów społecznościowych (np. [Twitter](https://twitter.com/kozakmilos) lub Facebook), prosimy o kontakt mailowy na adres developers@AndroidAPS.org). [Tutaj można również znaleźć niektóre z najnowszych badań i danych dotyczących wyników](https://openaps.org/outcomes/).
 
 ### Kroki niezbędne to stworzenia Zamkniętej Pętli typu "zrób to sam":
 
 Aby rozpocząć korzystanie z AndroidAPS, należy podjąć następujące kroki:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download the AndroidAPS source code and build the software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
 

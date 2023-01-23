@@ -48,8 +48,8 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
 
 ### Traducir enlaces de títulos
 
-* Cuando un enlace interno sólo conduce a una determinada página (es decir ../Usage/Profiles.html), no es necesaria ninguna traducción.
-* Enlaces internos a un determinado título (es decir ..//Usage/Profiles.html#percentage) debe ser traducido como el titular en el otro idioma es diferente de la original en inglés.
+* Cuando un enlace interno sólo conduce a una determinada página (es decir ../Usage/Profiles.md), no es necesaria ninguna traducción.
+* Enlaces internos a un determinado título (es decir ..//Usage/Profiles#percentage) debe ser traducido como el titular en el otro idioma es diferente de la original en inglés.
 * Si traduce un encabezado puede transformar esto en el enlace de anclaje (parte siguiente a # - i.e. #porcentaje) cambiando todas las letras a minúsculas, transformando caracteres especiales a caracteres estándar, reemplazando espacios por - (signo menos) y saltando las marcas de puntuación.
     
     Aquí tienes algunos ejemplos:

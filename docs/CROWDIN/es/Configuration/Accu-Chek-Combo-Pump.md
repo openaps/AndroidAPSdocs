@@ -15,7 +15,7 @@
 
 ## Limitaciones
 
-- Los bolos extendidos y multiondas no están soportados (consulte el apartado [Carbohidratos Extendidos](../Usage/Extended-Carbs.rst) en su lugar).
+- Los bolos extendidos y multiondas no están soportados (consulte el apartado [Carbohidratos Extendidos](../Usage/Extended-Carbs.md) en su lugar).
 - Solo se admite un perfil basal.
 - Establecer un perfil basal distinto de 1 en la bomba o entregar bolos extendidos o bolos multionda desde la bomba interfiere con TBRs y fuerza el bucle en modo de baja suspensión durante 6 horas, ya que el lazo no puede correr de forma segura bajo estas condiciones.
 - Actualmente no es posible establecer la hora y la fecha en la bomba, por lo que [cambios en el horario de verano](../Usage/Timezone-traveling#accu-chek-combo) tienen que realizarse manualmente (puede desactivar la actualización automática del reloj del teléfono por la noche y volver a cambiarlo por la mañana junto con el reloj de la bomba para evitar una alarma durante la noche).

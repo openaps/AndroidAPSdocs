@@ -31,7 +31,7 @@ Néanmoins, les données sont automatiquement envoyées à Nightscout "in the cl
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatives : voir la liste des sources [contrôles glycémique possibles](../Configuration/BG-Source.rst)
+    * Alternatives : voir la liste des sources [contrôles glycémique possibles](../Configuration/BG-Source.md)
 
 4. Optionnel : Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 1. Si l'application Dexcom originale est déjà installée : 
     * Arrêter le capteur
     * Désinstallez l'application via Menu > Paramètres > Apps > Dexcom G6 Mobile > Désinstaller
-2. Téléchargez et installez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom)
+2. Téléchargez et installez [BYODA](../Hardware/DexcomG6.md#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom)
 3. Démarrez l'application Dexcom G6 patchée, activez/calibrez le capteur selon les instructions données et attendez la fin de la phase de démarrage.
 4. Une fois que l'application Dexcom patchée affiche la valeur actuelle de la glycémie, configurez les alertes (menu hamburger sur le côté gauche de l'écran) comme suit : 
     * Urgent glycémie basse `55mg/dl` / `3.1mmol/l` (impossible à désactiver)
@@ -97,7 +97,7 @@ Pour ce faire, effectuez les étapes suivantes sur votre smartphone :
 3. [Configurez AndroidAPS](../Configuration/Config-Builder.md) selon vos besoins en utilisant l'assistant de configuration ou manuellement
 4. Dans cet exemple de configuration, nous avons utilisé (entre autres)
 
-* Source GLY : `BYODA` -- cliquez sur la roue crantée et activez `Remonter les Gly vers NS` et `Transmettre les Gly vers xDrip+` (voir [ source GLY ](../Configuration/BG-Source.rst))
+* Source GLY : `BYODA` -- cliquez sur la roue crantée et activez `Remonter les Gly vers NS` et `Transmettre les Gly vers xDrip+` (voir [ source GLY ](../Configuration/BG-Source.md))
 
 ![Paramètres G5](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ est une autre application open source très aboutie qui offre d'innombrab
     * Paramètres > Paramètres Inter-app > Accepter les calibrations > `ON`
     * Menu > Démarrer le capteur (n'est rien qu'un "pro forma" et n'a rien à voir avec le capteur G6 en cours. Ceci est nécessaire sinon un message d'erreur apparaîtra régulièrement.) 
 
-Pour plus d'informations sur xDrip +, voir ici [Page source GLY](../Configuration/BG-Source.rst).
+Pour plus d'informations sur xDrip +, voir ici [Page source GLY](../Configuration/BG-Source.md).
 
 ### Exemple d'une installation d'alarme
 

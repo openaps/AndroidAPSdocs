@@ -29,7 +29,7 @@ Ancak Nightscout profilini yerel bir profile senkronize etmek mümkündür. Bunu
 
 Yerel profil, telefona manuel olarak girilen bazal profili kullanır. Seçilir seçilmez, gerekirse pompadan okunan profil verilerini değiştirebileceğiniz AAPS'de yeni bir sekme görünür. Bir sonraki profil değişimi ile pompadaki profil1'e yazılırlar. İnternet bağlantısı gerektirmediği için bu profil önerilir.
 
-Yerel profilleriniz, [dışa aktarılan ayarların](../Usage/ExportImportSettings.rst) bir parçasıdır. Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
+Yerel profilleriniz, [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) bir parçasıdır. Bu yüzden güvenli bir yerde yedek aldığınızdan emin olun.
 
 ![Yerel Profil ayarları](../images/LocalProfile_Settings.png)
 
@@ -74,7 +74,7 @@ Profil yardımcısı iki işlev sunar:
 1. Çocuklar için bir profil bulmak
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
 
-Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.rst) açıklanmıştır.
+Ayrıntılar, [profil yardımcısı sayfasında](../Configuration/profilehelper.md) açıklanmıştır.
 
 ## İnsülin
 
@@ -181,7 +181,7 @@ Grafiklerde duyarlılık işaretlenerek beyaz çizgide duyarlılığınızı ana
 
 ### Emilim ayarları
 
-Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. [Karbonhidrat emiliminin](../Usage/COB-calculation.rst) kan reaksiyonlarınıza göre dinamik olarak hesaplanamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
+Oref1 ile SMB kullanıyorsanız **min_5m_carbimpact**'i 8 olarak değiştirmelisiniz. Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. [Karbonhidrat emiliminin](../Usage/COB-calculation.md) kan reaksiyonlarınıza göre dinamik olarak hesaplanamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
 
 ## APS (YPS)
 
@@ -226,9 +226,9 @@ Terapi ayarlamaları için istenen APS algoritmasını seçin. OpenAPS(OAPS) sek
 
 AndroidAPS, adım adım gerçekleştirmeniz gereken bir öğrenme programına (görevlere) sahiptir. Bunun amacı, güvenli bir şekilde kapalı döngü sistemi kurmak için size rehberlik etmektir. Her şeyi doğru bir şekilde kurmanızı ve sistemin tam olarak ne yaptığını anlamanızı garanti eder. Sisteme güvenmenizin tek yolu bu.
 
-Düzenli olarak [ayarlarınızı dışa aktarmalısınız](../Usage/ExportImportSettings.rst) (görevlerin ilerlemesi dahil). Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
+Düzenli olarak [ayarlarınızı dışa aktarmalısınız](../Usage/ExportImportSettings.md) (görevlerin ilerlemesi dahil). Akıllı telefonunuzu daha sonra değiştirmeniz durumunda (yeni satın alma, ekran hasarı vb.) bu ayarları kolayca içe aktarabilirsiniz.
 
-Daha fazla bilgi için [Görevler](../Usage/Objectives.rst) sayfasına bakın.
+Daha fazla bilgi için [Görevler](../Usage/Objectives.md) sayfasına bakın.
 
 ## Tedaviler
 
@@ -306,11 +306,11 @@ Kanül yaşı, insülin yaşı, sensör yaşı, pil yaşı, rezervuar seviyesi v
 
 ### Otomasyon
 
-Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı okuyun](../Usage/Automation.rst).
+Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı okuyun](../Usage/Automation.md).
 
 ### SMS Kominikatör
 
-Ebeveynlerin bazı AndroidAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.rst)'na bakın.
+Ebeveynlerin bazı AndroidAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
 
 ### Yiyecek
 

@@ -15,7 +15,7 @@
 
 ## Apribojimai
 
-- Ištęstinis bolusas ir dvibangis bolusas negalimi (žr. [Ištęsti angliavandeniai](../Usage/Extended-Carbs.rst)).
+- Ištęstinis bolusas ir dvibangis bolusas negalimi (žr. [Ištęsti angliavandeniai](../Usage/Extended-Carbs.md)).
 - Galimas tik vienas bazės profilis.
 - Daugiau nei 1 bazinio profilio nustatymas, ištęsto ar daugiabangio boluso suleidimas iš pompos trukdo laikinų bazių nustatymui (TBR) ir išjungia ciklą 6 valandoms, todėl ciklas negali saugiai veikti tokiomis sąlygomis.
 - Šiuo metu nėra galimybės pompoje nustatyti datos ir laiko, todėl [žiemos/vasaros laiko pokyčius](../Usage/Timezone-traveling#accu-chek-combo) turite atlikti rankiniu būdu (galite išjungti telefono automatinį laiko nustatymą iš vakaro, ir nustatyti jį ryte, kad išvengtumėte aliarmų nakties metu).

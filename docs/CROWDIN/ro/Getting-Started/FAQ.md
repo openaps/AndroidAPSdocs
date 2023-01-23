@@ -20,7 +20,7 @@ De aceea fișierele apk nu sunt disponibile.
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - un [telefon cu Android](Phones.md) (sistemul Apple iOS nu este suportat de AndroidAPS-poti verifica [iOS Loop](https://loopkit.github.io/loopdocs/)) şi 
-- un [sistem continuu de monitorizare a glicemiei](../Configuration/BG-Source.rst). 
+- un [sistem continuu de monitorizare a glicemiei](../Configuration/BG-Source.md). 
 
 În al doilea rând, trebuie să **configurezi hardware-ul**. Vezi [example setup with step-by-step tutorial](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ Când folosiți bucla ar trebui să încercați acești pași:
 
 Pre- and post-processing of these settings is important. Faceţi schimbările la timp, înainte de sport şi luaţi în considerare efectul de umplere cu glucoză a muşchilor.
 
-Dacă faceţi sport în mod regulat în aceeași perioadă a zilei (adică clasă de sport în sala) puteţi lua în considerare utilizarea de [automatizare](../Usage/Automation.rst) pentru schimbare profil şi TT. Automatizarea bazată pe locaţie ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
+Dacă faceţi sport în mod regulat în aceeași perioadă a zilei (adică clasă de sport în sala) puteţi lua în considerare utilizarea de [automatizare](../Usage/Automation.md) pentru schimbare profil şi TT. Automatizarea bazată pe locaţie ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
 
 Procentul de schimbare a profilului, valoarea pentru ținta temporară a activității tale și momentul cel mai bun pentru modificări sunt setări individuale. Începeți pe partea sigură dacă sunteți în căutarea valorii corecte pentru dvs. (începeți cu un procent mai mic și cu un TT mai mare).
 

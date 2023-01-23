@@ -7,8 +7,8 @@ AndroidAPS, bir dizi insülin pompasıyla çalışır. Aşağıdaki liste şu an
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
 - [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
-- [Diaconn G8 ](../Configuration/DiaconnG8.rst) (Bluetooth)
-- [Omnipod Eros](../Configuration/OmnipodEros.rst) (Rileylink Uyumlu Cihaz)
+- [Diaconn G8 ](../Configuration/DiaconnG8.md) (Bluetooth)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) (Rileylink Uyumlu Cihaz)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md) (Bluetooth)
 - Bazı eski [Medtronic pompaları](../Configuration/MedtronicPump.md) (Rileylink Uyumlu Cihaz)
 

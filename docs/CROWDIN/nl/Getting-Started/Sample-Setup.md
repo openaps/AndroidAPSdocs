@@ -31,7 +31,7 @@ Wat wel is ingesteld in dit voorbeeld, is dat alle gegevens automatisch worden g
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatieven: zie lijst met mogelijke [BG bronnen](../Configuration/BG-Source.rst)
+    * Alternatieven: zie lijst met mogelijke [BG bronnen](../Configuration/BG-Source.md)
 
 4. Optioneel: Sony Smartwatch 3 (SWR50)
     
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. [AndroidAPS instellen](../Configuration/Config-Builder.md) met de setup wizard of handmatig
 4. In dit voorbeeld gebruikten we (o.a.)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Instellingen > Inter-app settings > Accepteren Calibraties > `AAN`
     * Menu > Start Sensor (is alleen voor de vorm en heeft niets te maken met de G6 zelf. Dit is nodig omdat je anders steeds een foutmelding krijgt). 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Voorbeeld van alarm instellingen
 
