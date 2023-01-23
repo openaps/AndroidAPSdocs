@@ -20,7 +20,7 @@ En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
-- un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.rst) (Mcg). 
+- un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.md) (Mcg). 
 
 Secondly, you have to **setup your hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ Cuando utilices lazo, debe intentar estos pasos:
 
 Pre- and post-processing of these settings is important. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
-Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.rst) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
+Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.md) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
 
 Los porcentajes del conmutador de perfil, el valor para el objetivo temporal de la actividad y el mejor tiempo para los cambios son individuales. Empiece en el lado seguro si está buscando el valor correcto para usted (empiece con un porcentaje más bajo y un TT superior).
 

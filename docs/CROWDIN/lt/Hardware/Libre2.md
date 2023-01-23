@@ -1,6 +1,6 @@
 # Freestyle Libre 2
 
-The Freestyle Libre 2 system can automatically report dangerous blood glucose levels. The Libre2 Sensor sends the current blood sugar level to a receiver (reader or smartphone) every minute. The receiver triggers an alarm if necessary. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone.
+Freestyle Libre 2 sistema gali automatiškai pranešti apie pavojingus kraujo gliukozės kiekius kraujyje. Libre 2 jutiklis siunčia gliukozės kiekio kraujyje duomenis į imtuvą (skaitytuvą ar išmanųjį telefoną) kiekvieną minutę. Imtuvas įjungia pavojaus signalą, jeigu reikia. With a self-modified LibreLink app and the xDrip+ app, you can continuously receive and display your blood sugar level on your smartphone.
 
 The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2,2 mmol/l to +1,1 mmol/l) to adjust differences between finger prick measurements and sensor readings.
 
@@ -14,60 +14,72 @@ Dėl teisinių priežasčių, taip vadinamas "pataisymas" turi būti atliekamas 
 
 The patched app has to be installed instead of the original app. The next sensor started with it will transmit the current BG values to the xDrip+ app running on your smartphone via Bluetooth.
 
-Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC has to be enabled. Tai neeikvoja baterijos. Then install the patched app.
+Important: To avoid possible problems it may help to first install and uninstall the original app on an NFC capable smartphone. NFC turi būti įjungtas. Tai neeikvoja baterijos. Then install the patched app.
 
 The patched app can be identified by the foreground authorization notification. The foreground authorization service improves the connection stability compared to the original app which do not use this service.
 
-![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
+```{image} ../images/Libre2_ForegroundServiceNotification.png
+:alt: "LibreLink prane\u0161im\u0173 paslauga"
+```
 
 Other indications could be the Linux penguin logo three dot menu -> Info or the font of the patched app. These criteria are optional depending on the app source you choose.
 
-![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
+```{image} ../images/LibreLinkPatchedCheck.png
+:alt: LibreLink Font Check
+```
 
 Ensure that NFC is activated, enable the memory and location permission for the patched app, enable automatic time and time zone and set at least one alarm in the patched app.
 
-Now start the Libre2 sensor with the patched app by simply scanning the sensor. Ensure to have set all settings done.
+Dabar aktyvuokite Libre 2 jutiklį su modifikuota progrmėle, tiesiog skenuodami jutiklį. Ensure to have set all settings done.
 
 Privalomi parametrai norint sėkmingai aktyvuoti jutiklį:
 
--   NFC enabled / BT enabled
--   memory and location permission enabled
--   location service enabled
--   automatic time and time zone setting
--   set at least one alarm in the patched app
+- NFC įjungtas / BT įjungtas
+- memory and location permission enabled
+- location service enabled
+- automatic time and time zone setting
+- nustatytas bent vieną aliarmas modifikuotoje programėlėje
 
 Please note that the location service is a central setting. This is not the app location permission which has to be set also!
 
-![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
+```{image} ../images/Libre2_AppPermissionsAndLocation.png
+:alt: "LibreLink atminties & vietos teis\u0117s"
+```
 
-![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
+```{image} ../images/Libre2_DateTimeAlarms.png
+:alt: automatic time and time zone + alarm settings
+```
 
-The sensor remembers the device it was started from. Only this device can receive alarms in the future.
+The sensor remembers the device it was started from. Tik šis prietaisas gali priimti signalus ateityje.
 
-Pirmas ryšio nustatymas su jutikliu yra ypač svarbus. The LibreLink app tries to establish a wireless connection to the sensor every 30 seconds. Jei trūksta vieno ar kelių privalomų parametrų, jie turi būti koreguojami. Galite tai atlikti bet kuriuo metu. The sensor is constantly trying to setup the connection. Net jei tai trunka keletą valandų. Be patient and try different settings before even think of changing the sensor.
+Pirmas ryšio nustatymas su jutikliu yra ypač svarbus. LibreLink programėlė bando užmegzti belaidį ryšį su jutikliu kas 30 sekundžių. Jei trūksta vieno ar kelių privalomų parametrų, jie turi būti koreguojami. Galite tai atlikti bet kuriuo metu. Jutiklis nuolat bando nustatyti ryšį. Net jei tai trunka keletą valandų. Be patient and try different settings before even think of changing the sensor.
 
-As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. This should happen after a maximum of 5 minutes.
+As long as you see a red exclamation mark ("!") on the upper left corner of the LibreLink's start screen there is no connection or some other setting blocks LibreLink to signal alarms. Please check if the sound is enabled and all sorts of blocking app notifications are disabled. When the exclamation mark is gone, the connection should be established and blood sugar values are sent to the smartphone. Tai turėtų įvykti daugiausiai po 5 minučių.
 
-![LibreLink no connection](../images/Libre2_ExclamationMark.png)
+```{image} ../images/Libre2_ExclamationMark.png
+:alt: "LibreLink n\u0117ra ry\u0161io"
+```
 
-If the exclamation mark remains or you get an error message, this can have several reasons:
+Jei šauktukas lieka arba gaunate klaidos pranešimą, tai gali būti dėl keletos priežasčių:
 
--   Android location service is not granted - please enable it in the system settings
--   automatic time and time zone not set - please change the settings accordingly
--   activate alarms - at least one of the three alarms must be activated in LibreLink
--   Bluetooth is switched off - please switch on
--   sound is blocked
--   app notifications are blocked
--   idle screen notifications are blocked
--   you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
+- Android vietos nustatymo paslauga nėra įgalinta - prašome įjungti tai sistemos nustatymuose
+- automatic time and time zone not set - please change the settings accordingly
+- įjunkite aliarmus - bent vienas iš trijų aliarmų turi būti įjungtas LibreLink
+- Bluetooth yra išjungtas - įjunkite
+- sound is blocked
+- app notifications are blocked
+- idle screen notifications are blocked
+- you have a faulty Libre 2 sensor from a production LOT number with a 'K' followed by 8 digits. You find this printed on the yellow package. These sensors have to be replaced as they don't function on bluetooth.
 
-Gali padėti telefono paleidimas iš naujo, jums gali tekti padaryti tai keletą kartų. As soon as the connection is established, the red exclamation mark disappears and the most important step is taken. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Sensor and phone are now connected, every minute a blood sugar value is transmitted.
+Gali padėti telefono paleidimas iš naujo, jums gali tekti padaryti tai keletą kartų. Kai tik ryšys yra užmegztas, raudonas šauktukas dingsta ir svarbiausias žingsnis yra atliktas. It may happen that depending on system settings the exclamation mark remains but you still get readings. In both cases you are fine. Jutiklis ir telefonas dabar yra sujungti, kiekvieną minutę kraujo gliukozės reikšmės yra perduodamos.
 
-![LibreLink connection established](../images/Libre2_Connected.png)
+```{image} ../images/Libre2_Connected.png
+:alt: "LibreLink ry\u0161ys nustatytas"
+```
 
 In rare case it could help to empty the bluetooth cache and/or reset all network connections via the system menu. This removes all connected bluetooth devices which may help to setup a proper bluetooth connection. That procedure is save as the started sensor is remembered by the patched LibreLink app. Nothing additional has to be done here. Simply wait for the patched app to connect to the sensor.
 
-After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Location service can be switched off, volume can be set to zero or alarms can be switched off again. The blood sugar levels are transferred anyway.
+After a successful connection the smartphone settings can be changed if necessary. This is not recommended but you may want to save power. Vietos nustatymo paslaugą galima išjungti, garsas gali būti nutildytas, aliarmai išjungti. The blood sugar levels are transferred anyway.
 
 Tačiau aktyvuojant kitą jutiklį, visi parametrai turi būti nustatyti iš naujo!
 
@@ -83,68 +95,77 @@ However there is a variant of the patched app supporting LibreView with enabled 
 
 Kraujo gliukozės reikšmės išmaniąjame telefone gaunamos per xDrip+ programėlę.
 
--   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 (patched App)" as data source
--   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
--   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
--   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
+- If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
+- xDrip+ pasirinkite "Libre2 (patched App)" kaip duomenų šaltinį
+- Jei reikia, įveskite "BgReading:d,xdrip libre_receiver:v" ties Less Common Settings->Extra Logging Settings->Extra tags for logging. Taip bus įrašomi papildomi klaidų pranešimai trikčių šalinimui.
+- xDrip+ eikite į Settings > Interapp Compatibility > Broadcast Data Locally ir pasirinkite On.
+- xDrip+ eikite į Settings > Interapp Compatibility > Accept Treatments ir pasirinkite Off.
+- to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
 
-![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
+Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Settings > Interapp Compatibility > Accept Calibrations ir pasirinkite On.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
+
+```{image} ../images/Libre2_Tags.png
+:alt: "xDrip+ LibreLink \u017Eurnalas"
+```
 
 ## 3 žingsnis: aktyvuokite jutiklį
 
 xDrip+ aktyvuokite sensorių paspausdami "Start Sensor" ir pasirinkdami "not today".
 
-In fact this will not physically start any Libre2 sensor or interact with them in any case. This is simply to indicate xDrip+ that a new sensor is delivering blood sugar levels. If available, enter two bloody measured values for the initial calibration. Now the blood glucose values should be displayed in xDrip+ every 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+In fact this will not physically start any Libre2 sensor or interact with them in any case. Tai tiesiog nurodo xDrip+'ui, kad naujas sensorius siunčia kraujo gliukozės lygius. Jei galite, įveskite dvi reikšmes, gautas iš gliukomačio, pradinei kalibracijai. Dabar kraujo gliukozės reikšmės turėtų būti rodomos xDrip+ kas 5 minutes. Praleistos reikšmės, pvz. nes buvote per toli nuo telefono, negali būti įrašytos atbuline data.
 
 After a sensor change xDrip+ will automatically detect the new sensor and will delete all calibration data. You may check you bloody BG after activation and make a new initial calibration.
 
 ## Step 4: Configure AndroidAPS (for looping only)
 
--   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
--   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+- AndroidAPS eikite į Konfigūratorių>KG šaltinis ir pažymėkite xDrip+
+- If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
 
-Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
+Kol kas naudojant Libre 2 kaip KG šaltinį, negalite aktyvuoti 'Įjungti SMB visada' ir 'Įjungti SMB po angliavandenių' per SMB algoritmą. KG reikšmės Libre 2 nėra pakankamai tikslios, norint saugiai naudoti šias funkcijas. Žiūrėkite "Lyginti kraujo gliukozės duomenis \<../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md>\`\_, jei norite sužinoti daugiau.
 
 ## Patirtis ir gedimų šalinimas
 
 ### Connectivity
 
-The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. Ryšys gali nutrūkti, jei mobilusis telefonas yra kišenėje, esančioje priešingoje pusėje nei jutiklis arba, jei esate lauke. Kai aš sode, nešioju telefoną toje pačioje pusėje kur ir jutiklis. In rooms, where Bluetooth spreads over reflections, no problems should occur. Jei jūs turite ryšio problemų, išbandykite kitą telefoną. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
 ### Value smoothing & raw values
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. Tai privaloma naudojant uždarą ciklą. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Techniškai, esama kraujo gliukozės reikšmė yra perduodama xDrip+ kiekvieną minutę. Svertinio vidurkio filtras apskaičiuoja išlygintą reikšmę per pastarąsias 25 minutes. Tai privaloma naudojant uždarą ciklą. Kreivės atrodo sklandžiai ir ciklo rezultatai yra puikūs. Neapdorotos reikšmės, kuriomis aktyvuojami aliarmai, šiek tiek šokinėja, tačiau atitinka reikšmes skaitytuve. Be to, neapdorotos reikšmės gali būti rodomos xDrip+ grafike, kad būtų galima sureaguoti laiku į staigius pokyčius. Įjunkite Less Common Settings > Advanced Settings for Libre2 > "show Raw values" ir "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
 The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
-![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
+```{image} ../images/Libre2_RawValues.png
+:alt: xDrip+ advanced settings Libre 2 & raw values
+```
 
 ### Sensor runtime
 
-Jutiklio naudojimo trukmė yra nustatyta 14 dienų. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 \> "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
+Jutiklio naudojimo trukmė yra nustatyta 14 dienų. 12 papildomų valandų kaip Libre1 nebėra. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 > "show Sensors Infos" in the system menu like the starting time. Likęs jutiklio laikas taip pat gali būti matomas modifikuotoje LibreLink programėlėje. Arba pagrindiniame ekrane rodomos likusios dienos arba jutiklio pradžio laiką rasite trijų taškų meniu->Help->Event log ties "New sensor found".
 
-![Libre 2 start time](../images/Libre2_Starttime.png)
+```{image} ../images/Libre2_Starttime.png
+:alt: "Libre 2 prad\u017Eios laikas"
+```
 
 ### New sensor
 
-A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+.
+Jutiklio keitimas vyksta nepertraukiamai: uždėkite naują jutiklį šiek tiek prieš aktyvavimą. Kai tik xDrip+ nebegaus duomenų iš seno jutiklio, aktyvuokite naują jutiklį su modifikuota programėle. Po vienos valandos naujos reikšmės turėtų automatiškai atsirasti xDrip+'e.
 
-If not, please check the phone settings and proceed as with the first start. Neturite laiko apribojimų. Try to find the correct settings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Neskubėkite. In most cases you accidentally changed one setting which causes now problems.
+Jei ne, patikrinkite telefono nustatymus ir darykite taip, kaip su pirmuoju. Neturite laiko apribojimų. Try to find the correct settings. Nėra reikalo iš karto keisti jutiklį, kol nepabandėte skirtingų derinių. Jutikliai yra atkaklūs ir nuolat bando užmegzti ryšį. Neskubėkite. In most cases you accidentally changed one setting which causes now problems.
 
-Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip+.
+Pavykus, prašome xDrip'e pasirinkti "Sensor stop" ir "Delete calibration only". Tai nurodo xDrip'ui, kad naujas jutiklis siunčia naujus gliukozės kraujyje duomenis ir senos kalibaracijos daugiau netinkamos, todėl turi būti ištrintos. Čia nėra daroma jokios realios sąveikos su Libre2 jutikliu! You do not need to start the sensor in xDrip+.
 
-![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
+```{image} ../images/Libre2_GapNewSensor.png
+:alt: "xDrip+ tr\u016Bksta duomen\u0173, kei\u010Diant Libre 2 jutikl\u012F"
+```
 
 ### Kalibravimas
 
-You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
+You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. Norint saugiai jaustis, kalibruokite kas 24-48 valandas. Reikšmės yra tikslios iki pat jutiklio pabaigos ir nešokinėja taip kaip Libre1. Tačiau, jei jutiklis rodo visiškai netiksliai, tai nepasikeis. Tada jutiklis turėtų būti nedelsiant pakeistas.
 
 ### Plausibility checks
 
-The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test is too strict. I have completely stopped scanning and haven't had a failure since then.
+Libre2 jutikliai turi patikimumo patikrinimus, siekiant nustatyti blogas reikšmes. Kai tik jutiklis pajuda ant rankos ar yra šiek tiek pastumiamas, reikšmės gali pradėti svyruoti. Libre2 jutiklis tada išsijungs saugumo sumetimais. Deja, skenuojant su programėle, atliekami papildomi tikrinimai. Programėlė gali deaktyvuoti jutiklį, net jei su jutikliu viskas yra gerai. Currently the internal test is too strict. Aš visiškai nustojau skenuoti ir nuo tada neturėjau sutrikimų.
 
 ### Time zone travelling
 
@@ -152,18 +173,18 @@ In other [time zones](../Usage/Timezone-traveling.md) there are two strategies f
 
 Either
 
-1.  leave the smartphone time unchanged and shift the basal profile (smartphone in flight mode) or
-2.  delete the pump history and change the smartphone time to local time.
+1. nekeisti išmaniojo telefono laiko ir pastumti bazės profilį (telefonas skrydžio režimu) arba
+2. ištrinti pompos istoriją ir pakeisti telefono laiką į vietinį.
 
-1. būdas is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. netinka. Please check before, if you are somewhere else, you can run otherwise fast into problems.
+1) būdas yra geras iki tol, kol nereikia keisti Libre2 jutiklio į naują. Jei abejojate, pasirinkite metodą 2., ypač, jei kelionė trunka ilgiau. Jei aktyvuojate naują jutiklį, automatinė laiko juosta turi būti nustatyta, taigi 1. metodas netinka. Prašome patikrinti tai prieš kelionę, kitaip galite greitai turėti problemų.
 
 ### Experiences
 
-Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturb the internal levelling mechanism.
+Apskritai, tai yra viena iš mažiausių NGJ sistemų rinkoje. Maža, nereikia siųstuvo ir dažniausiai labai tikslūs duomenys be svyravimų. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Geriausi rezultatai būna užpakalinėje žąsto pusėje, kitur - atsargiai! Nėra būtinybės įdurti naują jutiklį dieną prieš "įmirkymui". That would disturb the internal levelling mechanism.
 
-There seem to be bad sensors from time to time, which are far away from the blood values. Taip būna. These should be immediately replaced.
+Karts nuo karto pasitaiko blogų jutiklių, rodančių dideliu skirtumu palyginus su kraujo rodikliais. Taip būna. Tokie turėtų būti nedelsiant pakeisti.
 
-If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Prašome nedelsiant pakeisti jutiklį! The results are inaccurate now.
+Jei jutiklis šiek tiek pasislinko ant odos ar buvo pastumtas, tai gali sąlygoti neteisingus rezultatus. Siūlelis, esantis audinyje, šiek tiek ištraukiamas iš audinio ir tada matuoja skirtingus rezultatus. Mostly probably you will see jumping values in xDrip+. Arba bus skirtumas su rodikliais iš piršto. Prašome nedelsiant pakeisti jutiklį! Rezultatai dabar yra netikslūs.
 
 ## Using bluetooth transmitter and OOP
 
@@ -177,23 +198,27 @@ The Droplet transmitter is working with Libre2 also but uses an internet service
 
 Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
--   the BG readings are identical to the reader results
--   the Libre2 sensor can be used 14.5 days as with the Libre1 before
--   8 hours Backfilling is fully supported.
--   get BG readings during the one hour startup time of a new sensor
+- the BG readings are identical to the reader results
+- the Libre2 sensor can be used 14.5 days as with the Libre1 before
+- 8 hours Backfilling is fully supported.
+- get BG readings during the one hour startup time of a new sensor
 
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
 
 Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
 
-# Best practices for calibrating a libre 2 sensor
+## Best practices for calibrating a libre 2 sensor
 
-To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow. They apply independently of the software combination (e.g. patched libre-app, oop2, …) that is used to handle the libre 2 values.
+To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow.
+They apply independently of the software combination (e.g. patched libre-app, oop2, …) that is used to handle the libre 2 values.
 
-1.  The most important rule is to only calibrate the sensor when you have a flat bg level for at least 15 minutes. The delta between the last three readings should not exceed 10 mg/dl (over 15min not between each reading). As the libre 2 does not measure your blood glucose level but your flesh glucose level there is some time lag especially when bg level is rising or falling. This time lag can lead to way too large calibration offsets in unfavourable situations even if the bg level rise / fall is not that much. So whenever possible avoid to calibrate on rising or falling edges. -> If you have to add a calibration when you do not have a flat bg level (e.g. when starting a new sensor) it is recommended to remove that calibration(s) as soon as possible and add a new one when in flat bg levels.
-2.  Actually this one is automatically taken into account when following rule 1 but to be sure: When doing comparison measurements your bg level should also be flat for about 15min. Do not compare when rising or falling. Important: You still shall do blood glucose measurements whenever you desire, just don’t use the results for calibration when rising or falling!
-3.  As calibrating the sensor in flat levels is a very good starting point it is also strongly recommended to calibrate the sensor only within your desired target range like 70 mg/dl to 160 mg/dl. The libre 2 is not optimized to work over a huge range like 50 mg/dl to 350 mg/dl (at least not in a linear manner), so try to only calibrate when within your desired range. -> Simply accept that values outside your calibration range will not perfectly match blood glucose levels.
-4.  Do not calibrate too often. Calibrating the sensor very often mostly leads to worse results. When the sensor delivers good results in flat conditions just don’t add any new calibration as it does not have any -useful- effect. It should be sufficient to recheck the status every 3-5 days (of course also in flat conditions).
-5.  Avoid calibration when not required. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 9l, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
+1. The most important rule is to only calibrate the sensor when you have a flat bg level for at least 15 minutes. The delta between the last three readings should not exceed 10 mg/dl (over 15min not between each reading). As the libre 2 does not measure your blood glucose level but your flesh glucose level there is some time lag especially when bg level is rising or falling. This time lag can lead to way too large calibration offsets in unfavourable situations even if the bg level rise / fall is not that much. So whenever possible avoid to calibrate on rising or falling edges.  -> If you have to add a calibration when you do not have a flat bg level (e.g. when starting a new sensor) it is recommended to remove that calibration(s) as soon as possible and add a new one when in flat bg levels.
+2. Actually this one is automatically taken into account when following rule 1 but to be sure: When doing comparison measurements your bg level should also be flat for about 15min. Do not compare when rising or falling. Important: You still shall do blood glucose measurements whenever you desire, just don’t use the results for calibration when rising or falling!
+3. As calibrating the sensor in flat levels is a very good starting point it is also strongly recommended to calibrate the sensor only within your desired target range like 70 mg/dl to 160 mg/dl. The libre 2 is not optimized to work over a huge range like 50 mg/dl to 350 mg/dl (at least not in a linear manner), so try to only calibrate when within your desired range. -> Simply accept that values outside your calibration range will not perfectly match blood glucose levels.
+4. Do not calibrate too often. Calibrating the sensor very often mostly leads to worse results. When the sensor delivers good results in flat conditions just don’t add any new calibration as it does not have any -useful- effect. It should be sufficient to recheck the status every 3-5 days (of course also in flat conditions).
+5. Avoid calibration when not required. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 9l, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
 
-Some general notes: After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. For new and old sensors it is more likely that the raw values change and a re-calibration is required. From time to time it happens that a sensor does not provide valid values. Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. E.g. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better. Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.
+Some general  notes:
+After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. For new and old sensors it is more likely that the raw values change and a re-calibration is required.
+From time to time it happens that a sensor does not provide valid values. Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. E.g. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better.
+Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.

@@ -2,28 +2,29 @@
 
 ## Používáte-li G5 s xDrip+
 
--   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
--   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
--   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xdrip in ConfigBuilder (setting in AndroidAPS).
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+- Pokud jste tak dosud neučinili, tak stáhněte [xdrip](https://github.com/NightscoutFoundation/xDrip) a postupujte podle instrukcí na Nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
+- V xDrip+ vyberte Nastavení -> Komunikace mezi aplikacemi - > Lokální odesílání dat a vyberte ZAPNOUT.
+- V xDrip vyberte Nastavení -> Komunikace mezi aplikacemi - > Přijímat ošetření a vyberte VYPNOUT.
+- Chcete-li, aby bylo možné přes AndroidAPS kalibrovat senzor, jděte v xDripu do Nastavení > Komunikace mezi aplikacemi > Accept Calibrations a vyberte zapnout.  Můžete také zkontrolovat v xDripu nastavení v částí Nastavení > Méně častá nastavení > Rozšířené kalibrace.
+- Na kartě Konfigurace (v AndroidAPS) vyberte xDrip.
+- Pokud AAPS nedostává hodnoty glykémie, když je telefon v režimu letadlo, použijte volbu 'Identify receiver' tak, jak je popsáno v [popisu nastavení xDrip+](../Configuration/xdrip.md) .
 
 ## Používáte-li G5 s upravenou Dexcom aplikací
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+- Stáhněte si apk z
 
-    -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Region bude viditelný v adrese URL.
+[https://github.com/dexcomapp/dexcomapp](https://github.com/dexcomapp/dexcomapp),
+kde si podle používaných jednotek glykémie vyberte odpovídající G5 verzi (mg/dl nebo mmol/l).
 
-    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
+> - Složka 2.3 je pro uživatele AndroidAPS 2.3, složka 2.4 pro uživatele AAPS 2.5.
+> - Otevřete <https://play.google.com/store/search?q=dexcom%20g5> na svém počítači. Region bude viditelný v adrese URL.
+>
+> ```{image} ../images/DexcomG5regionURL.PNG
+> :alt: Region v URL adrese Dexcom G5
+> ```
 
--   Stop sensor and uninstall the original Dexcom app, if not already done.
-
--   Install downloaded apk
-
--   Start sensor
-
--   Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
-
--   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+- Zastavte senzor a odinstalujte původní aplikaci Dexcom, pokud jste tak ještě neučinili.
+- Nainstalujte stažený apk
+- Spusťte senzor
+- Na kartě Konfigurace (nastavení v AndroidAPS) vyberte Dexcom aplikace (upravená).
+- Pokud chcete použít xDrip alarmy přes místní vysílání: v xDrip hamburger menu > nastavení > hardwarový zdroj dat > 640G /EverSense.

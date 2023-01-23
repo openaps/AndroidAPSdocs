@@ -31,7 +31,7 @@ Tačiau, kai yra interneto ryšys, duomenys automatiškai įkeliami į Nightscou
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatyvos: žr. galimų [glikemijos šaltinių](../Configuration/BG-Source.rst) sąrašą
+    * Alternatyvos: žr. galimų [glikemijos šaltinių](../Configuration/BG-Source.md) sąrašą
 
 4. Pasirinktinai: Sony Smartwatch 3 (SWR50)
     
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. [Konfigūruokite AndroidAPS](../Configuration/Config-Builder.md) pagal savo poreikius, naudodamiesi sąrankos vedliu arba rankiniu būdu
 4. Šiame pavyzdyje mes naudojome (be kita ko)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Nustatymai> Tarp-programų nustatymai> Priimti kalibravimą> `Įgalinta`
     * Meniu> Sensoriaus paleidimas (tai tik „forma“, neturi nieko bendra su veikiančiu G6 sensoriumi. Turite jį įjungti, kitaip klaidos pranešimas reguliariai pasirodys.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Įspėjimo konfigūracijos pavyzdys
 

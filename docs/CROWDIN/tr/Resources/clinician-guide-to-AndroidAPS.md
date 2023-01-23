@@ -2,13 +2,13 @@
 
 Bu sayfa, AndroidAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade eden klinisyenler veya bu tür bilgileri klinisyenleriyle paylaşmak isteyen hastalar için hazırlanmıştır.
 
-Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştığı hakkında bazı üst düzey bilgiler içerir. Tüm bu konular hakkında daha fazla ayrıntı için lütfen [kapsamlı AndroidAPS dokümantasyonunu çevrimiçi olarak](../index.rst) inceleyin. Sorularınız varsa, lütfen daha fazla ayrıntı için hastanıza sorun veya sorularınızı iletmek için her zaman topluluğa ulaşmaktan çekinmeyin. (Sosyal medyada değilseniz (ör. [Twitter](https://twitter.com/kozakmilos) veya Facebook), developers@AndroidAPS.org adresine e-posta gönderebilirsiniz). [Ayrıca en son araştırmalardan bazılarını ve sonuçlarla ilgili verileri burada bulabilirsiniz.](https://openaps.org/outcomes/).
+Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştığı hakkında bazı üst düzey bilgiler içerir. Tüm bu konular hakkında daha fazla ayrıntı için lütfen [kapsamlı AndroidAPS dokümantasyonunu çevrimiçi olarak](../index.md) inceleyin. Sorularınız varsa, lütfen daha fazla ayrıntı için hastanıza sorun veya sorularınızı iletmek için her zaman topluluğa ulaşmaktan çekinmeyin. (Sosyal medyada değilseniz (ör. [Twitter](https://twitter.com/kozakmilos) veya Facebook), developers@AndroidAPS.org adresine e-posta gönderebilirsiniz). [Ayrıca en son araştırmalardan bazılarını ve sonuçlarla ilgili verileri burada bulabilirsiniz.](https://openaps.org/outcomes/).
 
 ### Kendin Yap (DIY) Kapalı Döngü oluşturma adımları:
 
 AndroidAPS'i kullanmaya başlamak için aşağıdaki adımlar izlenmelidir:
 
-* [Uyumlu bir pompa](../Hardware/pumps.md), [uyumlu bir Android cihaz](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) ve [uyumlu bir CGM kaynağı](../Configuration/BG-Source.rst) bulun.
+* [Uyumlu bir pompa](../Hardware/pumps.md), [uyumlu bir Android cihaz](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) ve [uyumlu bir CGM kaynağı](../Configuration/BG-Source.md) bulun.
 * [AndroidAPS kaynak kodunu indirin ve yazılımı derleyin](../Installing-AndroidAPS/Building-APK.md).
 * [Yazılımı diyabet cihazlarıyla konuşacak ve ayarları ve güvenlik tercihlerini belirleyecek şekilde yapılandırın](../index#configuration).
 

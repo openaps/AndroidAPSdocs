@@ -1,6 +1,0 @@
-Pro uživatele MM640g nebo MM630g
-**************************************************
-
-* If not already set up then download `600SeriesAndroidUploader <https://pazaan.github.io/600SeriesAndroidUploader/>`_ and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* V 600 Series Uploader přejděte na Nastavení > Odesílat do xdrip+ a zvolte ON (zaškrtněte).
-* Na kartě Konfigurace (nastavení AndroidAPS) vyberte MM640g.

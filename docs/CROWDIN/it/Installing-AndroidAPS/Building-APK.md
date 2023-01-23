@@ -29,7 +29,7 @@ If your build fails with an error regarding "on demand configuration" you can do
 
 In general, the steps necessary to build the APK file:
 
-* [Install git](../Installing-AndroidAPS/git-install.rst)
+* [Install git](../Installing-AndroidAPS/git-install.md)
 * Install and setup Android Studio.
 * Use git to clone the source code from the central Github repository where the developers have put the actual code for the app.
 * Open the cloned project in Android Studio as active project.
@@ -42,7 +42,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Install git (if you don't have it)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.rst).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
 ## Install Android Studio
 
@@ -293,4 +293,4 @@ Yeah, you got it and can now start with configuring AndroidAPS for your use (CGM
 
 ## Troubleshooting
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.rst).
+See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md).

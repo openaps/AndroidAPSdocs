@@ -31,7 +31,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternativy: viz seznam možných [zdrojů glykémie](../Configuration/BG-Source.rst)
+    * Alternativy: viz seznam možných [zdrojů glykémie](../Configuration/BG-Source.md)
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. [Nakonfigurujte AndroidAPS ](../Configuration/Config-Builder.md) podle svých potřeb pomocí průvodce nastavením nebo ručně
 4. V tomto vzorovém nastavení jsme (mimo jiné) použili
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Nastavení > Komunikace mezi aplikacemi > Přijímat kalibrace > `ZAP`
     * Menu > Spustit senzor (je pouze „pro forma“ a nemá nic společného s běžícím senzorem G6. (To je nezbytné, jinak se bude pravidelně objevovat chybová zpráva.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Příklad nastavení výstrahy
 

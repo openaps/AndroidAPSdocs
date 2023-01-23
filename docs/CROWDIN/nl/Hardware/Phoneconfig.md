@@ -1,5 +1,10 @@
 # Telefoons
 
-- [List of tested phones](../Getting-Started/Phones.md)
-- [Jelly Pro Settings](../Usage/jelly.md)
-- [Huawei Settings](../Usage/huawei.md)
+```{toctree}
+:glob: true
+:maxdepth: 1
+
+Lijst van geteste telefoons <../Getting-Started/Phones.md>
+Jelly Pro Instellingen <../Usage/jelly.md>
+Huawei Instellingen <../Usage/huawei.md>
+```

@@ -21,7 +21,7 @@ Er is een Alleen NS upload (geen synchronisatie) functie in de AAPS instellingen
 
 ### Aanvullende veiligheidsmaatregelen
 
-Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](../Getting-Started/Safety-first.rst).
+Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](../Getting-Started/Safety-first.md).
 
 ## Nightscout aanmaken
 

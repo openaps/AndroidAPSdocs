@@ -327,7 +327,7 @@ AndroidAPS provides following complications:
     
     * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
     * Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
-    * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.rst).
+    * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
     ## View Nightscout data
     
     If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Yra keletas skaitmeninių ciferblatų, kurie rodo vidutinį delta pokytį, aktyvų insuliną, esamą laikiną bazinę ir bazinį profilį bei NGJ duomenų grafiką.

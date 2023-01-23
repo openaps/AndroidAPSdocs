@@ -48,8 +48,8 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 ### Başlık bağlantılarını çevir
 
-* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.html) çeviri gerekli değildir.
-* Belirli bir başlığa (ör. ..//Usage/Profiles.html#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
+* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.md) çeviri gerekli değildir.
+* Belirli bir başlığa (ör. ..//Usage/Profiles#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
 * Bir başlığı çevirecekseniz, (# işaretinden sonraki kısım, ör. #percentage) tüm harfleri küçük harfe çevirerek, özel karakterleri standart karakterlere dönüştürerek, boşlukları - (eksi işareti) ile değiştirerek ve noktalama işaretlerini atlayarak bunu bir bağlantı metnine dönüştürebilirsiniz.
     
     İşte bazı örnekler:

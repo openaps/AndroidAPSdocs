@@ -19,7 +19,7 @@
 3. [İmzalı APK Derleyin](../Installing-AndroidAPS/Update-to-new-version#build-the-signed-apk)
 4. [Derlenmiş apk'yı](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) telefonunuza aktarın ve yükleyin
 5. AndroidAPS'de [sürümü kontrol edin](#check-aaps-version-on-phone)
-6. [KŞ kaynağınıza](../Configuration/BG-Source.rst) bağlı olarak, xDrip'te [alıcıyı tanımladığınızdan](../Configuration/xdrip#identify-receiver) emin olun veya ['Kendi Dexcom Uygulamanızı oluşturun (BYODA)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
+6. [KŞ kaynağınıza](../Configuration/BG-Source.md) bağlı olarak, xDrip'te [alıcıyı tanımladığınızdan](../Configuration/xdrip#identify-receiver) emin olun veya ['Kendi Dexcom Uygulamanızı oluşturun (BYODA)'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app).
 
 Sorun yaşamanız durumunda, [Android Studio'da sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) konusu için ayrı sayfaya bakın.
 

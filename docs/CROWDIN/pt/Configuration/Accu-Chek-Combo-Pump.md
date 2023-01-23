@@ -15,7 +15,7 @@
 
 ## Limitações
 
-- Bólus prolongado e bólus multi onda não são suportados ( ver [Hidratos de carbono prolongados](../Usage/Extended-Carbs.rst)).
+- Bólus prolongado e bólus multi onda não são suportados ( ver [Hidratos de carbono prolongados](../Usage/Extended-Carbs.md)).
 - Apenas é suportado um perfil de basal.
 - Programar mais do que um perfil de basal na bomba, ou dar bólus prolongado ou multi onda a partir da bomba interfere com as DBT e irá forçar o LOOP a entrar em modo de suspensão durante horas dado que o LOOP não consegue funcionar em segurança nestas condições.
 - Actualmente não é possível programar tempo e hora na bomba, então [as alterações horárias](../Usage/Timezone-traveling#accu-chek-combo) têm de ser efectuadas manualmente (poderá desactivar as actualizações de horário automáticas no telefone de noite e voltar a activar de manhã e ao mesmo tempo alterar o relógio da bomba e assim evitar alarmes nessas duas noites do ano).

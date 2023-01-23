@@ -1,7 +1,13 @@
 # Smartwatch
 
-Ceasurile sunt opţionale, dar foarte utile pentru unii utilizatori. More details are here:
+Ceasurile sunt opţionale, dar foarte utile pentru unii utilizatori.
+Mai multe detalii sunt aici:
 
-- [List of tested phones and smartwatches](../Getting-Started/Phones.md)
-- [Watchfaces Wear OS](../Configuration/Watchfaces.md)
-- [Troubleshooting Sony Smartwatch SW 3](../Usage/SonySW3.rst)
+```{toctree}
+:glob: true
+:maxdepth: 1
+
+Lista de telefoane si ceasuri testate <../Getting-Started/Phones.md>
+Fețe de ceas Wear OS <../Configuration/Watchfaces.md>
+Depanare Sony Smartwatch SW 3 <../Usage/SonySW3.md>
+```

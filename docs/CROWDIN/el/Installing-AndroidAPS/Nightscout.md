@@ -21,7 +21,7 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### Περαιτέρω ρυθμίσεις ασφαλείας
 
-Κρατήστε το τηλέφωνό σας ενημερωμένο, όπως περιγράφεται στην [ασφάλεια](../Getting-Started/Safety-first.rst).
+Κρατήστε το τηλέφωνό σας ενημερωμένο, όπως περιγράφεται στην [ασφάλεια](../Getting-Started/Safety-first.md).
 
 ## Εγχειρίδιο εγκατάστασης Nightscout
 

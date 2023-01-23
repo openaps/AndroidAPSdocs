@@ -2,13 +2,13 @@
 
 Tato stránka je určena lékařům, kteří projevili zájem o open source technologie umělé slinivky, jako je AndroidAPS, nebo pro pacienty, kteří chtějí sdílet tyto informace se svým lékařem.
 
-Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. Další podrobnosti o všech těchto tématech získáte v [kompletní online dokumentaci k AndroidAPS](../index.rst). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
+Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. Další podrobnosti o všech těchto tématech získáte v [kompletní online dokumentaci k AndroidAPS](../index.md). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
 
 ### Kroky nutné pro sestavení DIY uzavřené smyčky:
 
 Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](../Installing-AndroidAPS/Building-APK.md).
 * [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
 

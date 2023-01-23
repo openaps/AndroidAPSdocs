@@ -71,7 +71,7 @@ Wees voorzichtig en geduldig en verander de instellingen stap voor stap. Dat is 
 * Insuline-resistente volwassene: 25
 * Zwangere: 40
 
-*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features.html#overzicht-van-harde-limieten).*
+*Zie ook [overzicht van harde limieten](../Usage/Open-APS-features#overzicht-van-harde-limieten).*
 
 Zie ook [OpenAPS documentatie over SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 

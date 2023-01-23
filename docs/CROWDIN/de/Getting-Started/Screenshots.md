@@ -83,9 +83,9 @@ Um es sofort zu entfernen, musst Du ein paar Einträge manuell aus der Registerk
 
 Wenn es jedoch viele Duplikate gibt, könnte es einfacher sein,
 
-* [sichere deine Einstellungen](../Usage/ExportImportSettings.rst),
+* [sichere deine Einstellungen](../Usage/ExportImportSettings.md),
 * setze deine Datenbank im Wartungsmenü zurück und
-* [Importiere deine Einstellungen](../Usage/ExportImportSettings.rst) erneut
+* [Importiere deine Einstellungen](../Usage/ExportImportSettings.md) erneut
 
 ##### Rotes Warndreieck: Doppelte BG-Daten
 
@@ -125,7 +125,7 @@ Du musst herausfinden, warum du doppelte BG-Daten erhältst:
    * IOB kann negativ sein, wenn zuvor die Basalrate reduziert worden ist.
    * Ein Klick auf das Symbol zeigt die Aufteilung von Bolus und Basal-Insulin.
 
-* Ähre: [Kohlenhydrate an Bord (COB)](../Usage/COB-calculation.rst) - noch nicht resorbierte Kohlenhydrate, die vorher gegessen wurden -> Symbol blinkt, falls Kohlenhydrate benötigt werden
+* Ähre: [Kohlenhydrate an Bord (COB)](../Usage/COB-calculation.md) - noch nicht resorbierte Kohlenhydrate, die vorher gegessen wurden -> Symbol blinkt, falls Kohlenhydrate benötigt werden
 
 * Violette Linie: Basalrate - Symbol ändert sich bei temporärer Änderung der Basalrate (flach bei 100%) 
    * Klicke auf das Icon um Details zur Basalrate und einer eventuellen temporären Basalrate (inkl. verbleibende Dauer) angezeigt zu bekommen.
@@ -178,7 +178,7 @@ Du musst herausfinden, warum du doppelte BG-Daten erhältst:
 
 #### Vorhersage Kurven
 
-* **Orange** Linie: [COB](../Usage/COB-calculation.rst) (Farbe wird im Allgemeinen verwendet, um COB und Kohlenhydrate darzustellen)
+* **Orange** Linie: [COB](../Usage/COB-calculation.md) (Farbe wird im Allgemeinen verwendet, um COB und Kohlenhydrate darzustellen)
    
    Die Prognosekurve zeigt, wohin sich der BZ (nicht die COB selbst!) auf der Grundlage der aktuellen Pumpeneinstellungen und unter der Annahme, dass die Abweichungen aufgrund der Kohlenhydratresorption konstant bleiben, entwickeln wird. Diese Linie erscheint nur, wenn es bekannte COB gibt.
 
@@ -282,7 +282,7 @@ Deine tatsächliche BZ-Kurve wird normalerweise in der Mitte dieser Prognoselini
 * Kohlenhydrate ohne Bolus dokumentieren.
 * Bestimmte [vordefinierte temporäre Ziele](../Configuration/Preferences#vordefinierte-temporare-ziele) können direkt durch Aktivieren des Kästchens gesetzt werden.
 * Zeitverschiebung: Wann wirst Du/hast Du Kohlenhydrate gegessen (in Minuten).
-* Dauer: Wird für ["eCarbs" verwendet](../Usage/Extended-Carbs.rst).
+* Dauer: Wird für ["eCarbs" verwendet](../Usage/Extended-Carbs.md).
 * Mit den Buttons können Sie schnell die Menge der Kohlenhydrate erhöhen.
 * Notizen werden in Nightscout hochgeladen - abhängig von Deinen Einstellungen für den [NS-Client](../Configuration/Preferences#nightscout-client).
 
@@ -327,7 +327,7 @@ Ein Mahlzeiten-Bolus wird normalerweise über den Bolus-Rechner abgegeben.
 
 ### Abschnitt J
 
-* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. Die Option ist nur verfügbar, wenn in den [Einstellungen der Übersicht](../Configuration/Preferences.html#ubersicht) bei den erweiterten Einstellungen "Aktiviere [Superbolus](../Configuration/Preferences.html#superbolus) im Wizard" aktiviert ist.
+* Beim SUPER BOLUS wird das Basalinsulin der kommenden zwei Stunden zum berechneten Bolus addiert und die Basalrate für die kommenden zwei Stunden auf Null gesetzt, um das extra Insulin wieder heraus zu nehmen. Die Option ist nur verfügbar, wenn in den [Einstellungen der Übersicht](../Configuration/Preferences#ubersicht) bei den erweiterten Einstellungen "Aktiviere [Superbolus](../Configuration/Preferences.md#superbolus) im Wizard" aktiviert ist.
 * Damit soll kurzfristig mehr Insulin zur Verfügung stehen und dadurch hoffentlich Spitzen vermieden werden.
 * Weitere Informationen findest Du unter [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 

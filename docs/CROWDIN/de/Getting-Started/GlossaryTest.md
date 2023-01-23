@@ -17,19 +17,19 @@
  <td>AMA</td>
  <td>erweiterter Mahlzeiten-Assistent (advanced meal assist) - erweiterte Algorithmus zum Umgang mit Kohlenhydraten</td>
  <td>MA / SMB</td>
- <td><a href="../Usage/Open-APS-features.html#erweiterter-mahlzeit-assistent-ama">Wiki - AMA</a></td>
+ <td><a href="../Usage/Open-APS-features#erweiterter-mahlzeit-assistent-ama">Wiki - AMA</a></td>
 <tr>
  <td>Android auto</td>
  <td>Anzeige von AAPS Benachrichtigungen auf kompatiblen Kfz-Multimedia-Systemen</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+ <td><a href="../Usage/Android-auto.md">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
  <td>Android Installations-Datei (Android application package)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - APK aus Quellcode erstellen</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.md">Wiki - APK aus Quellcode erstellen</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
@@ -47,7 +47,7 @@
  <td>BAT</td>
  <td>Statusanzeige niedriger Batteriestand auf dem Startbildschirm</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.md">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>BZ</td>
@@ -65,7 +65,7 @@
 <td>BZ-Quelle</td>
  <td>Woher kommen Deine Blutzucker-Werte?</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bz-quelle">Wiki - BZ-Quelle</a></td>
+ <td><a href="../Configuration/Config-Builder#bz-quelle">Wiki - BZ-Quelle</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
@@ -89,7 +89,7 @@
  <td>CAN</td>
  <td>Statusanzeige Kanülenwechsel auf dem Startbildschirm</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.md">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -101,7 +101,7 @@
  <td>Closed Loop</td>
  <td>Closed-loop-Systeme passen die Basalrate basierend auf einem Algorithmus automatisch an ohne dass der Nutzer eingreifen muss.</td>
  <td>Open Loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><a href="../Configuration/Config-Builder#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
@@ -113,31 +113,31 @@
  <td>DIA</td>
  <td>Insulinwirkdauer (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki Insulintypen</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (englisch)</a></td>
+ <td><a href="../Configuration/Config-Builder#insulin">Wiki Insulintypen</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA (englisch)</a></td>
 </tr>
 <tr>
  <td>DST</td>
  <td>Sommerzeit (daylight savings time)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#zeitumstellung-sommer-winterzeit">Wiki Zeitumstellung</a></td>
+ <td><a href="../Usage/Timezone-traveling#zeitumstellung-sommer-winterzeit">Wiki Zeitumstellung</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
  <td>verzögerte Kohlenhydrate (extended carbs) - Kohlenhydrate, die über mehrere Stunden aufgeteilt werden (z.B. hoher Fett- oder Proteinanteil)<br>Der verlängerte Bolus, den du vielleicht aus der klassischen Pumpentherapie kennst, macht beim Loopen wenig Sinn.</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - verzögerte Kohlenhydrate (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs Anwendungsfall (englisch)</a></td>
+ <td><a href="../Usage/Extended-Carbs#extended-carbs-ecarbs">Wiki - verzögerte Kohlenhydrate (eCarbs)</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs Anwendungsfall (englisch)</a></td>
 </tr>
 <tr>
  <td>FGM</td>
  <td>Flash-Glukose-Monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - BZ-Quelle</a></td>
+ <td><a href="../Configuration/BG-Source.md?highlight=blukon#bg-source">Wiki - BZ-Quelle</a></td>
 </tr>
 <tr>
  <td>git</td>
  <td>Versionskontrollsystem für die Nachverfolgung von Änderungen in Computerdateien und Koordinierung der Arbeit an diese Dateien <br>-> für APK-Updates notwendig</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - Update auf neue Version...</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version#master-branch">Wiki - Update auf neue Version...</a></td>
 </tr>
 <tr>
  <td>Github</td>
@@ -178,26 +178,26 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend (Reduzierung der Baslarate bei niedrigen Glukosewerten)<br>AAPS wird die Basalrate reduzieren, wenn die BZ-Werte zu stark sinken. Wenn die BZ-Werte aber steigen, wird AAPS die Basalrate nur dann erhöhen, wenn negatives Insulin on board (von einer vorangegangenen Basalratenreduzierung) ist. Sonst bleibt die Basalrate wie in Deinem Profil eingestellt. Wenn du eine Hypo korrigierst, kann es vorkommen, dass danach Spitzen auftreten, die du nicht durch Erhöhung der Basalrate korrigieren kannst.</td>
- <td><a href="../Usage/Objectives.html#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten">Ziel 6</a></td>
+ <td><a href="../Usage/Objectives#ziel-6-closed-loop-mit-abschaltung-bei-niedrigen-glukose-werten">Ziel 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
  <td>freies OpenSource Betriebssystem für Smartphones und andere Geräte<br>alternatives Betriebssystem für Smartphones, auf denen Android 8.1 (Oreo) nicht betrieben werden kann<br>(bei Benutzung der Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#benotigte-hardware">Wiki - Akku-Chek Combo Pumpe</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump#benotigte-hardware">Wiki - Akku-Chek Combo Pumpe</a></td>
 </tr>
 <tr>
  <td>Logdateien</td>
  <td>Aufzeichnung aller AAPS Aktionen (nützlich für Fehlersuche und -beseitigung)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
+ <td><a href="../Usage/Accessing-logfiles#accessing-logfiles">Wiki - Logfiles erhalten</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
  <td>Sicherheitsfunktion - Wert für maximales aktives Insulin im Körper, der von AAPS nicht überschritten werden kann</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Configuration/Preferences.html#openaps-smb-einstellungen">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes#einstellungen-die-bei-umstellung-von-ama-zu-smb-erforderlich-sind">Wiki - maxIOB</a><br><a href="../Configuration/Preferences.md#openaps-smb-einstellungen">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -209,7 +209,7 @@
  <td>min_5m_carbimpact</td>
  <td>Sicherheitsfunktion - Standardzeitangabe für den Abbau der Kohlenhydrate. Wird verwendet wenn dieser nicht durch die Veränderung der BZ-Werte dynamisch ermittelt werden kann.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Konfigurations-Generator</a></td>
+ <td><a href="../Configuration/Config-Builder#absorption-settings">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
@@ -221,7 +221,7 @@
  <td>NS Client Einstellungen für die Synchronisation deiner AndroidAPS Daten mit Nightscout</td>
  <td>Teil von AAPS zur Verbindung mit Deiner Nightscout-Seite</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
@@ -233,7 +233,7 @@
  <td>Objectives (Ziele)</td>
  <td>Ziele - Lenrprogramm innerhalb von AAPS um Dich Schritt für Schritt vom Open Loop zum Closed Loop zu führen.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - Objectives (Ziele)</a></td>
+ <td><a href="../Usage/Objectives.md">Wiki - Objectives (Ziele)</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
@@ -245,49 +245,49 @@
  <td>Open Loop</td>
  <td>Open-loop-Systeme machen Vorschläge zur Anpassung der Basalrate basierend auf einem Algorithmus. Diese müssen vom Nutzer händisch in der Pumpe umgesetzt werden.</td>
  <td>Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - Konfigurations-Generator</a></td>
+ <td><a href="../Configuration/Config-Builder#open-loop">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
  <td>Empfindlichkeitserkennung<br>"reference design implementation version 0/1" - der Schlüsselalgorithmus von OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB#sensitivity-detection">Wiki - Empfindlichkeitserkennung...</a></td>
 </tr>
 <tr>
  <td>Peak time (Wirkungshoch)</td>
  <td>Zeitpunkt des Wirkungshochs des gespritzen Insulins</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Konfigurations-Generator</a></td>
+ <td><a href="../Configuration/Config-Builder#insulin">Wiki - Konfigurations-Generator</a></td>
 </tr>
 <tr>
  <td>PH</td>
  <td>Pumpenhistorie (Eintrag im Behandlungs-Tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Predictions (Vorhersagen)</td>
  <td>Vorhersage der BZ-Werte basierend auf verschiedenen Berechnungsannahmen</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
+ <td><a href="../Getting-Started/Screenshots#vorhersage-kurven">Wiki - Vorhersagelinien</a></td>
 </tr>
 <tr>
  <td>Profile</td>
  <td>grundlegende Behandlungseinstellungen (Basalrate, DIA, IC, ISF, BZ-Zielbereich)<br>kann lokal auf dem Gerät oder über Nightscout eingerichtet werden</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - Profil</a></td>
+ <td><a href="../Configuration/Config-Builder#profile">Wiki - Profil</a></td>
 </tr>
 <tr>
  <td>Profilwechsel</td>
  <td>(vorübergehende) Änderung des verwendeten Profils oder dessen prozentuale Absenkung/Anhebung</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - Profil Wechsel</a></td>
+ <td><a href="../Usage/Profiles.md">Wiki - Profil Wechsel</a></td>
 </tr>
 <tr>
  <td>RES</td>
  <td>Statusanzeige Reservoirwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.md">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -305,7 +305,7 @@
  <td>SEN</td>
  <td>Statusanzeige Sensorwechsel auf dem Startbildschirm</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.html">AAPS-Bildschirme</a></td>
+ <td><a href="../Configuration/Preferences#ubersicht">Einstellungen</a><br><a href="../Getting-Started/Screenshots.md">AAPS-Bildschirme</a></td>
 </tr>
 <tr>
  <td>Sensitivitätserkennung</td>
@@ -317,13 +317,13 @@
  <td>Sensor noise</td>
  <td>Sensorrauschen - instabile CGM-Werte die zu "springenden" BZ-Werten führen</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - Sensorrauschen</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip#smoothing-blood-glucose-data">Wiki - Sensorrauschen</a></td>
 </tr>
 <tr>
  <td>SMB</td>
  <td>super micro bolus<br>erweiterte Bolusfunktion für schnellere Anpassung des BZ</td>
  <td>UAM</td>
- <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Super bolus</td>
@@ -353,13 +353,13 @@
  <td>TT</td>
  <td>vorübergehendes Ziel (temporary target)<br>vorübergehende Absenkung/Anhebung des BZ-Ziels bzw. BZ-Zielbereichs</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - Temporäre Ziele</a></td>
+ <td><a href="../Usage/temptarget#temp-targets">Wiki - Temporäre Ziele</a></td>
 </tr>
 <tr>
  <td>UAM</td>
  <td>"nicht angemeldete Mahlzeiten" (unannounced meals) - Erkennung von signifikanten Erhöhungen des Blutzuckerspiegels aufgrund von Mahlzeiten, Adrenalin oder anderen Einflüssen und Versuch, diese mit SMB anzupassen</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.md?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Virtuelle Pumpe</td>
@@ -371,7 +371,7 @@
  <td>Smartphone-Hintergrundbild</td>
  <td>AndroidAPS-Hintergrundbild</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">siehe Seite Smartphones</a></td>
+ <td><a href="../Getting-Started/Phones#phone-background">siehe Seite Smartphones</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>

@@ -2,28 +2,31 @@
 
 ## Jei naudojate G5 su xDrip+
 
--   If not already set up then download [xdrip](https://github.com/NightscoutFoundation/xDrip) and follow instructions on nightscout ([G5](http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support).
--   In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
--   In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xdrip go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
--   Select xdrip in ConfigBuilder (setting in AndroidAPS).
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
+- Jei dar to nepadarėte, atsisiųskite xDrip \<<https://github.com/NightscoutFoundation/xDrip>> \_ir vykdykite Nightscout instrukcijas (G5 \<<http://www.nightscout.info/wiki/welcome/nightscout-with-xdrip-and-dexcom-share-wireless/xdrip-with-g5-support>>\_.
+- In xdrip go to Settings > Inter-app settings > Broadcast Data Locally and select ON.
+- In xdrip go to Settings > Inter-app settings > Accept Treatments and select OFF.
+
+Jei norite naudotis AndroidAPS kalibracijoms, xDrip+ eikite į Nustatymus> Programinės įrangos suderinamumas> Priimti kalibracijas ir pasirinkite Įjungti.  Taip pat galbūt norėsite peržiūrėti kalibravimo parinktis Nustatymuose > Mažiau įprasti nustatymai > išplėstinės kalibravimo parinktys.
+\* Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite xDrip.
+\* If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md) .
 
 ## Kai naudojate G5 su modifikuota Dexcom programa
 
--   Download the apk from <https://github.com/dexcomapp/dexcomapp>, and choose the version that fits your needs (mg/dl or mmol/l version, G5).
+- Atsisiųskite programą iš `https://github.com/dexcomapp/dexcomapp <https://github.com/dexcomapp/dexcomapp>` _ ir pasirinkite versiją pagal savo poreikius (mg/dl arba mmol/l, G5).
 
-    -   Folder 2.3 is for users of AndroidAPS 2.3, folder 2.4 for users of AAPS 2.5.
-    -   Open <https://play.google.com/store/search?q=dexcom%20g5> on your computer. Regionas bus matomas URL adrese.
+  - 2.3 aplankas skirtas AndroidAPS 2.3 vartotojams, 2.4 aplankas yra skirtas AAPS 2.5 vartotojams.
+  - Atidarykite <https://play.google.com/store/search?q=dexcom%20g5> kompiuteryje. Regionas bus matomas URL adrese.
 
-    ![Region in Dexcom G5 URL](../images/DexcomG5regionURL.PNG)
+  ```{image} ../images/DexcomG5regionURL.PNG
+  :alt: Regiono Dexcom G5 URL
+  ```
 
--   Stop sensor and uninstall the original Dexcom app, if not already done.
+- Sustabdykite sensorių ir pašalinkite originalią „Dexcom“ programą, jei to dar nepadarėte.
 
--   Install downloaded apk
+- Įdiekite atsisiųstą apk
 
--   Start sensor
+- Startuokite sensorių
 
--   Select Dexcom App (patched) in ConfigBuilder (setting in AndroidAPS).
+- Konfigūratoriuje (AndroidAPS nustatymai) pasirinkite Dexcom App (modifikuota).
 
--   If you want to use xDrip alarms via local broadcast: in xDrip hamburger menu > settings > hardware data source > 640G /EverSense.
+- Jei norite naudoti xDrip aliarmus per vietinį transliavimą: xDrip trijų linijų meniu > Nustatymai> Aparatinės įrangos duomenų šaltinis> 640G / EverSense.

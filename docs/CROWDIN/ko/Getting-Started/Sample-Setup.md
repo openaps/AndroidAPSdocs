@@ -31,7 +31,7 @@ Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 x
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * 대안: 이용가능한 [혈당 소스](../Configuration/BG-Source.rst)리스트를 참조하세요
+    * 대안: 이용가능한 [혈당 소스](../Configuration/BG-Source.md)리스트를 참조하세요
 
 4. 옵션: 소니 스마트워치3 (SWR50)
     
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
 4. In this sample setup we used (among others)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Settings > Inter-app settings > Accept Calibrations > `ON`
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. This is necessary otherwise an error message will appear regularly.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Example of an alarm setup
 

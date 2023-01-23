@@ -20,7 +20,7 @@ Pirmiausia turite **paruošti komponentus, kurie veikia su AAPS**:
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - [Android išmanusis telefonas](Phones.md) (Apple iOS nepalaiko„AndroidAPS“ - vietoj to pabandykite [iOS Loop](https://loopkit.github.io/loopdocs/)), ir 
-- [Nuolatinė gliukozės kiekio kraujyje (KG) stebėjimo sistema](../Configuration/BG-Source.rst). 
+- [Nuolatinė gliukozės kiekio kraujyje (KG) stebėjimo sistema](../Configuration/BG-Source.md). 
 
 Antra, jūs turite **sukonfigūruoti savo įrangą**. Žr. [Diegimo pažingsniui pavyzdį](Sample-Setup.md).
 
@@ -63,7 +63,7 @@ You have to have the same emergency equipment with you like every other T1D with
 
 - Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
 - Pump batteries
-- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.rst) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## How can I safely and securely attach the CGM/FGM?
 
@@ -286,7 +286,7 @@ Kai naudojate uždarą ciklą, turėtumėte pabandyti šiuos veiksmus:
 
 Pre- and post-processing of these settings is important. Prieš sportuodami atlikite pakeitimus ir įvertinkite raumenų darbo poveikį.
 
-Jei sportuojate reguliariai tuo pačiu metu (pvz., sportuojate sporto salėje), galite naudoti [Automatizavimą](../Usage/Automation.rst), kad pakeistumėte profilį ir laikinus tikslus. Geografine padėtimi pagrįsta automatizavimas taip pat yra gera idėja, tačiau apsunkina išankstinį apdorojimą.
+Jei sportuojate reguliariai tuo pačiu metu (pvz., sportuojate sporto salėje), galite naudoti [Automatizavimą](../Usage/Automation.md), kad pakeistumėte profilį ir laikinus tikslus. Geografine padėtimi pagrįsta automatizavimas taip pat yra gera idėja, tačiau apsunkina išankstinį apdorojimą.
 
 Profilio pasikeitimo procentas, laikino tikslo dydis esant sportiniam aktyvumui bei pokyčių nustatymo geriausias laikas yra individualūs. Pradėkite nuo saugesnių parinkčių (pavyzdžiui, su mažu profilio procentu ir aukštesniais laikinais tikslais).
 

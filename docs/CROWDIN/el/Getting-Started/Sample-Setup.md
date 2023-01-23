@@ -31,7 +31,7 @@
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Εναλλακτικά: δείτε τη λίστα με τις πιθανές [ πηγές γλυκόζης αίματος](../Configuration/BG-Source.rst)
+    * Εναλλακτικά: δείτε τη λίστα με τις πιθανές [ πηγές γλυκόζης αίματος](../Configuration/BG-Source.md)
 
 4. Προαιρετικά: Sony Smartwatch 3 (SWR50)
     
@@ -97,7 +97,7 @@ To do this perform the following steps on your smartphone:
 3. [ Διαμορφώστε το AndroidAPS ](../Configuration/Config-Builder.md) ανάλογα με τις ανάγκες σας χρησιμοποιώντας το βοηθό εγκατάστασης ή με μη αυτόματο τρόπο
 4. Σε αυτό το δείγμα χρησιμοποιήσαμε (μεταξύ άλλων)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Ρυθμίσεις> Ρυθμίσεις μεταξύ εφαρμογών> Αποδοχή βαθμονομήσεων> ` ON `
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. Αυτό είναι απαραίτητο, διαφορετικά θα εμφανίζεται τακτικά ένα μήνυμα σφάλματος.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Παράδειγμα ρύθμισης συναγερμού
 

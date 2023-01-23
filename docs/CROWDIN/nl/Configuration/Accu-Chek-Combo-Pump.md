@@ -15,7 +15,7 @@
 
 ## Beperkingen
 
-- Extended bolus en multiwave bolus worden niet ondersteund (Zie [Extended Carbs](../Usage/Extended-Carbs.rst) voor een alternatief).
+- Extended bolus en multiwave bolus worden niet ondersteund (Zie [Extended Carbs](../Usage/Extended-Carbs.md) voor een alternatief).
 - Slechts één basaal profiel wordt ondersteund.
 - Als je in de pomp meer dan één basaalprofiel instelt of wanneer je extended bolus of multiwave bolus geeft vanaf de pomp dan zal dit ingrijpen op de TBR en zal AAPS de loop dwingen tot een beperkte gebruiksmodus voor de duur van 6 uur, omdat de loop onder deze omstandigheden anders niet veilig kan blijven werken.
 - Het is momenteel niet mogelijk om de tijd en datum automatisch in te stellen op de pomp, waardoor [zomer- en wintertijd](../Usage/Timezone-traveling#accu-chek-combo) handmatig moeten worden ingesteld. Je kunt op de telefoon het automatisch bijwerken van de zomer- en winter tijd uitzetten in de avond en in de ochtend weer aanzetten, tegelijk met het handmatig wijzigen van de tijd op de pomp. Zo voorkom je alarmen in de nacht.

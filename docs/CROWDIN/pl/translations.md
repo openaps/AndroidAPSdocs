@@ -48,8 +48,8 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 ### Tłumacz odnośniki do nagłówków
 
-* Gdy wewnętrzny odnośnik prowadzi tylko do określonej strony (tj. ../Usage/Profiles.html) nie jest wymagane tłumaczenie.
-* Wewnętrzne linki do określonego nagłówka (tj. ../Usage/Profiles.html#percentage) muszą być przetłumaczone, ponieważ nagłówek w innym języku różni się od angielskiego oryginału.
+* Gdy wewnętrzny odnośnik prowadzi tylko do określonej strony (tj. ../Usage/Profiles.md) nie jest wymagane tłumaczenie.
+* Wewnętrzne linki do określonego nagłówka (tj. ../Usage/Profiles#percentage) muszą być przetłumaczone, ponieważ nagłówek w innym języku różni się od angielskiego oryginału.
 * Jeśli przetłumaczysz nagłówek, możesz go przekształcić w kotwicę odnośnika (część po # - tj. #procent) przekształcając wszystkie litery na małe litery, znaki specjalne lub diakrytyczne ("ogonki", "umlauty" itp.) na standardowe znaki (łacińskie odpowiedniki), zastępując spacje znakiem minus (-) i pomijając znaki interpunkcyjne.
     
     Oto kilka przykładów:

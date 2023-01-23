@@ -83,9 +83,9 @@ Para eliminarlo inmediatamente, es necesario eliminar manualmente algunas entrad
 
 Sin embargo, cuando hay muchos duplicados, podrías ser más fácil:
 
-* [Exportar ajustes](../Usage/ExportImportSettings.rst) desde el menú de mantenimiento,
+* [Exportar ajustes](../Usage/ExportImportSettings.md) desde el menú de mantenimiento,
 * Restablecer las bases de datos, desde el menú de mantenimiento
-* [Importar ajustes](../Usage/ExportImportSettings.rst) desde el menú de mantenimiento
+* [Importar ajustes](../Usage/ExportImportSettings.md) desde el menú de mantenimiento
 
 ##### Señad de advertencia roja: Datos de glucosa duplicados
 
@@ -125,7 +125,7 @@ Es necesario que averigues por qué estás obteniendo datos de glucosa duplicado
    * El IOB puede ser negativo si recientemente han habido períodos de reducción basal.
    * Pulsa el icono para ver la división de los bolos y de la insulina basal.
 
-* Grano: [carbohidratos a bordo (COB)](../Usage/COB-calculation.rst) - carbohidratos que se han comido previamente y aún no se han absorbido -> el icono parpadea si se necesitan carbohidratos adicionales
+* Grano: [carbohidratos a bordo (COB)](../Usage/COB-calculation.md) - carbohidratos que se han comido previamente y aún no se han absorbido -> el icono parpadea si se necesitan carbohidratos adicionales
 
 * Línea morada: tasa basal: cambios en el icono que reflejan cambios temporales en la tasa basal (plano al 100%) 
    * Pulsa sobre el icono para ver la tasa basal base y los detalles de cualquier basal temporal (incluida la duración restante)
@@ -178,7 +178,7 @@ Es necesario que averigues por qué estás obteniendo datos de glucosa duplicado
 
 #### Líneas de predicción
 
-* **Naranja** línea: [COB](../Usage/COB-calculation.rst) (color que se utiliza generalmente para representar a los COB y los hidratos de carbono)
+* **Naranja** línea: [COB](../Usage/COB-calculation.md) (color que se utiliza generalmente para representar a los COB y los hidratos de carbono)
    
    La línea de predicción muestra donde irá la glucosa (no a dónde irá el propio COB) en función de la configuración actual de la bomba y suponiendo que las desviaciones debidas a la absorción de carbohidratos se mantienen constantes. Esta línea sólo aparece si se conocen los carbohidratos (COB).
 
@@ -282,7 +282,7 @@ Por lo general, la curva de glucosa real terminará en medio de estas líneas, o
 * Permite registrar carbohidratos sin bolo.
 * Se pueden establecer algunos [objetivos temporales preestablecidos](../Configuration/Preferences#default-temp-targets) marcando la casilla correspondiente (Actividad, Comiendo Pronto o Hipo).
 * Retardo: ¿Cuándo has comido o comerás los carbohidratos? (en minutos).
-* Duración: Para usarlo con los eCarbs ["carbohidratos extendidos"](../Usage/Extended-Carbs.rst)
+* Duración: Para usarlo con los eCarbs ["carbohidratos extendidos"](../Usage/Extended-Carbs.md)
 * Puedes usar los botones rápidos para aumentar la cantidad de carbohidratos.
 * Las notas se pueden subir a Nightscout, dependiendo de tu configuración de [NSClient](../Configuration/Preferences#nsclient).
 

@@ -29,7 +29,7 @@ Sin embargo, es posible sincronizar un perfil Nightscout con un perfil local. To
 
 Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.rst). So make sure to have a backup in a safe place.
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
@@ -74,7 +74,7 @@ El ayudante de perfil ofrece dos funciones:
 1. Encontrar un perfil para niños
 2. Comparar dos perfiles o conmutadores de perfil para clonar un perfil nuevo
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.rst).
+Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
 
 ## Insulina
 
@@ -181,7 +181,7 @@ You can view your sensitivity on the homescreen by selecting SEN and watching th
 
 ### Ajustes absorción
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.rst) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Básicamente, es un seguro contra fallos.
 
 ## APS
 
@@ -226,9 +226,9 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-You should [export your settings](../Usage/ExportImportSettings.rst) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
-See [Objectives](../Usage/Objectives.rst) page for more information.
+See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Tratamientos
 
@@ -306,11 +306,11 @@ Choose if you want to have [status lights](../Configuration/Preferences#status-l
 
 ### Automatización
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.rst).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
 
 ### Comunicaciones SMS
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.rst) for more setup information.
+Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Food
 
