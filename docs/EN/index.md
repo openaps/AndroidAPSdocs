@@ -180,7 +180,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :caption: For Clinicians
 :titlesonly: true
 
-For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
+For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
@@ -189,7 +189,8 @@ For Clinicians <./Resources/clinician-guide-to-AndroidAPS>
 
 How to help <./Getting-Started/How-can-I-help.md>
 How to translate the app and docs <./translations.md>
-How to edit the docs <./make-a-PR>
+How to edit the docs <./make-a-PR.md>
+Sandbox <./Sandbox/sandbox1.md>
 ```
 
 ```{toctree}
