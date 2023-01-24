@@ -35,7 +35,7 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](./make-a-PR.md#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -76,7 +76,6 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 ### Links
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
 * internal link to headline: `[alt text](../folder/file.html#headline)`
 
 ### Internal links
@@ -85,18 +84,18 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
 * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
-* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension .md and replace it with .html.
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* To set the link to an **anchor** (i.e. a headline) you let the file extension .md in place!
+  * `[text](../Usage/Test.md#anchor)`
 
 ### Notes
 
-```
+:::
 :::{admonition} Friendly Note
 :class: note
 
 This is a note.
 :::
-```
+:::
 
 :::{admonition} Friendly Note
 :class: note
@@ -106,13 +105,13 @@ This is a note.
 
 ### Warnings
 
-```
+:::
 :::{admonition} Strong Warning
 :class: warning
 
 This is a warning.
 :::
-```
+:::
 
 :::{admonition} Strong Warning
 :class: warning
