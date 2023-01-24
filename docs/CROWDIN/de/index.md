@@ -62,7 +62,6 @@ Sprache wechseln <./changelanguage.md>
 Sicherheitshinweise <./Getting-Started/Safety-first.md>
 Was ist ein Closed Loop System <./Getting-Started/ClosedLoop.md>
 Was ist ein Closed Loop System mit AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
-Insulinpumpen <./Getting-Started/Pump-Choices.md>
 Docs Updates & Änderungen <./Getting-Started/WikiUpdate.md>
 ```
 
@@ -73,6 +72,8 @@ Docs Updates & Änderungen <./Getting-Started/WikiUpdate.md>
 :glob: true
 :maxdepth: 1
 
+CGM/FGM <./Configuration/BG-Source.md>
+Insulinpumpen <./Getting-Started/Pump-Choices.md>
 Module <./Module/module.md>
 ```
 
@@ -100,7 +101,7 @@ Dev branch (nur für Entwickler) <./Installing-AndroidAPS/Dev_branch.md>
 
 CGM/FGM <./Configuration/BG-Source.md>
 xDrip Einstellungen <./Configuration/xdrip.md>
-Pumpen <./Hardware/pumps.md>
+Insulinpumpen <./Getting-Started/Pump-Choices.md>
 Smartphones <./Hardware/Phoneconfig.md>
 Nightscout Installation <./Installing-AndroidAPS/Nightscout.md>
 Smartwatch  <./Hardware/Smartwatch.md>

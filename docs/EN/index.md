@@ -69,9 +69,9 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :glob: true
 :maxdepth: 1
 
-Module <./Module/module.md>
 CGM/FGM choices <./Configuration/BG-Source.md>
 Pump choices <./Getting-Started/Pump-Choices.md>
+Module <./Module/module.md>
 ```
 
 ```{toctree}
@@ -97,8 +97,8 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :maxdepth: 0
 
 CGM/FGM <./Configuration/BG-Source.md>
-Pump choices <./Getting-Started/Pump-Choices.md>
 xDrip Settings <./Configuration/xdrip.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 Phones <./Hardware/Phoneconfig.md>
 Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
 Smartwatch  <./Hardware/Smartwatch.md>
