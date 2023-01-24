@@ -212,8 +212,7 @@ How to edit the docs <./make-a-PR>
 
 ```{toctree}
 :caption: Sandbox
-:glob: true
-:maxdepth: 1
+:titlesonly: true
 
 Sandbox <./Sandbox/sandbox1.md>
 ```
