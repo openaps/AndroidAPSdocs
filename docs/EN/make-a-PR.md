@@ -64,16 +64,15 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 ### Image size
 If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
 
-### .md files
-#### Text format
+### Text format
 * bold: `**text**`
 * italic: `*text*`
 * Headline 1: `# headline`
 * Headline 2: `## headline`
 * Headline 3: `### headline`
-#### Images
+### Images
 * images: `![alt text](../images/file.png)`
-#### Links
+### Links
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
 * internal link to .rst page: `[alt text](../folder/file.rst)`
