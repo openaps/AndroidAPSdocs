@@ -90,6 +90,14 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ### Notes
 
+```
+:::{admonition} Friendly Note
+:class: note
+
+This is a note.
+:::
+```
+
 :::{admonition} Friendly Note
 :class: note
 
@@ -100,9 +108,9 @@ This is a note.
 
 ```
 :::{admonition} Strong Warning
-:class: note
+:class: warning
 
-This is a note.
+This is a warning.
 :::
 ```
 
