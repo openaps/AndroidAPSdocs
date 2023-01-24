@@ -99,15 +99,15 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 
 ### multi level list
 
-You can insert list in lists by indenting the nect level with 4 more spaces to the right than the one before.
+You can insert lists in lists by indenting the nect level with 4 more spaces to the right than the one before.
 
 ```
 1. first
 1. second
 1. third
-  - one element
-  - another element
-  - and another element
+  1. one element
+  1. another element
+  1. and another element
 1. four
 1. five
 1. six
@@ -116,9 +116,9 @@ You can insert list in lists by indenting the nect level with 4 more spaces to t
 1. first
 1. second
 1. third
-    - one element
-    - another element
-    - and another element
+    1. one element
+    1. another element
+    1. and another element
 1. four
 1. five
 1. six
