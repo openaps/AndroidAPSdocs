@@ -35,7 +35,7 @@ For our example we are going to make an edit to AndroidAPSdocs.  This does NOT n
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved.  Make your edits to the file.
 
-   Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -59,11 +59,7 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 ## Code syntax
 
-At the moment there are two languages used for docs pages:
-* Markdown (.md) - the markup language originally used for docs pages
-* reStructuredText (.rst) - the new markup language
-
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### Image size
 If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
@@ -83,48 +79,16 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * internal link to .rst page: `[alt text](../folder/file.rst)`
 * internal link to headline: `[alt text](../folder/file.html#headline)`
 
-### .rst files
-#### Text format
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1: 
-
-   `headline`<br>`*****`
-* Headline 2: 
-
-   `headline`<br>`=====`
-* Headline 3: 
-
-   `headline`<br>`-----`
-#### Images
-* images:
-
-   `.. image:: ../images/modules.png`<br>`  :alt: alt text`
-#### Links
-* external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
-
 ### Internal links
 
 If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
-#### In files with **.md** ending:
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
+* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
 * To set the link to an **anchor** (i.e. a headline) you have to omit the file extension .md and replace it with .html.
   * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test.md#anchor)`
-
-#### In files with **.rst** ending:
-* `` `Text <../Usage/Test.hmtl>`_``  will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html. 
-
-   Except you are in a toctree. Then you have to write it like this:  `Text <../Usage/Test.md>` with .md or .rst (not .html).
-* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
-* To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
   
-## Adding multiple images to documentation
+## Adding multiple images to the documentation
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
