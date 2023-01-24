@@ -59,8 +59,6 @@ Change language <./changelanguage.md>
 Safety first <./Getting-Started/Safety-first.md>
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
 What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
-CGM/FGM <./Configuration/BG-Source.md>
-Pump choices <./Getting-Started/Pump-Choices.md>
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
@@ -72,6 +70,8 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :maxdepth: 1
 
 Module <./Module/module.md>
+CGM/FGM choices <./Configuration/BG-Source.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 ```
 
 ```{toctree}
