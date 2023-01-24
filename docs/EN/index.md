@@ -190,7 +190,6 @@ For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 How to help <./Getting-Started/How-can-I-help.md>
 How to translate the app and docs <./translations.md>
 How to edit the docs <./make-a-PR.md>
-Sandbox <./Sandbox/sandbox1.md>
 ```
 
 ```{toctree}
