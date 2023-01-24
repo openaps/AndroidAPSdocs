@@ -71,8 +71,51 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * Headline 1: `# headline`
 * Headline 2: `## headline`
 * Headline 3: `### headline`
+
+### ordered list
+
+```
+1. first
+1. second
+1. third
+```
+
+1. first
+1. second
+1. third
+
+### unordered list
+
+```
+* one element
+* another element
+* and another element
+```
+
+* one element
+* another element
+* and another element
+
+
+### multi level list
+
+You can insert list in lists by indenting the nect level with 4 more spaces to the right than the one before.
+
+```
+1. first
+1. second
+1. third
+    * one element
+    * another element
+    * and another element
+1. four
+1. five
+1. six
+```
+
 ### Images
 * images: `![alt text](../images/file.png)`
+
 ### Links
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
