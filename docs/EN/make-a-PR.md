@@ -113,6 +113,16 @@ You can insert list in lists by indenting the nect level with 4 more spaces to t
 1. six
 ```
 
+1. first
+1. second
+1. third
+    * one element
+    * another element
+    * and another element
+1. four
+1. five
+1. six
+
 ### Images
 * images: `![alt text](../images/file.png)`
 
