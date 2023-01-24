@@ -87,6 +87,25 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
 * To set the link to an **anchor** (i.e. a headline) you have to omit the file extension .md and replace it with .html.
   * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+
+### Notes
+
+:::{admonition} Peters Note
+:class: note
+
+This is a note.
+:::
+
+
+```
+:::{admonition} Peters Note
+:class: note
+
+This is a note.
+:::
+```
+
+### Warnings
   
 ## Adding multiple images to the documentation
 
