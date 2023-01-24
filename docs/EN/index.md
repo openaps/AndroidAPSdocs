@@ -59,7 +59,6 @@ Change language <./changelanguage.md>
 Safety first <./Getting-Started/Safety-first.md>
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
 What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
-Pump choices <./Getting-Started/Pump-Choices.md>
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```
 
@@ -70,6 +69,8 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :glob: true
 :maxdepth: 1
 
+CGM/FGM choices <./Configuration/BG-Source.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 Module <./Module/module.md>
 ```
 
@@ -95,9 +96,9 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :titlesonly: true
 :maxdepth: 0
 
-Pumps <./Hardware/pumps.md>
 CGM/FGM <./Configuration/BG-Source.md>
 xDrip Settings <./Configuration/xdrip.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 Phones <./Hardware/Phoneconfig.md>
 Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
 Smartwatch  <./Hardware/Smartwatch.md>
