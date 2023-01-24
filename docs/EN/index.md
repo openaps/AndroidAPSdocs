@@ -48,11 +48,7 @@ Please don't be shy, we need support in creating the documentation. A pull reque
 :maxdepth: 1
 
 Change language <./changelanguage.md>
-```
 
-(getting-started)=
-
-```{toctree}
 :caption: Getting started
 :titlesonly: true
 
@@ -214,7 +210,7 @@ How to edit the docs <./make-a-PR>
 :caption: Sandbox
 :glob: true
 :maxdepth: 1
-
+'titles_only': True
 Sandbox <./Sandbox/sandbox1.md>
 ```
 
