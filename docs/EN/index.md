@@ -210,6 +210,14 @@ How to translate the app and docs <./translations.md>
 How to edit the docs <./make-a-PR>
 ```
 
+```{toctree}
+:caption: Sandbox
+:glob: true
+:maxdepth: 1
+
+Sandbox <./Sandbox/sandbox1.md>
+```
+
 :::{note}
 **Disclaimer And Warning**
 
