@@ -1,8 +1,8 @@
 # Formats in addition to HTML
 
 formats:
-   - pdf
-   # - none
+   #- pdf
+   - none
 
 # Pip requirements
 requirements_file: ./requirements.txt
