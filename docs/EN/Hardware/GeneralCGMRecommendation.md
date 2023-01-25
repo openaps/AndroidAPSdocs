@@ -59,6 +59,6 @@ data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
 This occurs if there is either a double "CGM Sensor Insert" entry in
-[actions tab / menu](../Configuration/Config-Builder#actions) or a
+[actions tab / menu](../Configuration/Config-Builder.md#actions) or a
 sensor insert with wrong date. Go to treatments tab \> careportal and
 delete the wrong entry.
