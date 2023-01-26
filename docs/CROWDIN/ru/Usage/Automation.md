@@ -6,13 +6,12 @@
 
 Например, при низкой ГК, вы можете решить, что должна автоматически установиться высокая временная цель. Или если вы находитесь в фитнес-центре, вы автоматически получаете временную цель.
 
-Перед использованием автоматизации следует уверенно овладеть ручным управлением \` временными целями \<./temptarget.html> \` _ или переключением профиля.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
-Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. \*\* Вместо действий разрешите AAPS только показывать уведомления. * * Если вы уверены, что автоматизация инициируется в нужное время, замените уведомление реальным действием.
+Убедитесь, что вы понимаете, как работает автоматизация перед настройкой первого простого правила. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
-```{eval-rst}
-.. изображение:: ../images/Automation_ConditionAction_RC3.png
-  :alt: условие автоматизации + действие
+```{image} ../images/Automation_ConditionAction_RC3.png
+:alt: условие автоматизации + действие
 ```
 
 ## Как пользоваться
@@ -21,139 +20,133 @@
 
 ### Важное примечание
 
-\*\* Автоматизация по-прежнему активна при отключении цикла! \*\*
+**Automation is still active when you disable loop!**
 
 Поэтому при необходимости деактивируйте правила автоматизации на это время. Это можно сделать, сняв галочку в поле слева от названия правила автоматизации.
 
-```{eval-rst}
-.. изображение:: ../images/Automation_ActivateDeactivate.png
-  :alt: Активировать и деактивировать правило автоматизации
+```{image} ../images/Automation_ActivateDeactivate.png
+:alt: Активировать и деактивировать правило автоматизации
 ```
 
 ### Где найти Автоматизацию
 
-В зависимости от ваших [настроек в конфигураторе](../Configuration/Config-Builder#tab-or-hamburger-menu) вы найдете [Automation](../Configuration/Config-Builder.md#automation) в меню hamburger или в виде вкладки.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### Общие настройки
 
 Есть некоторые ограничения:
 
-- Значение ГК должно составлять от 72 до 270 мг/дл или от 4 до 15 ммоль/л.
-- Процент профилирования должен составлять от 70% до 130%.
-- Есть 5 минут ограничения по времени между выполнениями (и первым выполнением).
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**Пожалуйста, будьте внимательны:**
+**Please be careful:**
 
-- \*\* менее -2 означает: -3 и ниже (-4, -10 и т.д.) * \*
-- **более -2 означает: -1 и выше (-1, 0, +10 и т.д)**
+- **less than -2 means: -3 and lower (-4,-10, etc)**
+- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 ### Условие
 
 Вы можете выбрать между несколькими условиями. Некоторые моменты здесь объясняются, но основное легко понять и оно не все здесь описано:
 
-- условия соединения: можно иметь несколько условий и связать их с помощью
+- connect conditions: you can have several conditions and can link them with
 
-  - "И"
-  - "Или"
-  - "Исключительно или" (что означает, что если применяется одно - и только одно из этих условий, то действие (действия) произойдет
+  - "And"
+  - "Or"
+  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Время vs. время повторения
+- Time vs. recurring time
 
-  - время = одно событие времени
-  - повторяющееся событие = то, что происходит регулярно (напр. раз в неделю, каждый рабочий день и т. д.)
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- расположение: в конфигураторе (автоматизация), можете выбрать местоположение сервиса, который хотите использовать:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - Использовать пассивное расположение: AAPS принимает локацию только в том случае, если другие приложения ее запрашивали
-  - Использовать расположение сети: расположение вашего Wifi
-  - Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
+  - Use passive location: AAPS only takes locations when other apps are requesting it
+  - Use network location: Location of your Wifi
+  - Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
 
 ### Действие
 
 Можно выбрать одно или несколько действий:
 
-- начать врем цель
+- start temp target
 
-  - должно быть между 72 мг/дл и 270 мг/дл (4 ммоль/л и 15 ммоль/л)
-  - работает только в том случае, если нет предыдущей временной цели
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- остановить врем цель
+- stop temp target
 
-- уведомление
+- notification
 
-- процент профиля
+- profile percentage
 
-  - должно быть от 70% до 130%
-  - работает только в том случае, если предыдущий процент составляет 100%
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-После добавления ваших действий, **не забудьте изменить значения по умолчанию** на те, которые требуются, нажав на значения по умолчанию.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
-```{eval-rst}
-.. образ:: ../images/Automation_Default_V2_5.png
-  :alt: автоматизация по умолчанию vs. задать значения
+```{image} ../images/Automation_Default_V2_5.png
+:alt: Automation default vs. set values
 ```
 
 ### Выбор правил автоматизации
 
 Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
 
-```{eval-rst}
-.. изображение:: ../images/Automation_Sort.png
-  :alt: Выбор правил автоматизации
+```{image} ../images/Automation_Sort.png
+:alt: Выбор правил автоматизации
 ```
 
 ### Удаление правил автоматизации
 
 Для удаления правила автоматизации нажмите на значок корзины.
 
-```{eval-rst}
-.. изображение:: ../images/Automation_Deletet.png
-  :alt: Выбор правила автоматизации
+```{image} ../images/Automation_Delete.png
+:alt: Выбор правила автоматизации
 ```
 
-## Рекомендации и предостережения
+## Good practice & caveats
 
-- Когда вы начинаете пользоваться средствами автоматизации или создаете новое правило, добавьте уведомление об этом, пока не убедитесь, что правило хорошо работает.
+- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
-- Наблюдайте за результатами работы правила.
+- Watch the rule results.
 
-- Постарайтесь не делать условия слишком легкими (например, ЕСЛИ ГК > 80 мг/дл И ГК \< 180 мг/дл)
+- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
 
-  **Вдвойне важно, если правило активирует переключатель профиля!**
+  **Doubly important if action is a profile switch!**
 
-- Попробуйте использовать временные цели Temp Targets вместо переключателей профиля Profile Switches. Temp Targets не сбрасывают \` Autosens \<../Usage/Open-APS-features#autosens> \` _ на 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
-- Убедитесь, что переключатели профиля создаются с осторожностью и желательно как крайняя мера.
+- Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Переключение профилей делает [Autosens](../Usage/Open-APS-features#autosens) бесполезным минимум на 6 часов.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
-- Переключение профилей не сбросит профиль назад на базовый профиль
+- Profile switching will not reset the profile back to your base profile
 
-  - Вы должны создать еще одно правило, чтобы вернуть профиль или сделать это вручную!
-  - Повышенный риск гипогликемии в случае, если время работы нового профиля не истечет или не сбросится назад на базовый профиль.
+  - You have to make another rule to set this back or do it manually!
+  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
 ## Примеры
 
 Это просто примеры вариантов настройки, не советы. Не воспроизводите их, не зная, что вы делаете или зачем вам это нужно.
 
-- Переключение профилей для вашей повседневной деятельности (например, школа, тренажерный зал, выходные, рабочий день...) с использованием геолокации, wifi, времени и т. д.
-- Настройка временной цели исходя из времени, местоположения, подключения к bluetooth устройствам...
-- Настройка временной цели ожидаемый прием пищи на основе времени, геолокации...
+- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+- Setting temp target for activities based on time, location, connection to a bluetooth device...
+- Setting eating soon temp targets based on time, location...
 
 ### Временная Цель Низкая ГК
 
-```{eval-rst}
-.. изображение:: ../images/Automation2.png
-  :alt: Автоматизация2
+```{image} ../images/Automation2.png
+:alt: Автоматизация2
 ```
 
 Эта автоматизация для тех, кто хочет автоматически активировать временную цель ГИПО при низкой ГК.
 
 ### Временная Цель Время Обеда
 
-```{eval-rst}
-.. изображение:: ../images/Automation3.png
-  :alt: Автоматизация3
+```{image} ../images/Automation3.png
+:alt: Автоматизация3
 ```
 
 Эта автоматизация для тех, кто обедает на работе в одно и то же время каждую неделю. Если он/она в определенное время (перед обедом) находится в определенном месте, автоматизация задает более низкую временную цель (ожидаемый прием пищи). Из-за союза "И" это происходит только в определенное время в определенном месте. Поэтому эта автоматизация не работает в любое другое время на этом месте или в это же время, но когда человек находится дома.
@@ -162,12 +155,12 @@
 
 Опасайтесь неправильно использовать автоматизацию. Это может привести к трудностям и даже опасности для здоровья. Примеры неправильного применения:
 
-- Попытка полного переопределения алгоритма вместо помощи (напр. замена профиля вместо тюнинга базала, соотношения инсулин-углеводы IC и т. д.)
-- Установка профиля для компенсации приема пищи
-- Установка профиля без определения продолжительности
-- Создание правил в одну сторону (т.е. делать что-то, но не отменять это другим правилом)
-- Создание долгосрочных правил
+- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+- Setting profile to compensate food
+- Setting profile without duration
+- Creating one way rules (i.e. do something but don't undo it by another rule)
+- Creating long term rules
 
 ## Альтернативы
 
-Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Некоторые примеры можно найти \` здесь \<./automationwithapp.html> \` \_.
+Для опытных пользователей есть и другие возможности для автоматизации задач с помощью IFTTT или приложения других разработчиков Android под названием Automate. Some examples can be found [here](./automationwithapp.html).
