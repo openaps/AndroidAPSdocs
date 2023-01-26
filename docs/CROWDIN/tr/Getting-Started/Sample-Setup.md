@@ -31,7 +31,7 @@ Bununla birlikte, bir veri bağlantısı kurulduğunda veriler otomatik olarak "
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatifler: olası [KŞ kaynaklarının](../Configuration/BG-Source.md) listesine bakın
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. İsteğe bağlı: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 1. Orijinal Dexcom uygulaması zaten yüklüyse: 
     * Sensörü durdurun
     * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
-2. [BYODA Dexcom uygulamasını](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) indirin ve yükleyin
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
 4. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
     * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
@@ -92,12 +92,12 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 ## AndroidAPS'i yükleyin
 
-1. [APK'yı oluşturmak](../Installing-AndroidAPS/Building-APK#generate-signed-apk) için talimatları izleyin
-2. Oluşturulan APK'yı telefonunuza [aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
 4. Bu örnek kurulumda yardımcıyı kullandık
 
-* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.md))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Ayarları](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdı
     * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
     * Menü > Sensörü Başlat (Formalitedir ve çalışan G6 sensörüyle bir ilgisi yoktur. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
 
-xDrip+ hakkında daha fazla bilgi için buraya [KŞ kaynak sayfasına](../Configuration/BG-Source.md) bakın.
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Alarm kurulum örneği
 
