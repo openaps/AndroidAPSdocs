@@ -1,24 +1,24 @@
-# internal sandbox file 2 for testing
+# fichier sandbox interne 2 pour les tests
 
-:::{admonition} no need to translate this
+:::{admonition} pas besoin de traduire ceci
 :class: note
 
-No need to translate this.
+Pas besoin de traduire cela.
 :::
 
-This is an internal sandbox file for the documentation team to test
+Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse tester
 
-1. markdown syntax and
+1. syntaxe markdown et
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. processus en arrière-plan pour
+    1. les traductions CROWDIN
+    2. Lire la doc de déploiement.
 
-You can dirctly jump from here to the first label in the sandbox1.md file - ["Jump"](./sandbox1.md#this-is-a-test).
+Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox1.md - ["Sauter"](./sandbox1.md#this-is-a-test).
 
-You can dirctly jump from here to the second label in this file - ["Jump"](./sandbox1.md#this-is-another-test).
+Vous pouvez sauter directement d'ici à la deuxième étiquette dans le fichier sandbox1.md - ["Sauter"](./sandbox1.md#this-is-another-test).
 
-Here you can jump to the first sandbox file - ["Jump"](./sandbox1.md).
+Ici vous pouvez aller au premier fichier sandbox - ["Sauter"](./sandbox1.md).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -27,6 +27,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (this-is-a-test)=
-## This is a test
+## Ceci est un test
 
-This is a test if labels must be unique.
+Ceci est un test si les étiquettes doivent être uniques.
