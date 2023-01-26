@@ -49,7 +49,7 @@ Quando um revisor aprova uma tradução, ela será adicionada na próxima versã
 ### Translate headline links
 
 * When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
-* Internal links to a certain headline (i.e. ..//Usage/Profiles#percentage) must be translated as the headline in the other language is different from the English original.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * If you translate a headline you can transform this into the anchor link (part after # - i.e. #percentage) by turning all letters to lower case, transforming special characters to standard characters, replacing spaces by - (minus sign) and skipping punctuation marks.
     
     Here are some examples:
@@ -62,7 +62,7 @@ Quando um revisor aprova uma tradução, ela será adicionada na próxima versã
 
 #### Link translation in Markdown files (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
 * * *
 
@@ -80,7 +80,7 @@ click on the cogwheel to open settings, select "Show" and click "Save".
 
 ![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 
