@@ -1,4 +1,4 @@
 # PocTech CT-100
 
-- Installeer PocTech App
-- Selecteer PocTech App in ConfigBuilder (instelling in AndroidAPS)
+- Install PocTech App
+- Select PocTech App in ConfigBuilder (setting in AndroidAPS)
