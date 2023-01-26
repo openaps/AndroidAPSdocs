@@ -2,17 +2,17 @@
 
 Bu sayfa, AndroidAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade eden klinisyenler veya bu tür bilgileri klinisyenleriyle paylaşmak isteyen hastalar için hazırlanmıştır.
 
-Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştığı hakkında bazı üst düzey bilgiler içerir. Tüm bu konular hakkında daha fazla ayrıntı için lütfen [kapsamlı AndroidAPS dokümantasyonunu çevrimiçi olarak](../index.md) inceleyin. Sorularınız varsa, lütfen daha fazla ayrıntı için hastanıza sorun veya sorularınızı iletmek için her zaman topluluğa ulaşmaktan çekinmeyin. (Sosyal medyada değilseniz (ör. [Twitter](https://twitter.com/kozakmilos) veya Facebook), developers@AndroidAPS.org adresine e-posta gönderebilirsiniz). [Ayrıca en son araştırmalardan bazılarını ve sonuçlarla ilgili verileri burada bulabilirsiniz.](https://openaps.org/outcomes/).
+Bu kılavuz, DIY kapalı döngü ve özellikle AndroidAPS'in nasıl çalıştığı hakkında bazı üst düzey bilgiler içerir. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.md). Sorularınız varsa, lütfen daha fazla ayrıntı için hastanıza sorun veya sorularınızı iletmek için her zaman topluluğa ulaşmaktan çekinmeyin. (Sosyal medyada değilseniz (ör. [Twitter](https://twitter.com/kozakmilos) veya Facebook), developers@AndroidAPS.org adresine e-posta gönderebilirsiniz). [Ayrıca en son araştırmalardan bazılarını ve sonuçlarla ilgili verileri burada bulabilirsiniz.](https://openaps.org/outcomes/).
 
-### Kendin Yap (DIY) Kapalı Döngü oluşturma adımları:
+## The steps for building a DIY Closed Loop:
 
 AndroidAPS'i kullanmaya başlamak için aşağıdaki adımlar izlenmelidir:
 
-* [Uyumlu bir pompa](../Hardware/pumps.md), [uyumlu bir Android cihaz](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) ve [uyumlu bir CGM kaynağı](../Configuration/BG-Source.md) bulun.
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [AndroidAPS kaynak kodunu indirin ve yazılımı derleyin](../Installing-AndroidAPS/Building-APK.md).
-* [Yazılımı diyabet cihazlarıyla konuşacak ve ayarları ve güvenlik tercihlerini belirleyecek şekilde yapılandırın](../index#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
 
-### Bir KENDİN YAP Kapalı Döngü Nasıl Çalışır
+## How A DIY Closed Loop Works
 
 Kapalı döngü sistemi olmadan, diyabetli bir kişi pompasından ve CGM'sinden veri toplar, ne yapacağına karar verir ve harekete geçer.
 
@@ -20,7 +20,7 @@ Otomatik insülin iletimi ile sistem aynı şeyi yapar: pompadan, CGM'den ve gü
 
 AndroidAPS çalıştıran cihaz pompanın bağlantısını koparırsa veya menzil dışına çıkarsa, en son geçici bazal oranı sona erdiğinde, pompa, önceden programlanmış bazal oranları çalıştıran varsayılan programa geri döner.
 
-### Veriler nasıl toplanır:
+## How data is gathered:
 
 AndroidAPS ile, bir Android cihaz matematik yapmak için özel bir uygulama çalıştırır, cihaz desteklenen bir pompa ile Bluetooth kullanarak iletişim kurar. AndroidAPS, ek bilgi toplamak ve hastaya, bakıcılara ve sevdiklerine ne ve neden yaptığı hakkında rapor vermek için diğer cihazlarla ve bulutla wifi veya mobil veriler aracılığıyla iletişim kurabilir.
 
@@ -33,7 +33,7 @@ Cihaz bu verileri topladıktan sonra algoritma çalışır ve ayarlara (İDF, ka
 
 Ayrıca, insülin iletim oranlarının hesaplanmasında kullanmak üzere pompadan veya Nightscout'tan boluslar, karbonhidrat tüketimi ve geçici hedef ayarlamaları hakkında her türlü bilgiyi toplayacaktır.
 
-### Ne yapacağını nasıl biliyor?
+## How does it know what to do?
 
 Açık kaynaklı yazılım, insülin iletiminin nasıl ayarlanması gerektiğini hesaplamak için insanların yaptığı işi (manuel modda) cihazın yapmasını kolaylaştırmak için tasarlanmıştır. Önce tüm destekleyici cihazlardan ve buluttan veri toplar, verileri hazırlar ve hesaplamaları çalıştırır, sonraki saatlerde beklenen KŞ seviyelerine ilişkin tahminler yapar ve KŞini hedef aralıkta tutmak veya geri getirmek için gerekli ayarlamaları hesaplar. Ardından gerekli ayarlamaları pompaya gönderir. Sonra verileri geri okur ve tekrar tekrar yapar.
 
@@ -41,41 +41,41 @@ En önemli girdi parametresi CGM'den gelen kan şekeri seviyesi olduğundan, yü
 
 AndroidAPS, topladığı tüm girdi verilerini, ortaya çıkan tavsiyeyi ve gerçekleştirilen herhangi bir eylemi şeffaf bir şekilde izlemek için tasarlanmıştır. Bu nedenle, günlükleri gözden geçirerek. “Neden X yapıyor?” Sorusuna herhangi bir zamanda cevap vermek kolaydır.
 
-### AndroidAPS algoritması karar verme örnekleri:
+## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır. Algoritma, gelecekte neler olabileceğine dair farklı senaryoları temsil eden (ayarlara ve duruma göre) birden fazla tahminde bulunur. Nightscout'ta bunlar “mor çizgiler” olarak görüntülenir. AndroidAPS, bu [tahmin satırlarını](../Installing-AndroidAPS/Releasenotes#overview-tab) ayırmak için farklı renkler kullanır. Günlüklerde, bu tahminlerden hangisinin ve hangi zaman diliminin gerekli eylemleri yönlendirdiğini izlenebilir.
+AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır. Algoritma, gelecekte neler olabileceğine dair farklı senaryoları temsil eden (ayarlara ve duruma göre) birden fazla tahminde bulunur. Nightscout'ta bunlar “mor çizgiler” olarak görüntülenir. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). Günlüklerde, bu tahminlerden hangisinin ve hangi zaman diliminin gerekli eylemleri yönlendirdiğini izlenebilir.
 
-#### İşte mor tahmin çizgilerinin örnekleri ve bunların nasıl farklı olabileceği:
+### Here are examples of the purple prediction lines, and how they might differ:
 
 ![Mor tahmin satırı örnekleri](../images/Prediction_lines.jpg)
 
-#### İnsülin iletiminde gerekli ayarlamaları etkileyen farklı zaman dilimlerine ilişkin örnekler aşağıda verilmiştir:
+### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
 
-#### Senaryo 1 - Güvenlik için Sıfır Geçici
+### Scenario 1 - Zero Temp for safety
 
 Bu örnekte, KŞ kısa vadede yükseliyor; ancak, daha uzun bir zaman diliminde düşük olacağı tahmin edilmektedir. Aslında, hedef *ve* güvenlik eşiğinin altına ineceği tahmin edilmektedir. Güvenlik amacıyla düşüğü önlemek için AndroidAPS, nihai KŞ (herhangi bir zaman aralığında) eşiğin üzerine çıkana kadar sıfır geçici (%0'da geçici bazal oran) verecektir.
 
 ![Senaryo 1](../images/Dosing_scenario_1.jpg)
 
-#### Senaryo 2 - Güvenlik için sıfır geçici
+### Scenario 2 - Zero temp for safety
 
 Bu örnekte, KŞ'nin yakın vadede düşeceği, ancak sonunda hedefin üzerinde olacağı tahmin edilmektedir. Ancak, kısa vadeli beklenen değer güvenlik eşiğinin altında olduğundan, AndroidAPS, beklenen KŞ değeri artık herhangi bir zamanda eşiğin altında kalmayana kadar tekrar "sıfır geçici" kullanır.
 
 ![Senaryo 2](../images/Dosing_scenario_2.jpg)
 
-#### Senaryo 3 - Daha fazla insülin gerekli
+### Scenario 3 - More insulin needed
 
 Bu örnekteki tahmin, yakın gelecekte hedef değerin altına bir düşüş beklemektedir. Ancak güvenlik eşiğinin altında olması beklenmiyor. Nihai KŞ hedefin üzerindedir. Bu nedenle, eklenen insülin tahmini eşiğin altına getireceğinden, AndroidAPS kısa vadeli hipoya katkıda bulunacak insülin vermekten kaçınacaktır. Daha sonra, güvenli olduğunda, nihai olarak tahmin edilen KŞ'nin en düşük seviyesini hedefe indirmek için insülin eklenmesini değerlendirecektir. *(Gereken insülinin ayarına ve miktarına ve süresine bağlı olarak, bu insülin geçici bir bazal oran veya SMB (Süper Mikro Bolus) yoluyla iletilebilir).*
 
 ![Senaryo 3](../images/Dosing_scenario_3.jpg)
 
-#### Senaryo 4 - Güvenlik nedenleriyle insülin dozunun azaltılması
+### Scenario 4 - Low temping for safety
 
 Bu örnekte, AndroidAPS, KŞ'i hedefin oldukça üzerinde arttığını görüyor. Bununla birlikte, insülinin zamanlaması nedeniyle, vücutta zaten KŞ'i sonunda aralığa getirmek için yeterli insülin vardır. Aslında, KŞ sonunda hedefin altında olacağı tahmin edilmektedir. Bu nedenle, AndroidAPS orta vadede hipoglisemiye neden olmamak için herhangi bir ek insülin vermeyecektir. KŞ yüksek ve yükseliyor olsa da, AndroidAPS'nin böyle bir senaryoda bazal oranı düşürmesi daha olasıdır.
 
 ![Senaryo 4](../images/Dosing_scenario_4.jpg)
 
-### Ayarları optimize etme ve değişiklik yapma
+## Optimizing settings and making changes
 
 AndroidAPS veya DIY kapalı döngülerle deneyimi olmayan bir klinisyen olarak, hastanızın ayarlarını optimize etmesine veya sonuçlarını iyileştirmek için değişiklikler yapmasına yardımcı olmakta zorlanabilirsiniz. Toplulukta hastaların ayarlarını iyileştirmek için küçük, test edilmiş ayarlamalar yapmasına yardımcı olabilecek birden fazla aracımız ve [kılavuzumuz](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html) mevcuttur.
 
@@ -85,11 +85,11 @@ Ayar değişiklikleri yapmak için en güçlü araçlardan biri, bazal oranlar, 
 
 Ek olarak, manuel diyabet tedavisinde öğrenilen insan davranışı, bir DIY kapalı döngü ile bile sonuçları sıklıkla etkiler. Örneğin, KŞ'nin düşeceği tahmin ediliyorsa ve AndroidAPS düşerken insülini azaltıyorsa, KŞ'yi 70 mg/dl'den (3,9 mmol) yükseltmek için yalnızca az miktarda karbonhidrat (örn. 3-4 g karbonhidrat) gerekebilir. Bununla birlikte, birçok durumda, birileri daha fazla karbonhidratla (örneğin 15 kuralına bağlı kalmak) tedavi etmeyi seçebilir, bu da hem ekstra glikozdan daha hızlı bir artışa neden olur hem de insülin zaman çerçevesinde azaltıldığından, düşük seviyeye yol açabilir.
 
-### OpenAPS
+## OpenAPS
 
 **Bu kılavuz [Klinisyenin OpenAPS kılavuzundan](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html) uyarlanmıştır.** OpenAPS, küçük bir taşınabilir bilgisayarda (genellikle "teçhizat" olarak anılır) çalıştırılmak üzere geliştirilmiş bir sistemdir. AndroidAPS, OpenAPS'de uygulanan tekniklerin çoğunu kullanır ve mantık ve algoritmaların çoğunu paylaşır, bu yüzden bu kılavuz orijinal kılavuza çok benzer. OpenAPS ile ilgili bilgilerin çoğu, AndroidAPS'ye kolayca uyarlanabilir, ana fark, yazılımın üzerinde çalıştığı donanım platformudur.
 
-### Özet
+## Summary
 
 Bu AndroidAPS'nin nasıl çalıştığına genel bir bakış olarak tasarlanmıştır. Daha fazla ayrıntı için hastanıza sorun, topluluğa ulaşın veya çevrimiçi olarak sunulan AndroidAPS belgelerinin tamamını okuyun.
 
