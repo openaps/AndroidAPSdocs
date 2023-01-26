@@ -2,7 +2,7 @@
 
 ## What are eCarbs and when are they useful?
 
-Με μια τακτική θεραπεία αντλίας, τα εκτεταμένα bolus είναι ένας καλός τρόπος αντιμετώπισης λιπαρών ή άλλως αργά απορροφούμενων γευμάτων που αυξάνουν τη γλυκόζη του αίματος για εκτεταμένη διάρκεια περισσότερο από την διάρκεια ζωής της ινσουλίνη στον οργανισμό. Σε ένα πλαίσιο κυκλώματος, ωστόσο, τα εκτεταμένα bolus δεν έχουν τόσο νόημα (και δημιουργούν τεχνικές δυσκολίες), επειδή είναι βασικά ένας σταθερός υψηλός προσωρινός βασικός ρυθμός, το οποίο αντίκειται στον τρόπο λειτουργίας του κυκλώματος, ο οποίος ρυθμίζει δυναμικά το βασικό ρυθμό. For details see [extended bolus](../Usage/Extended-Carbs#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
+Με μια τακτική θεραπεία αντλίας, τα εκτεταμένα bolus είναι ένας καλός τρόπος αντιμετώπισης λιπαρών ή άλλως αργά απορροφούμενων γευμάτων που αυξάνουν τη γλυκόζη του αίματος για εκτεταμένη διάρκεια περισσότερο από την διάρκεια ζωής της ινσουλίνη στον οργανισμό. Σε ένα πλαίσιο κυκλώματος, ωστόσο, τα εκτεταμένα bolus δεν έχουν τόσο νόημα (και δημιουργούν τεχνικές δυσκολίες), επειδή είναι βασικά ένας σταθερός υψηλός προσωρινός βασικός ρυθμός, το οποίο αντίκειται στον τρόπο λειτουργίας του κυκλώματος, ο οποίος ρυθμίζει δυναμικά το βασικό ρυθμό. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
 
 Ωστόσο, η ανάγκη αντιμετώπισης τέτοιων γευμάτων εξακολουθεί να υπάρχει. Για το λόγο αυτό το AndroidAPS από την έκδοση 2.0 υποστηρίζει τους λεγόμενους εκτεταμένους υδατάνθρακες ή eCarbs.
 
@@ -42,12 +42,11 @@ The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as
 
 A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
-Με γεύματα χαμηλών υδατανθράκων, υψηλών λιπαρών / πρωτεϊνών μπορεί να αρκεί να χρησιμοποιείτε μόνο τα eCarbs χωρίς χειροκίνητα bolus (βλ. Την ανάρτηση του ιστολογίου παραπάνω). Όταν δημιουργούνται τα eCarbs, δημιουργείται επίσης μια Σημείωση Careport για την τεκμηρίωση όλων των εισροών, για να διευκολυνθεί η επανάληψη και η βελτίωση των εισροών.
+**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Με γεύματα χαμηλών υδατανθράκων, υψηλών λιπαρών / πρωτεϊνών μπορεί να αρκεί να χρησιμοποιείτε μόνο τα eCarbs χωρίς χειροκίνητα bolus (βλ. Την ανάρτηση του ιστολογίου παραπάνω). Όταν δημιουργούνται τα eCarbs, δημιουργείται επίσης μια Σημείωση Careport για την τεκμηρίωση όλων των εισροών, για να διευκολυνθεί η επανάληψη και η βελτίωση των εισροών.
 
 ## Extended bolus and why they won't work in closed-loop environment?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 ### Extended bolus and switch to open loop - Dana and Insight pump only
 
@@ -57,7 +56,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
 - Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
 
 ```{image} ../images/ExtendedBolus2_6.png
 :alt: Extended bolus in AAPS 2.6
