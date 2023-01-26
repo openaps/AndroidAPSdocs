@@ -36,10 +36,9 @@
 
   > 1. The last 5 digits of the SN number on the back of the pump.
   > 2. Click on O button > Information > BLE > Last 5 digits.
-  >
-  > > ```{image} ../images/DiaconnG8/DiaconnG8_06.jpg
-  > > :alt: check model no.
-  > > ```
+  > 
+  > > `{image} ../images/DiaconnG8/DiaconnG8_06.jpg
+    :alt: check model no.`
 
 - Once you select your pump, a window appears asking for a pin code. Enter the pin number displayed on your pump to complete the connection.
 
@@ -118,4 +117,4 @@
 ### Extended Bolus function
 
 - If you use extended bolus it will disable closed loop.
-- See [this page](../Usage/Extended-Carbs#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
