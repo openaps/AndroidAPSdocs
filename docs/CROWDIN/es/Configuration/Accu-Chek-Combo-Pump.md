@@ -15,10 +15,10 @@
 
 ## Limitaciones
 
-- Los bolos extendidos y multiondas no están soportados (consulte el apartado [Carbohidratos Extendidos](../Usage/Extended-Carbs.md) en su lugar).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Solo se admite un perfil basal.
 - Establecer un perfil basal distinto de 1 en la bomba o entregar bolos extendidos o bolos multionda desde la bomba interfiere con TBRs y fuerza el bucle en modo de baja suspensión durante 6 horas, ya que el lazo no puede correr de forma segura bajo estas condiciones.
-- Actualmente no es posible establecer la hora y la fecha en la bomba, por lo que [cambios en el horario de verano](../Usage/Timezone-traveling#accu-chek-combo) tienen que realizarse manualmente (puede desactivar la actualización automática del reloj del teléfono por la noche y volver a cambiarlo por la mañana junto con el reloj de la bomba para evitar una alarma durante la noche).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Actualmente solo se admiten tasas basales en el rango de 0.05 a 10 U / h. Esto también se aplica a la modificación de un perfil, p.ej. al aumentar a 200%, la tasa basal más alta no debe superar las 5 U/h ya que se duplicará. De manera similar, cuando se reduce al 50%, la tasa basal más baja debe ser de al menos 0,10 U / h.
 - Si el lazo solicita que se cancele un TBR en ejecución, la Combo establecerá un TBR del 90% o el 110% durante 15 minutos en su lugar. Esto es porque cancelar un TBR causa una alerta en la bomba que causa muchas vibraciones.
 - Ocasionalmente (cada dos o tres días) AAPS podría no cancelar una alerta de TBR CANCELADA, por lo que el usuario debe tratarla (presionar el botón Actualizar en AAPS para transferir la advertencia a AAPS o confirmar la alerta en la bomba).
