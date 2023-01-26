@@ -1,10 +1,5 @@
 # Телефоны
 
-```{toctree}
-:glob: true
-:maxdepth: 1
-
-Список проверенных телефонов <../Getting-Started/Phones.md>
-Настройки Jelly Pro <./../../Usage/jelly.md>
-Настройки Huuawei <../../Usage/huawei.md>и
-```
+- [List of tested phones](../Getting-Started/Phones.md)
+- [Jelly Pro Settings](../Usage/jelly.md)
+- [Huawei Settings](../Usage/huawei.md)
