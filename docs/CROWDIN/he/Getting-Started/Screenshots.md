@@ -10,7 +10,7 @@
 
 * ניווט בין מודולי AndroidAPS השונים.
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
-* הלשוניות שניתנות להצגה נבחרות ב[בונה התצורה](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
 ### חלק B - פרופיל וערכי מטרה
 
@@ -20,7 +20,7 @@
 
 * הפרופיל הנוכחי מוצג בסרגל הימיני (כששפת המערכת עברית).
 * לחיצה קצרה על הפרופיל מציגה את פרטי הפרופיל
-* לחיצה ארוכה על הפרופיל תפתח את תיבת דו השיח [החלפת פרופיל](../Usage/Profiles#profile-switch).
+* Long press profile bar to [switch between different profiles](../Usage/Profiles.md#profile-switch).
 * אם החלפת הפרופיל בוצעה עם משך זמן מוגדר, הזמן הנותר מוצג בסוגריים.
 
 #### ערך מטרה
@@ -36,7 +36,7 @@
 ![הצגת שינויים דינמיים בערכי המטרה](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS יכול להתאים באופן דינמי את ערכי המטרה על סמך הרגישות אם אתם משתמשים באלגוריתם SMB.
-* הפעילו את אחת [מהאפשרויות הבאות](../Configuration/Preferences#openaps-smb-settings) או את שתיהן 
+* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
    * "רגישות מעלה את ערך המטרה" ו\או 
    * "תנגודת מורידה את ערך המטרה" 
 * אם AAPS מזהה תנגודת או רגישות, המטרה תשונה ממה שנקבע בפרופיל. 
@@ -47,7 +47,7 @@
 #### רמת סוכר נוכחית
 
 * קריאת הסוכר האחרונה מהחיישן מוצגת בצד ימין.
-* הצבע של ערך הסוכר משקף את הסטטוס לפי [הטווח](../Configuration/Preferences#range-for-visualization) המוגדר. 
+* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
    * ירוק = בטווח
    * אדום = מתחת לטווח
    * צהוב = מעל הטווח
@@ -60,7 +60,7 @@
 * סמל חדש מציג את מצב הלולאה:
    
    * עיגול ירוק = לולאה פועלת
-   * עיגול ירוק מְקֻוְוקָּו = השהיית בזאלי עקב סוכר נמוך (LGS)
+   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * מעגל אדום = לולאה מושבתת (קבוע)
    * עיגול צהוב = לולאה מושהת (השהיה זמנית אך אינסולין בזאלי יינתן) - הזמן שנותר להשהיה מוצג מתחת לסמל
    * עיגול אפור = המשאבה מנותקת (האופן זמני, ללא הזרמת כל אינסולין) - הזמן שנותר מוצג מתחת לסמל
@@ -83,9 +83,9 @@
 
 אולם, כשיש הרבה כפילויות, אולי יהיה קל יותר:
 
-* [לגבות את ההגדרות שלכם](../Usage/ExportImportSettings.md),
+* [backup your settings](../Usage/ExportImportSettings.md),
 * לאתחל את מסד הנתונים שלכם בתפריט התחזוקה
-* ואז [לייבא את ההגדרות](../Usage/ExportImportSettings.md) מחדש
+* [import your settings](../Usage/ExportImportSettings.md) again
 
 ##### סימן אזהרה אדום: כפילות בנתוני סוכר
 
@@ -125,11 +125,11 @@
    * האינסולין הפעיל עשוי להיות שלילי אם היו לאחרונה תקופות של ירידה במינון הבזאלי.
    * לחצו על הסמל כדי לראות את הפיצול של הבולוס והאינסולין הבזאלי
 
-* שיבולת: [פחמימות פעילות (COB)](../Usage/COB-calculation.md) - פחמימות שטרם נספגו -> סמל מהבהב אם נדרשות פחמימות
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
 * קו סגול: מינון בזאלי - שינויים בסמל המשקפים שינויים זמניים במינון הבזאלי (שטוח ב-100%) 
    * לחצו על הסמל כדי לראות את המינון הבזאלי ופרטים של בזאלי זמני אם מופעל (כולל משך הזמן הנותר)
-* חצים למעלה ולמטה: מציינים את מצב [Autosens](../Usage/Open-APS-features#autosens) בפועל (מופעל או מושבת) והערך המוצג מתחת לסמל
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features.md#autosens) status (enabled or disabled) and value is shown below icon
 
 #### דרושות פחמימות
 
@@ -152,7 +152,7 @@
    * גיל ורמת הסוללה (%)
 * אם חורגים מסף האזהרה, הערכים יוצגו בצהוב.
 * אם חורגים מסף האזהרה הקריטי, הערכים יוצגו באדום.
-* ניתן להגדיר את החיוויים ב[העדפות](../Configuration/Preferences#status-lights).
+* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
 ### חלק F - גרף ראשי
 
@@ -161,8 +161,8 @@
 * הגרף מציג את רמת הסוכר בדם (BG) כפי שנקרא מהחיישן. 
 * הערות שהוזנו בלשונית פעולות, כגון כיולים מבדיקות עם גלוקומטר וערכים של פחמימות וכן החלפות פרופיל מוצגות כאן. 
 * לחצו לחיצה ארוכה על הגרף כדי לשנות את קנה המידה של ציר הזמן. אפשר לבחור 6, 12, 18 או 24 שעות.
-* האזור הירוק משקף את טווח המטרה. ניתן להגדירו ב[העדפות](../Configuration/Preferences#range-for-visualization).
-* משולשים כחולים מציגים [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - אם הופעל ב[העדפות](../Configuration/Preferences#openaps-smb-settings).
+* האזור הירוק משקף את טווח המטרה. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
 * מידע אופציונלי:
    
    * חיזוי
@@ -178,7 +178,7 @@
 
 #### עקומי החיזוי
 
-* עקום **כתום**: [פחמימות פעילות](../Usage/COB-calculation.md) (כתום משמש בדרך כלל לייצוג COB ופחמימות)
+* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
    
    עקום החיזוי מראה לאן הסוכר (ולא לאן הפחמימות הפעילות עצמן!) ילך בהתבסס על הגדרות המשאבה הנוכחיות ובהנחה שהסטיות עקב ספיגת פחמימות נשארות קבועות. עקום זה מופיע רק אם יש פחמימות פעילות ידועות.
 
@@ -189,10 +189,20 @@
 * עקום **כחול בהיר**: בזאלי אפס זמני (סוכר חזוי אם יוגדר קצב בזאלי זמני של 0%)
    
    עקום החיזוי מראה כיצד ישתנה עקום האינסולין הפעיל אם המשאבה תפסיק כל מתן אינסולין (בזאלי זמני 0%).
+   
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* עקום **צהוב כהה**: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (ארוחות לא מוכרזות)
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    ארוחות לא מוכרזות מראש - זיהוי של עלייה משמעותית ברמות הסוכר עקב ארוחות, אדרנלין או השפעות אחרות. עקום החיזוי דומה לעקום הפחמימות הכתום אך הוא מניח שהסטיות יצטמצמו בקצב קבוע (על ידי הארכת קצב הדעיכה הנוכחי).
+   
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+
+* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+   
+   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   
+   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 בדרך כלל עקומת הסוכר האמיתית נמצאת באמצע בין העקומים הללו, או קרובה לזו שמניחה הנחות שהכי דומות למצב שלך.
 
@@ -211,7 +221,7 @@
 ### חלק G - גרפים נוספים
 
 * ניתן להפעיל עד ארבעה גרפים נוספים מתחת לגרף הראשי.
-* כדי לפתוח הגדרות של גרפים נוספים, לחצו על המשולש בפינה שמאלית עליונה של [הגרף הראשי](../Getting-Started/Screenshots#section-f-main-graph) וגללו מטה.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots.md#section-f-main-graph) and scroll down.
 
 ![הגדרות גרף נוספות](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -224,9 +234,9 @@
 #### אינסולין פעיל
 
 * מראה את האינסולין הפעיל. הוא כולל אינסולין מבולוס ובזאלי זמני (**אך אינו כולל מינונים בזאליים שנקבעו בפרופיל**).
-* אם לא היו [SMB](../Usage/Open-APS-features#super-micro-bolus-smb), ללא בולוסים וללא בזאלי זמני בזמן משך הפעילות של האינסולין ערך זה יהיה אפס.
+* If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * אינסולין פעיל יכול להיות שלילי אם אין בולוס או בזאלי זמני אפס/נמוך למשך זמן רב יותר.
-* הדעיכה תלויה ב[הגדרות DIA ופרופיל פעילות האינסולין שבחרתם](../Configuration/Config-Builder#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
 
 #### פחמימות פעילות
 
@@ -237,14 +247,14 @@
 #### סטיות
 
 * עמודות **אפורות** מראות סטייה עקב פחמימות. 
-* עמודות **ירוקות** מראות שרמת הסוכר גבוהה ממה שהאלגוריתם ציפה. העמודות הירוקות משמשות להגברת התנגודת ע"י [Autosens](../Usage/Open-APS-features#autosens).
-* עמודות **אדומות** מראות שרמת הסוכר נמוכה ממה שהאלגוריתם ציפה. העמודות האדומות משמשות להפחתת התנגודת ע"י [Autosens](../Usage/Open-APS-features#autosens).
+* עמודות **ירוקות** מראות שרמת הסוכר גבוהה ממה שהאלגוריתם ציפה. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features.md#autosens).
+* עמודות **אדומות** מראות שרמת הסוכר נמוכה ממה שהאלגוריתם ציפה. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features.md#autosens).
 * עמודות **צהובות** מראות סטייה עקב ארוחות לא מוכרזות.
 * עמודות **שחורות** מציגות סטיות קטנות שלא נלקחו בחשבון בחישוב הרגישות
 
 #### רגישות
 
-* מציג את הרגישות שזוהתה על ידי [Autosens](../Usage/Open-APS-features#autosens). 
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features.md#autosens) has detected. 
 * חישוב רגישות לאינסולין כתוצאה מפעילות גופנית, תגובות הורמונליות וכו'.
 
 #### פעילות
@@ -265,14 +275,14 @@
    
    * אם החיבור למשאבה אובד, כפתור האינסולין מוסתר.
 
-* יש להגדיר כפתורים אחרים ב[העדפות](../Configuration/Preferences#buttons).
+* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
 
 #### אינסולין
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * נועד לתת כמות מסוימת של אינסולין מבלי להשתמש ב[מחשבון בולוס](#bolus-wizard).
-* על ידי סימון התיבה תוכלו להתחיל אוטומטית את [ערך המטרה הזמני לאכילה בקרוב](../Configuration/Preferences#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
 * אם אינכם רוצים להכניס בולוס דרך המשאבה אלא לרשום את כמות האינסולין (כלומר אינסולין שניתן באמצעות מזרק) סמנו את התיבה המתאימה.
 
 #### פחמימות
@@ -280,11 +290,11 @@
 ![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * נועד לרישום פחמימות ללא בולוס.
-* ניתן להגדיר [ערכי מטרה זמניים מוגדרים מראש](../Configuration/Preferences#default-temp-targets) מסוימים ישירות על ידי סימון התיבה.
+* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * היסט זמן: מתי תאכלו פחמימות (בדקות) יחסית לעכשיו.
-* משך: לשימוש ב[פחמימות ממושכות](../Usage/Extended-Carbs.md)
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
 * ניתן להשתמש בכפתורי התוספת כדי לרשום את מספר הפחמימות ביתר קלות.
-* הערות יועלו ל-Nightscout - בהתאם להגדרותיכם עבור [קליינט נייטסקאוט](../Configuration/Preferences#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 #### מחשבון
 
@@ -293,18 +303,18 @@
 #### כיולים
 
 * שולח כיול ל- xDrip או פותח את חלון הכיול של אפליקציית Dexcom.
-* חייב להיות מופעל ב[העדפות](../Configuration/Preferences#buttons).
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### סנסור
 
 * פותח את xDrip+.
 * כפתור החזרה מחזיר ל-AAPS.
-* חייב להיות מופעל ב[העדפות](../Configuration/Preferences#buttons).
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### אשף מהיר
 
 * הזנה בקלות של כמות הפחמימות והגדרת נתוני החישוב.
-* פרטים מוגדרים ב[העדפות](../Configuration/Preferences#quick-wizard).
+* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
 ## אשף הבולוס
 
@@ -327,7 +337,7 @@
 
 ### חלק J
 
-* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. האפשרות מוצגת רק כאשר "אפשר [סופרבולוס](../Configuration/Preferences#superbolus) באשף" מוגדר ב[ העדפות סקירה כללית](../Configuration/Preferences#overview).
+* סופר בולוס גורם להזרקת האינסולין הבזאלי של השעתיים הקרובות יחד עם בולוס הארוחה ובתמורה, מפעיל בזאלי זמני אפס במשך השעתיים הקרובות. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
 * הרעיון הוא לספק את האינסולין מוקדם יותר ובתקווה להפחית עליות חדות ברמות הסוכר.
 * לפרטים עיינו ב-[diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -335,7 +345,7 @@
 
 * מציג את הבולוס המחושב. 
 * אם כמות האינסולין הפעיל עולה על הבולוס המחושב, תוצג רק כמות הפחמימות הנדרשת.
-* הערות יועלו ל-Nightscout - בהתאם להגדרותיכם עבור [קליינט נייטסקאוט](../Configuration/Preferences#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 ### חלק L
 
@@ -356,7 +366,7 @@
 
 * אם האזהרה למעלה מופיעה לאחר שימוש באשף הבולוס, AndroidAPS זיהה שערך ה-COB המחושב אולי שגוי. 
 * לכן, אם תרצו להזריק בולוס לאחר ארוחה קודמת עם פחמימות פעילות, עליכם להיות מודעים למינון ביתר! 
-* לפרטים נוספים ראו [חישוב פחמימות פעילות](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
 ## לשונית פעולות
 
@@ -364,14 +374,14 @@
 
 ### פעולות - חלק M
 
-* לחצן [החלפת פרופיל](../Usage/Profiles#profile-switch) כחלופה ללחיצה על ה[פרופיל הנוכחי](../Getting-Started/Screenshots#section-b-profile-target) במסך הבית.
-* לחצן [ערך מטרה זמני](../Usage/temptarget#temp-targets) כחלופה ללחיצה על ה[ערך מטרה הנוכחי](../Getting-Started/Screenshots#section-b-profile-target) במסך הבית.
+* Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * לחצן להפעלה או ביטול של מינון בזאלי זמני. שימו לב שהלחצן משתנה מ-"בזאלי זמני" ל-"ביטול %x" כאשר מוגדר מינון בזאלי זמני.
-* למרות ש[בולוסים ממושכים](../Usage/Extended-Carbs#extended boluses) לא באמת עובדים בסביבת לולאה סגורה, אנשים מסוימים ביקשו בכל מקרה אפשרות להשתמש בבולוס ממושך.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * אפשרות זו קיימת רק במשאבות Dana RS ו-Accu chek Insight. 
    * לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
-   * הקפידו לקרוא את [הפרטים](../Usage/Extended-Carbs#extended boluses) לפני השימוש באפשרות זו.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
 
 ### פורטל הטיפולים - חלק N
 
@@ -382,13 +392,13 @@
    * גיל הצינורית
    * גיל ודרגת טעינת סוללת המשאבה
 
-* אם משתמשים בסקין [רזולוציה נמוכה](../Configuration/Preferences#skin), תוצג פחות אינפורמציה.
+* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
 
 #### רמת טעינת סוללת החיישן
 
 * דרוש xDrip nightly מדצמבר 10, 2020 או חדש יותר.
 * עובד עם חיישנים ומשדרים כדוגמת MiaoMiao 2. (טכנית, החיישן צריך לשלוח את המידע של רמת הסוללה לxDrip+.)
-* ניתן להגדיר את ספי החיוויים ב[העדפות](../Configuration/Preferences#status-lights).
+* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
 * אם רמת החיישן זהה לרמת הסוללה של הטלפון, כנראה שגרסת ה-xDrip+ ישנה מדי וצריכה עדכון.
    
    ![Sensor levels equals phone battery level](../images/Home2021_ActionSensorBat.png)
@@ -419,7 +429,7 @@
 
 ![פרופיל האינסולין](../images/Screenshot_insulin_profile.png)
 
-* כאן ניתן לראות את פרופיל הפעילות של האינסולין שבחרתם ב[בונה התצורה](../Configuration/Config-Builder#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
 * העקום הסגול מראה כמה אינסולין נשאר לאחר הזרקתו כשהוא דועך לאורך הזמן והעקום הכחול מראה כמה הוא פעיל.
 * חשוב לשים לב לכך שלדעיכה יש זנב ארוך. 
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
@@ -446,7 +456,7 @@
 
 ![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
-* אם השתמשתם ב[אשף הבולוס](../Getting-Started/Screenshots#bolus-wizard) כדי לחשב את מינון האינסולין, תוכלו לעיין בחישוב זה מאוחר יותר בלשונית הטיפולים.
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * פשוט לחץ על קישור "חישוב" הירוק. (בהתאם למשאבה שבשימוש, אינסולין ופחמימות ניתנים להצגה בשורה אחת בטיפולים.)
 
 ### תיקון פחמימות
@@ -471,7 +481,7 @@
 
 * לשוניות אלה מציגות פרטים על חישובי האלגוריתם ומדוע AAPS פועל כפי שהוא פועל.
 * החישובים מחושבים בכל פעם שהמערכת מקבלת קריאה חדשה מהחיישן.
-* לפרטים נוספים ראו [חלק APS בדף בונה התצורה](../Configuration/Config-Builder#aps).
+* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
 
 ## פרופיל
 
@@ -485,18 +495,18 @@
    * מינון בזאלי
    * ערך מטרה: רמת הגלוקוז בדם שאליה AAPS שואף
 
-* החל מגרסה 3.0 קיים רק [פרופיל מקומי](../Configuration/Config-Builder#local-profile). ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
+* As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
 
 ## טיפול
 
 היסטוריה של הטיפולים הבאים:
 
-* בולוס ופחמימות -> אפשרות [להסיר ערכים](../Getting-Started/Screenshots#carb-correction) כדי לתקן את ההיסטוריה
-* [בולוס ממושך](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
+* [בולוס ממושך](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * מינון בזאלי זמני
 * [ערך מטרה זמני](../Usage/temptarget.md)
 * [החלפת פרופיל](../Usage/Profiles.md)
-* [פורטל הטיפולים](../Usage/CPbefore26#careportal-discontinued) - הערות המוזנות דרך לשונית הפעולות והערות בדיאלוגים
+* [Careportal](../Usage/CPbefore26.md#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## מקורות נתוני סוכר - xDrip+, BYODA...
 
@@ -510,5 +520,5 @@
 ![NSClient](../images/Screenshots_NSClient.png)
 
 * מציג את מצב החיבור עם אתר הנייטסקאוט שלכם.
-* ניתן להגדיר את ההגדרות ב[העדפות](../Configuration/Preferences#nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
+* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). אפשר לפתוח את החלק המתאים על ידי לחיצה על גלגל השיניים בצד השמאלי העליון של המסך.
 * לפתרון בעיות עיינו ב[דף זה](../Usage/Troubleshooting-NSClient.md).
