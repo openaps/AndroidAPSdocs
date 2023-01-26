@@ -4,20 +4,19 @@
 :alt: AAPS je jako autopilot
 ```
 
-Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu.
-Dana M. Lewis, jedna za zakladatelek hnutí pro open source uzavřenou smyčku, jej ve své skvělé knize [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) přirovnává k „autopilotu pro váš diabetes“\<<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>>\`\_. Co to však znamená?
+Systém uzavřené smyčky APS využívá kombinaci různých komponent, aby vám usnadnil management diabetu. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Co to však znamená?
 
-**Autopilot v letadle**
+**Autopilot in an aircraft**
 
 Autopilot nedělá úplně všechno a neumožňuje skutečnému pilotovi, abys celý let prospal. Pouze mu pomáhá při jeho práci. Ulevuje mu od zátěže způsobené nutností neustále monitorovat funkce letadla a sledovat letovou hladinu. Pilot se tak může soustředit na sledování letového prostoru a kontrolu funkcí autopilota.
 
 Autopilot dostává signály od mnoha různých senzorů, počítač je následně vyhodnocuje společně se zadanými specifikacemi od pilota a nakonec provede potřebné korekce. Pilot se tak již nemusí zabývat neustálými drobnými úpravami.
 
-**Systém uzavřené smyčky**
+**Closed Loop System**
 
 Totéž platí pro systém uzavřené smyčky APS. Nedělá úplně všechno, stále se musíte o svůj diabetes starat vy sami. Systém uzavřené smyčky využívá data ze senzorů CGM/FGM v kombinaci s vašimi specifikacemi, jako jsou bazální dávky, citlivost na inzulin a inzulino-sacharidový poměr. Na základě toho pak vypočítává návrhy, jak upravit léčbu, a provádí tyto neustále drobné změny tak, aby udržel vaší glykémii v cílovém rozmezí a vy jste s nimi neměli tolik práce. Získáte tak více času na život „mimo diabetes“.
 
-Stejně jako byste nenastoupili do letadla, které by řídil pouze autopilot bez dohledu živého pilota, tak i systém uzavřené smyčky vám sice usnadní management vašeho diabetu, ale stále vyžaduje vaši pozornost a podporu! **Ani s uzavřenou smyčkou nemůžete na svůj diabetes zcela zapomenout!**
+Stejně jako byste nenastoupili do letadla, které by řídil pouze autopilot bez dohledu živého pilota, tak i systém uzavřené smyčky vám sice usnadní management vašeho diabetu, ale stále vyžaduje vaši pozornost a podporu! **Even with a closed loop you can't just forget your diabetes!**
 
 Stejně jako autopilot závisí na hodnotách ze senzorů i specifikacích pilota, tak i systém uzavřené smyčky potřebuje správné údaje jako bazály, ISF a sacharidový poměr, aby vám mohl dobře pomáhat.
 
@@ -27,30 +26,32 @@ V současnosti jsou k dispozici tři hlavní oper source systémy uzavřené smy
 
 ### AndroidAPS (AAPS)
 
-Systém AndroidAPS je podrobně popsán v [této dokumentaci](./WhatisAndroidAPS.html). Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. Vývojáři úzce spolupracují s OpenAPS (tzn. používají stejné algoritmy).
+AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Pro výpočty a ovládání inzulinové pumpy využívá smartphone se systémem Android. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
-Kompatibilní pumpy jsou:
+Compatible [pumps](../Hardware/pumps.md) are:
 
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) / [DanaRS & Dana-i](../Configuration/DanaRS-Insulin-Pump.html)
-- [Accu-Chek Combo](./Configuration/Accu-Chek-Combo-Pump.html)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
-- některé staré [Medtronic pumpy](../Configuration/MedtronicPump.md)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
+- some old [Medtronic pumps](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
 
-[OpenAPS](https://openaps.readthedocs.io) byl první open source systém uzavřené smyčky. Používá malý počítač, jako je Raspberry Pi nebo Intel Edison.
+[OpenAPS](https://openaps.readthedocs.io) was the first Open Source Closed Loop System. Používá malý počítač, jako je Raspberry Pi nebo Intel Edison.
 
 Kompatibilní pumpy jsou:
 
-- některé staré pumpy Medtronic
+- some old Medtronic pumps
 
 ### Loop pro iOS
 
-[Loop for iOS](https://loopkit.github.io/loopdocs/) je open source systém uzavřené smyčky pro zařízení Apple iPhone.
+[Loop for iOS](https://loopkit.github.io/loopdocs/) is the Open Source Closed Loop System to be used with Apple iPhones.
 
 Kompatibilní pumpy jsou:
 
+- Omnipod DASH
 - Omnipod Eros
-- některé staré pumpy Medtronic
+- some old Medtronic pumps
