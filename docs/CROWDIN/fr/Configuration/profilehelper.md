@@ -3,13 +3,13 @@
 L'assistant profil a deux fonctions :
 
 1. Trouver un profil pour les enfants
-2. Comparer deux profils ou changements de profil pour dupliquer un nouveau profil
+2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
 
 ## Profil pour les enfants (jusqu'à 18 ans)
 
-**Remarques importantes :**
+**Important note:**
 
-**L'assistant profil a pour but de vous aider à trouver le profil initial de votre enfant. Même s'il est basée sur un ensemble de données de deux hôpitaux différents, discutez toujours avec votre équipe médicale avant d'utiliser un nouveau profil !**
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 L'assistant de profil propose un ensemble de données d'enfants provenant de deux hôpitaux différents pour vous permettre de trouver un profil initial pour votre enfant jusqu'à 18 ans.
 
@@ -18,7 +18,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 ```
 
 1. Sélectionnez 'Assistant profil' dans le menu trois points en haut à droite de l'écran.
-2. Ajustez le profil par défaut (basé sur le jeu de données de l'hôpital) en entrant l'âge de l'enfant et le DTQ **ou** le poids.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Changez l'écran en cliquant sur la barre grise « 2 » à droite.
 4. Appuyez sur 'Profil actuel' et sélectionnez 'Profil par défaut DPV'.
 
@@ -26,15 +26,15 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 :alt: Assistant Profil Enfant 2
 ```
 
-5. Ajustez le Profil par défaut DPV (basé sur le jeu de données d'un autre hôpital) en entrant l'âge, le pourcentage de basal et aussi le DTQ **ou** le poids.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
-Une fois que vous êtes d'accord avec les réglages du profil, vous pouvez [dupliquer le profil](../Configuration/profilehelper#id1) comme décrit ci-dessous.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Comparer deux profils
 
-Vous pouvez également utiliser l'assistant de profil pour comparer à différents profils ou changements de profil (pourcentage de l'un des profils utilisés dans un précédent [changement de profil](../Usage/Profiles.md)).
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
 
 ```{image} ../images/ProfileHelper1.png
 :alt: Assistant Profil 1
@@ -57,7 +57,7 @@ Vous pouvez également utiliser l'assistant de profil pour comparer à différen
 
 ## Dupliquer le profil
 
-Si vous utilisez des [profils locaux](../Configuration/Config-Builder#profil-local), vous pouvez dupliquer un Profil / Changement de profil directement depuis l'assistant de profil.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Assistant profile Dupliquer le Profil / Changement de profil
