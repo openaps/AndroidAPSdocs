@@ -1,7 +1,7 @@
 # Automation
 
-What is Automation
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## What is Automation
+
 For the same frequent events, you might always have to change the same settings. To avoid the extra work, you can just try to automate the event if you can specify it well enough and let it do it for you automatically.
 
 I.e. when your BG is too low, you can decide to have automatically a high temp target. Or if you are at your fitness center, you get automatically a temp target.
@@ -14,11 +14,11 @@ Make sure you really understand how automation works before setting up your firs
 :alt: Automation condition + action
 ```
 
-How to use it
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## How to use it
+
 To set up an automation, you have to give it a title, select at least one condition and one action.
 
-## Important note
+### Important note
 
 **Automation is still active when you disable loop!**
 
@@ -28,11 +28,11 @@ So make sure to deactivate automation rules during these occasions if necessary.
 :alt: Activate and deactivaten automation rule
 ```
 
-## Where to find Automation
+### Where to find Automation
 
-Depending on your [settings in config builder](../Configuration/Config-Builder#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder.md#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
-## Ogólnie
+### Ogólnie
 
 There are some limits:
 
@@ -45,7 +45,7 @@ There are some limits:
 - **less than -2 means: -3 and lower (-4,-10, etc)**
 - **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
-## Condition
+### Condition
 
 You can choose between several conditions. Here are some things explained, but most of it should be easy to understand and is not all described here:
 
@@ -66,7 +66,7 @@ You can choose between several conditions. Here are some things explained, but m
   - Use network location: Location of your Wifi
   - Use GPS location (Attention! May cause excessive battery drain!)
 
-## Action
+### Action
 
 You can choose one or more actions:
 
@@ -90,7 +90,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
-## Sort automation rules
+### Sort automation rules
 
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
 
@@ -98,7 +98,7 @@ To sort automation rules click and hold the four-lines-button on the right side 
 :alt: Sort automation rules
 ```
 
-## Delete automation rules
+### Delete automation rules
 
 To delete an automation rule click on trash icon.
 
@@ -106,34 +106,36 @@ To delete an automation rule click on trash icon.
 :alt: Delete automation rule
 ```
 
-Good practice & caveats
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-\* When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
-\* Watch the rule results.
-\* Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+## Good practice & caveats
 
-> **Doubly important if action is a profile switch!**
+- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features#autosens) back to 0.
+- Watch the rule results.
+
+- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+
+  **Doubly important if action is a profile switch!**
+
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
 - Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
 - Profile switching will not reset the profile back to your base profile
 
   - You have to make another rule to set this back or do it manually!
   - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
-Examples
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Examples
+
 These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
 
 - Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
 - Setting temp target for activities based on time, location, connection to a bluetooth device...
 - Setting eating soon temp targets based on time, location...
 
-## Low Glucose Temp Target
+### Low Glucose Temp Target
 
 ```{image} ../images/Automation2.png
 :alt: Automation2
@@ -141,7 +143,7 @@ These are just setup examples, no advises. Don't reproduce them without being aw
 
 This is made by someone who wants to get a hypo temp target automatically when having low glucose.
 
-## Lunch Time Temp Target
+### Lunch Time Temp Target
 
 ```{image} ../images/Automation3.png
 :alt: Automation3
@@ -149,7 +151,7 @@ This is made by someone who wants to get a hypo temp target automatically when h
 
 This example is made by someone who has lunch at work at the same time every day during the week. If he or she stays at a certain time in his or her lunch location, automation will set a low temp target (eating soon) while waiting for the lunch. Because of the "And" connection, it only happens during the chosen time and if he or she is at the chosen location. So it does not work on any other time at this location or on this time when the person stays at home.
 
-## Incorrect use of automation
+### Incorrect use of automation
 
 Please be aware to use automation incorrectly. This might lead to difficulties and even danger for your health. Examples for incorrect use are for instance:
 
@@ -159,7 +161,6 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 - Creating one way rules (i.e. do something but don't undo it by another rule)
 - Creating long term rules
 
-Alternatives
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Alternatives
 
 For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).
