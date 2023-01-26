@@ -1,4 +1,4 @@
-# 설정 저장하기 & 불러오기
+# Export & import settings
 
 ## 언제 설정을 저장해야합니까?
 
@@ -20,19 +20,19 @@ Among others the following information is part of the settings export:
 
 - [Automation](../Usage/Automation.md) events
 - [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](../Configuration/Config-Builder#local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences#nsclient)
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Encrypted backup format
 
-Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences#master-password) .
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## 설정 내보내기
 
-- 화면 좌측 상단부의  三아이콘을 누릅니다
-- 정비를 누릅니다
-- 설정 저장하기를 누릅니다
+- Hamburger menu (top left corner of screen)
+- Maintenance
+- 설정 내보내기
 
 ```{image} ../images/AAPS_ExportSettings1.png
 :alt: AndroidAPS export settings 1
@@ -40,7 +40,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
@@ -49,10 +49,10 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ## 설정 불러오기
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- 화면 좌측 상단부의  三아이콘을 누릅니다
-- 정비를 누릅니다
+- Hamburger menu (top left corner of screen)
+- Maintenance
 - 설정 불러오기
 
 ```{image} ../images/AAPS_ImportSettings1.png
@@ -62,7 +62,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
 - Select file.
 - Confirm import by clicking 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS import settings 2
@@ -76,7 +76,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ### Note for Dana RS users
 
-- 펌프 연결 설정 역시 새 폰에 불러와지기 때문에, 새 폰은 펌프가 이미 연결되어 있는 것으로 "착각"하게 되고 블루투스 스캔을 시작하지 않게 됩니다.
+- As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
 - Please pair new phone and pump manually.
 
 ### Import settings from previous versions (before AAPS 2.7)
