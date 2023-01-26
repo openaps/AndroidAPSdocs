@@ -10,7 +10,7 @@ Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**
 * Některé funkce, jako např. *komplikace*, vyžadují Wear OS verze 2.0 nebo vyšší
 * Google od verze 2.x přejmenoval *Android Wear 1.x* na *Wear OS*, takže pokud bude někde uvedeno *Android Wear*, zřejmě se jedná o starší verzi systému 1.x
 * Jestliže je v popisu hodinek uvedeno, že jsou kompatibilní se systémy *Android* a *iOS*, **neznamená to**, že hodinky používají systém *Wear OS* - stejně tak se může jednat o nějaký jiný typ OS upraveného daným výrobcem, **který není kompatibilní s aplikací AAPS pro hodinky!**
-* Podívejte se na [seznam otestovaných telefonů a hodinek](../Getting-Started/Phones#list-of-tested-phones), a pokud jste na pochybách, zda budou vaše hodinky podporované, [zeptejte se komunity](../Where-To-Go-For-Help/Connect-with-other-users.md)
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Sestavení verze AAPS pro Wear OS
 
@@ -20,7 +20,7 @@ Od března 2021 již není možné AAPS pro hodinky stáhnout z Google Play Stor
 
 ### Nastavení na telefonu
 
-V aplikaci AndroidAPS musíte na kartě „Konfigurace“ [povolit modul Wear](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
 
 ## Ovládání AAPS z hodinek
 
@@ -29,7 +29,7 @@ AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear.
 Z hodinek lze ovládat následující funkce:
 
 * nastavovat dočasné cíle
-* používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](../Configuration/Config-Builder#wear) v telefonu)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
 * zadávat eSacharidy
 * podávat bolus (inzulín + sacharidy)
 * měnit nastavení hodinek
@@ -317,7 +317,7 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 * Zkuste, co lépe funguje na vašich hodinkách: Originální ciferník AAPS nebo jiný s AAPS komplikací.
 * Sledujte několik dní, s různými profily aktivit. Většina hodinek aktivuje obrazovku při pohledu na ně, pohybu a dalších spouštěčích souvisejících s užíváním.
 * Zkontrolujte globální nastavení systému, které ovlivňuje výkon: oznámení, časový limit podsvícení/aktivní zobrazení, je-li aktivována služba GPS apod.
-* Zkontrolujte [seznam doporučených hodinek a telefonů](../Getting-Started/Phones#list-of-tested-phones) a [zeptejte se ve skupině ](../Where-To-Go-For-Help/Connect-with-other-users.md) na další zkušenosti spojené s úsporou baterie.
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **Nemůžeme garantovat, že data zobrazena na ciferníku nebo komplikaci jsou aktuální**. Konečné rozhodnutí o tom, kdy aktualizovat ciferník nebo komplikaci, je na operačním systému. I když se aplikace AAPS aktualizují, systém se může rozhodnout odložit nebo ignorovat aktualizace v zájmu úspory baterie. V případě pochybností nebo vybité baterie – vždy zkontrolujte hlavní AAPS v telefonu.
 
 ## Řešení problémů s wear aplikací:
@@ -330,7 +330,7 @@ Protože nemůžeme ohrozit komunikaci (potřebujeme aktuální data) a chceme, 
 
 * Sony Smartwach 3 patří k nejoblíbenějším hodinkám používaným s AAPS.
 * Společnost Google od podzimu 2020 již bohužel nepodporuje zařízení s OS 1.5. To vede k problémům při používání hodinek Sony SW3 s AndroidAPS 2.7 a vyšší.
-* Možný postup, jak to vyřešit, najdete na stránce [odstraňování potíží](../Usage/SonySW3.md).
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## Zobrazení dat z Nightscoutu
 
