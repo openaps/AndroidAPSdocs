@@ -1,13 +1,7 @@
-# Smartwatch
+# Smartwatches
 
-Smartwaches sind nicht zwingend erforderlich, werden von einigen Anwendern aber als sehr hilfreich beschrieben.
-Mehr Infos hier
+Smartwaches sind nicht zwingend erforderlich, werden von einigen Anwendern aber als sehr hilfreich beschrieben. Mehr Infos hier:
 
-```{toctree}
-:glob: true
-:maxdepth: 1
-
-Liste der getesteten Telefone und Smartphones <../Getting-Started/Phones.md>
-Watchfaces Wear OS <../Configuration/Watchfaces.md>
-Problembehandlung Sony Smartwatch SW 3 <../Usage/SonySW3.md>
-```
+- [Liste der getesteten Telefone und Smartwatches](../Getting-Started/Phones.md)
+- [Watchfaces Wear-OS](../Configuration/Watchfaces.md)
+- [Fehlerbehebung für Sony Smartwach 3](../Usage/SonySW3.md)
