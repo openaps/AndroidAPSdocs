@@ -10,7 +10,7 @@
 
 * Переход между различными модулями AndroidAPS.
 * Также можно переходить между экранами свайпом влево или вправо.
-* Отображаемые вкладки можно выбрать в [Конфигураторе](../Configuration/Config-Builder#tab-or-hamburger-menu).
+* Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
 ### Раздел B - Профиль & Цель
 
@@ -20,7 +20,7 @@
 
 * Текущий профиль отображается на левой панели.
 * Короткое нажатие открывает подробности о текущем профиле
-* Долгое нажатие позволяет [переключаться между разными профилями](../Usage/Profiles#profile-switch).
+* Long press profile bar to [switch between different profiles](../Usage/Profiles.md#profile-switch).
 * Если профиль был изменен на время - в скобках отображается оставшееся время его активности в минутах.
 
 #### Целевое значение ГК
@@ -36,7 +36,7 @@
 ![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
-* Активируйте один или оба [варианта](../Configuration/Preferences#openaps-smb-settings): 
+* Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
    * "чувствительность повышает цель" и/или 
    * "сопротивляемость понижает цель" 
 * Если AAPS обнаружит повышенную сопротивляемость или чувствительность - цель будет изменена. 
@@ -47,7 +47,7 @@
 #### Текущий уровень глюкозы крови
 
 * Последнее значение ГК, переданное вашим НМГ, отображается в левой части экрана.
-* Цвет показаний ГК соответствует настроенному [даипазону](../Configuration/Preferences#range-for-visualization): 
+* Color of the BG value reflects the status to the defined [range](../Configuration/Preferences.md#range-for-visualization). 
    * зеленый = в заданном диапазоне
    * красный = ниже заданного диапазона
    * желтый = выше заданного диапазона
@@ -60,7 +60,7 @@
 * Новые иконки отображают статус цикла:
    
    * зеленый круг = активна замкнутая петля
-   * зеленый круг с пунктирной линией =[приостановка помпы на низкой ГК (LGS)](../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
+   * green circle with dotted line = [low glucose suspend (LGS)](../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend)
    * красный круг = цикл деактивирован (постоянно отключен)
    * желтый круг = цикл приостановлен (временно приостановлен, но базальный инсулин будет подаваться) - оставшееся время паузы отображается под иконкой
    * серый круг = помпа отключена (временно отключена любая подача инсулина) - оставшееся время остановки отображается под иконкой
@@ -83,9 +83,9 @@
 
 Однако, когда есть много дубликатов, может быть проще
 
-* [создать резервную копию настроек](../Usage/ExportImportSettings.md),
+* [backup your settings](../Usage/ExportImportSettings.md),
 * сбросить базу данных в меню обслуживания и
-* заново [импортировать настройки](../Usage/ExportImportSettings.md)
+* [import your settings](../Usage/ExportImportSettings.md) again
 
 ##### Красный предупреждающий знак: Дублирующиеся данные ГК
 
@@ -125,11 +125,11 @@
    * IOB может быть отрицательным если был период с пониженным относительно текущего профиля базалом.
    * Нажмите на иконку (только короткое нажатие), чтобы увидеть как IOB распределяется между базой и болюсом.
 
-* Иконка колоска: [углеводы "на борту"](../Usage/COB-calculation.md) - количество еще не усвоенных углеводов из тех, чтоб были введены ранее. Иконка мерцает, если необходимо съесть дополнительные углеводы.
+* Grain: [carbs on board (COB)](../Usage/COB-calculation.md) - yet unabsorbed carbs you have eaten before -> icon pulses if carbs are required
 
 * Иконка с фиолетовой линией: базальная скорость - иконка изменяется в соответствии с текущими настройками базала (прямая линия при базе 100%) 
    * Нажмите на иконку (только короткое нажатие), чтобы увидеть подробности базала (значение текущего базала, время начала, остаток/общая продолжительность в минутах)
-* Иконка со стрелочками вверх и вниз: отображает текущий статус Автосенса (AS, Autosens) (включен или отключен) и его значение
+* Arrows up & down: indicating actual [autosens](../Usage/Open-APS-features.md#autosens) status (enabled or disabled) and value is shown below icon
 
 #### Требуются углеводы
 
@@ -152,7 +152,7 @@
    * Времени, отработанном батареей и о ее уровне (%)
 * Если превышено пороговое значение, данные показываются желтым цветом.
 * Если превышено критическое пороговое значение, значения будут показаны красным цветом.
-* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#status-lights).
+* Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
 ### Раздел F - Основной график
 
@@ -161,8 +161,8 @@
 * График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM). 
 * Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
 * Длительное нажатие на графике изменит шкалу времени. Можно выбрать 6, 8, 12, 18 или 24 часа.
-* Зеленая область отражает ваш целевой диапазон. Его можно настроить в [настройках](../Configuration/Preferences#range-for-visualization).
-* Голубые треугольники показывают [микроболюсы SMB](../Usage/Open-APS-features#super-micro-bolus-smb) - если они активированы в [настройках](../Configuration/Preferences#openaps-smb-settings).
+* Зеленая область отражает ваш целевой диапазон. It can be configured in [preferences](../Configuration/Preferences.md#range-for-visualization).
+* Blue triangles show [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) - if enabled in [preferences](../Configuration/Preferences.md#openaps-smb-settings).
 * Дополнительная информация:
    
    * Прогнозирование
@@ -178,7 +178,7 @@
 
 #### Линии прогнозирования
 
-* ** Оранжевая ** линия: [активные углеводы COB ](../Usage/COB-calculation.md) (цвет используется обычно для представления активных углеводов COB и углеводов)
+* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
    
    Линия предсказания показывает, где будет ГК (а не сами активные углеводы COB) на основе текущих настроек помпы с учетом того, что отклонения вследствие усвоения углеводов останутся постоянными. Эта линия появляется только при известном наличии активных углеводов COB.
 
@@ -189,10 +189,20 @@
 * ** Голубая ** линия: нулевой временный базал (предсказанная ГК, если будет установлена временная базальная скорость в 0%)
    
    В строке прогноза показано, как изменится линия траектории активного инсулина IOB, если помпа прекратит подачу инсулина (0% TBR).
+   
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-* ** Темно-желтая ** линия: [ непредвиденный прием пищи UAM ](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1)
+* **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB.md#sensitivity-oref1) (un-announced meals)
    
    Незапланированный прием пищи - обнаружение значительного повышения уровня глюкозы, как следствие приема пищи, выброса адреналина или других факторов. Линия предсказания аналогична оранжевой линии активных углеводов COB, но предполагает, что отклонения будут понижаться с постоянной скоростью (за счет увеличения текущей скорости сокращения).
+   
+   *This line appears only when the [SMB](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
+
+* **Dark orange** line: aCOB (accelerated carbohydrate absorption)
+   
+   Similar to COB, but assuming a static 10 mg/dL/5m (-0.555 mmol/l/5m) carb absorption rate. Deprecated and of limited usefulness.
+   
+   *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
 Обычно реальная кривая глюкозы заканчивается в середине этих линий, или близка к той, которая ближе всего описывает вашу ситуацию.
 
@@ -211,7 +221,7 @@
 ### Раздел G - дополнительные графики
 
 * Можно активировать до четырех дополнительных графиков ниже главного графика.
-* Чтобы открыть настройки для дополнительных графиков, щелкните по треугольнику справа от [главного](../Getting-Started/Screenshots#section-f-main-graph) и прокрутите вниз.
+* To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots.md#section-f-main-graph) and scroll down.
 
 ![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
 
@@ -224,9 +234,9 @@
 #### Активный инсулин (IOB)
 
 * Показывает инсулин, который вы имеете на борту (= активный инсулин в вашем теле). Он включает инсулин болюсов и временного базала (**, но исключает базальную скорость, установленную в вашем профиле**).
-* Если бы не было [микроболюсов SMB](../Usage/Open-APS-features#super-micro-bolus-smb), болюсов, и временных базалов TBR во время действия инсулина DIA, он равнялся бы нулю.
+* If there were no [SMBs](../Usage/Open-APS-features.md#super-micro-bolus-smb), no boluses and no TBR during DIA time this would be zero.
 * Активный инсулин IOB может быть отрицательным, если у не осталось ни болюсов, ни нулевого/низкого временного базала в течение более длительного времени чем DIA.
-* Усвоение инсулина зависит от времени его действия [DIA и настроек профиля инсулина](../Configuration/Config-Builder#local-profile). 
+* Decaying depends on your [DIA and insulin profile settings](../Configuration/Config-Builder.md#local-profile). 
 
 #### Активные углеводы COB
 
@@ -237,14 +247,14 @@
 #### Отклонения
 
 * ** СЕРЫЕ ** столбцы показывают отклонение, вызванное углеводами. 
-* ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Зеленые столбцы используются для увеличения сопротивления в [Autosens](../Usage/Open-APS-features#autosens).
-* ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Красные столбцы используются для увеличения чувствительности в [Autosens](../Usage/Open-APS-features#autosens).
+* ** ЗЕЛЕНЫЕ ** столбцы показывают, что ГК превышает уровень, ожидаемый алгоритмом. Green bars are used to increase resistance in [Autosens](../Usage/Open-APS-features.md#autosens).
+* ** КРАСНЫЕ ** столбцы показывают, что ГК ниже величины, ожидаемой алгоритмом. Red bars are used to increase sensitivity in [Autosens](../Usage/Open-APS-features.md#autosens).
 * ** ЖЕЛТЫЕ ** столбцы показывают отклонение, вызванное непредвиденным приемом пищи UAM.
 * **ЧЕРНЫЕ** столбцы показывают небольшие отклонения, не принятые во внимание при расчете чувствительности
 
 #### Чувствительность
 
-* Показывает чувствительность, обнаруженную алгоритмом [Autosens](../Usage/Open-APS-features#autosens). 
+* Shows the sensitivity that [Autosens](../Usage/Open-APS-features.md#autosens) has detected. 
 * Чувствительность - это расчет чувствительности к инсулину в результате нагрузки, гормонов и т.д.
 
 #### Нагрузка
@@ -265,14 +275,14 @@
    
    * При потере подключения к помпе кнопка инсулина не видна.
 
-* Другие кнопки должны быть настроены в [настройках ](../Configuration/Preferences#buttons).
+* Other Buttons have to be setup in [preferences](../Configuration/Preferences.md#buttons).
 
 #### Инсулин
 
 ![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
 
 * Чтобы подать определенное количество инсулина без использования [калькулятора болюса ](#bolus-wizard).
-* Отметив флажок, можно автоматически активировать временную цель[ожидаемый прием пищи](../Configuration/Preferences#default-temp-targets).
+* By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
 * Если не хотите подавать болюс с помпы, а только отметить количество инсулина (например, поданного шприц-ручкой), отметьте соответствующий флажок.
 
 #### Углеводы
@@ -280,11 +290,11 @@
 ![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
 
 * Чтобы сделать запись об углеводах без подачи болюса.
-* Непкоторые [заранее настроенные временные цели ](../Configuration/Preferences#default-temp-targets) можно активировать отметив соответствующий флажок.
+* Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
 * Смещение по времени: Когда будете употреблять/употребили в пищу углеводы (в минутах).
-* Продолжительность: Для ["пролонгированных углеводов"](../Usage/Extended-Carbs.md)
+* Duration: To be used for ["extended carbs"](../Usage/Extended-Carbs.md)
 * Можно использовать кнопки для быстрого приращения количества углеводов.
-* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента APS](../Configuration/Preferences#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 #### Калькулятор
 
@@ -293,18 +303,18 @@
 #### Калибровки
 
 * Отправляет калибровку в xDrip + или открывает диалог калибровки Dexcom.
-* Активируется в [настройках](../Configuration/Preferences#buttons).
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### CGM/Непрерывный мониторинг ГК
 
 * Открывает xDrip +.
 * Кнопка Назад возвращает в AAPS.
-* Активируется в [настройках](../Configuration/Preferences#buttons).
+* Must be activated in [preferences](../Configuration/Preferences.md#buttons).
 
 #### Мастер быстрых настроек
 
 * Легко вводите количество углеводов и задайте основы расчетов.
-* Параметры задаются в [настройках](../Configuration/Preferences#quick-wizard).
+* Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
 ## Мастер Болюса
 
@@ -327,7 +337,7 @@
 
 ### Раздел J
 
-* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. Эта опция появляетмся только если отмечена опция "Включить [суперболюс](../Configuration/Preferences#superbolus) в мастере" в [окне параметров](../Configuration/Preferences#overview).
+* SUPER BOLUS - это когда базальный инсулин следующих двух часов добавляется к подаваемому болюсу, а следующие два часа подается нулевой временный базал TBR, чтобы поглотить лишний инсулин. The option only shows when "Enable [superbolus](../Configuration/Preferences.md#superbolus) in wizard" is set in the [preferences overview](../Configuration/Preferences.md#overview).
 * Идея заключается в том, чтобы доставить инсулин по возможности раньше и, желательно, сократить пики.
 * Подробная информация находится на сайте [diabetesnet.com](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/).
 
@@ -335,7 +345,7 @@
 
 * Показывает рассчитываемый болюс. 
 * Если количество активного инсулина превышает рассчитанный болюс, то оно просто покажет количество углеводов, которые еще требуются.
-* Примечания будут загружены в Nightscout-в зависимости от настроек [клиента APS](../Configuration/Preferences#nsclient).
+* Notes will be uploaded to Nightscout - depending on your settings for [NS client](../Configuration/Preferences.md#nsclient).
 
 ### Раздел L
 
@@ -356,7 +366,7 @@
 
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
-* For details see the hints on [COB calculation page](../Usage/COB-calculation#detection-of-wrong-cob-values).
+* For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
 ## Вкладка "Действия"
 
@@ -364,14 +374,14 @@
 
 ### Действия-раздел M
 
-* Button [profile switch](../Usage/Profiles#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
-* Button [temporary target](../Usage/temptarget#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots#section-b-profile-target) on homescreen.
+* Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
+* Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs#extended boluses) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
 
 ### Портал терапии-раздел N
 
@@ -382,13 +392,13 @@
    * отработанное время (возраст) катетера помпы
    * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
 
-* Будет показано меньше информации, если используется [ низкое разрешение экрана](../Configuration/Preferences#skin).
+* Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
 
 #### Уровень заряда сенсора (батарея)
 
 * Требуется xDrip+ ночная сборка от декабря 10, 2020 или новее.
 * Работает в мониторинге с дополнительным передатчиком, например MiaoMiao 2. (Датчик должен послать информацию об уровне батареи на xDrip+.)
-* Пороговые значения могут быть заданы в [настройках](../Configuration/Preferences#status-lights).
+* Thresholds can be set in [preferences](../Configuration/Preferences.md#status-lights).
 * Если уровень батареи сенсора совпадает с уровнем заряда аккумулятора телефона, то версия xDrip+, вероятно, слишком старая и нуждается в обновлении.
    
    ![Уровни сенсоров равны уровню батареи телефона](../images/Home2021_ActionSensorBat.png)
@@ -419,7 +429,7 @@
 
 ![Профиль Инсулина](../images/Screenshot_insulin_profile.png)
 
-* Это профиль активности инсулина, который вы выбрали в [конфигураторе](../Configuration/Config-Builder#insulin). 
+* This shows the activity profile of the insulin you have chosen in [config builder](../Configuration/Config-Builder.md#insulin). 
 * ФИОЛЕТОВАЯ линия показывает, сколько инсулина остается после ввода по мере рассасывания, а СИНЯЯ линия показывает его активность.
 * The important thing to note is that the decay has a long tail. 
 * If you have been used to manual pumping you have probably been used to assuming that insulin decays over about 3.5 hours. 
@@ -446,7 +456,7 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
 * Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
 
 ### Коррекция углеводов
@@ -471,7 +481,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * These tabs show details about the algorithm's calculations and why AAPS acts the way it does.
 * Calculations are each time the system gets a fresh reading from the CGM.
-* For more details see [APS section on config builder page](../Configuration/Config-Builder#aps).
+* For more details see [APS section on config builder page](../Configuration/Config-Builder.md#aps).
 
 ## Профиль
 
@@ -485,18 +495,18 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Скорость базала
    * Цель: Уровень глюкозы крови для AAPS
 
-* Начиная с версии 3.0 возможен только [локальный профиль](../Configuration/Config-Builder#local-profile). Локальный профиль может быть отредактирован на вашем смартфоне и синхронизирован с сайтом Nightscout.
+* As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. Локальный профиль может быть отредактирован на вашем смартфоне и синхронизирован с сайтом Nightscout.
 
 ## Терапия
 
 История следующих терапевтических действий:
 
-* Bolus & Carbs -> возможность [удалить записи](../Getting-Started/Screenshots#carb-correction) для исправления истории
-* [Пролонгированный болюс](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+* Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
+* [Пролонгированный болюс](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
 * Временная базальная скорость
 * [Временная цель](../Usage/temptarget.md)
 * [Profile switch/смена профиля](../Usage/Profiles.md)
-* [Портал терапии](../Usage/CPbefore26#careportal-discontinued) - примечания, введенные через вкладку действий и примечания в диалогах
+* [Careportal](../Usage/CPbefore26.md#careportal-discontinued) - notes entered through action tab and notes in dialogues
 
 ## Источник ГК - xDrip+, BYODA...
 
@@ -510,5 +520,5 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 ![клиент NS](../images/Screenshots_NSClient.png)
 
 * Показывает состояние соединения с сайтом Nightscout.
-* Настройки могут быть сделаны в [параметрах](../Configuration/Preferences#nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
+* Settings are made in [preferences](../Configuration/Preferences.md#nsclient). Вы можете открыть соответствующий раздел, щелкнув по значку шестеренки в верхней правой части экрана.
 * Для устранения неполадок смотрите эту [страницу](../Usage/Troubleshooting-NSClient.md).
