@@ -1,6 +1,6 @@
 # Αυτοματοποίηση με τρίτο πρόσωπο του Android Αυτοματοποιημένο App
 
-**Αυτό το άρθρο έχει γραφτεί πριν από την έκδοση 2.5 του AndroidAPS. Υπάρχει plugin [ αυτοματισμού AndroidAPS ](./Automation.rst) με την έκδοση 2.5 του AndroidAPS. Για μερικούς, αυτό εδώ μπορεί να είναι ακόμα χρήσιμο, αλλά θα πρέπει να χρησιμοποιείται μόνο από προχωρημένους χρήστες.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Δεδομένου ότι το AndroidAPS είναι ένα σύστημα υβριδικού κλειστού κυκλώματος, είναι απαραίτητη κάποια αλληλεπίδραση με το χρήστη (π.χ. πείτε στο κύκλωμα ότι περπατάτε, τρώτε, ξαπλώνετε στον καναπέ...). Οι συχνές είσοδοι χειροκίνητων πληροφοριών μπορούν να αυτοματοποιηθούν μέσω εξωτερικών εργαλείων όπως το Automate ή το IFTTT για την επέκταση της πρόσφατης λειτουργικότητας του AndroidAPS.
 
@@ -32,7 +32,7 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 
