@@ -6,9 +6,9 @@
 
 I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את ערך המטרה זמנית באופן אוטומטי. אפשרות נוספת היא להגדיר שאם אתם במכון כושר, יוגדר ערך המטרה גבוה.
 
-לפני השימוש באוטומציה, עליכם להיות לשלוט בשימוש ב-"ערכי מטרה זמניים \</temptarget.html>\`\_ או החלפות פרופיל ידניות.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
-ודאו שאתם באמת מבינים כיצד אוטומציה פועלת לפני הגדרת התנאי הפשוט הראשון שלכם. **במקום פעולה, תנו ל-AAPS להציג תחילה רק התראה.** כשאתם בטוחים שהאוטומציה מופעלת בזמן הנכון, החליפו את ההתראה בפעולה אמיתית.
+ודאו שאתם באמת מבינים כיצד אוטומציה פועלת לפני הגדרת התנאי הפשוט הראשון שלכם. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
 :alt: Automation condition + action
@@ -20,7 +20,7 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 
 ### הערה חשובה
 
-**אוטומציות ממשיכות להיות פעילות בזמן שהלופ מושבת!**
+**Automation is still active when you disable loop!**
 
 אז הקפידו במידת הצורך לבטל את כללי האוטומציה במהלך מקרים אלה. ניתן לעשות זאת על ידי ביטול סימון התיבה שלצד השם של האוטומציה.
 
@@ -30,67 +30,64 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 
 ### היכן למצוא את הגדרת האוטומציות
 
-בהתאם ל\`הגדרותיכם בבונה התצורה \<../Configuration/Config-Builder#tab-or-hamburger-menu>\`\_ תמצאו את אוטומציות \<../Configuration/Config-Builder.md#automation> \_\_ בתפריט ההמבורגר או כלשונית.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### כללי
 
 ישנן מגבלות:
 
-- ערך הגלוקוז חייב להיות בין 72 ל-270 mg/dl.
-- אחוז הפרופיל חייב להיות בין 70% ל-130%.
-- ישנו מינימום של 5 דקות בין ביצוע הפעולות.
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**נא לשמור על זהירות:**
+**Please be careful:**
 
-- **פחות מ-(-2) משמעו (3-) ומטה (-4 וכו')**
-- **יותר מ-(-2) משמעו (1-) ומעלה (0,10 וכו')**
+- **less than -2 means: -3 and lower (-4,-10, etc)**
+- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 ### תנאי
 
 ניתן לבחור בין מספר תנאים. להלן הסברים על מספר סוגי תנאים אבל רובם צריכים להיות קלים להבנה ולא הכל מתואר כאן:
 
-- תנאי חיבור: יכולים להיות לכם מספר תנאים ואפשר לקשר ביניהם עם השערים הלוגיים:
+- connect conditions: you can have several conditions and can link them with
 
-  - "וגם"
-  - "או"
-  - "או בררני" (משמעו שאם אך ורק אחד מהתנאים תקף אז הפעולה תופעל)
+  - "And"
+  - "Or"
+  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-זמן לעומת  זמן חוזרני
+- Time vs. recurring time
 
-> - זמן = מועד חד פעמי
-> - זמן חוזרני = אירוע שקורה באופן קבוע (לדוגמה פעם בשבוע, בימי עבודה וכו')
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- מיקום: בבונה ההגדרות (אוטומציה), אפשר לבחור באיזה שירות מיקום אתם רוצה להשתמש:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - השתמש במיקום פסיבי: AAPS מקבל מיקומים רק אם אפליקציות אחרות מבקשות זאת
-  - השתמש במיקום רשת: מיקום ע"פ רשת ה-WiFi
-  - השתמש במיקום GPS (שימו לב!
-
-> עלול לגרום לניצול מוגבר של הסוללה!)
+  - Use passive location: AAPS only takes locations when other apps are requesting it
+  - Use network location: Location of your Wifi
+  - Use GPS location (Attention! עלול לגרום לניצול מוגבר של הסוללה!)
 
 ### פעולות
 
 אפשר לבחור פעולה אחת או יותר:
 
-- הפעלת ערך מטרה זמני
+- start temp target
 
-  - חייב להיות בתחום 72-270 mg/dl
-  - פועל רק אם אין כבר ערך מטרה זמני בפעולה
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- הפסקת ערך מטרה זמני
+- stop temp target
 
-- התראה
+- notification
 
-- אחוז הפרופיל
+- profile percentage
 
-  מוכרח להיות בתחום 70-130%
-  \* פועל רק אם האחוז הקודם היה 100%
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-לאחר הוספת הפעולה שבחרתם, **אל תשכחו לשנות את ערכי ברירת המחדל** למה שאתם צריכים, על ידי לחיצה על ערכי ברירת המחדל.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: "\u05D0\u05D5\u05D8\u05D5\u05DE\u05E6\u05D9\u05D4 \u05DC\u05E2\u05D5\u05DE\u05EA\
-:  \ \u05E2\u05E8\u05DB\u05D9\u05DD \u05DE\u05D5\u05D2\u05D3\u05E8\u05D9\u05DD"
+:alt: Automation default vs. set values
 ```
 
 ### מיון כללי אוטומציה
@@ -109,39 +106,39 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 :alt: Delete automation rule
 ```
 
-## שיטות עבודה נכונות והסתייגויות
+## Good practice & caveats
 
-- כאשר אתם מתחילים להשתמש באוטומציה או יוצרים תנאי חדש, הגדירו שהפעולה תהיה הודעה בלבד עד שאתם תהיו בטוחים שהתנאי פועל היטב.
+- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
-- עקבו אחר תוצאות התנאי.
+- Watch the rule results.
 
-- אל תנסו לעשות תנאים מתירנים מדי (כלומר: אם Bg > 80 mg/dl ו-bg \< 180 mg/dl)
+- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
 
-  **חשוב כפליים אם הפעולה היא החלפת פרופיל!**
+  **Doubly important if action is a profile switch!**
 
-- נסו להשתמש בערכי מטרה זמניים במקום בהחלפות פרופיל. החלפות ערכי המטרה הזמניים אינם מאפסים את [Autosens](../Usage/Open-APS-features#autosens).
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
-- ודאו שהחלפות הפרופיל נעשות במשורה ורצוי כמוצא אחרון בלבד.
+- Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - החלפת פרופיל הופכת את [Autosens](../Usage/Open-APS-features#autosens) לחסר תועלת למשך 6 שעות לפחות.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
-- מעבר בין פרופילים לא תאפס את הפרופיל בחזרה לפרופיל הבסיסי
+- Profile switching will not reset the profile back to your base profile
 
-  - אתם צריכים לקבוע אוטומציה אחרת כדי להחזיר את הפרופיל או לעשות זאת באופן ידני!
-  - סיכון מוגבר להיפוגליקמיה אם החלפת הפרופיל לא תפוג או תוחזר בחזרה לפרופיל הבסיס.
+  - You have to make another rule to set this back or do it manually!
+  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
 ## דוגמאות
 
 אלו הן רק דוגמאות, לא עצות. אל תעתיקו אותן מבלי להיות מודעים למה שאתם עושים או למה אתה צריכים אותן.
 
-- החלפת פרופילים לפעילויות יומיומיות (כמו בית ספר, חדר כושר, סוף שבוע, יום עבודה...) באמצעות מיקום גיאוגרפי, wifi, זמן וכו'.
-- הגדרת ערך מטרה זמני לפעילויות על סמך זמן, מיקום, חיבור למכשיר בלוטות'...
-- הגדרת ערך מטרה זמני לאכילה בקרוב בהתבסס על זמן, מיקום...
+- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+- Setting temp target for activities based on time, location, connection to a bluetooth device...
+- Setting eating soon temp targets based on time, location...
 
 ### ערך מטרה זמני בתגובה לרמת סוכר נמוכה
 
 ```{image} ../images/Automation2.png
-:alt: "\u05D0\u05D5\u05D8\u05D5\u05DE\u05E6\u05D9\u05D42"
+:alt: אוטומציה2
 ```
 
 זה נעשה כדי להפעיל ערך מטרה זמני היפו באופן אוטומטי כאשר ערך הגלוקוז נמוך.
@@ -149,7 +146,7 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 ### ערך מטרה זמני לקראת ארוחת צהריים
 
 ```{image} ../images/Automation3.png
-:alt: "\u05D0\u05D5\u05D8\u05D5\u05DE\u05E6\u05D9\u05D43"
+:alt: אוטומציה3
 ```
 
 דוגמה זו נוצרה על ידי מישהו שאוכל ארוחת צהריים בעבודה באותה שעה בכל יום במהלך ימי עבודה. אם משתמש זה נמצא בשעה מסוימת במיקום ארוחת הצהריים שלו, האוטומציה תגדיר ערך מטרה זמני נמוך (אוכל בקרוב) בזמן ההמתנה לארוחת הצהריים. בגלל השימוש בשער הלוגי "וגם", הפעולה יוצאת לפועל רק בזמן הנבחר כשהמשתמש נמצא במיקום הנבחר. הפעולה לא מופעלת בזמנים אחרים במקום הזה או אם המשתמש נשאר בבית בזמן הזה.
@@ -158,12 +155,12 @@ I.e. אם רמת הסוכר נמוכה, אפשר להחליט להעלות את 
 
 יש להיזהר משימוש שגוי באוטומציות. שימוש שגוי עלול להוביל לקשיים ואף לסכנה לבריאותכם. להלן דוגמאות לשימוש לא נכון:
 
-- ניסיון לעקוף לחלוטין את האלגוריתם במקום לכוון אותו (לדוגמה החלפת פרופיל במקום לשפר את הערכים המוגדרים בפרופיל)
-- מעבר בין פרופילים כדי לפצות על מזון
-- החלפת פרופיל ללא הגדרת משך פעולה
-- יצירת אוטומציות חד כיווניות (לדוגמה פעולה שאינה מבוטלת ע"י אוטומציה אחרת)
-- יצירת אוטומציות הפועלות לטווח ארוך
+- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+- Setting profile to compensate food
+- Setting profile without duration
+- Creating one way rules (i.e. do something but don't undo it by another rule)
+- Creating long term rules
 
 ## אלטרנטיבות
 
-למשתמשים מתקדמים, ישנן אפשרויות אחרות לבצע אוטומציה של משימות באמצעות IFTTT או אפליקציית אנדרואיד צד שלישי בשם Automate. ניתן למצוא כמה דוגמאות [כאן](./automationwithapp.html).
+למשתמשים מתקדמים, ישנן אפשרויות אחרות לבצע אוטומציה של משימות באמצעות IFTTT או אפליקציית אנדרואיד צד שלישי בשם Automate. Some examples can be found [here](./automationwithapp.html).
