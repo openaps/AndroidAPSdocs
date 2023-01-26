@@ -12,21 +12,17 @@ Remarque importante : Ceci ne fonctionne pas avec la version US du capteur Frees
 
 Pour des raisons légales, le soi-disant correctifs doit être fait par vous-même. Utilisez les moteurs de recherche pour trouver les liens correspondants. Il y a deux principales variantes : L'application patchée d'origine recommandée bloque tout trafic Internet pour éviter le suivi. L'autre variante supporte LibreView qui peut être nécessaire pour votre médecin.
 
-L'application patchée doit être installée à la place de l'application d'origine. Le prochain capteur demarré avec elle transmettra les valeurs GLY actuelles via bluetooth à l'application xDrip+ qui s'exécute sur votre smartphone.
+L'application patchée doit être installée au lieu de l'application originale. Le prochain capteur démarré avec celle-ci transmettra les valeurs actuelles de glycémie à l'application xDrip+ exécutée sur votre smartphone via Bluetooth.
 
 Important : Pour éviter d'éventuels problèmes, il peut être utile dans un premier temps d'installer et de désinstaller l'application originale sur un smartphone compatible NFC. Le NFC doit être activé. Cela ne consomme pas plus d'énergie. Installez ensuite l'application patchée.
 
 L'application patchée peut être identifiée par la notification d'autorisation au premier plan. Le service d'autorisation au premier plan améliore la stabilité de la connexion par rapport à l'application d'origine qui n'utilise pas ce service.
 
-```{image} ../images/Libre2_ForegroundServiceNotification.png
-:alt: LibreLink Foreground Service
-```
+![LibreLink Foreground Service](../images/Libre2_ForegroundServiceNotification.png)
 
-D'autres indications pourraient être le logo Linux pingouin à trois points -> Info ou la police de l'application patchée. Ces critères sont facultatifs selon la source d'application que vous choisissez.
+D'autres indications pourraient être le logo du pingouin Linux à trois points -> Info ou la police de l'application patchée. Ces critères sont facultatifs en fonction de la source de l'application que vous choisissez.
 
-```{image} ../images/LibreLinkPatchedCheck.png
-:alt: "V\xE9rification de la police LibreLink"
-```
+![LibreLink Font Check](../images/LibreLinkPatchedCheck.png)
 
 Assurez-vous que NFC est activé, activez l'autorisation de mémoire et d'emplacement pour l'application corrigée, activez l'heure et le fuseau horaire automatiques et définissez au moins une alarme dans l'application patchée.
 
@@ -34,50 +30,42 @@ Maintenant, démarrez le détecteur Libre2 avec l'application patchée en scanna
 
 Paramètres obligatoires pour réussir le démarrage du capteur :
 
-- NFC activé / BT activé
-- autorisation de mémoire et d'emplacement activée
-- service d'emplacement activé
-- réglage automatique de l'heure et du fuseau horaire
-- définir au moins une alarme dans l'application patchée
+-   NFC activé / BT activé
+-   autorisation de mémoire et d'emplacement activée
+-   service d'emplacement activé
+-   réglage automatique de l'heure et du fuseau horaire
+-   définir au moins une alarme dans l'application patchée
 
 Veuillez noter que l'activation du service de localisation est primordial. Il ne s'agit pas de l'autorisation d'application qui doit être également définie !
 
-```{image} ../images/Libre2_AppPermissionsAndLocation.png
-:alt: "LibreLink autorisation m\xE9moire & localisation"
-```
+![LibreLink permissions memory & location](../images/Libre2_AppPermissionsAndLocation.png)
 
-```{image} ../images/Libre2_DateTimeAlarms.png
-:alt: "param\xE9trage de l'heure automatique fuseaux horaires et alarmes"
-```
+![automatic time and time zone + alarm settings](../images/Libre2_DateTimeAlarms.png)
 
 Le capteur se souvient de l'appareil avec lequel il a été démarré. Seul cet appareil peut recevoir les alarmes à l'avenir.
 
 La première configuration de connexion au capteur est critique. L'application LibreLink tente d'établir une connexion sans fil au capteur toutes les 30 secondes. Si un ou plusieurs paramètres obligatoires sont manquants, ils doivent être renseignés. Vous n'avez pas de limite de temps pour le faire. Le capteur essaye constamment de configurer la connexion. Même si cela dure plusieurs heures. Soyez patient et essayez différents paramétres avant d'envisager de changer le capteur.
 
-Tant que vous voyez un point d'exclamation rouge ("!") Dans le coin supérieur gauche de l'écran de démarrage de LibreLinks, il n'y a pas de connexion ou d'autres blocs de configuration LibreLink pour signaler des alarmes. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
+Tant que vous voyez un point d'exclamation rouge ("!") dans le coin supérieur gauche de l'écran de démarrage de LibreLinks, il n'y a pas de connexion ou d'autres blocs de configuration LibreLink pour signaler des alarmes. Vérifiez si le son est activé et que toutes les applications de blocage de notifications sont désactivées. Ce n'est que lorsque le point d'exclamation est parti, que la connexion est établie et que les valeurs de glycémies sont envoyées au smartphone. Cela devrait se produire après un maximum de 5 minutes.
 
-```{image} ../images/Libre2_ExclamationMark.png
-:alt: LibreLink no connection
-```
+![LibreLink no connection](../images/Libre2_ExclamationMark.png)
 
 Si le point d'exclamation reste ou si vous obtenez un message d'erreur, cela peut avoir plusieurs raisons :
 
-- le service de localisation Android n'est pas autorisé - veuillez l'activer dans les paramètres système
-- le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
-- activez les alarmes - au moins une des trois alarmes doit être activée dans LibreLink
-- le Bluetooth est éteint - veuillez l'activer
-- le son est bloqué
-- les notifications de l'application sont bloquées
-- les notifications de l'écran de veille sont bloqués
-- vous avez un capteur Libre 2 défectueux (LOT avec un 'K' suivi de 8 chiffres). Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
+-   le service de localisation Android n'est pas autorisé - veuillez l'activer dans les paramètres système
+-   le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
+-   activez les alarmes - au moins une des trois alarmes doit être activée dans LibreLink
+-   le Bluetooth est éteint - veuillez l'activer
+-   le son est bloqué
+-   les notifications de l'application sont bloquées
+-   les notifications de l'écran de veille sont bloqués
+-   vous avez un capteur Libre 2 défectueux provenant d'un LOT avec un 'K' suivi de 8 chiffres. Vous trouvez ce numéro imprimé sur le paquet jaune. Ces capteurs doivent être remplacés car ils ne fonctionnent pas en bluetooth.
 
 Le redémarrage du téléphone peut vous aider, vous devrez peut-être le faire plusieurs fois. Dès que la connexion est établie, le point d'exclamation rouge disparaît et l'étape la plus importante est franchie. Il peut arriver, selon les paramètres du système, que le point d'exclamation reste mais que vous obtenez des lectures. Dans les deux cas, c'est bon. Le capteur et le téléphone sont maintenant connectés, chaque minute une valeur de glycémie est transmise.
 
-```{image} ../images/Libre2_Connected.png
-:alt: "LibreLink connexion \xE9tablie"
-```
+![LibreLink connection established](../images/Libre2_Connected.png)
 
-Dans de rares cas, cela peut aider de vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique. Cette procédure est enregistrée car le capteur démarré est mémorisé par l'application LibreLink patchée. Rien de plus n'a à être fait ici. Il suffit d'attendre que l'application patchée se connecte au capteur.
+Dans de rares cas, cela peut aider de vider le cache bluetooth et/ou réinitialiser toutes les connexions réseau via le menu système. Cela supprime tous les périphériques bluetooth connectés ce qui peut aider à configurer une nouvelle connexion bluetooth spécifique. Cette procédure est enregistrée car le capteur démarré est mémorisé par l'application LibreLink patchée . Il ne faut rien faire de plus ici. Il suffit d'attendre que l'application patchée se connecte au capteur.
 
 Après une connexion réussie, les paramètres du smartphone peuvent être modifiés si nécessaire. Cela n'est pas recommandé, mais vous pouvez vouloir économiser de l'énergie. Le service de localisation peut être éteint, le volume peut être réglé à zéro ou les alarmes peuvent être à nouveau désactivées. Les glycémies sont de toute façon transmises.
 
@@ -95,30 +83,28 @@ Cependant, il existe une variante de l'application patchée supportant LibreView
 
 Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 
-- Si ce n'est pas déjà configuré, alors téléchargez l'application xDrip+ et installez une des dernières pre-release à partir d'[ici](https://github.com/NightscoutFoundation/xDrip/releases).
-- Dans xDrip+ sélectionnez "Libre2 (patched App)" comme source de données matérielle
-- Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Extra Logging Settings -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
-- Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
-- Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
-- pour permettre à AAPS de recevoir les glycémies (version 2.5.x et supérieures) de la part de xDrip+ veuillez renseigner dans [Paramètres > Inter-app settings > Identify receiver "info.nightscout.androidaps"](../Configuration/xdrip#identifier-le-recepteur)
-- Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON.  Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
+-   Si ce n'est pas déjà configuré, alors téléchargez l'application xDrip+ et installez une des dernières pre-release à partir  [d'ici](https://github.com/NightscoutFoundation/xDrip/releases).
+-   In xDrip+ select "Libre2 patched" or "Libre 2 (patched App)" as data source
+-   Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Extra Logging Settings -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Diffusion Locale et sélectionnez ON.
+-   Dans xDrip allez dans Paramètres > Inter-app settings > Accept Treatments et sélectionnez OFF.
+-   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip.md#identify-receiver)
+-   Si vous voulez pouvoir utiliser AndroidAPS pour calibrer, alors dans xDrip, allez dans Paramètres > Inter-app settings > Accept Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres > Paramètres moins courants > Paramètres Avancés de Calibration.
 
-```{image} ../images/Libre2_Tags.png
-:alt: xDrip+ journaux LibreLink
-```
+![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
 
 ## Étape 3 : Démarrer le capteur
 
 Dans xDrip+ démarrez le capteur avec "Start Sensor" et "not today".
 
-En fait, cela ne démarre aucun capteur Libre2 ou n'interagit en aucun cas avec eux. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Les valeurs manquantes, par ex. parce que vous étiez trop loin de votre téléphone, ne seront pas remises.
+En fait, cela ne démarre aucun capteur Libre2 ou n'interagit en aucun cas avec eux. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Les valeur manquées, par ex. si vous étiez trop loin de votre téléphone, ne seront pas actualisées à postériori.
 
 Après un changement de capteur, xDrip+ détectera automatiquement le nouveau capteur et supprimera toutes les données d'étalonnage. Vous pouvez vérifier la glycémie capillaire après l'activation et effectuer un nouvel étalonnage initial.
 
 ## Étape 4 : Configurer AndroidAPS (pour la boucle uniquement)
 
-- Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+'
-- Si AndroidAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver" comme c'est décrit dans la page [Paramètres xDrip+](../Configuration/xdrip#identify-receiver).
+-   Dans AndroidAPS allez dans le Générateur de configuration > Source des glycémies et cochez 'xDrip+'
+-   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
 
 Jusqu'à présent, en utilisant le Freestyle Libre 2 comme source Gly, vous ne pouvez pas activer les fonctions 'Activer SMB toujours' et 'Activer SMB après les glucides' dans l'algorithme SMB. Les valeurs de GLY du Freestyle Libre 2 ne sont pas assez lisses pour l'utiliser en toute sécurité. Voir [Lissage des données de glycémie](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) pour plus de détails.
 
@@ -134,90 +120,80 @@ Techniquement, la glycémie est transmise chaque minute à xDrip+. Une moyenne p
 
 Les valeurs brutes sont très utiles lorsque les glycémies changent rapidement. Même si les points sont moins stables, vous détecterez beaucoup mieux la tendance qu'avec l'utilisation de la ligne lissée pour prendre les bonnes décisions de traitement.
 
-```{image} ../images/Libre2_RawValues.png
-:alt: "xDrip+ param\xE8tres avanc\xE9s Libre2 & valeurs brutes"
-```
+![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
 ### Durée du capteur
 
-La durée d'exécution du capteur est fixée à 14 jours. Les 12 heures supplémentaires du capteur Libre1 n'existent plus. Après avoir activé Paramètres moins courants > Advanced settings for Libre2 > "show Sensors Infos in Status", xDrip+ affiche des informations supplémentaires sur le capteur dans le menu système comme le temps de démarrage. Le temps restant du capteur peut également être vu dans l'application Librelink patchée. Soit sur l'écran principal avec le nombre de jours restants affiché, soit avec la date de démarrage du capteur dans le menu 3 points -> Aide -> Journal des évènements sous "Nouveau capteur trouvé".
+La durée d'exécution du capteur est fixée à 14 jours. Les 12 heures supplémentaires du capteur Libre1 n'existent plus. Après avoir activé Paramètres moins courants > Advanced settings for Libre2 > "show Sensors Infos in Status", xDrip+ affiche des informations supplémentaires sur le capteur dans le menu système comme le temps de démarrage. Le temps de capteur restant peut également être vu dans l'application LibreLink patchée, soit dans l'écran principal avec affiché le jours restants, soit dans le menu à trois points->Aide->Journal d'événement sous "Nouveau capteur trouvé" avec le temps de démarrage du capteur.
 
-```{image} ../images/Libre2_Starttime.png
-:alt: Libre 2 start time
-```
+![Libre 2 start time](../images/Libre2_Starttime.png)
 
 ### Nouveau capteur
 
-Un échange de capteurs a lieu à la volée : configurez le nouveau capteur peu avant l'activation. Dès que xDrip+ ne reçoit plus de données de l'ancien capteur, démarrez le nouveau capteur avec l'application patchée. Après une heure, les nouvelles valeurs doivent apparaître automatiquement dans xDrip+.
+A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+.
 
-Si ce n'est pas le cas, vérifiez les paramètres du téléphone et procédez comme avec le premier démarrage. Vous n'avez pas de limite de temps. Essayez de trouver les bons paramètres. Vous n'avez pas besoin de remplacer immédiatement le capteur avant d'avoir vous essayé différentes combinaisons. Les capteurs sont robustes et essaient en permanence d'établir une connexion. Veuillez prendre votre temps. Dans la plupart des cas, vous avez accidentellement changé un paramètre qui cause maintenant des problèmes.
+If not, please check the phone settings and proceed as with the first start. Vous n'avez pas de limite de temps. Essayez de trouver les bons paramètres. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Veuillez prendre votre temps. In most cases you accidentally changed one setting which causes now problems.
 
-Une fois réussi, sélectionnez "Sensor Stop" et "Supprimer l'étalonnage seulement" dans xDrip+. Cela indique à xDrip+ qu'un nouveau capteur est mis en place et que les anciennes calibrations ne sont plus valables et doivent donc être supprimées. Aucune interaction n'est faite avec le capteur Libre2 ici ! Vous n'avez pas besoin de démarrer le capteur dans xDrip+.
+Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! Vous n'avez pas besoin de démarrer le capteur dans xDrip+.
 
-```{image} ../images/Libre2_GapNewSensor.png
-:alt: xDrip+ missing data when changing Libre 2 sensor
-```
+![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
 ### Étalonnage
 
-Vous pouvez calibrer le Libre2 avec un décalage de -40 mg/dl à +20 mg/dL \[-2,2 mmol/l à +1,1 mmol/l\] (intercept). La pente n'est pas modifiable car le Libre2 est beaucoup plus précis que le Libre1. Veuillez vérifier la glycémie capillaire dès le début de la pose d'un nouveau capteur. On sait qu'il peut y avoir de grandes différences avec les mesures de glycémies. Pour être en sécurité, étalonner toutes les 24 - 48 heures. Les valeurs sont précises jusqu'à la fin du capteur et ne sautent pas comme avec le Libre1. Cependant, si le capteur est complètement éteint, cela ne changera pas. Le capteur doit alors être remplacé immédiatement.
+You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmol/l to +1,1 mmol/l\] (intercept). The slope isn't changeable as the Libre2 is much more accurate compared to the Libe1. Please check by fingerpricking early after setting a new sensor. It is known that there can arise big differences to the blood measurements. To be on the safe side, calibrate every 24 - 48 hours. The values are accurate up to the end of the sensor and do not jitter as with the Libre1. However, if the sensor is completely off, this will not change. The sensor should then be replaced immediately.
 
 ### Contrôles de cohérence
 
-Les capteurs Libre2 vérifient que les glycémies lues sont plausibles pour détecter les mauvaises valeurs. Dès que le capteur bouge sur le bras ou est légèrement relevé, les valeurs peuvent commencer à fluctuer. Dans ce cas le capteur Libre2 s'éteindra pour des raisons de sécurité. Malheureusement, lors du scan avec l'application, des vérifications complémentaires sont faites. L'application peut désactiver le capteur même si celui-ci est OK. Actuellement le test interne est trop strict. J'ai complètement arrêté de scanner le capteur et je n'ai pas eu d'échec depuis.
+The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Actuellement le test interne est trop strict. I have completely stopped scanning and haven't had a failure since then.
 
 ### Changement de fuseau horaire
 
-En cas de changement de [fuseau horaire](../Usage/Timezone-traveling.md) Il y a deux stratégies pour la boucle :
+In other [time zones](../Usage/Timezone-traveling.md) there are two strategies for looping:
 
 Soit
 
-1. laisser l'heure du smartphone inchangée et décaler le profil de basal (smartphone en mode avion) ou
-2. supprimer l'historique de la pompe et changer l'heure du smartphone pour le mettre à l'heure locale.
+1.  leave the smartphone time unchanged and shift the basal profile (smartphone in flight mode) or
+2.  delete the pump history and change the smartphone time to local time.
 
-La méthode 1 est excellente tant que vous n'avez pas à mettre en place un nouveau capteur de Libre2. En cas de doute, choisissez la méthode 2, surtout si le voyage dure plus longtemps. Si vous posez un nouveau capteur, la mise à l'heure automatique de la zone doit être réglée, donc la méthode 1 sera perturbée. Il faut donc vérifier avant de partir ailleurs, sinon vous risquez d'avoir rapidement des problèmes.
+La méthode 1 is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. sera perturbée. Please check before, if you are somewhere else, you can run otherwise fast into problems.
 
 ### Expériences
 
-C'est l'un des plus petits systèmes MGC sur le marché. Il est petit, n'a pas besoin d'émetteur et surtout il envoie des valeurs très précises sans fluctuations. Après environ 12 heures de fonctionnement avec des variations allant jusqu'à 30 mg/dl (1,7 mmol/l), les écarts sont généralement inférieurs à 10 mg/dl (0,6 mmol/l). Les meilleurs résultats sont à l'arrière de l'avant bras, prudence avec les autres zones d'insertion ! Pas besoin d'installer un nouveau capteur un jour plus tôt pour le pré-chauffage. Cela perturberait le mécanisme de lissage interne.
+C'est l'un des plus petits systèmes MGC sur le marché. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. Cela perturberait le mécanisme de lissage interne.
 
-Il semble y avoir de mauvais capteurs de temps en temps, qui sont loin des glycémies capillaires. Cela restera ainsi. Ceux-ci doivent être immédiatement remplacés.
+There seem to be bad sensors from time to time, which are far away from the blood values. Cela restera ainsi. These should be immediately replaced.
 
-Si le capteur bouge un peu sur la peau ou est soulevé d'une manière ou d'une autre, cela peut entraîner de mauvais résultats. Le filament qui se trouve dans la peau est un peu sorti et mesurera ensuite des valeurs différentes. Vous verrez probablement des sauts dans xDrip+. Ou les écarts avec les glycémies capillaires augmenteront. Veuillez remplacer le capteur immédiatement ! Les résultats sont inexacts maintenant.
+If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Vous verrez probablement des sauts dans xDrip+. Or the difference to the bloody values change. Veuillez remplacer le capteur immédiatement ! The results are inaccurate now.
 
 ## Étape : Utiliser le transmetteur bluetooth et OOP
 
-Le transmetteur Bluetooth peut être utilisé avec le Libre2 et la dernière version courante de xDrip+ ainsi qu'avec l'application Libre2 OOP. Vous pouvez recevoir des lectures de glycémie toutes les 5 minutes comme avec le Libre1. Veuillez vous référer au site web miaomiao pour trouver une description. Cela marche aussi avec un Bubble et dans le futur avec d'autres transmetteurs. Le blucon devrait fonctionner mais n'a pas encore été testé.
+Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Please refer to the miaomiao website to find a description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
 
-Les anciens transmetteurs Libre1 ne peuvent pas être utilisés avec l'application OOP Libre2. Ils doivent être remplacés par une version plus récente ou avoir une mise à jour de firmware pour fonctionner. MM1 avec le firmware le plus récent ne marche malheureusement pas encore - l'analyse du problème est en cours.
+Les anciens transmetteurs Libre1 ne peuvent pas être utilisés avec l'application OOP Libre2. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
-Le OOP Libre2 obtient les mêmes lectures de glycémies qu'avec le lecteur d'origine ou l'application LibreLink via NFC. AAPS avec Libre2 fait un lissage sur 25 minutes pour éviter certains sauts. OOP génère des relevés toutes les 5 minutes avec la moyenne des 5 dernières minutes. Par conséquent, les lectures glycémique ne sont pas aussi lissées mais correspondent au lecteur d'origine et suivent plus vite les lectures "réelles". Si vous essayez de boucler avec OOP, activez tous les réglages de lissage dans xDrip +.
+The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
-Le transmetteur Droplet marche également avec Libre2 mais utilise un service Internet. Veuillez vous référer à FB ou à un moteur de recherche pour obtenir de plus amples renseignements. Le MM2 avec l'application Tomato semble également utiliser un service Internet. Pour ces deux appareils, vous devez prendre soin d'avoir une connexion Internet appropriée pour obtenir vos relevés de glycémies.
+The Droplet transmitter is working with Libre2 also but uses an internet service instead. Please refer to FB or a search engine to get further information. The MM2 with the tomato app also seems to use an internet service. For both devices you have to take care to have a proper internet connection to get your BG readings.
 
-Même si l'utilisation de LibreLink patchée est pratique, il peut y avoir des raisons d'utiliser un transmetteur bluetooth à la place :
+Even if the patched LibreLink app approach is smart there may be some reasons to use a bluetooth transmitter:
 
-- les GLY sont identiques aux résultats du lecteur
-- le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1
-- 8 heures d'historique est entièrement pris en charge.
-- obtenir des glycémies pendant l'heure de démarrage d'un nouveau capteur
+-   les GLY sont identiques aux résultats du lecteur
+-   le capteur Libre2 peut être utilisé 14,5 jours comme avec le Libre1
+-   8 heures d'historique sont entièrement pris en charge.
+-   obtenir des glycémies pendant l'heure de démarrage d'un nouveau capteur
 
-Remarque : Le transmetteur peut être utilisé en parallèle à l'application LibreLink. Il ne perturbe pas l'application LibreLink patchée.
+Remarque : L'émetteur peut être utilisé en parallèle avec l'application LibreLink. It doesn't disturb the patched LibreLink app operation.
 
-Remarque 2: L'algorithme OOP ne peut pas encore être calibré. Cela sera modifié à l'avenir.
+Remarque 2: L'algorithme OOP ne peut pas encore être calibré. This will be changed in the future.
 
-## Meilleures pratiques pour calibrer un capteur libre 2
+# Meilleures pratiques pour calibrer un capteur libre 2
 
-Pour obtenir les meilleurs résultats en étalonnant un capteur libre 2, il y a des « règles » à suivre.
-Elles s’appliquent indépendamment de la combinaison de logiciels (par ex. appli libre patché, oop2, …) qui est utilisée pour gérer les valeurs libre 2.
+To get the best results when calibrating a libre 2 sensor there are some “rules” you should follow. They apply independently of the software combination (e.g. patched libre-app, oop2, …) that is used to handle the libre 2 values.
 
-1. La règle la plus importante est de ne calibrer le capteur que lorsque vous avez un niveau de gly plat pendant au moins 15 minutes. Le delta entre les trois dernières lectures ne doit pas excéder 10 mg/dl (plus de 15 min entre chaque lecture). Comme le libre 2 ne mesure pas votre taux de glycémie mais que votre glycémie intersticielle, il y a un certain retard, surtout lorsque la glycémie augmente ou diminue. Ce décalage de temps peut conduire à des décalages d'étalonnage trop imprtants dans le mauvais sens, même si la hausse / la chute du niveau de gly n'est pas si grande. Donc, si possible, évitez de calibrer pendant des hausses ou des baisses.  -> Si vous devez ajouter un étalonnage lorsque vous n'avez pas une gly plate (par ex. lorsque vous démarrez un nouveau capteur), il est recommandé de supprimer le(s) calibration(s) aussitôt que possible et d'en ajouter une nouvelle lorsque vous êtes avec une gly plate.
-2. En fait, celle-ci est automatiquement prise en compte lorsque vous suivez la règle 1 mais pour être sûr : lorsque vous faites des mesures de comparaison, votre gly devrait également être plate pendant environ 15min. Ne comparez pas lorsque vous montez ou que vous descendez. Important : Vous devez toujours faire des glycémies chaque fois que vous le souhaitez, il vous suffit de ne pas utiliser les résultats pour l'étalonnage en cas de hausse ou de chute !
-3. Étant donné que la calibration du capteur lorsqu'on est constant est un très bon point de départ, il est également fortement recommandé de calibrer le capteur uniquement dans la plage cible de votre choix, comme 70 mg/dl à 160 mg/dl. Le libre 2 n'est pas optimisé pour fonctionner sur une vaste gamme de 50 mg/dl à 350 mg/dl (au moins pas de manière linéaire), alors essayez de ne calibrer que lorsque vous vous trouvez dans votre plage cible. -> Acceptez simplement que les valeurs en dehors de votre plage d'étalonnage ne correspondent pas parfaitement aux niveaux de glycémie.
-4. Ne calibrez pas trop souvent. L'étalonnage du capteur entraîne souvent des résultats pires. Lorsque le capteur donne de bons résultats dans des conditions stables, il suffit de ne pas ajouter de nouvelle calibration car cela n’est pas utile. Il devrait suffire de revérifier le statut tous les 3-5 jours (bien sûr aussi dans des conditions stables).
-5. Évitez l'étalonnage lorsque ce n'est pas nécessaire. Cela peut paraître stupide, mais il n'est pas recommandé d'ajouter une nouvelle calibration si la différence entre la glycémie capillaire et la glycémie intersticielle est inférieure à ±10 mg/dl (par ex. glycémie capillaire : 95, capteur Libre 100 -> N'ajoutez PAS le 95, glycémie capillaire : 95, Capteur Libre 115 -> ajoutez le 95 à prendre en compte pour l'étalonnage)
+1.  The most important rule is to only calibrate the sensor when you have a flat bg level for at least 15 minutes. The delta between the last three readings should not exceed 10 mg/dl (over 15min not between each reading). As the libre 2 does not measure your blood glucose level but your flesh glucose level there is some time lag especially when bg level is rising or falling. This time lag can lead to way too large calibration offsets in unfavourable situations even if the bg level rise / fall is not that much. So whenever possible avoid to calibrate on rising or falling edges. -> If you have to add a calibration when you do not have a flat bg level (e.g. when starting a new sensor) it is recommended to remove that calibration(s) as soon as possible and add a new one when in flat bg levels.
+2.  Actually this one is automatically taken into account when following rule 1 but to be sure: When doing comparison measurements your bg level should also be flat for about 15min. Do not compare when rising or falling. Important: You still shall do blood glucose measurements whenever you desire, just don’t use the results for calibration when rising or falling!
+3.  As calibrating the sensor in flat levels is a very good starting point it is also strongly recommended to calibrate the sensor only within your desired target range like 70 mg/dl to 160 mg/dl. The libre 2 is not optimized to work over a huge range like 50 mg/dl to 350 mg/dl (at least not in a linear manner), so try to only calibrate when within your desired range. -> Simply accept that values outside your calibration range will not perfectly match blood glucose levels.
+4.  Ne calibrez pas trop souvent. Calibrating the sensor very often mostly leads to worse results. When the sensor delivers good results in flat conditions just don’t add any new calibration as it does not have any -useful- effect. It should be sufficient to recheck the status every 3-5 days (of course also in flat conditions).
+5.  Évitez l'étalonnage lorsque ce n'est pas nécessaire. This might sound silly but it is not recommended to add a new calibration if the blood glucose to flesh glucose level difference is only ±10 mg/dl (e.g. blood glucose level: 95, Libre sensor 100 -> do NOT add the 9l, blood glucose level: 95, Libre sensor 115 -> add the 95 to be taken into account for the calibration)
 
-Quelques remarques générales :
-Après avoir activé un nouveau capteur et à la fin de vie du capteur, il est logique de faire des mesures de comparaison plus souvent que 3-5 jours, comme indiqué dans la règle n° 4. Pour les capteurs neufs et anciens, il est plus probable que les valeurs brutes changent et qu'une nouvelle calibration soit requise.
-De temps en temps, il arrive qu'un capteur ne fournisse pas de valeurs valides. Il est fort probable que la valeur du capteur soit faible par rapport à la glycémie réelle (par ex. capteur : 50 mg/dl, gly : 130 mg/dl) même après calibration. Si c'est le cas, le capteur ne peut pas être calibré pour donner des résultats exploitables. Par ex. en utilisant l'application libre patchée, on peut ajouter un décalage de +20 mg/dl maximum. S'il vous arrive que le capteur donne des valeurs beaucoup trop faibles, n’hésitez pas à le remplacer car il ne s’améliorera pas.
-Même s'il peut s'agir de capteurs défectueux, lorsque l'on voit des capteurs qui fournissent des valeurs beaucoup trop basses très souvent, essayez d’utiliser différentes zones pour placer votre capteur. Même dans la zone officielle (bras supérieur), il peut y avoir des endroits où les capteurs ne fournissent pas de valeurs valides. Il s'agit d'une sorte d'essai pour trouver les zones qui fonctionnent pour vous.
+Some general notes: After activating a new sensor and at the sensor’s end of life it does make sense to do comparison measurements more often than 3-5 days as stated in rule nr. 4. For new and old sensors it is more likely that the raw values change and a re-calibration is required. From time to time it happens that a sensor does not provide valid values. Most likely the sensor value is way to low compared to the actual blood glucose level (e.g. sensor: 50 mg/dl, bg: 130 mg/dl) even after calibrating. If this is the case the sensor cannot be calibrated to report useful results. Par ex. when using the patched libre app one can add an offset of maximal +20 mg/dl. When it happens to you that the sensor does provides way too low values, don’t hesitate to replace it as it will not get better. Even if it might be a defective sensor, when seeing sensors that do provide way too low values very often, try to use different areas to place your sensor. Even in the official area (upper arm) there might be some locations where the sensors just do not provide valid values. This is some kind of trial end error to find areas that work for you.
