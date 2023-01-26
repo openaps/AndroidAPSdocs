@@ -53,7 +53,7 @@
 
 * ניתן לחבר בו-זמנית משדר דקסקום G6 למקלט דקסקום (או לחילופין את המשאבה t:slim) ואפליקציה אחת בטלפון.
 * בעת שימוש ב-xDrip+ כמקלט הסירו תחילה את אפליקציית דקסקום. **לא ניתן לחבר את xDrip+ וגם את אפליקציית דקסקום למשדר בו-זמנית!**
-* אם אתם צריכים להשתמש ב-Clarity ורוצים ליהנות מהתראות ש-xDrip+ מציע, השתמשו ב-[BYODA - "בנה אפליקציית דקסקום בעצמך" ](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), המציעה שידור מקומי ל-xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### גרסת xDrip+ בהתאם למספר הסידורי של משדר G6
 
@@ -153,7 +153,7 @@
 
 ### הארכת חיי המשדר
 
-* עד כה לא ניתן להאריך את חיי המשדרים עם מספר סידורי שמתחיל עם 8G, 8H, 8J וכו'. כך גם לגבי משדרים עם מספר סידורי שמתחיל ב-81 וקושחה 1.6.5.**27** (ראו xDrip+ סטטוס מערכת - סטטוס G5/G6 כפי שמוצג ב[צילום המסך למעלה](../Configuration/xdrip#transmitter-battery-status)).
+* עד כה לא ניתן להאריך את חיי המשדרים עם מספר סידורי שמתחיל עם 8G, 8H, 8J וכו'. כך גם לגבי משדרים עם מספר סידורי starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
 * כדי למנוע קשיים בהפעלת חיישנים, מומלץ מאוד להאריך את חיי המשדר רק לפני היום ה-100 לשימוש הראשון במשדר.
 * הארכת חיי משדרים עם מספר סידורי שמתחיל ב-81 וקושחה 1.6.5.**27** לאחר היום ה-100 אפשרי רק אם [מצב הנדסי](../Usage/Enabling-Engineering-Mode-in-xDrip) מופעל ו'מצב נטיבי' מושבת (תפריט המבורגר > הגדרות > הגדרות דיבאג G5/G6 > אלגוריתם מקורי) מכיוון שלא ניתן לבצע איפוס קשיח של המשדר.
 * הארכת חיי המשדר תפסיק פעולת חיישן שרץ. לכן, האריכו את חיי החיישן לפני החלפתו או שימו לב שיש שלב חימום חדש של שעתיים.
@@ -275,7 +275,7 @@
    * אם אתם משתמשים באלגוריתם של xDrip+, תוכלו להגדיר זמן לפני יותר משעתיים כדי להימנע מהמתנה לחימום. הקריאות עשויות להיות מאוד לא יציבות. לכן, זה לא מומלץ. 
 * הזינו את קוד החיישן (על הנייר שעל מדבקת החיישן) 
    * שמרו את הקוד לעיון נוסף (לדוגמה, להתחלה חדשה לאחר הסרת המשדר) 
-   * ניתן למצוא את הקוד גם ב[יומני xDrip+](../Configuration/xdrip#retrieve-sensor-code): לחץ על תפריט 3 נקודות במסך הבית של xDrip+ ובחרו `הצג יומני אירועים`.
+   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * אין צורך בכיול אם אתם משתמשים ב-G6 ב"מצב נטיבי". xDrip+ יציג קריאות באופן אוטומטי לאחר חימום של שעתיים.
 * אל תפעילו את מקלט הדקסקום המקורי (אם יש) לפני ש-xDrip+ יציג נתוני סוכר ראשונים.
    
@@ -343,7 +343,7 @@
 ### רמת סוללה של קורא חכם של Libre 
 
 * ניתן להציג את רמת הסוללה של קוראים חכמים כגון MiaoMiao 2 ב-AAPS.
-* ניתן למצוא פרטים ב[דף צילומי המסך](../Getting-Started/Screenshots#sensor-level-battery). 
+* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
 
 ### חיבור משדר Libre והפעלת חיישן
 
