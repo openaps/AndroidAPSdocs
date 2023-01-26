@@ -1,6 +1,6 @@
 # Automatizace pomocí Automate – aplikace třetí strany pro Android
 
-**Tato část vznikla v době před uvedením AndroidAPS verze 2.5. Ta již obsahuje modul [Automatizace v AndroidAPS](./Automation.rst). Pro některé uživatele může být tato kapitola přesto užitečná, měli by ji však používat pouze pokročilí uživatelé.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Vzhledem k tomu, že AndroidAPS je systém hybridní uzavřené smyčky, uživatel stále musí s aplikací do určité míry interagovat (např. říci smyčce, že se prochází, že se blíží jídlo nebo že leží na gauči...). Časté ruční zásahy uživatele lze automatizovat pomocí externích nástrojů, jako je Automate nebo IFTTT, které mohou rozšířit stávající funkce AndroidAPS.
 
@@ -32,7 +32,7 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Předvolby stahování Nightscoutu](../images/automate-aaps2.jpg)
 
