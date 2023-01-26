@@ -1,6 +1,6 @@
 # Profile switch
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
