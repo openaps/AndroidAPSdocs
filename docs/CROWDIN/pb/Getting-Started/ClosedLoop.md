@@ -1,23 +1,22 @@
 # O que é um Sistema de Loop Fechado?
 
 ```{image} ../images/autopilot.png
-:alt: "AAPS \xE9 como um piloto autom\xE1tico"
+:alt: AAPS é como um piloto automático
 ```
 
-Um sistema de pâncreas artificial de loop fechado combina diversos componentes para facilitar o gerenciamento do diabetes para você.
-Em seu ótimo livro [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, uma das fundadoras do movimento do loop fechado de código aberto, o chama de ["piloto automático para a sua diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Mas o que isso significa?
+Um sistema de pâncreas artificial de loop fechado combina diversos componentes para facilitar o gerenciamento do diabetes para você. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Mas o que isso significa?
 
-**Piloto automático em um avião**
+**Autopilot in an aircraft**
 
 O piloto automático não faz o trabalho completo e não dá a possibilidade ao piloto de dormir ao longo de todo o voo. Ele facilita o trabalho dos pilotos. Liberta-os do fardo de uma vigilância constante do avião e da atitude de voo. Isto permite que o piloto se concentre no monitoramento do espaço aéreo e no controle das funções do piloto automático.
 
 O piloto automático recebe sinais de vários sensores, um computador avalia-os em conjunto com as especificações do piloto e então executa os ajustes necessários. O piloto não precisa mais se preocupar com os ajustes constantes.
 
-**Sistema de Loop Fechado**
+**Closed Loop System**
 
 O mesmo se aplica a um sistema de pâncreas artificial de loop fechado. Ele não faz todo o trabalho, você ainda tem de cuidar do seu diabetes. Um sistema de loop fechado combina os dados do sensor de um CGM/FGM com as especificações de gerenciamento de diabetes, como taxa de basal, fator de sensibilidade à insulina e relação de carboidratos. A partir daí, calcula as sugestões de tratamento e implementa esses pequenos ajustes permanentes a fim de manter seu diabetes dentro do intervalo de meta para aliviá-lo. Isso deixa mais tempo para a sua vida "ao lado do" diabetes.
 
-Assim como não quer entrar num avião onde apenas o piloto automático voa sem supervisão humana, um sistema de loop fechado ajuda-o com o gerenciamento do seu diabetes, mas sempre precisa do seu apoio! **Mesmo com um loop fechado, você não pode simplesmente esquecer o diabetes!**
+Assim como não quer entrar num avião onde apenas o piloto automático voa sem supervisão humana, um sistema de loop fechado ajuda-o com o gerenciamento do seu diabetes, mas sempre precisa do seu apoio! **Even with a closed loop you can't just forget your diabetes!**
 
 Assim como o piloto automático depende dos valores dos sensores e das especificações do piloto, um sistema de loop fechado precisa de entradas apropriadas, como taxas de basal, FS e I:C (relação número de gramas de carboidratos para uma unidade de insulina) para apoiar você com sucesso.
 
@@ -27,30 +26,32 @@ Atualmente existem três principais sistemas de loop fechado de código aberto d
 
 ### AndroidAPS (AAPS)
 
-O AndroidAPS é descrito em detalhes [nesta documentação](./WhatisAndroidAPS.html). Ele usa um Smartphone Android para cálculo e controle da sua bomba de insulina. Está em forte colaboração com o OpenAPS (ou seja, eles compartilham algoritmos).
+AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Ele usa um Smartphone Android para cálculo e controle da sua bomba de insulina. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
-[Bombas](../Hardware/pumps.md) compatíveis:
+Compatible [pumps](../Hardware/pumps.md) are:
 
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) / [DanaRS & Dana-i](../Configuration/DanaRS-Insulin-Pump.html)
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Diaconn G8](../Configuration/DiaconnG8.md)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) / Omnipod Dash
-- algumas [bombas Medtronic](../Configuration/MedtronicPump.md) antigas
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
+- some old [Medtronic pumps](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
 
-[OpenAPS](https://openaps.readthedocs.io) foi o primeiro Sistema de Loop Fechado de Código Aberto. Ele usa um pequeno computador como Raspberry Pi ou Intel Edison.
+[OpenAPS](https://openaps.readthedocs.io) was the first Open Source Closed Loop System. Ele usa um pequeno computador como Raspberry Pi ou Intel Edison.
 
 Bombas compatíveis:
 
-- algumas bombas Medtronic antigas
+- some old Medtronic pumps
 
 ### Loop para iOS
 
-[Loop para iOS](https://loopkit.github.io/loopdocs/) é o Sistema de Loop Fechado de Código Aberto a ser usado com iPhones Apple.
+[Loop for iOS](https://loopkit.github.io/loopdocs/) is the Open Source Closed Loop System to be used with Apple iPhones.
 
 Bombas compatíveis:
 
+- Omnipod DASH
 - Omnipod Eros
-- algumas bombas Medtronic antigas
+- some old Medtronic pumps
