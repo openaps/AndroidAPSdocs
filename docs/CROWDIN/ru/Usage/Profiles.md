@@ -1,6 +1,6 @@
 # Profile switch/смена профиля
 
-Документацию о профилях в целом можно найти в разделе [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 При запуске AndroidAPS и выборе профиля необходимо выполнить переключение профиля "Profile switch" с нулевой продолжительностью действия (объясняется ниже). При этом AAPS начинает отслеживать историю профилей, а каждое новое изменение профиля требует другого "переключения профиля" даже при изменении содержимого профиля в NS. Обновленный профиль немедленно передается в AAPS, но для начала использования этих изменений необходимо снова включить один и тот же профиль (в AAPS).
 
