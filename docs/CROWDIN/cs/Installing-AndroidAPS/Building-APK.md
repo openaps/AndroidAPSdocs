@@ -7,7 +7,7 @@
 ## Důležité poznámky
 
 * Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 ## Doporučená specifikace počítače pro vytváření souboru apk
 
@@ -61,13 +61,13 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 In general, the steps necessary to build the APK file:
 
 1. [Nainstalujte git](../Installing-AndroidAPS/git-install.md)
-2. [Instalace Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Nastavte v předvolbách Android Studio cestu ke gitu](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Stáhněte si kód AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Sestavte aplikaci](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (vygenerujte podepsaný soubor apk)
-7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip#identify-receiver)
+2. [Instalace Android Studio](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
+3. [Nastavte v předvolbách Android Studio cestu ke gitu](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
+4. [Stáhněte si kód AndroidAPS](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
+5. [Stáhněte Android SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
+7. [Nahrajte aplikaci do mobilu](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+8. [Možnost „Identify receiver“ při používání xDripu+](..//Configuration/xdrip.md#identify-receiver)
 
 ## Průvodce krok za krokem
 
@@ -75,7 +75,7 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Nainstalujte git (pokud ho ještě nemáte)
 
-Postupujte podle návodu na [stránka instalace gitu](../Installing-AndroidAPS/git-install.md).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
 ## Instalace Android Studio
 
@@ -293,7 +293,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Enter (2) and confirm (3) the password for your key store. ![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Note:*** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+    ***Note:*** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 * Enter an alias (4) for your key. Choose whatever you like.
 
