@@ -24,7 +24,7 @@ These pumps need a special care because AndroidAPS is using history from the pum
    
    * π.χ. Βιέννη -> Νέα Υόρκη: διακόπτης προφίλ +6 ώρες
    * π.χ. Βιέννη -> Σίδνεϊ: διακόπτης προφίλ -8 ώρες
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Επιλογή 2: Διαγραφή ιστορικού αντλίας
 
