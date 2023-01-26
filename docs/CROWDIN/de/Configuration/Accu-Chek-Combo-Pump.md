@@ -15,10 +15,10 @@
 
 ## Einschränkungen
 
-- Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.md) als Alternative an.)
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Es wird nur ein Basalprofil unterstützt.
 - Das Setzen mehrerer Basalprofile oder die Abgabe eines verzögerten Bolus oder eines Multiwave-Bolus an der Pumpe stört das Konzept von temporären Basalraten und setzt den Loop für 6 Stunden in einen “low glucose suspend mode”, da unter diesen Umständen keine sichere Funktion des Closed Loops gewährleistet ist.
-- Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Basalraten werden nur im Bereich von 0,05 bis 10 IE/h unterstützt. Dies gilt auch für Anpassungen des Profiles, welche es erlauben, die Basalrate zu verdoppeln oder zu halbieren. Auch in diesem Fall müssen die Grenzwerte eingehalten werden, so dass die Basalrate maximal 5 IE/h sein darf (da nach Verdoppelung 10 IE/h) bzw. minimal 0,1 iE/h (da nach Halbierung 0,05 iE/h).
 - Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das ist nötig, weil das Abbrechen der Basalrate auf der Combo Pumpe einen Alarm (W6 TBR Abbruch) auslöst, der durch starke Vibrationen mitgeteilt wird.
 - Manchmal kann es vorkommen, dass AAPS einen W6 TBR Abbruch Alarm nicht selbst quittiert, dann muss der Benutzer die Warnung selbst bestätigen, entweder durch Bestätigen des Alarms auf der Pumpe oder durch den Aktualisiere-Button im Combo Tab die Warnung an AAPS übergeben, damit AAPS die Warnung bestätigen kann.
