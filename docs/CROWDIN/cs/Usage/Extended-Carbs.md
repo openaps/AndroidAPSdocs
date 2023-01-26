@@ -2,7 +2,7 @@
 
 ## What are eCarbs and when are they useful?
 
-S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see [extended bolus](../Usage/Extended-Carbs#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
+S běžnou léčbou pomocí inzulínové pumpy je rozložený bolus dobrý způsob, jak řešit tučná nebo jinak pomalu stravovaná jídla, která zvyšují hladinu glukózy v krvi déle, než je působnost inzulínu. Nicméně v rámci smyčky nedávají rozložené bolusy moc smysl (a způsobují technické potíže), protože to jsou v podstatě fixní vysoké TBR, což je proti hlavnímu principu smyčky, která bazální dávky přizpůsobuje dynamicky. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
 
 Potřeba řešit taková jídla však stále zůstává. To je důvod, proč AndroidAPS od verze 2.0 podporuje takzvané rozložené sacharidy neboli eCarbs.
 
@@ -42,12 +42,11 @@ The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as
 
 A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
-**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive.
-Pro jídla s nízkým obsahem sacharidů a s vysokým obsahem tuků/bílkovin může být dostačující použít jenom eSacharidy bez ručních bolusů (viz blogový příspěvek výše). Když jsou eSacharidy generovány, je také založena poznámka do ošetření, aby byly všechny uživatelské zásahy zdokumentované, aby bylo snazší opakovat a vylepšovat své postupy.
+**Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Pro jídla s nízkým obsahem sacharidů a s vysokým obsahem tuků/bílkovin může být dostačující použít jenom eSacharidy bez ručních bolusů (viz blogový příspěvek výše). Když jsou eSacharidy generovány, je také založena poznámka do ošetření, aby byly všechny uživatelské zásahy zdokumentované, aby bylo snazší opakovat a vylepšovat své postupy.
 
 ## Extended bolus and why they won't work in closed-loop environment?
 
-As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+As mentioned above extended or multiwave boluses do not really work in a closed loop environment. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
 ### Extended bolus and switch to open loop - Dana and Insight pump only
 
@@ -57,7 +56,7 @@ That's why as of version 2.6 there is an option for an extended bolus for users 
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
 - Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
 
 ```{image} ../images/ExtendedBolus2_6.png
 :alt: Extended bolus in AAPS 2.6
