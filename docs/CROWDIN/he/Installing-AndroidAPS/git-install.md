@@ -1,13 +1,12 @@
 # התקנת Git
 
-## חלונות
+## Windows
 
 ### 1. הורדת git
 
-- **עליכם להיות מחוברים לאינטרנט כל הזמן מכיוון ש-Android Studio מוריד מספר עדכונים!**
-
-כל גרסה של git תתאים. לדוגמה [https://git-scm.com/download/win](https://git-scm.com/download/win).
-\* חובה לשים לב לנתיב התקנת git. תצטרכו אותו בהמשך.
+- **You have to be online all of the time as Android Studio downloads several updates!**
+- כל גרסה של git תתאים. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Make sure to note down the installation path. תצטרכו אותו בהמשך.
 
 ```{image} ../images/Update_GitPath.png
 :alt: Git installation path
@@ -21,33 +20,33 @@
   :alt: Android Studio - open settings
   ```
 
-- לחצו על המשולש הקטן שליד Version Control (1.) כדי לפתוח את תפריט המשנה.
+- Click the small triangle next to Version Control (1.) to open the sub-menu.
 
-- לחצו על Git (2.).
+- Click Git (2.).
 
-- ודא ששיטת העדכון "Merge" (3.) נבחרה.
+- Make sure update method "Merge" (3.) is selected.
 
-- בדקו אם Android Studio יכול לאתר נתיב ל-git.exe באופן אוטומטי על ידי לחיצה על הכפתור "Test" (4.)
+- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
   ```{image} ../images/AndroidStudio361_09.png
   :alt: Android Studio settings
   ```
 
-- אם ההגדרה האוטומטית מצליחה תוצג גרסת git.
+- If automatic setting is successful git version will be displayed.
 
-- לחצו על "OK" בתיבת הדו-שיח (1.) OK" בחלון ההגדרות (2.).
+- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
   ```{image} ../images/AndroidStudio361_10.png
   :alt: Automatic git installation succeeded
   ```
 
-- במקרה שלא ניתן למצוא את הקובץ git.exe לחצו על "OK" בתיבת הדו-שיח (1.) ולאחר מכן על הכפתור עם שלוש הנקודות (2.).
+- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 
-- השתמש ב\`פונקציית חיפוש \<<https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>>\`\_ ב-Windows Explorer כדי למצוא את "git.exe" אם אינכם בטוחים היכן ניתן למצוא אותו. אתם מחפשים את git.exe שנמצא בתיקייה bin.
+- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
 
-- בחרו את הנתיב אל git.exe וודאו שבחרתם את זה שבתיקיית **\\bin\\** (3.) ולחצו על "אישור" (4.).
+- Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 
-- סגרו את חלון ההגדרות על ידי לחיצה על כפתור "OK" (5.).
+- Close settings window by clicking "OK" button (5.).
 
   ```{image} ../images/AndroidStudio361_11.png
   :alt: Automatic git installation failed
@@ -55,27 +54,27 @@
 
 ### 3. אתחל מחדש
 
-- הפעילו מחדש את המחשב כדי לעדכן את סביבת המערכת.
+- Reboot your PC to update System Environment.
 
 ### 4. בדקו את הגדרות git ב-Android Studio
 
-- פתחו את חלון ה-Terminal ב-Android Studio
+- Open Terminal window in Android Studio
 
-- הזינו `git --version` (ללא מרכאות וללא רווחים בין סימני המינוס) והקישור אנטר
+- Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
 
   ```{image} ../images/AndroidStudio_gitversion1.png
   :alt: git - -version
   ```
 
-- אם git מותקן ומחובר כהלכה יופיע מידע על הגרסה המותקנת שנראה כך:
+- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 
   ```{image} ../images/AndroidStudio_gitversion2.png
   :alt: result git-version
   ```
 
-## מקינטוש
+## Mac
 
-כל גרסה של git תתאים. לדוגמה [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-השתמשו ב-homebrew כדי להתקין git: `` `$ brew install git` ``.
-\* לפרטים על התקנת git ראו את [מסמכי git הרשמיים](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-\* אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
+- כל גרסה של git תתאים. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Use homebrew to install git: `` `$ brew install git` ``.
+- לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
