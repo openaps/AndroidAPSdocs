@@ -15,13 +15,13 @@ Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documenta
 
 ## Configuration matérielle et logicielle requise
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AndroidAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Téléphone :** Le pilote Medtronic devrait fonctionner avec n'importe quel téléphone Android prenant en charge les connexions Bluetooth. **IMPORTANT : Les implémentations Bluetooth des fabricants de téléphones peuvent varier de sorte que chaque modèle de téléphone peut varier. Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth. Cela peut affecter l'expérience utilisateur lorsque AAPS a besoin de se reconnecter à votre appareil Rileylink.**
+- **Périphérique compatible RileyLink :** Les téléphones Android ne peuvent pas communiquer avec les pompes Medtronic sans un appareil séparé pour gérer les communications. Cet appareil sera relié à votre téléphone via Bluetooth et à votre pompe via une connexion radio compatible. Le premier de ces appareils a été appelé un Rileylink mais un certain nombre d'autres options sont maintenant disponibles qui peuvent offrir des fonctionnalités supplémentaires.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink disponible sur [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink disponible sur [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (multiples options de modèles) disponible sur [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (quelques détails supplémentaires requis) disponible sur [github.com](https://github.com/ecc1/gnarl)
 
 Un graphique de comparaison pour les différents appareils compatibles avec Rileylink peut être trouvé sur [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
@@ -52,7 +52,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select): 
+- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump.md#faq) if you are unsure which option to select): 
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
@@ -91,8 +91,8 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 At the bottom of the screen there are three buttons:
 
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
+- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
 
 ## Historique pompe
 
