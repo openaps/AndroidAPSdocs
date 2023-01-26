@@ -20,7 +20,7 @@ Za prvé, musíte si **opatřit kompatibilní hardwarové komponenty**:
 
 - podporovanou [inzulínovou pumpu](./Pump-Choices.md) 
 - [smartphone s operačním systémem Android](Phones.md) (Apple iOS není systémem AndroidAPS podporován – podívejte se na [iOS Loop](https://loopkit.github.io/loopdocs/)) a 
-- [systém pro kontinuální monitorování glykémie](../Configuration/BG-Source.md). 
+- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
 Za druhé, musíte **nastavit hardware**. Viz [příklad nastavení s podrobným návodem](Sample-Setup.md).
 
@@ -241,7 +241,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
 - for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Výměna zásobníků a kanyl
 
@@ -249,14 +249,14 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
 - Now disconnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26.md#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Pozadí
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-background).
 
 ## Každodenní používání
 
@@ -264,11 +264,11 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### Co dělat při sprchování a koupání?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Práce
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Volnočasové aktivity
 
@@ -281,18 +281,18 @@ Takže byste sice měli více zkonzumovaných sacharidů, ale smyčka by na ně 
 Při používání smyčky byste měli vyzkoušet tyto kroky:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Provedení změn před sportem a po sportu je velmi důležité. Proveďte změny v čase před sportem a zvažte vliv svalového plnění.
 
-Pokud se věnujete sportu pravidelně ve stejný čas (např. lekce ve fitku), zvažte možnost použití [automatizace](../Usage/Automation.md) pro přepnutí profilu a nastavení dočasného cíle. Bylo by možné použít automatizaci na základě polohy, ale obtížně se pak kontroluje včasné provedení změny nastavení.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Bylo by možné použít automatizaci na základě polohy, ale obtížně se pak kontroluje včasné provedení změny nastavení.
 
 Procentuální hodnota přepnutí profilu, hodnota pro váš dočasný cíl Aktivita a optimální čas pro změnu nastavení jsou velmi individuální. Při zjišťování správných hodnot se v zájmu bezpečnosti držte při zdi (začněte raději s nižší procentuální hodnotou a vyšším dočasným cílem).
 
 ### Sex
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Požívání alkoholu
 
@@ -308,7 +308,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### Jak mohu provozovat smyčku během noci bez mobilního a WIFI záření?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Zapněte na mobilu režim letadlo.
 2. Počkejte dokud není režim aktivní.
@@ -342,11 +342,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
@@ -364,7 +364,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md#troubleshooting-android-studio) for typical errors and
 - the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.
