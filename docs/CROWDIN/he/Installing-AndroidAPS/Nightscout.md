@@ -21,7 +21,7 @@
 
 ### הגדרות אבטחה נוספות
 
-דאגו לעדכן את הטלפון שלכם כמתואר ב[בטיחות קודמת לכול](../Getting-Started/Safety-first.md).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## הגדרה ידנית של Nightscout
 
