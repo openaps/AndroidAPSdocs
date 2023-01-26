@@ -6,38 +6,34 @@ APS negali atlikti tokio pat darbo kaip biologinė kasa, tačiau tai gali paleng
 
 Atsargiai: nei vienos šalies medicininis reguliatorius nereglamentuoja AndroidAPS. AndroidAPS iš esmės naudojama savo paties medicininiam eksperimentui atlikti. Sistemai sukurti reikia ryžto ir techninių žinių. Jei pradžioje vis dar trūksta techninių žinių, pabaigoje jas turėsite. Visą jums reikalingą informaciją galite rasti šiame ir kituose interneto puslapiuose. Arba galite užduoti savo klausimus Facebook grupėse ar kituose forumuose patyrusiems vartotojams. Daugybė skirtingų diabetu sergančių žmonių sėkmingai sukūrė AndroidAPS ir dabar saugiai naudojasi. Bet tai svarbu kiekvienam vartotojui:
 
-- Pats sukūria sistemą, kad galėtų suprasti, kaip ji veikia
-- Kiek įmanoma geriau suderina individualias diabeto nuostatas su savo diabeto komanda
-- Prižiūri, nuolat atnaujina ir stebi sistemą, kad įsitikintų, jog ji veikia tinkamai
+- Builds the system themselves so that they thoroughly understand how it works
+- Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
+- Maintains and monitors the system to ensure it is working properly
 
-```{eval-rst}
-.. pastaba::
-        **Atsakomybės Ir Įspėjimas**
+:::{note}
+**Disclaimer and Warning**
 
-        * Visa informacija, mintys ir šaltinio kodas yra skirti tik informaciniams ir moksliniams tikslams. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout neatitinka jokių privatumo reikalavimų sveikatos priežiūros srityje. Savo rizika naudokite Nightscout ir AndroidAPS ir nenaudokite jų priimdami medicininius sprendimus.
+- Use of code from github.com is without warranty or formal support of any kind. Norėdami gauti daugiau informacijos, perskaitykite šios saugyklos LICENCIJĄ.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
 
-        * Naudojant github.com šaltinio kodą, garantijos ir jokio oficialaus palaikymo nėra. Norėdami gauti daugiau informacijos, perskaitykite šios saugyklos LICENCIJĄ.
-
-        * Visi gaminių ir gamintojų pavadinimai, prekės ženklai, paslaugų ženklai, prekių ženklai ir registruoti paslaugų ženklai yra atitinkamų savininkų nuosavybė ir naudojami tik informaciniais tikslais, o ne reklamai ar rinkodarai. Jie naudojami tik informaciniais tikslais ir nereiškia, kad AAPS priklauso jiems ir kad jie yra palaikomi.
-
-        Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
-```
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
 Jei esate pasirengęs priimti šį iššūkį, skaitykite toliau.
 
 ## Pagrindiniai AndroidAPS tikslai
 
-- Programa su įjungta sauga. Norėdami daugiau sužinoti apie algoritmų, vadinamų oref0 ir oref1, saugos ypatybes, spustelėkite čia (<https://openaps.org/reference-design/>)
-- Viskas-viename programa, skirta valdyti 1 tipo cukrinį diabetą su dirbtine kasa ir Nightscout
-- Programa, leidžianti vartotojams lengvai pridėti arba pašalinti modulius pagal poreikį
-- Programa su skirtingų vietų ir kalbų versijomis.
-- Programa, kuri gali būti naudojama atviro ir uždaro ciklo režimais
-- Programa, kuri yra visiškai skaidri: vartotojai gali įvesti parametrus, pamatyti rezultatus ir priimti galutinį sprendimą
-- Programa, nepriklausoma nuo tam tikrų pompų tvarkyklių ir įgalinanti „virtualią pompą“, kad vartotojai galėtų saugiai eksperimentuoti prieš naudodami juos su savo realia insulino pompa
-- Programa, glaudžiai integruota su Nightscout
-- Programa, kurioje vartotojas kontroliuoja saugos apribojimus
+- An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
+- An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+- An app to which users can easily add or remove modules as needed
+- An app with different versions for specific locations and languages.
+- An app which can be used in open- and closed-loop mode
+- An app that is totally transparent: users can input parameters, see results, and make the final decision
+- An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves
+- An app closely integrated with Nightscout
+- An app in which the user is in control of safety constraints
 
 ## Kaip pradėti
 
-Žinoma, visa čia pateikiama informacija yra labai svarbi jūsų uždarojo ciklo sistemai, tačiau taip pat normalu, kad daugelis naujų dalykų iš pradžių atrodo painūs.
-Geras orientyras yra pateiktas Modulio Apžvalgoje \<./Module/module.html>\` ir Tiksluose \<./Usage/Objectives.html>\`.
+Žinoma, visa čia pateikiama informacija yra labai svarbi jūsų uždarojo ciklo sistemai, tačiau taip pat normalu, kad daugelis naujų dalykų iš pradžių atrodo painūs. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
