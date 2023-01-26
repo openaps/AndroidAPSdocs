@@ -7,9 +7,9 @@ Der Profil-Helfer ermöglicht zwei Funktionen:
 
 ## Profil für Kinder (bis 18 Jahre)
 
-**Wichtiger Hinweis:**
+**Important note:**
 
-**Profil-Helfer soll Dich dabei unterstützen, das anfängliche Profil für Dein Kind zu finden. Auch wenn es auf Datensätzen von zwei verschiedenen Krankenhäusern basiert, besprich es immer mit Deinem medizinischen Team, bevor Du ein neues Profil benutzt!**
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an, um ein anfängliches Profil für Dein Kind (bis 18 Jahre) zu finden.
 
@@ -18,7 +18,7 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 ```
 
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
-2. Passe das Standardprofil (basierend auf dem Krankenhausdatensatz) an, indem Du das Alter des Kindes eingibst sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 4. Drücke lange auf 'Aktuelles Profil' und wähle das DPV Standardprofil aus.
 
@@ -26,15 +26,15 @@ Profil-Helfer bietet Datensätze von zwei verschiedenen Kinderkrankenhäusern an
 :alt: Profile Helper Kids 2
 ```
 
-5. Passe das DPV-Standardprofil (basierend auf einem anderen Krankenhausdatensatz) an, indem Du das Alter des Kindes, den Prozentsatz der Basalrate sowie entweder das Gesamt-TDD **oder** das Gewicht eingibst.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 7. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
-Wenn Du mit den Profilanpassungen zufrieden bist, kannst Du das [Profil klonen](../Configuration/profilehelper#profil-klonen) wie unten beschrieben.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Vergleiche zwei Profile
 
-Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um einen Prozentsatz geändertes [Profil](../Usage/Profiles.md)) miteinander zu vergleichen.
+You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
 
 ```{image} ../images/ProfileHelper1.png
 :alt: Profile Helper 1
@@ -43,7 +43,7 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 1. Wähle 'Profil-Helfer' aus dem Drei-Punkte-Menü oben rechts auf dem Bildschirm.
 2. Drücke lange auf 'Standard-Profil' und wähle 'Verfügbares Profil' für eine Liste Deiner vorhandenen Profile oder 'Profilwechsel' für eine Liste der zuletzt verwendeten Profilwechsel.
 3. Drücke lange auf den Namen des Profils / Profilwechsels ('Aktuell_LP' im obigen Screenshot) und wähle ein Profil / einen Profilwechsel aus der Liste.
-4. Wechsele den Bildschirm, indem Du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
+4. Wechsele den Bildschirm, indem du auf die rechte, graue Schaltfläche mit der Bezeichnung '2' klickst.
 
 ```{image} ../images/ProfileHelper2.png
 :alt: Profile Helper 2
@@ -57,7 +57,7 @@ Du kannst den Profil-Helfer auch verwenden, um Profile oder Profilwechsel (um ei
 
 ## Profil klonen
 
-Wenn Du [lokale Profile](../Configuration/Config-Builder#lokales-profil) verwendest, kannst Du ein Profil / einen Profilwechsel direkt vom Profil-Helfer klonen.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone Profil / Profilwechsel
