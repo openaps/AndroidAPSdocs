@@ -6,38 +6,34 @@ APS to sice nedokáže dělat tak dobře, jako skutečná slinivka, avšak doká
 
 Upozornění: Systém AndroidAPS není v žádné zemi regulován žádným zdravotnickým orgánem. Používání AndroidAPS na vlastní osobě je čistě experimentální. Vytvoření tohoto systému vyžaduje odhodlání a technické znalosti. Pokud na začátku nemáte technické znalosti, na konci je mít budete. Veškeré potřebné informace naleznete v této dokumentaci, jinde na internetu nebo je získáte od ostatních uživatelů -- můžete se jich zeptat prostřednictvím skupin na Facebooku nebo v jiných diskuzních fórech. Spousta lidí si úspěšně sestavila aplikaci AndroidAPS a nyní ji zcela bezpečně používá, nicméně je zcela nezbytné, aby každý uživatel:
 
-- Sestavil aplikaci sám, aby skutečně pochopil, jak funguje
-- Nastavil svůj individuální algoritmus dávkování ve spolupráci s lékařem nebo pomocným personálem tak, aby fungoval téměř dokonale
-- Správně obsluhoval systém a dohlížel na to, zda správně funguje
+- Builds the system themselves so that they thoroughly understand how it works
+- Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
+- Maintains and monitors the system to ensure it is working properly
 
-```{eval-rst}
-.. poznámka::
-        **Zřeknutí se odpovědnosti a varování**
+:::{note}
+**Disclaimer and Warning**
 
-        * Všechny informace, myšlenky a kód zde popsané slouží pouze pro informační a vzdělávací účely. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout se nesnaží v současné době dodržovat zákon HIPAA. Používejte Nightscout a AndroidAPS na vaše vlastní riziko a nepoužívejte informace nebo kód k provádění lékařských rozhodnutí.
+- Use of code from github.com is without warranty or formal support of any kind. Přečtěte licenci z této repozitoře pro další podrobnosti.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Jejich použití je pro informační účely a neznamená žádné spojení.
 
-        * Použití kódu z github.com je bez záruky nebo formální podpory jakéhokoliv druhu. Přečtěte licenci z této repozitoře pro další podrobnosti.
-
-        * Všechny názvy společností a produktů, ochranné známky, servisní známky, registrované ochranné známky a registrované servisní známky jsou vlastnictvím jejich příslušných držitelů. Jejich použití je pro informační účely a neznamená žádné spojení.
-
-        Vezměte prosím na vědomí – tento projekt nemá žádnou spojitost s a není žádným způsobem schválený společnostmi: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ nebo `Medtronic <https://www.medtronic.com/>`_.
-```
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
 Jste-li připraveni přijmout tuto výzvu, čtěte dál.
 
 ## Primární cíle AndroidAPS
 
-- Aplikace obsahující řadu bezpečnostních opatření. Informace o bezpečnostních opatřeních algoritmů, známých jako oref0 a oref1, najdete zde (<https://openaps.org/reference-design/>)
-- Jediná aplikace potřebná pro management diabetu 1. typu podporující umělou slinivku a Nightscout
-- Aplikace, kterou lze v snadno rozšiřovat podle potřeb každého uživatele
-- Aplikace dostupná v různých verzích pro konkrétní země a jazyky
-- Aplikace, kterou lze používat v režimu otevřené i uzavřené smyčky
-- Aplikace, jejíž fungování je zcela transparentní: uživatelé mohou zadat parametry, uvidí výsledek a mohou provést konečné rozhodnutí
-- Aplikace, která není závislá na ovladači pro konkrétní pumpu a obsahuje možnost použít „virtuální pumpu“, takže s ní uživatelé mohou bezpečně experimentovat, než ji skutečně začnou používat
-- Aplikace podporující těsnou integraci s Nightscoutem
-- Aplikace, u které řídí bezpečnostní omezení sám uživatel
+- An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
+- An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+- An app to which users can easily add or remove modules as needed
+- An app with different versions for specific locations and languages.
+- An app which can be used in open- and closed-loop mode
+- An app that is totally transparent: users can input parameters, see results, and make the final decision
+- An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves
+- An app closely integrated with Nightscout
+- An app in which the user is in control of safety constraints
 
 ## Jak začít
 
-Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí.
-Dobrou představu vám poskytne část [Přehled modulů](./Module/module.html) a [Cíle](./Usage/Objectives.html).
+Veškerý tento obsah je samozřejmě velmi důležitý, ale může být na začátku docela matoucí. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
