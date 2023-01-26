@@ -21,7 +21,7 @@ Sólo hay una función de carga NS (sin sincronización) en los valores de AAPS.
 
 ### Ajustes de seguridad adicionales
 
-Mantenga su teléfono actualizado, tal como se describe en la seguridad [safety first](../Getting-Started/Safety-first.md).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## Configuración manual de Nightscout
 
