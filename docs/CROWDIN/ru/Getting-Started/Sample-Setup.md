@@ -31,7 +31,7 @@
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Альтернативы: см. список возможных [ источников ГК](../Configuration/BG-Source.md)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. Дополнительно: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@
 1. Если оригинальное приложение Dexcom уже установлено: 
     * Остановить сенсор
     * Удалить приложения через меню > Настройки > Приложения > Dexcom G6 Mobile > Удалить
-2. Скачайте и установите [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Запустите модифицированное приложение Dexcom, активируйте/закалибруйте сенсор в соответствии с инструкциями и подождите, пока завершится процесс разогрева.
 4. После того, как измененное приложение Dexcom покажет фактическое значение глюкозы, настройте оповещения (сэндвич-меню в левом верхнем углу экрана) следующим образом: 
     * Чрезвычайно низкий `55mg/dl` / `3.1mmol/l` (не может быть отключен)
@@ -92,12 +92,12 @@
 
 ## Установите AndroidAPS
 
-1. Следуйте инструкциям по [сборке APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Переместите](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) созданное приложение (APK) на ваш телефон
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. [Сконфигурируйте AndroidAPS](../Configuration/Config-Builder.md) в соответствии с Вашими потребностями, используя мастер настройки или вручную
 4. В этом примере мы использовали (среди прочего)
 
-* Источник ГК: `приложение Dexcom G6 (модифицированное)` -- нажмите на значок шестеренки и активируйте `Загружать данные ГК на NS` и `Отправлять данные ГК на xDrip+` (см. [источник ГК](../Configuration/BG-Source.md))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![Настройки G5](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ это великолепное приложение с открытым 
     * Настройки > Настройки Inter-app > Принимать Калибровки > `включено`
     * Меню > Запуск сенсора (только "pro forma", не имеет ничего общего с работающим датчиком G6.). Необходимо включить иначе будет регулярно появляться сообщение об ошибке.) 
 
-Более подробную информацию о xDrip+, см. здесь: [BG source page](../Configuration/BG-Source.md).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Пример настройки оповещения
 
