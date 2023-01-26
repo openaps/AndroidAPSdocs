@@ -24,7 +24,7 @@
    
    * напр. Vienna -> New York: сдвиг профиля +6 часов
    * напр. Vienna -> Sydney: сдвиг профиля --8 часов
-* Возможно, не подойдет при использовании модифицированного приложения [LibreLink app](../Hardware/Libre2#time-zone-travelling) поскольку при запуске нового сенсора Libre 2 на смартфоне должен быть настроен автоматический выбор времени.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Вариант 2: Удалить историю работы помпы
 
