@@ -10,7 +10,7 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 * Certaines fonctions comme les *complications* nécessitent une version 2.0 ou plus récente de Wear OS
 * Google a rebaptisé *Android Wear 1.x* en *Wear OS* depuis la version 2.x, donc quand il est indiqué *Android Wear* il est possible que ce soit une ancienne version 1.x du système
 * Si la description indique seulement *Compatibilité avec Android* et *iOS* - cela **ne signifie pas** que la montre fonctionne sous *Wear OS* - cela peut tout à fait être une autre sorte de système d'exploitation spécifique au fournisseur **qui n'est pas compatible avec les cadrans AAPS wear!**
-* Vérifiez la [liste des téléphones et des montres testés](../Getting-Started/Phones#liste-des-telephones-testes) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) si vous avez un doute si votre montre sera prise en charge
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Construction de la version Wear OS d'AAPS
 
@@ -20,7 +20,7 @@ L’application Wear OS de AAPS a été séparée de la compilation de AAPS pour
 
 ### Configuration sur le téléphone
 
-Dans AndroidAPS, dans le Générateur de configuration, vous devez [activer Wear](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
 
 ## Contrôler AAPS depuis la montre
 
@@ -29,7 +29,7 @@ AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si v
 Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
-* utiliser l'assistant bolus (les paramètres à prendre en compte dans le calculs peuvent être définis dans [Paramètres de l'Assistant](../Configuration/Config-Builder#wear) sur le téléphone)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
 * administrer des eGlucides
 * administrer un bolus (insuline + glucides)
 * afficher les paramètres sur la montre
@@ -317,7 +317,7 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 * Vérifiez ce qui fonctionne le mieux sur votre montre : les cadrans AAPS standards ou d'autres cadrans avec les Complications AAPS.
 * Observez sur quelques jours, avec différents profils d'activités. La plupart des montres activent l'affichage sur le regard, des mouvements de poignet et d'autres déclencheurs liés à l'utilisation.
 * Vérifiez les paramètres du système global qui affectent les performances : notifications, durée du rétro éclairage, affichage actif quand le GPS est activé.
-* Vérifiez la [liste des téléphones et des montres testés](../Getting-Started/Phones#list-of-tested-phones) et [demandez à la communauté](../Where-To-Go-For-Help/Connect-with-other-users.md) pour avoir le retour d'expérience des autres utilisateurs et sur la durée de vie des batteries.
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **Nous ne pouvons pas garantir que les données affichées sur les Cadrans ou les complications sont à jour**. A la fin, c'est Wear OS qui décide quand mettre à jour le cadran ou la complication. Même lorsque l'application AAPS demande une mise à jour, le système peut décider de reporter ou d'ignorer les mises à jour pour préserver la batterie. En cas de doute et de batterie de montre faible - faites toujours une double vérification avec l'application AAPS sur le téléphone.
 
 ## Dépannage de l'application wear :
@@ -330,7 +330,7 @@ Puisque nous ne pouvons pas transiger sur la communication (nous avons besoin de
 
 * La montre Sony Smartwatch 3 est l'une des plus populaires utilisée avec AAPS.
 * Malheureusement, Google a abandonné la prise en charge des appareils sous Wear OS 1.5 à l'automne 2020. Cela entraîne des problèmes lors de l'utilisation de Sony SW3 avec AndroidAPS 2.7 et plus.
-* Une solution de contournement possible peut être trouvée sur cette [page de dépannage](../Usage/SonySW3.md).
+* A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## Afficher les données Nightscout
 
