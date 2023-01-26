@@ -53,7 +53,7 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* Jestliže potřebujete službu Clarity a chcete zároveň využívat výhod výstrah xDripu+, použijte </a>BYODA upravenou aplikaci Dexcom</0> a funkci místního odesílání do xDripu+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 
@@ -153,7 +153,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
 
 ### Prodloužení životnosti vysílače
 
-* Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem začíná číslem 81 a firmwarem 1.6.5. ** 27 ** (viz xDrip+ Stav systému - G5/G6, [viz screenshot výše](../Configuration/xdrip#transmitter-battery-status)).
+* Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
 * Používání vysílačů se sériovým číslem začínajícím na 81 a firmwarem 1.6.5.**27** po 100 dnech je možné pouze při zaputém [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) a deaktivovaném 'nativním režimu' (hamburger menu -> Nastavení -> Nastavení ladění pro G5/G6 -> Native Algorithm), protože NELZE provést hard reset vysílače.
 * Během prodlužování životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2h zahřívání senzoru.
@@ -275,7 +275,7 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
    * Používáte-li algoritmus xDrip+ , můžete nastavit dobu před 2 hodinami a tak se vyhnout zahřívání senzoru. Získaná data ale mohou být velmi nepředvídatelná. Proto se to nedoporučuje.
 * Vložte kód senzoru (je na odlepovací fólii obalu senzoru) 
    * Kód senzoru si ponechejte pro pozdější použití (např. nový start senzoru po výměně vysílače)
-   * Kód senzoru můžete najít i v [log souborech xDrip+](../Configuration/xdrip#retrieve-sensor-code): klikněte na 3 tečky na hlavní straně a vyberte `Zobrazit logy`.
+   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Pokud používáte G6 v „nativním módu“, není potřeba žádná kalibrace. Po 2 hodinovém zahřívání senzoru začne xDrip+ zobrazovat nové hodnoty.
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
    
@@ -343,7 +343,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Úroveň baterie čtečky Libre
 
 * Úroveň baterie chytrých čteček jako MiaoMiao 2 může být zobrazena v AAPS.
-* Podrobnosti naleznete na [stránce se screenshoty](../Getting-Started/Screenshots#sensor-level-battery).
+* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
 
 ### Připojte vysílač Libre a spusťte senzor
 
