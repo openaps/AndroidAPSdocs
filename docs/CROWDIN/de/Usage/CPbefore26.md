@@ -2,40 +2,40 @@
 
 Careportal hat die Funktionen repliziert, die auf der Nightscout-Webseite unter dem "+"-Symbol zu finden sind, das es erlaubt, Notizen hinzuzufügen. Aber Careportal hat keine Befehle an die Pumpe abgegeben! Wenn also ein Bolus über diesen Bildschirm hinzugefügt wurde, wurde dieser einfach im Nightscout-Datensatz vermerkt, die Pumpe hat aber keinen Bolus abgegeben. Dies führte zu vielen Missverständnissen.
 
-Der ursprünglich für die Offline-Unterstützung des Careportals verwendete Code harmonierte nicht mit der Entwicklung von AAPS und blockierte die weitere Programmierung. **Deshalb wurde beschlossen, Careportal in der AAPS-Version 2.6 zu entfernen.**
+Der ursprünglich für die Offline-Unterstützung des Careportals verwendete Code harmonierte nicht mit der Entwicklung von AAPS und blockierte die weitere Programmierung. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
-Die meisten Funktionen des Careportals sind weiter entweder in "Aktionen" oder auf dem Startbildschirm zu finden. Die "Aktionen" können entweder über den Tab "Aktionen" (AKT) oder das Hamburger-Menü erreicht werden - abhängig von den Einstellungen in der [Konfiguration](../Configuration/Config-Builder.md).
+Die meisten Funktionen des Careportals sind weiter entweder in "Aktionen" oder auf dem Startbildschirm zu finden. The actions can be reached either via actions tab or hamburger menu - depending on your settings in [config builder](../Configuration/Config-Builder.md).
 
 Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Funktionen nun zu finden sind.
 
-## Aktivität & Feedback
+## Activity & feedback
 
 ```{image} ../images/Careportal_25_26_1_IIb.png
-:alt: "Careportal - Aktivit\xE4t & Feedback"
+:alt: Careportal activity & feedback
 ```
 
-Die Altersangaben zu Sensoren, Kanülen, etc. finden sich nun unten auf dem Tab / im Menü "Aktionen".
-BZ Test wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Das temporäres Ziel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](#kohlenhydrate--bolus) auf dieser Seite).
+- Age information was moved to actions tab / menu.
+- BG check was moved to actions tab / menu.
+- Temporary target was moved to actions tab / menu.
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
 
-## Kohlenhydrate & Bolus
+## Carbs & bolus
 
 ```{image} ../images/Careportal_25_26_2_IIa.png
-:alt: Careportal Kohlenhydrate & Bolus
+:alt: Careportal carbs & bolus
 ```
 
-- Um einen Bolus - unabhängig ob für eine Mahlzeit, einen Snack oder zur Korrektur - als Notiz zu vermerken, nutze den Insulin-Button auf dem Startbildschirm **und achte darauf "Bolus nur erfassen" anzukreuzen.**
+- To note a bolus - no matter if for snack, meal or correction - use the insulin button on the homescreen **and make sure to tick "Do not bolus, record only"!**
 
-- Die Option, Insulineinträge in der Vergangenheit zu machen - z.B. wenn Du vergessen hast, per Spritze injiziertes Insulin zu vermerken - ist nur verfügbar, wenn die Checkbox "Bolus nur erfassen" angehakt ist.
+- Option to backdate insulin - i.e. if you forgot to register insulin given by syringe - will only be available if checkbox "Do not bolus, record only" is ticked.
 
   ```{image} ../images/Careportal_25_26_5.png
   :alt: Insulin in der Vergangenheit erfassen
   ```
 
-- Für eine "Kohlenhydrat Korrektur" kannst Du den Button "Kohlenhydrate" auf dem Startbildschirm verwenden.
+- For carbs correction use the carbs button on the homescreen.
 
-- Temporäre Basalraten können über die Schaltfläche im Tab / Menü "Aktionen" gestartet und gestoppt werden. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
+- Temporary basal rates can be started and stopped through the button in actions tab / menu. Beachte, dass sich die Bezeichnung der Schaltfläche von "TBR" zu "Abbrechen X%" ändert, wenn eine temporäre Basalrate abgegeben wird.
 
 ## CGM & OpenAPS
 
@@ -43,8 +43,8 @@ Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screensh
 :alt: Careportal CGM & OpenAPS
 ```
 
-- Das Setzen des CGM-Sensors kannst Du jetzt im Tab / Menü "Aktionen" erfassen.
-- Alle anderen Funktionen aus diesem Abschnitt wurden entfernt. Nutze das Notizfeld in der Dialogbox, die erscheint wenn eine Aktion wie z.B. Bolusabgabe durchgeführt wird (siehe Screenshot im Bereich [Kohlenhydrate & Bolus](#kohlenhydrate--bolus) auf dieser Seite).
+- CGM sensor insert can now be found in the actions tab / menu.
+- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
 
 ## Pumpe
 
@@ -52,6 +52,6 @@ Bewegung wurde auf den Tab / in das Menü "Aktionen" verschoben. (siehe Screensh
 :alt: Careportal Pumpe
 ```
 
-- Katheter- und Reservoirwechsel können über die Schaltfläche "Katheterwechsel" im Tab / Menü "Aktionen" erfasst werden.
-- Der Profilwechsel wurde auf den Tab / in das Menü "Aktionen" verschoben.
-- Der Batteriewechsel wurde ebenfalls auf den Tab / in das Menü "Aktionen" verschoben.
+- Pump site and insulin cartridge change can be reach by using the button "prime/fill" in actions tab / menu.
+- Profile switch was moved to actions tab / menu.
+- Pump battery change was moved to actions tab / menu.
