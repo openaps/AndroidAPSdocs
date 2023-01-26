@@ -10,7 +10,7 @@ Je kunt de AndroidAPS app installeren op je **Wear OS based** smartwatch. Met de
 * Sommige functies zoals *complicaties* vereisen Wear OS versie 2.0 of recenter om te functioneren
 * Google heeft *Android Wear 1.x* omgedoopt naar *Wear OS* vanaf versie 2.x. Indien een smartwatch met *Android Wear* wordt aangeduid, kan het goed zijn dat het de oudere 1.x versie heeft
 * Als in een beschrijving van smartwatch alleen compatibiliteit met *Android* en *iOS* aangegeven wordt, betekent het **niet** dat deze draait op *Wear OS* - het kan net zo goed een ander soort fabrikant specifieke OS zijn **die niet compatibel is met AAPS wear!**.
-* Controleer de [lijst van geteste telefoons en horloges](../Getting-Started/Phones.md) en [ vraag de community](../Where-To-Go-For-Help/Connect-with-other-users.md) om advies als je twijfelt of het horloge wordt ondersteund
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Wear OS-versie van AAPS bouwen
 
@@ -20,7 +20,7 @@ From March 2021 you need to sideload AAPS onto the watch, it is no longer access
 
 ### Instellen op de telefoon
 
-Schakel in de AndroidAPS Configurator [de Wear plugin in](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
 
 ## AAPS aansturen vanaf het horloge
 
@@ -29,7 +29,7 @@ AndroidAPS is ontworpen om *te worden bediend* vanaf Android Wear horloges. Als 
 De volgende functies kunnen vanaf het horloge worden geactiveerd:
 
 * een tijdelijk BG doel (TT) instellen
-* de bolus calculator gebruiken (in [instellingen](../Configuration/Config-Builder#wear) op de telefoon is geconfigureerd welke variabelen in de berekening worden meegenomen)
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
 * invoeren van vertraagde koolhydraten (eCarbs)
 * dien een bolus (insuline + koolhydraten) toe
 * watch instellingen
@@ -317,7 +317,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
 ## Troubleshooting the wear app:
