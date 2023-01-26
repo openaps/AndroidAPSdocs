@@ -7,7 +7,7 @@
 ## הערות חשובות
 
 * נא להשתמש ב-**[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** או חדש יותר כדי לבנות את ה-apk.
-* [מערכות Windows 10 של 32 ביט](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) אינן נתמכות על ידי Android Studio 2020.3.1
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 ## מפרט מומלץ של מחשב לבניית קובץ apk
 
@@ -61,13 +61,13 @@
 באופן כללי, השלבים של בניית קובץ ה-APK הם:
 
 1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
-2. [התקנת Android Studio](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [הגדרת נתיב של Git בהעדפות Android Studio](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [הורדת הקוד של AndroidAPS](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [הורדת Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [בניית האפליקציה](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (יצירת apk חתום)
-7. [העברת קובץ ה-apk לטלפון](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](..//Configuration/xdrip#identify-receiver)
+2. [התקנת Android Studio](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
+3. [הגדרת נתיב של Git בהעדפות Android Studio](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
+4. [הורדת הקוד של AndroidAPS](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
+5. [הורדת Android SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
+7. [העברת קובץ ה-apk לטלפון](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](..//Configuration/xdrip.md#identify-receiver)
 
 ## מדריך שלב אחר שלב
 
@@ -75,7 +75,7 @@
 
 ## התקינו git (אם לא מותקן כבר)
 
-עקבו אחר המדריך ב[דף התקנת של git](../Installing-AndroidAPS/git-install.md).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
 ## התקנת Android Studio
 
@@ -119,7 +119,7 @@
 
 ## הגדירו את נתיב git בהעדפות
 
-ודאו ש[git מותקן](../Installing-AndroidAPS/git-install.md) במחשבכם ושאתחלתם את המחשב לאחר ההתקנתו.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
 
 במסך הפתיחה של Android Studio לחצו על "Customize" (1) בצד שמאל ולאחר מכן בחרו בקישור "All settings..." (2):
 
@@ -127,7 +127,7 @@
 
 ### Windows
 
-* כמשתמשי Windows, ודאו שהפעלת מחדש את המחשב לאחר [התקנת Git](../Installing-AndroidAPS/git-install.md).
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
 
 * לחצו פעמיים על "Version Control" (1) כדי לפתוח את תפריט המשנה.
 
@@ -293,7 +293,7 @@
 
 * רשמו (2) ואמתו (3) את סיסמת המאגר המפתחות שלכם. ![בחר נתיב מפתח מאגר](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. במקרה שלא תיזכרו את הסיסמאות שלכם בעתיד, ראו[פיתרון בעיות במאגר המפתחות](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 * רשמו כינוי (4) למאגר המפתחות שלכם. בחרו כל כינוי שתרצו.
 
