@@ -1,12 +1,11 @@
 # Změnit jazyk
 
-```{eval-rst}
-.. poznámka::
-   Výběr jazyka byl přesunut do spodního výsuvného menu v levé nabídce. Klepněte prosím na spodní pruh a otevřete nabídku výběru jazyka.
-```
+:::{note}
+The language selection have been moved to the bottom drawer of the left menu. Klepněte prosím na spodní pruh a otevřete nabídku výběru jazyka.
+:::
 
 ```{image} images/documentation_language_menu.png
-:alt: "Otev\u0159\xEDt nab\xEDdku jazyka"
+:alt: Open language menu
 :width: 350
 ```
 
