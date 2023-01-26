@@ -1,26 +1,26 @@
-# internal sandbox file 1 for testing
+# fichier sandbox interne 1 pour les tests
 
-:::{admonition} no need to translate this
+:::{admonition} pas besoin de traduire ceci
 :class: note
 
-No need to translate this.
+Pas besoin de traduire cela.
 :::
 
-This is an internal sandbox file for the documentation team to test
+Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse tester
 
-1. markdown syntax and
+1. syntaxe markdown et
 
-1. background process for
-    1. CROWDIN translation and
-    2. Read The Docs deployment.
+1. processus en arrière-plan pour
+    1. les traductions CROWDIN
+    2. Lire la doc de déploiement.
 
-You can dirctly jump from here to the second label in this file - ["Jump"](#this-is-another-test).
+Vous pouvez sauter directement d'ici à la deuxième étiquette dans ce fichier - ["Sauter"](#this-is-another-test).
 
-And you can jump to the first label too - ["Jump"](#this-is-a-test).
+Et vous pouvez aussi aller à la première étiquette - ["Sauter"](#this-is-a-test).
 
-Here you can jump to the second sandbox file - ["Jump"](./sandbox2.md).
+Ici vous pouvez aller au deuxième fichier sandbox - ["Sauter"](./sandbox2.md).
 
-You can dirctly jump from here to the first label in the sandbox2.md file - ["Jump"](./sandbox2.md#this-is-a-test).
+Vous pouvez sauter directement d'ici à la première étiquette dans le fichier sandbox2.md - ["Sauter"](./sandbox2.md#this-is-a-test).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -29,14 +29,14 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (this-is-a-test)=
-## This is a test
+## Ceci est un test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 (this-is-another-test)=
-## This is another test
+## Ceci est un autre test
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
