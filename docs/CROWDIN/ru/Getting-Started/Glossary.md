@@ -25,7 +25,7 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features#advanced-meal-assist-ama">Wiki - AMA</a>
+    <a href="../Usage/Open-APS-features.md#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
@@ -56,7 +56,7 @@
  <td><strong>BAT/БАТ</strong></td>
  <td>низкий уровень заряда батареи на главном экране</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.md">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>BG/ГК</strong></td>
@@ -74,7 +74,7 @@
 <td><strong>BG source / Источник данных ГК</strong></td>
  <td>The blood glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder#bg-source">Wiki - источник BG</a></td>
+ <td><a href="../Configuration/Config-Builder.md#bg-source">Wiki - источник BG</a></td>
 </tr>
 <tr>
  <td><strong>Blukon Nightreader</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>Кан/Кат</strong></td>
  <td>меняющая цвет надпись состояния просроченной/непросроченной канюли на главном экране</td>
  <td>БАТ/РЕЗ/СЕН</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.md">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>CGM/Непрерывный мониторинг ГК</strong></td>
@@ -116,7 +116,7 @@
  <td><strong>Closed Loop/Замкнутый цикл (петля, контур)</strong></td>
  <td>замкнутая система управления уровнем сахара крови. Система автоматически, без вмешательства пользователя подстраивает количество базального инсулина, основываясь на специальном алгоритме</td>
  <td>Открытый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder#closed-loop">Wiki - замкнутый цикл</a></td>
+ <td><a href="../Configuration/Config-Builder.md#closed-loop">Wiki - замкнутый цикл</a></td>
 </tr>
 <tr>
  <td><strong>АктУгл COB</strong></td>
@@ -128,19 +128,19 @@
  <td><strong>DIA (время действия инсулина)</strong></td>
  <td>продолжительность активности инсулина</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#insulin">Тип инсулина </a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.md#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
  <td>летнее/зимнее время (при переводе часов)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
 </tr>
 <tr>
  <td><strong>eCarbs/производные углеводы</strong></td>
  <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>Супер микро болюс SMB</td>
- <td><a href="../Usage/Extended-Carbs#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.md#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>ФЛЕШ МОНИТОРИНГ</strong></td>
@@ -193,26 +193,26 @@
 <tr>
  <td><strong>LGS</strong></td>
  <td>Приостановка подачи базального инсулина при падении ГК ниже заданного уровня. Но если глюкоза крови растет, алгоритм AAPS увеличит базу только если активный инсулин IOB имеет отрицательную величину (от предыдущего LGS), в противном случае скорость базала останется такой, как в выбранном вами профиле. Возможны временные пики вслед за мерами против гипогликемии без возможности увеличить базу на откате._</td>
- <td><a href="../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">цель 6</a></td>
+ <td><a href="../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">цель 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>бесплатная и открытая операционная система для смартфонов и т.д.<br>альтернативная ОС для смартфонов, не работающих на Android 8.1 (Oreo)<br>(при использовании Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.md#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
  <td><strong>Лог-файлы</strong></td>
  <td>record of all AAPS actions (useful for troubleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles#accessing-logfiles">Wiki - файлы журнала</a></td>
+ <td><a href="../Usage/Accessing-logfiles.md#accessing-logfiles">Wiki - файлы журнала</a></td>
 </tr>
 <tr>
  <td><strong>maxIOB/ максимум активного инсулина IOB</strong></td>
  <td>важная системная характеристика безопасности: максимально допустимый уровень инсулина в крови (IOB), выше которого AAPS прекращает ввод инсулина</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -224,7 +224,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>safety feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your BG reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#absorption-settings">Wiki - конфигуратор</a></td>
+ <td><a href="../Configuration/Config-Builder.md#absorption-settings">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -242,7 +242,7 @@
  <td><strong>NS Client</strong></td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.md#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Цели</strong></td>
@@ -260,37 +260,37 @@
  <td><strong>Открытый цикл</strong></td>
  <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
  <td>Closed Loop/Замкнутый цикл (петля, контур)</td>
- <td><a href="../Configuration/Config-Builder#open-loop">Wiki - конфигуратор</a></td>
+ <td><a href="../Configuration/Config-Builder.md#open-loop">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
  <td>Определение чувствительности <br>. Ключевой алгоритм версии 0/1, используемый OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB#sensitivity-detection">Wiki - Определение чувствительности</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.md#sensitivity-detection">Wiki - Определение чувствительности</a></td>
 </tr>
 <tr>
  <td><strong>Время пика</strong></td>
  <td>Время максимальной активности - время, через которое эффект от введения инсулина становится максимальным.</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#insulin">Wiki - конфигуратор</a></td>
+ <td><a href="../Configuration/Config-Builder.md#insulin">Wiki - конфигуратор</a></td>
 </tr>
 <tr>
  <td><strong>PH/История записей помпы</strong></td>
  <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment">Снимки экрана</a></td>
+ <td><a href="../Getting-Started/Screenshots.md#treatment">Снимки экрана</a></td>
 </tr>
 <tr>
  <td><strong>Прогнозирование</strong></td>
  <td>Прогнозы уровня ГК в будущем, основанные на разных алгоритмах расчета.</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes#overview-tab">Wiki - линии прогноза ГК</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.md#overview-tab">Wiki - линии прогноза ГК</a></td>
 </tr>
 <tr>
  <td><strong>Профиль</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#profile">Wiki - профиль</a></td>
+ <td><a href="../Configuration/Config-Builder.md#profile">Wiki - профиль</a></td>
 </tr>
 <tr>
  <td><strong>Profile switch/смена профиля</strong></td>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>меняющая цвет надпись состояния наполненности резервуара на главном экране</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.md">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>меняющая цвет надпись состояния просроченного/непросроченного сенсора на главном экране</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Настройки</a><br><a href="../Getting-Started/Screenshots.md">Снимки экрана</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection/определение чувствительности</strong></td>
@@ -332,13 +332,13 @@
  <td><strong>Sensor noise/шум сенсора</strong></td>
  <td>нестабильные данные НМГ, проявляющиеся в больших колебаниях значений ГК.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td><strong>Супер микро болюс SMB</strong></td>
  <td>сверхмалый болюс, продвинутая техника быстрой подстройки уровня ГК.</td>
  <td>UAM/</td>
- <td><a href="../Usage/Open-APS-features#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.md#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>Super bolus/Суперболюс</strong></td>
@@ -368,7 +368,7 @@
  <td><strong>Временная цель (TT)</strong></td>
  <td>temporary target<br>temporary increase/decrease of BG target (range) e.g. for eating or sport activities</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget#temp-targets">Wiki - временные цели</a></td>
+ <td><a href="../Usage/temptarget.md#temp-targets">Wiki - временные цели</a></td>
 </tr>
 <tr>
  <td><strong>Незапланированный прием пищи UAM</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>Фоновый рисунок</strong></td>
  <td>Фоновое изображение androidAPS</td>
  <td></td>
- <td><a href="../Getting-Started/Phones#phone-background">см. страницу телефонов</a></td>
+ <td><a href="../Getting-Started/Phones.md#phone-background">см. страницу телефонов</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>
