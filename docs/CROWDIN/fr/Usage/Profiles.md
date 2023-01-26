@@ -1,6 +1,6 @@
 # Changement de profil
 
-La documentation sur les profils en général peut être trouvée sur [Générateur de configuration - Profil](../Configuration/Config-Builder#profil).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 Lors du démarrage d'AAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau pour commencer à utiliser ces changements.
 
