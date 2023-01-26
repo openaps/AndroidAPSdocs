@@ -1,162 +1,315 @@
----
-substitutions:
-  DiaLink: |-
-    ```{image} ../images/omnipod/DiaLink.png
-    ```
-  EmaLink: |-
-    ```{image} ../images/omnipod/EmaLink.png
-    ```
-  LoopLink: |-
-    ```{image} ../images/omnipod/LoopLink.png
-    ```
-  OrangeLink: |-
-    ```{image} ../images/omnipod/OrangeLink.png
-    ```
-  RileyLink: |-
-    ```{image} ../images/omnipod/RileyLink.png
-    ```
----
+
+
+<div id="front-matter"><ul><li><div class="yaml-key" translate="no" has_child_nodes="yes">substitutions: </div><ul><li><div class="yaml-key" translate="no" has_child_nodes="no">DiaLink: </div><div class="yaml-value">`{image} ../images/omnipod/DiaLink.png`</div></li>
+- <div class="yaml-key" translate="no" has_child_nodes="no">EmaLink: </div><div class="yaml-value">
+    <code>{image} ../images/omnipod/EmaLink.png</code>
+  </div>
+- <div class="yaml-key" translate="no" has_child_nodes="no">LoopLink: </div><div class="yaml-value">
+    <code>{image} ../images/omnipod/LoopLink.png</code>
+  </div>
+- <div class="yaml-key" translate="no" has_child_nodes="no">OrangeLink: </div><div class="yaml-value">
+    <code>{image} ../images/omnipod/OrangeLink.png</code>
+  </div>
+- <div class="yaml-key" translate="no" has_child_nodes="no">RileyLink: </div><div class="yaml-value">
+    ```{image} ../images/omnipod/RileyLink.png</p> 
+    
+    <pre><code class="&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;">
 
 # Component Overview
 
-AndroidAPS není jen (vlastnoručně sestavená) aplikace, je to jeden z několika modulů vašeho systému uzavřené smyčky. Dříve než se rozhodnete pro konkrétní komponenty, bylo by dobré podívat se také na [nastavení komponent](../index#component-setup).
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.md#component-setup), too.
 
-```{eval-rst}
-.. obrázek:: ../images/modules.png
-  :alt: Přehled komponent
-```
+```{image} ../images/modules.png
+:alt: Components overview
+</code></pre>
+    
+    <p spaces-before="0">
+      :::{note}<br x-id="2" /> <strong x-id="1">IMPORTANT SAFETY NOTICE</strong>
+    </p>
+    
+    <p spaces-before="0">
+      Základy bezpečnosti AndroidAPS zmíněné v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování vašeho systému. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, <em x-id="3">do not use</em> these for creating an AndroidAPS system.
+    </p>
+    
+    <p spaces-before="0">
+      Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+    </p>
+    
+    <p spaces-before="0">
+      V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), které snižují hadinu cukru v krvi.  Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
+:::
+    </p>
 
-```{eval-rst}
-.. poznámka::
-   **DŮLEŽITÉ BEZPEČNOSTNÍ UPOZORNĚNÍ**
+<h2 spaces-before="0">
+  Nezbytné moduly
+</h2>
 
-   Základy bezpečnosti AndroidAPS zmíněné v této dokumentaci jsou postaveny na bezpečnostních vlastnostech hardwaru používaného k vybudování vašeho systému. Je zásadně důležité, abyste používali pouze testované, plně funkční a pro uzavřenou smyčku schválené inzulinové pumpy a CGM. Hardwarové nebo softwarové úpravy těchto komponent mohou způsobit neočekávané dávkování inzulínu, což může znamenat pro uživatele významné riziko. Pokud najdete nebo získáte rozbité, upravené nebo doma vyrobené inzulínové pumpy nebo CGM, NEPOUŽÍVEJTE JE pro vytvoření systému AndroidAPS.
+<h3 spaces-before="0">
+  Správný individuální algoritmus dávkování pro léčbu vašeho diabetu
+</h3>
 
-   Kromě toho je stejně důležité používat pouze originální spotřební materiál, jako jsou sety a zásobníky, schválené výrobcem pro použití s vaší pumpou nebo CGM. Použití nevyzkoušeného nebo upraveného spotřebního materiálu může způsobit nepřesnosti a chyby při dodávce inzulínu. Inzulín je velmi nebezpečný, když není dávkovaný správně – prosím, nehazardujte se svým životem tím, že budete upravovat spotřební materiál.
+<p spaces-before="0">
+  I když to není něco, co by bylo možné vytvořit nebo koupit, je to "modul", který je pravděpodobně nejvíce podceňován, je však nejdůležitější. Když necháte algoritmus zasahovat do léčby vašeho diabetu, musí znát správná nastavení, aby nedělal vážné chyby. I když vám stále chybí další moduly, již nyní můžete ve spolupráci se svým diabetologem ověřit a upravit svůj 'profil'. Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dávkování, citlivost a sacharidový poměr, které se přizpůsobují hormonální aktivitě inzulinu v průběhu dne.
+</p>
 
-   V neposlední řadě nesmíte užívat SGLT-2 inhibitory (glifloziny), které snižují hadinu cukru v krvi.  Kombinace se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
-```
+<p spaces-before="0">
+  Součástí profilu je
+</p>
 
-## Nezbytné moduly
+<ul>
+  <li>
+    BR (Basal rates)
+  </li>
+  <li>
+    ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
+  </li>
+  <li>
+    CR (carb ratio) is grams carbohydrate per one unit insulin
+  </li>
+  <li>
+    DIA (duration of insulin acting).
+  </li>
+</ul>
 
-### Správný individuální algoritmus dávkování pro léčbu vašeho diabetu
+<h3 spaces-before="0">
+  Nepoužívat inhibitory SGLT-2
+</h3>
 
-I když to není něco, co by bylo možné vytvořit nebo koupit, je to "modul", který je pravděpodobně nejvíce podceňován, je však nejdůležitější. Když necháte algoritmus zasahovat do léčby vašeho diabetu, musí znát správná nastavení, aby nedělal vážné chyby.
-I když vám stále chybí další moduly, již nyní můžete ve spolupráci se svým diabetologem ověřit a upravit svůj 'profil'.
-Většina uživatelů uzavřené smyčky používá cirkadiánní bazální dávkování, citlivost a sacharidový poměr, které se přizpůsobují hormonální aktivitě inzulinu v průběhu dne.
+<p spaces-before="0">
+  Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v ledvinách. Vzhledem k tomu, že nevyčíslitelně snižují hladinu cukru v krvi, NESMÍTE je užívat při používání uzavřené smyčky jako je AndroidAPS! Bylo by obrovské riziko ketoacidózy nebo hypoglykémií! Kombinace této léčby se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
+</p>
 
-Součástí profilu je
+<h3 spaces-before="0">
+  Telefon
+</h3>
 
-- BR (bazální dávky)
-- ISF (citlivost na inzulin) - hodnota, o kolik klesne glykémie po podání jedné jednotky inuzlinu
-- CR (sacharidový poměr) je množství sacharidů v gramech na jednu jednotku inzulinu
-- DIA (doba působnosti inzulinu).
+<p spaces-before="0">
+  Aktuální verze AndroidAPS vyžaduje u telefonů s Androidem minimálně verzi Google Android 8.0 nebo vyšší. Takže pokud přemýšlíte o novém telefonu, je sice doporučená minimállní verze Android 8.1, ale optimální volba je Android 9 nebo 10. Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the <a href="https://github.com/miloskozak/androidaps">old repository.</a>
+</p>
 
-### Nepoužívat inhibitory SGLT-2
+<p spaces-before="0">
+  Users are creating a <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">list of tested phones and watches</a>
+</p>
 
-Inhibitory SGLT-2, též nazývané glifloziny, inhibují reabsorpci glukózy v ledvinách. Vzhledem k tomu, že nevyčíslitelně snižují hladinu cukru v krvi, NESMÍTE je užívat při používání uzavřené smyčky jako je AndroidAPS! Bylo by obrovské riziko ketoacidózy nebo hypoglykémií! Kombinace této léčby se systémem, která snižuje bazální hodnoty ke zvýšení glykémie je zvláště nebezpečná, protože v důsledku gliflozinu tento nárůst glykémie nemusí nastat a může dojít k nebezpečnému stavu nedostatku inzulínu.
+<p spaces-before="0">
+  To record a phone or watch that isn't already listed in the spreadsheet then please fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">form</a>.
+</p>
 
-### Telefon
+<p spaces-before="0">
+  Any problems with the spreadsheet please send an email to <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a>, any donations of phone/watch models that still need testing please send an email to <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a>.
+</p>
 
-Aktuální verze AndroidAPS vyžaduje u telefonů s Androidem minimálně verzi Google Android 8.0 nebo vyšší. Takže pokud přemýšlíte o novém telefonu, je sice doporučená minimállní verze Android 8.1, ale optimální volba je Android 9 nebo 10.
-Uživatelům je důrazně doporučováno, aby z bezpečnostních důvodů udržovali používanou aplikaci AndroidAPS na aktuální verzi. Pro uživatele, kteří ale nemohou používat zařízení s verzí Android minimálně 8, je vhodná verze AndroidAPS 2.6.1.4, která zůstává dostupná ze [starého úložiště kódů](https://github.com/miloskozak/androidaps).
+<h3 spaces-before="0">
+  Inzulinová pumpa
+</h3>
 
-Uživatelé průběžné doplňují [seznam otestovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing)
+<p spaces-before="0">
+  AndroidAPS <strong x-id="1">currently</strong> works with
+</p>
 
-Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím [formulář](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+<ul>
+  <li>
+    <a href="../Configuration/Accu-Chek-Combo-Pump.md">Accu-Chek Combo</a> (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+  </li>
+  <li>
+    <a href="../Configuration/Accu-Chek-Insight-Pump.md">Accu-Chek Insight</a>
+  </li>
+  <li>
+    <a href="../Configuration/DanaR-Insulin-Pump.md">DanaR</a>
+  </li>
+  <li>
+    <a href="../Configuration/DanaRS-Insulin-Pump.md">Dana-i/RS</a>
+  </li>
+  <li>
+    <a href="../Configuration/MedtronicPump.md">some old Medtronic pumps</a> from upcoming version 2.4 (<a href="../Module/module.md#additional-communication-device">additional communication device</a> needed)
+  </li>
+  <li>
+    <a href="../Configuration/OmnipodEros.md">Omnipod Eros</a> (<a href="../Module/module.md#additional-communication-device">additional communication device</a> needed)
+  </li>
+  <li>
+    <a href="../Configuration/OmnipodDASH.md">Omnipod DASH</a>
+  </li>
+</ul>
 
-V případě jakýchkoli problémů s tabulkou napište prosím na e-mail [hardware@androidaps.org](mailto:hardware@androidaps.org), pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail [donations@androidaps.org](mailto:hardware@androidaps.org).
+<p spaces-before="0">
+  If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+</p>
 
-### Inzulinová pumpa
+<p spaces-before="0">
+  <strong x-id="1">Other pumps</strong> that may have the potential to work with AndroidAPS are listed on the <a href="../Getting-Started/Future-possible-Pump-Drivers.md">Future (possible) Pumps</a> page.
+</p>
 
-AndroidAPS **v současné době** funguje s
+<p spaces-before="0">
+  If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
+</p>
 
-- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
-- [DanaR](../Configuration/DanaR-Insulin-Pump.md)
-- [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](../Module/module#additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](../Module/module#additional-communication-device) needed)
-- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+<h4 spaces-before="0">
+  Přídavná komunikační zařízení
+</h4>
 
-If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
+<p spaces-before="0">
+  Pro staré pumpy Medtronic je potřeba přídavné komunikační zařízení (spojené s telefonem), aby dělalo "tlumočníka" překládajícího rádiový signál z pumpy na bluetooth pro komunikaci s telefonem. Nezapomeňte vybrat správné zařízení, které odpovídá vaší pumpě.
+</p>
 
-**Ostatní pumpy**, které potenciálně mohou fungovat s AndroidAPS, jsou uvedeny na stránce [Pumpy potenciálně použitelné v budoucnu](../Getting-Started/Future-possible-Pump-Drivers.md).
+<ul>
+  <li>
+    {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Website</a>
+  </li>
+  <li>
+    {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
+  </li>
+  <li>
+    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+  </li>
+  <li>
+    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+  </li>
+  <li>
+    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+  </li>
+</ul>
 
-Pokud je nutné, abyste si pumpu zakoupili **na vlastní náklady**, seznam různých distributorů najdete v [této tabulce](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0). Prosím uveďte podrobnosti o svém distributorovi, není-li v tabulce uveden.
+<p spaces-before="0">
+  <strong x-id="1">So what's the best pump for looping with AndroidAPS?</strong>
+</p>
 
-#### Přídavná komunikační zařízení
+<p spaces-before="0">
+  Combo, Insight a starší pumpy Medtronic jsou dobré pumpy, které lze používat se smyčkou. Combo má také výhodu v podobě mnohem většího počtu typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji ;-)
+</p>
 
-Pro staré pumpy Medtronic je potřeba přídavné komunikační zařízení (spojené s telefonem), aby dělalo "tlumočníka" překládajícího rádiový signál z pumpy na bluetooth pro komunikaci s telefonem. Nezapomeňte vybrat správné zařízení, které odpovídá vaší pumpě.
+<p spaces-before="0">
+  The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+</p>
 
-- {{ OrangeLink }}  [OrangeLink Website](https://getrileylink.org/product/orangelink)
-- {{ RileyLink }} [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
-- {{ EmaLink }}  [Emalink Website](https://github.com/sks01/EmaLink) - [Contact Info](mailto:getemalink@gmail.com)
-- {{ DiaLink }}  DiaLink - [Contact Info](mailto:Boshetyn@ukr.net)
-- {{ LoopLink }}  [LoopLink Website](https://www.getlooplink.org/) - [Contact Info](https://jameswedding.substack.com/) - Untested
+<ul>
+  <li>
+    The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (To se může v budoucnu změnit, až bude Android 8.1 více rozšířený)
+  </li>
+  <li>
+    Initial pairing is simpler with the Dana-i/RS. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, kdy chcete testovat nové funkce s různými pumpami.
+  </li>
+  <li>
+    So far the Combo works with screen parsing. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+  </li>
+  <li>
+    The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. V noci pravděpodobně používáte více dočasné bazální dávky než SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
+  </li>
+  <li>
+    Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+  </li>
+  <li>
+    All pumps AndroidAPS can talk with are waterproof on delivery. Pouze pumpy Dana mají také „záruku na vodotěsnost“ díky uzavřenému prostoru pro baterii a prostoru pro plnicí zásobník.
+  </li>
+</ul>
 
-**Která pumpa je pro provozování uzavřené smyčky s AndroidAPS nejlepší?**
+<h3 spaces-before="0">
+  Zdroj glykémií
+</h3>
 
-Combo, Insight a starší pumpy Medtronic jsou dobré pumpy, které lze používat se smyčkou. Combo má také výhodu v podobě mnohem většího počtu typů infuzních setů se standardním závitem luer lock. A baterie je obyčejná, kterou můžete koupit na každé benzínce, v obchodě který má otevřeno 24 hodin denně a pokud opravdu jednu potřebujete, můžete ji ukrást/půjčit si ji z ovládání v hotelovém pokoji ;-)
+<p spaces-before="0">
+  Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For further details, look <a href="../Configuration/BG-Source.md">here</a>. Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
+</p>
 
-The advantages of the DanaR/RS and Dana-i vs. Combu:
+<ul>
+  <li>
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
+  </li>
+  <li>
+    <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app
+  </li>
+  <li>
+    <a href="../Hardware/DexcomG4.md">Dexcom G4</a>: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+  </li>
+  <li>
+    <a href="../Hardware/Libre2.md">Libre 2</a>: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+  </li>
+  <li>
+    <a href="../Hardware/Libre1.md">Libre 1</a>: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+  </li>
+  <li>
+    <a href="../Hardware/Eversense.md">Eversense</a>: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+  </li>
+  <li>
+    <a href="../Hardware/MM640g.md">Enlite (MM640G/MM630G)</a>: quite complicated with a lot of extra stuff
+  </li>
+</ul>
 
-- The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... což není tak snadné v případě Comba. (To se může v budoucnu změnit, až bude Android 8.1 více rozšířený)
-- Initial pairing is simpler with the Dana-i/RS. Ale to obvykle děláte pouze jednou, takže to ovlivňuje pouze situace, kdy chcete testovat nové funkce s různými pumpami.
-- Combo zatím pracuje s převodem obrazu do strojově čitelné podoby. Obecně to funguje skvěle, ale je to pomalé. Pro smyčku to tolik nevadí, vše pracuje na pozadí. Stále strávíte ale mnohem více času, kdy musíte být spojeni, takže může dojít k přerušení spojení, což se může snadno stát, pokud odejde od telefonu mezitím, co posíláte bolus a vaříte.
-- The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. V noci pravděpodobně používáte více dočasné bazální dávky než SMB.  The Dana-i/RS is configurable that it does neither beep or vibrate.
-- Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
-- Všechny pumpy, se kterými AndroidAPS komunikuje, jsou vodotěsné. Pouze pumpy Dana mají také „záruku na vodotěsnost“ díky uzavřenému prostoru pro baterii a prostoru pro plnicí zásobník.
+<h3 spaces-before="0">
+  Nightscout
+</h3>
 
-### Zdroj glykémií
+<p spaces-before="0">
+  Nightscout je open source webová aplikace, která může zaznamenávat a zobrazovat vaše údaje z CGM a údaje z AndroidAPS a vytvářet zprávy. You can find more information on the <a href="http://nightscout.github.io/">website of the Nightscout project</a>. You can create your own <a href="https://nightscout.github.io/nightscout/new_user/">Nightscout website</a>, use the semi-automated Nightscout setup on <a href="https://ns.10be.de/en/index.html">zehn.be</a> or host it on your own server (this is for IT experts).
+</p>
 
-Toto je jen krátký přehled všech CGM/FGM kompatibilních s AndroidAPS. For further details, look [here](../Configuration/BG-Source.md). Rychlý tip: Pokud dokážete zobrazit údaje o glykémii v aplikaci xDrip+ nebo na webu Nightscout, můžete v AAPS jako zdroj glykémie vybrat xDrip+ (nebo Nightscout, máte-li připojení k internetu).
+<p spaces-before="0">
+  Nightscout je nezávislý na ostatních modulech. Budete jej potřebovat ke splnění Cíle 1.
+</p>
 
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes#important-hints) for details). xDrip+ must be at least version 2022.01.14 or newer
-- [Dexcom G5](../Hardware/DexcomG5.md): Funguje s aplikací xDrip+ nebo upravenou aplikací Dexcom
-- [Dexcom G4](../Hardware/DexcomG4.md): Tyto senzoru jsou poměrně staré, ale můžete si vyhledat pokyny, jak je používat s aplikací xDrip+
-- [Libre 2](../Hardware/Libre2.md): Funguje s aplikací xDrip+ (nevyžaduje žádný adaptér), ale musíte se sestavit vlastní upravenou aplikaci.
-- [Libre 1](../Hardware/Libre1.md): Potřebujete adaptér, jako např. Bluecon nebo MiaoMiao (sestavit nebo koupit) a aplikaci xDrip+
-- [Eversense](../Hardware/Eversense.md): Funguje zatím pouze v kombinaci s aplikací ESEL a upravenou aplikací Eversense (nefunguje s pumpou Dana RS a LineageOS, ale funguje dobře s pumpou DanaRS a Android nebo pumpou Combo a Lineage OS)
-- [Enlite (MM640G/MM630G)](../Hardware/MM640g.md): poměrně komplikované a vyžaduje spoustu věcí dalších věcí navíc
+<p spaces-before="0">
+  Additional information on how to configure Nightscout for use with AndroidAPS can be found <a href="../Installing-AndroidAPS/Nightscout.md">here</a>.
+</p>
 
-### Nightscout
+<h3 spaces-before="0">
+  Soubor AAPS-.apk
+</h3>
 
-Nightscout je open source webová aplikace, která může zaznamenávat a zobrazovat vaše údaje z CGM a údaje z AndroidAPS a vytvářet zprávy. Další informace najdete na webové stránce Nightscout project \<<http://nightscout.github.io/>>\`\_. Vlastní [Nightscout](https://nightscout.github.io/nightscout/new_user/) můžete vytvořit za pomoci poloautomatizovaného nastavení na [zehn.be](https://ns.10be.de/en/index.html), nebo ho můžete hostovat na vlastním severu (pro IT experty).
+<p spaces-before="0">
+  Základní součást systému. Před samotnou instalací aplikace si nejprve budete muset sestavit soubor apk (což je přípona souboru aplikace pro Android). Instructions are  <a href="../Installing-AndroidAPS/Building-APK.md">here</a>.
+</p>
 
-Nightscout je nezávislý na ostatních modulech. Budete jej potřebovat ke splnění Cíle 1.
+<h2 spaces-before="0">
+  Volitelné moduly
+</h2>
 
-Další informace o konfiguraci Nightscoutu pro použití s AndroidAPS najdete [zde](../Installing-AndroidAPS/Nightscout.md).
+<h3 spaces-before="0">
+  Chytré hodinky
+</h3>
 
-### Soubor AAPS-.apk
+<p spaces-before="0">
+  Můžete si vybrat chytré hodinky s Android Wear 1.x a novějším. Většina uživatelů uzavřené smyčky používá Sony Smartwatch 3 (SWR50), protože je to jediný model, který dokáže číst data z Dexcomu G5, i když je telefon mimo dosah. Some other watches can be patched to work as a standalone receiver as well (see <a href="https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5">this documentation</a> for more details).
+</p>
 
-Základní součást systému. Před samotnou instalací aplikace si nejprve budete muset sestavit soubor apk (což je přípona souboru aplikace pro Android). Pokyny najdete [zde](../Installing-AndroidAPS/Building-APK.md).
+<p spaces-before="0">
+  Users are creating a <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">list of tested phones and watches</a>. There are different watchfaces for use with AndroidAPS, which you can find <a href="../Configuration/Watchfaces.md">here</a>.
+</p>
 
-## Volitelné moduly
+<p spaces-before="0">
+  To record a phone or watch that isn't already listed in the spreadsheet then please fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">form</a>.
+</p>
 
-### Chytré hodinky
+<p spaces-before="0">
+  Any problems with the spreadsheet please send an email to <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a>, any donations of phone/watch models that still need testing please send an email to <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a>.
+</p>
 
-Můžete si vybrat chytré hodinky s Android Wear 1.x a novějším. Většina uživatelů uzavřené smyčky používá Sony Smartwatch 3 (SWR50), protože je to jediný model, který dokáže číst data z Dexcomu G5, i když je telefon mimo dosah. Některé další hodinky lze také upravit tak, aby fungovaly jako samostatný přijímač (další informace viz [tato dokumentace](https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5)).
+<h3 spaces-before="0">
+  xDrip+
+</h3>
 
-Uživatelé průběžné doplňují [seznam otestovaných telefonů a hodinek](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing). Existují různé ciferníky, které můžete s AndroidAPS použít. Najdete je [zde](../Configuration/Watchfaces.md).
+<p spaces-before="0">
+  Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. Můžete tak mít libovolný počet výstrah, specifikovat časy, kdy budou aktivní, zda mají přebít tichý režim telefonu apod. Some xDrip+ information can be found <a href="../Configuration/xdrip.md">here</a>. Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
+</p>
 
-Pro zápis telefonu nebo hodinek, které ještě nejsou uvedeny v tabulce, vyplňte prosím [formulář](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform).
+<h2 spaces-before="0">
+  Co dělat při čekání na moduly
+</h2>
 
-V případě jakýchkoli problémů s tabulkou napište prosím na e-mail [hardware@androidaps.org](mailto:hardware@androidaps.org), pokud chcete darovat telefon/hodinky potřebné pro testování, napište na e-mail [donations@androidaps.org](mailto:hardware@androidaps.org).
+<p spaces-before="0">
+  Někdy to zabere nějaký čas, než budete mít všechny moduly potřebné pro uzavření smyčky. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je NEZBYTNÉ ověřit (a případně upravit) bazální dávky (BR), sacharidový poměr (ICR), citlivost na inzulin (ISF) atd. Otevřená smyčka možná bude dobrým způsobem, jak systém otestovat a seznámit se s AndroidAPS. AndroidAPS v tomto režimu poskytuje rady ohledně léčby, které musíte provádět manuálně.
+</p>
 
-### xDrip+
+<p spaces-before="0">
+  You can keep on reading through the docs here, get in touch with other loopers online or offline, <a href="../Where-To-Go-For-Help/Background-reading.md">read</a> documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+</p>
 
-I když aplikaci xDrip+ nepotřebujete jako zdroj glykémie, stále ji můžete používat např. pro výstrahy a zobrazování glykémie. Můžete tak mít libovolný počet výstrah, specifikovat časy, kdy budou aktivní, zda mají přebít tichý režim telefonu apod. Některé informace o aplikaci xDrip+ najdete [zde](../Configuration/xdrip.md). Uvědomte si prosím, že dokumentace k této aplikaci není vždy aktuální, protože vývoj aplikace je poměrně rychlý.
+<p spaces-before="0">
+  <strong x-id="1">Done?</strong> If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the <a href="../Usage/Objectives.md">Objective description</a> before each new Objective and setup up your <a href="../index.md#component-setup">hardware</a>.
+</p>
 
-## Co dělat při čekání na moduly
+<p spaces-before="0">
+  % Image aliases resource for referencing images by name with more positioning flexibility
+</p>
 
-Někdy to zabere nějaký čas, než budete mít všechny moduly potřebné pro uzavření smyčky. Ale žádné obavy, je mnoho věcí, které můžete při čekání udělat. Je NEZBYTNÉ ověřit (a případně upravit) bazální dávky (BR), sacharidový poměr (ICR), citlivost na inzulin (ISF) atd. Otevřená smyčka možná bude dobrým způsobem, jak systém otestovat a seznámit se s AndroidAPS. AndroidAPS v tomto režimu poskytuje rady ohledně léčby, které musíte provádět manuálně.
-
-Můžete si pročítat tuto dokumentaci, být v kontaktu s ostatními uživateli uzavřené smyčky online nebo offline, [přečíst si dokumentaci](../Where-To-Go-For-Help/Background-reading.md) nebo zkušenosti ostatních uživatelů (buďte však opatrní, ne vše musí být správně nebo pro vás daný postup nemusí být vhodný).
-
-**Hotovo?**
-Jestliže máte všechny komponenty systému AAPS pohromadě (gratulujeme!) nebo aspoň máte vše potřebné pro spuštění otevřené smyčky, měli byste si nejprve před každým novým Cílem přečíst [Popis cílů](../Usage/Objectives.md) a nastavit svůj [hardware](../index#component-setup).
-
-% Zdroj aliasů obrázku pro odkazování obrázků jménem s větší flexibilitou polohy
-
-% Hardwarové a softwarové požadavky
+<p spaces-before="0">
+  % Hardware and Software Requirements
+</p>
