@@ -1,44 +1,39 @@
 # Ogólne zasady używania systemów CGM
 
-Higiena CGM
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Higiena CGM
 
-Niezależnie od tego, jakiego systemu CGM używasz, jeśli zamierzasz korzystać z kalibracji opartej na krwi, istnieją pewne bardzo jasne zasady, które powinieneś zastosować, niezależnie od tego, czy używasz oprogramowania DIY CGM, czy oficjalnych aplikacji.
+Whichever CGM system you are using, if you are going to use blood based calibration, then there are some very clear rules you should apply, whether or not you are using DIY CGM software or the official apps.
 
-- Upewnij się, że ręce i akcesoria do glukometru są czyste.
-- Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
-- Unikaj kalibracji, gdy poziom glukozy zmienia się w górę lub w dół.
-- W oficjalnych systemach CGM wykonaj „wymaganą” kalibrację - w aplikacjach pojawi się monit o sprawdzenie BG raz lub dwa razy dziennie. W systemach DIY możesz nie być poproszony/poproszona o wykonanie kalibracji i powinieneś/powinnaś uważać na kontynuowanie pracy systemu bez kalibracji.
-- Jeśli to możliwe, wykonaj kalibrację z niektórymi odczytami w niższym zakresie (4–5 mmoli / l lub 72–90 mg / dl), a niektóre na nieco wyższym poziomie (7-9 mmoli / l lub 126–160 mg / dl), taki sposób wykonania kalibracji zapewni lepszy zakres dla kalibracji punkt / nachylenie.
+-   Make sure hands and kit are clean.
+-   Try to calibrate when you have a series of dots with a flat arrow (15-30 minutes is usually enough)
+-   Avoid calibrating when glucose levels are moving up or down.
+-   Do “enough” calibrations – on official apps, you will be prompted for once or twice per day checks. On DIY systems you may not be, and should be careful about continuing without calibrations.
+-   If it all possible, calibrate with some of your readings in a lower range (4-5mmol/l or 72-90mg/dl) and some at a slightly higher level (7-9mmol/l or 126-160mg/dl) as this provides a better range for the point/slope calibration.
 
-Setting sensor (G6)
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Setting sensor (G6)
 
 When setting sensor, it is recommended not to press the inserter too firmly in order to avoid bleeding. The sensor thread should not come into contact with blood.
 
 After setting the sensor, the transmitter can be clicked into the sensor holder. Caution! First click in the square side and then press down the round side.
 
-Rozwiązywanie problemów
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Rozwiązywanie problemów
 
-## Connection problems
+### Connection problems
 
 Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
 
-## Sensor Errors
+### Sensor Errors
 
 If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
 
 Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
-## Jumpy values
+### Jumpy values
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse".  See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-## Negative Sensor Age
+### Negative Sensor Age
 
-```{image} ../images/Troubleshooting_SensorAge.png
-:alt: Negative sensor age
-```
+![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder#actions) or a sensor insert with wrong date. Go to treatments tab > careportal and delete the wrong entry.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
