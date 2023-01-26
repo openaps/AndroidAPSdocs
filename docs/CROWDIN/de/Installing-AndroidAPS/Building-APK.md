@@ -7,7 +7,7 @@
 ## Wichtige Hinweise
 
 * Nutze bitte **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) werden bei Android Studio 2020.3.1 nicht unterstützt
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
 ## Empfohlene Spezifikation des Computers zum Erstellen der Apk-Datei
 
@@ -61,13 +61,13 @@ Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem 
 Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 1. [Git installieren](../Installing-AndroidAPS/git-install.md)
-2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK#android-studio-installieren)
-3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](../Installing-AndroidAPS/Building-APK#git-pfad-in-android-studio-eintragen)
-4. [AndroidAPS-Code herunterladen](../Installing-AndroidAPS/Building-APK#androidaps-code-herunterladen)
-5. [Download Android SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [App erstellen](../Installing-AndroidAPS/Building-APK#signierte-apk-erstellen-generate-signed-apk) (generate signed apk)
-7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK#ubertrage-die-apk-datei-auf-das-smartphone)
-8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip#identify-receiver)
+2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
+3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
+4. [AndroidAPS-Code herunterladen](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
+5. [Download Android SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
+7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip.md#identify-receiver)
 
 ## Schritt für Schritt Anleitung
 
@@ -75,7 +75,7 @@ Detaillierte Beschreibung der notwendigen Schritte.
 
 ## Installiere git (falls du es noch nicht hast)
 
-Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.md).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
 ## Android Studio installieren
 
@@ -119,7 +119,7 @@ Warte während Android Studio zusätzliche Komponenten herunterlädt und bleibe 
 
 ## Git-Pfad in Android Studio eintragen
 
-Stelle sicher, dass [git auf Deinem PC installiert](../Installing-AndroidAPS/git-install.md) ist und dass Du den PC nach der git-Installation neu gestartet hast.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
 
 Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\] (1) auf der linken Seite und wähle dann den Link "All settings..." \[Alle Einstellungen...\] (2):
 
@@ -127,7 +127,7 @@ Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\]
 
 ### Windows
 
-* Stelle als Windows Nutzer sicher, dass Du den PC neu gestartet hast, nachdem Du [Git installiert](../Installing-AndroidAPS/git-install.md) hast.
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
 
 * Doppelklicke auf "Version Control" (1), um das Untermenü zu öffnen.
 
@@ -293,7 +293,7 @@ Signieren bedeutet, dass Du die App mit einem digitalen Fingerabdruck versiehst 
 
 * Gib das Passwort für Deinen key store ein (2) und bestätige es (3).![Key store Pfad wählen](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Hinweis:*** Passwörter für key store und key müssen nicht sehr anspruchsvoll sein. Merke sie Dir gut oder notiere sie an einem sicheren Ort. Falls Du künftig einmal keinen Zugriff auf die Passwörter haben solltest, findest Du einen Lösungsvorschlag unter [Fehlerbehebung verlorener key store](../Installing-AndroidAPS/troubleshooting_androidstudio#verlorener-keystore).
+    ***Hinweis:*** Passwörter für key store und key müssen nicht sehr anspruchsvoll sein. Merke sie Dir gut oder notiere sie an einem sicheren Ort. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 * Gib einen Alias für Deinen key ein (4). Wähle eine beliebige Bezeichnung.
 
