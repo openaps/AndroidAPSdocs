@@ -20,7 +20,7 @@ Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 - [destekleyen bir insülin pompası](./Pump-Choices.md), 
 - bir [Android akıllı telefon](Phones.md) (Apple iOS, AndroidAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve 
-- [sürekli glikoz izleme sistemi](../Configuration/BG-Source.md). 
+- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
 İkinci olarak, **donanımınızı kurmanız** gerekir. [Adım adım öğreticiyle örnek kurulum](Sample-Setup.md)'a bakın.
 
@@ -63,7 +63,7 @@ Döngü yapmanın pratikliğini anlamanıza yardımcı olacak iyi ipuçları iç
 
 - Akıllı telefonunuzu, saatinizi ve (gerekirse) BT okuyucusunu veya Link cihazını şarj etmek için pil takımı ve kablolar
 - Pompa pilleri
-- AndroidAPS ve kullandığınız diğer uygulamalar (ör. xDrip+, BYO Dexcom) için hem yerel olarak hem de bulutta (Dropbox, Google Drive) mevcut [apk](../Installing-AndroidAPS/Building-APK.md) ve [tercih dosyaları](../Usage/ExportImportSettings.md).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
 ## CGM/FGM'yi güvenli ve güvenilir bir şekilde nasıl bağlayabilirim?
 
@@ -241,7 +241,7 @@ Döngü, pompa pilini normal kullanımdan daha hızlı azaltabilir, çünkü sis
 - üretim sürecinden kalan balmumu veya yağ izi kalmadığından emin olmak için pil kutuplarını alkolle temizleyin.
 
 - [DanaR/RS pompası](../Configuration/DanaRS-Insulin-Pump.md) ile, başlatma prosedürü sırasında, pil kontaklarındaki koruyucu filmleri (depolama sırasında enerji kaybını önlemeyi amaçlayan) kısaca çıkarmaya çalışmak için yüksek bir akım kullanılır, ancak bu her zaman %100 çalışmaz. Pili ekranda %100 görünene kadar 2-3 kez çıkarıp yeniden takın veya pil anahtarını kullanarak pili kısa bir süre için her iki terminale birden uygulayarak takmadan önce kısa devre yapın.
-- ayrıca [belirli pil türleri](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life) için daha fazla ipucuna bakın
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Rezervuar ve kanüllerin değiştirilmesi
 
@@ -249,14 +249,14 @@ Kartuş değişimi AndroidAPS üzerinden yapılamaz, ancak daha önce olduğu gi
 
 - AndroidAPS'nin Ana Sayfa sekmesindeki "Açık Döngü"/"Kapalı Döngü" üzerine uzun basın ve 'Döngüyü 1 saat Askıya Al' seçeneğini seçin
 - Şimdi pompayı ayırın ve hazneyi pompa talimatlarına göre değiştirin.
-- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. Bu durumda, sadece değişikliği kaydetmek için eylemler sekmesinde [HAZIRLA/DOLDUR düğmesini](../Usage/CPbefore26#pump) kullanın.
+- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Pompaya yeniden bağlandıktan sonra, 'Askıya Alındı (X m)' üzerine uzun basarak döngüye devam edin.
 
-Ancak bir kanülün değiştirilmesi, pompanın "prime infüzyon seti" işlevini kullanmaz, ancak infüzyon setini ve/veya kanülü bolus geçmişinde görünmeyen bir bolus kullanarak doldurur. Bu şu anda çalışmakta olan geçici bir bazal oranını kesintiye uğratmadığı anlamına gelir. Eylemler (Eyl) sekmesinde, infüzyon setini doldurmak için gereken insülin miktarını ayarlamak ve hazırlamaya başlamak için [HAZIRLA/DOLDUR düğmesini](../Usage/CPbefore26#pump) kullanın. Miktar yeterli değilse, doldurmayı tekrarlayın. Varsayılan miktar düğmelerini Tercihler > Diğer > Standart insülin miktarlarını Hazırla/Doldur bölümünden ayarlayabilirsiniz. İğne uzunluğuna ve hortum uzunluğuna bağlı olarak kaç ünitenin doldurulması gerektiğini öğrenmek için kanül kutunuzdaki talimat kitapçığına bakın.
+Ancak bir kanülün değiştirilmesi, pompanın "prime infüzyon seti" işlevini kullanmaz, ancak infüzyon setini ve/veya kanülü bolus geçmişinde görünmeyen bir bolus kullanarak doldurur. Bu şu anda çalışmakta olan geçici bir bazal oranını kesintiye uğratmadığı anlamına gelir. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26.md#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Miktar yeterli değilse, doldurmayı tekrarlayın. Varsayılan miktar düğmelerini Tercihler > Diğer > Standart insülin miktarlarını Hazırla/Doldur bölümünden ayarlayabilirsiniz. İğne uzunluğuna ve hortum uzunluğuna bağlı olarak kaç ünitenin doldurulması gerektiğini öğrenmek için kanül kutunuzdaki talimat kitapçığına bakın.
 
 ## Duvar Kağıdı
 
-Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Getting-Started/Phones#phone-background) bulabilirsiniz.
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-background).
 
 ## Günlük kullanım
 
@@ -264,11 +264,11 @@ Telefonunuz için AndroidAPS duvar kağıdını [telefonlar sayfasında](../Gett
 
 #### Duş alırken veya banyo yaparken ne yapmalı?
 
-Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Duş veya banyo yaparken pompayı çıkarabilirsiniz. Bu kısa süre için buna ihtiyacınız olmayabilir, ancak AİNS hesaplamalarının doğru olması için AAPS'e bağlantınızın kesildiğini söylemelisiniz. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### İş
 
-İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. Bir döngü kullanıcısı olarak, tipik iş gününüz için bir [profil değiştirmeyi](../Usage/Profiles.md) düşünmelisiniz. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. Ayrıca, farklı vardiyalarda çalışıyorsanız, normalden çok daha erken veya daha geç çalışırken yüksek veya düşük bir geçici hedef veya [profilinizin zaman kaymasını](../Usage/Profiles#time-shift) düşünebilirsiniz. Ayrıca ikinci bir profil (ör. "ev" ve "iş günü") oluşturabilir ve ihtiyacınız olan profile günlük profil geçişi yapabilirsiniz.
+İşinize bağlı olarak, iş günlerinde farklı tedavi faktörleri kullanmayı tercih edebilirsiniz. Bir döngü kullanıcısı olarak, tipik iş gününüz için bir [profil değiştirmeyi](../Usage/Profiles.md) düşünmelisiniz. Örneğin, daha az zorlu bir işiniz varsa (örneğin, masada oturmak) %100'den yüksek bir profile veya tüm gün aktif ve ayaktaysanız %100'den az bir profile geçebilirsiniz. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. Ayrıca ikinci bir profil (ör. "ev" ve "iş günü") oluşturabilir ve ihtiyacınız olan profile günlük profil geçişi yapabilirsiniz.
 
 ## Boş zaman etkinlikleri
 
@@ -281,18 +281,18 @@ Böylece daha fazla aktif karbonhidrat olurdu, ancak aynı zamanda döngü, ins�
 Döngü yaparken şu adımları denemelisiniz:
 
 - [profil geçişi](../Usage/Profiles.md) < %100 yapın.
-- Standart hedefinizin üzerinde bir [etkinlik geçici hedefi](../Usage/temptarget#activity-temp-target) belirleyin.
-- SMB kullanıyorsanız ["SMB'yi yüksek geçici hedeflerle etkinleştir"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) ve ["SMB'yi her zaman etkinleştir"](../Usage/Open-APS-features#enable-smb-always)'in devre dışı bırakıldığından emin olun.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Bu ayarlar için önce ve sonra çalıştırma önemlidir. Değişiklikleri spordan önce zamanında yapın ve kas dolgusunun etkisini göz önünde bulundurun.
 
-Aynı anda düzenli olarak spor yapıyorsanız (yani spor salonunuzda spor dersi), profil değiştirme ve TT için [otomasyonu](../Usage/Automation.md) kullanmayı düşünebilirsiniz. Konum tabanlı otomasyon da bir fikir olabilir ancak ön işlemeyi zorlaştırır.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Konum tabanlı otomasyon da bir fikir olabilir ancak ön işlemeyi zorlaştırır.
 
 Profil değişikliğinin yüzdesi, aktivite geçici hedefinizin değeri ve değişiklikler için en iyi zaman bireyseldir. Sizin için doğru değeri arıyorsanız güvenli taraftan başlayın (daha düşük yüzde ve daha yüksek GH ile başlayın).
 
 ### Cinsel ilişki
 
-Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye AİNS hesaplamalarının doğru olması için söylemelisiniz. [yukarıdaki açıklamaya](../Getting-Started/FAQ#disconnect-pump) bakın.
+Pompayı 'özgür' olabilmek için kaldırabilirsiniz, ancak AndroidAPS'ye AİNS hesaplamalarının doğru olması için söylemelisiniz. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Alkol tüketimi
 
@@ -308,7 +308,7 @@ Alkol içerken, karbonhidrat yiyerek hipoglisemiyi manuel olarak önlemek için 
 
 #### Gece boyunca mobil ve WIFI radyasyonu olmadan nasıl döngü yapabilirim?
 
-Birçok kullanıcı geceleri telefonu uçak moduna alıyor. Döngünün uyurken sizi desteklemesini istiyorsanız, aşağıdaki şekilde ilerleyin (bu yalnızca xDrip+ veya ['Kendi Dexcom Uygulamanızı Oluşturun'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) gibi yerel bir KŞ kaynağıyla çalışır, KŞ okumalarını Nightscout aracılığıyla alırsanız çalışmayacaktır):
+Birçok kullanıcı geceleri telefonu uçak moduna alıyor. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Cep telefonunuzda uçak modunu açın.
 2. Uçak modu aktif olana kadar bekleyin.
@@ -342,11 +342,11 @@ Nightscout raporlarınızı (https://YOUR-NS-SITE.com/report) gösterebilir veya
 
 ## Benim problemim burada listelenmemiş.
 
-[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## Sorunum burada listelenmiyor ama çözümü buldum
 
-[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Yardım almak için bilgi.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Çözümünüzü bu listeye eklememizi bize hatırlatın!**
 
@@ -364,7 +364,7 @@ Bir internet sürücüsüne kopyalayın (Dropbox, Google vb.): Telefonunuza uygu
 
 Lütfen
 
-- tipik hatalar için [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio)'yi kontrol edin ve
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md#troubleshooting-android-studio) for typical errors and
 - [adım adım izlenecek yol](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po) ile ilgili ipuçları.
 
 ## Bir göreve takıldım ve yardıma ihtiyacım var.
