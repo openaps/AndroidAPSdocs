@@ -97,14 +97,14 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
 * Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
-* Supprimer l'entrée en erreur dans l'onglet [Traitements](../Getting-Started/Screenshots#correction-de-glucides) si vous le souhaitez.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
 * Le montant réel est lu et enregistré lors de la prochaine connexion. Pour forcer cette mise à jour, appuyez sur l'icône BT dans l'onglet dana ou attendez juste la prochaine connexion.
 
 ## Remarque spéciale lors du changement de téléphone
 
 Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
 
-* [Exportez les paramètres](../Usage/ExportImportSettings#export-settings) sur votre ancien téléphone
+* [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Transférez les paramètres de l'ancien vers le nouveau téléphone
 
 ### DanaRS v1
@@ -112,7 +112,7 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 * **Appairer manuellement** DanaRS avec le nouveau téléphone
 * Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth. Par conséquent, le nouveau téléphone et la pompe doivent être appairés manuellement.
 * Installez AndroidAPS sur le nouveau téléphone.
-* [Importer les paramètres](../Usage/ExportImportSettings#importer-les-parametres) sur votre nouveau téléphone
+* [Import settings](../Usage/ExportImportSettings.md#import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -121,4 +121,4 @@ Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessair
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
