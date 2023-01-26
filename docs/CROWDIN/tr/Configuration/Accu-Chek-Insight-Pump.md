@@ -12,7 +12,7 @@
 
 Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
-* Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](../Module/module#phone) sayfasında kontrol edin.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * Telefonunuzda yüklü olan AndroidAPS uygulaması
 
 ## Kurulum
@@ -52,7 +52,7 @@ Not: Pompa ile telefon arasında kalıcı bir bağlantı olmayacaktır. Yalnızc
 
 ## AAPS ayarları
 
-**Not : Nightscout ile 'senkronizasyon etkinleştirilmiş' olsa bile, Insight pompasıyla Otomatik Ayar kullanmak istiyorsanız 'Her zaman bazal mutlak değerleri kullan' seçeneğini kullanmak artık (yalnızca AAPS v2.7.0 ve üzeri sürümlerde) mümkündür.** (AAPS'de [Tercihler > NSClient > Gelişmiş Ayarlar](../Configuration/Preferences#advanced-settings-nsclient)'a gidin).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Pompanızın donanım yazılımı sürümüne bağlı olarak, Insight her bolus 
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AndroidAPS, bolus'u sessizce gönderir. (minimum [versiyon 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS, bolus'u sessizce gönderir. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
@@ -144,4 +144,4 @@ Bu durumda, pomp ve akıllı telefondaki bluetooth'u yaklaşık 10 saniye kapat�
 
 ## Insight pompasıyla zaman dilimlerini geçme
 
-Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#insight) bölümüne bakın.
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
