@@ -30,7 +30,7 @@ SMB 기능에는 몇 가지 안전 메커니즘이 있습니다:
 
 3. 혈당 추이를 예측하기 위한 부가적인 계산, 즉, UAM (un-announced meals, 입력되지 않은 음식 섭취). 사용자로부터 수동으로 탄수화물 섭취가 입력되지 않은 경우에도, 식사/아드레날린 또는 다른 영향들에 의해 상당히 상승한 혈당 수준을 UAM이 자동으로 검출할 수 있습니다. SMB를 사용하여 이러한 혈당 상승을 조절해볼 수 있습니다. 안전 측면에서 이는 반대로 작동하며, 예상치 못한 혈당의 급격한 감소가 발생하는 경우 SMB를 일찍 중단할 수 있습니다. 이것이 SMB 사용 시 UAM이 항상 활성화되어야 하는 이유입니다.
 
-**You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -52,7 +52,7 @@ AndroidAPS는 다음과 같이 값을 제한합니다:
 * 인슐린 저항성이 있는 성인: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### OpenAPS가 주입할 수 있는 최대 basal IOB (OpenAPS "max-iob")
 
@@ -63,7 +63,7 @@ Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In
     maxIOB = 평균 식사 bolus + 하루 최대 basal의 3배 양
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.md#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Child: 3
 * Teenager: 7
@@ -71,7 +71,7 @@ Be careful and patient and only change the settings step by step. It is differen
 * Insulin resistant adult: 25
 * Pregnant: 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -97,13 +97,13 @@ SMB is working when there is a high temporary target active (activity, hypo). Th
 
 ### Enable SMB always
 
-SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Enable SMB after carbs
 
-SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -165,7 +165,7 @@ The hardcoded parameters in AndroidAPS are:
 * Insulin resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
 
@@ -179,7 +179,7 @@ The default value is 2, but you should be rise this parameter slowly to see how 
 * Insulin resistant adult: 12
 * Pregnant: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### Enable AMA Autosens
 
