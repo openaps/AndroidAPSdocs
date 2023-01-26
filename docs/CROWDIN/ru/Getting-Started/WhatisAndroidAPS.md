@@ -6,38 +6,34 @@ AndroidAPS - это приложение, которое работает как
 
 Предупреждение: AndroidAPS не регулируется медицинскими органами ни в одной стране. Использование AndroidAPS-это, по сути, медицинский эксперимент над самим собой. Настройка системы требует настойчивости и технических знаний. Если у вас нет технических знаний, вы их постепенно приобретете. Вся нужная информация есть в этих документах, на соответствующих сайтах интернете или у других пользователей, которые уже спостроили APS -вы можете спросить их в группах Facebook или на форумах. Многие люди успешно построили AndroidAPS и теперь спокойно им пользуются, но важно, чтобы каждый пользователь:
 
-- Построил систему самостоятельно, чтобы досконально понимать как все работает
-- Скорректировал свой индивидуальный алгоритм дозирования с эндокринологом, чтобы он работать почти идеально
-- Обслуживал систему и следил за ней, чтобы она работала правильно
+- Builds the system themselves so that they thoroughly understand how it works
+- Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
+- Maintains and monitors the system to ensure it is working properly
 
-```{eval-rst}
-.. примечание::
-        **Отказ от ответственности и предупреждение**
+:::{note}
+**Disclaimer and Warning**
 
-        * Вся информация, идеи, и описанный здесь код предназначен только для ознакомительных и образовательных целей. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout в настоящее время не пытается соответствовать принципам конфиденциальности HIPAA. Вы применяете Nightscout и AndroidAPS на свой собственный риск и пожалуйста не используйте информацию или код для принятия медицинских решений.
+- Use of code from github.com is without warranty or formal support of any kind. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
 
-        *Вы пользуетесь кодом github.com без гарантии и какой-либо официальной поддержки. Пожалуйста, ознакомьтесь с ЛИЦЕНЗИЕЙ этого репозитория.
-
-        * Все наименования продуктов и компаний, товарные знаки, услуги по обслуживанию, зарегистрированные товарные знаки и зарегистрированные службы являются собственностью соответствующих владельцев. Их использование - в информационных целях и не подразумевает какой-либо принадлежности к ним или их одобрения.
-
-        Обратите внимание, что этот проект не имеет связи с и одобрения от: ` SOOIL <http://www.sooil.com/eng/>` _, ` Dexcom <https://www.dexcom.com/>` _, ` Accu-Chek, Roche Diabet Care <https://www.accu-chek.com/>` _ `Insulet <https://www.insulet.com/>`_или ` Medtronic <https://www.medtronic.com/>` _.
-```
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
 Если вы готовы продолжать, читайте дальше.
 
 ## Основные цели AndroidAPS
 
-- Приложение с встроенной безопасностью. Для того чтобы ознакомиться с защитными функциями алгоритмов, известных как oref0 и oref1, нажмите здесь (https: //openaps.org/reference-design/)
-- Это приложение все-в-одном для управления диабетом первого типа с алгоритмом ИПЖ и Nightscout
-- Приложение, в которым пользователи могут легко добавлять или удалять модули по мере необходимости
-- Приложение в различных версиях локализации и языков.
-- Приложение, которое может использоваться в открытом и замкнутом режиме
-- Приложение, полностью прозрачное: пользователи могут ввести параметры, увидеть результаты и принять окончательное решение
-- Приложение, которое не зависит от конкретных драйверов помп и содержит "виртуальную помпу", чтобы пользователи могли безопасно экспериментировать, прежде чем применять самостоятельно
-- Приложение, тесно интегрированное с Nightscout
-- Приложение, в котором пользователь контролирует ограничения безопасности
+- An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
+- An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+- An app to which users can easily add or remove modules as needed
+- An app with different versions for specific locations and languages.
+- An app which can be used in open- and closed-loop mode
+- An app that is totally transparent: users can input parameters, see results, and make the final decision
+- An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves
+- An app closely integrated with Nightscout
+- An app in which the user is in control of safety constraints
 
 ## Как начать
 
-Все, что здесь написано, очень важно, но поначалу может показаться довольно запутанным.
-Хорошая ориентация задается в [Обзоре модулей](./Module/module.html) и\`Целей \<. /Usage/Objectives.html>\`\_.
+Все, что здесь написано, очень важно, но поначалу может показаться довольно запутанным. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
