@@ -8,27 +8,25 @@ AndroidAPS oferă mai multe opțiuni pentru monitorizarea la distanță a copiil
 
 ## Functii
 
-- Pompa este controlată de telefonul copilului folosind AndroidAPS.
-- Părinţii pot vedea de la distanţă toate datele importante, cum ar fi valorile glicemiei, carbohidratii din organism, insulina din corp etc. folosind \*\* NSClient app * * pe telefonul lor. Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
-- Părinții pot avea alarme pe telefonul lor folosind aplicația **xDrip+ în modul follower**.
-- Control de la distanță al AndroidAPS folosind [SMS Commands](../Children/SMS-Commands.md) securizat prin autentificarea cu doi factori.
-- Controlul la distanţă prin intermediul aplicaţiei NSClient este recomandat doar dacă sincronizarea funcţionează bine (adică. nu vedeţi modificări de date nedorite cum ar fi modificarea a TT, TBR etc) vezi \` Release notes pentru Versiunea 2.8.1.1 \< ../Installing-AndroidAPS/Relesenotes#important-hints>\`\_ pentru detalii suplimentare.
+- Kid's pump is controlled by kid's phone using AndroidAPS.
+- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
+- Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
+- Remote control of AndroidAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
+- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) for further details.
 
 ## Instrumente și aplicații pentru monitorizare la distanță
 
-- [Nightscout](https://nightscout.github.io/) în browser-ul web (în principal afișare a datelor)
-- Aplicaţia NSClient este o versiune ciuntita de AAPS capabilă să urmareasca glicemiiile, fsa schimbe profilele bazale, sa seteze tinte temporare si sa introduca carbohidratii. Există 2 aplicaţii: " NSClient si NSClient2 disponibile pentru descărcare \<<https://github.com/nightscout/AndroidAPS/releases/>>\`\_. Singura diferenţă este numele aplicaţiei. În acest fel puteți instala aplicația de două ori pe același telefon, pentru a putea urmari 2 persoane/nifghtscout-uri cu ele.
-
-*Aplicația Dexcom Flollow dacă folosiți aplicația Dexcom originală (doar valorile glicemiei)
-\*\<unk> \`xDrip+ \<../Configuration/xdrip.md>\`\_ în modul follower (în principal valori ale glicemiei și \*\*alarme\**)
-\* \` Sugarmate \<<https://sugarmate.io/>>\` _ sau \` Spike \<<https://spike-app.com/>>\` _ pe iOS (in principal valori ale glicemiei si \*\* alarme\*\*)
+- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
+- NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). Singura diferenţă este numele aplicaţiei. În acest fel puteți instala aplicația de două ori pe același telefon, pentru a putea urmari 2 persoane/nifghtscout-uri cu ele.
+- Dexcom follow if you are using original Dexcom app (BG values only)
+- [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
+- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
 
 ## Lucrurile de luat în considerare
 
-- Setarea corectă a factorilor de tratament \<../Getting-Started/FAQ#how-to-begin>\`\_ (rată bazală, DIA, ISF...) este dificilă pentru copii, în special atunci când sunt implicați hormoni de creștere.
+- Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Setările trebuie să fie aceleași pentru AndroidAPS și NSClient.
-- Luați în considerare decalajul de timp dintre telefonul principal si telefonul urmaritor datorat timpului necesar pentru crestere si scadere, precum și faptul că telefonul principal AAPS se va încărca numai după rularea buclei.
-
-Asa ca faceti-va timp ca sa le setati corect si sa le testati functionarea cu copilul langa dumneavoastra inainte de a incepe monitorizarea si transmiterea tratamentului de la distanta. Vacanța școlară ar putea fi o perioadă bună pentru asta.
-\* Care este solutia dvs. de urgenţă atunci când monitorizarea de la distanţă nu funcţionează (de ex. probleme de reţea)?
-\* Monitorizarea şi tratamentul de la distanţă pot fi foarte utile la grădinita şi şcoala primara. Dar asigurați-vă că profesorii și educatorii sunt conștienți de planul de tratament al copilului dumneavoastră. Exemple pentru astfel de planuri de îngrijire pot fi găsite în "secțiunea de fișiere a utilizatorilor AndroidAPS \<<https://www.facebook.com/groups/AndroidAPSUsers/files/>>\`\_ pe Facebook.
+- Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
+- So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. Vacanța școlară ar putea fi o perioadă bună pentru asta.
+- What is your emergency plan when remote control does not work (i.e. network problems)?
+- Remote monitoring and treatment can be really helpful in kinder garden and elementary school. Dar asigurați-vă că profesorii și educatorii sunt conștienți de planul de tratament al copilului dumneavoastră. Examples for such care plans can be found in the [files section of AndroidAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.
