@@ -30,7 +30,7 @@ SMB, הקיצור של 'סופר מיקרו בולוס', הוא התכונה ה�
 
 3. חישובים נוספים לניבוי התנהגות הסוכר, למשל באמצעות UAM (ארוחות לא מוצהרות). גם ללא קלט פחמימות ידני מהמשתמש, UAM יכול לזהות באופן אוטומטי עלייה משמעותית ברמות הסוכר בעקבות ארוחות, אדרנלין או השפעות אחרות ולנסות להתאים זאת עם SMB. ליתר בטחון זה עובד גם הפוך ויכול לעצור את ה-SMB מוקדם יותר אם מתרחשת ירידה מהירה באופן בלתי צפוי בסוכר שבדם. זו הסיבה לכך שעל UAM להיות תמיד מופעל עם SMB.
 
-**עליכם להתחיל את [משימה 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) כדי להשתמש ב-SMB.**
+**You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 ראו גם: [תיעוד OpenAPS עבור oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) ו[המידע של טים על SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -52,7 +52,7 @@ AndroidAPS מגביל את הערך באופן הבא:
 * מבוגר\ת עם תנגודת אינסולין גבוהה: 12
 * הריון: 25
 
-*ראו גם [סקירה כללית של מגבלות קשיחות](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג (maxIOB)
 
@@ -63,7 +63,7 @@ AndroidAPS מגביל את הערך באופן הבא:
     אינסולין פעיל מרבי = בולוס ארוחה ממוצע + מינון בזאלי מקסימלי 3X
     
 
-היו זהירים וסבלניים ושנו את ההגדרות בהדרגה בלבד. ה-Max-IOB שונה עבור כל אחד ותלוי גם במינון היומי הממוצע (TDD). מטעמי בטיחות, קיימת מגבלה שתלויה בקטגוריית גיל המטופל. 'המגבלה הקשיחה' עבור maxIOB גבוהה יותר מאשר ב-[AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+היו זהירים וסבלניים ושנו את ההגדרות בהדרגה בלבד. ה-Max-IOB שונה עבור כל אחד ותלוי גם במינון היומי הממוצע (TDD). מטעמי בטיחות, קיימת מגבלה שתלויה בקטגוריית גיל המטופל. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.md#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * ילד\ה: 3
 * מתבגר\ת: 7
@@ -71,7 +71,7 @@ AndroidAPS מגביל את הערך באופן הבא:
 * מבוגר\ת עם תנגודת אינסולין גבוהה: 25
 * הריון: 40
 
-*ראו גם [סקירה כללית של מגבלות קשיחות](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ראו גם [תיעוד OpenAPS עבור SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -97,13 +97,13 @@ SMB פועל כאשר מופעל ערך מטרה זמני גבוה (פעילות
 
 ### הפעלת SMB תמיד
 
-SMB פועל תמיד (ללא תלות בפחמימות פעילות, ערכי מטרה זמניים או בולוסים). מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. לעת עתה, רק Dexcom G5 ו-G6 עומדים בדרישה זו. אם אתם משתמשים ב-["BYODA"](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) או ב"מצב נטיבי" ב-xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G5/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
+SMB פועל תמיד (ללא תלות בפחמימות פעילות, ערכי מטרה זמניים או בולוסים). מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G5/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
 
 עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### הפעלת SMB אחרי פחמימות
 
-SMB עובד במשך 6 שעות אחרי פחמימות, גם אם הפחמימות הפעילות הן 0. מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. לעת עתה, רק Dexcom G5 ו-G6 עומדים בדרישה זו. אם אתם משתמשים ב-["BYODA"](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) או ב"מצב נטיבי" ב-xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G5/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
+SMB עובד במשך 6 שעות אחרי פחמימות, גם אם הפחמימות הפעילות הן 0. מטעמי בטיחות, אפשרות זו מיועדת רק למקורות נתוני סוכר עם סינון איכותי לנתונים רועשים. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. אם בערך הסוכר יש סטייה גדולה מדי, חיישן ה-G5/G6 לא שולח אותו ללופ ומחכה לערך הבא בעוד 5 דקות.
 
 עבור חיישנים אחרים כמו Freestyle Libre, ''השימוש ב-SMB מושבת עד של-xDrip+ יהיה תהליך החלקת רעשים טוב יותר. לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -165,7 +165,7 @@ AMA - "סיוע ארוחה מתקדם" היא תכונת OpenAPS משנת 2017 (
 * מבוגר\ת עם תנגודת אינסולין גבוהה: 12
 * הריון: 25
 
-*ראו גם [סקירה כללית של מגבלות קשיחות](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג (maxIOB)
 
@@ -179,7 +179,7 @@ AMA - "סיוע ארוחה מתקדם" היא תכונת OpenAPS משנת 2017 (
 * מבוגר\ת עם תנגודת אינסולין גבוהה: 12
 * הריון: 25
 
-*ראו גם [סקירה כללית של מגבלות קשיחות](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### הפעלת חישוב רגישות אוטומטי (Autosens)
 
