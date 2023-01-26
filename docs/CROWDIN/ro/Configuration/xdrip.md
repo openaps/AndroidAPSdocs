@@ -53,7 +53,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 * When using xDrip+ as receiver uninstall Dexcom app first. **Transmiţătorul NU POATE FI conectat simultan cu xDrip+ si aplicatia Dexcom**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Versiunea xDrip+ în funcție de seria transmitatorului G6.
 
@@ -153,7 +153,7 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
 
 ### Extindere durata de functionare a transmiţătorului
 
-* Până acum durata de functionare nu a putut fi extinsă la transmiţătorii a caror serie începe cu 8G, 8H sau 8J. Acelaşi lucru este valabil şi pentru transmiţătorii cu serial nr. incepe cu 81 si firmware 1.6.5.**27** (vezi xDrip+ System Status-G5/G6 aşa cum se arată [pe acest ecran](../Configuration/xdrip#transmitter-battery-status)).
+* Până acum durata de functionare nu a putut fi extinsă la transmiţătorii a caror serie începe cu 8G, 8H sau 8J. Acelaşi lucru este valabil şi pentru transmiţătorii cu serial nr. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
 * Pentru a preveni dificultăţi la pornirea senzorilor, este indicat să extinzi viaţa transmiţătorului înainte de ziua 100 a primei utilizări.
 * -> Dacă seria transmițătorului starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Rularea senzorului va fi oprită in timpul in care se extindere viaţa transmiţătorului. Deci, extinde înainte de schimbarea senzorului sau fi constient că va exista o nouă fază de încălzire de 2 ore.
@@ -275,7 +275,7 @@ Pentru transmițătoarele a caror serie is starting with 8G, 8H or 8Juse one of 
       * Dacă folosesti algoritmul xDrip+, poti seta ora cu mai mult de 2 ore în urmă ca sa eviti încălzirea. Citirile pot fi foarte neregulate. Prin urmare, nu se recomandă acest lucru.
    * Introdu codul senzorului (de pe folia detaşabilă a senzorului) 
       * Păstreaza codul - il poti folosi ulterior (de ex la o noua pornire după ce transmiţătorul a trebuit înlăturat)
-      * Codul poate fi gasit si in [inregistrari xDrip+ ](../Configuration/xdrip#retrieve-sensor-code): Click 3-puncte-meniu din ecranul principal xDrip+ si alege `Vezi Inregistrari Evenimente`.
+      * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
    * Nu este necesară calibrarea în cazul în care utilizezi G6 în modul original. xDrip+ va afișa citiri automat după 2 ore de încălzire.
    * Nu reporni receptorul Dexcom original (dacă este utilizat) înainte ca xDrip+ să afișeze primele citiri.
       
@@ -343,7 +343,7 @@ Pentru transmițătoarele a caror serie is starting with 8G, 8H or 8Juse one of 
    ### Nivel baterie de la transmițătorul Libre
    
    * Nivelul de baterie al unor transmițători precum MiaoMiao 2 poate fi afişat în AAPS.
-   * Detaliile pot fi găsite pe pagina [de capturi de ecran](../Getting-Started/Screenshots#sensor-level-battery).
+   * Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
    
    ### Conectează Transmiterul Libre& pornește senzorul
    
