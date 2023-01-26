@@ -53,7 +53,7 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
 
 * Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 * Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
-* Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die ['Build Your Own Dexcom App](../Hardware/DexcomG6#g6-mit-build-your-own-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip+ Version abhängig von der G6 Transmitter Seriennummer
 
@@ -153,7 +153,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 
 ### Transmitterlaufzeit verlängern
 
-* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G, 8H oder 8J beginnt, nicht verlängert werden. Das Gleiche gilt für Transmitter deren Seriennummer mit 81 beginnt und die die Firmware 1.6.5.**27** (siehe xDrip+ System Status - G5/G6 Status wie im [Screenshot oben beschrieben](../Configuration/xdrip#transmitter-batteriestatus)) haben).
+* Bisher kann die Laufzeit von Transmittern, deren Seriennummer mit 8G, 8H oder 8J beginnt, nicht verlängert werden. Das Gleiche gilt für Transmitter deren Seriennummer starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
 * Um Schwierigkeiten beim Start von Sensoren zu vermeiden, wird dringend empfohlen, den Transmitter vor Ablauf des 100. Tags der ersten Nutzung zu verlängern.
 * Die Verwendung von Transmittern deren Seriennr. 81 beginnt und Firmware 1.6.5.**27** haben nach Tag 100 ist nur möglich, wenn der 'engineering mode' eingeschaltet ist und 'native mode' deaktiviert wird (Hamburger Menü -> Einstellungen -> G5 Debugeinstellungen -> Native Algorithm).
 * Eine laufende Sensorsitzung wird gestoppt, wenn Du die Transmitterlaufzeit verlängerst. Verlängere daher bei einem Sensorwechsel oder sei Dir bewusst, dass nach der Verlängerung eine neue zweistündige Warm-Up-Phase des Sensors beginnt.
@@ -275,7 +275,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    * Wenn Du den xDrip+ Algorithmus verwendest, kannst Du eine Setzzeit von mehr als zwei Stunden in der Vergangenheit setzen, um die Aufwärmphase zu umgehen. Die angezeigten Werte können dann aber recht fehlerhaft sein. Deshalb wird dies nicht empfohlen.
 * Gib den Sensorcode ein. Diesen findest Du auf der Abdeckfolie des Sensorpflasters. 
    * Bewahre diesen Code für künftige Nutzung auf (z.B. für einen Neustart nach Tausch des Transmitters).
-   * Der Code ist auch in den [xDrip+ Logs](../Configuration/xdrip#sensorcode-in-den-logs-finden) zu finden: Klicke auf das 3-Punkte-Menü rechts oben auf dem xDrip+ Startbildschirm und wähle `Log anzeigen`.
+   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Kalibrierungen sind nicht notwendig, wenn Du den G6 im "native mode" verwendest. xDrip+ wird nach der zweistündigen Aufwärmphase automatisch die erste BZ-Werte anzeigen.
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
    
@@ -343,7 +343,7 @@ Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seri
 ### Batteriestand Libre Smart Reader
 
 * Der Batteriestand eines Smart Readers wie z.B. des MiaoMiao 2 kann in AAPS angezeigt werden.
-* Weitere Details auf der Seite [AndroidAPS Bildschirme](../Getting-Started/Screenshots#sensor-level-batterie).
+* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
 
 ### Libre Transmitter verbinden und Sensor starten
 
