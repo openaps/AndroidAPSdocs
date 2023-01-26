@@ -2,37 +2,36 @@
 
 ## La seguridad Primero
 
-- AndroidAPS te permite controlar el teléfono de un niño de forma remota mediante mensajes de texto. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
-- Además, se recomienda permitir a un [segundo número de teléfono](#authorized-phone-numbers) para comandos SMS. Por lo que es posible utilizar un segundo número de teléfono para [deshabilitar temporalmente](#otro) teléfono SMS en caso de pérdida o robo del teléfono remoto principal.
-- AndroidAPS también te avisará por mensaje de texto si tus comandos resmotos, tales como bolos o cambios de perfil, se han llevado a cabo. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
-- **Si usted envia un bolo por Comandos SMS debe introducir hidratos de carbono a través de Nightscout (NSClient, página Web...)!** Si no lo hace el IOB sería correcto con bajos COB lo potencialmente conduce a no realizar la corrección de bolo dado que AAPS supone que tiene demasiada insulina activa.
-- Desde la versión 2.7 de AndroidAPS se debe utilizar una aplicación de autenticación por contraseña de un sólo uso, para mejorar la seguridad al usar la opción de comandos SMS.
+- AndroidAPS allows you to control a child's phone remotely via text message. Si activas esta función "SMS Communicator", recuerda siempre que el teléfono configurado para dar comandos remotos podría ser robado. Por lo que protege siempre el móvil con código PIN. Se recomienda usar una contraseña compleja o usar datos biométricos.
+- Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Es aconsejable, por seguridad, configurar esta función para que los textos de confirmación se envíen al menos a dos números de teléfono diferentes, así si falla (o ha sido robado) uno, quedará el otro.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Configurar comandos SMS
 
-```{eval-rst}
-.. imagen:: ../images/SMSCommandsSetup.png
-  :alt: Configuración de comandos SMS
+```{image} ../images/SMSCommandsSetup.png
+:alt: Configuración de comandos SMS
 ```
 
-- La mayoría de los ajustes de los objetivos temporales, después de AAPS, etc. se pueden realizar en [Aplicación NSClient](../Children/Children.md) en un teléfono Android con una conexión a Internet.
-- Los bolos no pueden añadir mediante Nightscout, pero se pueden usar comandos SMS.
-- Si usas un teléfono iPhone como seguidor, no puedes usar la aplicación NSClient, aunque, hay disponibles comandos SMS adicionales.
-- En los ajustes de tu móvil Android ve a aplicaciones > AndroidAPS > permisos y habilitar SMS
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Boluses can't be given through Nightscout, but you can use SMS commands.
+- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 ### Números de teléfono permitidos
 
-- En AndroidAPS ir a Tabla de configuraciones > Comunicador SMS \*\* y añadir el número(s) de teléfono que deseas habilitar para enviar comandos SMS (separados por punto y coma - p.ej. +3412345678;+3412345679)
+- In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
-- Habilitar 'Permitir comandos remotos mediante SMS'.
+- Enable 'Allow remote commands via SMS'.
 
-- Si desea utilizar más de un número:
+- If you want to use more than one number:
 
-  - Introduzca sólo un número.
+  - Enter just one number.
 
-  - Verifique que este número funcione por medio del envío y confirmación de un comando de SMS.
+  - Make that single number work by sending and confirming a SMS command.
 
-  - Ingrese número(s) adicional(es) separados por punto y coma(s) sin espacio.
+  - Enter additional number(s) separated by semicolon, no space.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
     :alt: SMS Commands Setup multiple numbers
@@ -80,7 +79,7 @@
 
 ## Use SMS commands
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands#commands) below.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.md#commands) below.
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
@@ -94,7 +93,7 @@
 
 ## Comandos
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: Ejemplo de comandos SMS
@@ -102,106 +101,71 @@ Commands must be sent in English, the response will be in your local language if
 
 ### Loop
 
-- LOOP STOP/DISABLE
-  \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Response: Loop has been disabled
 
-- LOOP START/ENABLE
-  \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Response: Loop has been enabled
 
 - LOOP STATUS
 
-  - La respuesta depende del estado actual
+  - Response depends on actual status
 
-    - Lazo inactivo
-    - Lazo activo
-    - Suspendido (10 min)
+    - Loop is disabled
+    - Loop is enabled
+    - Suspended (10 min)
 
-- LOOP SUSPEND 20
-  \* Respuesta: El lazo esta suspendido durante 20 minutos
+- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
 
-- LOOP REINICIADO
-  \* Respuesta: El lazo se ha reanudado
+- LOOP RESUME \* Response: Loop resumed
 
 ### Datos de CGM
 
-- BG
-  \* Respuesta: Último BG: 5,6 4min atrás, Delta: -0,2 mmol, IOB: 0,20U (Bolo: 0,10U Basal: 0,10U)
-- CAL 5.6
-  \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-  \* Respuesta después de recibir el código correcto: Calibración enviada (**Si xDrip está instalado. Debe estar habilitado aceptar calibración en xDdrip+**)
+- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
 ### Dosis Basal
 
-- BASAL STOP/CANCEL
-  \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3
-  \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20
-  \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30%
-  \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50
-  \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 ### Bolo
 
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
-- BOLUS 1.2
-  \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
-  \* Respuesta B: Los bolos remotos no están disponibles. Vuelve a intentarlo más tarde.
-- BOLUS 0,60 MEAL
-  \* Si especifica el parámetro opcional MEAL, esto establece el objetivo temporal MEAL (valores por defecto son: 90 mg/dL, 5,0 mmol/l para 45 minutos).
-  \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-  \* Respuesta B: Los bolos remotos no están disponibles.
-- CARBS 5
-  \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM
-  \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL
-  \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120
-  \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Vuelve a intentarlo más tarde.
+- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
+- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 ### Perfil
 
-- PROFILE STATUS
-  \* Respuesta: Perfil1
-- LISTADO DE PERFILES
-  \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PERFIL 1
-  \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30
-  \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Response: Profile1
+- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 ### Otros
 
-- TREATMENTS REFRESH
-  \* Respuesta: Actualizar los tratamientos desde NS
-- NSCLIENT RESTART
-  \* Respuesta: NSCLIENT REINICIAR de 1 receptor
-- BOMBA
-  \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT
-  \* Response: Pump reconnected
-- PUMP DISCONNECT *30*
-  \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISHABILITADO/STOP
-  \* Respuesta: Para inhabilitar la respuesta de servicio remoto de SMS responda con el código Any. Ten en cuenta que puedes reactivarlo directamente desde el smartphone maestro AAPS solamente.
-- TARGET MEAL/ACTIVITY/HYPO
-  \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL
-  \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- AYUDA
-  \* Respuesta: BG, LOOP, TRATAMIENTOS, .....
-- AYUDA BOLUS
-  \* Respuesta: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Response: Refresh treatments from NS
+- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- PUMP CONNECT \* Response: Pump reconnected
+- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Ten en cuenta que puedes reactivarlo directamente desde el smartphone maestro AAPS solamente.
+- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+- HELP \* Response: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 ## Solución de problemas
 
 ### Múltiples SMS
 
-If you receive the same message over and over again (i.e. cambio de perfil) probablemente hayas establecido un circulo con otras apps. Podría ser con xDrip +, por ejemplo. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. Podría ser con xDrip +, por ejemplo. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
