@@ -1,68 +1,69 @@
 # העדפות
 
-- **פתחו את העדפות** בלחיצה על תפריט 3 נקודות (⋮) בפינה השמאלית עליונה במסך הראשי.
+- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt: Open preferences
   ```
 
-ניתן לקפוץ אל ההעדפות המתאימות ללשונית מסויימת (לדוגמה לשונית המשאבה) ע"י מעבר אל הלשונית ובחירת העדפות של הלשונית בתפריט שלוש הנקודות.
+- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-> ```{image} ../images/Pref2020_OpenPlugin2.png
-> :alt: Open plugin preferences
-> ```
+  ```{image} ../images/Pref2020_OpenPlugin2.png
+  :alt: Open plugin preferences
+  ```
 
-- ניתן לפתוח **תת-תפריטים** בלחיצה על המשולשים שמתחת לשם תת התפריט.
+- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Open submenu
   ```
 
-- אפשר **לסנן** את ההעדפות בשורת הסינון כדי לקצר הגישה אל העדפה מסויימת. התחילו להקליד את שם ההגדרה אותה אתם מחפשים.
+- With the **filter** on top of the preferences screen you can quickly access certain preferences. התחילו להקליד את שם ההגדרה אותה אתם מחפשים.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt: Preferences filter
   ```
 
-% תוכן עניינים::
-% :backlinks: entry
-% :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
+```
 
 ## כללי
 
-**יחידות**
+**Units**
 
-- הגדירו את יחידות המידה של הסוכר mg/dl או mmol/l כרצונכם.
+- Set units to mmol/l or mg/dl depending on your preferences.
 
-**שפה**
+**Language**
 
-- ישנה אפשרות חדשה לשימוש בשפת ברירת המחדל של הטלפון (מומלץ).
+- New option to use phone's default language (recommended).
 
-אם ברצונכם להשתמש בשפה השונה ברירת המחדל של הטלפון, בחרו אותה בתפריט זה.
-\* בשימוש בשפה שונה, ייתכן שתראו תערובת של שפות. זה בגלל בעיה באנדרואיד שגורמת לכך שעקיפת שפת המערכת לפעמים נכשלת.
+- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
 
-> ```{image} ../images/Pref2020_General.png
-> :alt: Preferences > General
-> ```
+- If you use different languages you might sometimes see a language mix. זה בגלל בעיה באנדרואיד שגורמת לכך שעקיפת שפת המערכת לפעמים נכשלת.
 
-**שם המטופל\\ת**
+  ```{image} ../images/Pref2020_General.png
+  :alt: Preferences > General
+  ```
 
-- מאפשר זיהוי בין משתמשים שונים (לדוגמה אם יש שני ילדים סוכרתיים במשפחה).
+**Patient name**
+
+- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
 ### Protection (הגנה בסיסמאות)
 
 #### סיסמה ראשית
 
-- הכרחי כדי [לייצא הגדרות](../Usage/ExportImportSettings.md) מכיוון שהן מוצפנות החל מגרסה 2.7.
-  \*\* הגנה ביומטרית עלולה שלא לפעול כיאות במכשירי Oneplus. זוהי בעיה מוכרת בדגמים מסויימים.\*\*
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
-- פתחו את העדפות בלחיצה על תפריט 3 נקודות (⋮) בפינה השמאלית עליונה במסך הראשי)
+- Open Preferences (three-dot menu on top right of home screen)
 
-- לחצו על המשולש שמתחת ל-"כללי"
+- Click triangle below "General"
 
-- לחצו על "סיסמה ראשית"
+- Click "Master-Password"
 
-- הזינו סיסמה פעמיים ולחצו על אישור.
+- Enter password, confirm password and click ok.
 
   ```{image} ../images/MasterPW.png
   :alt: Set master password
@@ -70,11 +71,11 @@
 
 #### Settings protection (הגנה על הגדרות)
 
-- הגנו על ההגדרות שלכם עם סיסמה או עם זיהוי ביומטרי, לדוגמה במקרה בו [ילד משתמש ב-AAPS](../Children/Children.md).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
 
-- אפשר להשתמש ב-Custom password (סיסמה מותאמת אישית) אם ברצונכם להשתמש בסיסמה ששונה מהסיסמה הראשית שתגן על [ייצוא הגדרות](../Usage/ExportImportSettings.md).
+- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
-- אם אתם משתמשים בסיסמה מותאמת אישית, לחצו על השורה "סיסמת הגדרות" כדי להגדיר סיסמה כמתואר [מעלה](../Configuration/Preferences#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.md#master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Protection
@@ -82,14 +83,14 @@
 
 #### Application protection (הגנת האפליקציה)
 
-- אם האפליקציה מוגנת, עליכם להזין סיסמה או להשתמש באימות ביומטרי של הטלפון כדי לפתוח את AAPS.
-- האפליקציה תסגור עצמה מיד אם הוזנה סיסמה שגויה - אך עדיין תפעל ברקע אם היא נפתחה בעבר בהצלחה.
+- If app is protected you must enter password or use phone's biometric authentication to open AAPS.
+- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
 
 #### Bolus protection (הגנת בולוס)
 
-- הגנת בולוס עשויה להיות שימושית אם ילד קטן משתמש ב-AAPS ואתם מבצעים [בולוס באמצעות SMS](../Children/SMS-Commands.md).
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
 
-- בדוגמה למטה אפשר לראות דיאלוג של הגנה ביומטרית. אם האימות הביומטרי לא עובד, לחצו על הרווח שמעל להודעה הלבנה והזינו את הסיסמה הראשית.
+- In the example below you see the prompt for biometric protection. אם האימות הביומטרי לא עובד, לחצו על הרווח שמעל להודעה הלבנה והזינו את הסיסמה הראשית.
 
   ```{image} ../images/Pref2020_PW.png
   :alt: Prompt biometric protection
@@ -97,26 +98,26 @@
 
 #### סקין
 
-- אפשר לבחור מתוך ארבע סוגי סקינים:
+- You can choose from four types of skins:
 
   ```{image} ../images/Pref2021_SkinWExample.png
   :alt: Select skin + examples
   ```
 
-- "תצוגה רזולוציה נמוכה" מגיע עם תוויות קצרה יותר וגיליםרמות הוסרו כדי לקבל יותר מקום פנוי למסכים ברזולוציה נמוכה מאוד.
+- 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
 
-- ההבדל בין סקינים אחרים תלוי בכיוון התצוגה של הטלפון.
+- Difference of other skins depend of phone's display orientation.
 
 ##### אוריינטציית פורטרט (עומד)
 
-- ה\*\*סקין מקורי\*\* וה\*\*לחצנים מוצגים תמיד בתחתית המסך\*\* זהים
-- **תצוגה גדולה** מציגה גרפים בגודל גדול יותר בהשוואה לסקינים אחרים
+- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
+- **Large Display** has an increased size of all graphs compared to other skins
 
 ##### אוריינטציה אופקית
 
-- בשימוש ב\*\*סקין מקורי\*\* וב-**תצוגה גדולה**, עליכם לגלול למטה כדי לראות את הלחצנים שבתחתית המסך
+- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
 
-- **תצוגה גדולה** מציגה גרפים בגודל גדול יותר בהשוואה לסקינים אחרים
+- **Large Display** has an increased size of all graphs compared to other skins
 
   ```{image} ../images/Screenshots_Skins.png
   :alt: Skins depending on phone's display orientation
@@ -124,7 +125,7 @@
 
 ## סקירה כללית
 
-- בסעיף סקירה כללית ניתן להגדיר העדפות למסך הבית.
+- In overview section you can define preferences for home screen.
 
   ```{image} ../images/Pref2020_OverviewII.png
   :alt: Preferences > Overview
@@ -132,14 +133,14 @@
 
 ### השאר את המסך דולק
 
-- שימושי להצגה בפרזנטציה.
-- אפשרות זו תצרוך הרבה אנרגיה, אז חכם יהיה לחבר את הטלפון למטען.
+- Useful while giving a presentation.
+- It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
 ### מקשים
 
-- הגדירו אילו לחצנים גלויים בתחתית מסך הבית.
+- Define which buttons are visible on the bottom of your home screen.
 
-- בעזרת נתון התוספת ניתן להגדיר כמות עבור שלושת הכפתורים בדיאלוג פחמימות ואינסולין להזנת נתונים קלה.
+- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
   :alt: Preferences > Buttons
@@ -147,13 +148,13 @@
 
 ### אשף מהיר
 
-- אם יש לכם חטיף או ארוחה שכיחים, אפשר להשתמש בלחצן האשף המהיר כדי להזין בקלות את כמות הפחמימות ולהגדיר את יסודות החישוב.
+- If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 
-- בהגדרה זו מגדירים באיזה פרק זמן הכפתור יהיה גלוי במסך הבית שלך - רק כפתור אחד לכל תקופה.
+- In setup you define during which time period the button will be visible on your home screen - just one button per period.
 
-- אם תלחצו על כפתור האשף המהיר, AAPS יחשב ויציע בולוס עבור הפחמימות האלה בהתבסס על היחסים הנוכחיים שלך (בהתחשב בערך הסוכר בדם או אינסולין פעיל אם מוגדר).
+- If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
 
-- יש לאשר את ההצעה לפני הזרקת הבולוס.
+- The proposal has to be confirmed before insulin is delivered.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
   :alt: Preferences > Quick Wizard Button
@@ -161,24 +162,24 @@
 
 ### ברירות מחדל ערכי מטרה
 
-- [ערכי מטרה זמניים](../Usage/temptarget.md) מאפשרים שינויים בערכי המטרה של רמת הסוכר בדם למשך זמן מסוים.
+- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
 
-- עם הגדרת ברירת המחדל של ערכי המטרה ניתן לשנות את ערכי המטרה של פעילות גופנית, אכילה בקרוב וכו' בקלות.
+- With setting of default TT you can easily change your target for activity, eating soon etc.
 
-- לחצו לחיצה ארוכה על ערך המטרה בפינה השמאלית העליונה במסך הבית או השתמשו בקיצורי הדרך בכפתור הכתום "פחמימות" בתחתית המסך הראשי.
+- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Preferences > Default temp targets
   ```
 
-### מילויתיחול כמויות סטנדרטיות של אינסולין
+### מילוי\תיחול כמויות סטנדרטיות של אינסולין
 
-- אם ברצונכם למלא צינורית או לתחל קנולה דרך AAPS תוכלו לעשות זאת דרך [הלשונית פעולות](../Getting-Started/Screenshots#action-tab).
-- ניתן להגדיר ערכים מוגדרים מראש בדיאלוג זה.
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- Pre-set values can be defined in this dialogue.
 
 ### טווח הצגה
 
-- הגדירו את טווח היעד שלכם שיצבע בירוק בגרף הראשי במסך הבית.
+- Define which part of the graph on the home screen shall be you target range and be filled with green background.
 
   ```{image} ../images/Pref2020_OV_Range2.png
   :alt: Preferences > Range for visualization
@@ -186,9 +187,9 @@
 
 ### קצר את כותרות הלשוניות
 
-- קיצור כותרות הלשוניות כדי לראות יותר לשוניות בבת אחת על המסך.
+- See more tab titles on screen.
 
-- לדוגמה, הלשונית 'OpenAPS AMA' הופכת ל'OAPS' ו-'OBJECTIVES' הופכת ל'OBJ' וכו'.
+- For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
   :alt: Preferences > Tabs
@@ -196,7 +197,7 @@
 
 ### הצגת שדות הערות בתיבות דו-שיח של טיפול
 
-- מאפשר הוספת הערות טקסט קצרות לטיפולים שלך (במחשבון הבולוס, פחמימות, אינסולין...)
+- Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
   :alt: Preferences > Notes in treatment dialogs
@@ -204,21 +205,21 @@
 
 ### אורות חיווי
 
-- נורות הסטטוס נותנות חיווי ויזואלי עבור:
+- נורות הסטטוס נותנות חיווי ויזואלי עבור
 
   - גיל חיישן
-  - רמת סוללת משדרים של חיישנים מסוימים (ראו [דף צילומי מסך](../Getting-Started/Screenshots#sensor-level-battery) לפרטים).
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
   - גיל אינסולין (משך השימוש במכל האינסולין הנוכחי)
   - רמת המכל (יחידות)
-  - גיל העירוי
-  - גיל סוללת המשאבה
-  - רמת סוללת המשאבה (%)
+  - גיל הצינורית
+  - Pump battery age
+  - Pump battery level (%)
 
 - אם חורגים מסף האזהרה, הערכים יוצגו בצהוב.
 
 - אם חורגים מסף האזהרה הקריטי, הערכים יוצגו באדום.
 
-- בגרסאות שקדמו ל-AAPS 2.7 הגדרות לנורות המצב היו חייבות להתבצע בהגדרות Nightscout.
+- In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
   :alt: Preferences > Status Lights
@@ -230,21 +231,21 @@
 :alt: Preferences > Status Lights
 ```
 
-#### ספק את חלק זה של תוצאת אשף הבולוס \[%\]
+#### ספק את חלק זה של תוצאת אשף הבולוס [%]
 
-- הגדרה כללית אספקת רק חלק מסויים מתוצאת חישוב הבולוס.
-- רק האחוז שנקבע (חייב להיות בין 10 ל-100) מהבולוס המחושב יוזרק בעת שימוש באשף הבולוס.
-- האחוז הנבחר מוצג במחשבון הבולוסים.
+- General setting to deliver only part of bolus wizard result.
+- Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard.
+- The percentage is shown in bolus wizard.
 
 #### יועץ הבולוסים
 
-- אם תפאילו את [אשף הבולוס](../GettingStarted/Screenshots#bolus-wizard) וערך הסוכר מעל 180 mg/dl, יוצע בולוס תיקון.
+- If you run [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
-- אם יתקבל בולוס תיקון **לא תירשמנה פחמימות**.
+- If correction bolus is accepted **no carbs** will be recorded.
 
-- אזעקה תופעל כאשר ערך הסוכר ירד לרמה טובה כדי להתחיל לאכול.
+- An alarm will be started when glucose value is in good level to start eating.
 
-- עליכם להיכנס שוב [לאשף הבולוסים (מחשבון)](../GettingStarted/Screenshots#bolus-wizard) ולהזין את כמות הפחמימות שברצונכם לאכול.
+- You have to enter [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Bolus advisor message
@@ -252,112 +253,112 @@
 
 #### סופר בולוס
 
-- אפשרות להפעלת סופרבולוס באשף הבולוס.
-- [סופרבולוס](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) הוא בולוס "ששואל" אינסולין מהמינון הבזאלי של השעתיים הקרובות כדי למנוע עליות חדות.
+- Option to enable superbolus in bolus wizard.
+- [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
 
 ## בטיחות טיפולים
 
 ### Patient type
 
-- מגבלות הבטיחות נקבעות על סמך קטגוריית הגיל שתבחרו בהגדרה זו.
-- אם אתם מתחילים להגיע לגבולות הקשיחים הללו (כמו בולוס מקסימלי), הגיע הזמן לעבור לקטגורית גיל גבוהה יותר.
-- מומלץ שלא לבחור בגיל גבוה מהגיל האמיתי מכיוון שזה יכול להוביל למינון יתר על ידי הזנת ערך שגוי בדיאלוג האינסולין (על ידי דילוג על הנקודה העשרונית, למשל).
-- אם ברצונך לדעת את המספרים המדוייקים של מגבלות הבטיחות הקשיחות הללו, גללו אל תכונות האלגוריתם ב\`דף זה \<../Usage/Open-APS-features.md>\`\_.
+- Safety limits are set based on the age you select in this setting.
+- If you start hitting these hard limits (like max bolus) it's time to move one step up.
+- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
+- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
 
-### בולוס מקסימלי מותר \[U\]
+### Max allowed bolus \[U\]
 
-- מגדיר את הבולוס המקסימלי ש-AAPS מורשה לספק בבת אחת.
-- הגדרה זו קיימת כמגבלת בטיחות למניעת מתן בולוס מסיבי עקב קלט מקרי או שגיאת משתמש.
-- מומלץ להגדיר מגבלה זו לגודל הגיוני התואם בערך לכמות המקסימלית של בולוס אינסולין שסביר שתזדקקו לו לארוחה או לתיקון.
-- הגבלה זו חלה גם על תוצאות מחשבון הבולוס.
+- Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
+- This restriction is also applied to the results of the bolus calculator.
 
-### מקסימום פחמימות מותר \[g\]
+### Max allowed carbs \[g\]
 
-- מגדיר את הכמות המקסימלית של פחמימות שמחשבון הבולוס של AAPS יכול לקבל.
-- הגדרה זו קיימת כמגבלת בטיחות למניעת מתן בולוס מסיבי עקב קלט מקרי או שגיאת משתמש.
-- מומלץ להגדיר כמות הגיונית שתואמת בערך לכמות הפחמימות המרבית שסביר שתזדקקו אי פעם לארוחה.
+- Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
+- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
+- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
 
 ## לולאה
 
 ### מצב APS
 
-- בחירה בין לולאה פתוחה לסגורה כמו גם הפסקת עקב סוכר נמוך (LGS)
-- **לולאה פתוחה** פירושה שהצעות בזאלי זמני מוצעות על סמך הנתונים שלכם ומופיעות כהתראה. לאחר אישור ידני הפקודה למינון הבזאלי תועבר למשאבה. רק אם אתם משתמשים במשאבה וירטואלית תצטרכו להזין את ההצעה ידנית.
-- **לולאה סגורה** פירושה שהצעות בזאלי זמני נשלחות אוטומטית למשאבה שלך ללא אישור או קלט מהמשתמש.
+- Toggle between open and closed looping as well as low glucose suspend (LGS)
+- **Open looping** means TBR suggestions are made based on your data and appear as a notification. לאחר אישור ידני הפקודה למינון הבזאלי תועבר למשאבה. רק אם אתם משתמשים במשאבה וירטואלית תצטרכו להזין את ההצעה ידנית.
+- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
-### מינימום לבקשה לשינוי \[%\]
+### Minimal request change \[%\]
 
 - בזמן השימוש בלולאה פתוחה, תקבלו התראות בכל פעם שה-AAPS ימליץ על התאמת בזאל זמנית.
-- כדי להפחית את מספר ההתראות, אפשר להשתמש בטווח מטרה רחב יותר של ערכי הסוכר או להגדיל את אחוז שיעור הבקשות המינימלי.
+- To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - זוהי ההגדרה של השינוי היחסי הדרוש כדי להפעיל התראה על המלצה על שינוי.
 
 ## Advanced Meal Assist (AMA) או סופר מיקרו בולוס (SMB)
 
-בהתאם להגדרותיכם [בבונה התצורה](../Configuration/Config-Builder.md) אפשר לבחור בין שני אלגוריתמים:
+Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) זהו האלגוריתם שהיה בשימוש ב-2017
-- [סופר מיקרו בולוס (OpenAPS SMB)](../Usage/Open-APS-features#super-micro-bolus-smb) - האלגוריתם העדכני ביותר, נועד למשתמשים מתקדמים
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### הגדרות OpenAPS AMA
 
-- המערכת יכולה להפעיל מינון בזאלי זמני גבוה מהר לאחר בולוס ארוחה אם מזינים פחמימות בצורה אמינה.
-- פרטים נוספים על ההגדרות ועל Autosens ניתן למצוא ב- [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+- Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
+- More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-#### מינון בזאלי זמני מקסימלי (יח'שעה)
+#### מינון בזאלי זמני מקסימלי (יח'\שעה)
 
-- זוהי מגבלת בטיחות שמונעת מ-AAPS לתת מינון בזאלי גבוה בצורה מסוכנת.
-- הערך נמדד ביחידות לשעה (U/h).
-- מומלץ להגדיר ערך סביר. ההמלצה היא לבחור את **המינון הבזאלי הגבוה ביותר** שיש בפרופיל בשעה כלשהי ביממה ו\*\*להכפיל אותו ב-4\*\*.
-- כך שלדוגמה, אם המינון הבזאלי הגבוה ביותר בפרופיל שלך הוא 0.5 U/h, אפשר להכפילו ב-4 כדי לקבל ערך של 2 U/h.
-- ראו גם [תיאור תכונות מפורט](../Usage/Open-APS-features#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
+- The value is measured in units per hour (U/h).
+- מומלץ להגדיר ערך סביר. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-#### בזאלי פעיל מרבי ש-OpenAPS יכול לספק (יחידות)
+#### Maximum basal IOB OpenAPS can deliver \[U\]
 
-- כמות האינסולין הבזאלי הנוסף (ביחידות) המותר להצטבר בגופכם, בנוסף לפרופיל הבזאלי הרגיל.
-- ברגע שמגיעים לערך זה, AAPS יפסיק להזריק אינסולין בזאלי נוסף עד אשר האינסולין הבזאלי הפעיל (IOB) יירד חזרה לטווח הנבחר.
-- ערך זה **לא מתייחס לבולוס IOB**, רק לזה הבזאלי.
-- ערך זה מחושב ומנוטר ללא תלות במינון הבזאלי הרגיל שלכם. רק האינסולין הבזאלי שבנוסף למינון הבזאלי הרגיל מחושב במקרה זה.
+- Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile.
+- Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
+- This value **does not consider bolus IOB**, only basal.
+- This value is calculated and monitored independently of your normal basal rate. רק האינסולין הבזאלי שבנוסף למינון הבזאלי הרגיל מחושב במקרה זה.
 
-בהתחלת השימוש בלולאה, **מומלץ להגדיר את המינון הבזאלי הפעיל המרבי ל-0** למשך תקופה מסויימת, בזמן שאתם מתרגלים למערכת. זה מונע מ-AAPS לתת אינסולין בזאלי נוסף מעבר לזה שבפרופיל הבסיסי. במהלך תקופה זו AAPS עדיין יוכל להגביל או להפסיק את מתן האינסולין הבזאלי כדי לסייע במניעת היפוגליקמיה. זהו שלב חשוב על מנת ש-:
+When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. זה מונע מ-AAPS לתת אינסולין בזאלי נוסף מעבר לזה שבפרופיל הבסיסי. במהלך תקופה זו AAPS עדיין יוכל להגביל או להפסיק את מתן האינסולין הבזאלי כדי לסייע במניעת היפוגליקמיה. זהו שלב חשוב על מנת ש-:
 
-- יהיה פרק זמן להתרגל למערכת AAPS לפקח על אופן פעולתה בבטחה.
-- לנצל את ההזדמנות לשכלל את הפרופיל הבזאלי ואת יחס התיקון (ISF).
-- לראות כיצד AAPS מגביל את האינסולין הבזאלי כדי למנוע היפוגליקמיה.
+- Have a period of time to safely get used to the AAPS system and monitor how it works.
+- Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
+- See how AAPS limits your basal insulin to prevent hypoglycaemia.
 
-כאשר אתם מרגישים בטוחים במערכת, אפשרו למערכת להתחיל להזריק אינסולין בזאלי נוסף, על ידי העלאת ערך המינון הבזאלי הפעיל המרבי מ-0. ההנחיה המומלצת לכך היא לקחת את **המינון הבזאלי הגבוה ביותר** שבפרופיל שלך ו\*\*להכפילו ב-3\*\*. לדוגמה, אם המינון הבזאלי הגבוה ביותר בפרופיל הוא 0.5 U/h תוכלו להכפיל אותו ב-3 כדי לקבל ערך של 1.5 U/h.
+כאשר אתם מרגישים בטוחים במערכת, אפשרו למערכת להתחיל להזריק אינסולין בזאלי נוסף, על ידי העלאת ערך המינון הבזאלי הפעיל המרבי מ-0. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. לדוגמה, אם המינון הבזאלי הגבוה ביותר בפרופיל הוא 0.5 U/h תוכלו להכפיל אותו ב-3 כדי לקבל ערך של 1.5 U/h.
 
-- ניתן להתחיל באופן שמרני עם הערך הזה ולהעלות אותו לאט עם הזמן במקרה הצורך.
-- אלו הן המלצות בלבד; הגוף של כל אחד שונה. אולי תגלו שאתם צריכים יותר או פחות ממה שהומלץ כאן, אבל תמיד התחילו באופן שמרני וכווננו בהדרגה.
+- You can start conservatively with this value and increase it slowly over time.
+- These are guidelines only; everyone's body is different. אולי תגלו שאתם צריכים יותר או פחות ממה שהומלץ כאן, אבל תמיד התחילו באופן שמרני וכווננו בהדרגה.
 
-**הערה: כאמצעי בטיחות, המינון הבזאלי הפעיל המרבי מוגבל לעד 7 יחידות.**
+**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
 
 #### Autosens (זיהוי רגישות)
 
-- [Autosens](../Usage/Open-APS-features#autosens) מודד סטיות של רמת הסוכר בדם (חיוביות/שליליות/נייטרליות).
-- Autosens ינסה להבין עד כמה את מידת התנגודת לאינסולין על סמך סטיות אלו ויתאים את המינון הבזאלי ואת ה-ISF על פי הסטיות הללו.
-- אם תבחרו "וויסות ערכי מטרה ע"י Autosens", האלגוריתם ישנה גם את ערכי מטרת רמת הסוכר.
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
+- If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
 #### הגדרות מתקדמות (OpenAPS AMA)
 
-- בדרך כלל אין צורך לשנות את ההגדרות שבמסך זה!
-- אם ברצונכם לשנות אותן בכל זאת, הקפידו לקרוא על הפרטים ב-[OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) ולהבין לעומק את מה שאתם עושים.
+- Normally you do not have to change the settings in this dialogue!
+- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
 ### הגדרות OpenAPS SMB
 
-- בניגוד ל-AMA, אלגוריתם [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) אינו משתמש רק במינונים בזאליים זמניים כדי לשלוט ברמות הסוכר, אלא בעיקר בבולוסים קטנים -סופר מיקרו בולוסים.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- עליכם להתחיל את [משימה 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) כדי להשתמש ב-SMB.
+- You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- שלושת ההגדרות הראשונות מוסברות [מעלה](../Configuration/Preferences#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
 
-- פרטים על אפשרויות ההפעלה השונות מתוארים בקטע [תכונות OpenAPS](../Usage/Open-APS-features#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
-- *תדירות מתן SMB בדקות* היא מגבלה ל-SMB המגבילה הזרקת SMB כל 4 דקות לכל הפחות כברירת מחדל. ערך זה מונע מהמערכת להזריק SMB לעתים קרובות מדי (לדוגמה במקרה של הגדרת ערך מטרה זמני). אל תשנו הגדרה זו אלא אם כן אתם יודעים בדיוק את ההשלכות.
+- *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. ערך זה מונע מהמערכת להזריק SMB לעתים קרובות מדי (לדוגמה במקרה של הגדרת ערך מטרה זמני). אל תשנו הגדרה זו אלא אם כן אתם יודעים בדיוק את ההשלכות.
 
-- אם 'רגישות מעלה את ערך המטרה' או 'תנגודת מורידה את ערך המטרה' מופעלים, [Autosens](../Usage/Open-APS-features#autosens) ישנה את ערך המטרה בהתאם לסטיות ברמת הסוכר בדם.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
-- אם ערך המטרה ישתנה הוא יוצג עם רקע ירוק במסך הבית שלך.
+- If target is modified it will be displayed with a green background on your home screen.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
   :alt: Target modified by autosens
@@ -365,15 +366,15 @@
 
 #### הודעה על צריכת פחמימות
 
-- תכונה זו זמינה רק אם נבחר אלגוריתם ה-SMB.
+- This feature is only available if SMB algorithm is selected.
 
-- אכילה של פחמימות נוספות תוצע כאשר האלגוריתם יגלה כי הוא דורש פחמימות.
+- Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
 
-- במקרה זה תקבלו התראה שניתן להשהות למשך 5, 15 או 30 דקות.
+- In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
 
-- בנוסף, הפחמימות הנדרשות יוצגו באזור הפחמימות הפעילות במסך הבית.
+- Additionally the required carbs will be displayed in the COB section on your home screen.
 
-- ניתן להגדיר סף - כמות מינימלית של פחמימות הדרושה להפעלת הודעה.
+- A threshold can be defined - minimum amount of carbs needed to trigger a notification.
 
 - הודעות של דרישה לפחמימות יכולות להישלח ל-Nightscout אם תרצו, ובמקרה זה תוצג ותשודר הודעה.
 
@@ -383,8 +384,8 @@
 
 #### הגדרות מתקדמות (OpenAPS AMA)
 
-- בדרך כלל אין צורך לשנות את ההגדרות שבמסך זה!
-- אם ברצונכם לשנות אותן בכל זאת, הקפידו לקרוא על הפרטים ב-[OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) ולהבין לעומק את מה שאתם עושים.
+- Normally you do not have to change the settings in this dialogue!
+- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
 ## הגדרות ספיגה
 
@@ -394,21 +395,21 @@
 
 ### min_5m_carbimpact (השפעת פחמימות מינימלית ב-5 דקות)
 
-- האלגוריתם משתמש ב-BGI (השפעת הגלוקוז בדם) כדי לקבוע מתי פחמימות נספגות.
+- The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed.
 
-- ערך זה יימצא בשימוש רק בזמן שיש הפסקה בקבלת נתוני סוכר מהחיישן או כשפעילות גופנית "מנצלת" את כל העלייה בסוכר שבה AAPS משתמש כדי לחשב דעיכת פחמימות פעילות.
+- The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- בזמנים בהם לא ניתן לזהות את ספיגת הפחמימות באופן דינאמי בהתבסס על תגובות הסוכר בדם, התוכנה תזין אוטומטית דעיכה של הפחמימות כברירת מחדל. למעשה, זהו אמצעי אל כשל.
+- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. למעשה, זהו אמצעי אל כשל.
 
-- במילים פשוטות: האלגוריתם "יודע" איך הסוכר בדם *אמור* להתנהג כשהוא מושפע מהמינון הנוכחי של אינסולין וכו'.
+- To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 
-- בכל פעם שיש סטייה חיובית מההתנהגות הצפויה, חלק מהפחמימות נספגותדועכות. שינוי גדול=הרבה פחמימות וכו'.
+- Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. שינוי גדול=הרבה פחמימות וכו'.
 
-- ה-min_5m_carbimpact מגדיר את ברירת המחדל של השפעת ספיגת הפחמימות ל-5 דקות. לפרטים נוספים ראו [תיעוד OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-- הערך הסטנדרטי עבור AMA הוא 5 ועבור SMB הוא 8.
+- Standard value for AMA is 5, for SMB it's 8.
 
-- גרף הפחמימות פעילות במסך הבית מציין מתי נעשה שימוש ב-min_5m_impact על ידי הצבת עיגול כתום בחלק העליון.
+- The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
   :alt: COB graph
@@ -416,22 +417,22 @@
 
 ### זמן ספיגה מקסימלי של הארוחה
 
-- אם אתם מרבים לאכול ארוחות עתירות שומן או חלבון תצטרכו להגדיל את זמן ספיגת הארוחה.
+- If you often eat high fat or protein meals you will need to increase your meal absorption time.
 
 ### הגדרות מתקדמות - יחס Autosens
 
-- הגדרת יחס מינימלי ומקסימלי של [autosens](../Usage/Open-APS-features#autosens) ratio.
-- בדרך כלל הערכים הסטנדרטיים (מקסימום 1.2 ומינימום 0.7) לא דורשים שינוי.
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## הגדרות משאבה
 
-האפשרויות כאן ישתנו בהתאם למנהל ההתקן של משאבה שבחרת [בבונה התצורה](../Configuration/Config-Builder#pump).  צמדו והגדירו את המשאבה בהתאם להוראות של המשאבה:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  צמדו והגדירו את המשאבה בהתאם להוראות של המשאבה:
 
-- [משאבת DanaR\<../Configuration/DanaR-Insulin-Pump.md>][משאבת danar<../configuration/danar-insulin-pump.html>]
-- [משאבת Dana-RS\<../Configuration/DanaRS-Insulin-Pump.md>][משאבת dana-rs<../configuration/danars-insulin-pump.html>]
-- [Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [משאבת Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- משאבות [Medtronic ישנות](../Configuration/MedtronicPump.md)
+- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
+- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Medtronic Pump](../Configuration/MedtronicPump.md)
 
 אם אתם משתמשים ב-AndroidAPS עם לולאה פתוחה עם משאבה שאינה נתמכת, ודאו שבחרתם משאבה וירטואלית בבונה התצורה.
 
@@ -441,15 +442,12 @@
 :alt: NSClient
 ```
 
-- הגדירו את *כתובת אתר ה-Nightscout* האישי שלכם ( <https://yourwebsitename.herokuapp.com>) ואת *הסיסמה (API secret)* (סיסמה בת 12 תווים הרשומה בהגדרות באתר Heroku).
-- כך ניתן לקרוא ולכתוב נתונים בין אתר Nightscout לבין AndroidAPS.
-- וודאו שאין שגיאות הקלדה כאן אם אתם תקועים במשימה 1.
-- **וודאו שכתובת האתר היא ללא /api/v1/ בסוף.** (סיומת זו רלוונטית ב-xDrip).
-- *רשום הפעלת AAPS ב-Nightscout* ירשום הערה בפורטל הטיפולים של Nightscout בכל פעם שהאפליקציה מופעלת.  האפליקציה לא אמורה להיות מופעלת יותר מפעם אחת ביום; אם היא מופעלת לעתים קרובות יותר מכך, ייתכן שיש בעיה (לדוגמה
-
-> אם אופטימיזצייתטיוב הסוללה לא מושבתת עבור AAPS).
-
-- העלאת שינויים ב\`פרופיל מקומי ל-Nightscout \<../Configuration/Config-Builder#local-profile-recommended>\`\_ ישלח את ערכי הפרופיל המקומי לאתר ה-Nightscout שלכם.
+- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
+- This enables data to be read and written between both the Nightscout website and AndroidAPS.
+- Double check for typos here if you are stuck in Objective 1.
+- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
+- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
+- If activated changes in [local profile](../Configuration/Config-Builder.md#local-profile) are uploaded to your Nightscout site.
 
 ### הגדרות חיבור
 
@@ -457,17 +455,17 @@
 :alt: NSClient connection settings
 ```
 
-- הגבילו העלאת Nightscout ל-WiFi בלבד או אפילו לרשתות WiFi עם SSID ספסיפי.
-- אם אתם רוצים להשתמש רק ברשת WiFi ספציפית ניתן להזין את ה-SSID שלה.
-- ניתן להפריד בין SSID שונים באמצעות ; (נקודה-פסיק).
-- כדי למחוק את כל ה-SSID הזינו רווח ריק בשדה.
+- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
+- If you want to use only a specific WiFi network you can enter its WiFi SSID.
+- Multiple SSIDs can be separated by semicolon.
+- To delete all SSIDs enter a blank space in the field.
 
 ### אפשרויות התראה
 
-- אפשרויות אזעקה מאפשרות לבחור באילו אזעקות Nightscout להשתמש כברירת מחדל דרך האפליקציה.
-- כדי שהאזעקות יישמעו, עליכם להגדיר את ערכי האזעקה קריטיים גבוהים, גבוהים, נמוכים וקריטיים נמוכים ב\`משתני Heroku \<<https://nightscout.github.io/nightscout/setup_variables/#alarms>>\`\_.
-- הן יעבדו רק בזמן שיש חיבור ל-Nightscout והם מיועדים להוריםמטפלים.
-- אם מקור נתוני הסוכר בטלפון הוא אפליקציית Dexcom עם פאץ' או xDrip, השתמשו בהתראות שלהם במקום.
+- Alarm options allows you to select which default Nightscout alarms to use through the app.
+- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
+- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
 
 ### הגדרות מתקדמות (NSClient)
 
@@ -475,30 +473,28 @@
 :alt: NS Client advanced settings
 ```
 
-- רוב האפשרויות בהגדרות המתקדמות מובנות מאליהן.
+- Most options in advanced settings are self-explanatory.
 
-- *הפעל שידורים מקומיים* ישתף את הנתונים עם אפליקציות אחרות בטלפון כגון xDrip+.
+- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
 
-  - יש [להעביר דרך AAPS](../Configuration/Config-Builder#bg-source) ולאפשר שידור מקומי ב-AAPS כדי להשתמש באזעקות xDrip+.
+  - You need to [go through AAPS](../Configuration/Config-Builder.md#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
-- *השתמש תמיד בערכים בזאלים מוחלטים* יש להפעיל אם ברצונכם להשתמש ב-Autotune כראוי. ראו [תיעוד OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) לפרטים נוספים על Autotune.
+- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
 
 ## תקשורת SMS
 
-- האפשרויות יוצגו רק אם תקשורת SMS נבחרה ב\`בונה תצורה \<../Configuration/Config-Builder#sms-communicator>\`\_\_.
-- הגדרה זו מאפשרת שליטה מרחוק באפליקציה על ידי שליחת פקודות בהודעות טקסט לטלפון של המטופל. פקודות כגון השהית לולאה או הזרקת בולוס.
-- מידע נוסף אפשר לקרוא ב\`פקודות SMS \<../Children/SMS-Commands.md>\`\_.
-- יש שימוש באפליקציית אימות וקוד PIN נוסף בקצה האסימון ששולחים עם הפקודות כאמצעי אבטחה.
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
+- This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
+- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
+- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
 
 ## אוטומציה
 
 בחרו איזה שירות מיקום יהיה בשימוש:
 
-- השתמש במיקום פסיבי: AAPS מקבל מיקומים רק אם אפליקציות אחרות מבקשות זאת
-- השתמש במיקום רשת: מיקום ע"פ רשת ה-WiFi
-- השתמש במיקום GPS (שימו לב!
-
-> עלול לגרום לניצול מוגבר של הסוללה!)
+- Use passive location: AAPS only takes locations if other apps are requesting it
+- Use network location: Location of your Wi-Fi
+- Use GPS location (Attention! עלול לגרום לניצול מוגבר של הסוללה!)
 
 ## התראות מקומיות
 
@@ -506,7 +502,7 @@
 :alt: Local alerts
 ```
 
-- ההגדרות צריכות להיות מובנות מאליהן.
+- Settings should be self-explanatory.
 
 ## אפשרויות נתונים
 
@@ -514,7 +510,7 @@
 :alt: Data choices
 ```
 
-- אתם יכולים לעזור לפתח את AAPS עוד יותר על ידי שליחת דוחות קריסה למפתחים.
+- You can help develop AAPS further by sending crash reports to the developers.
 
 ## הגדרות תחזוקה
 
@@ -522,14 +518,14 @@
 :alt: Maintenance settings
 ```
 
-- הנמען הסטנדרטי של הרישומים הוא <mailto:logs@androidaps.org>.
-- אם תבחר *הצפנת הגדרות מיוצאות* הן תהינה מוצפנות עם [הסיסמה הראשית](../Configuration/Preferences#master-password) שלכם. במקרה זה יש להזין את הסיסמה הראשית בכל פעם שהגדרות מיוצאות או מיובאות.
+- Standard recipient of logs is <logs@androidaps.org>.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences.md#master-password). במקרה זה יש להזין את הסיסמה הראשית בכל פעם שהגדרות מיוצאות או מיובאות.
 
 ## Open Humans
 
-- אתם יכולים לעזור לקהילה על ידי תרומת הנתונים שלכם לפרוייקטי מחקר! פרטים מתוארים בדף [Open Humans page](../Configuration/OpenHumans.md).
+- You can help the community by donating your data to research projects! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
 
-- בהעדפות ניתן להגדיר מתי הנתונים יועלו
+- In Preferences you can define when data shall be uploaded
 
-  - רק אם מחוברים ל-WiFi
-  - רק בטעינה
+  - only if connected to WiFi
+  - only if charging
