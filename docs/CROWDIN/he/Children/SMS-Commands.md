@@ -2,207 +2,170 @@
 
 ## בטיחות לפני הכל
 
-- AndroidAPS מאפשר שליטה בלופ שבטלפון של ילד מרחוק באמצעות הודעת טקסט.  אם תאפשרו את תקשורת SMS, זכרו שהטלפון ששולח את הפקודות יכול להיגנב. לכן זכרו להגן עליו עם סיסמא לכל הפחות. מומלץ להגדיר סיסמא חזקה או זיהוי ביומטרי.
-- בנוסף, מומלץ לאשר [מספר טלפון נוסף](#authorized-phone-numbers) לפקודות SMS. כך תוכלו להשתמש במספר הנוסף כדי [להשבית זמנית](#other) את תקשורת ה-SMS במקרה של אובדן או גניבת מכשיר הטלפון העיקרי.
-- AndroidAPS יודיע בהודעת טקסט אם בוצעו הפקודות שנשלחו, כגון בולוס או שינוי פרופיל. רצוי להגדיר זאת כך שתשלחנה הודעות SMS לאישור לשני מספרי טלפון שונים לפחות, במקרה שאחד הטלפונים המקבלים ייגנב.
-- **במידה ומתן הבולוסים מתבצע באמצעות פקודות SMS, יש להזין את כמות הפחמימות לנייטסקאוט (NSClient, האתר...)!** אם לא תעשה זאת, הIOB (אינסולין בגוף) יהיה נכון, אך הCOB (פחמימות בגוף) יירשם כנמוך מידי, וכתוצאה מכך יתכן שלא יתבצע בולוס תיקון מכיון שהAAPS יעריך כי רמת האינסולין הפעיל בגוף גבוהה מידי.
-
-החל מגירסת AndroidAPS 2.7, יש להשתמש באפליקציית אימות עם סיסמה חד פעמית מבוססת-זמן להגברת בטיחות השימוש בפקודות SMS.
+- AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. מומלץ להגדיר סיסמא חזקה או זיהוי ביומטרי.
+- Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
+- As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## הגדרת פקודות SMS
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: "\u05D4\u05D2\u05D3\u05E8\u05EA \u05E4\u05E7\u05D5\u05D3\u05D5\u05EA SMS"
+:alt: הגדרת פקודות SMS
 ```
 
-- ניתן לבצע את רוב התאמות ערכי המטרה הזמניים, מעקב AAPS, וכו'. באפליקציית [NSClient](../Children/Children.md) בטלפון אנדרואיד עם חיבור לאינטרנט.
-- לא ניתן לתת בולוסים דרך הנייטסקאוט, אבל ניתן להשתמש בפקודות SMS.
-
-במידה ומכשיר הטלפון למעקב שלך הוא אייפון, ולכן אין באפשרותכם להשתמש באפליקציית ה-NSClient, קיימות פקודות SMS נוספות לשם כך.
-
-- בהגדרות מכשיר האנדרואיד, עבור ליישומים > AndroidAPS > הרשאות ואפשרו הרשאת SMS.
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Boluses can't be given through Nightscout, but you can use SMS commands.
+- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 ### מספרי טלפון מורשים
 
-ב-AndroidAPS, עברו ל\*\*העדפות > תקשורת SMS\*\* והזינו את מספר(י) הטלפון מהם אפשר יהיה לקבל פקודות SMS (הפרידו באמצעות ";" - לדוגמא, +972598765432;+972541234567)
-\* הפעילו את 'אפשר פקודות SMS מרחוק'.
-\* במידה וברצונכם להשתמש ביותר ממספר אחד:
+- In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
-> - הזינו מספר אחד בלבד.
->
-> - וודאו כי המספר היחיד הזה עובד באמצעות שליחת ואישור פקודת SMS.
->
-> - הזינו מספר(י) נוספ(ים), המופרדים ביניהם באמצעות ";", ללא רווחים.
->
->   ```{image} ../images/SMSCommandsSetupSpace2.png
->   :alt: SMS Commands Setup multiple numbers
->   ```
+- Enable 'Allow remote commands via SMS'.
+
+- If you want to use more than one number:
+
+  - Enter just one number.
+
+  - Make that single number work by sending and confirming a SMS command.
+
+  - Enter additional number(s) separated by semicolon, no space.
+
+    ```{image} ../images/SMSCommandsSetupSpace2.png
+    :alt: SMS Commands Setup multiple numbers
+    ```
 
 ### מספר הדקות בין פקודות בולוס
 
-- ניתן להגדיר את זמן העיכוב המינימלי בין שני בולוסים הניתנים באמצעות פקודות SMS.
-
-מטעמי בטיחות, עליכם להוסיף לפחות שני מספרי טלפון מאושרים על מנת לערוך נתון זה.
+- You can define the minimum delay between two boluses issued via SMS.
+- For safety reasons you have to add at least two authorized phone numbers to edit this value.
 
 ### תוספת PIN קבוע לקוד האסימון
 
-מטעמי בטיחות, על קוד PIN להופיע בסוף קוד התגובה.
-\* כללי ה-PIN:
+- For safety reasons the reply code must be followed by a PIN.
 
-> - 3 עד 6 ספרות
-> - ללא ספרות זהות (כגון 1111)
-> - ללא מספרים עוקבים (כגון 1234)
+- PIN rules:
+
+  - 3 to 6 digits
+  - not same digits (i.e. 1111)
+  - not in a row (i.e. 1234)
 
 ### הגדרת מאמת
 
-מטרת השימוש באימות דו-גורמי היא לשיפור הבטיחות.
-\* תוכלו להשתמש בכל אפליקציית אותנטיקציה שתומכת באסימוני RFC 6238 TOTP. מספר אפליקציות חינמיות פופולאריות:
+- Two-factor authentication is used to improve safety.
 
-> - [Authy](https://authy.com/download/)
-> - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
-> - [LastPass Authenticator](https://lastpass.com/auth/)
-> - [FreeOTP Authenticator](https://freeotp.github.io/)
+- You can use any Authenticator app that supports RFC 6238 TOTP tokens. מספר אפליקציות חינמיות פופולאריות:
 
-- התקינו אפליקציית אימות לבחירתכם על הטלפון העוקב, וסרקו את הברקוד (QR) המופיע ב-AAPS.
+  - [Authy](https://authy.com/download/)
+  - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
+  - [LastPass Authenticator](https://lastpass.com/auth/)
+  - [FreeOTP Authenticator](https://freeotp.github.io/)
 
-- נסו את הקוד החד-פעמי ע"י הקלדת האסימון שמופיע באפליקציית האימות ואת ה-PIN שהגדרתם קודם לדוגמה:
+- Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 
-  - PIN החובה שהגדרתם הוא 2020
+- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. לדוגמה:
 
-  הקוד שאפליקציית האימות רושם הוא 457051
-  \* הזינו 4570512020
+  - Your mandatory PIN is 2020
+  - TOTP token from the authenticator app is 457051
+  - Enter 4570512020
 
-- במידה והקוד שהזנתם נכון, ההודעה "PIN שגוי" באדום תשתנה **אוטומטית** ל"OK" ירוק. **אין לחצן עליו עליכם ללחוץ!**
+- The red text "WRONG PIN" will change **automatically** to a green "OK" if the entry is correct. **There is no button you can press!**
 
-- על השעונים בשני מכשירי הטלפון להיות מסונכרנים. מומלץ להגדיר עדכון זמן אוטומטי מהרשת. הפרשים בזמנים עלולים לגרום לשגיאות אימות.
+- The time on both phones must be synchronized. מומלץ להגדיר עדכון זמן אוטומטי מהרשת. הפרשים בזמנים עלולים לגרום לשגיאות אימות.
 
-- השתמשו בלחצן "איפוס מאמתים" אם ברצונכם למחוק מאמתים קיימים.  (איפוס המאמתים הופך את כל המאמתים שהוגדרו כלא חוקיים. תצטרכו להגדירם מחדש)
+- Use button "RESET AUTHENTICATORS" if you want to remove provisioned authenticators.  (איפוס המאמתים הופך את כל המאמתים שהוגדרו כלא חוקיים. תצטרכו להגדירם מחדש)
 
 ## השתמשו בפקודות SMS
 
-- שלחו הודעת SMS לטלפון בו מופעל ה-AndroidAPS ממספר(י) הטלפונ(ים) המאושר(ים), באמצעות אחת מה\`פקודות \<../Children/SMS-Commands#commands>\`\_\_ למטה.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.md#commands) below.
 
-- מכשיר הטלפון עם ה-AAPS ישלח תגובה על הצלחת הפקודה או הסטטוס המבוקש.
+- The AAPS phone will respond to confirm success of command or status requested.
 
-- אשרו את הפקודה באמצעות שליחת הקוד, במידת הצורך. לדוגמה:
+- Confirm command by sending the code where necessary. לדוגמה:
 
-  - PIN החובה שהגדרתם הוא 2020
+  - Your mandatory PIN is 2020
+  - TOTP token from the authenticator app is 457051
+  - Enter 4570512020
 
-  הקוד שאפליקציית האימות רושם הוא 457051
-  \* הזינו 4570512020
-
-**טיפ**: תוכנית SMS ללא הגבלה (בכל מכשיר טלפון בו תשתמש) תהיה שימושית מאד במידה והינכם צפויים לשלוח מספר רב של פקודות SMS.
+**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
 ## פקודות
 
-את הפקודות יש לשלוח באנגלית. התגובה תהיה בשפה המקומית שלך, במידה ומחרוזת התגובה כבר [תורגמה](../translations#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: "\u05D3\u05D5\u05D2\u05DE\u05D0 \u05DC\u05E4\u05E7\u05D5\u05D3\u05D5\u05EA SMS"
+:alt: דוגמא לפקודות SMS
 ```
 
 ### לולאה
 
-- LOOP STOP/DISABLE (עצור/הפסק לולאה)
-  \* תגובה: הלולאה הופסקה
+- LOOP STOP/DISABLE \* Response: Loop has been disabled
 
-- LOOP START/ENABLE (התחל/הפעל לולאה)
-  \* תגובה: הלולאה הופעלה
+- LOOP START/ENABLE \* Response: Loop has been enabled
 
-- LOOP STATUS (סטטוס לולאה)
+- LOOP STATUS
 
-  - התגובה תהיה תלויה בסטטוס הלולאה באותו זמן
+  - Response depends on actual status
 
-    - הלולאה כבויה
-    - הלולאה פעילה
-    - מושהת (10 דקות)
+    - Loop is disabled
+    - Loop is enabled
+    - Suspended (10 min)
 
-- LOOP SUSPEND 20 (השהיית לולאה 20)
-  \* תגובה: הלולאה הושהתה למשך 20 דקות
+- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
 
-- LOOP RESUME (הפעל לולאה מחדש)
-  \* תגובה: הלולאה הופעלה מחדש
+- LOOP RESUME \* Response: Loop resumed
 
 ### נתוני החיישן (ניטור סוכר רציף)
 
-- BG (סוכר בדם)
-  \* תגובה: רמת גלוקוז אחרונה: 5.6 לפני 4 דקות, דלתא: -0,2 mmol, IOB: 0.20U (בולוס: 0.10U בזאל: 0.10U)
-- CAL 5.6 (כיול)
-  \* תגובה: על מנת לשלוח כיול 5.6, השיבו באמצעות הקוד מאפליקציית האימות למשתמש, ולאחריה קוד ה-PIN
-  \* תגובה לאחר קבלת הקוד הנכון: הכיול נשלח (**במידה והותקן xDrip. על קבלת כיולים להיות מופעלת בxDrip+**)
+- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
 ### אינסולין בזאלי
 
-- BASAL STOP/CANCEL (עצור/בטל אינסולין בזאלי)
-  \* תגובה: על מנת לעצור את המינון הבזאלי הזמני, השיבו באמצעות הקוד מאפליקציית האימות למשתמש, ולאחריו קוד ה-PIN
-- BASAL 0.3 (בזאלי 0.30)
-  \* תגובה: על מנת להתחיל בזאלי 0.30U/h למשך 30 דקות, השיבו עם הקוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- BASAL 0.3 20 (בזאל 0.3 למשך 20 דקות)
-  \* תגובה: על מנת להתחיל בזאל 0.30U/h למשך 20 דקות, השיבו עם הקוד מאפליקציית האימות למשתמש, ולאחריו קוד ה-PIN
-- BASAL 30% (בזאל 30%)
-  \* תגובה: על מנת להתחיל מינון בזאלי 30% למשך 30 דקות, השיבו עם הקוד מאליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- BASAL 30% 50 (בזאלי 30% למשך 50 דקות)
-  \* תגובה: על מנת להתחיל מינון בזאלי 30% למשך 50 דקות, השיבו עם הקוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
+- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 ### בולוס
 
 לא ניתן לבצע בולוס מרחוק בתוך 15 דקות (ניתן לשנות ערך זה רק לאחר הוספת 2 מספרי טלפונים) לאחר הפקודה מרחוק או פקודת הבולוס האחרונה! לכן, התגובה תהיה תלויה בשעה בה ניתן הבולוס האחרון.
 
-- BOLUS 1.2
-  \* תגובה א': על מנת לתת בולוס 1.2U, השיבו עם קוד מאפליקציית האימות למשתמש, ולאחריו קוד ה-PIN
-  \* תגובה ב': בולוס מרחוק אינו זמין. נסו שוב מאוחר יותר.
-- BOLUS 0.60 MEAL (בולוס 0.60 - ארוחה)
-  \* בציון הפרמטר האופציונלי MEAL (ארוחה), ערך המטרה הזמני ישתנה לערך המתאים לאוכלים בקרוב (ערך ברירת המחדל: 90 mg/dL למשך 45 דקות).
-  \* תגובה א': על מנת להזריק בולוס ארוחה 0.60U, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-  \* תגובה ב': בולוס מרחוק אינו זמין.
-- CARBS 5
-  \* תגובה: על מנת להזין 5 גר' בשעה 12:45, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- CARBS 5 17:35/5:35PM
-  \* תגובה: על מנת להזין 5 גר' בשעה 17:35, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- EXTENDED STOP/CANCEL (ביטול/עצירה מושהת)
-  \* תגובה: על מנת לעצור את הבולוס הממושך, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- EXTENDED 2 120 (בולוס מושהה 2U למשך 120 דקות)
-  \* תגובה: על מנת להתחיל בולוס מושהה 2U למשך 120 דקות, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. נסו שוב מאוחר יותר.
+- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
+- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 ### פרופיל
 
-- PROFILE STATUS (סטטוס פרופיל)
-  \* תגובה: פרופיל1
-- PROFILE LIST (רשימת פרופילים)
-  \* תגובה: 1. 'פרופיל1' 2. 'פרופיל2'
-- PROFILE 1 (פרופיל 1)
-  \* תגובה: על מנת להחליף פרופיל לפרופיל1 של 100%, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- PROFILE 2 30 (פרופיל 2, 30%)
-  \* תגובה: על מנת להחליף את הפרופיל לפרופיל2 30%, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
+- PROFILE STATUS \* Response: Profile1
+- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 ### אחר
 
-- TREATMENTS REFRESH (רענן טיפולים)
-  \* תגובה: רענן טיפולים מהנייטסקאוט
-- NSCLIENT RESTART (התחל NSClient מחדש)
-  \* תגובה: מתחיל NSCLIENT
-- משאבה
-  \* תגובה: חיבור אחרון: לפני דקה. זמני: 0.00U/h בשעה 11:38 5/30דקות IOB: 0.5U נותר: 34U סוללה: 100
-- PUMP CONNECT (חיבור משאבה)
-  \* תגובה: המשאבה חוברה מחדש
-- PUMP DISCONNECT *30* (ניתוק המשאבה למשך 30 דקות)
-  \* תגובה: על מנת לנתק את המשאבה למשך *30* דקות, השיבו עם הקוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- SMS DISABLE/STOP (השבת/עצור SMS)
-  \* על מנת להשבית את שירות ה-SMS מרחוק, השיבו עם קוד Any. שימו לב: תוכלו להפעיל אותו ישירות מחדש אך ורק מתוך הטלפון החכם העיקרי עם אפליקציית ה-AAPS.
-- TARGET MEAL/ACTIVITY/HYPO (ערך מטרה אוכלים בקרוב/פעילות/היפו)
-  \* תגובה: על מנת להגדיר את ערך המטרה הזמני לארוחה/פעילות/היפו, השיבו עם הקוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- TARGET STOP/CANCEL (עצור/בטל ערך מטרה)
-  \* על מנת לבטל את ערך המטרה הזמני, השיבו עם קוד מאפליקציית האימות למשתמש, ואחריו קוד ה-PIN
-- HELP (עזרה)
-  \* תגובה: רמת גלוקוז, לולאה, טיפולים, .....
-- HELP BOLUS (עזרה - בולוס)
-  \* תגובה: בולוס 1.2 בולוס 1.2 ארוחה
+- TREATMENTS REFRESH \* Response: Refresh treatments from NS
+- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- PUMP CONNECT \* Response: Pump reconnected
+- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. שימו לב: תוכלו להפעיל אותו ישירות מחדש אך ורק מתוך הטלפון החכם העיקרי עם אפליקציית ה-AAPS.
+- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+- HELP \* Response: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 ## פתרון בעיות
 
 ### פקודות SMS מרובות
 
-אם אתם מקבלים את אותה ההודעה שוב ושוב (לדוגמה החלפת פרופיל) כנראה שהגדרתם הגדרה מעגלית עם אפליקציות אחרות. לדוגמה עם xDrip+. אם כך הדבר, וודאו ש-xDrip+ (או אפליקציות אחרות) לא מעלות טיפולים לנייטסקאוט.
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. לדוגמה עם xDrip+. אם כך הדבר, וודאו ש-xDrip+ (או אפליקציות אחרות) לא מעלות טיפולים לנייטסקאוט.
 
 אם האפליקציות האחרות מותקנות על טלפונים אחרים, בטלו העלאת טיפולים גם בהם.
 
