@@ -4,6 +4,16 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 
 ## Döngü yapılabilen Pompalar
 
+* * *
+
+### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AndroidAPS 3.2.
+
+**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
+
+* * *
+
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 **Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution. More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
@@ -25,14 +35,6 @@ Burada üretimde olan bazı pompaların listesi ve herhangi bir döngü sistemin
 ### Medtrum A6/P6/C6 ([Homepage](https://www.medtrum.com/product/nanopump.html))
 
 **Döngü durumu:** Bir Döngü adayıdır. Company has its own limited half-Loop system running (A6). Controllable via iPhone App. No Android app available at the moment.
-
-**AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
-
-* * *
-
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Döngü durumu:** Bir Döngü adayıdır. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
 
 **AAPS için donanım gereksinimi:** Muhtemelen yok. BT etkin görünüyor.
 
