@@ -12,7 +12,7 @@
 
 Примечание: AAPS всегда записывает данные в ** первый профиль скорости базала в помпе **.
 
-* Android-телефон (в основном каждая версия Android будет работать с Insight, но проверьте на странице [ Module ](../Module/module#phone), какую версию Android требуется для запуска AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * Приложение AndroidAPS на вашем телефоне
 
 ## Настройки
@@ -52,7 +52,7 @@
 
 ## Настройки на AAPS
 
-**Примечание : В настоящее время есть возможность (начиная с версии AAPS v2.7.) «Всегда использовать абсолютные значения базала», если вы намерены использовать Autotune с помпой Insight даже если 'Синхронизация включена' с Nightscout.** (В AAPS перейдите в [Настройки > NSClient > Расширенные настройки](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Снимок экрана настроек Insight](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@
 
 * Прошивка 1.х: нет вибрации конструктивно.
 * Прошивка 2.х: вибрация не может быть отключена.
-* Прошивка 3.х: AndroidAPS подает болюс беззвучно. (минимум [версия 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Прошивка 3.х: AndroidAPS подает болюс беззвучно. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Версию прошивки можно найти через меню.
 
@@ -144,4 +144,4 @@
 
 ## Пересечение часовых поясов с помпой Insight
 
-Информацию о пересечении часовых поясов см. в разделе [Пересечение часовых поясов с помпами](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
