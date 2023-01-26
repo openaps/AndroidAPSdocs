@@ -1,4 +1,4 @@
-# Eksporto & importo parametrai
+# Export & import settings
 
 ## Kada turėčiau eksportuoti parametrus?
 
@@ -11,37 +11,37 @@ Exported settings should be copied to a cloud storage or your computer, better t
 Windows 10 kompiuteryje tai atrodo maždaug taip:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: "AndroidAPS nuostat\u0173 failas - i\u0161manusis telefonas prijungtas prie kompiuterio"
+:alt: AndroidAPS nuostatų failas - išmanusis telefonas prijungtas prie kompiuterio
 ```
 
 ## Eksportuojama informacija
 
 Be kita ko, eksportuojami šie parametrai:
 
-- [Automatizavimo įvykiai](../Usage/Automation.md)
-- [Konfigūratoriaus](../Configuration/Config-Builder.md) parametrai
-- [Local profile](../Configuration/Config-Builder#local-profile) settings
-- [Tikslų](../Usage/Objectives.md) statusas, įskaitant [exam results](../Usage/Objectives#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences#nsclient)
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Šifruotas kopijos formatas
 
-Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences#master-password) .
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Eksportuoti nustatymus
 
-- Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
-- Servisas
+- Hamburger menu (top left corner of screen)
+- Maintenance
 - Eksportuoti nustatymus
 
 ```{image} ../images/AAPS_ExportSettings1.png
 :alt: AndroidAPS eksportavimo nustatymai 1
 ```
 
-- Eksporto data ir laikas bus pridėta prie failo pavadinimo automatiškai ir rodomas kartu su keliu.
-- Spustelėkite "OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
-- Ekrano apačioje bus pranešta apie sėkmingą eksportavimą.
+- Date and time of export will be added to the file name automatically and displayed together with the path.
+- Click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
+- Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS eksportavimo nustatymai 2
@@ -49,44 +49,44 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ## Importuokite nustatymus
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- Paspauskite trijų linijų meniu (viršutiniame kairiajame kampe)
-- Servisas
+- Hamburger menu (top left corner of screen)
+- Maintenance
 - Importuokite nustatymus
 
 ```{image} ../images/AAPS_ImportSettings1.png
 :alt: AndroidAPS importavimo nustatymai 1
 ```
 
-- Visi failai iš aplanko AAPS/preferencece/ jūsų telefone bus rodomi sąraše.
-- Pasirinkite failą.
-- Patvirtinkite importavimą paspausdami 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- All files from folder AAPS/preferences/ on your phone will be shown in the list.
+- Select file.
+- Confirm import by clicking 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS importavimo nustatymai 2
 ```
 
-- Bus parodyta išsami informacija apie parametrų failą.
-- Paskutinė galimybė atšaukti importą.
-- Spustelėkite "Importuoti".
-- Patvirtinkite žinutę paspausdami 'OK'.
-- AAPS bus perkrauta iš naujo, kad būtų aktyvuoti importuoti parametrai.
+- Details on the preference file will be shown.
+- Last option to cancel import.
+- Click 'Import'.
+- Confirm message by clicking 'OK'.
+- AAPS will be restarted in order to activate imported preferences.
 
 ### Pastaba Dana RS vartotojams
 
-- Kadangi pompos susiejimo nustatymai persikelia į naują telefoną kartu su kitais, Jūsų naujas telefonas jau "pažįsta" pompą, todėl nepradės BT paieškos.
-- Rankiniu būdu Bluetooth ryšiu suporuokite išmanųjį telefoną ir pompą.
+- As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan.
+- Please pair new phone and pump manually.
 
 ### Importo nustatymai iš ankstesnių versijų (prieš AAPS 2.7)
 
-- Senasis nustatymų failas (vadinamas 'AndroidAPSPreferences' - be failo plėtinio) turi būti išmaniojo telefono pagrindiniame aplanke (/storage/emulated/0).
-- Neperkelkite senojo failo į tą patį aplanką kaip ir nauji eksportuoti nustatymai (AAPS/preferences).
-- Importavimo dialogo lange sąrašo apačioje rasite seną failą.
+- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
+- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+- You will find the "old" file on the bottom of the list in the import dialogue.
 
 ## Nustatymų failo perkėlimas
 
-- Geriausias būdas perkelti nustatymų failą į naują telefoną yra per USB kabelį arba debesijos paslaugą (pvz., Google Drive).
-- Instrukcijas galima rasti internete, pvz., [Android pagalbos puslapiai](https://support.google.com/android/answer/9064445?hl=en).
-- Jei patiriate problemų su perkeliamu failu, pabandykite kitą būdą perkelti failą.
+- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
+- If you experience problems with the transferred file try another way to transfer file.
