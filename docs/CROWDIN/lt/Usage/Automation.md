@@ -6,12 +6,12 @@ Dėl nuolatinių, pasikartojančių įvykių gali būti, kad visada turite pakei
 
 pvz.,  galite sukurti aukšto tikslo veiksmų rinkinį, kuris automatiškai suaktyvinamas, kai gliukozės kiekis kraujyje yra mažas. Arba, jei esate savo sporto klube, laikinas tikslas gali būti suaktyvintas automatiškai.
 
-Prieš naudodamiesi automatizavimu, turite išmanyti [laikinus tikslus](./temptarget.html) ir (arba) profilio keitimą.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
-Įsitikinkite, kad jūs tikrai suprantate, kaip automatizavimas veikia prieš nustatant savo pirmąjį paprastą taisyklę. \*\* Vietoje veiksmų, leiskite AAPS pirmą kartą rodyti tik pranešimus.\*\* Kai esate tikri, kad automatizavimas yra inicijuotas tinkamu laiku, pakeisti pranešimą realiu veiksmu.
+Įsitikinkite, kad jūs tikrai suprantate, kaip automatizavimas veikia prieš nustatant savo pirmąjį paprastą taisyklę. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: "Automatizavimo b\u016Bsena + veiksmai"
+:alt: Automatizavimo būsena + veiksmai
 ```
 
 ## Kaip naudoti
@@ -20,74 +20,74 @@ Norėdami nustatyti automatizavimą, jūs turite suteikti jam pavadinimą, bent 
 
 ### Svarbios pastabos
 
-**Automatizavimas vis dar yra aktyvus, kai ciklas yra išjungtas!**
+**Automation is still active when you disable loop!**
 
 So make sure to deactivate automation rules during these occasions if necessary. Norėdami tai padaryti, pašalinkite varnelę laukelyje, esančiame automatizavimo taisyklės pavadinimo kairėje.
 
 ```{image} ../images/Automation_ActivateDeactivate.png
-:alt: "\u012Ejungti ir i\u0161jungti automatizavimo taisykl\u0119"
+:alt: Įjungti ir išjungti automatizavimo taisyklę
 ```
 
 ### Where to find Automation
 
-Depending on your [settings in config builder](../Configuration/Config-Builder#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder.md#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### Bendrieji
 
 Yra kai kurie apribojimai:
 
-- Glikemijos lygis turi būti nuo 72 iki 270 md/dl (4–15 mmol/l).
-- Profilio procentinė dalis turi būti nuo 70% iki 130%.
-- Yra 5 min. laiko tarpas tarp kiekvieno įvykdymo (ir prieš pirmąjį įvykdymą).
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**Prašome, būkite atsargūs:**
+**Please be careful:**
 
-- \*\* mažiau nei -2 reiškia: -3 ir mažiau (-4, -10 ir t. t.)\*\*
-- **daugiau nei -2 reiškia: -1 ir daugiau (-1, 0, +10, ir t. t.)**
+- **less than -2 means: -3 and lower (-4,-10, etc)**
+- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 ### Sąlyga
 
 Jūs galite pasirinkti tarp kelių sąlygų. Čia minimos tik kelios, tačiau dauguma jų yra savaime suprantamos, todėl čia nėra aprašytos:
 
-Susietos sąlygos: Galite naudoti kelias sąlygas ir jas susieti taip
+- connect conditions: you can have several conditions and can link them with
 
-> - "Ir"
-> - "Arba"
-> - "Išskirtinė arba" (t. y. viena (ir tik viena) iš sąlygų turi būti taikoma veiksmui atlikti)
+  - "And"
+  - "Or"
+  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Laikas prieš pasikartojantis laikas
+- Time vs. recurring time
 
-  - Laikas = vienkartinis įvykis
-  - recurring time = something that happens regularly (i.e. kartą per savaitę, kiekvieną darbo dieną ir pan.)
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- Vieta: Konfigūratoriuje (automatizavimas) galite pasirinkti, kurią vietos nustatymo paslaugą norite naudoti:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - Pasyvi vieta: AAPS naudoja tik tą vietą, kurios reikalauja kitos programos
-  - Tinklo vieta: vietos nustatymas naudojant jūsų mobiliojo ryšio paslaugų teikėjo infrastruktūrą arba Wifi
-  - GPS vieta (Dėmesio! Gali sukelti pernelyg didelį akumuliatoriaus sunaudojimą!)
+  - Use passive location: AAPS only takes locations when other apps are requesting it
+  - Use network location: Location of your Wifi
+  - Use GPS location (Attention! Gali sukelti pernelyg didelį akumuliatoriaus sunaudojimą!)
 
 ### Veiksmas
 
 Galite pasirinkti vieną ar daugiau veiksmų:
 
-- nustatykite laikiną tikslą
+- start temp target
 
-  - turi būti tarp 72 mg/dl ir 270 mg/dl (4 mmol/l ir 15 mmol/l)
-  - veikia tik tada, jei nėra ankstesnių laikinų tikslų
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- sustabdykite laikiną tikslą
+- stop temp target
 
-- pranešimas
+- notification
 
-- profilio procentas
+- profile percentage
 
-  - turi būti tarp 70% iki 130%
-  - veikia tik tuomet, jei ankstesnė profilio procentinė dalis 100%
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-Pridėję savo veiksmus, **nepamirškite pakeisti numatytųjų reikšmių** spustelėdami numatytąsias reikšmes.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: "Automatizavimo numatytosios prie\u0161 nustatytos reik\u0161m\u0117s"
+:alt: Automation default vs. set values
 ```
 
 ### Rūšiuoti automatizavimo taisykles
@@ -95,7 +95,7 @@ Pridėję savo veiksmus, **nepamirškite pakeisti numatytųjų reikšmių** spus
 Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
 
 ```{image} ../images/Automation_Sort.png
-:alt: "R\u016B\u0161iuoti automatizavimo taisykles"
+:alt: Rūšiuoti automatizavimo taisykles
 ```
 
 ### Ištrinti automatizavimo taisykles
@@ -103,37 +103,37 @@ Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių 
 To delete an automation rule click on trash icon.
 
 ```{image} ../images/Automation_Delete.png
-:alt: "I\u0161trinti automatizavimo taisykl\u0119"
+:alt: Ištrinti automatizavimo taisyklę
 ```
 
-## Rekomendacijos ir išlygos
+## Good practice & caveats
 
-- Jei pirmą kartą naudojate automatizavimą arba kuriate naują taisyklę, taip pat turėtumėte įjungti pranešimą siuntimo taisyklę, kad būtumėte tikri, kad taisyklė veikia taip, kaip numatyta.
+- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
 - Watch the rule results.
 
-- Nenaudokite pernelyg paprastų sąlygų (pvz., jei KG> 80 mg/dl IR KG\<180 mg/dl)
+- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
 
-  \*\* Ypač svarbu, jei veiksmas keičia profilį! \*\*
+  **Doubly important if action is a profile switch!**
 
-- Stenkitės naudoti laikinus tikslus, o ne profilių keitimą. Temp Targets do not reset [Autosens](../Usage/Open-APS-features#autosens) back to 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
-- Profilio pakeitimus naudokite saikingai ir tik kaip paskutinę galimybę.
+- Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
-- Profilio pakeitimai automatiškai neatkuria jūsų profilio į standartinį
+- Profile switching will not reset the profile back to your base profile
 
-  - Norėdami tai padaryti, turite sukurti kitą taisyklę, kad grįžtumėte į standartinį profilį arba padarytumėte tai rankiniu būdu!
-  - Jei profilio keitimas nustatomas neribotam laikui ir nėra atstatomas į standartinį profilį, padidėja hipoglikemijos rizika.
+  - You have to make another rule to set this back or do it manually!
+  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
 ## Pavyzdžiai
 
 Tai yra tiesiog pavyzdžiai, ne patarimai. Jūs neturėtumėte tiesiog jų kopijuoti, nebūdami tikri, ką tiksiai darote, ir nežinodami, kodėl jums jų reikia.
 
-- Kasdienės veiklos profilio keitimas (pvz., Mokykla, sportas, savaitgalis, darbo diena...) su vietos nustatymo funkcija, WiFi, laiku ir kt.
-- Laikino tikslo nustatymas grindžiamas laiku, vieta, ryšio su bluetooth prietaisu...
-- "Netrukus valgysiu" laikino tikslo, pagrįsto laiku, vieta, nustatymas...
+- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+- Setting temp target for activities based on time, location, connection to a bluetooth device...
+- Setting eating soon temp targets based on time, location...
 
 ### Žemos glikemijos laikinas tikslas
 
@@ -155,12 +155,12 @@ Tai tiems, kurie nori automatiškai nustatyti laikiną žemos glikemijos tikslą
 
 Atkreipkite dėmesį, jei netinkamai naudojate automatizavimo funkciją. Tai gali sukelti sunkumų ir net kelti pavojų jūsų sveikatai. Neteisingo naudojimo pavyzdžiai:
 
-- Pabandyti pergudrauti algoritmą, užuot jį palaikę (pvz., profilio keitimas, o ne tikslaus valandinės bazės ir kitų faktorių koregavimas)
-- Nustatyti profilio pakeitimą, kad kompensuotumėte suvalgytą maistą
-- Profilio keitimas be trukmės nustatymo
-- Vienpusės taisyklės kūrimas (pvz., nustatote taisyklę, bet pamirštate ją anuliuoti su kita taisykle)
-- Kurti ilgalaikes taisykles
+- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+- Setting profile to compensate food
+- Setting profile without duration
+- Creating one way rules (i.e. do something but don't undo it by another rule)
+- Creating long term rules
 
 ## Alternatyvos
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Keletas pavyzdžių galima rasti 'čia \<./automationwithapp.html>\`\_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).
