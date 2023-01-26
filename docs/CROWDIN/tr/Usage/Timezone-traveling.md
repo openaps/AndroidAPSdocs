@@ -24,7 +24,7 @@ Bunu önlemek için iki olasılık vardır:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Yeni bir Libre 2 sensörünü başlatmak için eğer [yama uygulanmış LibreLink uygulaması](../Hardware/Libre2#time-zone-travelling) kullanıyorsanız, otomatik saat dilimi ayarlanmalıdır ve bu seçeneği kullanamazsınız.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Seçenek 2: Pompa geçmişini sil
 
