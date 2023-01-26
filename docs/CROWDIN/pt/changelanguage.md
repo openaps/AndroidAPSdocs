@@ -1,14 +1,12 @@
 # Alterar Idioma
 
-```{eval-rst}
-.. nota::
-   A seleção de idiomas foi movida para o menu gaveta, em baixo do lado esquerdo. Por favor, clique na barra inferior para abrir menu de seleção de idiomas.
-```
+:::{note}
+The language selection have been moved to the bottom drawer of the left menu. Por favor, clique na barra inferior para abrir menu de seleção de idiomas.
+:::
 
-```{eval-rst}
-.. imagem:: images/documentation_language_menu.png
-   :width: 350
-   :alt: Abrir menu de idiomas
+```{image} images/documentation_language_menu.png
+:alt: Open language menu
+:width: 350
 ```
 
 Or just click on one of the following languages:
