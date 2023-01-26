@@ -2,5 +2,5 @@
 
 If you have any other CGM set up that sends your data to [Nightscout](https://nightscout.github.io/) then
 
-- În AndroidAPS Preferințe introduceți site-ul Nightscout și API Secret.
-- Alegeți NSClient în ConfigBuilder (setare în AndroidAPS).
+-   In AndroidAPS Preferences enter your Nightscout website and API secret.
+-   Select NSClient in ConfigBuilder (setting in AndroidAPS).
