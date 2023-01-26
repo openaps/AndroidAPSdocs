@@ -6,12 +6,12 @@ Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerek
 
 Örneğin KŞ'niz çok düşük olduğunda, otomatik olarak yüksek bir geçici hedefe sahip olmaya karar verebilirsiniz. Veya fitness merkezinizdeyseniz, otomatik olarak geçici bir hedef alırsınız.
 
-Otomasyonu kullanmadan önce, manuel [geçici hedeflere](./temptarget.html) veya profil anahtarlarından emin olmalısınız.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
-İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Aksiyon yerine AAPS'nin önce yalnızca bir bildirim göstermesine izin verin.** Otomasyonun doğru zamanda tetiklendiğinden eminseniz, bildirimi gerçek eylemle değiştirin.
+İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: "Otomasyon ko\u015Fulu + eylem"
+:alt: Otomasyon koşulu + eylem
 ```
 
 ## Bu nasıl kullanılır
@@ -20,75 +20,74 @@ Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir ey
 
 ### Önemli Not
 
-**Döngüyü devre dışı bıraktığınızda otomasyon hala etkindir!**
+**Automation is still active when you disable loop!**
 
 Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bıraktığınızdan emin olun. Bunu otomasyon kuralınızın adının solundaki kutunun işaretini kaldırarak yapabilirsiniz.
 
 ```{image} ../images/Automation_ActivateDeactivate.png
-:alt: "Otomasyon kural\u0131n\u0131 etkinle\u015Ftirin ve devre d\u0131\u015F\u0131\
-:  \ b\u0131rak\u0131n"
+:alt: Otomasyon kuralını etkinleştirin ve devre dışı bırakın
 ```
 
 ### Otomasyon nerede bulunur
 
-Hamburger menüsünde veya sekmede [Konfigürasyon ayarları içerisinde](../Configuration/Config-Builder#sekme-veya-hamburger-menusu) içindeki ayarlarınıza bağlı olarak, Otomasyon \<../Configuration/Config-Builder.md#otomasyon> öğesini bulacaksınız. \_\_
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### Genel
 
 Bazı sınırlar vardır:
 
-- Glikoz değeri 72 ile 270 mg/dl arasında veya 4 ile 15 mmol/l arasında olmalıdır.
-- Profil yüzdesi %70 ile %130 arasında olmalıdır.
-- 5 dk vardır. yürütmeler (ve ilk yürütme) arasındaki zaman sınırı.
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**Lütfen dikkatli olun:**
+**Please be careful:**
 
-- **-2'den küçük şu anlama gelir: -3 ve altı (-4,-10, vb.)**
-- **-2'den büyük şu anlama gelir: -1 ve üstü (-1, 0, +10, vb.)**
+- **less than -2 means: -3 and lower (-4,-10, etc)**
+- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 ### Şart
 
 Birkaç koşul arasından seçim yapabilirsiniz. Burada yalnızca birkaçından bahsedilmiştir, ancak çoğu kendi kendini açıklayıcı niteliktedir ve bu nedenle burada açıklanmamıştır:
 
-- bağlantı koşulları: birkaç koşula sahip olabilirsiniz ve bunları aşağıdakilerle bağlayabilirsiniz
+- connect conditions: you can have several conditions and can link them with
 
-  - "Ve"
-  - "Veya"
-  - "Dışlamalı veya" (bu koşullardan yalnızca birinin geçerli olması durumunda, eylem(ler) in gerçekleşeceği anlamına gelir)
+  - "And"
+  - "Or"
+  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Zaman vs. yinelenen zaman
+- Time vs. recurring time
 
-  - zaman = tek seferlik olay
-  - yinelenen zaman = düzenli olarak gerçekleşen bir şey (ör. haftada bir, her iş günü vb.)
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- konum: konfiguration oluşturucuda (Otomasyon), kullanmak istediğiniz konum hizmetini seçebilirsiniz:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
-  - Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ettiğinde konum alır
-  - Ağ konumunu kullan: Wifi'nizin konumu
-  - GPS konumunu kullanın (Dikkat! Aşırı pil tüketimine neden olabilir!)
+  - Use passive location: AAPS only takes locations when other apps are requesting it
+  - Use network location: Location of your Wifi
+  - Use GPS location (Attention! Aşırı pil tüketimine neden olabilir!)
 
 ### Eylem
 
 Bir veya daha fazla eylem seçebilirsiniz:
 
-- geçici hedefi başlat
+- start temp target
 
-  - 72 mg/dl ile 270 mg/dl (4 mmol/l ve 15 mmol/l) arasında olmalıdır
-  - yalnızca önceki geçici hedef yoksa çalışır
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- geçici hedefi durdur
+- stop temp target
 
-- bildirim
+- notification
 
-- profil yüzdesi
+- profile percentage
 
-  - \%70 ile %130 arasında olmalıdır
-  - yalnızca önceki yüzde %100 olduğunda çalışır
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan değerleri** ihtiyacınız olanla değiştirmeyi unutmayın.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: "Otomasyon varsay\u0131lan\u0131 vs. de\u011Ferlerini ayarlay\u0131n"
+:alt: Automation default vs. set values
 ```
 
 ### Otomasyon kurallarını sıralama
@@ -96,7 +95,7 @@ Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan de
 Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satırlı düğmeyi basılı tutun ve yukarı veya aşağı hareket ettirin.
 
 ```{image} ../images/Automation_Sort.png
-:alt: "Otomasyon kurallar\u0131n\u0131 s\u0131ralama"
+:alt: Otomasyon kurallarını sıralama
 ```
 
 ### Otomasyon kurallarını silme
@@ -104,37 +103,37 @@ Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satır
 Bir otomasyon kuralını silmek için çöp kutusu simgesine tıklayın.
 
 ```{image} ../images/Automation_Delete.png
-:alt: "Otomasyon kural\u0131n\u0131 silme"
+:alt: Otomasyon kuralını silme
 ```
 
-## Alıştırma & uyarılar
+## Good practice & caveats
 
-- Otomasyonu kullanmaya başladığınızda veya yeni bir kural oluşturduğunuzda, önce kuralın iyi çalıştığından emin olana kadar sadece bir bildirim ekleyin.
+- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
-- Kural sonuçlarını izleyin.
+- Watch the rule results.
 
-- Koşulları çok kolaylaştırmaya çalışmayın (yani: IF KŞ> 80 mg/dl VE KŞ\< 180 mg/dl)
+- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
 
-  **İşlem bir profil değiştirme ise iki kat önemlidir!**
+  **Doubly important if action is a profile switch!**
 
-- Profil değiştirme yerine Geçici Hedefleri kullanmayı deneyin. Geçici Hedefler, [Autosens](../Usage/Open-APS-features#autosens) öğesini 0'a resetlemez.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
-- Profil değiştirmeyi az miktarda ve tercihen son çare olarak yapıldığından emin olun.
+- Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profil değiştirme, [Autosens](../Usage/Open-APS-features#autosens) en az 6 saat boyunca işe yaramaz hale getirir.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
-- Profil değiştirme, profili temel profilinize geri döndürmez
+- Profile switching will not reset the profile back to your base profile
 
-  - Geri döndürmek için başka bir kural yapmalı veya manuel olarak ayarlamalısın!
-  - Profil değiştirme sona ermezse veya temel profile dönüş olmazsa hipoglisemi riski artabilir.
+  - You have to make another rule to set this back or do it manually!
+  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
 
 ## Örnekler
 
 Bunlar sadece otomasyon örnekleridir, tavsiye değildir. Gerçekte ne yaptığınızın veya neden ihtiyaç duyduğunuzun farkında olmadan onları uygulamayın.
 
-- Coğrafi konum, wifi, zaman vb. kullanarak günlük aktiviteleriniz (okul, spor salonu, hafta sonu, iş günü gibi) için profil değiştirme.
-- Zamana, konuma, bluetooth cihazına bağlantıya dayalı etkinlikler için geçici hedef belirleme...
-- Zamana, konuma göre yakında yemek yeme geçici hedeflerinin belirlenmesi...
+- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
+- Setting temp target for activities based on time, location, connection to a bluetooth device...
+- Setting eating soon temp targets based on time, location...
 
 ### Düşük Glikoz Geçici Hedefi
 
@@ -156,12 +155,12 @@ Bu örnek, hafta boyunca her gün aynı saatte işyerinde öğle yemeği yiyen b
 
 Otomasyonu yanlış kullanmadığınıza lütfen dikkat edin. Yanlış kullanım sağlığınızı tehlikeye atabilir. Yanlış kullanım örnekleri:
 
-- Yalnızca yardım yerine algoritmayı geçersiz kılmaya çalışmak (ör. bazal, IC vb. ayarlamak yerine profili değiştirerek)
-- Yiyecekleri telafi etmek için profil ayarlama
-- Süresiz profil ayarlama
-- Tek yönlü kurallar oluşturma (ör. bir şey yap ama başka bir kuralla geri alma)
-- Uzun süreli kurallar oluşturmak
+- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+- Setting profile to compensate food
+- Setting profile without duration
+- Creating one way rules (i.e. do something but don't undo it by another rule)
+- Creating long term rules
 
 ## Alternatifler
 
-İleri düzey kullanıcılar için, IFTTT veya Automate adlı üçüncü taraf Android uygulamasını kullanarak görevleri otomatikleştirmenin başka olanakları da vardır. Bazı örnekleri [burada](./automationwithapp.html) bulabilirsiniz.
+İleri düzey kullanıcılar için, IFTTT veya Automate adlı üçüncü taraf Android uygulamasını kullanarak görevleri otomatikleştirmenin başka olanakları da vardır. Some examples can be found [here](./automationwithapp.html).
