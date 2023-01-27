@@ -4,9 +4,9 @@
 
 ### 1. Git'i indir
 
-- **Android Studio çeşitli güncellemeler indirdiği için her zaman çevrimiçi olmanız gerekir!**
-- Herhangi bir git sürümü çalışması gerekir. Örneğin [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Kurulum yerini not ettiğinizden emin olun. Bir sonraki adımda ihtiyacınız olacak.
+- **You have to be online all of the time as Android Studio downloads several updates!**
+- Herhangi bir git sürümü çalışması gerekir. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Make sure to note down the installation path. Bir sonraki adımda ihtiyacınız olacak.
 
 ```{image} ../images/Update_GitPath.png
 :alt: Git kurulum yolu
@@ -14,59 +14,59 @@
 
 ### 2. Android Studio'da git yolunu ayarla
 
-- Dosyayı Aç > Ayarlar
+- Open File > Settings
 
   ```{image} ../images/Update_GitSettings1.png
-  :alt: "Android Studio - ayarlar\u0131 a\xE7"
+  :alt: Android Studio - ayarları aç
   ```
 
-- Alt menüyü açmak için Sürüm Kontrolü (1.) yanındaki küçük üçgene tıklayın.
+- Click the small triangle next to Version Control (1.) to open the sub-menu.
 
-- Git'e tıklayın (2.).
+- Click Git (2.).
 
-- Güncelleme yönteminin "Merge" (3.) seçili olduğundan emin olun.
+- Make sure update method "Merge" (3.) is selected.
 
-- "Test" düğmesine tıklayarak Android Studio'nun git.exe yolunu otomatik olarak bulup bulamayacağını kontrol edin (4.)
+- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
   ```{image} ../images/AndroidStudio361_09.png
-  :alt: "Android Studio ayarlar\u0131"
+  :alt: Android Studio ayarları
   ```
 
-- Otomatik ayar başarılı olursa git versiyonu görüntülenecektir.
+- If automatic setting is successful git version will be displayed.
 
-- İletişim kutusunda (1.) "OK" ve ayarlar penceresinde (2.) "OK" düğmesini tıklayın.
+- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
   ```{image} ../images/AndroidStudio361_10.png
-  :alt: "Otomatik git kurulumu ba\u015Far\u0131l\u0131"
+  :alt: Otomatik git kurulumu başarılı
   ```
 
-- git.exe dosyasının bulunamaması durumunda iletişim kutusundaki (1.) "OK" ve ardından üç noktalı (2.) düğmeyi tıklayın.
+- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 
-- Nerede bulunacağından emin değilseniz "git.exe"yi bulmak için Windows Gezgini'nde [arama işlevini](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) kullanın. binklasöründe bulunan git.exe'yi arıyoruz.
+- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
 
-- git.exe yolunu seçin ve **\\bin\\** klasöründeki yolu (3.) seçtiğinizden emin olun ve "OK"e (4.) tıklayın.
+- Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 
-- "OK" butonuna (5.) tıklayarak ayarlar penceresini kapatın.
+- Close settings window by clicking "OK" button (5.).
 
   ```{image} ../images/AndroidStudio361_11.png
-  :alt: "Otomatik git kurulumu ba\u015Far\u0131s\u0131z"
+  :alt: Otomatik git kurulumu başarısız
   ```
 
 ### 3. Yeniden başlat
 
-- Sistemi güncellemek için bilgisayarınızı yeniden başlatın.
+- Reboot your PC to update System Environment.
 
 ### 4. Android Studio'da git ayarlarını kontrol edin
 
-- Android Studio'da Terminal penceresini açın
+- Open Terminal window in Android Studio
 
-- `git --version` girin (tırnak işaretleri olmadan ve iki - \[eksi işareti\] arasında boşluk bırakmadan!) ve Return tuşuna basın
+- Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
 
   ```{image} ../images/AndroidStudio_gitversion1.png
   :alt: git - -version
   ```
 
-- Git düzgün bir şekilde kurulur ve bağlanırsa, kurulu sürüm hakkında aşağıdaki gibi görünen bir bilgi alacaksınız:
+- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 
   ```{image} ../images/AndroidStudio_gitversion2.png
   :alt: git-version durumu
@@ -74,7 +74,7 @@
 
 ## Mac
 
-- Herhangi bir git sürümü çalışması gerekir. Örneğin, [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-- Git'i kurmak için homebrew kullanın: `` `$ brew install git` ``.
-- Git kurulumuyla ilgili ayrıntılar için `resmi git belgelerine <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>` bakın.
+- Herhangi bir git sürümü çalışması gerekir. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Use homebrew to install git: `` `$ brew install git` ``.
+- Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
 - Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
