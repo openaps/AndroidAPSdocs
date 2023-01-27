@@ -53,28 +53,45 @@ Change language <./changelanguage.md>
 :caption: Getting started
 :titlesonly: true
 
-Safety first <./Getting-Started/Safety-first.md> What is a closed loop system <./Getting-Started/ClosedLoop.md> What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md> Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Safety first <./Getting-Started/Safety-first.md>
+What is a closed loop system <./Getting-Started/ClosedLoop.md>
+What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
 :::{toctree}
 :caption: What do I need?
 :titlesonly: true
 
-CGM/FGM choices <./Configuration/BG-Source.md> Pump choices <./Getting-Started/Pump-Choices.md> Module <./Module/module.md>
+CGM/FGM choices <./Configuration/BG-Source.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
+Module <./Module/module.md>
 :::
 
 :::{toctree}
 :caption: How to Install AndroidAPS
 :titlesonly: true
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md> Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md> Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md> Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md> Install git <./Installing-AndroidAPS/git-install.md> Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md> Release notes <./Installing-AndroidAPS/Releasenotes.md> Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Building the APK <./Installing-AndroidAPS/Building-APK.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Install git <./Installing-AndroidAPS/git-install.md>
+Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :::
 
 :::{toctree}
 :caption: Component Setup
 :titlesonly: true
 
-CGM/FGM <./Configuration/BG-Source.md> xDrip Settings <./Configuration/xdrip.md> Pump choices <./Getting-Started/Pump-Choices.md> Phones <./Hardware/Phoneconfig.md> Nightscout setup <./Installing-AndroidAPS/Nightscout.md> Smartwatch  <./Hardware/Smartwatch.md>
+CGM/FGM <./Configuration/BG-Source.md>
+xDrip Settings <./Configuration/xdrip.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
+Phones <./Hardware/Phoneconfig.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 :::
 
 (configuration)=
@@ -83,74 +100,98 @@ CGM/FGM <./Configuration/BG-Source.md> xDrip Settings <./Configuration/xdrip.md>
 :caption: Configuration
 :titlesonly: true
 
-Config builder <./Configuration/Config-Builder.md> Preferences <./Configuration/Preferences.md>
+Config builder <./Configuration/Config-Builder.md>
+Preferences <./Configuration/Preferences.md>
 :::
 
 :::{toctree}
 :caption: AndroidAPS Usage
 :titlesonly: true
 
-AndroidAPS screens <./Getting-Started/Screenshots.md> Objectives <./Usage/Objectives.md> OpenAPS features <./Usage/Open-APS-features.md> COB calculation <./Usage/COB-calculation.md> Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md> Profile switch <./Usage/Profiles.md> Temp-targets <./Usage/temptarget.md> Extended carbs <./Usage/Extended-Carbs.md> Automation <./Usage/Automation.md> Careportal (discontinued) <./Usage/CPbefore26.md> Open Humans Uploader <./Configuration/OpenHumans.md> Automation with 3rd party apps <./Usage/automationwithapp.md> Android auto <./Usage/Android-auto.md>
+AndroidAPS screens <./Getting-Started/Screenshots.md>
+Objectives <./Usage/Objectives.md>
+OpenAPS features <./Usage/Open-APS-features.md>
+COB calculation <./Usage/COB-calculation.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Profile switch <./Usage/Profiles.md>
+Temp-targets <./Usage/temptarget.md>
+Extended carbs <./Usage/Extended-Carbs.md>
+Automation <./Usage/Automation.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
+Android auto <./Usage/Android-auto.md>
 :::
 
 :::{toctree}
 :caption: General Hints
 :titlesonly: true
 
-Crossing timezones with pumps <./Usage/Timezone-traveling.md> Accessing logfiles <./Usage/Accessing-logfiles.md> Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> Export/Import Settings <./Usage/ExportImportSettings.md> xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+Crossing timezones with pumps <./Usage/Timezone-traveling.md>
+Accessing logfiles <./Usage/Accessing-logfiles.md>
+Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Export/Import Settings <./Usage/ExportImportSettings.md>
+xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 :::
 
 :::{toctree}
-:caption: AndroidAPS for children 
+:caption: AndroidAPS for children
 :titlesonly: true
 
-Remote monitoring <./Children/Children.md> SMS commands <./Children/SMS-Commands.md> Profile helper <./Configuration/profilehelper.md>
+Remote monitoring <./Children/Children.md>
+SMS commands <./Children/SMS-Commands.md>
+Profile helper <./Configuration/profilehelper.md>
 :::
 
 :::{toctree}
-:caption: Troubleshooting 
+:caption: Troubleshooting
 :titlesonly: true
 
-Troubleshooting <./Usage/troubleshooting.md> Nightscout client <./Usage/Troubleshooting-NSClient.md>
+Troubleshooting <./Usage/troubleshooting.md>
+Nightscout client <./Usage/Troubleshooting-NSClient.md>
 :::
 
 :::{toctree}
-:caption: FAQ 
+:caption: FAQ
 :titlesonly: true
 
 FAQ <./Getting-Started/FAQ.md>
 :::
 
 :::{toctree}
-:caption: Glossary 
+:caption: Glossary
 :titlesonly: true
 
 Glossary <./Getting-Started/Glossary.md>
 :::
 
 :::{toctree}
-:caption: Where to go for help 
+:caption: Where to go for help
 :titlesonly: true
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md> Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md> Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
 :::{toctree}
-:caption: For Clinicians 
+:caption: For Clinicians
 :titlesonly: true
 
 For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 :::
 
 :::{toctree}
-:caption: How to help 
+:caption: How to help
 :titlesonly: true
 
-How to help <./Getting-Started/How-can-I-help.md> How to translate the app and docs <./translations.md> How to edit the docs <./make-a-PR.md>
+How to help <./Getting-Started/How-can-I-help.md>
+How to translate the app and docs <./translations.md>
+How to edit the docs <./make-a-PR.md>
 :::
 
 :::{toctree}
-:caption: Sandbox 
+:caption: Sandbox
 :titlesonly: true
 
 Sandbox <./Sandbox/sandbox1.md>
