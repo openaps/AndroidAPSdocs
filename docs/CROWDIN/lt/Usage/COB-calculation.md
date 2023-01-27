@@ -26,28 +26,28 @@ AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio val
 
 ### Kaip AndroidAPS nustato klaidingas AAO reikšmes?
 
-Įprastai AAPS nustato angliavandenių įsisavinimą pagal KG svyravimus. Tuo atveju, jei jūs suvedėte angliavandenius, bet AAPS nemato numatyto jų įsisavinimo pagal KG svyravimus, ji naudos [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) metodą apskaičiuoti įsisavinimui (taip vadinamą 'atsarginę priemonę'). Kadangi šis metodas skaičiuoja tik minimalų angliavandenių įsisavinimą nekreipiant dėmesio į KG svyravimus, tai gali lemti neteisingas AAO reikšmes.
+Įprastai AAPS nustato angliavandenių įsisavinimą pagal KG svyravimus. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Kadangi šis metodas skaičiuoja tik minimalų angliavandenių įsisavinimą nekreipiant dėmesio į KG svyravimus, tai gali lemti neteisingas AAO reikšmes.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
-:alt: "U\u017Euomina apie neteising\u0105 AAO reik\u0161m\u0119"
+:alt: Užuomina apie neteisingą AAO reikšmę
 ```
 
 In the screenshot above, 41% of time the carb absorption was mathematically calculated by the min_5m_carbimpact instead of the value  detected from deviations.  Tai reiškia, kad gal jūsų turite mažiau aktyvių angliavandenių organizme nei apskaičiuota algoritmo.
 
 ### Kaip elgtis su tokiu įspėjimu?
 
-- Apsvarstykite veiksmų atšaukimą - paspauskite Atšaukti vietoj OK.
-- Dar kartą apskaičiuokite jūsų būsimą valgį su bolus patarėju paliekant AAO nepažymėtą.
-- Jei esate tikri, kad jums reikia korekcinio boluso, įveskite jį rankiniu būdu.
-- Bet kokiu atveju būkite atsargūs, kad neperdozuotumėte!
+- Consider to cancel the treatment - press Cancel instead of OK.
+- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
+- In case you are sure you need a correction bolus, enter it manually.
+- In any case be careful not to overdose!
 
 ### Kodėl algoritmas nenustato AAO teisingai?
 
-- Gal jūs pervertinote angliavandenius juos suvedant.
-- Aktyvumas / pratimai po prieš tai buvusio valgio
-- I:A reikalinga patikslinti
-- klaidinga min_5m_carbimpact reikšmė (rekomenduojama 8 su SMB, 3 su AMA)
+- Maybe you overestimated carbs when entering them.
+- Activity / exercise after your previous meal
+- I:C needs adjustment
+- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
 
 ## Įvestų angliavandenių koregavimas rankiniu būdu
 
-Jei pervertinote ar nepakankamai įvertinote angliavandenių kiekį, galite juos ištaisyti naudodamiesi terapijos skirtuku ir Veiksmų portalu, kaip aprašyta [čia](../Getting-Started/Screenshots#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).

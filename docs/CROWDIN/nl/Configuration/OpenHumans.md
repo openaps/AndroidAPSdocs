@@ -2,31 +2,30 @@
 
 ## Doneer je gegevens aan de wetenschap
 
-Je kunt de community verder helpen door jouw gegevens te doneren aan wetenschappelijk onderzoek. Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden.
-In AAPS zit de mogelijkheid ingebouwd om jouw data te synchroniseren met [Open Humans](https://www.openhumans.org), een platform waar je je gezondheidsgegevens kunt uploaden, verbinden en opslaan - en kunt delen.
+Je kunt de community verder helpen door jouw gegevens te doneren aan wetenschappelijk onderzoek. Dit helpt onderzoekers om dit project vooruit te helpen, nieuwe wetenschappelijke ideeën te ontwikkelen en de open mind van open source closed loop systemen te verbreden. AndroidAPS is ready to synchronize your data with [Open Humans](https://www.openhumans.org), a platform allowing you to upload, connect, and store your personal data – such as genetics, activity and health data.
 
 Je behoudt de volledige controle over wat er met je gegevens gebeurt en welke projecten je wilt ondersteunen door ze toegang tot je gegevens te geven. Welke gegevens worden gebruikt en op welke manier, is afhankelijk van de projecten waar je je op OpenHumans bij aansluit.
 
 De volgende gegevens worden geüpload naar je Open Humans account:
 
-- Glucose waarden
-- Careportal gebeurtenissen (behalve notities)
-- Vertraagde bolus
-- Profiel wissel
-- Totale dagelijkse doses
-- Tijdelijke basaalstanden
-- Tijdelijke streefdoelen
+- Glucose values
+- Careportal events (except notes)
+- Extended boluses
+- Profile switches
+- Total daily doses
+- Temporary basals
+- Temp targets
 - Instellingen
-- AAPS versie
-- Apparaat model
-- Scherm afmetingen
+- Application version
+- Device model
+- Screen dimensions
 
 Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal niet worden geüpload.
 
-## Koppeling maken
+## Instellen
 
-1. Maak jouw eigen account aan op [Open Humans](https://www.openhumans.org) als je dat nog niet hebt. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
-2. Activeer de "Open Humans"-plugin in de [Configurator](../Configuration/Config-Builder.md).
+1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Je kunt je bestaande Google of Facebook account gebruiken als je wilt.
+2. Enable the “Open Humans” plugin in [Config Builder](../Configuration/Config-Builder.md).
 3. Open de instellingen door op het tandwiel icoontje te tikken. Je kunt uploaden beperken tot momenten wanneer jouw telefoon gebruik maakt van Wi-Fi en/of wordt opgeladen.
 4. Open de Open Humans Plugin (via het menu OH-tabblad of hamburger menu) en klik op 'LOGIN'.
 
@@ -46,7 +45,7 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 
 10. Als je teruggaat naar AAPS ziet je een melding dat het aanmelden is gelukt.
 11. Laat de Open Humans Uploader plugin en telefoon ingeschakeld om de setup te voltooien.
-12. Nadat je op sluiten hebt geklikt, zie je jouw lidmaatschaps-ID. Wachtrijgrootte > 0 geeft aan dat er nog steeds gegevens moeten worden geüpload.
+12. Nadat je op sluiten hebt geklikt, zie je jouw lidmaatschaps-ID. Queue sizes > 0 shows that there is still data to be uploaded.
 13. Klik op 'LOGOUT' als je wilt stoppen met het uploaden van gegevens naar Open Humans.
 14. Je zult een Android melding zien met informatie over de voortgang van jouw upload.
 
@@ -54,7 +53,7 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 :alt: Open Humans setup afronden
 ```
 
-15. Je kunt jouw gegevens beheren door je aan te melden bij de [Open Humans website](https://www.openhumans.org).
+15. You can manage your data by logging in to the [Open Humans website](https://www.openhumans.org).
 
 ```{image} ../images/OHWeb.png
 :alt: Open Humans gegevens beheren
@@ -62,11 +61,11 @@ Geheime of persoonlijke informatie zoals je Nightscout URL of API-secret zal nie
 
 ## Gegevens delen met onderzoeksprojecten
 
-### [Het 'OPEN' project](https://www.open-diabetes.eu/)
+### [The 'OPEN' project](https://www.open-diabetes.eu/)
 
-Het 'OPEN'-project brengt een internationale en intersectorale groep patiënten, artsen, sociale wetenschappers, computerwetenschappers en patiëntenbelangenorganisaties samen. Ze onderzoeken verschillende aspecten van Doe-het-zelf-Kunstmatige Pancreas-systemen (DIY APS). Zie hun [website](https://www.open-diabetes.eu/) voor meer informatie.
+Het 'OPEN'-project brengt een internationale en intersectorale groep patiënten, artsen, sociale wetenschappers, computerwetenschappers en patiëntenbelangenorganisaties samen. Ze onderzoeken verschillende aspecten van Doe-het-zelf-Kunstmatige Pancreas-systemen (DIY APS). For more details see their [website](https://www.open-diabetes.eu/).
 
-In september 2020 lanceerde het 'OPEN'-project een [enquête](https://survey.open-diabetes.eu/) met de optie om gegevens te doneren die je hebt geüpload naar Open Humans. [Instructies](https://open-diabetes.eu/en/open-survey/survey-tutorials/) hoe je jouw gegevens aan het 'OPEN'-project kunt doneren, vind je op hun website en binnen de enquête zelf.
+September 2020 the 'OPEN' project launched a [survey](https://survey.open-diabetes.eu/) including the option to donate data you uploaded to Open Humans. A [tutorial](https://open-diabetes.eu/en/open-survey/survey-tutorials/) how to donate your data to the 'OPEN' project is available on their site and within the survey itself.
 
 ### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
 
@@ -82,14 +81,13 @@ Nadat je een account hebt aangemaakt en je gegevens in Open Humans hebt staan, m
 
 ## Gebruiksvoorwaarden
 
-Dit is een open source tool die jouw gegevens zal kopiëren naar [Open Humans](https://www.openhumans.org). We behouden geen rechten om je gegevens met derden te delen zonder je uitdrukkelijke toestemming. De gegevens die het project en de app ontvangen worden opgeslagen onder een willekeurig gegenereerde gebruikers-ID en zullen alleen veilig worden verzonden naar een Open Humans-account met jouw toestemming voor dat proces.
-Je kunt op elk gewenst moment stoppen met uploaden en jouw upload gegevens verwijderen via [www.openhumans.org](https://www.openhumans.org). Houd er rekening mee dat sommige projecten die gegevens ontvangen dit niet ondersteunen.
+This is an open source tool that will copy your data to [Open Humans](https://www.openhumans.org). We behouden geen rechten om je gegevens met derden te delen zonder je uitdrukkelijke toestemming. De gegevens die het project en de app ontvangen worden opgeslagen onder een willekeurig gegenereerde gebruikers-ID en zullen alleen veilig worden verzonden naar een Open Humans-account met jouw toestemming voor dat proces. You can stop uploading and delete your upload data at any time via [www.openhumans.org](https://www.openhumans.org). Houd er rekening mee dat sommige projecten die gegevens ontvangen dit niet ondersteunen.
 
-Zie ook de gebruikersvoorwaarden (Terms of Use) van [Open Humans](https://www.openhumans.org/terms/).
+Also see [Open Humans Terms of Use](https://www.openhumans.org/terms/).
 
 ## Gegevensbescherming
 
 Open Humans beschermt jouw privacy door voor elk project een numerieke ID aan jou toe te wijzen. Hierdoor kunnen projecten jou herkennen, maar ze kunnen je niet identificeren. Het Application ID geüpload door AndroidAPS is vergelijkbaar en helpt alleen de gegevens te beheren. Meer informatie vind je hier:
 
-- [Open Human Data Gebruik Beleid](https://www.openhumans.org/data-use/)
+- [Open Humans Data Use Policy](https://www.openhumans.org/data-use/)
 - [Open Humans GDPR](https://www.openhumans.org/gdpr/)

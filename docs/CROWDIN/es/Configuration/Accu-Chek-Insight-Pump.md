@@ -12,7 +12,7 @@
 
 Nota: AAPS escribirá los datos siempre en **primer perfil de tasa basal en la bomba**.
 
-* Un teléfono Android (cualquier versión de Android funcionaría con Insight, pero compruebe en la página [ Módulo ](../Module/module#phone) qué versión de Android es necesaria para ejecutar AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * La aplicación AndroidAPS instalada en el teléfono
 
 ## Configuración
@@ -52,7 +52,7 @@ Note: There will be no permanent connection between pump and phone. Sólo se est
 
 ## Valores en AAPS
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Pantalla de configuración de Insight](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Dependiendo de la versión de firmware de su bomba, el Insight vibrará brevemen
 
 * Firmware 1.x: Sin vibración por diseño.
 * Firmware 2.x: La vibración no se puede inhabilitar.
-* Firmware 3.x: AndroidAPS libera en forma silenciosa. (mínimo [ versión 2.6.1.4 ](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS libera en forma silenciosa. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 La versión de firmware se puede encontrar en el menú.
 
@@ -144,4 +144,4 @@ En este caso, desactive la función bluetooth en la bomba el smartphone por unos
 
 ## Cruzando zonas horarias con la bomba Insight
 
-Para obtener información sobre los viajes a través de zonas horarias, consulte la sección [Zonas horarias viajando con bombas](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

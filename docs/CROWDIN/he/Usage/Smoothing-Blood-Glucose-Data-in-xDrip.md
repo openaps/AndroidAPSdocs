@@ -6,7 +6,7 @@
 
 ### "בנה יישום Dexcom בעצמך" (BYODA)
 
-בעת שימוש ב-[BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) נתוני הסוכר שלכם חלקים ועקביים. יתר על כן, ניתן לנצל את החלקת הנתונים בדיעבד של Dexcom. אין הגבלות בשימוש ב-SMB.
+When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. יתר על כן, ניתן לנצל את החלקת הנתונים בדיעבד של Dexcom. אין הגבלות בשימוש ב-SMB.
 
 ### xDrip+ עם דקסקום G5 או G6
 

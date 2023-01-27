@@ -1,6 +1,6 @@
 # Profil değiştirme
 
-Genel olarak profillerle ilgili dokümantasyon [Konfigürasyon ayarları - profil](../Configuration/Config-Builder#profile) adresinde bulunabilir.
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 AAPS'nizi başlatırken ve profilinizi seçerken, sıfır süreli (daha sonra açıklanacak) bir "Profil değiştirme" olayı yapmanız gerekecektir. Bunu yaparak AAPS, profillerin geçmişini izlemeye başlar ve her yeni profil değişikliği, NS'de profilin içeriğini değiştirseniz bile başka bir "Profil değiştirme" gerektirir. Güncellenen profil hemen AAPS'e gönderilir, ancak bu değişiklikleri kullanmaya başlamak için aynı profili tekrar değiştirmeniz gerekir.
 

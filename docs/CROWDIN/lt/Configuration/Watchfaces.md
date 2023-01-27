@@ -10,7 +10,7 @@ Galite instaliuoti AndroidAPS programėlę savo **Wear OS pagrindu** veikiančia
 * Kai kurioms funkcijoms, pavyzdžiui, *ekrano elementams*, reikia Wear OS 2.0 versijos " arba naujesnės
 * "Google" pervadino * Android Wear 1.x* į *Wear OS* iš versijos 2.x, todėl, jei nurodoma *Android Wear*, tai gali būti senesnė 1.x sistemos versija
 * Jei išmaniojo laikrodžio aprašyme nurodomas tik suderinamumas su *Android* ir *iOS* - tai **ne**reiškia, kad jis veikia su *Wear OS* - tai gali būti šiek tiek kitos rūšies gamintojo specifinė OS **, kuri nėra suderinama su AAPS!**
-* Patikrinkite [sąrašą išbandytų telefonų ir laikrodžių](../Getting-Started/Phones#list-of-tested-phones) ir [paklauskite bendruomenės](../Where-To-Go-For-Help/Connect-with-other-users.md), jei kyla abejonių ar jūsų laikrodis yra palaikomas
+* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### AAPS Wear OS versijos sukūrimas
 
@@ -20,7 +20,7 @@ From March 2021 you need to sideload AAPS onto the watch, it is no longer access
 
 ### Nustatymas telefone
 
-AndroidAPS konfigūratoriuje turite [aktyvuoti Wear įskiepį](../Configuration/Config-Builder#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
 
 ## AAPS kontrolė laikrodyje
 
@@ -29,7 +29,7 @@ AndroidAPS galima *valdyti* naudojant Android Wear išmanųjį laikrodį. Pavyzd
 Iš laikrodžio galite paleisti šias funkcijas:
 
 * nustatyti laikiną tikslą
-* naudoti boluso skaičiuoklę (skaičiavimo kintamieji gali būti apibrėžti telefono [nustatymuose](../Configuration/Config-Builder#wear))
+* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
 * administruoti iAV
 * administruoti bolusus (insulinas + angliavandeniai)
 * nustatyti parametrus laikrodyje
@@ -316,7 +316,7 @@ AndroidAPS provides following complications:
     * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
     * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
     * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-    * Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+    * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
     * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
     ## Troubleshooting the wear app:
     

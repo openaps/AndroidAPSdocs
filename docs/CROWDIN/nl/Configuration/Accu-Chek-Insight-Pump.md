@@ -12,7 +12,7 @@
 
 Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in de pomp**.
 
-* Een Android-telefoon (In principe zou elke Android-versie moeten werken met Insight, maar check op de [Onderdelen](../Module/module#phone) pagina welke Android-versie nodig is voor AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * De AndroidAPS-app geïnstalleerd op jouw telefoon
 
 ## Pomp koppelen
@@ -52,7 +52,7 @@ Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een v
 
 ## Instellingen in AAPS
 
-**Opmerking: Vanaf nu kun je (alleen met AAPS v2.7.0 en hoger) de 'Gebruik altijd absolute basale waarden' aanzetten, zodat je Autotune kunt gebruiken met de Insight pomp, zelfs als 'sync is ingeschakeld' voor Nightscout.** (In AAPS ga naar [Voorkeuren > NSClient > Geavanceerde instellingen](../Configuration/Preferences#geavanceerde-instellingen-nsclient)). De bug uit eerdere versies is opgelost:)
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Screenshot van Insight Settings](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt
 
 * Firmware 1.x: Geen trillingen.
 * Firmware 2.x: Trillingen kunnen niet worden uitgeschakeld.
-* Firmware-3.x: AndroidAPS trilt niet bij afgeven van bolus. (minimum [versie 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware-3.x: AndroidAPS trilt niet bij afgeven van bolus. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Firmwareversie is te vinden in het menu.
 
@@ -144,4 +144,4 @@ Om dit op te lossen, schakel je bluetooth uit op je pomp EN op je telefoon gedur
 
 ## Wisselen van tijdzone met de Insight
 
-Lees alles over reizen in verschillende tijdzones op de pagina [Wisselen van tijdzone](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

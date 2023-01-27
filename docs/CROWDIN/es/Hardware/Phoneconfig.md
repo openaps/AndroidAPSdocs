@@ -1,10 +1,5 @@
 # Teléfonos
 
-```{toctree}
-:glob: true
-:maxdepth: 1
-
-Lista de teléfonos probados <../Getting-Started/Phones.md>
-Ajustes Jelly Pro <../Usage/jelly.md>
-Ajustes de Huawei <../Usage/huawei.md>
-```
+- [List of tested phones](../Getting-Started/Phones.md)
+- [Jelly Pro Settings](../Usage/jelly.md)
+- [Huawei Settings](../Usage/huawei.md)

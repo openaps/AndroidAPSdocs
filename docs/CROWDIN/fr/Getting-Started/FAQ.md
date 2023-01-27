@@ -20,7 +20,7 @@ Tout d'abord, vous devez **obtenir des composants matériels de la boucle** :
 
 - Une [pompe à insuline prise en charge](./Pump-Choices.md), 
 - un [smartphone Android](Phones.md) (l'iOS d'Apple n'est pas pris en charge par AndroidAPS - vous pouvez vérifier [iOS Loop](https://loopkit.github.io/loopdocs/)), et 
-- un système de [Mesure de Glycémie en Continu (MGC)](../Configuration/BG-Source.md). 
+- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
 Deuxièmement, vous devez **configurer votre matériel**. Voir [exemple de configuration avec le tutoriel étape par étape](Sample-Setup.md).
 
@@ -57,15 +57,15 @@ Il y a plusieurs blogs avec de bons conseils pour vous aider à comprendre les a
 - [Limiter les pics de repas](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
 - [Hormones et autosens](https://seemycgm.com/2017/06/06/hormones-2/) Voir ma MGC
 
-## Ce que l'équipement d'urgence est recommandé d'avoir sur soi ?
+## Quel équipement d'urgence est-il recommandé d'avoir sur soi ?
 
 Vous devez avoir le même équipement d'urgence avec vous, comme tous les autres diabétique de T1 avec une pompe à insuline. Quand vous bouclez avec AndroidAPS, il est fortement recommandé d'avoir les équipements supplémentaires suivants avec ou près de vous :
 
 - Pack de batteries et câbles pour charger votre smartphone, votre montre et, le cas échéant, votre lecteur BT ou votre périphérique de connection
 - Piles de la Pompe
-- L'[apk](../Installing-AndroidAPS/Building-APK.md) actuel et les [fichiers de préférences](../Usage/ExportImportSettings.md) pour AndroidAPS et toutes les autres applications que vous utilisez (par ex. xDrip+, BYODA Dexcom) localement et dans le cloud (Dropbox, Google Drive).
+- Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## Comment puis-je fixer la MGC/MGF en toute sécurité ?
+## Comment puis-je fixer le capteur MGC/MGF en toute sécurité ?
 
 Vous pouvez le coller. Il existe plusieurs « overpatchs » pré-troués adaptés aux systèmes MGC disponibles (recherchez sur Google, eBay ou Amazon). Certains boucleur utilisent également des pansements hydrofilm standard ou des bandes adhésives moins chères.
 
@@ -241,7 +241,7 @@ La boucle peut réduire la durée de vie de la pile de la pompe plus rapidement 
 - nettoyez les bornes de la pile avec un tampon d'alcool pour s'assurer qu'aucune cire ou draisse de fabrication ne reste.
 
 - pour les [pompes Dana R/RS](../Configuration/DanaRS-Insulin-Pump.md) la procédure de démarrage établit un courant élevé à travers la batterie pour briser de manière ciblée le film passif (cela empêche la perte d'énergie pendant le stockage) mais cela ne suffit pas toujours à la casser à 100%. Supprimez et réinsérez la batterie 2 à 3 fois jusqu'à ce qu'elle affiche 100 % à l'écran, ou utilisez la clé de batterie pour faire un court circuit bref de la batterie avant de l'insérer en appliquant aux deux bornes une fraction de seconde.
-- voir également plus de conseils pour les [types particuliers de piles](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#type-de-pile-et-causes-de-faible-autonomie)
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Changement des réservoirs et des canules
 
@@ -249,14 +249,14 @@ Le changement de cartouche ne peut pas être fait via AndroidAPS, mais doit êtr
 
 - Faites un appui long sur "Boucle Ouverte" / "Boucle Fermée" de l'onglet Accueil de AndroidAPS et sélectionnez 'Suspendre la Boucle pour 1h'
 - Débranchez maintenant la pompe et changez le réservoir selon les instructions de la pompe.
-- Ainsi le remplissage de la tubulure et de la canule peuvent être faites directement sur la pompe. Dans ce cas utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pump) dans l'onglet Actions pour uniquement enregistrer le changement.
+- Ainsi le remplissage de la tubulure et de la canule peuvent être faites directement sur la pompe. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Une fois reconnecté à la pompe, continuez la boucle en appuyant sur "Suspendu (X m)".
 
-Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et / ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. Dans l'onglet Actions (ACT), utilisez le [bouton AMORCER/REMPLIR](../Usage/CPbefore26#pompe) pour définit la quantité d'insuline nécessaire pour remplir le dispositif de perfusion (tubulure) et purger la canule. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
+Le changement d'une canule n'utilise cependant pas la fonction "Remplir tubulure" / "Remplir canule" de la pompe, mais remplit l'ensemble de perfusion et / ou la canule à l'aide d'un bolus qui n'apparaît pas dans l'historique des bolus. Cela signifie qu'il n'interrompt pas un débit de basal temporaire en cours d'exécution. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26.md#pump) to set the amount of insulin needed to fill the infusion set and start the priming. Si la quantité n'est pas suffisante, répétez le remplissage. Vous pouvez définir les quantités par défaut dans les Préférences > Autres > Valeurs prédéfinies pour remplir&amorcer. Consultez les notices de vos canules et tubulures pour savoir combien d'unités doivent être injectées en fonction de la longueur de l'aiguille et de la longueur de la tubulure.
 
 ## Fonds d'écran
 
-Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [page téléphones](../Getting-Started/Phones#fond-d-ecran).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-background).
 
 ## Utilisation quotidienne
 
@@ -264,11 +264,11 @@ Vous pouvez trouver le fond d'écran AndroidAPS pour votre téléphone sur la [p
 
 #### Que faire pour prendre une douche ou un bain?
 
-Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
+Vous pouvez retirer la pompe pour prendre une douche ou un bain. Pour ce court laps de temps, vous pouvez ne pas en avoir besoin, mais vous devez dire à AAPS que vous avez été déconnecté pour que les calculs IOB soient corrects. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Travail
 
-Selon votre de travail, vous pouvez peut-être utiliser différents paramètres de traitement pendant les jours travaillés. En tant que boucleur, vous devriez envisager un [changement de profil](../Usage/Profiles.md) pour votre journée de travail habituelle. Par exemple, vous pouvez passer à un profil supérieur à 100 % si vous avez un emploi moins fatigant (par ex. assis derrière un bureau), ou moins de 100 % si vous êtes actif et debout toute la journée. Vous pourriez également faire une cible temporaire élevée, basse ou encore un [Décalage horaire](../Usage/Profiles#decalage-horaire) de votre profil lorsque vous travaillez beaucoup plus tôt ou plus tard que d'habitude, ou si vous travaillez en trois huit. Vous pouvez aussi créer un second profil (par exemple "maison" et "jour de travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
+Selon votre de travail, vous pouvez peut-être utiliser différents paramètres de traitement pendant les jours travaillés. En tant que boucleur, vous devriez envisager un [changement de profil](../Usage/Profiles.md) pour votre journée de travail habituelle. Par exemple, vous pouvez passer à un profil supérieur à 100 % si vous avez un emploi moins fatigant (par ex. assis derrière un bureau), ou moins de 100 % si vous êtes actif et debout toute la journée. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. Vous pouvez aussi créer un second profil (par exemple "maison" et "jour de travail") et faire un changement de profil quotidien vers le profil dont vous avez besoin.
 
 ## Activités de loisirs
 
@@ -281,18 +281,18 @@ Donc, vous auriez plus de glucides à bord, mais en même temps, la boucle les n
 Lors de la boucle, vous devriez essayer ces étapes :
 
 - Faite un [changement de profil](../Usage/Profiles.md) < 100%.
-- Définissez une [cible temporaire d'activité](../Usage/temptarget#cible-temporaire-activite) au-dessus de votre cible standard.
-- Si vous utilisez SMB, assurez-vous que ["Activer SMB avec cibles temp. hautes"](../Usage/Open-APS-features#activer-smb-avec-cibles-temp-hautes) et [ "Activer en permanence les SMB" ](../Usage/Open-APS-features#activer-en-permanence-les-smb) sont désactivées.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Le pré-traitement et le post-traitement de ces paramètres sont importants. Faite les changements suffisament tôt avant le sport et tenez compte de l'effet sur les muscles après.
 
-Si vous faites du sport régulièrement au même moment (par exemple entrainement régulier dans votre salle de sport), vous pouvez envisager d'utiliser des règles [d'automatisation](../Usage/Automation.md) pour faire des changements de profil et mettre des CT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. L'automatisation basée sur l'emplacement peut également être une idée, mais rend l'anticipation du traitement plus difficile.
 
 Le pourcentage du changement de profil, la valeur de votre cible temporaire d'activité et le meilleur moment pour effectuer ces changements sont propres à chacun. Commencez prudemment si vous recherchez la valeur qui vous convient (commencez par un pourcentage faible et une CT plus élevée).
 
 ### Sexe
 
-Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes. Voir [description ci-dessus](../Getting-Started/FAQ#debrancher-la-pompe).
+Vous pouvez retirer la pompe pour être "libre", mais vous devez le dire à l'AAPS, pour que les calculs d'IA soient justes. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Boire de l'alcool
 
@@ -308,7 +308,7 @@ Lorsque vous buvez de l'alcool, vous devez toujours avoir un œil sur votre MGC 
 
 #### Comment puis-je boucler pendant la nuit sans rayonnement smartphone et WIFI ?
 
-De nombreux utilisateurs mettent le téléphone en mode avion la nuit. Si vous voulez que la boucle vous aide lorsque vous dormez, procédez comme suit (ceci ne fonctionne qu'avec une source de Gly locale telle que xDrip+ ou ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom), elle ne fonctionne PAS si vous obtenez les glycémies via Nightscout) :
+De nombreux utilisateurs mettent le téléphone en mode avion la nuit. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activez le mode avion de votre mobile.
 2. Attendez que le mode avion soit actif.
@@ -342,11 +342,11 @@ Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou
 
 ## Mon problème n'est pas répertorié ici.
 
-[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## Mon problème n'est pas listé ici, mais j'ai trouvé la solution
 
-[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Informations pour obtenir de l'aide.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Rappelez-nous d'ajouter votre solution à cette liste!**
 
@@ -364,18 +364,18 @@ Copiez sur un lecteur internet (Dropbox, Google etc) : toutes les apks que vous 
 
 Veuillez
 
-- vérifier [Dépannage d'Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) pour les erreurs typiques etr
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md#troubleshooting-android-studio) for typical errors and
 - suivre les conseils pour un accompagnement [pas à pas](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## Je suis coincé sur un objectif et j'ai besoin d'aide.
 
 Effectuez une capure d'écran avec la question et les réponses. Postez les sur le canal AAPS sur Discord. N'oubliez pas de préciser quelles options vous choisissez (ou pas) et pourquoi. Vous obtiendrez des conseils et de l'aide, mais vous devrez trouver les réponses vous-même.
 
-## How to reset the password in AAPS v2.8.x ?
+## Comment réinitialiser le mot de passe dans AAPS v2.8.x ?
 
 Open the hamburger menu, start the Configuration wizard and enter new password when asked. You can quit the wizard after the password phase.
 
-## How to reset the password in AAPS v3.x
+## Comment réinitialiser le mot de passe dans AAPS v3.x ?
 
 If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
 
@@ -387,13 +387,13 @@ Some also have non responsive Links (AAPS says that they are connected but the L
 
 The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
 
-## Build error: file name too long
+## Erreur de compilation : file name too long
 
 While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
 
 From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
 
-## Alert: Running dev version. Closed loop is disabled
+## Alerte : Version Dev. La boucle fermée est désactivée
 
 AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
 
@@ -401,11 +401,11 @@ Make sure AndroidAPS is running in "developer mode": Place a file named "enginee
 
 Hint: Make a copy of an existing logfile and rename it to "engineering_mode" (note: no file extension!).
 
-## Where can I find settings files?
+## Où puis-je trouver les fichiers de paramètres ?
 
 Settings files will be stored on your phone's internal storage in the directory "/AAPS/preferences". WARNING: Make sure not to lose your password as without it you will not be able to import an encrypted settings file!
 
-## How to configure battery savings?
+## Comment configurer les économies de batterie ?
 
 Properly configuring Power Management is important to prevent your Phone's OS to suspend AndroidAPS and related app's and services when your phone is not being used. As a result AAPS can not do its work and/or Bluetooth connections for sensor and Rileylink (RL) may be shut down causing "pump disconnected" alerts and communication errors. On the phone, go to settings->Apps and disable battery savings for: AndroidAPS xDrip or BYODA/Dexcom app The Bluetooth system app (you may need to select for viewing system apps first) Alternatively, fully disable all battery savings on the phone. As a result your battery may drain faster but it is a good way to find out if battery savings is causing your problem. The way battery savings is implemented greatly depends on the phone's brand, model and/or OS version. Because of this it is almost impossible to give instructions to properly set battery savings for your setup. Experiment on what settings work best for you. For additional information, see also Don't kill my app
 
@@ -413,7 +413,7 @@ Properly configuring Power Management is important to prevent your Phone's OS to
 
 Your phone may be suspending AAPS services or even Bluetooth causing it to loose connection to RL (see battery savings) Consider configuring unreachable alerts to 120 minutes by going to the top right-hand side three-dot menu, selecting Preferences->Local Alerts->Pump unreachable threshold [min].
 
-## Where can I delete treatments in AAPS v3 ?
+## Où puis-je supprimer les traitements dans AAPS v3 ?
 
 3 dots menu, select treatements, then 3 dots menu again and you have different options available.
 
@@ -456,7 +456,7 @@ Congratulations: you did it!
 
 When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
 
-## How do I import settings from earlier versions of AAPS into AAPS v3 ?
+## Comment importer les paramètres des versions antérieures d'AAPS dans AAPS v3 ?
 
 You can only import settings (in AAPS v3) that were exported using AAPS v2.8x or v3.x. If you were using a version of AAPS older than v2.8x or you need to use setting exports older than v2.8x, then you need to install AAPS v2.8 first. Import the older settings of v2.x in v2.8. After checking that all is OK, you can export settings from v2.8. Install AAPS v3 and import v2.8 settings in v3.
 

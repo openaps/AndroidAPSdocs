@@ -1,6 +1,6 @@
 # Profilwechsel
 
-Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 Wenn du dein AndroidAPS startest und dein Profil auswählst, musst du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
 

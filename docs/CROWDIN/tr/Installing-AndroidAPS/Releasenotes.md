@@ -1,14 +1,14 @@
 # Sürüm notları
 
-Lütfen [güncelleme kılavuzundaki](../Installing-AndroidAPS/Update-to-new-version.md) talimatlarını takip edin. Güncelleme kılavuzunda güncelleme yaparken en sık karşılaşılan zorlukları ele alan bir sorun giderme bölümü de bulabilirsiniz.
+Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). Güncelleme kılavuzunda güncelleme yaparken en sık karşılaşılan zorlukları ele alan bir sorun giderme bölümü de bulabilirsiniz.
 
 Yeni bir güncelleme çıkar çıkmaz aşağıdaki bilgileri alacaksınız:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: "G\xFCncelleme bilgisi"
+:alt: Güncelleme bilgisi
 ```
 
-O zaman güncellemek için 60 gününüz var. Bu 60 gün içinde güncelleme yapmazsanız, AAPS, [Görev 6](../Usage/Objectives.md) da olduğu gibi LGS'ye (Düşük glikoz süspansiyonuna - bkz. [sözlük](../Getting-Started/Glossary.html)) geri dönecektir.
+O zaman güncellemek için 60 gününüz var. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
 
 30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
 
@@ -22,18 +22,18 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 ### Android 9 ve üstü
 
-- En son AAPS sürümünü kullanın
-- AAPS Kodunu <https://github.com/nightscout/AndroidAPS> adresinden indirin
+- Use latest AAPS version
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- AAPS **2.8.2.1** sürümünü kullanın
-- AAPS Kodunu <https://github.com/nightscout/AndroidAPS> adresinden 2.8.2.1 şubesinden indirin
+- Use AAPS version **2.8.2.1**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
 
 ### Android 7
 
-- AAPS **2.6.2** sürümünü kullanın
-- AAPS Kodunu <https://github.com/nightscout/AndroidAPS> adresi 2.6.2 şubesinden indirin
+- Use AAPS version **2.6.2**
+- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
 ## Sürüm 3.1.0
 
@@ -41,26 +41,26 @@ Yayınlanma tarihi: 19-07-2022
 
 ### Önemli ipuçları
 
-- güncellemeden sonra Wear uygulamasını kaldırın ve yeni sürümü yükleyin
-- Omnipod kullanıcıları: pod değişikliğinde güncelleme !!!
+- after update uninstall Wear app and install new version
+- Omnipod users: update on pod change !!!
 
 ### Değişiklikler
 
-- 3.0 sürümündeki sorunlar düzeltildi
-- uygulama donması düzeltildi @MilosKozak
-- DASH sürücüsü düzeltildi @avereha
-- Dana sürücüsü düzeltildi @MilosKozak
-- büyük kullanıcı arayüzü iyileştirmesi, temizleme ve birleştirme, malzeme tasarımına geçiş, stiller, beyaz tema, yeni simgeler. @Andries-Smit @MilosKozak @osodebailar @Philoul
+- fixed issues from 3.0 version
+- fix application freezing @MilosKozak
+- fixed DASH driver @avereha
+- fixed Dana drivers @MilosKozak
+- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
-- `Wear OS Saat kutucukları <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, çeviriler @Andries-Smit
-- Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
-- a11y iyileştirmeleri @Andries-Smit
-- yeni koruma seçeneği PIN @Andries-Smit
-- menüde grafik ölçeğine izin verme @MilosKozak
-- daha fazla istatistik seçeneği @MilosKozak
-- VirtualPump lehine MDI eklentisi kaldırıldı
-- yeni otomasyon eylemi: StopProcessing (kurallara göre)
+- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+- Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
+- Wear code refactored. Artık geriye dönük uyumlu değil @MilosKozak
+- a11y improvements @Andries-Smit
+- new protection option PIN @Andries-Smit
+- allow graph scale from menu @MilosKozak
+- more statistics available @MilosKozak
+- MDI plugin removed in favor of VirtualPump
+- new automation action: StopProcessing (following rules)
 
 ## Sürüm 3.0.0
 
@@ -69,98 +69,98 @@ Yayınlanma tarihi: 31-01-2022
 ### Önemli ipuçları
 
 - **Minimum Android sürümü artık 9.0'dır.**
-- **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Böylece güncellemeden sonra AİNS, AKRB, tedaviler vb. temizlenecektir. Yeni [profil değişimi](../Usage/Profiles.md) oluşturmanız ve sıfır AİNS ve AKRB ile başlamanız gerekir. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
-- AAPS ve NSClient'in aynı sürümünü kullanın
+- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
+- Use the same version of AAPS and NSClient
 
-\*\* [Burada](../Installing-AndroidAPS/update3_0.md) açıklandığı üzere 3.0'a güncelledikten sonra ayarları kontrol ettiğinizden ve tamamladığınızdan emin olun.
+**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
 
 ### Hazırlık adımları
 
-**Güncellemeden en az iki gün önce:**
+**At least two days before update:**
 
-- Nightscout'ta Dexcom bridge'ı devre dışı bırakın
-- Toplayıcı olarak G5/G6 ve xDrip kullanıyorsanız, xDrip'i 14 Ocak 2022'den daha yeni bir sürüme güncellemeniz gerekir
-- G5/G6 kullanıyorsanız, toplayıcı olarak BYODA'ya geçiş yapıyorsanız, geri yumuşatmadan "back-smoothing" yararlanmanız önerilir (xDrip'i başka amaçlar için de kullanabilirsiniz, xDrip BYODA'dan veri alabilir)
+- disable Dexcom bridge in Nightscout
+- if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
+- if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
 ### Değişiklikler
 
-- 100k satır değişti, 105k satır yeni kod
+- 100k lines changed, 105k new lines of code
 
-- [Omnipod DASH desteği](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
+- [Omnipod DASH support](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
 
-- [Dana-i desteği](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Dana-i support](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 desteği](../Configuration/DiaconnG8.md)
+- [DiaconnG8 support](../Configuration/DiaconnG8.md)
 
-- Glunovo desteği
+- Glunovo support
 
-- Dahili veritabanı Room'a yükseltildi @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+- Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 
-- Kotlin'e yeniden yazılan birçok kod @MilosKozak
+- Lot of code rewritten to Kotlin @MilosKozak
 
-- Pompa sürücüleri için yeni dahili arayüz
+- New internal interface for pump drivers
 
-- NSClient, daha iyi senkronizasyon ve daha ayrıntılı özelleştirme için yeniden yazıldı @MilosKozak
+- NSClient rewritten for better synchronization and more detailed customization @MilosKozak
 
-  - NS'den kayıt silmeye izin verilmez (yalnızca NSClient aracılığıyla geçersiz kılma)
-  - NS'den kayıt değişikliğine izin verilmez
-  - Mühendislik modu olmadan kullanılabilen senkronizasyon ayarı (ebeveynler için)
-  - Verileri yeniden senkronize etme yeteneği
+  - Record deletion from NS is not allowed (only invalidation through NSClient)
+  - Record modification from NS is not allowed
+  - Sync setting available without engineering mode (for parents)
+  - Ability to resync data
 
-- Profil anahtarı davranış değişikliği. Artık Profil Anahtarı *(kullanıcının istediği bir şey)* ve Profil değişikliği *(değişiklik pompa tarafından yapıldığında)* arasında ayrım yapılır\* @MilosKozak @Tebbe
+- Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
 
-- Profil anahtarının oluşturulması sırasında aktivite geçici hedefi başlatabilirsiniz @MilosKozak
+- You can start activity temporary target during creation of profile switch @MilosKozak
 
-- NSProfili gitti, sadece yerel profil kullanılabilir. Yerel profil `NS <../Installing-AndroidAPS/update3_0.md#nightscout-profile-cannot-be-pused>` ile senkronize edilebilir. @MilosKozak.
+- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](../Installing-AndroidAPS/update3_0.md#nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Unutulan [ana şifre sıfırlama prosedürü](../Installing-AndroidAPS/update3_0.md#reset-master-password) @MilosKozak
+- Forgotten [master password reset procedure](../Installing-AndroidAPS/update3_0.md#reset-master-password) @MilosKozak
 
-- Kullanıcı eylemleri izleme @Philoul
+- User actions tracing @Philoul
 
-- Yeni otomasyon TempTargetValue tetikleyicisi @Philoul
+- New automation TempTargetValue trigger @Philoul
 
-- Yeni otomasyon Bakım Portalı eylemi @Philoul
+- New automation Careportal action @Philoul
 
-- Karbonhidrat İletişim Kutusuna Bolus hatırlatıcısı ekleyin @Philoul
+- Add Bolus reminder in Carbs Dialog @Philoul
 
-- Bolus Sihirbazı iyileştirmesi
+- Bolus Wizard improvement
 
-- UI (Kullanıcı arayüzü) iyileştirmeleri @MilosKozak
+- UI improvements @MilosKozak
 
-- Otomasyonlar için yeni kullanıcı butonları @MilosKozak
+- New user buttons for automations @MilosKozak
 
-- Yeni otomasyon düzeni @MilosKozak
+- New automation layout @MilosKozak
 
-- Geçmiş tarayıcısı güncellendi ve düzeltildi @MilosKozak
+- History browser updated and fixed @MilosKozak
 
-- Görev 9 kaldırıldı @MilosKozak
+- Objective9 removed @MilosKozak
 
-- Kararsız CGM verileriyle ilişkili hata giderildi @MilosKozak
+- Fixed bug associated to unstable CGM data @MilosKozak
 
-- DanaR ve DanaRS iletişim iyileştirmesi @MilosKozak
+- DanaR and DanaRS communication improvement @MilosKozak
 
-- CircleCI entegrasyonu @MilosKozak
+- CircleCI integration @MilosKozak
 
-- Dosya konumu değişikliği:
+- Files location change:
 
-  > - /AAPS/extra (engineering mode)
-  > - /AAPS/logs /AAPS/exports
-  > - /AAPS/preferences
+  - /AAPS/extra (engineering mode)
+  - /AAPS/logs /AAPS/exports
+  - /AAPS/preferences
 
 ## Sürüm 2.8.2
 
 Yayınlanma tarihi: 23-01-2021
 
-- Lütfen aşağıdaki [2.8.1.1 sürümü için önemli ipuçlarına da bakın](../Installing-AndroidAPS/Releasenotes#important-hints).
+- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) below.
 
 ### Değişiklikler
 
-- kararlılık iyileştirmeleri
-- Android 8+ için daha fazla ince ayar
-- geliştirilmiş simgeler
-- akıllı saat iyileştirmeleri
-- NSClient düzeltmeleri
-- Bolus danışmanı artık Pumpcontrol ve NSClient ile çalışıyor
+- stability improvements
+- more tweaking for Android 8+
+- improved icons
+- watch improvements
+- NSClient fixes
+- Bolus advisor now works with Pumpcontrol and NSClient
 
 ## Sürüm 2.8.1.1
 
@@ -168,24 +168,24 @@ Yayınlanma tarihi: 12-01-2021
 
 ### Önemli ipuçları
 
-- Seçenek **NS_UPLOAD_ONLY**, tüm 2.8.1 kullanıcıları için AÇIK olmaya zorlanmıştır.
-- GH, karbonhidrat veya profil değişimi girmek için NSClient kullanıyorsanız, bunu AAPS'de kapatmanız gerekir, ancak **yalnızca senkronizasyonunuz iyi çalışıyorsa** (örn. GH, GBO vb.'nin kendi kendine değişmesi istenmeyen veri değişikliklerini görmezsiniz).
-- DİKKAT: Başka uygulama tanıtıcı tedavileriniz varsa bunu YAPMAYIN (xDrip yayın/yükleme/eşitleme... gibi)
-- NS_UPLOAD_ONLY, yalnızca mühendislik modu etkinleştirildiğinde kapatılabilir.
+- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
+- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
+- ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
+- NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
 
 ### Majör değişiklikler
 
-- RileyLink, Omnipod ve MDT pompa iyileştirmeleri ve düzeltmeleri
-- NS_UPLOAD_ONLY zorunlu
-- SMB & Dexcom uyg. için düzeltmeler
-- saat arayüzü düzeltmeleri
-- kilitlenme raporlaması iyileştirildi
-- doğrudan saat yüzü kurulumuna izin vermek için gradle geri alındı
-- otomasyon düzeltmeleri
-- RS sürücüsü iyileştirmesi
-- çeşitli çökme düzelmeleri
-- Kullanıcı arayüzü düzeltmeleri ve iyileştirmeler
-- Yeni çeviriler
+- RileyLink, Omnipod and MDT pump improvements and fixes
+- forced NS_UPLOAD_ONLY
+- fix for SMB & Dexcom app
+- watchface fixes
+- crash reporting improved
+- gradle reverted to allow direct watchface instalation
+- automation fixes
+- RS driver improvement
+- various crashes fixed
+- UI fixes and improvements
+- new translations
 
 ## Sürüm 2.8.0
 
@@ -193,233 +193,229 @@ Yayınlanma tarihi: 01-01-2021
 
 ### Önemli ipuçları
 
-- **Minimum Android sürümü şu anda 8.0'dır.** Daha eski Android sürümleri için eski depodan 2.6.1.4'ü kullanmaya devam edebilirsiniz.
-
-*\`Görevler değişti. \<../Usage/Objectives#objective-3-prove-your-knowledge>\`\_ \*\*Güncellemeden önce tamamlanmayan görevleri tamamlayın.\**
-\* Depo konumu hala <https://github.com/nightscout/AndroidAPS> üzerinde. Git'e aşina değilseniz, güncellemenin en kolay yolu AndroidAPS ile dizini kaldırmak ve `yeni bir klon <../Installing-AndroidAPS/Building-APK.md>` yapmaktır.
-\* Lütfen apk oluşturmak için [Android Studio 4.1.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+- **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
+- [Objectives have changed.](../Usage/Objectives.md#objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
+- Repository location still on <https://github.com/nightscout/AndroidAPS> . Git'e aşina değilseniz, güncellemenin en kolay yolu, AndroidAPS dizini kaldırmak ve [yeni bir klon](../Installing-AndroidAPS/Building-APK.md) oluşturmaktır.
+- Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- [Omnipod Eros desteği](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda ve @ps2 @itsmojo'ya özel teşekkür Omnipod için Loop sürücüsüne katılan diğer herkese ve GetRileyLink.org'dan @jlucasvt' a
-- [bolus danışmanı](../Configuration/Preferences#bolus-advisor) & [yeme hatırlatıcısı](../Getting-Started/Screenshots.md#eating-reminder) @MilosKozak
-- [Yeni saat arayüzü](../Configuration/Watchfaces#new-watchface-as-of-androidaps-2-8) @rICTx-T1D
-- Dana RS bağlantı iyileştirmeleri @MilosKozak
-- Dexcom yerel uygulaması için SMB'deki "Değiştirilmemiş CGM değerleri" davranışı kaldırıldı
-- Yeni [Düşük Çözünürlüklü Dış Görünüm](../Configuration/Preferences#skin)
-- Yeni "Hamile" hasta tipi \<../Usage/Open-APS-features#overview-of-hard-coding-limits>\`\_ @Brian Quinion
-- Yeni NSClient tablet düzeni @MilosKozak
-- NSClient insülin, hassasiyet ve ekran ayarlarını doğrudan ana AAPS'den aktarır @MilosKozak
-- [Tercihler filtresi](../Configuration/Preferences.md) @Brian Quinion
-- Yeni pompa simgeleri @Rig22 @@teleriddler @osodebailar
-- Yeni [insülin tipi Lyumjev](../Configuration/Config-Builder#lyumjev)
-- Kurulum sihirbazı iyileştirmeleri @MilosKozak
-- Güvenlik iyileştirmeleri @dlvoy
-- Çeşitli iyileştirmeler ve düzeltmeler @AdrianLxM @Philoul @swissalpine @MilosKozak @Brian Quinion
+- [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
+- [bolus advisor](../Configuration/Preferences.md#bolus-advisor) & [eating reminder](../Getting-Started/Screenshots#eating-reminder) @MilosKozak
+- [New watchface](../Configuration/Watchfaces.md#new-watchface-as-of-androidaps-2-8) @rICTx-T1D
+- Dana RS connection improvements @MilosKozak
+- Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+- New [Low Ressolution Skin](../Configuration/Preferences.md#skin)
+- New ["Pregnant" patient type](../Usage/Open-APS-features.md#overview-of-hard-coded-limits) @Brian Quinion
+- New NSClient tablet layout @MilosKozak
+- NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
+- [Preferences filter](../Configuration/Preferences.md) @Brian Quinion
+- New pump icons @Rig22 @@teleriddler @osodebailar
+- New [insulin type Lyumjev](../Configuration/Config-Builder.md#lyumjev)
+- SetupWizard improvements @MilosKozak
+- Security improvements @dlvoy
+- Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 ## Sürüm 2.7.0
 
 Yayınlanma tarihi: 24-09-2020
 
-\*\* [Burada](../Installing-AndroidAPS/update2_7.md) açıklandığı üzere 2.7'a güncelledikten sonra ayarları kontrol ettiğinizden ve tamamladığınızdan emin olun.
+**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
 
-'Otomasyon özelliğini \<../Usage/Automation.md>\`\_ kullanmaya devam etmek için en azından [Görev 11'i (sonraki sürümlerde görev 10!)](../Usage/Objectives#objective-10-automation) başlamanız gerekir. (önceki tüm görevler tamamlanmalıdır, aksi takdirde Görev 11'e başlamak mümkün değildir). Örneğin, [Görev 3](../Usage/Objectives.html#objective-3-prove-your-knowledge) içindeki sınavı henüz bitirmediyseniz, [görev 11'e başlamadan önce sınavı tamamlamanız gerekir.](../Usage/Objectives.html#objective-10-automation). Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
+You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 ### Başlıca yeni özellikler
 
-- bağımlılık enjeksiyonunun dahili kullanımı, kitaplık güncellemeleri, kotline yeniden kod yazımı @MilosKozak @AdrianLxM
-- Dana pompaları için modüllerin kullanılması @MilosKozak
-- [yeni düzen, düzen seçimi](../Getting-Started/Screenshots.md) @MilosKozak
-- yeni [durum ışıkları düzeni](../Configuration/Preferences#status-lights) @MilosKozak
-- [birden çok grafik desteği](../Getting-Started/Screenshots#section-f-main-graph) @MilosKozak
-- [Profil yardımcısı](../Configuration/profilehelper.md) @MilosKozak
-- [dinamik hedef ayarının görselleştirmesi](../Getting-Started/Screenshots#visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- yeni [tercihler düzeni](../Configuration/Preferences.md) @MilosKozak
-- SMB algoritması güncellemesi @Tornado-Tim
-- [Düşük glikoz süspansiyonu modu](../Configuration/Preferences#aps-mode) @Tornado-Tim
-- [karbonhidrat gerekli bildirimleri](../Configuration/Preferences#carb-required-notification) @twain47 @Tornado-Tim
-- Bakım portalı kaldırıldı (Eylemlere taşındı) @MilosKozak
-- [yeni şifreli yedekleme formatı](../Usage/ExportImportSettings.md) @dlvoy
-- [yeni SMS TOTP kimlik doğrulaması](../Children/SMS-Commands.md) @dlvoy
-- [yeni SMS POMPAYA BAĞLANI, BAĞLANTIYI KES](../Children/SMS-Commands#commands) komutları @Lexsus
-- Dana pompalarında küçük bazallar için destek @Mackwe
-- küçük Insight düzeltmeleri @TebbeUbben @MilosKozak
-- ["Varsayılan dil" seçeneği](../Configuration/Preferences#general) @MilosKozak
-- vektör simgeleri @Philoul
-- [MDT pompası için nötr geçici değerleri ayarlama](../Configuration/MedtronicPump#configuration-of-the-pump) @Tornado-Tim
-- Geçmiş tarayıcı geliştirmeleri @MilosKozak
-- OpenAPS MA algoritması kaldırıldı @Tornado-Tim
-- Oref0 duyarlılığı kaldırıldı @Tornado-Tim
-- Bolus ayarları için [Biyometrik veya şifre koruması](../Configuration/Preferences#protection) @MilosKozak
-- [yeni otomasyon tetikleyicisi](../Usage/Automation.md) @PoweRGbg
-- [Open Humans yükleyici](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
-- Yeni dokümantasyon @Achim
+- internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
+- using modules for Dana pumps @MilosKozak
+- [new layout, layout selection](../Getting-Started/Screenshots.md) @MilosKozak
+- new [status lights layout](../Configuration/Preferences.md#status-lights) @MilosKozak
+- [multiple graphs support](../Getting-Started/Screenshots.md#section-f-main-graph) @MilosKozak
+- [Profile helper](../Configuration/profilehelper.md) @MilosKozak
+- visualization of [dynamic target adjustment](../Getting-Started/Screenshots.md#visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- new [preferences layout](../Configuration/Preferences.md) @MilosKozak
+- SMB algorithm update @Tornado-Tim
+- [Low glucose suspend mode](../Configuration/Preferences.md#aps-mode) @Tornado-Tim
+- [carbs required notifications](../Configuration/Preferences.md#carb-required-notification) @twain47 @Tornado-Tim
+- removed Careportal (moved to Actions) @MilosKozak
+- [new encrypted backup format](../Usage/ExportImportSettings.md) @dlvoy
+- [new SMS TOTP authentication](../Children/SMS-Commands.md) @dlvoy
+- [new SMS PUMP CONNECT, DISCONNECT](../Children/SMS-Commands.md#commands) commands @Lexsus
+- better support for tiny basals on Dana pumps @Mackwe
+- small Insight fixes @TebbeUbben @MilosKozak
+- ["Default language" option](../Configuration/Preferences.md#general) @MilosKozak
+- vector icons @Philoul
+- [set neutral temps for MDT pump](../Configuration/MedtronicPump.md#configuration-of-the-pump) @Tornado-Tim
+- History browser improvements @MilosKozak
+- removed OpenAPS MA algorithm @Tornado-Tim
+- removed Oref0 sensitivity @Tornado-Tim
+- [Biometric or password protection](../Configuration/Preferences.md#protection) for settings, bolus @MilosKozak
+- [new automation trigger](../Usage/Automation.md) @PoweRGbg
+- [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
+- New documentation @Achim
 
 ## Sürüm 2.6.1.4
 
 Yayınlanma tarihi: 04-05-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- Insight: Ürün yazılımı sürüm 3 için bolusta titreşimi devre dışı bırakın - ikinci deneme
-- Aksi takdirde 2.6.1.3 ile aynıdır. Güncelleme isteğe bağlıdır.
+- Insight: Disable vibration on bolus for firmware version 3 - second attempt
+- Otherwise is equal to 2.6.1.3. Güncelleme isteğe bağlıdır.
 
 ## Sürüm 2.6.1.3
 
 Yayınlanma tarihi: 03-05-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- Insight: Ürün yazılımı sürüm 3 için bolusta titreşimi devre dışı bırakın
-- Aksi takdirde 2.6.1.2 ile aynıdır. Güncelleme isteğe bağlıdır.
+- Insight: Disable vibration on bolus for firmware version 3
+- Otherwise is equal to 2.6.1.2. Güncelleme isteğe bağlıdır.
 
 ## Sürüm 2.6.1.2
 
 Yayınlanma tarihi: 19-04-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- Insight hizmetindeki kilitlenme düzeltmesi
-- Aksi takdirde 2.6.1.1 ile aynıdır. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
+- Fix crashing in Insight service
+- Otherwise is equal to 2.6.1.1. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
 
 ## Sürüm 2.6.1.1
 
 Yayınlanma tarihi: 06-04-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- Combo pompa kullanırken SMS CARBS komut sorununu çözer
-- Aksi takdirde 2.6.1 ile aynıdır. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
+- Resolves SMS CARBS command issue while using Combo pump
+- Otherwise is equal to 2.6.1. Bu hatadan etkilenmiyorsanız, yükseltme yapmanız gerekmez.
 
 ## Sürüm 2.6.1
 
 Yayınlanma tarihi: 21-03-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- NSClient ayarlarında yalnızca `https://` girişine izin verir
-- Saatlerdeki [BGI](../Getting-Started/Glossary.md) hatası düzeltildi
-- Ufak kullanıcı arayüzü hataları düzeltildi
-- Insight çökme hataları düzeltildi
-- Combo pompadaki gelecekteki karbonhidratlar düzeltildi
-- `Yerel Profil -> NS senkronizasyonu <../Configuration/Config-Builder#upload-local-profiles-to-nightscout>` düzeltildi
-- Insight uyarıları iyileştirmeleri
-- Pompa geçmişinden bolus algılaması iyileştirildi
-- NSClient bağlantı ayarları (wifi, şarj) düzeltildi
-- Kalibrasyonların xDrip'e gönderilmesi düzeltildi
+- Allow to enter only `https://` in NSClient settings
+- Fixed [BGI](../Getting-Started/Glossary.md) displaying bug on watches
+- Fixed small UI bugs
+- Fixed Insight crashes
+- Fixed future carbs with Combo pump
+- Fixed [LocalProfile -> NS sync](../Configuration/Config-Builder.md#upload-local-profiles-to-nightscout)
+- Insight alerts improvements
+- Improved detection of boluses from pump history
+- Fixed NSClient connection settings (wifi, charging)
+- Fixed sending of calibrations to xDrip
 
 ## Sürüm 2.6.0
 
 Yayınlanma tarihi: 29-02-2020
 
-Lütfen apk oluşturmak için [Android Studio 3.6.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Başlıca yeni özellikler
 
-- Küçük tasarım değişiklikleri (başlangıç sayfası...)
+- Small design changes (startpage...)
 
-- Bakım portalı sekmesi / menüsü kaldırıldı - daha fazla ayrıntı [burada](../Usage/CPbefore26.md)
+- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
 
-- Yeni [Yerel Profil eklentisi](../Configuration/Config-Builder#local-profile)
+- New [Local Profile plugin](../Configuration/Config-Builder.md#local-profile)
 
-  - Yerel profil 1'den fazla profil tutabilir
-  - Profiller klonlanabilir ve düzenlenebilir
-  - NS'ye profil yükleme yeteneği
-  - Eski profil değişimleri Yerel Profil'de yeni profile kopyalanabilir (zaman kaydırma ve yüzde uygulanır)
-  - Hedefler için Dikey NumberPicker
+  - Local profile can hold more than 1 profile
+  - Profiles can be cloned and edited
+  - Ability of upload profiles to NS
+  - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
+  - Veritical NumberPicker for targets
 
-- Basit profil kaldırıldı
+- SimpleProfile is removed
 
-- [Yayma bolus](../Usage/Extended-Carbs#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only) özelliği - kapalı döngü devre dışı bırakılacak
+- [Extended bolus](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
 
-- MDT eklentisi: Yinelenen girişlerle ilgili hata düzeltildi
+- MDT plugin: Fixed bug with duplicated entries
 
-- Birimler profilde belirtilmemiş ancak genel ayarlardır
+- Units are not specified in profile but it's global setting
 
-- Başlangıç sihirbazına yeni ayarlar eklendi
+- Added new settings to startup wizard
 
-- Farklı kullanıcı arayüzü ve dahili iyileştirmeler
+- Different UI and internal improvements
 
-- [Wear komplikasyonları](../Configuration/Watchfaces.md)
+- [Wear complications](../Configuration/Watchfaces.md)
 
-- Yeni [SMS komutları](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+- New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
-- Dil desteği düzeltildi
+- Fixed language support
 
-- Görevler: [Geri gitmeye izin ver](../Usage/Objectives#go-back-in-objectives), Zaman getirme iletişim kutusu
+- Objectives: [Allow to go back](../Usage/Objectives.md#go-back-in-objectives), Time fetching dialog
 
-- Otomasyon: [sıralamaya izin ver](../Usage/Automation#sort-automation-rules)
+- Automation: [allow sorting](../Usage/Automation.md#sort-automation-rules)
 
-- Otomasyon: devre dışı bırakılmış döngüde çalışan otomasyon hatası düzeltildi
+- Automation: fixed bug when automation was running with disabled loop
 
-- Combo için yeni durum satırı
+- New status line for Combo
 
-- GlikozDurumu iyileştirme
+- GlucoseStatus improvement
 
-- Geçici Hedef NS senkronizasyonu düzeltildi
+- Fixed TempTarget NS sync
 
-- Yeni istatistik etkinliği
+- New statistics activity
 
-- Açık döngü modunda yayma bolusa izin ver
+- Allow Extended bolus in open loop mode
 
-- Android 10 alarm desteği
+- Android 10 alarm support
 
-- Tonlarca yeni çeviri
+- Tons on new translations
 
 ## Sürüm 2.5.1
 
 Yayınlanma tarihi: 31-10-2019
 
-Lütfen [sürüm 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0) için listelenen [önemli notlara](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) ve [sınırlamalara](../Installing-AndroidAPS/Releasenotes.html#is-this-update-for-me-currently-is-not-supported) dikkat edin.
-\* Ağ durumu alıcısında birçok kişinin çökmesine neden olan bir hata düzeltildi (kritik değil ama yeniden hesaplamada çok fazla enerji israfına neden oluyor).
-\* Güncelleme bildirimini tetiklemeden küçük güncellemelerin yapılmasına izin verecek yeni sürüm.
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
 ## Sürüm 2.5.0
 
 Yayınlanma tarihi: 26-10-2019
 
-(onemli-notlar-2-5-0)=
+(important-notes-2-5-0)=
 
 ### Önemli notlar
 
-- Lütfen `apk oluşturmak <../Installing-AndroidAPS/Building-APK.md>` için [Android Studio Sürüm 3.5.1](https://developer.android.com/studio/) kullanın veya [güncelleme](../Installing-AndroidAPS/Update-to-new-version.html) yapın.
-- xDrip kullanıyorsanız [alıcıyı tanımla](../Configuration/xdrip#identify-receiver) ayarlanmalıdır.
-- Yamalı Dexcom uygulamasıyla Dexcom G6 kullanıyorsanız, [2.4 klasöründeki](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) sürümüne ihtiyacınız olacaktır.
-- Glimp, 4.15.57 ve daha yeni sürümlerde desteklenmektedir.
+- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.html).
+- If you are using xDrip [identify receiver](../Configuration/xdrip.md#identify-receiver) must be set.
+- If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+- Glimp is supported from version 4.15.57 and newer.
 
 ### Bu güncelleme benim için mi? Şu anda DESTEKLENMİYOR
 
-- Android 5 ve altı
+- Android 5 and lower
 - Poctech
-- 600SerisiYükleyici
-- 2.3 dizininden Yamalı Dexcom
+- 600SeriesUploader
+- Patched Dexcom from 2.3 directory
 
 ### Başlıca yeni özellikler
 
-- Dahili TargetSDK 28 (Android 9) olarak değiştirilmesi, jetpack desteği
-- RxJava2, Okhttp3, Retrofit desteği
-- Eski [Medtronic pompaları](../Configuration/MedtronicPump.md) desteği (RileyLink gerekir)
-- Yeni [Otomasyon eklentisi](../Usage/Automation.md)
-- Bolus sihirbazı hesaplamasından [sadece bolus parçasına](../Configuration/Preferences#advanced-settings-overview) izin ver
-- İnsülin aktivitesi oluşturma
-- AİNS tahminlerini otoduyarlılık sonucuna göre ayarlama
-- Yamalı Dexcom apk'leri için yeni destek ([2.4 klasörü](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- İmza doğrulayıcı
-- OpenAPS kullanıcıları için hedeflerin atlanmasına izin ver
-- Yeni [görevler](../Usage/Objectives.md) - sınav, uygulama yönetimi
-  (Önceki sürümlerde "Açık döngüde başlama" görevini tamamladıysanız sınav isteğe bağlıdır.)
-- Dana\* sürücülerinde yanlış zaman farkının bildirildiği hata düzeltildi
-- `` SMS Kominikatör <../Children/SMS-Commands.md>` `` içindeki hata düzeltildi
+- Internal change of targetSDK to 28 (Android 9), jetpack support
+- RxJava2, Okhttp3, Retrofit support
+- Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
+- New [Automation plugin](../Usage/Automation.md)
+- Allow to [bolus only part](../Configuration/Preferences.md#advanced-settings-overview) from bolus wizard calculation
+- Rendering insulin activity
+- Adjusting IOB predictions by autosens result
+- New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+- Signature verifier
+- Allow to bypass objectives for OpenAPS users
+- New [objectives](../Usage/Objectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
+- Fixed bug in Dana\* drivers where false time difference was reported
+- Fixed bug in [SMS communicator](../Children/SMS-Commands.md)
 
 ## Sürüm 2.3
 
@@ -427,15 +423,15 @@ Yayınlanma tarihi: 25-04-2019
 
 ### Başlıca yeni özellikler
 
-- Insight için önemli güvenlik düzeltmesi (Insight kullanıyorsanız gerçekten önemlidir!)
-- Geçmiş-Tarayıcısı düzeltmesi
-- Delta hesaplaması düzeltmesi
-- Dil güncellemeleri
-- GIT'i kontrol etme ve kademeli yükseltme konusunda uyarı
-- Birçok otomatik test
-- AlarmSound Hizmetindeki olası çökmeyi düzeltme (teşekkürler @lee-b!)
-- KŞ verilerinin yayını düzeltildi (şimdi SMS izninden bağımsız çalışıyor!)
-- Yeni Sürüm Denetleyicisi
+- Important safety fix for Insight (really important if you use Insight!)
+- Fix History-Browser
+- Fix delta calculations
+- Language updates
+- Check for GIT and warn on gradle upgrade
+- More automatic testing
+- Fixing potential crash in AlarmSound Service (thanks @lee-b !)
+- Fix broadcast of BG data (works independently of SMS permission now!)
+- New Version-Checker
 
 ## Sürüm 2.2.2
 
@@ -443,10 +439,10 @@ Yayınlanma tarihi: 07-04-2019
 
 ### Başlıca yeni özellikler
 
-- Otoduyarlılık düzeltmesi: GH hedefi yükseltme/düşürme devre dışı bırakma
-- Yeni çeviriler
-- Insight sürücü düzeltmesi
-- SMS eklentisi düzeltmesi
+- Autosens fix: deactivate TT raises/lowers target
+- New translations
+- Insight driver fixes
+- SMS plugin fix
 
 ## Sürüm 2.2
 
@@ -454,11 +450,11 @@ Yayın tarihi: 29-03-2019
 
 ### Başlıca yeni özellikler
 
-- [DST düzeltmesi](../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst)
-- Wear güncellemesi
-- [SMS eklenti](../Children/SMS-Commands.md) güncellemesi
-- Görevlere geri dönüş.
-- Telefon hafızası doluysa döngüyü durdur
+- [DST fix](../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst)
+- Wear Update
+- [SMS plugin](../Children/SMS-Commands.md) update
+- Go back in objectives.
+- Stop loop if phone disk is full
 
 ## Sürüm 2.1
 
@@ -466,18 +462,18 @@ Yayınlanma tarihi: 03-03-2019
 
 ### Başlıca yeni özellikler
 
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) desteği (Tebbe Ubben ve JamOrHam tarafından)
-- Ana ekranda durum ışıkları (Nico Schmitz)
-- Yaz saati uygulaması yardımcısı (Roumen Georgiev)
-- NS'den gelen profili adları düzeltmesi (Johannes Mockenhaupt)
-- Kullanıcı arayüzü blokaj düzeltmesi (Johannes Mockenhaupt)
-- Güncellenmiş G5 uygulaması desteği (Tebbe Ubben ve Milos Kozak)
-- G6, Poctech, Tomato, Eversense KŞ kaynağı desteği (Tebbe Ubben ve Milos Kozak)
-- Tercihlerden SMB'nin devre dışı bırakılması düzeltmesi (Johannes Mockenhaupt)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
+- Status lights on main screen (Nico Schmitz)
+- Daylight saving time helper (Roumen Georgiev)
+- Fix processing profile names comming from NS (Johannes Mockenhaupt)
+- Fix UI blocking (Johannes Mockenhaupt)
+- Support for updated G5 app (Tebbe Ubben and Milos Kozak)
+- G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
+- Fixed disabling SMB from preferences (Johannes Mockenhaupt)
 
 ### Diğer
 
-- Varsayılan olmayan `smbmaxminutes` değeri kullanıyorsanız, bu değeri tekrar ayarlamanız gerekir.
+- If you are using non default `smbmaxminutes` value you have to setup this value again
 
 ## Sürüm 2.0
 
@@ -485,53 +481,53 @@ Yayınlanma tarihi: 03-11-2018
 
 ### Başlıca yeni özellikler
 
-- oref1/SMB desteği ([oref1 dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) SMB'den ne bekleyeceğinizi, nasıl davranacağını, neyi başarabileceğini ve sorunsuz çalışabilmesi için nasıl kullanacağını öğrenmek için dokümantasyonu mutlaka okuyun.
-- [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pompa desteği
-- Kurulum sihirbazı: AndroidAPS'i kurma sürecinde size rehberlik eder
+- oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
+- [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
+- Setup wizard: guides you through the process of setting up AndroidAPS
 
 ### AMA'dan SMB'ye geçerken yapılacak ayarlar
 
-- SMB'lerin etkinleştirilmesi için Görev 10'a başlanılmalıdır (SMB sekmesi genellikle hangi kısıtlamaların geçerli olduğunu gösterir)
+- Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
 
-- maxAİNS artık yalnızca bazal değil, [tüm] AİNS'i içeriyor. Diğer bir deyişle, bir yemek için 8 Ü bolus verilirse ve maksAİNS 7 Ü ise, AİNS 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez.
+- maxIOB now includes \_all\_ IOB, not just added basal. Diğer bir deyişle, bir yemek için 8 Ü bolus verilirse ve maksAİNS 7 Ü ise, AİNS 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez.
 
-- min_5m_carbimpact varsayılanı, AMA'dan SMB'ye geçerken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
+- min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
 
-- AndroidAPS 2.0 apk oluştururken dikkat edin: İsteğe bağlı yapılandırma, Android Gradle eklentisinin mevcut sürümü tarafından desteklenmiyor! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
+- Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
 
-  - Dosya > Ayarlar'a tıklayarak Tercihler penceresini açın. (Mac'te, Android Studio > Tercihler)
-  - Sol bölmede, "Build, Execution, Deployment > Compiler" Oluştur, Yürüt, Dağıt > Derleyici'ye tıklayın.
-  - Yapılandır onay kutusunun işaretini kaldırın.
-  - Uygula veya Tamam'a tıklayın.
+  - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
+  - In the left pane, click Build, Execution, Deployment > Compiler.
+  - Uncheck the Configure on demand checkbox.
+  - Click Apply or OK.
 
 ### Genel bakış sekmesi
 
-- Üst şerit, döngüyü askıya alma/devre dışı bırakma, profili görüntüleme/ayarlama ve geçici hedefleri (GH) başlatma/durdurma erişimi sağlar. GH'ler, tercihlerde ayarlanan varsayılanları kullanır. Yeni Hypo GH seçeneği, döngünün karbonhidratları çok agresif aşırı düzeltmesini önlemek için yüksek geçici bir GH'dir.
-- Tedavi butonları: eski tedavi butonu hala kullanılabilir, ancak varsayılan olarak gizlidir. Butonların görünürlüğü artık yapılandırılabilir. Yeni insülin butonu, yeni karbonhidrat butonu ([yKarb/yayma karbonhidratlar](../Usage/Extended-Carbs.md) dahil)
-- [Renkli tahmin satırları](../Getting-Started/Screenshots#prediction-lines)
-- NS'ye yüklenen insülin/karbonhidrat/hesap makinesi/hazırlama+doldurma iletişim kutularında bir not alanı gösterme seçeneği
-- Güncellenmiş hazırlama/doldurma iletişim kutusu, set değişikliği ve kartuş değişikliği için hazırlamaya ve bakım portalı girişleri oluşturmaya olanak tanır
+- Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). GH'ler, tercihlerde ayarlanan varsayılanları kullanır. Yeni Hypo GH seçeneği, döngünün karbonhidratları çok agresif aşırı düzeltmesini önlemek için yüksek geçici bir GH'dir.
+- Treatment buttons: old treatment button still available, but hidden by default. Butonların görünürlüğü artık yapılandırılabilir. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
+- [Colored prediction lines](../Getting-Started/Screenshots.md#prediction-lines)
+- Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
+- Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
 
 ### Saat
 
-- Ayrı yapı varyantı düştü, şimdi düzenli tam yapıya dahil edildi. Saatten bolus kontrollerini kullanmak için telefonda bu ayarı etkinleştirin
-- Sihirbaz artık sadece karbonhidrat istiyor (ve saat ayarlarında etkinleştirilmişse yüzde). Hesaplamaya hangi parametrelerin dahil olduğu telefondaki ayarlarda yapılandırılabilir
-- onaylar ve bilgi diyalogları artık wear 2.0'da da çalışıyor
-- yKarb menü girişi eklendi
+- Separate build variant dropped, included in regular full build now. Saatten bolus kontrollerini kullanmak için telefonda bu ayarı etkinleştirin
+- Wizard now only asks for carbs (and percentage if enabled in watch settings). Hesaplamaya hangi parametrelerin dahil olduğu telefondaki ayarlarda yapılandırılabilir
+- confirmations and info dialogs now work on wear 2.0 as well
+- Added eCarbs menu entry
 
 ### Yeni eklentiler
 
-- KŞ kaynağı olarak PocTech uygulaması
-- KŞ kaynağı olarak Dexcom yamalı uygulama
-- oref1 duyarlılık eklentisi
+- PocTech app as BG source
+- Dexcom patched app as BG source
+- oref1 sensitivity plugin
 
 ### Diğer
 
-- Uygulama artık tüm eklentileri göstermek için çekmeceyi kullanıyor; konfigürasyon ayarlarında görünür olarak seçilen eklentiler üstte sekmeler olarak gösterilir (favoriler)
-- Konfigürasyon ayarları ve Görevler sekmeleri için elden geçirme, açıklamalar ekleme
-- Yeni uygulama simgesi
-- Çok sayıda iyileştirme ve hata düzeltmesi
-- Pompaya uzun süre ulaşılamadığında Nightscout'tan bağımsız uyarılar örn. bitmiş pompa pili ve kaçırılan KŞ değerleri (ayarlarda *Yerel uyarılar* bölümüne bakın)
-- Ekranı açık tutma seçeneği
-- Bildirimi Android bildirimi olarak gösterme seçeneği
-- Gelişmiş filtreleme (SMB'yi ve yemeklerden 6 saat sonra her zaman etkinleştirmeyi sağlayan), yamalı Dexcom uygulaması veya KŞ kaynağı olarak Xdripte G5 yerel modu ile desteklenir.
+- App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
+- Overhaul for config builder and objectives tabs, adding descriptions
+- New app icon
+- Lots of improvements and bugfixes
+- Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
+- Option to keep screen on
+- Option to show notification as Android notification
+- Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.

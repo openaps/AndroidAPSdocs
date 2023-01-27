@@ -12,7 +12,7 @@
 
 Atentie: AAPS va scrie întotdeauna date în **primul profil al ratei bazale din pompă**.
 
-* Un telefon Android (in principiu orice versiune de Android ar funcționa cu Insight, dar verifica pe pagina [Module](../Module/module#phone) care este versiunea Android necesară pentru a rula AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * Aplicația AndroidAPS instalată pe telefon
 
 ## Instalare
@@ -52,7 +52,7 @@ Atentie: Nu va exista o conexiune permanentă între pompă şi telefon. O conex
 
 ## Setări în AAPS
 
-**Atentie: Este posibil (doar cu AAPS v2.7. sau mai recent) sa folosesti „Utilizeaza întotdeauna valorile bazale absolute” dacă vrei să folosesti Autotune cu pompa Insight, chiar dacă 'sincronizarea este activată' cu Nightscout.** (în AAPS mergeți la [Preferences > NSClient > Advanced Settings](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Captura de ecran Setări Insight](../images/Insight_settings.png)
 
@@ -116,7 +116,7 @@ Acesta va reduce la tăcere toate alarmele din pompă, permițând AndroidAPS s�
 
 * Firmware 1.x: Fără vibraţii din proiectare.
 * Firmware 2.x: Vibraţiile nu pot fi dezactivate.
-* Firmware 3.x: AndroidAPS livrează bolus în mod silenţios. (minim [versiunea 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS livrează bolus în mod silenţios. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Versiunea de firmware poate fi găsită în meniu.
 
@@ -142,4 +142,4 @@ Uneori se poate întâmpla ca pompa Insight să nu răspundă în timpul configu
 
 ## Traversarea fusurilor orare cu pompa Insight
 
-Pentru informaţii desprte călătoriile prin diverse fusuri orare, vedeţi secţiunea [Timezone traveling with pumps](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

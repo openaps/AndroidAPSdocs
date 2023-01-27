@@ -12,7 +12,7 @@
 
 ### רגישות AAPS, רגישות משוקללת ממוצעת
 
-הספיגה מחושבת כך ש-`COB == 0` לאחר זמן שצויין
+absorption is calculated to have `COB == 0` after specified time
 
 ```{image} ../images/cob_aaps2_orange_II.png
 :alt: AAPS, WheitedAverage
@@ -26,7 +26,7 @@ AAPS מזהיר אם אתם עומדים לקבל בולוס עם COB מארוח
 
 ### כיצד AndroidAPS מזהה ערכי COB שגויים?
 
-בדרך כלל AAPS מזהה ספיגת פחמימות באמצעות סטיות ברמת הסוכר. במקרה שרשמתם פחמימות אך AAPS לא יכול לראות את הספיגה המשוערת שלהן באמצעות סטיות ברמת הסוכר, הוא ישתמש בשיטת החישוב [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) כדי לחשב את הספיגה במקום (כאפשרות שניה). מכיוון ששיטה זו מחשבת רק את ספיגת הפחמימות המינימלית מבלי להתחשב בסטיות של רמת הסוכר, היא עלולה להוביל לערכי COB שגויים.
+בדרך כלל AAPS מזהה ספיגת פחמימות באמצעות סטיות ברמת הסוכר. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). מכיוון ששיטה זו מחשבת רק את ספיגת הפחמימות המינימלית מבלי להתחשב בסטיות של רמת הסוכר, היא עלולה להוביל לערכי COB שגויים.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: Hint on wrong COB value
@@ -36,19 +36,18 @@ AAPS מזהיר אם אתם עומדים לקבל בולוס עם COB מארוח
 
 ### איך מתמודדים עם האזהרה הזו?
 
-- שקלו לבטל את הטיפול - לחצו על ביטול במקום אישור.
-- חשבו שוב את הארוחה הקרובה עם אשף הבולוס ולהשאיר את COB ללא סימון.
-- במקרה שאתם בטוחים שאתם צריכים בולוס תיקון, הזינו אותו ידנית.
-- בכל מקרה יש להיזהר מהזרקת יתר!
+- Consider to cancel the treatment - press Cancel instead of OK.
+- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
+- In case you are sure you need a correction bolus, enter it manually.
+- In any case be careful not to overdose!
 
 ### מדוע האלגוריתם אינו מזהה נכונה את COB?
 
-- אולי הערכתם ביתר את הפחמימות שהזנתם.
-- פעילות גופנית לאחר הארוחה הקודמת
-
-יחס הפחמימות דורש כיוונון
-\- הערך של min_5m_carbimpact שגוי (המומלץ הוא 8 בשביל SMB ו-3 עם AMA)
+- Maybe you overestimated carbs when entering them.
+- Activity / exercise after your previous meal
+- I:C needs adjustment
+- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
 
 ## תיקון ידני של פחמימות שנרשמו
 
-אם הערכתם את הפחמימות ביתר או בחסר, תוכלו לתקן זאת בלשונית הטיפולים ובלשוניתתפריט הפעולות כמתואר [כאן](../GettingStarted/Screenshots#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).

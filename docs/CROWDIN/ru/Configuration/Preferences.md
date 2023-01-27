@@ -2,117 +2,106 @@
 
 - **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
 
-  ```{eval-rst}
-  .. образ:: ../images/Pref2020_Open2.png
-    :alt:Открыть настройки
+  ```{image} ../images/Pref2020_Open2.png
+  :alt:Открыть настройки
   ```
 
-- Можно сразу перейти к настройкам на определенной вкладке (напр. pump tab) by opening this tab and clicking Plugin preferences.
+- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
 
-  ```{image} ../images/Pref20_OpenPlugin2.png
-  :alt: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043F\u0430\u0440\u0430\u043C\u0435\
-  :  \u0442\u0440\u044B \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0439"
+  ```{image} ../images/Pref2020_OpenPlugin2.png
+  :alt: Открыть параметры расширений
   ```
 
-- \*\* Подменю\*\* можно открыть, щелкнув на треугольнике под заголовком подменю.
+- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
 
-  ```{image} ../images/Pref20_OpenPlugin2.png
-  :alt: "\u041E\u0442\u043A\u0440\u044B\u0442\u044C \u043F\u043E\u0434\u043C\u0435\u043D\
-  :  \u044E"
+  ```{image} ../images/Pref2020_Submenu2.png
+  :alt: Открыть подменю
   ```
 
-- С \*\* фильтра\*\* в верхней части экрана параметров вы можете быстро получить доступ к некоторым настройкам. Просто начните вводить часть текста, который вы ищете.
+- With the **filter** on top of the preferences screen you can quickly access certain preferences. Просто начните вводить часть текста, который вы ищете.
 
-  ```{eval-rst}
-  .. изображение:: ../images/Pref2021_Filter.png
-    :alt:Фильтр настроек
+  ```{image} ../images/Pref2021_Filter.png
+  :alt:Фильтр настроек
   ```
 
-```{eval-rst}
-.. содержание::
-   :backlinks: запись
-   :depth: 2
+```{contents}
+:backlinks: entry
+:depth: 2
 ```
 
 ## Общие настройки
 
-**Единицы**
+**Units**
 
-- В зависимости от предпочтений установите единицы mmol/l или mg/dl.
+- Set units to mmol/l or mg/dl depending on your preferences.
 
-**Язык**
+**Language**
 
-- Новый вариант использования языка телефона по умолчанию (рекомендуется).
+- New option to use phone's default language (recommended).
 
 - In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
 
-- Если вы используете разные языки, то иногда можете видеть языковую смесь. This is due to an android issue that overriding the default android language sometimes doesn't work.
+- If you use different languages you might sometimes see a language mix. This is due to an android issue that overriding the default android language sometimes doesn't work.
 
-  ```{eval-rst}
-  .. изображение:: ../images/Pref2020_General.png
-    :alt:Настройки > общие
+  ```{image} ../images/Pref2020_General.png
+  :alt: Preferences > General
   ```
 
-**Имя пациента**
+**Patient name**
 
-- Может использоваться, если нужно иметь несколько настроек (например, когда в семье 2 ребенка с СД1).
+- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
 ### Защита
 
 #### Главный пароль
 
-- Необходимо, чтобы можно было [экспортировать настройки](../Usage/ExportImportSettings.md) в том виде, в каком они зашифрованы начиная с версии 2.7.
-  **Биометрическая защита может не работать на телефонах OnePlus. This is a known issue of OnePlus on some phones.**
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
 
 - Open Preferences (three-dot menu on top right of home screen)
 
-- Нажмите на треугольник под «Общим»
+- Click triangle below "General"
 
-- Нажмите "Главный пароль"
+- Click "Master-Password"
 
-- Введите пароль, подтвердите пароль и нажмите кнопку Ok.
+- Enter password, confirm password and click ok.
 
-  ```{eval-rst}
-  .. изображение:: ../images/MasterPW.png
-    :alt: Установа мастер-пароля
+  ```{image} ../images/MasterPW.png
+  :alt: Установить основной пароль
   ```
 
 #### Защита настроек
 
-- Защитите ваши настройки с помощью пароля или биометрической аутентификации телефона (напр. \` AAPS используется ребенком \<../Children/Children.md> \` \_).
+- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
 
-- Если вы хотите использовать главный пароль только для защиты \` экспортируемых параметров \<../Usage/ExportImportSettings.md> \` \_, следует использовать пользовательский пароль.
+- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
-- Если вы хотите применить пользовательский пароль, щелкните по строке "Настройки пароля", чтобы задать пароль, как описано выше \<../Configuration/Preferences#master-password> \` \_\_.
+- If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.md#master-password).
 
-  ```{eval-rst}
-  .. изображение:: ../images/Pref20_Protection.png
-    :alt: Защита
+  ```{image} ../images/Pref2020_Protection.png
+  :alt: Защита
   ```
 
 #### Защита приложения
 
-- Если приложение защищено, вследует ввести пароль или использовать биометрическую идентификацию телефона для открытия AAPS.
-- Приложение будет немедленно выключано, если введен неправильный пароль, но будет выполняется в фоновом режиме, если было штатно открыто до этого.
+- If app is protected you must enter password or use phone's biometric authentication to open AAPS.
+- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
 
 #### Защита болюсов
 
-- Защита от болюсов может быть полезной, если AAPS используется маленьким ребенком, а вы подаете болюсы через SMS \<../Children/SMS-Commands.md> \` \_.
+- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
 
-- В примере ниже вы видите запрос на биометрическую защиту. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
+- In the example below you see the prompt for biometric protection. Если биометрическое распознавание не работает, нажмите на пробел над запросом и введите главный пароль.
 
-  ```{eval-rst}
-  .. изображение:: ../images/Pref2020_PW.png
-    :alt: Биометрическая защита
+  ```{image} ../images/Pref2020_PW.png
+  :alt: Биометрическая защита
   ```
 
 #### Тема оформления
 
-- Можно выбрать из четырех типов оформления:
+- You can choose from four types of skins:
 
-  ```{eval-rst}
-  .. изображение:: ../images/Pref2021_SkinWExample.png
-    :alt: Выбор оформления + примеры
+  ```{image} ../images/Pref2021_SkinWExample.png
+  :alt: Выбор оформления + примеры
   ```
 
 - 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
@@ -185,7 +174,7 @@
 
 ### Заполнить стандартное количество инсулина
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
 ### Range for visualization
@@ -216,19 +205,19 @@
 
 ### Индикаторы состояния
 
-- Status lights give a visual warning for
+- Индикаторы состояния сообщают о
 
-  - Sensor age
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots#sensor-level-battery) for details).
-  - Insulin age (days reservoir is used)
-  - Reservoir level (units)
-  - Cannula age
+  - Времени, отработанном сенсором
+  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Времени работы инсулина в резервуаре помпы
+  - Уровне заполнения резервуара (единицы)
+  - Времени работы катетера помпы
   - Pump battery age
   - Pump battery level (%)
 
-- If threshold warning is exceeded, values will be shown in yellow.
+- Если превышено пороговое значение, данные показываются желтым цветом.
 
-- If threshold critical is exceeded, values will be shown in red.
+- Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 
 - In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
 
@@ -250,13 +239,13 @@
 
 #### Bolus advisor
 
-- If you run [Bolus wizard](../Getting-Started/Screenshots#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+- If you run [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
 - If correction bolus is accepted **no carbs** will be recorded.
 
 - An alarm will be started when glucose value is in good level to start eating.
 
-- You have to enter [Bolus wizard](../Getting-Started/Screenshots#bolus-wizard) again and enter the amount of carbs you want to eat.
+- You have to enter [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Bolus advisor message
@@ -308,8 +297,8 @@
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features#super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### OpenAPS AMA settings
 
@@ -320,9 +309,9 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
 - The value is measured in units per hour (U/h).
-- It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- Рекомендуется установить какое-то разумное значение. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](../Usage/Open-APS-features#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
@@ -346,7 +335,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
 - It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 - If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
@@ -357,17 +346,17 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### OpenAPS SMB settings
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
 - *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. This value prevents the system from issuing SMB too often (for example in case of a temp target being set). You should not change this setting unless you know exactly about consequences.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
 
 - If target is modified it will be displayed with a green background on your home screen.
 
@@ -387,7 +376,7 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 - A threshold can be defined - minimum amount of carbs needed to trigger a notification.
 
-- Carb required notifications can be pushed to Nightscout if wished, in which case an announcement will be shown and broadcast.
+- При желании уведомления об углеводах могут быть переданы в Nightscout. В этом случае сработают стандартные настройки оповещения NS.
 
   ```{image} ../images/Pref2020_CarbsRequired.png
   :alt: Display carbs required on home screen
@@ -432,16 +421,16 @@ When you feel comfortable, you can allow the system to start giving you addition
 
 ### Advanced settings - autosens ratio
 
-- Define min. and max. [autosens](../Usage/Open-APS-features#autosens) ratio.
+- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## Pump settings
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder#pump).  Pair and set your pump up according to the pump related instructions:
+The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  Pair and set your pump up according to the pump related instructions:
 
 - [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
-- [Accu Chek Combo Pump](../Configuration/Accu-Chek-Combo-Pump.md)
+- [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
@@ -458,7 +447,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](../Configuration/Config-Builder#local-profile) are uploaded to your Nightscout site.
+- If activated changes in [local profile](../Configuration/Config-Builder.md#local-profile) are uploaded to your Nightscout site.
 
 ### Connection settings
 
@@ -488,13 +477,13 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 
 - *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
 
-  - You need to [go through AAPS](../Configuration/Config-Builder#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - You need to [go through AAPS](../Configuration/Config-Builder.md#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
 - *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
 
 ## СМС-коммуникатор
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
 - Further information is described in [SMS Commands](../Children/SMS-Commands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
@@ -505,7 +494,7 @@ Select which location service shall be used:
 
 - Use passive location: AAPS only takes locations if other apps are requesting it
 - Use network location: Location of your Wi-Fi
-- Используйте локатор GPS (Внимание! Может привести к чрезмерной разрядке аккумулятора!)
+- Use GPS location (Attention! Может привести к чрезмерной разрядке аккумулятора!)
 
 ## Local alerts
 
@@ -529,8 +518,8 @@ Select which location service shall be used:
 :alt: Maintenance settings
 ```
 
-- Standard recipient of logs is <mailto:logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences#master-password). In this case master password has to be entered each time settings are exported or imported.
+- Standard recipient of logs is <logs@androidaps.org>.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences.md#master-password). In this case master password has to be entered each time settings are exported or imported.
 
 ## Open Humans
 

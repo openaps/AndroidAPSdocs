@@ -48,8 +48,8 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
 
 ### Překlad odkazů v nadpisech
 
-* Pokud interní odkaz vede pouze na konkrétní stránku (tj. ../Usage/Profiles.md), je nutné odkaz nepřekládat.
-* Pokud interní odkaz vede na konkrétní nadpis (tj. ..//Usage/Profiles#percentage) musí být odkaz přeložen, protože titulek v jiném jazyce se liší od anglického originálu.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Pokud překládáte nadpis, můžete jej přeměnit na odkaz na kotvu (část za # - tj. #procenta) otočením všech písmen na malá písmena, transformací speciálních znaků na standardní znaky, nahrazením mezer znamínkem - (minus znaménko) a přeskočením interpunkčních znamének.
     
     Zde je několik příkladů:
@@ -62,7 +62,7 @@ Když korektor schválí překlad, tak bude přidaný do příští verze Androi
 
 #### Překládání odkazů v Markdown souborech (.md)
 
-At the moment two [markup languages](./make-a-PR#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Whereas files written in reStructuredText syntax (.rst) always show link address in Crowdin, for files in Markdown syntax (.md) you might have to activate HTML tag displaying in order to translate the link address.
 
 * * *
 
@@ -80,7 +80,7 @@ click on the cogwheel to open settings, select "Show" and click "Save".
 
 ![Crowdin - show HTML tag display](./images/CrowdinShowURL2.png)
 
-Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations#translate-headline-links).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - HTML tag display](./images/CrowdinShowURL3.png)
 

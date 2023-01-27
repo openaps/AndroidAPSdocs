@@ -31,7 +31,7 @@ Dexcom앱은 제한된 알림기능을 제공함에 따라서, 오픈소스앱 x
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * 대안: 이용가능한 [혈당 소스](../Configuration/BG-Source.md)리스트를 참조하세요
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. 옵션: 소니 스마트워치3 (SWR50)
     
@@ -80,7 +80,7 @@ To do this perform the following steps on your smartphone:
 1. If the original Dexcom app is already installed: 
     * Stop sensor
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
@@ -92,8 +92,8 @@ To do this perform the following steps on your smartphone:
 
 ## Install AndroidAPS
 
-1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Transfer](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) the generated APK to your phone
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. [Configure AndroidAPS](../Configuration/Config-Builder.md) according to your needs using the setup assistant or manually
 4. In this sample setup we used (among others)
 

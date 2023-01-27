@@ -12,7 +12,7 @@
 
 Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * L'application AndroidAPS installée sur votre téléphone
 
 ## Paramètres
@@ -52,7 +52,7 @@ Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléph
 
 ## Paramètres dans AAPS
 
-**Note : il est maintenant possible (uniquement avec AAPS v2.7.0 et ultérieures) d'utiliser « Utiliser toulours les valeurs absolues du basal » si vous voulez utiliser Autotune avec la pompe Insight, même si la 'syncro est activée' avec Nightscout.** (Dans AAPS, allez dans [Préférences > NSClient > Paramètres avancés](../Configuration/Preferences#parametres-avances-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Copie d'écran paramètres Insight](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Selon la version de firmware de votre pompe Insight, elle vibrera brièvement à
 
 * Firmware 1.x : Aucune vibration par conception.
 * Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
-* Firmware 3.x : Il n'y a pas de vibration quand AndroidAPS injecte un bolus. (Au minimum avec la [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x : Il n'y a pas de vibration quand AndroidAPS injecte un bolus. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
 
@@ -144,4 +144,4 @@ Dans ce cas, désactivez le bluetooth sur la pompe ET sur le smartphone pendant 
 
 ## Voyager avec différents fuseaux horaires avec une pompe Insight
 
-Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

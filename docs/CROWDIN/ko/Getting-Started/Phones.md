@@ -1,14 +1,14 @@
-# 테스트 완료된 폰 목록
+# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
 
-Currently, a friendly maintainer is maintaining a list for AndroidAPS on phones in use with the Omnipods insulin pumps, as the last development of a pump driver was for these and there was the need for communication there between the early adaptors.
+Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AndroidAPS/OpenAPS ecosystem!
 
-If the need for another hardware list arises again in the future and someone wants to take care of this list, please contact us!
+Our Maintainer has spent a lot of time and effort to make sure that its easy for everyone to enter data into the Spreadsheet; via a Google Form with pre-populated information headers for ease of use! This ensures that the existing data on the sheets cannot be accidentally overwritten or deleted. The same experience can be built upon the success of the first again using Google Sheets.
 
-The current maintainer of the list has spent a lot of time and effort to make it easy to enter data, but also to make sure that existing data cannot be accidentally overwritten or deleted. This experience can be built upon again with Google Sheets.
+Thanks to the ease of Google Spreadsheets, close communication amongst early adopters and the ability of pooling their collective knowledge and lessons learned throughout early testing/feedback phases of the Dash pump pod drivers was compiled quite efficiently. The results of the time, information and energy provided by the numerous Early Adopters in providing step-by-step feedback on each new version of the Dash Bluetooth drivers becomes apparent once you open the up what is now a comprehensive Compare/Contrast list of all hardware suited for Looping with the Omnipod Dash, with many Android Phones and Smartwatches tested and ranked for compatibility. In addition, the more incompatible setups are also included in this Spreadshee so that new users will know which hardware to avoid due to issues with connection speed or strength.
 
-## Omnipod
+When the time comes for another Hardware Compatibility List to be created in the future; we encourage anyone that feels they might enjoy becoming a Maintainer to please contact us!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google .com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5 RvMcI6NG5TnY)
 
 With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
 

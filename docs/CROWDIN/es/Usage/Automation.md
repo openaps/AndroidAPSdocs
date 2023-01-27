@@ -10,9 +10,8 @@ Before using Automation, you should be confident with manual [temp targets](./te
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
-```{eval-rst}
-.. imagen:: ../images/Automation_ConditionAction_RC3.png
-  :alt: Condición de automatización + acción
+```{image} ../images/Automation_ConditionAction_RC3.png
+:alt: Condición de automatización + acción
 ```
 
 ## Cómo se usa
@@ -21,28 +20,27 @@ Para configurar una automatización, tiene que darle un título, seleccionar al 
 
 ### Nota importante
 
-**La automatización todavía está activa cuando se inhabilita el lazo.**
+**Automation is still active when you disable loop!**
 
 So make sure to deactivate automation rules during these occasions if necessary. You can do so by unticking the box left of the name of your automation rule.
 
-```{eval-rst}
-.. imagen:: ../images/Automation_ActivateDeactivate.png
-  :alt: Activate and deactivaten automation rule
+```{image} ../images/Automation_ActivateDeactivate.png
+:alt: Activate and deactivaten automation rule
 ```
 
 ### Where to find Automation
 
-Depending on your [settings in config builder](../Configuration/Config-Builder#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder.md#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### General
 
 Hay algunos límites:
 
-- El valor de la glucosa tiene que estar entre 72 y 270 mg/dl ó 4 y 15 mmol/l.
-- El porcentaje de perfil tiene que estar entre el 70% y el 130%.
-- Hay un mínimo de 5 min. de límite de tiempo entre ejecuciones (y la primera ejecución).
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**Por favor, tenga cuidado:**
+**Please be careful:**
 
 - **less than -2 means: -3 and lower (-4,-10, etc)**
 - **more than -2 means: -1 and higher (-1, 0, +10, etc)**
@@ -53,43 +51,43 @@ Usted puede elegir entre varias condiciones. Aquí están algunos componentes ex
 
 - connect conditions: you can have several conditions and can link them with
 
-  - "Y"
-  - "O"
+  - "And"
+  - "Or"
   - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Tiempo vs. hora de Repetición
+- Time vs. recurring time
 
-  - hora = suceso de una sola vez
-  - recurring time = something that happens regularly (i.e. una vez a la semana, todos los días laborables, etc.)
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- ubicación: en el constructor de configuración (Automatización), puede seleccionar el servicio de ubicación que desea utilizar:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
   - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Usar la ubicación de la red: la ubicación de su Wifi
-  - Usar localización GPS (Atención! ¡ Puede provocar una descarga excesiva de la batería!)
+  - Use network location: Location of your Wifi
+  - Use GPS location (Attention! ¡ Puede provocar una descarga excesiva de la batería!)
 
 ### Acción
 
 Puede elegir una o varias acciones:
 
-- iniciar objetivo temporal
+- start temp target
 
-  - debe estar entre 72 mg/dl y 270 mg/dl (4 mmol/l y 15 mmol/l)
-  - sólo funciona si no hay ningún valor temporal anterior
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- detener objetivo temporal
+- stop temp target
 
-- notificación
+- notification
 
-- porcentaje de perfil
+- profile percentage
 
-  - debe estar entre el 70% y el 130%
-  - sólo funciona si el porcentaje anterior es 100%
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-Después de añadir la acción, **no olvide cambiar los valores por defecto** a lo que necesita pulsando en los valores predeterminados.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. valores del usuario
+:alt: Automation default vs. set values
 ```
 
 ### Sort automation rules
@@ -108,7 +106,7 @@ To delete an automation rule click on trash icon.
 :alt: Delete automation rule
 ```
 
-## Buenas prácticas y advertencias
+## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
 
@@ -118,11 +116,11 @@ To delete an automation rule click on trash icon.
 
   **Doubly important if action is a profile switch!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features#autosens) back to 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
 - Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
 - Profile switching will not reset the profile back to your base profile
 
@@ -133,9 +131,9 @@ To delete an automation rule click on trash icon.
 
 These are just setup examples, no advises. Don't reproduce them without being aware what you are actually doing or why you need them.
 
-- Conmutar perfiles para sus actividades diarias (como escuela, gimnasio, fin de semana, día laboral...) usando geolocalización, wifi, tiempo, etc.
+- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
 - Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Establecer pronto objetivos temporales de comida basados en el tiempo, la ubicación...
+- Setting eating soon temp targets based on time, location...
 
 ### Objetivo temporal de glucosa baja
 
@@ -157,12 +155,12 @@ This example is made by someone who has lunch at work at the same time every day
 
 Please be aware to use automation incorrectly. Esto podría conducir a dificultades e incluso a un peligro para su salud. Por ejemplo, los ejemplos de uso incorrecto son:
 
-- Tratar de alterar temporalmente el algoritmo en lugar de sólo ayuda (por ejemplo. cambiando el perfil en lugar de ajustar basal, IC, etc.)
-- Estableciendo perfil para compensar a los alimentos
-- Establecimiento de un perfil sin duración
-- Creación de reglas de un sentido (por ejemplo. hacer algo, pero no deshacerlo con otra regla)
-- Creando reglas a largo plazo
+- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
+- Setting profile to compensate food
+- Setting profile without duration
+- Creating one way rules (i.e. do something but don't undo it by another rule)
+- Creating long term rules
 
 ## Alternativas
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Algunos ejemplos se pueden encontrar [aquí](./automationwithapp.html).
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).

@@ -12,7 +12,7 @@
 
 Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
-* Android telefonas (Iš esmės kiekviena Android versija būtų tinkama Insight, bet žvilgtelėkite į [Moduliai](../Module/module#phone) puslapį, kuri Android versija yra būtina AndroidAPS veikimui.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * Jūsų telefone įdiegtos AndroidAPS programos
 
 ## Sąranka
@@ -52,7 +52,7 @@ Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. Ryšys bus užmegztas 
 
 ## AAPS nustatymai
 
-** Pastaba: dabar (tik su AAPS v2.7.0 ir vėlesnėmis versijomis) galima naudoti „Visada naudoti absoliučias bazines reikšmes“, jei norite naudoti Autotune su Insight pompa, net jei sinchronizavimas su Nightscout įgalintas.** (AAPS eikite į [ Nustatymai > NSClient > Papildomi nustatymai](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Insight nustatymų ekrano vaizdas](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Priklausomai nuo pompos programinės įrangos versijos, Insight trumpai vibruos 
 
 * Programinė versija 1.x: Jokios vibracijos.
 * Programinė versija 2.x: Vibracija negali būti išjungta.
-* Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (nuo [versijos 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Programinės įrangos versiją galima rasti meniu.
 
@@ -144,4 +144,4 @@ Tokiu atveju maždaug 10 sekundžių išjunkite pompos ir išmaniojo telefono Bl
 
 ## Kelionė per laiko zonas su Insight pompa
 
-Žiūrėkite skyrių [Keliavimas per skirtingas laiko juostas su pompa](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

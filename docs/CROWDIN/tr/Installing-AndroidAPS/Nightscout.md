@@ -21,7 +21,7 @@ AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bu
 
 ### Diğer güvenlik ayarları
 
-[Önce güvenlik](../Getting-Started/Safety-first.md) bölümünde açıklandığı gibi telefonunuzu güncel tutun.
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## Manuel Nightscout kurulumu
 

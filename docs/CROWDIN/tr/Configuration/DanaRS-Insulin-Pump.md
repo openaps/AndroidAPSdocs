@@ -97,14 +97,14 @@ Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının k
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
 * Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
-* İsterseniz [tedaviler sekmesinde](../Getting-Started/Screenshots#carb-correction) hatalı girişi silin.
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
 * Bir sonraki pompa bağlantısında gerçek miktar okunur ve kaydedilir. Bunu yaptırmak için dana sekmesindeki BT simgesine basın veya bir sonraki bağlantı için bekleyin.
 
 ## Telefon değiştirirken özel not
 
 Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
-* Eski telefonunuzdaki [Ayarları dışa aktarın](../Usage/ExportImportSettings#export-settings)
+* [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Ayarları eski telefondan yeni telefona aktarın
 
 ### DanaRS v1
@@ -112,7 +112,7 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 * Dana RS'i yeni telefonla **manuel olarak eşleştirin**
 * Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
 * AndroidAPS'i yeni telefona yükleyin.
-* Yeni telefonunuzda [Ayarları içe aktarın](../Usage/ExportImportSettings#import-settings)
+* [Import settings](../Usage/ExportImportSettings.md#import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -121,4 +121,4 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 
-Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).

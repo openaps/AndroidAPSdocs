@@ -1,4 +1,4 @@
-# Export/Import des paramètres
+# Export & import settings
 
 ## Quand dois-je exporter les paramètres ?
 
@@ -11,82 +11,82 @@ Les paramètres exportés doivent être copiés sur un stockage cloud ou sur vot
 Sur un ordinateur Windows 10, cela ressemble à ceci :
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: "AndroidAPS Pr\xE9f\xE9rences t\xE9l\xE9phone connect\xE9 \xE0 l'ordinateur"
+:alt: AndroidAPS Préférences téléphone connecté à l'ordinateur
 ```
 
 ## Informations exportées
 
 Entre autres, les informations suivantes font partie des paramètres exportés :
 
-- [Evènement d'automatisation](../Usage/Automation.md)
-- Paramètres du [Générateur de configuration](../Configuration/Config-Builder.md)
-- Paramètres des [Profils locaux](../Configuration/Config-Builder#profil-local)
-- Résultats des [Objectifs](../Usage/Objectives.md) y compris les résultats de l'objectif 3 [Prouver ses connaissances](../Usage/Objectives#objectif-3-prouver-ses-connaissances)
-- [Préférences](../Configuration/Preferences.md) y compris les paramètres [NSClient](../Configuration/Preferences#nsclient)
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Format de sauvegarde chiffré
 
-La sauvegarde des paramètres est chiffrée par un mot de passe principal qui peut être défini dans [Préférences](../Configuration/Preferences#mot-de-passe-principal) .
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Exporter les paramètres
 
-- Menu Hamburger (coin supérieur gauche de l'écran)
+- Hamburger menu (top left corner of screen)
 - Maintenance
 - Exporter les paramètres
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: "AndroidAPS exporter les param\xE8tres 1"
+:alt: AndroidAPS exporter les paramètres 1
 ```
 
-- La date et l'heure d'exportation seront automatiquement ajoutées au nom du fichier et affichées avec le chemin.
-- Cliquez sur 'OK'.
-- Entrez le [mot de passe principal](../Configuration/Preferences#mot-de-passe-principal) et cliquez 'OK'.
-- L'exportation réussie sera affichée en bas de l'écran.
+- Date and time of export will be added to the file name automatically and displayed together with the path.
+- Click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
+- Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: "AndroidAPS exporter les param\xE8tres 2"
+:alt: AndroidAPS exporter les paramètres 2
 ```
 
 ## Importer les paramètres
 
-**Ne pas importer les paramètres pendant une session Pod active** - voir la page [Omnipod pour plus de détails](../Configuration/OmnipodEros#importer-les-parametres-aaps-de-versions-precedentes).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- Menu Hamburger (coin supérieur gauche de l'écran)
+- Hamburger menu (top left corner of screen)
 - Maintenance
-- Importez les paramètres
+- Importer les paramètres
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: "AndroidAPS importer les param\xE8tres 1"
+:alt: AndroidAPS importer les paramètres 1
 ```
 
-- Tous les fichiers présents dans le dossier AAPS/préférences/ de votre téléphone seront affichés dans la liste.
-- Sélectionnez un fichier.
-- Confirmez l'importation en cliquant sur 'OK'.
-- Entrez le [mot de passe principal](../Configuration/Preferences#mot-de-passe-principal) et cliquez 'OK'.
+- All files from folder AAPS/preferences/ on your phone will be shown in the list.
+- Select file.
+- Confirm import by clicking 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: "AndroidAPS importer les param\xE8tres 2"
+:alt: AndroidAPS importer les paramètres 2
 ```
 
-- Les détails du fichier de préférences seront affichés.
-- C'est la dernière possibilité pour annuler l'importation.
-- Cliquez sur 'Importer'.
-- Confirmez le message en cliquant sur 'OK'.
-- AAPS sera redémarré afin d'activer les préférences importées.
+- Details on the preference file will be shown.
+- Last option to cancel import.
+- Click 'Import'.
+- Confirm message by clicking 'OK'.
+- AAPS will be restarted in order to activate imported preferences.
 
 ### Remarque pour les utilisateurs de Dana RS
 
 - Comme les paramètres de connexion de la pompe sont également importés dans AAPS sur votre nouveau téléphone, il va déjà "connaître" la pompe et donc ne démarrera pas une analyse bluetooth.
-- Veuillez associer manuellement le nouveau téléphone et la pompe.
+- Please pair new phone and pump manually.
 
 ### Importer les paramètres des versions précédentes (avant AAPS 2.7)
 
-- L'ancien fichier de paramètres (appelé 'AndroidAPSPreferences' - sans extension de fichier) doit être dans le dossier racine de votre smartphone (/storage/emulated/0).
-- Ne mettez pas l'ancien fichier dans le même dossier que celui des nouveaux paramètres exportés (AAPS/préférences).
-- Vous trouverez l'ancien fichier en bas de la liste dans la boîte de dialogue d'importation.
+- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
+- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+- You will find the "old" file on the bottom of the list in the import dialogue.
 
 ## Transférer les paramètres
 
-- La meilleure façon de transférer des fichiers de paramètres sur un nouveau téléphone est via un câble USB ou un service cloud (par ex. Google Drive).
-- Des aides peuvent être trouvées sur le web, par ex. [Aide Android](https://support.google.com/android/answer/9064445?hl=fr).
-- Si vous rencontrez des problèmes avec le fichier transféré, essayez de transférer le fichier par d'une autre façon.
+- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
+- If you experience problems with the transferred file try another way to transfer file.

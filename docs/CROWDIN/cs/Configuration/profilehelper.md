@@ -7,37 +7,37 @@ Pomocník s profilem nabízí dvě funkce:
 
 ## Profil pro děti (do 18 let)
 
-**Důležité poznámky**
+**Important note:**
 
-**Pomocník s profilem je určen k tomu, aby vám pomohl s počátečním nastavením profilu vašeho dítěte. I když je založen na datech dvou různých nemocnic, vždy jeho výsledky konzultujte s vaším lékařem, než je použijete jako hotový profil!**
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 Pomocník s profilem nabízí datové sady dětských pacientů do 18 let ze dvou různých nemocnic, aby vám pomohly najít úvodní nastavení profilu.
 
 ```{image} ../images/ProfileHelperKids1.png
-:alt: "Pomocn\xEDk profilu pro d\u011Bti 1"
+:alt: Pomocník profilu pro děti 1
 ```
 
 1. Vyberte "Pomocník s profilem" z třítečkového menu v pravém horním rohu obrazovky.
-2. Upravte Výchozí profil (připravený z nemocničních dat) zadáním věku a buďto CDD celkem **nebo** hmotnosti.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Přepněte stránku kliknutím na šedivé podlouhlé tlačítko s nápisem 2, které je na pravé straně obrazovky.
 4. Dlouze stiskněte "Aktuální profil" a vyberte "Výchozí profil DVP".
 
 ```{image} ../images/ProfileHelperKids2.png
-:alt: "Pomocn\xEDk profilu pro d\u011Bti 2"
+:alt: Pomocník profilu pro děti 2
 ```
 
-5. Upravte Výchozí profil DVP (vytvořen z rozdílných nemocničních dat) zadáním věku dítěte, procentního podílu bazálu a buďto CDD celkem **nebo** hmotnosti.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 7. Zobrazí se porovnání dvou upravených profilů.
 
-Až budete s úpravami profilu spokojeni, můžete [klonovat profil](../Configuration/profilehelper#clone-profile), jak je popsáno níže.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Porovnání dvou profilů
 
 You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
 
 ```{image} ../images/ProfileHelper1.png
-:alt: "Pomocn\xEDk profilu 1"
+:alt: Pomocník profilu 1
 ```
 
 1. Vyberte "Pomocník s profilem" z třítečkového menu v pravém horním rohu obrazovky.
@@ -46,7 +46,7 @@ You can use profile helper also to compare to different profiles or profile swit
 4. Přepněte stránku kliknutím na šedivé podlouhlé tlačítko s nápisem 2, které je na pravé straně obrazovky.
 
 ```{image} ../images/ProfileHelper2.png
-:alt: "Pomocn\xEDk profilu 2"
+:alt: Pomocník profilu 2
 ```
 
 5. Standardní "Aktuální profil" je nabízen jako kandidát pro porovnání.
@@ -57,10 +57,10 @@ You can use profile helper also to compare to different profiles or profile swit
 
 ## Klonování profilu
 
-If you use [local profiles](../Configuration/Config-Builder#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
-:alt: "Pomocn\xEDk profilu Klonov\xE1n\xED profilu / p\u0159epnut\xED profilu"
+:alt: Pomocník profilu Klonování profilu / přepnutí profilu
 ```
 
 1. Vyberte požadovaný profil / přepnutí profilu dle popisu výše.

@@ -53,7 +53,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * De Dexcom G6 zender kan gelijktijdig worden gekoppeld aan de Dexcom ontvanger (of als alternatief de t:slim pomp) en een app op je telefoon.
 * Als je jouw Dexcom wilt koppelen aan de xDrip+ app dan zul je dus eerst de Dexcom app moeten verwijderen (of: pas het zender-nummer in de Dexcom app aan naar een onzingetal zodat Dexcom niet probeert aan de zender te koppelen). **Je kunt de xDrip+ app en de Dexcom app niet gelijktijdig koppelen aan een zender.**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip+ versie afhankelijk van G6-zendernummer
 
@@ -153,7 +153,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
 
 ### Zender resetten
 
-* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen. Hetzelfde geldt voor zenders met serienummer beginnend met 81 en firmware 1.6.5.**27** (zie xDrip + System Status-G5/G6 status zoals weergegeven in [screenshot hierboven](../Configuration/xdrip#transmitter-battery-status)).
+* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen. Hetzelfde geldt voor zenders met serienummer starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
 * Het wordt aangeraden om de zender te resetten vóórdat hij 100 dagen in gebruik is. Dit om problemen met het starten van sensoren te voorkomen.
 * Het gebruik van de zenders waarvan het serienummer begint met 81 en firmware 1.6.5.**27** na dag 100 is alleen mogelijk als ['engineering mode'](../Usage/Enabling-Engineering-Mode-in-xDrip) is ingeschakeld en 'native modus' uitgeschakeld is (hamburger menu-> instellingen-> G5/G6 foutopsporingsinstellingen-> native algoritme) omdat een zender hard reset NIET mogelijk is.
 * De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
@@ -275,7 +275,7 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
    * Als je het xDrip+ algoritme gebruikt, kun je een tijdstip ingeven van meer dan 2 uur geleden om de opwarmtijd over te slaan. Metingen kunnen daardoor zeer onbetrouwbaar worden. Daarom wordt dit niet aanbevolen.
 * Voer Sensor code in (die staat op de papieren achterkant van de sensorverpakking) 
    * Bewaar deze code voor als je hem later nog nodig hebt (bijv. nieuwe start van de sensor nadat de zender moest worden verwijderd)
-   * De code kun je ook terugvinden in de [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Klik op 3 stipjes in rechterbovenhoek van xDrip+ homescreen en kies `View Events Log`.
+   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Als je de G6 in "Native mode" gebruikt, hoef je geen kalibratie in te voeren. xDrip+ zal de automatisch waardes gaan weergeven na de 2 uur opwarmtijd.
 * Zet de originele Dexcom ontvanger (indien je die gebruikt) niet terug aan voordat xDrip+ de eerste meetwaardes toont.
    
@@ -343,7 +343,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Batterijniveau van opzetapparaatje voor FSL
 
 * Het batterijniveau van opzetapparaatjes zoals MiaoMiao 2 kan in AAPS worden weergegeven.
-* Meer info vind je op de [screenshots pagina](../Getting-Started/Screenshots#sensorniveau-batterij).
+* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
 
 ### Verbind Libre opzetapparaatje & start sensor
 

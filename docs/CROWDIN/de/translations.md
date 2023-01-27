@@ -48,8 +48,8 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 ### Links zu Überschriften übersetzen
 
-* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.md) verweist, muss er nicht übersetzt werden.
-* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
     
     Hier einige Beispiele:
@@ -62,7 +62,7 @@ Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version vo
 
 #### Link-Übersetzung in Markdown-Dateien (.md)
 
-Momentan werden in den Docs zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
 
 * * *
 
@@ -80,7 +80,7 @@ Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und k
 
 ![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
 
-Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#links-zu-uberschriften-ubersetzen) beschrieben übersetzt werden.
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
 

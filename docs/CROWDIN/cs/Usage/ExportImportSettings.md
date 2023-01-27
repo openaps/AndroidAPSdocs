@@ -1,4 +1,4 @@
-# Export a import nastavení
+# Export & import settings
 
 ## Kdy bych měl exportovat nastavení?
 
@@ -11,26 +11,26 @@ Exported settings should be copied to a cloud storage or your computer, better t
 Na počítači se systémem Windows 10 to vypadá takto:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: "telefon s AndroidAPS p\u0159ipojen\xFD k po\u010D\xEDta\u010Di"
+:alt: telefon s AndroidAPS připojený k počítači
 ```
 
 ## Exportovaná data
 
 Mezi jinými jsou součástí exportu tato nastavení:
 
-- Akce [Automatizace](../Usage/Automation.md)
-- [Konfigurace](../Configuration/Config-Builder.md)
-- [Local profile](../Configuration/Config-Builder#local-profile) settings
-- [Cíle](../Usage/Objectives.md) vč. [exam results](../Usage/Objectives#objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences#nsclient)
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Encrypted backup format
 
-Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences#master-password) .
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Exportovat nastavení
 
-- Hamburger menu (v levém horním rohu obrazovky)
+- Hamburger menu (top left corner of screen)
 - Údržba
 - Exportovat nastavení
 
@@ -40,7 +40,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 - Date and time of export will be added to the file name automatically and displayed together with the path.
 - Click 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 - Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
@@ -49,11 +49,11 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ## Importujte nastavení
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- Hamburger menu (v levém horním rohu obrazovky)
+- Hamburger menu (top left corner of screen)
 - Údržba
-- Importovat nastavení
+- Importujte nastavení
 
 ```{image} ../images/AAPS_ImportSettings1.png
 :alt: AndroidAPS import settings 1
@@ -62,7 +62,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 - All files from folder AAPS/preferences/ on your phone will be shown in the list.
 - Select file.
 - Confirm import by clicking 'OK'.
-- Enter [master password](../Configuration/Preferences#master-password) and click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS import settings 2
@@ -76,7 +76,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 
 ### Note for Dana RS users
 
-- Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také naimportována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth.
+- Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth.
 - Please pair new phone and pump manually.
 
 ### Import settings from previous versions (before AAPS 2.7)

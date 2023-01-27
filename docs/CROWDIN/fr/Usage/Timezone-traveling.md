@@ -24,7 +24,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probablement pas une option si vous utilisez [l'application LibreLink patchée](../Hardware/Libre2#changement-de-fuseau-horaire) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Option 2: Supprimer l'historique de la pompe
 

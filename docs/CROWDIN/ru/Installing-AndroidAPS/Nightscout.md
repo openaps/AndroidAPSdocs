@@ -21,7 +21,7 @@
 
 ### Дополнительные параметры защиты
 
-Регулярно обновляйте программное обеспечение телефона, как описано в разделе [ безопасность прежде всего](../Getting-Started/Safety-first.md).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## Установка Nightscout вручную
 

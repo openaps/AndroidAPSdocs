@@ -24,7 +24,7 @@ Norint išvengti šito, yra du pasirinkimai:
    
    * pvz.: Viena -> Niujorkas: profilio perjungimas +6 valandos
    * pvz.: Viena -> Sidnėjus: profilio perjungimas -8 valandos
-* Tikriausiai tai nėra aktualu, jei naudojate [modifikuotą Libre Link programą](../Hardware/Libre2#time-zone-travelling). Ten reikia nustatyti automatinį laiko juostos keitimą, kad būtų galima paleisti naują Libre 2 jutiklį.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
 

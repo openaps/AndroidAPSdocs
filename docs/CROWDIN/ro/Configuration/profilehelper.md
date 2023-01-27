@@ -7,40 +7,37 @@ Profilul de ajutor are două funcţii:
 
 ## Profil pentru copii (până la 18 ani)
 
-\*\* Notă importantă: \*\*
+**Important note:**
 
-Asistentul de profil este destinat să te ajute să găsești profilul inițial pentru copilul tău. Chiar dacă se bazează pe seturi de date a doua spitale diferite, discuta mereu cu echipa ta medicala înainte de a folosi un profil nou! \*\*
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 Asistentul de profil oferă seturi de date de la două spitale diferite pentru copii pentru a găsi profilul iniţial pentru copilul dumneavoastră de până la 18 ani.
 
-```{eval-rst}
-.. imagine:: ../images/ProfileHelperKids1.png
-  :alt: Profilul Helper Kids 1
+```{image} ../images/ProfileHelperKids1.png
+:alt: Profilul Helper Kids 1
 ```
 
 1. Selectați 'Asistent de profil ' din meniul 3 puncte din partea dreaptă sus a ecranului.
-2. Ajustați profilul implicit (bazat pe setul de date al spitalului) introducând vârsta copilului şi doza totala zilnica de insulina **sau** greutatea.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Modificați ecranul dând click pe bara gri etichetată 2 în dreapta.
 4. Apăsați lung pe 'Profilul curent' și selectați profilul implicit DPV.
 
-```{eval-rst}
-.. imagine:: ../images/ProfileHelperKids2.png
-  :alt: Profilul Helper Kids 2
+```{image} ../images/ProfileHelperKids2.png
+:alt: Profilul Helper Kids 2
 ```
 
-5. Ajustaţi profilul implicit DPV (bazat pe un alt set de date din spital) introducând vârsta copilului, procent de insulina bazala din cea totala şi doza totala zilnica de insulina **sau** greutatea.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
 7. Se va afișa o comparație între cele două profiluri ajustate.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Compară două profiluri
 
 You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
 
-```{eval-rst}
-.. imagine:: ../images/ProfileHelper1.png
-  :alt: Profile Helper 1
+```{image} ../images/ProfileHelper1.png
+:alt: Profile Helper 1
 ```
 
 1. Selectați 'Asistent de profil ' din meniul 3 puncte din partea dreaptă sus a ecranului.
@@ -48,9 +45,8 @@ You can use profile helper also to compare to different profiles or profile swit
 3. Apăsați lung numele profilului / schimbare profil ('Aktuell_LP' din captura de ecran de mai sus) și selectați un profil / schimbare profil din listă.
 4. Modificați ecranul dând click pe bara gri etichetată 2 în dreapta.
 
-```{eval-rst}
-.. imagine:: ../images/ProfileHelper2.png
-  :alt: Profile Helper 2
+```{image} ../images/ProfileHelper2.png
+:alt: Profile Helper 2
 ```
 
 5. În mod standard 'Profilul curent' este oferit pentru a compara candidatul.
@@ -61,11 +57,10 @@ You can use profile helper also to compare to different profiles or profile swit
 
 ## Copiere profil
 
-If you use [local profiles](../Configuration/Config-Builder#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
-```{eval-rst}
-.. imagine:: ../images/ProfileHelperClone.png
-  :alt: Profile Helper copiere profil / schimbare profil
+```{image} ../images/ProfileHelperClone.png
+:alt: Profile Helper copiere profil / schimbare profil
 ```
 
 1. Selectaţi profilul dorit / schimbare profil aşa cum este descris mai sus.

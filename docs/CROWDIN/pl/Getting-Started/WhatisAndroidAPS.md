@@ -10,23 +10,19 @@ A note of caution: AndroidAPS is not regulated by any medical authority in any c
 - Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
 - Maintains and monitors the system to ensure it is working properly
 
-```{eval-rst}
-.. notatka::
-        **Disclaimer and Warning**
+:::{note}
+**Disclaimer and Warning**
 
-        * Wszystkie informacje, przemyślenia i kod opisane tutaj są przeznaczone wyłącznie do celów informacyjnych i edukacyjnych. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.
+- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout obecnie nie podejmuje prób zachowania zgodności z zasadami ochrony prywatności HIPAA. Korzystasz z Nightscout i AndroidAPS na własne ryzyko i nie używaj informacji ani kodu do podejmowania decyzji medycznych.
+- Use of code from github.com is without warranty or formal support of any kind. Proszę zapoznać się LICENCJA w repozytorium aby poznać szczegóły.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Ich wykorzystanie służy celom informacyjnym i nie oznacza żadnego powiązania z nimi ani poparcia.
 
-        * Korzystanie z kodu pobranego ze strony github.com nie jest objęte żadną gwarancją ani formalnym wsparciem. Proszę zapoznać się LICENCJA w repozytorium aby poznać szczegóły.
-
-        * Wszystkie nazwy produktów i firm, znaki handlowe, znaki serwisowe, zastrzeżone znaki handlowe i zastrzeżone znaki serwisowe są własnością ich odpowiednich właścicieli. Ich wykorzystanie służy celom informacyjnym i nie oznacza żadnego powiązania z nimi ani poparcia.
-
-        Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
-```
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
 If you're ready for the challenge, please read on.
 
-Primary goals behind AndroidAPS
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
+## Primary goals behind AndroidAPS
 
 - An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
 - An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
@@ -38,7 +34,6 @@ Primary goals behind AndroidAPS
 - An app closely integrated with Nightscout
 - An app in which the user is in control of safety constraints
 
-How to start
-== == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == == ==
-Of course, all of this content here is very important, but can be in the beginning quite confusing.
-A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
+## How to start
+
+Of course, all of this content here is very important, but can be in the beginning quite confusing. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).

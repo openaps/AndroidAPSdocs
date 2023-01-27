@@ -25,7 +25,7 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features#advanced-meal-assist-ama">Wiki - AMA</a>
+    <a href="../Usage/Open-APS-features.md#advanced-meal-assist-ama">Wiki - AMA</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>Stavový indikátor nízké baterie na domovské obrazovce</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.md">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>BG</strong></td>
@@ -74,7 +74,7 @@
 <td><strong>Zdroj glykémie (BG source)</strong></td>
  <td>The blood glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder#bg-source">Wiki - Zdroj glykémie</a></td>
+ <td><a href="../Configuration/Config-Builder.md#bg-source">Wiki - Zdroj glykémie</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>ukazatel stáří kanyly na domácí stránce</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.md">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -116,7 +116,7 @@
  <td><strong>Uzavřená smyčka (Closed Loop)</strong></td>
  <td>Systémy uzavřené smyčky provádějí automatické změny bazálních dávek, bez potřeby schvalování ze strany uživatele, na základě algoritmu</td>
  <td>Otevřená smyčka</td>
- <td><a href="../Configuration/Config-Builder#closed-loop">Wiki - Uzavřená smyčka</a></td>
+ <td><a href="../Configuration/Config-Builder.md#closed-loop">Wiki - Uzavřená smyčka</a></td>
 </tr>
 <tr>
  <td><strong>COB</strong></td>
@@ -128,19 +128,19 @@
  <td><strong>Doba působnosti inzulínu</strong></td>
  <td>Doba působnosti inzulinu (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#insulin">Wiki - Typy inzulinů</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.md#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
  <td>Letní čas (daylight savings time)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst">Wiki - DST</a></td>
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
  <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
+ <td><a href="../Usage/Extended-Carbs.md#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
@@ -193,26 +193,26 @@
 <tr>
  <td><strong>LGS</strong></td>
  <td>Vypnutí při nízké glykémii (Low Glucose Suspend)<br>Systém AAPS sníží nebo zastaví bazál, pokud glykémie klesá. Pokud však glykémie stoupá, pak zvýší bazál pouze v případě záporného IOB (v důsledku předchozího LGS), v opačném případě zůstávají bazální dávky stejné jako ve vašem zvoleném profilu. Bez možnosti zvýšit bazál při srovnání křivky glykémie se vám dočasně může stávat, že po vyřešení hypoglykémie, bude následovat přílišný vzestup glykémie.</td>
- <td><a href="../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">cíl 6</a></td>
+ <td><a href="../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">cíl 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>Bezplatný open-source operační systém pro smartphony atd.<br>alternativní OS pro smartphony, které nevyužívají systém Android 8.1 (Oreo)<br>(pokud používáte pumpu Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump#hardware-requirements">Wiki - Pumpa Combo</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.md#hardware-requirements">Wiki - Pumpa Combo</a></td>
 </tr>
 <tr>
  <td><strong>Soubory protokolů</strong></td>
  <td>record of all AAPS actions (useful for troubleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles#accessing-logfiles">Wiki - Soubory protokolů</a></td>
+ <td><a href="../Usage/Accessing-logfiles.md#accessing-logfiles">Wiki - Soubory protokolů</a></td>
 </tr>
 <tr>
  <td><strong>maxIOB</strong></td>
  <td>Bezpečnostní funkce - maximální celkový IOB, který systém AAPS nemůže překročit</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -224,7 +224,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>safety feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your BG reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#absorption-settings">Wiki - Konfigurace</a></td>
+ <td><a href="../Configuration/Config-Builder.md#absorption-settings">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -242,7 +242,7 @@
  <td><strong>NS Client</strong></td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.md#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Cíle</strong></td>
@@ -260,37 +260,37 @@
  <td><strong>Otevřená smyčka</strong></td>
  <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
  <td>Uzavřená smyčka (Closed Loop)</td>
- <td><a href="../Configuration/Config-Builder#open-loop">Wiki - Konfigurace</a></td>
+ <td><a href="../Configuration/Config-Builder.md#open-loop">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
  <td>Detekce citlivosti<br>„implementace referenčního návrhu verze 0/1“ - klíčový algoritmus na pozadí OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB#sensitivity-detection">Wiki - Detekce citlivosti</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.md#sensitivity-detection">Wiki - Detekce citlivosti</a></td>
 </tr>
 <tr>
  <td><strong>Peak time</strong></td>
  <td>Doba maximálního účinku podaného inzulinu</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#insulin">Wiki - Konfigurace</a></td>
+ <td><a href="../Configuration/Config-Builder.md#insulin">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td><strong>PH</strong></td>
  <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots#treatment">Snímky obrazovky</a></td>
+ <td><a href="../Getting-Started/Screenshots.md#treatment">Snímky obrazovky</a></td>
 </tr>
 <tr>
  <td><strong>Predikce</strong></td>
  <td>predikce vývoje glykémie založená na různých výpočtech</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes#overview-tab">Wiki - křivky predikce</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.md#overview-tab">Wiki - křivky predikce</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder.md#profile">Wiki - profile</a></td>
 </tr>
 <tr>
  <td><strong>Přepínání profilu</strong></td>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na starý zásobník</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.md">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.md">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>
@@ -332,13 +332,13 @@
  <td><strong>Sensor noise</strong></td>
  <td>unstable CGM readings leading to "jumping" values</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
- <td><a href="../Usage/Open-APS-features#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.md#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>Super bolus</strong></td>
@@ -368,7 +368,7 @@
  <td><strong>TT</strong></td>
  <td>temporary target<br>temporary increase/decrease of BG target (range) e.g. for eating or sport activities</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget.md#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
  <td><strong>UAM</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>Pozadí</strong></td>
  <td>AndroidAPS background image</td>
  <td></td>
- <td><a href="../Getting-Started/Phones#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones.md#phone-background">see phones page</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>

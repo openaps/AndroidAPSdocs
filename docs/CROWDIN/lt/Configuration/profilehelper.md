@@ -7,9 +7,9 @@ Profilio pagalbininkas siūlo dvi funkcijas:
 
 ## Vaikų, iki 18 metų, profilis
 
-**Svarbi pastaba:**
+**Important note:**
 
-\*\* Profilio pagalbininkas yra skirtas padėti jums sukurti pradinį profilį savo vaikui. Net jei tai pagrįsta dviejų skirtingų ligoninių duomenimis, prieš nustatydami naują profilį, visada aptarkite tai su savo diabeto komanda!\*\*
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rinkinius. Tai yra pagalba jums kuriant pradinį profilį jūsų vaikui (iki 18 metų).
 
@@ -18,7 +18,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 ```
 
 1. Trijų taškų meniu dešinėje ekrano dešinėje pusėje pasirinkite "Profilio pagalbininkas".
-2. Koreguokite numatytąjį profilį (pagal ligoninės duomenų įrašus) įvesdami vaiko amžių ir bendrą paros insulino kiekį **arba** svorį.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Perjunkite ekranus spustelėdami pilką mygtuką dešinėje, pažymėtą „2“.
 4. Ilgai paspauskite „Dabartinis profilis“ ir pasirinkite standartinį profilį.
 
@@ -26,11 +26,11 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 :alt: Profilio pagalbininkas Vaikams 2
 ```
 
-5. Koreguokite DPV numatytąjį profilį (pagal ligoninės duomenų įrašus) įvesdami vaiko amžių, bazinio insulino procentą ir bendrą paros insulino kiekį *arba\** svorį.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Ekrano viršuje paspauskite mygtuką "PALYGINTI PROFILIUS".
 7. Bus parodytas dviejų koreguotų profilių palyginimas.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Dviejų profilių palyginimus
 
@@ -57,7 +57,7 @@ You can use profile helper also to compare to different profiles or profile swit
 
 ## Profilio klonavimas
 
-If you use [local profiles](../Configuration/Config-Builder#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profilio pagalbininko profilio klonavimas / profilio perjungimas

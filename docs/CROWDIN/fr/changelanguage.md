@@ -13,7 +13,7 @@ Ou cliquez simplement sur l'une des langues suivantes :
 
 - [Anglais](https://androidaps.readthedocs.io/en/latest/)
 - [Tchèque](https://androidaps.readthedocs.io/cs/latest/)
-- [Néerlandais](https://androidaps.readthedocs.io/nl/latest/)
+- [Hollandais](https://androidaps.readthedocs.io/nl/latest/)
 - [Allemand](https://androidaps.readthedocs.io/de/latest/)
 - [Grec](https://androidaps.readthedocs.io/el/latest/)
 - [Coréen](https://androidaps.readthedocs.io/ko/latest/)

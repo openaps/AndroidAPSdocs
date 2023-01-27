@@ -48,8 +48,8 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 ### Traduire les liens de titre
 
-* Lorsqu'un lien interne ne mène qu'à une page (par ex. ../Usage/Profiles.md), aucune traduction n'est nécessaire.
-* Les liens internes vers un titre spécifique (par ex. ..//Usage/Profiles#percentage) doivent être traduits car le titre de l'autre langue est différent de l'original anglais.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Si vous traduisez un titre, vous pouvez le transformer en lien d'ancrage (partie après # - par ex. #percentage) en transformant toutes les lettres en minuscules, en transformant les caractères spéciaux en caractères standard, en remplaçant les espaces par - (signe moins) et en ignorant les signes de ponctuation.
     
     Voici quelques exemples :
@@ -62,7 +62,7 @@ Lorsqu'un correcteur approuve une traduction, elle sera ajoutée à la prochaine
 
 #### Traduction des liens dans les fichiers Markdown (.md)
 
-À l'heure actuelle deux [formats de documents](./make-a-PR#syntaxe-du-code) sont utilisés dans les docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Alors que les fichiers écrits avec la syntaxe reStructuredText (.rst) affichent toujours l'adresse de lien dans Crowdin, pour les fichiers écrit avec la syntaxe Markdown (.md), vous devrez peut-être activer l'affichage des balises HTML pour traduire l'adresse du lien.
 
 * * *
 
@@ -80,7 +80,7 @@ cliquez sur la roue crantée pour ouvrir les paramètres, sélectionnez "Show" e
 
 ![Crowdin - afficher les balises HTML](./images/CrowdinShowURL2.png)
 
-Les liens seront alors affichés au format HTML standard et pourront être traduits en tenant compte des règles mentionnées [ci-dessus](./translations#traduire-les-liens-de-titre).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - affichage des balises HTML](./images/CrowdinShowURL3.png)
 

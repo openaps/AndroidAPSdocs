@@ -23,4 +23,4 @@
 
 ## Cestovanie medzi časovými pásmami s pumpou Dana R
 
-Viac informácií ohľadne cestovanie naprieč časovými pásmami nájdete v časti [Prekračovanie časových pásiem s pumpami](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).

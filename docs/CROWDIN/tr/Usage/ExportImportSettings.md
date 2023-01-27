@@ -1,4 +1,4 @@
-# Dışa aktarma/içe aktarma ayarları
+# Export & import settings
 
 ## Ayarları ne zaman dışa aktarmalıyım?
 
@@ -11,82 +11,82 @@ Dışa aktarılan ayarlar, telefondan bir buluta veya bilgisayarınıza kopyalan
 Bir Windows 10 bilgisayarında şöyle görünür:
 
 ```{image} ../images/AAPS_ExImportSettingsWin.png
-:alt: "Bilgisayara ba\u011Fl\u0131 AndroidAPS telefonda Preferences klas\xF6r\xFC"
+:alt: Bilgisayara bağlı AndroidAPS telefonda Preferences klasörü
 ```
 
 ## Dışa aktarılan bilgiler
 
 Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bir parçasıdır:
 
-- [Otomasyon](../Usage/Automation.md) olayları
-- [Konfigürasyon ayarları](../Configuration/Config-Builder.md)
-- [Yerel profil](../Configuration/Config-Builder#local-profile) ayarları
-- [Görevler](../Usage/Objectives.md) durum dahil. [durumları dahil](../Usage/Objectives#objective-3-prove-your-knowledge)
-- [Tercihler](../Configuration/Preferences.md) NS Client ayarları [dahil](../Configuration/Preferences#nsclient)
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Şifreli yedekleme formatı
 
-Ayarların yedeği, [Tercihler](../Configuration/Preferences#master-password) içinde ayarlanabilen bir ana parola ile şifrelenir.
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Dışa aktarma ayarları
 
-- Hamburger menü (ekranın sol üst kısmında)
+- Hamburger menu (top left corner of screen)
 - Bakım
 - Dışa aktarma ayarları
 
 ```{image} ../images/AAPS_ExportSettings1.png
-:alt: "AndroidAPS d\u0131\u015Fa aktarma ayarlar\u0131 1"
+:alt: AndroidAPS dışa aktarma ayarları 1
 ```
 
-- Dışa aktarma tarihi ve saati dosya adına otomatik olarak eklenecek ve yol ile birlikte görüntülenecektir.
-- 'Tamam'ı tıklayın.
-- [ana parolayı](../Configuration/Preferences#master-password) girin ve 'Tamam'ı tıklayın.
-- Ekranın alt kısmında başarılı dışa aktarma görünecektir.
+- Date and time of export will be added to the file name automatically and displayed together with the path.
+- Click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
+- Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
-:alt: "AndroidAPS d\u0131\u015Fa aktarma ayarlar\u0131 2"
+:alt: AndroidAPS dışa aktarma ayarları 2
 ```
 
 ## İçe aktarma ayarları
 
-**Aktif bir Pod varken ayarları içe aktarmayın** - ayrıntılar için [Omnipod sayfasına bakın](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- Hamburger menü (ekranın sol üst kısmında)
+- Hamburger menu (top left corner of screen)
 - Bakım
 - İçe aktarma ayarları
 
 ```{image} ../images/AAPS_ImportSettings1.png
-:alt: "AndroidAPS i\xE7e aktarma ayarlar\u0131 1"
+:alt: AndroidAPS içe aktarma ayarları 1
 ```
 
-- Telefonunuzdaki AAPS/preferences/ klasöründeki tüm dosyalar listede gösterilecektir.
-- Dosyayı seçin.
-- 'Tamam'ı tıklayarak içe aktarmayı onaylayın.
-- [ana parolayı](../Configuration/Preferences#master-password) girin ve 'Tamam'ı tıklayın.
+- All files from folder AAPS/preferences/ on your phone will be shown in the list.
+- Select file.
+- Confirm import by clicking 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
-:alt: "AndroidAPS i\xE7e aktarma ayarlar\u0131 2"
+:alt: AndroidAPS içe aktarma ayarları 2
 ```
 
-- Aktarılacak dosyaya ilişkin ayrıntılar gösterilecektir.
-- İçe aktarmayı iptal etmek için son şansınız.
-- 'İçe Aktar'ı tıklayın.
-- 'Tamam'ı tıklayarak mesajı onaylayın.
-- İçe aktarılan tercihleri etkinleştirmek için AAPS yeniden başlatılacak.
+- Details on the preference file will be shown.
+- Last option to cancel import.
+- Click 'Import'.
+- Confirm message by clicking 'OK'.
+- AAPS will be restarted in order to activate imported preferences.
 
 ### Dana RS kullanıcıları için not
 
-- Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Fakat telefonunuz henüz pompa ile eşleşmemiştir.
-- Lütfen yeni telefonu ve pompayı manuel olarak eşleştirin.
+- Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz.
+- Please pair new phone and pump manually.
 
 ### Ayarları önceki sürümlerden içe aktarın (AAPS 2.7'den önce)
 
-- "Eski" ayarlar dosyası ('AndroidAPSPreferences' olarak adlandırılır - dosya uzantısı olmadan) akıllı telefonunuzun kök klasöründe olmalıdır (/storage/emulated/0).
-- "Eski" dosyayı yeni dışa aktarılan ayarlarla (AAPS/tercihler) aynı klasöre koymayın.
-- İçe aktarma iletişim kutusundaki listenin en altında "eski" dosyayı bulacaksınız.
+- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
+- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+- You will find the "old" file on the bottom of the list in the import dialogue.
 
 ## Ayarlar dosyasını transfer etme
 
-- Ayarlar dosyasını yeni bir telefona aktarmanın en iyi yolu USB kablosu veya bulut hizmetidir (yani Google Drive).
-- Kılavuzlar web'de bulunabilir, [Android yardım sayfaları](https://support.google.com/android/answer/9064445?hl=en).
-- Transfer etmeyle ilgili sorun yaşıyorsanız, dosya transferinin başka bir yolunu deneyin.
+- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
+- If you experience problems with the transferred file try another way to transfer file.

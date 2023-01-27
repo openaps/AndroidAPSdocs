@@ -30,7 +30,7 @@ La fonctionnalité SMB contient des mécanismes de sécurité:
 
 3. Des calculs supplémentaires sont effectués pour prédire l'évolution de la glycémie, par ex. RNS (ou Repas Non Signalés). Même si aucun glucide n'est renseigné par l'utilisateur, RNS peut détecter automatiquement une augmentation significative des niveaux de glycémie liés à des repas, l'adrénaline ou d'autres facteurs et essaiera de les ajuster avec des SMB. Pour être en sécurité, cela marche aussi dans l'autre sens et peut arrêter les SMB plus tôt si une chute rapide inattendue de la glycémie survient. C'est pourquoi RNS doit toujours être activé avec les SMB.
 
-**Vous devez avoir démarré [l'objectif 9](../Usage/Objectives#objectif-9-activation-de-fonctionnalites-supplementaires-pour-l-utilisation-en-journee-telles-que-la-fonction-smb) pour utiliser les SMB.**
+**You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
 
 Voir aussi : [Documentation OpenAPS pour oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) et [les infos de Tim sur les SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
@@ -52,7 +52,7 @@ AndroidAPS limite la valeur ainsi :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### IA totale maximale pour OpenAPS \[U\] (OpenAPS "max-IA")
 
@@ -63,7 +63,7 @@ En utilisant OpenAPS SMB, maxIA est calculé différemment de OpenAPS AMA. Dans 
     maxIA = moyenne bolus repas + 3 x max basal quotidien
     
 
-Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale Quotidienne (DTQ) moyenne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. La 'limite en dur' pour maxIA est supérieure à la limite [AMA](../Usage/Open-APS-features#max-u-h-pour-le-debit-temp-basal-openaps-max-basal).
+Soyez prudent et patient et modifiez les paramètres petit à petit. C'est différent pour tout le monde et dépend aussi de la Dose Totale Quotidienne (DTQ) moyenne. Pour des raisons de sécurité, il y a une limite, qui dépend de l'âge du patient. The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features.md#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 * Enfant : 3
 * Adolescent : 7
@@ -71,7 +71,7 @@ Soyez prudent et patient et modifiez les paramètres petit à petit. C'est diff�
 * Adulte résistant à l'insuline : 25
 * Grossesse : 40
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 Voir aussi la [documentation OpenAPS pour SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
@@ -97,13 +97,13 @@ SMB fonctionne lorsqu'il existe une cible temporaire élevée active (activité,
 
 ### Activer en permanence les SMB
 
-SMB fonctionne en permanence (indépendamment des GA, des cibles temp ou des bolus). Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour le moment, il ne fonctionne qu'avec un Dexcom G5 ou G6, si vous utilisez ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
+SMB fonctionne en permanence (indépendamment des GA, des cibles temp ou des bolus). Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de GLY a une variation trop importante, le G5/G6 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, ‘SMB en permanence’ sera désactivé jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Activer SMB après ingestion de glucides
 
-Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. Pour le moment, il ne fonctionne qu'avec un Dexcom G5 ou G6, si vous utilisez ['BYODA'](../Hardware/DexcomG6#si-vous-utilisez-g6-avec-votre-propre-application-dexcom) ou le "mode natif" dans xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
+Le SMB marche pendant 6 h après avoir manger des glucides, même si les GA sont à 0. Pour des raisons de sécurité, cette option n'est possible que pour les sources GLY ayant un bon filtrage des données bruyantes. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. Si une valeur de GLY a une variation trop importante, le G5 ne l'envoie pas et attend la valeur suivante 5 minutes après.
 
 Pour les autres MGC/MGF comme le Freestyle Libre, les ‘SMB sans glucides actifs’ seront désactivés jusqu'à ce que xDrip+ ait un meilleur plugin de filtrage. Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
@@ -165,7 +165,7 @@ Les paramètres codés en dur dans AndroidAPS sont les suivants :
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### IA basale max que OpenAPS pourra délivrer \[U\] (OpenAPS "max-iob")
 
@@ -179,7 +179,7 @@ La valeur par défaut est 2, mais vous pouvez augmenter ce paramètre lentement 
 * Adulte résistant à l'insuline : 12
 * Grossesse : 25
 
-*Voir aussi [l'aperçu des limites codées en dur](../Usage/Open-APS-features#apercu-des-limites-codees-en-dur).*
+*See also [overview of hard-coded limits](../Usage/Open-APS-features.md#overview-of-hard-coded-limits).*
 
 ### Activer AMA Autosens
 

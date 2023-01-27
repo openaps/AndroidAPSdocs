@@ -1,179 +1,236 @@
 # Устранение неполадок Android Studio
 
 ## Потеряно хранилище ключей
-
 Если вы используете одно и то же хранилище ключей при обновлении AndroidAPS, вам не нужно деинсталлировать предыдущую версию на смартфоне. Поэтому рекомендуется хранилище ключей размещать в надежном месте.
 
-На случай, если вы не можете найти свое старое хранилище ключей, выполните следующие действия:
+If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
-1. [Экспорт настроек](../Usage/ExportImportSettings#export-settings) на вашем телефоне.
-2. Скопируйте настройки вашего телефона во внешнее местоположение (напр. ваш компьютер, служба облачного хранения...).
-3. Убедитесь, что файл параметров "Параметры AndroidAPS" сохранен.
-4. Сгенерируйте подписанный apk новой версии, как описано на странице обновления \<../Instaling-AndroidAPS/Update-to-new-version.md> \` \_.
+In case you cannot find your old keystore or its password anymore, proceed as follows:
+
+1. [Export settings](../Usage/ExportImportSettings.md#export-settings) on your phone.
+2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
+4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Деинсталлируйте предыдущую версию AAPS на вашем телефоне.
 6. Установите новую версию AAPS на свой телефон.
-7. [Импортируйте настройки](../Usage/ExportImportSettings#export-settings) - если не можете найти их на вашем телефоне, скопируйте их из внешнего хранилища.
-8. Продолжайте пользоваться циклом.
+7. [Import settings](../Usage/ExportImportSettings.md#import-settings) to restore your objectives and configuration.
+8. Check your battery optimization options and disable them again.
 
-## Error "on demand" Configuration
+   If you can't find them on your phone copy them from the external storage to your phone.
+8. Keep on looping.
 
-Если сборка выполнена с ошибкой, относящейся к "выборочной конфигурации", можно сделать следующее:
-\* Откройте окно настроек, нажав Файл > Настройки (на Mac, Android Studio > Настройки).
-\* В левой панели нажмите Сборка, Выполнение, Развертывание > Компилятор.
-Снимите флажок с ячейки "выборочная конфигурация".
-\* Нажмите Применить или OK.
+## Gradle Sync failed
+Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
-## Предупреждение компилятора Kotlin
+  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-Если сборка завершена успешно, но вы получаете предупреждения компилятора Kotlin, просто проигнорируйте эти предупреждения.
+These are the usual gradle sync failures:
+* [Неодобренные изменения](#uncommitted-changes)
+* [No cached version of ... available](#could-not-resolve-no-cached-version)
+* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
-Приложение успешно построено и может быть перенесено на телефон.
+*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
-```{eval-rst}
-.. изображение:: ../images/GIT_WarningIgnore.PNG
-  :alt: игнорировать предупреждение компилятора Koline
-```
+### Неодобренные изменения
 
-## Ключ создан с ошибками
+If you receive a failure message like
 
-При создании нового хранилища ключей для построения подписанного APK в Windows может появиться следующее сообщение об ошибке
+![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-```{eval-rst}
-.. изображение:: ../images/AndroidStudio35SigningKeys.png
-  :alt: Ключ создан с ошибками
-```
+#### Step 1 - Check git installation
+  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+    ```
+    git --version
+    ```
 
-Это, кажется, ошибка в Android Studio 3.5.1 и в среде Java в Windows. Ключ создается правильно, но рекомендация выводится как ошибка. В настоящее время это можно игнорировать.
+    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
 
-## Не удалось загрузить… / Работа оффлайн
+    Note: There is a space and two hyphens between git and version!
 
-Если вы получите подобное сообщение об ошибке
+  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
 
-```{eval-rst}
-.. изображение:: ../images/GIT_Offline1.jpg
-  :alt: Не удалось загрузить предупреждение
-```
+  * In case you get an message saying
+    ```
+    Git: command not found
+    ```
+    your Git installation is not right.
 
-убедитесь, что 'Автономная работа' выключена.
+  * [Check git installation](../Installing-AndroidAPS/git-install.md#check-git-settings-in-android-studio)
 
-Файл -> параметры
+  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
-```{eval-rst}
-.. изображение:: ../images/GIT_Offline2.jpg
-  :alt: Параметры автономной работы
-```
+  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
 
-## Ошибка: buildOutput.apkData не может быть пустым
+  * Search your computer for a file "git.exe".
 
-Иногда появляется сообщение об ошибке при компоновке apk
+    Note for yourself, what directory it is in.
 
-> `Ошибки при сборке APK.`
->
-> `Ошибка: buildOutput.apkData не может быть пустым`
+  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
 
-Эта известная ошибка в Android Studio 3.5 и, вероятно, она не будет исправлена до Android Studio 3.6. Есть три варианта:
+  * Save and close.
 
-1. Вручную удалите три папки компоновки (обычная "сборка", папка компоновки в "app" и папка компоновки в "wear") и снова сгенерируйте подписанный apk.
-2. Установите папку назначения в папку проекта, а не в папку приложения, как описано в этом видео \<<https://www.youtube.com/watch?v=BWUFWzG-kag>>\`\_.
-3. Измените папку назначения apk (другое расположение).
+  * Restart Android Studio.
 
-## Не удается запустить демон процесс
+#### Step 2: Check for uncommitted changes.
 
-Если вы видите подобное сообщение об ошибке, вы, вероятно, используете ОС Windows 10, 32-bit. Она не поддерживается Android Studio 3.5.1 и выше. В Windows 10 следовать использовать 64-битную операционную систему.
+  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
 
-В интернете много руководств, как определить, у вас 32-или 64-битная ОС- например " это \<<https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/>>\` \_.
+    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
 
-```{eval-rst}
-.. изображение:: ../images/AndroidStudioWin10_32bitError.png
-  :alt: снимок экрана не удалось запустить процесс демона
+    * Right click on "Default Changeset" and select "Rollback"
 
-```
+      ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-## Нет данных CGM мониторинга
+    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
-- В случае, если вы используете xDrip+: идентифицируйте ресивер, как описано в настройках xDrip+ \<../Configuration/xdrip#identify-receiver>\`\_.
+  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
 
-ContextEdit.
-\* В случае, если вы используете пропатченное приложение Dexcom G6: это приложение устарело. Используйте вместо этого самостоятельно построенное приложение Dexcom [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
+    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
 
-## Неодобренные изменения
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
 
-Если вы получите сообщение об ошибке, как это
+      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
 
-```{eval-rst}
-.. изображение:: ../images/GIT_TerminalCheckOut0.PNG
-  :alt: отказ: незафиксированные изменения
-```
 
-### Вариант 1 - Проверить установку git
+#### Step 3: Resync Gradle (again)
 
-- возможно, git установлен неправильно (должен быть доступен по всему миру)
-- после установки Git в Windows и, нужно перезапустить компьютер или хотя бы раз выйти и снова войти в систему, чтобы сделать git глобально доступным
-- [Проверьте установку git](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
-- Если на вашем компьютере не отображается версия gti, но git установлен, убедитесь, что Android Studio знает, где находится [git. /Installing-AndroidAPS/git-install.html#set-git-path-in-android-studio>] на своем компьютере.
+Follow the instructions at [Gradle Resync](#gradle-resync).
 
-### Вариант 2 - Перезагрузка исходного кода
+### Android Gradle plugin requires Java 11 to run
 
-- В Android Studio выберите VCS -> GIT -> Сбросить HEAD
+  You might experience this error message:
 
-```{eval-rst}
-.. изображение:: ../images/GIT_TerminalCheckOut3.PNG
-  :alt: Сбросить HEAD
-```
+  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
-### Вариант 3 - проверить наличие обновлений
+  Click on "Gradle Settings" (1) to go to open the gradle settings.
 
-- Скопируйте «git checkout --» в буфер обмена (без кавычек)
+  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
 
-- Переключитесь на терминал в Android Studio (слева с нижней стороны окна Android Studio)
+  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  ```{eval-rst}
-  .. изображение:: ../images/GIT_TerminalCheckOut1.PNG
-    :alt: Терминал Android Studio
-  ```
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
 
-- Вставьте скопированный текст и нажмите ввод
+  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  ```{eval-rst}
-  .. изображение:: ../images/GIT_TerminalCheckOut2.PNG
-    :alt: Проверка GIT успешно завершена
-  ```
+  Press "OK" to save and close the settings dialog.
 
-## Приложение не установлено
+  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
-```{eval-rst}
-.. изображение:: ../images/Update_AppNotInstalled.png
-  :alt: приложение не установлено
-```
+  Now you need to trigger a [Gradle Resync](#gradle-resync)
 
-- Убедитесь, что вы передали файл «full-release.apk» на ваш телефон.
-- Если на вашем телефоне появилось сообщение "приложение не установлено", то выполните следующее:
+### Could not resolve/No cached version
 
-1. [Экспортируйте параметры](../Usage/ExportImportSettings.md) (в версии AAPS, уже установленной на телефоне)
+  You might get this error message:
+
+    ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
+
+  * On the right side, open the Gradle tab (1).
+
+    Make sure the button shown at (2) is *NOT* selected.
+
+    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+
+  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+
+### Не удается запустить демон процесс
+
+  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+
+  If you are using Windows 10 you must use a 64-bit operating system.
+
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+
+  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+
+### Gradle Resync
+
+  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+
+
+  If you don't see the a message anymore, you can still trigger this manually:
+
+  * Open the Gradle tab (1) on the right border of Android Studio.
+
+    ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
+
+  * Right-click on AndroidAPS (2)
+
+  * Click on "Reload Gradle Project" (3)
+
+## Generate Signed APK generated successfully with 0 build variants
+
+When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+
+![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
+
+
+## App was created with compiler/kotlin warnings
+
+If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+
+ ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+
+Your app was build successfully and can be transferred to phone!
+
+
+## Key was created with errors
+
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
+
+![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
+
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+
+
+## No CGM data is received by AndroidAPS
+
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
+
+
+## App not installed
+
+![phone app note installed](../images/Update_AppNotInstalled.png)
+
+* Make sure you have transferred the “app-full-release.apk” file to your phone.
+* If "App not installed" is displayed on your phone follow these steps:
+
+1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
 2. Удалите AAPS с телефона.
-3. Включите режим полета и выключите Bluetooth.
+3. Enable airplane mode & turn off bluetooth.
 4. Установите новую версию («app-full-release.apk»)
-5. [Импортируйте настройки](../Usage/ExportImportSettings.md)
+5. [Выполните импорт настроек](../Usage/ExportImportSettings)
 6. Снова включите Bluetooth и отключите режим самолета
 
-## Приложение установлено, но старая версия
+## App installed but old version
 
-Если вы успешно построили приложение, перенесли его на телефон и установили его, но номер версии остается прежним, то вы могли пропустить шаг обновления [update your local copy](../Update-to-new-version#update-your-local-copy).
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy)
 
-## Ничего из вышеперечисленного не сработало
+## None of the above worked
 
-Если вышеперечисленные советы не помогли попробуйте начать сборку приложения с нуля:
+If non of the above tips helped you might consider building the app from scratch:
 
-1. [Экспортируйте параметры](../Usage/ExportImportSettings.md) (в версии AAPS, уже установленной на телефоне)
-2. Подготовьте пароль ключа и пароль хранилища. В случае, если вы забыле пароли, вы можете попытаться найти их в файлах проекта, как описано здесь \<<https://youtu.be/nS3wxnLgZOo>>\` \_. Или просто создайте новый файл хранения ключей.
-3. Постройте приложение с нуля, как описано [здесь](../Installing-AndroidAPS/Building-APK#download-code-and-additional-components).
+1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+
+2. Подготовьте пароль ключа и пароль хранилища. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+
+    Или просто создайте новый файл хранения ключей.
+
+3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code).
+
 4. Когда вы успешно собрали APK, удалите существующее приложение с телефона, перенесите новое приложение на ваш телефон и установите.
-5. [Импортируйте настройки](../Usage/ExportImportSettings.md)
+5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
+6. You should check your battery optimization options and disable them again.
 
-## Сценарий худшего варианта
+## Worst case scenario
 
-Если даже создание приложения с нуля не решает проблему, попробуйте полностью удалить Android Studio. Некоторые пользователи сообщили, что это решило проблему.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-\*\* Обязательно деинсталлируйте все файлы, связанные с Android Studio. * * Если вы не полностью удалите Android Studio со всеми скрытыми файлами, деинсталляция может привести к новым проблемам, а не к решению существующих. Руководства по полной деинсталляции можно найти в Интернете, напр. \<<https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10>>.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
 
-Установите Android Studio с нуля, как описано ниже: \<../Installing-AndroidAPS/Building-APK#install-android-studio>\`\_ и **не обновляйте gradle**.
+[https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
+
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#install-android-studio).

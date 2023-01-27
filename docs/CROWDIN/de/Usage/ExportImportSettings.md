@@ -1,4 +1,4 @@
-# Einstellungen exportieren & importieren
+# Export & import settings
 
 ## Wann sollte man die Einstellungen exportieren?
 
@@ -18,30 +18,30 @@ Auf einem Windows 10 PC sieht es in etwa so aus:
 
 Neben anderen werden folgende Einstellungen exportiert:
 
-- [Automation](../Usage/Automation.md) Regeln
-- Einstellungen des [Konfigurations-Generators](../Configuration/Config-Builder.md)
-- Einstellungen der [lokalen Profile](../Configuration/Config-Builder#lokales-profil)
-- Status der [Ziele (Objectives)](../Usage/Objectives.md) inkl. [Ergebnisse der Multiple-Choice-Fragen](../Usage/Objectives#ziel-3-belege-dein-wissen)
-- [Einstellungen im 3-Punkte-Menü](../Configuration/Preferences.md) inkl. [NS Client Einstellungen](../Configuration/Preferences#nightscout-client)
+- [Automation](../Usage/Automation.md) events
+- [Config builder](../Configuration/Config-Builder.md) settings
+- [Local profile](../Configuration/Config-Builder.md#local-profile) settings
+- [Objectives](../Usage/Objectives.md) status incl. [exam results](../Usage/Objectives.md#objective-3-prove-your-knowledge)
+- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](../Configuration/Preferences.md#nsclient)
 
 ## Verschlüsseltes Backup-Format
 
-Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, das in den [Einstellungen](../Configuration/Preferences#master-passwort) festgelegt wird.
+Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
 ## Exportiere die Einstellungen
 
-- Hamburger Menü (drei Striche oben links am Bildschirm)
+- Hamburger menu (top left corner of screen)
 - Wartung
-- Einstellungen exportieren
+- Exportiere die Einstellungen
 
 ```{image} ../images/AAPS_ExportSettings1.png
 :alt: AndroidAPS Export der Einstellungen 1
 ```
 
-- Datum und Zeit des Exports werden automatisch an den Dateinamen angehängt und zusammen mit dem Pfad angezeigt.
-- Klicke auf "OK'.
-- Gib das [Master-Passwort](../Configuration/Preferences#master-passwort) ein und klicke 'OK'.
-- Der erfolgreiche Export wird am unteren Rand des Bildschirms angezeigt.
+- Date and time of export will be added to the file name automatically and displayed together with the path.
+- Click 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
+- Successful export will be prompted at bottom of the screen.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS Export der Einstellungen 2
@@ -49,44 +49,44 @@ Die Sicherung der Einstellungen wird mit einem Master-Passwort verschlüsselt, d
 
 ## Importiere die Einstellungen
 
-**Während einer aktiven Pod-Sitzung keine Einstellungen importieren** - weitere Details findest Du auf der [Seite zum Omnipod](../Configuration/OmnipodEros#import-settings-from-previous-aaps).
+**Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
-- Hamburger Menü (drei Striche oben links am Bildschirm)
+- Hamburger menu (top left corner of screen)
 - Wartung
-- Einstellungen importieren
+- Importiere die Einstellungen
 
 ```{image} ../images/AAPS_ImportSettings1.png
 :alt: AndroidAPS Import der Einstellungen 1
 ```
 
-- Alle Dateien im Verzeichnis AAPS/preferences/ auf Deinem Smartphone werden in der Liste angezeigt.
-- Datei auswählen.
-- Bestätige den Import durch Klick auf 'OK'.
-- Gib das [Master-Passwort](../Configuration/Preferences#master-passwort) ein und klicke 'OK'.
+- All files from folder AAPS/preferences/ on your phone will be shown in the list.
+- Select file.
+- Confirm import by clicking 'OK'.
+- Enter [master password](../Configuration/Preferences.md#master-password) and click 'OK'.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS Import der Einstellungen 2
 ```
 
-- Details zu der gewählten Datei werden angezeigt.
-- Letzte Option zum Abbrechen des Imports.
-- Klicke auf 'Importieren'.
-- Bestätige die Meldung durch Klick auf 'OK'.
-- AAPS wird neu gestartet, um importierte Einstellungen zu aktivieren.
+- Details on the preference file will be shown.
+- Last option to cancel import.
+- Click 'Import'.
+- Confirm message by clicking 'OK'.
+- AAPS will be restarted in order to activate imported preferences.
 
 ### Hinweis für Dana RS Nutzer
 
 - Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan.
-- Bitte stelle die Bluetooth-Verbindung zwischen Smartphone und Pumpe manuell her.
+- Please pair new phone and pump manually.
 
 ### Einstellungen aus früheren Versionen importieren (vor AAPS 2.7)
 
-- Die “alte” Datei mit den Einstellung (der Dateiname ist 'AndroidAPSPreferences' - ohne Dateiendung) muss sich im Stammordner (root folder) des Smartphones befinden (/storage/emulated/0).
-- Lege die "alte" Datei nicht in den gleichen Ordner wie die neuen exportierten Einstellungen (AAPS/Einstellungen).
-- Die "alte" Einstellungs-Datei findest Du am Ende der Liste im Import-Dialog.
+- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
+- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
+- You will find the "old" file on the bottom of the list in the import dialogue.
 
 ## Einstellungs-Datei übertragen
 
-- Der beste Weg, um Einstellungs-Datei auf ein neues Telefon zu übertragen, ist über ein USB-Kabel oder einen Cloud-Service (z.B. Google Drive).
-- Anleitungen dazu findest Du im Netz, z.B. [Android-Hilfe](https://support.google.com/android/answer/9064445?hl=de).
-- Wenn Probleme mit der übertragenen Datei auftreten, versuche eine andere Methode, um die Datei zu übertragen.
+- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
+- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
+- If you experience problems with the transferred file try another way to transfer file.

@@ -1,5 +1,7 @@
 # EOPatch2 Instruction Manual
 
+**Planned but not commited for AndroidAPS 3.2 (next version)!**
+
 The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
 
 The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
@@ -9,7 +11,8 @@ The smallest injectable dose of insulin when using the patch is 0.05 U. The Prof
 1. Select 'EOPatch2' in the Pump section.
 1. Press the Back key to return to the home screen.
 
-![Bild1](../../images/EOPatch/Bild1.png) ![Bild2](../../images/EOPatch/Bild2.png)
+
+![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
 
 ## Paramètres
 Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
@@ -27,7 +30,7 @@ This is a reminder to notify you of the time remaining before the current patch 
 ### Patch buzzer Reminder
 This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
 
-![Bild3](../../images/EOPatch/Bild3.png)
+![Bild3](../images/EOPatch/Bild3.png)
 
 ## Connecting the Patch
 
@@ -35,7 +38,7 @@ This is a reminder function for injections other than basal injection. If you ar
 
 Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
 
-![Bild4](../../images/EOPatch/Bild4.png)
+![Bild4](../images/EOPatch/Bild4.png)
 
 ### Connecting the patch
 Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
@@ -46,7 +49,7 @@ Insert the syringe needle into the insulin inlet on the patch and then slowly pu
 - The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
 - Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
 
-![Bild5](../../images/EOPatch/Bild5.png)
+![Bild5](../images/EOPatch/Bild5.png)
 
 ### patch pairing
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
@@ -57,13 +60,13 @@ The Patch pairing screen will be displayed, and pairing will be attempted automa
 - After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
 - After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
 
-![Bild6](../../images/EOPatch/Bild6.png) ![Bild7](../../images/EOPatch/Bild7.png) ![Bild8](../../images/EOPatch/Bild8.png)
+![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
 
 
 ### patch preparation
 After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
 
-![Bild9](../../images/EOPatch/Bild9.png)
+![Bild9](../images/EOPatch/Bild9.png)
 
 ### Patch attachment
 Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
@@ -73,7 +76,7 @@ Insulin should be injected in a spot with subcutaneous fat but few nerves or blo
 - Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
 - If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
 
-![Bild10](../../images/EOPatch/Bild10.png)
+![Bild10](../images/EOPatch/Bild10.png)
 
 ### Safety Check
 When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
@@ -82,7 +85,7 @@ When patching is complete, touch Start Safety Check. When the safety check is co
 
 - For safe use, do not turn the needle action lever until the safety check has been completed.
 
-![Bild11](../../images/EOPatch/Bild11.png) ![Bild12](../../images/EOPatch/Bild12.png)
+![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
 ### Inserting the needle
@@ -98,7 +101,7 @@ Patches must be replaced in the case of low insulin levels, usage expiration, an
 ### Discarding the patch
 Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
 
-![Bild13](../../images/EOPatch/Bild13.png) ![Bild14](../../images/EOPatch/Bild14.png) ![Bild15](../../images/EOPatch/Bild15.png) ![Bild16](../../images/EOPatch/Bild16.png)
+![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
 
 ## Suspendre et reprendre l'injection d'Insuline
 Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
@@ -106,13 +109,13 @@ Suspending insulin delivery also cancels both extended bolus and temporary basal
 ### Suspending insulin delivery
 Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
 
-![Bild17](../../images/EOPatch/Bild17.png) ![Bild18](../../images/EOPatch/Bild18.png) ![Bild19](../../images/EOPatch/Bild19.png)
+![Bild17](../images/EOPatch/Bild17.png) ![Bild18](../images/EOPatch/Bild18.png) ![Bild19](../images/EOPatch/Bild19.png)
 
 
 ### Resuming insulin delivery
 Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
 
-![Bild20](../../images/EOPatch/Bild20.png) ![Bild21](../../images/EOPatch/Bild21.png)
+![Bild20](../images/EOPatch/Bild20.png) ![Bild21](../images/EOPatch/Bild21.png)
 
 ## Alarms/Warnings
 
@@ -120,7 +123,7 @@ Select EOPATCH2 at the top of the home screen and click the RESUME button at the
 
 Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
 
-![Bild22](../../images/EOPatch/Bild22.png) ![Bild23](../../images/EOPatch/Bild23.png)
+![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
 
 The different types of alarms are explained below.
 
@@ -140,7 +143,7 @@ The different types of alarms are explained below.
 
 A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 
-![Bild24](../../images/EOPatch/Bild24.png)
+![Bild24](../images/EOPatch/Bild24.png)
 
 The different types of warnings are explained below.
 

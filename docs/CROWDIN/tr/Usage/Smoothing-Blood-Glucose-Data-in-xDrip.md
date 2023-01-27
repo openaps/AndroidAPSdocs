@@ -6,7 +6,7 @@ KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yü
 
 ### Kendi Dexcom Uygulamanızı Oluşturun (BYODA)
 
-[BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) kullanırken KŞ verileriniz sorunsuz ve tutarlıdır. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
+When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
 
 ### Dexcom G5 veya G6 ile xDrip+
 

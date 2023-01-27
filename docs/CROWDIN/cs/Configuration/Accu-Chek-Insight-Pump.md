@@ -12,7 +12,7 @@
 
 Poznámka: AAPS vždy zapíše data do **prvního bazálního profilu v pumpě**.
 
-* Telefon se systémem Android (v podstatě každá Android verze bude fungovat s Insight, ale zkontrolujte stránku [Module](../Module/module#phone), která Android verze je požadována pro AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
 * Aplikace AndroidAPS nainstalovaná v telefonu
 
 ## Nastavení
@@ -52,7 +52,7 @@ Poznámka: Spojení mezi pumpou a telefonem není permanentní. Spojení bude na
 
 ## Nastavení v AAPS
 
-**Pozn. Pokud chcete s pumpou Insight používat Autotune, je opět možné (pouze s AAPS verze větší než 2.7.0) mít nastaveno 'Vždy používat absolutní hodnoty bazálu', i když je zapnuto 'Synchronizace povolena'.**. (v AAPS přejděte do [Nastavení > NSClient > Pokročilá nastavení](../Configuration/Preferences#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
 ![Screenshot nastavení Insight](../images/Insight_settings.png)
 
@@ -118,7 +118,7 @@ Pumpy Insight s novějším firmwarem budou vibrovat vždy při podání bolusu 
 
 * Firmware 1.x: Žádné vibrace z výroby
 * Firmware 2.x: Vibrace nelze vypnout.
-* Firmware 3.x: AndroidAPS aplikuje bolus tiše. (minimální [verze 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS aplikuje bolus tiše. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
 Verzi firmwaru lze nalézt v menu.
 
@@ -144,4 +144,4 @@ V tom případě vypněte bluetooth v pumpě i telefonu na 10 sekund a potom jej
 
 ## Změna časových pásem s pumpou Insight
 
-Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).

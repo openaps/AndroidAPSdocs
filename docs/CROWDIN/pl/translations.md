@@ -48,8 +48,8 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 ### Tłumacz odnośniki do nagłówków
 
-* Gdy wewnętrzny odnośnik prowadzi tylko do określonej strony (tj. ../Usage/Profiles.md) nie jest wymagane tłumaczenie.
-* Wewnętrzne linki do określonego nagłówka (tj. ../Usage/Profiles#percentage) muszą być przetłumaczone, ponieważ nagłówek w innym języku różni się od angielskiego oryginału.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Jeśli przetłumaczysz nagłówek, możesz go przekształcić w kotwicę odnośnika (część po # - tj. #procent) przekształcając wszystkie litery na małe litery, znaki specjalne lub diakrytyczne ("ogonki", "umlauty" itp.) na standardowe znaki (łacińskie odpowiedniki), zastępując spacje znakiem minus (-) i pomijając znaki interpunkcyjne.
     
     Oto kilka przykładów:
@@ -62,7 +62,7 @@ Kiedy korektor zatwierdzi tłumaczenie, zostanie ono dodane do następnej wersji
 
 #### Jak tłumaczyć odnośniki w plikach Markdown (.md)
 
-Obecnie używane są dwa różne [formaty opisu dokumentacji](./make-a-PR#code-syntax) do tworzenia dokumentacji. Podczas gdy pliki napisane w składni reStructuredText (.rst) zawsze pokazują adres odnośnika w Crowdin, dla plików w składni Markdown (.md) być może będziesz musiał aktywować wyświetlanie znaczników HTML, aby przetłumaczyć adres odnośnika.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Podczas gdy pliki napisane w składni reStructuredText (.rst) zawsze pokazują adres odnośnika w Crowdin, dla plików w składni Markdown (.md) być może będziesz musiał aktywować wyświetlanie znaczników HTML, aby przetłumaczyć adres odnośnika.
 
 * * *
 
@@ -80,7 +80,7 @@ kliknij na ikonkę koła zębatego, aby otworzyć ustawienia, wybierz "Show" i k
 
 ![Crowdin - jak włączyć wyświetlanie znaczników HTML](./images/CrowdinShowURL2.png)
 
-Odnośniki zostaną wyświetlone w standardowym formacie HTML i mogą być przetłumaczone z uwzględnieniem reguł wymienionych [powyżej](./translations#tlumacz-odnosniki-do-naglowkow).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - wyświetlanie znaczników HTML](./images/CrowdinShowURL3.png)
 

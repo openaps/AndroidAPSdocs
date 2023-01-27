@@ -2,13 +2,13 @@
 
 ## Hygiène de la MGC
 
-Quel que soit le système MGC que vous utilisez, si vous souhaitez faire un calibrage avec une glycémie capillaire, il existe des règles très claires à respecter, que vous utilisiez ou non un logiciel DIY MGC ou les applications officielles.
+Quel que soit le système CGM que vous utilisez, si vous allez utiliser un calibrage effectué sur le sang, il existe des règles très claires que vous devriez appliquer, que vous utilisiez ou non le logiciel DIY CGM ou les applications officielles.
 
-- Assurez-vous que vos mains et le kit sont propres.
-- Essayez de calibrer lorsque vous avez une série de mesures avec une flèche horizontale (15-30 minutes sont habituellement suffisantes)
-- Évitez de calibrer lorsque les glycémie montent ou descendent.
-- Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
-- Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et d'autres à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
+-   Assurez-vous que vos mains et le kit sont propres.
+-   Essayez de calibrer lorsque vous avez une série de mesures avec une flèche plate (15-30 minutes sont habituellement suffisantes)
+-   Évitez de calibrer lorsque les glycémie montent ou descendent.
+-   Faites "assez" de calibrations - sur les applications officielles, vous serez invité à effectuer des vérifications une ou deux fois par jour. Sur les systèmes DIY, vous pouvez ne pas être sollicités pour calibrer, mais soyez prudents si vous continuez sans calibration.
+-   Si c'est possible, calibrez avec certaines de vos lectures dans une plage basse (4-5mmol/l ou 72-90mg/dl) et certains à un niveau légèrement plus élevé (7-9mmol/l ou 126-160mg/dl) car cela offre une meilleure gamme pour le calibrage des points par rapport à la pente.
 
 ## Réglage du capteur (G6)
 
@@ -30,12 +30,10 @@ Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et
 
 ### Saut de valeurs
 
-Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex. "Block Very High noise and worse".  Voir également [Lissage des glycémies](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Âge du capteur négatif
 
-```{image} ../images/Troubleshooting_SensorAge.png
-:alt: Negative sensor age
-```
+![Âge du capteur négatif](../images/Troubleshooting_SensorAge.png)
 
-Cela se produit s'il y a soit une double entrée "Insertion Capteur MGC" dans [l'onglet/menu Actions](../Configuration/Config-Builder#actions), soit un capteur inséré avec une mauvaise date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.

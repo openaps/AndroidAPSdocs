@@ -1,38 +1,32 @@
 # Удаленный мониторинг
 
 ```{image} ../images/KidsMonitoring.png
-:alt: "\u041C\u043E\u043D\u0438\u0442\u043E\u0440\u0438\u043D\u0433 \u0434\u0435\u0442\
-:  \u0435\u0439"
+:alt: Мониторинг детей
 ```
 
 AndroidAPS предлагает несколько опций для удаленного мониторинга детей, а также позволяет отправлять удаленные команды. Конечно, его можно использовать для мониторинга партнера или друга.
 
 ## Функции
 
-- Помпа ребенка управляется телефоном ребенка с помощью AndroidAPS.
-
-- Родители могут удаленно отслеживать все соответствующие данные, такие как уровни глюкозы, активные углеводы, инсулин и т. д. используя **приложение NSClient** на своих телефонах. Настройки должны быть одинаковыми в AndroidAPS и NSClient.
-
-- Родители оповещаются с помощью приложения xDrip в режиме слежения follower\* * на своем телефоне.
-
-- Удаленный контроль над AndroidAPS с помощью \` SMS Commands \<../Children/SMS-Commands.md> \` _ защищен двухфакторной аутентификацией.
-
-- Удаленный контроль через приложение NSClient рекомендуется только в том случае, если синхронизация работает хорошо (т. е. на сайте не происходит нежелательных изменений TT, TBR и т.д.) - подробнее см. " Замечания по версии 2.8.1.1 \<../Installing-AndroidAPS/Releasenotes#important-hints>\`.
+- Kid's pump is controlled by kid's phone using AndroidAPS.
+- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Настройки должны быть одинаковыми в AndroidAPS и NSClient.
+- Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
+- Remote control of AndroidAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
+- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) for further details.
 
 ## Инструменты и приложения для удаленного мониторинга
 
-- " Nightscout \<<https://nightscout.github.io/>>\` _ в браузере (в основном отображение данных)
-- Приложение NSClient-это урезанная версии AAPS, способная на слежение, переключение профилей, постановку временных целей TT и ввод углеводов. Существует 2 приложения: \` NSClient & NSClient2 \<<https://github.com/nightscout/AndroidAPS/releases/>>\` \_. Единственное отличие-это название приложения. Таким образом имеется возможность установить приложение дважды на одном телефоне, чтобы следить за 2 разными лицами/nightscout.
-
-*Приложение Dexcom Follow, если вы используете оригинальное приложение Dexcom (только ГК)
-\* \`xDrip \<../Configuration/xdrip.md>\`\_ в режиме слежения follower (в основном значения ГК и \*\*оповещения\**)
-\* \` Sugarmate \<<https://sugarmate.io/>>\_ или \` Spike \<<https://spike-app.com/>> _ на iOS (в основном значения ГК и \*\* оповещения\*\*)
+- [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
+- NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). Единственное отличие-это название приложения. Таким образом имеется возможность установить приложение дважды на одном телефоне, чтобы следить за 2 разными лицами/nightscout.
+- Dexcom follow if you are using original Dexcom app (BG values only)
+- [xDrip+](../Configuration/xdrip.md) in follower mode (mainly BG values and **alarms**)
+- [Sugarmate](https://sugarmate.io/) or [Spike](https://spike-app.com/) on iOS (mainly BG values and **alarms**)
 
 ## Важные факторы
 
-- Определение правильных [факторов лечения](../Getting-Started/FAQ#how-to-begin) (скорость базала, время действия инсулина DIA, чувствительность к инсулину ISF...) - затруднено у детей, особенно, когда участвуют гормоны роста.
+- Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Настройки должны быть одинаковыми в AndroidAPS и NSClient.
-- Учитывайте временной разрыв между ведущим телефоном и ведомым из-за времени на загрузку и выгрузку, а также из-за того, что ведущий телефон AAPS начнет выгрузку только после выполнения цикла.
-- Так что не торопитесь, установите их правильно и проверьте их в реальной жизни когда ребенок рядом прежде чем начать дистанционный контроль и дистанционное лечение. Школьные каникулы могут быть хорошим временем для этого.
-- Определите план действий на тот случай, когда дистанционный контроль не работает (напр. проблемы сети)
-- Удаленный мониторинг и лечение может быть очень полезно в детском саду и начальной школе. Но убедитесь, что учителя и воспитатели в курсе плана лечения вашего ребенка. Примеры таких планов можно найти в разделе `файлы пользователей AndroidAPS <https://www.facebook.com/groups/AndroidAPSUsers/files/>` _ на Facebook.
+- Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
+- So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. Школьные каникулы могут быть хорошим временем для этого.
+- What is your emergency plan when remote control does not work (i.e. network problems)?
+- Remote monitoring and treatment can be really helpful in kinder garden and elementary school. Но убедитесь, что учителя и воспитатели в курсе плана лечения вашего ребенка. Examples for such care plans can be found in the [files section of AndroidAPS users](https://www.facebook.com/groups/AndroidAPSUsers/files/) on Facebook.

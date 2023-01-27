@@ -1,8 +1,8 @@
-# BZ-Quelle
+# CGMS Configuration
 
-* [Allgemeine Empfehlungen für alle CGM/FGM](../Hardware/GeneralCGMRecommendation.md)
-* [Glättung der Blut-Glukose-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
-* [xDrip+Einstellungen](./xdrip.md)
+* [Allgemein](../Hardware/GeneralCGMRecommendation.md)
+* [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [xDrip+Settings](./xdrip.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
 * [Dexcom G4](../Hardware/DexcomG4.md)
@@ -12,4 +12,4 @@
 * [Eversense](../Hardware/Eversense.md)
 * [MM640g/MM630g](../Hardware/MM640g.md)
 * [PocTech](../Hardware/PocTech.md)
-* [Nightscout als BZ-Quelle](../Hardware/CgmNightscoutUpload.md)
+* [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)

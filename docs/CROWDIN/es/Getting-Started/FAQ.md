@@ -4,33 +4,33 @@
 
 # General
 
-## ¿Puedo descargar directamente el archivo de instalación AndroidAPS?
+## ¿Puedo descargar el archivo de instalación de AndroidAPS?
 
 No. No hay ningún archivo de apk descargable para AndroidAPS. Tienes que [montarlo](../Installing-AndroidAPS/Building-APK.md) tu mismo. Te explicamos el porqué:
 
-AndroidAPS se utiliza para controlar tu bomba y para suministrar insulina. Under current regulations in Europe, all systems classed as IIa or IIb are medical devices that require regulatory approval (a CE mark) which needs various studies and sign offs. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
+AndroidAPS se utiliza para controlar tu bomba y para suministrar insulina. Según la normativa vigente en Europa, todos los sistemas clasificados como IIa o IIb son productos sanitarios que requieren una aprobación reglamentaria (una marca CE), para lo que se necesitan diversos estudios y aprobaciones. La distribución de dispositivos no regulados es ilegal. Existen reglamentos similares en otras partes del mundo.
 
-This regulation is not restricted just to sales (in the meaning of getting money for something) but applies to any distribution (even giving away for free). Building a medical device for yourself is the only way to use the app within these regulations.
+Esta normativa no se limita sólo a las ventas (en el sentido de obtener dinero por algo), sino que se aplica a cualquier distribución (incluso regalar). Construir un dispositivo médico para uno mismo, es la única manera de utilizar la aplicación dentro de esta normativa.
 
-Esta es la razón por lo que las apks no están disponibles.
+Por eso no hay apks disponibles.
 
 ## ¿Cómo empezar?
 
 En primer lugar, necesitas **obtener componentes de hardware utilizables**:
 
-- A [supported insulin pump](./Pump-Choices.md), 
+- Una [bomba de insulina compatible ](./Pump-Choices.md), 
 - un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
-- un [sistema de monitorización continua de glucosa](../Configuration/BG-Source.md) (Mcg). 
+- a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-Secondly, you have to **setup your hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
+En segundo lugar, tienes que **configurar el hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
 
-Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
+En tercer lugar, tienes que **configurar los componentes de software **: AndroidAPS y la fuente MCG/MFG.
 
-Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+En cuarto lugar, tienes que aprender y **entender el "diseño de referencia" de OpenAPS, para comprobar los parámetros de tu tratamiento **. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar una gran cantidad de datos y que te sugiera si necesitas ajustar basales y/o ISF, y también si es necesario ajustar los ratios. O puedes probar y establecer tu basal [con el método tradicional](https://integrateddiabetes.com/basal-testing/).
 
-## ¿Qué aspectos prácticos de lazo tengo?
+## ¿Cuáles son los aspectos prácticos del lazo?
 
-### Protección con contraseña
+### Protección mediante contraseña
 
 Si quieres proteger tus preferencias, dirígete al "Menú de Preferencias" y selecciona "Contraseña para ajustes", luego escribe la contraseña que elijas. La próxima vez que vayas al menú de preferencias, preguntará por esa contraseña antes de poder continuar. Si más adelante quieres eliminar ésta opción, vuelve a "Contraseña para ajustes" y suprime el texto.
 
@@ -40,32 +40,32 @@ Si tienes previsto utilizar la aplicación "android wear" para suministrar bolos
 
 ### Desconectando la bomba
 
-If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
+Si te quitas la bomba para ducharte, bañarte, nadar, hacer deporte u otras actividades, debes informar a AndroidAPS de que no se suministra insulina, para mantenerde forma correcta la insulina activa (IOB).
 
-The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
+La bomba puede desconectarse utilizando el icono de Estado del Lazo en la [Pantalla de Inicio de AndroidAPS](./Screenshots.md#loop-status).
 
 ### Las recomendaciones no se basan en lecturas aisladas del sensor
 
-For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
+Por seguridad, las recomendaciones que se hacen no se basan en una lectura del MCG, sino en un delta medio. Por lo tanto, si se pierden algunas lecturas, puede pasar un tiempo entre que se vuelvan a recibir datos y que AndroidAPS vuelva a iniciar el lazo.
 
 ### Lecturas adicionales
 
-There are several blogs with good tips to help you understand the practicalities of looping:
+Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cómo funciona el lazo:
 
-- [Fine-tuning Settings](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
-- [Why DIA matters](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
-- [Limiting meal spikes](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
-- [Hormones and autosens](https://seemycgm.com/2017/06/06/hormones-2/) See my CGM
+- ['Ajustes de puesta a punto'](https://seemycgm.com/2017/10/29/fine-tuning-settings/) en 'Ver mi MCG'
+- [Por qué es importante DIA](https://seemycgm.com/2017/08/09/why-dia-matters/) Ver mi MCG
+- [''Limitando los picos de comida](https://diyps.org/2016/07/11/picture-this-how-to-do-eating-soon-mode/) #DIYPS
+- [Hormonas y Autosens](https://seemycgm.com/2017/06/06/hormones-2/) Ver mi MCG
 
 ## ¿Qué equipo de emergencia se recomienda llevar?
 
-You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
+Tienes que llevar contigo el mismo equipo de emergencia que cualquier otra persona con DT1, con tratamiento con bomba de insulina. Para hacer lazo con AndroidAPS, se recomienda encarecidamente tener el siguiente equipo adicional contigo o cerca de tí:
 
-- Battery pack and cables to charge your smartphone, watch and (if needed) BT reader or Link device
-- Pump batteries
+- Batería y cables para cargar el teléfono, el reloj y (si es necesario) el lector BT o dispositivo Link
+- Baterias para la bomba
 - Current [apk](../Installing-AndroidAPS/Building-APK.md) and [preferences files](../Usage/ExportImportSettings.md) for AndroidAPS and any other apps you use (e.g. xDrip+, BYO Dexcom) both locally and in the cloud (Dropbox, Google Drive).
 
-## How can I safely and securely attach the CGM/FGM?
+## ¿Cómo puedo fijar el MCG/MFG de forma segura?
 
 You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
@@ -241,7 +241,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 - clean battery terminals with alcohol wipe to ensure no manufacturing wax/grease remains.
 
 - for [Dana R/RS pumps](../Configuration/DanaRS-Insulin-Pump.md) the startup procedure draws a high current across the battery to purposefully break the passivation film (prevents loss of energy whilst in storage) but it doesn't always work to break it 100%. Either remove and reinsert battery 2-3 times until it does show 100% on screen, or use battery key to briefly short circuit battery before insertion by applying to both terminals for a split second.
-- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage#battery-type-and-causes-of-short-battery-life)
+- see also more tips for [particular types of battery](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md#battery-type-and-causes-of-short-battery-life)
 
 ### Cambiando cánulas y cartuchos
 
@@ -249,14 +249,14 @@ The change of cartridge cannot be done via AndroidAPS but must be carried out as
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
 - Now disconnect the pump and change the reservoir as per pump instructions.
-- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26#pump) in the actions tab just to record the change.
+- Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
-The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
+The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](../Usage/CPbefore26.md#pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
 
 ## Fondo de pantalla
 
-You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones#phone-background).
+You can find the AndroidAPS wallpaper for your phone on the [phones page](../Getting-Started/Phones.md#phone-background).
 
 ## Uso diario
 
@@ -264,11 +264,11 @@ You can find the AndroidAPS wallpaper for your phone on the [phones page](../Get
 
 #### ¿Qué hacer al ducharse o bañarse?
 
-You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump while taking a shower or bath. For this short period of time you may not need it, but you should tell AAPS that you've disconnected so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Trabajo
 
-Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
+Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Actividades de ocio
 
@@ -281,18 +281,18 @@ Así que usted tendría más hidratos de carbono a bordo, pero al mismo tiempo e
 Cuando utilices lazo, debe intentar estos pasos:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
-- Set an [activity temp target](../Usage/temptarget#activity-temp-target) above your standard target.
-- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
+- Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
+- If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
 Pre- and post-processing of these settings is important. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
 
-Si usted hace deportes regularmente al mismo tiempo (es decir, la clase deportiva en su gimnasio), puede considerar utilizar [automatización ](../Usage/Automation.md) para el cambio de perfil y TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
 
 Los porcentajes del conmutador de perfil, el valor para el objetivo temporal de la actividad y el mejor tiempo para los cambios son individuales. Empiece en el lado seguro si está buscando el valor correcto para usted (empiece con un porcentaje más bajo y un TT superior).
 
 ### Sexo
 
-You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ#disconnect-pump).
+You can remove the pump to be 'free', but you should tell AndroidAPS so that the IOB calculations are correct. See [description above](../Getting-Started/FAQ.md#disconnect-pump).
 
 ### Beber alcohol
 
@@ -308,7 +308,7 @@ When drinking alcohol, you always have to have an eye on your CGM to manually av
 
 #### ¿Cómo puede funcionar por la noche sin radiación del móvil ni radiación WIFI?
 
-Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
+Many users turn the phone into airplane mode at night. If you want the loop to support you when you are sleeping, proceed as follows (this will only work with a local BG-source such as xDrip+ or ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app), it will NOT work if you get the BG-readings via Nightscout):
 
 1. Activa el modo avión en tu móvil.
 2. Espera hasta que el modo avión esté activo.
@@ -342,11 +342,11 @@ You can either show your Nightscout reports (https://YOUR-NS-SITE.com/report) or
 
 ## My problem is not listed here.
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 ## My problem is not listed here but I found the solution
 
-[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
+[Information to get help.](../Where-To-Go-For-Help/Connect-with-other-users.md#i-m-getting-stuck-what-do-i-do-who-can-i-ask)
 
 **Remind us to add your solution to this list!**
 
@@ -364,7 +364,7 @@ Copy on an internet drive (Dropbox, Google etc) : all the apks you used to insta
 
 Please
 
-- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio#troubleshooting-android-studio) for typical errors and
+- check [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md#troubleshooting-android-studio) for typical errors and
 - the tipps for with a [step by step walktrough](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## I'm stuck on an objective and need help.

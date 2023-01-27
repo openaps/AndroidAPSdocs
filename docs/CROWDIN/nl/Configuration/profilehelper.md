@@ -7,16 +7,16 @@ De Profiel hulp kan je helpen met twee verschillende dingen:
 
 ## Profiel voor kinderen (tot 18 jaar)
 
-**Belangrijke opmerking:**
+**Important note:**
 
-**De profiel hulp is bedoeld om je te helpen om voor het eerst een profiel voor je kind samen te stellen. Hoewel deze profiel hulp gebaseerd is op gegevenssets van twee verschillende ziekenhuizen, is het belangrijk dat je eerst overlegt met het medische team van jouw kind voordat je een nieuw profiel daadwerkelijk gebruikt!**
+**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
 
 ```{image} ../images/ProfileHelperKids1.png
 :alt: Profiel Hulp Kinderen 1
 ```
 
 1. Open de Profiel hulp via het menu onder de drie stipjes in de rechterbovenhoek van het scherm.
-2. Pas het Basis profiel (gebaseerd op een ziekenhuisggegevensset) aan door de leeftijd van jouw kind en de totale dagelijkse dosis insuline (TDD-totaal) **of** het gewicht van jouw kind in te voeren.
+2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
 3. Wissel van scherm door rechtsbovenaan op de grijze balk met cijfer 2 te klikken.
 4. Druk lang op 'Huidig profiel' en selecteer DPV Basis profiel.
 
@@ -24,11 +24,11 @@ De Profiel hulp kan je helpen met twee verschillende dingen:
 :alt: Profiel Hulp Kinderen 2
 ```
 
-5. Pas het DPV Basis profiel (gebaseerd op een andere ziekenhuisgegevensset) aan door de leeftijd van jouw kind en de totale dagelijkse dosis insuline (TDD-totaal) **of** het gewicht van jouw kind in te voeren.
+5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
 6. Druk op de knop 'VERGELIJK PROFIELEN' op het scherm.
 7. Vergelijking van de twee aangepaste profielen wordt weergegeven.
 
-Zodra je klaar bent met het aanpassen van het profiel kun je [het profiel dupliceren](../Configuration/profilehelper#profieldupliceren) zoals hieronder beschreven.
+Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
 
 ## Vergelijk twee profielen
 
@@ -55,7 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 
 ## Profiel dupliceren
 
-If you use [local profiles](../Configuration/Config-Builder#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profiel hulp Profiel dupliceren / profiel wisselen

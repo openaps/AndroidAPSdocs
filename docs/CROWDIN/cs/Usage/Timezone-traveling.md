@@ -24,7 +24,7 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 

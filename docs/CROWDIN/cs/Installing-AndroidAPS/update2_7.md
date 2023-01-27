@@ -1,72 +1,66 @@
 # Nezbytné kontroly po aktualizaci na AndroidAPS 2.6
 
-- U verze AAPS 2.7 byl kód programu významně změněn.
-- Proto je důležité, abyste po aktualizaci provedli nějaké změny, nebo zkontrolovali nastavení.
-- Podrobnosti o nových a rozšířených funkcích naleznete v [Poznámkách k vydání](../Installing-AndroidAPS/Releasenotes#version-2-7-0).
+- The program code was changed significantly when switching to AAPS 2.7.
+- Therefore it is important that you make some changes or check settings after the update.
+- Please see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-2-7-0) for details on new and extended features.
 
 ## Zkontrolujte zdroj glykémií
 
-- Zkontrolujte, zda je zdroj glykémií po aktualizaci správný.
-- Zejména při použití [xDrip+](../Configuration/xdrip.md) se může stát, že zdroj glykémie se změní na Dexcom aplikace (upravená).
-- Otevřete [Konfigurace](../Configuration/Config-Builder#bg-source) (hamburger menu v levém horním rohu hlavní obrazovky)
-- Sjeďte dolů na "Zdroj glykémie".
-- Je-li to nutné, nastavte správný zdroj glykémie.
+- Check if BG source is correct after update.
+- Especially when using [xDrip+](../Configuration/xdrip.md) it might happen, that BG source is changed to Dexcom app (patched).
+- Open [Config builder](../Configuration/Config-Builder.md#bg-source) (hamburger menu on top left side of home screen)
+- Scroll down to "BG source".
+- Select correct BG source if changes are necessary.
 
 ```{image} ../images/ConfBuild_BG.png
-:alt: "Zdroj glyk\xE9mie"
+:alt: Zdroj glykémie
 ```
 
 ## Dokončit cíle
 
 - AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.md).
-- You have to finish exam ([objective 3 and 4](../Usage/Objectives#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives.md#objective-10-automation).
-- If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation).
+- You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives#objective-10-automation).
+- If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives#objective-10-automation).
 - Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 ## Nastavit hlavní heslo
 
-- Abyste mohli [exportovat nastavení](../Usage/ExportImportSettings.md), je nutné nastavit hlavní heslo. Od verze 2.7 jsou totiž exporty šifrované.
-- Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
-- Klepněte na trojúhelník pod "Obecné"
-- Klepněte na položku "Hlavní heslo"
-- Zadejte heslo, potvrďte ho, a klepněte na tlačítko Ok.
+- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Open Preferences (three-dot-menu on top right of home screen)
+- Click triangle below "General"
+- Click "Master-Password"
+- Enter password, confirm password and click ok.
 
 ```{image} ../images/MasterPW.png
-:alt: "Nastaven\xED hlavn\xEDho hesla"
+:alt: Nastavení hlavního hesla
 ```
 
 ## Exportovat nastavení
 
-- AAPS 2.7 používá nový šifrovaný formát zálohy.
-
-- Po aktualizaci na verzi 2.7 musíte [exportovat nastavení](../Usage/ExportImportSettings.md).
-
-- Soubory se zálohou vytvořenou v předchozích verzích mohou být v AAPS 2.7 pouze naimportované. Export bude už v novém formátu.
-
-- Ujistěte se, že jste uložili exportovaná nastavení nejen na vašem telefonu, ale také alespoň na jednom bezpečném místě (pc, cloudové úložiště...).
-
-- Pokud sestavujete apk AAPS 2.7 za použití stejného podpisového klíče jako u předchozích verzí, můžete instalovat novou verzi bez odstranění předchozí verze.
-
-- Všechna nastavení i dokončené cíle zůstanou tak, jak byly v předchozí verzi.
-
-- V případě, že jste ztratili svůj podpisový klíč, sestavte verzi 2.7 za použití nového klíče a importem z předchozí verze tak, jak je popsáno v sekci odstraňování problémů \<../Installing-AndroidAPS/troubleshooting_androidstedio#lost-keystore> \` \_.
+- AAPS 2.7 uses a new encrypted backup format.
+- You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
+- Settings files from previous versions can only be imported in AAPS 2.7. Export bude už v novém formátu.
+- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
+- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
+- All settings as well as finished objectives will remain as they were in the previous version.
+- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 ## Autosens (Tip - není nutná žádná akce)
 
-- Autosens je změněn na dynamický přepínací model, který replikuje referenční design.
-- Autosens se nyní pro výpočet citlivosti přepíná mezi 24 a 8 hodinovým úsekem. Vybere, která z nich je citlivější.
+- Autosens is changed to a dynamic switching model which replicates the reference design.
+- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Vybere, která z nich je citlivější.
 - Pokud uživatelé pocházejí z Oref1, pravděpodobně si všimnou toho, že systém může být méně dynamický na změny, v závislosti na citlivosti za 24 nebo 8 hodin.
 
 ## Nastavení hesla pumpy Dana RS (pokud používáte Dana RS)
 
-- V předchozích verzích nebylo heslo pumpy [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) kontrolováno.
-- Klepnutím na tři tečky v pravém horním rohu hlavní obrazovky otevřete Nastavení
-- Přejděte dolů a klikněte na trojúhelník vedle "Dana RS".
-- Klikněte na "Heslo pumpy (pouze v1)"
-- Zadejte heslo pumpy ([Výchozí heslo](../Configuration/DanaRS-Insulin-Pump#default-password) se liší v závislosti na verzi firmwaru), a klikněte na tlačítko OK.
+- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) was not checked in previous versions.
+- Open Preferences (three-dot-menu on top right of screen)
+- Scroll down and click triangle next to "Dana RS".
+- Click "Pump password (v1 only)"
+- Enter pump password ([Default password](../Configuration/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
 
 ```{image} ../images/DanaRSPW.png
-:alt: "Nastaven\xED hesla Dana RS"
+:alt: Nastavení hesla Dana RS
 ```
 
-Chcete-li změnit heslo na Dana RS, postupujte podle pokynů na stránce [DanaRS](../Configuration/DanaRS-Insulin-Pump#change-password-on-pump).
+To change password on Dana RS follow instructions on [DanaRS page](../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump).

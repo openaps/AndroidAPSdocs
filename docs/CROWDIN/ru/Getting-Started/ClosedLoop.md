@@ -1,22 +1,22 @@
 # Что такое система замкнутого цикла?
 
-% изображение:../images/autopilot.png
-% :alt: AAPS-как автопилот
+```{image} ../images/autopilot.png
+:alt: AAPS-как автопилот
+```
 
-Искусственная поджелудочная железа замкнутой системы сочетает в себе различные компоненты чтобы облегчить управление диабетом.
-В своей книге " Automated Insulin Delivery \<<https://www.artificialpancreasbook.com/>>\` _ Dana M. Lewis, одна из основателей движения ИПЖ с открытым исходным кодом, назвала алгоритм системы "автопилот для диабета" \<<https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps>>\` \_. Что это означает?
+Искусственная поджелудочная железа замкнутой системы сочетает в себе различные компоненты чтобы облегчить управление диабетом. In her great book [Automated Insulin Delivery](https://www.artificialpancreasbook.com/) Dana M. Lewis, one of the founders of the open source closed loop movement, calls it an ["autopilot for your diabetes"](https://www.artificialpancreasbook.com/3.-getting-started-with-your-aps). Что это означает?
 
-**Автопилот в самолете**
+**Autopilot in an aircraft**
 
 Автопилот не выполняет всю работу и не дает возможности пилоту спать в течение всего полета. Он облегчает работу пилотов. Он освобождает их от бремени постоянного наблюдения за самолетом и ходом полета. Это позволяет пилоту сосредоточиться на мониторинге воздушного пространства и управлении функциями автопилота.
 
 Автопилот получает сигналы от различных датчиков, компьютер оценивает их наряду со спецификациями пилота, а затем вносит необходимые корректировки. Пилоту больше не нужно беспокоиться о постоянных корректировках.
 
-\*\* Система замкнутого цикла * \*
+**Closed Loop System**
 
 То же самое относится и к и системе искусственной поджелудочной железы. Она не делает всю работу, вы все равно должны контролировать свой диабет. Система замкнутого цикла объединяет данные датчиков мониторинга с такими параметрами управления диабетом, как скорость базала, коэффициент чувствительности к инсулину и углеводный коэффициент. Исходя из этого, она рассчитывает предложения по лечению и выполняет постоянные небольшие корректировки, чтобы держать диабет в целевом диапазоне и избавить вас от этой заботы. Это оставляет больше времени для жизни "рядом с" диабетом.
 
-Так же, как никто не хочет попасть на самолет, которым управляет только автопилот без контроля человека, система замкнутого цикла помогает нам в управлении диабетом, но всегда нуждается в нашей поддержке! \*\* Даже в режиме замкнутого цикла нельзя просто взять и забыть про свой диабет! \*\*
+Так же, как никто не хочет попасть на самолет, которым управляет только автопилот без контроля человека, система замкнутого цикла помогает нам в управлении диабетом, но всегда нуждается в нашей поддержке! **Even with a closed loop you can't just forget your diabetes!**
 
 Точно так же, как автопилот зависит от показателей датчиков, а также от параметров, задаваемых летчиками, система замкнутой петли требует соответствующих вводных данных, таких как скорость базала, чувствительность к инсулину ISF и углеводный коэффициент, чтобы успешно обеспечить поддержку вашего организма.
 
@@ -26,32 +26,32 @@
 
 ### AndroidAPS (AAPS)
 
-AndroidAPS подробно описан в этой документации \<./WhatisAndroidAPS.html> \` \_. Он использует смартфон Android для вычислений и контроля инсулиновой помпы. Он создан в тесном взаимодействии с OpenAPS (т.е. у них общие алгоритмы).
+AndroidAPS is described in detail in [this documentation](./WhatisAndroidAPS.html). Он использует смартфон Android для вычислений и контроля инсулиновой помпы. It is in strong collaboration with OpenAPS (i.e. they share algorithms).
 
-Совместимые \` помпы \<../Hardware/pumps.md> \` \_:
+Compatible [pumps](../Hardware/pumps.md) are:
 
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) / [DanaRS & Dana-i](../Configuration/DanaRS-Insulin-Pump.html)
-
-- Accu-Chek Combo \<../Конфигуратор/Accu-Chek-Combo-Pump.html> \` \_
-
-[Accu-Chek Insight](../Конфигуратор/Accu-Chek-Insight-Pump.html)
-\* [Diaconn G8](../Configuration/DiaconnG8.md)
-\* [Omnipod Eros](../Конфигуратор/OmnipodEros.html)
-\* некоторые старые помпы [Medtronic](../Конфигуратор/MedtronicPump.html)
+- [Помпа Accu Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Diaconn G8](../Configuration/DiaconnG8.md)
+- [Omnipod DASH](../Configuration/OmnipodDASH.md)
+- [Omnipod Eros](../Configuration/OmnipodEros.md)
+- some old [Medtronic pumps](../Configuration/MedtronicPump.md)
 
 ### OpenAPS
 
-\` OpenAPS \<<https://openaps.readthedocs.io>>\` \_-это первая закольцованная система с открытым исходным кодом. Она использует мини-компьютер, Raspberry Pi или Intel Edison.
+[OpenAPS](https://openaps.readthedocs.io) was the first Open Source Closed Loop System. Она использует мини-компьютер, Raspberry Pi или Intel Edison.
 
 Совместимые помпы:
 
-- некоторые старые помпы Medtronic
+- some old Medtronic pumps
 
 ### Петля iOS
 
-\` Петля для iOS \<<https://loopkit.github.io/loopdocs/>>\` \_-это замкнутая система Loop для Apple iPhone.
+[Loop for iOS](https://loopkit.github.io/loopdocs/) is the Open Source Closed Loop System to be used with Apple iPhones.
 
 Совместимые помпы:
 
-- Omnompod Eros
-- некоторые старые помпы Medtronic
+- Omnipod DASH
+- Omnipod Eros
+- some old Medtronic pumps

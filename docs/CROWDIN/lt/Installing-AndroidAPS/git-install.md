@@ -4,9 +4,9 @@
 
 ### 1. Atsisiųsti git
 
-- **Jūs turite būti prisijungę prie interneto visą laiką, nes Android Studio turi parsisiųsti keletą atnaujinimų!**
-- Bet kuri git versija turėtų veikti. Pvz., [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Įsitikinkite, kad žinote įdiegimo kelią. Jums jo reikės kitame žingsnyje.
+- **You have to be online all of the time as Android Studio downloads several updates!**
+- Any git version should work. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Make sure to note down the installation path. Jums jo reikės kitame žingsnyje.
 
 ```{image} ../images/Update_GitPath.png
 :alt: Git diegimo kelias
@@ -14,39 +14,39 @@
 
 ### 2. Nustatykite git kelią Android Studio programoje
 
-- Spustelėkite File > Settings
+- Open File > Settings
 
   ```{image} ../images/Update_GitSettings1.png
   :alt: Android Studio - atidaryti parametrus
   ```
 
-- Spustelėkite mažą trikampį šalia "Version Control" (1.) norėdami atidaryti sub-meniu.
+- Click the small triangle next to Version Control (1.) to open the sub-menu.
 
-- Spustelėkite Git (2.).
+- Click Git (2.).
 
-- Įsitikinkite, kad atnaujinimo metodas "Merge" (3.) yra pasirinktas.
+- Make sure update method "Merge" (3.) is selected.
 
-- Patikrinkite, ar Android Studio randa kelią į git.exe automatiškai paspaudus mygtuką "Test" (4.)
+- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
 
   ```{image} ../images/AndroidStudio361_09.png
   :alt: Android Studio parametrai
   ```
 
-- Jei automatinis nustatymas sėkmingas, git versija bus rodoma.
+- If automatic setting is successful git version will be displayed.
 
-- Spauskite "OK" dialogo lange (1.) ir "OK" nustatymų lange (2.).
+- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
 
   ```{image} ../images/AndroidStudio361_10.png
   :alt: Automatinis git instaliavimas pavyko
   ```
 
-- Jei failas git.exe negali būti rastas, spustelėkite "GERAI" dialogo lange (1.) ir tada mygtuką su trimis taškais (2.).
+- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
 
-- Naudokite paieškos funkcija \<<https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html>> Windows explorer rasti "git.exe", jei jūs nežinote, kur jį galima rasti. Jūs ieškote git.exe, esančiame binaplanke.
+- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
 
 - Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
 
-- Uždarykite nustatymų langą, paspausdami "OK" mygtuką (5.).
+- Close settings window by clicking "OK" button (5.).
 
   ```{image} ../images/AndroidStudio361_11.png
   :alt: Automatinis git instaliavimas nepavyko
@@ -54,11 +54,11 @@
 
 ### 3. Perkraukite
 
-- Perkraukite kompiuterį, kad atsinaujintų sistemos aplinka.
+- Reboot your PC to update System Environment.
 
 ### 4. Patikrinkite git parametrus Android Studio programoje
 
-- Atidarykite Terminal langą Android Studio programoje
+- Open Terminal window in Android Studio
 
 - Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
 
@@ -66,7 +66,7 @@
   :alt: git - -version
   ```
 
-- Jei git įdiegta ir prijungta tinkamai, gausite informaciją apie įdiegtą versiją, kuri atrodo taip:
+- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
 
   ```{image} ../images/AndroidStudio_gitversion2.png
   :alt: rezultatas git-versija
@@ -74,7 +74,7 @@
 
 ## Mac
 
-- Bet kuri git versija turėtų veikti. Pvz., [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-- Naudotis homebrew įdiegti git: `` `$ brew install git` ``.
-- Daugiau informacijos, kaip įdiegti git žr. [oficiali git dokumentacija](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
-- Jei įdiegiate git per homebrew nereikia keisti jokių nuostatų. Jei prireiks: Jos gali būti randamos čia: Android Studio - Preferences.
+- Any git version should work. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Use homebrew to install git: `` `$ brew install git` ``.
+- For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+- If you install git via homebrew there is no need to change any preferences. Jei prireiks: Jos gali būti randamos čia: Android Studio - Preferences.

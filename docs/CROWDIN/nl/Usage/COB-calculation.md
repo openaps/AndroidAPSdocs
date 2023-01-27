@@ -12,7 +12,7 @@ Niet-opgenomen koolhydraten worden afgekapt (naar nul) na bepaalde tijd.
 
 ### AAPS, Gewogen gemiddelde
 
-de absorptie wordt berekend met `COB == 0` na de opgegeven tijd
+absorption is calculated to have `COB == 0` after specified time
 
 ```{image} ../images/cob_aaps2_orange_II.png
 :alt: AAPS, Gewogen gemiddelde
@@ -26,7 +26,7 @@ AAPS waarschuwt je als je op het punt staat om een bolus te gaan geven wanneer j
 
 ### Hoe detecteert AndroidAPS verkeerde COB waarden?
 
-Normaalgesproken detecteert AAPS carb absorptie dmv BG afwijkingen. In het geval je koolhydraten hebt ingevoerd maar AAPS ziet niet de verwachte BG stijging, dan zal hij gebruik maken van de [min_5m_carbimpact](..Configuratie/Config-Builder.md?highlight=min_5m_carbimpact#opname-instellingen) methode om de absorptie te berekenen (als een soort ' vangnet' of ' fallback' in het Engels). Aangezien deze methode slechts de minimale koolhydraten absorptie berekent zonder rekening te houden met BG afwijkingen, kan dit leiden tot onjuiste COB waarden.
+Normaalgesproken detecteert AAPS carb absorptie dmv BG afwijkingen. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Aangezien deze methode slechts de minimale koolhydraten absorptie berekent zonder rekening te houden met BG afwijkingen, kan dit leiden tot onjuiste COB waarden.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: Detectie van verkeerde COB waarden
@@ -36,18 +36,18 @@ In de bovenstaand screenshot werd bij het berekenen van de koolhydraat absorptie
 
 ### Hoe om te gaan met deze waarschuwing?
 
-- Overwegen om de behandeling te annuleren - druk op Annuleer in plaats van OK.
-- Gebruik de boluscalculator opnieuw maar haal het vinkje bij COB weg.
-- Als je denkt dat je een correctie bolus nodig hebt, voer hem handmatig in.
-- Pas in ieder geval op dat je geen overdosis geeft!
+- Consider to cancel the treatment - press Cancel instead of OK.
+- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
+- In case you are sure you need a correction bolus, enter it manually.
+- In any case be careful not to overdose!
 
 ### Waarom detect het algoritme COB niet goed?
 
-- Misschien heb je de hoeveelheid koolhydraten overschat bij het invoeren.
-- Activiteit / sport na je de vorige maaltijd
-- KH ratio moet worden aangepast
-- Waarde voor min_5m_carbimpact is verkeerd (aanbevolen is 8 met SMB, 3 met AMA)
+- Maybe you overestimated carbs when entering them.
+- Activity / exercise after your previous meal
+- I:C needs adjustment
+- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
 
 ## Handmatige correctie van ingevoerde koolhydraten
 
-Als je de hoeveelheid koolhydraten hebt over/onderschat dan kun je dit corrigeren via het Behandelingen-tabblad en het Acties-tabblad, zoals [hier](../Getting-Started/Screenshots#koolhydraten-correctie) beschreven.
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).

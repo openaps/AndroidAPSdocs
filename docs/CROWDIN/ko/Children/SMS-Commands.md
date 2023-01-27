@@ -2,24 +2,22 @@
 
 ## 안전유의사항
 
-- AndroidAPS는 SMS 문자를 통해 아이의 폰을 원격으로 조정할 수 있습니다. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)이 도난 될 수도 있는 경우도 발생할 수 있다는것을 항상 유념하세요. 따라서 최소한 PIN 코드이상의 보안으로 본인의 폰을 보호하세요. A strong password or biometrics are recommended.
+- AndroidAPS allows you to control a child's phone remotely via text message. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)을 도난 맞을 수도 있다는 사실에 항상 유념하셔야 합니다. 따라서 최소한 PIN 코드 이상의 보안으로 폰을 보호하십시오. A strong password or biometrics are recommended.
 - Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
-- Bolus 혹은 프로파일 변경 등의 원격 명령들이 수행되었다면 AndroidAPS 역시 SMS 문자로 항상 알려줄 것입니다. 수신 폰 중 하나가 도난당한 경우를 대비하여 적어도 2개 이상의 폰에 확인 SMS 문자가 전송될 수 있도록 설정해놓는 것이 좋습니다.
-- **SMS 원격명령을 통해 Bolus를 주입한 경우 Nightscout (NSClient, 웹사이트...)를 통해 탄수화물양을 항상 입력하여야 합니다!** 그러지 않으면 너무 낮은 COB인 상태에서 IOB가 계산될 것이고 AAPS가 당신이 너무 많은 활성 인슐린을 가지고 있다고 가정하게 되기 때문에 적절한 보정 주입이 되지 않을 수 있습니다.
+- AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. 수신 폰 중 하나가 도난 당할 경우를 대비하여, 적어도 2개 이상의 다른 폰에 확인 문자 메시지가 전송되도록 설정하는 것을 권장합니다.
+- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
 ## Setup SMS commands
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: "SMS \uBA85\uB839 \uC124\uC815"
+:alt: SMS 명령 설정
 ```
 
-- AAPS와 작동하는 임시 목표와 관련된 대부분의 조정들은 can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
-
-Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 가능합니다.
-\* If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
-
-- 당신의 안드로이드폰의 환경설정에서 애플리케이션 > AndroidAPS > 권한에 들어간 뒤 SMS를 활성화하세요
+- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
+- Boluses can't be given through Nightscout, but you can use SMS commands.
+- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
+- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
 ### Authorized phone numbers
 
@@ -27,13 +25,13 @@ Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 �
 
 - Enable 'Allow remote commands via SMS'.
 
-- 하나 이상의 전화번호 사용을 원한다면:
+- If you want to use more than one number:
 
-  - 하나의 번호만 입력하세요.
+  - Enter just one number.
 
-  - SMS 명령을 보내고 확인하여 해당 전화번호가 올바르게 작동하는지 확인하십시오.
+  - Make that single number work by sending and confirming a SMS command.
 
-  - 다른 번호를 입력하세요. 세미콜론으로 구분하고 공백이 있으면 안됩니다.
+  - Enter additional number(s) separated by semicolon, no space.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
     :alt: SMS Commands Setup multiple numbers
@@ -81,7 +79,7 @@ Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 �
 
 ## Use SMS commands
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands#commands) below.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.md#commands) below.
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
@@ -95,7 +93,7 @@ Bolus는 Nightscout를 통해 원격 주입되지 않지만, SMS 명령으로 �
 
 ## 명령어
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: SMS Commands Example
@@ -103,106 +101,71 @@ Commands must be sent in English, the response will be in your local language if
 
 ### Loop
 
-- LOOP STOP/DISABLE
-  \* 응답: Loop가 중지되었습니다
+- LOOP STOP/DISABLE \* Response: Loop has been disabled
 
-- LOOP START/ENABLE
-  \* 응답: Loop가 실행되었습니다
+- LOOP START/ENABLE \* Response: Loop has been enabled
 
 - LOOP STATUS
 
-  - 현재의 Loop의 상태에 따라 응답됩니다
+  - Response depends on actual status
 
-    - Loop가 중지중입니다
-    - Loop가 실행중입니다
-    - 일시중지중 (10분)
+    - Loop is disabled
+    - Loop is enabled
+    - Suspended (10 min)
 
-- LOOP SUSPEND 20
-  \* 응답: Loop가 20분동안 일시중지되었습니다
+- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
 
-- LOOP RESUME
-  \* 응답: Loop가 재실행되었습니다
+- LOOP RESUME \* Response: Loop resumed
 
 ### CGM 데이터
 
-- BG
-  \* 응답: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 120
-  \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN
-  \* 코드 전송 후 응답: 보정 전송됨 (**xDrip이 설치되었다면 xDrip+에서 Accept Calibrations가 활성화 되어 있어야만 합니다**)
+- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
 ### Basal
 
-- BASAL STOP/CANCEL
-  \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3
-  \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20
-  \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30%
-  \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50
-  \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
+- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
 
 ### Bolus
 
 Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
 
-- BOLUS 1.2
-  \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN
-  \* 응답 B: 원격 주입이 불가능합니다. 나중에 다시 시도해주세요.
-- BOLUS 0.60 MEAL
-  \* MEAL 옵션을 지정하는 경우 MEAL 임시목표가 설정됩니다 (기본값은 45분동안 목표값 90 mg/dL입니다).
-  \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN
-  \* 응답 B: 원격 주입이 불가능합니다.
-- CARBS 5
-  \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM
-  \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL
-  \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120
-  \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. 나중에 다시 시도해주세요.
+- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
+- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
+- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
+- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
+- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
 
 ### 프로파일
 
-- PROFILE STATUS
-  \* 응답: Profile1
-- PROFILE LIST
-  \* 응답: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1
-  \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30
-  \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Response: Profile1
+- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
+- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
+- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
 
 ### 기타
 
-- TREATMENTS REFRESH
-  \* 응답: NS에서 관리 새로고침
-- NSCLIENT RESTART
-  \* 응답: NSCLIENT RESTART 1 receivers
-- PUMP
-  \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT
-  \* Response: Pump reconnected
-- PUMP DISCONNECT *30*
-  \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP
-  \* 응답: SMS 원격 기능을 비활성화려면 Any를 입력하고 답장하세요. AAPS 마스터폰을 통해서만 다시 활성화할 수 있습니다.
-- TARGET MEAL/ACTIVITY/HYPO
-  \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL
-  \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- HELP
-  \* 응답: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS
-  \* 응답: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Response: Refresh treatments from NS
+- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
+- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
+- PUMP CONNECT \* Response: Pump reconnected
+- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
+- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. AAPS 마스터폰을 통해서만 다시 활성화할 수 있습니다.
+- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
+- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
+- HELP \* Response: BG, LOOP, TREATMENTS, .....
+- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
 ## 문제 해결
 
 ### 무한 SMS
 
-동일한 메세지를 끊임없이 계속 수신하는 경우 (예. 프로파일 변경) 아마도 다른 앱과 무한루프가 되게 설정되었을 가능성이 있습니다. 예를 들면 그 앱이 xDrip+일 수가 있습니다. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
+If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. 예를 들면 그 앱이 xDrip+일 수가 있습니다. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
 
 If the other app is installed on multiple phones make sure to deactivate upload on all of them.
 
@@ -211,6 +174,5 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 갤럭시 S10 폰 업데이트 이후 SMS 명령어가 작동하지 않는다는 문제가 보고되었습니다. Could be solved by disabling 'send as chat message'.
 
 ```{image} ../images/SMSdisableChat.png
-:alt: "\uCC44\uD305 \uBA54\uC138\uC9C0\uB85C \uBCF4\uB0B4\uAE30 \uBE44\uD65C\uC131\uD654\
-:  \uD558\uAE30"
+:alt: 채팅 메세지로 보내기 비활성화하기
 ```

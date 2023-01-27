@@ -48,8 +48,8 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
 
 ### Traducir enlaces de títulos
 
-* Cuando un enlace interno sólo conduce a una determinada página (es decir ../Usage/Profiles.md), no es necesaria ninguna traducción.
-* Enlaces internos a un determinado título (es decir ..//Usage/Profiles#percentage) debe ser traducido como el titular en el otro idioma es diferente de la original en inglés.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Si traduce un encabezado puede transformar esto en el enlace de anclaje (parte siguiente a # - i.e. #porcentaje) cambiando todas las letras a minúsculas, transformando caracteres especiales a caracteres estándar, reemplazando espacios por - (signo menos) y saltando las marcas de puntuación.
     
     Aquí tienes algunos ejemplos:
@@ -62,7 +62,7 @@ Cuando un lector de pruebas aprueba una traducción, se agregará a la siguiente
 
 #### Traducción de enlaces en archivos Markdown (.md)
 
-En el momento dos [lenguajes de marcación](./make-a-PR#code-syntax) se utilizan en docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. Mientras que los archivos escritos en la sintaxis de reStructuredText (.rst) siempre muestran la dirección de enlace en Crowdin, para los archivos de la sintaxis de Markdown (.md), es posible que tenga que activar la visualización de códigos HTML con el fin de traducir la dirección de enlace.
 
 * * *
 
@@ -80,7 +80,7 @@ haga clic en la rueda dentada para abrir la configuración, seleccione "Show" y 
 
 ![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL2.png)
 
-A continuación, los enlaces se mostrarán en formato HTML estándar y se pueden traducir teniendo en cuenta las reglas mencionadas [arriba](./translations#translate-headline-links).
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - mostrar la etiqueta HTML](./images/CrowdinShowURL3.png)
 

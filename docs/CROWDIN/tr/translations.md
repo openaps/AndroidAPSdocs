@@ -48,8 +48,8 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 ### Başlık bağlantılarını çevir
 
-* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.md) çeviri gerekli değildir.
-* Belirli bir başlığa (ör. ..//Usage/Profiles#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
+* When an internal link leads only to a certain page (i.e. ../Usage/Profiles.md) no translation is necessary.
+* Internal links to a certain headline (i.e. ..//Usage/Profiles.md#percentage) must be translated as the headline in the other language is different from the English original.
 * Bir başlığı çevirecekseniz, (# işaretinden sonraki kısım, ör. #percentage) tüm harfleri küçük harfe çevirerek, özel karakterleri standart karakterlere dönüştürerek, boşlukları - (eksi işareti) ile değiştirerek ve noktalama işaretlerini atlayarak bunu bir bağlantı metnine dönüştürebilirsiniz.
     
     İşte bazı örnekler:
@@ -62,7 +62,7 @@ Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne ekle
 
 #### Markdown dosyalarında (.md) bağlantı çevirisi
 
-Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. reStructuredText sözdiziminde (.rst) yazılan dosyalar Crowdin'de her zaman bağlantı adresini gösterirken, markdown sözdizimindeki (.md) dosyalarda bağlantı adresini çevirmek için HTML etiketi görüntülemeyi etkinleştirmeniz gerekebilir.
+At the moment two [markup languages](./make-a-PR.html#code-syntax) are used in docs. reStructuredText sözdiziminde (.rst) yazılan dosyalar Crowdin'de her zaman bağlantı adresini gösterirken, markdown sözdizimindeki (.md) dosyalarda bağlantı adresini çevirmek için HTML etiketi görüntülemeyi etkinleştirmeniz gerekebilir.
 
 * * *
 
@@ -80,7 +80,7 @@ ayarları açmak için dişli çarka tıklayın, "Göster"i seçin ve "Kaydet"e 
 
 ![Crowdin - HTML etiketini göster](./images/CrowdinShowURL2.png)
 
-Bağlantılar daha sonra standart HTML biçiminde gösterilir ve [yukarıda](./translations#translate-headline-links) belirtilen kurallar dikkate alınarak çevrilebilir.
+Links will then be shown in standard HTML format and can be translated considering the rules mentioned [above](./translations.html#translate-headline-links).
 
 ![Crowdin - HTML etiketi görüntüleme](./images/CrowdinShowURL3.png)
 

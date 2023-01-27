@@ -21,7 +21,7 @@ Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync
 
 ### Autres paramètres de sécurité
 
-Gardez votre téléphone à jour comme c'est décrit dans [La sécurité avant tout](../Getting-Started/Safety-first.md).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
 ## Manuel d'installation Nightscout
 

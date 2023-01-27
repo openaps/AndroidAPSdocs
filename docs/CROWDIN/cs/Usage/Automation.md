@@ -6,12 +6,12 @@ Může se stát, že pro tytéž často se opakující události budete měnit t
 
 Např. když je glykémie příliš nízká, můžete si nechat automaticky nastavit vyšší dočasný cíl. Nebo když se budete nacházet ve fitness centru, automaticky se nastaví dočasný cíl.
 
-Dříve než použijete Automatizaci, měli byste ovládat ruční nastavování dočasných cílů \<./temptarget.html>\`\_ nebo přepínání profilu.
+Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
 
 Make sure you really understand how automation works before setting up your first simple rule. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
-:alt: "Automatizace \u2013 podm\xEDnka + akce"
+:alt: Automatizace – podmínka + akce
 ```
 
 ## Jak to používat
@@ -30,20 +30,20 @@ So make sure to deactivate automation rules during these occasions if necessary.
 
 ### Where to find Automation
 
-Depending on your [settings in config builder](../Configuration/Config-Builder#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder.md#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
 ### Obecné
 
 Existují určitá omezení:
 
-- Hodnota glykémie musí být v rozmezí 4 až 15 mmol/l.
-- Procentuální hodnota profilu musí být mezi 70 % a 130%.
-- Je tam 5 min. časový limit mezi provedeními (a prvním provedením).
+- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
+- The profile percentage has to be between 70 % and 130%.
+- There is a 5 min. time limit between executions (and first execution).
 
-**Buďte prosím opatrní:**
+**Please be careful:**
 
-- **méně než -2 znamená: -3 a nižší (-4,-10 atd.)**
-- **více než -2 znamená: -1 a vyšší (-1, 0, +10 atd.)**
+- **less than -2 means: -3 and lower (-4,-10, etc)**
+- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
 
 ### Podmínka
 
@@ -51,43 +51,43 @@ Můžete si vybrat mezi několika podmínkami. Některé věci jsou zde vysvětl
 
 - connect conditions: you can have several conditions and can link them with
 
-  - „A“
-  - „Nebo“
+  - "And"
+  - "Or"
   - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
 
-- Čas vs. opakující se čas
+- Time vs. recurring time
 
-  - čas =  jednorázová událost
-  - recurring time = something that happens regularly (i.e. jednou týdně, každý pracovní den apod.)
+  - time =  single time event
+  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
 
-- poloha: na kartě Konfigurace (Automatizace) můžete vybrat, kterou službu určování polohy chcete používat:
+- location: in the config builder (Automation), you can select which location service you want to use:
 
   - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Používat zjištění polohy podle sítě: Poloha podle vaší sítě Wifi
+  - Use network location: Location of your Wifi
   - Use GPS location (Attention! May cause excessive battery drain!)
 
 ### Akce
 
 Můžete si vybrat jednu nebo více akcí:
 
-- spustit dočasný cíl
+- start temp target
 
-  - musí být v rozmezí 4 mmol/l a 15 mmol/l
-  - funguje pouze tehdy, není-li již spuštěn jiný dočasný cíl
+  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
+  - works only if there is no previous temp target
 
-- zastavit dočasný cíl
+- stop temp target
 
-- oznámení
+- notification
 
-- procento profilu
+- profile percentage
 
-  - musí být mezi 70 % a 130 %
-  - funguje pouze v případě, že předchozí procento profilu bylo 100 %
+  - must be between 70% and 130%
+  - works only if the previous percentage is 100%
 
-Po přidání akce kliknutím na výchozí hodnoty **nezapomeňte změnit výchozí hodnoty** na to, co potřebujete.
+After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: "V\xFDchoz\xED hodnoty automatizace vs. nastaven\xE9 hodnoty"
+:alt: Automation default vs. set values
 ```
 
 ### Sort automation rules
@@ -116,11 +116,11 @@ To delete an automation rule click on trash icon.
 
   **Doubly important if action is a profile switch!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features#autosens) back to 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
 
 - Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
 
 - Profile switching will not reset the profile back to your base profile
 
@@ -163,4 +163,4 @@ Please be aware to use automation incorrectly. This might lead to difficulties a
 
 ## Alternativy
 
-For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Některé příklady jsou uvedeny v části \<./automationwithapp.html>\`\_.
+For advanced users, there are other possibilities to automate tasks using IFTTT or a third party Android app called Automate. Some examples can be found [here](./automationwithapp.html).

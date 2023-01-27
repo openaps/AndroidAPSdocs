@@ -6,38 +6,34 @@ AndroidAPS is an app that acts as an artificial pancreas system (APS) on an Andr
 
 Σημείωση προσοχής: Το AndroidAPS δεν ρυθμίζεται από καμία ιατρική αρχή σε καμία χώρα. Η χρήση του AndroidAPS πραγματοποιεί ουσιαστικά ένα ιατρικό πείραμα στον εαυτό σας. Η εγκατάσταση του συστήματος απαιτεί αποφασιστικότητα και τεχνικές γνώσεις. Εάν δεν έχετε την τεχνική τεχνογνωσία στην αρχή, θα την έχετε στο τέλος. Όλες οι πληροφορίες που χρειάζεστε μπορούν να βρεθούν σε αυτά τα έγγραφα, αλλού online ή από άλλους που το έχουν ήδη κάνει - μπορείτε να τα ρωτήσετε σε ομάδες του Facebook ή σε άλλα φόρουμ. Πολλοί άνθρωποι έχουν χτίσει με επιτυχία το AndroidAPS και τώρα το χρησιμοποιούν με απόλυτη ασφάλεια, αλλά είναι σημαντικό κάθε χρήστης:
 
-- Να δημιουργεί το ίδιο το σύστημα έτσι ώστε να κατανοεί πλήρως το πώς λειτουργεί
-- Ρυθμίζει τον ατομικό αλγόριθμο δοσολογίας με την ομάδα του διαβήτη για να δουλέψει σχεδόν τέλεια
-- Να διατηρεί και παρακολουθεί το σύστημα για να διασφαλίσει ότι λειτουργεί σωστά
+- Builds the system themselves so that they thoroughly understand how it works
+- Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
+- Maintains and monitors the system to ensure it is working properly
 
-```{eval-rst}
-.. σημείωση::
-        **Disclaimer and Warning**
+:::{note}
+**Disclaimer and Warning**
 
-        * Όλες οι πληροφορίες, οι σκέψεις και ο κώδικας που περιγράφονται εδώ προορίζονται μόνο για πληροφοριακούς και εκπαιδευτικούς σκοπούς. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. Χρησιμοποιήστε το Nightscout και το AndroidAPS με δική σας ευθύνη και μην χρησιμοποιείτε τις πληροφορίες ή τον κωδικό για να παίρνετε ιατρικές αποφάσεις.
+- All information, thought, and code described here is intended for informational and educational purposes only. Το Nightscout δεν πραγματοποιεί επί του παρόντος προσπάθεια συμμόρφωσης με το HIPAA. Χρησιμοποιήστε το Nightscout και το AndroidAPS με δική σας ευθύνη και μην χρησιμοποιείτε τις πληροφορίες ή τον κωδικό για να παίρνετε ιατρικές αποφάσεις.
+- Use of code from github.com is without warranty or formal support of any kind. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
+- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
 
-        * Η χρήση του κώδικα από το github.com είναι χωρίς εγγύηση ή επίσημη υποστήριξη οποιασδήποτε μορφής. Ανατρέξτε στην ΑΔΕΙΑ ΑΠΟΣΤΟΛΗΣ αυτού του αποθετηρίου για λεπτομέρειες.
-
-        * Όλα τα ονόματα των προϊόντων και των εταιρειών, τα εμπορικά σήματα, τα κατατεθέντα εμπορικά σήματα και τα καταχωρημένα λογότυπα υπηρεσίας αποτελούν ιδιοκτησία των αντίστοιχων κατόχων τους. Η χρήση τους είναι για ενημερωτικούς σκοπούς και δεν συνεπάγεται καμία προσχώρηση ή έγκριση από αυτούς.
-
-        Please note - this project has no association with and is not endorsed by: `SOOIL <http://www.sooil.com/eng/>`_, `Dexcom <https://www.dexcom.com/>`_, `Accu-Chek, Roche Diabetes Care <https://www.accu-chek.com/>`_, `Insulet <https://www.insulet.com/>`_ or `Medtronic <https://www.medtronic.com/>`_.
-```
+Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+:::
 
 Εάν είστε έτοιμοι για την πρόκληση, παρακαλώ διαβάστε το.
 
 ## Πρωταρχικοί στόχοι πίσω από το AndroidAPS
 
-- Μια εφαρμογή με ενσωματωμένη ασφάλεια. Για να διαβάσετε σχετικά με τα χαρακτηριστικά ασφαλείας των αλγορίθμων, γνωστά ως oref0 και oref1, κάντε κλικ εδώ (<https://openaps.org/reference-design/>)
-- Μια εφαρμογή all-in-one για τη διαχείριση του διαβήτη τύπου 1 με τεχνητό πάγκρεας και Nightscout
-- Μια εφαρμογή στην οποία οι χρήστες μπορούν εύκολα να προσθέσουν ή να αφαιρέσουν στοιχεία ανάλογα με τις ανάγκες
-- Μια εφαρμογή με διαφορετικές εκδόσεις για συγκεκριμένες τοποθεσίες και γλώσσες.
-- Μια εφαρμογή που μπορεί να χρησιμοποιηθεί σε λειτουργία ανοιχτού και κλειστού κυκλώματος
-- Μια εφαρμογή που είναι απόλυτα διαφανής: οι χρήστες μπορούν να εισάγουν παραμέτρους, να δουν τα αποτελέσματα και να λάβουν την τελική απόφαση
-- Μια εφαρμογή που είναι ανεξάρτητη από συγκεκριμένους οδηγούς αντλιών και περιέχει μια "εικονική αντλία" έτσι ώστε οι χρήστες να μπορούν να πειραματιστούν με ασφάλεια πριν τη χρησιμοποιήσουν στον εαυτό τους
-- Μια εφαρμογή που είναι στενά συνδεδεμένη με το Nightscout
-- Μια εφαρμογή στην οποία ο χρήστης ελέγχει τους περιορισμούς ασφαλείας
+- An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
+- An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
+- An app to which users can easily add or remove modules as needed
+- An app with different versions for specific locations and languages.
+- An app which can be used in open- and closed-loop mode
+- An app that is totally transparent: users can input parameters, see results, and make the final decision
+- An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves
+- An app closely integrated with Nightscout
+- An app in which the user is in control of safety constraints
 
 ## Πώς να ξεκινήσω
 
-Φυσικά, όλο αυτό το περιεχόμενο εδώ είναι πολύ σημαντικό, αλλά μπορεί να είναι στην αρχή αρκετά συγκεχυμένο.
-Ένας καλός προσανατολισμός δίνεται από την Επισκόπηση μονάδων \</ Module / module.html> `_ και τους` Στόχους \<./ Usage / Objectives.html> \_.
+Φυσικά, όλο αυτό το περιεχόμενο εδώ είναι πολύ σημαντικό, αλλά μπορεί να είναι στην αρχή αρκετά συγκεχυμένο. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
