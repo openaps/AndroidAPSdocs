@@ -41,7 +41,7 @@ Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide
 
 The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
 
-The documentation process is explained [here](translations.html).
+The documentation process is explained [here](translations.md).
 
 State of the translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
