@@ -44,7 +44,7 @@ The documentation is written in English and translated in different languages. W
 The documentation process is explained [here](translations.md).
 
 State of the documentation translations per language (country code, percentage translation, percentage proofreading).
-| Language | Translated | Proofread
+| Language | Translated | Proofread |
 | -------- | -------- | -------- |
 | CS | ![cs translation](https://img.shields.io/badge/dynamic/json?color=blue&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![cs proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
 | DE | ![de translation](https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=flat&logo=crowdin&query=%24.progress.1.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![de proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=de&style=flat&logo=crowdin&query=%24.progress.1.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
@@ -65,6 +65,7 @@ State of the documentation translations per language (country code, percentage t
 
 State of the app translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
+| -------- | -------- | -------- |
 | AF | ![af translation](https://img.shields.io/badge/dynamic/json?color=blue&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![af proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
 | BG | ![bg translation](https://img.shields.io/badge/dynamic/json?color=blue&label=bg&style=flat&logo=crowdin&query=%24.progress.1.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![bg proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=bg&style=flat&logo=crowdin&query=%24.progress.1.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
 | CA | ![ca translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ca&style=flat&logo=crowdin&query=%24.progress.2.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![ca proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ca&style=flat&logo=crowdin&query=%24.progress.2.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
