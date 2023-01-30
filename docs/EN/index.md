@@ -77,7 +77,6 @@ State of the translations per language (country code, percentage translation, pe
 ![sk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)
 ![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)
 ![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)
-
 :::
 
 :::{admonition} Ask for help - Writing Docs
