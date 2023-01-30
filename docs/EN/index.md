@@ -43,6 +43,7 @@ The documentation is written in English and translated in different languages. W
 
 The documentation process is explained [here](translations.md).
 
+(translation-help-needed)=
 State of the documentation translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
 | -------- | -------- | -------- |
