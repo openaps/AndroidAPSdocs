@@ -1,8 +1,8 @@
-# CGMS Configuration
+# Configuración de MCG
 
 * [General](../Hardware/GeneralCGMRecommendation.md)
-* [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
-* [xDrip+Settings](./xdrip.md)
+* [Suavizado de datos](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [Configuración de xDrip+](./xdrip.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
 * [Dexcom G4](../Hardware/DexcomG4.md)
@@ -10,6 +10,6 @@
 * [Libre 2](../Hardware/Libre2.md)
 * [Libre 1](../Hardware/Libre1.md)
 * [Eversense](../Hardware/Eversense.md)
-* [MM640g/MM630g](../Hardware/MM640g.md)
+* [MM640G/MM630G](../Hardware/MM640g.md)
 * [PocTech](../Hardware/PocTech.md)
-* [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)
+* [Nightscout como origen BG](../Hardware/CgmNightscoutUpload.md)
