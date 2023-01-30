@@ -44,7 +44,7 @@ The documentation is written in English and translated in different languages. W
 The documentation process is explained [here](translations.md).
 
 (translation-help-needed)=
-State of the documentation translations per language (country code, percentage translation, percentage proofreading).
+State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
 | -------- | -------- | -------- |
 | CS | ![cs translation](https://img.shields.io/badge/dynamic/json?color=blue&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![cs proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
@@ -64,7 +64,7 @@ State of the documentation translations per language (country code, percentage t
 | SK | ![sk translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![sk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
 | TR | ![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
 
-State of the app translations per language (country code, percentage translation, percentage proofreading).
+State of the **app** translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
 | -------- | -------- | -------- |
 | AF | ![af translation](https://img.shields.io/badge/dynamic/json?color=blue&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![af proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
