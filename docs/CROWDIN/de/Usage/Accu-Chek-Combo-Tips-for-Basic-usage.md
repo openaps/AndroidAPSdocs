@@ -50,19 +50,21 @@
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS setzt dann erneut eine benötigte temporäre Basalrate mit Eintreffen des nächsten Zuckerwertes. 
 
+(battery-type-and-causes-of-short-battery-life)=
+
 ### Batterieart und Ursachen für eine kurze Lebensdauer der Batterie
 
 * As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Die typische Lebensdauer für verschiedene Batterien ist wie folgt:
+Ranges for typical life time of the different battery types are as follows:
 
 * **Energizer Ultimate Lithium**: 4 bis 7 Wochen
 * **Power One Alkaline** (Varta) aus dem Service-Pack: 2 bis 4 Wochen
 * **Eneloop wiederaufladbare** Batterien (BK-3MCCE): 1-3 Wochen
 
-Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegebenen Bereiche, überprüfe bitte folgende mögliche Ursachen:
+If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
 
 * Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * Es gibt verschiedene Varianten der Batterie Abdeckung bei der Combo Pumpe, die teilweise einen Kurzschluss bei der Batterie verursachen und sie schnell entladen. Die Abdeckungen ohne dieses Problem kann man an den goldenen Metallkontakten erkennen.
@@ -77,7 +79,7 @@ Wenn die Lebensdauer der Batterie wesentlich kürzer ist, als die oben angegeben
 
 ## Erweiterter Bolus, Multiwave Bolus
 
-Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-Algorithmus unterstützt. Aber ein ähnlicher Effekt kann durch folgende Alternativen erreicht werden:
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
 * Setze vor dem Essen auf der **Registerkarte Aktionen** in AndroidAPS unter Temporäres Ziel ein **Bald essen** Ziel mit einem Zielwert von 80 für ein paar Stunden. Die Dauer sollte dem Intervall entsprechen, das du für einen erweiterten Bolus verwenden würdest. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
@@ -85,15 +87,15 @@ Ein gleichzeitiger erweiterter Bolus und Multiwave Bolus wird nicht vom OpenAPS-
 
 * Wenn du unbedingt den erweiterten oder Multiwave Bolus direkt an der Pumpe eingeben willst, wird AndroidAPS dich damit bestrafen, dass es den Closed Loop für die nächsten 6 Stunden aussetzt um zu gewährleisten, dass nicht zu viel Insulin berechnet und abgegeben wird.
 
-![Loop nach Multiwave Bolus deaktiviert](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Alarme bei Bolusabgabe
 
 * Wenn AndroidAPS bemerkt, dass ein identischer Bolus erfolgreich in der gleichen Minute abgegeben wurde, wird die Bolusabgabe mit der gleichen Menge Insulin verhindert. Wenn du dieselbe Bolusmenge unbedingt innerhalb kurzer Zeit erneut abgeben möchtest, warte zwei Minuten und gib ihn dann ab. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. An dieser Stelle müssen nicht zu unterscheidende Einträge verhindert werden.
 
-![Doppelter Bolus](../images/combo/combo-tips-doppelbolus.png)
+![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Dieser Mechanismus verhindert ebenfalls einen zweiten Fehler: wenn während der Benutzung des Bolus-Rechners ein weitere Bolus direkt an der Pumpe abgegeben wird und sich dadurch die Bolus-Historie ändert, ist die Basis der Bolusberechnung falsch und die Bolusabgabe wird abgebrochen. 
 
-![Abgebrochener Bolus](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/combo/combo-tips-history-changed.png)
