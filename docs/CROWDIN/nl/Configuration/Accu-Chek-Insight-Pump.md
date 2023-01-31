@@ -50,13 +50,15 @@ Opmerking: AAPS zal informatie altijd opslaan in het **eerste basaal profiel in 
 
 Opmerking: Er zal geen permanente verbinding zijn tussen pomp en telefoon. Een verbinding zal alleen tot stand worden gebracht als dat nodig is (d.w.z. instellen van tijdelijke basaalstand, bolus geven, pomp geschiedenis uitlezen...). Anders zouden de batterij van telefoon en pomp te snel leeglopen.
 
+(settings-in-aaps)=
+
 ## Instellingen in AAPS
 
 **Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
 
-![Screenshot van Insight Settings](../images/Insight_settings.png)
+![Screenshot of Insight Settings](../images/Insight_settings.png)
 
-In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
+In the Insight settings in AndroidAPS you can enable the following options:
 
 * "Infuuswissel noteren": Dit zal automatisch een insulinepatroon wissel noteren wanneer je de "cannule vullen" optie op de pomp gebruikt.
 
@@ -93,9 +95,9 @@ In de Insight-instellingen in AndroidAPS kun je de volgende opties inschakelen:
 
 * "Verbindingsvertraging ": Dit bepaalt hoe lang (in seconden) AndroidAPS zal wachten met het verbreken van de pompverbinding nadat een opdracht is uitgevoerd. Standaard waarde is 5 seconden.
 
-Voor perioden waarin de pomp gestopt is geweest, zal AAPS een tijdelijke basaalstand noteren van 0%.
+For periods when pump was stopped AAPS will log a temp. basal rate with 0%.
 
-In AndroidAPS toont het Accu-Chek Insight tabblad de huidige status van de pomp. Er zijn hier twee knoppen:
+In AndroidAPS, the Accu-Chek Insight tab shows the current status of the pump and has two buttons:
 
 * "Vernieuw": Vernieuwt de pomp status
 * "Activeer/deactiveer melding van TBR einde": Een Insight pomp is standaard ingesteld om een alarm af te geven wanneer een TBR (tijdelijke basaalstand) eindigt. Met deze knop kun je dit alarm activeren of deactiveren zonder dat je hiervoor speciale Accucheck configuratie-software nodig hebt.
@@ -104,43 +106,47 @@ In AndroidAPS toont het Accu-Chek Insight tabblad de huidige status van de pomp.
 
 ## Instellingen in de pomp
 
-Configureer alarmen in de pomp als volgt:
+Configure alarms in the pump as follows:
 
 * Menu > Instellingen > Apparaatinstellingen > Modus instellingen > Zacht > Signaal > Geluid
 * Menu > Instellingen > Apparaatinstellingen > Instellingen modus > Zacht > Volume > 0 (verwijder alle balken)
 * Menu > Modi > Signaalmodus > Zacht
 
-Met deze instellingen gaan alle alarmen vanuit de pomp af in stilte. AndroidAPS krijgt de alarmen wel binnen, en beslist vervolgens of een alarm relevant voor jou is. Niet-relevante alarmen worden bevestigd in de pomp door AndroidAPS, hiervan zul jij dus niks merken. Wel-relevante alarmen worden door AndroidAPS niet bevestigd, waarna het volume van het alarm zal toenemen (eerst piepen, dan trillen) en jij als gebruiker het alarm moet bevestigen.
+This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
+
+(vibration)=
 
 ### Trilalarmen
 
-Insight pompen met nieuwere firmware zullen kort trillen wanneer een bolus wordt afgeleverd (bijvoorbeeld wanneer AndroidAPS een SMB afgeeft of wanneer AndroidAPS een vertraagde bolus afgeeft om een hoge tijdelijke basaalstand te simuleren).
+Depending on the firmware version of your pump, the Insight will vibrate briefly every time a bolus is delivered (for example, when AndroidAPS issues an SMB or TBR emulation delivers an extended bolus).
 
 * Firmware 1.x: Geen trillingen.
 * Firmware 2.x: Trillingen kunnen niet worden uitgeschakeld.
 * Firmware-3.x: AndroidAPS trilt niet bij afgeven van bolus. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
 
-Firmwareversie is te vinden in het menu.
+Firmware version can be found in the menu.
 
 ## Batterij vervangen
 
-De batterij gaan ongeveer 10 tot 14 dagen mee, maximaal 20 dagen. Dit zijn ervaringen van gebruikers die lithiumbatterijen van het merk Energizer in hun pomp hebben.
+Battery life for Insight when looping range from 10 to 14 days, max. 20 days. The user reporting this is using Energizer lithium batteries.
 
-De Insight pomp heeft een kleine interne batterij om essentiële functies zoals de interne klok, te kunnen laten doorgaan terwijl jij de batterij verwisselt. Als het wisselen van de batterij te lang duurt, kan deze interne batterij leegraken. Dan wordt de interne klok gereset en wordt je gevraagd een nieuwe tijd en datum in te voeren nadat je een nieuwe batterij in de pomp hebt gedaan. Als dit gebeurt, zullen alle behandelingen in AndroidAPS voorafgaand aan de batterijwissel niet meer in berekeningen (zoals COB, IOB) worden opgenomen, omdat de juiste tijd niet kan worden vastgesteld.
+The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
+
+(insight-specific-errors)=
 
 ## Insight specifieke foutmeldingen
 
 ### Vertraagde bolus
 
-Gebruik slechts één vertraagde bolus tegelijk, omdat meerdere uitgebreide bolussen tegelijkertijd fouten kunnen veroorzaken.
+Just use one extended bolus at a time as multiple extended boluses at the same time might cause errors.
 
 ### Time-out
 
-Soms kan het gebeuren dat de Insight niet antwoordt wanneer AndroidAPS probeert te verbinden met je pomp. In dat geval zal AAPS het volgende bericht weergeven: "Time-out tijdens verbinden - reset bluetooth".
+Sometimes it might happen that the Insight pump does not answer during connection setup. In this case AAPS will display the following message: "Timeout during handshake - reset bluetooth".
 
 ![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
-Om dit op te lossen, schakel je bluetooth uit op je pomp EN op je telefoon gedurende ongeveer 10 seconden. Zet bluetooth daarna weer aan op je pomp en telefoon.
+In this case turn off bluetooth on pump AND smartphone for about 10 seconds and then turn it back on.
 
 ## Wisselen van tijdzone met de Insight
 
