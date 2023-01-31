@@ -146,7 +146,7 @@
   :alt: Preferences > Buttons
   ```
 
-### Quick Wizard
+### Asistente Rápido
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
 
