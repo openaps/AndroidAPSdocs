@@ -203,7 +203,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </ul>
 
 <h3 spaces-before="0">
-  Fuentes de datos de glucemia (BG)
+  Fuentes de BG (datos de glucemia)
 </h3>
 
 <p spaces-before="0">
