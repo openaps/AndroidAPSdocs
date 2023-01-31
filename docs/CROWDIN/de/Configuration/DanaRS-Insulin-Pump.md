@@ -41,6 +41,8 @@
 * Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Bolus-Schritte auf 0,05 IE/h.
 * Aktiviere verzögerten Bolus in der Pumpe.
 
+(default-password)=
+
 ### Standard-Passwort
 
 * Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
@@ -49,6 +51,8 @@
     * Öffne auf der Pumpe das Hauptmenü > Prüfen > Geräte Info. 
     * Nummer 3 ist das Produktionsdatum. 
     * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. Es wird nicht für die Kommunikation verwendet und muss daher nicht in AndroidAPS eingegeben werden.
+
+(change-password-on-pump)=
 
 ## Passwort auf Pumpe ändern
 
@@ -87,13 +91,15 @@
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Dana RS spezifische Fehler
 
 ### Fehler bei der Insulinabgabe
 
-Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
@@ -102,7 +108,7 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
 
-Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Übertrage die Einstellungen vom alten auf das neue Smartphone.
