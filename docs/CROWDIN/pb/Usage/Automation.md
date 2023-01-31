@@ -32,7 +32,7 @@ So make sure to deactivate automation rules during these occasions if necessary.
 
 Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
 
-### General
+### Geral
 
 There are some limits:
 
