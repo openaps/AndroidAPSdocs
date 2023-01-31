@@ -1,3 +1,5 @@
+(sensitivity-detection)=
+
 # Detekcja wrażliwości (sensitivity)
 
 ## Algorytmy detekcji wrażliwości na insulinę
