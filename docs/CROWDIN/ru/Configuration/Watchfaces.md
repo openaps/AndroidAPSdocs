@@ -51,39 +51,41 @@ AndroidAPS предусматривает возможность *управле
 
 ![Доступные циферблаты](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
+
 ### Новый циферблат начиная с Android 2.8
 
-![Цифровой стиль](../images/Watchface_DigitalStyle.png)
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
 * Цвет, линии и круг настраиваются через меню - шестеренку в меню выбора циферблата.
 
 ## Циферблат AAPSv2 - Legend
 
-![Циферблат Легенда AndroidAPSv2](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-О - время с запуска последнего цикла
+A - time since last loop run
 
-B - данные мониторинга ГК
+B - CGM reading
 
-C - минуты с последнего получения данных ГК
+C - minutes since last CGM reading
 
-D - изменение по сравнению с последним полученным значением ГК (в mmol или mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - среднее изменение данных ГК за последние 15 минут
+E - average change CGM reading last 15 minutes
 
-F - состояние аккумулятора телефона
+F - phone battery
 
-G - скорость подачи базала (в ед/ч во время стандартной подачи и в % при временном базале TBR)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (взаимодействие с глюкозой крови) -> Степень, с которой ГК “должна” расти или падать, основываясь только на активности инсулина (без учета других факторов).
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - углеводы (активные углеводы | e-carb в будущем)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - активный инсулин (от болюсов | от базала)
+J - insulin on board (from bolus | from basal)
 
 ## Доступ к главному меню AAPS
 
-Для доступа к главному меню AAPS можно использовать следующие опции:
+To access main menu of AAPS you can use on of following options:
 
 * дважды нажмите на значение ГК
 * выбрать значок AAPS в меню приложения часов
@@ -91,11 +93,11 @@ J - активный инсулин (от болюсов | от базала)
 
 ## Параметры (в часах Wear)
 
-Чтобы получить доступ к настройкам циферблатов, войдите в главное меню AAPS, сдвиньте экран вверх и выберите "Настройки".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-Заполненная звездочка соответствует включенному состоянию (**Вкл.**), а незаполненная указывает, что настройка отключена (**Выкл**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Параметры вкл./выкл](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### Параметры спутника AAPS
 
@@ -125,7 +127,7 @@ J - активный инсулин (от болюсов | от базала)
 
 * **Дизайн ввода**: этим параметром вы можете выбрать положение кнопок "+" и "-" при вводе команд для AAPS (TT, Insulin, Carbs...)
 
-![Варианты дизайна ввода](../images/Watchface_InputDesign.png)
+![Input design options](../images/Watchface_InputDesign.png)
 
 ### Специфические параметры циферблатов
 
@@ -133,7 +135,7 @@ J - активный инсулин (от болюсов | от базала)
 
 * **Зернистость** (по умолчанию `Средняя`)
 
-![Манометры_Стимпанк](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Круглый циферблат
 
@@ -153,19 +155,21 @@ J - активный инсулин (от болюсов | от базала)
 
 * **Процент мастера** (по умолчанию `Выкл.`): разрешить коррекцию болюса с мастера (значение вводится в процентах до уведомления подтверждения)
 
+(complications)=
+
 ## Усложнения (дополнительные функции)
 
-* Усложнение *-это термин из традиционной часовой механики, который описывает дополнения основного циферблата в виде еще одного окошка ( с датой, днем недели, фазой луны и т. д.). Операционная система Wear OS 2.0 позволяет употребить эту метафору для описания дополнительных функций, выводимых на экран вроде погоды, уведомлений, счетчиков фитнеса а также добавлять их в любые циферблаты, поддерживающие усложнения.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-Приложение AndroidAPS Wear поддерживает усложнения начиная с версии ` 2.6 ` и позволяет использовать любые сторонние циферблаты, поддерживающие усложнения, для отображение данных AAPS (ГК с трендом, IOB, COB и т. д.).
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Кроме того, усложнения служат ** ярлыками ** для функций AAPS. Нажав на них вы можете открывать меню и диалогоовые окна, связанные с AAPS (в зависимости от типа усложнения и конфигурации).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
-![Усложнения_на_Циферблатах](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Типы усложнений (дополнительных функций)
 
-Приложение AAPS Wear обеспечивает только необработанные данные в соответствии с заданными форматами. Решение о том, где и как отображать усложнения, включая их макет, границу, цвет и шрифт, зависит от авторов стороннего циферблата. Из многих доступных типов усложнений Wear AAPS использует:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * ` SHORT TEXT `-Содержит две строки текста, по 7 символов каждый, иногда именуется значением и меткой. Обычно отображаетя внутри круга или небольшой таблетки - один под другим, или сбоку друг от друга. Это очень ограниченное размерами усложнение. AAPS пытается удалить ненужные символы чтобы уместить информацию: округляет значения, удаляет начальные и хвостовые нули из значений и т. д.
 * `ДЛИННЫЙ ТЕКСТ` - содержит две строки текста, около 20 знаков в каждой. Обычно выводится внутри прямоугольника или длинной таблетки-один ниже другого. Он используется для более детальной информации в виде текста.
@@ -174,15 +178,15 @@ J - активный инсулин (от болюсов | от базала)
 
 ### Настройка усложнений (дополнительных функций)
 
-Чтобы добавить дополнительные функции на циферблат, настройте его долгим нажатием на значок шестеренки внизу. В зависимости от конфигурации нажмите на соответствующее место на экране или войдите в меню настройки циферблата для настройки усложнений. Усложнения AAPS сгруппированы в меню AAPS.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-При настройке усложнений на циферблате, Wear OS показывает и фильтрует список усложнений, которые могут быть помещены в выбранное место на экране. Если в списке не удается найти конкретные усложнения, то, вероятно, это связано с отсутствием достаточного места.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### Усложнения, предоставляемые AAPS
 
-AndroidAPS обеспечивает следующие усложнения:
+AndroidAPS provides following complications:
 
-![AAPS_Список_усложнений](../images/Watchface_Complications_List.png)
+![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
 * ** BR, CoB & IoB ** (` КРАТКИЙ ТЕКСТ `, открывается через * Меню *): Отображает * Скорость базального инсулина* на первой строке, * Активные углеводы* и * Активный инсулин * на второй.
 * ** Глюкоза крови ** (` КРАТКИЙ ТЕКСТ`, открывает * Меню *): Отображает * Кровь глюкозы * и * trend * стрелка на первой строке и * возраст измерений * и * дельта * на второй строке.
@@ -195,7 +199,7 @@ AndroidAPS обеспечивает следующие усложнения:
 * ** Значок IoB ** (`КРАТКИЙ ТЕКСТ`, открывается через * Болюс *): Отображает величину *Активных углеводов IOB* со статичной иконкой.
 * ** Загрузчик/батарея телефона ** (`ДИАПАЗОН ВЕЛИЧИН `, открывает * Состояние *): Показывает процент батареи с телефона с AAPS (загрузчика). Выводится в виде процентной шкалы с значком батареи, отражающий сообщаемые значения. Он обновляется не в режиме реального времени, а наряду с изменением других важных данных AAPS (обычно: каждые ~ 5 минут с новым значением * гликемии *).
 
-Кроме того, существуют три усложнения типа ` КРУПНОЕ ИЗОБРАЖЕНИЕ `: ** Темные обои **, ** Серые обои ** и ** Светлые обои**, являющиеся статическим фоном.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### Параметры, связанные с усложнениями
 
@@ -319,6 +323,8 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
 * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+
+(troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 
