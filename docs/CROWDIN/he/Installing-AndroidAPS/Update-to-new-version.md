@@ -27,6 +27,8 @@ In case you experience problems, see separate page for [troubleshooting Android 
 
 See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
 
+(update-your-local-copy)=
+
 ## 2. Update your local copy
 
 As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
@@ -61,6 +63,8 @@ If you have already changed the URL or update from version 2.8.x, follow these s
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
+(build-the-signed-apk)=
+
 ## 3. Build the Signed APK
 
 Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
@@ -73,7 +77,7 @@ See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/B
 
 ## 5. Install apk
 
-בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
 
 ## 6. Check AAPS version on phone
 
