@@ -12,11 +12,13 @@
 * Также можно переходить между экранами свайпом влево или вправо.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
+(section-b-profile-target)=
+
 ### Раздел B - Профиль & Цель
 
 #### Текущий профиль
 
-![Оставшееся время замененного профиля](../images/Home2020_ProfileSwitch.png)
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Текущий профиль отображается на левой панели.
 * Короткое нажатие открывает подробности о текущем профиле
@@ -25,15 +27,17 @@
 
 #### Целевое значение ГК
 
-![Оставшаяся продолжительность временной цели](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Текущее целевое значение глюкозы крови (ГК) отображается на правой панели.
 * Короткое нажатие позволяет установить [временную цель](../Usage/temptarget.md).
 * Если установлена временная цель - панель будет желтой, а в скобках отображается оставшееся время ее активности в минутах.
 
+(visualization-of-dynamic-target-adjustment)=
+
 #### Визуализация динамического изменения цели
 
-![Визуализация динамического изменения цели](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS может динамически изменять установленную цель основываясь на чувствительности если используется алгоритм СМБ (SMB).
 * Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
@@ -52,6 +56,8 @@
    * красный = ниже заданного диапазона
    * желтый = выше заданного диапазона
 * Сероватый блок в центре экрана отображает изменение текущего уровня ГК относительно предыдущего чтения, и изменение за последние 15 и 40 минут.
+
+(loop-status)=
 
 #### Статус цикла
 
@@ -73,15 +79,17 @@
    
    ![Меню состояния цикла](../images/Home2020_Loop_Dialog.png)
 
+(bg-warning-sign)=
+
 #### предупреждающий знак ГК
 
-Начиная с Android 3.0, вы можете увидеть предупреждающий знак под числом ГК на главном экране.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-*Примечание*: Расчеты AAPS учитывают до 30 часов. Поэтому даже после устранения проблемы нерегулярной передачи данных, может потребоваться до 30 часов, чтобы исчез желтый треугольник.
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-Чтобы немедленно удалить его, вам нужно вручную удалить несколько записей из вкладки Dexcom/xDrip+.
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
-Однако, когда есть много дубликатов, может быть проще
+However, when there are a lot of duplicates, it might be easier to
 
 * [backup your settings](../Usage/ExportImportSettings.md),
 * сбросить базу данных в меню обслуживания и
@@ -89,11 +97,11 @@
 
 ##### Красный предупреждающий знак: Дублирующиеся данные ГК
 
-Красный предупреждающий знак служит сигналом для немедленных действий: поступают дублирующиеся данные ГК, не позволяющие правильно работать алгоритму цикла. Поэтому замкнутый цикл будет отключен до устранения проблемы.
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-Следует выяснить, почему поступают дубликаты ГК:
+You need to find out why you get duplicate BGs:
 
 * Активирован ли мост Dexcom на вашем сайте NS? Отключите мост, перейдя в Heroku (или к другому провайдеру хостинга), отредактируйте переменную «enable» и удалите "bridge". (Для Heroku [подробности можно найти здесь](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Имеется ли несколько источников передачи данных ГК в Nightscout (NS)? Если вы используете самостоятельно собранное приложение BYODA, включите загрузку в AAPS, но не включайте его в xDrip+.
@@ -117,7 +125,7 @@
 
 ### Раздел D - IOB, COD, BR и AS
 
-![Раздел D](../images/Home2020_TBR.png)
+![Section D](../images/Home2020_TBR.png)
 
 * Иконка шприца: инсулин "на борту" (IOB) - количество активного инсулина в теле
    
@@ -142,7 +150,7 @@
 
 ### Раздел E- Индикаторы состояния
 
-![Раздел E](../images/Home2020_StatusLights.png)
+![Section E](../images/Home2020_StatusLights.png)
 
 * Индикаторы состояния сообщают о 
    * Времени работы катетера помпы
@@ -154,9 +162,11 @@
 * Если превышено критическое пороговое значение, значения будут показаны красным цветом.
 * Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
+(section-f-main-graph)=
+
 ### Раздел F - Основной график
 
-![Раздел F](../images/Home2020_MainGraph.png)
+![Section F](../images/Home2020_MainGraph.png)
 
 * График показывает уровень глюкозы в крови (ГК) считываемый с мониторинга глюкозы (CGM). 
 * Здесь показаны заметки, введенные на вкладке действия, такие как калибровка с глюкометра и записи углеводов, а также переключения профиля. 
@@ -175,6 +185,8 @@
 * Для главного графика доступны три варианта выше строки "\---\---- График 1 \---\----".
    
    ![Настройка главного графика](../images/Home2020_MainGraphSetting.png)
+
+(prediction-lines)=
 
 #### Линии прогнозирования
 
@@ -204,7 +216,7 @@
    
    *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-Обычно реальная кривая глюкозы заканчивается в середине этих линий, или близка к той, которая ближе всего описывает вашу ситуацию.
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
 #### Базал
 
@@ -223,7 +235,7 @@
 * Можно активировать до четырех дополнительных графиков ниже главного графика.
 * To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots.md#section-f-main-graph) and scroll down.
 
-![Дополнительные параметры графика](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
 * Для добавления дополнительного графика установите флажок с левой стороны его названия (например, \---\---- Граф 1 \---\----).
 
@@ -269,7 +281,7 @@
 
 ### Раздел H-Кнопки
 
-![Кнопки главного экрана](../images/Home2020_Buttons.png)
+![Homescreen buttons](../images/Home2020_Buttons.png)
 
 * Кнопки инсулина, углеводов и калькулятора почти 'всегда активны'.
    
@@ -279,7 +291,7 @@
 
 #### Инсулин
 
-![Кнопка инсулина](../images/Home2020_ButtonInsulin.png)
+![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * Чтобы подать определенное количество инсулина без использования [калькулятора болюса ](#bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
@@ -287,7 +299,7 @@
 
 #### Углеводы
 
-![Кнопка углеводов](../images/Home2020_ButtonCarbs.png)
+![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * Чтобы сделать запись об углеводах без подачи болюса.
 * Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
@@ -316,11 +328,13 @@
 * Легко вводите количество углеводов и задайте основы расчетов.
 * Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
+(bolus-wizard)=
+
 ## Мастер Болюса
 
-![Мастер Болюса](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-Когда необходимо дать болюс на еду, он обычно подается отсюда.
+When you want to make a meal bolus this is where you will normally make it from.
 
 ### Раздел I
 
@@ -328,6 +342,8 @@
 * В поле УГЛЕВОДЫ вводим рассчитанное нами количество углеводов - или эквивалент - на которые хотим дать болюс. 
 * Поле CORR-для корректировки - если вы по какой-либо причине хотите изменить конечную дозу.
 * Поле CARB TIME предназначено для предварительной подачи болюса, так что вы можете сообщить системе о задержке в приеме углеводов. Вы можете добавить отрицательное число в это поле, если даете болюс на прошлые углеводы.
+
+(eating-reminder)=
 
 #### Напоминание о приеме пищи
 
@@ -360,13 +376,17 @@
 * Если вы нажимаете IOB без COB, AAPS принимает в расчет уже поданный инсулин, но не углеводы, которые предстоит усвоить. Это приводит к уведомлению о "недостатке углеводов".
 * Если подается болюс на ** дополнительную еду** вскоре после болюса на прием пищи (напр. дополнительный десерт) полезно **снять все галочки**. Таким образом, добавляются только новые углеводы а поскольку основная еда не еще не усвоена, то IOB не будет точно соответствовать углеводам COB вскоре после болюса на еду.
 
+(wrong-cob-detection)=
+
 #### Неверное обнаружение активных углеводов COB
 
-![Медленное усваивание углеводов](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
+
+(action-tab)=
 
 ## Вкладка "Действия"
 
@@ -377,11 +397,11 @@
 * Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
 ### Портал терапии-раздел N
 
@@ -393,6 +413,8 @@
    * время, отработанное батареей (аккумулятором) помпы & уровень заряда (процент
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+
+(sensor-level-battery)=
 
 #### Уровень заряда сенсора (батарея)
 
@@ -423,7 +445,9 @@
 * Другие принимают за суточную базу TBB диапазон от 32% до 37% от суммарной суточной дозы TDD. 
 * Как и большинство подобных подсказок они имеют ограниченное практическое значение. Примечание: Ваш диабет может быть иным!
 
-![Браузер журнала + TDD](../images/Home2021_Action_HB_TDD.png)
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+(insulin-profile))=
 
 ## Профиль Инсулина
 
@@ -454,10 +478,12 @@ Careportal replicated the functions you will find on your Nightscout screen unde
 
 ### Просмотреть расчет углеводов
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+
+(carb-correction)=
 
 ### Коррекция углеводов
 
@@ -497,9 +523,11 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. Локальный профиль может быть отредактирован на вашем смартфоне и синхронизирован с сайтом Nightscout.
 
+(treatment)=
+
 ## Терапия
 
-История следующих терапевтических действий:
+History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
 * [Пролонгированный болюс](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
@@ -510,7 +538,7 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
 
 ## Источник ГК - xDrip+, BYODA...
 
-![Вкладка Источник ГК- здесь xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * В зависимости от заданного в параметрах источника ГК эта вкладка называется по-разному.
 * Показывает хронологию показаний мониторинга и предлагает возможность удаления данных при сбое (например, при компрессии сенсора).
