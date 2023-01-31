@@ -2,6 +2,8 @@
 
 **Deze software is onderdeel van een doe-het-zelf oplossing en is niet een product, maar vraagt JOU te lezen, leren en te begrijpen hoe het systeem werkt en hoe je het kunt gebruiken. Het neemt niet je gehele diabetes management van je over, maar stelt je wel in staat om je diabetes beter onder controle te krijgen en je kwaliteit van leven te verhogen, als je bereid bent de benodigde tijd erin te investeren. Haast je niet, maar geef jezelf de tijd om te leren. Jij alleen bent verantwoordelijk voor wat je ermee doet.**
 
+(hardware-requirements)=
+
 ## Hardware vereisten
 
 - Een Roche Accu-Chek Combo pomp (elke firmware is geschikt).
@@ -51,13 +53,13 @@
     - Toetsblokkering van de pomp inschakelen om ongewenst bolusen vanaf de pomp te voorkomen, vooral wanneer de pomp eerder werd gebruikt en snel bolussen een gewoonte was.
     - Stel de scherm time-out en menu time-out in tot een minimum van 5,5 en 5 respectievelijk. Dit laat AAPS sneller herstellen van foutsituaties en vermindert de hoeveelheid trillingalarmen die je kunt hebben tijdens zulke fouten
 
-![Schermafbeelding van instellingen voor het gebruikersmenu](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Schermafbeelding van TBR instellingen](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Schermafbeelding van bolusinstellingen](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Schermafbeelding van instellingen voor insuline reservoir](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Installeer AndroidAPS zoals deze is beschreven in de [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Zorg ervoor dat je de wiki goed doorleest en begrijpt hoe AndroidAPS ingesteld moet worden.
@@ -69,13 +71,15 @@
 - Voordat u de Combo-plugin in AAPS inschakelt, zorg er dan voor dat jouw profiel correct is ingesteld en geactiveerd (!) en dat jouw basale profiel up-to-date is. Omdat AAPS het basale profiel zal synchroniseren met de pomp. Activeer vervolgens de Combo-plugin. Druk op de *Verversen* knop op het Combo tabblad om de pomp te initialiseren.
 - Om de verbinding te controleren: zorg dat de pomp **niet verbonden is**, en gebruik AAPS om een TBR van 500% gedurende 15 minuten in te stellen en een kleine bolus te geven. De pomp moet nu een actieve TBR hebben en een bolus in de geschiedenis. AAPS moet ook de actieve TBR en de geleverde bolus laten zien.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Waarom werkt het koppelen met de pomp met de "ruffy" app niet?
 
-Er zijn verschillende oorzaken mogelijk. Probeer de volgende stappen:
+There are serveral possible reasons. Try the following steps:
 
 1. Plaats een **verse of volle batterij** in de pomp. Kijk in de batterij sectie voor details. Zorg ervoor dat de pomp heel dicht bij de smartphone is.
 
-![Combo moet naast de telefoon zijn](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Schakel bluetooth apparaten uit of verwijder ze zodat ze geen verbinding met de telefoon kunnen maken tijdens het koppelen. Alle parallelle bluetooth-communicatie of -prompt voor het tot stand brengen van verbindingen kan het koppelingsproces verstoren.
 
