@@ -1,6 +1,8 @@
+(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Ik kom hier niet verder mee. Wat moet ik doen? Wie kan ik vragen?
 
-Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die zo vriendelijk zijn hun tijd en kennis hierin te steken, willen we jou vragen deze regels te respecteren:
+This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * niveau 1: Lees de Wiki - we hebben nu een zoekfunctie!
 * niveau 2: Zoek in de Facebook-groep, als er al niet een antwoord te vinden is, stel dan jouw vraag in de algemene [AndroidAPS gebruikers Facebook groep](https://www.facebook.com/groups/1900195340201874/). Of in de Nederlandstalige Looped-NL groep (zie onderaan deze pagina).
@@ -8,11 +10,11 @@ Dit project is vrijwilligerswerk. Om extra werk te voorkomen voor de mensen die 
 * niveau 4: Maak een [issue](https://github.com/nightscout/AndroidAPS/issues) op gitter en voeg [log-bestanden](../Usage/Accessing-logfiles.md) toe
 * niveau 5: e-mail naar *developers@androidaps.org* (alleen als het om persoonlijke gegevens gaat die je niet wilt delen op een openbare plek en jouw problemen niet via andere wegen opgelost konden worden)
 
-Voor vragen of problemen met jouw glucosesensor kun je het beste de Facebook groepen of discord kanalen voor jouw specifieke systeem (bijv. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) of voor Nightscout [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) gebruiken, omdat je in die groepen meer gebruikers zult vinden die jouw specifieke systeem goed kennen.
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Meld je aan voor de AndroidAPS gebruikersgroep op Facebook!
 
-Word lid van de belangrijkste [AndroidAPS Facebook groep](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Er is ook een groep voor Combo pomp gebruikers [AAPSCombo](https://www.facebook.com/groups/127507891261169/), voor specifieke tips bij het instellen en gebruiken van deze pomp.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
 ## Other resources in English
 
