@@ -1,6 +1,8 @@
+(smoothing-blood-glucose-data)=
+
 # Filteren van bloed glucose waardes
 
-Als de BG data van jouw sensor veel ruis heeft of 'springerig' is, dan zou het kunnen dat AAPS een verkeerde dosis insuline geeft, wat dan weer kan zorgen voor hoge of lage BG. Om deze reden is het belangrijk om de closed loop uit te schakelen totdat het probleem met de sensor is opgelost. Afhankelijk van jouw CGM kunnen dit soort problemen liggen aan jouw sensor instellingen, aan de sensor zelf, of aan de plaats waar je de sensor draagt. Om dit op te lossen moet je wellicht jouw CGM-sensor vervangen. Sommige functies in AndroidAPS, zoals 'Activeer SMB altijd' en 'Gebruik SMB met koolhydraten' kunnen alleen worden gebruikt wanneer je een goed gefilterde BG bron hebt.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensors
 
@@ -10,7 +12,7 @@ When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexco
 
 ### xDrip+ with Dexcom G5 or G6
 
-Wanneer je in xDrip+ de optie 'OB1 collector in native mode' hebt aangevinkt dan zijn jouw gegevens vloeiend en consistent genoeg. Met deze optie zijn er geen beperkingen in het gebruik van SMB. De reden hierachter is dat in de 'Native mode' xDrip+ het algoritme van de Dexcom zender gebruikt. Hierbij stuurt de zender ook informatie over 'ruis' mee, en heb je dus dezelfde waardes als wanneer je de Aangepaste Dexcom app zou gebruiken. Wanneer je de optie 'OB1 collector in native mode' niet hebt aangevinkt, dan gebruikt xDrip+ een eigen xDrip algoritme, waarbij je beperkt bent in het gebruik van SMB.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ### Dexcom G5 App (patched)
 
