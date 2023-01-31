@@ -14,7 +14,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ### Ayarlar
 * [Profil](../Usage/Profiles.md#troubleshooting-profile-errors)
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![Hata: Bazal saatlere göre ayarlanamadı](../images/Screen_DifferentPump.png)
 
 * [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
@@ -25,7 +25,7 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 ### Kullanım
 * [Wrong carb values](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+   ![Hata: Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
 * [SMS commands](../Children/SMS-Commands.md#troubleshooting)
 
@@ -75,7 +75,7 @@ Here are examples how to find them on specific android phones.
 
 * Select "battery".
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Pil](../images/troubleshooting/samsung/Samsung04_Battery.png)
 
 * Set it to "Not optimized"
 
