@@ -49,6 +49,8 @@ The documentation is written in English and translated in different languages. W
 
 The documentation process is explained [here](translations.md).
 
+If your brwoser will not display all icons in once please press refresh. Theses are a lot of static images the browser requests from the internet. The badges are generated with new status every hour.
+
 (translation-help-needed)=
 State of the **app** translations per language (country code, percentage translation, percentage proofreading).
 | Language | Translated | Proofread |
