@@ -41,6 +41,8 @@
 * Régler l'incrément Bolus sur la pompe à 0,05 U/h en utilisant le menu de Médecin (voir le guide de l’utilisateur de la pompe).
 * Activez les Bolus Étendus sur la pompe
 
+(default-password)=
+
 ### Mot de passe par défaut
 
 * Pour les DanaRS avec le firmware v1 et v2, le mot de passe par défaut est 1234.
@@ -49,6 +51,8 @@
     * Sur votre pompe ouvrez le menu principal -> Rapport -> Info produit. 
     * Le numéro 3 est la date de production. 
     * Pour v3/i, ce mot de passe est utilisé uniquement pour verrouiller le menu sur la pompe. Il n'est pas utilisé pour la communication et il n'est pas nécessaire de le saisir dans AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Changer de mot de passe sur la pompe
 
@@ -87,13 +91,15 @@
     
     ![DanaRS Quitter](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Erreurs spécifiques à DanaRS
 
 ### Erreur lors de la distribution de l'insuline
 
-Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'insuline (par ex. vous vous éloignez de votre téléphone alors que la DanaRS est en train de délivrer de l'insuline), vous verrez le message suivant et vous entendrez une alarme sonore.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarme d'administration de l'insuline](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Dans la plupart des cas c'est juste un problème de communication et la quantité d'insuline délivrée est correcte.
 * Vérifiez dans l'historique de la pompe (à la pompe ou à l'aide de l'onglet Dana > historique de la pompe > bolus) si le bolus est correct.
@@ -102,7 +108,7 @@ Dans le cas où la connexion entre AAPS et DanaRS est perdue pendant un bolus d'
 
 ## Remarque spéciale lors du changement de téléphone
 
-Lors du passage à un nouveau téléphone, les étapes suivantes sont nécessaires :
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Transférez les paramètres de l'ancien vers le nouveau téléphone
