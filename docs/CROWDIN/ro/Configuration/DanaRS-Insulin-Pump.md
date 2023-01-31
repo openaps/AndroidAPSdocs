@@ -41,6 +41,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Activați bolusurile extinse în pompă
 
+(default-password)=
+
 ### Parola implicită
 
 * Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
@@ -49,6 +51,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Schimbă parola pe pompă
 
@@ -86,6 +90,8 @@
 * Move down to "14. EXIT" and press OK button.
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
+
+(dana-rs-specific-errors)=
 
 ## Dana RS specific errors
 
