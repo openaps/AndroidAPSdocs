@@ -133,7 +133,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
-## Źródło BG
+## BG Source
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
 
