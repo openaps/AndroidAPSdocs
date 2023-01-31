@@ -315,7 +315,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </code></pre>
 
 <h2 spaces-before="0">
-  Hardware and Software Requirements
+  Требования к аппаратному и программному обеспечению
 </h2>
 
 <ul>
