@@ -2,6 +2,8 @@
 
 **Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
+(hardware-requirements)=
+
 ## Benötigte Hardware
 
 - Eine Roche Accu-Chek Combo (jede Firmware funktioniert)
@@ -51,13 +53,13 @@
     - Stelle die Tastensperre der Pumpe an, um zu verhindern, dass du von der Pumpe Bolus abgibst. Dies gilt besonders, wenn du daran gewöhnt bist, Bolus von der Pumpe aus abzugeben.
     - Stelle die Anzeigedauer und das Menü-Timeout auf das Minimum (5,5 bzw. 5). Das erlaubt AndroidAPS in Fehlerzuständen schneller wieder fortzusetzen und verringert die Anzahl an Vibrationen die während so einem Fehler auftreten können.
 
-![Screenshot der Einstellungen des Benutzer-Menüs](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Screenshot der TBR-Einstellungen](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Screenshot der Bolus Einstellungen](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Screenshot der Insulinreservoir Einstellungen](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Installiere AndroidAPS wie im [AndroidAPS wiki](https://androidaps.readthedocs.io/) beschrieben
 - Lies zuerst das Wiki, um zu verstehen, wie AndroidAPS kompiliert und installiert wird.
@@ -69,13 +71,15 @@
 - Bevor das Combo-Plugin in AndroidAPS aktiviert wird, muss sichergestellt sein, dass das Basalratenprofil korrekt in AndroidAPS eingestellt ist und aktiviert wurde(!), da AndroidAPS das in der Pumpe programmierte Profil mit den eigenen Einstellungen überschreibt. Wenn das Basalratenprofil also korrekt in AAPS eingestellt ist, kann das Combo-Plugin aktiviert werden. Drücke nun den *Aktualisieren* Button im Combo Tab um die Pumpe zu initialisieren.
 - **Trenne die Pumpe** um die Konfiguration zu prüfen, setze mit AAPS eine TBR von 500% für 15 Min. und gib einen Bolus ab. Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historie haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Warum funktioniert die Kopplung mit der Pumpe nicht mit der App "ruffy"?
 
-Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
+There are serveral possible reasons. Try the following steps:
 
 1. Lege eine **neue oder volle Batterie** in die Pumpe ein. Sieh Dir den Batterie-Abschnitt für Details an. Stelle sicher, dass die Pumpe sich sehr nahe am Smartphone befindet.
 
-![Combo sollte sich direkt bei dem Smartphone befinden](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Schalte andere Bluetoothgeräte aus oder entferne sie, damit sie keine Verbindung zu dem Smartphone aufzubauen, während die Kopplung durchgeführt wird. Jede gleichzeitige Bluetooth-Kommunikation oder Eingabeaufforderung, eine Verbindung herzustellen, kann den Kopplungs-Prozess stören.
 
