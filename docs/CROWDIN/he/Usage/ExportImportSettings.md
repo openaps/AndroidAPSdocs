@@ -28,11 +28,11 @@
 
 Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
-## Export settings
+## ייצוא הגדרות
 
 - Hamburger menu (top left corner of screen)
 - תחזוקה
-- Export settings
+- ייצוא הגדרות
 
 ```{image} ../images/AAPS_ExportSettings1.png
 :alt: AndroidAPS export settings 1
