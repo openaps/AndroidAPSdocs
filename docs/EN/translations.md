@@ -102,4 +102,4 @@ It's the proofreaders job to have a special look on this!
   
    ![approve text](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build. To speed process you can inform docs team about new translations.
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
