@@ -35,7 +35,7 @@
 :alt: Set master password
 ```
 
-## Export settings
+## ייצוא הגדרות
 
 - AAPS 2.7 uses a new encrypted backup format.
 - You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
@@ -48,7 +48,7 @@
 ## Autosens (Hint - no action necessary)
 
 - Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. It will pick which ever one is more sensitive.
+- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. הרגיש מבינהם יבחר.
 - אם משתמשים הגיעו מ-oref1, הם כנראה ישימו לב שהמערכת עשויה להיות פחות דינמית לשינויים, בגלל המשתנה של 24 או 8 שעות של רגישות.
 
 ## Set Pump Password for Dana RS (if using Dana RS)
