@@ -48,7 +48,7 @@
 ## Autosens (Hint - no action necessary)
 
 - Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Hij kiest voor welke het gevoeligst is.
+- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Hij kiest voor de meest gevoelige.
 - Als je voorheen oref1 gebruikte, zul je waarschijnlijk merken dat het systeem minder dynamisch omgaat met veranderingen, als gevolg van het gebruiken van 24 ofwel 8 uur.
 
 ## Set Pump Password for Dana RS (if using Dana RS)
