@@ -1,6 +1,8 @@
+(smoothing-blood-glucose-data)=
+
 # Vyhlazování zarušených dat glykémií
 
-Pokud glykémie poskakují, může AAPS nesprávně poslat dávku inzulinu vedoucí k vysoké nebo nízké glykémii. Z tohoto důvodu je důležité deaktivovat smyčku, dokud se problém nevyřeší. V závislosti na Vašem CGM mohou být tyto problémy způsobeny konfigurací CGM nebo problémy se senzorem/umístěním. You may need to replace your CGM sensor to resolve this. Některé funkce, jako je "Vždy povolit SMB" a "Povolit SMB po jídle" lze použít pouze s filtrovaným zdrojem glykémií.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensors
 
