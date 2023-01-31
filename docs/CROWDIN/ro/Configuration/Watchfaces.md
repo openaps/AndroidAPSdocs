@@ -51,39 +51,41 @@ Pentru a ajunge mai rapid la meniul AAPS, apăsați de două ori rapid pe valoar
 
 ![Fețe de ceas disponibile](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
+
 ### Față nouă de ceas pentru AndroidAPS 2,8
 
-![Față de ceas format Digital](../images/Watchface_DigitalStyle.png)
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
 * Culoarea, liniile şi cadranul sunt configurabile în meniul de setare pe semnul de cog al meniului de selectare al cadranului ceasului.
 
 ## Fețe de ceas AAPSv2 - Legendă
 
-![Legendă față de ceas AndroidAPSv2](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - timp de la ultima activare a loop
+A - time since last loop run
 
-B - Citire CGM
+B - CGM reading
 
-C - minute de la ultima citire CGM
+C - minutes since last CGM reading
 
-D - modificare în comparaţie cu ultima citire a CGM (în mmol sau mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - variația medie a citirilor CGM din ultimele 15 minute
+E - average change CGM reading last 15 minutes
 
-F - bateria telefonului
+F - phone battery
 
-G - rata bazală (indicată în U/h în timpul ratei standard şi în % în timpul TBR)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H-BGI (interacţiunea glicemiei) -> gradul în care glicemia "ar trebui" să fie în creştere sau scădere în funcţie doar de activitatea insulinei.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - carbohidrati (carbohidrati la bord | e-carbohidrati in viitor)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - insulină la bord (de la bolus | de la bazală)
+J - insulin on board (from bolus | from basal)
 
 ## Accesarea meniului principal al AAPS
 
-Pentru a accesa meniul principal al AAPS, puteţi utiliza următoarele opţiuni:
+To access main menu of AAPS you can use on of following options:
 
 * apăsaţi de două ori pe valoarea glicemiei
 * selectați pictograma AAPS în meniul de aplicaţii al ceasului
@@ -91,11 +93,11 @@ Pentru a accesa meniul principal al AAPS, puteţi utiliza următoarele opţiuni:
 
 ## Setări (în ceas)
 
-Pentru a accesa setările pentru fețe de ceas, intrați in meniul principal AAPS, glisaţi in sus şi selectaţi "Settings".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-Pictograma cu steaua umplută este pentru starea activată (**On**), iar pictograma cu stea goală indică faptul că setarea este dezactivată (**Off**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Setări pornit/oprit](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### Parametrii AAPS insoțitor
 
@@ -125,7 +127,7 @@ Pictograma cu steaua umplută este pentru starea activată (**On**), iar pictogr
 
 * **Design de intrare**: cu acest parametru, poți selecta poziția butoanelor "+" și "-" atunci când introduci comenzi pentru AAPS (TT, Insulină, Carbs...)
 
-![Opţiuni pentru design de intrare](../images/Watchface_InputDesign.png)
+![Input design options](../images/Watchface_InputDesign.png)
 
 ### Parametri specifici pentru fețe de ceas
 
@@ -133,7 +135,7 @@ Pictograma cu steaua umplută este pentru starea activată (**On**), iar pictogr
 
 * **Granularitate Variație** (implicit `Mediu`)
 
-![Indicator_Steampunk](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cadran FațaCeas
 
@@ -153,19 +155,21 @@ Pictograma cu steaua umplută este pentru starea activată (**On**), iar pictogr
 
 * **Asistent Procentaj** (implicit `Off`): Se permite corecţia bolus din asistent (valoarea introdusă în procente înainte de notificarea de confirmare)
 
+(complications)=
+
 ## Auxiliare
 
-*Auxiliare* este un termen de la producătorii tradiționali de ceasuri, care descrie adăugarea pe fața principală a ceasului - o altă fereastră sau cadran mai mic (cu data, ziua săptămânii, faza lunii, etc.). Wear OS 2.0 permite diverșilor furnizori de date, cum ar fi vremea, notificările, contoarele de fitness şi altele - să fie adăugate la orice feţe de ceas care suporta auxiliare.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-Aplicaţia AAPS Wear OS suportă auxiliare de la versiunea `2.6`şi permite oricărei fețe de ceas al unei terţe părţi care suportă auxiliare să fie configurate pentru a afişa datele asociate cu AAPS (glicemia și tendinţa, IOB, COB, etc.).
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Auxiliarele servesc de asemenea ca **scurtătură** la funcții AAPS. Apăsând pe ele puteți deschide meniurile și dialogurile legate de AAPS (în funcție de tipul de auxiliare și configurație).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
-![Auxiliare_Pe_Ceasuri](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Tipuri de Auxiliare
 
-Aplicaţia AAPS Wear OS furnizează numai date brute, conform formatelor predefinite. Depinde de dezvoltatorul feței de ceas să decidă unde și cum să afișeze auxiliarele, inclusiv modul de prezentare, margine, culoare și tip caracter. Din multele tipuri disponibile de auxiliare ale Wear OS, AAPS utilizează:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * `TEXT SCURT ` -Conţine două linii de text, 7 caractere fiecare, denumite uneori valoare şi etichetă. De obicei, redat în interiorul unui cadran sau a unei mici buline - unul sub altul, sau lateral unul de altul. Este un auxiliar foarte limitat ca spaţiu. AAPS încearcă să înlăture caracterele care nu sunt necesare pentru a se potrivi: prin rotunjirea valorilor, înlăturarea zerourilor de la începutul şi sfârşitul valorilor, etc.
 * `TEXT LUNG` - Conține două linii de text, aproximativ 20 de caractere fiecare. De obicei, redat în interiorul unui dreptunghi sau unui cadran lung - unul sub altul. Este folosit pentru mai multe detalii şi stări.
@@ -174,15 +178,15 @@ Aplicaţia AAPS Wear OS furnizează numai date brute, conform formatelor predefi
 
 ### Configurare Auxiliare
 
-Pentru a adăuga auxiliare la faţa de ceas, configuraţi-o printr-o apăsare lungă şi făcând clic pe roata dințata de mai jos. În funcție de modul specific în care se configurează o față de ceas - fie apăsați pe înlocuitori fie intrați in meniul de configurare a fețelor de ceas pentru auxiliare. Auxiliarele AAPS sunt grupate în meniul AAPS.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-Când configurați auxiliare pe ceas, Wear OS va prezenta și va filtra lista de auxiliare care se pot potrivi în locul selectat pe ceas. Dacă anumite auxiliare nu pot fi găsite în listă, este probabil din cauza faptului că acel tip nu poate fi utilizat pentru locul respectiv.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### Auxiliare furnizate de AAPS
 
-AndroidAPS oferă următoarele auxiliare:
+AndroidAPS provides following complications:
 
-![AAPS_Listă_Auxiliare](../images/Watchface_Complications_List.png)
+![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
 * **BR, CoB & IoB** (`TEXT SCURT`, deschide *Menu*): Afişează *Rata Bazală* pe prima linie şi *Carbohidrați la Bord* şi *Insulină la Bord* pe linia a doua.
 * **Glicemia** (`TEXT SCURT`, deschide *Menu*): Afișează valoarea *Glicemiei* și săgeata de *tendință* pe prima linie iar pe linia a doua *măsurători durată* și *Variația Glicemiei*.
@@ -195,7 +199,7 @@ AndroidAPS oferă următoarele auxiliare:
 * **Iconiță IoB** (`TEXT SCURT`, deschide *Bolus*): Afișează valoarea *Insulinei la Bord* printr-o iconiță statică.
 * **Baterie Telefon/Uploader** (`VALOARE INTERVAL`, deschide *Status*): Afișează în procente bateria telefonului cu AAPS (uploader), așa cum este raportat de AAPS. Prezentat ca un indicator în procente cu o iconiță de baterie care afișează valoarea raportată. Este posibil să nu se actualizeze în timp real, doar atunci când apar alte modificări importante de date AAPS (de obicei: la fiecare ~ 5 minute cu noua valoare a *glicemiei*).
 
-În plus, există trei auxiliare `IMAGINE MARE` tip: **fundal întunecat**, **fundal gri** și **fundal deschis**, afișează imaginea de fundal statică AAPS.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### Setări legate de Auxiliare
 
@@ -319,6 +323,8 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
 * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+
+(troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 
