@@ -51,6 +51,8 @@ Norėdami greičiau patekti į AAPS meniu, du kartus spustelėkite ant KG. Dukar
 
 ![Galimi ciferblatai](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
+
 ### New watchface as of AndroidAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
@@ -59,31 +61,31 @@ Norėdami greičiau patekti į AAPS meniu, du kartus spustelėkite ant KG. Dukar
 
 ## AAPSv2 laikrodžio ekranas - paaiškinimai
 
-![AndroidAPSv2 laikrodžio ekrano informacija](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - laikas nuo paskutinės ciklo veiklos
+A - time since last loop run
 
-B - NGJ duomenys
+B - CGM reading
 
-C - minutės nuo paskutinių NGJ duomenų
+C - minutes since last CGM reading
 
-D - pokytis, palyginti su praėjusiais NGJ duomenimis (mmol arba mg/dl),
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - vidutinis NGJ duomenų pokytis per pastarąsias 15 minučių
+E - average change CGM reading last 15 minutes
 
-F - telefono baterija
+F - phone battery
 
-G - valandinė bazė (vv/val, jei užprogramuota, arba % jei laikina)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - įtaka kraujo glikemijai -> tikėtinas glikemijos pokytis, pagrįstas vien aktyviu insulinu.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - angliavandeniai (aktyvūs angliavandeniai | e-angliavandeniai ateityje)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - aktyvus insulinas (iš boluso | iš bazės)
+J - insulin on board (from bolus | from basal)
 
 ## Pasiekti pagrindinį AAPS meniu
 
-Norėdami atidaryti pagrindinį AAPS meniu, galite naudoti šias parinktis:
+To access main menu of AAPS you can use on of following options:
 
 * dukart bakstelėkite į savo KG reikšmę
 * pasirinkite AAPS piktogramą laikrodžio programų meniu
@@ -91,11 +93,11 @@ Norėdami atidaryti pagrindinį AAPS meniu, galite naudoti šias parinktis:
 
 ## Nustatymai (išmaniajame laikrodyje)
 
-Norint pasiekti laikrodžio ekrano nustatymus, įeikite į AAPS pagrindinį meniu, paslinkite aukštyn ir pasirinkite "Nustatymai".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuščiavidurės žvaigžutės piktograma rodo, kad nustatymas yra išjungtas (**Išjungta**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Nustatymai įjung/išjung](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS lydinčios programėlės parametrai
 
@@ -153,6 +155,8 @@ Užpildyta žvaigždutė reiškia, kad būsena yra aktyvi (**Įjungta**), o tuš
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
+(complications)=
+
 ## Ekrano elementai
 
 *Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
@@ -196,7 +200,7 @@ AndroidAPS provides following complications:
 * **Siuntėjo/Telefono Baterija** (`RIBINĖ REIKŠMĖ/1>, atsidaro <em>Būsena</em>): pateikia AAPS įdiegtame telefone baterijos procentą (siuntėjas) taip, kaip nurodo AAPS. Rodoma procentais, su akumuliatoriaus piktograma, kuri atspindi gautą reikšmę. Gali būti neatnaujinama realiu laiku, o tik su kitais svarbiais AAPS duomenimis (paprastai kas ~5 minutes kartu su nauju <em>kraujo gliukozės</em> matavimu).</li>
 </ul>
 
-<p>Be to, yra trys ekrano elementai <code>DIDELIS PAVEIKSLĖLIS` tokie kaip: **Tamsus fono paveikslėlis**, **Pilkas fono paveikslėlis** ir **Šviesus fono paveikslėlis**, rodantys statinį AAPS fono paveikslėlį.</p> 
+<p>Additionally, there are three complications of <code>LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.</p> 
     ### Su ekrano elementais susiję nustatymai
     
     * **Veiksmai paspaudus plėtinių mygtuką** (numatytoji reikšmė `Numatytasis`): Nusprendžia, kuris dialogo langas yra atidarytas, kai vartotojas baksteli į plėtinius: 
@@ -318,6 +322,9 @@ AndroidAPS provides following complications:
     * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
     * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
     * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+    
+    (troubleshooting-the-wear-app)=
+    
     ## Troubleshooting the wear app:
     
     * Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.
