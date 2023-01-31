@@ -2,7 +2,7 @@
 
 **When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
 
-## General
+## Geral
 
 - AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
 - Do not assume that AndroidAPS will never make mistakes. This device is taking control of your insulin delivery: Watch it all the time, understand how it works, and learn how to interpret its actions.
