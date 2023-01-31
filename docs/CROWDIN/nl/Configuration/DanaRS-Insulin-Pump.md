@@ -41,6 +41,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Activeer vertraagde bolussen op de pomp
 
+(default-password)=
+
 ### Standaard wachtwoord
 
 * Voor DanaRS met firmware v1 en v2 is het standaard wachtwoord 1234.
@@ -49,6 +51,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Wachtwoord wijzigen op de pomp
 
@@ -86,6 +90,8 @@
 * Gebruik de pijlknop om omlaag te gaan naar "14. EXIT" en druk op OK knop.
     
     ![DanaRS Afsluiten](../images/DanaRSPW_07_Exit.png)
+
+(dana-rs-specific-errors)=
 
 ## Foutmeldingen specifiek voor de DanaRS
 
