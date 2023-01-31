@@ -29,6 +29,7 @@
 :depth: 2
 ```
 
+(general)=
 ## General
 
 **Units**
@@ -51,8 +52,10 @@
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
+(protection)=
 ### Protection
 
+(master-password)=
 #### Master password
 
 - Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
@@ -97,6 +100,7 @@
   :alt: Prompt biometric protection
   ```
 
+(skin)=
 #### Skin
 
 - You can choose from four types of skins:
@@ -124,6 +128,7 @@
   :alt: Skins depending on phone's display orientation
   ```
 
+(overview)=
 ## Overview
 
 - In overview section you can define preferences for home screen.
@@ -137,6 +142,7 @@
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
+(buttons)=
 ### Buttons
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -147,6 +153,7 @@
   :alt: Preferences > Buttons
   ```
 
+(quick-wizard)=
 ### Quick Wizard
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
@@ -161,6 +168,7 @@
   :alt: Preferences > Quick Wizard Button
   ```
 
+(default-temp-targets)=
 ### Default temp targets
 
 - [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
@@ -178,6 +186,7 @@
 - If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
+(range-for-visualization)=
 ### Range for visualization
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
@@ -204,6 +213,7 @@
   :alt: Preferences > Notes in treatment dialogs
   ```
 
+(status-lights)=
 ### Status lights
 
 - Status lights give a visual warning for
@@ -226,6 +236,7 @@
   :alt: Preferences > Status Lights
   ```
 
+(advanced-settings-overview)=
 ### Advanced Settings (Overview)
 
 ```{image} ../images/Pref2021_OV_Adv.png
@@ -252,6 +263,7 @@
   :alt: Bolus advisor message
   ```
 
+(superbolus)=
 #### Superbolus
 
 - Option to enable superbolus in bolus wizard.
@@ -281,6 +293,7 @@
 
 ## Loop
 
+(aps-mode)=
 ### APS mode
 
 - Toggle between open and closed looping as well as low glucose suspend (LGS)
@@ -288,12 +301,14 @@
 - **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
+(minimal-request-change)=
 ### Minimal request change \[%\]
 
 - When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - This defines the relative change required to trigger a notification.
 
+(advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) or Super Micro Bolus (SMB)
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
@@ -345,13 +360,14 @@ When you feel comfortable, you can allow the system to start giving you addition
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
+(openaps-smb-settings)=
 ### OpenAPS SMB settings
 
 - In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 - Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
@@ -365,6 +381,7 @@ When you feel comfortable, you can allow the system to start giving you addition
   :alt: Target modified by autosens
   ```
 
+(carb-required-notification)=
 #### Carb required notification
 
 - This feature is only available if SMB algorithm is selected.
@@ -437,6 +454,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
+(nsclient)=
 ## NSClient
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -468,6 +486,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 - They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
 - If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
 
+(advanced-settings-nsclient)=
 ### Advanced settings (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png

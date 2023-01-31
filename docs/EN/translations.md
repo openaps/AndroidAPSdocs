@@ -16,6 +16,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 ## Translation of the app
 
+(translate-strings-for-androidaps-app)=
 ### Translate strings for AndroidAPS app
 
 * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
@@ -44,6 +45,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 When a proofreader approves a translation it will be added to the next version of AndroidAPS.
 
+(translation-of-the-documentation)=
 ## Translation of the documentation
 
 * Click the name of the docs page you want to translate

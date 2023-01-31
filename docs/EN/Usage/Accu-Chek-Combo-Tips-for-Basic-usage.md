@@ -47,6 +47,7 @@
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
+(battery-type-and-causes-of-short-battery-life)=
 ### Battery type and causes of short battery life
 * As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
 
