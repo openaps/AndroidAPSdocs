@@ -36,7 +36,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
     </p>
     
     <p spaces-before="0">
-      마지막으로 또 하나 중요한 것은 SGLT-2 억제제(글리플로진)가 계산할 수 없을 정도로 혈당 수치를 낮추기 때문에 절대 사용하면 안된다는 것입니다.  혈당을 올리기 위해 basal 양을 낮추는 시스템과 함께 사용 시, 글리플로진으로 인해 혈당이 오르지 않을 것이며 인슐린 부족의 위험한 상태까지 갈 수 있기 때문에 매우 위험합니다.
+      마지막으로는  계산할 수 없을 정도로 혈당을 낮추기 때문에 SGLT-2 억제제 (글 리플로 진)을 절대 사용하면 안된다.  혈당을 올리기 위해 기저양(basal rate)을 낮추는 시스템과 병행하는 것은 글 리폴로 진으로 인해 매우 위헙합니다. 오히려 혈당이 오르지 않을 수 있으며 인슐린 부족의 위험한 상태까지 올 수 있습니다.
 :::
     </p>
 
@@ -203,7 +203,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </ul>
 
 <h3 spaces-before="0">
-  혈당정보
+  혈당 출처
 </h3>
 
 <p spaces-before="0">
