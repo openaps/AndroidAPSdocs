@@ -1,8 +1,10 @@
+(temp-targets)=
+
 # Cele tymczasowe
 
 ## Czym są Cele tymczasowe, gdzie mogę je ustawić i skonfigurować?
 
-Za pomocą celów tymczasowych "Temp-Targets" (lub krótko TT) możesz zmienić docelowy poziom glukozy we krwi na określony czas. Ponieważ są one najczęściej potrzebne do aktywności, hipo (niedoboru węglowodanów) lub jedzenia wkrótce, możesz skonfigurować wartości domyślne. Aby skonfigurować cele tymczasowe, możesz wejść do menu w prawym górnym rogu i przejść do Ustawienia -> Inne-> Domyślne tymczasowe wartości docelowe.
+With “Temp-Targets” (or short TT), you can change your blood glucose target for a certain time period. As these are mostly needed for activity, hypo (treatment carbs) or eating soon, you can configure default ones. To configure these one, you can go to the menu in the right corner on top and go to Preferences-> Other-> Default Temp-Targets.
 
 ![Set default temp targets](../images/TempTarget_Default.png)
 
@@ -23,6 +25,8 @@ This can be considered as the most important Temp-Target. There are several reas
 4. (advanced, [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
 
 Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+
+(activity-temp-target)=
 
 ## Ćwiczenia Cel tymczasowy
 
