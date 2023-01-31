@@ -1,4 +1,4 @@
-# Git'i kurun
+# Git yükleyin
 
 ## Windows
 
