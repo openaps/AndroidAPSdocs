@@ -29,7 +29,7 @@
 :depth: 2
 ```
 
-## General
+## Geral
 
 **Units**
 
