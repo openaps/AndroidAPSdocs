@@ -1,27 +1,29 @@
+(smoothing-blood-glucose-data)=
+
 # Kan şekeri verilerini yumuşatma
 
-KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yüksek veya düşük KŞ'ne sebep olabilir. Bu nedenle, sorun çözülene kadar döngüyü devre dışı bırakmak önemlidir. CGM'nize bağlı olarak, bu tür sorunlar CGM'in yapılandırmasından veya sensör/set sorunlarından kaynaklanabilir. Bunu çözmek için CGM sensörünüzü değiştirmeniz gerekebilir. 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir' gibi bazı özellikler yalnızca iyi filtrelemeli bir KŞ kaynağıyla kullanılabilir.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensörleri
 
 ### Kendi Dexcom Uygulamanızı Oluşturun (BYODA)
 
-When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
+When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
 
 ### Dexcom G5 veya G6 ile xDrip+
 
-Düzgün veri, yalnızca xDrip+ G5 'OB1 toplayıcısı yerel modda' kullanıyorsanız iletilir.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ### Dexcom G5 Uygulaması (yamalı)
 
-Dexcom G5 Uygulamasını (yamalı) kullanırken BG verileriniz sorunsuz ve tutarlıdır. SMB kullanımında herhangi bir kısıtlama yoktur.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
 
 ## Freestyle Libre sensörleri
 
 ### Freestyle Libre ile xDrip+
 
-Şimdiye kadar Freestyle Libre değerleri için veri kaynağınız olarak xDrip+ kullanırken, KŞ değerleri yeterince düzgün olmadığından SMB içinde 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir'i aktive edemezsiniz. Bunun dışında, verilerdeki gürültüyü azaltmaya yardımcı olmak için yapabileceğiniz birkaç şey var.
+When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
 
-**Pürüzsüz Sensör Gürültüsü.** xDrip Ayarları > xDrip Ekran Ayarları'nda, smooth sensor noise "Pürüzsüz Sensör Gürültüsü"nün açık olduğundan emin olun. Bu, gürültülü verilerde yumuşatma uygulamaya çalışır.
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
 
-**Pürüzsüz Sensör Gürültüsü (Ultra Duyarlı).** xDrip+'ta hala parazitli veriler görüyorsanız, Pürüzsüz Sensör Gürültüsü (Ultra Duyarlı) ayarını kullanarak daha agresif yumuşatma uygulayabilirsiniz. Bu, algılanan gürültünün çok düşük seviyelerinde bile yumuşatma uygulamaya çalışacaktır. Bunu yapmak için önce xDrip+'ta [mühendislik modunu](Enabling-Engineering-Mode-in-xDrip.md) etkinleştirin. Ardından Ayarlar > xDrip+ Ekran Ayarları'na gidin ve Pürüzsüz Sensör Gürültüsü'nü (Ultra Duyarlı) açın.
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).
