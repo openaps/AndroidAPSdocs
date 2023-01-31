@@ -1,3 +1,5 @@
+(temp-targets)=
+
 # Temp-Targets
 
 ## What are Temp-Targets and where can I set and configure them?
@@ -23,6 +25,8 @@ This can be considered as the most important Temp-Target. There are several reas
 4. (advanced, [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)): You can deactivate “SMB with high temp target”, so that even if you have COB > 0, "SMB with Temp-Target" or "SMB always" enabled and OpenAPS SMB active, AndroidAPS won’t give SMBs while high temp targets are active.
 
 Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
+
+(activity-temp-target)=
 
 ## Activity Temp-Target
 
