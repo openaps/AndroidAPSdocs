@@ -9,6 +9,8 @@
 * Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
+(recommended-specification-of-computer-for-building-apk-file)=
+
 ## Doporučená specifikace počítače pro vytváření souboru apk
 
 <table class="tg">
@@ -77,6 +79,8 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
+(install-android-studio)=
+
 ## Instalace Android Studio
 
 The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
@@ -116,6 +120,8 @@ Click "Finish" on the "Verify Settings" dialog.
 Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
 
 ![Downloading components](../images/studioSetup/07_Downloading.png)
+
+(set-git-path-in-preferences)=
 
 ## Nastavení cesty k nástroji git v předvolbách
 
@@ -164,6 +170,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Pokud by bylo třeba: Najdete je zde: Android Studio - Preferences.
 
+(download-androidaps-code)=
+
 ## Stáhněte si kód AndroidAPS
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
@@ -210,6 +218,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     Don't worry, this will be solved soon!
 
+(download-android-sdk)=
+
 ## Stáhněte Android SDK
 
 * In the menu, go to File (1) > Settings (2).
@@ -250,6 +260,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     ![No gradle update](../images/studioSetup/37_GradleUpdateDeny.png)
 
 * Restart Android Studio before you continue.
+
+(generate-signed-apk)=
 
 ## Vytvořte podepsaný soubor APK
 
@@ -338,6 +350,8 @@ Signing means that you indicate your app to be your own creation but in a digita
     ![Umístění souboru apk](../images/studioSetup/54_APKlocation.png)
 
 * "app-full-release.apk" (3) is the file you are looking for!
+
+(transfer-apk-to-smartphone)=
 
 ## Přeneste soubor APK do telefonu
 
