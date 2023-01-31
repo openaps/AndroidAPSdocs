@@ -12,11 +12,13 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 * Vous pouvez également changer d'écrans en glissant vers la gauche ou la droite.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
+(section-b-profile-target)=
+
 ### Section B - Profil & cible
 
 #### Profil actuel
 
-![Changement de profil, durée restante](../images/Home2020_ProfileSwitch.png)
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Le profil actuel est affiché dans la barre de gauche.
 * Un appui court sur le profil permet de voir les détails du profil
@@ -25,15 +27,17 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
 
 #### Cible
 
-![Cible temporaire, durée restante](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * La cible de glycémie actuelle est affichée dans la barre de droite.
 * Un appui court sur la barre de cible permet de définir une [cible temporaire](../Usage/temptarget.md).
 * Si une cible temporaire est définie, la barre devient jaune et le temps restant en minutes est affiché entre parenthèses.
 
+(visualization-of-dynamic-target-adjustment)=
+
 #### Visualisation de l'ajustement dynamique de la cible
 
-![Visualisation de l'ajustement dynamique de la cible](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS peut ajuster dynamiquement votre cible en fonction de la sensibilité si vous utilisez l'algorithme SMB.
 * Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
@@ -52,6 +56,8 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    * rouge = en dessous de la fourchette
    * jaune = au-dessus de la fourchette
 * Le bloc gris du milieu affiche les minutes depuis la dernière lecture et les variations depuis la dernière lecture ainsi que depuis les 15 et 40 dernières minutes.
+
+(loop-status)=
 
 #### État de la boucle
 
@@ -73,15 +79,17 @@ Ceci est le premier écran que vous verrez quand vous ouvrirez AndroidAPS et il 
    
    ![Menu état de la boucle](../images/Home2020_Loop_Dialog.png)
 
+(bg-warning-sign)=
+
 #### Avertissement Glycémie
 
 À partir d'Android 3.0, vous pouvez avoir un signal d'avertissement à côté de votre glycémie sur l'écran principal.
 
-*Remarque* : Jusqu'à 30 heures sont prises en compte pour les calculs AAPS. Donc, même après avoir résolu la cause racine, cela peut prendre environ 30 heures pour que le triangle jaune disparaisse après le dernier interval irrégulier.
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-Pour le supprimer immédiatement, vous devez supprimer manuellement quelques entrées dans l'onglet Dexcom/xDrip+.
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
-Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
+However, when there are a lot of duplicates, it might be easier to
 
 * [backup your settings](../Usage/ExportImportSettings.md),
 * réinitialiser votre base de données dans le menu de maintenance et
@@ -89,11 +97,11 @@ Cependant, quand il y a beaucoup de doublons, il peut être plus facile de
 
 ##### Signe d'alerte rouge : données Gly dupliquées
 
-Le signe d'alerte rouge vous demande d'être actif immédiatement : vous recevez des données de glycémie dupliquées, qui empèche la boucle de faire son travail correctement. Par conséquent, votre boucle sera désactivée jusqu'à ce que ce soit résolu.
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
 ![Avertissement de glycémie rouge](../images/bg_warn_red.png)
 
-Vous devez savoir pourquoi vous avez des Gly dupliquées :
+You need to find out why you get duplicate BGs:
 
 * Est-ce que le passerelle Dexcom Bridge est activé dans votre site NS ? Désactivez le pont de connexion en allant sur heroku (ou tout autre fournisseur d'hébergement), éditez la variable "activer" et retirez la partie "bridge" à cet endroit. (Pour heroku les [détails peuvent être trouvés ici](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings).)
 * Est-ce que plusieurs sources téléchargent votre Gly vers NS ? Si vous utilisez l'application BYODA, activez le téléchargement dans AAPS mais ne l'activez pas dans xDrip+, si vous l'utilisez.
@@ -154,6 +162,8 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 * Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
 * Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
+(section-f-main-graph)=
+
 ### Section F - Graphique principal
 
 ![Section F](../images/Home2020_MainGraph.png)
@@ -175,6 +185,8 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
 * Pour le graphique principal, juste les trois options au-dessus de la ligne "\---\---- Graph 1 \---\----" sont disponibles.
    
    ![Réglage du graphique principal](../images/Home2020_MainGraphSetting.png)
+
+(prediction-lines)=
 
 #### Lignes de prédiction
 
@@ -204,7 +216,7 @@ Vous devez savoir pourquoi vous avez des Gly dupliquées :
    
    *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-Généralement votre courbe de glycémie réelle finira au milieu de ces lignes, ou proche de la ligne qui représente le mieux votre situation réelle.
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
 #### Basals
 
@@ -223,7 +235,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Vous pouvez activer jusqu'à quatre graphiques supplémentaires en dessous du graphique principal.
 * To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots.md#section-f-main-graph) and scroll down.
 
-![Paramètres graphiques additionnels](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
 * Pour ajouter un graphique supplémentaire, cochez la case sur le côté gauche de son nom (par ex. \---\---- Graph 1 \---\----).
 
@@ -269,7 +281,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 ### Section H - Boutons
 
-![Boutons de l'écran d'accueil](../images/Home2020_Buttons.png)
+![Homescreen buttons](../images/Home2020_Buttons.png)
 
 * Les boutons pour l'Insuline, les Glucides et l'Assistant bolus sont "quasiment toujours affichés".
    
@@ -279,7 +291,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Insuline
 
-![Bouton Insuline](../images/Home2020_ButtonInsulin.png)
+![Insulin button](../images/Home2020_ButtonInsulin.png)
 
 * Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](#assistant-bolus).
 * By checking the box you can automatically start your [eating soon temp target](../Configuration/Preferences.md#default-temp-targets).
@@ -287,7 +299,7 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 
 #### Glucides
 
-![Bouton Glucides](../images/Home2020_ButtonCarbs.png)
+![Carbs button](../images/Home2020_ButtonCarbs.png)
 
 * Permet d'enregistrer les glucides sans faire de bolus.
 * Certain [pre-set temporary targets](../Configuration/Preferences.md#default-temp-targets) can be set directly by checking the box.
@@ -316,11 +328,13 @@ Généralement votre courbe de glycémie réelle finira au milieu de ces lignes,
 * Entrez facilement la quantité de glucides et définissez les paramètres de calcul.
 * Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
+(bolus-wizard)=
+
 ## Assistant bolus
 
-![Assistant Bolus](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le ferez.
+When you want to make a meal bolus this is where you will normally make it from.
 
 ### Section I
 
@@ -328,6 +342,8 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Dans le champ Glucides, vous ajoutez votre estimation de la quantité de glucides -ou équivalent- que vous souhaitez pour le bolus. 
 * Le champ "Corr" vous permet de modifier le dosage final pour une raison quelconque.
 * Le champ "Décalage horaire" est destiné au pré-bolus pour que vous puissiez renseigner qu'il y aura un délai avant que les glucides ne soient mangés. Vous pouvez mettre une valeur négative dans ce champ si vous faites un bolus pour des glucides déjà consommés.
+
+(eating-reminder)=
 
 #### Rappel repas
 
@@ -360,28 +376,32 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Si vous cochez l’IA sans GA, AAPS prendra en compte l’insuline déjà délivrée, mais pas les glucides absorbés. Cela conduit à un avis de « manque de glucides ».
 * Si vous faites un bolus pour de la **nourriture supplémentaire** rapidement après un bolus de repas (par exemple pour un dessert supplémentaire) il peut être utile de **décocher toutes les cases**. De cette façon, les nouveaux glucides seront juste additionnés car le repas principal ne sera pas nécessairement absorbé et l'IA ne correspondra pas avec le GA aussi prêt d'un bolus de repas.
 
+(wrong-cob-detection)=
+
 #### Détection incorrecte des GA
 
-![Absorption lente des glucides](../images/Calculator_SlowCarbAbsorption.png)
+![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
 * Si vous voyez l'avertissement ci-dessus après avoir utilisé l'assistant bolus, AndroidAPS a détecté que la valeur de GA calculée est peut-être incorrecte. 
 * Donc si vous voulez faire un nouveau bolus après un précédent repas avec des GA, vous devez être conscient du risque de surdose ! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
+(action-tab)=
+
 ## Onglet Actions
 
-![Onglet Actions](../images/Home2021_Action.png)
+![Actions tab](../images/Home2021_Action.png)
 
 ### Actions - section M
 
 * Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Le bouton pour démarrer ou annuler un débit basal temporaire. Veuillez noter que le bouton passe de "BASAL TEMPORAIRE" à "ANNULER x%" lorsqu'un débit de base temporaire est défini.
-* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * Cette option n'est disponible que pour les pompes Dana RS et Insight. 
    * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
 ### Careportal - section N
 
@@ -393,6 +413,8 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
    * âge de la batterie de la pompe & niveau (pourcentage)
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+
+(sensor-level-battery)=
 
 #### Niveau du capteur (batterie)
 
@@ -423,7 +445,9 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * D'autres préfèrent une fourchette allant de 32% à 37% de DTQ pour DTB. 
 * Comme la plupart de ces règles empiriques, leur validité réelle est limitée. Remarque : Votre diabète peut varier!
 
-![Historique + DTQ](../images/Home2021_Action_HB_TDD.png)
+![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
+
+(insulin-profile))=
 
 ## Profil d'Insuline
 
@@ -435,11 +459,11 @@ Quand vous voulez faire un bolus de repas, c'est normalement d'ici que vous le f
 * Si vous êtes habitué à la pompe manuellement, vous êtes probablement habitué à supposer que l'insuline se désintègre en environ 3,5 heures. 
 * Toutefois, lorsque vous bouclez la longue queue est importante, car les calculs sont beaucoup plus précis et ces petites quantités s’additionnent lorsqu’elles sont soumises aux calculs récursifs de l’algorithme AndroidAPS.
 
-Pour plus d'informations sur les différents types d'insuline, leurs profils d'activité et l'importance de tout cela, vous pouvez lire un article ici sur [ Comprendre les nouvelles courbes IA basées sur des courbes d'activité exponentielles ](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-Et vous pouvez lire un excellent article de blog à ce sujet ici: [Pourquoi nous avons régulièrement tort dans la durée d'action de l'insuline (DAI) que nous utilisons, et pourquoi c'est important…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## Statut de la pompe
 
@@ -450,20 +474,22 @@ Et plus encore: [Courbes d’insuline exponentielle + Fiasp](https://seemycgm.co
 
 ## Careportal
 
-Careportal reproduisait les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et qui vous permet d'ajouter des remarques à vos enregistrements.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
 ### Revoir le calcul des glucides
 
-![Revoir le calcul des glucides dans l'onglet Traitement](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Appuyez simplement sur le lien vert Calc. (Selon la pompe utilisée, l'insuline et les glucides peuvent aussi être affichés sur une seule ligne dans les traitements.)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
+* Appuyez simplement sur le lien vert Calc. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+
+(carb-correction)=
 
 ### Correction de Glucides
 
-![Traitement en 1 ou 2 lignes](../images/Treatment_1or2_lines.png)
+![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-L'onglet Traitement peut être utilisé pour corriger les entrées de glucides erronées (par ex. si vous avez surestimé ou sous-estimé les glucides).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. Vérifiez et mémorisez les GA et IA actuels sur l'écran d'accueil.
 2. Selon la pompe, dans l'onglet Traitement, les glucides peuvent être affichés avec l'insuline sur une seule ligne ou dans deux lignes séparées (par ex. avec Dana RS).
@@ -497,9 +523,11 @@ L'onglet Traitement peut être utilisé pour corriger les entrées de glucides e
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. Le profil local peut être modifié sur votre smartphone et synchronisé sur votre site Nightscout.
 
+(treatment)=
+
 ## Traitement
 
-Historique des traitements suivants :
+History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
 * [Bolus étendu](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
@@ -510,7 +538,7 @@ Historique des traitements suivants :
 
 ## Source Glycémie - xDrip+, BYODA...
 
-![Onglet Source Gly - ici xDrip](../images/Screenshots_BGSource.png)
+![BG Source tab - here xDrip](../images/Screenshots_BGSource.png)
 
 * Selon les votre source de glycémie, cet onglet est nommé différemment.
 * Affiche l'historique des lectures MGC et propose l'option de supprimer la lecture en cas d'échec (par ex. sous la limite basse).
