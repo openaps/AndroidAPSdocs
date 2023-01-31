@@ -4,11 +4,13 @@
 
 No hay problema con cambiar el huso horario en el teléfono porque la bomba no utiliza el historial
 
+(danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **Eso significa que si se cambia el huso horario en el teléfono, los registros se leerán con un huso horario diferente y se duplicarán.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-Para evitar esto, hay dos posibilidades:
+To avoid this there are two possibilities:
 
 ### Opción 1: Conservar la zona horaria original el perfil de tiempo
 
@@ -30,7 +32,7 @@ Para evitar esto, hay dos posibilidades:
 
 * Desactiva 'Fecha y hora automática' en la configuración de tu teléfono (cambio de zona horaria manual)
 
-Cuando salga del avión:
+When get out of plane:
 
 * apague la bomba
 * cambiar huso horario por teléfono
@@ -40,21 +42,27 @@ Cuando salga del avión:
 * activar el teléfono
 * deje que el teléfono se conecte a la bomba y se ajuste de tiempo
 
+(insight)=
+
 ## Insight
 
-El controlador ajusta automáticamente el tiempo de la bomba a la hora del teléfono.
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-El Insight también registra las entradas de historial en las que se modificó el tiempo y desde cual (antigua) hora a la que es (nueva) hora. Por lo tanto, el tiempo correcto se puede determinar en AAPS a pesar del cambio de tiempo.
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Puede provocar imprecisiones en los TDD. Pero esto no debería ser un problema.
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Por lo tanto, el usuario de Insight no tiene que preocuparse por los cambios de huso horario y los cambios de hora. Hay una excepción a esta regla: la bomba de Insight tiene una pequeña batería interna a la hora de encendido, etc. mientras estás cambiando la batería "real". Si el cambio de la batería tarda demasiado tiempo, esta batería interna se puede quedar sin energía, se restablecerá el reloj y se le solicitará que introduzca una nueva hora y fecha después de insertar una nueva batería. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 # Ajuste horario de verano (DST)
 
-Dependiendo de la bomba y de la configuración de la MCG, los saltos en el tiempo pueden llevar a problemas. Con el Combo, por ejemplo, el historial de la bomba se vuelve a leer y se generan entradas duplicadas. Así que por favor, haga el ajuste mientras esté despierta y no durante la noche.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Si usted se da bolos con la calculadora por favor no use COB y IOB a menos que esté seguro de que son absolutamente correctos - es mejor que no los use durante un par de horas después del interruptor DST.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+
+(accu-chek-combo)=
 
 ## Accu-Check Combo
 
@@ -83,7 +91,7 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 
 ### Actions to take after the clock change
 
-Un buen momento para hacer este interruptor sería con un IOB bajo. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
+A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
 2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
