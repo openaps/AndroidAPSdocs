@@ -84,7 +84,7 @@ Here are examples how to find them on specific android phones.
 
 ## CGM
 
-* [General](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
+* [Geral](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
 * [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
 * [Libre 3](../Hardware/Libre3.html#experiences-and-troubleshooting)
 * [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
