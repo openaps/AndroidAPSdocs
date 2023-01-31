@@ -1,6 +1,8 @@
+(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Utknąłem; co mam zrobić? Kogo mogę zapytać?
 
-Ten projekt opiera się na pracy wolontariuszy, dlatego obowiązują pewne zasady, aby uniknąć dodatkowej pracy dla tych, którzy życzliwie poświęcają swój czas i umiejętności:
+This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * poziom 1: Przeczytaj Wiki - teraz mamy funkcję wyszukiwania, która Ci pomoże!
 * poziom 2: Przeszukuj grupę na Facebooku, jeśli nie ma już odpowiedzi, zadaj pytanie w grupie [AndroidAPS Users na Facebooku ](https://www.facebook.com/groups/1900195340201874/)
@@ -12,7 +14,7 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Dołącz do grupy użytkowników AndroidAPS na Facebooku!
 
-Dołącz do głównej grupy [ AndroidAPS na Facebooku ](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Istnieje również grupa dla użytkowników pomp Combo [ AAPSCombo ](https://www.facebook.com/groups/127507891261169/), która zawiera więcej informacji na temat specyfiki tej pompy.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
 ## Other resources in English
 
