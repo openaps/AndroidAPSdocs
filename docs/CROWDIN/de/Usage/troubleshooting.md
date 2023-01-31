@@ -104,7 +104,7 @@ Here are examples how to find them on specific android phones.
 * [Jelly](../Usage/jelly.html)
 * [Huawei bluetooth & battery optimization](../Usage/huawei.html)
 
-## Smartwatch
+## Smartwatches
 
 * [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.html)
