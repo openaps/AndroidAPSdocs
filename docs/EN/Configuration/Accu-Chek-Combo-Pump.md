@@ -2,6 +2,7 @@
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
+(hardware-requirements)=
 ## Hardware requirements
 
 * A Roche Accu-Chek Combo (any firmware, they all work)
@@ -81,6 +82,7 @@
   pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 ## Why pairing with the pump does not work with the app "ruffy"?
 There are serveral possible reasons. Try the following steps:
 

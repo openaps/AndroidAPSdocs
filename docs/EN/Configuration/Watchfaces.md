@@ -55,6 +55,7 @@ With a double tap onto the BG curve you can change the time scale..
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
 ### New watchface as of AndroidAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
@@ -156,6 +157,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
+(complications)=
 ## Complications
 
 _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
@@ -330,6 +332,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
+(troubleshooting-the-wear-app)=
 ## Troubleshooting the wear app:
 
 *  Sometimes it helps to re-sync the apps to the watch as it can be a bit slow to do so itself: Android Wear > Cog icon > Watch name > Resync apps.

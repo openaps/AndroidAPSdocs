@@ -59,6 +59,7 @@ published by Tim Street at
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.md).
 
+(if-using-g6-with-build-your-own-dexcom-app)=
 ## If using G6 with Build Your Own Dexcom App
 
 -   As of December 2020 [Build Your Own Dexcom

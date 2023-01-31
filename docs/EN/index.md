@@ -109,14 +109,12 @@ State of the **documentation** translations per language (country code, percenta
 
 :::{toctree}
 :caption: Change language
-:titlesonly: true
 
 Change language <./changelanguage.md>
 :::
 
 :::{toctree}
 :caption: Getting started
-:titlesonly: true
 
 Safety first <./Getting-Started/Safety-first.md>
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
@@ -124,9 +122,10 @@ What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
+(what-do-i-need)=
+
 :::{toctree}
 :caption: What do I need?
-:titlesonly: true
 
 CGM/FGM choices <./Configuration/BG-Source.md>
 Pump choices <./Getting-Started/Pump-Choices.md>
@@ -135,7 +134,6 @@ Module <./Module/module.md>
 
 :::{toctree}
 :caption: How to Install AndroidAPS
-:titlesonly: true
 
 Building the APK <./Installing-AndroidAPS/Building-APK.md>
 Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -147,9 +145,10 @@ Release notes <./Installing-AndroidAPS/Releasenotes.md>
 Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :::
 
+(component-setup)=
+
 :::{toctree}
 :caption: Component Setup
-:titlesonly: true
 
 CGM/FGM <./Configuration/BG-Source.md>
 xDrip Settings <./Configuration/xdrip.md>
@@ -163,7 +162,6 @@ Smartwatch  <./Hardware/Smartwatch.md>
 
 :::{toctree}
 :caption: Configuration
-:titlesonly: true
 
 Config builder <./Configuration/Config-Builder.md>
 Preferences <./Configuration/Preferences.md>
@@ -171,7 +169,6 @@ Preferences <./Configuration/Preferences.md>
 
 :::{toctree}
 :caption: AndroidAPS Usage
-:titlesonly: true
 
 AndroidAPS screens <./Getting-Started/Screenshots.md>
 Objectives <./Usage/Objectives.md>
@@ -190,7 +187,6 @@ Android auto <./Usage/Android-auto.md>
 
 :::{toctree}
 :caption: General Hints
-:titlesonly: true
 
 Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 Accessing logfiles <./Usage/Accessing-logfiles.md>
@@ -201,7 +197,6 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 :::{toctree}
 :caption: AndroidAPS for children
-:titlesonly: true
 
 Remote monitoring <./Children/Children.md>
 SMS commands <./Children/SMS-Commands.md>
@@ -210,7 +205,6 @@ Profile helper <./Configuration/profilehelper.md>
 
 :::{toctree}
 :caption: Troubleshooting
-:titlesonly: true
 
 Troubleshooting <./Usage/troubleshooting.md>
 Nightscout client <./Usage/Troubleshooting-NSClient.md>
@@ -218,21 +212,18 @@ Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 :::{toctree}
 :caption: FAQ
-:titlesonly: true
 
 FAQ <./Getting-Started/FAQ.md>
 :::
 
 :::{toctree}
 :caption: Glossary
-:titlesonly: true
 
 Glossary <./Getting-Started/Glossary.md>
 :::
 
 :::{toctree}
 :caption: Where to go for help
-:titlesonly: true
 
 Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
 Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -241,14 +232,12 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
 :::{toctree}
 :caption: For Clinicians
-:titlesonly: true
 
 For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 :::
 
 :::{toctree}
 :caption: How to help
-:titlesonly: true
 
 How to help <./Getting-Started/How-can-I-help.md>
 How to translate the app and docs <./translations.md>
@@ -257,7 +246,6 @@ How to edit the docs <./make-a-PR.md>
 
 :::{toctree}
 :caption: Sandbox
-:titlesonly: true
 
 Sandbox <./Sandbox/sandbox1.md>
 :::

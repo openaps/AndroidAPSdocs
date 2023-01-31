@@ -27,6 +27,7 @@ In case you experience problems, see separate page for [troubleshooting Android 
 ## 1. Export your settings
 See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
 
+(update-your-local-copy)=
 ## 2. Update your local copy
 
 As of version 2.7 repository location changed to [https://github.com/nightscout/AndroidAPS](https://github.com/nightscout/AndroidAPS). If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
@@ -62,6 +63,7 @@ Note: The files that were updated may vary! This is not an indication
 
   ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
+(build-the-signed-apk)=
 ## 3. Build the Signed APK
 
 Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
