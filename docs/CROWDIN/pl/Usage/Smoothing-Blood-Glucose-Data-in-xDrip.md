@@ -1,3 +1,5 @@
+(smoothing-blood-glucose-data)=
+
 # Wygładzanie danych dotyczących poziomu glukozy we krwi
 
 If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
