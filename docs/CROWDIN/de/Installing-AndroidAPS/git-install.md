@@ -1,4 +1,4 @@
-# Installiere git
+# Git installieren
 
 ## Windows
 
