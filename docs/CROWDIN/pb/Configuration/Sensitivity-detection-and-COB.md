@@ -1,3 +1,5 @@
+(sensitivity-detection)=
+
 # Sensitivity detection
 
 ## Sensitvity algorithm
