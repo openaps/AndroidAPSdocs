@@ -1,6 +1,8 @@
+(smoothing-blood-glucose-data)=
+
 # Gliukozės kraujyje duomenų išlyginimas
 
-Jei KG duomenys šokinėjantys/triukšmingi, AAPS gali neteisingai dozuoti insuliną, kas sąlygotų žemą arba aukštą KG. Dėl šios priežasties yra svarbu atjungti ciklą, kol problema bus išspręsta. Priklausomai nuo jūsų NGJ tokie dalykai gali kilti dėl NGJ konfigūravimo arba jutiklio problemų, puslapio sutrikimų. Jums gali tekti pakeisti savo NGJ jutiklį, kad išsprętumėte tai. Kai kurios funkcijos, pavyzdžiui, "Įjungti SMB visada" ir "Įjungti SMB po angliavandenių" gali būti naudojami tik su geru KG šaltinio filtravimu.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensors
 
@@ -10,7 +12,7 @@ When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexco
 
 ### xDrip+ with Dexcom G5 or G6
 
-Pakankamai sklandūs duomenys ir siunčiami tik tada, kai naudojate xDrip+ G5 "OB1 kolektorius natyviu režimu".
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ### Dexcom G5 App (patched)
 
