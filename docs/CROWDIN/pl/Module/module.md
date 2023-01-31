@@ -203,7 +203,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </ul>
 
 <h3 spaces-before="0">
-  Źródło BG
+  BG Source
 </h3>
 
 <p spaces-before="0">
