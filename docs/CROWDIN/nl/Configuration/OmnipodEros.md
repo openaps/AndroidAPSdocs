@@ -2106,6 +2106,9 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   It is recommended that pump unreachable alerts be configured to <strong x-id="1">120 minutes</strong> by going to the top right-hand side three-dot menu, selecting <strong x-id="1">Preferences</strong>➜<strong x-id="1">Local Alerts</strong>➜<strong x-id="1">Pump unreachable threshold \[min\]</strong> and setting this to <strong x-id="1">120</strong>.
 </p>
 
+<p spaces-before="0">
+  (import-settings-from-previous-aaps)=
+</p>
 <h3 spaces-before="0">
   Importeer instellingen van vorige AAPS
 </h3>
