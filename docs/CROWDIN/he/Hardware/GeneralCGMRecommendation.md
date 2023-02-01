@@ -16,24 +16,25 @@
 
 לאחר החדרת החיישן, ניתן ללחוץ את המשדר לתוך החיישן. זהירות! תחילה הרכיבו את הצד המרובע ולאחר מכן לחצו כלפי מטה על הצד העגול.
 
+(troubleshooting)=
 ## פתרון בעיות
 
 ### בעיה בחיבור
 
-חיבור הבלוטות' עלול להיות מופרע על ידי התקני בלוטות' אחרים בקרבת מקום כגון מדי סוכר בדם, אוזניות, טאבלטים או מכשירי מטבח כגון תנורי מיקרוגל או כיריים קרמיות. במקרה זה xDrip לא יציג ערכי סוכר. כאשר חיבור הבלוטות' מתייצב מחדש, הנתונים החסרים נטענים בחזרה.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
 
 ### שגיאות חיישן
 
-אם מתרחשות שגיאות חוזרות בחיישן, נסו לבחור אתר אחר בגוף כדי להחדיר בו את החיישן. חוט החיישן לא אמור לבוא במגע עם דם.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
 
-לעתים קרובות ניתן לתקן "שגיאת חיישן" על ידי שתייה מיידית ועיסוי סביב החיישן!
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### ערכים קופצניים
 
-ניתן להחיל הגדרות לחסימת רעש ב-xDrip (הגדרות - הגדרות לשיתוף פעולה בין יישומים - חסימת רעש) לקריאה נוספת [כאן](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### גיל חיישן שלילי
 
-![גיל חיישן שלילי](../images/Troubleshooting_SensorAge.png)
+![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. עברו ללשונית טיפולים > פורטל הטיפולים ומחקו את הערך השגוי.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
