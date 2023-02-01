@@ -18,6 +18,7 @@ Before using Automation, you should be confident with manual [temp targets](./te
 
 Norėdami nustatyti automatizavimą, jūs turite suteikti jam pavadinimą, bent vieną sąlygą ir bent vieną atliktiną veiksmą.
 
+(important-note)=
 ### Svarbios pastabos
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Rūšiuoti automatizavimo taisykles
 
 Norint rūšiuoti automatizavimo taisykles, paspauskite ir palaikykite keturių linijų mygtuką ekrano dešinėje pusėje ir tempkite žemyn ar aukštyn.
@@ -106,6 +108,7 @@ To delete an automation rule click on trash icon.
 :alt: Ištrinti automatizavimo taisyklę
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
