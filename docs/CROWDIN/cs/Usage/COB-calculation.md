@@ -20,6 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Jestliže je použitá minimální absorpce sacharidů (min_5m_carbimpact) namísto hodnoty vypočtené z odchylek, tak se v COB grafu objeví oranžová tečka.
 
+(detection-of-wrong-cob-values)=
 ## Zjišťování nesprávných hodnot COB
 
 AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. V takovém případě Vám bude po použití bolusové kalkulačky zobrazen dodatečný pokyn na obrazovce s potvrzením.
