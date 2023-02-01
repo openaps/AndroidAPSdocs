@@ -1,4 +1,4 @@
-# How to translate strings for the AndroidAPS app or the documentation
+# AndroidAPS uygulaması veya dokümantasyon için diziler (strings) nasıl çevrilir?
 
 * For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
@@ -11,7 +11,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 * Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags.png)
 
-## Translation of the app
+## Uygulamanın çevirisi
 
 (translate-strings-for-androidaps-app)=
 
