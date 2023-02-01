@@ -78,7 +78,7 @@ If there is another request, you can confirm it with "OK".
 
 ### Step 3: Install & set up Juggluco
 
-Now install the [Juggluco App](https://play.google.com/store/apps/details?id=tk.glucodata) from the Playstore (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
+Now download & install the Juggluco App from [here (link)](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) or [here (mirror)](http://jkaltes.byethost16.com/Juggluco/download.html) (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
 
 After installing Juggluco, several messages may appear. Allow Juggluco to find, locate and connect nearby devices.
 
