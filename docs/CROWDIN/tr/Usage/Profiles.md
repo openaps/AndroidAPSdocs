@@ -2,22 +2,22 @@
 
 # Profil değiştirme
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
+Genel olarak profillerle ilgili dokümantasyon [Konfigürasyon ayarları - profil](../Configuration/Config-Builder.md#profile) adresinde bulunabilir.
 
-On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
+AAPS'nizi başlatırken ve profilinizi seçerken, sıfır süreli (daha sonra açıklanacak) bir "Profil değiştirme" olayı yapmanız gerekecektir. Bunu yaparak AAPS, profillerin geçmişini izlemeye başlar ve her yeni profil değişikliği, NS'de profilin içeriğini değiştirseniz bile başka bir "Profil değiştirme" gerektirir. Güncellenen profil hemen AAPS'e gönderilir, ancak bu değişiklikleri kullanmaya başlamak için aynı profili tekrar değiştirmeniz gerekir.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
+Dahili olarak AAPS, profilin başlangıç tarihi ve süresi ile anlık görüntüsünü oluşturur ve seçilen süre içinde kullanır.
 
 * Süre olarak sıfır sonsuz anlamına gelir. Bu profil, yeni "Profil değiştirme"ye kadar geçerlidir.
 * x dakika süre, bu profilin x dakika kullanımı anlamına gelir. Bu süreden sonra "Profil değiştirme", önceki geçerli profile geri döner.
 
-If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
+Profilinizi "yerel profil" sekmesinde düzenlediyseniz, profili orada etkinleştirebilirsiniz, bu da örtülü bir profil geçişi yapar.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+Profil değiştirme yapmak için, AndroidAPS'nin ana ekranında profilinizin adına (aşağıdaki resimde "03/11' e ayarlanmış") uzun basın.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
+"Profil değiştirme" içinde, daha önce Sirkadiyen Yüzde Profilinin parçası olan iki ek değişiklik seçebilirsiniz:
 
 ## Yüzde
 
