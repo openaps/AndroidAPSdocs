@@ -18,6 +18,7 @@ Before using Automation, you should be confident with manual [temp targets](./te
 
 כדי להגדיר אוטומציה, מתחילים מלתת לה שם, לבחור לפחות תנאי אחד ופעולה אחת.
 
+(important-note)=
 ### הערה חשובה
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### מיון כללי אוטומציה
 
 כדי למיין את כללי האוטומציה לחצו כפתור המיון והחזיקו את כפתור ארבע השורות בצד שמאל של המסך וגררו למעלה או למטה.
@@ -106,6 +108,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Delete automation rule
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
