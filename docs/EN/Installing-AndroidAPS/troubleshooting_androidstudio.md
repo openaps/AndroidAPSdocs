@@ -1,5 +1,7 @@
+(troubleshooting-android-studio)=
 # Troubleshooting Android Studio
 
+(lost-keystore)=
 ## Lost keystore
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
@@ -135,6 +137,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
+(unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.

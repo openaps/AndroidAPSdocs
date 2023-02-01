@@ -1021,6 +1021,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
+(import-settings-from-previous-aaps)=
 ### Import Settings from previous AAPS
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.

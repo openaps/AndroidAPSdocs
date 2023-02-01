@@ -39,6 +39,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Enable extended boluses on pump
 
+(default-password)=
 ### Default password
 
 * For DanaRS with firmware v1 and v2 the default password is 1234.
@@ -48,6 +49,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
   * Number 3 is production date. 
   * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
 
+(change-password-on-pump)=
 ## Change password on pump
 
 * Press OK button on pump
@@ -83,6 +85,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 
   ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
 ## Dana RS specific errors
 
 ### Error during insulin delivery

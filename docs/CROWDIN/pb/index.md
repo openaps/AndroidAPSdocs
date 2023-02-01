@@ -104,6 +104,8 @@ State of the **documentation** translations per language (country code, percenta
 | SK       | ![sk translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![sk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
 | TR       | ![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
 
+=======
+Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 :::
 
 :::{toctree}
@@ -115,7 +117,10 @@ Change language <./changelanguage.md>
 :::{toctree}
 :caption: Getting started
 
-Safety first <./Getting-Started/Safety-first.md> What is a closed loop system <./Getting-Started/ClosedLoop.md> What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md> Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Safety first <./Getting-Started/Safety-first.md>
+What is a closed loop system <./Getting-Started/ClosedLoop.md>
+What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
 (what-do-i-need)=
@@ -123,13 +128,22 @@ Safety first <./Getting-Started/Safety-first.md> What is a closed loop system <.
 :::{toctree}
 :caption: What do I need?
 
-CGM/FGM choices <./Configuration/BG-Source.md> Pump choices <./Getting-Started/Pump-Choices.md> Module <./Module/module.md>
+CGM/FGM choices <./Configuration/BG-Source.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
+Module <./Module/module.md>
 :::
 
 :::{toctree}
 :caption: How to Install AndroidAPS
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md> Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md> Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md> Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md> Install git <./Installing-AndroidAPS/git-install.md> Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md> Release notes <./Installing-AndroidAPS/Releasenotes.md> Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Building the APK <./Installing-AndroidAPS/Building-APK.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Install git <./Installing-AndroidAPS/git-install.md>
+Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :::
 
 (component-setup)=
@@ -137,7 +151,12 @@ Building the APK <./Installing-AndroidAPS/Building-APK.md> Update to a new versi
 :::{toctree}
 :caption: Component Setup
 
-CGM/FGM <./Configuration/BG-Source.md> xDrip Settings <./Configuration/xdrip.md> Pump choices <./Getting-Started/Pump-Choices.md> Phones <./Hardware/Phoneconfig.md> Nightscout setup <./Installing-AndroidAPS/Nightscout.md> Smartwatch  <./Hardware/Smartwatch.md>
+CGM/FGM <./Configuration/BG-Source.md>
+xDrip Settings <./Configuration/xdrip.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
+Phones <./Hardware/Phoneconfig.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Smartwatch  <./Hardware/Smartwatch.md>
 :::
 
 (configuration)=
@@ -145,31 +164,51 @@ CGM/FGM <./Configuration/BG-Source.md> xDrip Settings <./Configuration/xdrip.md>
 :::{toctree}
 :caption: Configuration
 
-Config builder <./Configuration/Config-Builder.md> Preferences <./Configuration/Preferences.md>
+Config builder <./Configuration/Config-Builder.md>
+Preferences <./Configuration/Preferences.md>
 :::
 
 :::{toctree}
 :caption: AndroidAPS Usage
 
-AndroidAPS screens <./Getting-Started/Screenshots.md> Objectives <./Usage/Objectives.md> OpenAPS features <./Usage/Open-APS-features.md> COB calculation <./Usage/COB-calculation.md> Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md> Profile switch <./Usage/Profiles.md> Temp-targets <./Usage/temptarget.md> Extended carbs <./Usage/Extended-Carbs.md> Automation <./Usage/Automation.md> Careportal (discontinued) <./Usage/CPbefore26.md> Open Humans Uploader <./Configuration/OpenHumans.md> Automation with 3rd party apps <./Usage/automationwithapp.md> Android auto <./Usage/Android-auto.md>
+AndroidAPS screens <./Getting-Started/Screenshots.md>
+Objectives <./Usage/Objectives.md>
+OpenAPS features <./Usage/Open-APS-features.md>
+COB calculation <./Usage/COB-calculation.md>
+Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Profile switch <./Usage/Profiles.md>
+Temp-targets <./Usage/temptarget.md>
+Extended carbs <./Usage/Extended-Carbs.md>
+Automation <./Usage/Automation.md>
+Careportal (discontinued) <./Usage/CPbefore26.md>
+Open Humans Uploader <./Configuration/OpenHumans.md>
+Automation with 3rd party apps <./Usage/automationwithapp.md>
+Android auto <./Usage/Android-auto.md>
 :::
 
 :::{toctree}
 :caption: General Hints
 
-Crossing timezones with pumps <./Usage/Timezone-traveling.md> Accessing logfiles <./Usage/Accessing-logfiles.md> Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md> Export/Import Settings <./Usage/ExportImportSettings.md> xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
+Crossing timezones with pumps <./Usage/Timezone-traveling.md>
+Accessing logfiles <./Usage/Accessing-logfiles.md>
+Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Export/Import Settings <./Usage/ExportImportSettings.md>
+xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 :::
 
 :::{toctree}
 :caption: AndroidAPS for children
 
-Remote monitoring <./Children/Children.md> SMS commands <./Children/SMS-Commands.md> Profile helper <./Configuration/profilehelper.md>
+Remote monitoring <./Children/Children.md>
+SMS commands <./Children/SMS-Commands.md>
+Profile helper <./Configuration/profilehelper.md>
 :::
 
 :::{toctree}
 :caption: Troubleshooting
 
-Troubleshooting <./Usage/troubleshooting.md> Nightscout client <./Usage/Troubleshooting-NSClient.md>
+Troubleshooting <./Usage/troubleshooting.md>
+Nightscout client <./Usage/Troubleshooting-NSClient.md>
 :::
 
 :::{toctree}
@@ -187,7 +226,9 @@ Glossary <./Getting-Started/Glossary.md>
 :::{toctree}
 :caption: Where to go for help
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md> Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md> Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
 :::{toctree}
@@ -199,7 +240,9 @@ For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 :::{toctree}
 :caption: How to help
 
-How to help <./Getting-Started/How-can-I-help.md> How to translate the app and docs <./translations.md> How to edit the docs <./make-a-PR.md>
+How to help <./Getting-Started/How-can-I-help.md>
+How to translate the app and docs <./translations.md>
+How to edit the docs <./make-a-PR.md>
 :::
 
 :::{toctree}
@@ -215,5 +258,5 @@ Sandbox <./Sandbox/sandbox1.md>
 - Use of code from github.com is without warranty or formal support of any kind. Please review this repository's LICENSE for details.
 - All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Their use is for information purposes and does not imply any affiliation with or endorsement by them.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](https://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/) or [Medtronic](https://www.medtronic.com/)
+Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
 :::

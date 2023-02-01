@@ -91,6 +91,7 @@
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
+(commands)=
 ## Commands
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
@@ -196,6 +197,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP BOLUS
   \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(troubleshooting)=
 ## Troubleshooting
 
 ### Multiple SMS

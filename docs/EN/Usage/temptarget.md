@@ -1,3 +1,4 @@
+(temp-targets)=
 # Temp-Targets
 
 ## What are Temp-Targets and where can I set and configure them?
@@ -23,7 +24,7 @@ This can be considered as the most important Temp-Target. There are several reas
 
 Note: if you enter carbs with the carb button and your blood glucose is less then 72mg/dl or 4mmol/l, Hypo TT is automatically enabled.
 
-
+(activity-temp-target)=
 ## Activity Temp-Target
 
 Before and during activity, you might want to have a higher target to prevent getting low. To simplify setting the Temp-Target, you can configure a default "Activity Temp-Target". Based on DIA, IOB and your experience you might want to set TT prior to activity. See also [sports section in FAQ](../Getting-Started/FAQ.md#sports).

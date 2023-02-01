@@ -10,6 +10,7 @@ See [FAQ page](../Getting-Started/FAQ.md) for details.**
 * Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
 * [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
+(recommended-specification-of-computer-for-building-apk-file)=
 ## Recommended specification of computer for building apk file
 
 <table class="tg">
@@ -76,6 +77,7 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
+(install-android-studio)=
 ## Install Android Studio
 
 The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
@@ -119,6 +121,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
    ![Downloading components](../images/studioSetup/07_Downloading.png)
 
 
+(set-git-path-in-preferences)=
 ## Set git path in preferences
 
 Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
@@ -168,7 +171,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-
+(download-androidaps-code)=
 ## Download AndroidAPS code
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
@@ -218,6 +221,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
    Don't worry, this will be solved soon!
 
+(download-android-sdk)=
 ## Download Android SDK
 
 * In the menu, go to  File (1) > Settings (2).
@@ -259,7 +263,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Restart Android Studio before you continue.
 
-
+(generate-signed-apk)=
 ## Generate signed APK
 
 Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
@@ -354,7 +358,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 * "app-full-release.apk" (3) is the file you are looking for!
 
 
-
+(transfer-apk-to-smartphone)=
 ## Transfer APK to smartphone
 
 Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
