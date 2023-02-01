@@ -18,6 +18,7 @@ Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de con
 
 Pour mettre en place une automatisation, vous devez lui donner un titre, sélectionner au moins une condition et une action.
 
+(important-note)=
 ### Remarque importante
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Tri des règles d'automatisation
 
 Pour trier les règles d'automatisation, cliquez et maintenez l'icone sur la droite d'une règle (4 lignes) et déplacez-la vers le haut ou vers le bas.
@@ -106,6 +108,7 @@ Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 :alt: Suppression des règles d'automatisation
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
