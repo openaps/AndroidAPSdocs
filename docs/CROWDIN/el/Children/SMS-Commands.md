@@ -1,6 +1,6 @@
-# Εντολές SMS
+# SMS Commands
 
-## Πρώτα η ασφάλεια
+## Safety First
 
 - AndroidAPS allows you to control a child's phone remotely via text message. Αν ενεργοποιήσετε αυτό την επικοινωνία με SMS, θυμηθείτε πάντα ότι το τηλέφωνο που έχει ρυθμιστεί για να δώσει απομακρυσμένες εντολές μπορεί να κλαπεί. Συνεπώς, πάντα να το προστατεύετε τουλάχιστον από ένα κωδικό PIN. A strong password or biometrics are recommended.
 - Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
@@ -65,7 +65,7 @@
 
 - Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
 
-- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Παράδειγμα:
+- Test the one-time password by entering the token shown in your authenticator app and the PIN you just setup in AAPS. Example:
 
   - Your mandatory PIN is 2020
   - TOTP token from the authenticator app is 457051
@@ -83,7 +83,7 @@
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
-- Confirm command by sending the code where necessary. Παράδειγμα:
+- Confirm command by sending the code where necessary. Example:
 
   - Your mandatory PIN is 2020
   - TOTP token from the authenticator app is 457051
@@ -91,7 +91,8 @@
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
-## Εντολές
+(commands)=
+## Commands
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
@@ -161,6 +162,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP \* Response: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(troubleshooting)=
 ## Αντιμετώπιση προβλημάτων
 
 ### Multiple SMS
@@ -171,7 +173,7 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 
 ### SMS commands not working on Samsung phones
 
-Υπήρξε μια αναφορά σχετικά με τις εντολές SMS που σταματούν μετά από μια ενημέρωση στο τηλέφωνο Galaxy S10. Could be solved by disabling 'send as chat message'.
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
 
 ```{image} ../images/SMSdisableChat.png
 :alt: Disable SMS as chat message
