@@ -1,7 +1,7 @@
 # Dili değiştir
 
 :::{note}
-The language selection have been moved to the bottom drawer of the left menu. Dil seçim menüsünü açmak için lütfen alttaki çubuğa tıklayın.
+Dil seçimi sol menünün en alt satırına taşınmıştır. Dil seçim menüsünü açmak için lütfen alttaki v:latest yazan yere tıklayın.
 :::
 
 ```{image} images/documentation_language_menu.png
