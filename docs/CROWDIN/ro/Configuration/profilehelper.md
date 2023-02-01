@@ -1,6 +1,6 @@
 # Ajutor Profil
 
-Profilul de ajutor are două funcţii:
+Profile helper offers two functions:
 
 1. Găseşte un profil pentru copii
 2. Compară două profiluri sau Schimbări de Profil pentru a clona un nou profil
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
 9. Se va afișa o comparație între cele două profiluri ajustate.
 
+(clone-profile)=
 ## Copiere profil
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
