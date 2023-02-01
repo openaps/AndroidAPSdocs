@@ -25,6 +25,8 @@ You can find out how to check the firmware on the pumps at [OpenAPS docs](https:
 
 A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
+(configuration-of-the-pump)=
+
 ## Διαμόρφωση της αντλίας
 
 The following settings should be configured on the pump in order for AndroidAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
@@ -94,11 +96,15 @@ At the bottom of the screen there are three buttons:
 - **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
 - **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
 
+(pump-history)=
+
 ## Ιστορικό αντλίας
 
 ![Pump History Dialog](../images/Medtronic03.png)
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+
+(rl-status-rileylink-status)=
 
 ## Κατάσταση RL (κατάσταση RileyLink)
 
@@ -148,7 +154,11 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
+(faq)=
+
 ## FAQ
+
+(what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### What to do if I loose connection to RileyLink and/or pump?
 
