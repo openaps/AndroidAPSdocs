@@ -27,11 +27,13 @@ Sorun yaşamanız durumunda, [Android Studio'da sorun giderme](../Installing-And
 
 See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
 
+(update-your-local-copy)=
+
 ## 2. Yerel kopyanızı güncelleyin
 
-2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. Git'e aşina değilseniz, güncellemenin en kolay yolu, diskinizdeki AndroidAPS ile dizini kaldırmak ve [Yeni klon](../Installing-AndroidAPS/Building-APK.md) yapmak için talimatları takip etmektir.
+2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
-URL'yi zaten değiştirdiyseniz veya 2.8.x sürümünden güncelleme yaptıysanız, şu adımları izleyin:
+If you have already changed the URL or update from version 2.8.x, follow these steps:
 
 * Mevcut AndroidAPS projenizi Android Studio ile açın. Projenizi seçmeniz gerekebilir. AndroidAPS projesine (Çift) tıklayın.
     
@@ -61,30 +63,32 @@ URL'yi zaten değiştirdiyseniz veya 2.8.x sürümünden güncelleme yaptıysan�
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
+(build-the-signed-apk)=
+
 ## 3. İmzalı APK'yı Derleyin
 
-Kaynak kodunuz artık yayınlanan güncel sürümdür. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
 
 ## 4. Apk dosyasını aktarma
 
-Yükleyebilmeniz için apk'yı telefonunuza aktarmanız gerekir.
+You need to transfer the apk to your phone so you can install it.
 
 See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
 
 ## 5. Apk dosyasını kurun
 
-Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)). Not: Derlemeyi Android Studio'da aynı mevcut anahtar deposuyla tamamladıysanız, telefonunuzdaki mevcut uygulamayı kaldırmanız gerekmez. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin. Android Studio'da yeni bir anahtar deposu oluşturarak imzaladığınız apk senaryosu için, apk'yi yüklemeden önce eski uygulamayı silmeniz gerekecektir.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
 
 ## 6. Telefondaki AAPS sürümünü kontrol edin
 
-Yeni apk'yı yükledikten sonra, sağ üstteki üç nokta menüsüne ve ardından Hakkında'ya tıklayarak telefonunuzdaki AAPS sürümünü kontrol edebilirsiniz. Mevcut sürümü görmelisiniz.
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![Yüklü AAPS sürümü](../images/Update_VersionCheck282.png)
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 # Sorun giderme
 
-Bir şeyler ters giderse, panik yapmayın.
+If anything goes wrong, don't panic.
 
-Bir Nefes Alın!
+Take a breath!
 
-Ardından, sorununuz zaten belgelenmişse, [Android Studio sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın!
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!

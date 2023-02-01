@@ -1,6 +1,8 @@
+(smoothing-blood-glucose-data)=
+
 # Suavizado de los datos de glucosa en la sangre
 
-Si los datos de BG son variables/ruidosos, la AAPS puede inyectar incorrectamente la insulina lo que resulta en BG altos o bajos. Por esta razón, es importante inhabilitar el lazo hasta que se resuelva el problema. Dependiendo de su MCG, estos problemas pueden deberse a la configuración de los mismos o a problemas de sensor/sitio. You may need to replace your CGM sensor to resolve this. Algunas características como 'Habilitar SMB siempre' y 'Habilitar SMB después de carbohidratos' sólo se pueden utilizar con una fuente BG con buen filtrado.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensors
 

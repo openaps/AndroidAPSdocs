@@ -14,29 +14,33 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 É por isso que os apks não estão disponíveis.
 
+(how-to-begin)=
+
 ## Como começar?
 
-Em primeiro lugar, você tem que **obter componentes de hardware capazes de construir o loop**:
+First of all, you have to **get loopable hardware components**:
 
 - Uma [bomba de insulina suportada](./Pump-Choices.md), 
 - um [smartphone Android](Phones.md) (O Apple iOS não é suportado pelo AndroidAPS - pode verificar [iOS Loop](https://loopkit.github.io/loopdocs/)) e 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-Em segundo lugar, tem que **configurar o seu hardware**. Veja [o exemplo de configuração com tutorial passo a passo](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Em terceiro lugar, tem que **configurar os seus componentes de software**: AndroidAPS e fonte MCG/MFG.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Em quarto lugar, deve aprender e **compreender o design de referência da OpenAPS para verificar os seus fatores de tratamento**. O princípio principal do loop fechado é que a sua dose basal e a proporção de hidratos de carbono estão corretas (bem afinadas). Todas as recomendações presumem que suas necessidades basais são atendidas e quaisquer picos ou descidas que veja são resultado de outros fatores que, portanto, requerem alguns ajustes únicos (exercício, stress, etc.). Os ajustes que o loop fechado pode fazer para a segurança foram limitados (ver máximo de dose basal temporária permitida em [OpenAPS Reference Design](https://openaps.org/reference-design/)), o que significa que você não quer desperdiçar a dosagem permitida corrigindo uma basal subjacente incorreta. Se, por exemplo, você está frequentemente com baixa glicemia ao se aproximar de uma refeição, então é provável que as suas necessidades básicas precisem de ajustes. Pode usar o [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para considerar um grande conjunto de dados para sugerir se, e como, as basais e/ou FSI precisam ser ajustados e também se a razão dos hidratos de carbono precisa ser alterada. Ou você pode testar e definir a seu basal à [maneira antiga](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Que aspectos práticos de looping eu tenho?
 
 ### Proteção por senha
 
-Se não deseja que as suas preferências sejam facilmente alteradas, então pode proteger o menu de preferências, selecionando no menu preferências "senha para configurações" e digite a senha escolhida. Da próxima vez que você aceder ao menu de preferências, ele solicitará a senha antes de prosseguir. Se mais tarde quiser remover a opção de senha, vá em “senha para configurações” e exclua o texto.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Android Wear Smartwatches
 
-Se planeia usar o aplicativo android wear para bólus ou alterar as configurações, precisa garantir que as notificações da AndroidAPS não são bloqueadas. A confirmação da ação vem por meio de notificação.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Desconetar a bomba
 
@@ -82,6 +86,8 @@ The following list aims to help you optimize settings. It may be best to start a
 The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+
+(impact)=
 
 ### Impact
 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -271,6 +277,8 @@ You can remove the pump while taking a shower or bath. For this short period of 
 Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
+
+(sports)=
 
 ### Desporto
 

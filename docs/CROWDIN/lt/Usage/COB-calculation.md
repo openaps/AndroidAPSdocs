@@ -20,6 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Jei minimalus angliavandenių įsisavinimas (min_5m_carbimpact) yra naudojamas vietoj reikšmių, apskaičiuotų iš KG svyravimų, atsiranda oranžinis taškas AAO grafike.
 
+(detection-of-wrong-cob-values)=
 ## Neteisingų AAO reikšmių aptikimas
 
 AAPS įspėja jus, jei jūs ketinate bolusuoti su AAO iš prieš tai buvusio valgio ir algoritmas mano, kad dabartinis AAO apskaičiavimas gali būti neteisingas. Šiuo atveju jis duos jums papildomą užuominą patvirtinimo ekrane, kai pasinaudosite boluso patarėju.

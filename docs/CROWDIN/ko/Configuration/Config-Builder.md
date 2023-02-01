@@ -12,11 +12,15 @@
 
 ![구성 관리자 박스와 톱니바퀴 버튼](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
+(tab-or-hamburger-menu)=
+
 ## 탭 또는 ≡ 버튼
 
-눈 모양 기호 아래의 선택란을 사용하여 해당 프로그램을 여는 방법을 결정할 수 있습니다.
+With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
 ![탭 또는 ≡ 버튼](../images/ConfBuild_TabOrHH_AAPS30.png)
+
+(profile)=
 
 ## 프로파일
 
@@ -24,6 +28,8 @@
 * As of AAPS 3.0, only the local profile is available.
 
 However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+
+(local-profile)=
 
 ### Local profile
 
@@ -53,6 +59,8 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![프로파일 변경 사항을 복제하기](../images/LocalProfile_ClonePS_AAPS30.png)
 
+(upload-local-profiles-to-nightscout)=
+
 #### 로컬 프로파일을 Nightscout에 업로드하기
 
 Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
@@ -75,6 +83,8 @@ Profile helper offers two functions:
 2. Compare two profiles or profile switches in order to clone a new profile
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+
+(insulin)=
 
 ## 인슐린
 
@@ -117,6 +127,8 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DIA = at least 5.0h
 * Max. peak = 55 minutes after injection (fixed, not adjustable)
 
+(lyumjev)=
+
 #### Lyumjev
 
 ![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
@@ -133,6 +145,8 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * The DIA is automatically set to 5 hours if it is not specified higher in the profile.
 * This effect profile is recommended if an unbacked insulin or a mixture of different insulins is used.
 
+(bg-source)=
+
 ## 혈당 출처
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
@@ -140,7 +154,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Build Your Own Dexcom App (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0) for details.
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - only version 4.15.57 and newer are supported
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -148,6 +162,8 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 * [Glunovo App](https://infinovo.com/) for Glunovo CGM system
 * NSClient BG - not recommended as closed loop relies on mobile data / wifi coverage in this case. CGM data will only be received if there is an online connection to your NS site. Better use local broadcast from one of the other CGM data sources.
 * Random BG: Generates random BG data (Demo mode only)
+
+(pump)=
 
 ## 펌프
 
@@ -179,9 +195,13 @@ Select the type of sensitivity detection. For more details of different designs 
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
+(absorption-settings)=
+
 ### Absorption settings
 
 If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+
+(aps)=
 
 ## APS
 
@@ -196,11 +216,15 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
+(open-loop)=
+
 ### Open Loop
 
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
 * This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+
+(closed-loop)=
 
 ### Closed Loop
 
@@ -299,6 +323,8 @@ Choose if you want to have [status lights](../Configuration/Preferences.md#statu
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
+(actions)=
+
 ### 실행
 
 * Some buttons to quickly access common features.
@@ -307,6 +333,8 @@ Choose if you want to have [status lights](../Configuration/Preferences.md#statu
 ### Automation
 
 User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
+
+(sms-communicator)=
 
 ### SMS 통신기
 
@@ -317,6 +345,8 @@ Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS C
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+
+(wear)=
 
 ### Wear
 

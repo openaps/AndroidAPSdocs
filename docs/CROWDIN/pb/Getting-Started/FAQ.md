@@ -14,43 +14,47 @@ Este regulamento não se restringe apenas às vendas (no sentido de obter dinhei
 
 É por isso que os apks não estão disponíveis.
 
+(how-to-begin)=
+
 ## Como começar?
 
-Antes de tudo, você deve **obter componentes de hardware que possam fechar um loop**:
+First of all, you have to **get loopable hardware components**:
 
 - Uma [bomba de insulina suportada](./Pump-Choices.md), 
 - um [smartphone Android](Phones.md) (Apple iOS não é suportado pelo AndroidAPS - pode verificar o [Loop iOS](https://loopkit.github.io/loopdocs/)) e 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-Em segundo lugar, você deve **configurar seu hardware**. Veja o [exemplo de configuração com o tutorial passo-a-passo](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Em terceiro lugar, você deve **configurar seus componentes de software**: AndroidAPS e a fonte de CGM/FGM.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Em quarto lugar, você tem que aprender e **entender o design de referência do OpenAPS para verificar seus fatores de tratamento**. O princípio fundador do loop fechado é que a sua taxa basal e a relação de carboidratos estão precisas. Todas as recomendações assumem que suas necessidades basais foram atendidas e quaisquer picos ou problemas que você está vendo são resultado de outros fatores que precisam de alguns ajustes únicos (exercícios, estresse etc). Os ajustes que o loop fechado pode fazer foram limitados por segurança (veja a taxa de basal temporária permitida em [OpenAPS Design de Referência](https://openaps.org/reference-design/)), o que significa que você não quer desperdiçar a dosagem permitida para corrigir uma basal subjacente errada. Se, por exemplo, você está frequentemente baixo pouco antes de uma refeição, então é provável que suas taxas de basal precisam ser ajustadas. Você pode usar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analisar um grande conjunto de dados e sugerir se e como os basais e/ou FS precisam ser ajustados, e também se é necessário alterar a relação I:C. Ou você pode testar e definir sua basal do [modo antiquado](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Que praticidades terei usando o loop?
 
 ### Proteção por senha
 
-Se você não quer que suas preferências sejam facilmente alteradas, então você pode proteger o menu preferências, selecionando o item "senha para configurações" e digitando a senha que você escolher. Na próxima vez que você entrar no menu de preferências, ele irá solicitar a senha antes de prosseguir. Se mais tarde quiser remover a opção de senha, vá para "senha das configurações" e exclua o texto.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Smartwatches Android Wear
 
-Se você planeja usar o aplicativo Android Wear para bolus ou alterar configurações, terá de garantir que as notificações do AndroidAPS não sejam bloqueadas. A confirmação da ação vem através de notificação.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Desconectar bomba
 
-Se você tirar a bomba para tomar banho, nadar, praticar esportes ou outras atividades você deve deixar o AndroidAPS saber que nenhuma insulina será entregue para manter a IA (Insulina Ativa) correta.
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-A bomba pode ser desconectada usando o ícone de Status do Loop na [Tela Inicial do AndroidAPS](./Screenshots.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### Recomendações não se baseiam apenas numa única leitura do CGM
 
-Por segurança, as recomendações formuladas baseiam-se não numa única leitura do CGM, mas no delta médio. Portanto, se perder algumas leituras, pode demorar um pouco para o AndroidAPS entrar em loop novamente depois de ter o fluxo de dados do CGM reestabelecido.
+For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
 ### Leituras adicionais
 
-Existem vários blogs com boas dicas para ajudar você a entender as praticidades do loop:
+There are several blogs with good tips to help you understand the practicalities of looping:
 
 - [Ajuste fino nas Configurações](https://seemycgm.com/2017/10/29/fine-tuning-settings/) See my CGM
 - [Por que DAI importa](https://seemycgm.com/2017/08/09/why-dia-matters/) See my CGM
@@ -59,7 +63,7 @@ Existem vários blogs com boas dicas para ajudar você a entender as praticidade
 
 ## Que equipamento de emergência devo transportar comigo?
 
-Você precisa ter o mesmo equipamento de emergência que todos os outros T1D em terapia de bomba de insulina. Quando estiver em loop com AndroidAPS, é altamente recomendável ter o seguinte equipamento com ou perto de você:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
 - Carregadores e cabos para seu smartphone, watch e (se necessário) leitor BT ou dispositivo Link
 - Bateria(s) da Bomba
@@ -67,88 +71,90 @@ Você precisa ter o mesmo equipamento de emergência que todos os outros T1D em 
 
 ## Como posso anexar de forma segura o CGM/FGM?
 
-Você pode travá-lo com adesivo. Existem vários adesivos pré-perfurados para sistemas comuns de CGM disponíveis (pesquise Google, eBay ou Amazon). Alguns loopers usam a fita cinesiologia padrão mais barata ou rocktape.
+You can tape it. There are several pre-perforated 'overpatches' for common CGM systems available (search Google, eBay or Amazon). Some loopers use the cheaper standard kinesiology tape or rocktape.
 
-Você pode fixá-lo. Você também pode comprar braçadeiras que fixem o CGM/FGM com uma banda (procure pelo Google, eBay ou Amazon).
+You can fix it. You can also purchase upper arm bracelets that fix the CGM/FGM with a band (search Google, eBay or Amazon).
 
 # Configurações do AndroidAPS
 
-A seguinte lista visa ajudar você a otimizar as configurações. Talvez seja melhor começar do primeiro e ir até o último item da lista, em ordem. Tente acertar uma configuração antes de mudar outra. Trabalhe em pequenos passos ao invés de fazer grandes mudanças de uma só vez. Você pode usar [Autotune](https://autotuneweb.azurewebsites.net/) para orientar seu raciocínio, embora não deva ser seguido cegamente: pode não funcionar bem para você ou não funcionar em todas as circunstâncias. Observe que as configurações interagem umas com as outras - você pode ter configurações 'erradas' que funcionam bem juntas em algumas circunstâncias (exemplo um basal muito alto acontece enquanto uma relação I:C muito alta for usada), mas não em outras. Isto significa que você precisa considerar todas as configurações e verificar que elas funcionam em conjunto em uma variedade de circunstâncias.
+The following list aims to help you optimize settings. It may be best to start at the top and work to the bottom. Aim to get one setting right before changing another. Work in small steps rather than making large changes at once. You can use [Autotune](https://autotuneweb.azurewebsites.net/) to guide your thinking, although it should not be followed blindly: it may not work well for you or in all circumstances. Note that settings interact with one another - you can have 'wrong' settings that work well together in some circumstances (e.g. if a too-high basal happens to be at the same time as a too-high CR) but do not in others. This means that you need to consider all the settings and check they work together in a variety of circumstances.
 
 ## Duração da Atividade da Insulina (DAI)
 
 ### Descrição & teste
 
-O intervalo de tempo em que a insulina decai para zero.
+The length of time that insulin decays to zero.
 
-Isto é frequentemente configurado curto demais. A maioria das pessoas irá querer pelo menos 5 horas, potencialmente 6 ou 7.
+This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+
+(impact)=
 
 ### Impacto
 
-DAI muito curta pode levar a GLICs baixas. E vice-versa.
+Too short DIA can lead to low BGs. And vice-versa.
 
-Se DAI for muito curta, AAPS pensa muito cedo que seu bolus anterior está consumido e, em glicose ainda elevada, lhe dará mais. (Na verdade, não espera tanto tempo, mas prevê o que aconteceria, e continua adicionando insulina). Isso essencialmente cria ‘empilhamento de insulina’ do qual o AAPS não está ciente.
+If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
-Exemplo de um DAI muito curto é uma glicemia alta seguida do AAPS corrigindo excessivamente e resultando numa glicemia baixa.
+Example of a too-short DIA is a high BG followed by AAPS over-correcting and giving a low BG.
 
 ## Programação Taxas de Basal (U/h)
 
 ### Descrição & teste
 
-A quantidade de insulina em um determinado bloco de tempo para manter a GLIC em um nível estável.
+The amount of insulin in a given hour time block to maintain BG at a stable level.
 
-Teste suas taxas de basal suspendendo o loop, jejuando, esperando por um tempo próximo à sua DAI depois da comida, e vendo como a GLIC muda. Repita algumas vezes.
+Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-Se a GLIC estiver diminuindo, a taxa de basal está muito alta. E vice-versa.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impacto
 
-A taxa de basal muito alta pode levar a baixas GLICs. E vice-versa.
+Too high basal rate can lead to low BGs. And vice-versa.
 
-AAPS ‘baselines’ contra a taxa de basal padrão. Se a taxa de basal for muito alta, um 'zero temporário' contará como uma IA negativa maior do que deveria. Isso fará com que o AAPS dê mais correções subsequentes do que deveria para trazer a IA para zero.
+AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
-Então, uma taxa de basal muito alta irá criar baixas GLICs tanto durante sua vigência, quanto algumas horas depois enquanto o AAPS corrige para o alvo.
+So, a basal rate too high will create low BGs both with the default rate, but also some hours hence as AAPS corrects to target.
 
-Inversamente, uma taxa de basal muito baixa pode levar a GLIC alta, e a falha em reduzir os níveis ao alvo.
+Conversely a basal rate too low can lead to high BGs, and a failure to bring levels down to target.
 
 ## Fator de sensibilidade à insulina (FS) (mmol/l/U ou mg/dl/U)
 
 ### Descrição & teste
 
-A queda na GLIC esperada com a administração de 1U de insulina.
+The drop in BG expected from dosing 1U of insulin.
 
-Supondo basal correta, você pode testar isso suspendendo o loop, verificando que a IA é zero, e tomando alguns comprimidos de glicose para chegar a um nível estável de ‘alto’.
+Assuming correct basal, you can test this by suspending loop, checking IOB is zero, and taking a few glucose tablets to get to a stable ‘high’ level.
 
-Depois, administre uma quantidade estimada de insulina (seguindo seu 1/FS atual) para chegar à GLIC alvo.
+Then take an estimated amount of insulin (as per current 1/ISF) to get to your target BG.
 
-Tome cuidado, pois frequentemente isso é estabelecido muito baixo. Baixo demais significa que 1U vai abaixar sua GLIC mais do que esperado.
+Be careful as this is quite often set too low. Too low means 1 U will drop BG faster than expected.
 
 ### Impacto
 
-**FS Baixo** (ou seja, 40 em vez de 50) significa que a insulina baixa menos a sua GLIC por unidade. Isto leva a uma correção mais agressiva / mais forte do loop com **mais insulina**. Se o FS estiver baixo demais, isso pode levar a baixas GLICs.
+**Lower ISF** (i.e. 40 instead of 50) meaning insulin drops your BG less per unit. This leads to a more aggressive / stronger correction from the loop with **more insulin**. If the ISF is too low, this can lead to low BGs.
 
-**FS Alto** (ou seja, 45 em vez de 35) significa que a insulina baixa mais sua GLIC por unidade. Isto leva a uma correção menos agressiva / mais fraca do loop com **menos insulina**. Se o FS estiver muito alto, isso pode levar a altas GLICs.
+**Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
-**Exemplo:**
+**Example:**
 
 - GLIC está 190 mg/dl (10,5 mmol) e o alvo é 100 mg/dl (5,6 mmol). 
 - Então, você quer corrigir 90 mg/dl (= 190 - 110).
 - FS = 30 -> CORREÇÃO / FS = 90 / 30 = 3 unidades de insulina
 - FS = 45 -> CORREÇÃO / FS = 90 / 45 = 2 unidades de insulina
 
-Um FS muito baixo (não incomum) pode resultar em 'sobre correções', porque o AAPS acha que ele precisa de mais insulina para corrigir uma GLIC alta do que realmente precisa. Isso pode levar a GLICs 'montanha russa' (ex. quando jejuando). Nessa circunstância, você precisa aumentar o seu FS. Isso significa que o AAPS administrará doses de correção menores, e evitará 'sobre corrigir' uma GLIC alta que resultaria em uma GLIC baixa.
+An ISF that is too low (not uncommon) can result in ‘over corrections’, because AAPS thinks it needs more insulin to correct a high BG than it actually does. This can lead to ‘roller coaster’ BGs (esp. when fasting). In this circumstance you need to increase your ISF. This will mean AAPS gives smaller correction doses, and this will avoid over-correcting a high BG resulting in a low BG.
 
-Inversamente, um FS definido muito alto pode resultar em 'sub correções', o que significa que a sua GLIC permanece acima do alvo – particularmente perceptível durante a noite.
+Conversely, an ISF set too high can result in under-corrections, meaning your BG remains above target – particularly noticeable overnight.
 
 ## Relação Insulina-Carboidrato (I:C) (g/U)
 
 ### Descrição & teste
 
-Número de gramas de carboidrato para uma unidade de insulina.
+The grams of carbohydrate for each unit of insulin.
 
-Algumas pessoas também usam IC em vez de I:C.
+Some people also use I:C as abbreviation instead of IC or talk about carb ratio (CR).
 
-Assumindo que sua taxa basal está correta, sua IA está em zero e você está na meta de GLIC, você pode testar comendo uma quantidade conhecida de carboidratos e tomando uma quantidade estimada de insulina baseada na relação I:C atual. O melhor é comer alimentos que você normalmente come naquela hora do dia e contar seus carboidratos com precisão.
+Assuming correct basal, you can test by checking IOB is zero and that you are in-range, eating exactly known carbs, and take an estimated amount of insulin based on current insulin to carb ratio. Best is to eat food your normally eat at that time of day and count its carbs precisely.
 
 > **NOTA:**
 > 
@@ -170,11 +176,11 @@ Assumindo que sua taxa basal está correta, sua IA está em zero e você está n
 
 ### Impacto
 
-**Menor I:C** = menos comida por unidade, ou seja, você está recebendo mais insulina por uma quantidade fixa de carboidratos. Também pode ser chamado "mais agressivo".
+**Lower IC** = less food per unit, i.e. you are getting more insulin for a fixed amount of carbs. Can also be called ‘more aggressive’.
 
-**Maior I:C** = mais comida por unidade, ou seja, você está recebendo menos insulina por uma quantidade fixa de carboidratos. Também pode ser chamado "menos agressivo".
+**Higher IC** = more food per unit, i.e. you are getting less insulin for a fixed amount of carbs. Can also be called ‘less aggressive’.
 
-Se após a refeição ter sido digerida e a IA ter retornado a zero a sua GLIC ficar mais alta do que antes da comida, é provável que sua relação I:C está muito alta. Inversamente, se sua GLIC ficar mais baixa do que antes da comida, a relação I:C está baixa demais.
+If after meal has digested and IOB has returned to zero, your BG remains higher than before food, chances are IC is too large. Conversely if your BG is lower than before food, IC is too small.
 
 # Algoritmo APS
 
@@ -182,23 +188,23 @@ Se após a refeição ter sido digerida e a IA ter retornado a zero a sua GLIC f
 
 ![AMA 3h](../images/Screenshot_AMA3h.png)
 
-Na AMA, a DAI na verdade não significa a "duração da atividade da insulina". É um parâmetro, que costumava estar ligado à DAI. Agora significa "após quanto tempo a correção deve estar finalizada". Não tem nenhuma relação com o cálculo da IA. No SMB OpenAPS, já não há necessidade deste parâmetro.
+In AMA, DIA actually doesn't mean the 'duration of insulin acting'. It is a parameter, which used to be connected to the DIA. Now, it means, 'in which time should the correction be finished'. It has nothing to do with the calculation of the IOB. In OpenAPS SMB, there is no need for this parameter any longer.
 
 ## Perfil
 
 ### Por que usar DAI mín. 5h (Duração da Atividade da Insulina) em vez de 2-3h?
 
-Bem explicado [neste artigo](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Não se esqueça de `ATIVAR PERFIL` após alterar sua DAI.
+Well explained in [this article](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/). Don't forget to `ACTIVATE PROFILE` after changing your DIA.
 
 ### O que faz com que o loop baixe frequentemente a minha GLIC para valores hipoglicêmicos sem CA?
 
-Em primeiro lugar, verifique sua taxa basal e faça um teste de taxa de basal sem carboidratos. Se a taxa basal estiver correta, esse comportamento normalmente é causado por um FS muito baixo. Um FS muito baixo geralmente se parece com isto:
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct, this behavior is typically caused by a too low ISF. A too low ISF looks typically like this:
 
 ![ISF too low](../images/isf.jpg)
 
 ### O que causa picos altos pós-prandiais no loop fechado?
 
-Em primeiro lugar, verifique sua taxa basal e faça um teste de taxa de basal sem carboidratos. Se estiver correto e sua GLIC estiver caindo no seu alvo depois que os carboidratos forem totalmente absorvidos, tente definir um objetivo temporário "comendo em breve" no AndroidAPS algum tempo antes da refeição ou pense em um tempo pré-bolus apropriado com o seu endocrinologista. Se a sua GLIC estiver muito alta após a refeição e ainda muito alta depois que os carboidratos forem totalmente absorvidos, considere diminuir sua relação I:C com seu endocrinologista. Se a sua GLIC estiver muito alta enquanto houver CA e muito baixa depois que os carboidratos forem totalmente absorvidos, pense em aumentar sua relação I:C e um tempo pré-bolus apropriado com o seu endocrinologista.
+First of all, check your basal rate and make a no-carb basal rate test. If it is correct and your BG is falling to your target after carbs are fully absorbed, try to set an 'eating soon' temp target in AndroidAPS some time before the meal or think about an appropriate prebolus time with your endocrinologist. If your BG is too high after the meal and still too high after carbs are fully absorbed, think about decreasing your IC with your endocrinologist. If your BG is too high while COB and too low after carbs are fully absorbed, think about increasing your IC and an appropriate prebolus time with your endocrinologist.
 
 # Outras configurações
 
@@ -206,19 +212,19 @@ Em primeiro lugar, verifique sua taxa basal e faça um teste de taxa de basal se
 
 ### AndroidAPS NSClient diz 'não permitido' e não faz o upload de dados. O que posso fazer?
 
-Em NSClient verifique "Configurações de conexão". Talvez você não esteja em uma WLAN permitida ou tenha ativado 'Somente se estiver carregando' e seu cabo de carregamento não esteja conectado.
+In NSClient check 'Connection settings'. Maybe you actually are not in an allowed WLAN or you have activated 'Only if charging' and your charging cable is not attached.
 
 ## Configurações do CGM
 
 ### Por que o AndroidAPS diz 'fonte de GLIC não suporta filtro avançado'?
 
-Se você usa outro CGM/FGM além do Dexcom G5 ou G6 em modo nativo do xDrip, você obtém este alerta na aba OpenAPS do AndroidAPS. Veja [Suavizando dados da GLIC](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) para mais detalhes.
+If you do use another CGM/FGM than Dexcom G5 or G6 in xDrip native mode, you'll get this alert in AndroidAPS OpenAPS-tab. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
 ## Bomba
 
 ### Onde posicionar a bomba?
 
-Há inúmeras possibilidades de posicionamento para a bomba. Não importa se você está em loop ou não.
+There are innumerable possibilities to place the pump. It does not matter if you are looping or not.
 
 ### Baterias
 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -271,6 +277,8 @@ You can remove the pump while taking a shower or bath. For this short period of 
 Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
+
+(sports)=
 
 ### Sports
 

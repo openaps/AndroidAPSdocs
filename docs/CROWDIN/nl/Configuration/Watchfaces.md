@@ -51,39 +51,41 @@ Voer een double-tap uit op je BG om sneller naar het AAPS-menu te gaan. Voer een
 
 ![Beschikbare wijzerplaten](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
+
 ### Nieuw watchface vanaf AndroidAPS 2.8
 
-![Watchface digitale stijl](../images/Watchface_DigitalStyle.png)
+![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
 * Als je in het instellingen menu op het tandwiel-icoontje drukt bij het watchface keuzemenu, dan kun je de kleuren, lijnen, en cirkel zelf aanpassen.
 
 ## AAPSv2 wijzerplaat - Legend
 
-![Legenda AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - tijd sinds laatste uitvoering loop
+A - time since last loop run
 
-B - CGM-uitlezing
+B - CGM reading
 
-C - minuten sinds laatste CGM-uitlezing
+C - minutes since last CGM reading
 
-D - wijziging in vergelijking met de laatste CGM-uitlezing (in mmol of mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-Gemiddelde wijziging in de CGM-uitlezing in de laatste 15 minuten
+E - average change CGM reading last 15 minutes
 
-F - telefoon batterij
+F - phone battery
 
-G - basaal (getoond in E/uur tijdens standaard patroon en in % tijdens TBR)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - BGI (bloed glucose interactie) -> de mate waarin BG zou moeten stijgen of dalen uitgaande van enkel de insuline activiteit.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - koolhydraten (koolhydraten aan boord | e-carbs in de toekomst)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - insuline aan boord (van bolus | van basaal)
+J - insulin on board (from bolus | from basal)
 
 ## Toegang tot het hoofdmenu van AAPS
 
-Om het AAPS hoofdmenu te openen kunt u gebruik maken van de volgende opties:
+To access main menu of AAPS you can use on of following options:
 
 * dubbel tik op je BG-waarde
 * selecteer het AAPS icoon in het applicatie menu van het horloge
@@ -91,11 +93,11 @@ Om het AAPS hoofdmenu te openen kunt u gebruik maken van de volgende opties:
 
 ## Instellingen (in Android Wear horloge)
 
-Om naar de wijzerplaat instellingen te gaan, ga naar het AAPS hoofdmenu swipe omhoog en selecteer "Instellingen".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat instelling is uitgeschakeld (**Uit**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
-![Instellingen aan/uit](../images/Watchface_Settings_On_Off.png)
+![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
 ### AAPS-parameters
 
@@ -125,7 +127,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Invoer uiterlijk**: met deze parameter kun je de positie van "+" en "- knoppen selecteren voor wanneer je opdrachten in AAPS (TT, Insuline, khd...) invoert
 
-![Opties voor invoerontwerp](../images/Watchface_InputDesign.png)
+![Input design options](../images/Watchface_InputDesign.png)
 
 ### Specifieke watchface parameters
 
@@ -133,7 +135,7 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Delta Korrelgrootte** (standaard `Medium`)
 
-![Steampunk_meter](../images/Watchface_Steampunk_Gauge.png)
+![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
 #### Cirkel Watchface
 
@@ -153,19 +155,21 @@ Een gevulde ster geeft aan ingeschakeld (**Aan**), een lege ster geeft aan dat i
 
 * **Wizard Percentage** (standaard `Uit`): Bolus correctie vanuit de wizard toestaan (waarde ingevoerd in percentage voor bevestiging melding)
 
+(complications)=
+
 ## Complications
 
-*Complication* is een term afkomstig van traditionele horloges, waarbij een toevoeging aan de wijzerplaat wordt beschreven als extra klein venster of een subwijzerplaat (met datum, dag van de week, maanfase, enz.). Wear OS 2.0 biedt deze optie om extra invoering mogelijk te maken voor meldingen zoals weer, notificaties, fitnesstellers etc. Deze zijn toe te voegen aan alle wijzerplaten die "Complication" ondersteunen.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-De AndroidAPS Wear OS-app ondersteunt complicaties sinds build nummer `2.6`, dit maakt het mogelijk om alle watchfaces die complicaties ondersteunen, AAPS gerelateerde gegevens te laten weergeven (BG met trend, IOB, COB, enz.).
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-Complicaties kunnen ook dienen als **snelkoppeling** naar AAPS functies. Door te tikken op een complicatie kun je AAPS menu's en dialoogvensters openen (afhankelijk van type complicatie en configuratie).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
-![Complications_Op_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Complicatie types
 
-De AAPS Wear OS-app geeft alleen ruwe gegevens door, in een vooraf gedefinieerde standaard-opmaak. Het is aan het watchface om te bepalen waar en hoe deze complicaties worden weergegeven, denk daarbij aan de lay-out, de rand, kleur en het lettertype. Van de vele beschikbare Wear OS-complicatietypes, gebruikt AAPS:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * `SHORT TEXT` - Bevat twee regels tekst, 7 tekens elk, soms aangeduid als waarde en label. Meestal weergegeven in een cirkel of kleine 'pill' - de één onder de ander, of naast elkaar. Het is een zeer ruimtebesparende complicatie. AAPS probeert onnodige tekens te verwijderen om deze complicatie in te passen: door het afronden van waarden, het verwijderen van voorafgaande en afsluitende nullen uit waarden, enz.
 * `LONG TEXT` - Bevat twee regels tekst, elk ongeveer 20 tekens. Meestal weergegeven in een rechthoek of lange pill - de één onder de ander. Het wordt gebruikt voor extra details en voor de status uitgeschreven in tekst.
@@ -174,13 +178,13 @@ De AAPS Wear OS-app geeft alleen ruwe gegevens door, in een vooraf gedefinieerde
 
 ### Complicaties instellen
 
-Om een complicatie toe te voegen aan een watchface, houd hem lang ingedrukt en klik op het tandwiel-icoon eronder. Afhankelijk van hoe het specifieke watchface werkt: ofwel klik op de betreffende plaats ofwel ga naar het complicaties setup menu. AAPS-complicaties zijn gegroepeerd onder het AAPS menu item.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-Bij het instellen van complicaties op de watchface, zal Wear OS de lijst van complicaties die geschikt zijn voor de geselecteerde plaats op het watchface weergeven en filteren. Als je een bepaalde complicatie niet kunt vinden in de lijst, komt dat waarschijnlijk doordat die complicatie niet kan worden gebruikt voor de geselecteerde plaats.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### Complicaties van AAPS
 
-AndroidAPS biedt de volgende complicaties:
+AndroidAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -195,7 +199,7 @@ AndroidAPS biedt de volgende complicaties:
 * **IoB Icon** (`SHORT TEXT`, opent *Bolus*): Geeft *Insulin on Board* waarde weer met een statisch pictogram.
 * **Uploader/Telefoon Batterij** (`RANGED VALUE`, opent *Status*): Geeft het batterij percentage van de AAPS telefoon (uploader) weer, zoals gerapporteerd door AAPS. Afgebeeld als percentagemeter met een batterijpictogram dat de waarde weergeeft. Het kan zijn dat het niet real-time wordt bijgewerkt, maar slechts wanneer andere belangrijke AAPS gegevens veranderen (meestal: elke ~ 5 minuten met nieuwe *Blood Glucose* meting).
 
-Daarnaast zijn er drie complicaties van het `LARGE IMAGE` soort: **Donkere Achtergrond**, **Grijze Achtergrond** en **Lichte Achtergrond**, zij laten een statische AAPS achtergrond zien.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### Instellingen voor complicaties
 
@@ -319,6 +323,8 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
 * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+
+(troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 

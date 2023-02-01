@@ -141,7 +141,7 @@
 - [Řešení problémů s Android Studiem](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 - [Troubleshooting - link collection](../Usage/troubleshooting.md)
 - Update - quick walk-through for experienced users
-- Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations#translate-docs-pages).
+- Docs - update [edit](../make-a-PR.md#code-syntax) and [translation](../translations#translation-of-the-documentation).
 
 ## Říjen 2019
 

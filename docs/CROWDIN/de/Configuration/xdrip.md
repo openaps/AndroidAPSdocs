@@ -42,6 +42,8 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
    
    ![xDrip+ Grundeinstellungen 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Identifiziere Empfänger
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -78,13 +80,13 @@ Wenn Du Android 10 verwendest und Probleme mit der xDrip+ master Version auftret
 
 ### Preemptive restarts werden nicht empfohlen
 
-**Falls die Seriennummer Deines Dexcom G6 Transmitters mit 8G, 8H oder 8J beginnt können preemptive restarts nicht genutzt werden und ggf. sogar den Sensor unbenutzbar machen!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-Die automatische Verlängerung von Dexcom G6 Sensoren (`preemptive restarts`) werden nicht empfohlen, da dies zu Sprüngen in den BZ-Werten nach dem Neustart am 9. Tag führen kann.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Sprünge nach Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Wenn Du mit nativen Daten und dem Kalibrierungscode in xDrip+ oder Spike arbeitest, ist es am sichersten, auf den "preemptive" Neustart des Sensors zu verzichten.
 * Falls Du den "preemptive restart" verwendest, stelle sicher, dass dieser zu einer Tageszeit erfolgt, zu der Du die Änderungen verfolgen und ggf. durch eine Kalibrierung eingreifen kannst. 
@@ -92,11 +94,13 @@ Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet.
 * Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich besser Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
 * Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
 
-Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [kompletten Artikel](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (englisch) von Tim Street auf seiner Seite [www.diabettech.com](https://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### G6 Transmitter das erste Mal verbinden
 
-**Für den zweiten und alle weiteren Transmitter siehe [Transmitterlaufzeit verlängern](#extend-transmitter-life) weiter unten.**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) hergestellt wurden, benötigen mindestens die [xDrip+ master](https://jamorham.github.io/#xdrip-plus) version.
 
@@ -127,7 +131,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    
    -> Am unteren Bildschirmrand nach einigen Minuten wird `Warm Up x,x Stunden left` angezeigt.
 
--> Falls die Seriennummer Deines Transmitters nicht mit 8G, 8H oder 8J beginnt und die Zeitangabe auch nach einigen Minuten fehlt, musst Du den Sensor stoppen und erneut starten.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * Starte den Datensammler neu (im Systemstatus und nur, wenn Du den Sensor neu gesetzt hast).
 * Falls Du den Dexcom Empfänger nutzt, schalte diesen nicht ein, bevor xDrip+ die ersten BZ-Werte anzeigt.
@@ -140,6 +144,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+
+(transmitter-battery-status)=
 
 ### Transmitter-Batteriestatus
 
@@ -175,11 +181,13 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 
 * Die "Transmitter days" werden nach erfolgreicher Verlängerung und Start des Sensors auf 0 zurückgesetzt.
 
+(replace-transmitter)=
+
 ### Transmitter ersetzen
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) hergestellt wurden, benötigen mindestens die [xDrip+ master](https://jamorham.github.io/#xdrip-plus) version.
 
-Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwende einen der [letzten nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Falls die Seriennummer Deines G6 Transmitters is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * Schalte den Original Dexcom Empfänger aus (falls Du diesen verwendet).
 * Stoppe den Sensor (außer Du tauscht den Transmitter während einer laufenden Sensorsitzung).
@@ -283,6 +291,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    
    ![xDrip+ Sensor starten 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Sensorcode in den Logs finden
 
 * Wenn Du den Master vom 18.05.2019 oder einen der letzten Nightly Builds verwendest, wird der Sensorcode im Systemstatus angezeigt (Hamburger Menü links oben auf dem Startbildschirm).
@@ -297,6 +307,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    
    ![xDrip+ Dexcom Sensorcode ermitteln (Log Files)](../images/xDrip_Dexcom_SensorCode.png)
 
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
+
 ## Fehlerbehebung Dexcom G5/G6 und xDrip+
 
 ### Problem beim Verbinden mit dem Transmitter
@@ -310,7 +322,7 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
 
 ### Probleme beim Starten eines neuen Sensors
 
-Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seriennummer Deines Transmitters mit 8G, 8H oder 8J beginnt.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * Im 'native mode' wird der Sensor als "FAILED: Sensor Failed Start" gekennzeichnet.
 * Sensor stoppen
@@ -320,7 +332,7 @@ Bitte beachte, dass die folgende Methode evtl. nicht funktioniert, wenn die Seri
 * Sensor stoppen
 * Starte den Sensor mit dem "tatsächlichen" Code, den Du auf dem Schutzpapier des Pflasters findest.
 
-Überprüfe in den xDrip+ Logs, ob xDrip+ beginnt, mit "Duration: 1 minute" (und so weiter) zu zählen. Nur in den xDrip+ Logs kannst Du frühzeitig feststellen, ob xDrip+ einen Sensor gestoppt hat. Der letzte Status wird unten auf dem Startbildschirm nicht immer korrekt angezeigt.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ mit Freestyle Libre
 

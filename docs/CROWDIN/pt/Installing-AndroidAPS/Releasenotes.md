@@ -1,3 +1,4 @@
+(release-notes)=
 # Notas das Versões
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). You can also find a troubleshooting section addressing the most common difficulties when updating on the update manual page.
@@ -39,6 +40,7 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 Release date: 19-07-2022
 
+(important-hints-3-1-0)=
 ### Notas importantes
 
 - after update uninstall Wear app and install new version
@@ -66,6 +68,7 @@ Release date: 19-07-2022
 
 Data de lançamento: 31-01-2022
 
+(important-hints-3-0-0)=
 ### Notas importantes
 
 - **Minimum Android version is 9.0 now.**
@@ -151,7 +154,7 @@ Data de lançamento: 31-01-2022
 
 Data de lançamento: 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) below.
+- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) below.
 
 ### Alterações
 
@@ -166,6 +169,7 @@ Data de lançamento: 23-01-2021
 
 Data de lançamento: 12-01-2021
 
+(important-hints-2-8-1-1)
 ### Notas importantes
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
@@ -187,6 +191,7 @@ Data de lançamento: 12-01-2021
 - UI fixes and improvements
 - new translations
 
+(version-2-8-0)=
 ## Version 2.8.0
 
 Data de lançamento: 01-01-2021
@@ -216,13 +221,14 @@ Data de lançamento: 01-01-2021
 - Security improvements @dlvoy
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
+(version-2-7-0)=
 ## Version 2.7.0
 
 Data de lançamento: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). This will not effect other objectives you have already finished. Vai manter todos os objetivos acabados!
+You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 ### Major new features
 
@@ -254,6 +260,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Usag
 - [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
 - New documentation @Achim
 
+(version-2-6-1-4)=
 ## Version 2.6.1.4
 
 Data de lançamento: 04-05-2020
@@ -317,6 +324,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed NSClient connection settings (wifi, charging)
 - Fixed sending of calibrations to xDrip
 
+(version-2-6-0)=
 ## Version 2.6.0
 
 Data de lançamento: 29-02-2020
@@ -379,8 +387,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Data de lançamento: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
+(version-2-5-0)=
 ## Version 2.5.0
 
 Data de lançamento: 26-10-2019
@@ -394,6 +403,7 @@ Data de lançamento: 26-10-2019
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.
 
+(is-this-update-for-me-currently-is-not-supported)=
 ### Is this update for me? Currently is NOT supported
 
 - Android 5 and lower
@@ -485,6 +495,7 @@ Data de lançamento: 03-11-2018
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
 - Setup wizard: guides you through the process of setting up AndroidAPS
 
+(settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Settings to adjust when switching from AMA to SMB
 
 - Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
@@ -500,6 +511,7 @@ Data de lançamento: 03-11-2018
   - Uncheck the Configure on demand checkbox.
   - Click Apply or OK.
 
+(overview-tab)=
 ### Overview tab
 
 - Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). TTs use defaults set in preferences. The new Hypo TT option is a high temp TT to prevent the loop from too aggressively overcorrection rescue carbs.

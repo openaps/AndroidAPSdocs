@@ -16,6 +16,7 @@ When setting sensor, it is recommended not to press the inserter too firmly in o
 
 After setting the sensor, the transmitter can be clicked into the sensor holder. Pozor! First click in the square side and then press down the round side.
 
+(troubleshooting)=
 ## Řešení problémů
 
 ### Problém s připojením

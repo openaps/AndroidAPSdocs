@@ -1,31 +1,35 @@
 # Nightscout
 
+(security-considerations)=
+
 ## Remarques sur la sécurité
 
-En complément des rapports, Nightscout peut également être utilisé pour contrôler AAPS. C'est-à-dire que vous pouvez définir des cibles temporaires ou ajouter des glucides futurs. Ces informations seront recueillies par AAPS qui agira en conséquence. Par conséquent, cela vaut la peine de penser à sécuriser votre site Nightscout.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Paramètres Nightscout
 
-Vous pouvez interdire l'accès public à votre site Nightscout en utilisant des [rôles d'authentification](https://nightscout.github.io/nightscout/security).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Paramètres AndroidAPS
 
-Il y a dans les paramètres AAPS une fonction "Remonter uniquement vers NS (sync désactivée)". En l'activant, AAPS ne prendra pas en compte les changement effectués dans Nightscout comme les cibles temp. ou les glucides renseignés.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Cliquez sur le menu 3 points en haut à droite de votre page d'accueil AAPS.
 * Sélectionnez "Préferences".
 * Faites défiler vers le bas et dans la section NSClient, appuyez sur "Paramètres Avancés".
 * Activez Remonter uniquement vers NS
 
-![Remonter uniquement vers NS](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Autres paramètres de sécurité
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
+(manual-nightscout-setup)=
+
 ## Manuel d'installation Nightscout
 
-Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas, rendez-vous sur la page [Nightscout](http://nightscout.github.io/nightscout/new_user/) pour des instructions complètes sur la configuration. Les instructions ci-dessous sont alors les paramètres que vous devrez également ajouter à votre site Nightscout. Votre site Nightscout doit être au moins la version 10 (affichée comme 0.10...), donc vérifiez que vous utilisez bien la [dernière version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) sinon vous recevrez un message d'erreur sur votre application AAPS. Certaines personnes trouvent que la boucle utilise plus que le quota gratuit d'azure, donc heroku est le choix à privilégier.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Aller à https://herokuapp.com/
 
@@ -49,9 +53,9 @@ Il est supposé que vous avez déjà un site Nightscout. Si ce n'est pas le cas,
 
 ## Configuration de Nightscout semi-automatisée
 
-Le cofondateur Martin Schiftan a offert gratuitement une installation de Nightscout semi-automatisée pendant de nombreuses années. Comme le nombre d'utilisateurs a augmenté de façon importante, il a dû commencer à demander une petite participation à partir d'octobre 2021 - à partir de €4, 7 par mois.
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Avantages**
+**Benefits**
 
 * Vous pouvez installer Nightscout en quelques clics et l'utiliser directement. 
 * Réduction du travail manuel car Martin essaye d'automatiser l'administration.
@@ -61,4 +65,4 @@ Le cofondateur Martin Schiftan a offert gratuitement une installation de Nightsc
 
 <https://ns.10be.de/en/index.html>
 
-Une alternative est <https://t1pal.com/> - à partir de 11,99$ par mois.
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

@@ -16,24 +16,25 @@ Sensörü ayarlarken, kanamayı önlemek için aplikatöre çok fazla bastırmam
 
 Sensör yerleştirildikten sonra, verici sensör üzerindeki tutucusuna takılabilir. Dikkat! Önce sensörün kare tarafını yerleştirip ardından yuvarlak tarafa bastırın.
 
+(troubleshooting)=
 ## Sorun giderme
 
 ### Bağlantı problemleri
 
-Bluetooth bağlantısı, kan şekeri ölçüm cihazları, kulaklıklar, tabletler gibi yakındaki diğer bluetooth cihazları veya mikrodalga fırınlar veya seramik ocaklar gibi mutfak cihazları tarafından bozulabilir. Bu durumda xdrip herhangi bir KŞ değeri göstermez. Bluetooth bağlantısı stabil olduğunda veriler yeniden gelmeye başlar.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
 
 ### Sensör Hataları
 
-Yinelenen sensör hataları meydana gelirse, sensörünüzü yerleştirmek için farklı bir vücut bölgesi seçmeyi deneyin. Sensör teli kanla temas etmemelidir.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
 
-Genellikle bir "Sensör Hatası", hemen su içerek (dehidrasyon) ve sensörün etrafına masaj yaparak düzeltilebilir!
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### Atlamalı değerler
 
-Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gürültü Engelleme) değiştirmeyi deneyebilirsiniz. Örn". Ayrıca bkz. [KŞ verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Negatif Sensör Yaşı
 
-![Negatif sensör yaşı](../images/Troubleshooting_SensorAge.png)
+![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.

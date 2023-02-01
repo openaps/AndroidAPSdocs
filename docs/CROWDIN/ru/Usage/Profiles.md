@@ -1,21 +1,23 @@
+(profile-switch)=
+
 # Profile switch/смена профиля
 
 Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
-При запуске AndroidAPS и выборе профиля необходимо выполнить переключение профиля "Profile switch" с нулевой продолжительностью действия (объясняется ниже). При этом AAPS начинает отслеживать историю профилей, а каждое новое изменение профиля требует другого "переключения профиля" даже при изменении содержимого профиля в NS. Обновленный профиль немедленно передается в AAPS, но для начала использования этих изменений необходимо снова включить один и тот же профиль (в AAPS).
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-Внутри себя AAPS создает моментальную копию профиля с начальной датой и длительностью и использует ее в выбранный период.
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
 * Нулевая длительность означает постоянную работу. Такой профиль действителен до нового "переключения профиля".
 * Продолжительность х минут означает х минут использования этого профиля. После этой процедуры профиль переключается обратно на предыдущий валидный "Переключатель профиля".
 
-Если вы редактировали профиль на вкладке "локальный профиль", можете активировать этот профиль там же, что также произведет неявное переключение профиля.
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-Чтобы выполнить переключение профиля, нажмите и удерживайте имя вашего профиля ("Tuned 03/11" на рисунке ниже).
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
 
-![Выполните Переключение профиля](../images/ProfileSwitch_HowTo.png)
+![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-В рамках "переключения профиля" можно выбрать два дополнительных изменения, которые раньше были частью суточного процентного профиля Circadian Percentage Profile:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Процент
 
@@ -28,9 +30,11 @@ Documentation about profiles in general can be found at [Config Builder - profil
 
 * Алгоритм цикла (открытый или закрытый) продолжит работу на основе выбранного процентного профиля. Так, отдельные процентные профили могут быть установлены для различных этапов гормонального цикла.
 
+(time-shift)=
+
 ## Сдвиг по времени
 
-![Переключение профиля в процентах и сдвиг по времени](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * Эта установка позволяет сместить профиль на введенное число часов. 
 * Так, например, когда работаете в ночные смены, сдвиньте время в ту сторону, насколько позже/раньше вы ложитесь спать или просыпаетесь.
@@ -43,15 +47,17 @@ Documentation about profiles in general can be found at [Config Builder - profil
     * 22:00 ** -10 ч **-> 12:00
     * Вместо параметров, обычно используемых в 24:00, из-за отрицательного сдвига времени будут использоваться параметры от 22:00.
 
-![Инструкции по смене профиля и часового пояса](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Этот механизм захвата снимков профиля позволяет гораздо точнее вычислить прошлое и дает возможность отслеживать изменения профиля.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## Устранение ошибок профиля
 
 ### 'Недопустимый профиль'/'Профиль базала не скорректирован по часам '
 
-![Базал не соответствует распределению по часам](../images/BasalNotAlignedToHours2.png)
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
 * Если базальные скорости или коэффициенты I:C не выверены по часам, будут появляться сообщения об ошибке. (Так, помпы DanaR и DanaRS не поддерживают получасовой сдвиг)
   
@@ -67,14 +73,14 @@ Documentation about profiles in general can be found at [Config Builder - profil
   
   ![Удалите переключение профиля](../images/PSRemove.png)
 
-Как вариант, можно удалить переключатель профиля непосредственно в mLab, как описано ниже.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### 'Получено переключение профиля из NS, но профиль не существует локально'
 
 * Запрошенный профиль не синхронизирован корректно с Nightscout.
 * Следуйте инструкциям выше, чтобы удалить переключение профиля
 
-Как вариант, можно удалить переключатель профиля непосредственно в mLab:
+Alternatively you can delete the profile switch directly in mLab:
 
 * Перейдите в коллекцию mlab
 * Найдите в терапии переключатель профиля

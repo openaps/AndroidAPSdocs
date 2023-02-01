@@ -4,7 +4,7 @@
 
 For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
-## General
+## Geral
 
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). Doing a PR isn't difficult, but we can help you editing the documentation.
 
@@ -63,9 +63,11 @@ PS: Your fork and branch will still be sitting on your own personal GitHub accou
 
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
+(image-size)=
+
 ### Image size
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+If using images please use reasonable sizes. Screenshot images should be up to **850 pixels wide**.
 
 ### Text format
 

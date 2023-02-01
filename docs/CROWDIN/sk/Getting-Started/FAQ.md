@@ -14,6 +14,8 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 That’s why apks aren’t available.
 
+(how-to-begin)=
+
 ## How to begin?
 
 First of all, you have to **get loopable hardware components**:
@@ -37,6 +39,8 @@ If you don't want your preferences to be easily changed then you can password pr
 ### Android Wear Smartwatches
 
 If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Disconnect pump
 
@@ -82,6 +86,8 @@ The following list aims to help you optimize settings. It may be best to start a
 The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
+
+(impact)=
 
 ### Impact
 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -271,6 +277,8 @@ You can remove the pump while taking a shower or bath. For this short period of 
 Depending on your job, you may choose to use different treatment factors on workdays. As a looper you should consider a [profile switch](../Usage/Profiles.md) for your typical working day. For example, you may switch to a profile higher than 100% if you have a less demanding job (e.g. sitting at a desk), or less than 100% if you are active and on your feet all day. You could also consider a high or low temporary target or a [time shift of your profile](../Usage/Profiles.md#time-shift) when working much earlier or later than regular, of if you work different shifts. You can also create a second profile (e.g. 'home' and 'workday') and do a daily profile switch to the profile you actually need.
 
 ## Leisure activities
+
+(sports)=
 
 ### Sports
 

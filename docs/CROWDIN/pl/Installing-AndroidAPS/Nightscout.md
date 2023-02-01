@@ -1,5 +1,7 @@
 # Nightscout
 
+(security-considerations)=
+
 ## Security considerations
 
 Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
@@ -22,6 +24,8 @@ There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS
 ### Further security settings
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(manual-nightscout-setup)=
 
 ## Manual Nightscout setup
 
@@ -51,7 +55,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Półautomatyczna konfiguracja Nightcout**
+**Benefits**
 
 * Możesz zainstalować Nightscout za pomocą kilku kliknięć i od razu go używać. 
 * Redukcja ilości ręcznych ustawień, Martin próbuje zautomatyzować zarządzanie konfiguracją.

@@ -1,4 +1,4 @@
-# Git'i kurun
+# Git yükleyin
 
 ## Windows
 
@@ -56,6 +56,7 @@
 
 - Reboot your PC to update System Environment.
 
+(check-git-settings-in-android-studio)=
 ### 4. Android Studio'da git ayarlarını kontrol edin
 
 - Open Terminal window in Android Studio

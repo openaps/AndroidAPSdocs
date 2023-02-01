@@ -1,27 +1,29 @@
+(smoothing-blood-glucose-data)=
+
 # החלקת נתוני הגלוקוז בדם
 
-אם נתוני הסוכר קופצניים\רועשים, AAPS עלול להזריק אינסולין במינון שגוי וכתוצאה מכך לגרום להיפוגליקמיה או היפרגליקמיה. לכן חשוב להשבית את הלולאה עד לפתרון הבעיה. בהתאם לחיישן שלכם, ייתכן שבעיות אלה נובעות מתצורה של החיישן או בעיות בחיישנים\בעיות באתר ההדבקה. ייתכן שתצטרכו להחליף את החיישן כדי לפתור זאת. תכונות מסוימות כמו 'אפשר SMB תמיד' ו'אפשר SMB אחרי פחמימות' ניתנות לשימוש רק עם מקור סוכר המסנן רעשים היטב.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## חיישני דקסקום
 
 ### "בנה יישום Dexcom בעצמך" (BYODA)
 
-When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. יתר על כן, ניתן לנצל את החלקת הנתונים בדיעבד של Dexcom. אין הגבלות בשימוש ב-SMB.
+When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMB.
 
 ### xDrip+ עם דקסקום G5 או G6
 
-נתונים חלקים מספיק נמסרים רק אם אתם משתמשים 'אוסף OB1 במצב נטיבי' ב-xDrip+.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ### אפליקציית Dexcom G5 עם פאץ'
 
-בעת שימוש באפליקציית Dexcom G5 (עם פאץ') נתוני הסוכר חלקים ועקביים. אין הגבלות בשימוש ב-SMB.
+When using Dexcom G5 App (patched) your BG data is smooth and consistent. There are no restrictions in using SMB.
 
 ## חיישני Freestyle Libre
 
 ### xDrip+ עם Freestyle Libre
 
-נכון להיום, בעת שימוש ב-xDrip+ עם Freestyle Libre, אינכם יכולים להפעיל את 'הפעל SMB תמיד' ו'הפעל SMB אחרי פחמימות' בתוך SMB מכיוון שערכי הסוכר אינם חלקים מספיק. מלבד זאת, יש כמה דברים שאפשר לעשות כדי להפחית את הרעש בנתונים.
+When using xDrip+ as your data source for Freestyle Libre values until now you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB because the BG values are not smooth enough. Except this, there are a couple of things you can do to help reduce noise in the data.
 
-**החלקת רעש חיישן.** בהגדרות xDrip+ > הגדרות תצוגה xDrip+ ודאו שהחלקת רעש חיישן מופעל. אפשרות זו מנסה להחיל החלקה על נתונים רועשים.
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
 
-**החלקת רעש חיישן (רגיש במיוחד).** אם אתם עדיין רואים נתונים רועשים ב-xDrip+, תוכלו להחיל החלקה אגרסיבית יותר באמצעות ההגדרה החלקת רעש חיישן (רגיש במיוחד). אפשרות זו תנסה ליישם החלקה גם ברמות נמוכות מאוד של רעש אם מזוהה. כדי לעשות זאת, תחילה הפעילו את [מצב הנדסה](Enabling-Engineering-Mode-in-xDrip.md) ב-xDrip+. לאחר מכן יש לנווט אל הגדרות > הגדרות תצוגה xDrip+ ולהפעיל החלקת רעש חיישן (רגיש במיוחד).
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).

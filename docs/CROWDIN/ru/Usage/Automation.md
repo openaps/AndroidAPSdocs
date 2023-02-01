@@ -18,6 +18,7 @@ Before using Automation, you should be confident with manual [temp targets](./te
 
 Чтобы настроить автоматизацию, нужно дать ей заголовок, выбрать хотя бы одно условие и одно действие.
 
+(important-note)=
 ### Важное примечание
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Выбор правил автоматизации
 
 Для отбора правил автоматизации нажмите и удерживайте кнопку с четырьмя строками в правой части экрана и двигайтесь вверх или вниз.
@@ -106,6 +108,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Выбор правила автоматизации
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.

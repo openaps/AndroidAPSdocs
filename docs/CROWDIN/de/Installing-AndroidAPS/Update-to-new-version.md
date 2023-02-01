@@ -27,11 +27,13 @@ Für den Fall, dass Probleme auftreten, findest Du Lösungsansätze auf der sepa
 
 See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
 
+(update-your-local-copy)=
+
 ## 2. Führe ein Update deiner lokalen Version durch
 
-Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. Wenn Du Dich mit git nicht auskennst, ist es am einfachsten, wenn Du das vorhandene AndroidAPS-Verzeichnis entfernst und die [App-Erstellung von vorne](../Installing-AndroidAPS/Building-APK.md) beginnst.
+Ab Version 2.7 wurde der Speicherort des Repositories auf <https://github.com/nightscout/AndroidAPS> geändert. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
 
-Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge diesen Schritten:
+If you have already changed the URL or update from version 2.8.x, follow these steps:
 
 * Öffne Dein existierendes AndroidAPS Projekt mit Android Studio. Möglicherweise musst Du Dein Projekt wählen. Doppelklicke auf das AndroidAPS Projekt.
     
@@ -61,30 +63,32 @@ Wenn Du die URL bereits geändert hast oder von Version 2.8.x updatest, folge di
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
+(build-the-signed-apk)=
+
 ## 3. Erstelle die signierte APK
 
-Dein Sourcecode ist jetzt die aktuelle veröffentlichte Version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
 
 ## 4. Übertrage die APK-Datei
 
-Du musst die APK-Datei auf Dein Smartphone übertragen, um sie dort installieren zu können.
+You need to transfer the apk to your phone so you can install it.
 
 See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
 
 ## 5. APK installieren
 
-Auf dem Smartphone musst Du die Installation aus unbekannten Quellen zulassen. Anleitungen dazu findest Du im Internet (z.B. [hier](https://mobilsicher.de/ratgeber/apps-aus-apk-datei-installieren-mit-android-8) oder [hier](https://www.tutonaut.de/anleitung-android-apps-unbekannten-quellen-installieren/)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
 
 ## 6. AAPS-Version auf dem Smartphone überprüfen
 
-Nachdem Du die neue APK-Datei installiert hast, kannst Du auf dem Smartphone die Version prüfen. Gehe dazu oben rechts auf die drei Punkte und wähle dann "Über". Du solltest die aktuelle Version angezeigt bekommen.
+After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
-![Installierte AAPS Version](../images/Update_VersionCheck282.png)
+![AAPS version installed](../images/Update_VersionCheck282.png)
 
 # Problembehandlung
 
-Keine Panik, wenn irgendetwas schiefläuft.
+If anything goes wrong, don't panic.
 
-Tief durchatmen!
+Take a breath!
 
-Wirf dann einen Blick auf die Lösungsansätze der separaten Seite zur [Fehlerbehebung für Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio). In den meisten Fällen dürfte Dein Problem und eine Lösung dort zu finden sein.
+Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!

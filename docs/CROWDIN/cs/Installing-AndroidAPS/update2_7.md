@@ -19,8 +19,8 @@
 ## Dokončit cíle
 
 - AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.md).
-- You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives#objective-10-automation).
-- If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives#objective-10-automation).
+- You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives.md#objective-10-automation).
+- If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation).
 - Neovlivní to cíle, které jste již dokončili. Splněné cíle zůstanou zachovány!
 
 ## Nastavit hlavní heslo

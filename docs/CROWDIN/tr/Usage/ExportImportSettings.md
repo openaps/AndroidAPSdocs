@@ -28,6 +28,7 @@ Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bi
 
 Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
+(export-settings)=
 ## Dışa aktarma ayarları
 
 - Hamburger menu (top left corner of screen)
@@ -47,13 +48,14 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS dışa aktarma ayarları 2
 ```
 
-## İçe aktarma ayarları
+(import-settings)=
+## Ayarları içe aktarın
 
 **Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
 
 - Hamburger menu (top left corner of screen)
 - Bakım
-- İçe aktarma ayarları
+- Ayarları içe aktarın
 
 ```{image} ../images/AAPS_ImportSettings1.png
 :alt: AndroidAPS içe aktarma ayarları 1

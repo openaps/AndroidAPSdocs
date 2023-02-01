@@ -42,6 +42,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Identify receiver
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -94,6 +96,8 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
+(connect-g6-transmitter-for-the-first-time)=
+
 ### Connect G6 transmitter for the first time
 
 **For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
@@ -141,6 +145,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [ni
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(transmitter-battery-status)=
+
 ### Transmitter battery status
 
 * Battery status can be controlled in system status (Hamburger menu top left on homescreen)
@@ -174,6 +180,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J try [ni
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
 * Transmitter days will be set to 0 after successful extension and start of sensor.
+
+(replace-transmitter)=
 
 ### Replace transmitter
 
@@ -283,6 +291,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8Juse one 
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Retrieve sensor code
 
 * In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
@@ -296,6 +306,8 @@ If your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8Juse one 
 * Select `View Event Logs` and search for "code"
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Troubleshooting Dexcom G5/G6 and xDrip+
 

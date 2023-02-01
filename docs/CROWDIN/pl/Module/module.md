@@ -71,6 +71,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   </li>
 </ul>
 
+<p spaces-before="0">
+  (no-use-of-sglt-2-inhibitors)=
+</p>
 <h3 spaces-before="0">
   No use of SGLT-2 inhibitors
 </h3>
@@ -79,6 +82,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 </p>
 
+<p spaces-before="0">
+  (phone)=
+</p>
 <h3 spaces-before="0">
   Phone
 </h3>
@@ -143,6 +149,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
+<p spaces-before="0">
+  (additional-communication-device)=
+</p>
 <h4 spaces-before="0">
   Additional communication device
 </h4>
@@ -203,7 +212,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </ul>
 
 <h3 spaces-before="0">
-  Źródło BG
+  BG Source
 </h3>
 
 <p spaces-before="0">
@@ -212,7 +221,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app

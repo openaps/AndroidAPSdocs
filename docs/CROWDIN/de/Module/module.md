@@ -36,7 +36,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
     </p>
     
     <p spaces-before="0">
-      Nicht zuletzt darfst Du keine SGLT-2-Inhibitoren (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken.  Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
+      Nicht zuletzt darfst Du keine SGLT-2-Hemmer (Gliflozins) einnehmen, da sie den Blutzuckerspiegel unberechenbar senken.  Die Kombination mit einem Closed Loop System, das die basalen Raten senkt, um den BZ zu erhöhen ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
 :::
     </p>
 
@@ -71,6 +71,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   </li>
 </ul>
 
+<p spaces-before="0">
+  (no-use-of-sglt-2-inhibitors)=
+</p>
 <h3 spaces-before="0">
   Keine Verwendung von SGLT-2-Hemmern
 </h3>
@@ -79,6 +82,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   SGLT-2 Hemmer, auch Gliflozins genannt, hemmen die Resorption (Aufnahme) von Glukose in der Niere. Da sie den Blutzuckerspiegel unberechenbar senken, dürfen sie KEINESFALLS mit einem Closed Loop System wie AndroidAPS verwendet werden! Es bestünde ein enormes Risiko für eine Ketoazidose oder eine Hypoglykämie! Die Kombination dieser Medikamente mit einem Closed Loop System, das die Basalrate senkt, um den BZ zu erhöhen, ist besonders gefährlich, da durch die Gliflozin dieser BZ-Anstieg verhindert wird und ein gefährlicher Zustand durch Insulinmangel auftreten kann.
 </p>
 
+<p spaces-before="0">
+  (phone)=
+</p>
 <h3 spaces-before="0">
   Smartphone
 </h3>
@@ -143,6 +149,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
+<p spaces-before="0">
+  (additional-communication-device)=
+</p>
 <h4 spaces-before="0">
   Zusätzliches Kommunikationsgerät
 </h4>
@@ -212,7 +221,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app

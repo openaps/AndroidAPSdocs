@@ -12,6 +12,8 @@
 * לחלופין ניתן לעבור בין המסכים ע"י החלקה שמאלה וימינה.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
+(section-b-profile-target)=
+
 ### חלק B - פרופיל וערכי מטרה
 
 #### פרופיל נוכחי
@@ -31,9 +33,11 @@
 * לחצו לחיצה קצרה על ערכי המטרה כדי להגדיר [ערך מטרה זמני](../Usage/temptarget.md).
 * אם הוגדר ערך מטרה זמני, צבע הכפתור יצבע בצהוב והזמן הנותר בדקות מוצג בסוגריים.
 
+(visualization-of-dynamic-target-adjustment)=
+
 #### הצגת שינויים דינמיים בערכי המטרה
 
-![הצגת שינויים דינמיים בערכי המטרה](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS יכול להתאים באופן דינמי את ערכי המטרה על סמך הרגישות אם אתם משתמשים באלגוריתם SMB.
 * Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
@@ -52,6 +56,8 @@
    * אדום = מתחת לטווח
    * צהוב = מעל הטווח
 * הערכים האפורים באמצע מציגים דקות מאז הקריאה האחרונה ושינויים מאז הקריאה האחרונה, ב-15 וב-40 הדקות האחרונות.
+
+(loop-status)=
 
 #### סטטוס הלולאה
 
@@ -73,15 +79,17 @@
    
    ![Loop status menu](../images/Home2020_Loop_Dialog.png)
 
+(bg-warning-sign)=
+
 #### סימן אזהרה לצד רמת הסוכר
 
-החל מ-Android 3.0, ייתכן שיופיע סמל אזהרה מעל לרמת הסוכר במסך הראשי.
+Beginning with Android 3.0, you might get a warning signal beneath your BG number on the main screen.
 
-*הערה*: עד 30 השעות האחרונות נלקחות בחשבון בחישובים של AAPS. אז גם לאחר שפתרת את בעיית המקור, עשויות לחלוף כ-30 שעות עד שהמשולש הצהוב ייעלם לאחר שהתרחש המרווח האחרון בנתונים.
+*Note*: Up to 30h hours are taken into accord for AAPS calculations. So even after you solved the origin problem, it can take about 30 hours for the yellow triangle to disappear after the last irregular interval occurred.
 
-כדי להסיר אותו באופן מיידי, יש למחוק ידנית כמה ערכים מלשונית xDrip או BYODA.
+To remove it immediately you need to manually delete a couple of entries from the Dexcom/xDrip+ tab.
 
-אולם, כשיש הרבה כפילויות, אולי יהיה קל יותר:
+However, when there are a lot of duplicates, it might be easier to
 
 * [backup your settings](../Usage/ExportImportSettings.md),
 * לאתחל את מסד הנתונים שלכם בתפריט התחזוקה
@@ -89,11 +97,11 @@
 
 ##### סימן אזהרה אדום: כפילות בנתוני סוכר
 
-סימן האזהרה האדום מסמל שנדרשת פעולה מיידית מצידכם: מקבלים נתוני סוכר כפולים, דבר שמפריע ללופ לתפקד. משום כך, הלופ עוצר את פעולתו עד שהמצב ייפתר.
+The red warning sign is signaling you to get active immediately: You are receiving duplicate BG data, which does avoid the loop to do its work right. Therefore your loop will be disabled until it is resolved.
 
 ![Red BG warning](../images/bg_warn_red.png)
 
-עליכם לברר מדוע יש כפילות:
+You need to find out why you get duplicate BGs:
 
 * גשר Dexcom מופעל בהגדרת אתר נייטסקאוט? בטלו את את הגשר ע"י כניסה לאתר Heroku שלכם, שנו בהגדרות את המשתנה Enable ובו מחקו את "bridge". (ניתן למצוא [פרטים לגבי Heroku כאן](https://nightscout.github.io/troubleshoot/troublehoot/#heroku-settings))
 * האם יש יותר ממקור אחד להעלאות לנייטסקאוט? אם אתם משתמשים ב-BYODA, אפשרו את ההעלאה לנייטסקאוט ב-AAPS ואל תאפשרו את ההעלאה מ-xDrip אם הוא בשימוש.
@@ -142,7 +150,7 @@
 
 ### חלק E - חיווי מצב
 
-![חלק E](../images/Home2020_StatusLights.png)
+![Section E](../images/Home2020_StatusLights.png)
 
 * נורות הסטטוס נותנות חיווי ויזואלי עבור 
    * גיל הצינורית
@@ -154,9 +162,11 @@
 * אם חורגים מסף האזהרה הקריטי, הערכים יוצגו באדום.
 * Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
+(section-f-main-graph)=
+
 ### חלק F - גרף ראשי
 
-![חלק F](../images/Home2020_MainGraph.png)
+![Section F](../images/Home2020_MainGraph.png)
 
 * הגרף מציג את רמת הסוכר בדם (BG) כפי שנקרא מהחיישן. 
 * הערות שהוזנו בלשונית פעולות, כגון כיולים מבדיקות עם גלוקומטר וערכים של פחמימות וכן החלפות פרופיל מוצגות כאן. 
@@ -175,6 +185,8 @@
 * עבור הגרף הראשי זמינות רק שלוש האפשרויות שמעל ל-"\---\---- גרף 1 \---\----".
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+
+(prediction-lines)=
 
 #### עקומי החיזוי
 
@@ -204,7 +216,7 @@
    
    *This line appears only when the older [AMA](../Configuration/Preferences.md#advanced-meal-assist-ama-or-super-micro-bolus-smb) algorithm is used.*
 
-בדרך כלל עקומת הסוכר האמיתית נמצאת באמצע בין העקומים הללו, או קרובה לזו שמניחה הנחות שהכי דומות למצב שלך.
+Usually your real glucose curve ends up in the middle of these lines, or close to the one which makes assumptions that closest resemble your situation.
 
 #### בזאלי
 
@@ -223,7 +235,7 @@
 * ניתן להפעיל עד ארבעה גרפים נוספים מתחת לגרף הראשי.
 * To open settings for additional graphs click the triangle on the right side of the [main graph](../Getting-Started/Screenshots.md#section-f-main-graph) and scroll down.
 
-![הגדרות גרף נוספות](../images/Home2020_AdditionalGraphSetting.png)
+![Additional graph settings](../images/Home2020_AdditionalGraphSetting.png)
 
 * כדי להוסיף גרף נוסף יש לסמן את התיבה בצד שמאל של שמו (לדוגמה: \---\---- גרף 1 \---\---- וכו').
 
@@ -316,11 +328,13 @@
 * הזנה בקלות של כמות הפחמימות והגדרת נתוני החישוב.
 * Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
+(bolus-wizard)=
+
 ## אשף הבולוס
 
-![אשף בולוס](../images/Home2020_BolusWizard_v2.png)
+![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
 
-כאן מתכננים במרבית המקרים את בולוסי הארוחה.
+When you want to make a meal bolus this is where you will normally make it from.
 
 ### חלק I
 
@@ -328,6 +342,8 @@
 * בשדה פחמימות אתם מוסיפים את ההערכה שלכם לכמות הפחמימות בארוחה שעבורה אתם רוצים לקבל בולוס. 
 * שדה התיקון נועד לשינוי המינון הסופי באופן ידני.
 * השדה זמן פחמימות מיועד לבולוס מקדים, כך שתוכלו לומר למערכת שיהיה עיכוב של הזמן שרשמתם לפני שהפחמימות צפויות. בכתיבת מספר שלילי בשדה זה אתם נותנים בולוס עבור פחמימות שנאכלו בעבר בעבר.
+
+(eating-reminder)=
 
 #### תזכורת אכילה
 
@@ -360,6 +376,8 @@
 * אם תסמן IOB ללא COB, הלופ ייקח בחשבון את האינסולין שכבר ניתן, אך לא יכסה פחמימות שעוד לא נספגו. מצב זה מוביל להודעת "פחמימות חסרות".
 * אם מזריקים בולוס עבור **מזון נוסף** זמן קצר לאחר בולוס ארוחה (לדוגמה קינוח), ייתכן שכדאי יהיה **לבטל את הסימון בכל התיבות**. כך רק הפחמימות החדשות מתווספות מכיוון שהארוחה העיקרית לא בהכרח תיספג ולכן IOB לא יתאים ל-COB במדויק זמן קצר לאחר בולוס הארוחה.
 
+(wrong-cob-detection)=
+
 #### זיהוי שגוי של פחמימות פעילות
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -368,20 +386,22 @@
 * לכן, אם תרצו להזריק בולוס לאחר ארוחה קודמת עם פחמימות פעילות, עליכם להיות מודעים למינון ביתר! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
 
+(action-tab)=
+
 ## לשונית פעולות
 
-![לשונית פעולות](../images/Home2021_Action.png)
+![Actions tab](../images/Home2021_Action.png)
 
 ### פעולות - חלק M
 
 * Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * לחצן להפעלה או ביטול של מינון בזאלי זמני. שימו לב שהלחצן משתנה מ-"בזאלי זמני" ל-"ביטול %x" כאשר מוגדר מינון בזאלי זמני.
-* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * אפשרות זו קיימת רק במשאבות Dana RS ו-Accu chek Insight. 
    * לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
 ### פורטל הטיפולים - חלק N
 
@@ -393,6 +413,8 @@
    * גיל ודרגת טעינת סוללת המשאבה
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+
+(sensor-level-battery)=
 
 #### רמת טעינת סוללת החיישן
 
@@ -425,6 +447,8 @@
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
+(insulin-profile))=
+
 ## פרופיל האינסולין
 
 ![פרופיל האינסולין](../images/Screenshot_insulin_profile.png)
@@ -435,11 +459,11 @@
 * אם השתמשתם בעבר במשאבה, כנראה שהנחתם שדעיכת האינסולין לוקחת כ-3.5 שעות. 
 * עם זאת, בשימוש בלופ, הזנב הארוך חשוב כיוון שהחישובים הרבה יותר מדויקים והכמויות הקטנות הללו בזנבות מסתכמות למספרים משמעותיים בחישובים הרקורסיבים של אלגוריתמים של AndroidAPS.
 
-לדיון מפורט יותר על סוגי האינסולין השונים, פרופילי הפעילות שלהם ומדוע כל זה חשוב, אפשר לקרוא מאמר כאן על [הבנת עקומות החדשות של האינסולין הפעיל על סמך עקומות פעילות אקספוננציאליות](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
+For a more detailed discussion of the different types of insulin, their activity profiles and why all this matters you can read an article here on [Understanding the New IOB Curves Based on Exponential Activity Curves](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves)
 
-ניתן גם לקרוא מאמר מצוין בבלוג על זה כאן: [מדוע אנחנו טועים באופן קבוע במשך פעולת האינסולין (DIA) ולמה זה חשוב…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
+And you can read an excellent blog article about it here: [Why we are regularly wrong in the duration of insulin action (DIA) times we use, and why it matters…](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/)
 
-ועוד כאן: [עקומות אינסולין אקספוננציאליות + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
+And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017/10/21/exponential-insulin-curves-fiasp/)
 
 ## סטטוס המשאבה
 
@@ -450,20 +474,22 @@
 
 ## פורטל הטיפולים
 
-פורטל הטיפולים שיכפל את הפונקציות שנמצאות במסך נייטסקאוט תחת הסמל "+" המאפשר להוסיף הערות לרשומותיכם.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
 ### סקירה של חישוב הפחמימות
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* פשוט לחץ על קישור "חישוב" הירוק. (בהתאם למשאבה שבשימוש, אינסולין ופחמימות ניתנים להצגה בשורה אחת בטיפולים.)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
+* פשוט לחץ על קישור "חישוב" הירוק. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+
+(carb-correction)=
 
 ### תיקון פחמימות
 
 ![Treatment in 1 or 2 lines](../images/Treatment_1or2_lines.png)
 
-ניתן להשתמש בלשונית הטיפולים כדי לתקן הזנת פחמימות שגויה (כלומר, הערכת יתר או חסר).
+Treatment tab can be used to correct faulty carb entries (i.e. you over- or underestimated carbs).
 
 1. בדקו וזכרו את האינסולין והפחמימות הפעילים בפועל במסך הבית.
 2. בהתאם למשאבה בלשונית הטיפולים פחמימות עשויות להיות מוצגות יחד עם אינסולין בשורה אחת או כערכים נפרדים (כלומר עם משאבת Dana RS).
@@ -497,9 +523,11 @@
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. ניתן לערוך את הפרופיל המקומי בסמארטפון ולסנכרנו עם אתר הנייטסקאוט שלכם.
 
+(treatment)=
+
 ## טיפול
 
-היסטוריה של הטיפולים הבאים:
+History of the following treatments:
 
 * Bolus & carbs -> option to [remove entries](../Getting-Started/Screenshots.md#carb-correction) to correct history
 * [בולוס ממושך](../Usage/Extended-Carbs.md#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)

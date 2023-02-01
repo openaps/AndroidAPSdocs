@@ -12,38 +12,44 @@
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
+(tab-or-hamburger-menu)=
+
 ## Tab or hamburger menu
 
-באמצעות תיבת הסימון מתחת סמל העין תוכלו לבחור כיצד לפתוח את מסך אותה תכונה.
+With the checkbox under the eye symbol you can decide how to open the corresponding program section.
 
 ![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+
+(profile)=
 
 ## פרופיל
 
 * בחרו את סוג הפרופיל הבזאלי בו תרצו להשתמש. ראו עמוד [פרופילים](../Usage/Profiles.md) למידע נוסף על ההתקנה.
 * החל מ-AAPS 3.0, קיים רק פרופיל מקומי.
 
-למרות זאת, ניתן לסנכרן פרופיל נייטסקאוט עם הפרופיל המקומי. לשם כך, חשוב לשכפל את כל מסד הנתונים הכולל מספר פרופילים בעורך הפרופילים בנייטסקאוט. ראו את ההוראות מטה. זה יוכל להיות שימושי אם נוח לכם לעשות שינויים גדולים בפרופיל דרך ממשק של האתר, לדוגמה העתקת הגדרות מטבלת אקסל.
+However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+
+(local-profile)=
 
 ### פרופיל מקומי
 
-הפרופיל המקומי משתמש בפרופיל הבזאלי שהוזן ידנית לטלפון. עם בחירת הפרופיל, תופיע לשונית חדשה ב-AAPS, שם תוכלו לשנות את פרטי הפרופיל הנקראים מהמשאבה במידת הצורך. בפעם הבאה שתשנו פרופיל, הפרטים החדשים יישלחו למשאבה בפרופיל 1. הפרופיל הזה מומלץ מכיוון שאינו מסתמך על חיבור לאינטרנט.
+Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). לכן, הכינו לעצמכם גיבוי במקום בטוח.
+Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-מקשים:
+Buttons:
 
 * פלוס ירוק: הוסף
 * X אדום: מחק
 * חץ כחול: שכפל
 
-כשאתם מבצעים שינויים בפרופיל, וודאו כי הנכם עובדים על הפרופיל הנכון. לא תמיד הפרופיל הפעיל כרגע יופיע בלשונית הפרופילים. לדוגמא, אם ביצעתם החלפת פרופיל דרך במסך הבית, יתכן שהוא יהיה שונה מהפרופיל המופיע בלשונית הפרופיל המקומי, משום שאין קשר ביניהם.
+If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
 
 #### Clone profile switch
 
-ניתן בקלות ליצור פרופיל מקומי חדש מהפרופיל המוחלף\זמני. במקרה זה שינוי היסט הזמן והאחוזים יוחלו על הפרופיל המקומי החדש.
+You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
 
 1. לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה.
 2. בחרו "טיפולים".
@@ -53,28 +59,32 @@ Your local profiles are part of [exported settings](../Usage/ExportImportSetting
 
 ![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
 
+(upload-local-profiles-to-nightscout)=
+
 #### העלאת פרופילים מקומיים לנייטסקאוט
 
-ניתן גם להעלות את הפרופילים המקומיים לנייטסקאוט. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### שינוי הפרופיל בעורך הפרופיל של נייטסקאוט
 
-ניתן לסנכרן שינויים בפרופיל בנייטסקאוט אל הפרופיל המקומי. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
 
-זה הכרחי לשכפל את כלל מסד הנתונים הפעיל ולא רק פרופיל אחד עם החץ הכחול! התאריך העדכני נרשם עם מסד הנתונים החדש וניתן להפעילו בלשונית "פרופיל מקומי".
+It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
 ### עוזר פרופילים
 
-עוזר הפרופילים מציע שתי פונקציות:
+Profile helper offers two functions:
 
 1. הרכבת פרופיל עבור ילדים
 2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+
+(insulin)=
 
 ## אינסולין
 
@@ -117,9 +127,11 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DIA =לפחות 5 שעות
 * שיא = 55 דקות לאחר ההזרקה (קבוע, לא ניתן לשינוי)
 
+(lyumjev)=
+
 #### Lyumjev
 
-![סוג אינסולין Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
 
 * פרופיל אינסולין במיוחד ל-Lyumjev
 * DIA =לפחות 5 שעות
@@ -133,6 +145,8 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * משך הפעילות DIA מוגדר אוטומטית כ-5 שעות אם לא הוגדר גבוה יותר בפרופיל.
 * פרופיל זה מומלץ למי שמשתמש באינסולין שאינו נתמך בלופ או שמשתמש בערבוב של סוגי אינסולין.
 
+(bg-source)=
+
 ## מקור ערכי הסוכר
 
 Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
@@ -140,7 +154,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [בנה אפליקציית Dexcom בעצמך (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0) for details.
 * [Minimed 640G](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - נתמך החל מגרסה 4.15.57
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -149,9 +163,11 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 * נתוני סוכר מ-NSClient - לא מומלץ כי במקרה זה תפקוד הלולאה תלוי בחיבור רצוף לאינטרנט. נתוני סוכר יתקבלו רק אם יש חיבור לאתר הנייטסקאוט דרך האינטרנט. עדיף להשתמש בשידור מקומי ממקורות הנתונים האחרים.
 * הפקת נתוני גלוקוז אקראיים (מצב הדגמה בלבד)
 
+(pump)=
+
 ## משאבה
 
-בחרו את המשאבה בה אתם משתמשים.
+Select the pump you are using.
 
 ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
 
@@ -175,17 +191,21 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## זיהוי רגישות
 
-בחרו את סוג זיהוי הרגישות. [לחצו כאן](../Configuration/Sensitivity-detection-and-COB.md) למידע נוסף על האפשרויות השונות. פונקציה זו תנתח את המידע ההיסטורי בשעת מעשה ותבצע התאמות במידה ותזהה כי הנכם מגיבים לאינסולין ברגישות יתר מהרגיל (או להיפך, אינכם מגיבים מספיק). מידע נוסף על אלגוריתם הרגישות ניתן למצוא ב[מסמכי OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-תוכלו לראות את רמת הרגישות שלכם בעמוד הבית, על ידי בחירה ברגישות ומעקב אחרי העקום הלבן בגרף. Note, you need to be in [Objective 8](../Usage/Objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. עד שתגיעו לשלב זה במשימות, אחוזי ה-Autosens והעקום הלבן בגרף מוצגים כמידע בלבד.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+
+(absorption-settings)=
 
 ### הגדרות ספיגה
 
-אם אתם משתמשים ב-Oref1 עם SMB, חובה לשנות את **min_5m_carbimpact** ל-8. ערך זה יימצא בשימוש רק בזמן שיש הפסקה בקבלת נתוני סוכר מהחיישן או כשפעילות גופנית "מנצלת" את כל העלייה בסוכר שבה AAPS משתמש כדי לחשב דעיכת פחמימות פעילות. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. למעשה, זהו אמצעי אל כשל.
+If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+
+(aps)=
 
 ## APS
 
-בחר את אלגוריתם ה-APS הרצוי להתאמות טיפוליות. ניתן לצפות בפרטי הפעילות של האלגוריתם הנבחר בלשונית ה-OpenASP(OAPS).
+Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA ("עוזר ארוחות מתקדם", אלגוריתם מ-2017) במילים פשוטות, לאחר הזרקת בולוס ארוחה, האלגוריתם יכול לתקן מהר עם בזאלי זמני גבוה אם הזנתם את כמות הפחמימות במדוייק.
 * [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
@@ -196,11 +216,15 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
+(open-loop)=
+
 ### לולאה פתוחה
 
 * AAPS מנתח באופן רציף את כל הנתונים הזמינים (IOB - אינסולין פעיל בגוף, COB - פחמימות פעילות, BG - רמת הסוכר...) ומציע הצעות להתאמת הטיפול במידת הצורך. 
 * ההצעות לא תבוצענה באופן אוטומטי (כמו שיקרה בלולאה הסגורה). יש לבצע אותם ידנית במשאבה, או באמצעות המקש המתאים אם הנכם משתמשים במשאבה מתאימה (Dana R/RS, Omnipod או AccuChek Combo). 
 * מטרת האפשרות הזו היא כדי לאפשר לכם להכיר כיצד פועל AndroidAPS, או במידה ואתם משתמשים במשאבה לא תואמת.
+
+(closed-loop)=
 
 ### לולאה סגורה
 
@@ -224,29 +248,29 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## משימות (הלומדה)
 
-ל-AndroidAPS לומדה מובנית הבנויה ממשימות שאותן עליכם לבצע, צעד אחר צעד. היא תדריך אותכם בבטחה במהלך הקמת הלולאה הסגורה. היא מבטיחה שאתם תגדירו הכל כראוי ושאתם מבינים מה היא עושה. זוהי הדרך היחידה שלכם לבטוח בפעילותה.
+AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
-You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. במקרה בו תחליפו את הטלפון (בגלל קניית חדש, נזק וכו') תוכלו לייבא את ההגדרות.
+You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
 See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## טיפולים
 
-בלשונית טיפולים, תוכלו לראות את הטיפולים שהועלו לנייטסקאוט. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
 
 ## כללי
 
 ### סקירה כללית
 
-מציג את המצב הנוכחי של הלולאה והכפתורים עבור הפעולות הנפוצות ביותר (ראו [מסך הבית](../Getting-Started/Screenshots.md) לפרטים). ניתן לגשת להגדרות על ידי לחיצה על גלגל השיניים.
+Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
 
 #### השאר את המסך דולק
 
-האפשרות 'שמור מסך מופעל' תאלץ את אנדרואיד להשאיר את המסך דולק כל הזמן. זה שימושי להדגמות וכו'. אבל הוא צורך הרבה סוללה. לכן, מומלץ לחבר את הסמארטפון למטען.
+Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
 
 #### מקשים
 
-הגדירו אילו כפתורים מוצגים במסך הראשי.
+Define which Buttons are shown on the home screen.
 
 * טיפולים
 * מחשבון
@@ -255,19 +279,19 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 * סנסור (פותח את xDrip או את מקור נתוני הסוכר)
 * כיול
 
-בנוסף, ניתן להגדיר קיצורי דרך לתוספות אינסולין ופחמימות ולהחליט אם יש להציג את שדה ההערות בדיאלוגים של הטיפולים.
+Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
 
 #### הגדרות אשף מהיר
 
-אפשר ליצור כפתור לארוחה סטנדרטית מסוימת (פחמימות ושיטת חישוב לבולוס) שיוצג במסך הבית. השתמשו בכפתור זה לארוחות סטנדרטיות הנאכלות בתדירות גבוהה. אם צוינו זמנים שונים לארוחות השונות תמיד יהיה לכם כפתור הארוחה הסטנדרטי המתאים במסך הבית, בהתאם לשעה ביום.
+Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
 
-הערה: הכפתור לא יהיה גלוי אם הוא מחוץ לטווח הזמן שצוין או אם יש כרגע מספיק אינסולין פעיל כדי לכסות את הפחמימות המוגדרות בלחצן אשף מהיר.
+Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
 #### ברירות מחדל ערכי מטרה
 
-בחרו ערכי מטרה זמניים (משך וערך מטרה). ברירות המחדל הן:
+Choose default temp-targets (duration and target). Preset values are:
 
 * אוכלים בקרוב: מטרה 72 mg/dl למשך 45 דקות
 * פעילות: מטרה 140 mg/dl למשך 90 דקות
@@ -275,29 +299,31 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 #### מילוי\תיחול כמויות סטנדרטיות של אינסולין
 
-בחר את כמויות ברירת המחדל של שלושת הכפתורים בדיאלוג מילוי\תיחול, בהתאם לאורך הקנולה שלכם.
+Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 #### טווח הצגה
 
-בחרו את הספים הגבוהים והנמוכים עבור הגרף הראשי במסך הבית של AndroidAPS והשעון החכם. אפשרות זו היא רק להצגה נוחה, אין זה טווח המטרה עצמו. דוגמה: 70-180 מ"ג/ד"ל
+Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### קצר את כותרות הלשוניות
 
-בחרו אם להציג את כותרות הלשוניות שב-AndroidAPS בשלמותן (למשל ACTIONS, LOCAL PROFILE, AUTOMATION) או בקיצור (למשל ACT, LP, AUTO)
+Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### הצגת שדות הערות בתיבות דו-שיח של טיפול
 
-בחרו אם ברצונכם לכתוב בשדה הערות בעת הזנת טיפולים.
+Choose if you want to have a notes field when entering treatments or not.
 
 #### אורות חיווי
 
-Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. כאשר מגיעה רמת האזהרה, צבע נורית המצב יעבור לצהוב. גיל קריטי יוצג באדום.
+Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### הגדרות מתקדמות
 
-**ספק את חלק זה מתוצאת אשף הבולוס[%]**: בעת שימוש ב-SMB, אנשים רבים אינם מזריקים את כל האינסולין הדרוש בבת אחת, אלא רק חלק ממנו (למשל 75%) ונותנים ל-SMB עם UAM (זיהוי ארוחות לא מוכרזות) לעשות את השאר. בהגדרה זו, באפשרותכם לבחור ערך ברירת מחדל עבור אחוז הבולוס שמוזרק מתוך חישוב בולוס הארוחה במחשבון. אם הגדרה זו היא 75% והמחשבון חישב שדרוש בולוס ארוחה 10 יח', אשף הבולוס יציע בולוס ארוחה של 7.5 יח' בלבד.
+**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-**אפשרו פונקציונליות סופר בולוס במחשבון** (זה שונה מ*סופר מיקרובולוס (SMB)*!): השתמשו בסופר בולוס בזהירות ואל תפעילו אפשרות זו לפני שתלמדו מה היא באמת עושה. בעיקרון, המינון הבזאלי לשעתיים הקרובות מתווסף לבולוס ומופעל מינון בזאלי זמני 0 למשך שעתיים. **פונקציות לולאה של AAPS יושבתו - לכן השתמשו בזהירות! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+
+(actions)=
 
 ### פעולות
 
@@ -306,7 +332,9 @@ Choose if you want to have [status lights](../Configuration/Preferences.md#statu
 
 ### אוטומציה
 
-משימות אוטומציה שהוגדרו על ידי המשתמש ('אם ככה-אז'). Please [read on here](../Usage/Automation.md).
+User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
+
+(sms-communicator)=
 
 ### תקשורת SMS
 
@@ -314,26 +342,28 @@ Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS C
 
 ### מזון
 
-מציג את הגדרות מזון המוגדרות מראש במאגר המזון של Nightscout, ראו [מידע נוסף](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) על הגדרות אלה ב-Nightscout.
+Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-הערה: לא ניתן להשתמש בערכים במחשבון AndroidAPS. (צפייה בלבד)
+Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+
+(wear)=
 
 ### Wear
 
-עקבו ושלטו ב-AAPS באמצעות שעון Android Wear (ראו [דף פני שעון](../Configuration/Watchfaces.md)). השתמש בהגדרות (גלגל שיניים) כדי להגדיר אילו משתנים יש לקחת בחשבון בעת חישוב בולוס דרך השעון (כלומר מגמה של 15 דקות, COB...).
+Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
 
 אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
 
 ![Wear settings](../images/ConfBuild_Wear.png)
 
-באמצעות לשונית Wear או בתפריט ההמבורגר (בפינה הימנית עליונה של המסך, אם הלשונית לא מוצגת) תוכלו 
+Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
 
 * לשלוח מחדש את כל הנתונים. שימושי אם השעון לא היה מחובר במשך זמן מה ואתם רוצים לעדכן את המידע שבשעון.
 * לפתוח את ההגדרות בשעון ישירות מהטלפון שלך.
 
 ### שורת מצב xDrip (שעון)
 
-מציג מידע על לולאה על פני שעון xDrip שלך (אם אינך משתמש בפני השעון [APPS/ AAPSv2](../Configuration/Watchfaces.md)
+Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
 
@@ -342,8 +372,8 @@ Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS C
 
 ### תחזוקה
 
-כתובת מייל ומספר הרישומים לשליחה. אין צורך לשנות כאן דבר.
+Email and number of logs to be send. Normally no change necessary.
 
 ### בונה התצורה
 
-בחירת אופן הגישה לבונה התצורה דרך תפריט ההמבורגר או דרך לשונית.
+Use tab for config builder instead of hamburger menu.

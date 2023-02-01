@@ -1,3 +1,4 @@
+(release-notes)=
 # Примечания к изменениям в версиях
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). На ее страницах решаются наиболее распространенные проблемы связанные с обновлениями.
@@ -39,6 +40,7 @@ If your smartphone uses an Android Version older than Android 9 you will not be 
 
 Release date: 19-07-2022
 
+(important-hints-3-1-0)=
 ### Важные Примечания
 
 - after update uninstall Wear app and install new version
@@ -66,6 +68,7 @@ Release date: 19-07-2022
 
 Release date: 31-01-2022
 
+(important-hints-3-0-0)=
 ### Важные Примечания
 
 - **Minimum Android version is 9.0 now.**
@@ -151,7 +154,7 @@ Release date: 31-01-2022
 
 Дата выпуска: 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) below.
+- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) below.
 
 ### Изменения
 
@@ -166,6 +169,7 @@ Release date: 31-01-2022
 
 Дата выпуска: 12-01-2021
 
+(important-hints-2-8-1-1)
 ### Важные Примечания
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
@@ -187,6 +191,7 @@ Release date: 31-01-2022
 - UI fixes and improvements
 - new translations
 
+(version-2-8-0)=
 ## Версия 2.8.0
 
 Дата выпуска: 01-01-2021
@@ -216,13 +221,14 @@ Release date: 31-01-2022
 - Security improvements @dlvoy
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
+(version-2-7-0)=
 ## Версия 2.7.0
 
 Дата выпуска: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start [objective 11 (in later versions objective 10!)](../Usage/Objectives.md#objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](../Usage/Objectives#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.html#objective-10-automation). Это не повлияет на другие цели, которые вы уже выполнили. You will keep all finished objectives!
 
 ### Новые возможности
 
@@ -254,6 +260,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Usag
 - [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
 - New documentation @Achim
 
+(version-2-6-1-4)=
 ## Версия 2.6.1.4
 
 Дата выпуска: 04-05-2020
@@ -317,6 +324,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed NSClient connection settings (wifi, charging)
 - Fixed sending of calibrations to xDrip
 
+(version-2-6-0)=
 ## Версия 2.6.0
 
 Дата выпуска: 29-02-2020
@@ -379,8 +387,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Дата выпуска: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
+(version-2-5-0)=
 ## Версия 2.5.0
 
 Дата выпуска: 26-10-2019
@@ -394,6 +403,7 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#impor
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.
 
+(is-this-update-for-me-currently-is-not-supported)=
 ### Это обновление для меня? В настоящее время НЕ поддерживается
 
 - Android 5 and lower
@@ -485,6 +495,7 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#impor
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
 - Setup wizard: guides you through the process of setting up AndroidAPS
 
+(settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Настройки при переключении с AMA на SMB
 
 - Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
@@ -500,6 +511,7 @@ Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#impor
   - Uncheck the Configure on demand checkbox.
   - Click Apply or OK.
 
+(overview-tab)=
 ### Вкладка обзора
 
 - Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Временные цели TT используют настройки по умолчанию. Новая опция Гипо TT является высокой временной целью TT для предотвращения слишком агрессивной реакции на корректирующие углеводы.

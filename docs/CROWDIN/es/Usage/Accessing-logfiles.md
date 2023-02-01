@@ -1,3 +1,5 @@
+(accessing-logfiles)=
+
 # Acceder a los logs
 
 * Conecte el teléfono a una computadora en modo de transferencia de archivos
@@ -7,7 +9,7 @@
     * (3.0.0) The folder will be at a location similar to ***Internal storage(1) / AAPS / logs***
     * The naming of the root storage folder (1) may vary a little depending on the phone.
 
-![registros](../images/aapslog.png)
+![logs](../images/aapslog.png)
 
 * The current log is a .log file which can be viewed in a number of ways such as [LogCat](https://developer.android.com/studio/debug/am-logcat.html) within Android Studio, any Log Viewer android app, or simply as plain text. 
 * Los archivos de registro anteriores se comprimen y almacenan en carpetas en orden de fecha / hora. 

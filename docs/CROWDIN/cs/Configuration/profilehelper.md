@@ -1,6 +1,6 @@
 # Pomocník s profilem
 
-Pomocník s profilem nabízí dvě funkce:
+Profile helper offers two functions:
 
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 9. Zobrazí se porovnání dvou upravených profilů.
 
+(clone-profile)=
 ## Klonování profilu
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.

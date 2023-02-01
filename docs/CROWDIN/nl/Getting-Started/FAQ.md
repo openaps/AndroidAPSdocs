@@ -14,29 +14,33 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 Dat is waarom een kant-en-klare app niet verspreid mag worden.
 
+(how-to-begin)=
+
 ## Hoe begin ik?
 
-Ten eerste, moet je alle **fysieke onderdelen van een closed loop** verzamelen:
+First of all, you have to **get loopable hardware components**:
 
 - Een [geschikte insulinepomp](./Pump-Choices.md), 
 - een [Android smartphone](Phones.md) (Apple iOS wordt niet ondersteund door AndroidAPS - je kunt wel [iOS Loop](https://loopkit.github.io/loopdocs/) gebruiken) en 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-Ten tweede, moet je de **fysieke onderdelen instellen**. Zie het [gebruiksvoorbeeld](Sample-Setup.md) met stap voor stap instructies.
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-Ten derde, moet je alle **software bouwen en instellen**: AndroidAPS en CGM/FGM bron.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-Ten vierde moet je leren en **begrijpen hoe het algoritme is ontworpen om jouw behandel instellingen** correct in te kunnen stellen. Het grondbeginsel van closed loopen is dat jouw basaalstanden en koolhydraatratio's correct zijn. Alle aanpassingen die de closed loop doet, gaan er vanuit dat jouw basaalstand klopt. Alle pieken en dalen die je ziet zijn dus een gevolg van andere, tijdelijke factoren (beweging, stress etc) die dan worden opgelost met een tijdelijke insulineaanpassing. De aanpassingen die de closed loop kan maken zijn uit veiligheid beperkt (zie maximaal toegestane basaalstand in [OpenAPS Reference Design](https://openaps.org/reference-design/)). Dit betekent dat je de closed loop niet moet inzetten om een fout afgestelde basaalstand te verhelpen. Wanneer je bijvoorbeeld vaak een lage waarde hebt vlak voor een maaltijd, dan moet waarschijnlijk je basaal omlaag. Je kunt [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) aan de hand van een grote hoeveelheid gegevens, suggesties laten doen voor verbeteringen aan je basaalstanden, ISF en/of koolhydraatratio. Of je kunt je basaalstanden op de [ouderwetse manier](https://integrateddiabetes.com/basal-testing/) testen en instellen.
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Zijn er nog praktische tips?
 
 ### Wachtwoordbeveiliging
 
-Als je niet wilt dat jouw instellingen gemakkelijk worden aangepast, dan kun je het instellingen menu voorzien van een wachtwoord. Ga naar "Wachtwoord voor instellingen" in het instellingen menu en typ een zelfgekozen wachtwoord. De volgende keer dat je het instellingen menu opent, moet je het wachtwoord intypen om verder te kunnen. Wanneer je later geen wachtwoord meer wilt gebruiken, ga dan naar het "Wachtwoord voor instellingen" veld en verwijder de tekst.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Android Wear Smartwatches
 
-Wanneer je in de toekomst de Android Wear app wilt gebruiken om vanaf een smartwatch te kunnen bolussen of instellingen te wijzigen, dan moet je instellen dat notificaties van AndroidAPS niet geblokkeerd worden. Bevestiging van opdrachten die je op je smartwatch invoert, komen namelijk via een notificatie binnen op je telefoon.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Pomp afkoppelen
 
@@ -83,9 +87,11 @@ The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
+(impact)=
+
 ### Invloed op BG
 
-Too short DIA can lead to low BGs. En omgekeerd.
+Too short DIA can lead to low BGs. And vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -99,11 +105,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. En omgekeerd.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Invloed op BG
 
-Too high basal rate can lead to low BGs. En omgekeerd.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -129,7 +135,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
-**Voorbeeld:**
+**Example:**
 
 - BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
 - So, you want correction of 90 mg/dl (= 190 - 110).
@@ -158,7 +164,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > Bij gebruik van KH ratio's (insuline:koolhydraat ratio's) is de hoeveelheid insuline een vast getal, en de hoeveelheid koolhydraten varieert per persoon. ("Hoeveel gram koolhydraten kan iemand eten bij één eenheid insuline?")
 > 
-> Voorbeeld:
+> Example:
 > 
 > Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -272,23 +278,25 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ## Vrije tijd
 
+(sports)=
+
 ### Sporten
 
-Je moet je oude gewoontes uit de pre-loop tijd afleren. Als je simpelweg evenveel extra koolhydraten neemt als voorheen bij het sporten, dan zal het systeem voor deze koolhydraten gaan corrigeren waarmee hun effect teniet wordt gedaan.
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
-Wat je wilt is dat je extra koolhydraten kunt nemen, zonder dat de loop daarvoor de bijbehorende hoeveelheid insuline toedient.
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
-Probeer daarvoor deze stappen:
+When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
 - Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
 - If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
-Pre- and post-processing of these settings is important. Houd rekening met de (trage) werkingsduur van insuline, zorg dus dat je enige tijd voorafgaand aan de sport al minder insuline krijgt. Ook na het sporten kun je nog minder (of juist meer!) insuline nodig hebben.
+Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Je kunt de Automatisering ook op basis van GPS locatie instellen, maar dat maakt het timen voorafgaand aan sporten wel lastiger.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
-Het exacte percentage van de Profiel wissel, de waarde voor het Tijdelijke streefdoel en de timing van al deze instellingen zijn voor iedereen anders. Begin aan de veilige kant als je op zoek gaat naar de juiste waarde voor jou (start met een lager percentage en hoger streefdoel).
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 

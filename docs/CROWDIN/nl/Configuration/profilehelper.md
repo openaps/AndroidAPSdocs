@@ -1,6 +1,6 @@
 # Profiel hulp
 
-De Profiel hulp kan je helpen met twee verschillende dingen:
+Profile helper offers two functions:
 
 1. Een profiel maken voor kinderen
 2. Twee profielen of profielwissels vergelijken, om zo een nieuw profiel te klonen
@@ -53,6 +53,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Druk op de knop 'VERGELIJK PROFIELEN' op het scherm.
 9. Vergelijking van de twee aangepaste profielen wordt weergegeven.
 
+(clone-profile)=
 ## Profiel dupliceren
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.

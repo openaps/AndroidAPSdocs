@@ -25,20 +25,20 @@
   </td>
   
   <td>
-    <a href="../Usage/Open-APS-features.md#advanced-meal-assist-ama">Viki - AMA</a>
+    <a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Viki - AMA</a>
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
  <td>Android Auto, motorlu araçlarda bilgi-eğlence sistemi ile bir Android akıllı telefonun işlevlerini kullanmak için Google LLC tarafından geliştirilen bir sistemdir. Android aracılığıyla Auto AndroidAPS, uyumlu ve yapılandırılmış bilgi-eğlence sisteminize mesaj gönderebilir.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.md">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
+ <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
 </tr>
 <tr>
  <td><strong>APK</strong></td>
  <td>yazılım yükleme dosyası (Android uygulama paketi)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.md">Viki - APK Derleme</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.html">Viki - APK Derleme</a></td>
 </tr>
 <tr>
  <td><strong>Otoduyarlılık</strong></td>
@@ -56,7 +56,7 @@
  <td><strong>PİL</strong></td>
  <td>ana ekranda düşük pil durumu göstergesi</td>
  <td>Kanül / Rezervuar / Sensör</td>
- <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>KŞ</strong></td>
@@ -74,7 +74,7 @@
 <td><strong>KŞ Kaynağı</strong></td>
  <td>Kan şekeri kaynağı, kan şekeri değerlerinizin geldiği kaynaktır. BYODA, xDrip+ vb. gibi bir tür entegrasyon yazılımı aracılığıyla taktığınız bir CGM veya FGM sisteminden gelirler.</td>
  <td>CGM / FGM (Sürekli ve Anlık Glikoz Takip sistemleri)</td>
- <td><a href="../Configuration/Config-Builder.md#bg-source">Viki - KŞ kaynağı</a></td>
+ <td><a href="../Configuration/Config-Builder.html#bg-source">Viki - KŞ kaynağı</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
@@ -92,7 +92,7 @@
  <td><strong>BYODA</strong></td>
  <td>Kendi Dexcom Uygulamanızı oluşturun - sensör verilerini okumak için kendi Dexcom Uygulamanızı oluşturmanın özel bir yolu</td>
  <td>&nbsp;</td>
- <td><a href="../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
+ <td><a href="../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
 </tr>
 <tr>
  <td><strong>KYAŞ</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>KANÜL</strong></td>
  <td>başlangıç ​​ekranında kanül değişim durumu ekranı</td>
  <td>Pil / Rezeruar / Sensör</td>
- <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -116,7 +116,7 @@
  <td><strong>Kapalı Döngü</strong></td>
  <td>kapalı döngü sistemleri, bir algoritmaya dayalı olarak, kullanıcı onayına ihtiyaç duymadan bazal iletimde otomatik ayarlamalar yapar</td>
  <td>Açık Döngü</td>
- <td><a href="../Configuration/Config-Builder.md#closed-loop">Viki kapalı döngü</a></td>
+ <td><a href="../Configuration/Config-Builder.html#closed-loop">Viki kapalı döngü</a></td>
 </tr>
 <tr>
  <td><strong>AKRB Aktif Karbonhidrat</strong></td>
@@ -128,31 +128,31 @@
  <td><strong>İES (DIA) İnsülin etki süresi</strong></td>
  <td>insülin etki süresi</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.md#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST (YSU)</strong></td>
  <td>yaz saati uygulaması</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.md#time-adjustment-daylight-savings-time-dst">Viki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Viki DST</a></td>
 </tr>
 <tr>
  <td><strong>yKarb</strong></td>
  <td>"yayma karbonhidratlar" - karbonhidratlar birkaç saate bölünür (çok fazla yağ/protein)<br>düzenli pompa tedavisinden bildiğiniz yayma boluslar, döngü sırasında pek bir anlam ifade etmez</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.md#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
  <td>anlık glikoz monitörü (Freestyle Libre)</td>
  <td>CGM</td>
- <td><a href="../Configuration/BG-Source.md">Viki - KŞ kaynağı</a></td>
+ <td><a href="../Configuration/BG-Source.html">Viki - KŞ kaynağı</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
  <td>git bizim bağlamımızda burada, oluşturma işlemi için esas olarak Github'dan AndrdoidAPS kaynaklarını indirme aracıdır. Özellikle ekipler için bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemidir.<br>-> APK güncellemeleri için gereklidir</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.md">Viki - APK güncellemesi</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Viki - APK güncellemesi</a></td>
 </tr>
 <tr>
  <td><strong>GitHub</strong></td>
@@ -193,26 +193,26 @@
 <tr>
  <td><strong>LGS</strong></td>
  <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca AİNS negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
- <td><a href="../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">görev 6</a></td>
+ <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">görev 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>LineageOS</strong></td>
  <td>akıllı telefonlar vb. için ücretsiz ve açık kaynaklı işletim sistemi<br>Android 8.1 (Oreo) işletim sistemi olmayan akıllı telefonlar için alternatif işletim sistemi<br>(Accu-Chek Combo kullanırken)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.md#hardware-requirements">Viki - Combo pompa</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Viki - Combo pompa</a></td>
 </tr>
 <tr>
  <td><strong>Günlük dosyaları</strong></td>
  <td>tüm AAPS eylemlerinin kaydı (sorun giderme ve hata ayıklama için kullanışlıdır)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.md#accessing-logfiles">Viki - Günlük dosyaları</a></td>
+ <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Viki - Günlük dosyaları</a></td>
 </tr>
 <tr>
  <td><strong>makIOB</strong></td>
  <td>güvenlik özelliği -AAPS maksimum toplam AİNS (aktif insülini) geçemez</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -224,7 +224,7 @@
  <td><strong>min_5m_carbimpact</strong></td>
  <td>güvenlik özelliği - karbonhidrat emiliminin kan reaksiyonlarınıza göre dinamik olarak çalışamadığı zamanlarda varsayılan karbonhidrat düşüşü</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.md#absorption-settings">Viki - Konfigürasyon ayarları</a></td>
+ <td><a href="../Configuration/Config-Builder.html#absorption-settings">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
@@ -242,13 +242,13 @@
  <td><strong>NS Client (Nightscout İstemcisi)</strong></td>
  <td>Nightscout sitenize bağlanmak için AAPS'in bir parçası</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.md#troubleshooting-nsclient">Viki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Viki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Görevler</strong></td>
  <td>AAPS içinde açık döngüden kapalı döngüye adım adım rehberlik eden öğrenme programı</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.md">Viki - görevler</a></td>
+ <td><a href="../Usage/Objectives.html">Viki - görevler</a></td>
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
@@ -260,49 +260,49 @@
  <td><strong>Açık Döngü</strong></td>
  <td>sistem, uygulamada manuel olarak onaylanması gereken önerilen ayarlamaları önerecektir</td>
  <td>Kapalı Döngü</td>
- <td><a href="../Configuration/Config-Builder.md#open-loop">Viki - Konfigürasyon ayarları</a></td>
+ <td><a href="../Configuration/Config-Builder.html#open-loop">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>Oref0 / Oref1</strong></td>
  <td>duyarlılık algılama<br>"referans tasarım uygulaması sürüm 0/1" - OpenAPS'in arkasındaki temel algoritma</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.md#sensitivity-detection">Viki - duyarlılık algılama</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Viki - duyarlılık algılama</a></td>
 </tr>
 <tr>
  <td><strong>Tepe zamanı</strong></td>
  <td>verilen insülinin maksimum etki süresi</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.md#insulin">Viki - Konfigürasyon ayarları</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Viki - Konfigürasyon ayarları</a></td>
 </tr>
 <tr>
  <td><strong>PG</strong></td>
  <td>pompa geçmişi - buna AndroidAPS ana ekranının sağ tarafında bulunan 3 noktalı menüde bulunan tedavilerden erişebilirsiniz</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.md#treatment">Ekran görüntüleri</a></td>
+ <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>Tahminler</strong></td>
  <td>farklı hesaplamalara dayalı gelecekteki KŞ için tahminler</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.md#overview-tab">Viki - tahmin çizgileri</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Viki - tahmin çizgileri</a></td>
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
  <td>temel tedavi ayarları (bazal oran, İES, KİO, İDF, KŞ hedefi)<br>AndroidAPS v3 yalnızca yerel profilleri destekler, ancak Nightscout profilleri AndroidAPS'ye kopyalanabilir (senkronize edilebilir)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.md#profile">Viki - profil</a></td>
+ <td><a href="../Configuration/Config-Builder.html#profile">Viki - profil</a></td>
 </tr>
 <tr>
  <td><strong>Profil değiştir</strong></td>
  <td>(geçici) kullanılan profil değişikliği veya profilde yüzde artış/azalma</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.md">Viki - profil değiştir</a></td>
+ <td><a href="../Usage/Profiles.html">Viki - profil değiştir</a></td>
 </tr>
 <tr>
  <td><strong>REZ</strong></td>
  <td>giriş ekranda durum ışığı- gecikmiş rezervuar değişikliği</td>
  <td>Pil / Rezeruar / Sensör</td>
- <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>giriş ekranında sensör durum ışığı</td>
  <td>Pil / Rezeruar / Kanül</td>
- <td><a href="../Configuration/Preferences.md#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.md">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Duyarlılık algılaması</strong></td>
@@ -332,13 +332,13 @@
  <td><strong>Sensör gürültüsü</strong></td>
  <td>"atlama" değerlerine yol açan kararsız CGM okumaları</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md#smoothing-blood-glucose-data">Viki - sensör gürültüsü</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Viki - sensör gürültüsü</a></td>
 </tr>
 <tr>
  <td><strong>SMB</strong></td>
  <td>daha hızlı KŞ ayarı için gelişmiş özellik<br> süper mikro bolus</td>
  <td>UAM</td>
- <td><a href="../Usage/Open-APS-features.md#super-micro-bolus-smb">Viki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Viki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>Süper bolus</strong></td>
@@ -368,13 +368,13 @@
  <td><strong>TT (Geçici Hedef)</strong></td>
  <td>geçici hedef<br>KŞ hedefinde (aralık) geçici artış/düşüş ör. yemek veya spor aktiviteleri için</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.md#temp-targets">Viki - geçici hedefler</a></td>
+ <td><a href="../Usage/temptarget.html#temp-targets">Viki - geçici hedefler</a></td>
 </tr>
 <tr>
  <td><strong>UAM</strong></td>
  <td>bildirilmemiş öğünler - öğün, adrenalin veya diğer etkilerden dolayı glikoz seviyelerinde önemli bir artışın tespiti ve bunu SMB ile ayarlamaya çalışmak</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.md?highlight=uam#super-micro-bolus-smb">Viki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Viki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>Sanal pompa</strong></td>
@@ -386,7 +386,7 @@
  <td><strong>Akıllı telefon Duvar kağıdı</strong></td>
  <td>AndroidAPS arka plan resmi</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.md#phone-background">telefon sayfasına bak</a></td>
+ <td><a href="../Getting-Started/Phones.html#phone-background">telefon sayfasına bak</a></td>
 </tr>
 <tr>
  <td><strong>xDrip / xDrip+</strong></td>

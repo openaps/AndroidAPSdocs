@@ -1,6 +1,6 @@
 # Profilio pagalbininkas
 
-Profilio pagalbininkas siūlo dvi funkcijas:
+Profile helper offers two functions:
 
 1. Rasti profilį vaikams
 2. Palyginti du profilius arba profilio pakeitimus, kad būtų galima klonuoti naują profilį
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Ekrano viršuje paspauskite mygtuką "PALYGINTI PROFILIUS".
 9. Bus parodytas dviejų koreguotų profilių palyginimas.
 
+(clone-profile)=
 ## Profilio klonavimas
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.

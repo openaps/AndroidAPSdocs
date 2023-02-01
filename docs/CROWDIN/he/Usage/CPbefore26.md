@@ -1,6 +1,6 @@
 # Careportal (discontinued)
 
-פורטל הטיפולים שיכפל את הפונקציות שנמצאות במסך נייטסקאוט תחת הסמל "+" המאפשר להוסיף הערות לרשומותיכם. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. But careportal did not issue any commands to the pump! So, if a bolus was added using this screen it simply made a note of this on your Nightscout record, the pump wasn’t instructed to deliver a bolus. This led to a lot of misunderstandings.
 
 The code originally used to add offline support for careportal did not harmonize with the development of AAPS and was really blocking further coding. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 

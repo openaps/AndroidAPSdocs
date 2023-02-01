@@ -1,6 +1,8 @@
+(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Sıkışıp kaldim; Ne yapabilirim? Kime sorabilirim?
 
-Bu proje gönüllü çalışmaya dayanmaktadır, bu nedenle zamanlarını ve becerilerini bu kadar nazikçe bağışlayanlara fazladan çalışmadan kaçınmak için bazı kurallar uygulanır:
+This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * seviye 1: Wiki'yi okuyun - şimdi size yardımcı olacak bir arama fonksiyonumuz var!
 * seviye 2: Facebook grubunda arama yapın, henüz bir yanıt yoksa sorunuzu [AndroidAPS Kullanıcıları Facebook grubunda](https://www.facebook.com/groups/1900195340201874/) sorun
@@ -8,11 +10,11 @@ Bu proje gönüllü çalışmaya dayanmaktadır, bu nedenle zamanlarını ve bec
 * 4. düzey: Bir [Hata](https://github.com/nightscout/AndroidAPS/issues) oluşturun ve [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) ekleyin
 * seviye 5: e-posta *developers@androidaps.org* (yalnızca genel bir kanala girmemesi gereken kişisel veriler söz konusuysa ve sorunlarınız diğer seviyelerde çözülmediyse)
 
-CGM kaynaklarıyla ilgili destek için lütfen söz konusu sistem için Facebook gruplarını veya discord kanallarını kullanın (örn. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 serisi yükleyici](https://www.facebook.com/groups/NightscoutForMedtronic/)) veya Nightscout desteği [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) kullanın. Oradaki kullanıcılar, burada farklı sistemler kullanan insanlardan daha fazla uzmanlığa sahip olacaklardır.
+For support on CGM sources please use the Facebook groups or discord channels for that specific system (e.g. [xdrip](https://www.facebook.com/groups/xDripG5/), [600 series uploader](https://www.facebook.com/groups/NightscoutForMedtronic/)) or support on Nightscout use [CGMintheCloud](https://www.facebook.com/groups/cgminthecloud/) as the users there will have a greater level of expertise than the people here who all use different systems.
 
 ## Facebook'ta AndroidAPS kullanıcı grubuna katılmayı unutmayın!
 
-Ana [AndroidAPS Facebook grubuna](https://www.facebook.com/groups/1900195340201874/) katılın. Algoritmayla ilgili tüm sorularınızı, Android Studio'da ve APK'yı oluşturmada yaşadığınız tüm kurulum sorunlarını, uygulamanın kullanımıyla ilgili tüm sorularınızı ve uygulamadan en iyi şekilde nasıl yararlanabileceğinizle ilgili ipuçlarını buraya gönderebilirsiniz. Ayrıca [AAPSCombo](https://www.facebook.com/groups/127507891261169/) Combo pompa kullanıcıları için biraz daha özel bir kuruluma sahip bir grup var.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
 ## İngilizce diğer kaynaklar
 

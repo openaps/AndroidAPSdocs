@@ -1,8 +1,10 @@
 # Nightscout
 
+(security-considerations)=
+
 ## Consideraciones de Seguridad
 
-Además de informar Nightscout también se puede utilizar para controlar AAPS. Por ejemplo, puede establecer objetivos temporales o añadir futuros carbohidratos. Esta información será recogida por la AAPS y actuará de forma correspondiente. Por lo tanto, vale la pena pensar en asegurar el sitio web de Nightscout.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Ajustes de Nightscout
 
@@ -10,18 +12,20 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### Ajustes en AndroidAPS
 
-Sólo hay una función de carga NS (sin sincronización) en los valores de AAPS. Al hacerlo, AAPS no recogerá los cambios realizados en Nightscout, tales como objetivos temporales o futuros carbohidratos.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Toca el menú de 3 puntos en la esquina superior derecha en la pantalla de inicio de AAPS.
 * Seleccione "preferencias".
 * Desplácese hacia abajo y toque "Configuración avanzada".
 * Activar "sólo carga de NS
 
-![Nightscout solo cargar](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Ajustes de seguridad adicionales
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(manual-nightscout-setup)=
 
 ## Configuración manual de Nightscout
 
@@ -51,7 +55,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Beneficios**
+**Benefits**
 
 * Puede instalar Nightscout con un par de clics y usarlo directamente. 
 * Reducción del trabajo manual mientras Martin trata de automatizar la administración.

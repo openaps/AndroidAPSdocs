@@ -8,6 +8,12 @@ Tato aplikace NEPOUŽÍVÁ umělou inteligenci, která se sama učí. Místo toh
 
 Aplikace není k dispozici v Google Play - z právních důvodů si ji musíte sami sestavit ze zdrojového kódu.
 
+:::{admonition} Ask for help - Writing Docs
+:class: note
+
+Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
+:::
+
 ## How to read the documentation?
 
 We have provided this subsection of the documentation especially for those who are new to concept of Do-It-Yourself-APS (Artificial-Pancreas-Systems) in order to best show how to get acquainted with the information we consider to be the most important, especially in terms of understanding the reasons behind the "limits" set in place when you are first beginning your AAPS journey. These safety limits have been developed over many years by observations of the inadvertent mistakes that new users are most likely to make when first learning to set up, build, and then successfully loop with AndroidAPS - as most often those mistakes occur simply because the user was so excited to get started using the system that they may have forgotten to sit down and dedicate the time needed to understand the information within this documentation thoroughly. We have all been there!
@@ -36,22 +42,80 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AndroidA
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
-:::{admonition} Ask for help
+:::{admonition} Ask for help - Translators Neeeded!!!
 :class: note
 
+The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
+
+The documentation process is explained [here](translations.md).
+
+If your brwoser will not display all icons in once please press refresh. Theses are a lot of static images the browser requests from the internet. The badges are generated with new status every hour.
+
+(translation-help-needed)= State of the **app** translations per language (country code, percentage translation, percentage proofreading).
+| Language | Translated                                                                                                                                                                                                                              | Proofread                                                                                                                                                                                                                              |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| AF       | ![af translation](https://img.shields.io/badge/dynamic/json?color=blue&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![af proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=af&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| BG       | ![bg translation](https://img.shields.io/badge/dynamic/json?color=blue&label=bg&style=flat&logo=crowdin&query=%24.progress.1.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![bg proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=bg&style=flat&logo=crowdin&query=%24.progress.1.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| CA       | ![ca translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ca&style=flat&logo=crowdin&query=%24.progress.2.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![ca proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ca&style=flat&logo=crowdin&query=%24.progress.2.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| CS       | ![cs translation](https://img.shields.io/badge/dynamic/json?color=blue&label=cs&style=flat&logo=crowdin&query=%24.progress.3.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![cs proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=cs&style=flat&logo=crowdin&query=%24.progress.3.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| DA       | ![da translation](https://img.shields.io/badge/dynamic/json?color=blue&label=da&style=flat&logo=crowdin&query=%24.progress.4.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![da proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=da&style=flat&logo=crowdin&query=%24.progress.4.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| DE       | ![de translation](https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=flat&logo=crowdin&query=%24.progress.5.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![de proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=de&style=flat&logo=crowdin&query=%24.progress.5.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| EL       | ![el translation](https://img.shields.io/badge/dynamic/json?color=blue&label=el&style=flat&logo=crowdin&query=%24.progress.6.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![el proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=el&style=flat&logo=crowdin&query=%24.progress.6.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| es-ES    | ![es-ES translation](https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=flat&logo=crowdin&query=%24.progress.7.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)  | ![es-ES proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=es-ES&style=flat&logo=crowdin&query=%24.progress.7.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)  |
+| FR       | ![fr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=flat&logo=crowdin&query=%24.progress.8.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        | ![fr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=fr&style=flat&logo=crowdin&query=%24.progress.8.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)        |
+| ga-IE    | ![ga-IE translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ga-IE&style=flat&logo=crowdin&query=%24.progress.9.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)  | ![ga-IE proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ga-IE&style=flat&logo=crowdin&query=%24.progress.9.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)  |
+| HE       | ![he translation](https://img.shields.io/badge/dynamic/json?color=blue&label=he&style=flat&logo=crowdin&query=%24.progress.10.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![he proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=he&style=flat&logo=crowdin&query=%24.progress.10.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| HR       | ![hr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=hr&style=flat&logo=crowdin&query=%24.progress.11.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![hr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=hr&style=flat&logo=crowdin&query=%24.progress.11.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| HU       | ![hu translation](https://img.shields.io/badge/dynamic/json?color=blue&label=hu&style=flat&logo=crowdin&query=%24.progress.12.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![hu proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=hu&style=flat&logo=crowdin&query=%24.progress.12.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| IT       | ![it translation](https://img.shields.io/badge/dynamic/json?color=blue&label=it&style=flat&logo=crowdin&query=%24.progress.13.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![it proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=it&style=flat&logo=crowdin&query=%24.progress.13.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| JA       | ![ja translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ja&style=flat&logo=crowdin&query=%24.progress.14.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![ja proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ja&style=flat&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| KO       | ![ko translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=flat&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![ko proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ko&style=flat&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| LT       | ![lt translation](https://img.shields.io/badge/dynamic/json?color=blue&label=lt&style=flat&logo=crowdin&query=%24.progress.16.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![lt proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=lt&style=flat&logo=crowdin&query=%24.progress.16.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| NL       | ![nl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=nl&style=flat&logo=crowdin&query=%24.progress.17.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![nl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=nl&style=flat&logo=crowdin&query=%24.progress.17.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| NO       | ![no translation](https://img.shields.io/badge/dynamic/json?color=blue&label=no&style=flat&logo=crowdin&query=%24.progress.18.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![no proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=no&style=flat&logo=crowdin&query=%24.progress.18.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| PL       | ![pl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pl&style=flat&logo=crowdin&query=%24.progress.19.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![pl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pl&style=flat&logo=crowdin&query=%24.progress.19.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| pt-BR    | ![pt-BR translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-BR&style=flat&logo=crowdin&query=%24.progress.20.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![pt-BR proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-BR&style=flat&logo=crowdin&query=%24.progress.20.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
+| pt-PT    | ![pt-PT translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=flat&logo=crowdin&query=%24.progress.21.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![pt-PT proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-PT&style=flat&logo=crowdin&query=%24.progress.21.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
+| RO       | ![ro translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ro&style=flat&logo=crowdin&query=%24.progress.22.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![ro proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ro&style=flat&logo=crowdin&query=%24.progress.22.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| RU       | ![ru translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=flat&logo=crowdin&query=%24.progress.23.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![ru proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ru&style=flat&logo=crowdin&query=%24.progress.23.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| SK       | ![sk translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sk&style=flat&logo=crowdin&query=%24.progress.24.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![sk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sk&style=flat&logo=crowdin&query=%24.progress.24.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| sr-CS    | ![sr-CS translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sr-CS&style=flat&logo=crowdin&query=%24.progress.25.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![sr-CS proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sr-CS&style=flat&logo=crowdin&query=%24.progress.25.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
+| sv-SE    | ![sv-SE translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sv-SE&style=flat&logo=crowdin&query=%24.progress.26.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![sv-SE proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sv-SE&style=flat&logo=crowdin&query=%24.progress.26.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
+| TR       | ![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=flat&logo=crowdin&query=%24.progress.27.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       | ![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=flat&logo=crowdin&query=%24.progress.27.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json)       |
+| zh-CN    | ![zh-CN translation](https://img.shields.io/badge/dynamic/json?color=blue&label=zh-CN&style=flat&logo=crowdin&query=%24.progress.28.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) | ![zh-CN proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=zh-CN&style=flat&logo=crowdin&query=%24.progress.28.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-309752.json) |
+
+State of the **documentation** translations per language (country code, percentage translation, percentage proofreading).
+| Language | Translated                                                                                                                                                                                                                              | Proofread                                                                                                                                                                                                                              |
+| -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CS       | ![cs translation](https://img.shields.io/badge/dynamic/json?color=blue&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![cs proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=cs&style=flat&logo=crowdin&query=%24.progress.0.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| DE       | ![de translation](https://img.shields.io/badge/dynamic/json?color=blue&label=de&style=flat&logo=crowdin&query=%24.progress.1.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![de proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=de&style=flat&logo=crowdin&query=%24.progress.1.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| EL       | ![el translation](https://img.shields.io/badge/dynamic/json?color=blue&label=el&style=flat&logo=crowdin&query=%24.progress.2.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![el proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=el&style=flat&logo=crowdin&query=%24.progress.2.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| ES       | ![es-ES translation](https://img.shields.io/badge/dynamic/json?color=blue&label=es-ES&style=flat&logo=crowdin&query=%24.progress.3.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)  | ![es-ES proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=es-ES&style=flat&logo=crowdin&query=%24.progress.3.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)  |
+| FR       | ![fr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=fr&style=flat&logo=crowdin&query=%24.progress.4.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![fr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=fr&style=flat&logo=crowdin&query=%24.progress.4.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| HE       | ![he translation](https://img.shields.io/badge/dynamic/json?color=blue&label=he&style=flat&logo=crowdin&query=%24.progress.5.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![he proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=he&style=flat&logo=crowdin&query=%24.progress.5.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| KO       | ![ko translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ko&style=flat&logo=crowdin&query=%24.progress.6.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![ko proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ko&style=flat&logo=crowdin&query=%24.progress.6.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| LT       | ![lt translation](https://img.shields.io/badge/dynamic/json?color=blue&label=lt&style=flat&logo=crowdin&query=%24.progress.7.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![lt proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=lt&style=flat&logo=crowdin&query=%24.progress.7.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| NL       | ![nl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=nl&style=flat&logo=crowdin&query=%24.progress.8.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![nl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=nl&style=flat&logo=crowdin&query=%24.progress.8.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| PL       | ![pl translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pl&style=flat&logo=crowdin&query=%24.progress.9.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        | ![pl proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pl&style=flat&logo=crowdin&query=%24.progress.9.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)        |
+| PT       | ![pt-BR translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-BR&style=flat&logo=crowdin&query=%24.progress.10.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![pt-BR proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-BR&style=flat&logo=crowdin&query=%24.progress.10.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
+| pt-BT    | ![pt-PT translation](https://img.shields.io/badge/dynamic/json?color=blue&label=pt-PT&style=flat&logo=crowdin&query=%24.progress.11.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) | ![pt-PT proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=pt-PT&style=flat&logo=crowdin&query=%24.progress.11.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json) |
+| RO       | ![ro translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ro&style=flat&logo=crowdin&query=%24.progress.12.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![ro proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ro&style=flat&logo=crowdin&query=%24.progress.12.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
+| RU       | ![ru translation](https://img.shields.io/badge/dynamic/json?color=blue&label=ru&style=flat&logo=crowdin&query=%24.progress.13.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![ru proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=ru&style=flat&logo=crowdin&query=%24.progress.13.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
+| SK       | ![sk translation](https://img.shields.io/badge/dynamic/json?color=blue&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![sk proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=sk&style=flat&logo=crowdin&query=%24.progress.14.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
+| TR       | ![tr translation](https://img.shields.io/badge/dynamic/json?color=blue&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.translationProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       | ![tr proofreading](https://img.shields.io/badge/dynamic/json?color=green&label=tr&style=flat&logo=crowdin&query=%24.progress.15.data.approvalProgress&url=https%3A%2F%2Fbadges.awesome-crowdin.com%2Fstats-13588158-310610.json)       |
+
+=======
 Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
 :::
 
 :::{toctree}
 :caption: Change language
-:titlesonly: true
 
 Change language <./changelanguage.md>
 :::
 
 :::{toctree}
 :caption: Getting started
-:titlesonly: true
 
 Safety first <./Getting-Started/Safety-first.md>
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
@@ -59,9 +123,10 @@ What is a closed loop system with AndroidAPS <./Getting-Started/WhatisAndroidAPS
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
 :::
 
+(what-do-i-need)=
+
 :::{toctree}
 :caption: What do I need?
-:titlesonly: true
 
 CGM/FGM choices <./Configuration/BG-Source.md>
 Pump choices <./Getting-Started/Pump-Choices.md>
@@ -70,7 +135,6 @@ Module <./Module/module.md>
 
 :::{toctree}
 :caption: How to Install AndroidAPS
-:titlesonly: true
 
 Building the APK <./Installing-AndroidAPS/Building-APK.md>
 Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
@@ -82,9 +146,10 @@ Release notes <./Installing-AndroidAPS/Releasenotes.md>
 Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 :::
 
+(component-setup)=
+
 :::{toctree}
 :caption: Component Setup
-:titlesonly: true
 
 CGM/FGM <./Configuration/BG-Source.md>
 xDrip Settings <./Configuration/xdrip.md>
@@ -98,7 +163,6 @@ Smartwatch  <./Hardware/Smartwatch.md>
 
 :::{toctree}
 :caption: Configuration
-:titlesonly: true
 
 Config builder <./Configuration/Config-Builder.md>
 Preferences <./Configuration/Preferences.md>
@@ -106,7 +170,6 @@ Preferences <./Configuration/Preferences.md>
 
 :::{toctree}
 :caption: AndroidAPS Usage
-:titlesonly: true
 
 AndroidAPS screens <./Getting-Started/Screenshots.md>
 Objectives <./Usage/Objectives.md>
@@ -125,7 +188,6 @@ Android auto <./Usage/Android-auto.md>
 
 :::{toctree}
 :caption: General Hints
-:titlesonly: true
 
 Crossing timezones with pumps <./Usage/Timezone-traveling.md>
 Accessing logfiles <./Usage/Accessing-logfiles.md>
@@ -136,7 +198,6 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 :::{toctree}
 :caption: AndroidAPS for children
-:titlesonly: true
 
 Remote monitoring <./Children/Children.md>
 SMS commands <./Children/SMS-Commands.md>
@@ -145,7 +206,6 @@ Profile helper <./Configuration/profilehelper.md>
 
 :::{toctree}
 :caption: Troubleshooting
-:titlesonly: true
 
 Troubleshooting <./Usage/troubleshooting.md>
 Nightscout client <./Usage/Troubleshooting-NSClient.md>
@@ -153,21 +213,18 @@ Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 :::{toctree}
 :caption: FAQ
-:titlesonly: true
 
 FAQ <./Getting-Started/FAQ.md>
 :::
 
 :::{toctree}
 :caption: Glossary
-:titlesonly: true
 
 Glossary <./Getting-Started/Glossary.md>
 :::
 
 :::{toctree}
 :caption: Where to go for help
-:titlesonly: true
 
 Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
 Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
@@ -176,14 +233,12 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
 :::{toctree}
 :caption: For Clinicians
-:titlesonly: true
 
 For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 :::
 
 :::{toctree}
 :caption: How to help
-:titlesonly: true
 
 How to help <./Getting-Started/How-can-I-help.md>
 How to translate the app and docs <./translations.md>
@@ -192,7 +247,6 @@ How to edit the docs <./make-a-PR.md>
 
 :::{toctree}
 :caption: Sandbox
-:titlesonly: true
 
 Sandbox <./Sandbox/sandbox1.md>
 :::

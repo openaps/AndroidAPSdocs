@@ -4,11 +4,13 @@
 
 Δεν υπάρχει πρόβλημα με την αλλαγή ζώνης ώρας στο τηλέφωνο, επειδή η αντλία δεν χρησιμοποιεί ιστορικό
 
+(danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **Αυτό σημαίνει ότι αν αλλάξετε απλά τη ζώνη ώρας στο τηλέφωνο, οι εγγραφές θα διαβαστούν με διαφορετική ζώνη ώρας και θα διπλασιαστούν.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-Για να αποφευχθεί αυτό, υπάρχουν δύο δυνατότητες:
+To avoid this there are two possibilities:
 
 ### Επιλογή 1: Διατήρηση του προφίλ ώρας και χρονικής μετατόπισης
 
@@ -30,7 +32,7 @@ These pumps need a special care because AndroidAPS is using history from the pum
 
 * Απενεργοποιήστε την "Αυτόματη ημερομηνία και ώρα" στις ρυθμίσεις του τηλεφώνου σας (αλλαγή σε χειροκίνητης ζώνη ώρας)
 
-Όταν βγείτε από το αεροπλάνο:
+When get out of plane:
 
 * κλείστε την αντλία
 * αλλάξτε ώρα στο τηλέφωνο
@@ -40,21 +42,27 @@ These pumps need a special care because AndroidAPS is using history from the pum
 * ενεργοποιήστε το τηλέφωνο
 * αφήστε το τηλέφωνό σας να συνδεθεί στην αντλία και ρυθμίσετε το χρόνο
 
+(insight)=
+
 ## Insight
 
-Ο οδηγός προσαρμόζει αυτόματα την ώρα της αντλίας στην ώρα του τηλεφώνου.
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-Το Insight καταγράφει επίσης τις καταχωρήσεις ιστορικού, στις οποίες η χρονική στιγμή άλλαξε και από ποιο (παλιό) χρόνο στον (καινούργιο) χρόνο. Επομένως, ο σωστός χρόνος μπορεί να καθοριστεί στο AAPS παρά την αλλαγή ώρας.
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Μπορεί να προκαλέσει ανακρίβειες στα TDDs. Αλλά δεν πρέπει να είναι πρόβλημα.
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Έτσι, ο χρήστης Insight δεν χρειάζεται να ανησυχεί για τις αλλαγές ζώνης ώρας και τις αλλαγές ώρας. Υπάρχει μία εξαίρεση στο κανόνα αυτό: Η αντλία Insight διαθέτει μια μικρή εσωτερική μπαταρία για να τροφοδοτεί χρόνο κτλ. ενώ αλλάζετε την "πραγματική" μπαταρία. Αν πάρει πολλή ώρα η αλλαγή της μπαταρίας, η εσωτερική μπαταρία εξαντλείται, το ρολόι επαναφέρεται και σας ζητείται να εισάγετε την ώρα και την ημερομηνία μετά την εισαγωγή μιας νέας μπαταρίας. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 # Ρύθμιση χρόνου και εξοικονόμηση χρόνου κατά τη διάρκεια της ημέρας(DST)
 
-Ανάλογα με την αντλία και τη ρύθμιση CGM, τα άλματα στο χρόνο μπορεί να οδηγήσουν σε προβλήματα. Με το Combo π.χ. το ιστορικό της αντλίας διαβάζεται ξανά και οδηγεί σε διπλές εγγραφές. Επομένως, κάντε την προσαρμογή ενώ είστε ξύπνιος και όχι κατά τη διάρκεια της νύχτας.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Εάν χρησιμοποιείτε bolus με την αριθμομηχανή, παρακαλούμε μην χρησιμοποιείτε COB και IOB, εκτός αν βεβαιωθείτε ότι είναι απολύτως σωστοί - καλύτερα να μην τις χρησιμοποιείτε για μερικές ώρες μετά τον διακόπτη DST.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+
+(accu-chek-combo)=
 
 ## Accu-Chek Combo
 

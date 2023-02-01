@@ -1,3 +1,5 @@
+(profile-switch)=
+
 # Přepínání profilu
 
 Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
@@ -15,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-V rámci „Přepnutí profilu“ můžete ještě upravit následující dva parametry (což bývalo součástí Cirkadiánního procentuálního profilu):
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Procento
 
@@ -28,9 +30,11 @@ V rámci „Přepnutí profilu“ můžete ještě upravit následující dva pa
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(time-shift)=
+
 ## Posun času
 
-![Profilový procentní podíl a časový posun](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
@@ -43,9 +47,11 @@ V rámci „Přepnutí profilu“ můžete ještě upravit následující dva pa
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![Směry posunu profilu v čase](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Tento mechanismus snímkování profilu umožňuje mnohem přesnější výpočty z minulosti a také umožňuje sledovat změny profilu.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## Řešení chyb profilů
 

@@ -1,6 +1,6 @@
 # Careportal (bestaat niet meer)
 
-De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kon de Careportal gebruiken om dingen in te noteren. Maar careportal gaf geen commando's aan de pomp! Dus als je via de Care Portal een bolus invoerde, dan kreeg je alleen een notitie van de bolus te zien op je Nightscout grafiek. De pomp zelf gaf géén bolus. Dit was verwarrend voor veel beginnende loopers.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. Maar careportal gaf geen commando's aan de pomp! Dus als je via de Care Portal een bolus invoerde, dan kreeg je alleen een notitie van de bolus te zien op je Nightscout grafiek. De pomp zelf gaf géén bolus. Dit was verwarrend voor veel beginnende loopers.
 
 De code die ervoor zorgde dat de Careportal in AndroidAPS offline kon worden gebruikt, hield bepaalde ontwikkelingen in de AndroidAPS code tegen. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 

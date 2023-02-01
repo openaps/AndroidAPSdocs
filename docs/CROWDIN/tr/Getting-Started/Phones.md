@@ -1,3 +1,5 @@
+(list-of-tested-phones)=
+
 # List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
 
 Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AndroidAPS/OpenAPS ecosystem!
@@ -15,6 +17,8 @@ With CRTL-F you can search in the text of the Google sheet. The sheet is write p
 After you fill in the form data the maintainer will check the data and approve it for publishing!
 
 Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+
+(phone-background)=
 
 # Telefon Arka Planı
 

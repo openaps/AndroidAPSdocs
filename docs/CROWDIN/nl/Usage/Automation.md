@@ -18,6 +18,7 @@ Zorg ervoor dat je goed begrijpt hoe automatisering werkt voordat je jouw eerste
 
 Als je een automatisering wilt instellen, moet je deze een titel geven, en ten minste één voorwaarde en één actie selecteren.
 
+(important-note)=
 ### Belangrijke opmerking
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Automatiseringsregels sorteren
 
 Om jouw automatiseringsregels te sorteren, houd je de vier-streepjes-knop aan de rechterkant van het scherm ingedrukt en sleep je de regel omhoog of omlaag.
@@ -106,6 +108,7 @@ Om een automatiseringsregel te verwijderen, klik op het prullenbak-icoon.
 :alt: Automatiseringsregels verwijderen
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.

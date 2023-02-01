@@ -610,7 +610,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Podu Doldur</strong> ekranı görüntülenir. Yeni bir podu en az 80 birim insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave12 ile 15 ünite kullanacağını lütfen göz önünde bulundurun.
+      <strong x-id="1">Podu Doldur</strong> ekranı görüntülenir. Yeni bir podu en az 80 ünite insülinle doldurun ve podun kullanıma hazır olduğunu belirten iki bip sesini dinleyin. 3 gün boyunca ihtiyacınız olan toplam insülin miktarını hesaplarken, pod hazırlamanın ilave12 ile 15 ünite kullanacağını lütfen göz önünde bulundurun.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -777,7 +777,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
      </p>
      
      <p spaces-before="0">
-       <strong x-id="1">IF deactivation fails</strong> and you do not receive a confirmation beep, you may receive a <strong x-id="1">No response from RileyLink</strong> or <strong x-id="1">No response from Pod message</strong>. Please click on the <strong x-id="1">Retry (1)</strong> button to attempt deactivation again. If deactivation continues to fail, please click on the <strong x-id="1">Discard Pod (2)</strong> button to discard the Pod. Etkin oturum devre dışı bırakıldığı için artık podunuzu kaldırabilirsiniz. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the <strong x-id="1">Discard Pod (2)</strong> button will not silence it.
+       <strong x-id="1">IF deactivation fails</strong> and you do not receive a confirmation beep, you may receive a <strong x-id="1">No response from RileyLink</strong> or <strong x-id="1">No response from Pod message</strong>. Please click on the <strong x-id="1">Retry (1)</strong> button to attempt deactivation again. If deactivation continues to fail, please click on the <strong x-id="1">Discard Pod (2)</strong> button to discard the Pod. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the <strong x-id="1">Discard Pod (2)</strong> button will not silence it.
      </p>
      
      <blockquote spaces-before="3">
@@ -790,7 +790,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
  
  <li>
    <p spaces-before="0">
-     Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Pod devre dışı ekranını görüntülemek için <strong x-id="1">İleri</strong> butonunu tıklayın. Etkin oturum devre dışı bırakıldığı için artık podunuzu kaldırabilirsiniz.
+     Başarılı bir şekilde devre dışı bırakmanın ardından yeşil bir onay işareti görünecektir. Pod devre dışı ekranını görüntülemek için <strong x-id="1">İleri</strong> butonunu tıklayın. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1723,7 +1723,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu giriş için bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
+  Ayar grupları aşağıda listelenmiştir; aşağıda açıklanan çoğu ayarı bir geçiş anahtarı aracılığıyla etkinleştirebilir veya devre dışı bırakabilirsiniz:
 </p>
 
 <p spaces-before="0">
@@ -1804,7 +1804,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Pod uyarılarının etkinleştirildiğini otomatik olarak onaylamadıkça, bildirimin reddedilmesi uyarıyı KAPATMAZ. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.</em>
+  <em x-id="3">Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.</em>
 </p>
 
 <ul>
@@ -2008,7 +2008,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   </li>
   
   <li>
-    Under the <strong x-id="1">Careportal (1)</strong> section the following 3 fields will have their <strong x-id="1">age reset</strong> to 0 days and 0 hours <strong x-id="1">after each pod change</strong>: <strong x-id="1">Insulin</strong> and <strong x-id="1">Cannula</strong>. Bu Omnipod pompasının yapılış ve çalışma şekli nedeniyle yapılır. <strong x-id="1">Pompa pili</strong> ve <strong x-id="1">insülin rezervuarı</strong>, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında geleneksel hortum kullanılmaz. <em x-id="3">Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.</em> <strong x-id="1">Pompa pil yaşı</strong> pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
+    Under the <strong x-id="1">Careportal (1)</strong> section the following 3 fields will have their <strong x-id="1">age reset</strong> to 0 days and 0 hours <strong x-id="1">after each pod change</strong>: <strong x-id="1">Insulin</strong> and <strong x-id="1">Cannula</strong>. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. <strong x-id="1">Pompa pili</strong> ve <strong x-id="1">insülin rezervuarı</strong>, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. <em x-id="3">Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.</em> <strong x-id="1">Pompa pil yaşı</strong> pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
   </li>
 </ol>
 
@@ -2087,7 +2087,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h3>
 
 <p spaces-before="0">
-  Pod'lar Pod'un kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra başarısız oluyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. A list of fault codes can be found <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">here</a> to help determine the cause.
+  Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. A list of fault codes can be found <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">here</a> to help determine the cause.
 </p>
 
 <h3 spaces-before="0">
@@ -2106,6 +2106,9 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   It is recommended that pump unreachable alerts be configured to <strong x-id="1">120 minutes</strong> by going to the top right-hand side three-dot menu, selecting <strong x-id="1">Preferences</strong>➜<strong x-id="1">Local Alerts</strong>➜<strong x-id="1">Pump unreachable threshold \[min\]</strong> and setting this to <strong x-id="1">120</strong>.
 </p>
 
+<p spaces-before="0">
+  (import-settings-from-previous-aaps)=
+</p>
 <h3 spaces-before="0">
   Önceki AAPS ayarlarını içe aktarın
 </h3>

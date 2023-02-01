@@ -14,29 +14,33 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 이것이 APK 파일 다운로드를 할 수 없는 이유입니다.
 
+(how-to-begin)=
+
 ## 어떻게 시작해야 합니까?
 
-우선, **Loop가능한 하드웨어 장치들**이 필요로 합니다:
+First of all, you have to **get loopable hardware components**:
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - [안드로이드 스마트폰](Phones.md) (아이폰은 AndroidAPS에서 지원하지 않습니다 - 아이폰을 사용하려면 Loop를 알아보세요 [iOS Loop](https://loopkit.github.io/loopdocs/)) 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-두번째로, **본인의 하드웨어를 설정해야 합니다**. [단계별 튜토리얼 설정 예시를 확인해 보세요](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-세번째로, **소프트웨어 요소들을 설정하여야 합니다**: AndroidAPS 와 CGM/FGM 소스.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-네번째로, **관리 요인에 대해 확인하기 위하여 OpenAPS 참조 설계에 관한 공부를하고이해하여야 합니다**. Closed Loop를 하기 위해 가장 기본적으로 요구되는 사항은, 당신의 Basal양과 탄수화물 비율(carb ratio)가 정확해야한다는 점입니다. Closed Loop의 모든 제안들은 당신 필요한 Basal 적정하다고 가정하고 계산됩니다. 따라서 모든 혈당 피크와 저점은 (운동, 스트레스 등) 다른 일시적인 요인들의 결과이며, 인슐린의 일시적인 조절로 관리가 가능하다고 가정합니다. 안전을 위해, Closed Loop가 조절을 하는데 제한이 있습니다. ([OpenAPS Reference Design](https://openaps.org/reference-design/)에서 최대 허용 임시Basal 양을 확인해보세요.) 이것은 당신이 잘못 설정된 Basal양을 바로잡는 용도로 Loop를 사용해서는 안된다는 것을 의미합니다. 예를 들면, 만약 당신이 식사전에 저혈당에 자주 노출된다면 Basal양을 조정할 필요한 것일 수도 있습니다. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Loop를 위한 실질적인 조언들
 
 ### 비밀번호 보호
 
-설정이 쉽게 변경되길 원치 않는다면 설정에 암호를 걸어 보호할 수 있습니다. 설정에서 "설정 비밀번호"를 선택하여 원하는 비밀번호를 입력하면 됩니다. 그 이후로는 설정에 들어갈때마다 비밀번호를 물어볼것입니다. 비밀번호 삭제를 원하면 "설정 비밀번호"를 선택한 후 모든 글자를 삭제하세요.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### 안드로이드 웨어 스마트워치
 
-Bolus를 주입하거나 설정을 변경하기 위해 안드로이드 워치앱을 사용할 계획이라면 AndroidAPS의 알림이 차단되지않은 것을 확인하여야 합니다. 알림을 통하여 확인할 수 있습니다.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### 펌프 일시중지
 
@@ -83,9 +87,11 @@ The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
+(impact)=
+
 ### 영향
 
-Too short DIA can lead to low BGs. 그리고 반대의 경우도 마찬가지입니다.
+Too short DIA can lead to low BGs. And vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -99,11 +105,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. 그리고 반대의 경우도 마찬가지입니다.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### 영향
 
-Too high basal rate can lead to low BGs. 그리고 반대의 경우도 마찬가지입니다.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -129,7 +135,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
-**예시:**
+**Example:**
 
 - BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
 - So, you want correction of 90 mg/dl (= 190 - 110).
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -272,23 +278,25 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ## 여가 활동
 
+(sports)=
+
 ### 스포츠
 
-Loop를 사용하기 전이 가졌던 오랜 운동 습관들을 고쳐야합니다. 운동시 예전과 같이 탄수화물을 섭취한다면, Closed Loop가 이를 인식하고 교정하려고 할 것입니다.
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
-따라서 당신의 체내에 탄수화물이 더 많이 있게될 것이지만, 동시에 Loop가 이에 대응하고 인슐린을 주입하게 됩니다.
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
-Loop시 아래 단계를 시도해보아야 합니다:
+When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
 - Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
 - If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
-Pre- and post-processing of these settings is important. 운동 전 미리 이러한 설정을 변경하고, 근력운동이 주는 영향도 고려하세요.
+Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. 위치 기반 자동화도 좋은 생각일 수 있지만 사전처리를 더 어렵게 할 수 있습니다.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
-프로파일 변경의 퍼센트, 활동 임시 목표 설정 그리고 변경하는 최고의 시간은 모두 개개인에 따라 다릅니다. 당신에게 적합한 설정값을 찾을때 우선 보수적으로 시작하세요 (낮은 퍼센트의 프로파일 변경과 높은 임시목표로 시작해보세요).
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### 성교
 

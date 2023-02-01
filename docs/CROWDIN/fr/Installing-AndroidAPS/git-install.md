@@ -1,4 +1,4 @@
-# Installez Git
+# Installer Git
 
 ## Windows
 
@@ -56,6 +56,7 @@
 
 - Reboot your PC to update System Environment.
 
+(check-git-settings-in-android-studio)=
 ### 4. Vérifier les paramètres de git dans Android Studio
 
 - Open Terminal window in Android Studio

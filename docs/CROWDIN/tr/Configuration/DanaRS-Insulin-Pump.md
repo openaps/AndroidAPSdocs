@@ -41,6 +41,8 @@
 * Doktorlar menüsünü kullanarak pompadaki bolus adımını 0,05 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
 * Pompada yayma bolusları etkinleştir
 
+(default-password)=
+
 ### Varsayılan parola
 
 * Pompa yazılımı v1 ve v2'ye sahip DanaRS için varsayılan parola 1234'tür.
@@ -49,6 +51,8 @@
     * Ana menüde Pompa > gözden geçir > bilgi açın. 
     * 3. numara üretim tarihidir. 
     * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AndroidAPS'e girmek için gerekli değildir.
+
+(change-password-on-pump)=
 
 ## Pompa şifresi değiştirme
 
@@ -87,13 +91,15 @@
     
     ![DanaRS Çıkış](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Dana RS'e özgü hatalar
 
 ### İnsülin iletimi sırasında hata
 
-Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) bir mesaj görecek ve bir alarm sesi duyacaksınız.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![İnsülin iletimi alarmı](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
 * Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
@@ -102,7 +108,7 @@ Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının k
 
 ## Telefon değiştirirken özel not
 
-Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Ayarları eski telefondan yeni telefona aktarın

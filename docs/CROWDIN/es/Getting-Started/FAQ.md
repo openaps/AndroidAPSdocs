@@ -14,43 +14,47 @@ Esta normativa no se limita sólo a las ventas (en el sentido de obtener dinero 
 
 Por eso no hay apks disponibles.
 
+(how-to-begin)=
+
 ## ¿Cómo empezar?
 
-En primer lugar, necesitas **obtener componentes de hardware utilizables**:
+First of all, you have to **get loopable hardware components**:
 
 - Una [bomba de insulina compatible ](./Pump-Choices.md), 
 - un [smartphone Android ](Phones.md) (Apple iOS no es compatible con AndroidAPS, puedes probar con [iOS Loop ](https://loopkit.github.io/loopdocs/)) y 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-En segundo lugar, tienes que **configurar el hardware**. Ver el ejemplo del [tutorial de configuración paso a paso](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-En tercer lugar, tienes que **configurar los componentes de software **: AndroidAPS y la fuente MCG/MFG.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-En cuarto lugar, tienes que aprender y **entender el "diseño de referencia" de OpenAPS, para comprobar los parámetros de tu tratamiento **. El principio fundamental del lazo cerrado es que tu basal y tus ratios de hidratos sean precisos. Todas las recomendaciones presuponen que tus necesidades basales están ajustadas y que cualquier pico o bajada observados vienen provocados por otros factores y que por lo tanto requieren de ajustes esporádicos (ejercicio, estrés, etc.). Los ajustes que el lazo cerrado puede realizar han sido limitados por seguridad (ver basal temporal máxima permitida en [OpenAPS Reference Design](https://openaps.org/reference-design/)), es preferible no utilizar las dosis disponibles para corregir basales mal ajustadas. Si por ejemplo usted frecuentemente esta bajo al aproximarse a una comida, entonces es probable que su basal tenga que ajustarse. Puedes usar [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) para analizar una gran cantidad de datos y que te sugiera si necesitas ajustar basales y/o ISF, y también si es necesario ajustar los ratios. O puedes probar y establecer tu basal [con el método tradicional](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## ¿Cuáles son los aspectos prácticos del lazo?
 
 ### Protección mediante contraseña
 
-Si quieres proteger tus preferencias, dirígete al "Menú de Preferencias" y selecciona "Contraseña para ajustes", luego escribe la contraseña que elijas. La próxima vez que vayas al menú de preferencias, preguntará por esa contraseña antes de poder continuar. Si más adelante quieres eliminar ésta opción, vuelve a "Contraseña para ajustes" y suprime el texto.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Relojes inteligentes Android Wear
 
-Si tienes previsto utilizar la aplicación "android wear" para suministrar bolos o cambiar configuraciones desde un smartwatch, debes asegurarte de que las notificaciones de AndroidAPS no están bloqueadas. La confirmación de la acción se realiza a través de la notificación.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Desconectando la bomba
 
-Si te quitas la bomba para ducharte, bañarte, nadar, hacer deporte u otras actividades, debes informar a AndroidAPS de que no se suministra insulina, para mantenerde forma correcta la insulina activa (IOB).
+If you take your pump off for showering, bathing, swimming, sports or other activities you must let AndroidAPS know that no insulin is delivered to keep IOB correct.
 
-La bomba puede desconectarse utilizando el icono de Estado del Lazo en la [Pantalla de Inicio de AndroidAPS](./Screenshots.md#loop-status).
+The pump can be disconnected using the Loop Status icon on the [AndroidAPS Home Screen](./Screenshots.md#loop-status).
 
 ### Las recomendaciones no se basan en lecturas aisladas del sensor
 
-Por seguridad, las recomendaciones que se hacen no se basan en una lectura del MCG, sino en un delta medio. Por lo tanto, si se pierden algunas lecturas, puede pasar un tiempo entre que se vuelvan a recibir datos y que AndroidAPS vuelva a iniciar el lazo.
+For safety, recommendations made are based on not one CGM reading but the average delta. Therefore, if you miss some readings it may take a while after getting data back before AndroidAPS kicks in looping again.
 
 ### Lecturas adicionales
 
-Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cómo funciona el lazo:
+There are several blogs with good tips to help you understand the practicalities of looping:
 
 - ['Ajustes de puesta a punto'](https://seemycgm.com/2017/10/29/fine-tuning-settings/) en 'Ver mi MCG'
 - [Por qué es importante DIA](https://seemycgm.com/2017/08/09/why-dia-matters/) Ver mi MCG
@@ -59,7 +63,7 @@ Hay varios blogs con buenos consejos y sugerencias para ayudarte a entender cóm
 
 ## ¿Qué equipo de emergencia se recomienda llevar?
 
-Tienes que llevar contigo el mismo equipo de emergencia que cualquier otra persona con DT1, con tratamiento con bomba de insulina. Para hacer lazo con AndroidAPS, se recomienda encarecidamente tener el siguiente equipo adicional contigo o cerca de tí:
+You have to have the same emergency equipment with you like every other T1D with insulin pump therapy. When looping with AndroidAPS it is strongly recommended to have the following additional equipment with or near to you:
 
 - Batería y cables para cargar el teléfono, el reloj y (si es necesario) el lector BT o dispositivo Link
 - Baterias para la bomba
@@ -83,9 +87,11 @@ The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
+(impact)=
+
 ### Impacto
 
-Too short DIA can lead to low BGs. Y viceversa.
+Too short DIA can lead to low BGs. And vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -99,11 +105,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. Y viceversa.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impacto
 
-Too high basal rate can lead to low BGs. Y viceversa.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -129,7 +135,7 @@ Be careful as this is quite often set too low. Too low means 1 U will drop BG fa
 
 **Higher ISF** (i.e. 45 instead of 35) meaning insulin drops your BG more per unit. This leads to a less aggressive / weaker correction from the loop with **less insulin**. If the ISF is too high, this can lead to high BGs.
 
-**Ejemplo:**
+**Example:**
 
 - BG is 190 mg/dl (10,5 mmol) and target is 100 mg/dl (5,6 mmol). 
 - So, you want correction of 90 mg/dl (= 190 - 110).
@@ -158,7 +164,7 @@ Assuming correct basal, you can test by checking IOB is zero and that you are in
 > 
 > Cuando se utiliza IC, la cantidad de insulina es fija y la cantidad de carbohidratos es variable. ("¿Cuántos gr de carbohidratos pueden estar cubiertos por una sola unidad de insulina?")
 > 
-> Ejemplo:
+> Example:
 > 
 > Bread unit factor (BU = 12g carbs): 2,4 U/BU -> You need 2,4 units of insulin when you eat one bread unit.
 > 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -272,23 +278,25 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ## Actividades de ocio
 
+(sports)=
+
 ### Deportes
 
-Tienes que rehacer tus viejos hábitos deportivos desde tiempos anteriores al lazo de vuelta. Si usted simplemente consume uno o más carbohidratos deportivos como antes, el sistema de circuito cerrado los reconocerá y corregirá en consecuencia.
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
-Así que usted tendría más hidratos de carbono a bordo, pero al mismo tiempo el bucle contrarrestaría y liberaría insulina.
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
-Cuando utilices lazo, debe intentar estos pasos:
+When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
 - Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
 - If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
-Pre- and post-processing of these settings is important. Realice los cambios en el tiempo antes del deporte y tenga en cuenta el efecto del relleno muscular.
+Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. La automatización basada en la ubicación también puede ser una idea, pero hace que el preproceso sea más difícil.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
-Los porcentajes del conmutador de perfil, el valor para el objetivo temporal de la actividad y el mejor tiempo para los cambios son individuales. Empiece en el lado seguro si está buscando el valor correcto para usted (empiece con un porcentaje más bajo y un TT superior).
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sexo
 

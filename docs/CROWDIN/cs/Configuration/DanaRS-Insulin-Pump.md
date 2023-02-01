@@ -41,6 +41,8 @@
 * Nastavte krok bolusu na 0.05 U/h pomocí lékařského menu (viz uživatelská příručka pumpy).
 * Na pumpě povolte rozšířené bolusy
 
+(default-password)=
+
 ### Výchozí heslo
 
 * DanaRS s firmwarem v1 a v2 má výchozí heslo 1234.
@@ -49,6 +51,8 @@
     * Otevřete hlavní menu na pumpě > Přehled > Informace. 
     * Číslo 3 je datum výroby. 
     * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. Nepoužívá se pro komunikaci a není nutné jej zadat v AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Změna hesla pumpy
 
@@ -87,13 +91,15 @@
     
     ![Ukončit DanaRS](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Specifické chyby Dana RS
 
 ### Chyba během vydávání inzulinu
 
-V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v průběhu vydávání bolusu (např. odejdete mimo dosah telefonu, zatímco pumpa Dana RS vydává inzulin), zobrazí se následující zpráva a zazní akustická výstraha.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Oznámení chyby podávání inzulínu](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
@@ -102,7 +108,7 @@ V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v pr�
 
 ## Zvláštní poznámka, pokud měníte telefon
 
-Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kroky:
+When switching to a new phone the following steps are necessary:
 
 * [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Přesuňte nastavení ze starého do nového telefonu

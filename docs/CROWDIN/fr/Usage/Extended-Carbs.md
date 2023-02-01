@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # Glucides étendus / "eGlucides"
 
 ## Que sont les eGlucides et quand sont-ils utiles?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Avec des repas faibles en glucides et riches en graisses/protéines, il peut être suffisant d'utiliser uniquement des eGlucides sans bolus manuels (voir le blog ci-dessus). Lorsque des eGlucides sont générés, une note Careportal est également créée pour pouvoir documenter toutes les entrées, et faciliter les itérations et l'amélioration des entrées.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Bolus étendu et pourquoi ils ne fonctionneront pas dans une boucle fermée ?
 
 Comme mentionné ci-dessus, les bolus étendus ou mixtes ne fonctionnent pas vraiment dans un environnement en boucle fermée. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Bolus étendus et passage en boucle ouverte - uniquement pour les pompesDana et Insight
 
 Certaines personnes ont demandé une option pour utiliser des bolus étendus dans AAPS, car ils voulaient traiter les aliments spéciaux comme ils avaient l'habitude de le faire.
@@ -62,6 +65,7 @@ C'est pourquoi à partir de la version 2.6, il y a une option pour un bolus éte
 :alt: Bolus étendus dans AAPS 2.6
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Pourquoi les bolus étendus ne marchent pas avec une boucle fermée
 
 1. La boucle détermine que maintenant 1,55 U / h doit être délivré. Que ce soit administré sous forme de bolus étendu ou de DBT n'a pas d'importance pour l'algorithme. En fait, certaines des pompes utilisent le bolus étendu. Que devrait-il arriver alors ? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

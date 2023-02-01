@@ -1,3 +1,4 @@
+(release-notes)=
 # Notas de la versión
 
 Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). También puede encontrar una sección de resolución de problemas que se ocupa de las dificultades más comunes cuando se actualiza en la página de actualización manual.
@@ -39,6 +40,7 @@ Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Andr
 
 Release date: 19-07-2022
 
+(important-hints-3-1-0)=
 ### Notas importantes
 
 - after update uninstall Wear app and install new version
@@ -66,10 +68,11 @@ Release date: 19-07-2022
 
 Fecha de lanzamiento: 31-01-2022
 
+(important-hints-3-0-0)=
 ### Notas importantes
 
 - **Ahora, la versión mínima requerida de Android es la 9.0**
-- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Debido a esto, después de aplicar la actualización, el IOB, los COB, los tratamientos, etc. serán elimiandos. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
+- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Debido a esto, después de aplicar la actualización, el IOB, los COB, los tratamientos, etc. serán elimiandos. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Planifica la actualización con cuidado. La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 - Use the same version of AAPS and NSClient
 
 **Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
@@ -151,7 +154,7 @@ Fecha de lanzamiento: 31-01-2022
 
 Fecha de lanzamiento: 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints) below.
+- Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) below.
 
 ### Cambios
 
@@ -166,6 +169,7 @@ Fecha de lanzamiento: 23-01-2021
 
 Fecha de lanzamiento: 12-01-2021
 
+(important-hints-2-8-1-1)
 ### Notas importantes
 
 - Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
@@ -187,6 +191,7 @@ Fecha de lanzamiento: 12-01-2021
 - UI fixes and improvements
 - new translations
 
+(version-2-8-0)=
 ## Versión 2.8.0
 
 Fecha de lanzamiento: 01-01-2021
@@ -216,6 +221,7 @@ Fecha de lanzamiento: 01-01-2021
 - Security improvements @dlvoy
 - Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
+(version-2-7-0)=
 ## Versión 2.7.0
 
 Fecha de lanzamiento: 24-09-2020
@@ -254,6 +260,7 @@ You need at least start [objective 11 (in later versions objective 10!)](../Usag
 - [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
 - New documentation @Achim
 
+(version-2-6-1-4)=
 ## Versión 2.6.1.4
 
 Fecha de lanzamiento: 04-05-2020
@@ -317,6 +324,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 - Fixed NSClient connection settings (wifi, charging)
 - Fixed sending of calibrations to xDrip
 
+(version-2-6-0)=
 ## Versión 2.6.0
 
 Fecha de lanzamiento: 29-02-2020
@@ -379,8 +387,9 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Fecha de lanzamiento: 31-10-2019
 
-Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Please note the [important notes](../Installing-AndroidAPS/Releasenotes.md#important-notes-2-5-0) and [limitations](../Installing-AndroidAPS/Releasenotes.md#is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](../Installing-AndroidAPS/Releasenotes.md#version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
 
+(version-2-5-0)=
 ## Versión 2.5.0
 
 Fecha de lanzamiento: 26-10-2019
@@ -394,6 +403,7 @@ Fecha de lanzamiento: 26-10-2019
 - If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
 - Glimp is supported from version 4.15.57 and newer.
 
+(is-this-update-for-me-currently-is-not-supported)=
 ### ¿Es esta actualización para mí? Actualmente NO es soportado
 
 - Android 5 and lower
@@ -485,6 +495,7 @@ Fecha de lanzamiento: 03-11-2018
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
 - Setup wizard: guides you through the process of setting up AndroidAPS
 
+(settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Valores para ajustar cuando se cambia de AMA a SMB
 
 - Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
@@ -500,6 +511,7 @@ Fecha de lanzamiento: 03-11-2018
   - Uncheck the Configure on demand checkbox.
   - Click Apply or OK.
 
+(overview-tab)=
 ### Pestaña general
 
 - Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Los TTs utilizan los valores predeterminados establecidos en las preferencias. La nueva opción de Hypo TT es una temporal alta TT para evitar que el lazo haga una sobrecorrección muy agresiva en el rescate de carbohidratos.

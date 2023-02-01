@@ -51,6 +51,8 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
+(new-watchface-as-of-androidaps-2-8)=
+
 ### תצוגות שעון חדשות החל מגרסה AndroidAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
@@ -61,29 +63,29 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - זמן שעבר מאז הפעילות האחרונה של הלופ
+A - time since last loop run
 
-B - קריאת חיישון גלוקוז רציף
+B - CGM reading
 
-C - דקות שעברו מאז קריאת חיישן הסוכר האחרונה
+C - minutes since last CGM reading
 
-D - שינוי בהשוואה לקריאה האחרונה מהחיישן (ב-mmol או mg/dl)
+D - change compared to last CGM reading (in mmol or mg/dl)
 
-E - שינוי ממוצע בקריאות החיישן ב-15 הדקות האחרונות
+E - average change CGM reading last 15 minutes
 
-F - סוללת הטלפון
+F - phone battery
 
-G - המינון הבזאלי (מוצג ביחידות לשעה ובאחוזים כאשר מופעל מינון בזאלי זמני)
+G - basal rate (shown in U/h during standard rate and in % during TBR)
 
-H - (אינטראקציה של גלוקוז בדם - BGI) -> המידה בה הסוכר בדם צפוי לעלות או לרדת על בסיס פעולת האינסולין בלבד.
+H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
 
-I - פחמימות (פחמימות זמינות או ממושכות עתידיות)
+I - carbs (carbs on board | e-carbs in the future)
 
-J - אינסולין פעיל (בולוס או בזאלי)
+J - insulin on board (from bolus | from basal)
 
 ## גישה לתפריט הראשי של AAPS
 
-על מנת לגשת לתפריט הראשי של AAPS אתם יכולים להשתמש בחלופות הבאות:
+To access main menu of AAPS you can use on of following options:
 
 * הקשה כפולה בערך הגלוקוז בדם
 * לבחור בצלמית AAPS בתפריט האפליקציות בשעון
@@ -91,9 +93,9 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 ## הגדרות (בשעון wear)
 
-על מנת לגשת להגדרות של תצוגת השעון, כנסו לתפריט הראשי של AAPS, החליקו למעלה ובחרו "הגדרות".
+To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
 
-כוכבית מלאה מורה על מצב מאושר (**On**), וכוכבית ריקה מורה על לא מאושר (**Off**):
+Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
@@ -153,19 +155,21 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 * **אחוז האשף** (ברירת המחדל `off`): מאפשר בולוס תיקון מהאשף (הערך הוזן באחוזים לפני הודעת האישור)
 
+(complications)=
+
 ## סיבוכים
 
-*סיבוכים* הינו מונח מסורתי של שענות, אשר מתאר תוספים לפנים של השעון - כחלון קטן נוסף או מחוג משני (עם תאריך, יום בשבוע, שלב ירח, וכו'). Wear OS 2.0 מביא מטפורה זו על מנת לאפשר לתוכנות המספקות מידע, כמו הודעות מזג אוויר, מחשבוני כושר ועוד - להיות מוסף לכל פני השעונים שתומכים בסיבוכים.
+*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-אפליקציית AndroidAPS Wear OS תומכת בסיבוכים מאז גרסה `2.6`, ומאפשרת לכל פני שעון של צד שלישי שתומך בסיבוכים להצגת נתונים קשורים ל-AAPS (גלוקוז בדם עם מגמה, IOB, COB, וכו').
+AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
-סיבוכים משמשים גם כ-**קיצור דרך** לפונקציות של AAPS. על ידי הקשה עליהם תוכלו לפתוח תפריטים ודיאלוגים הקשורים ל-AAPS (מותנה בסוגי הסיבוכים ותצורות).
+Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### סוגי סיבוכים
 
-אפליקציה AAPS Wear OS מספקת רק נתונים גולמיים, לפי פורמטים מוגדרים מראש. אופן הצגת התצורה, הגבולות, הצבעים והגופנים של הסיבוכים הוא באחריות יוצרי פני השעון. מסוגי הסיבוכים הרבים של Wear OS הקיימים, AAPS משתמש ב:
+AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
 
 * `טקסט קצר` - מכיל שתי שורות של טקסט, 7 תווים כל אחת, אליהן מתייחסים לפעמים כערך ותווית. לרוב מוצגים בתוך עיגול או אליפסה - אחד מתחת לאחר, או זה לצד זה. זהו סיבוך עם מקום מוגבל ביותר. AAPS מנסה להסיר תווים לא נחוצים כדי להתאימם: על ידי עיגול ערכים, הסרת אפסים מקדימים או נגררים מהערכים וכו'.
 * `טקסט ארוך` - מכיל שתי שורות של טקסט, עם 20 תווים בערך כל אחד. בדרך כלל מוצגות בתוך מלבן או אליפסה ארוכה - אחת מתחת לשניה. משמש למצבים טקסטואלים יותר מפורטים.
@@ -174,13 +178,13 @@ J - אינסולין פעיל (בולוס או בזאלי)
 
 ### הגדרות סיבוכים
 
-על מנת להוסיף סיבוך לתצוגת פני השעון, עצבו אותו על ידי לחיצה ארוכה והקשה על צלמית גלגל השיניים בהמשך למטה. בהתאם לאופן שבו השעון הספציפי מגדיר אותם - לחצו על מצייני מיקום או היכנסו לתפריט ההגדרות של פני השעון בשביל הסיבוכים. סיבוכים של AAPS מקובצים תחת כפריט בתפריט AAPS.
+To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
 
-כאשר מעצבים סיבוכים בפני שעון, Wear OS יציג ויסנן את רשימת הסיבוכים שבהם אפשר לבחור בהתאם לפני השעון. אם סיבוכים מסויימים לא נמצאים ברשימה זו, יתכן שסוג הסיבוך לא מתאים למיקום זה.
+When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
 
 ### סיבוכים מסופקים על ידי AAPS
 
-AndroidAPS מספק את סיבוכים הבאים:
+AndroidAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -195,7 +199,7 @@ AndroidAPS מספק את סיבוכים הבאים:
 * **צלמית IoB** (`טקסט קצר`, פותח * בולוס*): מציג ערך אינסולין פעיל עם צלמית סטטית.
 * **סוללת הטלפון** (`ערך טווח`, פותח *סטטוס*): מציג את אחוז טעינת סוללת הטלפון, כפי שמדווח על ידי AAPS. מוצג באחוזים עם צלמית של סוללה שמייצגת את הערך המדווח. יתכן שלא יתעדכן בזמן אמת, אבל כן כאשר נתונים חשובים אחרים של AAPS משתנים (בדרך כלל כל 5 דקות עם קריאה חדשה של גלוקוז בדם).
 
-בנוסף קיימים עוד שלושה סיבוכים של `תמונה גדולה` סוג: **טפט כהה**, ** טפט אפור** ו**טפט בהיר**, המציג טפט סטטי של AAPS.
+Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
 
 ### הגדרות הקשורות לסיבוכים
 
@@ -319,6 +323,8 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
 * Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
+
+(troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 

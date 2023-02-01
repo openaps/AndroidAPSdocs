@@ -42,6 +42,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Ajustes Básicos 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Identificar receptor
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -84,7 +86,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo que se sugiere en primer lugar. Para utilizar de manera segura, hay un par de puntos a tener en cuenta:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Si estás usando los datos nativos con el código de calibración en xDrip+ o Spike, la cosa más segura es no permitir reinicios preventivos del sensor.
 * Si debe usar reinicio preventivo, a continuación, asegúrese de insertar una hora del día donde puede observar el cambio y calibrar si es necesario. 
@@ -93,6 +95,8 @@ Lo que está claro es que el uso del G6 es tal vez un poco más complejo que lo 
 * Si no estás observando los cambios que pueden estar teniendo lugar, puede ser mejor volver al modo no calibrado en fábrica y usar el sistema como un G5.
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### Conectar el transmisor G6 por primera vez
 
@@ -141,6 +145,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    
    ![xDrip+ Dexcom Transmisor 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(transmitter-battery-status)=
+
 ### Estado de la batería de Transmisor
 
 * El estado de la batería se puede controlar en el estado del sistema (menú Hamburguesa en la parte superior izquierda de la pantalla de inicio)
@@ -174,6 +180,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    ![xDrip+ El reseteo pudo haber fallado](../images/xDrip_HardResetMaybeFailed.png)
 
 * Los días de Transmisor se establecerán en 0 después de la extensión y el inicio satisfactorios del sensor.
+
+(replace-transmitter)=
 
 ### Sustituir transmisor
 
@@ -283,6 +291,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
    
    ![xDrip+ Inicio Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Recuperar código de sensor
 
 * En el maestro fechado 2019/05/18 y las últimas Versiones el código del sensor se muestra en el estado del sistema (la parte superior del menú de Hamburgesa que queda en la pantalla de inicio).
@@ -296,6 +306,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
 * Seleccione `Ver registros de sucesos` y busque "código"
    
    ![xDrip+ Recuperar código sensor Dexcom](../images/xDrip_Dexcom_SensorCode.png)
+
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Solución de problemas de Dexcom G5/G6 y xDrip+
 

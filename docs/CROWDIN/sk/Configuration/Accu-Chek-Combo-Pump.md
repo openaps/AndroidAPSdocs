@@ -2,6 +2,8 @@
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
+(hardware-requirements)=
+
 ## Hardware requirements
 
 - A Roche Accu-Chek Combo (any firmware, they all work)
@@ -68,6 +70,8 @@
 - If the pump is completely new, you need to do one bolus on the pump, so the pump creates a first history entry.
 - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
+
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 
 ## Why pairing with the pump does not work with the app "ruffy"?
 

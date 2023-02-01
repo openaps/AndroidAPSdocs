@@ -1,7 +1,9 @@
+(troubleshooting-android-studio)=
 # Устранение неполадок Android Studio
 
+(lost-keystore)=
 ## Потеряно хранилище ключей
-Если вы используете одно и то же хранилище ключей при обновлении AndroidAPS, вам не нужно деинсталлировать предыдущую версию на смартфоне. Поэтому рекомендуется хранилище ключей размещать в надежном месте.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
@@ -132,6 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
+(unable-to-start-daemon-process)=
 ### Не удается запустить демон процесс
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.

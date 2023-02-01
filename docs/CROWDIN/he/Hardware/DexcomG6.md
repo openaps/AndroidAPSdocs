@@ -27,6 +27,7 @@
 -   התאימו את ההגדרות ב-xDrip+ לפי [דף הוראות   xDrip+](../Configuration/xdrip.md)
 -   אם AAPS אינו מקבל ערכי סוכר כאשר הטלפון במצב טיסה השתמשו ב'זהה מקלט' כפי שמתואר בהגדרות [xDrip+ דף](../Configuration/xdrip.md).
 
+(if-using-g6-with-build-your-own-dexcom-app)=
 ## אם משתמשים ב-G6 עם Build Your Own Dexcom App (BYODA)
 
 -   החל מדצמבר 2020 [בנה אפליקציית Dexcom בעצמך (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) תומך גם בשידור מקומי ל-AAPS ו\או ל-xDrip+ (לא עבור חיישני G5!)
@@ -69,4 +70,4 @@ General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation
 
 ### משדר חדש עם חיישן שכבר מופעל
 
-במקרה של החלפת משדר במהלך פעילות חיישן שכבר הופעל, תרצו להסיר את המשדר מבלי לפגוע בחיישן. ניתן למצוא סרטון הדגמה בכתובת <https://youtu.be/tx-kTsrkNUM>.
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.

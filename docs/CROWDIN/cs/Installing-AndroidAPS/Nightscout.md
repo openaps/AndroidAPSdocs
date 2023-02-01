@@ -1,31 +1,35 @@
 # Nightscout
 
+(security-considerations)=
+
 ## Bezpečnostní pokyny
 
-Kromě sledování může být Nightscout použit také k ovládání AAPS. Tj. můžete nastavit dočasné cíle nebo přidat budoucí sacharidy. Tyto informace budou sbírány AAPS a bude to fungovat odpovídajícím způsobem. Proto stojí za to přemýšlet o zabezpečení Nightscout webové stránky.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Nastavení Nightscoutu
 
-Můžete odepřít veřejný přístup k serveru Nightscout pomocí [ověřovacích rolí](https://nightscout.github.io/nightscout/security).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Nastavení AndroidAPS
 
-V nastavení AAPS existuje funkce pouze nahrávání do NS (ne synchronizace). Tím AAPS nebude provádět změny zadané v Nightscoutu, jako jsou dočasné cíle nebo budoucí sacharidy.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Klepněte na menu (3 tečky v pravém horním rohu) na hlavní obrazovce AAPS.
 * Zvolte „Nastavení“.
 * Posuňte se dolů a klepněte na „Rozšířená nastavení“.
 * Aktivujte možnost „pouze nahrávání do NS“
 
-![Nightscout pouze nahrávání](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Další nastavení zabezpečení
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
+(manual-nightscout-setup)=
+
 ## Ruční nastavení Nightscoutu
 
-Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte stránku [Nightscout](http://nightscout.github.io/nightscout/new_user/) pro návod k založení. Následující pokyny jsou nastavení, která potřebujete provést v Nightscoutu pro správnou funkčnost AndroidAPS. Je nutné, aby byl váš Nightscout verze alespoň 10 (zobrazeno jako 0.10...), zkontrolujte tedy, jestli provozujete [poslední verzi](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version), jinak se vám v AAPS zobrazí chybová zpráva. U některých uživatelů dochází při používání smyčky k překročení kvóty pro bezplatné používání Azure, proto je hostování na Heroku doporučená volba.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Běžte na https://herokuapp.com/
 
@@ -49,9 +53,9 @@ Předpokládá se, že Nightscout stránky už máte, pokud ne, tak navštivte s
 
 ## Poloautomatickíé zřízení Nightscoutu
 
-Kolega smyčkař Martin Schiftan nabízel poloautomatizované nastavení Nightscoutu spoustu let zdarma. Vzhledem k tomu, že se počet uživatelů zvýšil a náklady se zvýšily, musel začít od října 2021 požadovat malý poplatek – počínaje 4,17 EUR měsíčně.
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Výhody**
+**Benefits**
 
 * Nightscout si pomocí této služby můžete nainstalovat pomocí několika málo kliknutí a ihned jej začít používat. 
 * Téměř žádná manuální práce, protože Martin se snaží celou administraci zautomatizovat.
@@ -61,4 +65,4 @@ Kolega smyčkař Martin Schiftan nabízel poloautomatizované nastavení Nightsc
 
 <https://ns.10be.de/en/index.html>
 
-Alternativou může být <https://t1pal.com/> – začíná na 11,99 USD za měsíc. V neposlední řadě existuje služba nightscout.cz, kterou provozuje Martin Škarecký (prozatím zdarma, drobný pravidelný příspěvek by však velmi ocenil (servery, instalace, údržba a správa něco stojí)).
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

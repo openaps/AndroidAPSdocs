@@ -1,3 +1,5 @@
+(profile-switch)=
+
 # Schimbare de profil
 
 Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
@@ -28,6 +30,8 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(time-shift)=
+
 ## Decalare
 
 ![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
@@ -46,6 +50,8 @@ Within the "profile switch" you can choose two additional changes which used to 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
 This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## Troubleshooting Profile Errors
 

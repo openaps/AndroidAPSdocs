@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # Verzögerte Kohlenhydrate / "eCarbs"
 
 ## Was sind eCarbs und wann sind sie nützlich?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Bei Low-Carb-Ernährung und fett-/eiweißreichen Mahlzeiten reicht es möglicherweise aus, nur eCarbs ohne manuellem Mahlzeitenbolus einzugeben (mehr dazu im Blogbeitrag oben). Wenn eCarbs eingegeben werden, wird im Careportal automatisch eine Notiz angelegt, damit es einfacher ist, die Eingaben zu überprüfen und zu verbessern.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Verzögerter Bolus und warum dieser nicht mit Closed Loop funktioniert?
 
 Wie oben bereits erwähnt sind verzögerte oder sog. Multi-Wave-Boli beim Loopen nicht sinnvoll. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Verzögerter Bolus und Wechsel zum Open Loop - nur für Dana- und Insight-Pumpe
 
 Es kam immer wieder der Wunsch auf, verzögerte Boli auch in AAPS zu nutzen, um spezielle Mahlzeiten wie gewohnt behandeln zu können.
@@ -62,6 +65,7 @@ Daher gibt es ab Version 2.6 für Nutzer der Dana- und Insight-Pumpe eine Option
 :alt: Verzögerter Bolus in AAPS 2.6
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Warum ein verzögerter Bolus beim Loopen nicht funktioniert
 
 1. Der Loop bestimmt, dass jetzt 1,55 IE/Std. abgegeben werden soll. Ob das als verzögerter Bolus oder TBR abgegeben wird, ist dem Algorithmus egal. In der Tat verwenden einige der Pumpen den verzögerten Bolus. Was soll dann geschehen? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

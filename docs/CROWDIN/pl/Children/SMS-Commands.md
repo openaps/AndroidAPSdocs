@@ -1,6 +1,6 @@
-# Komunikator SMS
+# SMS Commands
 
-## Bezpieczeństwo
+## Safety First
 
 - AndroidAPS allows you to control a child's phone remotely via text message. Jeśli włączysz ten komunikator SMS, zawsze pamiętaj, że telefon skonfigurowany do wydawania poleceń zdalnych może zostać skradziony. Dlatego zawsze chroń go przynajmniej kodem PIN. A strong password or biometrics are recommended.
 - Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
@@ -91,7 +91,8 @@
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
-## Polecenia
+(commands)=
+## Commands
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
@@ -161,6 +162,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP \* Response: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(troubleshooting)=
 ## Rozwiązywanie problemów
 
 ### Multiple SMS
@@ -171,7 +173,7 @@ If the other app is installed on multiple phones make sure to deactivate upload 
 
 ### SMS commands not working on Samsung phones
 
-Pojawił się raport o zatrzymywaniu się poleceń SMS po aktualizacji telefonu Galaxy S10. Could be solved by disabling 'send as chat message'.
+There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
 
 ```{image} ../images/SMSdisableChat.png
 :alt: Disable SMS as chat message

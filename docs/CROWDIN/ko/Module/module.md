@@ -36,7 +36,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
     </p>
     
     <p spaces-before="0">
-      마지막으로 또 하나 중요한 것은 SGLT-2 억제제(글리플로진)가 계산할 수 없을 정도로 혈당 수치를 낮추기 때문에 절대 사용하면 안된다는 것입니다.  혈당을 올리기 위해 basal 양을 낮추는 시스템과 함께 사용 시, 글리플로진으로 인해 혈당이 오르지 않을 것이며 인슐린 부족의 위험한 상태까지 갈 수 있기 때문에 매우 위험합니다.
+      마지막으로는  계산할 수 없을 정도로 혈당을 낮추기 때문에 SGLT-2 억제제 (글 리플로 진)을 절대 사용하면 안된다.  혈당을 올리기 위해 기저양(basal rate)을 낮추는 시스템과 병행하는 것은 글 리폴로 진으로 인해 매우 위헙합니다. 오히려 혈당이 오르지 않을 수 있으며 인슐린 부족의 위험한 상태까지 올 수 있습니다.
 :::
     </p>
 
@@ -71,6 +71,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   </li>
 </ul>
 
+<p spaces-before="0">
+  (no-use-of-sglt-2-inhibitors)=
+</p>
 <h3 spaces-before="0">
   SGLT-2 억제제의 미사용
 </h3>
@@ -79,6 +82,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   글 리플로 진이라고도하는 SGLT2 억제제는 신장에서 포도당의 재 흡수를 억제하여 혈당을 낮추는 약물입니다. 이 억제제는 혈당을 계산할 수 없을 정도로 낮출 수 있기 때문에 절대로 AndroidAPS와 같은 closed loop 시스템과 병행하시면 안됩니다. 케톤산증이나 저혈당의 위험이 아주 큽니다. 혈당을 올리기 위해 기저양(basal rate) 을 낮추는 시스템과 병행하는 것은 글 리폴로 진으로 인해 매우 위헙합니다. 오히려 혈당이 오르지 않을 수 있으며 인슐린 부족의 위험한 상태까지 올 수 있습니다.
 </p>
 
+<p spaces-before="0">
+  (phone)=
+</p>
 <h3 spaces-before="0">
   핸드폰
 </h3>
@@ -143,6 +149,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
+<p spaces-before="0">
+  (additional-communication-device)=
+</p>
 <h4 spaces-before="0">
   Additional communication device
 </h4>
@@ -203,7 +212,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </ul>
 
 <h3 spaces-before="0">
-  혈당정보
+  혈당 출처
 </h3>
 
 <p spaces-before="0">
@@ -212,7 +221,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ must be at least version 2022.01.14 or newer
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app

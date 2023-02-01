@@ -18,6 +18,7 @@ Before using Automation, you should be confident with manual [temp targets](./te
 
 Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir eylem seçmeniz gerekir.
 
+(important-note)=
 ### Önemli Not
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Otomasyon kurallarını sıralama
 
 Otomasyon kurallarını sıralamak için ekranın sağ tarafındaki dört satırlı düğmeyi basılı tutun ve yukarı veya aşağı hareket ettirin.
@@ -106,6 +108,7 @@ Bir otomasyon kuralını silmek için çöp kutusu simgesine tıklayın.
 :alt: Otomasyon kuralını silme
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.

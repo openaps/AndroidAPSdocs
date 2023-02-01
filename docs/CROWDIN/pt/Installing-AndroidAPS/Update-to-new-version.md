@@ -27,6 +27,8 @@ In case you experience problems, see separate page for [troubleshooting Android 
 
 See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
 
+(update-your-local-copy)=
+
 ## 2. Update your local copy
 
 As of version 2.7 repository location changed to <https://github.com/nightscout/AndroidAPS>. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
@@ -60,6 +62,8 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 * Gradle Sync will be running a couple of seconds to download some dependencies. Wait until it is finished.
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
+
+(build-the-signed-apk)=
 
 ## 3. Build the Signed APK
 

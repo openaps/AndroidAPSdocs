@@ -14,29 +14,33 @@ This regulation is not restricted just to sales (in the meaning of getting money
 
 De aceea fișierele apk nu sunt disponibile.
 
+(how-to-begin)=
+
 ## Cum să încep?
 
-În primul rând, trebuie să **ai componentele hardware compatibile pentru loop**:
+First of all, you have to **get loopable hardware components**:
 
 - A [supported insulin pump](./Pump-Choices.md), 
 - un [telefon cu Android](Phones.md) (sistemul Apple iOS nu este suportat de AndroidAPS-poti verifica [iOS Loop](https://loopkit.github.io/loopdocs/)) şi 
 - a [continuous glucose monitoring system](../Configuration/BG-Source.md). 
 
-În al doilea rând, trebuie să **configurezi hardware-ul**. Vezi [example setup with step-by-step tutorial](Sample-Setup.md).
+Secondly, you have to **setup your hardware**. See [example setup with step-by-step tutorial](Sample-Setup.md).
 
-În al treilea rând, trebuie să **configurați componentele software**: AndroidAPS și sursa CGM/FGM.
+Thirdly, you have to **setup your software components**: AndroidAPS and CGM/FGM source.
 
-În al patrulea rând, trebuie să învățați și **să înțelegeți design-ul de referință OpenAPS pentru a vă verifica factorii de tratament**. Principiile fundamentale ale buclei închise se bazează pe faptul că rata de bazală şi raportul carbohidraților sunt exacte. Toate recomandările presupun că nevoile dvs. bazale sunt îndeplinite și orice vârfuri sau văi pe care le vedeți sunt un rezultat al altor factori care necesită, prin urmare, unele ajustări punctuale (exercițiu, stres etc.). Ajustările pe care le poate face bucla sunt limitate pentru siguranță (a se vedea bazala temporară maximă permisă în [designul de referință al OpenAPS](https://openaps.org/reference-design/)), ceea ce înseamnă că nu veți dori să pierdeți doza permisă pe corecții necesare pentru a repara greșelile bazalei. Dacă, de exemplu, ajungeți în mod frecvent la rate temporare joase atunci când se apropie o masă, atunci este foarte probabil că sunt necesare ajustări ale bazalei. Puteți folosi [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) pe o bază mare de date pentru a afla sugestii despre cum ați putea ajusta ratele bazale și/sau ISF-ul și dacă ratele de carbohidrați trebuie schimbate. Sau puteți testa și stabili ratele bazale [folosind metoda tradițională](https://integrateddiabetes.com/basal-testing/).
+Fourthly, you have to learn and **understand the OpenAPS reference design to check your treatment factors**. The founding principle of closed looping is that your basal rate and carb ratio are accurate. All recommendations assume that your basal needs are met and any peaks or troughs you're seeing are a result of other factors which therefore require some one-off adjustments (exercise, stress etc.). The adjustments the closed loop can make for safety have been limited (see maximum allowed temporary basal rate in [OpenAPS Reference Design](https://openaps.org/reference-design/)), which means that you don't want to waste the allowed dosing on correcting a wrong underlying basal. If for example you are frequently low temping on the approach of a meal then it is likely your basal needs adjusting. You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html#phase-c-running-autotune-for-suggested-adjustments-without-an-openaps-rig) to consider a large pool of data to suggest whether and how basals and/or ISF need to be adjusted, and also whether carb ratio needs to be changed. Or you can test and set your basal the [old fashioned way](https://integrateddiabetes.com/basal-testing/).
 
 ## Ce beneficii am dacă folosesc bucla?
 
 ### Protecția parolei
 
-Dacă nu doriți ca setările dumneavoastră să poată fi schimbate cu ușurință, puteți stabili o parolă pentru a proteja secțiunea de setări prin selectarea opțiunii ”parolă pentru setări” și introducerea unei parole. Data viitoare când veți intra în meniul de setări, vi se va cere o parolă înainte de a vi se permite accesul. Dacă veți dori să eliminați parola mai târziu, mergeți la "parolă pentru setări" și ștergeți textul.
+If you don't want your preferences to be easily changed then you can password protect the preferences menu by selecting in the preferences menu "password for settings" and type the password you choose. The next time you go into preferences menu it will ask for that password before going any further. If you later want to remove the password option then go into "password for settings" and delete the text.
 
 ### Ceasuri cu Android Wear
 
-Dacă intenționați să folosiți aplicația de ceas Wear pentru a bolusa sau pentru a schimba setări, atunci va trebui să activați notificările pentru AndroidAPS. Confirmarea acțiunilor vine sub formă de notificare.
+If you plan to use the android wear app to bolus or change settings then you need to ensure notifications from AndroidAPS are not blocked. Confirmation of action comes via notification.
+
+(disconnect-pump)=
 
 ### Deconectează pompa
 
@@ -83,9 +87,11 @@ The length of time that insulin decays to zero.
 
 This is quite often set too short. Most people will want at least 5 hours, potentially 6 or 7.
 
+(impact)=
+
 ### Impact
 
-Too short DIA can lead to low BGs. Și invers.
+Too short DIA can lead to low BGs. And vice-versa.
 
 If DIA is too short, AAPS thinks too early that your previous bolus is all consumed, and, at still elevated glucose, will give you more. (Actually, it does not wait that long, but predicts what would happen, and keeps adding insulin). This essentially creates ‘insulin stacking’ that AAPS is unaware of.
 
@@ -99,11 +105,11 @@ The amount of insulin in a given hour time block to maintain BG at a stable leve
 
 Test your basal rates by suspending loop, fasting, waiting for say 5 hours after food, and seeing how BG changes. Repeat a few times.
 
-If BG is dropping, basal rate is too high. Și invers.
+If BG is dropping, basal rate is too high. And vice-versa.
 
 ### Impact
 
-Too high basal rate can lead to low BGs. Și invers.
+Too high basal rate can lead to low BGs. And vice-versa.
 
 AAPS ‘baselines’ against the default basal rate. If basal rate is too high, a ‘zero temp’ will count as a bigger negative IOB than it should. This will lead to AAPS giving more subsequent corrections than it should to bring IOB ultimately to zero.
 
@@ -248,7 +254,7 @@ Looping can reduce the pump battery faster than normal use because the system in
 The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
 
 - Long press on "Open Loop"/"Closed Loop" on the Home tab of AndroidAPS and select 'Suspend Loop for 1h'
-- Now disconnect the pump and change the reservoir as per pump instructions.
+- Now nnect the pump and change the reservoir as per pump instructions.
 - Also priming and filling tube and cannula can be done directly on the pump. In this case use [PRIME/FILL button](../Usage/CPbefore26.md#pump) in the actions tab just to record the change.
 - Once reconnected to the pump continue the loop by long pressing on 'Suspended (X m)'.
 
@@ -272,23 +278,25 @@ Depending on your job, you may choose to use different treatment factors on work
 
 ## Activități de agrement
 
+(sports)=
+
 ### Sporturi
 
-Trebuie să vă reluați vechile obiceiuri sportive din vremurile dinaintea buclei. Dacă doar ați consuma mai mulți carbohidrați decât înainte, sistemul de buclă închisă îi va recunoaşte şi îi va corecta în mod corespunzător.
+You have to rework your old sports habits from pre-loop times. If you simply consume one or more sports carbs as before, the closed loop system will recognize them and correct them accordingly.
 
-Deci, ați avea mai mulți carbohidrați la bord, dar în același timp bucla ar contracara și va elibera insulina.
+So, you would have more carbohydrates on board, but at the same time the loop would counteract and release insulin.
 
-Când folosiți bucla ar trebui să încercați acești pași:
+When looping you should try these steps:
 
 - Make a [profile switch](../Usage/Profiles.md) < 100%.
 - Set an [activity temp target](../Usage/temptarget.md#activity-temp-target) above your standard target.
 - If you are using SMB make sure ["Enable SMB with high temp targets"](../Usage/Open-APS-features.md#enable-smb-with-high-temp-targets) and ["Enable SMB always"](../Usage/Open-APS-features#enable-smb-always) are disabled.
 
-Pre- and post-processing of these settings is important. Faceţi schimbările la timp, înainte de sport şi luaţi în considerare efectul de umplere cu glucoză a muşchilor.
+Pre- and post-processing of these settings is important. Make the changes in time before sport and consider the effect of muscle filling.
 
-If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Automatizarea bazată pe locaţie ar putea fi de asemenea o idee, dar face preprocesarea mai dificilă.
+If you do sports regularly at the same time (i.e. sports class in your gym) you can consider using [automation](../Usage/Automation.md) for profile switch and TT. Location based automation might also be an idea but makes preprocessing more difficult.
 
-Procentul de schimbare a profilului, valoarea pentru ținta temporară a activității tale și momentul cel mai bun pentru modificări sunt setări individuale. Începeți pe partea sigură dacă sunteți în căutarea valorii corecte pentru dvs. (începeți cu un procent mai mic și cu un TT mai mare).
+The percentage of the profile switch, the value for your activity temp target and best time for the changes are individual. Start on the safe side if you are looking for the right value for you (start with lower percentage and higher TT).
 
 ### Sex
 

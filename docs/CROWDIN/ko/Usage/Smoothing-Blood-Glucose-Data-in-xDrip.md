@@ -1,6 +1,8 @@
+(smoothing-blood-glucose-data)=
+
 # 혈당 데이터 평활화
 
-만약 혈당 데이타가 불안하거나 잡음이 심한경우, AAPS가 인슐린을 잘못 주입해 고혈당과 저혈당을 초래할 수 있습니다. 이러한 이유로 문제가 해결될 때 까지 Loop를 사용하지 않는 것이 중요합니다. CGM에 따라 이러한 문제는 CGM의 구성이나 센서 문제 혹은 사이트 문제로 인한 것일 수 있습니다. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this. Some features like 'Enable SMB always' and 'Enable SMB after carbs' can only be used with a nice-filtering BG source.
 
 ## Dexcom sensors
 
@@ -10,7 +12,7 @@ When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexco
 
 ### xDrip+ with Dexcom G5 or G6
 
-XDrip G5 'OB1 collector in native mode' 사용하는 경우 충분히 평활화된 데이터가 전송됩니다.
+Smooth enough data is only delivered if you use xDrip+ G5 'OB1 collector in native mode'.
 
 ### Dexcom G5 App (patched)
 

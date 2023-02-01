@@ -29,6 +29,7 @@
 :depth: 2
 ```
 
+(general)=
 ## כללי
 
 **Units**
@@ -51,8 +52,10 @@
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
+(protection)=
 ### Protection (הגנה בסיסמאות)
 
+(master-password)=
 #### סיסמה ראשית
 
 - Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
@@ -96,6 +99,7 @@
   :alt: Prompt biometric protection
   ```
 
+(skin)=
 #### סקין
 
 - You can choose from four types of skins:
@@ -123,6 +127,7 @@
   :alt: Skins depending on phone's display orientation
   ```
 
+(overview)=
 ## סקירה כללית
 
 - In overview section you can define preferences for home screen.
@@ -136,6 +141,7 @@
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
+(buttons)=
 ### מקשים
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -146,6 +152,7 @@
   :alt: Preferences > Buttons
   ```
 
+(quick-wizard)=
 ### אשף מהיר
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
@@ -160,6 +167,7 @@
   :alt: Preferences > Quick Wizard Button
   ```
 
+(default-temp-targets)=
 ### ברירות מחדל ערכי מטרה
 
 - [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
@@ -177,6 +185,7 @@
 - If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
+(range-for-visualization)=
 ### טווח הצגה
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
@@ -203,6 +212,7 @@
   :alt: Preferences > Notes in treatment dialogs
   ```
 
+(status-lights)=
 ### אורות חיווי
 
 - נורות הסטטוס נותנות חיווי ויזואלי עבור
@@ -225,6 +235,7 @@
   :alt: Preferences > Status Lights
   ```
 
+(advanced-settings-overview)=
 ### הגדרות מתקדמות (סקירה כללית)
 
 ```{image} ../images/Pref2021_OV_Adv.png
@@ -251,6 +262,7 @@
   :alt: Bolus advisor message
   ```
 
+(superbolus)=
 #### סופר בולוס
 
 - Option to enable superbolus in bolus wizard.
@@ -280,6 +292,7 @@
 
 ## לולאה
 
+(aps-mode)=
 ### מצב APS
 
 - Toggle between open and closed looping as well as low glucose suspend (LGS)
@@ -287,12 +300,14 @@
 - **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
+(minimal-request-change)=
 ### Minimal request change \[%\]
 
 - בזמן השימוש בלולאה פתוחה, תקבלו התראות בכל פעם שה-AAPS ימליץ על התאמת בזאל זמנית.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - זוהי ההגדרה של השינוי היחסי הדרוש כדי להפעיל התראה על המלצה על שינוי.
 
+(advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) או סופר מיקרו בולוס (SMB)
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
@@ -309,7 +324,7 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 
 - Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
 - The value is measured in units per hour (U/h).
-- מומלץ להגדיר ערך סביר. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
+- It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
 - See also [detailed feature description](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
@@ -344,13 +359,14 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
+(openaps-smb-settings)=
 ### הגדרות OpenAPS SMB
 
 - In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 - Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
@@ -364,6 +380,7 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
   :alt: Target modified by autosens
   ```
 
+(carb-required-notification)=
 #### הודעה על צריכת פחמימות
 
 - This feature is only available if SMB algorithm is selected.
@@ -399,7 +416,7 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. למעשה, זהו אמצעי אל כשל.
+- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 - To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 
@@ -436,6 +453,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 אם אתם משתמשים ב-AndroidAPS עם לולאה פתוחה עם משאבה שאינה נתמכת, ודאו שבחרתם משאבה וירטואלית בבונה התצורה.
 
+(nsclient)=
 ## NSClient
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -467,6 +485,7 @@ The options here will vary depending on which pump driver you have selected in [
 - They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
 - If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
 
+(advanced-settings-nsclient)=
 ### הגדרות מתקדמות (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png

@@ -41,6 +41,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Активируйте пролонгированные болюсы на помпе
 
+(default-password)=
+
 ### Пароль по умолчанию
 
 * Для DanaRS с прошивкой v1 и v2 пароль по умолчанию 1234.
@@ -49,6 +51,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Смена пароля на помпе
 
@@ -86,6 +90,8 @@
 * Переместитесь вниз до "14. EXIT " и нажмите кнопку OK.
     
     ![Выход DanaRS](../images/DanaRSPW_07_Exit.png)
+
+(dana-rs-specific-errors)=
 
 ## Специфические ошибки Dana RS
 

@@ -41,6 +41,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Įgalinkite ištęstus bolusus pompoje
 
+(default-password)=
+
 ### Numatytasis slaptažodis
 
 * Pompos DanaRS su programine įranga v1 ir v2 numatytasis slaptažodis yra 1234.
@@ -49,6 +51,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Slaptažodžio keitimas pompoje
 
@@ -86,6 +90,8 @@
 * Pereikite žemyn į „14. EXIT" ir paspauskite OK mygtuką.
     
     ![DanaRS Išėjimas](../images/DanaRSPW_07_Exit.png)
+
+(dana-rs-specific-errors)=
 
 ## Specifinės DanaRS klaidos 
 

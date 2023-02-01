@@ -42,6 +42,8 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Identify receiver
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -78,13 +80,13 @@ Pokud váš telefon používá systém Android 10 a máte potíže s aplikací x
 
 ### Preemptivní restarty nejsou doporučené
 
-**S vysílači Dexcom, jejichž sériové číslo začíná znaky 8G, 8H nebo 8J preemptivní restarty nefungují, a dokonce mohou senzor úplně zničit!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-Automatické prodloužení senzorů Dexcom (`preemptivní restart`) není doporučeno, protože to může způsobit „skoky“ v hodnotách glykémie 9. den po restartu.
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
-![xDrip+ Skok po preemptivním restartu](../images/xDrip_Dexcom_PreemptiveJump.png)
+![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip+ nebo Spike, nejbezpečnější postup je zakázat preemptivní restartování senzoru.
 * Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci. 
@@ -92,11 +94,13 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 * Nastřelení senzoru G6 předem v kombinaci s tovární kalibrací pravděpodobně povede k odchylkám ve výsledcích měření. Jestliže nastřelujete senzor s předstihem, pak jej pravděpodobně v zájmu co nejlepších výsledků bude nutné zkalibrovat.
 * Jestliže nechcete sledovat změny, ke kterým může docházet, možná bude lepší přepnout na režim bez továrních kalibrací a používat systém jako G5.
 
-Chcete-li se dozvědět další informace o podrobnostech a důvodech pro tato doporučení, přečtěte si [kompletní článek](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/), který sepsal Tim Street na adrese [www.diabettech.com](https://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### První připojení vysílače G6
 
-**Pro druhý a další vysílače viz [Prodloužení životnosti vysílače](#extend-transmitter-life) níže.**
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající znaky 80 nebo 81) můžete použít verzi [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -141,6 +145,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    
    ![xDrip+ Vysílač Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(transmitter-battery-status)=
+
 ### Stav baterie vysílače
 
 * Stav baterie je zobrazen v system status (Hamburger menu levý horní roh domácí obrazovky)
@@ -174,6 +180,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
 
 * Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
+
+(replace-transmitter)=
 
 ### Výměna vysílače
 
@@ -283,6 +291,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
    
    ![xDrip+ Spustit senzor Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Získání kódu senzoru
 
 * Ve verzi master ze dne 2019/05/18 a ve verzích nightly build je kód senzoru zobrazován ve stavu systému (Hamburger menu v levém horním rohu hlavní obrazovky).
@@ -296,6 +306,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
 * Vyberte `Zobrazit logy` a hledejte kód senzoru
    
    ![xDrip+ Získat kód senzoru Dexcom](../images/xDrip_Dexcom_SensorCode.png)
+
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Odstraňování potíží s Dexcom G5/G6 a xDrip+
 

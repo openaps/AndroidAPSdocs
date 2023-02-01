@@ -29,6 +29,7 @@
 :depth: 2
 ```
 
+(general)=
 ## General
 
 **Units**
@@ -51,8 +52,10 @@
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
+(protection)=
 ### Protecţie
 
+(master-password)=
 #### Parola principală
 
 - Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
@@ -96,6 +99,7 @@
   :alt: Solicită protecție biometrică
   ```
 
+(skin)=
 #### Imagine fundal
 
 - You can choose from four types of skins:
@@ -123,6 +127,7 @@
   :alt: Fundaluri în functie de orientarea de afișare a telefonului
   ```
 
+(overview)=
 ## Privire de ansamblu
 
 - In overview section you can define preferences for home screen.
@@ -136,6 +141,7 @@
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
+(buttons)=
 ### Butoane
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -146,6 +152,7 @@
   :alt: Preferences > Buttons
   ```
 
+(quick-wizard)=
 ### Asistent Rapid
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
@@ -160,6 +167,7 @@
   :alt: Preferences > Quick Wizard Button
   ```
 
+(default-temp-targets)=
 ### Ţinte temp implicite
 
 - [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
@@ -177,6 +185,7 @@
 - If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
 - Pre-set values can be defined in this dialogue.
 
+(range-for-visualization)=
 ### Intervalul de vizualizare
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
@@ -203,6 +212,7 @@
   :alt: Preferences > Notes in treatment dialogs
   ```
 
+(status-lights)=
 ### Lumini de stare
 
 - Status lights give a visual warning for
@@ -225,6 +235,7 @@
   :alt: Preferences > Status Lights
   ```
 
+(advanced-settings-overview)=
 ### Setări avansate (Privire generală)
 
 ```{image} ../images/Pref2021_OV_Adv.png
@@ -251,6 +262,7 @@
   :alt: mesaj consilier bolus
   ```
 
+(superbolus)=
 #### Superbolus
 
 - Option to enable superbolus in bolus wizard.
@@ -280,6 +292,7 @@
 
 ## Buclă
 
+(aps-mode)=
 ### Mod APS
 
 - Toggle between open and closed looping as well as low glucose suspend (LGS)
@@ -287,12 +300,14 @@
 - **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
+(minimal-request-change)=
 ### Minimal request change \[%\]
 
 - When using open loop you will receive notifications every time AAPS recommends to adjust basal rate.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - This defines the relative change required to trigger a notification.
 
+(advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Asistent avansat la masă (AMA) sau Super Micro bolus (SMB)
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
@@ -344,13 +359,14 @@ Când te vei simți confortabil, poti permite sistemului să înceapă livrarea 
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
+(openaps-smb-settings)=
 ### Setări OpenAPS SMB
 
 - In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
 - You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to).
+- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 - Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
 
@@ -364,6 +380,7 @@ Când te vei simți confortabil, poti permite sistemului să înceapă livrarea 
   :alt: Țintă modificată de autosens
   ```
 
+(carb-required-notification)=
 #### Notificare pentru necesar carbohidrați
 
 - This feature is only available if SMB algorithm is selected.
@@ -399,7 +416,7 @@ Când te vei simți confortabil, poti permite sistemului să înceapă livrarea 
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Practic, este un eşec.
+- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
 - To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 
@@ -436,6 +453,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 Dacă folosiți AndroidAPS în sistem buclă deschisă, trebuie să aveți selectată Pompa Virtuală în configuratorul sistemului (Config Builder).
 
+(nsclient)=
 ## Client NS
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -467,6 +485,7 @@ Dacă folosiți AndroidAPS în sistem buclă deschisă, trebuie să aveți selec
 - They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
 - If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
 
+(advanced-settings-nsclient)=
 ### Setări avansate (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png

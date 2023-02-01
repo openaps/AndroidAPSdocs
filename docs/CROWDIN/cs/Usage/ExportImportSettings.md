@@ -28,6 +28,7 @@ Mezi jinými jsou součástí exportu tato nastavení:
 
 Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
+(export-settings)=
 ## Exportovat nastavení
 
 - Hamburger menu (top left corner of screen)
@@ -47,6 +48,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS export settings 2
 ```
 
+(import-settings)=
 ## Importujte nastavení
 
 **Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).

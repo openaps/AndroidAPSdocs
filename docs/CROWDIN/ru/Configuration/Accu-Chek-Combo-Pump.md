@@ -2,6 +2,8 @@
 
 **Настоящее ПО является частью самодеятельной разработки, а не готовым программным продуктом. От ВАС потребуется прочитать, изучить и понять систему и то, как ей пользоваться. Она не контролирует диабет за вас, но позволит улучшить компенсацию и качество жизни, если вы готовы уделить ей достаточно времени. Не бросайтесь в систему сломя голову, дайте себе время на изучение. Только вы несете ответственность за то, что делаете.**
 
+(hardware-requirements)=
+
 ## Требования к оборудованию
 
 - Помпа Roche Accu-Chek Combo (любая версия прошивки, работают все)
@@ -51,13 +53,13 @@
     - Включите блокировку клавиш помпы для предотвращения быстрой подачи болюса, особенно если быстрая подача болюса с помпы была в привычке до перехода на AAPS.
     - Задайте таймаут отключения экрана и меню минимум на 5,5 и 5 соответственно. Это позволяет AAPS быстрее восстановиться после ошибок и уменьшает количество вибраций во время таких ошибок
 
-![Снимок экрана меню параметров пользователя](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Снимок экрана параметров TBR](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Снимок экрана настроек болюса](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Снимок экрана настроек для картриджей инсулина](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Install AndroidAPS as described in the [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Make sure to read the wiki to understand how to setup AndroidAPS.
@@ -69,13 +71,15 @@
 - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Why pairing with the pump does not work with the app "ruffy"?
 
-There are serveral possible reasons. Попробуйте следующие действия:
+There are serveral possible reasons. Try the following steps:
 
 1. Вставьте в помпу **свежие или полностью заряженные батареи**. Подробнее см. в разделе "батарея". Убедитесь, что помпа находится вблизи смартфона.
 
-![Помпа Combo должна находиться рядом с телефоном](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
 

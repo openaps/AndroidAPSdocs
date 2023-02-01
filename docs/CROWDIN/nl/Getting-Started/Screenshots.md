@@ -12,11 +12,13 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 * Je kunt overigens ook van het ene naar het andere tabblad gaan door je huidige scherm naar links of rechts te swipen.
 * Displayed tabs can be selected in [config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu).
 
+(section-b-profile-target)=
+
 ### Sectie B - Profiel & streefdoel
 
 #### Huidig profiel
 
-![Resterende duur profiel wissel](../images/Home2020_ProfileSwitch.png)
+![Profile switch remaining duration](../images/Home2020_ProfileSwitch.png)
 
 * Jouw actieve profiel wordt links weergegeven.
 * Druk kort op de profielnaam om jouw profielgegevens te bekijken
@@ -25,15 +27,17 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
 
 #### Streefdoel
 
-![Resterende duur tijdelijk streefdoel](../images/Home2020_TT.png)
+![Temp target remaining duration](../images/Home2020_TT.png)
 
 * Het huidige bloedglucose streefdoel wordt weergegeven aan de rechterkant.
 * Druk kort op het streefdoel om een [tijdelijk streefdoel](../Usage/temptarget.md) in te stellen.
 * Als je een tijdelijk streefdoel hebt ingesteld, dan wordt de balk geel en wordt de resterende tijd (in minuten) tussen haakjes weergegeven.
 
+(visualization-of-dynamic-target-adjustment)=
+
 #### Weergave van dynamisch aangepast streefdoel
 
-![Weergave van dynamisch aangepast streefdoel](../images/Home2020_DynamicTargetAdjustment.png)
+![Visualization of dynamic target adjustment](../images/Home2020_DynamicTargetAdjustment.png)
 
 * AAPS kan jouw streefdoel dynamisch aanpassen op basis van jouw insulinegevoeligheid (geldt alleen als je het SMB-algoritme hebt gekozen).
 * Enable either one or both of the [following options](../Configuration/Preferences.md#openaps-smb-settings) 
@@ -52,6 +56,8 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
    * rood = eronder
    * geel = erboven
 * In het midden zie je het aantal minuten sinds de laatste CGM meting en ook het verschil tov de laatste meting, tov 15 minuten geleden en tov 40 minuten geleden.
+
+(loop-status)=
 
 #### Loop status
 
@@ -72,6 +78,8 @@ Dit is het eerste scherm dat je ziet wanneer je AndroidAPS opent en je vindt er 
    * Als je kort drukt op het loop-pictogram, moet je je keuze bevestigen in het dialoogvenster.
    
    ![Loop-statusmenu](../images/Home2020_Loop_Dialog.png)
+
+(bg-warning-sign)=
 
 #### BG warning sign
 
@@ -154,6 +162,8 @@ You need to find out why you get duplicate BGs:
 * If threshold critical is exceeded, values will be shown in red.
 * Settings can be made in [preferences](../Configuration/Preferences.md#status-lights).
 
+(section-f-main-graph)=
+
 ### Sectie F - Hoofdgrafiek
 
 ![Section F](../images/Home2020_MainGraph.png)
@@ -175,6 +185,8 @@ You need to find out why you get duplicate BGs:
 * For the main graph just the three options above the line "\---\---- Graph 1 \---\----" are available.
    
    ![Main graph setting](../images/Home2020_MainGraphSetting.png)
+
+(prediction-lines)=
 
 #### Prediction lines
 
@@ -316,6 +328,8 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Easily enter amount of carbs and set calculation basics.
 * Details are setup in [preferences](../Configuration/Preferences.md#quick-wizard).
 
+(bolus-wizard)=
+
 ## Bolus calculator
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
@@ -328,6 +342,8 @@ When you want to make a meal bolus this is where you will normally make it from.
 * In the CARBS field you add your estimate of the amount of carbs - or equivalent - that you want to bolus for. 
 * The CORR field is if you want to modify the end dosage for some reason.
 * The CARB TIME field is for pre-bolusing so you can tell the system that there will be a delay before the carbs are to be expected. You can put a negative number in this field if you are bolusing for past carbs.
+
+(eating-reminder)=
 
 #### Eating reminder
 
@@ -360,6 +376,8 @@ When you want to make a meal bolus this is where you will normally make it from.
 * If you tick IOB without COB, AAPS takes account of already delivered insulin but won’t cover that off against any carbs still to be absorbed. This leads to a 'missing carbs' notice.
 * If you bolus for **additional food** shortly after a meal bolus (i.e. additional desert) it can be helpful to **untick all boxes**. This way just the new carbs are being added as the main meal won't necessarily be absorbed so IOB won't match COB accurately shortly after a meal bolus.
 
+(wrong-cob-detection)=
+
 #### Wrong COB detection
 
 ![Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
@@ -367,6 +385,8 @@ When you want to make a meal bolus this is where you will normally make it from.
 * If you see the warning above after using bolus wizard, AndroidAPS has detected that the calculated COB value maybe wrong. 
 * So, if you want to bolus again after a previous meal with COB you should be aware of overdosing! 
 * For details see the hints on [COB calculation page](../Usage/COB-calculation.md#detection-of-wrong-cob-values).
+
+(action-tab)=
 
 ## Acties tabblad
 
@@ -377,11 +397,11 @@ When you want to make a meal bolus this is where you will normally make it from.
 * Button [profile switch](../Usage/Profiles.md#profile-switch) as an alternative to pressing the [current profile](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button [temporary target](../Usage/temptarget.md#temp-targets) as an alternative to pressing the [current target](../Getting-Started/Screenshots.md#section-b-profile-target) on homescreen.
 * Button to start or cancel a temporary basal rate. Please note that the button changes from “TEMPBASAL” to “CANCEL x%” when a temporary basal rate is set.
-* Even though [extended boluses](../Usage/Extended-Carbs.md#extended boluses) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
+* Even though [extended boluses](../Usage/Extended-Carbs.md#extended-bolus-and-why-they-wont-work-in-closed-loop-environment) do not really work in a closed loop environment some people were asking for an option to use extended bolus anyway.
    
    * This option is only available for Dana RS and Insight pumps. 
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
-   * Make sure to read the [details](../Usage/Extended-Carbs.md#extended boluses) before using this option.
+   * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
 ### Careportal - sectie N
 
@@ -393,6 +413,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * pump battery age & level (percentage
 
 * Less information will be shown if [low resolution skin](../Configuration/Preferences.md#skin) is used.
+
+(sensor-level-battery)=
 
 #### Sensor level (battery)
 
@@ -425,6 +447,8 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ![Histroy browser + TDD](../images/Home2021_Action_HB_TDD.png)
 
+(insulin-profile))=
+
 ## Insuline curve
 
 ![Insuline curve](../images/Screenshot_insulin_profile.png)
@@ -450,14 +474,16 @@ And even more at: [Exponential Insulin Curves + Fiasp](https://seemycgm.com/2017
 
 ## Care Portal
 
-De Careportal had dezelfde functies als wat je in Nightscout ziet wanneer je daar op het "+" symbool klikt. Je kon de Careportal gebruiken om dingen in te noteren.
+Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records.
 
 ### Koolhydraat-berekening bekijken
 
-![Review carb calculation on treatment tab](../images/Screenshots_TreatCalc.png)
+![Review carb calculation on t tab](../images/Screenshots_TreatCalc.png)
 
-* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on treatments tab.
-* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in treatments.)
+* If you have used the [Bolus Wizard](../Getting-Started/Screenshots.md#bolus-wizard) to calculate insulin dosage you can review this calculation later on ts tab.
+* Just press the green Calc link. (Depending on pump used insulin and carbs can also be shown in one single line in ts.)
+
+(carb-correction)=
 
 ### Koolhydraten correctie
 
@@ -496,6 +522,8 @@ Treatment tab can be used to correct faulty carb entries (i.e. you over- or unde
    * Target: Blood glucose level that you want AAPS to be aiming for
 
 * As of version 3.0 only [local profile](../Configuration/Config-Builder.md#local-profile) is possible. The local profile can be edited on your smartphone and synced to your Nightscout site.
+
+(treatment)=
 
 ## Bolus
 

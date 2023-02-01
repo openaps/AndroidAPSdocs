@@ -28,6 +28,7 @@ If you want to go back in objectives see [explanation below](../Usage/Objectives
   :alt: Screenshot objective 2
   ```
 
+(objective-3-prove-your-knowledge)=
 ## משימה 3: הוכיחו את הידע שלכם
 
 - Pass a multiple-choice exam testing your AndroidAPS knowledge.
@@ -93,6 +94,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 :alt: blank
 ```
 
+(objective-6-starting-to-close-the-loop-with-low-glucose-suspend)=
 ## משימה 6: מתחילים לסגור לולאה עם השהיה עקב ערך סוכר נמוך
 
 ```{image} ../images/sign_warning.png
@@ -115,6 +117,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
 - ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
+(objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 ## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
 
 - Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
@@ -129,6 +132,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
 
+(objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 ## משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens
 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
@@ -136,18 +140,21 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 *Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
 
+(objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
 
 - You must read the [SMB chapter in this wiki](../Usage/Open-APS-features.md#super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
 - Then you ought to [rise maxIOB](../Usage/Open-APS-features.md#maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק בזאלי. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](../Usage/Objectives#objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
 - min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. אם אתם עוברים מ-AMA ל-SMB, עליכם לעדכן זאת ידנית.
 
+(objective-10-automation)=
 ## משימה 10: אוטומציות
 
 - You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
 - Make sure you have completed all objectives including exam [../Usage/Objectives.md#objective-3-prove-your-knowledge](../Usage/Objectives#objective-3-prove-your-knowledge).
 - Completing previous objectives will not effect other objectives you have already finished. המשימות שכבר הושלמו יישמרו כך!
 
+(go-back-in-objectives)=
 ## חזרה על משימות
 
 אם ברצונכם לחזור על משימה מכל סיבה שהיא, ניתן לעשות זאת ע"י לחיצה על "ביטול השלמה".

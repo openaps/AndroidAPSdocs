@@ -2,6 +2,8 @@
 
 **Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
+(hardware-requirements)=
+
 ## Configuration matérielle requise
 
 - Une pompe Roche Accu-Chek Combo (avec n’importe quel firmware, ils fonctionnent tous)
@@ -51,13 +53,13 @@
     - Activez le verrouillage des touches sur la pompe pour empêcher les bolus via la pompe, surtout si la pompe a déjà été utilisée et que vous aviez l'habitude d'utiliser les bolus rapides.
     - Définissez un délai d'affichage et de menu aux valeurs minimales respectivement de 5,5s et 5s. Cela permet à AAPS de récupérer plus rapidement de situations d’erreur et réduit la quantité de vibrations qui peuvent se produire pendant ces erreurs.
 
-![Capture d’écran de réglages du menu utilisateur](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Capture d'écran des paramètres DBT](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Capture d'écran des paramètres de bolus](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Capture d'écran des paramètres de cartouche d'insuline](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Installez AndroidAPS comme décrit dans la page [wiki AndroidAPS](https://androidaps.readthedocs.io/)
 - Lisez bien le wiki pour comprendre comment configurer AndroidAPS.
@@ -69,13 +71,15 @@
 - Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 - Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
 
-Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
+There are serveral possible reasons. Try the following steps:
 
 1. Insérer une **pile neuve ou un accu complètement chargé** dans la pompe. Consultez la section "Considérations relatives à la pile" pour plus de détails. Assurez-vous que la pompe est très proche du smartphone.
 
-![Le Combo doit être proche du téléphone](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Désactivez ou supprimez tous les autres périphériques bluetooth afin qu'ils ne soient pas en mesure d'établir une connexion au téléphone pendant que l'appairage est en cours. Toute communication bluetooth parallèle ou demande de connexions peut perturber le processus d'appairage.
 

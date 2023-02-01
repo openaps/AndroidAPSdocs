@@ -2,6 +2,8 @@
 
 **Tento software je součástí DIY řešení a není to produkt, ale vyžaduje, abyste si přečetli dokumentaci, pochopili celý systém a naučili se ho používat. Není to něco, co za Vás udělá veškerý management diabetu, ale pomůže Vám k lepším výsledkům a kvalitě života, pokud investujete čas k tomu potřebný. Zbytečně nespěchejte, nechejte si na učení dostatek času. Pouze Vy jste zodpovědní za to, jak ze systémem zacházíte.**
 
+(hardware-requirements)=
+
 ## Hardwarové požadavky
 
 - Roche Accu-Chek Combo (jakýkoliv firmware, funguje se všemi)
@@ -51,13 +53,13 @@
     - Aktivujte zámek tlačítek na pumpě, abyste předešli nechtěnému vydání bolusů z pumpy, when the pump was used before and quick bolusing was a habit.
     - Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-![Screenshot z nastavení uživatelského menu](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Screenshot nastavení dočasného bazálu](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Screenshot nastavení bolusu](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Screenshot nastavení zásobníku](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Nainstalujte AndroidAPS tak, jak je popsáno v [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Přečtěte si dokumentaci, abyste pochopili, jak nastavit AndroidAPS.
@@ -69,13 +71,15 @@
 - Před spuštěním Combo pluginu v AAPS ověřte, že máte správně nastavený a aktivovaný (!) profil. Ověřte dvakrát, že profil v AAPS odpovídá vašemu bazálnímu profilu. AAPS po spojení s pumpou zapíše bazální profil z AAPS do pumpy do profilu 1. Potom aktivujte Combo plugin. Stiskněte tlačítko *Obnovit* na záložce Combo, abyste zahájili komunikaci s pumpou Combo.
 - Ověřte správné nastavení pumpy. Ve chvíli, kdy je pumpa ve stavu **Odpojeno**, použijte AAPS k nastavení dočasného bazálu (TBR) na 500 % po dobu 15 min a následně zkuste vydat malý bolus. Ověřte na pumpě, že dočasný bazál se nastavil na 500 % a bolus je zaznamenán v historii. AAPS také zobrazí, že obě akce (dočasný bazál a bolus) byly provedeny.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Why pairing with the pump does not work with the app "ruffy"?
 
-Má to několik možných důvodů. Vyzkoušejte tyto kroky:
+There are serveral possible reasons. Try the following steps:
 
 1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
-![Combo by mělo být vedle telefonu](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Vypněte nebo odstraňte jakékoliv jiné Bluetooth zařízení, abyste eliminovali možné rušení při párování. Jakákoliv paralelní komunikace s rozhraním Bluetooth nebo výzva k vytvoření připojení může narušit proces párování.
 

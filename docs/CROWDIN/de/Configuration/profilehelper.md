@@ -1,6 +1,6 @@
 # Profil-Helfer
 
-Der Profil-Helfer ermöglicht zwei Funktionen:
+Profile helper offers two functions:
 
 1. Finden eines Profils für Kinder
 2. Vergleichen von zwei Profilen oder von Profilwechseln, um ein neues Profil zu klonen.
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Drücke die Schaltfläche 'PROFILE VERGLEICHEN' oben auf dem Bildschirm.
 9. Es wird der Vergleich der beiden angepassten Profile angezeigt.
 
+(clone-profile)=
 ## Profil klonen
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.

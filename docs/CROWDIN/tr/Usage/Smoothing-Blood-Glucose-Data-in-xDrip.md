@@ -1,3 +1,5 @@
+(smoothing-blood-glucose-data)=
+
 # Kan şekeri verilerini yumuşatma
 
 KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yüksek veya düşük KŞ'ne sebep olabilir. Bu nedenle, sorun çözülene kadar döngüyü devre dışı bırakmak önemlidir. CGM'nize bağlı olarak, bu tür sorunlar CGM'in yapılandırmasından veya sensör/set sorunlarından kaynaklanabilir. Bunu çözmek için CGM sensörünüzü değiştirmeniz gerekebilir. 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir' gibi bazı özellikler yalnızca iyi filtrelemeli bir KŞ kaynağıyla kullanılabilir.
@@ -6,7 +8,7 @@ KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yü
 
 ### Kendi Dexcom Uygulamanızı Oluşturun (BYODA)
 
-When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
+[BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) kullanırken KŞ verileriniz sorunsuz ve tutarlıdır. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
 
 ### Dexcom G5 veya G6 ile xDrip+
 

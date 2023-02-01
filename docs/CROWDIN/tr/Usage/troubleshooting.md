@@ -2,84 +2,84 @@
 
 Sorun giderme bilgilerini viki'deki birçok sayfada bulabilirsiniz. Bu sayfa, sorununuzu çözecek bilgileri bulmanıza yardımcı olacak bir bağlantılar topluluğudur.
 
-Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
+Faydalı ilave bilgilere de [SSS](../Getting-Started/FAQ.html) sayfasından ulaşabilirsiniz.
 
 ## AndroidAPS uygulaması
 
-### Building & updating
+### Yapım & güncelleme
 
 * [Kayıp keystore](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
-* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
+* [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
 
 ### Ayarlar
 * [Profil](../Usage/Profiles.md#troubleshooting-profile-errors)
 
-  ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
+  ![Hata: Bazal saatlere göre ayarlanamadı](../images/Screen_DifferentPump.png)
 
-* [Pump - data from different pump](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
+* [Pompa - farklı pompadan alınan veriler](../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump)
 
   ![Hata mesajı: Farklı pompadan gelen veriler](../images/BasalNotAlignedToHours2.png)
 
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
 ### Kullanım
-* [Wrong carb values](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
+* [Yanlış karbonhidrat değerleri](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
 
-   ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
+   ![Hata: Yavaş karbonhidrat emilimi](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](../Children/SMS-Commands.md#troubleshooting)
+* [SMS Komutları](../Children/SMS-Commands.md#troubleshooting)
 
-### Frequent bluetooth connection problems
+### Sık bluetooth bağlantı sorunları
 
-This can happen with various pumps. Apart from excluding AAPS from any battery optimization, you can also exclude the system bluetooth app from battery optimization. This can help in some cases. Depending on the phone you use, you will find the bluetooth app differently.
+Bu, çeşitli pompalarda olabilir. AAPS'i pil optimizasyonunun dışında tutmanın yanı sıra, sistem bluetooth uygulamasını da pil optimizasyonunun dışında tutabilirsiniz. Bu, bazı durumlarda yardımcı olabilir. Kullandığınız telefona bağlı olarak, bluetooth ayarları farklı olacaktır.
 
-Here are examples how to find them on specific android phones.
-
-
-#### Pixel phones (stock android)
-
-* Go to the android settings, select "Apps".
-
-  ![Android Settings¦Apps](../images/troubleshooting/pixel/01_androidsettings.png)
-
-* Select "See all apps"
-
-  ![See all apps](../images/troubleshooting/pixel/02_apps.png)
-
-* On the menu on the right, select "Show system" apps.
-
-  ![Show system apps](../images/troubleshooting/pixel/03_allapps.png)
-
-* Now search and select the app "Bluetooth".
-
-  ![Bluetooth app](../images/troubleshooting/pixel/04_bluetooth.png)
-
-* Click the "App battery usage" and select "Not optimized".
-
-  ![BT Battery optimization](../images/troubleshooting/pixel/05_btunrestricted.png)
+Bunları belirli android telefonlarda nasıl bulacağınıza dair örnekler aşağıda verilmiştir.
 
 
-#### Samsung phones
+#### Pixel telefonlar (stok android)
 
-* Go to the android settings, select "Apps"
+* Android ayarlarına gidin, "Uygulamalar" ı seçin.
 
-* On the icon that supposedly changes the sorting algorithm (1), select "Show system apps" (2).
+  ![Android Ayarları¦Uygulamalar](../images/troubleshooting/pixel/01_androidsettings.png)
 
-  ![App Filter](../images/troubleshooting/samsung/Samsung01_Apps.png)
+* "Tüm uygulamaları gör" seçeneğini seçin
 
-  ![Show system apps](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+  ![Tüm uygulamaları göster](../images/troubleshooting/pixel/02_apps.png)
 
-* Now search the bluetooth app and select it to see its settings.
+* Sağdaki menüden "Sistemi göster" uygulamalarını seçin.
 
-  ![Bluetooth App](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+  ![Sistem uygulamalarını göster](../images/troubleshooting/pixel/03_allapps.png)
 
-* Select "battery".
+* Şimdi "Bluetooth" uygulamasını arayın ve seçin.
 
-  ![Battery](../images/troubleshooting/samsung/Samsung04_Battery.png)
+  ![Bluetooth uyg.](../images/troubleshooting/pixel/04_bluetooth.png)
 
-* Set it to "Not optimized"
+* "Uygulama pil kullanımı"na tıklayın ve "Optimize edilmedi"yi seçin.
 
-  ![Not optimized](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
+  ![BT Pil optimizasyonu](../images/troubleshooting/pixel/05_btunrestricted.png)
+
+
+#### Samsung telefonlar
+
+* Android ayarlarına gidin, "Uygulamalar" ı seçin
+
+* Sıralama algoritmasını değiştiren simgede (1), "Sistem uygulamalarını göster"i (2) seçin.
+
+  ![Uyg. Filtresi](../images/troubleshooting/samsung/Samsung01_Apps.png)
+
+  ![Sistem uygulamalarını göster](../images/troubleshooting/samsung/Samsung02_ShowSystemApps.png)
+
+* Şimdi bluetooth uygulamasını arayın ve ayarları görmek için seçin.
+
+  ![Bluetooth Uyg.](../images/troubleshooting/samsung/Samsung03_BtApp.png)
+
+* "Pil"i seçin
+
+  ![Pil](../images/troubleshooting/samsung/Samsung04_Battery.png)
+
+* "Optimize edilmedi" olarak ayarlayın
+
+  ![Optimize edilmedi](../images/troubleshooting/samsung/Samsung05_NotOptimized.png)
 
 
 ## CGM
@@ -88,13 +88,13 @@ Here are examples how to find them on specific android phones.
 * [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
 * [Libre 3](../Hardware/Libre3.html#experiences-and-troubleshooting)
 * [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
-* [xDrip - no CGM data](../Configuration/xdrip.md#identify-receiver)
-* [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
+* [xDrip - CGM verisi yok](../Configuration/xdrip.md#identify-receiver)
+* [xDrip - Dexcom sorun giderme](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Pompalar
 
 * [DanaRS](../Configuration/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
-* [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
+* [Accu-Chek Combo genel](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
 * [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
 * [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
 * [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
@@ -102,9 +102,9 @@ Here are examples how to find them on specific android phones.
 ## Telefonlar
 
 * [Jelly](../Usage/jelly.html)
-* [Huawei bluetooth & battery optimization](../Usage/huawei.html)
+* [Huawei bluetooth & pil optimizasyonu](../Usage/huawei.html)
 
 ## Akıllı saatler
 
-* [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
+* [Wear uygulamasında sorun giderme](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
 * [Sony Smartwatch 3](../Usage/SonySW3.html)
