@@ -1,11 +1,13 @@
+(troubleshooting-android-studio)=
 # Dépannage d'Android Studio
 
+(lost-keystore)=
 ## Fichier de clés perdu
-Si vous utilisez le même fichier de clés lors de la mise à jour d'AndroidAPS, vous n'avez pas besoin de désinstaller la version précédente sur votre smartphone. C'est pourquoi il est recommandé de stocker le fichier de clés dans un dossier de sauvegarde sûr.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
-Si vous essayez d'installer l'apk, signé avec un fichier de clés différent de celui d'avant, vous recevrez un message d'erreur indiquant que l'installation a échoué!
+If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
-Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, procédez comme suit :
+In case you cannot find your old keystore or its password anymore, proceed as follows:
 
 1. [Export settings](../Usage/ExportImportSettings.md#export-settings) on your phone.
 2. Copiez le fichier de configuration de votre téléphone vers un emplacement externe (par ex. votre ordinateur, un service cloud...).
@@ -19,22 +21,22 @@ Si vous ne trouvez plus votre ancien fichier de clés ou son mot de passe, proc�
 8. Continuez à boucler.
 
 ## Gradle Sync en échec
-Gradle Sync peut échouer pour diverses raisons. Quand vous recevez un message indiquant que la synchronisation gradle a échouée, ouvrez l'onglet "Build" (1) en bas d'Android Studio et vérifiez quel message d'erreur (2) est affiché.
+Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
-  ![Échec de Gradle](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
-Ci-dessous les échecs courants de synchronisation de gradle :
+These are the usual gradle sync failures:
 * [Uncommitted changes](#modifications-non-validees)
 * [No cached version of ... available](#could-not-resolve-no-cached-version)
 * [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: Après avoir suivi les instructions pour votre problème spécifique, vous devez déclencher la [Resynchronisation gradle](#resynchronisation-gradle) à nouveau.
+*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
 
 ### Uncommitted changes
 
-Si vous recevez un message d'erreur comme ceci
+If you receive a failure message like
 
-![Changements non commités Gradle](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
+![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
 #### Étape 1 - Vérifiez l'installation de git
   * Ouvrez l'onglet Terminal (1) en bas d'Android Studio, copiez le texte suivant et collez le dans le terminal.
@@ -94,33 +96,33 @@ Si vous recevez un message d'erreur comme ceci
 
 #### Étape 3 : Resynchroniser Gradle (encore)
 
-Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle).
+Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ### Android Gradle requires Java 11 to run
 
-  Si vous rencontrez ce message d'erreur:
+  You might experience this error message:
 
   ![Android Gradle requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
 
-  Cliquez sur "Gradle Settings" (1) pour ouvrir les paramètres du gradle.
+  Click on "Gradle Settings" (1) to go to open the gradle settings.
 
-  Si vous n'avez pas le lien vers "Gradle Settings", ouvrez les paramètres Gradle manuellement en sélectionnant l'onglet Gradle sur la bordure droite (1), sélectionnez l'icône des outils (2) et là 'Gradle Settings' (3).
+  If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
 
-  ![Configuration de Gradle](../images/studioTroubleshooting/09_GradleSettings.png)
+  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
 
-  Lorsque vous avez ouvert la boîte de dialogue des paramètres Gradle, ouvrez les options (1) à "Gradle JDK" et sélectionnez "Embedded JDK version" (2).
+  When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
 
-  ![Configuration de Gradle](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
-  Appuyez sur "OK" pour enregistrer et fermer la boîte de dialogue des paramètres.
+  Press "OK" to save and close the settings dialog.
 
-  *Important*: Si vous ne voyez pas le paramètre "Gradle JDK", vous n'avez peut-être pas mis à jour Android Studio. Assurez-vous que vous utilisez Android Studio 2021.1.1 Bumblebee) ou plus récent.
+  *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
   Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ### Could not resolve/No cached version
 
-  Si vous rencontrez ce message d'erreur:
+  You might get this error message:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
@@ -132,22 +134,23 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
   * Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
 
+(unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  Si vous voyez un message d'erreur ci-dessous, vous utilisez probablement un système Windows 10 32 bits. Ceci n'est pas pris en charge par Android Studio 3.5.1 et plus et il n'y a malheureusement rien que le développeur d'AAPS ne puisse faire.
+  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
 
-  Si vous utilisez Windows 10, vous devez utiliser un système d'exploitation 64 bits.
+  If you are using Windows 10 you must use a 64-bit operating system.
 
-  Il y a beaucoup de documentation sur Internet pour savoir si vous avez un OS 32 bits ou 64 bits - par ex. [celle-ci](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-  ![Copie d'écran Impossible de démarrer le processus daemon](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
 
 ### Resynchronisation Gradle
 
-  Si vous pouvez toujours voir le message que la synchronisation de gradle a échoué, sélectionnez maintenant le lien "Try again".![Gradle Sync en échec](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  Si vous ne voyez plus le message, vous pouvez toujours le déclencher manuellement:
+  If you don't see the a message anymore, you can still trigger this manually:
 
   * Ouvrez l'onglet Gradle (1) sur le côté droit de Android Studio.
 
@@ -159,29 +162,29 @@ Suivez les instructions à [Resynchronisation Gradle](#resynchronisation-gradle)
 
 ## Générer l'APK signé avec succès mais avec 0 variantes de compilation
 
-Lorsque vous générez l'apk signé, vous pouvez obtenir la notification que la génération a été effectuée avec succès mais on vous dit que 0 variantes de compilation ont été générées:
+When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
 
-![APK généré avec 0 variantes de compilation](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-C'est un faux avertissement. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
 
 
 ## L'application a été créée avec les avertissements du compilateur/kotlin
 
-Si votre compilation est terminée avec succès mais que vous obtenez des avertissements du compilateur ou de kotlin (indiqués par un point d'exclamation jaune ou bleu), alors vous pouvez ignorer ces avertissements.
+If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
- ![Gradle terminé avec des avertissements](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+ ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Votre application a été correctement compilée et peut être transférée au téléphone!
+Your app was build successfully and can be transferred to phone!
 
 
 ## La clé a été créée avec des erreurs
 
-Lors de la création d'un fichier de clés pour pouvoir générer un APK signé, sous Windows, le message d'erreur suivant peut apparaître
+When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
 ![La clé a été créée avec des erreurs](../images/AndroidStudio35SigningKeys.png)
 
-Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java livré sous Windows. La clé est créée correctement mais une recommandation est affichée à tort comme une erreur. Cela peut actuellement être ignoré.
+This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
 ## Aucune donnée MGC n'est reçue par AndroidAPS
@@ -193,7 +196,7 @@ Cela semble être un bug avec Android Studio 3.5.1 et son environnement Java liv
 
 ## Application non installée.
 
-![note d'application du téléphone installée](../images/Update_AppNotInstalled.png)
+![phone app note installed](../images/Update_AppNotInstalled.png)
 
 * Assurez-vous d'avoir transféré le fichier “app-full-release.apk” sur votre téléphone.
 * Si vous avez le message "App non installé" sur votre téléphone, suivez ces étapes :
@@ -211,7 +214,7 @@ If you built the app successfully, transferred it to your phone and installed it
 
 ## Rien ci-dessus n'a marché
 
-Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repartir de zéro pour reconstruire l'application :
+If non of the above tips helped you might consider building the app from scratch:
 
 1. [Exporter les paramètres](../Usage/ExportImportSettings) (dans la version AAPS déjà installée sur votre téléphone)
 
@@ -227,9 +230,9 @@ Si aucun des conseils ci-dessus ne vous a aidé, vous pourriez envisager de repa
 
 ## Pire scénario
 
-Dans le cas où même construire l'application à partir de rien ne résout pas votre problème, vous pouvez essayer de désinstaller complètement Android Studio. Certains utilisateurs ont signalé que cela a résolu leur problème.
+In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
-**Assurez-vous de désinstaller tous les fichiers associés à Android Studio.** Si vous ne supprimez pas complètement tous les fichiers cachés, la désinstallation peut provoquer de nouveaux problèmes au lieu de résoudre ceux existants. Les manuels pour une désinstallation complète peuvent être trouvés en ligne, par ex.
+**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
