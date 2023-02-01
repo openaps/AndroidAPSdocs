@@ -28,6 +28,7 @@ Entre autres, les informations suivantes font partie des paramètres exportés :
 
 Settings backup is encrypted by a master password that can be set in [Preferences](../Configuration/Preferences.md#master-password) .
 
+(export-settings)=
 ## Exporter les paramètres
 
 - Hamburger menu (top left corner of screen)
@@ -47,6 +48,7 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS exporter les paramètres 2
 ```
 
+(import-settings)=
 ## Importer les paramètres
 
 **Do not import settings while on an active Pod session** - see [Omnipod page for details](../Configuration/OmnipodEros.md#import-settings-from-previous-aaps).
