@@ -56,6 +56,7 @@
 
 - Reboot your PC to update System Environment.
 
+(check-git-settings-in-android-studio)=
 ### 4. Kontrola nastavení git v Android Studiu
 
 - Open Terminal window in Android Studio
