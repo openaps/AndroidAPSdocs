@@ -8,7 +8,7 @@ The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l
 
 - If you have a rooted system, you have to hide it. You can find instructions here: [Link](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3).
 
-  (There are several apps to find out if the smartphone is rooted, one of them is e.g. [root-checker.org](https://root-checker.org/))
+  (There are several apps to find out if the smartphone is rooted, one of them is e.g. [Root Checker App](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck))
 
 - The Juggluco app only supports English, Dutch and Italian languages.
 
