@@ -42,6 +42,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Basis Instellingen 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Identificeer ontvanger (Identify receiver)
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -84,7 +86,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Wanneer je het "Native" algoritme gebruikt in combinatie met de kalibratiecode in xDrip of Spike, is het veiligste om de optie "Pre-emptive restart" (voortijdige herstart) niet te gebruiken.
 * Als je er wel voor kiest om Pre-emptive restarts te gebruiken, zorg dan dat je de sensor start op een moment van de dag dat je tijd kunt vrijmaken om te zien wat er gebeurt tijdens de herstart. Zodat je kunt kalibreren als je ziet dat dat nodig is (je ziet een 'sprong' in je glucosegrafiek). 
@@ -93,6 +95,8 @@ Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht l
 * Als je om welke reden ook niet in staat bent om op te letten wat er gebeurt tijdens een herstart / na een Pre-soak, dan kun je beter de kalibratiecode niet gebruiken, en jouw sensor gebruiken met kalibraties, net als bij de G5.
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### G6-zender voor de eerste keer verbinden
 
@@ -141,6 +145,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    
    ![xDrip+ Dexcom zender 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(transmitter-battery-status)=
+
 ### Zender Batterij Status
 
 * Via het Hamburgermenu > System Status kun je de status van de zender batterij (Transmitter battery) zien.
@@ -174,6 +180,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    ![xDrip+ Hard Reset mogelijk mislukt](../images/xDrip_HardResetMaybeFailed.png)
 
 * Transmitter days (ouderdom zender, in dagen) zal worden ingesteld op 0 nadat je succesvol de zender hebt gereset en weer een sensor hebt gestart.
+
+(replace-transmitter)=
 
 ### Zender vervangen
 
@@ -283,6 +291,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Sensorcode terugvinden
 
 * In de master versie van 2019/05/18 en in de laatste 'nightly builds' versies wordt de sensor code weergegeven in de Systeemstatus (via Hamburger menu linksboven op het homescreen).
@@ -296,6 +306,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 * Selecteer `View Events Log` en zoek naar "code". Gebruik eventueel de zoekfunctie (via het vergrootglas-icoontje).
    
    ![xDrip+ Haal Dexcom Sensor Code op](../images/xDrip_Dexcom_SensorCode.png)
+
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Probleemoplossing Dexcom G5/G6 en xDrip+
 
