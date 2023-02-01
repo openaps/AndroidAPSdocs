@@ -18,6 +18,7 @@ Make sure you really understand how automation works before setting up your firs
 
 To set up an automation, you have to give it a title, select at least one condition and one action.
 
+(important-note)=
 ### Important note
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Sort automation rules
 
 To sort automation rules click and hold the four-lines-button on the right side of the screen and move up or down.
@@ -106,6 +108,7 @@ To delete an automation rule click on trash icon.
 :alt: Delete automation rule
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
