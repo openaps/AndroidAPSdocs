@@ -18,6 +18,7 @@ Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du 
 
 Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion.
 
+(important-note)=
 ### Wichtiger Hinweis
 
 **Automation is still active when you disable loop!**
@@ -90,6 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
+(sort-automation-rules)=
 ### Automation-Regeln sortieren
 
 Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
@@ -106,6 +108,7 @@ Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 :alt: Automation-Regeln löschen
 ```
 
+(good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
