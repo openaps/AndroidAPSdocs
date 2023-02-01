@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # Yayma karbonhidratlar / "yKarb"
 
 ## yKarb nedir ve ne zaman faydalıdır?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Düşük karbonhidratlı, yüksek yağlı/proteinli öğünlerde, manuel bolus olmadan yalnızca yKarb kullanmak yeterli olabilir (yukarıdaki blog gönderisine bakın). yKarb oluşturulduğunda, girdileri yinelemeyi ve iyileştirmeyi kolaylaştırmak için tüm girdileri belgelemek için bir Careportal notu da oluşturulur.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Yayma bolus ve neden kapalı döngü ortamında çalışmaz?
 
 Yukarıda belirtildiği gibi, yayma veya çoklu yayma boluslar, kapalı döngü ortamında gerçekten çalışmaz. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Yayma bolus ve açık döngüye geçiş - yalnızca Dana ve Insight pompası
 
 Bazı insanlar, özel gıdaları alıştıkları şekilde tedavi uygulamak istedikleri için, yine de AAPS'de yayma bolus kullanmak istiyorlardı.
@@ -62,6 +65,7 @@ Bu nedenle 2.6 sürümünden itibaren Dana ve Insight pompa kullanıcıları iç
 :alt: AAPS 2.6'da yayma bolus
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Yayma boluslar neden kapalı döngü ortamında çalışmaz?
 
 1. Şimdi döngü 1,55Ü/s teslim edileceğini belirler. Bunun yayma bir bolus olarak mı yoksa GBO olarak mı iletildiği, algoritma için önemli değildir. Aslında, bazı pompalar yayma bolusu kullanır. O zaman ne olmalı? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
