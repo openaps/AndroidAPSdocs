@@ -71,6 +71,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   </li>
 </ul>
 
+<p spaces-before="0">
+  (no-use-of-sglt-2-inhibitors)=
+</p>
 <h3 spaces-before="0">
   Не использовать SGLT-2 ингибиторы
 </h3>
@@ -79,6 +82,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   SGLT-2 ингибиторы, которые также называются глифлозины, блокируют реабсорбцию глюкозы в почках. Поскольку они непредсказуемо снижают уровень сахара в крови, их принимать НЕЛЬЗЯ при использовании таких систем как AAPS! Существует огромный риск возникновения кетоацидоза или гипогликемии! Сочетание с системой, которая снижает базальную скорость для повышения ГК является особенно опасным, поскольку из-за глифлозинов этот подъем ГК может не произойти и возникнет нехватка инсулина.
 </p>
 
+<p spaces-before="0">
+  (phone)=
+</p>
 <h3 spaces-before="0">
   Телефон
 </h3>
@@ -143,6 +149,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
+<p spaces-before="0">
+  (additional-communication-device)=
+</p>
 <h4 spaces-before="0">
   Дополнительное устройство коммуникации
 </h4>
@@ -212,7 +221,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app
