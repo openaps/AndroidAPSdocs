@@ -1,7 +1,9 @@
+(troubleshooting-android-studio)=
 # Problemen met Android Studio oplossen
 
+(lost-keystore)=
 ## Keystore (digitale handtekening) kwijt
-Het is het makkelijkste om steeds hetzelfde keystore-bestand te gebruiken bij het updaten van AndroidAPS, omdat jouw telefoon dan de nieuwe versie van de app herkent als update van jouw bestaande app. Je laat de bestaande app gewoon op je telefoon staan, je installeert de nieuwe eroverheen en al jouw instellingen blijven behouden. Daarom moet je jouw keystore bestand (eindigt op *.jks) opslaan en bewaren op jouw computer.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
@@ -132,6 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
+(unable-to-start-daemon-process)=
 ### Unable to start daemon process (Kan daemon proces niet starten)
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
