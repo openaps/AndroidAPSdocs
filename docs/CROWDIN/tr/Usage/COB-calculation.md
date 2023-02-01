@@ -20,6 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 KŞ sapmalarından hesaplanan değer yerine minimum karbonhidrat emilimi (min_5m_carbimpact) kullanılırsa, AKRB grafiğinde turuncu bir nokta görünür.
 
+(detection-of-wrong-cob-values)=
 ## Yanlış AKRB değerlerinin tespiti
 
 AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcut AKRB hesaplamasının yanlış olabileceğini düşünür ve sizi uyarır. Bu durumda bolus sihirbazından sonraki onay ekranında size ek bir ipucu verecektir.
