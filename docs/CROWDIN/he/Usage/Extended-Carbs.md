@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # פחמימות ממושכות
 
 ## מהן פחמימות ממושכות ומתי משתמשים בהן?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. בארוחות דלות פחמימות שעתירות שומן\חלבון זה עשוי להספיק להשתמש רק בפחמימות ממושכות ללא בולוסים מקדימים ידניים (ראו את הפוסט בבלוג למעלה). כאשר נוצר רישום פחמימות ממושכות, נוצרת גם תיעוד בנייטסקאוט לתיעוד כל התשומות, כדי להקל על איטרציה ושיפור התשומות.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## בולוס מושהה ומדוע לא יעבוד במערכת לולאה סגורה?
 
 כפי שהוזכר לעיל בולוסים ממושכים או מרובי גלים לא באמת עובדים בסביבת לולאה סגורה. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### בולוס מושהה ומעבר ללולאה פתוחה - משאבת Dana ו-Insight בלבד
 
 חלק מהאנשים ביקשו אפשרות להשתמש בבולוס מושהה ב-AAPS בכל זאת מכיוון שהם רצו להתייחס למזונות מיוחדים כפי שהיו רגילים בעבר.
@@ -62,6 +65,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 :alt: Extended bolus in AAPS 2.6
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### הסיבה לכך שבולוסים מושהים לא יעבדו בלולאה סגורה
 
 1. הלופ קובע שיש לספק עכשיו 1.55 יח'\שעה. לא משנה לאלגוריתם אם זה מוזרק כבולוס מושהה או כמינון בזאלי זמני. למעשה, חלק מהמשאבות משתמשות בבולוס המושהה. מה צריך לקרות? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
