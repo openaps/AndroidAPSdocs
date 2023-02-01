@@ -1,7 +1,9 @@
+(troubleshooting-android-studio)=
 # Solución de problemas para Android Studio
 
+(lost-keystore)=
 ## Perdida de almacén de claves
-Si utiliza el mismo almacén de claves a la hora de actualizar AndroidAPS usted no tiene que desinstalar la versión anterior en su smartphone. Es por eso que se recomienda almacenar el almacén de claves en un lugar seguro.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
@@ -132,6 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
+(unable-to-start-daemon-process)=
 ### No se puede iniciar el proceso daemon
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
