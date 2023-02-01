@@ -16,24 +16,25 @@ Lors de la mise en place du capteur, il est recommandé de ne pas appuyer trop f
 
 Après la mise en place du capteur, l'émetteur peut être cliqué dans son support. Attention ! Cliquez d'abord sur le côté carré, puis appuyez sur le côté rond.
 
+(troubleshooting)=
 ## Résolution de problèmes
 
 ### Problèmes de connexion
 
-La connexion Bluetooth peut être perturbée par d'autres appareils Bluetooth voisins tels que des lecteurs de glycémie, des casques, des tablettes ou des appareils de cuisine tels que des fours à micro-ondes ou des plaques vitrocéramique. Dans ce cas, xdrip n'affiche aucune valeur de Gly. Lorsque la connexion bluetooth est rétablie les données sont comblées.
+Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
 
 ### Erreurs de capteur
 
-Si des erreurs de capteur récurrentes se produisent, essayez de positionner votre capteur ailleurs sur votre corps. Le fil du capteur ne doit pas entrer en contact avec le sang.
+If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
 
-Souvent une "erreur de capteur" peut être corrigée en buvant immédiatement et en massant autour du capteur !
+Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
 
 ### Saut de valeurs
 
-Vous pouvez essayer de modifier les paramètres de blocage du bruit dans xdrip (Paramètres - Inter-app settings - Noise Blocking) par ex". Vous pouvez trouver [plus d'informations ici](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Âge du capteur négatif
 
-![Âge du capteur négatif](../images/Troubleshooting_SensorAge.png)
+![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Allez dans l'onglet Traitements > Careportal et supprimez la mauvaise entrée.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
