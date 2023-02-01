@@ -1,6 +1,6 @@
 # עוזר פרופילים
 
-עוזר הפרופילים מציע שתי פונקציות:
+Profile helper offers two functions:
 
 1. הרכבת פרופיל עבור ילדים
 2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. לחצו על 'השוואת פרופילים'.
 9. תוצג השוואה בין הפרופילים.
 
+(clone-profile)=
 ## שכפול הפרופיל
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
