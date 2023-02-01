@@ -83,8 +83,6 @@ If no additional communication device  is mentioned the communication betweeen i
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
 
-If you need to **privately buy** a pump then you can find various distributors is in [this spreadsheet](https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0), please share the details of yours if not already listed.
-
 (additional-communication-device)=
 #### Additional communication device
 
