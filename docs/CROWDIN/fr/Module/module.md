@@ -71,6 +71,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   </li>
 </ul>
 
+<p spaces-before="0">
+  (no-use-of-sglt-2-inhibitors)=
+</p>
 <h3 spaces-before="0">
   Ne pas utiliser d'inhibiteurs SGLT-2
 </h3>
@@ -79,6 +82,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   Les inhibiteurs SGLT-2, aussi appelés gliflozines, empêchent la réabsorption du glucose dans le rein. Comme ils abaissent de façon incalculable la glycémie, vous NE DEVEZ PAS les prendre en utilisant un système à boucle fermée comme AndroidAPS! Il y aurait un risque énorme d'une acidocétose ou d'une hypoglycémie ! La combinaison de ce médicament avec un système qui abaisse les débits de basal pour augmenter la glycémie est particulièrement dangereuse car en raison de la gliflozine, cette augmentation de Gly pourrait ne pas se produire et un état dangereux d'absence d'insuline peut se produire.
 </p>
 
+<p spaces-before="0">
+  (phone)=
+</p>
 <h3 spaces-before="0">
   Téléphone
 </h3>
@@ -143,6 +149,9 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
   If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
+<p spaces-before="0">
+  (additional-communication-device)=
+</p>
 <h4 spaces-before="0">
   Périphérique de communication additionnel
 </h4>
@@ -212,7 +221,7 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints">release notes</a> for details). xDrip+ doit être au moins la version 2022.01.14 ou plus récente
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ doit être au moins la version 2022.01.14 ou plus récente
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app
