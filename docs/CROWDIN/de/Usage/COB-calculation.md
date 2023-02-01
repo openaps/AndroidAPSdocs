@@ -20,6 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Falls die minimale Kohlenhydrat-Resorption (min_5m_carbimpact) statt einem aus den Entwicklungen des BZ berechneten Wert genutzt wird, wird in der COB-Kurve ein orangener Punkt angezeigt.
 
+(detection-of-wrong-cob-values)=
 ## Erkennung Fehlerhafter COB-Werte
 
 AAPS warnt Dich, wenn Du mit aktiven Kohlenhydraten von einer vorherigen Mahlzeit bolen willst und der Algorithmus davon ausgeht, dass die aktuelle COB-Berechnung falsch sein könnte. In diesem Fall gibt es einen zusätzlichen Hinweis in der Bestätigungsanzeige nach der Nutzung des Bolus-Assistenten.
