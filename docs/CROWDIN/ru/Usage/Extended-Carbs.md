@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # Пролонгированные (расширенные) углеводы / "eCarbs"
 
 ## Что такое eCarbs и когда они полезны?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. При низком содержании углеводов, высоким содержании жиров и белков, eCarbs может быть достаточен, чтобы обойтись без дополнительного контроля болюсов (см. пост блога выше). При создании eCarbs в портале терапии создается также запись для документирования, упрощающая итерацию и ввод данных.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Пролонгированный болюс и почему он не будет работать в среде замкнутого цикла?
 
 Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Пролонгированный болюс и переключение на незамкнутый цикл - только для помп Dana и Insight
 
 Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом.
@@ -62,6 +65,7 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 :alt: Пролонгиованный болюс в AAPS 2.6
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Почему пролонгированные болюсы не будут работать в среде замкнутого цикла
 
 1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Для алгоритма неважно подается ли при этом пролонгированный болюс или обычный временный базал TBR. На самом деле, на некоторых помпах возможен пролонгированный болюс. Что должно произойти в этом случае? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
