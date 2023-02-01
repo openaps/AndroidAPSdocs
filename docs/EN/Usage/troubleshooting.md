@@ -53,11 +53,11 @@ Here are examples how to find them on specific android phones.
   
 * Now search and select the app "Bluetooth".
   
-  ![Bluetooth app](../images/troubleshooting/pixel/04_bluetooth.png)
+  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
   
 * Click the "App battery usage" and select "Not optimized".
   
-  ![BT Battery optimization](../images/troubleshooting/pixel/05_btunrestricted.png)
+  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
 #### Samsung phones
