@@ -42,6 +42,8 @@
    
    ![xDrip+ Basic Settings 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### זיהוי מקלט
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -78,13 +80,13 @@
 
 ### אתחול מונע לא מומלץ 
 
-**במשדרי G6 עם מספר סידורי שמתחיל ב-8G, 8H ,8J וכו', אתחול מונע לא עובד ועלול לקלקל את המשדר!**
+**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
 
-הארכה אוטומטית של חיישני דקסקום(`preemptive restarts`) אינה מומלצת מכיוון שהדבר עלול להוביל ל"קפיצות "בערכי הסוכר ביום התשיעי לאחר ההפעלה מחדש. 
+The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-השימוש ב-G6 קצת יותר מורכב ממה שנדמה. כדי להשתמש בו בבטחה, יש לשים לב למספר נקודות:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * אם אתם משתמשים בנתונים הנאטיביים (Native Data) עם קוד הכיול ב-xDrip+ או ב-Spike, הדבר הבטוח ביותר שאפשר לעשות הוא לא לאפשר הפעלה מחדש של החיישן.
 * אם אתם מוכרחים להשתמש באתחול מונע, הקפידו להפעיל זאת בזמן ביום בו תוכלו לצפות בשינוי ולכייל במידת הצורך. 
@@ -92,11 +94,13 @@
 * "השרייה" מוקדמת של ה-G6 (הדבקת חיישן מבלי להפעילו למספר שעות) עם כיול המפעל עשויה לגרום סטיה בתוצאות. אם אתם עושים השרייה מוקדמת, כדי לקבל את התוצאות הטובות ביותר, סביר להניח שתצטרכו לכייל את החיישן.
 * אם אינכם מקפידים לפקח על השינויים שעלולים להתרחש, אולי עדיף לחזור למצב שאינו מכויל ע"H היצרן ולהשתמש במערכת כמו G5.
 
-למידע נוסף על הפרטים והסיבות להמלצות אלה קראו את [המאמר המלא](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) שפרסם טים סטריט בכתובת [www.diabettech.com](https://www.diabettech.com).
+To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### חיבור משדר G6 בפעם הראשונה 
 
-**עבור משדרים שניים וכו', ראו [הארכת חיי המשדר](#extend-transmitter-life) להלן. **
+**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
 
 עבור משדרי G6 המיוצרים לאחר סתיו/סוף 2018 (כלומר מספר סידורי שמתחיל ב-80 או 81) תוכלו להשתמש ב[גרסת המאסטר](https://jamorham.github.io/#xdrip-plus).
 
@@ -127,7 +131,7 @@
    
    > בחלק התחתון של המסך יוצג `Warm Up x,x hours left` לאחר מספר דקות.
 
-> אם המספר הסידורי המשדר מתחיל ב-8G, 8H, 8J וכו' ולא מפורט זמן לאחר מספר דקות, יש לעצור ולהפעיל מחדש את החיישן.
+-> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
 
 * הפעילו מחדש את האוסף (סטטוס מערכת - אם לא מחליף חיישן) 
 * אל תפעיל את מקלט הדקסקום המקורי (אם יש) לפני ש-xDrip+ יציג נתוני סוכר ראשונים.
@@ -140,6 +144,8 @@
    ![xDrip+ Dexcom Transmitter 3](../images/xDrip_Dexcom_Transmitter03.png)
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
+
+(transmitter-battery-status)=
 
 ### מצב סוללת המשדר
 
@@ -175,11 +181,13 @@
 
 * גיל המשדר יאופס לאחר הארכה מוצלחת והתחלת חיישן. 
 
+(replace-transmitter)=
+
 ### החלפת משדר
 
 עבור משדרי G6 המיוצרים לאחר סתיו/סוף 2018 (כלומר מספר סידורי שמתחיל ב-80 או 81) תוכלו להשתמש ב[גרסת המאסטר](https://jamorham.github.io/#xdrip-plus).
 
-אם המספר הסידורי של משדר G6 מתחיל ב-8G, 8H ,8J וכו' נסו [גרסה לילית עדכנית](https://github.com/NightscoutFoundation/xDrip/releases).
+אם המספר הסידורי של משדר G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
 
 * כבו את מקלט דקסקום המקורי (אם נעשה בו שימוש).
 * עצרו את החיישן (רק אם מחליפים)
@@ -283,6 +291,8 @@
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### אחזור קוד חיישן 
 
 * בגרסת מאסטר מתאריך 18/05/2019 ובגרסאות הליליות האחרונות, קוד החיישן מוצג במצב המערכת (תפריט המבורגר שמאל למעלה במסך הבית).
@@ -297,6 +307,8 @@
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
 
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
+
 ## פתרון בעיות דקסקום G5/G6 ו-xDrip+ 
 
 ### בעיה בחיבור משדר 
@@ -310,7 +322,7 @@
 
 ### בעיה בהפעלת חיישן חדש 
 
-שימו לב שייתכן שהשיטה הבאה לא תעבוד אם המספר הסידורי של המשדר מתחיל ב-8G, 8H, 8J וכו'.
+Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
 
 * חיישן נטיבי מסומן כ- "נכשל: ההתחלה נכשלה בחיישן"
 * עצרו סנסור
@@ -320,7 +332,7 @@
 * עצרו סנסור
 * הפעילו חיישן הקוד "האמיתי" (מודפס על הנייר שעל המדבקה)
 
-בדקו ביומן xDrip+ האם xDrip+ מתחיל לספור "משך: דקה אחת" (וכו'). רק ביומן xDrip+ תוכלו לזהות בשלב מוקדם האם xDrip+ עצר את החיישן. הסטטוס האחרון לא תמיד מוצג כראוי בתחתית המסך הראשי.
+Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
 
 ## xDrip+ ו-Freestyle Libre 
 
