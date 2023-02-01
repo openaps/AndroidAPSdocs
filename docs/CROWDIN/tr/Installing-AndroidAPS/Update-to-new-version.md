@@ -6,10 +6,10 @@
 
 ## Önemli notlar
 
-* Lütfen yeni bir sürüm çıktıktan sonra mümkün olan en kısa sürede güncelleyin. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.md#release-notes) about the new version.
+* Lütfen yeni bir sürüm çıktıktan sonra mümkün olan en kısa sürede güncelleyin. Yeni sürüm hakkında [AndroidAPS ana ekranında bilgi](../Installing-AndroidAPS/Releasenotes.md#release-notes) alacaksınız.
 * 2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. Git'e aşina değilseniz, güncellemenin en kolay yolu, AndroidAPS dizini kaldırmak ve [yeni bir klon](../Installing-AndroidAPS/Building-APK.md) oluşturmaktır.
 * Apk'yi oluşturmak için lütfen **[Android Studio Sürüm 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** veya daha yenisini kullanın.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
+* [Windows 10 32-bit sistemler](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) Android Studio 2020.3.1 tarafından desteklenmez.
 * Mevcut sürüm için [Sürüm Notlarını](../Installing-AndroidAPS/Releasenotes) okuduğunuzdan emin olun
 
 ## AndroidAPS sürümünüzü güncellemeye genel bakış

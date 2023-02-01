@@ -9,13 +9,13 @@
 
 The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord. :::
 
-* When we approve you, click the flag ![When we approve you, click the flag](./images/translation_flags.png)
+* Sizi onayladığımızda bayrağa tıklayın ![When we approve you, click the flag](./images/translation_flags.png)
 
 ## Translation of the app
 
 (translate-strings-for-androidaps-app)=
 
-### Translate strings for AndroidAPS app
+### AndroidAPS uygulaması için dizeleri (strings) çevir
 
 * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
     
