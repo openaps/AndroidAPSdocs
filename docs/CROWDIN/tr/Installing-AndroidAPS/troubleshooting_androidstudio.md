@@ -23,7 +23,7 @@ In case you cannot find your old keystore or its password anymore, proceed as fo
 ## Gradle Sync başarısız oldu
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+  ![Gradle Başarısız](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
 * [Uncommitted changes](#uncommitted-changes)
@@ -108,11 +108,11 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
 
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
 
   When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Press "OK" to save and close the settings dialog.
 
