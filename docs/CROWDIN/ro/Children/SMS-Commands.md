@@ -1,17 +1,17 @@
-# Comenzi prin SMS
+# SMS Commands
 
-## Siguranța pe primul loc
+## Safety First
 
-- AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. Se recomandă o parolă puternică sau bazata pe date biometrice.
+- AndroidAPS allows you to control a child's phone remotely via text message. If you enable this SMS Communicator, always remember that the phone set up to give remote commands could be stolen. So always protect it at least by a PIN code. A strong password or biometrics are recommended.
 - Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. It is advisable to set this up so that confirmation texts are sent to at least two different phone numbers in case one of the receiving phones is stolen.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
 
-## Setare comenzi SMS
+## Setup SMS commands
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: Setare comenzi SMS
+:alt: SMS Commands Setup
 ```
 
 - Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
@@ -19,7 +19,7 @@
 - If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
 - In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
 
-### Numere de telefon autorizate
+### Authorized phone numbers
 
 - In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
 
@@ -37,7 +37,7 @@
     :alt: SMS Commands Setup multiple numbers
     ```
 
-### Minute între comenzile de bolus
+### Minutes between bolus commands
 
 - You can define the minimum delay between two boluses issued via SMS.
 - For safety reasons you have to add at least two authorized phone numbers to edit this value.
@@ -52,11 +52,11 @@
   - not same digits (i.e. 1111)
   - not in a row (i.e. 1234)
 
-### Setare Authenticator
+### Authenticator setup
 
 - Two-factor authentication is used to improve safety.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Aplicaţiile gratuite populare sunt:
+- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
@@ -91,6 +91,7 @@
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
+(commands)=
 ## Commands
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
@@ -122,7 +123,7 @@ Commands must be sent in English, the response will be in your local language if
 - BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
 - CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
 
-### Bazală
+### Basal
 
 - BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
 - BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
@@ -161,6 +162,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP \* Response: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
+(troubleshooting)=
 ## Depanare
 
 ### Multiple SMS
