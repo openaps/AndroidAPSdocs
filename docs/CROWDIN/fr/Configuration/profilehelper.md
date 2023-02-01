@@ -1,6 +1,6 @@
 # Assistant Profil
 
-L'assistant profil a deux fonctions :
+Profile helper offers two functions:
 
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
@@ -55,6 +55,7 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 9. La comparaison des deux profils sélectionnés sera affichée.
 
+(clone-profile)=
 ## Dupliquer le profil
 
 If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
