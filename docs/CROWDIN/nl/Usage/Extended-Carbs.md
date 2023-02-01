@@ -1,3 +1,4 @@
+(extended-carbs-ecarbs)=
 # Vertraagde koolhydraten / "eCarbs"
 
 ## What are eCarbs and when are they useful?
@@ -44,10 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. Voor maaltijden met nauwelijks koolhydraten en een hoog vet/eiwitgehalte kan het genoeg zijn om alleen eCarbs te gebruiken en geen bolus (zie de blogpost hierboven). Iedere keer dat je eCarbs invoert, wordt er in jouw Careportal automatisch een opmerking toegevoegd. Hierdoor kun je de eerdere keren gemakkelijk terugvinden, zodat je jouw aanpak kunt evalueren en verbeteren voor de volgende keer. Of gewoon herhalen wat je eerder deed, als dat voor jou goed werkte.
 
+(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Extended bolus and why they won't work in closed-loop environment?
 
 Zoals hierboven vermeld, werken vertraagde of multiwave bolussen niet echt in een closed loop. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
+(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Vertraagde bolus en overschakelen naar open loop - alleen voor Dana en Insight pomp
 
 Sommige mensen wilden dolgraag een optie hebben om een vertraagde bolus te kunnen gebruiken in AAPS omdat ze voor bepaalde voedingsmiddelen willen bolussen zoals ze eerder gewend waren.
@@ -62,6 +65,7 @@ Daarom is er vanaf versie 2.6 een optie voor een vertraagde bolus toegevoegd, de
 :alt: vertraagde bolus in AAPS 2.6
 ```
 
+(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Waarom vertraagde bolussen niet werken in een closed loop
 
 1. The loop determines that now 1.55U/h is to be delivered. Whether this is delivered as an extended bolus or TBR does not matter to the algorithm. In fact, some of the pumps use the extended bolus. What should happen then? Most pump drivers then stop the extended bolus -> You didn't even need to start it.
