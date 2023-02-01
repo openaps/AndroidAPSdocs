@@ -42,6 +42,8 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![+xDrip Βασικές ρυθμίσεις 3](../images/xDrip_Basic3.png)
 
+(identify-receiver)=
+
 ### Προσδιορίστε δέκτη
 
 * If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
@@ -84,7 +86,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Αυτό που είναι σαφές είναι ότι η χρήση του G6 είναι ίσως λίγο πιο πολύπλοκη από ό, τι φαίνεται. Για να το χρησιμοποιήσετε με ασφάλεια, υπάρχουν μερικά σημεία που πρέπει να γνωρίζετε:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
 * If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary. 
@@ -93,6 +95,8 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 * If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+
+(connect-g6-transmitter-for-the-first-time)=
 
 ### Συνδέστε το πομπό G6 για πρώτη φορά
 
@@ -141,6 +145,8 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ Dexcom Transmitter 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(transmitter-battery-status)=
+
 ### Κατάσταση μπαταρίας πομπού
 
 * Battery status can be controlled in system status (Hamburger menu top left on homescreen)
@@ -174,6 +180,8 @@ To learn more about the details and reasons for these recommendations read the [
    ![xDrip+ Hard Reset maybe failed](../images/xDrip_HardResetMaybeFailed.png)
 
 * Transmitter days will be set to 0 after successful extension and start of sensor.
+
+(replace-transmitter)=
 
 ### Αντικατάσταση πομπού
 
@@ -283,6 +291,8 @@ To learn more about the details and reasons for these recommendations read the [
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
+(retrieve-sensor-code)=
+
 ### Ανάκτηση κώδικα αισθητήρα
 
 * In master dated 2019/05/18 and the latest nightly builds the sensor code is shown in system status (Hamburger menu top left on homescreen).
@@ -296,6 +306,8 @@ To learn more about the details and reasons for these recommendations read the [
 * Select `View Event Logs` and search for "code"
    
    ![xDrip+ Retrieve Dexcom Sensor Code](../images/xDrip_Dexcom_SensorCode.png)
+
+(troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Αντιμετώπιση προβλημάτων Dexcom G5/G6 και xDrip+
 
