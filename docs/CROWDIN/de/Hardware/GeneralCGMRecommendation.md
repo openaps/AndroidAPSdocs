@@ -21,20 +21,20 @@ Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpfl
 
 ### Verbindungsprobleme
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Die Bluetooth-Verbindung kann durch andere Bluetooth-Geräte, die sich in der Nähe befinden, gestört werden, Solche Geräte können Blutzuckermessgeräte, Headsets, Tablets (iPad...) aber auch Küchengeräte wie Mikrowellen oder Cerankochfelder sein. In diesem Fall zeigt xDrip keine BZ-Werte an. Die Daten werden nachgetragen, sobald die Bluetooth-Verbindung wieder hergestellt wurde.
 
 ### Sensorfehler
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Wenn Sensorfehler wiederholt auftreten, probiere den Sensor an einer anderen Körperstelle zu setzen. Der Sensorfaden sollte nicht mit Blut in Kontakt kommen.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Oftmals kann ein Sensorfehler durch sofortiges Trinken und "Massage" an der Sensorsetzstelle beseitigt werden.
 
 ### Springende Werte
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inter-App Einstellungen -> Verrauschungsunterdrückung) zu ändern, z.B. "Block Very High noise and worse". Siehe auch die Informationen zur [Glättung von BZ-Daten](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Negatives Sensor-Alter
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Negatives Sensor-Alter](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Dies tritt dann auf, wenn im [Aktionen Tab / Menü](../Configuration/Config-Builder.md#actions) ein doppelter Eintrag "CGM-Sensor gesetzt" oder bei einem einzelnen Eintrag ein falsches Datum verwendet wurde. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.

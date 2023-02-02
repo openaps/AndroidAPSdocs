@@ -1,6 +1,6 @@
 # Accu-Chek Combo
 
-**Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
+**Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 (hardware-requirements)=
 
@@ -17,10 +17,10 @@
 
 ## Einschränkungen
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+- Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.md) als Alternative an.)
 - Es wird nur ein Basalprofil unterstützt.
 - Das Setzen mehrerer Basalprofile oder die Abgabe eines verzögerten Bolus oder eines Multiwave-Bolus an der Pumpe stört das Konzept von temporären Basalraten und setzt den Loop für 6 Stunden in einen “low glucose suspend mode”, da unter diesen Umständen keine sichere Funktion des Closed Loops gewährleistet ist.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
 - Basalraten werden nur im Bereich von 0,05 bis 10 IE/h unterstützt. Dies gilt auch für Anpassungen des Profiles, welche es erlauben, die Basalrate zu verdoppeln oder zu halbieren. Auch in diesem Fall müssen die Grenzwerte eingehalten werden, so dass die Basalrate maximal 5 IE/h sein darf (da nach Verdoppelung 10 IE/h) bzw. minimal 0,1 iE/h (da nach Halbierung 0,05 iE/h).
 - Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das ist nötig, weil das Abbrechen der Basalrate auf der Combo Pumpe einen Alarm (W6 TBR Abbruch) auslöst, der durch starke Vibrationen mitgeteilt wird.
 - Manchmal kann es vorkommen, dass AAPS einen W6 TBR Abbruch Alarm nicht selbst quittiert, dann muss der Benutzer die Warnung selbst bestätigen, entweder durch Bestätigen des Alarms auf der Pumpe oder durch den Aktualisiere-Button im Combo Tab die Warnung an AAPS übergeben, damit AAPS die Warnung bestätigen kann.
@@ -53,13 +53,13 @@
     - Stelle die Tastensperre der Pumpe an, um zu verhindern, dass du von der Pumpe Bolus abgibst. Dies gilt besonders, wenn du daran gewöhnt bist, Bolus von der Pumpe aus abzugeben.
     - Stelle die Anzeigedauer und das Menü-Timeout auf das Minimum (5,5 bzw. 5). Das erlaubt AndroidAPS in Fehlerzuständen schneller wieder fortzusetzen und verringert die Anzahl an Vibrationen die während so einem Fehler auftreten können.
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Screenshot der Einstellungen des Benutzer-Menüs](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Screenshot der TBR-Einstellungen](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Screenshot der Bolus Einstellungen](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Screenshot der Insulinreservoir Einstellungen](../images/combo/combo-insulin-settings.png)
 
 - Installiere AndroidAPS wie im [AndroidAPS wiki](https://androidaps.readthedocs.io/) beschrieben
 - Lies zuerst das Wiki, um zu verstehen, wie AndroidAPS kompiliert und installiert wird.
@@ -75,11 +75,11 @@
 
 ## Warum funktioniert die Kopplung mit der Pumpe nicht mit der App "ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 
 1. Lege eine **neue oder volle Batterie** in die Pumpe ein. Sieh Dir den Batterie-Abschnitt für Details an. Stelle sicher, dass die Pumpe sich sehr nahe am Smartphone befindet.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo sollte sich direkt bei dem Smartphone befinden](../images/Combo_next_to_Phone.png)
 
 2. Schalte andere Bluetoothgeräte aus oder entferne sie, damit sie keine Verbindung zu dem Smartphone aufzubauen, während die Kopplung durchgeführt wird. Jede gleichzeitige Bluetooth-Kommunikation oder Eingabeaufforderung, eine Verbindung herzustellen, kann den Kopplungs-Prozess stören.
 
