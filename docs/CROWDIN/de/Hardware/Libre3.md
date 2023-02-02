@@ -8,7 +8,7 @@ The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l
 
 - If you have a rooted system, you have to hide it. You can find instructions here: [Link](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3).
 
-  (There are several apps to find out if the smartphone is rooted, one of them is e.g. [root-checker.org](https://root-checker.org/))
+  (There are several apps to find out if the smartphone is rooted, one of them is e.g. [Root Checker App](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck))
 
 - The Juggluco app only supports English, Dutch and Italian languages.
 
@@ -78,7 +78,7 @@ If there is another request, you can confirm it with "OK".
 
 ### Step 3: Install & set up Juggluco
 
-Now install the [Juggluco App](https://play.google.com/store/apps/details?id=tk.glucodata) from the Playstore (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
+Now download & install the Juggluco App from [here (link)](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) or [here (mirror)](http://jkaltes.byethost16.com/Juggluco/download.html) (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
 
 After installing Juggluco, several messages may appear. Allow Juggluco to find, locate and connect nearby devices.
 
@@ -156,7 +156,7 @@ Die Blutzuckerwerte werden von der xDrip + App auf dem Smartphone empfangen.
 - to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set Settings -> Interapp Settings -> Identify Receiver "info.nightscout.androidaps".
 - If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings -> Interapp Compatibility -> Accept Calibrations and select ON. You may also want to review the options in Settings -> Less Common Settings -> Advanced Calibration Settings.
 
-```{image} ../images/Libre2_Tags.jpg
+```{image} ../images/Libre2_Tags.png
 :alt: xDrip+ LibreLink Fehlerprotokoll
 ```
 
