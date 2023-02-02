@@ -63,13 +63,13 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 #### Lokale Profile zu Nightscout hochladen
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+Local profiles can also be uploaded to Nightscout. Die Einstellungen sind in den [NSClient Einstellungen](../Configuration/Preferences.md#nsclient)zu finden.
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Profil im Nighscout Profil-Editor ändern
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. Die Einstellungen sind in den [NSClient Einstellungen](../Configuration/Preferences.md#nsclient)zu finden.
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
