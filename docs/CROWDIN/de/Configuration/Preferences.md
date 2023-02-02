@@ -416,7 +416,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 - The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Im Prinzip ist es eine Notlauffunktion.
 
 - To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
 
