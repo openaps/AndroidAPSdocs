@@ -56,7 +56,7 @@ Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. E
 
 **Hinweis: Es ist ab AAPS Version 2.7 nun wieder möglich, 'Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout' mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](../Configuration/Preferences#erweiterte-einstellungen-nightscout-client).)
 
-![Screenshot of Insight Settings](../images/Insight_settings.png)
+![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
 
 In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen aktivieren:
 
