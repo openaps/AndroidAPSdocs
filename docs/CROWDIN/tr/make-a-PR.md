@@ -67,7 +67,7 @@ We are using markdown for the docs pages. The files have got the suffix ".md".
 
 ### Görüntü boyutu
 
-If using images please use reasonable sizes. Screenshot images should be up to **850 pixels wide**.
+If using images please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
 
 ### Text format
 
@@ -171,7 +171,7 @@ This is a warning. :::
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* Please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
 * You can upload images in batches easily by:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
