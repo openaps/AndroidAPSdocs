@@ -65,7 +65,7 @@ Man kann zwischen verschiedenen Bedingungen wählen. Hier sind nur ein paar erw�
 
   - Use passive location: AAPS only takes locations when other apps are requesting it
   - Use network location: Location of your Wifi
-  - Use GPS location (Attention! Kann zu übermäßigen Akkuverbrauch führen!)
+  - GPS-Standort (Achtung! Kann zu übermäßigen Akkuverbrauch führen!)
 
 ### Aktion
 
