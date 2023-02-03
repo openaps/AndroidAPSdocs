@@ -25,11 +25,11 @@
 
 ## Master-Passwort festlegen
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Die [exportierten Einstellungen](../Usage/ExportImportSettings.md) sind ab Version 2.7 verschlüsselt.
 - Open Preferences (three-dot-menu on top right of home screen)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- Klicke das Dreieck neben "Allgemein".
+- Klicke auf "Master-Passwort".
+- Gib ein Passwort ein, bestätige es und klicke auf OK.
 
 ```{image} ../images/MasterPW.png
 :alt: Master-Password festlegen
