@@ -1,6 +1,6 @@
 # Smartwatches
 
-Smartwatches are optional, but very useful for some users. Mehr Infos hier:
+Smartwatches sind nicht zwingend erforderlich, werden von einigen Anwendern aber als sehr hilfreich beschrieben. Mehr Infos hier:
 
 - [Liste der getesteten Telefone und Smartwatches](../Getting-Started/Phones.md)
 - [Watchfaces Wear-OS](../Configuration/Watchfaces.md)
