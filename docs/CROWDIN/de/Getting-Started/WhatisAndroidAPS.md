@@ -6,34 +6,34 @@ Ein APS kann die Aufgabe nicht so gut erfüllen wie eine biologische Bauchspeich
 
 Ein Hinweis zur Vorsicht: AndroidAPS wird nicht von einer medizinischen Aufsichtsbehörde reguliert. Die Verwendung von AndroidAPS ist im Wesentlichen die Durchführung eines medizinischen Experiments an sich selbst. Die Einrichtung des Systems erfordert Entschlossenheit und technisches Wissen. Wenn Dir zu Beginn das technische Know-how noch fehlt, wirst Du es am Ende haben. Alle Informationen, die Du benötigst, findest Du auf dieser und anderen Seiten im Internet. Oder Du kannst Deine Fragen in Facebook-Gruppen oder anderen Foren an erfahrene Nutzer stellen. Viele unterschiedliche Menschen mit Diabetes haben AndroidAPS erfolgreich erstellt und nutzen es nun ganz sicher. Es ist aber wichtig, dass jeder Benutzer
 
-- Builds the system themselves so that they thoroughly understand how it works
-- Adjusts its individual dosage algorithm with his or her diabetes team to work nearly perfect
-- Maintains and monitors the system to ensure it is working properly
+- das System selbst erstellt, damit Er/Sie vollständig versteht, wie es funktioniert.
+- seine individuellen Diabetes-Einstellungen zusammen mit seinem Diabetes-Team anpasst, so dass diese bestmöglich funktionieren.
+- das System pflegt, auf dem aktuellen Stand hält und es überwacht, um sicherzustellen, dass es ordnungsgemäß funktioniert.
 
 :::{note}
-**Disclaimer and Warning**
+**Disclaimer und Warnung**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
-- Use of code from github.com is without warranty or formal support of any kind. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
+- Sämtliche Informationen, Gedanken und der Quellcode sind nur für informatorische und wissenschaftliche Zwecke. Nightscout erfüllt keinerlei Anforderungen des Datenschutzes im Gesundheitswesen. Verwenden Sie Nightscout und AndroidAPS auf eigenes Risiko und setzen Sie es nicht ein, um Behandlungsentscheidungen zu treffen.
+- Bei Nutzung des Quellcodes von github.com bestehen keinerlei Gewährleistungs- und Garantieansprüche. Im Übrigen wird auf die Lizenz verwiesen, die im Repository abgerufen werden kann.
+- Sämtliche Produkt- und Herstellernamen, Handelsmarken, Dienstleistungsmarken, Warenzeichen und eingetragene Dienstleistungsmarken sind Eigentum ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genutzt und nicht für Werbung oder Marketing. Ihre Verwendung dient nur zur Information und bedeutet weder, dass AAPS zu ihnen gehört, noch dass sie unterstützt werden.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) or [Medtronic](https://www.medtronic.com/).
+Bitte beachten: Dieses Projekt steht in keinerlei Verbindung mit [SOOIL](http://www.sooil.com/eng/), [Dexcom](https://www.dexcom.com/), [Accu-Chek, Roche Diabetes Care](https://www.accu-chek.com/), [Insulet](https://www.insulet.com/) oder [Medtronic](https://www.medtronic.com/).
 :::
 
 Wenn Du bereit bist, diese Herausforderung anzunehmen, lies bitte weiter.
 
 ## Die primären Ziele von AndroidAPS
 
-- An app with safety built in. To read about the safety features of the algorithms, known as oref0 and oref1, click here (<https://openaps.org/reference-design/>)
-- An all-in-one app for managing type 1 diabetes with an artificial pancreas and Nightscout
-- An app to which users can easily add or remove modules as needed
-- An app with different versions for specific locations and languages.
-- An app which can be used in open- and closed-loop mode
-- An app that is totally transparent: users can input parameters, see results, and make the final decision
-- An app which is independent of particular pump drivers and contains a "virtual pump" so users can safely experiment before using it on themselves
-- An app closely integrated with Nightscout
-- An app in which the user is in control of safety constraints
+- Eine App mit eingebauter Sicherheit. Um mehr über die Sicherheitsfunktionen der Algorithmen, die als oref0 und oref1 bekannt sind, zu lesen, klicke hier (<https://openaps.org/reference-design/>)
+- Eine All-in-one-App für das Management Deines Typ1-Diabetes mit einer künstlichen Bauchspeicheldrüse und Nightscout.
+- Eine App, zu der Benutzer bei Bedarf Module einfach hinzufügen oder entfernen können.
+- Eine App mit Versionen für verschiedenen Standorte und Sprachen.
+- Eine App, die im Open- und Closed-Loop-Modus verwendet werden kann.
+- Eine App, die vollkommen transparent ist: Benutzer können Parameter eingeben, Ergebnisse sehen und die endgültige Entscheidung treffen.
+- Eine App, die unabhängig von bestimmten Pumpen-Treibern ist und eine "virtuelle Pumpe" enthält, damit Benutzer sicher experimentieren können, bevor sie diese zusammen mit ihrer Insulinpumpe verwenden.
+- Eine App, die eng mit Nightscout verbunden ist.
+- Eine App, in der der Benutzer die Kontrolle über die Sicherheitseinschränkungen hat.
 
 ## Wie lege ich los?
 
-Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken. A good orientation is given by the [Module Overview](../Module/module.md) and the [Objectives](../Usage/Objectives.html).
+Natürlich sind alle hier verfügbaren Informationen für Dein Closed Loop System sehr wichtig, es ist aber auch normal, dass die vielen neuen Dinge anfangs etwas verwirrend wirken. Gute Orientierung bieten die [Modul-Übersicht](../Module/module.md) und die [Objectives (Ziele)](../Usage/Objectives.html).
