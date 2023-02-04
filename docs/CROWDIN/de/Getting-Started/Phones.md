@@ -1,25 +1,25 @@
 (list-of-tested-phones)=
 
-# List of tested Phones compatible with Omnipod Dash Insulin Pump Pods
+# Liste der getesteten Smartphones
 
-Currently, we have a very hard-working behind-the-scenes Maintainer, who is in charge of ensuring the integrity of the Hardware List of all Android Phones/Smartwatches Capable of Looping with the Omnipod Dash; the newest pump driver addition to our ever-expanding network of Bluetooth enabled insulin pumps for use within the AndroidAPS/OpenAPS ecosystem!
+Derzeit betreut ein freundlicher, engagiert arbeitender Betreuer eine Liste für AndroidAPS auf Handys, die mit den Omnipods Insulinpumpen verwendet werden, da die letzte Entwicklung eines Pumpentreibers für diese war und es notwendig war, dort mehr zwischen den frühen Anwendern zu kommunizieren.
 
-Our Maintainer has spent a lot of time and effort to make sure that its easy for everyone to enter data into the Spreadsheet; via a Google Form with pre-populated information headers for ease of use! This ensures that the existing data on the sheets cannot be accidentally overwritten or deleted. The same experience can be built upon the success of the first again using Google Sheets.
+Unser Betreuer hat viel Zeit und Mühe damit verbracht, dass es für Jeden leicht ist, Daten in die Tabelle einzugeben; über ein Google-Formular mit vorgefüllten Überschriften zur einfachen Anwendung! Dadurch wird sichergestellt, dass die vorhandenen Daten der Tabellen nicht versehentlich überschrieben oder gelöscht werden können. Diese Version basiert auf dem Erfolg des ersten Sheets, das nicht mehr gepflegt wurde und nutzt hierzu wiederum Google Sheets.
 
-Thanks to the ease of Google Spreadsheets, close communication amongst early adopters and the ability of pooling their collective knowledge and lessons learned throughout early testing/feedback phases of the Dash pump pod drivers was compiled quite efficiently. The results of the time, information and energy provided by the numerous Early Adopters in providing step-by-step feedback on each new version of the Dash Bluetooth drivers becomes apparent once you open the up what is now a comprehensive Compare/Contrast list of all hardware suited for Looping with the Omnipod Dash, with many Android Phones and Smartwatches tested and ranked for compatibility. In addition, the more incompatible setups are also included in this Spreadshee so that new users will know which hardware to avoid due to issues with connection speed or strength.
+Der neue Treiber für den DASH Pod konnte sehr effizient und schnell erstellt werden, Dank der Einfachheit von Google Spreadsheets, welches den Anwendern einen leichten Zugang ermöglicht, der engen Kommunikation zwischen den frühen Anwendern und der Fähigkeit, ihr gemeinsames Wissen und die Erkenntnisse zu bündeln, die während der frühen Test- und Feedback-Phasen der Dash-Pump-Pod-Treiber gewonnen wurden. Die Ergebnisse, Informationen und Energie, die von den zahlreichen Early Adoptern bereitgestellt wurden, um Schritt für Schritt Feedback zu jeder neuen Version der Dash Bluetooth-Treiber zu geben, wird deutlich, wenn Du die umfassende Vergleichs- und Kontrastliste der Hardware öffnest, die für das Loopen mit dem Omnipod-Dash, geeignet ist, mit vielen Android Phones und Smartwatches getestet und die als kompatibel eingestuft wird. Darüber hinaus sind inkompatibleren Setups auch in dieser Spreadshee enthalten, so dass neue Benutzer wissen, welche Hardware sie aufgrund von Verbindungsgeschwindigkeit oder -stärke vermeiden können.
 
-When the time comes for another Hardware Compatibility List to be created in the future; we encourage anyone that feels they might enjoy becoming a Maintainer to please contact us!
+Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und Jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google .com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5 RvMcI6NG5TnY)
+Die Liste des getesteten Telefons kann über den folgenden Link [Liste der getesteten Telefone mit Omnipod-Insulinpumpe aufgerufen werden](https://docs.google .com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5 RvMcI6NG5TnY)
 
-With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
+Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. Um den Test eines Telefons aufzunehmen, fülle bitte das [-Formular](https://forms.gle/g7GbSkMCTfFrWKjSA) aus.
 
-After you fill in the form data the maintainer will check the data and approve it for publishing!
+Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten überprüfen und sie zur Veröffentlichung freigeben!
 
-Any problems with the spreadsheet please contact us directly or via a GitHub issue for the openaps/AndroidAPSDocs project.
+Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
 
 (phone-background)=
 
 # Handy Hintergrundbild
 
-![phone background](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> If you want to decorate your phone with more AndroidAPS, you can download your background image here: ![Background in high resolution.](../images/bg_phone.jpg)
+![Handy Hintergrundbild](../images/bg_phone_thump.jpg) </br> Design: Thiago :) </br> Wenn du dein Smartphone mit AndroidAPS verschönern willst, kannst du das Hintergrundbild hier herunterladen: ![Hintergrundbild in hoher Auflösung.](../images/bg_phone.jpg)
