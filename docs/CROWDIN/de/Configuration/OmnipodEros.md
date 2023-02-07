@@ -415,7 +415,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">30 min Basal Rate Profiles are NOT supported in AndroidAPS.</strong> If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. Wenn Du zum Beispiel eine Basalrate von 1,1 Einheiten hast, die um 9:30 Uhr startet und zwei Stunden bis 11:30 Uhr läuft, wird dies nicht funktionieren.  Du muss diese 1,1 IE Basalrate auf einen Zeitraum von entweder 9:00 - 11:00 Uhr oder 10:00 - 12:00 Uhr einstellen.  Obwohl die Omnipod-Hardware selbst Basalratenwechsel zur halben Stunde unterstützt, ist AndroidAPS derzeit nicht in der Lage, sie mit seinen Algorithmen zu berücksichtigen.
+  <strong x-id="1">Basalraten-Profile mit 30-Minuten-Schritten werden in AndroidAPS NICHT unterstützt.</strong> Wenn Du neu bei AndroidAPS bist und zum ersten Mal Dein Basalprofil einrichtest, beachte bitte, dass Basalprofile, die mit einer halben Stunde beginnen, nicht unterstützt werden und Du Dein Basalprofil anpassen musst. Wenn Du zum Beispiel eine Basalrate von 1,1 Einheiten hast, die um 9:30 Uhr startet und zwei Stunden bis 11:30 Uhr läuft, wird dies nicht funktionieren.  Du muss diese 1,1 IE Basalrate auf einen Zeitraum von entweder 9:00 - 11:00 Uhr oder 10:00 - 12:00 Uhr einstellen.  Obwohl die Omnipod-Hardware selbst Basalratenwechsel zur halben Stunde unterstützt, ist AndroidAPS derzeit nicht in der Lage, sie mit seinen Algorithmen zu berücksichtigen.
 </p>
 
 <h2 spaces-before="0">
@@ -423,7 +423,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h2>
 
 <p spaces-before="0">
-  You can enable the Omnipod driver in AAPS in <strong x-id="1">two ways</strong>:
+  Du kannst den Omnipod-Treiber in AAPS auf <strong x-id="1">zwei Wegen</strong> aktivieren:
 </p>
 
 <h3 spaces-before="0">
@@ -431,11 +431,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  After installing a new version of AndroidAPS, the <strong x-id="1">Setup Wizard</strong> will start automatically.  Dies wird auch nach einem Upgrade geschehen.  Wenn du die Einstellungen von einer vorherigen Installation exportiert hast, kannst du den Einrichtungsassistenten beenden und deine alten Einstellungen importieren.  Für Neuinstallationen fahre unten fort.
+  Nach der Installation einer neuen Version von AndroidAPS startet der <strong x-id="1">Einrichtungsassistent</strong> automatisch.  Dies wird auch nach einem Upgrade geschehen.  Wenn du die Einstellungen von einer vorherigen Installation exportiert hast, kannst du den Einrichtungsassistenten beenden und deine alten Einstellungen importieren.  Für Neuinstallationen fahre unten fort.
 </p>
 
 <p spaces-before="0">
-  Via the <strong x-id="1">AAPS Setup Wizard (2)</strong> located at the top right-hand corner <strong x-id="1">three-dot menu (1)</strong> and proceeding through the wizard menus until you arrive at the <strong x-id="1">Pump</strong> screen. Then select the <strong x-id="1">Omnipod radio button (3)</strong> .
+  Es wird ein grünes Häkchen angezeigt, und der Button <strong x-id="1">Weiter</strong> wird bei erfolgreicher Kanüleneinführung aktiviert. Klicke auf den Button <strong x-id="1">Weiter</strong>.
 </p>
 
 <blockquote spaces-before="0">
@@ -445,11 +445,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </blockquote>
 
 <p spaces-before="0">
-  On the same screen, below the pump selection, the <strong x-id="1">Omnipod Driver Settings</strong> are displayed, under the <strong x-id="1">RileyLink Configuration</strong> add your RileyLink device by pressing the <strong x-id="1">Not Set</strong> text.
+  Auf dem gleichen Bildschirm werden unter der Pumpenauswahl die <strong x-id="1">Omnipod-Treibereinstellungen</strong> angezeigt. Füge unterhalb der <strong x-id="1">RileyLink Konfiguration</strong> Dein RileyLink Gerät hinzu, indem Du den <strong x-id="1">Nicht gesetzt</strong> Text drückst.
 </p>
 
 <p spaces-before="0">
-  On the <strong x-id="1">RileyLink Selection</strong> screen press the <strong x-id="1">Scan</strong> button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. Wenn Du alles richtig ausgewählt hast, wirst Du auf den Bildschirm der Pumpentreiberauswahl (unter Omnipod Treibereinstellungen) zurückgeleitet. Dort sollte die MAC-Adresse Deines gewählten RileyLink anzeigt werden.
+  Drücke auf dem Bildschirm <strong x-id="1">RileyLink Auswahl</strong> die <strong x-id="1">Scan-Schaltfläche (4)</strong> um einen Bluetooth Scan zu starten. Wenn Du alles richtig ausgewählt hast, wirst Du auf den Bildschirm der Pumpentreiberauswahl (unter Omnipod Treibereinstellungen) zurückgeleitet. Dort sollte die MAC-Adresse Deines gewählten RileyLink anzeigt werden.
 </p>
 
 <p spaces-before="0">
@@ -457,11 +457,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  Detailed steps on how to setup your pod communication device are listed below in the <a href="#rileylink-setup">RileyLink Setup Section</a>.
+  Die Details zur Einrichtung des Pod-Kommunikationsgeräts finden sich weiter unten im Bereich <a href="#rileylink-setup">RileyLink Setup</a>.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">OR</strong>
+  <strong x-id="1">ODER</strong>
 </p>
 
 <h3 spaces-before="0">
@@ -469,12 +469,12 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Via the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong> by selecting the <strong x-id="1">radio button (2)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (4)</strong> next to the <strong x-id="1">Settings Gear (3)</strong> will display the Omnipod menu as a tab in the AAPS interface titled <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  Über das <strong x-id="1">Hamburger Menü</strong> oben links unter <strong x-id="1">Konfigurations-Assistent (1)</strong> \<unk> <strong x-id="1">Pumpe</strong>\<unk> <strong x-id="1">Omnipod</strong> indem Du das <strong x-id="1">Auswahlfeld (2)</strong> mit dem Titel <strong x-id="1">Omnipod</strong> wählst. Wenn du das <strong x-id="1">Kontrollkästchen (4)</strong> neben dem <strong x-id="1">Einstellungsrädchen (3)</strong> wählst, wird das Omnipod-Menü als Registerkarte im AAPS-Interface mit dem Titel <strong x-id="1">POD</strong> angezeigt. Dies wird in dieser Dokumentation als Registerkarte <strong x-id="1">Omnipod (POD)</strong> bezeichnet.
 </p>
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> can be found below in the <a href="#omnipod-settings">Omnipod Settings section</a> of this document.
+    <strong x-id="1">HINWEIS:</strong> Eine schnellere Möglichkeit zum Zugriff auf die <strong x-id="1">Omnipod-Einstellungen</strong> findest du unten in der Rubrik <a href="#omnipod-einstellungen">Omnipod-Einstellungen</a> dieses Dokuments.
   </p>
   
   <p spaces-before="0">
@@ -487,11 +487,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below</em>
+  <em x-id="3">Hinweis: Wenn Du den Setup-Assistenten vorzeitig verlassen hast, ohne Deinen RileyLink auszuwählen, ist der Omnipod Treiber aktiviert, aber Du musst trotzdem Deinen RileyLink noch auswählen.  Dann erscheint bei dir der Omnipod (POD) Tab wie unten zusehen</em>
 </p>
 
 <p spaces-before="0">
-  To verify that you have enabled the Omnipod driver in AAPS <strong x-id="1">swipe to the left</strong> from the <strong x-id="1">Overview</strong> tab, where you will now see an <strong x-id="1">Omnipod</strong> or <strong x-id="1">POD</strong> tab.
+  Um zu überprüfen, ob Du den Omnipod-Treiber in AAPS aktiviert hast, <strong x-id="1">wische nach links</strong> vom Tab <strong x-id="1">Übersicht</strong> wo du nun einen Reiter <strong x-id="1">Omnipod</strong> oder <strong x-id="1">POD</strong> siehst.
 </p>
 
 <p spaces-before="0">
@@ -503,16 +503,16 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h2>
 
 <p spaces-before="0">
-  Please <strong x-id="1">swipe left</strong> to the <strong x-id="1">Omnipod (POD)</strong> tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+  Bitte <strong x-id="1">wische nach links</strong> zur <strong x-id="1">Omnipod (POD)</strong> Registerkarte, wo du alle Pod und RileyLink Funktionen verwalten kannst (einige dieser Funktionen sind ohne aktive Pod Sitzung nicht aktiviert oder nicht sichtbar):
 </p>
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    {{ refresh_pod_status }} Refresh Pod connectivity and status
+    {{ refresh_pod_status }} Aktualisiere Pod-Verbindungen und -Status
   </p>
   
   <p spaces-before="0">
-    {{ pod_management }} Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    {{ pod_management }} Pod-Management (Aktivieren, Deaktivieren, Testsignal, RileyLink Statistik und Pod-Historie)
   </p>
 </blockquote>
 
@@ -525,7 +525,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.</em>
+  <em x-id="3">Hinweis: Ein guter visueller Hinweis dafür, dass der RileyLink nicht angeschlossen ist, ist, dass die Tasten Insulin und Bolusrechner auf der Startseite fehlen. Dies passiert auch in den ersten 30 Sekunden nach dem Start von AAPS, da AAPS sich erst mit dem RileyLink verbinden muss.</em>
 </p>
 
 <ol start="1">
@@ -537,11 +537,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   
   <li>
     <p spaces-before="0">
-      After selecting the Omnipod driver, identify and select your RileyLink from <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Gear Icon (Settings) (2)</strong> ➜<strong x-id="1">RileyLink Configuration (3)</strong> by pressing the <strong x-id="1">Not Set</strong> or <strong x-id="1">MAC Address (if present)</strong> text.
+      Die Einstellungen des Omnipod-Treibers können über das <strong x-id="1">Hamburger-Menü</strong> oben links unter <strong x-id="1">Konfigurations-Assistent</strong>➜<strong x-id="1">Pumpe</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Einstellungsrädchen (2)</strong> konfiguriert werden,
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
-       Ensure your RileyLink battery is charged and it is <a href="#optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Einmal ausgewählt, kannst du deine erste Pod Session aktivieren. Benutze die Zurück-Taste auf deinem Handy, um zum AAPS-Haupt-Bildschirm zurückzukehren.
+       Stelle sicher, dass dein RileyLink-Akku geladen ist und sich <a href="#optimale-positionierung-von-omnipod-und-rileylink">in unmittelbarer Nähe befindet</a> (~30 cm entfernt oder weniger) zu deinem Handy positioniert, damit AAPS es durch seine MAC-Adresse identifizieren kann. Einmal ausgewählt, kannst du deine erste Pod Session aktivieren. Benutze die Zurück-Taste auf deinem Handy, um zum AAPS-Haupt-Bildschirm zurückzukehren.
      </p>
      
      <p spaces-before="0">
@@ -552,7 +552,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Selection</strong> screen press the <strong x-id="1">Scan (4)</strong> button to initiate a bluetooth scan. <strong x-id="1">Select your RileyLink (5)</strong>  from the list of available Bluetooth devices.
+     Drücke die <strong x-id="1">Weiter</strong> Taste, um mit dem Rest des <strong x-id="1">Einrichtungsassistenten</strong> fortzufahren. Es kann bis zu einer Minute dauern, bis der gewählte RileyLink eingerichtet wurde und der <strong x-id="1">Fortsetzen</strong> Button aktiviert wird.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -563,7 +563,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     After successful selection you are returned to the Omnipod Settings page listing your <strong x-id="1">currently selected RileyLink's MAC Address (6).</strong>
+     Nach erfolgreicher Auswahl wirst Du zu den Omnipod Einstellungen zurückgeleitet, welche die <strong x-id="1">MAC-Adresse Deines aktuell ausgewählte RileyLinks auflisten (6).</strong>
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -593,7 +593,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. During these procedures, make sure that your pod is</em> <a href="#optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+  <em x-id="3">HINWEIS: Für die Verbindung mit dem Pod steht aus Sicherheitsgründen nur ein kleinerer Kommunikationsbereich zur Verfügung. Vor dem Pairing des Pods ist das Funksignal schwächer, aber nachdem es verbunden wurde, wird es mit voller Signalleistung funktionieren. Stelle sicher, dass Dein Pod während dieser Prozedur \`in der Nähe\<#optimale-positionierung-von-omnipod-und-rileylink>\`\_\_ \*(~30 cm entfernt oder weniger)</em> ist, aber nicht auf oder direkt neben dem RileyLink liegt.\*
 </p>
 
 <ol start="1">
@@ -618,14 +618,14 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
       </p>
       
       <p spaces-before="0">
-        Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the <strong x-id="1">Next</strong> button.
+        Stelle sicher, dass der neue Pod und RileyLink in der Nähe von einander liegen (~ 30cm oder weniger), und klicke auf den Button <strong x-id="1">Weiter</strong>.
       </p>
     </blockquote>
   </li>
   
   <li>
     <p spaces-before="0">
-      Der Bildschirm <strong x-id="1">Initialisiere Pod</strong> wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, <a href="#optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
+      Der Bildschirm <strong x-id="1">Initialisiere Pod</strong> wird angezeigt und der Pod beginnt zu entlüften. (Du wirst ein Klicken hören, gefolgt von einer Reihe tickender Sounds, der Pod entlüftet sich selbst). Der Suspend-Befehl wird vom RileyLink an den aktiven Pod gesendet und der <strong x-id="1">Unterbrechen (3)</strong> Button wird ausgegraut. Der <strong x-id="1">Pod Status (2)</strong> wird <strong x-id="1">AUSLIEFERUNG UNTERBROCHEN</strong> anzeigen.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -636,7 +636,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   
   <li>
     <p spaces-before="0">
-      Upon successful priming a green checkmark will be shown and the <strong x-id="1">Next</strong> button will become enabled. Klicke auf den <strong x-id="1">Weiter</strong> Button, um die Initialisierung des Pods abzuschließen; anschließend wird der <strong x-id="1">Pod anlegen</strong> Bildschirm angezeigt.
+      Bei erfolgreicher Befüllung wird ein grünes Häkchen angezeigt und der <strong x-id="1">Weiter</strong> Button wird aktiviert. Klicke auf den <strong x-id="1">Weiter</strong> Button, um die Initialisierung des Pods abzuschließen; anschließend wird der <strong x-id="1">Pod anlegen</strong> Bildschirm angezeigt.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -658,7 +658,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   
   <li>
     <p spaces-before="0">
-      Das <strong x-id="1">Pod anlegen</strong> Dialogfenster wird nun angezeigt. <strong x-id="1">ONLY click on the OK button if you are ready to deploy the cannula</strong>.
+      Das <strong x-id="1">Pod anlegen</strong> Dialogfenster wird nun angezeigt. <strong x-id="1">NUR auf OK klicken, wenn du bereit bist, die Kanülen einzuführen.</strong>
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -669,15 +669,15 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   
   <li>
     <p spaces-before="0">
-      After pressing <strong x-id="1">OK</strong>, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+      Nach dem Drücken von <strong x-id="1">OK</strong> dauert es eventuell etwas, bevor der Omnipod antwortet und die Kanüle setzt (1-2 Minuten maximal) also habe Geduld.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
-        If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry</strong> button.
+        Der Suspend-Befehl wird vom RileyLink an den aktiven Pod gesendet und der <strong x-id="1">Unterbrechen (3)</strong> Button wird ausgegraut. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry</strong> button.
       </p>
       
       <p spaces-before="0">
-        If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message <strong x-id="1">No response from RileyLink</strong>. If this occurs, move the RileyLink closer to the phone and click the <strong x-id="1">Retry</strong> button.
+        Wenn der RileyLink außerhalb der Bluetoothreichweite oder keine aktive Verbindung zum Smartphone hat, bekommt man eine Fehlermeldung <strong x-id="1">Keine Antwort von RileyLink</strong>. Wenn diese Fehlermeldung auftritt, verringere die Distanz vom RileyLink und dem Smartphone und klicke auf den Button <strong x-id="1">Erneut versuchen</strong>.
       </p>
       
       <p spaces-before="0">
@@ -721,10 +721,10 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
       The <strong x-id="1">Pod management</strong> menu screen should now display with the <strong x-id="1">Activate Pod (1)</strong> button <em x-id="3">disabled</em> and the <strong x-id="1">Deactivate Pod (2)</strong> button <em x-id="3">enabled</em>. Dies liegt daran, dass jetzt ein Pod aktiv ist und du keinen zusätzlichen Pod aktivieren kannst, ohne zuerst den aktuell aktiven Pod zu deaktivieren.
     </p>
     <p spaces-before="4">
-      Click on the back button on your phone to return to the <strong x-id="1">Omnipod (POD)</strong> tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+      Klicke auf den Zurück-Knopf auf deinem Smartphone, um zum Tab-Bildschirm <strong x-id="1">Omnipod (POD)</strong> zurückzukehren, auf dem jetzt Informationen zu deiner aktiven Pod-Sitzung angezeigt werden, einschließlich der aktuellen Basalrate, Pod Reservoir Level, abgegebenem Insulin, Pod Fehler und Warnungen.
     </p>
     <p spaces-before="4">
-      For more details on the information displayed go to the <a href="#omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
+      Weitere Details zu den angezeigten Informationen findest du im Tab <a href="#omnipod-pod-tab">Omnipod (POD)</a> dieses Dokuments.
     </p>
     <p spaces-before="4">
       {{ Activate_Pod_14 }} {{ Activate_Pod_15 }}
@@ -747,7 +747,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab, click on the <strong x-id="1">POD MGMT (1)</strong> button, on the <strong x-id="1">Pod management</strong> screen click on the <strong x-id="1">Deactivate Pod (2)</strong> button.
+      Navigiere zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> und klicke auf den <strong x-id="1">POD MGMT (1)</strong> Button und dann auf <strong x-id="1">Pod aktivieren (2)</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -758,7 +758,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">Deactivate Pod</strong> screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the <strong x-id="1">Next</strong> button to begin the process of deactivating the pod.
+     Stelle sicher, dass sich der RileyLink in unmittelbarer Nähe zum Pod befindet, aber nicht direkt darauf oder direkt neben dem Pod liegt. Dann klicke auf dem <strong x-id="1">Deaktiviere Pod \*\* Bildschirm den \*\*Weiter</strong> -Button, um den Prozess der Deaktivierung des Pods zu starten.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -769,7 +769,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     The <strong x-id="1">Deactivating Pod</strong> screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+     Der <strong x-id="1">Deaktiviere Pod</strong> Bildschirm erscheint und du erhältst einen Bestätigungspiepton, dass die Deaktivierung erfolgreich war.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -777,7 +777,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
      </p>
      
      <p spaces-before="0">
-       <strong x-id="1">IF deactivation fails</strong> and you do not receive a confirmation beep, you may receive a <strong x-id="1">No response from RileyLink</strong> or <strong x-id="1">No response from Pod message</strong>. Please click on the <strong x-id="1">Retry (1)</strong> button to attempt deactivation again. If deactivation continues to fail, please click on the <strong x-id="1">Discard Pod (2)</strong> button to discard the Pod. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the <strong x-id="1">Discard Pod (2)</strong> button will not silence it.
+       <strong x-id="1">WENN die Deaktivierung scheitert</strong> und du keinen Bestätigungspiepton erhältst, kommt evlt. die Meldung <strong x-id="1">Keine Antwort von RileyLink</strong> oder <strong x-id="1">Keine Antwort vom Pod</strong>. Bitte klicke auf den Button <strong x-id="1">Erneut versuchen (1)</strong>, um die Deaktivierung erneut zu versuchen. Wenn die Deaktivierung weiterhin fehlschlägt, klicke bitte auf die <strong x-id="1">Verwerfen (2)</strong> -Schaltfläche, um den Pod zu verwerfen. Du kannst nun deinen Pod entfernen, da die aktive Sitzung beendet wurde. Falls Dein Pod einen dauerhaften Alarm hat, musst Du ihn mit einem Pin oder einer Büroklammer manuell ausschalten. Die <strong x-id="1">Verwerfen (2)</strong> Schaltfläche wird ihn nicht stillt stellen.
      </p>
      
      <blockquote spaces-before="3">
@@ -801,7 +801,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Click on the green button to return to the <strong x-id="1">Pod management</strong> screen.
+     Klicke auf den grünen Knopf, um zum Bildschirm <strong x-id="1">Pod Management</strong> zurückzukehren.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -812,7 +812,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     You are now returned to the <strong x-id="1">Pod management</strong> menu press the back button on your phone to return to the <strong x-id="1">Omnipod (POD)</strong> tab. Verify that the <strong x-id="1">RileyLink Status:</strong> field reports <strong x-id="1">Connected</strong> and the <strong x-id="1">Pod status:</strong> field displays a <strong x-id="1">No active Pod</strong> message.
+     Geh auf den <strong x-id="1">Omnipod (POD)</strong> Tab und drücke den <strong x-id="1">POD MGMT (1)</strong> Button um das <strong x-id="1">Pod Management</strong> Menü zu erreichen. Drücke dann den <strong x-id="1">RileyLink Status (2)</strong> Button um den aktuell konfigurierten <strong x-id="1">RileyLink (3)</strong> und die Einstellungen des aktiven Pod <strong x-id="1">Geräts (4)</strong> zu sehen.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -831,7 +831,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see a SUSPEND button</em>, then it has not been enabled to display in the Omnipod (POD) tab. Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="#omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
+  <em x-id="3">HINWEIS - wenn du keinen Button 'Unterbrechen' siehst</em>, ist dessen Anzeige im Register Omnipod (POD) nicht aktiviert. Aktiviere die Einstellung <strong x-id="1">Button 'Insulinabgabe unterbrechen' im Omnipod Tab anzeigen</strong> in den <a href="#omnipod-einstellungen">Omnipod-Einstellungen</a> unter <strong x-id="1">Andere</strong>.
 </p>
 
 <h4 spaces-before="0">
@@ -845,7 +845,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and click on the <strong x-id="1">SUSPEND (1)</strong> button. The suspend command is sent from the RileyLink to the active pod and the <strong x-id="1">SUSPEND (3)</strong> button will become greyed out. The <strong x-id="1">Pod status (2)</strong> will display <strong x-id="1">SUSPEND DELIVERY</strong>.
+      Gehe zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> und drücke den Button <strong x-id="1">POD MGMT (1)</strong>, um das <strong x-id="1">Pod Management</strong> Menü zu erreichen. Drücke anschließend den <strong x-id="1">Pod Historie (2)</strong> Button, um zu den <strong x-id="1">Einstellungen</strong> und der <strong x-id="1">Historie</strong> zu gelangen. Klicke auf den Text <strong x-id="1">Pod Historie (3)</strong>, um den gesamten Verlauf des RileyLink und der derzeit aktiven Pod-Sitzung anzuzeigen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -856,7 +856,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">All insulin delivery has been suspended</strong>. Klicke <strong x-id="1">OK</strong> um zu bestätigen und fortzufahren.
+     Wenn der Befehl zum Aussetzen erfolgreich durch den RileyLink bestätigt wurde, zeigt ein Bestätigungsdialog die Nachricht <strong x-id="1">Alle Insulinlieferungen wurden ausgesetzt</strong> an. Klicke <strong x-id="1">OK</strong> um zu bestätigen und fortzufahren.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -867,7 +867,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Dein aktiver Pod hat nun die Insulinabgabe unterbrochen. The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> to <strong x-id="1">Suspended</strong>. The <strong x-id="1">SUSPEND</strong> button will change to a new <strong x-id="1">Resume Delivery (2)</strong> button
+     Dein aktiver Pod hat nun die Insulinabgabe unterbrochen. Die <strong x-id="1">Omnipod (POD)</strong> Registerkarte aktualisiert den <strong x-id="1">Pod Status (1)</strong> auf <strong x-id="1">unterbrochen</strong>. Der <strong x-id="1">Unterbrechen</strong>-Button ändert sich zu <strong x-id="1">Abgabe fortsetzen (2)</strong>.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -888,7 +888,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and ensure the <strong x-id="1">Pod status (1)</strong> field displays <strong x-id="1">Suspended</strong>, then press the <strong x-id="1">Resume Delivery (2)</strong> button to start the process to instruct the current pod to resume normal insulin delivery. A message <strong x-id="1">RESUME DELIVERY</strong> will display in the <strong x-id="1">Pod status (3)</strong> field, signifying the RileyLink is actively sending the command to the suspended pod.
+      Gehe zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> und drücke die <strong x-id="1">ACK ALERTS (2)</strong> Schaltfläche (Bestätigungs-Warnungen). Der RileyLink sendet den Befehl an den Pod, um die Ablaufwarnung des Pods zu deaktivieren und aktualisiert das Feld <strong x-id="1">Pod Status (1)</strong> mit <strong x-id="1">ACKNOWLEDGE ALERTS</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -899,7 +899,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">Insulin delivery has been resumed</strong>. Klicke <strong x-id="1">OK</strong> um zu bestätigen und fortzufahren.
+     Bei <strong x-id="1">erfolgreicher Deaktivierung</strong> der Alarme werden <strong x-id="1">2 Signaltöne</strong> vom aktiven Pod abgegeben und ein Bestätigungsdialog zeigt die Nachricht <strong x-id="1">Aktive Warnungen wurden bestätigt.</strong> an. Klicke <strong x-id="1">OK</strong> um zu bestätigen und fortzufahren.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -910,7 +910,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> field to display <strong x-id="1">RUNNING,</strong> and the <strong x-id="1">Resume Delivery</strong> button will now display the <strong x-id="1">SUSPEND (2)</strong> button.
+     Die <strong x-id="1">Omnipod (POD)</strong> Registerkarte aktualisiert das Feld <strong x-id="1">Pod Status (1)</strong> um <strong x-id="1">LAUFEND</strong> und die Schaltfläche <strong x-id="1">Lieferung fortsetzen</strong> wird nun zu <strong x-id="1">UNTERBRECHEN (2)</strong> geändert.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -925,11 +925,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.</em>
+  <em x-id="3">HINWEIS - Wenn du keine ACK ALERTS Schaltfläche siehst, liegt es daran, dass diese nur auf der Registerkarte Omnipod (POD) angezeigt wird, wenn der Pod-Ablauf oder der niedrige Reservoir-Alarm ausgelöst wurden.</em>
 </p>
 
 <p spaces-before="0">
-  In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert werden können, die auftreten, wenn die aktive Pod-Zeit den Grenzwert für die Warnung vor dem Ablauf von 72 Stunden (3 Tage) erreicht. This warning time limit is defined in the <strong x-id="1">Hours before shutdown</strong> Omnipod alerts setting. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
+  In dem folgenden Prozess wird gezeigt, wie Warntöne bestätigt und quittiert werden können, die auftreten, wenn die aktive Pod-Zeit den Grenzwert für die Warnung vor dem Ablauf von 72 Stunden (3 Tage) erreicht hat. Dieser Grenzwert für die Zeitbegrenzung ist in den <strong x-id="1">Stunden vor dem Herunterfahren</strong> in den Omnipod Warnungen definiert. Die maximale Nutzungsdauer eines Pods beträgt 80 Stunden (3 Tage und 8 Stunden), dennoch empfiehlt der Hersteller, 72 Stunden (3 Tage) nicht zu überschreiten.
 </p>
 
 <p spaces-before="0">
@@ -939,7 +939,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      When the defined <strong x-id="1">Hours before shutdown</strong> warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the <strong x-id="1">Omnipod (POD)</strong> tab, the <strong x-id="1">Pod expires: (1)</strong> field will show the exact time the pod will expire (72 hours after activation) and the text will turn <strong x-id="1">red</strong> after this time has passed, under the <strong x-id="1">Active Pod alerts (2)</strong> field where the status message <strong x-id="1">Pod will expire soon</strong> is displayed. This trigger will display the <strong x-id="1">ACK ALERTS (3)</strong> button. A <strong x-id="1">system notification (4)</strong> will also inform you of the upcoming pod expiration
+      <strong x-id="1">Stunden vor der Abschaltung:</strong> Legt die Anzahl der Stunden vor der Abschaltung des aktiven Pods fest, die dann den Alarm zur Pod-Ablauferinnerung auslöst. \* <strong x-id="1">\*Warnung bei niedrigem Reservoir-Füllstand:</strong> Aktiviere oder deaktiviere eine Warnung, wenn das Limit für den niedrigen Reservoir-Füllstand der verbleibenden Einheiten des Pods erreicht wird, wie im Feld Anzahl der Einheiten definiert. \* <strong x-id="1">Anzahl der Einheiten:</strong> Die Anzahl der verbleibenden Einheiten, bei denen der Alarm für den niedrigen Reservoir-Füllstand ausgelöst werden soll. A <strong x-id="1">system notification (4)</strong> will also inform you of the upcoming pod expiration
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -950,7 +950,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">ACK ALERTS (2)</strong> button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the <strong x-id="1">Pod status (1)</strong> field with <strong x-id="1">ACKNOWLEDGE ALERTS</strong>.
+     Vergewissere dich, dass im Tab <strong x-id="1">Omnipod (POD)</strong> der <strong x-id="1">RileyLink Status (1)</strong> als <strong x-id="1">verbunden</strong> erscheint. Das <strong x-id="1">Pod Status (2)</strong> Feld sollte <strong x-id="1">Kein aktiver Pod</strong> anzeigen; Falls nicht, wiederhole bitte den vorherigen Schritt oder verlasse AAPS, um zu sehen, ob dies die Verbindung aktualisiert.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -980,7 +980,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab, under the <strong x-id="1">Active Pod alerts</strong> field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+     Gehe zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> unter dem Menüpunkt <strong x-id="1">Aktive Pod Warnungen</strong>. Die Warnmeldung wird dort nicht mehr angezeigt und der aktive Pod erzeugt keine Signale mehr, die mit dem Ablauf des Pods zu tun haben.
    </p>
  </li>
 </ol>
@@ -998,13 +998,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE:</em> <strong x-id="1">Uncertain</strong> commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+  <em x-id="3">HINWEIS:</em> <strong x-id="1">Unsichere</strong> Befehle erscheinen in der Pod-Historie, aber für deren Genauigkeit gibt es aufgrund der Unsicherheit keine Garantie.
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu and then press the <strong x-id="1">Pod history (2)</strong> button to access the pod history screen.
+      Gehe zur Registerkarte <strong x-id="1">Omnipod (POD)</strong>, klicke auf den Button <strong x-id="1">POD MGMT (1)</strong> und dann auf dem Bildschirm <strong x-id="1">Pod Management</strong> auf den Button <strong x-id="1">Deaktiviere Pod (2)</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1015,7 +1015,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">Pod history</strong> screen, the default category of <strong x-id="1">All (1)</strong> is displayed showing the <strong x-id="1">Date and Time (2)</strong> of all pod <strong x-id="1">Actions (3)</strong> and <strong x-id="1">Results (4)</strong> in reverse chronological order. Use your phone’s <strong x-id="1">back button 2 times</strong> to return to the <strong x-id="1">Omnipod (POD)</strong> tab in the main AAPS interface.
+     In der Anzeige <strong x-id="1">Pod-Historie</strong> wird die Standardkategorie <strong x-id="1">Alle (1)</strong> angezeigt, die <strong x-id="1">Datum und Uhrzeit (2)</strong> aller Pods <strong x-id="1">Aktionen (3)</strong> und <strong x-id="1">Ergebnisse (4)</strong> in umgekehrter chronologischer Reihenfolge darstellt. Drücke zweimal die <strong x-id="1">Zurück-Taste deines Telefons</strong> um zur <strong x-id="1">Omnipod (POD)</strong> Registerkarte  zurückzukehren.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1030,15 +1030,15 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Dieser Abschnitt zeigt, wie die Einstellungen des aktiven Pods und RileyLinks zusammen mit der Kommunikationshistorie der beiden überprüft werden können. This feature, once accessed, is split into two sections: <strong x-id="1">Settings</strong> and <strong x-id="1">History</strong>.
+  Dieser Abschnitt zeigt, wie die Einstellungen des aktiven Pods und RileyLinks zusammen mit der Kommunikationshistorie der beiden überprüft werden können. Diese Funktion wird nach dem Aufrufen in zwei Abschnitte unterteilt: <strong x-id="1">Einstellungen</strong> und <strong x-id="1">Historie</strong>.
 </p>
 
 <p spaces-before="0">
-  The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the <strong x-id="1">RileyLink status</strong> reports <strong x-id="1">RileyLink unreachable</strong>. The <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+  Hauptsächlich wird diese Funktion verwendet, wenn der RileyLink außerhalb des Bluetooth-Bereichs des Smartphones ist und der <strong x-id="1">RileyLink-Status</strong> nach einer bestimmten Zeit <strong x-id="1">RileyLink nicht erreichbar</strong> meldet. Der Button <strong x-id="1">Aktualisieren</strong> auf der Registerkarte <strong x-id="1">Omnipod (POD)</strong> stellt manuell die Bluetooth-Kommunikation mit dem derzeit in den Omnipod-Einstellungen konfigurierten RileyLink erneut her.
 </p>
 
 <p spaces-before="0">
-  In the event the <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+  Für den Fall dass der <strong x-id="1">REFRESH</strong> Button im <strong x-id="1">Omnipod (POD)</strong> Tab die Verbindung zum Rileylink nicht wiederherstellen kann, folge den zusätzlichen Hinweisen weiter unten zur manuellen Wiederherstellung der Verbindung.
 </p>
 
 <h4 spaces-before="0">
@@ -1048,7 +1048,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      From the <strong x-id="1">Omnipod (POD)</strong> tab when the <strong x-id="1">RileyLink Status: (1)</strong> reports <strong x-id="1">RileyLink unreachable</strong> press the <strong x-id="1">POD MGMT (2)</strong> button to navigate to the <strong x-id="1">Pod Management</strong> menu. On the <strong x-id="1">Pod Management</strong> menu you will see a notification appear actively searching for a RileyLink connection, press the <strong x-id="1">RileyLink stats (3)</strong> button to access the <strong x-id="1">RileyLink settings</strong> screen.
+      Wenn im <strong x-id="1">Omnipod (POD)</strong> Tab der <strong x-id="1">RileyLink-Status: (1)</strong> <strong x-id="1">RileyLink nicht erreichbar</strong> meldet, drücke den <strong x-id="1">POD MGMT (2)</strong> Knopf, um zur <strong x-id="1">Pod-Verwaltung</strong> zu kommen. Wenn im Menü <strong x-id="1">Pod Management</strong> eine Benachrichtigung zur aktiven Suche nach einer RileyLink-Verbindung erscheint, drücke auf <strong x-id="1">RileyLink Statistiken (3)</strong>, um die <strong x-id="1">RileyLink Einstellungen</strong> Seite aufzurufen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1059,7 +1059,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Settings (1)</strong> screen under the <strong x-id="1">RileyLink (2)</strong> section you can confirm both the Bluetooth connection status and error in the <strong x-id="1">Connection Status and Error: (3)</strong> fields. A <em x-id="3">Bluetooth Error</em> and <em x-id="3">RileyLink unreachable</em> status should be shown. Start the manual Bluetooth reconnection by pressing the <strong x-id="1">refresh (4)</strong> button in the lower right corner.
+     Auf dem Bildschirm <strong x-id="1">RileyLink-Einstellungen (1)</strong> unter <strong x-id="1">RileyLink (2)</strong> kannst du sowohl den Bluetooth-Verbindungsstatus als auch den Fehler in den Feldern <strong x-id="1">Verbindungsstatus und Fehler: (3)</strong> bestätigen. Ein <em x-id="3">Bluetooth-Fehler</em> und <em x-id="3">RileyLink nicht erreichbar</em> Status sollten angezeigt werden. Start the manual Bluetooth reconnection by pressing the <strong x-id="1">refresh (4)</strong> button in the lower right corner.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1079,7 +1079,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   </li>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">OK (2)</strong> will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+      <strong x-id="1">OK (2)</strong> bestätigt diese aktuelle Warnung und ermöglicht es dem Nutzer zu versuchen die Bluetooth-Verbindung erneut wieder herzustellen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1092,13 +1092,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="3">
   <li>
     <p spaces-before="0">
-      If the <strong x-id="1">Bluetooth connection</strong> does not re-establish, try manually turning <strong x-id="1">off</strong> and then back <strong x-id="1">on</strong> the Bluetooth function on your phone.
+      Wenn die <strong x-id="1">Bluetooth-Verbindung</strong> nicht wieder hergestellt wird, dann versuche die Bluetooth-Funktion auf deinem Smartphone manuell <strong x-id="1">aus-</strong> und dann wieder <strong x-id="1">anzuschalten</strong>.
     </p>
   </li>
   
   <li>
     <p spaces-before="0">
-      After a successful RileyLink Bluetooth reconnection the <strong x-id="1">Connection Status: (1)</strong> field should report <strong x-id="1">RileyLink ready</strong>. Herzlichen Glückwunsch, Du hast jetzt erneut Deinen konfigurierten RileyLink mit AAPS verbunden!
+      Nach einer erfolgreichen RileyLink Bluetooth-Wiederverbindung sollte das Feld <strong x-id="1">Verbindungsstatus: (1)</strong> <strong x-id="1">RileyLink bereit</strong> anzeigen. Herzlichen Glückwunsch, Du hast jetzt erneut Deinen konfigurierten RileyLink mit AAPS verbunden!
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1113,13 +1113,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h4>
 
 <p spaces-before="0">
-  Dieser Bildschirm liefert Informationen, Status und Einstellungen zur Konfiguration sowohl für den aktuell konfigurierten Rileylink als auch für den aktuell aktiven Pod.
+  This screen will provide information, status, and settings configuration information for both the currently configured pod communication device and the currently active Omnipod Eros pod.
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu, then press the <strong x-id="1">RileyLink stats (2)</strong> button to view your currently configured <strong x-id="1">RileyLink (3)</strong> and active pod <strong x-id="1">Device (4)</strong> settings.
+      Gehe zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> und stelle sicher, dass das Feld <strong x-id="1">Pod Status (1)</strong> <strong x-id="1">unterbrochen</strong> anzeigt, dann drücke die <strong x-id="1">Fortsetzen (2)</strong> Taste, um den Prozess zu starten, um den aktuellen Pod anzuweisen, die normale Insulinlieferung fortzusetzen. Eine Nachricht <strong x-id="1">RESUME DELIVERY</strong> wird im Feld <strong x-id="1">Pod Status (3)</strong> angezeigt. Das bedeutet, dass der RileyLink aktiv den Befehl an den gestoppten Pod sendet.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1140,25 +1140,25 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Address:</strong> MAC address of the selected pod communication device defined in the Omnipod Settings.
+      <strong x-id="1">Adresse:</strong> MAC-Adresse des gewählten Pod-Kommunikationsgeräts, die in den Omnipod-Einstellungen definiert wurde.
     </li>
     <li>
-      <strong x-id="1">Name:</strong> Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
+      <strong x-id="1">Name:</strong> Bluetooth-Identifikationsname des in den Bluetooth-Einstellungen deines Smartphones definierten Pod-Kommunikationsgeräts.
     </li>
     <li>
-      <strong x-id="1">Battery Level:</strong> Displays the current battery level of the connected pod communication device
+      <strong x-id="1">Akkustand:</strong> Zeigt den aktuellen Batterieladestand des angeschlossenen Pod-Kommunikationsgeräts an
     </li>
     <li>
-      <strong x-id="1">Connected Device:</strong> Model of the Omnipod pod currently communicating with the pod communication device
+      <strong x-id="1">Verbundenes Gerätemodell:</strong> Modell des Omnipod-Pods, der derzeit mit dem Pod-Kommunikationsgerät kommuniziert
     </li>
     <li>
-      <strong x-id="1">Connection Status</strong>: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
+      <strong x-id="1">Verbindungsstatus:</strong>: Der aktuelle Status der Bluetooth-Verbindung zwischen dem Pod-Kommunikationsgerät und dem Smartphone, auf dem AAPS läuft.
     </li>
     <li>
-      <strong x-id="1">Connection Error:</strong> If there is an error with the pod communication device Bluetooth connection details will be displayed here.
+      Verbindungsfehler: \*\* Wenn es einen Fehler mit dem Pod-Kommunikationsgerät gibt, werden hier die Details der Bluetooth-Verbindung angezeigt.
     </li>
     <li>
-      <strong x-id="1">Firmware Version:</strong> Current firmware version installed on the actively connected pod communication device.
+      <strong x-id="1">Firmware-Version:</strong> Aktuelle Firmware-Version, die auf dem aktiv verbundenen Pod-Kommunikationsgerät installiert ist.
     </li>
   </ul>
 </blockquote>
@@ -1170,25 +1170,25 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Device Type:</strong> The type of device communicating with the pod communication device (Omnipod pod pump)
+      <strong x-id="1">Geräte-Typ:</strong> Der Geräte-Typ, der mit dem Pod-Kommunikationsgerät verbunden ist (Omnipod-Pod-Pumpe)
     </li>
     <li>
-      <strong x-id="1">Device Model:</strong> The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
+      <strong x-id="1">Gerätemodell:</strong> Das Modell des aktiven Geräts, das mit dem Pod-Kommunikationsgerät verbunden ist (der Modellname des Omnipod-Pods, also Eros)
     </li>
     <li>
-      <strong x-id="1">Pump Serial Number:</strong> Serial number of the currently activated pod
+      <strong x-id="1">Seriennummer der Pumpe:</strong> Seriennummer des aktuell aktivierten Pods
     </li>
     <li>
-      <strong x-id="1">Pump Frequency:</strong> Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
+      <strong x-id="1">Pumpenfrequenz:</strong> Funkfrequenz, die das Pod-Kommunikationsgerät eingestellt hat, um die Kommunikation zwischen sich und dem Pod zu ermöglichen.
     </li>
     <li>
-      <strong x-id="1">Last Used frequency:</strong> Last known radio frequency the pod used to communicate with the pod communication device.
+      <strong x-id="1">Zuletzt verwendete Frequenz:</strong> Letzte bekannte Funkfrequenz, die der Pod zur Kommunikation mit dem Pod-Kommunikationsgerät verwendet hat.
     </li>
     <li>
-      <strong x-id="1">Last Device Contact:</strong> Date and time of the last contact the pod made with the pod communication device.
+      <strong x-id="1">Letzter Gerätekontakt:</strong> Datum und Uhrzeit des letzten Kontakts vom Pod mit dem Pod-Kommunikationsgerät.
     </li>
     <li>
-      <strong x-id="1">Refresh button</strong> manually refresh the settings on this page.
+      <strong x-id="1">Aktualisieren Button:</strong> Durch Klicken manuell die Einstellungen auf dieser Seite aktualisieren.
     </li>
   </ul>
 </blockquote>
@@ -1204,7 +1204,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod Management</strong> menu, then press the <strong x-id="1">Pod History (2)</strong> button to view the <strong x-id="1">Settings</strong> and <strong x-id="1">History</strong> screen. Click on the <strong x-id="1">HISTORY (3)</strong> text to display the entire history of the RileyLink and currently active pod session.
+      Geh zur Registerkarte <strong x-id="1">Omnipod (POD)</strong> und drücke den Button <strong x-id="1">POD MGMT (1)</strong>, um auf das Menü <strong x-id="1">Pod-Management</strong> zuzugreifen. Drücke dann auf die Schaltfläche <strong x-id="1">Pod-Historie(2)</strong>, um auf den Bildschirm der Pod-Historie zuzugreifen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1225,13 +1225,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Date & Time</strong>: In reverse chronological order the timestamp of each event.
+      <strong x-id="1">Datum & Uhrzeit</strong>: In umgekehrter chronologischer Reihenfolge der Zeitstempel der einzelnen Ereignisse.
     </li>
     <li>
-      <strong x-id="1">Device:</strong> The device to which the current action or state is referring.
+      <strong x-id="1">Gerät:</strong> Das Gerät, auf das sich die aktuelle Aktion oder der aktuelle Zustand bezieht.
     </li>
     <li>
-      <strong x-id="1">State or Action:</strong> The current state or action performed by the device.
+      <strong x-id="1">Zustand oder Aktion:</strong> Der aktuelle Zustand oder die Aktion, die das Gerät durchgeführt hat.
     </li>
   </ul>
 </blockquote>
@@ -1241,11 +1241,11 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h2>
 
 <p spaces-before="0">
-  Below is an explanation of the layout and meaning of the icons and status fields on the <strong x-id="1">Omnipod (POD)</strong> tab in the main AAPS interface.
+  Im Folgenden werden die Anordnung und die Bedeutung der Symbole und Statusfelder auf der Registerkarte <strong x-id="1">Omnipod (POD)</strong> des AAPS-Hauptbildschims erläutert.
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.</em>
+  <em x-id="3">HINWEIS: Wenn in den Statusfeldern der Registerkarte Omnipod (POD) eine Meldung erscheint (unsicher), musst Du die Schaltfläche Aktualisieren drücken, um sie zu löschen und den Pod-Status zu aktualisieren.</em>
 </p>
 
 <blockquote spaces-before="0">
@@ -1261,18 +1261,18 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">RileyLink Status:</strong> Displays the current connection status of the RileyLink
+      <strong x-id="1">RileyLink Status:</strong> Zeigt den aktuellen Verbindungsstatus des RileyLink an
     </p>
 <blockquote spaces-before="2">
     <ul>
       <li>
-        <em x-id="3">RileyLink Unreachable</em> - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
+        <em x-id="3">RileyLink nicht erreichbar</em> - Das Pod-Kommunikationsgerät befindet sich entweder nicht in Bluetooth-Reichweite des Smartphones, ist ausgeschaltet oder hat einen Fehler, der die Bluetooth-Kommunikation verhindert.
       </li>
       <li>
-        <em x-id="3">RileyLink Ready</em> - pod communication device is powered on and actively initializing the Bluetooth connection
+        <em x-id="3">RileyLink bereit</em> - Das Pod-Kommunikationsgerät ist eingeschaltet und initialisiert gerade die Bluetooth-Verbindung.
       </li>
       <li>
-        <em x-id="3">Connected</em> - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+        <em x-id="3">Verbunden</em> - Das Pod-Kommunikationsgerät ist eingeschaltet, verbunden und aktiv in der Lage, über Bluetooth zu kommunizieren.
       </li>
     </ul>
   </blockquote>
@@ -1280,42 +1280,42 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod address:</strong> Displays the current address in which the active pod is referenced
+    <strong x-id="1">Pod Adresse:</strong> Zeigt die aktuelle Adresse an, in der der aktive Pod referenziert wird
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">LOT:</strong> Displays the LOT number of the active pod
+    <strong x-id="1">LOT:</strong> Zeigt die LOT-Nummer des aktiven Pods an
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">TID:</strong> Displays the serial number of the pod.
+    <strong x-id="1">TID:</strong> Zeigt die Seriennummer des Pods an.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Firmware Version:</strong> Displays the firmware version of the active pod.
+    <strong x-id="1">Firmware-Version:</strong> Zeigt die Firmware-Version des aktiven Pods an.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Time on Pod:</strong> Displays the current time on the active pod.
+    \* <strong x-id="1">Zeit auf dem Pod:</strong> Zeigt die aktuelle Uhrzeit auf dem aktiven Pod an.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod expires:</strong> Displays the date and time when the active pod will expire.
+    \* <strong x-id="1">Pod läuft ab:</strong> Zeigt das Datum und die Uhrzeit an, zu der der aktive Pod abläuft.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod status:</strong> Displays the status of the active pod.
+    \* <strong x-id="1">Pod-Status:</strong> Zeigt den Status des aktiven Pods an.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Last connection:</strong> Displays the last time communication with the active pod was achieved.
+    \* <strong x-id="1">Letzte Verbindung:</strong> Zeigt an, wann zum letzten Mal eine Kommunikation mit dem aktiven Pod stattgefunden hat.
   </p>
 <blockquote spaces-before="2">
     <ul>
@@ -1337,7 +1337,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Last bolus:</strong> Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+    <strong x-id="1">Letzter Bolus:</strong> Zeigt die Dosierung des letzten Bolus an, der an den aktiven Pod gesendet wurde, und in Klammern, wie lange es her ist, dass er abgegeben wurde.
   </p>
 </li>
 <li>
@@ -1352,7 +1352,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <blockquote spaces-before="2">
     <ul>
       <li>
-        Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+        Einheiten / Stunde zum Zeitpunkt der Erstellung der TBR (gelaufene Minuten / Gesamtminuten, in denen die TBR läuft)
       </li>
       <li>
         <em x-id="3">Beispiel:</em> 0,00 IE/h @18:25 ( 90/120 min.)
@@ -1368,12 +1368,12 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Insgesamt abgegeben:</strong> Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. <em x-id="3">Note this is an approximation as priming and filling the pod is not an exact process.</em>
+    <strong x-id="1">Insgesamt abgegeben:</strong> Zeigt die Gesamtzahl der aus dem Reservoir abgegebenen Insulineinheiten an. <em x-id="3">Beachte, dass es sich hierbei um einen Näherungswert handelt, da das Befüllen des Pods nicht absolut exakt geschieht.</em>
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Fehler:</strong> Zeigt den letzten Fehler an. Review the <a href="#view-pod-history">Pod history</a>, <a href="#rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
+    <strong x-id="1">Fehler:</strong> Zeigt den letzten Fehler an. Überprüfe die <a href="#anzeige-pod-historie">Pod Historie</a>, <a href="#historie-des-rileylink-und-aktiven-pods">RileyLink Historie</a> und die Protokolldateien auf frühere Fehler und für ausführlichere Informationen.
   </p>
 </li>
 <li>
@@ -1390,7 +1390,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">REFRESH:</strong>
+      <strong x-id="1">UNTERBRECHEN:</strong>
     </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1428,7 +1428,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">ACK ALERTS:</strong>
+    <strong x-id="1">ZEIT EINSTELLEN:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1440,14 +1440,14 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     </p>
     
     <p spaces-before="0">
-      Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
+      Der Button wird nur angezeigt, wenn die aktuelle Zeit des Pods nach dem Pod-Ablaufdatum liegt Nach erfolgreicher Bestätigung wird dieses Symbol nicht mehr angezeigt.
     </p>
   </blockquote>
 </li>
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">SET TIME:</strong>
+    <strong x-id="1">ALARM BESTÄTIGEN:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1462,7 +1462,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">SUSPEND:</strong>
+    <strong x-id="1">UNTERBRECHEN:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1477,7 +1477,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">RESUME DELIVERY:</strong>
+    <strong x-id="1">ABGABE FORTSETZEN:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1498,7 +1498,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Below is an explanation of the layout and meaning of the icons on the <strong x-id="1">Pod Management</strong> menu accessed from the <strong x-id="1">Omnipod (POD)</strong> tab.
+  Im Folgenden werden die Darstellung und die Bedeutung der Symbole im Menü <strong x-id="1">Pod Management</strong> erläutert, das über die Registerkarte <strong x-id="1">Omnipod (POD)</strong> aufgerufen wird.
 </p>
 
 <blockquote spaces-before="0">
@@ -1533,7 +1533,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     </p>
     
     <p spaces-before="0">
-      Deaktiviert den aktuell aktiven Pod.
+      * Deaktiviert den aktuell aktiven Pod.
     </p>
     
     <p spaces-before="0">
@@ -1552,7 +1552,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Play test beep</strong>
+    <strong x-id="1">Testton abspielen</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1567,7 +1567,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Discard pod</strong>
+    <strong x-id="1">Pod verwerfen</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1585,13 +1585,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     <blockquote spaces-before="2">
       <ul>
         <li>
-          A <strong x-id="1">pod is not fully paired</strong> and thus ignores deactivate commands.
+          Ein <strong x-id="1">Pod ist nicht vollständig verbunden</strong> und ignoriert daher die Befehle zum Deaktivieren.
         </li>
         <li>
-          A <strong x-id="1">pod is stuck</strong> during the pairing process between steps
+          Ein <strong x-id="1">Pod hängt</strong> während des Kopplungsvorgangs zwischen den Schritten fest
         </li>
         <li>
-          A <strong x-id="1">pod simply does not pair at all.</strong>
+          Ein <strong x-id="1">Pod lässt sich überhaupt nicht verbinden.</strong>
         </li>
       </ul>
     </blockquote>
@@ -1600,7 +1600,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod history</strong>
+    <strong x-id="1">Pod Historie</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1615,7 +1615,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">RileyLink stats:</strong>
+    <strong x-id="1">RileyLink Status:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1629,10 +1629,10 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     <blockquote spaces-before="2">
       <ul>
         <li>
-          <strong x-id="1">Settings</strong> - displays RileyLink and active pod settings information
+          <strong x-id="1">Einstellungen</strong> - zeigt Informationen zum RileyLink und aktiven Pod-Einstellungen an
         </li>
         <li>
-          <strong x-id="1">History</strong> - displays RileyLink and Pod communication history
+          <strong x-id="1">Historie</strong> - zeigt den Verlauf der RileyLink- und Pod-Kommunikation an
         </li>
       </ul>
     </blockquote>
@@ -1641,7 +1641,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Reset RileyLink Config</strong>
+    <strong x-id="1">RileyLink-Konfiguration zurücksetzen</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1655,10 +1655,10 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     <blockquote spaces-before="2">
       <ul>
         <li>
-          When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set
+          Wenn die Kommunikation gestartet wird, werden bestimmte Daten an das Pod-Kommunikationsgerät gesendet und dort eingestellt > - Speicherregister werden gesetzt > - Kommunikationsprotokolle werden eingestellt > - Eingestellte Funkfrequenz wird gesetzt
         </li>
         <li>
-          See <a href="#reset-rileylink-config-notes">additional notes</a> at the end of this table
+          Beachte die <a href="#hinweise-zum-zurucksetzen-der-rileylink-konfiguration">zusätzlichen Hinweise</a> am Ende dieser Tabelle
         </li>
       </ul>
     </blockquote>
@@ -1667,7 +1667,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Read pulse log:</strong>
+    <strong x-id="1">Pulse-Log lesen:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1684,21 +1684,21 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </ul>
 
 <h4 spaces-before="0">
-  <em x-id="3">Reset RileyLink Config Notes</em>
+  <em x-id="3">Hinweise zum Zurücksetzen der RileyLink-Konfiguration</em>
 </h4>
 
 <ul>
   <li>
-    The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
+    Diese Funktion wird in erster Linie verwendet, wenn das derzeit aktive Pod-Kommunikationsgerät nicht antwortet und die Kommunikation in einem festgefahrenen Zustand ist.
   </li>
   <li>
-    If the pod communication device is turned off and then back on, the <strong x-id="1">Reset RileyLink Config</strong> button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
+    Wenn das Pod-Kommunikationsgerät aus- und wieder eingeschaltet wird, muss die Taste <strong x-id="1">RileyLink-Konfiguration zurücksetzen</strong> gedrückt werden, damit diese Kommunikationsparameter in der Konfiguration des Pod-Kommunikationsgeräts eingestellt werden.
   </li>
   <li>
-    If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
+    Wird dies NICHT getan, muss AAPS neu gestartet werden, nachdem das Pod-Kommunikationsgerät aus- und wieder eingeschaltet wurde.
   </li>
   <li>
-    This button <strong x-id="1">DOES NOT</strong> need to be pressed when switching between different pod communication devices
+    Diese Taste <strong x-id="1">muss NICHT</strong> gedrückt werden, wenn zwischen verschiedenen Pod-Kommunikationsgeräten gewechselt wird.
   </li>
 </ul>
 
@@ -1707,7 +1707,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h2>
 
 <p spaces-before="0">
-  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  indem Du das <strong x-id="1">Auswahlfeld (1)</strong> mit dem Titel <strong x-id="1">Omnipod</strong> wählst. Wenn du das <strong x-id="1">Kontrollkästchen (3)</strong> neben dem Einstellungsrädchen (2) wählst, wird das Omnipod-Menü als Registerkarte mit der Bezeichnung <strong x-id="1">OMNIPOD</strong> oder <strong x-id="1">POD</strong> in der AAPS-Oberfläche angezeigt. Dies wird in dieser Dokumentation als Registerkarte <strong x-id="1">Omnipod (POD)</strong> bezeichnet.
 </p>
 
 <p spaces-before="0">
@@ -1715,7 +1715,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> is by accessing the <strong x-id="1">3 dot menu (1)</strong> in the upper right hand corner of the <strong x-id="1">Omnipod (POD)</strong> tab and selecting <strong x-id="1">Omnipod preferences (2)</strong> from the dropdown menu.
+  <strong x-id="1">HINWEIS:</strong> Eine schnellere Möglichkeit, auf die <strong x-id="1">Omnipod Einstellungen</strong> zuzugreifen, besteht darin, das <strong x-id="1">Drei-Punkte-Menü (1)</strong> in der oberen rechten Ecke der Registerkarte <strong x-id="1">Omnipod (POD)</strong> aufzurufen und <strong x-id="1">Omnipod Einstellungen (2)</strong> aus dem Dropdown-Menü auszuwählen.
 </p>
 
 <p spaces-before="0">
@@ -1731,7 +1731,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE: An asterisk (\*) denotes the default for a setting is enabled.</em>
+  <em x-id="3">HINWEIS: Ein Sternchen (\*) bedeutet, dass "aktiviert" der Standardwert für eine Einstellung ist.</em>
 </p>
 
 <h3 spaces-before="0">
@@ -1745,21 +1745,21 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Show battery level reported by OrangeLink/EmaLink/DiaLink:</strong> Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is <strong x-id="1">strongly recommended</strong> that all OrangeLink/EmaLink/DiaLink users enable this setting.
+      <strong x-id="1">Akkustand von OrangeLink/EmaLink/DiaLink anzeigen:</strong> Meldet den aktuellen Batteriestand des OrangeLink/EmaLink/DiaLink. Es wird <strong x-id="1">dringend empfohlen</strong>, dass alle OrangeLink/EmaLink/DiaLink-Benutzer diese Einstellung aktivieren.
     </p>
 <blockquote spaces-before="2">
     <ul>
       <li>
-        DOES NOT work with the original RileyLink.
+        Funktioniert NICHT mit dem originalen RileyLink.
       </li>
       <li>
-        May not work with RileyLink alternatives.
+        Funktioniert möglicherweise nicht mit RileyLink-Alternativen.
       </li>
       <li>
-        Enabled - Reports the current battery level for supported pod communication devices.
+        Aktiviert - Meldet den aktuellen Batteriestand für unterstützte Pod-Kommunikationsgeräte.
       </li>
       <li>
-        Disabled - Reports a value of n/a.
+        Deaktiviert - Meldet einen Wert von n/a.
       </li>
     </ul>
   </blockquote>
@@ -1767,7 +1767,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Enable battery change logging in Actions:</strong> In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Einige Pod-Kommunikationsgeräte können inzwischen mit normalen Batterien betrieben werden, die ausgewechselt werden können.  Diese Option ermöglicht es dir, dies zu protokollieren und den Timer für das Batteriealter zurückzusetzen.
+    <strong x-id="1">Aktiviere die Protokollierung des Akkuwechsels im Aktionen-Tab/Menü:</strong> Im Menü "Aktionen" ist die Schaltfläche "Batteriewechsel protokollieren" aktiviert, WENN Du diese Einstellung UND die obige Einstellung zum Anzeigen des Akkustands aktiviert hast.  Einige Pod-Kommunikationsgeräte können inzwischen mit normalen Batterien betrieben werden, die ausgewechselt werden können.  Diese Option ermöglicht es dir, dies zu protokollieren und den Timer für das Batteriealter zurückzusetzen.
   </p>
 </li>
 </ul>
@@ -1782,13 +1782,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <ul>
   <li>
-    <strong x-id="1">\*Bolus beeps enabled:</strong> Enable or disable confirmation beeps when a bolus is delivered.
+    <strong x-id="1">\*Bolus-Piep aktiviert:</strong> Aktiviert oder deaktiviert Bestätigungstöne, wenn ein Bolus abgegeben wird.
   </li>
   <li>
-    <strong x-id="1">\*Basal beeps enabled:</strong> Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+    <strong x-id="1">\*Basal-Piep aktiviert:</strong> Aktiviert oder deaktiviert die Bestätigungstöne, wenn eine neue Basalrate eingestellt wird, eine aktive Basalrate abgebrochen oder die aktuelle Basalrate geändert wird.
   </li>
   <li>
-    <strong x-id="1">\*SMB beeps enabled:</strong> Enable or disable confirmation beeps when a SMB is delivered.
+    <strong x-id="1">\*SMB-Piep aktiviert:</strong> Aktiviert oder deaktiviert Bestätigungstöne, wenn ein SMB abgegeben wird.
   </li>
   <li>
     <strong x-id="1">TBR-Piep aktiviert:</strong> Aktiviert oder deaktiviert Bestätigungstöne, bei Setzen oder Abbruch einer TBR.
@@ -1804,18 +1804,18 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Beachte, dass eine AAPS-Benachrichtigung IMMER für jeden Alarm nach der ersten Kommunikation mit dem Pod ausgegeben wird, da der Alarm ausgelöst wurde. Wenn du die Benachrichtigung löschst, wird der Alarm NICHT gelöscht, AUSSER wenn die automatische Bestätigung von Pod-Alarmen aktiviert ist. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.</em>
+  <em x-id="3">Beachte, dass eine AAPS-Benachrichtigung IMMER für jeden Alarm nach der ersten Kommunikation mit dem Pod ausgegeben wird, da der Alarm ausgelöst wurde. Wenn du die Benachrichtigung löschst, wird der Alarm NICHT gelöscht, AUSSER wenn die automatische Bestätigung von Pod-Alarmen aktiviert ist. Um den Alarm MANUELL zu deaktivieren, musst du die Registerkarte Omnipod (POD) aufrufen und die Schaltfläche AKK ALERTS drücken.</em>
 </p>
 
 <ul>
   <li>
-    <strong x-id="1">\*Expiration reminder enabled:</strong> Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+    <strong x-id="1">\*Ablauferinnerung aktiviert:</strong> Aktiviere oder deaktiviere die Pod-Ablauferinnerung, die ausgelöst wird, wenn die festgelegte Anzahl von Stunden vor dem Herunterfahren erreicht ist.
   </li>
   <li>
     <strong x-id="1">Stunden bis zum Podende:</strong> Legt die Anzahl der Stunden vor der Abschaltung des aktiven Pods fest, die den Alarm zur Pod-Ablauferinnerung auslöst.
   </li>
   <li>
-    <strong x-id="1">\*Low reservoir alert enabled:</strong> Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+    Füllstände
   </li>
   <li>
     <strong x-id="1">Anzahl der Einheiten:</strong> Die Anzahl der verbleibenden Einheiten, bei denen der Alarm für den niedrigen Reservoirstand ausgelöst werden soll.
@@ -1842,10 +1842,10 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
     <strong x-id="1">Ton für unsichere TBR-Benachrichtigung aktiviert:</strong> Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob eine TBR erfolgreich gesetzt wurde.
   </li>
   <li>
-    <strong x-id="1">\*Sound for uncertain SMB notifications enabled:</strong> Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+    <strong x-id="1">Ton für Benachrichtigung bei unsicheren SMB-Ereignis aktiviert:</strong> Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob eine SMB erfolgreich zugestellt wurde.
   </li>
   <li>
-    <strong x-id="1">\*Sound for uncertain bolus notifications enabled:</strong> Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+    <strong x-id="1">\*Ton für Benachrichtigung bei unsicheren Bolus-Ereignis aktiviert:</strong> Aktiviere oder deaktiviere diese Einstellung, um einen akustischen Alarm und eine visuelle Benachrichtigung auszulösen, wenn AAPS unsicher ist, ob ein Bolus erfolgreich abgegeben wurde.
   </li>
 </ul>
 
@@ -1859,16 +1859,16 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <ul>
   <li>
-    <strong x-id="1">Show Suspend Delivery button in Omnipod tab:</strong> Hide or display the suspend delivery button in the <strong x-id="1">Omnipod (POD)</strong> tab.
+    <strong x-id="1">Schaltfläche "Zustellung aussetzen" in der Registerkarte Omnipod anzeigen:</strong> Blende die Schaltfläche "Zustellung aussetzen" in der Registerkarte <strong x-id="1">Omnipod (POD)</strong> aus oder zeige sie an.
   </li>
   <li>
-    <strong x-id="1">Show Pulse log button in Pod Management menu:</strong> Hide or display the pulse log button in the <strong x-id="1">Pod Management</strong> menu.
+    <strong x-id="1">Pulsprotokoll-Schaltfläche im Menü Pod-Verwaltung anzeigen:</strong> Blende die Pulsprotokoll-Schaltfläche im Menü <strong x-id="1">Pod-Verwaltung</strong> aus oder zeige sie an.
   </li>
   <li>
-    <strong x-id="1">Show RileyLink Stats button in Pod Management menu:</strong> Hide or display the RileyLink Stats button in the <strong x-id="1">Pod Management</strong> menu.
+    <strong x-id="1">Schaltfläche RileyLink-Statistiken im Menü Pod-Verwaltung anzeigen:</strong> Verstecke oder zeige die Schaltfläche RileyLink-Statistiken im Menü <strong x-id="1">Pod-Verwaltung</strong>.
   </li>
   <li>
-    <strong x-id="1">\*DST/Time zone detect on enabled:</strong> allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+    \* <strong x-id="1">\*Sommerzeit/Zeitzonenerkennung aktiviert:</strong> Ermöglicht die automatische Erkennung von Zeitzonenänderungen, wenn das Telefon in einem Gebiet verwendet wird, in dem die Sommerzeit gilt.
   </li>
 </ul>
 
@@ -1881,13 +1881,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  The following steps will show how to <strong x-id="1">Remove</strong> and existing pod communication device (RileyLink) as well as <strong x-id="1">Add</strong> a new pod communication device.  Executing both <strong x-id="1">Remove</strong> and <strong x-id="1">Add</strong> steps will switch your device.
+  Die folgenden Schritte zeigen dir, wie du ein bestehendes Pod-Kommunikationsgerät (RileyLink) <strong x-id="1">entfernst</strong> und ein neues Pod-Kommunikationsgerät <strong x-id="1">hinzufügst</strong>.  Wenn du die beiden Schritte <strong x-id="1">Entfernen</strong> und <strong x-id="1">Hinzufügen</strong> ausführst, wird dein Gerät gewechselt.
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Access the <strong x-id="1">RileyLink Selection</strong> menu by selecting the <strong x-id="1">3 dot menu (1)</strong> in the upper right hand corner of the <strong x-id="1">Omnipod (POD)</strong> tab and selecting <strong x-id="1">Omnipod preferences (2)</strong> from the dropdown menu. On the <strong x-id="1">Omnipod Settings</strong> menu under <strong x-id="1">RileyLink Configuration (3)</strong> press the <strong x-id="1">Not Set</strong> (if no device is selected) or <strong x-id="1">MAC Address</strong> (if a device is present) text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Rufe das Menü <strong x-id="1">RileyLink-Auswahl</strong> auf, indem du das <strong x-id="1">3-Punkte-Menü (1)</strong> in der oberen rechten Ecke der <strong x-id="1">Omnipod (POD)</strong>-Registerkarte auswählst und im Dropdown-Menü <strong x-id="1">Omnipod-Einstellungen (2)</strong> auswählst. Drücke im Menü <strong x-id="1">Omnipod-Einstellungen</strong> unter <strong x-id="1">RileyLink-Konfiguration (3)</strong> auf den Text <strong x-id="1">Nicht eingestellt</strong> (wenn kein Gerät ausgewählt ist) oder <strong x-id="1">MAC-Adresse</strong> (wenn ein Gerät vorhanden ist), um das Menü <strong x-id="1">RileyLink-Auswahl</strong> zu öffnen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1908,7 +1908,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">MAC Address (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Drücke unter <strong x-id="1">RileyLink-Konfiguration</strong> auf den Text <strong x-id="1">MAC-Adresse (1)</strong>, um das Menü <strong x-id="1">RileyLink-Auswahl</strong> zu öffnen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1919,7 +1919,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Selection</strong> menu the press <strong x-id="1">Remove (2)</strong> button to remove <strong x-id="1">your currently selected RileyLink (3)</strong>
+     Drücke im Menü <strong x-id="1">RileyLink-Auswahl</strong> die Taste <strong x-id="1">Entfernen (2)</strong>, um <strong x-id="1">deinen aktuell ausgewählten RileyLink (3)</strong> zu entfernen
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1930,7 +1930,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     At the confirmation prompt press <strong x-id="1">Yes (4)</strong> to confirm the removal of your device.
+     Drücke bei der Bestätigungsaufforderung <strong x-id="1">Ja (4)</strong>, um das Entfernen deines Geräts zu bestätigen.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1941,7 +1941,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     You are returned to the <strong x-id="1">Omnipod Setting</strong> menu where under <strong x-id="1">RileyLink Configuration</strong> you will now see the device is <strong x-id="1">Not Set (5)</strong>.  Herzlichen Glückwunsch, du hast dein ausgewähltes Pod-Kommunikationsgerät nun erfolgreich entfernt.
+     Du gelangst zurück zum Menü <strong x-id="1">Omnipod-Einstellungen</strong>, wo du unter <strong x-id="1">RileyLink-Konfiguration</strong> jetzt siehst, dass das Gerät <strong x-id="1">Nicht eingestellt (5)</strong> ist.  Herzlichen Glückwunsch, du hast dein ausgewähltes Pod-Kommunikationsgerät nun erfolgreich entfernt.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1962,7 +1962,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">Not Set (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Drücke unter <strong x-id="1">RileyLink-Konfiguration</strong> den Text <strong x-id="1">Nicht gesetzt (1)</strong>, um das Menü <strong x-id="1">RileyLink-Auswahl</strong> zu öffnen.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1973,7 +1973,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Press the <strong x-id="1">Scan (2)</strong> button to start scanning for all available Bluetooth devices.
+     Drücke die Taste <strong x-id="1">Scan (2)</strong>, um die Suche nach allen verfügbaren Bluetooth-Geräten zu starten.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1984,7 +1984,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
  
  <li>
    <p spaces-before="0">
-     Select <strong x-id="1">your RileyLink (3)</strong> from the list of available devices and you will be returned to the <strong x-id="1">Omnipod Settings</strong> menu displaying the <strong x-id="1">MAC Address (4)</strong> of your newly selected device.  Herzlichen Glückwunsch, du hast dein Pod-Kommunikationsgerät erfolgreich ausgewählt.
+     Wähle <strong x-id="1">deinen RileyLink (3)</strong> aus der Liste der verfügbaren Geräte aus und du kehrst zum Menü <strong x-id="1">Omnipod-Einstellungen</strong> zurück, wo die <strong x-id="1">MAC-Adresse (4)</strong> deines neu ausgewählten Geräts angezeigt wird.  Herzlichen Glückwunsch, du hast dein Pod-Kommunikationsgerät erfolgreich ausgewählt.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -2033,10 +2033,10 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Above 50 Units</strong> - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+      <strong x-id="1">Über 50 Einheiten</strong> - Meldet einen Wert von 50+U, wenn sich mehr als 50 Einheiten im Reservoir befinden.
     </li>
     <li>
-      <strong x-id="1">Below 50 Units</strong> - Reports an approximate calculated value of insulin remaining in the reservoir.
+      <strong x-id="1">Unter 50 Einheiten</strong> - Meldet einen ungefähren berechneten Wert des im Reservoir verbleibenden Insulins.
     </li>
     <li>
       <strong x-id="1">SMS</strong> - Aus dem Pod übernommener Wert oder 50+ IE für SMS-Antworten
@@ -2048,7 +2048,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </blockquote>
 
 <p spaces-before="0">
-  <strong x-id="1">Battery Level</strong>
+  <strong x-id="1">Akkustand</strong>
 </p>
 
 <p spaces-before="0">
@@ -2061,13 +2061,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
       <strong x-id="1">RileyLink hardware is NOT capable of reporting battery level</strong>
     </li>
     <li>
-      <strong x-id="1">"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values</strong>
+      <strong x-id="1"><strong x-id="1">RileyLink-Hardware ist NICHT in der Lage, den Batteriestand zu melden</strong> \* <strong x-id="1">Die Einstellung "Von OrangeLink/EmaLink/DiaLink gemeldeten Batteriestand anzeigen" MUSS in den Omnipod-Einstellungen aktiviert sein, um Batteriestandswerte zu melden</strong> \* <strong x-id="1">Batteriestandsmeldung funktioniert NUR für OrangeLink-, EmaLink- und DiaLink-Geräte</strong> \* <strong x-id="1">Batteriestandsmeldung KANN für andere Geräte funktionieren (außer RileyLink)</strong> \* <strong x-id="1">SMS</strong> - Gibt den aktuellen Batteriestand als Antwort zurück, wenn ein aktueller Stand vorhanden ist; ein unbekannter Wert von n/a wird nicht zurückgegeben <strong x-id="1">Nightscout</strong> - Der Batteriestand wird gemeldet, wenn ein aktueller Stand vorhanden ist, ein Wert von n/a wird nicht gemeldet</strong>
     </li>
     <li>
-      <strong x-id="1">Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices</strong>
+      <strong x-id="1">Batteriestandsmeldung funktioniert NUR für OrangeLink-, EmaLink- und DiaLink-Geräte</strong>
     </li>
     <li>
-      <strong x-id="1">Battery Level reporting MAY work for other devices (excluding RileyLink)</strong>
+      <strong x-id="1">Batteriestandsmeldung KANN für andere Geräte funktionieren (außer RileyLink)</strong>
     </li>
     <li>
       <strong x-id="1">SMS</strong> - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
@@ -2087,7 +2087,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. A list of fault codes can be found <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">here</a> to help determine the cause.
+  Pods fallen gelegentlich aus unterschiedlichen Gründen aus, u. a. wegen Hardwareproblemen mit dem Pod selbst. Am besten ist es, diese nicht bei Insulet anzugeben, da AAPS kein zugelassener Anwendungsfall ist. Eine Liste an Fehlercodes findest du <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">hier</a> um die Ursache zu ermitteln.
 </p>
 
 <h3 spaces-before="0">
@@ -2095,7 +2095,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. We recommend users to switch to the Nightscout client to <em x-id="3">upload only (Disable sync)</em> under the <strong x-id="1">Config Builder</strong>➜<strong x-id="1">General</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">cog wheel</strong>➜<strong x-id="1">Advanced Settings</strong> to prevent possible failures.
+  Dieser Fehler hängt mit einem fehlerhaften Pod-Status für einen Befehl oder einem Fehler während der Insulinabgabe zusammen. Wir empfehlen Nutzern, im Nightscout-Client unter <strong x-id="1">Konfigurations-Assistent \*\* -> \*\*Allgemein</strong> -> <strong x-id="1">NSClient</strong> -> <strong x-id="1">Einstellungsrädchen</strong> -> <strong x-id="1">Erweiterte Einstellungen</strong> auf <em x-id="3">Nur Upload (Synchronisation deaktivieren)</em> umzuschalten, um mögliche Fehler zu vermeiden.
 </p>
 
 <h3 spaces-before="0">
@@ -2103,7 +2103,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  It is recommended that pump unreachable alerts be configured to <strong x-id="1">120 minutes</strong> by going to the top right-hand side three-dot menu, selecting <strong x-id="1">Preferences</strong>➜<strong x-id="1">Local Alerts</strong>➜<strong x-id="1">Pump unreachable threshold \[min\]</strong> and setting this to <strong x-id="1">120</strong>.
+  Es wird empfohlen, Alarme für unerreichbare Pumpen auf <strong x-id="1">120 Minuten</strong> zu konfigurieren, indem du im Drei-Punkte-Menü oben rechts <strong x-id="1">Einstellungen</strong> ➜ <strong x-id="1">Lokale Alarme</strong> ➜ <strong x-id="1">Schwellenwert für unerreichbare Pumpen \[min\]</strong> auswählst und diesen auf <strong x-id="1">120</strong> setzt.
 </p>
 
 <p spaces-before="0">
@@ -2114,7 +2114,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h3>
 
 <p spaces-before="0">
-  Bitte beachte, dass beim Importieren von Einstellungen die Möglichkeit besteht, dass ein veralteter Pod-Status importiert wird. Infolgedessen kannst Du einen aktiven Pod verlieren. It is therefore strongly recommended that you <strong x-id="1">do not import settings while on an active Pod session</strong>.
+  Bitte beachte, dass beim Importieren von Einstellungen die Möglichkeit besteht, dass ein veralteter Pod-Status importiert wird. Infolgedessen kannst Du einen aktiven Pod verlieren. Es wird daher dringend empfohlen, <strong x-id="1">keine Einstellungen während einer aktiven Pod-Sitzung zu importieren</strong>.
 </p>
 
 <ol start="1">
@@ -2176,7 +2176,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h4>
 
 <p spaces-before="0">
-  Alert that the SMB bolus success could not be verified, you will need to verify the <em x-id="3">Last bolus</em> field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+  Du musst das Feld <em x-id="3">Letzter Bolus</em> auf der Registerkarte Omnipod überprüfen, um zu sehen, ob der SMB-Bolus erfolgreich war, und wenn nicht, den Eintrag auf der Registerkarte Behandlungen entfernen.
 </p>
 
 <h4 spaces-before="0">
@@ -2184,7 +2184,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </h4>
 
 <p spaces-before="0">
-  Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is <em x-id="3">uncertain</em> if a command was successfully processed. Es war notwendig, den Nutzer über diese Unsicherheit zu informieren.
+  Aufgrund der Art und Weise, wie RileyLink und Omnipod miteinander kommunizieren, kann es zu Situationen kommen, in denen es <em x-id="3">unsicher</em> ist, ob ein Befehl erfolgreich verarbeitet wurde. Es war notwendig, den Nutzer über diese Unsicherheit zu informieren.
 </p>
 
 <p spaces-before="0">
@@ -2193,13 +2193,13 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <ul>
   <li>
-    <strong x-id="1">Boluses</strong> - Uncertain boluses cannot be automatically verified. Die Benachrichtigung bleibt bis zum nächsten Bolus bestehen, aber eine manuelle Pod-Aktualisierung löscht die Meldung. <em x-id="3">By default alerts beeps are enabled for this notification type as the user will manually need to verify them.</em>
+    <strong x-id="1">Bolus</strong> - Unsichere Boli können nicht automatisch überprüft werden. Die Benachrichtigung bleibt bis zum nächsten Bolus bestehen, aber eine manuelle Pod-Aktualisierung löscht die Meldung. <em x-id="3">Standardmäßig sind bei dieser Benachrichtigungsart die Warntöne aktiviert, da der/die Nutzer/in sie manuell bestätigen muss.</em>
   </li>
   <li>
-    <strong x-id="1">TBRs, Pod Statuses, Profile Switches, Time Changes</strong> - a manual pod refresh will clear the message. In der Voreinstellung sind die Signaltöne für diesen Benachrichtigungstyp deaktiviert.
+    <strong x-id="1">TBRs, Pod-Status, Profilwechsel, Zeitänderungen</strong> - eine manuelle Pod-Aktualisierung löscht die Meldung. In der Voreinstellung sind die Signaltöne für diesen Benachrichtigungstyp deaktiviert.
   </li>
   <li>
-    <strong x-id="1">Pod Time Deviation -</strong> When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. Wenn die Zeitabweichung zwischen dem Pod und dem Telefon mehr als 5 Minuten beträgt, meldet AAPS unter Pod-Status, dass sich der Pod im Schwebezustand befindet, und gibt eine Meldung über eine Zeitänderung aus. An additional <strong x-id="1">Set Time</strong> icon will appear at the bottom of the Omnipod (POD) tab. Wenn du auf Zeit einstellen klickst, wird die Zeit auf dem Pod mit der Zeit auf dem Telefon synchronisiert und dann kannst du auf die Schaltfläche ZUSTELLUNG WIEDERAUFNEHMEN klicken, um den normalen Pod-Betrieb fortzusetzen.
+    <strong x-id="1">Pod-Zeitabweichung -</strong> Wenn die Zeit auf dem Pod und die Zeit auf deinem Telefon zu sehr voneinander abweichen, ist es für die AAPS-Schleife schwierig, zu funktionieren und genaue Vorhersagen und Dosierungsempfehlungen zu machen. Wenn die Zeitabweichung zwischen dem Pod und dem Telefon mehr als 5 Minuten beträgt, meldet AAPS unter Pod-Status, dass sich der Pod im Schwebezustand befindet, und gibt eine Meldung über eine Zeitänderung aus. Ein zusätzliches Symbol <strong x-id="1">Zeit einstellen</strong> erscheint am unteren Rand der Registerkarte Omnipod (POD). Wenn du auf Zeit einstellen klickst, wird die Zeit auf dem Pod mit der Zeit auf dem Telefon synchronisiert und dann kannst du auf die Schaltfläche ZUSTELLUNG WIEDERAUFNEHMEN klicken, um den normalen Pod-Betrieb fortzusetzen.
   </li>
 </ul>
 
@@ -2221,12 +2221,12 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <em x-id="3">(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern</em>)
+    <em x-id="3">(Bild 1. Graphische Darstellung einer Wendelspiralantenne in einem Rundstrahldiagramm</em>)
   </p>
 </blockquote>
 
 <p spaces-before="0">
-  Because of both safety and security concerns, pod <em x-id="3">activation</em> has to be done at a range <em x-id="3">closer (~30 cm away or less)</em> than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. Aufgrund der Art und Weise der Signalübertragung der RileyLink-Antenne ist es NICHT empfehlenswert, den Pod direkt auf oder neben dem RileyLink zu platzieren.
+  Aus Sicherheitsgründen muss die <em x-id="3">Aktivierung</em> des Pods in einem <em x-id="3">geringeren Abstand (~30 cm oder weniger)</em> als andere Vorgänge erfolgen, wie z. B. die Verabreichung eines Bolus, das Setzen eines TBR oder das einfache Aktualisieren des Pod-Status. Aufgrund der Art und Weise der Signalübertragung der RileyLink-Antenne ist es NICHT empfehlenswert, den Pod direkt auf oder neben dem RileyLink zu platzieren.
 </p>
 
 <p spaces-before="0">
@@ -2234,7 +2234,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.</em>
+  <em x-id="3">Hinweis: Wenn trotz optimaler Positionierung des Pods die Kommunikation mit dem RileyLink fehlschlägt, kann dies an einer schwachen Batterie liegen, da diese den Sendebereich der RileyLink-Antenne verringert. Um dieses Problem zu vermeiden, stelle sicher, dass der RileyLink während dieses Vorgangs ordnungsgemäß geladen oder direkt an ein Ladekabel angeschlossen ist.</em>
 </p>
 
 <p spaces-before="0">
@@ -2285,7 +2285,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Hardware- und Software-Anforderungen
 </p>
 
 <p spaces-before="0">
@@ -2297,15 +2297,15 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  % Activate Pod
+  % Pod aktivieren
 </p>
 
 <p spaces-before="0">
-  % Deactivate Pod
+  % Pod deaktivieren
 </p>
 
 <p spaces-before="0">
-  % Enabling the Omnipod Driver in AAPS
+  % Aktivieren des Omnipod-Treibers in AAPS
 </p>
 
 <p spaces-before="0">
@@ -2313,7 +2313,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  % Omnipod Settings
+  % Omnipod-Einstellungen
 </p>
 
 <p spaces-before="0">
@@ -2321,7 +2321,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  % Pod History
+  % Pod Historie
 </p>
 
 <p spaces-before="0">
@@ -2333,7 +2333,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  % RileyLink Setup
+  % RileyLink-Setup
 </p>
 
 <p spaces-before="0">
