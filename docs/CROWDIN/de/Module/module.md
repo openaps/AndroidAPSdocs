@@ -168,13 +168,13 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
     {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
   </li>
   <li>
-    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Kontakt:</a>
   </li>
   <li>
-    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Kontakt:</a>
   </li>
   <li>
-    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Kontakt:</a> - nicht getestet
   </li>
 </ul>
 
