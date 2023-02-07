@@ -303,11 +303,11 @@
     
     <pre><code class="&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;">
 
-# AndroidAPS Omnipod Insulin Pump Driver Documentation
+# Dokumentation zum AndroidAPS Omnipod Insulinpumpen-Treiber
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 2.8 verfügbar.
+Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe (**NICHT Omnipod Dash**). Der Omnipod-Treiber ist als Teil von AndroidAPS (AAPS) ab Version 2.8 verfügbar.
 
-**Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. You alone are responsible for what you do with it.**
+**Diese Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 ```{contents}
 :backlinks: entry
@@ -320,7 +320,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <ul>
   <li>
-    <strong x-id="1">Pod Communication Device</strong>
+    <strong x-id="1">Pod-Kommunikationsgerät</strong>
   </li>
 </ul>
 
@@ -338,13 +338,13 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
         {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
       </li>
       <li>
-        {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+        {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Kontakt:</a>
       </li>
       <li>
-        {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+        {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Kontakt:</a>
       </li>
       <li>
-        {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+        {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Kontakt:</a> - nicht getestet
       </li>
     </ul>
   </blockquote>
@@ -364,7 +364,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   <blockquote spaces-before="0">
     <ul>
       <li>
-        Supported <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Omnipod driver Android phone</a> with a version of AAPS 2.8 and related <a href="../index.md#component-setup">components setup</a>
+        unterstützte <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Android Smartphones</a> mit AAPS ab Version 2.8 und zugehörigem <a href="../index#component-setup">Komponenten-Setup</a>
       </li>
     </ul>
   </blockquote>
@@ -372,7 +372,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <ul>
   <li>
-    {{ Omnipod_Pod }}  <strong x-id="1">Insulin Delivery Device</strong>
+    {{ Omnipod_Pod }} <strong x-id="1">Insulin-Pumpe</strong>
   </li>
 </ul>
 
@@ -384,7 +384,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   <blockquote spaces-before="0">
     <ul>
       <li>
-        A new Omnipod pod (Eros generation - <strong x-id="1">NOT DASH</strong>)
+        Ein neuer Omnipod-Pod (Eros-Generation - <strong x-id="1">NICHT DASH</strong>)
       </li>
     </ul>
   </blockquote>
@@ -399,19 +399,19 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  <strong x-id="1">SAFETY FIRST</strong> - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+  <strong x-id="1">Sicherheit geht vor</strong> - Stelle sicher, dass Du auf eventuell auftretende Fehler reagieren kannst, bevor Du diesen Prozess beginnst: zusätzliche Pods, Insulin, geladener RileyLink und Smartphone mit vollem Akku sind unbedingt notwendig.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod</strong>. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, <strong x-id="1">you will no longer be able to use your PDM with your pod</strong>. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. <em x-id="3">This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.</em>
+  <strong x-id="1">Dein Omnipod PDM funktioniert nicht mehr, wenn der AAPS Omnipod Treiber Deinen Pod aktiviert hat</strong>. Bisher hast Du Deinen Omnipod PDM verwendet, um Befehle an Deinen Omnipod Eros Pod zu senden. Ein Omnipod Eros Pod kann sich nur mit einem einzigen Gerät verbinden. Das Gerät, das den Pod erfolgreich aktiviert, ist das einzige Gerät, das von diesem Zeitpunkt an mit ihm kommunizieren darf. Dies bedeutet, dass, sobald Du einen Omnipod Eros Pod mit Deinem RileyLink über den AAPS Omnipod Treiber aktiviert hast, <strong x-id="1">wirst Du Deinen PDM nicht mehr mit diesem Pod</strong> verwenden können. Der AAPS Omnipod Treiber mit dem RileyLink ist dann Dein aktiver PDM. <em x-id="3">Dies bedeutet NICHT, dass Du Deinen PDM wegwerfen solltest. Es wird empfohlen, ihn als Backup zu behalten und für Notfälle, falls AAPS nicht korrekt funktioniert.</em>
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.</strong> The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+  <strong x-id="1">Du kannst mehrere RileyLinks konfigurieren, aber nur ein RileyLink kann gleichzeitig mit einem Pod kommunizieren.</strong> Der AAPS Omnipod Treiber unterstützt die Möglichkeit, mehrere RileyLinks in der RileyLink-Konfiguration hinzuzufügen, jedoch kann nur ein RileyLink gleichzeitig für das Senden und Empfangen der Kommunikation ausgewählt werden.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your pod will not shut off when the RileyLink is out of range.</strong> When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Beim Aktivieren eines Pods wird das in AAPS definierte Profil in den neuen Pod programmiert. Wenn du den Kontakt zum Pod verlierst, wird er auf dieses zurückgesetzt. Du kannst keine neuen Befehle senden, solange der RileyLink nicht wieder in Reichweite kommt und die Verbindung wiedergeherstellt ist.
+  <strong x-id="1">Dein Pod wird nicht abgeschaltet, wenn der RileyLink außerhalb der Reichweite liegt.</strong> Dein Pod wird weiterhin Basal-Insulin liefern, wenn Dein RileyLink außerhalb der Reichweite ist oder die Kommunikation mit dem aktiven Pod geblockt wird. Beim Aktivieren eines Pods wird das in AAPS definierte Profil in den neuen Pod programmiert. Wenn du den Kontakt zum Pod verlierst, wird er auf dieses zurückgesetzt. Du kannst keine neuen Befehle senden, solange der RileyLink nicht wieder in Reichweite kommt und die Verbindung wiedergeherstellt ist.
 </p>
 
 <p spaces-before="0">
