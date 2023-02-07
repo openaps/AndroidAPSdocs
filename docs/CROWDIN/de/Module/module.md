@@ -320,5 +320,5 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Hardware- und Software-Anforderungen
 </p>
