@@ -21,7 +21,10 @@ Noteworthy is the fact that the G7 system, compared to the G6, does not smooth t
 ## 1.  Patched Dexcom G7 App
 To avoid confusion, it must be explained that the patched Dexcom G7 app is NOT the same as the BYODA. The author of the BYODA has focused on the G6 and the G ONE and has not made any changes to the Dexcom G7 app other than a compatibility patch. More details [here](https://www.reddit.com/r/dexcom/comments/y4vixk/oc_build_your_own_dexcom_app_update_now_with_g7/).
 
-A recent patch of the Dexcom G7 app can be found on [Github](https://github.com/DiaKEM/dexcom-g7-apk-patcher) and all the built-in changes are explained there. Currently (as of 02/'23) these are:
+A patch for the Dexcom G7 is now in the standard dev branch of AndroidAPS.
+Build a new signed APK and install it on your phone.
+  
+These changes are made as of 02/'23 whith these:
 
 - Broadcast of the values to AAPS (ATTENTION: Here a special AAPS version is needed. See below!)
 - Deactivate Dexcom compatibility check
