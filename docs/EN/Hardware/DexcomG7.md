@@ -1,5 +1,15 @@
 # Dexcom G7
 
+:::{admonition} Only available in dev version at the moment
+:class: note
+
+This feature is only available in the dev version - see documentation about the dev version.
+
+The dev version of AndroidAPS is only for developers and testers comfortable dealing with stacktraces, looking through log files and maybe firing up the debugger to produce bug reports that are helpful to the developers (in short: people that know what they are doing without being assisted!).
+
+:::
+
+
 ##   Fundamental in advance
 
 In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
