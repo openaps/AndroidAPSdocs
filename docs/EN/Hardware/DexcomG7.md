@@ -40,7 +40,7 @@ After the warm-up phase, the values are displayed as usual in the G7 app.
 To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AndroidAPS is necessary.
 
 This modified version of AndroidAPS can be found [here](https://github.com/DiaKEM/dexcom-g7-aaps). 
-To create this version you have to follow the instructions, but you have to change the following when downloading the code from Github ([described here](https://androidaps.readthedocs.io/de/latest/Installing-AndroidAPS/Building-APK.html#androidaps-code-herunterladen)):
+To create this version you have to follow the instructions, but you have to change the following when downloading the code from Github ([described here](../Installing-AndroidAPS/Building-APK.html#id4)):
 
 * Copy the following URL ```https://github.com/DiaKEM/dexcom-g7-aaps``` and paste it into the URL textbox (3) in Android Studio.
 * Follow the rest as mentioned to compile the modified AAPS version with G7 support.
