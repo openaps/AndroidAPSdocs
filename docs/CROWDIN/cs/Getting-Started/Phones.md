@@ -10,7 +10,7 @@ Thanks to the ease of Google Spreadsheets, close communication amongst early ado
 
 When the time comes for another Hardware Compatibility List to be created in the future; we encourage anyone that feels they might enjoy becoming a Maintainer to please contact us!
 
-The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google .com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5 RvMcI6NG5TnY)
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
 With CRTL-F you can search in the text of the Google sheet. The sheet is write protected. To record your test of a phone please fill in the [form](https://forms.gle/g7GbSkMCTfFrWKjSA).
 
