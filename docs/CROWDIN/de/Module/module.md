@@ -24,11 +24,11 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </code></pre>
     
     <p spaces-before="0">
-      :::{note}<br x-id="2" /> <strong x-id="1">IMPORTANT SAFETY NOTICE</strong>
+      :::{note}<br x-id="2" /> <strong x-id="1">WICHTIGER SICHERHEITSHINWEIS</strong>
     </p>
     
     <p spaces-before="0">
-      Die grundlegenden Sicherheitsfunktionen von AndroidAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der du dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, <em x-id="3">do not use</em> these for creating an AndroidAPS system.
+      Die grundlegenden Sicherheitsfunktionen von AndroidAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der du dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. <em x-id="3">Verwende keine</em> defekten, modifizierten oder selbsterstellten Insulinpumpen oder CGM-Empfänger, um ein AndroidAPS-System zu erstellen oder zu betreiben.
     </p>
     
     <p spaces-before="0">
@@ -168,13 +168,13 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
     {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
   </li>
   <li>
-    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Kontakt:</a>
   </li>
   <li>
-    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Kontakt:</a>
   </li>
   <li>
-    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Kontakt:</a> - nicht getestet
   </li>
 </ul>
 
@@ -320,5 +320,5 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Hardware- und Software-Anforderungen
 </p>

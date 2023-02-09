@@ -1,14 +1,14 @@
 # Sicherheitshinweise
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Wenn Du Dich entscheidest, Deine eigene künstliche Bauchspeicheldrüse zu bauen, ist es immer wichtig, über Sicherheit und Schutz nachzudenken und die Auswirkungen all Deiner Handlungen zu verstehen.**
 
 ## Allgemein
 
-- AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-- Do not assume that AndroidAPS will never make mistakes. AndroidAPS übernimmt die Kontrolle Deiner Insulinabgabe: Habe es immer im Auge, verstehe wie es arbeitet und lerne, seine Handlungen zu interpretieren.
-- Remember that, once paired, the phone can instruct the pump to do anything. Verwende das Smartphone ausschließlich für AndroidAPS und - falls es von einem Kind genutzt wird - für die unentbehrliche Kommunikation. Installiere keine unnötigen Anwendungen oder Spiele (!!!!!), die Malware wie Trojaner, Viren oder Bots einschleppen könnten, die Dein System stören könnten.
-- Install all security updates provided by your phone manufacturer and Google.
-- You might also need to change your diabetes habits as you change your therapy by using a closed loop system. Zum Beispiel viele Anwender deutlich weniger Hypo-BE, da AndroidAPS die Insulinzufuhr bereits im Vorfeld reduziert hat.
+- AndroidAPS ist nur ein Hilfsmittel, mit dem du deinen Diabetes managen kannst und nichts, was du installieren und dann vergessen kannst!
+- Nimm nicht an, dass AndroidAPS nie Fehler machen wird. AndroidAPS übernimmt die Kontrolle Deiner Insulinabgabe: Habe es immer im Auge, verstehe wie es arbeitet und lerne, seine Handlungen zu interpretieren.
+- Bedenke, dass ein Smartphone, welches einmal mit Deiner Pumpe gekoppelt ist, jegliche Anweisungen an die Pumpe geben kann. Verwende das Smartphone ausschließlich für AndroidAPS und - falls es von einem Kind genutzt wird - für die unentbehrliche Kommunikation. Installiere keine unnötigen Anwendungen oder Spiele (!!!!!), die Malware wie Trojaner, Viren oder Bots einschleppen könnten, die Dein System stören könnten.
+- Installiere alle Sicherheits-Updates, die der Smartphone-Hersteller und Google zur Verfügung stellen.
+- Du musst auch Deine Diabetes-Gewohnheiten anpassen, da Du Deine Therapie durch den Closed Loop wesentlich veränderst. Zum Beispiel viele Anwender deutlich weniger Hypo-BE, da AndroidAPS die Insulinzufuhr bereits im Vorfeld reduziert hat.
 
 ## SMS Kommunikator
 
@@ -23,16 +23,16 @@ Wir Benutzer erstellen die AndroidAPS-App selbst mit Android Studio. Viele verwe
 
 Bitte gehen Sie dazu wie folgt vor:
 
-- Press WINDOWSTASTE and enter "Control Panel" in the search field, open with Enter. Es öffnt: "Alle Systemsteuerungselemente".
-- Press the letter C to get to "Center for Ease of Use", open with Enter.
-- Then open "Use computer without a screen" with Enter.
-- There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it.
-- Done, just close the window! Der Screenreader sollte jetzt funktionieren.
+- Drücken Sie WINDOWSTASTE und geben Sie in das Suchfeld "Systemsteuerung" ein, öffnen Sie mit Enter. Es öffnt: "Alle Systemsteuerungselemente".
+- Drücken Sie den Buchstaben C, um zu "Center für erleichterte Bedienung" zu gelangen, öffnen Sie mit Enter.
+- Dann öffnen Sie "Computer ohne Bildschirm verwenden" mit Enter.
+- Dort unten finden Sie das Kontrollkästchen "Java Access Bridge aktivieren".
+- Fertig, einfach das Fenster schließen! Der Screenreader sollte jetzt funktionieren.
 
 :::{note}
-**IMPORTANT SAFETY NOTICE**
+**WICHTIGER SICHERHEITSHINWEIS**
 
-Die grundlegenden Sicherheitsfunktionen von AndroidAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der du dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+Die grundlegenden Sicherheitsfunktionen von AndroidAPS, die in dieser Dokumentation beschrieben sind, bauen auf den Sicherheitsfunktionen der Hardware auf, mit der du dein System aufgesetzt hast. Es ist extrem wichtig, dass die Insulinpumpe und das CGM-System, die für ein Closed Loop System mit automatisierter Insulinabgabe verwendet werden, hinreichend getestet und voll funktionstüchtig sind sowie (in Europa) eine CE-Kennzeichnung haben und (in Deutschland) als Medizinprodukte zugelassen sind. Veränderungen an Hard- oder Software dieser Komponenten können zu unerwarteter Insulinabgabe und damit zu erheblichen Risiken für den Anwender führen. *Verwende keine* defekten, modifizierten oder selbsterstellten Insulinpumpen oder CGM-Empfänger, um ein AndroidAPS-System zu erstellen oder zu betreiben.
 
 Außerdem ist es ebenso wichtig, nur Originalzubehör zu verwenden. Setzhilfen, Kanülen und Reservoire müssen vom Hersteller für den Einsatz mit deiner Pumpe bzw. deinem CGM zugelassen sein. Die Verwendung von nicht geprüftem oder modifiziertem Zubehör kann zu Ungenauigkeiten des CGM-Systems und Insulinabgabefehlern führen. Insulin ist sehr gefährlich, wenn es falsch dosiert wird. Spiele nicht mit deinem Leben, indem du ungeprüftes oder modifiziertes Zubehör verwendest.
 
