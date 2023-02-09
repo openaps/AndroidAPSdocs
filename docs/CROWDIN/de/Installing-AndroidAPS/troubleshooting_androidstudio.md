@@ -191,12 +191,12 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 * Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen die [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)  App.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
+* Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den [xDrip+ Einstellungen](../Configuration/xdrip.md#identify-receiver) beschrieben.
 
 
 ## App not installed
 
-![phone app note installed](../images/Update_AppNotInstalled.png)
+![Smartphone Meldung App nicht installiert](../images/Update_AppNotInstalled.png)
 
 * Stelle sicher, dass Du die “app-full-release.apk” auf Dein Smartphone übertragen hast.
 * Falls "App not installed" auf dem Smartphone angezeigt wird, gehe wie folgt vor:
@@ -210,11 +210,11 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## App installiert, aber weiter die alte Version auf dem Smartphone
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy)
+Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast, jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine [lokale Kopie zu aktualisieren](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy).
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
-If non of the above tips helped you might consider building the app from scratch:
+Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, die App von Grund auf neu zu erstellen.
 
 1. [Exportiere die Einstellungen](../Usage/ExportImportSettings) (in der AAPS Version, die bereits auf Deinem Smartphone installiert ist)
 
@@ -222,7 +222,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     Oder verwende einfach einen neuen keystore.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code).
+3. Erstelle die App von Grund auf neu wie [hier](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code) beschrieben.
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere Einstellungen](../Usage/ExportImportSettings) erneut, um deine Zielsetzungen und Einstellungen wiederherzustellen.
@@ -230,10 +230,10 @@ If non of the above tips helped you might consider building the app from scratch
 
 ## Worst case scenario
 
-In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
+Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, könntest Du versuchen, Android Studio komplett neu zu installieren. Einige Benutzer berichteten, dass dies ihr Problem gelöst hat.
 
-**Make sure to uninstall all files associated with Android Studio.** If you do not completely remove Android Studio with all hidden files, uninstalling may cause new problems instead of solving your existing one(s). Manuals for complete uninstall can be found online i.e.
+**Stelle sicher, dass du alle Dateien, die in Verbindung mit Android Studio stehen, deinstallierst.** Falls du Android Studio nicht mit allen versteckten Dateien löscht, können beim Deinstallieren neue Probleme auftreten, anstatt dass Deine bestehenden Probleme gelöst werden. Anleitungen zur kompletten Deinstallation findest Du online z.B.
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#install-android-studio).
+Installiere Android Studio von Grund auf wie [hier](../Installing-AndroidAPS/Building-APK.md#install-android-studio) beschrieben.
