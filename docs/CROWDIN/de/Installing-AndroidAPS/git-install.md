@@ -4,9 +4,9 @@
 
 ### 1. Git herunterladen
 
-- **You have to be online all of the time as Android Studio downloads several updates!**
-- Jede git Version sollte funktionieren. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Make sure to note down the installation path. Du brauchst diesen im nächsten Schritt.
+- **Du musst immer online sein, da Android Studio verschiedene Updates herunterlädt!**
+- Jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Notiere Dir den Installationspfad. Du brauchst diesen im nächsten Schritt.
 
 ```{image} ../images/Update_GitPath.png
 :alt: Git Installationspfad
@@ -14,39 +14,39 @@
 
 ### 2. Pfad zu git in Android Studio festlegen
 
-- Open File > Settings
+- Öffne File > Settings
 
   ```{image} ../images/Update_GitSettings1.png
   :alt: Android Studio - Einstellungen öffnen
   ```
 
-- Click the small triangle next to Version Control (1.) to open the sub-menu.
+- Klicke auf das kleine Dreieck neben Version Control (1.), um das Untermenü zu öffnen.
 
-- Click Git (2.).
+- Git (2.) anklicken.
 
-- Make sure update method "Merge" (3.) is selected.
+- Stelle sicher, dass die update method "Merge" (3.) ausgewählt ist.
 
-- Check if Android Studio can locate path to git.exe automatically by clicking the button "Test" (4.)
+- Prüfe durch klicken des Buttons "Test" (4.), ob Android Studio den Pfad zu git.exe automatisch ermitteln kann.
 
   ```{image} ../images/AndroidStudio361_09.png
   :alt: Android Studio settings
   ```
 
-- If automatic setting is successful git version will be displayed.
+- Wenn die automatische Einstellung möglich ist, wird die Git-Version angezeigt.
 
-- Click "OK" in the dialog box (1.) and "OK" in the settings window (2.).
+- Klicke im Dialogfenster auf "OK" (1.) und dann im Einstellungsfenster nochmals auf "OK" (2.).
 
   ```{image} ../images/AndroidStudio361_10.png
   :alt: Automatische git Installation erfolgreich
   ```
 
-- In case file git.exe cannot be found click "OK" in the dialog box (1.) and then the button with the three dots (2.).
+- Falls git.exe nicht gefunden werden kann, schließe das Dialogfenster mit "OK" (1.) und klicke dann auf den Button mit den drei Punkten (2.).
 
-- Use [search function](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html) in windows explorer to find "git.exe" if you are unsure where it can be found. You are looking for git.exe located in binfolder.
+- Du kannst auch die [Suchfunktion](https://www.tenforums.com/tutorials/94452-search-file-explorer-windows-10-a.html)  im Windows Explorer verwenden, um "git.exe" zu finden wenn Du Dir nicht sicher bist, wo diese gespeichert ist. Du brauchst die git.exe, die im Ordner bin gespeichert ist.
 
-- Select path to git.exe and make sure you selected the one in **\\bin\\** folder (3.) and click "OK" (4.).
+- Wähle den Pfad zu git.exe aus, stelle sicher, dass Du den Ordner \*\* \\bin\\\*\* ausgewählt hast (3.), und klicke auf "OK" (4.).
 
-- Close settings window by clicking "OK" button (5.).
+- Schließe das Einstellungs-Fenster durch Klick auf "OK" (5.).
 
   ```{image} ../images/AndroidStudio361_11.png
   :alt: Automatische Git-Installation fehlgeschlagen
@@ -54,20 +54,20 @@
 
 ### 3. Starte den Rechner neu
 
-- Reboot your PC to update System Environment.
+- Starte Deinen PC neu, um die Systemumgebung zu aktualisieren.
 
 (check-git-settings-in-android-studio)=
 ### 4. Prüfe die Einstellungen in Android Studio
 
-- Open Terminal window in Android Studio
+- Öffne das Terminal-Fenster in Android Studio
 
-- Enter `git --version` (without quotation marks and no spaces between the two - \[minus sign\]!) and press Return
+- Gib `git --version` (ohne Anführungszeiten und ohne das Leerzeichen zwischen den zwei - \[Minuszeichen\]!) und drücke Return
 
   ```{image} ../images/AndroidStudio_gitversion1.png
   :alt: git - -version
   ```
 
-- If git is installed and connected properly you will receive an information about the installed version that looks as follows:
+- Wenn git installiert und richtig verbunden ist, erhältst Du eine Information über die installierte Version, die wie folgt aussieht:
 
   ```{image} ../images/AndroidStudio_gitversion2.png
   :alt: Ergebnis git-version
@@ -75,7 +75,7 @@
 
 ## Mac
 
-- Jede git Version sollte funktionieren. For example [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
-- Use homebrew to install git: `` `$ brew install git` ``.
+- Jede git Version sollte funktionieren. Zum Beispiel [https://git-scm.com/download/mac](https://git-scm.com/download/mac)
+- Verwende homebrew um git zu installieren: `` `$ brew install git` ``.
 - Details zur Installation von git findest Du in der [offiziellen git Dokumentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 - Wenn Du git über homebrew installierst, musst Du keine Einstellungen ändern. Im Fall der Fälle findest Du diese unter Android Studio - Preferences.
