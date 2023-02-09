@@ -189,9 +189,9 @@ xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 :::{toctree}
 :caption: AndroidAPS for children
 
-Remote monitoring <./Children/Children.md> SMS commands
+Remote monitoring <./Children/Children.md>
 
-<./Children/SMS-Commands.md>
+SMS commands <./Children/SMS-Commands.md>
 
 Profile helper <./Configuration/profilehelper.md>
 
