@@ -49,7 +49,7 @@ Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide
 
 The documentation is written in English and translated in different languages. We are searching help by the translation of a) the app and b) the documentation.
 
-The documentation process is explained [here](translations.md).
+The translation process is explained [here](translations.md).
 
 The state of the translations per language for app and documentation can be found [here](./Administration/stateTranslations.md).
 
