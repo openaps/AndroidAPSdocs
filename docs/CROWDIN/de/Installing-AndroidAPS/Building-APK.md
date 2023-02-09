@@ -7,7 +7,7 @@
 ## Wichtige Hinweise
 
 * Nutze bitte **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** oder neuer, um die APK-Datei zu erstellen.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit Systeme](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) werden von Android Studio 2020.3.1 nicht unterstützt
 
 (recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Bitte beachte, dass sowohl eine **64-Bit-CPU als auch ein 64-Bit-Betriebssystem zwingend erforderlich sind**. Wenn Dein System diese Bedingung nicht erfüllt, musst Du die betroffene Hardware, Software oder das ganze System ersetzen. **Es wird dringend empfohlen, SSD (Solid State Disk) anstelle von HDD (Hard Disk Drive) zu verwenden, da dies dies die Zeit zur Erstellung der APS-Installationsdatei reduziert.** Dies wird nur eine Empfohlung und ist nicht zwingend erforderlich. Du kannst auch eine normale Festplatte verwenden. Beachte aber, dass der Prozess zur Erstellung der APK-Datei dann länger dauert. Du kannst den Prozess aber unbeaufsichtigt laufen lassen, nachdem Du ihn gestartet hast.
 
 * * *
 
@@ -60,80 +60,80 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 ## Übersicht
 
-In general, the steps necessary to build the APK file:
+Kurzfassung der wichtigsten Schritte zum Erstellen der APK Datei:
 
 1. [Git installieren](../Installing-AndroidAPS/git-install.md)
 2. [Android Studio installieren](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
 3. [Pfad zu git.exe in den Einstellungen von Android Studio festlegen](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
 4. [AndroidAPS-Code herunterladen](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
 5. [Download Android SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
+6. [App erstellen](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
 7. [APK-Datei auf das Smartphone übertragen](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
 8. [Identifiziere den Empfänger falls Du xDrip verwendest+](..//Configuration/xdrip.md#identify-receiver)
 
 ## Schritt für Schritt Anleitung
 
-Detailed description of the steps necessary to build the APK file.
+Detaillierte Beschreibung der notwendigen Schritte.
 
 ## Installiere git (falls du es noch nicht hast)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
+Die Schritt-für-Schritt-Anleitung findest Du auf der Seite zur [git Installation](../Installing-AndroidAPS/git-install.md).
 
 (install-android-studio)=
 
 ## Android Studio installieren
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Die folgenden Screenshots stammen von Android Studio Version Arctic Fox | 2020.3.1. Die Bildschirme können bei zukünftigen Versionen von Android Studio leicht anders aussehen. Aber Du solltest Dich dennoch zurechtfinden. Bei Fragen gibt es [Hilfe in der Community](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Einer der wichtigsten Punkte bei der Installation von Android Studio ist: **Sei geduldig!** Während der Installation und Einrichtung lädt Android Studio sehr viele Daten nach und das braucht seine Zeit.
 
-Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+Lade [Android Studio von dieser Seite](https://developer.android.com/studio/install.html) herunter und installiere es auf Deinem Computer.
 
-On first start you will find the setup wizard:
+Beim ersten Start öffnet sich der Setup Wizard:
 
-Select "Do not import settings" as you have not used it before.
+Wähle “Do not import settings”, da bisher keine Einstellungen vorgenommen wurden.
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+![Einstellungen nicht importieren](../images/studioSetup/01_ImportSettings.png)
 
-Decide whether you want to share data with Google or not.
+Entscheide, ob Du Daten mit Google teilen möchtest oder nicht.
 
-![Share data with Google](../images/studioSetup/02_DataSharing.png)
+![Daten mit Google teilen](../images/studioSetup/02_DataSharing.png)
 
-On the following screen click "Next".
+Klicke auf dem nächsten Bildschirm den Button "Next".
 
-![Welcome screen](../images/studioSetup/03_Welcome.png)
+![Willkommensbildschirm](../images/studioSetup/03_Welcome.png)
 
-Select "Standard" installation and click "Next".
+Wähle “Standard” Installation und klicke auf “Next”.
 
-![Standard installation](../images/studioSetup/04_InstallType.png)
+![Standardinstallation](../images/studioSetup/04_InstallType.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
+Wähle das Design für die Benutzeroberfläche, welches Dir am besten gefällt. (In dieser Anleitung verwenden wir "Light".) Dann klicke auf "Next".
 
 > ***Hinweis:*** Das ist nur das Farbschema. Du kannst auswählen, was Du möchtest (z.B. "Darcula" für den dunklen Modus). Diese Auswahl hat keinen Einfluss auf das Erstellen der APK, aber die folgenden Screenshots könnten anders aussehen.
 
-![UI color scheme](../images/studioSetup/05_UITheme.png)
+![Farbschema](../images/studioSetup/05_UITheme.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Klicke auf “Finish” im Fenster “Verify Settings”.
 
-![Verify settings](../images/studioSetup/06_Verify.png)
+![Einstellungen überprüfen](../images/studioSetup/06_Verify.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Warte während Android Studio zusätzliche Komponenten herunterlädt und bleibe geduldig. Sobald alles heruntergeladen ist, wird der Button "Finish" blau dargestellt. Klicke diesen dann an.
 
-![Downloading components](../images/studioSetup/07_Downloading.png)
+![Komponenten herunterladen](../images/studioSetup/07_Downloading.png)
 
 (set-git-path-in-preferences)=
 
 ## Git-Pfad in Android Studio eintragen
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
+Stelle sicher, dass [git auf Deinem PC installiert](../Installing-AndroidAPS/git-install.md) ist und dass Du den PC nach der git-Installation neu gestartet hast.
 
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+Klicke auf dem Android Studio Willkommensbildschirm auf "Customize" \[Anpassen\] (1) auf der linken Seite und wähle dann den Link "All settings..." \[Alle Einstellungen...\] (2):
 
-![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+![Einstellungen für Android Studio vom Willkommensbildschirm aus](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+* Stelle als Windows Nutzer sicher, dass Du den PC neu gestartet hast, nachdem Du [Git installiert](../Installing-AndroidAPS/git-install.md) hast.
 
 * Doppelklicke auf "Version Control" (1), um das Untermenü zu öffnen.
 
