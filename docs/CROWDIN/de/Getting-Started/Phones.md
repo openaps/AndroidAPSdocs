@@ -10,7 +10,7 @@ Der neue Treiber für den DASH Pod konnte sehr effizient und schnell erstellt we
 
 Wenn in Zukunft wieder eine andere Hardwareliste benötigt wird und Jemand sich um diese Liste kümmern möchte, kontaktiere uns bitte!
 
-Die Liste des getesteten Telefons kann über den folgenden Link [Liste der getesteten Telefone mit Omnipod-Insulinpumpe aufgerufen werden](https://docs.google .com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5 RvMcI6NG5TnY)
+The list of the tested phone can be accessed via the following link [list of tested phones with Omnipod insulin pump](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
 
 Mit STRG-F kannst Du im Text der Google Tabelle suchen. Die Tabelle ist schreibgeschützt. Um den Test eines Telefons aufzunehmen, fülle bitte das [-Formular](https://forms.gle/g7GbSkMCTfFrWKjSA) aus.
 
