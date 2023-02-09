@@ -122,7 +122,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ### Could not resolve/No cached version
 
-  You might get this error message:
+  Wahrscheinlich siehst Du diese Fehlermeldung:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
@@ -137,20 +137,20 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 (unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
-  If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
+  Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird von Android Studio Version 3.5.1 und höher nicht unterstützt und daran können die AAPS Entwickler leider nichts ändern.
 
-  If you are using Windows 10 you must use a 64-bit operating system.
+  Falls du Windows 10 verwendest, brauchst du ein 64-bit Betriebssystem.
 
-  There are a lot of manuals on the internet how to determine wether you have a 32-bit or 64-bit OS - i.e. [this one](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
+  Es gibt viele Anleitungen im Internet, um herauszufinden, ob du ein 32-bit oder 64-bit Betriebssystem hast - z. B.: [diese hier](https://www.howtogeek.com/howto/21726/how-do-i-know-if-im-running-32-bit-or-64-bit-windows-answers/).
 
-  ![Screenshot Unable to start daemon process](../images/AndroidStudioWin10_32bitError.png)
+  ![Screenshot konnte den Daemon-Prozess nicht starten](../images/AndroidStudioWin10_32bitError.png)
 
 ### Gradle Resync
 
-  If you can still see the message that the gradle sync failed, now select the Link "Try again". ![Gradle Sync Failed Mode](../images/studioTroubleshooting/01_GradleSyncFailed.png)
+  Falls Du immer noch den Hinweis sehen kannst, dass der Gradle sync fehlgeschlagen ist, wähle den Link "Try again".  ![Gradle Sync fehlgeschlagen Modus](../images/studioTroubleshooting/01_GradleSyncFailed.png)
 
 
-  If you don't see the a message anymore, you can still trigger this manually:
+  Falls Du den Hinweis nicht mehr siehst, kannst Du das auch manuell auswählen:
 
   * Öffne den Gradle Tab (1) am rechten Rand von Android Studio.
 
@@ -162,34 +162,34 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
 ## Generate Signed APK generated successfully with 0 build variants
 
-When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
+Wenn Du die Apk generierst, bekommst Du möglicherweise den Hinweis, dass das Generieren zwar erfolgreich war, aber, dass keine build variants generiert wurden:
 
-![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
+![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
+Diese Warnung ist falsch. Prüfe den Pfad den Du als "Destination Folder" (Ziel Speicherort) für die Erstellung angegeben hast (Schritt [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) und Du wirst die signierte APK dort finden!
 
 
 ## App was created with compiler/kotlin warnings
 
-If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
+Falls Dein Build erfolgreich durchgelaufen ist, Du aber Warnungen vom Compiler oder Kotlin bekommst (diese zeigen sich durch ein gelbes oder blaues Ausrufezeichen), kannst Du diese Warnungen einfach ignorieren.
 
- ![Gradle finished with warnings](../images/studioTroubleshooting/13_BuildWithWarnings.png)
+ ![Gradle mit Warnungen beendet](../images/studioTroubleshooting/13_BuildWithWarnings.png)
 
-Your app was build successfully and can be transferred to phone!
+Deine App wurde erfolgreich gebaut und kann aufs Smartphone übertragen werden!
 
 
 ## Key was created with errors
 
-When creating a new keystore for building the signed APK, on Windows the following error message might appear
+Beim Erstellen eines neuen Keystores zum Erstellen der signierten APK wird unter Windows möglicherweise die folgende Fehlermeldung angezeigt:
 
 ![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
 
-This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
+Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Windows zu sein. Der Schlüssel wird korrekt erstellt, aber eine Empfehlung wird fälschlicherweise als Fehler angezeigt. Dies kann momentan ignoriert werden.
 
 
 ## No CGM data is received by AndroidAPS
 
-* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen die [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)  App.
 
 * In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
 
