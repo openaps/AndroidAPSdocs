@@ -1,13 +1,13 @@
 # Dexcom G7
 
-:::{admonition} Only available in dev branch
+```{admonition} Only available in dev branch
 :class: note
 
 This feature is only available in the in dev branch and not in master.
 
 Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md)).
 
-:::
+```
 
 ##   Fundamental in advance
 
