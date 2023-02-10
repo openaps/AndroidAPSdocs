@@ -1,6 +1,15 @@
 # Übersetzungsstatus für die App und die Dokumentation
 
-Der Status wird einmal pro Stunde von einem externen Dienst aktualisiert.
+The state is once per hour updated and reflects only the state in Crowdin.
+
+:::{admonition} needed time for final publication
+:class: note
+
+After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
+
+Depending on the complexity of the PR which has to be manually checked the final publication to [wiki.aaps.app](https://wiki.aaps.app) may need up to 14 days.
+
+:::
 
 ## Status App Übersetzung
 
