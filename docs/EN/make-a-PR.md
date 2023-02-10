@@ -102,7 +102,7 @@ If using images please use reasonable sizes. Screenshot images should be up to *
 
 ### multi level list
 
-You can insert lists in lists by indenting the nect level with 4 more spaces to the right than the one before.
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
 ```
 1. first
