@@ -101,7 +101,7 @@ If using images please use reasonable sizes. Screenshot-Bilder sollten bis zu **
 
 ### mehrstufige Liste
 
-Sie können Listen in Listen einfügen, indem Sie die nächste Ebene mit 4 weiteren Leerzeichen nach rechts einrücken als zuvor.
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
     1. erste
     1. zweite
@@ -141,29 +141,31 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ### Notes
 
-    :::{admonition} Freundliche Notiz
+    ```{admonition} Friendly Note
     :class: note
     
-    Dies ist eine Notiz.
-    :::
+    This is a note.
     
 
-:::{admonition} freundliche Notiz :class: note
-
-Das ist eine Notiz. :::
+    <br />```{admonition} Friendly Note
+    :class: note
+    
+    This is a note.
+    
 
 ### Warnungen
 
-    :::{admonition} Starke Warnung
+    ```{admonition} Strong Warning
     :class: warning
     
-    Dies ist eine Warnung.
-    :::
+    This is a warning.
     
 
-:::{admonition} Starke Warnung :class: warning
-
-Dies ist eine Warnung. :::
+    <br />```{admonition} Strong Warning
+    :class: warning
+    
+    This is a warning.
+    
 
 ## Adding multiple images to the documentation
 
