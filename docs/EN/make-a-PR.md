@@ -148,34 +148,34 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 ### Notes
 
 ```
-:::{admonition} Friendly Note
+```{admonition} Friendly Note
 :class: note
 
 This is a note.
-:::
+```
 ```
 
-:::{admonition} Friendly Note
+```{admonition} Friendly Note
 :class: note
 
 This is a note.
-:::
+```
 
 ### Warnings
 
 ```
-:::{admonition} Strong Warning
+```{admonition} Strong Warning
 :class: warning
 
 This is a warning.
-:::
+```
 ```
 
-:::{admonition} Strong Warning
+```{admonition} Strong Warning
 :class: warning
 
 This is a warning.
-:::
+```
 
 ## Adding multiple images to the documentation
 

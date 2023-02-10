@@ -5,11 +5,11 @@
 
 * Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
 
-:::{admonition} Time for Approval
+```{admonition} Time for Approval
 :class: note
 
 The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
-:::
+```
 
 * When we approve you, click the flag
    ![When we approve you, click the flag](./images/translation_flags.png)
@@ -82,12 +82,12 @@ In general this needs 1 - 3 days but might during holiday take a little bit long
 
 ### Translating links
 
-:::{admonition} Links are not translated anymore
+```{admonition} Links are not translated anymore
 :class: note
 
 Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
 
-:::
+```
 
 You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
 
