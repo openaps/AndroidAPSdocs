@@ -101,7 +101,7 @@ If using images please use reasonable sizes. Screenshot images should be up to *
 
 ### multi level list
 
-You can insert lists in lists by indenting the nect level with 4 more spaces to the right than the one before.
+You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
 
     1. first
     1. second
@@ -142,29 +142,31 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ### Notes
 
-    :::{admonition} Friendly Note
+    ```{admonition} Friendly Note
     :class: note
     
     This is a note.
-    :::
     
 
-:::{admonition} Friendly Note :class: note
-
-This is a note. :::
+    <br />```{admonition} Friendly Note
+    :class: note
+    
+    This is a note.
+    
 
 ### Warnings
 
-    :::{admonition} Strong Warning
+    ```{admonition} Strong Warning
     :class: warning
     
     This is a warning.
-    :::
     
 
-:::{admonition} Strong Warning :class: warning
-
-This is a warning. :::
+    <br />```{admonition} Strong Warning
+    :class: warning
+    
+    This is a warning.
+    
 
 ## Adding multiple images to the documentation
 
