@@ -6,7 +6,7 @@ Please follow the instructions in the [update manual](../Installing-AndroidAPS/U
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Información de la actualización
+:alt: Update info
 ```
 
 Entonces tienes 60 días para actualizar. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
@@ -14,6 +14,15 @@ Entonces tienes 60 días para actualizar. If you do not update within these 60 d
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+
+```{admonition} First version of AndroidAPS
+:class: note
+
+The first test version started already in 2015. In 2016 has beend the first released version.
+
+The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+
+```
 
 ## Versión de Android y versión de AAPS
 
