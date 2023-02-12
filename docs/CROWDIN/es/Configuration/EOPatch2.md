@@ -28,15 +28,15 @@ Aparece una advertencia cuando la cantidad de insulina restante en el reservorio
 Se trata de un recordatorio para informarte del tiempo que falta para que caduque el parche actual. Puede ajustarse entre 1-24 horas, con incrementos de 1 hora. Por defecto, viene configurado en 4 horas.
 
 ### Recordatorio de zumbidos del parche
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+Se trata de una función de recordatorio para inyecciones distintas de la inyección basal. Si estás usando una inyección en bolo (prolongada) o una inyección basal temporal, el parche emitirá un zumbido cuando comience la inyección y otro cuando finalice. La configuración predeterminada es Desactivado.
 
 ![Bild3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Conexión del parche
 
-### Move to patch connection screen
+### Ir a la pantalla de conexión del parche
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Selecciona EOPATCH2 en la parte superior de la pantalla de inicio y pulsa el botón ACTIVAR PARCHE en la parte inferior izquierda.
 
 ![Bild4](../images/EOPatch/Bild4.png)
 
