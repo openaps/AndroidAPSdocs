@@ -5,7 +5,7 @@
 
 This feature is only available in the in dev branch and not in master.
 
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md)).
+Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
 
 ```
 
@@ -25,11 +25,11 @@ There are **two** possibilities (as of 02/'23).
 
 A patched Dexcom G7 app gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
 
-Uninstall the original Dexcom app if you used it before.
+Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/blob/main/dexcom.g7.compatibility.errorcodes.aaps.v1.3.3.3527.apk).
+Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
 
-Enter sensor code and serial number of the transmitter in the patched app.
+Enter sensor code in the patched app.
 
 Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
 
