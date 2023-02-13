@@ -45,6 +45,18 @@ In order to allow users with older Android to use older version of AAPS new vers
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
+## Version 3.2.0
+
+Release date: XX-XX-2023
+
+### Important hints
+
+- 
+
+### Changes
+
+- fixed tons of issues from 3.1 version
+
 ## Version 3.1.0
 
 Release date: 19-07-2022
