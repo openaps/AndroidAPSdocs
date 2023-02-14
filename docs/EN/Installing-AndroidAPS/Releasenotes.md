@@ -55,6 +55,7 @@ Release date: XX-XX-2023
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) are not sent to AAPS. This will be fixed in future release of NS.
 - Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
+- Tidepool can be used as a replacement of NS to pass first objective
 
 ### Changes
 
