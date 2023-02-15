@@ -26,32 +26,32 @@ The chronology of these releases is not available at the moment but as this ques
 
 ## Versión de Android y versión de AAPS
 
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+Si tu smartphone utiliza una versión de Android anterior a Android 9, no podrás utilizar AAPS v3 y posteriores, ya que requiere al menos Android 9.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
 ### Android 9 y superiores
 
-- Use latest AAPS version
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- Usa la última versión de AAPS
+- Descargar el código fuente de AAPS desde <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- Usa la versión de AAPS **2.8.2.1**
+- Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- Usa la versión de AAPS **2.6.2**
+- Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.6.2
 
-## Version 3.2.0
+## Versión 3.2.0
 
-Release date: XX-XX-2023
+Fecha de lanzamiento: XX-XX-2023
 
 ### Notas importantes
 
-- NS 15 is required. At the moment "dev" branch of NS main repository
+- NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
 - While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
 - Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
@@ -90,13 +90,13 @@ Release date: 19-07-2022
 
 ### Cambios
 
-- fixed issues from 3.0 version
+- Corrección de errores de la versión 3.0
 - fix application freezing @MilosKozak
 - fixed DASH driver @avereha
 - fixed Dana drivers @MilosKozak
 - huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+- Soporte para Aidex CGM @andyrozman @markvader (sólo Pumpcontrol)
 - Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
 - Wear code refactored. No compatible con versiones anteriores @MilosKozak
 - a11y improvements @Andries-Smit
