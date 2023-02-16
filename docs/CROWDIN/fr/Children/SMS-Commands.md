@@ -21,7 +21,7 @@
 
 ### Numéros de tél autorisés
 
-- In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- Dans AndroidAPS, allez dans **Préférences > Communicateur SMS** et entrez le(s) numéro(s) de téléphone que vous autoriserez pour les commandes SMS (séparés par des points-virgules, par ex. +33123456789;+33123456798)
 
 - Activez 'Autoriser les commandes distantes par SMS'.
 
@@ -83,38 +83,38 @@
 
 - Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé.
 
-- Confirm command by sending the code where necessary. Par exemple :
+- Confirmez la commande en envoyant le code si nécessaire. Par exemple :
 
   - Votre code PIN obligatoire est 2020
   - Le jeton TOTP de l'application d'authentification est 457051
   - Entrez 4570512020
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**Astuce** : Il peut être utile d'avoir un forfait SMS illimité (pour chaque téléphone utilisé) si beaucoup de SMS sont envoyés.
 
 (commands)=
-## Commands
+## Commandes
 
 Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
+:alt: Example de commandes SMS
 ```
 
 ### Boucle
 
-- LOOP STOP/DISABLE \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Réponse : La boucle a été désactivée
 
-- LOOP START/ENABLE \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Réponse : La boucle a été activée
 
 - LOOP STATUS
 
-  - Response depends on actual status
+  - La réponse dépend du statut réel
 
-    - Loop is disabled
-    - Loop is enabled
-    - Suspended (10 min)
+    - La Boucle est désactivée
+    - La Boucle est activée
+    - Suspendu (10 min)
 
-- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
+- LOOP SUSPEND 20 \* Réponse : Suspendu (20 min)
 
 - LOOP RESUME \* Response: Loop resumed
 
