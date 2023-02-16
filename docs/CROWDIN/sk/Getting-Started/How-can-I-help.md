@@ -19,6 +19,12 @@ Great, this is a highly appreciated thing and a good way to pay it forward!
 
 ## I do speak multiple languages and want to translate the app or the documentation
 
+If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+
+You are welcome to start as a translator for the documentation in parallel or later.
+
+You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
+
 * If you want to translate **the app** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidaps).
 * If you want to translate **the docs** to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs). 
 
