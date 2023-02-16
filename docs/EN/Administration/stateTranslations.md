@@ -7,7 +7,7 @@ The state is once per hour updated and reflects only the state in Crowdin.
 
 After Crowdin translation a sync to Github is scheduled every day to transfer translations to Github as pull request (PR).
 
-Depending on the complexity of the PR which has to be manually checked the final publication to [wiki.aaps.app](https://wiki.aaps.app) may need up to 14 days.
+The acceptance of the PR is a manual task which will be done es fast as possible.
 
 ```
 
