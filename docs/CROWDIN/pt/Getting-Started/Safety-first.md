@@ -29,7 +29,7 @@ To do this, please proceed as follows:
 - There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it.
 - Done, just close the window! The screen reader should work now.
 
-:::{note}
+```{note}
 **IMPORTANT SAFETY NOTICE**
 
 The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
@@ -37,4 +37,4 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
 Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.
-:::
+```
