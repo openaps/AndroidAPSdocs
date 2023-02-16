@@ -52,31 +52,31 @@ Fecha de lanzamiento: XX-XX-2023
 ### Notas importantes
 
 - NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS.
+- Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos.
+- Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
+- Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
+- Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
 
 
-### Cambios
+### Changes
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- new 125k+ lines of code, changed 150k lines
+- Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
+- Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
+- Soporte al MCG Glunovo @christinadamianou
+- Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
+- Plugin NSClient v3 @MilosKozak
+- Soporte para Tidepool @MilosKozak
+- Plugin de suavizado de datos de glucosa @MilosKozak @justmara inspirado en el proyecto Tsunami, @jbr7rr
+- Corregidos muchos problemas de la versión 3.1
+- Permitir añadir notas desde más lugares @Sergey Zorchenko
+- Correcciones en la interfaz de usuario (UI) @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- Nuevos comandos SMS para Lazo LGS/Cerrado @pzadroga
+- Traducciones Wear @Andries-Smit
+- Traslado de comunicaciones con xDrip+ a un módulo independiente @MilosKozak
+- Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
+- Correcciones en el controlador de Diaconn @miyeongkim
+- Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
 
 ## Versión 3.1.0
 
@@ -85,10 +85,10 @@ Release date: 19-07-2022
 (important-hints-3-1-0)=
 ### Notas importantes
 
-- after update uninstall Wear app and install new version
-- Omnipod users: update on pod change !!!
+- Después de actualizar, desinstalar la aplicación Wear del reloj e instalar la nueva versión (no se puede actualizar directamente)
+- Usuarios de Omnipod: Actualizar cuando toque cambio del POD !!!
 
-### Cambios
+### Changes
 
 - Corrección de errores de la versión 3.0
 - fix application freezing @MilosKozak
@@ -127,7 +127,7 @@ Fecha de lanzamiento: 31-01-2022
 - if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
 - if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
-### Cambios
+### Changes
 
 - 100k lines changed, 105k new lines of code
 
@@ -198,7 +198,7 @@ Fecha de lanzamiento: 23-01-2021
 
 - Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) below.
 
-### Cambios
+### Changes
 
 - stability improvements
 - more tweaking for Android 8+
