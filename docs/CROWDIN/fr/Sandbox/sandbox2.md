@@ -1,10 +1,10 @@
 # fichier sandbox interne 2 pour les tests
 
-:::{admonition} pas besoin de traduire ceci
+```{admonition} no need to translate this
 :class: note
 
-Pas besoin de traduire cela.
-:::
+No need to translate this.
+```
 
 Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse tester
 
