@@ -29,12 +29,12 @@ To do this, please proceed as follows:
 - There, at the bottom, you will find the checkbox "Enable Java Access Bridge", select it.
 - Done, just close the window! The screen reader should work now.
 
-:::{note}
+```{note}
 **IMPORTANT SAFETY NOTICE**
 
-תכונות הבטיחות של AndroidAPS הנדונות בתיעוד זה מבוססות על תכונות הבטיחות של החומרה המשמשת לבניית המערכת שלכם. חשוב מאוד שתשתמשו רק במשאבת אינסולין שנבדקה ואושרה ע"י ה-FDA או CE ובחיישן CGM לסגירת לולאת מינון אינסולין אוטומטית. שינויים בחומרה או בתוכנה ברכיבים אלה עלולים לגרום למינון בלתי צפוי של אינסולין, ולגרום לסיכון משמעותי למשתמש. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. חשוב מאוד שתשתמשו רק במשאבת אינסולין שנבדקה ואושרה ע"י ה-FDA או CE ובחיישן CGM לסגירת לולאת מינון אינסולין אוטומטית. שינויים בחומרה או בתוכנה ברכיבים אלה עלולים לגרום למינון בלתי צפוי של אינסולין, ולגרום לסיכון משמעותי למשתמש. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
 
 Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
 
 Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalculably lower blood sugar levels.  The combination with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
-:::
+```
