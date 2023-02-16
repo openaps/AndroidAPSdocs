@@ -1,15 +1,15 @@
 # Uzaktan İzleme
 
 ```{image} ../images/KidsMonitoring.png
-:alt: Monitoring children
+:alt: Çocukları izleme
 ```
 
-AndroidAPS offer several options for remote monitoring of children and also allows to send remote commands. Of course you can also use remote monitoring to follow your partner or friend.
+AndroidAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve ayrıca uzaktan sms komutları göndermeye izin verir. Elbette, partnerinizi veya arkadaşınızı takip etmek için de uzaktan izlemeyi kullanabilirsiniz.
 
-## Functions
+## Fonksiyonlar
 
-- Kid's pump is controlled by kid's phone using AndroidAPS.
-- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Settings must be the same in AndroidAPS and NSClient app.
+- Çocuğun pompası, AndroidAPS kullanılarak çocuğun telefonu tarafından kontrol edilir.
+- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
 - Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
 - Remote control of AndroidAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
 - Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) for further details.
@@ -25,7 +25,7 @@ AndroidAPS offer several options for remote monitoring of children and also allo
 ## Things to consider
 
 - Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
-- Settings must be the same in AndroidAPS and NSClient app.
+- Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
 - Consider time gap between master and follower due to time for up- and download as well as the fact that AAPS master phone will only upload after loop run.
 - So take your time to set those correctly and test them in real life with your kid next to you before starting remote monitoring and remote treatment. School holidays might be a good time for that.
 - What is your emergency plan when remote control does not work (i.e. network problems)?
