@@ -23,22 +23,14 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 :alt: Components overview
 </code></pre>
     
-    <p spaces-before="0">
-      :::{note}<br x-id="2" /> <strong x-id="1">IMPORTANT SAFETY NOTICE</strong>
-    </p>
-    
-    <p spaces-before="0">
-      The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, <em x-id="3">do not use</em> these for creating an AndroidAPS system.
-    </p>
-    
-    <p spaces-before="0">
-      Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
-    </p>
-    
-    <p spaces-before="0">
-      Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.
-:::
-    </p>
+    <pre><code class="{note}">**IMPORTANT SAFETY NOTICE**
+
+The foundation of AndroidAPS safety features discussed in this documentation is built on the safety features of the hardware used to build your system. It is critically important that you only use a tested, fully functioning FDA or CE approved insulin pump and CGM for closing an automated insulin dosing loop. Hardware or software modifications to these components can cause unexpected insulin dosing, causing significant risk to the user. If you find or get offered broken, modified or self-made insulin pumps or CGM receivers, *do not use* these for creating an AndroidAPS system.
+
+Additionally, it is equally important to only use original supplies such as inserters, cannulas and insulin containers approved by the manufacturer for use with your pump or CGM. Using untested or modified supplies can cause CGM inaccuracy and insulin dosing errors. Insulin is highly dangerous when misdosed - please do not play with your life by hacking with your supplies.
+
+Por último, mas não menos importante, você não deve tomar inibidores SGLT-2 (gliflozins), pois eles reduzem incalculavelmente os níveis de açúcar no sangue.  A combinação com um sistema que reduz as taxas basais a fim de aumentar a GLIC é especialmente perigosa já que devido ao gliflozin esse aumento na GLIC pode não acontecer e um estado perigoso de falta de insulina pode acontecer.
+</code></pre>
 
 <h2 spaces-before="0">
   Módulos Necessários
@@ -143,10 +135,6 @@ AndroidAPS is not just a (self-built) application, it is just one of several mod
 
 <p spaces-before="0">
   <strong x-id="1">Other pumps</strong> that may have the potential to work with AndroidAPS are listed on the <a href="../Getting-Started/Future-possible-Pump-Drivers.md">Future (possible) Pumps</a> page.
-</p>
-
-<p spaces-before="0">
-  If you need to <strong x-id="1">privately buy</strong> a pump then you can find various distributors is in <a href="https://drive.google.com/open?id=1CRfmmjA-0h_9nkRViP3J9FyflT9eu-a8HeMrhrKzKz0">this spreadsheet</a>, please share the details of yours if not already listed.
 </p>
 
 <p spaces-before="0">
