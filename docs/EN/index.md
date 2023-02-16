@@ -11,7 +11,12 @@ The app is not provided in Google Play - you have to build it from source code b
 ```{admonition} Ask for help - Writing Docs
 :class: note
 
-Please don't be shy, we need support in creating the documentation. A pull request is relatively simple to create. You can't break anything. There are release procedures. If you just want to talk in the beginning to see how you can help, give us a shout on Discord or Facebook. In this day and age, a telco is quickly arranged and we can discuss how you can best get involved and how we can show you the first steps.
+Please don't be shy, we urgently *need* support in creating the documentation.
+
+A pull request to edit the documentation is relatively simple to create. You can't break anything. There are release procedures.
+
+A 3 minute video which explains how to edit the docs via PR is available [here](https://www.youtube.com/watch?v=Vo4L6YYxWak).
+
 ```
 
 ## How to read the documentation?
