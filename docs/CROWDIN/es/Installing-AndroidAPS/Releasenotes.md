@@ -6,7 +6,7 @@ Please follow the instructions in the [update manual](../Installing-AndroidAPS/U
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Información de la actualización
+:alt: Update info
 ```
 
 Entonces tienes 60 días para actualizar. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
@@ -15,26 +15,68 @@ Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la n
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
+```{admonition} First version of AndroidAPS
+:class: note
+
+The first test version started already in 2015. In 2016 has beend the first released version.
+
+The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+
+```
+
 ## Versión de Android y versión de AAPS
 
-If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
+Si tu smartphone utiliza una versión de Android anterior a Android 9, no podrás utilizar AAPS v3 y posteriores, ya que requiere al menos Android 9.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
 ### Android 9 y superiores
 
-- Use latest AAPS version
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- Usa la última versión de AAPS
+- Descargar el código fuente de AAPS desde <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- Usa la versión de AAPS **2.8.2.1**
+- Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- Usa la versión de AAPS **2.6.2**
+- Descargar el código de AAPS desde <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+
+## Versión 3.2.0
+
+Fecha de lanzamiento: XX-XX-2023
+
+### Notas importantes
+
+- NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
+- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
+- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
+- If you are using xdrip as cgm source you must select it again after update due to internal changes
+- Tidepool can be used as a replacement of NS to pass first objective
+- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+
+
+### Cambios
+
+- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
+- ComboV2 pump driver (no need of Ruffy) @dv1
+- Glunovo CGM support @christinadamianou
+- G7 support @MilosKozak @rICTx-T1D @khskekec
+- NSClient v3 plugin @MilosKozak
+- Tidepool support @MilosKozak
+- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
+- fixed tons of issues from 3.1 version
+- allow add notes on more places @Sergey Zorchenko
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- new SMS commands LOOP LGS/CLOSED @pzadroga
+- wear translations @Andries-Smit
+- xdrip communication moved to separate module @MilosKozak
+- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
+- Diaconn driver fixes @miyeongkim
+- new 125k+ lines of code, changed 150k lines
 
 ## Versión 3.1.0
 
@@ -48,13 +90,13 @@ Release date: 19-07-2022
 
 ### Cambios
 
-- fixed issues from 3.0 version
+- Corrección de errores de la versión 3.0
 - fix application freezing @MilosKozak
 - fixed DASH driver @avereha
 - fixed Dana drivers @MilosKozak
 - huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+- Soporte para Aidex CGM @andyrozman @markvader (sólo Pumpcontrol)
 - Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
 - Wear code refactored. No compatible con versiones anteriores @MilosKozak
 - a11y improvements @Andries-Smit

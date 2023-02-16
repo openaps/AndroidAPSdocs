@@ -6,7 +6,7 @@ Please follow the instructions in the [update manual](../Installing-AndroidAPS/U
 Jakmile bude k dispozici nová aktualizace, obdržíte následující informace:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Informace o aktualizaci
+:alt: Update info
 ```
 
 Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
@@ -14,6 +14,15 @@ Pak máte 60 dnů na aktualizaci. If you do not update within these 60 days AAPS
 Pokud neaktualizujete do dalších 30 dní (90 dní od nového vydání) přejde AAPS na otevřenou smyčku.
 
 Prosím pochopte, že tato změna není určena, aby vás otravovala, ale je to kvůli bezpečnostním důvodům. Nové verze AndroidAPS neposkytují pouze nové funkce, ale také důležité bezpečnostní opravy. Therefore it is necessary that every user updates a.s.a.p.. Bohužel stále existují hlášení o chybách z velmi starých verzí, takže se jedná o pokus zlepšit bezpečnost pro každého uživatele a celou komunitu DIY. Děkujeme za pochopení.
+
+```{admonition} First version of AndroidAPS
+:class: note
+
+The first test version started already in 2015. In 2016 has beend the first released version.
+
+The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+
+```
 
 ## Android version and AAPS version
 
@@ -35,6 +44,39 @@ In order to allow users with older Android to use older version of AAPS new vers
 
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+
+## Version 3.2.0
+
+Release date: XX-XX-2023
+
+### Důležitá poznámky
+
+- NS 15 is required. At the moment "dev" branch of NS main repository
+- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
+- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
+- If you are using xdrip as cgm source you must select it again after update due to internal changes
+- Tidepool can be used as a replacement of NS to pass first objective
+- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+
+
+### Changes
+
+- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
+- ComboV2 pump driver (no need of Ruffy) @dv1
+- Glunovo CGM support @christinadamianou
+- G7 support @MilosKozak @rICTx-T1D @khskekec
+- NSClient v3 plugin @MilosKozak
+- Tidepool support @MilosKozak
+- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
+- fixed tons of issues from 3.1 version
+- allow add notes on more places @Sergey Zorchenko
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- new SMS commands LOOP LGS/CLOSED @pzadroga
+- wear translations @Andries-Smit
+- xdrip communication moved to separate module @MilosKozak
+- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
+- Diaconn driver fixes @miyeongkim
+- new 125k+ lines of code, changed 150k lines
 
 ## Version 3.1.0
 

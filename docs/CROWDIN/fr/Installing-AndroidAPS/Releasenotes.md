@@ -15,6 +15,15 @@ Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à par
 
 Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AndroidAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
+```{admonition} First version of AndroidAPS
+:class: note
+
+The first test version started already in 2015. In 2016 has beend the first released version.
+
+The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+
+```
+
 ## Version d'Android et version AAPS
 
 Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS v3 et supérieur car il nécessite au moins Android 9.
@@ -35,6 +44,39 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 
 - Use AAPS version **2.6.2**
 - Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+
+## Version 3.2.0
+
+Release date: XX-XX-2023
+
+### Conseils importants
+
+- NS 15 is required. At the moment "dev" branch of NS main repository
+- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
+- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
+- If you are using xdrip as cgm source you must select it again after update due to internal changes
+- Tidepool can be used as a replacement of NS to pass first objective
+- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+
+
+### Modifications
+
+- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
+- ComboV2 pump driver (no need of Ruffy) @dv1
+- Glunovo CGM support @christinadamianou
+- G7 support @MilosKozak @rICTx-T1D @khskekec
+- NSClient v3 plugin @MilosKozak
+- Tidepool support @MilosKozak
+- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
+- fixed tons of issues from 3.1 version
+- allow add notes on more places @Sergey Zorchenko
+- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- new SMS commands LOOP LGS/CLOSED @pzadroga
+- wear translations @Andries-Smit
+- xdrip communication moved to separate module @MilosKozak
+- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
+- Diaconn driver fixes @miyeongkim
+- new 125k+ lines of code, changed 150k lines
 
 ## Version 3.1.0
 

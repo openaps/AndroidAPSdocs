@@ -1,16 +1,16 @@
 # Notwendige Überprüfungen nach einem Update von AndroidAPS 2.6
 
-- The program code was changed significantly when switching to AAPS 2.7.
-- Therefore it is important that you make some changes or check settings after the update.
-- Please see [release notes](../Installing-AndroidAPS/Releasenotes.md#version-2-7-0) for details on new and extended features.
+- Der Programmcode wurde bei der Umstellung auf AAPS 2.7 deutlich verändert.
+- Daher ist es wichtig, dass Du einige Änderungen vornimmst bzw. die Einstellungen nach der Aktualisierung überprüfst.
+- In den [Release Notes](../Installing-AndroidAPS/Releasenotes.md#version-2-7-0) findest Du Details zu allen neuen und verbesserten Funktionen.
 
 ## Prüfe die BZ-Quelle
 
-- Check if BG source is correct after update.
-- Especially when using [xDrip+](../Configuration/xdrip.md) it might happen, that BG source is changed to Dexcom app (patched).
-- Open [Config builder](../Configuration/Config-Builder.md#bg-source) (hamburger menu on top left side of home screen)
-- Scroll down to "BG source".
-- Select correct BG source if changes are necessary.
+- Prüfe, ob Deine BZ-Quelle nach dem Update noch richtig eingestellt ist.
+- Wenn Du z.B. [xDrip+](../Configuration/xdrip.md) nutzt, kann es passieren, dass die BZ-Quelle auf die gepatchte Dexcom App geändert wird.
+- Öffne den [Konfigurations-Generator](../Configuration/Config-Builder.md#bg-source) (Hamburger Menü oben links)
+- Scrolle nach unten zu "BZ-Quelle".
+- Ändere bei Bedarf die BZ-Quelle.
 
 ```{image} ../images/ConfBuild_BG.png
 :alt: BZ-Quelle
@@ -18,7 +18,7 @@
 
 ## Prüfung abschließen
 
-- AAPS 2.7 contains new objective 11 (in later versions renumbered to objective 10!) for [automation](../Usage/Automation.md).
+- AAPS 2.7 enthält neues Ziel 11 (in späteren auf Ziel 10!) für [Automation](../Usage/Automation.md).
 - You have to finish exam ([objective 3 and 4](../Usage/Objectives.md#objective-3-prove-your-knowledge)) in order to complete [objective 11](../Usage/Objectives.md#objective-10-automation).
 - If for example you did not finish the exam in [objective 3](../Usage/Objectives.md#objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](../Usage/Objectives.md#objective-10-automation).
 - Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
@@ -26,7 +26,7 @@
 ## Master-Passwort festlegen
 
 - Die [exportierten Einstellungen](../Usage/ExportImportSettings.md) sind ab Version 2.7 verschlüsselt.
-- Open Preferences (three-dot-menu on top right of home screen)
+- Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
 - Klicke das Dreieck neben "Allgemein".
 - Klicke auf "Master-Passwort".
 - Gib ein Passwort ein, bestätige es und klicke auf OK.
@@ -37,30 +37,30 @@
 
 ## Exportiere die Einstellungen
 
-- AAPS 2.7 uses a new encrypted backup format.
-- You must [export your settings](../Usage/ExportImportSettings.md) after updating to version 2.7.
-- Settings files from previous versions can only be imported in AAPS 2.7. Der Export wird im neuen Format erfolgen.
-- Make sure to store your exported settings not only on your phone but also in at least one safe place (your pc, cloud storage...).
-- If you build AAPS 2.7 apk with the same keystore than in previous versions you can install new version without deleting the previous version.
-- All settings as well as finished objectives will remain as they were in the previous version.
-- In case you have lost your keystore build version 2.7 with new keystore and import settings from previous version as described in the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+- AAPS 2.7 verwendet ein neues verschlüsseltes Backup-Format.
+- Du musst daher nach dem Update auf Version 2.7 [Deine Einstellungen exportieren](../Usage/ExportImportSettings.md).
+- Einstellungsdateien aus früheren Versionen können in AAPS 2.7 nur importiert werden. Der Export wird im neuen Format erfolgen.
+- Speichere Deine exportierten Einstellungen nicht nur auf Deinem Smartphone, sondern auch an mindestens einem sicheren Ort (PC, Cloud-Speicher ...).
+- Wenn Du die AAPS 2.7 APK mit dem gleichen Keystore wie in früheren Versionen erstellst, kannst Du die neue Version installieren, ohne die vorherige Version zu deinstallieren.
+- Alle Einstellungen sowie abgeschlossenen Objectives (Ziele) bleiben so, wie sie in der Vorgängerversion waren.
+- Falls Du Deinen Keystore verloren hast, erstelle die Version 2.7 mit einem neuen keystore und importiere Deine Einstellungen von der Vorgängerversion wie auf der Seite [Problembehebung](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore) beschrieben.
 
 ## Autosens (Hinweis - keine Maßnahmen erforderlich)
 
-- Autosens is changed to a dynamic switching model which replicates the reference design.
-- Autosens will now switch between a 24 and 8 hours window for calculating sensitivity. Dabei wird das empfindlichere Ergebnis verwendet.
+- Autosens wurde von einem statischen zu einem dynamischen Modell geändert. Dies entspricht auch dem Referenzdesign.
+- Autosens wechselt nun zwischen einem 8-stündigen und 24-stündigen Zeitfenster für die Berechnung der Sensitivität. Dabei wird das empfindlichere Ergebnis verwendet.
 - Wenn Du bisher oref1 genutzt hast, wirst Du wahrscheinlich bemerken, dass das System weniger dynamisch auf Veränderungen reagiert, da zwischen 8 und 24 Stunden gewechselt wird.
 
 ## Pumpen-Passwort für Dana RS setzen (wenn Dana RS verwendet wird)
 
-- Pump password for [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) was not checked in previous versions.
-- Open Preferences (three-dot-menu on top right of screen)
-- Scroll down and click triangle next to "Dana RS".
-- Click "Pump password (v1 only)"
-- Enter pump password ([Default password](../Configuration/DanaRS-Insulin-Pump.md#default-password) is different depending on firmware version) and click OK.
+- Das Pumpen-Passwort der [Dana RS](../Configuration/DanaRS-Insulin-Pump.md) wurde in früheren Versionen nicht geprüft.
+- Öffne die Einstellungen (Drei-Punkte-Menü oben rechts)
+- Scrolle nach unten und klicke das Dreieck neben "Dana RS".
+- Klicke auf "Pumpen-Passwort (nur v1)".
+- Gib das Passwort der Pumpe ein ([Standard-Passwort](../Configuration/DanaRS-Insulin-Pump.md#default-password) unterscheidet sich je nach Firmware Version) und klicke OK.
 
 ```{image} ../images/DanaRSPW.png
 :alt: Dana RS Passwort setzen
 ```
 
-To change password on Dana RS follow instructions on [DanaRS page](../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump).
+Wie Du das Passwort Deiner Pumpe ändern kannst, ist auf der [DanaRS Seite](../Configuration/DanaRS-Insulin-Pump.md#change-password-on-pump) beschrieben.

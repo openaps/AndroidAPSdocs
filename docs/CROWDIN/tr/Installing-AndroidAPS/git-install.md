@@ -8,6 +8,13 @@
 - Herhangi bir git sürümü çalışması gerekir. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
 - Make sure to note down the installation path. Bir sonraki adımda ihtiyacınız olacak.
 
+```{admonition} make git.exe available via Windows PATH
+:class: note
+
+Make sure that you can call git.exe without the prefing path as Android Studio needs this to find git.exe. It will then automatically sets the path to git.exe correct in the Android Studio settings.
+
+```
+
 ```{image} ../images/Update_GitPath.png
 :alt: Git kurulum yolu
 ```

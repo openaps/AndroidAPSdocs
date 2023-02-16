@@ -4,15 +4,15 @@
 
 ## Sicherheitsüberlegungen
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Neben der Erstellung von Berichten, kann Nightscout auch genutzt werden, um AndroidAPS zu steuern. So kannst Du z.B. temporäre Ziele setzen oder Kohlenhydrate eingeben. Diese Informationen werden von AAPS übernommen, das dann entsprechend reagiert. Daher macht es Sinn, über die Absicherung Deiner Nightscout-Seite nachzudenken.
 
 ### Nightscout Einstellungen
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+Du kannst den allgemeinen Zugriff auf Deine Nightscout-Seite mittels [authentication roles](https://nightscout.github.io/nightscout/security) (Benutzer mit verschiedenen Zugriffsrechten) unterbinden.
 
 ### AndroidAPS Einstellungen
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzuladen (keine Synchronisierung). By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Tippe oben rechts auf dem Startbildschirm auf das 3-Punkte-Menü.
 * Klicke auf "Einstellungen".
