@@ -76,7 +76,7 @@ Release date: XX-XX-2023
 - xdrip communication moved to separate module @MilosKozak
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
-- AAPSClient provides info if main phone is plugged in electricity
+- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - new 125k+ lines of code, changed 150k lines
 
 ## Version 3.1.0
