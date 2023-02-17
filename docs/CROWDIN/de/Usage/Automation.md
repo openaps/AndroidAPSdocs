@@ -18,7 +18,7 @@ Stelle sicher, dass Du wirklich verstehst, wie Automation funktioniert bevor Du 
 
 Um eine Automatisierung zu erstellen, gibt man dieser einen Namen, mindestens eine Bedingung und mindestens eine auszuführende Aktion.
 
-(important-note)=
+(Automation-important-note)=
 ### Wichtiger Hinweis
 
 **Automation is still active when you disable loop!**
@@ -31,7 +31,7 @@ Schalte daher ggf. die Automation-Regeln aus während Du den Loop deaktiviert ha
 
 ### Automatisierung aufrufen
 
-Depending on your [settings in config builder](../Configuration/Config-Builder.md#tab-or-hamburger-menu) you will either find [Automation](../Configuration/Config-Builder#automation) in hamburger menu or as a tab.
+Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
 
 ### Allgemein
 
@@ -91,7 +91,7 @@ After adding your action, **don't forget to change the default values** to what 
 :alt: Automation default vs. set values
 ```
 
-(sort-automation-rules)=
+(Automation-sort-automation-rules)=
 ### Automation-Regeln sortieren
 
 Zum Sortieren von Automation-Regeln klicke und halte die Schaltfläche mit den vier Linien auf der rechten Seite des Bildschirms und bewege sie nach oben oder unten.
@@ -108,7 +108,7 @@ Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 :alt: Automation-Regeln löschen
 ```
 
-(good-practice-caveats)=
+(Automation-good-practice-caveats)=
 ## Good practice & caveats
 
 - When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
@@ -119,11 +119,11 @@ Klicke auf das Papierkorbsymbol, um eine Automatisierungsregel zu löschen.
 
   **Doubly important if action is a profile switch!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](../Usage/Open-APS-features.md#autosens) back to 0.
+- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
 
 - Make sure Profile switches are made sparingly and preferably at a last resort.
 
-  - Profile switching renders [Autosens](../Usage/Open-APS-features.md#autosens) useless for a min of 6 hours.
+  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
 
 - Profile switching will not reset the profile back to your base profile
 
