@@ -28,7 +28,7 @@ Profile helper offers two functions:
 6. Druk op de knop 'VERGELIJK PROFIELEN' op het scherm.
 7. Vergelijking van de twee aangepaste profielen wordt weergegeven.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Vergelijk twee profielen
 
@@ -53,10 +53,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Druk op de knop 'VERGELIJK PROFIELEN' op het scherm.
 9. Vergelijking van de twee aangepaste profielen wordt weergegeven.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Profiel dupliceren
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profiel hulp Profiel dupliceren / profiel wisselen
