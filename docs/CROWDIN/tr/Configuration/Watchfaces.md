@@ -10,7 +10,7 @@ AndroidAPS uygulamasını **Wear OS tabanlı** akıllı saatinize yükleyebilirs
 * *komplikasyonlar* gibi bazı özelliklerin çalışması için Wear OS sürüm 2.0 veya daha yeni bir sürüm gerekir
 * Google, *Android Wear 1.x*'i 2.x sürümünden *Wear OS* olarak yeniden markaladı, bu nedenle *Android Wear* dediği zaman, sistemin daha eski 1.x sürümünü gösteriyor olabilir
 * Akıllı saatin açıklaması yalnızca *Android* ve *iOS* ile uyumluluğu gösteriyorsa - bu *Wear OS*'de çalıştığı **anlamına gelmez** - **AAPS wear ile uyumlu olmayan!** başka bir tür Markaya özel işletim sistemi de olabilir
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### AAPS'nin Wear OS sürümünü derlemek
 
@@ -20,7 +20,7 @@ Mart 2021'den itibaren sideload AAPS'yi saatinize yüklemeniz gerekiyor, artık 
 
 ### Telefonda Kurulum
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## APPS'i Saatten Kontrol Etme
 
@@ -29,7 +29,7 @@ AndroidAPS, Android Wear saatleri tarafından *kontrol edilecek* şekilde tasarl
 Aşağıdaki işlevler saatten tetiklenebilir:
 
 * geçici bir hedef belirleme
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * yKarb yönetme
 * bolus (insulin + carbs) yönetme
 * saat ayarları
@@ -51,7 +51,7 @@ AAPS menüsüne daha hızlı ulaşmak için KŞ'nize iki kez dokunun. KŞ eğris
 
 ![Mevcut saat yüzleri](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### AndroidAPS 2.8'den itibaren yeni saat yüzü
 
@@ -155,7 +155,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Sihirbaz Yüzdesi** (varsayılan `Kapalı`): Sihirbazdan bolus düzeltmesine izin ver (değer, onay bildiriminden önce yüzde olarak girilir)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## Komplikasyonlar
 
@@ -321,10 +321,10 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Saatinizde nelerin daha iyi performans gösterdiğini kontrol edin: AAPS stok saat yüzleri veya AAPS Komplikasyonlarına sahip diğer saat yüzleri.
 * Farklı aktivite profilleriyle birkaç gün boyunca gözlem yapın. Çoğu saat, bakış, hareket ve kullanımla ilgili diğer tetikleyicilerde ekranı etkinleştirir.
 * GPS etkinleştirildiğinde, performansı etkileyen global sistem ayarlarınızı kontrol edin: bildirimler, arka ışık/etkin ekran zaman aşımı.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **Saat arayüzünde veya komplikasyonda görüntülenen verilerin güncel olduğunu garanti edemeyiz**. Sonunda, bir saat yüzünün veya bir komplikasyonun ne zaman güncelleneceğine karar vermek Wear OS'ye kalmıştır. AAPS uygulaması güncelleme talep ettiğinde bile, sistem pilden tasarruf etmek için güncellemeleri ertelemeye veya yok saymaya karar verebilir. Şüphe duyduğunuzda ve saatinizin pili azaldığında - her zaman telefondaki ana AAPS uygulamasıyla iki kez kontrol edin.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Wear uygulamasında sorun giderme:
 
