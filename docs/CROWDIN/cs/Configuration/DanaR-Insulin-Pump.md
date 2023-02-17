@@ -23,4 +23,4 @@
 
 ## Cestování mezi časovými pásmy s pumpou Dana R
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
