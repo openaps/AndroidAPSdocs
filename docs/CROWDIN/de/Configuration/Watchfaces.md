@@ -10,7 +10,7 @@ Du kannst AndroidAPS auf Deiner Smartwatch mit **Wear OS** installieren. Mit der
 * Manche Funktionen wie *Komplikationen* erfordern Wear OS Version 2.0 oder höher.
 * Google hat *Android Wear 1.x* ab Version 2.0 in *Wear OS* umbenannt. Wenn die Uhr also mit *Android Wear* angepriesen wird, kann das auf eine ältere Version 1.x hinweisen.
 * Wenn die Smartwatch nur als mit *Android* und *iOS* kompatibel beschrieben wird, **bedeutet dies nicht**, dass sie *Wear OS* nutzt. Es kann sich auch um ein herstellerspezifisches Betriebssystem handeln, das **nicht mit AAPS Wear kompatibel ist!**
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Wear OS Version von AAPS erstellen
 
@@ -20,7 +20,7 @@ Ab März 2021 musst Du AAPS mittels sogenanntem Sideload auf die Uhr übertragen
 
 ### Einrichten auf dem Smartphone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## AAPS von der Uhr aus steuern
 
@@ -29,7 +29,7 @@ AndroidAPS kann mit einer Android Wear Smartwatch *gesteuert* werden. Wenn Du De
 Die nachfolgenden Funktionen kannst Du von der Uhr aus starten:
 
 * temporäres Ziel setzen
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * eCarbs eintragen
 * Bolus (Insulin + Kohlenhydrate) abgeben
 * Uhreinstellungen
@@ -51,7 +51,7 @@ Um schneller zu AndroidAPS zu kommen, kannst du den angezeigten CGM-Wert auf der
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### Neues Watchface ab Version 2.8
 
@@ -155,7 +155,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Wizard Percentage** (Standard: `Off`): Boluskorrektur über den Assistenten (Wert wird in Prozent eingegeben, bevor die Insulinabgabe bestätigt wird)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## Komplikationen
 
@@ -321,10 +321,10 @@ Da wir bei der Kommunikation keine Kompromisse eingehen können (wir brauchen ak
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Beobachte über mehrere Tage mit verschiedenen Aktivitätsprofilen. Die meisten Uhren aktivieren die Anzeige beim Draufschauen, bei Bewegung und anderen nutzungsbezogenen Auslösern.
 * Überprüfe die globalen Systemeinstellungen, die sich auf die Leistung auswirken: Benachrichtigungen, das Zeitlimit für eine Hintergrundanzeige oder das aktive Anzeigezeitlimit, wenn Ortungsdienste aktiviert sind.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **Es kann nicht garantiert werden, dass die auf dem Watchface angezeigten Daten aktuell sind!** In the end, it is up to Wear OS to decide when to update a watchface or a complication. Selbst wenn die AAPS-App die Aktualisierung anstößt, kann das System die Aktualisierung verschieben oder ignorieren, um die Akku-Laufzeit zu erhöhen. Im Zweifel und vor allem bei niedrigem Akku-Ladestand der Uhr solltest Du die Werte immer mit einem Blick auf AAPS auf Deinem Smartphone gegenprüfen.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Fehlerbehebung der Smartwatch App:
 
