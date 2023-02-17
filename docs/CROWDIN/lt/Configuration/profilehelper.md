@@ -30,7 +30,7 @@ Profilio pagalbininkas siūlo dviejų skirtingų vaikų ligoninių duomenų rink
 6. Ekrano viršuje paspauskite mygtuką "PALYGINTI PROFILIUS".
 7. Bus parodytas dviejų koreguotų profilių palyginimas.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Dviejų profilių palyginimus
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Ekrano viršuje paspauskite mygtuką "PALYGINTI PROFILIUS".
 9. Bus parodytas dviejų koreguotų profilių palyginimas.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Profilio klonavimas
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profilio pagalbininko profilio klonavimas / profilio perjungimas
