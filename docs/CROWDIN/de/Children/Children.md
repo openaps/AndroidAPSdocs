@@ -12,7 +12,7 @@ AndroidAPS bietet verschiedene Optionen für die Fernüberwachung von Kindern un
 - Die Eltern können aus der Ferne alle relevanten Daten wie Glukosewerte, aktive Kohlenhydrate, aktives Insulin usw. sehen. Dazu können sie die **NSClient App** auf ihrem Smartphone verwenden. Du musst in AndroidAPS und der NSClient App die gleichen Einstellungen verwenden.
 - Alarme auf den Smartphones der Eltern sind durch Einsatz **xDrip+ im Follower Modus** möglich.
 - Die Fernsteuerung von AndroidAPS mittels [SMS-Befehlen](../Children/SMS-Commands.md) ist durch eine Zwei-Faktor-Authentifizierung abgesichert.
-- Fernsteuerung über die NSClient-App wird nur empfohlen, wenn Deine Synchronisation gut funktioniert (d.h. Du siehst keine unerwünschten Datenänderungen wie z.B. Selbstmodifikation von TT, TBR usw.) siehe [Versionshinweise für Version 2. .1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) für weitere Details.
+- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
 ## Tools und Apps für die Fernüberwachung
 
@@ -24,7 +24,7 @@ AndroidAPS bietet verschiedene Optionen für die Fernüberwachung von Kindern un
 
 ## Dinge, die zu beachten sind
 
-- Die Ermittlung der richtigen [Faktoren](../Getting-Started/FAQ.md#how-to-begin) (Basalrate, Korrekturfaktoren, Insulinwirkdauer...) ist bei Kindern schwierig, gerade wenn auch noch Wachstumshormone ins Spiel kommen.
+- Setting the correct [treatment factors](FAQ-how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
 - Du musst in AndroidAPS und der NSClient App die gleichen Einstellungen verwenden.
 - Diese entsteht zum einen durch die Zeit, die für Up- und Download benötigt wird, zum anderen lädt das AAPS-Haupttelefon nur Daten hoch, wenn es eine Aktivität des Closed Loop auf dem Smartphone gab.
 - Nimm Dir also Zeit, um diese richtig einzustellen und teste sie im Alltag mit Deinem Kind neben Dir bevor Du mit der Fernüberwachung und der Fernbehandlung startest. Schulferien könnten dafür eine gute Zeit sein.
