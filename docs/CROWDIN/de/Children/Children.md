@@ -24,7 +24,7 @@ AndroidAPS bietet verschiedene Optionen für die Fernüberwachung von Kindern un
 
 ## Dinge, die zu beachten sind
 
-- Die Ermittlung der richtigen [Faktoren](../Getting-Started/FAQ#wo-anfangen) (Basalrate, Korrekturfaktoren, Insulinwirkdauer...) ist bei Kindern schwierig, gerade wenn auch noch Wachstumshormone ins Spiel kommen.
+- Die Ermittlung der richtigen [Faktoren](../Getting-Started/FAQ.md#how-to-begin) (Basalrate, Korrekturfaktoren, Insulinwirkdauer...) ist bei Kindern schwierig, gerade wenn auch noch Wachstumshormone ins Spiel kommen.
 - Du musst in AndroidAPS und der NSClient App die gleichen Einstellungen verwenden.
 - Diese entsteht zum einen durch die Zeit, die für Up- und Download benötigt wird, zum anderen lädt das AAPS-Haupttelefon nur Daten hoch, wenn es eine Aktivität des Closed Loop auf dem Smartphone gab.
 - Nimm Dir also Zeit, um diese richtig einzustellen und teste sie im Alltag mit Deinem Kind neben Dir bevor Du mit der Fernüberwachung und der Fernbehandlung startest. Schulferien könnten dafür eine gute Zeit sein.
