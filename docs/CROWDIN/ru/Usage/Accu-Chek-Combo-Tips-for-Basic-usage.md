@@ -50,7 +50,7 @@
 * Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
 * AndroidAPS возобновит подачу необходимого временного базала с получением следующего значения ГК. 
 
-(battery-type-and-causes-of-short-battery-life)=
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Типы батарей и причины их короткой жизни
 
