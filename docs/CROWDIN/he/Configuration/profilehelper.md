@@ -30,7 +30,7 @@ Profile helper offers two functions:
 6. לחצו על 'השוואת פרופילים'.
 7. תוצג השוואה בין הפרופילים.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## השוואת פרופילים
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. לחצו על 'השוואת פרופילים'.
 9. תוצג השוואה בין הפרופילים.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## שכפול הפרופיל
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper Clone profile / profile switch
