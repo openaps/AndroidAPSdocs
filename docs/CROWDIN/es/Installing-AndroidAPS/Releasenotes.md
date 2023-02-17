@@ -1,26 +1,24 @@
 (release-notes)=
 # Notas de la versión
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). También puede encontrar una sección de resolución de problemas que se ocupa de las dificultades más comunes cuando se actualiza en la página de actualización manual.
+Por favor, sigue las instrucciones del [manual de actualización](../Installing-AndroidAPS/Update-to-new-version.md). También puede encontrar una sección de resolución de problemas que se ocupa de las dificultades más comunes cuando se actualiza en la página de actualización manual.
 
 Recibirá la siguiente información tan pronto como se disponga de una nueva actualización:
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Update info
+:alt: Información de la actualización
 ```
 
-Entonces tienes 60 días para actualizar. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
+Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 días, la AAPS retrocederá a LGS (suspensión de glucosa baja -ver [glosario](../Getting-Started/Glossary.md)) como en el [objetivo 6](../Usage/Objectives.html).
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
 Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 ```{admonition} First version of AndroidAPS
-:class: note
+La primera versión de prueba comenzó en 2015. En 2016 se publicó la primera versión.
 
-The first test version started already in 2015. In 2016 has beend the first released version.
-
-The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+La cronología de estos lanzamientos no está disponible en este momento, pero como es una pregunta recurrente, lo documentamos aquí.
 
 ```
 
@@ -59,7 +57,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
 
 
-### Changes
+### Cambios
 
 - Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
 - Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
@@ -76,7 +74,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Traslado de comunicaciones con xDrip+ a un módulo independiente @MilosKozak
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
+- AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
 - Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
 
 ## Versión 3.1.0
@@ -89,7 +87,7 @@ Release date: 19-07-2022
 - Después de actualizar, desinstalar la aplicación Wear del reloj e instalar la nueva versión (no se puede actualizar directamente)
 - Usuarios de Omnipod: Actualizar cuando toque cambio del POD !!!
 
-### Changes
+### Cambios
 
 - Corrección de errores de la versión 3.0
 - fix application freezing @MilosKozak
@@ -128,7 +126,7 @@ Fecha de lanzamiento: 31-01-2022
 - if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
 - if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
 
-### Changes
+### Cambios
 
 - 100k lines changed, 105k new lines of code
 
@@ -199,7 +197,7 @@ Fecha de lanzamiento: 23-01-2021
 
 - Please see also [important hints for version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) below.
 
-### Changes
+### Cambios
 
 - stability improvements
 - more tweaking for Android 8+
