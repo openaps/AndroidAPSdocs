@@ -79,7 +79,7 @@
 
 ## SMS-Kommandos verwenden
 
-- Sende eine SMS von Deiner/Deinen erlaubte/n Telefonnummer(n) an das Smartphone, das AndroidAPS ausgeführt und nutze dabei eines der [Kommandos](../Children/SMS-Commands#id1) unten.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - Das AAPS-Smartphone wird antworten, um sich die Durchführung des übermittelten Kommandos bestätigen zu lassen oder um den angeforderten Status zu übermitteln.
 
@@ -91,10 +91,10 @@
 
 **Hinweis**: Eine SMS-Flat auf beiden Telefonen kann nützlich sein, da u.U. viele SMS hin und her gesandt werden.
 
-(kommandos)=
+(SMS-Commands-commands)=
 ## Kommandos
 
-Kommandos müssen in Englisch gesendet werden, die Antwort erhältst Du in Deiner lokalen Sprache, wenn die Zeichenfolge bereits [übersetzt ist](../translations#texte-fur-die-androidaps-app-ubersetzen).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: Beispiele für SMS-Kommandos
@@ -162,7 +162,7 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 - HELP \* Antwort: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Antwort: BOLUS 1.2 BOLUS 1.2 MEAL
 
-(problembehandlung)=
+(SMS-Commands-troubleshooting)=
 ## Problembehandlung
 
 ### Mehrfach-SMS
