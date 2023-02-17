@@ -1,4 +1,4 @@
-(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
 
 # Je suis coincé; Que dois-je faire ? A qui puis-je demander ?
 
