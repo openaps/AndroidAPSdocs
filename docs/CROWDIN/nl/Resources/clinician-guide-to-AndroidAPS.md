@@ -10,7 +10,7 @@ Om AndroidAPS te kunnen gebruiken, moet iemand de volgende dingen doen:
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Download de AndroidAPS broncode en bouw de app](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ AndroidAPS is zo ontworpen dat alle ingevoerde gegevens, en de daaruit volgende 
 
 ## Examples of AndroidAPS algorithm decision making:
 
-Het algoritme dat oorspronkelijk is gemaakt voor OpenAPS (een doe-het-zef systeem dat draait op een minicomputer), wordt ook gebruikt door AndroidAPS. De functies die AndroidAPS heeft, komen grotendeels overeen met OpenAPS. Onderstaande voorbeelden zijn dan ook overgenomen uit de OpenAPS documentatie. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
+Het algoritme dat oorspronkelijk is gemaakt voor OpenAPS (een doe-het-zef systeem dat draait op een minicomputer), wordt ook gebruikt door AndroidAPS. De functies die AndroidAPS heeft, komen grotendeels overeen met OpenAPS. Onderstaande voorbeelden zijn dan ook overgenomen uit de OpenAPS documentatie. Het algoritme maakt voorspellingen voor meerdere scenario's (zoals hierboven beschreven). Deze worden in Nightscout weergegeven als paarse lijnen in de toekomst. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). In de logs is terug te vinden welke voorspelling en welk tijdsbestek heeft geleid tot een actie van het algoritme.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
