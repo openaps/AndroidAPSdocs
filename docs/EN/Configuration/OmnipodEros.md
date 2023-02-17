@@ -332,7 +332,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 > Component that will operate AndroidAPS and send control commands to the Pod communication device.
 >
-> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](../index.md#component-setup)
+> > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](index-component-setup)
 
 - {{ Omnipod_Pod }}  **Insulin Delivery Device**
 
@@ -1021,7 +1021,7 @@ This failure is related to an incorrect pod state for a command or an error duri
 
 It is recommended that pump unreachable alerts be configured to **120 minutes** by going to the top right-hand side three-dot menu, selecting **Preferences**➜**Local Alerts**➜**Pump unreachable threshold \[min\]** and setting this to **120**.
 
-(import-settings-from-previous-aaps)=
+(OmnipodEros-import-settings-from-previous-aaps)=
 ### Import Settings from previous AAPS
 
 Please note that importing settings has the possibility to import an outdated Pod status. As a result, you may lose an active Pod. It is therefore strongly recommended that you **do not import settings while on an active Pod session**.

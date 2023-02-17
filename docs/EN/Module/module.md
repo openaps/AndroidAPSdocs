@@ -19,7 +19,7 @@ substitutions:
 
 # Component Overview
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.md#component-setup), too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
@@ -50,12 +50,12 @@ The profile includes
 - CR (carb ratio) is grams carbohydrate per one unit insulin
 - DIA (duration of insulin acting).
 
-(no-use-of-sglt-2-inhibitors)=
+(module-no-use-of-sglt-2-inhibitors)=
 ### No use of SGLT-2 inhibitors
 
 SGLT-2 inhibitors, also called gliflozins, inhibit reabsorption of glucose in the kidney. As they incalculably lower blood sugar levels, you MUST NOT take them while using a closed loop system like AndroidAPS! There would be a huge risk of a ketoacidosis or a hypoglycemia! The combination of this medication with a system that lowers basal rates in order to increase BG is especially dangerous as due to the gliflozin this rise in BG might not happen and a dangerous state of lack of insulin can happen.
 
-(phone)=
+(module-phone)=
 ### Phone
 
 The current version of AndroidAPS requires an Android smartphone with Google Android 8.0 or above. So if you are thinking about a new phone, Android 8.1 is recommended at a minimum but optimally choose Android 9 or 10.
@@ -75,15 +75,15 @@ AndroidAPS **currently** works with
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md)
 - [Dana-i/RS](../Configuration/DanaRS-Insulin-Pump.md)
-- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](../Module/module.md#additional-communication-device) needed)
-- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](../Module/module.md#additional-communication-device) needed)
+- [some old Medtronic pumps](../Configuration/MedtronicPump.md) from upcoming version 2.4 ([additional communication device](module-additional-communication-device) needed)
+- [Omnipod Eros](../Configuration/OmnipodEros.md) ([additional communication device](module-additional-communication-device) needed)
 - [Omnipod DASH](../Configuration/OmnipodDASH.md)
 
 If no additional communication device  is mentioned the communication betweeen insulin pump and AndroidAPS is based on the integrated bluetooth stack of Android without the need of an additional communication device to translate the communnication protocol.
 
 **Other pumps** that may have the potential to work with AndroidAPS are listed on the [Future (possible) Pumps](../Getting-Started/Future-possible-Pump-Drivers.md) page.
 
-(additional-communication-device)=
+(module-additional-communication-device)=
 #### Additional communication device
 
 For old medtronic pumps an additional communication device (besides your phone) is needed to "translate" the radio signal from pump to bluetooth. Make sure to choose the correct version depending on your pump.
@@ -111,7 +111,7 @@ The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice ho
 
 This is just a short overview of all compatible CGMs/FGM with AndroidAPS. For further details, look [here](../Configuration/BG-Source.md). Just a short hint: if you can display your glucose data in xDrip+ app or Nightscout website, you can choose xDrip+ (or Nightscout with web connection) as BG source in AAPS.
 
-- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
+- [Dexcom G6](../Hardware/DexcomG6.md): BOYDA is recommended as of version 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details). xDrip+ must be at least version 2022.01.14 or newer
 - [Dexcom G5](../Hardware/DexcomG5.md): It works with xDrip+ app or patched Dexcom app
 - [Dexcom G4](../Hardware/DexcomG4.md): These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
 - [Libre 2](../Hardware/Libre2.md): It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
@@ -154,7 +154,7 @@ It sometimes takes a while to get all modules for closing the loop. But no worri
 You can keep on reading through the docs here, get in touch with other loopers online or offline, [read](../Where-To-Go-For-Help/Background-reading.md) documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
 
 **Done?**
-If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](../index.md#component-setup).
+If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the [Objective description](../Usage/Objectives.md) before each new Objective and setup up your [hardware](index-component-setup).
 
 % Image aliases resource for referencing images by name with more positioning flexibility
 

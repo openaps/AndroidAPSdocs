@@ -1,4 +1,4 @@
-(accessing-logfiles)=
+(Accessing-logfiles-accessing-logfiles)=
 # Accessing logfiles
 
 * Connect phone to a computer in file transfer mode
