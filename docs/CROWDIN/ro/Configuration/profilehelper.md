@@ -30,7 +30,7 @@ Asistentul de profil oferă seturi de date de la două spitale diferite pentru c
 6. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
 7. Se va afișa o comparație între cele două profiluri ajustate.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Compară două profiluri
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Apăsați butonul 'COMPARĂ PROFILE' de deasupra ecranului.
 9. Se va afișa o comparație între cele două profiluri ajustate.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Copiere profil
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profile Helper copiere profil / schimbare profil
