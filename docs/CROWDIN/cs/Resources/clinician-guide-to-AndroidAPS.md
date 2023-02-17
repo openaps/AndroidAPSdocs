@@ -10,7 +10,7 @@ Chcete-li začít používat systém AndroidAPS, je třeba provést následujíc
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ Systém AndroidAPS je navržen tak, aby transparentně sledoval všechny vstupn�
 
 ## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
+AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
