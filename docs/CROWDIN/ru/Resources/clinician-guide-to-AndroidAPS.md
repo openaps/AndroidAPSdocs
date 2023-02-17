@@ -10,7 +10,7 @@
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Скачайте исходный код AndroidAPS и постройте программное обеспечение](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ AndroidAPS предназначен для прозрачного отслежи
 
 ## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS основывается на том же основном алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
+AndroidAPS основывается на том же основном алгоритме и наборе функций, что и OpenAPS. Алгоритм выполняет несколько предсказаний (на основе параметров и ситуации), представляющих различные сценарии того, что может произойти в будущем. В Nightscout они отображаются в виде фиолетовых линий. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). В журнале событий будет описано, какие из этих предсказаний и в какие временные рамки будут управлять необходимыми действиями.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 
