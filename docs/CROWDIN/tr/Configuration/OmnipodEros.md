@@ -1462,7 +1462,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">SUSPEND:</strong>
+    <strong x-id="1">ASKIYA AL:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">

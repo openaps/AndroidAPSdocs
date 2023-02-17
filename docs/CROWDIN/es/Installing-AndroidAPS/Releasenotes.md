@@ -76,6 +76,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Traslado de comunicaciones con xDrip+ a un módulo independiente @MilosKozak
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
+- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
 - Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
 
 ## Versión 3.1.0
