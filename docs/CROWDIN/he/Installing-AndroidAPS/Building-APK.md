@@ -7,9 +7,9 @@
 ## הערות חשובות
 
 * נא להשתמש ב-**[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** או חדש יותר כדי לבנות את ה-apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
-(recommended-specification-of-computer-for-building-apk-file)=
+(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
 ## מפרט מומלץ של מחשב לבניית קובץ apk
 
@@ -63,13 +63,13 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 In general, the steps necessary to build the APK file:
 
 1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
-2. [התקנת Android Studio](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
-3. [הגדרת נתיב של Git בהעדפות Android Studio](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
-4. [הורדת הקוד של AndroidAPS](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
-5. [הורדת Android SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
-7. [העברת קובץ ה-apk לטלפון](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
-8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](..//Configuration/xdrip.md#identify-receiver)
+2. [התקנת Android Studio](Building-APK-install-android-studio)
+3. [הגדרת נתיב של Git בהעדפות Android Studio](Building-APK-set-git-path-in-preferences)
+4. [הורדת הקוד של AndroidAPS](Building-APK-download-androidaps-code)
+5. [הורדת Android SDK](Building-APK-download-android-sdk)
+6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
+7. [העברת קובץ ה-apk לטלפון](Building-APK-transfer-apk-to-smartphone)
+8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](xdrip-identify-receiver)
 
 ## מדריך שלב אחר שלב
 
@@ -79,7 +79,7 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
-(install-android-studio)=
+(Building-APK-install-android-studio)=
 
 ## התקנת Android Studio
 
@@ -121,7 +121,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ![Downloading components](../images/studioSetup/07_Downloading.png)
 
-(set-git-path-in-preferences)=
+(Building-APK-set-git-path-in-preferences)=
 
 ## הגדירו את נתיב git בהעדפות
 
@@ -170,7 +170,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * לפרטים על התקנת git עיינו ב[תיעוד ה-git הרשמי](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * אם אתם מתקינים git דרך homebrew אין צורך לשנות שום העדפות. ליתר ביטחון: ניתן למצוא אותם כאן: Android Studio > Preferences.
 
-(download-androidaps-code)=
+(Building-APK-download-androidaps-code)=
 
 ## הורדת הקוד של AndroidAPS
 
@@ -218,7 +218,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     אל דאגה, תכף הן תטופלנה!
 
-(download-android-sdk)=
+(Building-APK-download-android-sdk)=
 
 ## הורדת Android SDK
 
@@ -261,7 +261,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * הפעילו מחדש את Android Studio לפני שתמשיכו.
 
-(generate-signed-apk)=
+(Building-APK-generate-signed-apk)=
 
 ## יצירת APK חתום
 
@@ -305,7 +305,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * רשמו (2) ואמתו (3) את סיסמת המאגר המפתחות שלכם. ![בחר נתיב מפתח מאגר](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+    ***הערה:*** הסיסמאות למאגר המפתחות לא חייבות להיות מתוחכמות. וודאו שתזכרו את הסיסמאות על ידי שמירתן במקום בטוח. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
 * רשמו כינוי (4) למאגר המפתחות שלכם. בחרו כל כינוי שתרצו.
 
@@ -351,7 +351,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * "app-full-release.apk" (3) הינו הקובץ שאתם מחפשים!
 
-(transfer-apk-to-smartphone)=
+(Building-APK-transfer-apk-to-smartphone)=
 
 ## העתיקו את האפליקציה אל הטלפון
 
