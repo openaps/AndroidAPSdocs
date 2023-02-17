@@ -24,7 +24,7 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 
 ## Points à considérer
 
-- Setting the correct [treatment factors](../Getting-Started/FAQ.md#how-to-begin) (basal rate, DIA, ISF...) is difficult for kids, especially when growth hormones are involved.
+- Définir les bons [paramètres de traitement](../Getting-Started/FAQ.md#how-to-begin) (débits de basal, DAI, SI...) est difficile pour les enfants, surtout lorsque les hormones de croissance sont impliquées.
 - Les paramètres doivent être identiques dans AAPS et dans l'application NSClient.
 - Considérez un décalage de temps entre le maître et le suiveur dû au temps de téléchargement, et parce que le téléphone principal AAPS ne remontera les données qu'après l'exécution de la boucle.
 - Alors prenez le temps de les configurer correctement et de les tester dans la vrai vie avec votre enfant à côté de vous avant de commencer la surveillance et le traitement à distance. Les vacances scolaires pourraient être un bon moment pour cela.
