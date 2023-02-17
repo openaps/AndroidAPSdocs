@@ -2,7 +2,7 @@
 
 **Este software es parte de una solución de DIY y no es un producto, pero requiere que USTED lea, aprenda y entienda el sistema incluyendo cómo utilizarlo. No es algo que maneja toda su diabetes, pero permite mejorarla y aumentar su calidad de vida si está dispuesto a dedicar el tiempo necesario. No se apresure en ello, pero permítese tiempo para aprender. Solo Usted es responsable de lo que hace con esto.**
 
-(hardware-requirements)=
+(Accu-Chek-Combo-Pump-hardware-requirements)=
 
 ## Hardware necesario
 
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Solo se admite un perfil basal.
 - Establecer un perfil basal distinto de 1 en la bomba o entregar bolos extendidos o bolos multionda desde la bomba interfiere con TBRs y fuerza el bucle en modo de baja suspensión durante 6 horas, ya que el lazo no puede correr de forma segura bajo estas condiciones.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Actualmente solo se admiten tasas basales en el rango de 0.05 a 10 U / h. Esto también se aplica a la modificación de un perfil, p.ej. al aumentar a 200%, la tasa basal más alta no debe superar las 5 U/h ya que se duplicará. De manera similar, cuando se reduce al 50%, la tasa basal más baja debe ser de al menos 0,10 U / h.
 - Si el lazo solicita que se cancele un TBR en ejecución, la Combo establecerá un TBR del 90% o el 110% durante 15 minutos en su lugar. Esto es porque cancelar un TBR causa una alerta en la bomba que causa muchas vibraciones.
 - Ocasionalmente (cada dos o tres días) AAPS podría no cancelar una alerta de TBR CANCELADA, por lo que el usuario debe tratarla (presionar el botón Actualizar en AAPS para transferir la advertencia a AAPS o confirmar la alerta en la bomba).
@@ -71,7 +71,7 @@
 - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
-(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 
 ## Why pairing with the pump does not work with the app "ruffy"?
 
