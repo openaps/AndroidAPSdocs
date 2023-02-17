@@ -36,7 +36,7 @@
 
 - Set units to mmol/l or mg/dl depending on your preferences.
 
-**Language**
+**Langue**
 
 - New option to use phone's default language (recommended).
 

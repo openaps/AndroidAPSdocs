@@ -89,40 +89,40 @@ Module <./Module/module.md>
 ```
 
 ```{toctree}
-:caption: How to Install AndroidAPS
+:caption: Wie installiere ich AndroidAPS
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md>
+Erstelle die APK <. Installing-AndroidAPS/Building-APK.md>
 
-Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Update auf eine neue Version oder Branch <. Installing-AndroidAPS/Update-to-new-version.md>
 
-Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Hinweise und Überprüft nach dem Update auf AAPS 3.<./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Prüft nach dem Update auf AAPS 2.7 <. Installing-AndroidAPS/update2_7.md>
 
-Install git <./Installing-AndroidAPS/git-install.md>
+Installieren Sie git <./Installing-AndroidAPS/git-install.md>
 
-Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Troubleshooting Android Studio <. Installing-AndroidAPS/troubleshooting_androidstudio.md>
 
-Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Release Notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Dev Branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 (component-setup)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Komponenten Setup
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Settings <./Configuration/xdrip.md>
+xDrip Einstellungen <./Configuration/xdrip.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Pumpenwahl <./Getting-Started/Pump-Choices.md>
 
-Phones <./Hardware/Phoneconfig.md>
+Telefonwahl <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Nightscout Setup <./Installing-AndroidAPS/Nightscout.md>
 
 Smartwatch  <./Hardware/Smartwatch.md>
 
