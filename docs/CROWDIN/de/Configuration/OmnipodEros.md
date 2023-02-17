@@ -364,7 +364,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
   <blockquote spaces-before="0">
     <ul>
       <li>
-        unterstützte <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Android Smartphones</a> mit AAPS ab Version 2.8 und zugehörigem <a href="../index#component-setup">Komponenten-Setup</a>
+        Supported <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Omnipod driver Android phone</a> with a version of AAPS 2.8 and related <a href="index-component-setup">components setup</a>
       </li>
     </ul>
   </blockquote>
@@ -2107,7 +2107,7 @@ Diese Anweisungen sind für die Konfiguration der Omnipod Eros Generation Pumpe 
 </p>
 
 <p spaces-before="0">
-  (import-settings-from-previous-aaps)=
+  (OmnipodEros-import-settings-from-previous-aaps)=
 </p>
 <h3 spaces-before="0">
   Importieren von Einstellungen aus früherem AAPS
