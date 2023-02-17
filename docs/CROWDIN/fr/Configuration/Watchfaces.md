@@ -10,7 +10,7 @@ Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wea
 * Certaines fonctions comme les *complications* nécessitent une version 2.0 ou plus récente de Wear OS
 * Google a rebaptisé *Android Wear 1.x* en *Wear OS* depuis la version 2.x, donc quand il est indiqué *Android Wear* il est possible que ce soit une ancienne version 1.x du système
 * Si la description indique seulement *Compatibilité avec Android* et *iOS* - cela **ne signifie pas** que la montre fonctionne sous *Wear OS* - cela peut tout à fait être une autre sorte de système d'exploitation spécifique au fournisseur **qui n'est pas compatible avec les cadrans AAPS wear!**
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Construction de la version Wear OS d'AAPS
 
@@ -20,7 +20,7 @@ L’application Wear OS de AAPS a été séparée de la compilation de AAPS pour
 
 ### Configuration sur le téléphone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## Contrôler AAPS depuis la montre
 
@@ -29,7 +29,7 @@ AndroidAPS est conçu pour être *contrôlé* par les montres Android Wear. Si v
 Les fonctions suivantes peuvent être déclenchées à partir de la montre :
 
 * définir une cible temporaire
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * administrer des eGlucides
 * administrer un bolus (insuline + glucides)
 * afficher les paramètres sur la montre
@@ -51,7 +51,7 @@ Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Ave
 
 ![Cadrans disponibles](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### Nouveau cadran depuis AndroidAPS 2.8
 
@@ -155,7 +155,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Assistant Pourcentage** (par défaut `Off`) : Autoriser la correction du bolus à partir de l'assistant (valeur saisie en pourcentage avant la confirmation)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## Complications
 
@@ -321,10 +321,10 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Vérifiez ce qui fonctionne le mieux sur votre montre : les cadrans AAPS standards ou d'autres cadrans avec les Complications AAPS.
 * Observez sur quelques jours, avec différents profils d'activités. La plupart des montres activent l'affichage sur le regard, des mouvements de poignet et d'autres déclencheurs liés à l'utilisation.
 * Vérifiez les paramètres du système global qui affectent les performances : notifications, durée du rétro éclairage, affichage actif quand le GPS est activé.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **Nous ne pouvons pas garantir que les données affichées sur les Cadrans ou les complications sont à jour**. A la fin, c'est Wear OS qui décide quand mettre à jour le cadran ou la complication. Même lorsque l'application AAPS demande une mise à jour, le système peut décider de reporter ou d'ignorer les mises à jour pour préserver la batterie. En cas de doute et de batterie de montre faible - faites toujours une double vérification avec l'application AAPS sur le téléphone.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Dépannage de l'application wear :
 
