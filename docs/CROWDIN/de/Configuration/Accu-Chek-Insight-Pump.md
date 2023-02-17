@@ -12,7 +12,7 @@
 
 Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe**.
 
-* Ein Android-Telefon - im Grunde funktionieren alle Android-Versionen mit der Insight, aber prüfe auf der Seite [Module](../Module/module#smartphone), welche Android Version für AndroidAPS benötigt wird.
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AndroidAPS.)
 * AndroidAPS muss auf Deinem Smartphone installiert sein.
 
 ## Einrichtung
@@ -50,11 +50,11 @@ Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe
 
 Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. Eine Verbindung wird nur dann hergestellt, wenn es erforderlich ist (z.B. Setzen einer temporären Basalrate, Bolusabgabe, Auslesen der Pumpenhistorie...). Sonst würden die Akkus des Smartphones und die Batterien der Pumpe zu schnell leer.
 
-(settings-in-aaps)=
+(Accu-Chek-Insight-Pump-settings-in-aaps)=
 
 ## Einstellungen in AndroidAPS
 
-**Hinweis: Es ist ab AAPS Version 2.7 nun wieder möglich, 'Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout' mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](../Configuration/Preferences#erweiterte-einstellungen-nightscout-client).)
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](Preferences-advanced-settings-nsclient)).
 
 ![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
 
@@ -114,7 +114,7 @@ Stelle die Alarme in der Pumpe wie folgt ein:
 
 So werden alle Alarme der Pumpe nur noch ohne Ton abgegeben, so dass AndroidAPS entscheiden kann, ob ein Alarm für Dich relevant ist. Wenn AndroidAPS einen Alarm nicht anerkennt, wird dessen Lautstärke steigen (zuerst Piepton, dann Vibration).
 
-(vibration)=
+(Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibration
 
@@ -122,7 +122,7 @@ Abhängig von der Version der Pumpen-Firmware kann die Insight jedes Mal kurz vi
 
 * Firmware 1.x: Grundsätzlich keine Vibration
 * Firmware 2.x: Vibration kann nicht deaktiviert werden.
-* Firmware 3.x: AndroidAPS Bolusabgabe ohne Vibration. (Mindestanforderung [AAPS Version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS Bolusabgabe ohne Vibration. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Die Firmware-Version kann im Menü der Pumpe nachgesehen werden.
 
@@ -132,7 +132,7 @@ Die Batterielebensdauer bei der Insight im Loop liegt zwischen 10 und 14 Tagen, 
 
 Die Innenpumpe hat eine kleine interne Batterie, um wichtige Funktionen wie die Uhr am Laufen zu halten, während Du die herausnehmbare Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. Falls dies geschieht, werden alle Einträge in AndroidAPS, die vor dem Batteriewechsel liegen, nicht mehr in Berechnungen aufgenommen, da die richtige Zeit nicht korrekt erkannt werden kann.
 
-(insight-specific-errors)=
+(Accu-Chek-Insight-Pump-insight-specific-errors)=
 
 ## Insight spezifische Fehler
 
@@ -150,4 +150,4 @@ Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und sc
 
 ## Mit der Insight Pumpe über Zeitzonen hinweg reisen
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-insight).
