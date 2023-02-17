@@ -2,7 +2,7 @@
 
 **יישום זה הוא חלק מפתרון "עשה זאת בעצמך", הוא אינו מוצר מדף וככזה הוא דורש קריאה מעמיקה, לימוד והבנה של המערכת, לרבות אופן השימוש בה. היישום לא יחליף אותך בניהול הסוכרת, אלא יאפשר לך לשפר את איזון רמת הסוכר ואיכות החיים שלך, במידה והנך נכון להשקיע את הזמן הנדרש לכך. אל תמהרו יותר מידי. אפשרו לעצמכם זמן ללמוד. האחריות על השימוש במערכת היא עליכם בלבד.**
 
-(hardware-requirements)=
+(Accu-Chek-Combo-Pump-hardware-requirements)=
 
 ## דרישות חומרה
 
@@ -20,7 +20,7 @@
 - Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - רק פרופיל בזאלי אחד נתמך. 
 - הגדרת פרופיל בזאלי מעבר לאחד, שימוש בבולוסים מושהים או בולוסים מרובי גלים מגוף המשאבה מפריעים למינונים הבזאליים הזמניים של הלולאה ומאלצת אותה לעבור למצב "השהיה עקב ערך סוכר נמוך" למשך 6 שעות מכיוון שהלולאה לא יכולה לפעול בבטחה בתנאים אלה.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - כיום נתמכים רק מינונים בזאליים בטווח של 0.05 עד 10 יח'\שעה. מגבלה זו חלה גם בעת שינוי פרופיל, למשל כאשר הוא עולה ל-200%, המינון הבזאלי הגבוה ביותר לא יעלה על 5 יח'\שעה מכיוון שהוא יוכפל. בדומה, בעת הפחתה ל-50%, המינון הבזאלי הנמוך ביותר חייב להיות לפחות 0.10 יח'\שעה. 
 - אם הלולאה מבקשת לבטל בזאלי זמני פעיל, המשאבה תגדיר במקום זאת בזאלי זמני של 90% או 110% למשך 15 דקות. הסיבה לכך היא שביטול בזאלי זמני גורם להתראה על המשאבה הגורמת לרטט רב.
 - לעיתים רחוקות AAPS עלול להיכשל בביטול אוטומטי של התראת "בזאלי זמני בוטל" והמשתמש צריך לבטלה בעצמו (על ידי לחיצה על כפתור הרענון ב-AAPS כדי להעביר את האזהרה ל-AAPS או לאשר את ההתראה על המשאבה). 
@@ -71,7 +71,7 @@
 - לפני שתפעילו את תוסף Combo ב-AAPS, וודאו שהפרופיל מוגדר כהלכה ומופעל (!) ושהפרופיל הבזאלי מעודכן שכן AAPS יסנכרן את הפרופיל הבזאלי עם המשאבה. לאחר מכן הפעילו את התוסף Combo. לחצו על *רענן* בלשונית Combo כדי לאתחל את המשאבה.
 - כדי לאמת את ההתקנה, כאשר המשאבה **מנותקת מהגוף**, הגדירו ב-AAPS בזאלי זמני של 500% למשך 15 דקות והזריקו בולוס. המשאבה צריכה כעת להפעיל בזאלי זמני ולהציג רישום של הבולוס בהיסטוריית המשאבה. AAPS צריך גם להציג את הבזאלי הזמני הנוכחי ואת הבולוס שניתן.
 
-(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 
 ## מדוע צימוד עם המשאבה אינו פועל עם האפליקציה Ruffy?
 
