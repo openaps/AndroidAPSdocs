@@ -47,11 +47,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
    
-For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
+For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
 
 ## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+To resolve this issue go to [config builder](Config-Builder-pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

@@ -1,6 +1,6 @@
 # Nightscout
 
-(security-considerations)=
+(Nightscout-security-considerations)=
 ## Security considerations
 
 Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
@@ -24,7 +24,7 @@ There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
-(manual-nightscout-setup)=
+(Nightscout-manual-nightscout-setup)=
 ## Manual Nightscout setup
 
 It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site.  Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app.  Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.

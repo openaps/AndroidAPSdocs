@@ -47,7 +47,7 @@ There is a subsection for the [clinicians](Resources/clinician-guide-to-AndroidA
 
 Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. That way the correct information can easily be located again should other users also be trying to find answers to the same types of questions in the future.
 
-(translation-help-needed)=
+(index-translation-help-needed)=
 
 ```{admonition} Ask for help - Translators Neeeded!!!
 :class: note
@@ -80,7 +80,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
 ```
 
-(what-do-i-need)=
+(index-what-do-i-need)=
 
 ```{toctree}
 :caption: What do I need&#063;
@@ -114,7 +114,7 @@ Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
-(component-setup)=
+(index-component-setup)=
 
 ```{toctree}
 :caption: Component Setup
@@ -133,7 +133,7 @@ Smartwatch  <./Hardware/Smartwatch.md>
 
 ```
 
-(configuration)=
+(index-configuration)=
 
 ```{toctree}
 :caption: Configuration
