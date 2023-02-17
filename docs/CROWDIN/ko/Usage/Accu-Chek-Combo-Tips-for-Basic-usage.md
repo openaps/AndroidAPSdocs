@@ -50,7 +50,7 @@
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
 
-(battery-type-and-causes-of-short-battery-life)=
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Battery type and causes of short battery life
 
