@@ -17,7 +17,7 @@
 
 # Component Overview
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](../index.md#component-setup), too.
+AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
@@ -64,7 +64,7 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 </ul>
 
 <p spaces-before="0">
-  (no-use-of-sglt-2-inhibitors)=
+  (module-no-use-of-sglt-2-inhibitors)=
 </p>
 <h3 spaces-before="0">
   Не использовать SGLT-2 ингибиторы
@@ -75,7 +75,7 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 </p>
 
 <p spaces-before="0">
-  (phone)=
+  (module-phone)=
 </p>
 <h3 spaces-before="0">
   Телефон
@@ -119,10 +119,10 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
     <a href="../Configuration/DanaRS-Insulin-Pump.md">Dana-i/RS</a>
   </li>
   <li>
-    <a href="../Configuration/MedtronicPump.md">some old Medtronic pumps</a> from upcoming version 2.4 (<a href="../Module/module.md#additional-communication-device">additional communication device</a> needed)
+    <a href="../Configuration/MedtronicPump.md">some old Medtronic pumps</a> from upcoming version 2.4 (<a href="module-additional-communication-device">additional communication device</a> needed)
   </li>
   <li>
-    <a href="../Configuration/OmnipodEros.md">Omnipod Eros</a> (<a href="../Module/module.md#additional-communication-device">additional communication device</a> needed)
+    <a href="../Configuration/OmnipodEros.md">Omnipod Eros</a> (<a href="module-additional-communication-device">additional communication device</a> needed)
   </li>
   <li>
     <a href="../Configuration/OmnipodDASH.md">Omnipod DASH</a>
@@ -138,7 +138,7 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 </p>
 
 <p spaces-before="0">
-  (additional-communication-device)=
+  (module-additional-communication-device)=
 </p>
 <h4 spaces-before="0">
   Дополнительное устройство коммуникации
@@ -209,7 +209,7 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0">release notes</a> for details). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="Releasenotes-important-hints-3-0-0">release notes</a> for details). xDrip+ должен быть по крайней мере версии 2022.01.14 или новее
   </li>
   <li>
     <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app
@@ -300,7 +300,7 @@ The foundation of AndroidAPS safety features discussed in this documentation is 
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Done?</strong> If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the <a href="../Usage/Objectives.md">Objective description</a> before each new Objective and setup up your <a href="../index.md#component-setup">hardware</a>.
+  <strong x-id="1">Done?</strong> If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the <a href="../Usage/Objectives.md">Objective description</a> before each new Objective and setup up your <a href="index-component-setup">hardware</a>.
 </p>
 
 <p spaces-before="0">
