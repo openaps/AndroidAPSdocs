@@ -21,13 +21,13 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 -   Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
 -   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
--   Falls Du Clarity benötigst und trotzdem von den xDrip+ Alarmen profitieren willst, musst Du die [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) mit lokaler Datenübertragung zu xDrip+ verwenden.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 -   Falls Du xDrip noch nicht eingerichtet hast, dann lade es Dir herunter [xdrip](https://github.com/NightscoutFoundation/xDrip) und richte es entsprechend der Dokumentation unter[G5](../Configuration/xdrip.md)  ein.
 -   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
 -   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
 -   Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
-(if-using-g6-with-build-your-own-dexcom-app)=
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## G6 mit Build Your Own Dexcom App
 
 -   Seit Dezember 2020 unterstützt die [BYODA - "Erstelle deine eigene Dexcom App"](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!).
@@ -48,6 +48,8 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 -   Wähle '640G/Eversense' als Datenquelle.
 -   Führe den Befehl 'Sensor starten' in xDrip+ aus, damit Werte empfangen werden. Dies hat keinen Einfluss auf den laufenden Sensor, der ggf. von der BYODA App kontroliert wird.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Problembehandlung G6
 
 ### Dexcom G6-spezifische Problembehandlung
@@ -66,8 +68,8 @@ Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [komplett
 
 ### Allgemeine Problembehandlung
 
-Allgemeine Vorschläge für die Problemlösung bei CGMs findest Du [hier](./GeneralCGMRecommendation.html#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### Neuer Transmitter bei laufendem Sensor
 
-Falls Du einen Transmitter bei einer laufenden Sensorsitzung wechseln musst, kannst Du versuchen, den Transmitter zu tauschen, ohne die Transmitterhalterung zu beschädigen. Eine Videoanleitung findest Du unter <https://youtu.be/tx-kTsrkNUM>.
+If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
