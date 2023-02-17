@@ -16,7 +16,7 @@
 
 לאחר החדרת החיישן, ניתן ללחוץ את המשדר לתוך החיישן. זהירות! תחילה הרכיבו את הצד המרובע ולאחר מכן לחצו כלפי מטה על הצד העגול.
 
-(troubleshooting)=
+(GeneralCGMRecommendation-troubleshooting)=
 ## פתרון בעיות
 
 ### בעיה בחיבור
@@ -37,4 +37,4 @@ You might try to change settings for noise blocking in xdrip (Settings - Inter-A
 
 ![Negative sensor age](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](../Configuration/Config-Builder.md#actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](Config-Builder-actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
