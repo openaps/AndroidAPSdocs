@@ -1,4 +1,4 @@
-(smoothing-blood-glucose-data)=
+(Smoothing-Blood-Glucose-Data-in-xDrip-smoothing-blood-glucose-data)=
 
 # Suavizado de los datos de glucosa en la sangre
 
@@ -10,7 +10,7 @@ Some CGM systems have internal algorithms to detect the noise level in the readi
 
 ### Build Your Own Dexcom App
 
-When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
+When using [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
 ### xDrip+ with Dexcom G6 or Dexcom ONE
 
