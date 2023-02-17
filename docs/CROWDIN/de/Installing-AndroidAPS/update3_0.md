@@ -47,11 +47,11 @@ Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal
 
   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-Details findest du auf der Seite [AAPS-Bildschirm](../Getting-Started/Screenshots.md#bg-warning-sign)
+For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
 
 ## Fehlermeldung: Daten aus verschiedenen Pumpen
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-Um dieses Problem zu beheben, gehe zum Bildschirm [Konfiguration](../Configuration/Config-Builder.md#pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
+To resolve this issue go to [config builder](Config-Builder-pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
