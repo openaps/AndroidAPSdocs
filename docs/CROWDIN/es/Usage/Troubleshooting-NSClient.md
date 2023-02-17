@@ -1,4 +1,4 @@
-(troubleshooting-nsclient)=
+(Troubleshooting-NSClient-troubleshooting-nsclient)=
 
 # Resolución de problemas de NSClient
 
