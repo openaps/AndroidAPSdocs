@@ -63,7 +63,7 @@ Make sure that you can call git.exe without the prefing path as Android Studio n
 
 - Reboot your PC to update System Environment.
 
-(check-git-settings-in-android-studio)=
+(git-install-check-git-settings-in-android-studio)=
 ### 4. Vérifier les paramètres de git dans Android Studio
 
 - Open Terminal window in Android Studio
