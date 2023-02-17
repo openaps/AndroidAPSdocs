@@ -20,7 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Si l'absorption minimale de glucides (min_5m_carbimpact) est utilisée à la place de la valeur calculée à partir des écarts de GLY, un point orange apparaît sur le graphique GA.
 
-(detection-of-wrong-cob-values)=
+(COB-calculation-detection-of-wrong-cob-values)=
 ## Détection de GA erronés
 
 AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un précédent repas et que l'algorithme pense que le calcul actuel des GA pourrait être erroné. Dans ce cas, il vous donnera une indication supplémentaire sur l'écran de confirmation après l'utilisation de l'assistant bolus.
@@ -51,4 +51,4 @@ Dans la capture d'écran ci-dessus, 41% du temps l'absorption de glucides a ét�
 
 ## Correction manuelle des glucides
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
