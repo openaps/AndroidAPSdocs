@@ -35,7 +35,7 @@ Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteği
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](./make-a-PR.md#code-syntax).
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -57,13 +57,13 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-(code-syntax)=
+(make-a-PR-code-syntax)=
 
 ## Sözdizimi kodları
 
 We are using markdown for the docs pages. The files have got the suffix ".md".
 
-(image-size)=
+(make-a-PR-image-size)=
 
 ### Görüntü boyutu
 
