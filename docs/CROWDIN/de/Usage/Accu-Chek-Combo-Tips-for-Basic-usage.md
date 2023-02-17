@@ -50,7 +50,7 @@
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS setzt dann erneut eine benötigte temporäre Basalrate mit Eintreffen des nächsten Zuckerwertes. 
 
-(battery-type-and-causes-of-short-battery-life)=
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Batterieart und Ursachen für eine kurze Lebensdauer der Batterie
 
