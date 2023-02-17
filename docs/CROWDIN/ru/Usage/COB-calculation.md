@@ -20,7 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Если вместо значения, вычисленного из отклонений ГК, используется минимальное поглощение углеводов (min_5m_arbarimpact), на графике активных углеводов COB появится оранжевая точка.
 
-(detection-of-wrong-cob-values)=
+(COB-calculation-detection-of-wrong-cob-values)=
 ## Обнаружение неправильного значения COB
 
 AAPS предупреждает о том, что вы собираетесь подавать болюс при активных углеводах COB, оставшихся от предыдущего приема пищи, и алгоритм считает, что текущий расчет COB может быть неправильным. В этом случае он даст дополнительный подсказку на экране подтверждения калькулятора болюса.
@@ -51,4 +51,4 @@ AAPS предупреждает о том, что вы собираетесь п
 
 ## Ручная коррекция введенных углеводов
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
