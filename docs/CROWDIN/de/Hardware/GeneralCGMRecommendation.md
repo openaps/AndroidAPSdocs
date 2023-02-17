@@ -16,7 +16,7 @@ Beim Setzen des Sensors darf die Setzhilfe nicht zu stark auf die Haut gedrückt
 
 Nach dem Setzen des Sensors wird der Transmitter in den Halter auf dem Sensorpflaster eingeklickt. Achtung! Zuerst auf der rechteckigen Seite einführen und danach auf der runden Seite nach unten Drücken bis der Transmitter mit einem Klick einrastet.
 
-(problembehandlung)=
+(GeneralCGMRecommendation-troubleshooting)=
 ## Problembehandlung
 
 ### Verbindungsprobleme
@@ -37,4 +37,4 @@ Versuche, die Einstellungen zum "noise blocking" in xDrip (Einstellungen -> Inte
 
 ![Negatives Sensor-Alter](../images/Troubleshooting_SensorAge.png)
 
-Dies tritt dann auf, wenn im [Aktionen Tab / Menü](../Configuration/Config-Builder.md#actions) ein doppelter Eintrag "CGM-Sensor gesetzt" oder bei einem einzelnen Eintrag ein falsches Datum verwendet wurde. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
+This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](Config-Builder-actions) or a sensor insert with wrong date. Wechsle zur Registerkarte "Behandlungen" > "Careportal" und lösche den falschen Eintrag.
