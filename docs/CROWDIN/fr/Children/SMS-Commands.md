@@ -79,7 +79,7 @@
 
 ## Utiliser les commandes SMS
 
-- Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AAPS lancé en utilisant l'une des [commandes](../Children/SMS-Commands#id1) ci-dessous.
+- Envoyez depuis votre/vos numéro(s) de téléphone approuvé(s) un SMS au téléphone ayant AAPS lancé en utilisant l'une des [commandes](SMS-Commands-commands) ci-dessous.
 
 - Le téléphone AAPS répondra pour confirmer le succès de la commande ou du statut demandé.
 
@@ -91,10 +91,10 @@
 
 **Astuce** : Il peut être utile d'avoir un forfait SMS illimité (pour chaque téléphone utilisé) si beaucoup de SMS sont envoyés.
 
-(commands)=
+(SMS-Commands-commands)=
 ## Commandes
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
+Les commandes doivent être envoyées en anglais, la réponse sera dans votre langue locale si la chaîne de réponse a déjà été [traduite](translations-translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: Example de commandes SMS
@@ -116,53 +116,53 @@ Commands must be sent in English, the response will be in your local language if
 
 - LOOP SUSPEND 20 \* Réponse : Suspendu (20 min)
 
-- LOOP RESUME \* Response: Loop resumed
+- LOOP RESUME \* Réponse : Boucle relancée
 
-### CGM data
+### Données MGC
 
-- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+- Gly \* Réponse: Dernière G: 5,6 il y a 4 min, Delta: 2 mmol, IA: 0.20U (Bolus: 0.10U Basal: 0.10U)
+- CAL 5.6 \* Réponse : Pour envoyer la calibration 5.6, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN \* Réponse après réception du code correct : Étalonnage envoyé. La réception doit être activée dans xDrip. (**Si xDrip est installé. L'acceptation des calibrations doit être activée dans xDrip+**)
 
 ### Basal
 
-- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Réponse : Pour arrêter la basal temp, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- BASAL 0.3 \* Réponse : Pour démarrer la basal de 0,3 U/h pendant 30 min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- BASAL 0.3 20 \* Réponse : Pour démarrer la basal de 0,3 U/h pendant 20 min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- BASAL 30% \* Réponse : Pour démarrer la Basal 30% pendant 30 min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- BASAL 30% 50 \* Réponse : Pour démarrer la Basal 30% pendant 50 min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier bolus dans AAPS ou à distance (vous ne pouvez ajuster la durée que si au moins 2 numéros de téléphone sont entrés) ! La réponse dépend donc du moment où le dernier bolus a été administré.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
-- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
-- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Réponse A : Pour injecter le bolus de 1,2 U, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN \* Réponse B : Bolus à distance non disponible. Réessayez plus tard.
+- BOLUS 0.60 MEAL \* Si vous spécifiez le paramètre optionnel REPAS, cela définit la Cible Temporaire Repas Imminent (valeur par défaut : 90 mg/dL, 5,0 mmol/l pour 45 min). \* Réponse A: Pour injecter le bolus repas de 0,60 U, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN \* Réponse B : Bolus à distance non disponible.
+- CARBS 5 \* Réponse : Pour entrer 5g à 12:45, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- CARBS 5 17:35/5:35PM \* Réponse : Pour entrer 5g à 17:35, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- EXTENDED STOP/CANCEL \* Réponse : Pour arrêter le bolus étendu, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- EXTENDED 2 120 \* Réponse : Pour démarrer le bolus étendu de 2U pendant 120 min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 
 ### Profil
 
-- PROFILE STATUS \* Response: Profile1
-- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Réponse: Profil1
+- PROFILE LIST \* Réponse : 1.\`Profil1\` 2.\`Profil2\`
+- PROFILE 1 \* Réponse : Pour changer le profil vers Profile1 100%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- PROFILE 2 30 \* Réponse : Pour changer le profil vers Profile2 30%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 
 ### Autres
 
-- TREATMENTS REFRESH \* Response: Refresh treatments from NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
-- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT \* Response: Pump reconnected
-- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
+- TREATMENTS REFRESH \* Réponse : Actualiser les données depuis NS
+- NSCLIENT RESTART \* Réponse : NSCLIENT RESTART 1 receivers
+- POMPE \* Réponse : Dernière conn : il y a 1 min Temp: 0.00U/h @11:38 5/30min IA: 0.5U Réserv: 34U Batt.: 100
+- PUMP CONNECT \* Réponse : Pompe reconnectée
+- PUMP DISCONNECT *30* \* Réponse : Pour déconnecter la pompe pendant *30* min, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+- SMS DISABLE/STOP \* Réponse : Pour désactiver les commandes à distance SMS renvoyer le code Any. Gardez à l'esprit que vous ne pourrez le réactiver que directement à partir de l'application AAPS du smartphone maitre.
 - TARGET MEAL/ACTIVITY/HYPO \* Réponse : Pour définir la cible temp MEAL/ACTIVITY/HYPO, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 - TARGET STOP/CANCEL \* Réponse : Pour annuler la cible temp, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 - HELP \* Réponse : BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Réponse : BOLUS 1.2 BOLUS 1.2 MEAL
 
-(troubleshooting)=
+(SMS-Commands-troubleshooting)=
 ## Résolution de problèmes
 
 ### SMS multiples

@@ -21,13 +21,13 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 -   Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
 -   xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 -   Henüz kurulmadıysa [xDrip+](https://github.com/NightscoutFoundation/xDrip)'i indirin ve [xDrip+ ayarlar sayfasındaki](../Configuration/xdrip.md) talimatları izleyin.
 -   Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
 -   [xDrip+ ayarlar sayfasına](../Configuration/xdrip.md) göre xDrip+'daki ayarları yapın
 -   AAPS, telefon uçak modundayken KŞ değerlerini almıyorsa, [xDrip+ ayarlar sayfasında](../Configuration/xdrip.md) açıklandığı gibi 'Alıcıyı tanımla'yı kullanın.
 
-(if-using-g6-with-build-your-own-dexcom-app)=
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## Kendi Dexcom Uygulamanızı Oluşturun ile G6 kullanıyorsanız
 
 -   Aralık 2020 tarihi itibariyle [Kendi Dexcom App kurmak](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) ayrıca AAPS ve/veya xDrip+'a yerel yayını da destekler ( G5 sensörleri için gecerli değil!)
@@ -48,6 +48,8 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 -   Veri kaynağı olarak '640G/Everses'i seçin.
 -   Değerlerin alınabilmesi için xDrip+'da 'sensörü başlat' komutu gerçekleştirilmelidir. Bu Kendi Dexcom Uygulamanızı Oluşturun tarafından kontrol edilen mevcut sensörünüzü etkilemeyecektir.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Sorun giderme G6
 
 ### Dexcom G6'ya özel sorun giderme

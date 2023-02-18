@@ -29,7 +29,7 @@
 :depth: 2
 ```
 
-(general)=
+(Preferences-general)=
 ## Allgemein
 
 **Einheiten**
@@ -52,10 +52,10 @@
 
 - Kann verwendet werden, wenn Du zwischen verschiedenen Installationen unterscheiden musst (z.B. zwei Kinder mit Typ 1 in Deiner Familie).
 
-(schutz)=
+(Preferences-protection)=
 ### Schutz
 
-(master-password)=
+(Preferences-master-password)=
 #### Master-Passwort
 
 - Die [exportierten Einstellungen](../Usage/ExportImportSettings.md) sind ab Version 2.7 verschlüsselt. **Biometrischer Schutz funktioniert unter Umständen nicht auf OnePlus-Smartphones. Dies ist ein bekanntes Problem von OnePlus auf einigen Telefonen.**
@@ -78,7 +78,7 @@
 
 - Das 'Benutzerdefinierte Passwort' sollte verwendet werden, wenn Du das Master-Passwort nur für die Sicherung der [exportierten Einstellungen](../Usage/ExportImportSettings.md) verwenden möchtest.
 
-- Wenn du ein 'Benutzerdefiniertes Kennwort' verwendest, klicke auf Zeile 'Passwort für Einstellungen', um das Kennwort wie [oben beschrieben](../Configuration/Preferences#master-passwort) festzulegen.
+- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Schutz
@@ -99,7 +99,7 @@
   :alt: Freigabe mit biometrischer Authentifizierung
   ```
 
-(skin)=
+(Preferences-skin)=
 #### Erscheinungsbild
 
 - Du kannst zwischen vier Darstellungsarten wählen:
@@ -127,7 +127,7 @@
   :alt: Darstellungsart abhängig von der Ausrichtung des Smartphones
   ```
 
-(übersicht)=
+(Preferences-overview)=
 ## Übersicht
 
 - In Übersicht kannst du Einstellungen für den Homescreen festlegen.
@@ -141,7 +141,7 @@
 - Nützlich, wenn du eine Präsentation gibst.
 - Dies wird ziemlich viel Energie verbrauchen, daher ist es ratsam, Dein Telefon an ein Ladekabel anzuschließen.
 
-(schaltflächen)=
+(Preferences-buttons)=
 ### Schaltflächen
 
 - Lege fest welche Schaltflächen am unteren Rand des Homescreens sichtbar sind.
@@ -152,7 +152,7 @@
   :alt: Einstellungen > Buttons
   ```
 
-(quick-wizard)=
+(Preferences-quick-wizard)=
 ### Quick Wizard
 
 - Bei häufigen Snacks oder Mahlzeiten kannst du über QuickWizard-Schaltflächen einfach die Menge der Kohlenhydrate eingeben und die Berechnungsgrundlagen festlegen.
@@ -167,7 +167,7 @@
   :alt: Einstellungen > Quick Wizard Button
   ```
 
-(default-temp-targets)=
+(Preferences-default-temp-targets)=
 ### Vordefinierte temporäre Ziele
 
 - [Temp Targets (TT)](../Usage/temptarget.md) erlauben es dir, dein Blutzuckerziel für einen bestimmten Zeitraum zu ändern.
@@ -182,10 +182,10 @@
 
 ### Füll-/Vorfüll-Standardmengen
 
-- Katheter (Schlauch) oder Kanüle (Nadel) kannst Du in AAPS über den Button 'Katheterwechsel' im [Aktionen-Tab](../Getting-Started/Screenshots.md#action-tab) füllen.
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
 - Voreinstellungen für Füllmengen können in diesem Dialog definiert werden.
 
-(range-for-visualization)=
+(Preferences-range-for-visualization)=
 ### Zielbereich für die Grafikanzeige
 
 - Lege fest, welcher Bereich der Grafik auf dem Startbildschirm der Zielbereich sein und grün hinterlegt werden soll.
@@ -212,13 +212,13 @@
   :alt: Einstellungen > Notizen im Behandlungsdialog
   ```
 
-(status-lights)=
+(Preferences-status-lights)=
 ### Statusanzeige
 
 - Status Lights geben eine optische Warnung für
 
   - Sensoralter
-  - Batteriestand des Sensor-Smart-Readers für bestimmte Geräte (weitere Details auf der Seite [AndroidAPS Bildschirme](../Getting-Started/Screenshots#sensor-level-batterie)).
+  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
   - Insulinalter (Tage Reservoirverwendung)
   - Reservoirstand (Einheiten)
   - Kanülenalter
@@ -235,7 +235,7 @@
   :alt: Einstellungen > Status Lights
   ```
 
-(advanced-settings-overview)=
+(Preferences-advanced-settings-overview)=
 ### Erweiterte Einstellungen (Übersicht)
 
 ```{image} ../images/Pref2021_OV_Adv.png
@@ -250,19 +250,19 @@
 
 #### Bolus-Berater
 
-- Wenn du den [Bolus-Rechner](../Getting-Started/Screenshots#bolus-rechner) verwendest und dein Glukosewert über 180 mg/dl (10 mmol) liegt, wird ein Korrekturbolus vorgeschlagen.
+- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
 - Wenn Du den Vorschlag akzeptierst, werden **keine Kohlenhydrate** aufgezeichnet.
 
 - Wenn den Glukosewert auf einem guten Level für das Essen liegt, wirst Du benachrichtigt.
 
-- Du musst erneut den [Bolus-Rechner](../Getting-Started/Screenshots#bolus-rechner) aufrufen und die Menge der Kohlenhydrate, die du essen möchtest, eingeben.
+- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Nachricht des Bolus-Beraters
   ```
 
-(superbolus)=
+(Preferences-superbolus)=
 #### Superbolus
 
 - Option zur Aktivierung des Superbolus im Bolus-Rechner.
@@ -292,7 +292,7 @@
 
 ## Loop
 
-(aps-mode)=
+(Preferences-aps-mode)=
 ### APS-Modus
 
 - Umschalten zwischen Closed Loop, Open Loop sowie Unterbrechung der Insulinzufuhr bei niedrigem Blutzucker (LGS - low glucose suspend).
@@ -300,20 +300,20 @@
 - **Closed Loop** bedeutet, dass die TBR Vorschläge automatisch zur Pumpe gesendet werden, ohne dass Du benachrichtigt wirst oder sie bestätigen musst.
 - **Low Glucose Suspend** ähnelt der Closed Loop, überschreibt aber die MaxIOB-Einstellung mit Null. Dies bedeutet, dass AAPS bei fallenden BZ-Werte die Basalrate herabsetzen kann. Wenn aber die BZ-Werte steigen, werden diese nur korrigiert, wenn Dein Basal-IOB negativ ist (z.B. von einer vorangegangenen Abschaltung wegen niedriger BZ-Werte).
 
-(minimal-request-change)=
+(Preferences-minimal-request-change)=
 ### Minimaler Wert zur Anfrage einer Änderung \[%\]
 
 - Im Open Loop erhälst Du jedes Mal eine Benachrichtigung, wenn AAPS empfiehlt, die Basalrate anzupassen.
 - Um die Anzahl der Benachrichtigungen zu reduzieren, kannst du entweder einen größeren BZ-Zielbereich verwenden oder den minimalen Wert zur Anfrage einer Änderung erhöhen.
 - Diese definiert, wie hoch die relative Änderung sein muss, damit eine Benachrichtigung erscheint.
 
-(advanced-meal-assist-ama-or-super-micro-bolus-smb)=
+(Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) oder Super Micro Bolus (SMB)
 
 Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuration/Config-Builder.md) kannst Du zwischen zwei Algorithmen wählen:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features#erweiterter-mahlzeit-assistent-ama) - Stand des Algorithmus in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features#super-micro-bolus-smb) - Der aktuellste Algorithmus für erfahrene Nutzer
+- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### OpenAPS AMA-Einstellungen
 
@@ -326,7 +326,7 @@ Abhängig von Deinen Einstellungen im [Konfigurations-Generator](../Configuratio
 - Der Wert wird in IE pro Stunde angegeben (IE/h).
 - Es wird empfohlen, hier etwas vernünftiges einzugeben. Eine gute Empfehlung ist, die **höchste Basalrate** in Deinem Profil zu verwenden und diese **mit 4 zu multiplizieren**.
 - Wenn zum Beispiel die höchste Basalrate in deinem Profil 0.5IE/h war, kannst du das mit 4 multiplizieren, um einen Wert von 2IE/h zu erhalten.
-- Siehe dazu auch die [detaillierte Beschreibung](../Usage/Open-APS-features#max-ie-h-die-als-tbr-gesetzt-werden-konnen-openaps-max-basal).
+- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximales Basal-IOB, das OpenAPS abgeben darf \[U\]
 
@@ -350,7 +350,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 #### Autosens
 
-- [Autosens](../Usage/Open-APS-features#autosens) analysiert Deine BZ-Abweichungen (positiv/negativ/neutral).
+- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - Dabei wird anhand dieser Abweichungen ermittelt, wie empfindlich / resistent Du auf Insulin reagierst und Deine Basalrate und den ISF entsprechend angepasst.
 - Wenn Du "Autosens passt Zielwerte ebenfalls an" auswählst, wird der Algorithmus auch Dein BZ-Ziel entsprechend anpassen.
 
@@ -359,20 +359,20 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 - Normalerweise musst Du die Einstellungen in diesem Dialog nicht ändern!
 - Falls Du sie doch ändern willst, lies in jedem Fall vorher die Details dazu in den [OpenAPS Docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) und stelle sicher, dass Du weißt, was Du tust.
 
-(openaps-smb-settings)=
+(Preferences-openaps-smb-settings)=
 ### OpenAPS SMB-Einstellungen
 
-- Im Gegensatz zu AMA verwendet [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) keine temporären Basalraten, um den Blutzuckerspiegel zu steuern, sondern hauptsächlich kleine Supermicroboli.
+- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- Du musst [Ziel 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) gestartet haben, um SMB nutzen zu können.
+- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- Die ersten drei Einstellungen sind [oben beschrieben](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-- Details zu den verschiedenen Optionen sind auf der Seite [OpenAPS-Funktionen](../Usage/Open-APS-features.md#enable-smb) beschrieben.
+- Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
 - *Wie häufig SMB abgegeben werden (in Min.)* ist eine Einschränkung für SMB, die standardmäßig nur alle vier Minuten abgegeben werden. Dieser Wert verhindert, dass das System SMB zu häufig abgibt (z. B. wenn Du ein temporäres Ziel setzt). Sie sollten diese Einstellung nicht ändern, außer Du weißt genau über die Folgen Bescheid.
 
-- Wenn 'Empfindlichkeit erhöht den Zielwert' oder 'Resistenz senkt den Zielwert' aktiviert ist, passt [Autosens](../Usage/Open-APS-features.md#autosens) Deinen BZ-Zielwert entsprechend der BZ-Abweichungen an.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - Wenn der Zielwert angepasst wird, wird dies durch einen grünen Hintergrund des Zielwerts angezeigt.
 
@@ -380,7 +380,7 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
   :alt: Von Autosens angepasster Zielwert
   ```
 
-(carb-required-notification)=
+(Preferences-carb-required-notification)=
 #### Kohlenhydrat-Vorschlag
 
 - Diese Funktion steht nur zur Verfügung, wenn Du SMB ausgewählt hast.
@@ -438,12 +438,12 @@ Wenn du dich damit gut fühlst, kannst du dem System erlauben, dir zusätzliches
 
 ### Erweiterte Einstellungen - Autosens-Faktoren
 
-- Definiere einen minimalen und maximalen [Autosens](../Usage/Open-APS-features.md#autosens)-Faktor.
+- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
 - Die Standardwerte (max. 1.2 und min. 0.7) sollten nicht verändert werden.
 
 ## Pumpen-Einstellungen
 
-Die Einstellungen hier sind je nach Pumpenmodell, das Du im [Konfigurations-Generator](../Configuration/Config-Builder.md#pump) gewählt hast, unterschiedlich.  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
+The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Verbinde Deine Pumpe und richte sie entsprechend der pumpenspezifischen Beschreibung ein:
 
 - [DanaR Insulinpumpe](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS Insulinpumpe](../Configuration/DanaRS-Insulin-Pump.md)
@@ -453,7 +453,7 @@ Die Einstellungen hier sind je nach Pumpenmodell, das Du im [Konfigurations-Gene
 
 Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewählt hast, wenn du AndroidAPS als Open Loop betreibst.
 
-(nsclient)=
+(Preferences-nsclient)=
 ## Nightscout-Client
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -465,7 +465,7 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 - Überprüfe die Eingaben auf Tippfehler, wenn du bei Ziel 1 hängen bleibst.
 - **Stelle sicher, dass die URL NICHT mit /api/v1/ endet.**
 - *Logge App-Start in Nightscout* schreibt jedes Mal, wenn AAPS startet, eine Notiz in Dein Nightscout Careportal.  Die App sollte maximal einmal am Tag neu gestartet werden. Mehrere Einträge am Tag könnten ein Hinweis auf ein Problem sein (z.B.  Akkuoptimierung für AAPS nicht deaktiviert).
-- Falls aktiviert, werden Änderungen Deiner [lokalen Profile](../Configuration/Config-Builder#lokales-profil) zu Nightscout hochgeladen.
+- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
 
 ### Verbindungseinstellungen
 
@@ -485,7 +485,7 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 - Diese funktionieren nur, wenn Du eine Online-Verbindung mit Nightscout hast und sind vor allem für Eltern und Betreuer gedacht.
 - Wenn Du Deine CGM-Quelle direkt auf dem Smartphone hast (z.B. xDrip+ oder BYODA \[Build your own dexcom app\]) verwende stattdessen die Alarme dieser App.
 
-(advanced-settings-nsclient)=
+(Preferences-advanced-settings-nsclient)=
 ### Erweiterte Einstellungen (Nightscout-Client)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
@@ -496,13 +496,13 @@ Stelle sicher, dass du die virtuelle Pumpe im Konfigurations-Generator ausgewäh
 
 - *Aktiviere lokale Broadcasts* teilt deine Daten mit anderen Apps auf dem Smartphone (z. B. xDrip+).
 
-  - Du musst [über AAPS gehen](../Configuration/Config-Builder.md#bg-source) und lokale Broadcast in AAPS aktivieren, um xDrip+ Alarme nutzen zu können.
+  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
 - *Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout.* muss aktiviert werden, wenn Du Autotune einsetzen willst. In der [OpenAPS Dokumentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) findest Du Details zu Autotune.
 
 ## SMS Kommunikator
 
-- Einstellmöglichkeiten werden nur angezeigt, wenn Du zuvor den SMS Kommunikator im [Konfigurations-Generator](../Configuration/Config-Builder.md#sms-communicator) aktiviert hast.
+- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
 - Diese Einstellung erlaubt eine Fernsteuerung der App, indem Anweisungen an das Smartphone des Patienten gesendet werden, die die App ausführt (z.B. Loop oder Bolus anhalten).
 - Weitere Information findest Du auf der Seite [SMS-Befehle](../Children/SMS-Commands.md).
 - Zusätzliche Sicherheit wird durch die Verwendung einer Authentifikator-App und einer zusätzlichen PIN am Tokenende erreicht.
@@ -538,7 +538,7 @@ Wähle aus, welcher Standortservice verwendet werden soll:
 ```
 
 - Standardempfänger von Protokollen ist <logs@androidaps.org>.
-- Wenn Du *Exportierte Daten verschlüsseln* auswählst, werden diese mit Deinem <0>master password</0> verschlüsselt. In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). In diesem Fall muss das Master-Passwort jedes Mal eingegeben werden, wenn die Einstellungen ex- oder importiert werden.
 
 ## Open Humans
 

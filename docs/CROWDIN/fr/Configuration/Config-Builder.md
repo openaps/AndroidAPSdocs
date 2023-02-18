@@ -12,7 +12,7 @@ Lorsque des paramètres supplémentaires sont disponibles dans le module, vous p
 
 ![Sections du générateur de configuration et roue crantée](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
-(tab-or-hamburger-menu)=
+(Config-Builder-tab-or-hamburger-menu)=
 
 ## Onglet ou menu hamburger
 
@@ -20,7 +20,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 ![Onglet ou menu hamburger](../images/ConfBuild_TabOrHH_AAPS30.png)
 
-(profile)=
+(Config-Builder-profile)=
 
 ## Profil
 
@@ -29,7 +29,7 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 
 However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
 
-(local-profile)=
+(Config-Builder-local-profile)=
 
 ### Profil Local
 
@@ -59,17 +59,17 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 ![Dupliquer un changement de profil](../images/LocalProfile_ClonePS_AAPS30.png)
 
-(upload-local-profiles-to-nightscout)=
+(Config-Builder-upload-local-profiles-to-nightscout)=
 
 #### Remonter les profils locaux sur Nightscout
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Changer de profil dans l'éditeur de profil Nighscout
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](../Configuration/Preferences.md#nsclient).
+You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
 
 It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
 
@@ -84,7 +84,7 @@ Profile helper offers two functions:
 
 Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
 
-(insulin)=
+(Config-Builder-insulin)=
 
 ## Insuline
 
@@ -102,13 +102,13 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * La DAI n'est pas la même pour chaque personne. C'est pourquoi vous devez la tester par vous-même. 
 * Mais elle doit toujours être au minimum de 5 heures.
 * Pour beaucoup de personnes utilisant des insulines ultra rapide comme la FIASP, il n'y a pratiquement pas d'effet notable après 3-4 heures tout au plus, même si 0.0 xx unités sont disponibles en tant que règle. Cette quantité résiduelle peut encore être perceptible pendant le sport, par exemple. Par conséquent, AndroidAPS utilise au moins 5h comme DAI.
-* You can read more about that in the Insulin Profile section of [this](../Getting-Started/Screenshots.md#insulin-profile) page.
+* You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
 
 ### Différences entre les types d'insuline
 
 * Pour l'insuline à "Action Rapide", "Ultra-Rapide" et "Lyumjev", la DAI est la seule variable que vous pouvez ajuster vous-même, le temps du pic est fixé. 
 * Le Profil d'insuline ajustable vous permet d'ajuster à la fois la DAI et le temps du pic, et ne doit être utilisé que par les utilisateurs confirmés qui connaissent les effets de ces paramètres. 
-* The [insulin curve graph](../Getting-Started/Screenshots.md#insulin-profile) helps you to understand the different curves.
+* The [insulin curve graph](Screenshots-insulin-profile) helps you to understand the different curves.
 * Vous pouvez le voir en activant la case à cocher pour l'afficher sous forme d'onglet, sinon il se trouve dans le menu hamburger.
 
 #### Insuline à Action Rapide Oref 
@@ -127,7 +127,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * DAI = au moins 5.0h
 * Pic maxi = 55 minutes après l'injection (fixe, non réglable)
 
-(lyumjev)=
+(Config-Builder-lyumjev)=
 
 #### Lyumjev
 
@@ -145,7 +145,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * La DAI est automatiquement définie à 5 heures s'il n'est pas spécifié plus haut dans le profil.
 * Ce profil est recommandé si une insuline non soutenue ou un mélange d'insulines différentes est utilisé.
 
-(bg-source)=
+(Config-Builder-bg-source)=
 
 ## Source GLY
 
@@ -154,7 +154,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 ![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Construisez votre propre application Dexcom (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](../Installing-AndroidAPS/Releasenotes.md#important-hints-3-0-0) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details.
 * [Medtronic 640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - seule la version 4.15.57 et plus récentes sont prise en charge
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -163,7 +163,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 * Glycémie NSClient - non recommandé car la boucle fermée repose sur la couverture des données mobiles / wifi dans ce cas. Les données MGC ne seront reçues que s'il y a une connexion en ligne à votre site NS. Mieux vaut utiliser la diffusion locale de l'une des autres sources de données de la MGC.
 * Gly Aléatoire : Génère des données de glycémie aléatoires (mode Démo uniquement)
 
-(pump)=
+(Config-Builder-pump)=
 
 ## Pompe
 
@@ -193,22 +193,22 @@ Select the pump you are using.
 
 Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](../Usage/Objectives.md#objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](../Usage/Open-APS-features#autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
-(absorption-settings)=
+(Config-Builder-absorption-settings)=
 
 ### Paramètres d’absorption
 
 If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
 
-(aps)=
+(Config-Builder-aps)=
 
 ## APS
 
 Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
 
 * OpenAPS AMA (Assistance Améliorée Repas, état de l'algorithme en 2017) En termes simples, les avantages sont après un bolus de repas le système peut faire une temporaire haute plus rapidement SI vous entrez les glucides de manière fiable.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
 
 ## Boucle
 
@@ -216,7 +216,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ![Config builder - loop mode](../images/ConfigBuilder_LoopLGS.png)
 
-(open-loop)=
+(Config-Builder-open-loop)=
 
 ### Boucle Ouverte
 
@@ -224,13 +224,13 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 * Les suggestions ne seront pas exécutées automatiquement (comme dans la boucle fermée) doivent être entrées manuellement dans la pompe ou en utilisant un bouton si vous utiliserez une pompe compatible (Dana R/RS, Accu Chek Combo, Insight...). 
 * Cette option permet de savoir comment AndroidAPS fonctionne ou si vous utilisez une pompe non prise en charge.
 
-(closed-loop)=
+(Config-Builder-closed-loop)=
 
 ### Boucle Fermée
 
 * AAPS évalue en permanence toutes les données disponibles (IA, GA, Gly ...) et ajuste automatiquement le traitement si nécessaire (c'est-à-dire sans intervention de votre part) pour atteindre la plage ou la valeur cible fixée (bolus, débit de basal temporaire, arrêt de l'insuline pour éviter l'hypo, etc.). 
 * La boucle fermée fonctionne avec de nombreuses limites de sécurité, que vous pouvez définir individuellement.
-* Closed Loop is only possible if you are in [Objective 6](../Usage/Objectives.md#objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* Closed Loop is only possible if you are in [Objective 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
 * Remarque : En mode boucle fermée, une cible unique au lieu de la plage cible (par ex. 5,5 mmol ou 100 mg/dl au lieu de 5,0 - 7,0 mmol ou 90 - 125 mg/dl) est recommandée.
 
 ### Arrêt Glycémie Basse (AGB)
@@ -256,7 +256,7 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 ## Traitements
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](../Getting-Started/Screenshots.md#carb-correction).
+If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
 
 ## Généralités
 
@@ -315,26 +315,26 @@ Choose if you want to have a notes field when entering treatments or not.
 
 #### Voyants d'état
 
-Choose if you want to have [status lights](../Configuration/Preferences.md#status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
 
 #### Paramètres Avancés
 
 **Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
-**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](../Usage/Open-APS-features.md#max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
-(actions)=
+(Config-Builder-actions)=
 
 ### Actions
 
 * Quelques boutons pour accéder rapidement aux fonctions communes.
-* See [AAPS screenshots](../Getting-Started/Screenshots.md#action-tab) for details.
+* See [AAPS screenshots](Screenshots-action-tab) for details.
 
 ### Automatisation
 
 User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
 
-(sms-communicator)=
+(Config-Builder-sms-communicator)=
 
 ### Communicateur SMS
 
@@ -346,7 +346,7 @@ Displays the food presets defined in the Nightscout food database, see [Nightsco
 
 Note: Entries cannot be used in the AndroidAPS calculator. (View only)
 
-(wear)=
+(Config-Builder-wear)=
 
 ### Wear
 
@@ -368,7 +368,7 @@ Display loop information on your xDrip+ watchface (if you are not using AAPS/[AA
 ### NSClient
 
 * Configurer la synchronisation de vos données AndroidAPS avec Nightscout.
-* Settings in [preferences](../Configuration/Preferences.md#nsclient) can be opened by clicking the cog wheel.
+* Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance
 

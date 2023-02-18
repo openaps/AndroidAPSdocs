@@ -42,7 +42,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Ajustes Básicos 3](../images/xDrip_Basic3.png)
 
-(identify-receiver)=
+(xdrip-identify-receiver)=
 
 ### Identificar receptor
 
@@ -55,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * El transmisor Dexcom G6 puede conectarse simultáneamente al receptor Dexcom (o alternativamente a la bomba t:slim) y a una aplicación en tu teléfono.
 * Para usar xDrip+ como receptor, desinstala primero la aplicación Dexcom. **No se puede conectar al mismo tiempo la aplicación xDrip+ y Dexcom con el transmisor.**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### La versión de xDrip+ a utilizar depende del número de serie de los transmisores G6.
 
@@ -96,7 +96,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-(connect-g6-transmitter-for-the-first-time)=
+(xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### Conectar el transmisor G6 por primera vez
 
@@ -145,7 +145,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    
    ![xDrip+ Dexcom Transmisor 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-(transmitter-battery-status)=
+(xdrip-transmitter-battery-status)=
 
 ### Estado de la batería de Transmisor
 
@@ -159,9 +159,9 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
 
 ### Extender vida del transmisor
 
-* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
+* So far life cannot be extended for transmitters who's serial no. starts with 8G, 8H or 8J. Same is true for transmitters with serial no. starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * Para evitar las dificultades iniciando los sensores, se recomienda encarecidamente extender la vida del transmisor antes del día 100 de la primera utilización.
-* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
+* Use of transmitters serial no. starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * La sesión en ejecución del sensor se detendrá al ampliar la vida del transmisor. Así que, extienda antes del cambio de sensor o tenga en cuenta que habrá una nueva fase de inicialización de 2 h.
 * Stop sensor manually via hamburger menu.
 * Cambie a la `modo ingeniería`: 
@@ -181,7 +181,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
 
 * Los días de Transmisor se establecerán en 0 después de la extensión y el inicio satisfactorios del sensor.
 
-(replace-transmitter)=
+(xdrip-replace-transmitter)=
 
 ### Sustituir transmisor
 
@@ -283,7 +283,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
    * Si utiliza el algoritmo xDrip+, puede establecer un tiempo anterior de más de 2 horas para evitar el inicio. Las lecturas pueden ser muy erráticas. Por lo tanto, esto no se recomienda.
 * Introduzca el código del Sensor (en la lámina de papel de aluminio del sensor) 
    * Mantenga el código para futuras referencias (por ejemplo, un nuevo inicio después de que el transmisor haya tenido que eliminarse)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * No se necesita ninguna calibración si utiliza G6 en "modalidad nativa". xDrip+ mostrará las lecturas automáticamente después del inicio de 2 horas.
 * No encienda el receptor original de Dexcom (si lo utiliza) de nuevo, antes de que xDrip+ muestre las primeras lecturas.
    
@@ -291,7 +291,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
    
    ![xDrip+ Inicio Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-(retrieve-sensor-code)=
+(xdrip-retrieve-sensor-code)=
 
 ### Recuperar código de sensor
 
@@ -307,7 +307,7 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8Ju
    
    ![xDrip+ Recuperar código sensor Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-(troubleshooting-dexcom-g5-g6-and-xdrip)=
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Solución de problemas de Dexcom G5/G6 y xDrip+
 
@@ -355,7 +355,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Libre smart reader battery level
 
 * Battery level of smart readers such as MiaoMiao 2 can be displayed in AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Connect Libre Transmitter & start sensor
 

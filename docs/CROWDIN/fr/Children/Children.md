@@ -12,7 +12,7 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 - Les parents peuvent suivre à distance toutes les données pertinentes telles que les glycémies, les glucides actifs, l'insuline active, etc. en utilisant l'application **NSclient** sur leur téléphone. Les paramètres doivent être identiques dans AAPS et dans l'application NSClient.
 - Les parents peuvent recevoir des alarmes en utilisant l'application **xDrip+ en mode suiveur** sur leur téléphone.
 - Contrôle à distance d'AndroidAPS en utilisant les [commandes SMS](../Children/SMS-Commands.md) sécurisées par l'authentification à deux facteurs.
-- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](../Installing-AndroidAPS/Releasenotes.md#important-hints-2-8-1-1) for further details.
+- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
 ## Outils et applications pour la surveillance à distance
 
@@ -24,7 +24,7 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 
 ## Points à considérer
 
-- Définir les bons [paramètres de traitement](../Getting-Started/FAQ.md#how-to-begin) (débits de basal, DAI, SI...) est difficile pour les enfants, surtout lorsque les hormones de croissance sont impliquées.
+- Définir les bons [paramètres de traitement](FAQ-how-to-begin) (débits de basal, DAI, SI...) est difficile pour les enfants, surtout lorsque les hormones de croissance sont impliquées.
 - Les paramètres doivent être identiques dans AAPS et dans l'application NSClient.
 - Considérez un décalage de temps entre le maître et le suiveur dû au temps de téléchargement, et parce que le téléphone principal AAPS ne remontera les données qu'après l'exécution de la boucle.
 - Alors prenez le temps de les configurer correctement et de les tester dans la vrai vie avec votre enfant à côté de vous avant de commencer la surveillance et le traitement à distance. Les vacances scolaires pourraient être un bon moment pour cela.

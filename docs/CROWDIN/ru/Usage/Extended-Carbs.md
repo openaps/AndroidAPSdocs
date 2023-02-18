@@ -1,9 +1,9 @@
-(extended-carbs-ecarbs)=
+(Extended-Carbs-extended-carbs-ecarbs)=
 # Пролонгированные (расширенные) углеводы / "eCarbs"
 
 ## Что такое eCarbs и когда они полезны?
 
-При обычной помповой терапии пролонгированные болюcы-хороший способ справиться с жирной или медленно усваиваемой пищей, которая увеличивает уровень глюкозы в крови дольше, чем работает инсулин. Однако в контексте алгоритма ИПЖ пролонгированные болюсы не имеют большого смысла (и создают технические трудности), поскольку они представляют собой по сути, фиксированную высокую временную базальную скорость, которая идет вразрез с тем, как работает цикл ИПЖ, который должен динамически корректировать базальную скорость. For details see [extended bolus](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
+При обычной помповой терапии пролонгированные болюcы-хороший способ справиться с жирной или медленно усваиваемой пищей, которая увеличивает уровень глюкозы в крови дольше, чем работает инсулин. Однако в контексте алгоритма ИПЖ пролонгированные болюсы не имеют большого смысла (и создают технические трудности), поскольку они представляют собой по сути, фиксированную высокую временную базальную скорость, которая идет вразрез с тем, как работает цикл ИПЖ, который должен динамически корректировать базальную скорость. For details see [extended bolus](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) below.
 
 Однако необходимость работать с такой едой все же существует. Именно поэтому AndroidAPS начиная с версии 2.0 поддерживает так называемые расширенные углеводы или eCarbs.
 
@@ -45,12 +45,12 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 **Important notes:** You'll need to try out and see which concrete values work for you of course. You might also carefully adjust the setting *max minutes of basal to limit SMB to* to make the algorithm more or less aggressive. При низком содержании углеводов, высоким содержании жиров и белков, eCarbs может быть достаточен, чтобы обойтись без дополнительного контроля болюсов (см. пост блога выше). При создании eCarbs в портале терапии создается также запись для документирования, упрощающая итерацию и ввод данных.
 
-(extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
+(Extended-Carbs-extended-bolus-and-why-they-wont-work-in-closed-loop-environment)=
 ## Пролонгированный болюс и почему он не будет работать в среде замкнутого цикла?
 
-Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. [See below](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
+Как упоминалось выше, пролонгированные или многоволновые болизы не работают в замкнутом цикле. [See below](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details
 
-(extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
+(Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)=
 ### Пролонгированный болюс и переключение на незамкнутый цикл - только для помп Dana и Insight
 
 Некоторые пользователи просили предусмотреть пролонгированные болюсы в ААПС, так как хотели бы компенсировать специфические продукты питания привычным для себя образом.
@@ -59,13 +59,13 @@ A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the 
 
 - Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
 - Bolus units, remaining and total time will be shown on homescreen.
-- On Insight pump extended bolus is *not available* if [TBR emulation](../Configuration/Accu-Chek-Insight-Pump.md#settings-in-aaps) is used.
+- On Insight pump extended bolus is *not available* if [TBR emulation](Accu-Chek-Insight-Pump-settings-in-aaps) is used.
 
 ```{image} ../images/ExtendedBolus2_6.png
 :alt: Пролонгиованный болюс в AAPS 2.6
 ```
 
-(why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
+(Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment)=
 ### Почему пролонгированные болюсы не будут работать в среде замкнутого цикла
 
 1. Цикл определяет, что скорость базала должна быть 1.55 ед/ч. Для алгоритма неважно подается ли при этом пролонгированный болюс или обычный временный базал TBR. На самом деле, на некоторых помпах возможен пролонгированный болюс. Что должно произойти в этом случае? Most pump drivers then stop the extended bolus -> You didn't even need to start it.

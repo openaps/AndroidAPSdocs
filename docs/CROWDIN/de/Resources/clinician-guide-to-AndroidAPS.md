@@ -10,7 +10,7 @@ Um AndroidAPS nutzen zu können, müssen die folgenden Schritte unternommen werd
 
 * Organisiere Dir eine [kompatible Insulinpumpe](../Hardware/pumps.md), ein [kompatibles Android-Gerät](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) und eine [kompatible CGM Quelle](../Configuration/BG-Source.md).
 * [AndroidAPS Quellcode herunterladen und die Software "erstellen"](../Installing-AndroidAPS/Building-APK.md).
-* [Konfigurieren Sie die Software so, dass sie mit Ihren Diabetes-Geräten kommuniziert, richten Sie sie ein und nehmen Sie Sicherheitseinstellungen vor](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## Wie ein DIY Closed Loop funktioniert
 
@@ -43,7 +43,7 @@ AndroidAPS dokumentiert transparent alle erfassten Eingabedaten, die daraus resu
 
 ## Beispiele für die Entscheidungsfindung des AndroidAPS-Algorithmus
 
-AndroidAPS verwendet den gleichen Kern-Algorithmus und Funktionsumfang wie OpenAPS. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde. In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
+AndroidAPS verwendet den gleichen Kern-Algorithmus und Funktionsumfang wie OpenAPS. Der Algorithmus macht, basierend auf den Einstellungen und der aktuellen Situation, mehrere Vorhersagen, die verschiedene Szenarien berechnen, was in der Zukunft passieren könnte. In Nightscout werden diese als "violette Linien" angezeigt. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). In den Log-Dateien kann nachvollzogen werden, welche dieser verschiedenen Vorhersagen in welchem Zeitraum für die Berechnung der notwendigen Maßnahmen verwendet wurde.
 
 ### Hier einige Beispiele für die Vorhersagelinien und wie sie sich unterscheiden können:
 

@@ -8,6 +8,8 @@
 
 * V pumpě DanaRS/i je aplikací používán "BAZÁL A". Stávající data budou přepsána.
 
+(DanaRS-Insulin-Pump-pairing-pump)=
+
 ## Párování pumpy
 
 * Na domovské obrazovce AndroidAPS klikněte na hamburger menu v levém horním rohu a přejděte do Konfigurace.
@@ -41,7 +43,7 @@
 * Nastavte krok bolusu na 0.05 U/h pomocí lékařského menu (viz uživatelská příručka pumpy).
 * Na pumpě povolte rozšířené bolusy
 
-(default-password)=
+(DanaRS-Insulin-Pump-default-password)=
 
 ### Výchozí heslo
 
@@ -52,7 +54,7 @@
     * Číslo 3 je datum výroby. 
     * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. Nepoužívá se pro komunikaci a není nutné jej zadat v AndroidAPS.
 
-(change-password-on-pump)=
+(DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Změna hesla pumpy
 
@@ -91,7 +93,7 @@
     
     ![Ukončit DanaRS](../images/DanaRSPW_07_Exit.png)
 
-(dana-rs-specific-errors)=
+(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
 ## Specifické chyby Dana RS
 
@@ -103,14 +105,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
+* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
 * Skutečně vydaný bolus se načte a zaznamená při příštím připojení. Chcete-li vynutit připojení okamžitě, klikněte na ikonu BT na kartě Dana, nebo prostě počkejte na příští připojení.
 
 ## Zvláštní poznámka, pokud měníte telefon
 
 When switching to a new phone the following steps are necessary:
 
-* [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
+* [Export settings](ExportImportSettings-export-settings) on your old phone
 * Přesuňte nastavení ze starého do nového telefonu
 
 ### DanaRS v1
@@ -118,13 +120,13 @@ When switching to a new phone the following steps are necessary:
 * **Ručně spárujte** Danu RS s novým telefonem
 * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Proto je třeba nový telefon a pumpu spárovat ručně.
 * Nainstalujte AndroidAPS v novém telefonu.
-* [Import settings](../Usage/ExportImportSettings.md#import-settings) on your new phone
+* [Import settings](ExportImportSettings-import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
-* Zahajte proces párování, jak je popsáno [výše](#pairing-pump).
+* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
 * Někdy může být nutné vymazat informace o párování v AndroidAPS dlouhým kliknutím na ikonu BT na kartě Dana-i/RS.
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).

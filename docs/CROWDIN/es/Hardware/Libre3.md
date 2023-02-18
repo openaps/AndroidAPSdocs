@@ -185,6 +185,7 @@ It is possible to switch back from Juggluco to the Libre 3 app as receiver. The 
 4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
 5. The 60-minute warm-up phase should then begin. This is necessary after every change and cannot be skipped.
 
+(Libre3-experiences-and-troubleshooting)=
 ### Experiences and Troubleshooting
 
 #### Necessary settings for a successful sensor start

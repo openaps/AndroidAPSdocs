@@ -10,7 +10,7 @@ Puteţi instala aplicaţia AndroidAPS pe ceasuri **cu Wear OS**. Versiunea de ce
 * Unele caracteristici precum *auxiliare* necesita Wear OS versiunea 2.0 sau mai nouă pentru a funcționa
 * Google redenumit de la *Android Wear 1.x* la *Wear OS* de la versiunea 2.x, asa ca atunci cand spune *Android Wear* ar putea indica versiuni de sistem mai vechi de 1.x
 * Dacă descrierea ceasului indică doar compatibilitatea cu *Android* și *iOS* - **nu** înseamnă că rulează pe *Wear OS* - poate fi la fel de bine un alt fel de sistem de operare al unui producător necunoscut **care nu este compatibil cu AAPS!**
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### Construirea versiunii Wear OS pentru AAPS
 
@@ -20,7 +20,7 @@ From March 2021 you need to sideload AAPS onto the watch, it is no longer access
 
 ### Configurare pe telefon
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## Controlează AAPS de pe Ceas
 
@@ -29,7 +29,7 @@ AndroidAPS este proiectat să poată fi *controlat* de ceasuri Android Wear. Dac
 Următoarele funcţii pot fi activate de la ceas:
 
 * setarea unei ţinte temporare
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * administrare eCarbs
 * administrare un bolus (insulină + carbohidrați)
 * setări ceas
@@ -51,7 +51,7 @@ Pentru a ajunge mai rapid la meniul AAPS, apăsați de două ori rapid pe valoar
 
 ![Fețe de ceas disponibile](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### Față nouă de ceas pentru AndroidAPS 2,8
 
@@ -155,7 +155,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Asistent Procentaj** (implicit `Off`): Se permite corecţia bolus din asistent (valoarea introdusă în procente înainte de notificarea de confirmare)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## Auxiliare
 
@@ -321,10 +321,10 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 

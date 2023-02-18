@@ -10,7 +10,7 @@
 * כמה תכונות כגון *סיבוכים* מחייבות גרסה 2.0 של Wear Os או מאוחרת יותר כדי לעבוד
 * חברת גוגל שינתה שמה של *Android Wear 1.x* לשם *Wear OS* מגרסה 2.x, כך כאשר היא אומרת *Android Wear* יתכן שמתכוונת לגרסה הישנה 1.x של המערכת.
 * אם התיאור של השעון החכם מצביעה על תאימות רק עם *Android* וגם *IOS* - זה **לא** אומר שהוא עובד עם *Wear Os* - יתכן שהיצרנים משתמשים במערכות משלהם **שלא תואמות AAPS wear!**
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
 
 ### בניית גרסת Wear OS של AAPS
 
@@ -20,7 +20,7 @@
 
 ### הגדרות בטלפון
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder.md#wear).
+Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## שליטה ב-AAPS מהשעון
 
@@ -29,7 +29,7 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 הפונקציות הבאות ניתנות להפעלה מהשעון:
 
 * קביעת ערך מטרה זמני
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder.md#wear) on the phone)
+* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
 * הכרזת פחמימות ממושכות
 * הזרקת בולוס (אינסולין + פחמימות)
 * הגדרות שעון
@@ -51,7 +51,7 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-(new-watchface-as-of-androidaps-2-8)=
+(Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### תצוגות שעון חדשות החל מגרסה AndroidAPS 2.8
 
@@ -155,7 +155,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **אחוז האשף** (ברירת המחדל `off`): מאפשר בולוס תיקון מהאשף (הערך הוזן באחוזים לפני הודעת האישור)
 
-(complications)=
+(Watchfaces-complications)=
 
 ## סיבוכים
 
@@ -321,10 +321,10 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
-* Check [list of tested phones and watches](../Getting-Started/Phones.md#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
+* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) for other users experiences and reported battery lifetime.
 * **We cannot guarantee that data displayed on watchface or complication is up-to-date**. In the end, it is up to Wear OS to decide when to update a watchface or a complication. Even when the AAPS app requests update, the System may decide to postpone or ignore updates to conserve battery. When in doubt and low on battery on watch - always double-check with main AAPS app on phone.
 
-(troubleshooting-the-wear-app)=
+(Watchfaces-troubleshooting-the-wear-app)=
 
 ## Troubleshooting the wear app:
 

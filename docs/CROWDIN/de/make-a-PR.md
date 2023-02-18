@@ -35,7 +35,7 @@ In unserem Beispiel nehmen wir nun eine Änderung an der AndroidAPS-Dokumentatio
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
 
-Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". Die Markdown-Spezifikation ist nicht fixiert und wir verwenden im Moment den myst_parser für unsere Markdown-Dateien. Take care to use the correct syntax as [described below](./make-a-PR.md#code-syntax).
+Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". Die Markdown-Spezifikation ist nicht fixiert und wir verwenden im Moment den myst_parser für unsere Markdown-Dateien. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -57,13 +57,13 @@ Wir verwenden Markdown für die Dokumentation. Die Datei hat das Suffix ".md". D
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
-(code-syntax)=
+(make-a-PR-code-syntax)=
 
 ## Code-Syntax
 
 Wir verwenden Markdown für die Dokumentation. The files have got the suffix ".md".
 
-(image-size)=
+(make-a-PR-image-size)=
 
 ### Bildgröße
 

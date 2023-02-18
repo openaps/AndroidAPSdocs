@@ -47,11 +47,11 @@ Desde la versión de AndroidAPS 3.0, puede aparecer una señal de advertencia de
 
   ![Triángulo de adverntencia de glucosa en amarillo](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
+For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
 
 ## Mensaje de error: Los datos son de bombas diferentes
 
    ![Mensaje de error: Los datos son de bombas diferentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Cambia a Bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.
+To resolve this issue go to [config builder](Config-Builder-pump). Cambia a Bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.

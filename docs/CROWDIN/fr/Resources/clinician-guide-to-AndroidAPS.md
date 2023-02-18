@@ -10,7 +10,7 @@ Pour commencer à utiliser AndroidAPS, les étapes suivantes doivent être faite
 
 * Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Télécharger le code source AndroidAPS et compiler le logiciel](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index.md#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
 ## How A DIY Closed Loop Works
 
@@ -43,7 +43,7 @@ AndroidAPS est conçu pour suivre de façon transparente toutes les données d'e
 
 ## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS uses different colors to separate these [prediction lines](../Installing-AndroidAPS/Releasenotes.md#overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
+AndroidAPS utilise les mêmes algorithmes et les mêmes jeux de fonctions que OpenAPS. L'algorithme fait des prédictions multiples (basées sur les paramètres et la situation) représentant différents scénarios de ce qui pourrait arriver à l'avenir. Dans Nightscout, ces lignes sont affichées sous la forme de "lignes violettes". AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). Dans les logs, il décrira laquelle de ces prédictions et quelle période est à l'origine des actions nécessaires.
 
 ### Here are examples of the purple prediction lines, and how they might differ:
 

@@ -117,4 +117,4 @@
 ### Fonction Bolus Étendu
 
 - If you use extended bolus it will disable closed loop.
-- See [this page](../Usage/Extended-Carbs.md#why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.
+- See [this page](Extended-Carbs-why-extended-boluses-won-t-work-in-a-closed-loop-environment) for details why extended bolus does not work in a closed loop environment.

@@ -32,7 +32,7 @@
 
 В AndroidAPS коснитесь 3-точечного меню в верхней правой части экране и перейдите в меню Параметры > NSClient > Дополнительные параметры > Снимите галочки с 'Только загрузка в NS (без синхронизации)' и 'Без загрузки в NS'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Настройки загрузок Nightscout](../images/automate-aaps2.jpg)
 

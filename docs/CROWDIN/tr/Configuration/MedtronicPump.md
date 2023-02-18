@@ -25,7 +25,7 @@ Aşağıdaki modeli ve yazılımı belirtilen pompa kombinasyonları uyumludur:
 
 Çeşitli Rileylink uyumlu cihazlar için karşılaştırma tablosunu [getrileylink.org](https://getrileylink.org/rileylink- Compatible-hardware-comparison-chart) adresinde bulabilirsiniz.
 
-(configuration-of-the-pump)=
+(MedtronicPump-configuration-of-the-pump)=
 
 ## Pompa Konfigürasyonu
 
@@ -54,7 +54,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 - **Pompa Seri Numarası**: Pompanızın arkasında yer alır ve SN ile başlar. Alfabetik karakterler olmadan yalnızca görünen 6 rakamı girmelisiniz (ör. 123456).
 - **Pompa Tipi**: Kullandığınız pompa modeli (ör. 522). 
-- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](../Configuration/MedtronicPump.md#faq) if you are unsure which option to select): 
+- **Pompa Frekansı**: Pompanızın ilk dağıtıldığı yere bağlı olarak iki seçenek vardır. Please check the [FAQ](MedtronicPump-faq) if you are unsure which option to select): 
     - ABD & Kanada için (NA-CA) kullanılan frekans 916 Mhz
     - Dünya çapında (WW) kullanılan frekans 868 Mhz'dir.
 - **Pompadaki Maks Bazal (Ü/s)**: Bunun, pompanızda ayarlanan değerle eşleşmesi gerekir (yukarıdaki pompa konfigürasyonuna bakın). Bu ayar AndroidAPS'in bazal oranınız aracılığıyla ne kadar insülin iletebileceğini belirleyeceğinden dikkatli bir şekilde seçilmelidir. Bu değer maksimum geçici bazal oranını etkin bir şekilde ayarlayacaktır. Örnek olarak, bu değeri maksimum standart bazal oranınızın dört katına ayarlamak %400 Geçici Bazal Oranına izin verir. Pompa tarafından izin verilen maksimum değer saatte 34,9 ünitedir.
@@ -93,10 +93,10 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 At the bottom of the screen there are three buttons:
 
 - **Yenile**: Pompanın mevcut durumunu yenilemek içindir. Bu buton komple veri yenilediğinden (geçmişi al, zamanı al/ayarla, profil al, pil durumunu al, vb.) yalnızca bağlantı uzun bir süre boyunca kopmuşsa kullanılmalıdır.
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](MedtronicPump-rl-status-rileylink-status))
 
-(pump-history)=
+(MedtronicPump-pump-history)=
 
 ## Pompa geçmişi
 
@@ -104,7 +104,7 @@ At the bottom of the screen there are three buttons:
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
-(rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## RL Durumu (RileyLink Durumu)
 
@@ -154,11 +154,11 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-(faq)=
+(MedtronicPump-faq)=
 
 ## SSS
 
-(what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
+(MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### RileyLink ve/veya pompa ile bağlantımı kaybedersem ne yapmalıyım?
 

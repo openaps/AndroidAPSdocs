@@ -1,6 +1,6 @@
 # Nightscout
 
-(security-considerations)=
+(Nightscout-security-considerations)=
 
 ## Sicherheitsüberlegungen
 
@@ -25,7 +25,7 @@ In den AAPS-Einstellungen gibt es eine Funktion, nur Daten zu Nightscout hochzul
 
 Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
 
-(manual-nightscout-setup)=
+(Nightscout-manual-nightscout-setup)=
 
 ## Manuelles Nightscout-Setup
 

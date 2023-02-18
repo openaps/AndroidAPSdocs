@@ -30,7 +30,7 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 6. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 7. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## İki profili karşılaştırın
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 9. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Profili Klonla
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profil Yardımcısı profil Klonlama / profil değiştirme

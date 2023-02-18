@@ -185,6 +185,7 @@ Es ist möglich, als Empfänger von Juggluco auf die Libre 3 App zurückzuwechse
 4. Klicken Sie im Menü Libre 3 auf "Start Sensor", wählen Sie "Ja", "Weiter" und scannen Ihren Sensor.
 5. Die 60-minütige Aufwärmphase sollte dann beginnen. Dies ist nach jeder Änderung notwendig und kann nicht übersprungen werden.
 
+(Libre3-experiences-and-troubleshooting)=
 ### Erfahrungen und Troubleshooting
 
 #### Zwingend erforderliche Einstellungen für den erfolgreichen Sensorstart:

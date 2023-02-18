@@ -1,4 +1,4 @@
-(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
 
 # Zasekl jsem se, co mám dělat? Koho se mám zeptat?
 

@@ -50,7 +50,7 @@
 * Ardından ana ekranda **Askıya Alınan Döngü** simgesine basarken pompayı tekrar çalışma moduna getirin **Devam et** öğesini seçin.
 * AndroidAPS, bir sonraki kan şekeri değerinin gelmesiyle gerekli bir geçici bazal oranını yeniden ayarlayacaktır. 
 
-(battery-type-and-causes-of-short-battery-life)=
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Pil tipi ve kısa pil ömrünün nedenleri
 

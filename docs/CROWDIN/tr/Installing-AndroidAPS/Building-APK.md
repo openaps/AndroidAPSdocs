@@ -7,9 +7,9 @@
 ## Önemli notlar
 
 * Apk'yi oluşturmak için lütfen **[Android Studio Sürüm 2020.3.1](https://developer.android.com/studio/)** veya daha yenisini kullanın.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
 
-(recommended-specification-of-computer-for-building-apk-file)=
+(Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
 ## apk dosyası oluşturmak için önerilen bilgisayar özellikleri
 
@@ -63,13 +63,13 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 In general, the steps necessary to build the APK file:
 
 1. [Git yükleyin](../Installing-AndroidAPS/git-install.md)
-2. [Android Studio'yu yükleyin](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
-3. [Android Studio tercihlerinde git yolunu ayarlayın](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
-4. [AndroidAPS kodlarını indirin](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
-5. [Android SDK'i indirin](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
-6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
-7. [Telefonunuza apk dosyasını aktarın](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
-8. [Eğer xDrip+ kullanıyorsanız, alıcıyı tanımlayın](..//Configuration/xdrip.md#identify-receiver)
+2. [Android Studio'yu yükleyin](Building-APK-install-android-studio)
+3. [Android Studio tercihlerinde git yolunu ayarlayın](Building-APK-set-git-path-in-preferences)
+4. [AndroidAPS kodlarını indirin](Building-APK-download-androidaps-code)
+5. [Android SDK'i indirin](Building-APK-download-android-sdk)
+6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
+7. [Telefonunuza apk dosyasını aktarın](Building-APK-transfer-apk-to-smartphone)
+8. [Eğer xDrip+ kullanıyorsanız, alıcıyı tanımlayın](xdrip-identify-receiver)
 
 ## Adım adım izlenecek yol
 
@@ -79,7 +79,7 @@ Detailed description of the steps necessary to build the APK file.
 
 Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
 
-(install-android-studio)=
+(Building-APK-install-android-studio)=
 
 ## Android Studio'yu yükleyin
 
@@ -121,7 +121,7 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ![Downloading components](../images/studioSetup/07_Downloading.png)
 
-(set-git-path-in-preferences)=
+(Building-APK-set-git-path-in-preferences)=
 
 ## Git yolunu tercihlerde ayarla
 
@@ -170,7 +170,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * Git'i yüklemeyle ilgili ayrıntılar için [resmi git belgelerine](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) bakın.
 * Git'i homebrew aracılığıyla kurarsanız, herhangi bir tercihi değiştirmenize gerek yoktur. Her ihtimale karşı: Android Studio - Tercihler altında bulabilirsiniz.
 
-(download-androidaps-code)=
+(Building-APK-download-androidaps-code)=
 
 ## AndroidAPS kodlarını indirin
 
@@ -218,7 +218,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     Endişelenmeyin, bu yakında çözülecek!
 
-(download-android-sdk)=
+(Building-APK-download-android-sdk)=
 
 ## Android SDK'i indirin
 
@@ -261,7 +261,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 * Devam etmeden önce Android Studio'yu yeniden başlatın.
 
-(generate-signed-apk)=
+(Building-APK-generate-signed-apk)=
 
 ## İmzalı APK oluştur
 
@@ -305,7 +305,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Key store parolasına girin (2) ve onaylayın(3). ![Key store yolunu seçin](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Not:*** key store ve key için parolaların çok karmaşık olması gerekmez. Bunları hatırladığınızdan veya güvenli bir yere not aldığınızdan emin olun. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
+    ***Not:*** key store ve key için parolaların çok karmaşık olması gerekmez. Bunları hatırladığınızdan veya güvenli bir yere not aldığınızdan emin olun. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
 * Key için bir takma ad alias (4) girin. Ne isterseniz seçebilirsiniz.
 
@@ -351,7 +351,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * "app-full-release.apk" (3) aradığınız dosyadır!
 
-(transfer-apk-to-smartphone)=
+(Building-APK-transfer-apk-to-smartphone)=
 
 ## APK'yı akıllı telefona aktarın
 

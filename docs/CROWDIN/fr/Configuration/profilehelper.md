@@ -30,7 +30,7 @@ L'assistant de profil propose un ensemble de données d'enfants provenant de deu
 6. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 7. La comparaison des deux profils sélectionnés sera affichée.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Comparer deux profils
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Appuyez sur le bouton 'COMPARER LES PROFILS' en haut de l'écran.
 9. La comparaison des deux profils sélectionnés sera affichée.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Dupliquer le profil
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Assistant profile Dupliquer le Profil / Changement de profil

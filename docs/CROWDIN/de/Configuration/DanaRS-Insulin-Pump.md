@@ -8,6 +8,8 @@
 
 * Bei der DanaRS und Dana-i wird das Basalprofil "BASAL A" von AAPS verwendet. Eventuell in der Pumpe vorhandene Einträge in diesem Profil werden überschrieben.
 
+(DanaRS-Insulin-Pump-pairing-pump)=
+
 ## Pumpe verbinden
 
 * Klicke auf dem AndroidAPS Startbildschirm oben links auf das Hamburger Menü und wähle den Konfigurations-Generator aus.
@@ -41,7 +43,7 @@
 * Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Bolus-Schritte auf 0,05 IE/h.
 * Aktiviere verzögerten Bolus in der Pumpe.
 
-(default-password)=
+(DanaRS-Insulin-Pump-default-password)=
 
 ### Standard-Passwort
 
@@ -52,7 +54,7 @@
     * Nummer 3 ist das Produktionsdatum. 
     * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. Es wird nicht für die Kommunikation verwendet und muss daher nicht in AndroidAPS eingegeben werden.
 
-(change-password-on-pump)=
+(DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Passwort auf Pumpe ändern
 
@@ -91,26 +93,26 @@
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
-(dana-rs-specific-errors)=
+(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
 
 ## Dana RS spezifische Fehler
 
 ### Fehler bei der Insulinabgabe
 
-Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe abbricht (z.B. weil du dich vom Smartphone entfernst, während die Dana RS Insulin abgibt) wird die folgende Meldung angezeigt und ein Alarmton abgegeben.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Alarm Abgabefehler](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Lösche den fehlerhaften Eintrag im[Behandlungen Tab](../Getting-Started/Screenshots.md#carb-correction), wenn Du magst.
+* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
 * Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
 
-Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+When switching to a new phone the following steps are necessary:
 
-* [Exportiere die Einstellungen](../Usage/ExportImportSettings.md#export-settings) auf Deinem alten Smartphone
+* [Export settings](ExportImportSettings-export-settings) on your old phone
 * Übertrage die Einstellungen vom alten auf das neue Smartphone.
 
 ### DanaRS v1
@@ -118,13 +120,13 @@ Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 * Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
 * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * Installiere AndroidAPS auf dem neuen Smartphone.
-* [Importiere die Einstellungen](../Usage/ExportImportSettings.md#import-settings) auf Deinem neuen Smartphone
+* [Import settings](ExportImportSettings-import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
-* Starte den Kopplungsprozess wie [oben](#pumpe-verbinden) beschrieben.
+* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
 * Manchmal kann es notwendig sein, die Kopplung von AndroidAPS zu löschen, indem Du auf dem Dana-i/RS Tab auf das Bluetooth-Symbol drückst.
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg.](../Usage/Timezone-traveling.md#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).

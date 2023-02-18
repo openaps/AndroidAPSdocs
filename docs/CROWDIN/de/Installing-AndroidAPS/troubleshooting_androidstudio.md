@@ -1,7 +1,7 @@
-(troubleshooting-android-studio)=
+(troubleshooting_androidstudio-troubleshooting-android-studio)=
 # Fehlerbehebung für Android Studio
 
-(lost-keystore)=
+(troubleshooting_androidstudio-lost-keystore)=
 ## Verlorener Keystore
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
@@ -9,12 +9,12 @@ If you try to install the apk, signed with a different keystore than before, you
 
 In case you cannot find your old keystore or its password anymore, proceed as follows:
 
-1. [Export settings](../Usage/ExportImportSettings.md#export-settings) on your phone.
+1. [Export settings](ExportImportSettings-export-settings) on your phone.
 2. Kopiere die Datei mit den Einstellungen von deinem Smartphone auf ein externes Gerät (d.h. dein Computer, externe Festplatte) oder lade sie in deinen Cloudspeicher hoch.
-4. Erstelle ein signiertes Apk für die neue Version, wie es im [Update Guide](../Installing-AndroidAPS/Update-to-new-version) beschrieben ist und übertrage es auf dein Smartphone.
+4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version.md) and transfer it to your phone.
 5. Deinstallieren die Vorgängerversion von AAPS auf Deinem Smartphone.
 6. Installiere die neue AAPS-Version auf Deinem Smartphone.
-7. [Import settings](../Usage/ExportImportSettings.md#import-settings) to restore your objectives and configuration.
+7. [Import settings](ExportImportSettings-import-settings) to restore your objectives and configuration.
 8. Prüfe deine Einstellungen und deaktiviere den Energiesparmodus.
 
    Falls du die Einstellungen nicht findest, kopiere sie von deinem externen Speicher auf dein Smartphone.
@@ -56,7 +56,7 @@ If you receive a failure message like
     ```
     ist deine git Installation fehlerhaft.
 
-  * [Prüfe die git Installation](../Installing-AndroidAPS/git-install.md#check-git-settings-in-android-studio)
+  * [Prüfe die git Installation](git-install-check-git-settings-in-android-studio)
 
   * Falls du mit Windows arbeitest und Git erst kurz zuvor installiert wurde, solltest du deinen Computer neu starten, um Git nach der Installation global verfügbar zu machen
 
@@ -134,7 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Jetzt ist es notwendig einen [Gradle Resync](#gradle-resync) auszulösen
 
-(unable-to-start-daemon-process)=
+(troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
   Wenn Du eine Fehlermeldung wie die unten siehst, verwendest Du wahrscheinlich ein Windows 10 32-Bit-Betriebssystem. Dies wird von Android Studio Version 3.5.1 und höher nicht unterstützt und daran können die AAPS Entwickler leider nichts ändern.
@@ -166,7 +166,7 @@ Wenn Du die Apk generierst, bekommst Du möglicherweise den Hinweis, dass das Ge
 
 ![APK mit 0 Build-Varianten erstellt](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-Diese Warnung ist falsch. Prüfe den Pfad den Du als "Destination Folder" (Ziel Speicherort) für die Erstellung angegeben hast (Schritt [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) und Du wirst die signierte APK dort finden!
+Diese Warnung ist falsch. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](Building-APK-generate-signed-apk)) and you will find the generated apk there!
 
 
 ## App was created with compiler/kotlin warnings
@@ -189,9 +189,9 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## No CGM data is received by AndroidAPS
 
-* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Verwende stattdessen die [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)  App.
+* Falls Du gepatchte Dexcom G6-App verwendest: Diese App ist veraltet. Use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* Falls Du xDrip+ verwendest: Identifiziere den Empfänger wie in den [xDrip+ Einstellungen](../Configuration/xdrip.md#identify-receiver) beschrieben.
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](xdrip-identify-receiver).
 
 
 ## App not installed
@@ -210,7 +210,7 @@ Dies scheint ein Fehler in Android Studio 3.5.1 und seiner Java-Umgebung in Wind
 
 ## App installiert, aber weiter die alte Version auf dem Smartphone
 
-Wenn Du die App erfolgreich erstellt, sie auf Dein Smartphone übertragen und dort erfolgreich installiert hast, jedoch weiter die alte Versionsnummer angezeigt wird, so hast Du wahrscheinlich versäumt, Deine [lokale Kopie zu aktualisieren](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy).
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](Update-to-new-version-update-your-local-copy)
 
 ## Keiner der oben genannten Löungsvorschläge funktioniert
 
@@ -222,7 +222,7 @@ Falls die oben genannten Tipps Dich nicht weiter bringen, kannst Du überlegen, 
 
     Oder verwende einfach einen neuen keystore.
 
-3. Erstelle die App von Grund auf neu wie [hier](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code) beschrieben.
+3. Build app from scratch as described [here](Building-APK-download-androidaps-code).
 
 4. Nachdem Du die APK erfolgreich erstellt hast, kannst Du die App auf Deinem Smartphone deinstallieren. Übertrage dann die neue APK auf Dein Smartphone und installiere diese.
 5. [Importiere Einstellungen](../Usage/ExportImportSettings) erneut, um deine Zielsetzungen und Einstellungen wiederherzustellen.
@@ -236,4 +236,4 @@ Falls auch die Neuerstellung der App von Grund auf Dein Problem nicht löst, kö
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Installiere Android Studio von Grund auf wie [hier](../Installing-AndroidAPS/Building-APK.md#install-android-studio) beschrieben.
+Install Android Studio from scratch as described [here](Building-APK-install-android-studio).

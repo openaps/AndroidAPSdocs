@@ -14,7 +14,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     ## Translation of the app
     
-    (translate-strings-for-androidaps-app)=
+    (translations-translate-strings-for-androidaps-app)=
     ### Translate strings for AndroidAPS app
     
     * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
@@ -43,7 +43,7 @@ Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stell
     
     When a proofreader approves a translation it will be added to the next version of AndroidAPS.
     
-    (translation-of-the-documentation)=
+    (translations-translation-of-the-documentation)=
     ## Translation of the documentation
     
     * Click the name of the docs page you want to translate

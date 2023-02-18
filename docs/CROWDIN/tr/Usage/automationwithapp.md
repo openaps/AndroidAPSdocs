@@ -32,7 +32,7 @@ AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSC
 
 AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Gelişmiş Ayarlar > 'Yalnızca NS yükle (senkronizasyon devre dışı)' ve 'NS'ye yükleme yok' seçeneğinin işaretini kaldırın.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Nightscout indirme tercihleri](../images/automate-aaps2.jpg)
 

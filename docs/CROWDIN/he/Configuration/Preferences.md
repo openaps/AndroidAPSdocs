@@ -29,7 +29,7 @@
 :depth: 2
 ```
 
-(general)=
+(Preferences-general)=
 ## כללי
 
 **Units**
@@ -52,10 +52,10 @@
 
 - Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
 
-(protection)=
+(Preferences-protection)=
 ### Protection (הגנה בסיסמאות)
 
-(master-password)=
+(Preferences-master-password)=
 #### סיסמה ראשית
 
 - Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
@@ -78,7 +78,7 @@
 
 - Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](../Configuration/Preferences.md#master-password).
+- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Protection
@@ -99,7 +99,7 @@
   :alt: Prompt biometric protection
   ```
 
-(skin)=
+(Preferences-skin)=
 #### סקין
 
 - You can choose from four types of skins:
@@ -127,7 +127,7 @@
   :alt: Skins depending on phone's display orientation
   ```
 
-(overview)=
+(Preferences-overview)=
 ## סקירה כללית
 
 - In overview section you can define preferences for home screen.
@@ -141,7 +141,7 @@
 - Useful while giving a presentation.
 - It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
 
-(buttons)=
+(Preferences-buttons)=
 ### מקשים
 
 - Define which buttons are visible on the bottom of your home screen.
@@ -152,7 +152,7 @@
   :alt: Preferences > Buttons
   ```
 
-(quick-wizard)=
+(Preferences-quick-wizard)=
 ### אשף מהיר
 
 - If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
@@ -167,7 +167,7 @@
   :alt: Preferences > Quick Wizard Button
   ```
 
-(default-temp-targets)=
+(Preferences-default-temp-targets)=
 ### ברירות מחדל ערכי מטרה
 
 - [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
@@ -182,10 +182,10 @@
 
 ### מילוי\תיחול כמויות סטנדרטיות של אינסולין
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](../Getting-Started/Screenshots.md#action-tab).
+- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
 - Pre-set values can be defined in this dialogue.
 
-(range-for-visualization)=
+(Preferences-range-for-visualization)=
 ### טווח הצגה
 
 - Define which part of the graph on the home screen shall be you target range and be filled with green background.
@@ -212,13 +212,13 @@
   :alt: Preferences > Notes in treatment dialogs
   ```
 
-(status-lights)=
+(Preferences-status-lights)=
 ### אורות חיווי
 
 - נורות הסטטוס נותנות חיווי ויזואלי עבור
 
   - גיל חיישן
-  - Sensor battery level for certain smart readers (see [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery) for details).
+  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
   - גיל אינסולין (משך השימוש במכל האינסולין הנוכחי)
   - רמת המכל (יחידות)
   - גיל הצינורית
@@ -235,7 +235,7 @@
   :alt: Preferences > Status Lights
   ```
 
-(advanced-settings-overview)=
+(Preferences-advanced-settings-overview)=
 ### הגדרות מתקדמות (סקירה כללית)
 
 ```{image} ../images/Pref2021_OV_Adv.png
@@ -250,19 +250,19 @@
 
 #### יועץ הבולוסים
 
-- If you run [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
+- If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
 - If correction bolus is accepted **no carbs** will be recorded.
 
 - An alarm will be started when glucose value is in good level to start eating.
 
-- You have to enter [Bolus wizard](../Getting-Started/Screenshots.md#bolus-wizard) again and enter the amount of carbs you want to eat.
+- You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
 
   ```{image} ../images/Home2021_BolusWizard_CorrectionOffer.png
   :alt: Bolus advisor message
   ```
 
-(superbolus)=
+(Preferences-superbolus)=
 #### סופר בולוס
 
 - Option to enable superbolus in bolus wizard.
@@ -292,7 +292,7 @@
 
 ## לולאה
 
-(aps-mode)=
+(Preferences-aps-mode)=
 ### מצב APS
 
 - Toggle between open and closed looping as well as low glucose suspend (LGS)
@@ -300,20 +300,20 @@
 - **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
-(minimal-request-change)=
+(Preferences-minimal-request-change)=
 ### Minimal request change \[%\]
 
 - בזמן השימוש בלולאה פתוחה, תקבלו התראות בכל פעם שה-AAPS ימליץ על התאמת בזאל זמנית.
 - To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
 - זוהי ההגדרה של השינוי היחסי הדרוש כדי להפעיל התראה על המלצה על שינוי.
 
-(advanced-meal-assist-ama-or-super-micro-bolus-smb)=
+(Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Advanced Meal Assist (AMA) או סופר מיקרו בולוס (SMB)
 
 Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
 
-- [Advanced meal assist (OpenAPS AMA)](../Usage/Open-APS-features.md#advanced-meal-assist-ama) - state of the algorithm in 2017
-- [Super Micro Bolus (OpenAPS SMB)](../Usage/Open-APS-features.md#super-micro-bolus-smb) - most recent algorithm for advanced users
+- [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
+- [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### הגדרות OpenAPS AMA
 
@@ -326,7 +326,7 @@ Depending on your settings in [config builder](../Configuration/Config-Builder.m
 - The value is measured in units per hour (U/h).
 - It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
 - For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
-- See also [detailed feature description](../Usage/Open-APS-features.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
 #### Maximum basal IOB OpenAPS can deliver \[U\]
 
@@ -350,7 +350,7 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
 
 #### Autosens (זיהוי רגישות)
 
-- [Autosens](../Usage/Open-APS-features.md#autosens) looks at blood glucose deviations (positive/negative/neutral).
+- [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
 - It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
 - If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
 
@@ -359,20 +359,20 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
 - Normally you do not have to change the settings in this dialogue!
 - If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
 
-(openaps-smb-settings)=
+(Preferences-openaps-smb-settings)=
 ### הגדרות OpenAPS SMB
 
-- In contrast to AMA, [SMB](../Usage/Open-APS-features.md#super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
+- In contrast to AMA, [SMB](Open-APS-features-super-micro-bolus-smb) does not use temporary basal rates to control glucose levels, but mainly small super micro boluses.
 
-- You must have started [objective 9](../Usage/Objectives.md#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
+- You must have started [objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.
 
-- The first three settings are explained [above](../Configuration/Preferences.md#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
+- The first three settings are explained [above](Preferences-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-- Details on the different enable options are described in [OpenAPS feature section](../Usage/Open-APS-features.md#enable-smb).
+- Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
 - *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. ערך זה מונע מהמערכת להזריק SMB לעתים קרובות מדי (לדוגמה במקרה של הגדרת ערך מטרה זמני). אל תשנו הגדרה זו אלא אם כן אתם יודעים בדיוק את ההשלכות.
 
-- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](../Usage/Open-APS-features.md#autosens) will modify your glucose target according to your blood glucose deviations.
+- If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
 - If target is modified it will be displayed with a green background on your home screen.
 
@@ -380,7 +380,7 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
   :alt: Target modified by autosens
   ```
 
-(carb-required-notification)=
+(Preferences-carb-required-notification)=
 #### הודעה על צריכת פחמימות
 
 - This feature is only available if SMB algorithm is selected.
@@ -438,12 +438,12 @@ When you begin looping, **it is advised to set Max Basal IOB to 0** for a period
 
 ### הגדרות מתקדמות - יחס Autosens
 
-- Define min. and max. [autosens](../Usage/Open-APS-features.md#autosens) ratio.
+- Define min. and max. [autosens](Open-APS-features-autosens) ratio.
 - Normally standard values (max. 1.2 and min. 0.7) should not be changed.
 
 ## הגדרות משאבה
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](../Configuration/Config-Builder.md#pump).  צמדו והגדירו את המשאבה בהתאם להוראות של המשאבה:
+The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  צמדו והגדירו את המשאבה בהתאם להוראות של המשאבה:
 
 - [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
 - [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
@@ -453,7 +453,7 @@ The options here will vary depending on which pump driver you have selected in [
 
 אם אתם משתמשים ב-AndroidAPS עם לולאה פתוחה עם משאבה שאינה נתמכת, ודאו שבחרתם משאבה וירטואלית בבונה התצורה.
 
-(nsclient)=
+(Preferences-nsclient)=
 ## NSClient
 
 ```{image} ../images/Pref2020_NSClient.png
@@ -465,7 +465,7 @@ The options here will vary depending on which pump driver you have selected in [
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](../Configuration/Config-Builder.md#local-profile) are uploaded to your Nightscout site.
+- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
 
 ### הגדרות חיבור
 
@@ -485,7 +485,7 @@ The options here will vary depending on which pump driver you have selected in [
 - They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
 - If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
 
-(advanced-settings-nsclient)=
+(Preferences-advanced-settings-nsclient)=
 ### הגדרות מתקדמות (NSClient)
 
 ```{image} ../images/Pref2020_NSClientAdv.png
@@ -496,13 +496,13 @@ The options here will vary depending on which pump driver you have selected in [
 
 - *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
 
-  - You need to [go through AAPS](../Configuration/Config-Builder.md#bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
 - *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
 
 ## תקשורת SMS
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](../Configuration/Config-Builder.md#sms-communicator).
+- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
 - This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
 - Further information is described in [SMS Commands](../Children/SMS-Commands.md).
 - Additional safety is obtained through use of an authenticator app and additional PIN at token end.
@@ -538,7 +538,7 @@ The options here will vary depending on which pump driver you have selected in [
 ```
 
 - Standard recipient of logs is <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](../Configuration/Preferences.md#master-password). במקרה זה יש להזין את הסיסמה הראשית בכל פעם שהגדרות מיוצאות או מיובאות.
+- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). במקרה זה יש להזין את הסיסמה הראשית בכל פעם שהגדרות מיוצאות או מיובאות.
 
 ## Open Humans
 

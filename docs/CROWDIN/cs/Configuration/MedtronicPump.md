@@ -25,7 +25,7 @@ You can find out how to check the firmware on the pumps at [OpenAPS docs](https:
 
 A comparision chart for the various Rileylink compatible devices can be found at [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
 
-(configuration-of-the-pump)=
+(MedtronicPump-configuration-of-the-pump)=
 
 ## Nastavení pumpy
 
@@ -54,7 +54,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump.md#faq) if you are unsure which option to select): 
+- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](MedtronicPump-faq) if you are unsure which option to select): 
     - for US & Canada, frequency used is 916 Mhz
     - for Worldwide, frequency used is 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
@@ -93,10 +93,10 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 At the bottom of the screen there are three buttons:
 
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](MedtronicPump-rl-status-rileylink-status))
 
-(pump-history)=
+(MedtronicPump-pump-history)=
 
 ## Historie pumpy
 
@@ -104,7 +104,7 @@ At the bottom of the screen there are three buttons:
 
 Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
-(rl-status-rileylink-status)=
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## Stav RL (Stav RileyLink)
 
@@ -154,11 +154,11 @@ The GNARL code fully supports all of the functions used by the Medtronic driver 
 
 **Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
 
-(faq)=
+(MedtronicPump-faq)=
 
 ## FAQ
 
-(what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
+(MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### What to do if I loose connection to RileyLink and/or pump?
 

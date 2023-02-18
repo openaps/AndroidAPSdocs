@@ -42,7 +42,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
    
    ![xDrip+ Temel Ayarlar 3](../images/xDrip_Basic3.png)
 
-(identify-receiver)=
+(xdrip-identify-receiver)=
 
 ### Alıcı tanımlama
 
@@ -55,7 +55,7 @@ Telefonunuz Android 10 çalıştırıyorsa ve xDrip+ ana sürüm ile ilgili soru
 
 * Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
 * xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### G6 verici seri numarasına bağlı xDrip+ sürümü
 
@@ -96,7 +96,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-(connect-g6-transmitter-for-the-first-time)=
+(xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### G6 vericisine ilk kez bağlanma
 
@@ -145,7 +145,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    ![xDrip+ Dexcom Verici 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-(transmitter-battery-status)=
+(xdrip-transmitter-battery-status)=
 
 ### Verici pil durumu
 
@@ -159,9 +159,9 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 
 ### Verici ömrünü uzatın
 
-* Şimdiye kadar 8G, 8H veya 8J seri nosu ile başlayan vericilerin ömrü uzatılamamıştır. Aynı durum 81 seri nosu ile başlayıp yazılımı 1.6.5.27 starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
+* Şimdiye kadar 8G, 8H veya 8J seri nosu ile başlayan vericilerin ömrü uzatılamamıştır. Aynı durum 81 seri nosu ile başlayıp yazılımı 1.6.5.27 starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * Sensörlerin başlatılmasındaki zorlukları önlemek için verici ömrünün 100. gününden önce uzatılması şiddetle tavsiye edilir.
-* 81 seri no ile başlayan ve yazılımı 1.6.5.**27**olan bir verici 100. günden sonra yalnızca [mühendislik modu](../Usage/Enabling-Engineering-Mode-in-xDrip) açılır ve 'yerel mod' devre dışı bırakılır ise süre uzatma mümkündür (hamburger menüsü -> ayarlar -> G5/G6 hata ayıklama ayarları -> yerel algoritma) çünkü verici hard reset mümkün DEĞİLDİR.
+* 81 seri no ile başlayan starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Verici ömrü uzatılırken çalışan sensör oturumu durdurulacaktır. Bu nedenle vericiyi sensör değişiminden önce uzatın ve 2 saatlik yeni bir ısınma aşaması olacağını unutmayın.
 * Sensörü hamburger menüsü aracılığıyla manuel olarak durdurun.
 * `mühendislik moduna` geçin: 
@@ -181,7 +181,7 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
 
 * Başarılı uzatma ve sensörün başlatılmasından sonra verici günleri 0 olacaktır.
 
-(replace-transmitter)=
+(xdrip-replace-transmitter)=
 
 ### Vericiyi değiştirme
 
@@ -283,7 +283,7 @@ Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the
    * xDrip+ algoritmasını kullanıyorsanız, ısınmayı önlemek için 2 saatten daha önce bir süre ayarlayabilirsiniz. Okumalar çok düzensiz olabilir. Bu nedenle, bu tavsiye edilmez.
 * Sensör kodunu girin (sensör ambalajının üzerinde) 
    * İleride gerekeceği için kodu saklayın (örn. verici değişimi ve yeniden sensör başlatma için)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * G6'yı "native mode" kullanırsanız kalibrasyon gerekmez. xDrip+, 2 saatlik ısınmadan sonra okumaları otomatik olarak gösterecektir.
 * xDrip+ ilk okumaları göstermeden önce orijinal Dexcom Alıcısını (kullanılıyorsa) açmayın.
    
@@ -291,7 +291,7 @@ Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the
    
    ![xDrip+ Dexcom Sensörü Başlat 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-(retrieve-sensor-code)=
+(xdrip-retrieve-sensor-code)=
 
 ### Sensör kodunu öğrenme
 
@@ -307,7 +307,7 @@ Dexcom G6 vericinizin seri numarası is starting with 8G, 8H or 8Juse one of the
    
    ![xDrip Dexcom Sensör Kodu Alma](../images/xDrip_Dexcom_SensorCode.png)
 
-(troubleshooting-dexcom-g5-g6-and-xdrip)=
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Dexcom G5/G6 ve xDrip+ ile İlgili Sorunları Giderme
 
@@ -355,7 +355,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Libre akıllı okuyucu pil seviyesi
 
 * MiaoMiao 2 gibi akıllı okuyucuların pil seviyesi AAPS'de görüntülenebilir.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Libre Vericiyi Bağla & sensörü başlat
 

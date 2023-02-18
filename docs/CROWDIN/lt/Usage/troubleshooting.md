@@ -8,11 +8,11 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 
 ### Building & updating
 
-* [Prarasta raktų saugykla](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore)
-* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.html)
+* [Prarasta raktų saugykla](troubleshooting_androidstudio-lost-keystore)
+* [Troubleshooting AndroidStudio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
 
 ### Parametrai
-* [Profilis](../Usage/Profiles.md#troubleshooting-profile-errors)
+* [Profilis](Profiles-troubleshooting-profile-errors)
 
   ![Error: Basal not aligned to hours](../images/Screen_DifferentPump.png)
 
@@ -23,11 +23,11 @@ Additional useful information might also be available in the [FAQ](../Getting-St
 * [Nightscout Client](../Usage/Troubleshooting-NSClient.html)
 
 ### Naudojimas
-* [Wrong carb values](../Usage/COB-calculation.md#detection-of-wrong-cob-values)
+* [Wrong carb values](COB-calculation-detection-of-wrong-cob-values)
 
    ![Error: Slow carb absorption](../images/Calculator_SlowCarbAbsorption.png)
 
-* [SMS commands](../Children/SMS-Commands.md#troubleshooting)
+* [SMS commands](SMS-Commands-troubleshooting)
 
 ### Frequent bluetooth connection problems
 
@@ -52,11 +52,11 @@ Here are examples how to find them on specific android phones.
 
 * Now search and select the app "Bluetooth".
 
-  ![Bluetooth app](../images/troubleshooting/pixel/04_bluetooth.png)
+  ![Bluetooth app](../images/troubleshooting/pixel/03_bluetooth.png)
 
 * Click the "App battery usage" and select "Not optimized".
 
-  ![BT Battery optimization](../images/troubleshooting/pixel/05_btunrestricted.png)
+  ![BT Battery optimization](../images/troubleshooting/pixel/04_btunrestricted.png)
 
 
 #### Samsung phones
@@ -84,27 +84,27 @@ Here are examples how to find them on specific android phones.
 
 ## NGJ
 
-* [Bendrieji](../Hardware/GeneralCGMRecommendation.md#troubleshooting)
-* [Dexcom G6](../Hardware/DexcomG6.html#troubleshooting-g6)
-* [Libre 3](../Hardware/Libre3.html#experiences-and-troubleshooting)
-* [Libre 2](../Hardware/Libre2.html#experiences-and-troubleshooting)
-* [xDrip - no CGM data](../Configuration/xdrip.md#identify-receiver)
-* [xDrip - Dexcom troubleshooting](../Configuration/xdrip.md#troubleshooting-dexcom-g5-g6-and-xdrip)
+* [Bendrieji](GeneralCGMRecommendation-troubleshooting)
+* [Dexcom G6](DexcomG6-troubleshooting-g6)
+* [Libre 3](Libre3-experiences-and-troubleshooting)
+* [Libre 2](Libre2-experiences-and-troubleshooting)
+* [xDrip - no CGM data](xdrip-identify-receiver)
+* [xDrip - Dexcom troubleshooting](xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)
 
 ## Pompos
 
-* [DanaRS](../Configuration/DanaRS-Insulin-Pump.md#dana-rs-specific-errors)
-* [Accu-Chek Combo general](../Usage/Accu-Chek-Combo-Tips-for-Basic-usage.html)
-* [Accu-Chek Combo + Ruffy](../Configuration/Accu-Chek-Combo-Pump.md#why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md#insight-specific-errors)
-* [Medtronic + RileyLink](../Configuration/MedtronicPump.md#what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
+* [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
+* [Accu-Chek Combo general](Accu-Chek-Combo-Tips-for-Basic-usage)
+* [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
+* [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Telefonai
 
-* [Jelly](../Usage/jelly.html)
-* [Huawei bluetooth & battery optimization](../Usage/huawei.html)
+* [Jelly](../Usage/jelly.md)
+* [Huawei bluetooth & battery optimization](../Usage/huawei.md)
 
 ## Išmanieji laikrodžiai
 
-* [Troubleshooting Wear app](../Configuration/Watchfaces.md#troubleshooting-the-wear-app)
-* [Sony Smartwatch 3](../Usage/SonySW3.html)
+* [Troubleshooting Wear app](Watchfaces-troubleshooting-the-wear-app)
+* [Sony Smartwatch 3](../Usage/SonySW3.md)

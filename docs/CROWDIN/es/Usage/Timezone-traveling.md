@@ -4,7 +4,7 @@
 
 No hay problema con cambiar el huso horario en el teléfono porque la bomba no utiliza el historial
 
-(danarv2-danars)=
+(Timezone-traveling-danarv2-danars)=
 
 ## DanaRv2, DanaRS
 
@@ -26,7 +26,7 @@ To avoid this there are two possibilities:
    
    * p.e. Viena -> Nueva York: cambio de perfil +6 horas
    * p.e. Viena -> Sydney: cambio de perfil -8 horas
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Opción 2: Suprimir historial de bomba
 
@@ -42,7 +42,7 @@ When get out of plane:
 * activar el teléfono
 * deje que el teléfono se conecte a la bomba y se ajuste de tiempo
 
-(insight)=
+(Timezone-traveling-insight)=
 
 ## Insight
 
@@ -54,7 +54,7 @@ It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
 So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
 
-(time-adjustment-daylight-savings-time-dst)=
+(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 # Ajuste horario de verano (DST)
 
@@ -62,7 +62,7 @@ Depending on pump and CGM setup, jumps in time can lead to problems. With the Co
 
 If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
 
-(accu-chek-combo)=
+(Timezone-traveling-accu-chek-combo)=
 
 ## Accu-Check Combo
 

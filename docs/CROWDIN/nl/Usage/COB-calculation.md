@@ -20,7 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Als de door jou ingestelde minimale koolhydraten absorptie (min_5min_carbimpact) wordt gebruikt in plaats van de waarde berekend op basis van afwijkingen, verschijnt een oranje stip op jouw COB grafiek.
 
-(detection-of-wrong-cob-values)=
+(COB-calculation-detection-of-wrong-cob-values)=
 ## Detectie van verkeerde COB-waarden
 
 AAPS waarschuwt je als je op het punt staat om een bolus te gaan geven wanneer je nog COB van een vorige maaltijd hebt, en als het algoritme denkt dat de huidige COB berekening verkeerd kan zijn. In dat geval zie je een extra hint op het bevestigingsscherm nadat je op OK hebt gedrukt in de bolus wizard.
@@ -51,4 +51,4 @@ In de bovenstaand screenshot werd bij het berekenen van de koolhydraat absorptie
 
 ## Handmatige correctie van ingevoerde koolhydraten
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).

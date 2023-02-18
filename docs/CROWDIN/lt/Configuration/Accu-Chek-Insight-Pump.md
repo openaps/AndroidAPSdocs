@@ -12,7 +12,7 @@
 
 Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
-* An Android phone (Basically every Android version would work with Insight, but check on the [Module](../Module/module.md#phone) page which Android version is required to run AndroidAPS.)
+* An Android phone (Basically every Android version would work with Insight, but check on the [Module](module-phone) page which Android version is required to run AndroidAPS.)
 * Jūsų telefone įdiegtos AndroidAPS programos
 
 ## Sąranka
@@ -50,11 +50,11 @@ Pastaba: AAPS visada duomenis įrašys į **pirmąjį pompos bazės profilį**.
 
 Pastaba: tarp pompos ir telefono nebus nuolatinio ryšio. Ryšys bus užmegztas tik prireikus (t. y. nustatyti laikiną bazę, suleisti bolusą, perskaityti pompos istoriją ir t.t.). Priešingu atveju telefono ir pompos baterijos greitai išseks.
 
-(settings-in-aaps)=
+(Accu-Chek-Insight-Pump-settings-in-aaps)=
 
 ## AAPS nustatymai
 
-**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](../Configuration/Preferences.md#advanced-settings-nsclient)).
+**Note : It is now possible (only with AAPS v2.7.0 and above) to use ‘Always use basal absolute values’ if you want to use Autotune with Insight pump, even if 'sync is enabled' with Nightscout.** (In AAPS go to [Preferences > NSClient > Advanced Settings](Preferences-advanced-settings-nsclient)).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -114,7 +114,7 @@ Configure alarms in the pump as follows:
 
 This will silence all alarms from the pump, allowing AndroidAPS to decide if an alarm is relevant to you. If AndroidAPS does not acknowledge an alarm, its volume will increase (first beep, then vibration).
 
-(vibration)=
+(Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibracija
 
@@ -122,7 +122,7 @@ Depending on the firmware version of your pump, the Insight will vibrate briefly
 
 * Programinė versija 1.x: Jokios vibracijos.
 * Programinė versija 2.x: Vibracija negali būti išjungta.
-* Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (minimum [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes.md#version-2-6-1-4))
+* Programinė versija 3.x: AndroidAPS suleidžia bolusą tyliai. (minimum [version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Firmware version can be found in the menu.
 
@@ -132,7 +132,7 @@ Battery life for Insight when looping range from 10 to 14 days, max. 20 days. Th
 
 The Insight pump has a small internal battery to keep essential functions like the clock running while you are changing the removable battery. If changing the battery takes too long, this internal battery may run out of power, the clock will reset, and you will be asked to enter a new time and date after inserting a new battery. If this happens, all entries in AndroidAPS prior to the battery change will no longer be included in calculations as the correct time cannot be identified properly.
 
-(insight-specific-errors)=
+(Accu-Chek-Insight-Pump-insight-specific-errors)=
 
 ## Insight specifinės klaidos
 
@@ -150,4 +150,4 @@ In this case turn off bluetooth on pump AND smartphone for about 10 seconds and 
 
 ## Kelionė per laiko zonas su Insight pompa
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#insight).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-insight).

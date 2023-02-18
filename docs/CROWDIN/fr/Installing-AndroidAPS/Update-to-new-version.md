@@ -6,28 +6,28 @@
 
 ## Remarques importantes
 
-* Veuillez mettre à jour dès que possible quand une nouvelle version est disponible. You will receive an [information on the AndroidAPS home screen](../Installing-AndroidAPS/Releasenotes.md#release-notes) about the new version.
+* Veuillez mettre à jour dès que possible quand une nouvelle version est disponible. You will receive an [information on the AndroidAPS home screen](Releasenotes-release-notes) about the new version.
 * À partir de la version 2.7, l'emplacement du code a été déplacé vers <https://github.com/nightscout/AndroidAPS>. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AndroidAPS et de faire un [nouveau clone](../Installing-AndroidAPS/Building-APK.md).
 * Utilisez **[Android Studio Version 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
-* Assurez-vous de lire les [Notes de version](../Installing-AndroidAPS/Releasenotes) pour la version actuelle
+* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
+* Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) for the current version
 
 ## Aperçu de la mise à jour de votre version d'AndroidAPS
 
-1. [Export your settings](../Usage/ExportImportSettings.md#export-settings) from the existing AAPS version on your phone. Vous n'en avez peut-être pas besoin, mais mieux vaut les sauver que regretter de ne pas l'avoir fait.
-2. [Update local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
-3. [Constuire un apk signé](../Installing-AndroidAPS/Update-to-new-version.md#build-the-signed-apk)
-4. [Transfer the built apk](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) to your phone and install it
-5. [Vérifier la version](#verifier-la-version-d-aaps-sur-le-telephone) dans AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](../Configuration/xdrip.md#identify-receiver) in xDrip or use the ['Build your own Dexcom App'](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app).
+1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing AAPS version on your phone. Vous n'en avez peut-être pas besoin, mais mieux vaut les sauver que regretter de ne pas l'avoir fait.
+2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+3. [Constuire un apk signé](Update-to-new-version-build-the-signed-apk)
+4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
+5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AndroidAPS
+6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 Dans le cas où vous auriez des problèmes, allez voir la page spécifique de [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
 
 ## 1. Exporter les paramètres
 
-See the [Export & import settings](../Usage/ExportImportSettings.md#export-settings) page if you don't remember how to do this.
+See the [Export & import settings](ExportImportSettings-export-settings) page if you don't remember how to do this.
 
-(update-your-local-copy)=
+(Update-to-new-version-update-your-local-copy)=
 
 ## 2. Mettez à jour votre copie locale
 
@@ -63,21 +63,23 @@ If you have already changed the URL or update from version 2.8.x, follow these s
     
     ![Android Studio - Gradle Sync](../images/studioSetup/40_BackgroundTasks.png)
 
-(build-the-signed-apk)=
+(Update-to-new-version-build-the-signed-apk)=
 
 ## 3. Construisez l'APK signé
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](Building-APK-generate-signed-apk).
 
 ## 4. Transférez l'apk
 
 You need to transfer the apk to your phone so you can install it.
 
-See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+See the instructions for [Transfer APK to smartphone](Building-APK-transfer-apk-to-smartphone)
 
 ## 5. Installer l'apk
 
 On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+
+(Update-to-new-version-check-aaps-version-on-phone)=
 
 ## 6. Vérifier la version d'AAPS sur le téléphone
 

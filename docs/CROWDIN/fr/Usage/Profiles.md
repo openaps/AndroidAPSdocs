@@ -1,8 +1,8 @@
-(profile-switch)=
+(Profiles-profile-switch)=
 
 # Changement de profil
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -30,7 +30,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 * L'algorithme de la boucle (ouvert ou fermé) continuera de fonctionner au dessus du profil au pourcentage sélectionné. Ainsi, par exemple, des pourcentages différents peuvent être mis en place sur un profil pour différentes étapes du cycle hormonal.
 
-(time-shift)=
+(Profiles-time-shift)=
 
 ## Décalage horaire
 
@@ -51,7 +51,7 @@ Within the "profile switch" you can choose two additional changes which used to 
 
 This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
 
-(troubleshooting-profile-errors)=
+(Profiles-troubleshooting-profile-errors)=
 
 ## Dépannage des erreurs de profil
 

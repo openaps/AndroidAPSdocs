@@ -47,11 +47,11 @@
 
   ![Avertissement de glycémie jaune](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
+For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
 
 ## Message d'erreur : Données provenant de pompes différentes
 
    ![Message d'erreur : Données provenant de pompes différentes](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.
+To resolve this issue go to [config builder](Config-Builder-pump). Sélectionnez la pompe virtuelle puis resélectionnez votre pompe réelle. Cela réinitialisera l'état de la pompe.

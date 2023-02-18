@@ -42,7 +42,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
    
    ![xDrip+ Paramètres de base 3](../images/xDrip_Basic3.png)
 
-(identify-receiver)=
+(xdrip-identify-receiver)=
 
 ### Identifier le récepteur
 
@@ -55,7 +55,7 @@ Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la
 
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
 
@@ -96,7 +96,7 @@ What’s clear is that using the G6 is perhaps a little more complex than it as 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
-(connect-g6-transmitter-for-the-first-time)=
+(xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### Connecter l'émetteur G6 pour la première fois
 
@@ -145,7 +145,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    
    ![xDrip+ Transmetteur Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
-(transmitter-battery-status)=
+(xdrip-transmitter-battery-status)=
 
 ### Etat de la batterie de l'émetteur
 
@@ -159,9 +159,9 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 ### Étendre la durée de vie de l'émetteur
 
-* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](../Configuration/xdrip.md#transmitter-battery-status)).
+* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
-* L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le ["mode ingénierie"](../Usage/Enabling-Engineering-Mode-in-xDrip) est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
+* L'utilisation d'émetteurs dont le numéro de série starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * La session en cours du capteur sera stoppée lors de l'extension de la durée de vie de l'émetteur. Donc étendre la durée de vie avant un changement de capteur, ou soyez conscient qu'il y aura une nouvelle phase de démarrage du capteur d'une durée de 2h.
 * Arrêtez le capteur manuellement via le menu hamburger.
 * Basculez dans le mode `engineering` : 
@@ -181,7 +181,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 * Le nombre de jours du transmetteur doit être à 0 après l'extension réussie de l'émetteur et le démarrage du capteur.
 
-(replace-transmitter)=
+(xdrip-replace-transmitter)=
 
 ### Remplacement du transmetteur
 
@@ -283,7 +283,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
    * Si vous utilisez l'algorithme xDrip+, vous pouvez définir une heure d'insertion antérieure de 2 heures pour éviter le temps de démarrage. Les glycémies peuvent être très irrégulière. Par conséquent, ce n'est pas recommandé.
 * Entrez le code du capteur (sur la protection du capteur) 
    * Conserver le code pour un usage ultérieur (par ex. pour redémarrer le transmetteur s'il a dû être retiré)
-   * Code can also be found in [xDrip+ logs](../Configuration/xdrip.md#retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Aucune calibration n'est nécessaire si vous utilisez le G6 en "mode natif". xDrip+ affichera automatiquement les glycémies après les 2 heures de démarrage.
 * Ne rallumez pas le récepteur Dexcom d'origine (s'il est utilisé) avant que xDrip+ n'affiche les premières lectures.
    
@@ -291,7 +291,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
    
    ![xDrip+ Démarrage Capteur Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
 
-(retrieve-sensor-code)=
+(xdrip-retrieve-sensor-code)=
 
 ### Récupérez le code du capteur
 
@@ -307,7 +307,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
    
    ![xDrip+ Récupérer Code Capteur Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
-(troubleshooting-dexcom-g5-g6-and-xdrip)=
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Dépannage Dexcom G5/G6 et xDrip+
 
@@ -355,7 +355,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Niveau de batterie du transmetteur Freestyle Libre
 
 * Le niveau de batterie de certains transmetteurs comme le MiaoMiao 2 est affiché dans AAPS.
-* Details can be found on [screenshots page](../Getting-Started/Screenshots.md#sensor-level-battery).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 

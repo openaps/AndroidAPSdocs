@@ -79,7 +79,7 @@
 
 ## Use SMS commands
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](../Children/SMS-Commands.md#commands) below.
+- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
 
 - The AAPS phone will respond to confirm success of command or status requested.
 
@@ -91,10 +91,10 @@
 
 **Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
 
-(commands)=
+(SMS-Commands-commands)=
 ## Commands
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](../translations.md#translate-strings-for-androidaps-app).
+Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-androidaps-app).
 
 ```{image} ../images/SMSCommands.png
 :alt: SMS Commands Example
@@ -162,7 +162,7 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - HELP \* Response: BG, LOOP, TREATMENTS, .....
 - HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
 
-(troubleshooting)=
+(SMS-Commands-troubleshooting)=
 ## Problemen oplossen
 
 ### Multiple SMS

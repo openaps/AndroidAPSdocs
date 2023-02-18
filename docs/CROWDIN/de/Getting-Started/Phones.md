@@ -1,4 +1,4 @@
-(list-of-tested-phones)=
+(Phones-list-of-tested-phones)=
 
 # Liste der getesteten Smartphones
 
@@ -18,7 +18,7 @@ Nachdem Du die Formulardaten ausgefüllt hast, wird der Betreuer die Daten über
 
 Im Falle von Fragen oder Problemen mit der Tabelle kontaktiere uns bitte direkt oder über einen GitHub Issue für das openaps/AndroidAPSDocs Projekt.
 
-(phone-background)=
+(Phones-phone-background)=
 
 # Handy Hintergrundbild
 

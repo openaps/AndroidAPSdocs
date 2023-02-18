@@ -20,7 +20,7 @@ absorption is calculated to have `COB == 0` after specified time
 
 Si se utiliza la absorción mínima de carbohidratos (min_5m_carbimpact) en lugar del valor calculado a partir de las desviaciones de BG, aparece un punto naranja en el gráfico COB.
 
-(detection-of-wrong-cob-values)=
+(COB-calculation-detection-of-wrong-cob-values)=
 ## Detección de valores COB incorrectos
 
 AAPS warns you if you are about to bolus with COB from a previous meal and the algorithm thinks that current COB calculation could be wrong. En este caso, le dará una sugerencia adicional en la pantalla de confirmación después del uso del asistente en bolo.
@@ -51,4 +51,4 @@ In the screenshot above, 41% of time the carb absorption was mathematically calc
 
 ## Corrección manual de los carbohidratos ingresados
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](../Getting-Started/Screenshots.md#carb-correction).
+If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).

@@ -30,7 +30,7 @@ Pomocník s profilem nabízí datové sady dětských pacientů do 18 let ze dvo
 6. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 7. Zobrazí se porovnání dvou upravených profilů.
 
-Once you are fine with the profile adjustments you can [clone the profile](../Configuration/profilehelper.md#clone-profile) as described below.
+Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
 
 ## Porovnání dvou profilů
 
@@ -55,10 +55,10 @@ You can use profile helper also to compare to different profiles or profile swit
 8. Klikněte na tlačítko "POROVNAT PROFILY" nahoře na obrazovce.
 9. Zobrazí se porovnání dvou upravených profilů.
 
-(clone-profile)=
+(profilehelper-clone-profile)=
 ## Klonování profilu
 
-If you use [local profiles](../Configuration/Config-Builder.md#local-profile) you can clone a profile / profile switch directly from profile helper.
+If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Pomocník profilu Klonování profilu / přepnutí profilu
