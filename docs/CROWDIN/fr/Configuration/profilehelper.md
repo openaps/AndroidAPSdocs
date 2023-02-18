@@ -1,6 +1,6 @@
 # Assistant Profil
 
-Profile helper offers two functions:
+L'assistant profil a deux fonctions :
 
 1. Trouver un profil pour les enfants
 2. Comparer deux profils ou changements de profil pour cloner un nouveau profil
