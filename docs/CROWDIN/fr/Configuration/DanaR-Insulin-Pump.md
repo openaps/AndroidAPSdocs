@@ -23,4 +23,4 @@
 
 ## Voyager avec différents fuseaux horaires avec la pompe DanaR
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](Timezone-traveling-danarv2-danars).
