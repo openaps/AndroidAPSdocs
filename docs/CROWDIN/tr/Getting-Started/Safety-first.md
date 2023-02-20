@@ -1,14 +1,14 @@
 # Önce Güvenlik
 
-**When you decide to build your own artificial pancreas, it's always important to think about security and safety, and to understand the impact of all your actions**
+**Kendi yapay pankreas sisteminizi oluşturmaya karar verdiğinizde, her zaman güvenlik ve emniyet hakkında düşünmek ve tüm eylemlerinizin etkisini anlamak önemlidir**
 
 ## Genel
 
-- AndroidAPS is a just a tool to help you manage diabetes, it is not a fully automated system you can install and forget!
-- Do not assume that AndroidAPS will never make mistakes. Bu program, insülin iletiminizin kontrolünü ele alıyor. Her zaman izleyin, nasıl çalıştığını anlayın ve eylemlerini nasıl yorumlayacağınızı öğrenin.
-- Remember that, once paired, the phone can instruct the pump to do anything. Bir çocuk tarafından kullanılıyorsa telefona yalnızca AndroidAPS yükleyin ve iletişim için kullanın. Truva atları, virüsler veya sisteminize müdahale edebilecek botlar gibi kötü amaçlı yazılımları bulaştırabilecek gereksiz uygulamalar veya oyunlar (!!!) yüklemeyin.
-- Install all security updates provided by your phone manufacturer and Google.
-- You might also need to change your diabetes habits as you change your therapy by using a closed loop system. Örneğin bazı insanlar, AndroidAPS otomatik insülini azalttığı (veya durdurduğu) için daha az hipo tedavisine ihtiyaç duyduklarını rapor ediyorlar.
+- AndroidAPS, şeker hastalığını yönetmenize yardımcı olacak bir araçtır, programı yükleyip KŞ takibini unutabileceğiniz tam otomatik bir sistem değildir!
+- AndroidAPS'in hiçbir zaman hata yapmayacağını varsaymayın. Bu program, insülin iletiminizin kontrolünü ele alıyor. Her zaman izleyin, nasıl çalıştığını anlayın ve eylemlerini nasıl yorumlayacağınızı öğrenin.
+- Telefonun pompa ile eşleştirildiğinde, pompaya her türlü talimatı verebileceğini unutmayın. Bir çocuk tarafından kullanılıyorsa telefona yalnızca AndroidAPS yükleyin ve iletişim için kullanın. Truva atları, virüsler veya sisteminize müdahale edebilecek botlar gibi kötü amaçlı yazılımları bulaştırabilecek gereksiz uygulamalar veya oyunlar (!!!) yüklemeyin.
+- Telefon üreticiniz ve Google tarafından sağlanan tüm güvenlik güncellemelerini yükleyin.
+- Kapalı döngü sistemi kullanarak tedavinizi değiştirirken diyabet alışkanlıklarınızı da değiştirmeniz gerekebilir. Örneğin bazı insanlar, AndroidAPS otomatik insülini azalttığı (veya durdurduğu) için daha az hipo tedavisine ihtiyaç duyduklarını rapor ediyorlar.
 
 ## SMS Kominikatör
 
