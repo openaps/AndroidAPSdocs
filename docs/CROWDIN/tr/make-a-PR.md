@@ -2,7 +2,7 @@
 
 **Bu açıklama yalnızca İngilizce belgeleri düzenlemek içindir. Tüm yeni bilgiler önce İngilizce olarak eklenmelidir. Diğer dillere çeviri yapmak istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın.**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+Metnin nasıl biçimlendirileceğine (başlık, kalın...) ve bağlantıların ayarlanmasına ilişkin ipuçları için lütfen bu sayfanın ["code syntax"](#code-syntax) bölümüne bakın.
 
 ## Genel
 
@@ -33,29 +33,29 @@ Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteği
 
 ![RTD io](./images/PR2.png)
 
-3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
+3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
 We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
 
-![Edit branch](./images/PR3.png)
+![Şubeyi düzenle](./images/PR3.png)
 
 4. "<>Dosyayı düzenle" sekmesinde çalışıyorsunuz. Değiştirdiğiniz her şeyin istediğiniz gibi göründüğünden emin olmak için yeni bir görünüm için "Preview changes" "Değişiklikleri önizle" sekmesini seçin (yazım hataları vs.). Gerekli bir iyileştirme görürseniz, daha fazla iyileştirme yapmak için düzenleme sekmesine geri dönün. 
 
-![preview mode](./images/PR5.png)
+![önizleme modu](./images/PR5.png)
 
 5. Düzenlemelerinizi bitirdiğinizde, sayfanın en altına gidin. Alttaki kutuda, "İsteğe bağlı bir genişletilmiş açıklama ekleyin..." yazan metin alanına yorumlarınızı girin. Varsayılan başlık dosya adıdır. Değişikliğin **nedenini** açıklayan bir cümle eklemeye çalışın. Nedeni ilişkilendirmek, gözden geçirenlerin PR ile ne yapmaya çalıştığınızı anlamasına yardımcı olur.
 
-![commit comments](./images/PR4.png)
+![yorum yap](./images/PR4.png)
 
 6. Yeşil "Dosya değişiklikleri öner" veya "Değişiklikleri kabul et" düğmesini tıklayın. Açılan sayfada "Create Pull Request" "Çekme Talebi Oluştur" u tıklayın ve sonraki sayfada tekrar "Çekme Talebi Oluştur" u tıklayın.
 
-![create pull request](./images/PR6.png)
+![çekme isteği oluşturun](./images/PR6.png)
 
 7. Bu, bir çekme isteğinin (PR) açılmasını tamamlar. GitHub, PR'ye başlıktan sonra bulunan bir sayı ve bir kare işaret atar. Geri bildirimi kontrol etmek için bu sayfaya dönün (veya size e-postayla GitHub bildirimleri gönderildiyse, PR ile ilgili herhangi bir etkinlik hakkında bilgilendiren e-postalar alacaksınız). Düzenleme şimdi, ekibin AndroidAPS için ana belgelere geçmeden önce gözden geçireceği ve potansiyel olarak geri bildirimde bulunacağı bir PR listesinde olacak! PR'nin ilerlemesini kontrol etmek isterseniz, GitHub hesabınızın sağ üst köşesindeki zil logosuna tıklayıp tüm PR'lerinizi görebilirsiniz.
 
-![PR tracking](./images/PR7.png)
+![PR takibi](./images/PR7.png)
 
-PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
 (make-a-PR-code-syntax)=
 
@@ -156,42 +156,42 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 
 ### Warnings
 
-    ```{admonition} Strong Warning
-    :class: warning
+    ```{admonition} Güçlü Uyarı
+    :class: uyarı
     
-    This is a warning.
-    
-
-    <br />```{admonition} Strong Warning
-    :class: warning
-    
-    This is a warning.
+    Bu bir uyarı.
     
 
-## Adding multiple images to the documentation
-
-If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
-
-* As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
-* You can upload images in batches easily by:
-  
-  1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
-  
-  2. Click in the upper right corner where it says "Upload files"
-  
-  3. Drag and drop your images into the screen
-  
-  4. Commit these to your branch
-  
-  5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
-  
-  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR.html#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+    <br />```{admonition} Güçlü Uyarı
+    :class: uyarı
     
-    * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
-    * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  
-      `:alt: Example of uploading images in batches`
+    Bu bir uyarı.
+    
 
-![Example of uploading images in batches](./images/Example_batch_images_upload.png)
+## Dokümantasyona birden çok görüntü ekleme
 
-7. After adding images or making adjustments, you can submit a PR to the master branch of AndroidAPSdocs.
+Dokümanların bazı bölümlerine görsel olarak yardımcı olacak görüntü ve fotoğraf eklemek de dahil çok sayıda düzenleme yapmayı planlıyorsanız (teşekkürler!), aşağıdaki yaklaşımı kullanmak isteyebilirsiniz:
+
+* Ekran görüntülerini kaydederken ekran görüntülerini açıklayıcı bir adla yeniden adlandırın - ancak GitHub'ın kafasını karıştıracağı için boşluk kullanmamaya çalışın. Bunun yerine alt çizgi kullanın. "Örnek toplu görüntüler upload.png" yerine Örnek_toplu_görüntüler_upload.png. 
+* Lütfen makul ölçüler kullanın. Screenshot images should be up to **1050 pixels wide**.
+* Görüntüleri toplu şekilde aşağıdakileri adımları uygulayıp kolayca yükleyebilirsiniz:
+  
+  1. Görüntüler klasörüne gidin (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - ancak bunu yapabilmek için dokümanlar Görüntüler klasörünün çatalında/kopyasında olduğunuzdan emin olun ( URL'deki "openaps" ifadesini GitHub kullanıcı adınızla değiştirin)).
+  
+  2. Sağ üst köşede "Dosya yükle" yazan yere tıklayın
+  
+  3. Görsellerinizi ekrana sürükleyip bırakın
+  
+  4. Bunları şubenize teslim edin
+  
+  5. Artık her dosyanın URL'sini/göreceli yolunu arayabilir ve bunu belgelerdeki bir sayfaya resim eklerken başvurmak için kullanabilirsiniz.
+  
+  6. Görsellerin nasıl ekleneceğine dair örnekleri görmek, görsellerin zaten başarıyla gömülü olduğu sayfadan bir örnek görmek için bir sayfanın "ham" koduna bakabilirsiniz. Bulunduğunuz sayfa türü (.md veya .rst) için [doğru kodu](./make-a-PR.html#code-syntax) kullandığınızdan emin olun. Ana amaç, düz bir metin açıklamasına sahip olmak ve ardından aşağıdaki gibi görüntüye göreli bir yol içeren bir bağlantıya sahip olmaktır:
+    
+    * .md sayfaları için: `![Görüntüleri toplu halde yükleme örneği](../images/Example_batch_images_upload.png)`
+    * .rst sayfaları için: `.. image:: ../images/Example_batch_images_upload.png`  
+      `:alt: Görüntüleri toplu halde yükleme örneği`
+
+![Toplu halde resim yükleme örneği](./images/Example_batch_images_upload.png)
+
+7. Resim ekledikten veya ayarlamalar yaptıktan sonra, AndroidAPSdocs'un ana dalına bir PR gönderebilirsiniz.
