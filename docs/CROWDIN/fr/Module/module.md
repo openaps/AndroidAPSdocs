@@ -308,5 +308,5 @@ Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Configuration matérielle et logicielle requise
 </p>
