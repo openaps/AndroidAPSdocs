@@ -60,7 +60,7 @@
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
-  - [LastPass Authenticator](https://lastpass.com/auth/)
+  - [LastPass Authenticator](https://www.lastpass.com/solutions/authentication)
   - [FreeOTP Authenticator](https://freeotp.github.io/)
 
 - Install the authenticator app of your choice on your follower phone and scan the QR code shown in AAPS.
