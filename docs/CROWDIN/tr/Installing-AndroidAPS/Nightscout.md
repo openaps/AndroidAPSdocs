@@ -4,32 +4,32 @@
 
 ## Güvenlik Hususları
 
-Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
+Nightscout raporlamanın yanı sıra AAPS'i kontrol etmek için de kullanılabilir. Yani Geçici hedefler belirleyebilir veya gelecekteki karbonhidratları ekleyebilirsiniz. Bu bilgiler AAPS tarafından alınacak ve buna göre hareket edecektir. Bu nedenle Nightscout web sitenizi güvence altına almalısınız.
 
 ### Nightscout ayarları
 
-You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
+[kimlik doğrulama rollerini](https://nightscout.github.io/nightscout/security) kullanarak Nightscout sitenize genel erişimi engelleyebilirsiniz.
 
 ### AndroidAPS ayarları
 
-There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
+AAPS ayarlarında yalnızca NS yükleme (senkronizasyon yok) işlevi vardır. Bunu yaparak AAPS, Nightscout'ta yapılan geçici hedefler veya gelecekteki karbonhidratlar gibi değişiklikleri almaz.
 
 * AAPS ana ekranınızın sağ üst köşesindeki 3 noktalı menüye dokunun.
 * "Tercihler"i seçin.
 * Aşağı kaydırın ve "NSClient"e dokunun.
 * Senkronizasyon sekmesinde "Verileri NS'a yükleyin"i etkinleştirin.
 
-![Nightscout upload only](../images/NSsafety.png)
+![Yalnızca Nightscout yüklemesi](../images/NSsafety.png)
 
 ### Diğer güvenlik ayarları
 
-Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+[Önce güvenlik](../Getting-Started/Safety-first.md) bölümünde açıklandığı gibi telefonunuzu güncel tutun.
 
 (Nightscout-manual-nightscout-setup)=
 
 ## Manuel Nightscout kurulumu
 
-It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+Zaten bir Nightscout siteniz olduğu varsayılır, kurulumla ilgili tüm talimatlar için [Nightscout](http://nightscout.github.io/nightscout/new_user/) sayfasını ziyaret edebilirsiniz. Aşağıdaki talimatlar, Nightscout sitenize eklemeniz gereken ayarlardır. Nightscout sitenizin en az sürüm 10 (0.10... olarak görüntüleniyor) olması gerekir, bu nedenle lütfen [en son sürüm](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version)ü çalıştırdığınızı kontrol edin. Aksi takdirde AAPS uygulamanızda bir hata mesajı alırsınız. Bazı insanlar döngü kullanımları için izin verilen azure ücretsiz kotasından daha fazlasını ararlar, bu nedenle heroku tercih edilen seçimdir.
 
 * https://herokuapp.com/ adresine gidin
 
@@ -53,9 +53,9 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 ## Yarı otomatik Nightscout kurulumu
 
-Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
+Martin Schiftan, yarı otomatik Nightscout kurulumunu uzun yıllar boyunca ücretsiz olarak sundu. Kullanıcı sayısı arttıkça maliyet de arttı ve bu nedenle Ekim 2021'den itibaren aylık 4,17 €'dan başlayan küçük bir ücret talep etmeye başladı.
 
-**Benefits**
+**Faydaları**
 
 * Nightscout'u birkaç tıklama ile yükleyebilir ve doğrudan kullanabilirsiniz. 
 * Martin yönetimi otomatikleştirmeye çalışırken manuel işler azalır.
@@ -65,4 +65,4 @@ Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many
 
 <https://ns.10be.de/en/index.html>
 
-An alternative would be <https://t1pal.com/> - starting at $11,99 per month.
+Bir alternatif te <https://t1pal.com/> olabilir - aylık 11,99 ABD dolarından başlayan fiyatlarla.
