@@ -1,6 +1,6 @@
 # AndroidAPS dokümantasyonuna hoş geldiniz
 
-![Image](images/modules-female.png)
+![Görsel](images/modules-female.png)
 
 AndroidAPS, android akıllı telefonlarında yapay pankreas sistemi (APS) görevi gören, insüline bağımlı diyabetle yaşayan kişiler için açık kaynak kodlu bir uygulamadır. Ana kompanentler ile amacı, farklı openAPS yazılım algoritmaları kullanarak canlı bir pankreasın yaptığı gibi otomatik insülin dozlama (AID) yaparak kan şekeri seviyelerini sağlıklı sınırlar içinde tutmaktır. Ek olarak, yazılımın desteklediği ve FDA/CE onaylı bir insülin pompasına ve sürekli şeker ölçüm cihazına ihtiyacınız olacaktır.
 
@@ -117,138 +117,138 @@ Geliştirici sürümü <./Installing-AndroidAPS/Dev_branch.md>
 (index-component-setup)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Bileşen Kurulumu
 
 CGM/FGM <./Configuration/BG-Source.md>
 
-xDrip Settings <./Configuration/xdrip.md>
+xDrip Ayarları <./Configuration/xdrip.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Pompa seçenekleri <./Getting-Started/Pump-Choices.md>
 
-Phones <./Hardware/Phoneconfig.md>
+Telefonlar <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Nightscout kurulumu <./Installing-AndroidAPS/Nightscout.md>
 
-Smartwatch  <./Hardware/Smartwatch.md>
+Akıllı saat <./Hardware/Smartwatch.md>
 
 ```
 
 (index-configuration)=
 
 ```{toctree}
-:caption: Configuration
+:caption: Konfigürasyon
 
-Config builder <./Configuration/Config-Builder.md>
+Konfigürasyon ayarları <./Configuration/Config-Builder.md>
 
-Preferences <./Configuration/Preferences.md>
+Tercihler <./Configuration/Preferences.md>
 
 ```
 
 ```{toctree}
-:caption: AndroidAPS Usage
+:caption: AndroidAPS Kullanımı
 
-AndroidAPS screens <./Getting-Started/Screenshots.md>
+AndroidAPS ekranları <./Getting-Started/Screenshots.md>
 
-Objectives <./Usage/Objectives.md>
+Görevler <./Usage/Objectives.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+OpenAPS özellikleri <./Usage/Open-APS-features.md>
 
-COB calculation <./Usage/COB-calculation.md>
+AKRB hesaplama <./Usage/COB-calculation.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Duyarlılık algılama <./Configuration/Sensitivity-detection-and-COB.md>
 
-Profile switch <./Usage/Profiles.md>
+Profil değiştirme <./Usage/Profiles.md>
 
-Temp-targets <./Usage/temptarget.md>
+Geçici hedefler <./Usage/temptarget.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Yayma karbonhidratlar <./Usage/Extended-Carbs.md>
 
-Automation <./Usage/Automation.md>
+Otomasyon <./Usage/Automation.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
+Bakımportalı (devam etmiyor) <./Usage/CPbefore26.md>
 
-Open Humans Uploader <./Configuration/OpenHumans.md>
+Open Humans Yükleyici <./Configuration/OpenHumans.md>
 
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+3. taraf uygulamalarla otomasyon <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
 
 ```
 
 ```{toctree}
-:caption: General Hints
+:caption: Genel İpuçları
 
-Crossing timezones with pumps <./Usage/Timezone-traveling.md>
+Pompalarla saat dilimlerini aşmak <./Usage/Timezone-traveling.md>
 
-Accessing logfiles <./Usage/Accessing-logfiles.md>
+Günlük dosyalarına erişim <./Usage/Accessing-logfiles.md>
 
-Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Temel kullanım için Accu-Chek Combo ipuçları <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-Export/Import Settings <./Usage/ExportImportSettings.md>
+Ayarları Dışa/İçe Aktarma <./Usage/ExportImportSettings.md>
 
-xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: AndroidAPS for children
-
-Remote monitoring <./Children/Children.md>
-
-SMS commands <./Children/SMS-Commands.md>
-
-Profile helper <./Configuration/profilehelper.md>
+xDrip mühendislik modu <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 ```
 
 ```{toctree}
-:caption: Troubleshooting
+:caption: Çocuklar için AndroidAPS
 
-Troubleshooting <./Usage/troubleshooting.md>
+Uzaktan izleme <./Children/Children.md>
+
+SMS komutları <./Children/SMS-Commands.md>
+
+Profil yardımcısı <./Configuration/profilehelper.md>
+
+```
+
+```{toctree}
+:caption: Sorun Giderme
+
+Sorun Giderme <./Usage/troubleshooting.md>
 
 Nightscout client <./Usage/Troubleshooting-NSClient.md>
 
 ```
 
 ```{toctree}
-:caption: FAQ
+:caption: SSS
 
-FAQ <./Getting-Started/FAQ.md>
+SSS <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Glossary
+:caption: Sözlük
 
-Glossary <./Getting-Started/Glossary.md>
+Sözlük <./Getting-Started/Glossary.md>
 ```
 
 ```{toctree}
-:caption: Where to go for help
+:caption: Yardım için nereye gitmeli?
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Başlamadan önce okumanız gereken yararlı kaynaklar <./Where-To-Go-For-Help/Background-reading.md>
 
-Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Yardım için nereye gitmeli <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Doküman güncellemeleri & değişiklikler <./Getting-Started/WikiUpdate.md>
 
 ```
 
 ```{toctree}
-:caption: For Clinicians
+:caption: Klinisyenler için
 
-For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
+Klinisyenler için <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
-:caption: How to help
+:caption: Nasıl yardım ederim
 
-How to help <./Getting-Started/How-can-I-help.md>
+Nasıl yardım ederim <./Getting-Started/How-can-I-help.md>
 
-How to translate the app and docs <./translations.md>
+Uygulama ve dokümantasyon nasıl çevrilir <./translations.md>
 
-State of translations <./Administration/stateTranslations.md>
+Çevirilerin durumu <./Administration/stateTranslations.md>
 
-How to edit the docs <./make-a-PR.md>
+Dokümanlar nasıl düzenlenir <./make-a-PR.md>
 
 ```
 
