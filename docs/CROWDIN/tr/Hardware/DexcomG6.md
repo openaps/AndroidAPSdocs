@@ -21,7 +21,7 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 -   Dexcom G6 vericisi, Dexcom alıcısına (veya alternatif olarak t:slim pompasına) ve telefonunuzdaki bir uygulamaya aynı anda bağlanabilir.
 -   xDrip+'ı alıcı olarak kullanmadan önce Dexcom uygulamasını telefonunuzdan kaldırın. **xDrip+ ve Dexcom uygulamasını vericiye aynı anda bağlayamazsınız!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   Dexcom clarity uygulamasını kullanıyorsanız ve xDrip+ alarmlarından yararlanmak istiyorsanız xDrip+'ta yerel yayın ile [Kendi Dexcom Uygulamanızı Oluşturun (BYODA)](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) kullanın.
 -   Henüz kurulmadıysa [xDrip+](https://github.com/NightscoutFoundation/xDrip)'i indirin ve [xDrip+ ayarlar sayfasındaki](../Configuration/xdrip.md) talimatları izleyin.
 -   Konfigürasyon ayarlarında (AndroidAPS'deki ayarda) xDrip+'ı seçin.
 -   [xDrip+ ayarlar sayfasına](../Configuration/xdrip.md) göre xDrip+'daki ayarları yapın
@@ -68,8 +68,8 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 ### Genel sorun giderme
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
+CGM'ler için Genel Sorun Giderme [burada](./GeneralCGMRecommendation.html#troubleshooting). bulunabilir.
 
 ### Çalışan sensörle yeni verici
 
-If you happen to change transmitter during a running sensor session you might try to remove the transmitter without damaging the sensor mount. A video can be found at <https://youtu.be/tx-kTsrkNUM>.
+Çalışan bir sensör oturumu sırasında vericiyi değiştirirseniz, sensör yuvasına zarar vermeden vericiyi çıkarmayı deneyebilirsiniz. Bu konu hakkında video şu adreste bulunabilir <https://youtu.be/tx-kTsrkNUM>.
