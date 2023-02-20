@@ -8,9 +8,9 @@ Pompa geçmişi kullanmadığı için telefonda saat dilimini değiştirmekle il
 
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+AndroidAPS, pompanın geçmişini kullandığından ancak pompadaki kayıtların saat dilimi damgasına sahip olmadığı için bu pompalar özel bir bakıma ihtiyaç duyar. **Bu telefonda saat dilimini basitçe değiştirirseniz, kayıtların farklı saat dilimleriyle okunacağı ve iki katına çıkacağı anlamına gelir.**
 
-To avoid this there are two possibilities:
+Bunu önlemek için iki olasılık vardır:
 
 ### Seçenek 1: Yerel saati koruyarak profilde zaman kaydırma
 
@@ -26,13 +26,13 @@ To avoid this there are two possibilities:
    
    * ör. Viyana -> New York: profil değiştirme +6 saat
    * ör. Viyana -> Sidney: profil değiştirme -8 saat
-* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Yeni bir Libre 2 sensörünü başlatmak için eğer [yama uygulanmış LibreLink uygulaması](Libre2-time-zone-travelling) kullanıyorsanız, otomatik saat dilimi ayarlanmalıdır ve bu seçeneği kullanamazsınız.
 
 ### Seçenek 2: Pompa geçmişini sil
 
 * Telefon ayarlarınızda 'Otomatik tarih ve saat'i özelliğini kapatın (manuel saat dilimi değişikliği)
 
-When get out of plane:
+Uçaktan inerken:
 
 * pompayı kapatın
 * telefonda saat dilimini değiştirin
@@ -42,25 +42,25 @@ When get out of plane:
 * telefonu açın
 * telefonun pompaya bağlanmasına ve zaman ince ayarının yapmasına izin verin
 
-(Timezone-traveling-insight)=
+(Timezone-traveling-insight)= 
 
 ## Insight
 
-The driver automatically adjusts the time of the pump to the time of the phone.
+Sürücü, pompanın saatini telefonun saatine göre otomatik olarak ayarlar.
 
-The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
+Insight, aynı zamanda, hangi andaki zamanın ve hangi (eski) zamandan hangi (yeni) zamana değiştirildiği geçmiş girdilerini de kaydeder. Böylece saat değişikliğine rağmen AAPS'de doğru zaman belirlenebilir.
 
-It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
+GTD'larda yanlışlıklara neden olabilir. Ama sorun olmamalı.
 
-So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. Pilin değiştirilmesi uzun sürerse bu dahili pilin enerjisi biterse saat sıfırlanır ve yeni pil taktıktan sonra saat ve tarih girmeniz istenir. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
-# Zaman ayarı yaz saati uygulaması (DST)
+# Yaz saati uygulamasında (DST) zaman ayarı
 
-Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
+Pompa ve CGM kurulumuna bağlı olarak, zaman atlamaları sorunlara yol açabilir. Combo ile örn. pompa geçmişi tekrar okunur ve yinelenen girişlere yol açar. Bu yüzden lütfen ayarlamayı gece değil, uyanıkken yapın.
 
-If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayıcıyı tekrar kullanmayın. DST Saat değişikliğinden sonra muhtemelen birkaç saat kullanmamak daha iyidir.
 
 (Timezone-traveling-accu-chek-combo)=
 
