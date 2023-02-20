@@ -1,6 +1,6 @@
 # Profil yardımcısı
 
-Profile helper offers two functions:
+Profil yardımcısı iki işlev sunar:
 
 1. Çocuklar için bir profil bulmak
 2. Yeni bir profili klonlamak için iki profili veya profil değişimlerini karşılaştırmak
