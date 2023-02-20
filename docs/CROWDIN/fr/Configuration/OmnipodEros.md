@@ -400,23 +400,23 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h2>
 
 <p spaces-before="0">
-  <strong x-id="1">SAFETY FIRST</strong> - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+  <strong x-id="1">SÉCURITÉ D'ABORD</strong> - ne pas essayer ce processus dans un environnement où vous ne pouvez pas récupérer une erreur (pods supplémentaires, insuline, RileyLink chargé et les smartphones sont nécessaires).
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod</strong>. Vous avez précédemment utilisé votre PDM Omnipod pour envoyer des commandes à votre pod Omnipod Eros. Un pod Omnipod Eros ne permet qu'à un seul appareil de la communiquer avec lui. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, <strong x-id="1">you will no longer be able to use your PDM with your pod</strong>. Le pilote AAPS Omnipod avec le RileyLink est maintenant votre PDM. <em x-id="3">This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.</em>
+  <strong x-id="1">Votre PDM Omnipod ne fonctionnera plus après l'activation de votre pod par le driver AAPS Omnipod</strong>. Vous avez précédemment utilisé votre PDM Omnipod pour envoyer des commandes à votre pod Omnipod Eros. Un pod Omnipod Eros ne permet qu'à un seul appareil de la communiquer avec lui. L'appareil qui active le pod avec succès est le seul appareil autorisé à communiquer avec lui à partir de ce moment. Cela signifie qu'une fois que vous activez un pod Omnipod Eros avec votre RileyLink via le pilote AAPS Omnipod, <strong x-id="1">vous ne pourrez plus utiliser votre PDM avec votre pod</strong>. Le pilote AAPS Omnipod avec le RileyLink est maintenant votre PDM. <em x-id="3">Cela ne veut pas dire que vous pouvez jeter votre PDM, il est recommandé de le garder comme une sauvegarde, et en cas d'urgence dans le cas où AAPS ne fonctionne pas correctement.</em>
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.</strong> The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+  <strong x-id="1">Vous pouvez configurer plusieurs RileyLinks, mais un seul RileyLink à la fois peut communiquer avec un pod.</strong> Le pilote AAPS Omnipod supporte la possibilité d'ajouter plusieurs RileyLinks dans la configuration de RileyLink, cependant, un seul RileyLink à la fois peut être sélectionné pour la communication.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your pod will not shut off when the RileyLink is out of range.</strong> When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Lors de l'activation d'un pod, le profil basal défini dans AAPS sera programmé dans le nouveau pod. Si vous perdez le contact avec le pod, il retournera à ce profil de basal. Vous ne serez pas en mesure d'émettre de nouvelles commandes tant que le RileyLink ne reviendra pas à portée et rétablira la connexion.
+  <strong x-id="1">Votre pod ne s'arrêtera pas lorsque le RileyLink sera hors de portée.</strong> Lorsque votre RileyLink est hors de portée ou que le signal est bloqué pour communiquer avec le pod actif, votre pod continuera à injecter l'insuline basale. Lors de l'activation d'un pod, le profil basal défini dans AAPS sera programmé dans le nouveau pod. Si vous perdez le contact avec le pod, il retournera à ce profil de basal. Vous ne serez pas en mesure d'émettre de nouvelles commandes tant que le RileyLink ne reviendra pas à portée et rétablira la connexion.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">30 min Basal Rate Profiles are NOT supported in AndroidAPS.</strong> If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. Par exemple, si vous avez un débit de basal de 1,1 unités qui commence à 09h30 et a une durée de 2 heures se terminant à 11h30, cela ne marchera pas.  Vous devrez mettre à jour ce taux de basal de 1,1 sur une plage horaire de 9h00 à 11h00 ou de 10h00 à 12h00.  Même si les changements de débit de basal du profil toutes les 30 min sont supportés par le matériel Omnipod lui-même, AndroidAPS n'est pas en mesure de les prendre en compte avec ses algorithmes actuellement.
+  <strong x-id="1">Les profils de débit de base de 30 min ne sont PAS pris en charge dans AAPS.</strong> Si vous êtes nouveau sur AAPS et que vous configurez votre profil de débit de basal pour la première fois, veuillez noter que les débits de basal commençant par une demi-heure ne sont pas pris en charge et que vous devrez ajuster votre profil de débit de basal pour démarrer sur les heures. Par exemple, si vous avez un débit de basal de 1,1 unités qui commence à 09h30 et a une durée de 2 heures se terminant à 11h30, cela ne marchera pas.  Vous devrez mettre à jour ce taux de basal de 1,1 sur une plage horaire de 9h00 à 11h00 ou de 10h00 à 12h00.  Même si les changements de débit de basal du profil toutes les 30 min sont supportés par le matériel Omnipod lui-même, AndroidAPS n'est pas en mesure de les prendre en compte avec ses algorithmes actuellement.
 </p>
 
 <h2 spaces-before="0">
@@ -424,7 +424,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h2>
 
 <p spaces-before="0">
-  You can enable the Omnipod driver in AAPS in <strong x-id="1">two ways</strong>:
+  Vous pouvez activer le pilote Omnipod dans AAPS de <strong x-id="1">deux façons</strong>:
 </p>
 
 <h3 spaces-before="0">
@@ -432,11 +432,11 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  After installing a new version of AndroidAPS, the <strong x-id="1">Setup Wizard</strong> will start automatically.  Cela se produit également lors des mises à jour.  Si vous avez déjà exporté vos paramètres à partir d'une installation précédente, vous pouvez quitter l'assistant d'installation et importer vos anciens paramètres.  Pour les nouvelles installations, procédez comme suit.
+  Après avoir installé une nouvelle version d'AAPS, l'<strong x-id="1">Assistant de configuration</strong> démarrera automatiquement.  Cela se produit également lors des mises à jour.  Si vous avez déjà exporté vos paramètres à partir d'une installation précédente, vous pouvez quitter l'assistant d'installation et importer vos anciens paramètres.  Pour les nouvelles installations, procédez comme suit.
 </p>
 
 <p spaces-before="0">
-  Via the <strong x-id="1">AAPS Setup Wizard (2)</strong> located at the top right-hand corner <strong x-id="1">three-dot menu (1)</strong> and proceeding through the wizard menus until you arrive at the <strong x-id="1">Pump</strong> screen. Then select the <strong x-id="1">Omnipod radio button (3)</strong> .
+  Via l'<strong x-id="1">Assistant de configuration AAPS (2)</strong> situé dans le coin supérieur droit <strong x-id="1">menu trois points (1)</strong>, passez par les menus de l'assistant jusqu'à ce que vous arriviez à l'écran <strong x-id="1">Pompe</strong>. Ensuite, sélectionnez le <strong x-id="1">bouton radio Omnipod (3)</strong>.
 </p>
 
 <blockquote spaces-before="0">
@@ -446,23 +446,23 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </blockquote>
 
 <p spaces-before="0">
-  On the same screen, below the pump selection, the <strong x-id="1">Omnipod Driver Settings</strong> are displayed, under the <strong x-id="1">RileyLink Configuration</strong> add your RileyLink device by pressing the <strong x-id="1">Not Set</strong> text.
+  Sur le même écran, sous la sélection de la pompe, les <strong x-id="1">Paramètres du pilote Omnipod</strong> s'affichent, dans la <strong x-id="1">Configuration du RileyLink</strong> ajoutez votre appareil RileyLink en appuyant sur le texte <strong x-id="1">Non configuré</strong>.
 </p>
 
 <p spaces-before="0">
-  On the <strong x-id="1">RileyLink Selection</strong> screen press the <strong x-id="1">Scan</strong> button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. Lorsque c'est correctement sélectionné, vous êtes basculé sur l'écran de sélection de la pompe, qui affiche les paramètres du pilote Omnipod montrant votre RileyLink sélectionné avec l'adresse MAC listée.
+  Sur l'écran de <strong x-id="1">Recherche du RileyLink</strong> appuyez sur le bouton <strong x-id="1">Rechercher</strong> et sélectionnez votre RileyLink en scannant tous les périphériques Bluetooth disponibles et en sélectionnant votre RileyLink dans la liste. Lorsque c'est correctement sélectionné, vous êtes basculé sur l'écran de sélection de la pompe, qui affiche les paramètres du pilote Omnipod montrant votre RileyLink sélectionné avec l'adresse MAC listée.
 </p>
 
 <p spaces-before="0">
-  Press the <strong x-id="1">Next</strong> button to proceed with the rest of the <strong x-id="1">Setup Wizard.</strong>  It can take up to one minute for the selected RileyLink to initialize and the <strong x-id="1">Next</strong> button to become active.
+  Appuyez sur le bouton <strong x-id="1">Suivant</strong> pour continuer avec le reste de l'<strong x-id="1">Assistant de configuration</strong>. Cela peut prendre jusqu'à une minute pour que le RileyLink sélectionné s'initialise et que le bouton <strong x-id="1">Suivant</strong> devienne actif.
 </p>
 
 <p spaces-before="0">
-  Detailed steps on how to setup your pod communication device are listed below in the <a href="#rileylink-setup">RileyLink Setup Section</a>.
+  Les étapes détaillées sur la façon de configurer votre appareil de communication pod sont listées ci-dessous dans la section <a href="#configuration-rileylink">Configuration RileyLink</a>.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">OR</strong>
+  <strong x-id="1">OU</strong>
 </p>
 
 <h3 spaces-before="0">
@@ -470,12 +470,12 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Via the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong> by selecting the <strong x-id="1">radio button (2)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (4)</strong> next to the <strong x-id="1">Settings Gear (3)</strong> will display the Omnipod menu as a tab in the AAPS interface titled <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  Via le <strong x-id="1">menu hamburger</strong> situé dans le coin supérieur gauche, dans la <strong x-id="1">Configuraiton (1)</strong> ➜<strong x-id="1">Pompe</strong>➜<strong x-id="1">Omnipod</strong> en sélectionnant le <strong x-id="1">bouton radio (2) Omnipod</strong>. En sélectionnant la <strong x-id="1">case à cocher (4)</strong> à côté de la <strong x-id="1">roue crantée (3)</strong> cela affichera le menu Omnipod sous la forme d'un onglet intitulé <strong x-id="1">POD</strong> dans l'interface AAPS. C'est ce que l'on appelle dans cette documentation l'onglet <strong x-id="1">Omnipod (POD)</strong>.
 </p>
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> can be found below in the <a href="#omnipod-settings">Omnipod Settings section</a> of this document.
+    <strong x-id="1">REMARQUE :</strong> Un moyen plus rapide d'accéder aux <strong x-id="1">paramètres Omnipod</strong> est décrit ci-dessous dans la section <a href="#configuration-omnipod">Paramètres Omnipod</a> de ce document.
   </p>
   
   <p spaces-before="0">
@@ -488,11 +488,11 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below</em>
+  <em x-id="3">Remarque : Si vous avez quitté l'Assistant de configuration plus tôt sans sélectionner votre RileyLink, Le pilote Omnipod est activé mais vous devrez toujours sélectionner votre RileyLink.  Vous pouvez voir l'onglet Omnipod (POD) s'afficher comme ci-dessous</em>
 </p>
 
 <p spaces-before="0">
-  To verify that you have enabled the Omnipod driver in AAPS <strong x-id="1">swipe to the left</strong> from the <strong x-id="1">Overview</strong> tab, where you will now see an <strong x-id="1">Omnipod</strong> or <strong x-id="1">POD</strong> tab.
+  Pour vérifier que vous avez activé le pilote Omnipod dans AAPS <strong x-id="1">glissez vers la gauche</strong> depuis l'onglet <strong x-id="1">Aperçu</strong>, où vous verrez maintenant un onglet <strong x-id="1">Omnipod</strong> ou <strong x-id="1">POD</strong>.
 </p>
 
 <p spaces-before="0">
@@ -504,16 +504,16 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h2>
 
 <p spaces-before="0">
-  Please <strong x-id="1">swipe left</strong> to the <strong x-id="1">Omnipod (POD)</strong> tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+  Veuillez <strong x-id="1">glisser vers la gauche</strong> jusqu'à l'onglet <strong x-id="1">Omnipod (POD)</strong> où vous pourrez gérer toutes les fonctions du pod et du RileyLink (certaines de ces fonctions ne sont pas activées ou visibles sans une session de pod active):
 </p>
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    {{ refresh_pod_status }} Refresh Pod connectivity and status
+    {{ refresh_pod_status }} Rafraîchir la connectivité et l'état du Pod
   </p>
   
   <p spaces-before="0">
-    {{ pod_management }} Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    {{ pod_management }} Gestion du Pod (activer, désactiver, tester les bips, stats du RileyLink et historique du Pod)
   </p>
 </blockquote>
 
@@ -526,7 +526,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.</em>
+  <em x-id="3">Remarque : Un bon indicateur visuel indiquant que le RileyLink n'est pas connecté est que les boutons Insuline et Assistant de l'onglet Accueil seront manquants. Cela se produira également pendant environ les 30 premières secondes après le démarrage d'AAPS, car il se connecte activement au RileyLink.</em>
 </p>
 
 <ol start="1">
@@ -538,7 +538,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   
   <li>
     <p spaces-before="0">
-      After selecting the Omnipod driver, identify and select your RileyLink from <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Gear Icon (Settings) (2)</strong> ➜<strong x-id="1">RileyLink Configuration (3)</strong> by pressing the <strong x-id="1">Not Set</strong> or <strong x-id="1">MAC Address (if present)</strong> text.
+      Après avoir sélectionné le pilote Omnipod, identifiez et sélectionnez votre RileyLink dans <strong x-id="1">Générateur de configuration (1)</strong> ➜<strong x-id="1">Pompe</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Roue crantée (2)</strong> ➜<strong x-id="1">Configuration du RileyLink (3)</strong> en appuyant sur <strong x-id="1">Non configuré</strong> ou sur le texte de <strong x-id="1">l'adresse MAC (si présent)</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1708,7 +1708,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h2>
 
 <p spaces-before="0">
-  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. C'est ce que l'on appelle dans cette documentation l'onglet <strong x-id="1">Omnipod (POD)</strong>.
 </p>
 
 <p spaces-before="0">
