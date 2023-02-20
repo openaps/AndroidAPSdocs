@@ -600,7 +600,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Copie le journal d'impulsion du pod actif dans le presse-papiers
+      Naviguez vers l'onglet <strong x-id="1">Omnipod (POD)</strong> et cliquez sur le bouton <strong x-id="1">POD MGMT (1)</strong> , puis cliquez sur <strong x-id="1">Activer Pod (2)</strong>.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -748,7 +748,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Désactive et supprime l'état d'un pod qui ne répond pas lorsque vous cliquez dessus.
+      Allez à l'onglet <strong x-id="1">Omnipod (POD)</strong> , cliquez sur le bouton <strong x-id="1">POD MGMT (1)</strong> , sur l'écran de <strong x-id="1">Gestion du pod</strong> cliquez sur le bouton <strong x-id="1">Désactiver Pod (2)</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1888,7 +1888,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Access the <strong x-id="1">RileyLink Selection</strong> menu by selecting the <strong x-id="1">3 dot menu (1)</strong> in the upper right hand corner of the <strong x-id="1">Omnipod (POD)</strong> tab and selecting <strong x-id="1">Omnipod preferences (2)</strong> from the dropdown menu. On the <strong x-id="1">Omnipod Settings</strong> menu under <strong x-id="1">RileyLink Configuration (3)</strong> press the <strong x-id="1">Not Set</strong> (if no device is selected) or <strong x-id="1">MAC Address</strong> (if a device is present) text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Accédez au menu de<strong x-id="1">Sélection RileyLink</strong> en sélectionnant le <strong x-id="1">menu 3 points (1)</strong> dans le coin supérieur droit de l'onglet <strong x-id="1">Omnipod (POD)</strong> et en sélectionnant les <strong x-id="1">Préférences Omnipod (2)</strong> dans le menu déroulant. Dans le menu des <strong x-id="1">Paramètres Omnipod</strong> sous <strong x-id="1">Configuration RileyLink (3)</strong> appuyez sur le bouton <strong x-id="1">Non configuré</strong> (si aucun appareil n'est sélectionné) ou <strong x-id="1">Adresse MAC</strong> (si un périphérique est présent) pour ouvrir le menu de <strong x-id="1">Sélection RileyLink</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1909,7 +1909,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">MAC Address (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Dans <strong x-id="1">Configuration RileyLink</strong> appuyez sur le texte <strong x-id="1">Non configuré (1)</strong> pour ouvrir le menu de <strong x-id="1">Sélection RileyLink</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1920,7 +1920,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Selection</strong> menu the press <strong x-id="1">Remove (2)</strong> button to remove <strong x-id="1">your currently selected RileyLink (3)</strong>
+     Dans le menu de <strong x-id="1">Sélection du RileyLink</strong> appuyez sur le bouton <strong x-id="1">Supprimer (2)</strong> pour supprimer <strong x-id="1">le RileyLink actuellement sélectionné (3)</strong>
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1931,7 +1931,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     At the confirmation prompt press <strong x-id="1">Yes (4)</strong> to confirm the removal of your device.
+     À la demande de confirmation, appuyez sur <strong x-id="1">Oui (4)</strong> pour confirmer la suppression de votre appareil.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1942,7 +1942,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     You are returned to the <strong x-id="1">Omnipod Setting</strong> menu where under <strong x-id="1">RileyLink Configuration</strong> you will now see the device is <strong x-id="1">Not Set (5)</strong>.  Félicitations, vous avez supprimé avec succès le périphérique de communication pod.
+     Vous êtes retourné dans le menu <strong x-id="1">Paramètres Omnipod</strong> où sous <strong x-id="1">Configuration RileyLink</strong> vous verrez maintenant que le périphérique est <strong x-id="1">Non configuré (5)</strong>.  Félicitations, vous avez supprimé avec succès le périphérique de communication pod.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1963,7 +1963,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">Not Set (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      Dans la <strong x-id="1">Configuration du RileyLink</strong> appuyez sur le texte <strong x-id="1">Non défini (1)</strong> pour ouvrir le menu <strong x-id="1">Sélection du RileyLink</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1974,7 +1974,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Press the <strong x-id="1">Scan (2)</strong> button to start scanning for all available Bluetooth devices.
+     Appuyez sur le bouton <strong x-id="1">Rechercher (2)</strong> pour commencer à chercher tous les périphériques Bluetooth disponibles.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1985,7 +1985,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Select <strong x-id="1">your RileyLink (3)</strong> from the list of available devices and you will be returned to the <strong x-id="1">Omnipod Settings</strong> menu displaying the <strong x-id="1">MAC Address (4)</strong> of your newly selected device.  Félicitations, vous avez sélectionné avec succès votre périphérique de communication pod.
+     Sélectionnez <strong x-id="1">votre RileyLink (3)</strong> dans la liste des périphériques disponibles et vous serez renvoyé au menu des <strong x-id="1">Paramètres Omnipod</strong> qui affichera l'<strong x-id="1">Adresse MAC (4)</strong> de votre appareil nouvellement sélectionné.  Félicitations, vous avez sélectionné avec succès votre périphérique de communication pod.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -2009,7 +2009,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   </li>
   
   <li>
-    Under the <strong x-id="1">Careportal (1)</strong> section the following 3 fields will have their <strong x-id="1">age reset</strong> to 0 days and 0 hours <strong x-id="1">after each pod change</strong>: <strong x-id="1">Insulin</strong> and <strong x-id="1">Cannula</strong>. C'est dû à la façon dont la pompe Omnipod est construite et opérationnelle. The <strong x-id="1">pump battery</strong> and <strong x-id="1">insulin reservoir</strong> are self contained inside of each pod. Puisque le pod insère la canule directement dans la peau au niveau du site d'application pod, il n'y a pas de tubulure traditionnelle dans les pompes Omnipod. <em x-id="3">Therefore after a pod change the age of each of these values will automatically reset to zero.</em> <strong x-id="1">Pump battery age</strong> is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+    Dans la section <strong x-id="1">Careportal (1)</strong> les 3 champs suivants auront leur <strong x-id="1">age réinitialisés</strong> à 0 jours et 0 heures <strong x-id="1">après chaque changement de pod</strong> : <strong x-id="1">Insuline</strong> et <strong x-id="1">Canule</strong>. C'est dû à la façon dont la pompe Omnipod est construite et opérationnelle. The <strong x-id="1">pump battery</strong> and <strong x-id="1">insulin reservoir</strong> are self contained inside of each pod. Puisque le pod insère la canule directement dans la peau au niveau du site d'application pod, il n'y a pas de tubulure traditionnelle dans les pompes Omnipod. <em x-id="3">Therefore after a pod change the age of each of these values will automatically reset to zero.</em> <strong x-id="1">Pump battery age</strong> is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
   </li>
 </ol>
 
@@ -2034,10 +2034,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Above 50 Units</strong> - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+      <strong x-id="1">Au-delà de 50 unités</strong> - Affiche la valeur de 50+U lorsque plus de 50 unités sont actuellement dans le réservoir.
     </li>
     <li>
-      <strong x-id="1">Below 50 Units</strong> - Reports an approximate calculated value of insulin remaining in the reservoir.
+      <strong x-id="1">En dessous de 50 unités</strong> - Affiche la quantité approximative d'insuline restante dans le réservoir.
     </li>
     <li>
       <strong x-id="1">SMS</strong> - Returns value or 50+U for SMS responses
@@ -2049,7 +2049,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </blockquote>
 
 <p spaces-before="0">
-  <strong x-id="1">Battery Level</strong>
+  <strong x-id="1">Niveau pile</strong>
 </p>
 
 <p spaces-before="0">
@@ -2059,10 +2059,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">RileyLink hardware is NOT capable of reporting battery level</strong>
+      <strong x-id="1">Le hardware RileyLink n'est PAS compatible de l'affichage du niveau batterie</strong>
     </li>
     <li>
-      <strong x-id="1">"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values</strong>
+      <strong x-id="1">Le paramètre "Afficher le niveau batterie remonté par OrangeLink/EmaLink/Dialink" DOIT être activé dans les paramètres Omnipod</strong>
     </li>
     <li>
       <strong x-id="1">Le niveau batterie ne fonctionne que pour les périphériques OrangeLink, EmaLink et Dialink</strong>
@@ -2096,7 +2096,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. We recommend users to switch to the Nightscout client to <em x-id="3">upload only (Disable sync)</em> under the <strong x-id="1">Config Builder</strong>➜<strong x-id="1">General</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">cog wheel</strong>➜<strong x-id="1">Advanced Settings</strong> to prevent possible failures.
+  Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout <em x-id="3">Envoi NS uniquement</em> dans la <strong x-id="1">Configuration</strong>➜<strong x-id="1">Général</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">roue crantée</strong>➜<strong x-id="1">Paramètres Avancés</strong> pour prévenir les éventuels échecs.
 </p>
 
 <h3 spaces-before="0">
