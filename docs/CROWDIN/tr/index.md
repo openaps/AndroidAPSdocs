@@ -259,12 +259,12 @@ Sandbox <./Sandbox/sandbox1.md>
 ```
 
 ```{note}
-**Disclaimer And Warning**
+**Sorumluluk Reddi ve Uyarı**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AndroidAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
-- Use of code from github.com is without warranty or formal support of any kind. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
-- All product and company names, trademarks, servicemarks, registered trademarks, and registered servicemarks are the property of their respective holders. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
+- Burada açıklanan tüm bilgiler, düşünce ve kodlar yalnızca bilgilendirme ve eğitim amaçlıdır. Nightscout şu anda HIPAA gizlilik uyumluluğu için herhangi bir girişimde bulunmamaktadır. Nightscout ve AndroidAPS'i kendi sorumluluğunuzda kullanın. Tıbbi kararlar almak için bilgileri veya kodu kullanmayın.
+- github.com'dan alınan kodun kullanımı herhangi bir garanti veya resmi destek içermez. Ayrıntılar için lütfen bu deponun LİSANSINI gözden geçirin.
+- Tüm ürün ve şirket adları, ticari markalar, hizmet markaları, tescilli ticari markalar ve tescilli hizmet markaları ilgili sahiplerinin mülkiyetindedir. Kullanımları bilgi amaçlıdır ve onlar tarafından herhangi bir bağlantı veya onay anlamına gelmez.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
+Lütfen unutmayın - bu projenin aşağıdaki markalar ile hiçbir ilişkisi yoktur ve bunlar tarafından desteklenmemektedir. [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) veya [Medtronic](<https://www.medtronic.com/>)
 
 ```
