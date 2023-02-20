@@ -321,42 +321,42 @@ Kanül yaşı, insülin yaşı, sensör yaşı, pil yaşı, rezervuar seviyesi v
 
 **Bolus sihirbazı sonucunun bu kadarını iletin**: SMB kullanırken, birçok kişi ihtiyaç duyulan insülinin %100'ünü yemek bolusu olarak iletmez, sadece bir kısmını (örn. %75) gönderir ve SMB, UAM ile (Bildirilmemiş yemek algılama) gerisini halleder. Bu ayarda, bolus sihirbazının hesaplaması için varsayılan bir yüzde değer seçebilirsiniz. Bu ayar %75 ise ve 10ü bolus yapmanız gerekiyorsa, bolus sihirbazı yalnızca 7,5 ünitelik bir öğün bolusu önerecektir.
 
-**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Basically, the basal for the next two hours is added to the bolus and a two hour zero-temp activated. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
+**Sihirbazda süper bolus işlevini etkinleştirin** (*süper mikro bolustan* farklıdır!): Dikkatli kullanın ve gerçekte ne işe yaradığını öğrenene kadar etkinleştirmeyin. Temel olarak, sonraki iki saat için bazal bolusa eklenir ve iki saatlik sıfır geçici bazal etkinleştirilir. **AAPS döngü işlevleri devre dışı bırakılacak - bu nedenle dikkatli kullanın! SMB kullanırsanız, AAPS döngü işlevleri ["SMB'yi sınırlamak için maks. bazal dakika"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to) içindeki ayarlarınıza göre devre dışı bırakılacaktır. SMB kullanmazsanız, döngü işlevleri iki saat boyunca devre dışı bırakılır.** Süper bolus ile ilgili ayrıntılara [buradan ulaşabilirsiniz](https://www. diyabetnet.com/diabetes-technology/blue-skying/super-bolus).
 
 (Config-Builder-actions)=
 
 ### Eylemler
 
 * Ortak özelliklere hızla erişmek için bazı butonlar.
-* See [AAPS screenshots](Screenshots-action-tab) for details.
+* Ayrıntılar için [AAPS ekran görüntülerine](Screenshots-action-tab) bakın.
 
 ### Otomasyon
 
-User defined automation tasks ('if-then-else'). Please [read on here](../Usage/Automation.md).
+Kullanıcı tanımlı otomasyon görevleri. Lütfen otomasyonla ilgili [burayı okuyun](../Usage/Automation.md).
 
 (Config-Builder-sms-communicator)=
 
 ### SMS Kominikatör
 
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Ebeveynlerin bazı AndroidAPS özelliklerini uzaktan SMS yoluyla kontrol etmesine izin verir, daha fazla kurulum bilgisi için [SMS Komutları](../Children/SMS-Commands.md)'na bakın.
 
 ### Yiyecek
 
-Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
+Nightscout gıda veritabanında tanımlanan yemek ön ayarlarını görüntüler, daha fazla kurulum bilgisi için [Nightscout Beni Oku](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods)'ya bakın.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Not: Girişler, AndroidAPS hesaplayıcısında kullanılamaz. (Sadece Görüntüleme)
 
 (Config-Builder-wear)=
 
 ### Wear
 
-Monitor and control AAPS using your Android Wear watch (see [page Watchfaces](../Configuration/Watchfaces.md)). Use settings (cog wheel) to define which variables should be considered when calculating bolus given though your watch (i.e. 15min trend, COB...).
+Android saatinizi kullanarak AAPS'yi izleyin ve kontrol edin (bkz. [saat arayüzeyleri sayfası](../Configuration/Watchfaces.md)). Saatinizden verilen bolusu hesaplarken hangi değişkenlerin dikkate alınması gerektiğini belirlemek için ayarları (dişli çark) kullanın (15dk trend, AKARB., KŞ vb..).
 
 Saatinizden bolus vs. göndermek istiyorsanız "Wear ayarları" içinde "Saat tarafından kontrol"u etkinleştirmeniz gerekir.
 
 ![Wear ayarları](../images/ConfBuild_Wear.png)
 
-Through Wear tab or hamburger menu (top left of screen, if tab is not displayed) you can
+Wear sekmesi veya hamburger menüsünden (sekme görüntülenmiyorsa ekranın sol üst kısmında)
 
 * Tüm verileri yeniden gönder. Saat bir süredir bağlı değilse ve bilgileri saate göndermek istiyorsanız yardımcı olabilir.
 * Telefonunuzu kullanarak Ayarları doğrudan saatinizde açar.
