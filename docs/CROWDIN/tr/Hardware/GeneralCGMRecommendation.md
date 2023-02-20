@@ -21,20 +21,20 @@ Sensör yerleştirildikten sonra, verici sensör üzerindeki tutucusuna takılab
 
 ### Bağlantı problemleri
 
-Bluetooth connection may be disturbed by other nearby Bluetooth devices such as blood glucose meters, headsets, tablets or kitchen devices such as microwave ovens or ceramic hobs. In this case xdrip does not display any BG values. When bluetooth connection is restabilised the data is backfilled.
+Bluetooth bağlantısı, kan şekeri ölçüm cihazları, kulaklıklar, tabletler gibi yakındaki diğer bluetooth cihazları veya mikrodalga fırınlar veya seramik ocaklar gibi mutfak cihazları tarafından bozulabilir. Bu durumda xdrip herhangi bir KŞ değeri göstermez. Bluetooth bağlantısı stabil olduğunda veriler yeniden gelmeye başlar.
 
 ### Sensör Hataları
 
-If recurring sensor errors occur try selecting a different body site to set your sensor. The sensor thread should not come into contact with blood.
+Yinelenen sensör hataları meydana gelirse, sensörünüzü yerleştirmek için farklı bir vücut bölgesi seçmeyi deneyin. Sensör teli kanla temas etmemelidir.
 
-Often a "Sensor Error" can be corrected by immediate drinking and massage around the sensor!
+Genellikle bir "Sensör Hatası", hemen su içerek (dehidrasyon) ve sensörün etrafına masaj yaparak düzeltilebilir!
 
 ### Atlamalı değerler
 
-You might try to change settings for noise blocking in xdrip (Settings - Inter-App Settings - Noise Blocking) i.e. "Block Very High noise and worse". See also [Smoothing BG data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
+Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gürültü Engelleme) değiştirmeyi deneyebilirsiniz. Örn". Ayrıca bkz. [KŞ verilerini yumuşatma](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
 ### Negatif Sensör Yaşı
 
-![Negative sensor age](../images/Troubleshooting_SensorAge.png)
+![Negatif sensör yaşı](../images/Troubleshooting_SensorAge.png)
 
-This occurs if there is either a double "CGM Sensor Insert" entry in [actions tab / menu](Config-Builder-actions) or a sensor insert with wrong date. Go to treatments tab \> careportal and delete the wrong entry.
+Bu mesaj [eylem sekmesi / menüsü](Config-Builder-actions) "CGM Sensör yerleştir" butonu ile çift giriş varsa veya yanlış tarih ile sensör girişi yapılmışsa çıkar. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.

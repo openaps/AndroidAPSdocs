@@ -150,19 +150,19 @@ Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines
 
 <ul>
   <li>
-    {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Website</a>
+    {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">Site internet OrangeLink</a>
   </li>
   <li>
     {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
   </li>
   <li>
-    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Site internet Emalink</a> - <a href="mailto:getemalink@gmail.com">Contact</a>
   </li>
   <li>
-    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+    {{ DiaLink }} DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact</a>
   </li>
   <li>
-    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+    {{ LoopLink }}  <a href="https://www.getlooplink.org/">Site internet LoopLink</a> - <a href="https://jameswedding.substack.com/">Contact</a> - Non testé
   </li>
 </ul>
 

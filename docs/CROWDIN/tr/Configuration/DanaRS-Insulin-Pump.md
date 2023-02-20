@@ -99,20 +99,20 @@
 
 ### İnsülin iletimi sırasında hata
 
-In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
+Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının kesilmesi durumunda (yani, Dana RS insülin iletirken telefondan uzaklaşırsanız) bir mesaj görecek ve bir alarm sesi duyacaksınız.
 
-![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
+![İnsülin iletimi alarmı](../images/DanaRS_Error_bolus.png)
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
 * Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
-* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
+* İsterseniz [tedaviler sekmesinde](Screenshots-carb-correction) hatalı girişi silin.
 * Bir sonraki pompa bağlantısında gerçek miktar okunur ve kaydedilir. Bunu yaptırmak için dana sekmesindeki BT simgesine basın veya bir sonraki bağlantı için bekleyin.
 
 ## Telefon değiştirirken özel not
 
-When switching to a new phone the following steps are necessary:
+Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
-* [Export settings](ExportImportSettings-export-settings) on your old phone
+* Eski telefonunuzdaki [Ayarları dışa aktarın](ExportImportSettings-export-settings)
 * Ayarları eski telefondan yeni telefona aktarın
 
 ### DanaRS v1
@@ -120,13 +120,13 @@ When switching to a new phone the following steps are necessary:
 * Dana RS'i yeni telefonla **manuel olarak eşleştirin**
 * Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
 * AndroidAPS'i yeni telefona yükleyin.
-* [Import settings](ExportImportSettings-import-settings) on your new phone
+* Yeni telefonunuzda [Ayarları içe aktarın](ExportImportSettings-import-settings)
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
+* [Yukarıda](DanaRS-Insulin-Pump-pairing-pump) açıklanan şekilde eşleştirme prosedürünü başlatın.
 * Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AndroidAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 
-For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](Timezone-traveling-danarv2-danars) bölümüne bakın.

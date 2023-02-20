@@ -12,7 +12,7 @@ AndroidAPS offre plusieurs options pour la surveillance à distance des enfants 
 - Les parents peuvent suivre à distance toutes les données pertinentes telles que les glycémies, les glucides actifs, l'insuline active, etc. en utilisant l'application **NSclient** sur leur téléphone. Les paramètres doivent être identiques dans AAPS et dans l'application NSClient.
 - Les parents peuvent recevoir des alarmes en utilisant l'application **xDrip+ en mode suiveur** sur leur téléphone.
 - Contrôle à distance d'AndroidAPS en utilisant les [commandes SMS](../Children/SMS-Commands.md) sécurisées par l'authentification à deux facteurs.
-- Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
+- Le contrôle à distance via l'application NSClient n'est recommandé que si votre synchronisation fonctionne bien (vous ne voyez pas de changement de données indésirables comme la modification automatique de CT, DBT, etc.) voir les [notes de version pour la version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) pour plus de détails.
 
 ## Outils et applications pour la surveillance à distance
 

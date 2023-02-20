@@ -47,11 +47,11 @@ Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinya
 
   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](Screenshots-bg-warning-sign)
+Ayrıntılar için [AAPS ekranları sayfasına](Screenshots-bg-warning-sign) bakın
 
 
 ## Hata mesajı: Farklı pompadan gelen veriler
 
    ![Hata mesajı: Farklı pompadan gelen veriler](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](Config-Builder-pump). Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.
+Bu sorunu çözmek için [Konfigürasyon ayarları](Config-Builder-pump)'na gidin. Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.
