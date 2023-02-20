@@ -43,9 +43,9 @@ Bunu özellikle önemli bir alt bölüm olan [AndroidAPS Kullanımı](Getting-St
 
 Bu başlıktan sonra AndroidAPS kullanılırken yılda iki kez gerçekleşecek olan yaz saati uygulaması değişiklikleri sırasında zaman dilimlerinin kesişmesiyle nasıl başa çıkılacağı hakkında bilgileri içeren [Genel İpuçları](Usage/Timezone-traveling.md) adlı bir alt başlık vardır.
 
-There is a subsection for the [clinicians](Resources/clinician-guide-to-AndroidAPS.md) who have expressed interest in open source artificial pancreas technology such as AndroidAPS, or for patients who want to share such information with their clinicians.
+AndroidAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade eden veya bu tür bilgileri klinisyenleriyle paylaşmak isteyen hastalar için [klinisyenler](Resources/clinician-guide-to-AndroidAPS.md) alt başlığı mevcuttur.
 
-Finally, in the subsection [How to help?](make-a-PR.md) we would like to provide you with information so that you are able to suggest small or larger changes to the documentation yourself and work together with us on the documentation. We further need support for [translation of the documentation](translations.md) By the way, it also very helpful for everyone if you could provide links to the corresponding documentation (or screenshots of where the links are located within the Documentation if you are not familiar with how to send a link) when answering questions from other users. Bu şekilde, diğer kullanıcılar da gelecekte aynı tür sorulara yanıt bulmaya çalışırsa, doğru bilgiler kolayca yeniden bulunabilir.
+Son olarak, [Nasıl yardımcı olurum?](make-a-PR.md) alt başlığında, dokümantasyonda küçük veya büyük değişiklikleri önerebilmeniz ve dokümantasyon üzerinde bizimle birlikte çalışabilmeniz için size bilgi veriyoruz. Ayrıca [dokümantasyon çevirisi](translations.md) için desteğe ihtiyacımız var. Bu arada, diğer kullanıcılardan gelen soruları yanıtlarken ilgili dokümantasyona bağlantılar (veya bağlantıların nasıl gönderileceğini bilmiyorsanız dokümantasyon içinde bağlantıların nerede bulunduğuna dair ekran görüntüleri) sağlamanız da herkes için çok yararlı olacaktır. Bu şekilde, diğer kullanıcılar da gelecekte aynı tür sorulara yanıt bulmaya çalışırsa, doğru bilgiler kolayca yeniden bulunabilir.
 
 (index-translation-help-needed)=
 
@@ -94,23 +94,23 @@ Modül <./Module/module.md>
 ```
 
 ```{toctree}
-:caption: How to Install AndroidAPS
+:caption: AndroidAPS Nasıl Yüklerim?
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md>
+APK Oluşturma <./Installing-AndroidAPS/Building-APK.md>
 
-Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Yeni bir sürüme veya yan sürüme güncelleme <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+AAPS 3.0 güncellemesinden sonra İpuçları ve Kontroller <./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+AAPS 2.7 güncellemesinden sonraki kontroller <./Installing-AndroidAPS/update2_7.md> 
 
-Install git <./Installing-AndroidAPS/git-install.md>
+Git kurulumu <./Installing-AndroidAPS/git-install.md>
 
-Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Android Studio'da Sorun Giderme <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
 
-Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Sürüm notları <./Installing-AndroidAPS/Releasenotes.md>
 
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Geliştirici sürümü <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
