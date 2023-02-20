@@ -56,7 +56,7 @@
  <td><strong>PİL</strong></td>
  <td>ana ekranda düşük pil durumu göstergesi</td>
  <td>Kanül / Rezervuar / Sensör</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>KŞ</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>KANÜL</strong></td>
  <td>başlangıç ​​ekranında kanül değişim durumu ekranı</td>
  <td>Pil / Rezeruar / Sensör</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -128,7 +128,7 @@
  <td><strong>İES (DIA) İnsülin etki süresi</strong></td>
  <td>insülin etki süresi</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Viki insulin çeşitleri</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST (YSU)</strong></td>
@@ -140,7 +140,7 @@
  <td><strong>yKarb</strong></td>
  <td>"yayma karbonhidratlar" - karbonhidratlar birkaç saate bölünür (çok fazla yağ/protein)<br>düzenli pompa tedavisinden bildiğiniz yayma boluslar, döngü sırasında pek bir anlam ifade etmez</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Viki - yKarb</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">yKarb kullanımı</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
@@ -212,7 +212,7 @@
  <td><strong>makIOB</strong></td>
  <td>güvenlik özelliği -AAPS maksimum toplam AİNS (aktif insülini) geçemez</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - makIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -302,7 +302,7 @@
  <td><strong>REZ</strong></td>
  <td>giriş ekranda durum ışığı- gecikmiş rezervuar değişikliği</td>
  <td>Pil / Rezeruar / Sensör</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>giriş ekranında sensör durum ışığı</td>
  <td>Pil / Rezeruar / Kanül</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>Duyarlılık algılaması</strong></td>
