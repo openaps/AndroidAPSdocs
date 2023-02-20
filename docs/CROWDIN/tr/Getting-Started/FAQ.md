@@ -18,7 +18,7 @@ Bu yüzden apk'ler mevcut değildir.
 
 ## Nasıl başlamalı?
 
-First of all, you have to **get loopable hardware components**:
+Her şeyden önce, **döngülenebilir donanım bileşenleri almanız** gerekir:
 
 - [destekleyen bir insülin pompası](./Pump-Choices.md), 
 - bir [Android akıllı telefon](Phones.md) (Apple iOS, AndroidAPS tarafından desteklenmez - [iOS Loop](https://loopkit.github.io/loopdocs/) kontrol edebilirsiniz) ve 
@@ -251,11 +251,11 @@ Looping can reduce the pump battery faster than normal use because the system in
 
 ### Rezervuar ve kanüllerin değiştirilmesi
 
-The change of cartridge cannot be done via AndroidAPS but must be carried out as before directly via the pump.
+Kartuş değişimi AndroidAPS üzerinden yapılamaz, ancak daha önce olduğu gibi doğrudan pompa üzerinden yapılmalıdır.
 
 - AndroidAPS'nin Ana Sayfa sekmesindeki "Açık Döngü"/"Kapalı Döngü" üzerine uzun basın ve 'Döngüyü 1 saat Askıya Al' seçeneğini seçin
-- Now nnect the pump and change the reservoir as per pump instructions.
-- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. In this case use [PRIME/FILL button](CPbefore26-pump) in the actions tab just to record the change.
+- Şimdi pompayı ayırın ve hazneyi pompa talimatlarına göre değiştirin.
+- Ayrıca doğrudan pompa üzerinde hortum ve kanül doldurma işlemi yapılabilir. Bu durumda, sadece değişikliği kaydetmek için eylemler sekmesinde [HAZIRLA/DOLDUR düğmesini](CPbefore26-pump) kullanın.
 - Pompaya yeniden bağlandıktan sonra, 'Askıya Alındı (X m)' üzerine uzun basarak döngüye devam edin.
 
 The change of a cannula however does not use the "prime infusion set" function of the pump, but fills the infusion set and/or cannula using a bolus which does not appear in the bolus history. This means it does not interrupt a currently running temporary basal rate. On the Actions (Act) tab, use the [PRIME/FILL button](CPbefore26-pump) to set the amount of insulin needed to fill the infusion set and start the priming. If the amount is not enough, repeat filling. You can set default amount buttons in the Preferences > Other > Fill/Prime standard insulin amounts. See the instruction booklet in your cannula box for how many units should be primed depending on needle length and tubing length.
