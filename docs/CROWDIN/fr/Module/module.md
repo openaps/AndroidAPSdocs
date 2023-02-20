@@ -153,7 +153,7 @@ Enfin et surtout, vous ne devez pas prendre d'inhibiteurs du SGLT-2 (gliflozines
     {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">Site internet OrangeLink</a>
   </li>
   <li>
-    {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
+    {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">RileyLink 433MHz</a>
   </li>
   <li>
     {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Site internet Emalink</a> - <a href="mailto:getemalink@gmail.com">Contact</a>
