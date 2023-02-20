@@ -58,13 +58,13 @@
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Ranges for typical life time of the different battery types are as follows:
+Farklı pil türlerinin tipik kullanım ömrü aralıkları aşağıdaki gibidir:
 
 * **Energizer Ultimate Lithium**: 4 ila 7 hafta
 * Hizmet paketinden **Power One Alkaline** (Varta): 2 ila 4 hafta
 * **Eneloop şarj edilebilir** piller (BK-3MCCE): 1 ila 3 hafta
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+Pil ömrünüz yukarıda belirtilen aralıklardan önemli ölçüde kısaysa, lütfen aşağıdaki olası nedenleri kontrol edin:
 
 * [ruffy Uygulamasının](https://github.com/MilosKozak/ruffy) vMarch 2018'den sonraki sürümleri, pompa pil ömrünü önemli ölçüde iyileştirdi. Kısa pil ömrüyle ilgili sorunlarınız varsa en yeni sürümde olduğunuzdan emin olun.
 * Pilleri kısmen kısa devre yapan ve hızlı bir şekilde boşaltan Combo pompanın vidalı pil kapağının bazı çeşitleri vardır. Bu sorunu olmayan kapaklar, altın metal kontaklardan tanınabilir.
@@ -79,7 +79,7 @@ If your battery life is signifcantly shorter than the ranges given above, please
 
 ## Yayma bolus, çok dalgalı bolus
 
-The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
+OpenAPS algoritması paralel yayma bolusu veya çok dalgalı bolusu desteklemez. Ancak aşağıdaki alternatiflerle benzer bir tedavi sağlanabilir:
 
 * Karbonhidrat girerken veya tam öğünün karbonhidratlarını ve karbonhidratların kanınıza glikoz olarak gelmesini beklediğiniz süreyi girerek Hesap Makinesini kullanırken **y-Karb** kullanın. Sistem daha sonra, tüm süre boyunca eşit olarak dağıtılan küçük karbonhidratları hesaplayacak ve bu da, algoritmanın eşdeğer insülin dozunu sağlamasına ve aynı zamanda kan şekeri seviyesinin genel yükselişini/düşüşünü sürekli olarak kontrol etmesine neden olacaktır. Çok dalgalı bir bolus yaklaşımı için, daha küçük bir acil bolusu y-karbonhidratlarla da birleştirebilirsiniz. 
 * Yemekten önce, AndroidAPS'deki **Eylemler sekmesinde**, birkaç saat boyunca hedef glikoz 80 ile geçici bir **Yakında Yemek** hedefi olarak ayarlayın. Süre, yayılmış bir bolus için seçmeniz gereken aralığa dayalı olmalıdır. Bu hedefinizi normalden daha düşük tutacak ve dolayısıyla iletilen insülin miktarını artıracaktır.
@@ -87,15 +87,15 @@ The OpenAPS algorithm does not support a parallel extended bolus or multiwave bo
 
 * Yayma veya çok dalgalı bolusu doğrudan pompa üzerinde kullanmak isterseniz, AndroidAPS, fazla insülin dozunun hesaplanmamasını sağlamak için sonraki altı saat boyunca kapalı döngüyü devre dışı bırakarak sizi cezalandıracaktır.
 
-![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
+![Çoklu Dalga bolus'tan sonra döngü devre dışı bırakıldı](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Bolus iletiminde uyarılar
 
 * AndroidAPS, aynı bolusun aynı dakikada başarıyla iletildiğini algılarsa, aynı sayıda insülin ünitesiyle bolus iletimi engellenir. Aynı insülini arka arkaya iki kez gerçekten bolus yapmak istiyorsanız, iki dakika daha bekleyin ve ardından bolusu tekrar gönderin. İlk bolus kesintiye uğradıysa veya başka nedenlerle iletilmediyse, AAPS 2.0'dan itibaren bolusu hemen yeniden gönderebilirsiniz.
 * Alarm, bir bolus doğrudan pompadan iletilse bile, aktif insülini (AİNS) doğru bir şekilde hesaplamak için yeni bir bolus göndermeden önce pompanın bolus geçmişini okuyan bir güvenlik mekanizmasıdır. Burada ayırt edilemeyen girişler engellenmelidir.
 
-![Double bolus](../images/combo/combo-tips-doppelbolus.png)
+![Çift bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Bu mekanizma, hatanın ikinci bir nedeninden de sorumludur: Bolus hesaplayıcının kullanımı sırasında pompa aracılığıyla başka bir bolus verilirse ve bu nedenle bolus geçmişi değişmiş olur, bundan dolayıda bolus hesaplaması temelinden eksik olur ve bolus iptal edilir. 
 
-![Canceled bolus](../images/combo/combo-tips-history-changed.png)
+![Bolusu iptal Et](../images/combo/combo-tips-history-changed.png)
