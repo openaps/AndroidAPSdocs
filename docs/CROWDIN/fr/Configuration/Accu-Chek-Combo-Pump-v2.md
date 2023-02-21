@@ -1,6 +1,6 @@
 # Pompe Accu-Chek Combo
 
-These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. Ce driver est entièrement séparé de l'ancien.
+Ces instructions sont pour configurer la pompe Accu-Chek Combo à l'aide du nouveau pilote combov2, qui est disponible dans le cadre d'AAPS depuis la version 3.2. Ce driver est entièrement séparé de l'ancien.
 
 **Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
@@ -46,10 +46,10 @@ It is very important to make sure that battery optimizations are turned off. AAP
      * Vérifiez le _Quick Info Text_ est défini à "QUICK INFO" (sans les guillemets, trouvés sous _Insulin Pump Options_).
      * Paramétrez le DBT _Maximum Adjustment_ à 500%
      * Désactivez _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Paramétrez le DBT _Duration increment_ à 15min
      * Activez le Bluetooth
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Paramètres recommandés** (marqués en bleu dans les captures d'écran) :
 
      * Définissez une alarme de cartouche basse à votre convenance
      * Configurez un bolus max adapté à votre thérapie afin de se protéger contre les bugs logiciel et matériel
@@ -108,7 +108,7 @@ The tab shows the following information when a pump was paired (items are listed
 
 1. _Driver state_: The driver can be in one of the following states:
    - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
+   - "Connexion en cours"
    - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
    - "Ready" : the driver is ready to accept commands from AAPS
    - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
@@ -175,7 +175,7 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 
 ## Things to be careful about when using the Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
+* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 * Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
 * Ne faites pas ou n'annulez pas de DBT sur la pompe. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
 * Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](combov2-before-you-begin)).
