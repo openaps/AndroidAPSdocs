@@ -41,6 +41,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
 * Enable extended boluses on pump
 
 (DanaRS-Insulin-Pump-default-password)=
+
 ### Default password
 
 * For DanaRS with firmware v1 and v2 the default password is 1234.
@@ -68,7 +69,7 @@ _These instructions are for configuring the app and your pump if you have a Dana
    
 * Press OK to enter old password.
 
-* Enter **old password** (Default password see [above](#default-password)) and press OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
 
   ![DanaRS Enter old password](../images/DanaRSPW_04_11PWenter.png)
 
