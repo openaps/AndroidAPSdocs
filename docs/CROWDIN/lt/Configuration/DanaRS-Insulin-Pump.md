@@ -73,7 +73,7 @@
 
 * Paspauskite OK senojo slaptažodžio įvedimui.
 
-* Įveskite **seną slaptažodį** (Numatytasis slaptažodis žr. [aukščiau](#default-password)) ir paspauskite OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Įveskite seną slaptažodį](../images/DanaRSPW_04_11PWenter.png)
 
