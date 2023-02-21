@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Первое подключение трансмиттера G6
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Для передатчиков G6, изготовленных после осени/конца 2018 года (серийный номер которых начинается с 80 или 81) пользуйтесь версией [ master ](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ To learn more about the details and reasons for these recommendations read the [
    
    * Пост 1: Дни передатчика: 151/Напряжение А: 297/Напряжение В: 260/Сопротивление: 2391
    * Пост 2: передатчик дней: 249 / напряжение: 275 (на момент отказа)
+
+(xdrip-extend-transmitter-life)=
 
 ### Увеличение срока работы трансмиттера
 
