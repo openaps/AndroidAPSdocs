@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Conectar el transmisor G6 por primera vez
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 For G6 transmitters manufactured after fall/end of 2018 (i.e. serial no. a partir de 80 o 81) puede utilizar la versión [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ Si el número de serie de su transmisor Dexcom G6 is starting with 8G, 8H or 8J 
    
    * Publicación 1: Día de transmisión: 151 / Voltaje A: 297 / Voltaje B: 260 / Resistencia: 2391
    * Publicación 2: Días de transmisión: 249 / Voltaje A: 275 (en tiempo de falla)
+
+(xdrip-extend-transmitter-life)=
 
 ### Extender vida del transmisor
 
