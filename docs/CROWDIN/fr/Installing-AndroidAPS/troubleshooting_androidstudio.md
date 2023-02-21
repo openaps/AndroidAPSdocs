@@ -26,12 +26,13 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [Uncommitted changes](#modifications-non-validees)
-* [No cached version of ... available](#could-not-resolve-no-cached-version)
-* [Android Gradle requires Java 11 to run](#android-gradle-plugin-requires-java-11-to-run)
+* [Uncommitted changes](troubleshooting_androidstudio-uncommitted-changes)
+* [No cached version of ... available](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
+* [Android Gradle requires Java 11 to run](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](troubleshooting_androidstudio-gradle-resync) again.
 
+(troubleshooting_androidstudio-uncommitted-changes)=
 ### Uncommitted changes
 
 If you receive a failure message like
@@ -48,7 +49,7 @@ If you receive a failure message like
 
     Note : Il y a un espace et deux traits d'union entre git et version !
 
-  * Vous devez recevoir un message indiquant quelle version de git est installée, comme vous pouvez le voir dans la capture d'écran ci-dessus. Dans ce cas, allez à [l'étape 2](#etape-2-verifier-les-modifications-non-commit-es).
+  * Vous devez recevoir un message indiquant quelle version de git est installée, comme vous pouvez le voir dans la capture d'écran ci-dessus. In this case, go to [Step 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes).
 
   * Dans le cas où vous recevez un message disant
     ```
@@ -83,7 +84,7 @@ If you receive a failure message like
 
       ![Onglet de commit : Restaurer les modifications](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * Les fichiers sont récupérés à nouveau depuis le serveur Git. S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[Étape 3](#etape-3-resynchroniser-gradle-encore).
+    * Les fichiers sont récupérés à nouveau depuis le serveur Git. If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
   * Si vous pouvez voir "Unversioned Files", vous pouvez avoir stocké des fichiers dans votre répertoire soure qui devraient être ailleurs, par ex. votre fichier de de clés.
 
@@ -91,12 +92,16 @@ If you receive a failure message like
 
     * Retournez à Android Studio et cliquez sur le bouton Refresh (4) dans l'onglet Commit pour vous assurer que le fichier n'est plus stocké dans le répertoire AndroidAPS.
 
-      S'il n'y a pas d'autres changements dans l'onglet commit, allez à l'[Étape 3](#etape-3-resynchroniser-gradle-encore).
+      If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
+
+(troubleshooting_androidstudio-step-3-gradle-resync)=
 
 #### Étape 3 : Resynchroniser Gradle (encore)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
+
+(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 ### Android Gradle requires Java 11 to run
 
@@ -118,7 +123,9 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
-  Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
+  Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
+
+(troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 
 ### Could not resolve/No cached version
 
@@ -132,7 +139,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
     ![Gradle mode hors connexion](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Maintenant vous devez faire une [Resynchronisation Gradle](#resynchronisation-gradle)
+  * Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### Unable to start daemon process
