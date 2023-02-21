@@ -2,7 +2,7 @@
 
 **Esta descripción es sólo para editar la documentación en inglés. All new information must be added in English first. Si desea traducir a otros idiomas (gracias), por favor use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
 
 ## General
 
