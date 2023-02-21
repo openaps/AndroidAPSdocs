@@ -458,7 +458,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  Les étapes détaillées sur la façon de configurer votre appareil de communication pod sont listées ci-dessous dans la section <a href="#configuration-rileylink">Configuration RileyLink</a>.
+  Detailed steps on how to setup your pod communication device are listed below in the <a href="OmnipodEros-rileylink-setup">RileyLink Setup Section</a>.
 </p>
 
 <p spaces-before="0">
@@ -475,7 +475,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <strong x-id="1">REMARQUE :</strong> Un moyen plus rapide d'accéder aux <strong x-id="1">paramètres Omnipod</strong> est décrit ci-dessous dans la section <a href="#configuration-omnipod">Paramètres Omnipod</a> de ce document.
+    <strong x-id="1">REMARQUE :</strong> Un moyen plus rapide d'accéder aux <strong x-id="1">paramètres Omnipod</strong> est décrit ci-dessous dans la section <a href="OmnipodEros-omnipod-settings">Paramètres Omnipod</a> de ce document.
   </p>
   
   <p spaces-before="0">
@@ -517,12 +517,16 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   </p>
 </blockquote>
 
+<p spaces-before="0">
+  (OmnipodEros-rileylink-setup)=
+</p>
+
 <h3 spaces-before="0">
   Configuration RileyLink
 </h3>
 
 <p spaces-before="0">
-  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="#activating-a-pod">Activating a Pod Section</a> below.
+  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="OmnipodEros-activating-a-pod">Activating a Pod Section</a> below.
 </p>
 
 <p spaces-before="0">
@@ -542,7 +546,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
-       Ensure your RileyLink battery is charged and it is <a href="#optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Une fois sélectionné, vous pouvez continuer à activer votre première session de pod. Utilisez le bouton retour de votre téléphone pour revenir à l'interface principale AAPS.
+       Ensure your RileyLink battery is charged and it is <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Une fois sélectionné, vous pouvez continuer à activer votre première session de pod. Utilisez le bouton retour de votre téléphone pour revenir à l'interface principale AAPS.
      </p>
      
      <p spaces-before="0">
@@ -585,6 +589,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  </li>
 </ol>
 
+<p spaces-before="0">
+  (OmnipodEros-activating-a-pod)=
+</p>
+
 <h3 spaces-before="0">
   Activation d’un Pod
 </h3>
@@ -594,7 +602,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. During these procedures, make sure that your pod is</em> <a href="#optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+  <em x-id="3">RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. During these procedures, make sure that your pod is</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 </p>
 
 <ol start="1">
@@ -626,7 +634,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   
   <li>
     <p spaces-before="0">
-      Sur l'écran <strong x-id="1">Initialiser le Pod</strong> le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur <strong x-id="1">Aucune réponse du Pod</strong>. If this occurs, <a href="#optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
+      Sur l'écran <strong x-id="1">Initialiser le Pod</strong> le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur <strong x-id="1">Aucune réponse du Pod</strong>. If this occurs, <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -725,7 +733,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
       Cliquez sur le bouton Retour de votre téléphone pour retourner à l'écran de l'onglet <strong x-id="1">Omnipod (POD)</strong> qui affichera maintenant les informations du Pod pour votre session de pod actif, y compris le débit de basal actuel, le niveau du réservoir du pod, l'insuline injectée, les erreurs du pod et les alertes.
     </p>
     <p spaces-before="4">
-      For more details on the information displayed go to the <a href="#omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
+      For more details on the information displayed go to the <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
     </p>
     <p spaces-before="4">
       {{ Activate_Pod_14 }} {{ Activate_Pod_15 }}
@@ -742,7 +750,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  Pour désactiver un pod (soit après son expiration soit à cause d'une erreur du pod) :
+  To deactivate a pod (either from expiration or from a pod failure):
 </p>
 
 <ol start="1">
@@ -832,7 +840,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMARQUE : si vous ne voyez pas de bouton SUSPENDRE</em>, son affichage n'a pas été activé dans l'onglet Omnipod (POD). Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="#omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
+  <em x-id="3">REMARQUE : si vous ne voyez pas de bouton SUSPENDRE</em>, son affichage n'a pas été activé dans l'onglet Omnipod (POD). Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="OmnipodEros-omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
 </p>
 
 <h4 spaces-before="0">
@@ -883,7 +891,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h4>
 
 <p spaces-before="0">
-  Utilisez cette commande pour demander au pod actif, actuellement suspendu, de reprendre l'injection d'insuline. Une fois la commande exécutée avec succès, l'insuline sera à nouveau injectée normalement avec le débit de basal défini dans le profil actif pour l'heure actuelle. Le pod acceptera à nouveau les commandes pour les bolus, DBT, et SMB.
+  Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 </p>
 
 <ol start="1">
@@ -986,12 +994,16 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  </li>
 </ol>
 
+<p spaces-before="0">
+  (OmnipodEros-view-pod-history)=
+</p>
+
 <h3 spaces-before="0">
   Voir l'historique du Pod
 </h3>
 
 <p spaces-before="0">
-  Cette section vous montre comment revoir l'historique du pod actif et filtrer selon les catégories d'action. L'outil historique du pod vous permet de visualiser les actions et résultats effectués dans votre pod actuellement actif pendant sa durée de vie de trois jours (72 à 80 heures).
+  This section shows you how to review your active pod history and filter by different action categories. L'outil historique du pod vous permet de visualiser les actions et résultats effectués dans votre pod actuellement actif pendant sa durée de vie de trois jours (72 à 80 heures).
 </p>
 
 <p spaces-before="0">
@@ -1005,7 +1017,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu and then press the <strong x-id="1">Pod history (2)</strong> button to access the pod history screen.
+      Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et appuyez sur le bouton <strong x-id="1">GEST. POD (1)</strong> pour accéder au menu de <strong x-id="1">Gestion du pod</strong> puis appuyez sur le bouton <strong x-id="1">Historique pod (2)</strong> pour accéder à l'écran d'historique du pod.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1016,7 +1028,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">Pod history</strong> screen, the default category of <strong x-id="1">All (1)</strong> is displayed showing the <strong x-id="1">Date and Time (2)</strong> of all pod <strong x-id="1">Actions (3)</strong> and <strong x-id="1">Results (4)</strong> in reverse chronological order. Use your phone’s <strong x-id="1">back button 2 times</strong> to return to the <strong x-id="1">Omnipod (POD)</strong> tab in the main AAPS interface.
+     Sur l'écran <strong x-id="1">Historique Pod</strong> la catégorie par défaut <strong x-id="1">Tous (1)</strong> est affichée avec la <strong x-id="1">Date / Heure (2)</strong> de tous les pods <strong x-id="1">Actions (3)</strong> et <strong x-id="1">Résultats (4)</strong> dans l'ordre chronologique inverse. Utilisez le <strong x-id="1">bouton retour</strong> de votre téléphone <strong x-id="1">2 fois</strong> pour retourner à l'onglet <strong x-id="1">Omnipod (POD)</strong> dans l'interface principale AAPS.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1031,15 +1043,15 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Cette section vous montre comment revoir les paramètres de votre pod actif et du RileyLink ainsi que l'historique de la communication de chacun d'eux. This feature, once accessed, is split into two sections: <strong x-id="1">Settings</strong> and <strong x-id="1">History</strong>.
+  Cette section vous montre comment revoir les paramètres de votre pod actif et du RileyLink ainsi que l'historique de la communication de chacun d'eux. Cette fonctionnalité, une fois sélectionnée, est divisée en deux sections : <strong x-id="1">Paramètres</strong> et <strong x-id="1">Historique</strong>.
 </p>
 
 <p spaces-before="0">
-  The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the <strong x-id="1">RileyLink status</strong> reports <strong x-id="1">RileyLink unreachable</strong>. The <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+  L'utilisation principale de cette fonction est lorsque votre périphérique de communication pod est hors de la portée Bluetooth de votre téléphone après une période de temps et que l'<strong x-id="1">État du RileyLink</strong> signale <strong x-id="1">RileyLink hors de portée</strong>. Le bouton <strong x-id="1">ACTUALISER</strong> de l'onglet principal <strong x-id="1">Omnipod (POD)</strong> va essayer de rétablir manuellement la communication Bluetooth avec le RileyLink actuellement configuré dans les paramètres Omnipod.
 </p>
 
 <p spaces-before="0">
-  In the event the <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+  Dans le cas où le bouton <strong x-id="1">ACTUALISER</strong> de l'onglet principal <strong x-id="1">Omnipod (POD)</strong> ne restaure pas la connexion avec le périphérique de communication pod, suivez les étapes supplémentaires ci-dessous pour une reconnexion manuelle.
 </p>
 
 <h4 spaces-before="0">
@@ -1049,7 +1061,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      From the <strong x-id="1">Omnipod (POD)</strong> tab when the <strong x-id="1">RileyLink Status: (1)</strong> reports <strong x-id="1">RileyLink unreachable</strong> press the <strong x-id="1">POD MGMT (2)</strong> button to navigate to the <strong x-id="1">Pod Management</strong> menu. On the <strong x-id="1">Pod Management</strong> menu you will see a notification appear actively searching for a RileyLink connection, press the <strong x-id="1">RileyLink stats (3)</strong> button to access the <strong x-id="1">RileyLink settings</strong> screen.
+      À partir de l'onglet <strong x-id="1">Omnipod (POD)</strong> lorsque l'<strong x-id="1">État RileyLink : (1)</strong> signale <strong x-id="1">RileyLink injoignable</strong> appuyez sur le bouton <strong x-id="1">GEST POD (2)</strong> pour accéder au menu <strong x-id="1">Gestion du Pod</strong>. Dans le menu de <strong x-id="1">Gestion du pod</strong> vous verrez une notification montrant une recherche active d'une connexion RileyLink, appuyez sur le bouton <strong x-id="1">Stats RileyLink (3)</strong> pour accéder à l'écran <strong x-id="1">Paramètres RileyLink</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1060,7 +1072,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Settings (1)</strong> screen under the <strong x-id="1">RileyLink (2)</strong> section you can confirm both the Bluetooth connection status and error in the <strong x-id="1">Connection Status and Error: (3)</strong> fields. A <em x-id="3">Bluetooth Error</em> and <em x-id="3">RileyLink unreachable</em> status should be shown. Start the manual Bluetooth reconnection by pressing the <strong x-id="1">refresh (4)</strong> button in the lower right corner.
+     Dans l'écran <strong x-id="1">Paramètres RileyLink (1)</strong> sous la section <strong x-id="1">RileyLink (2)</strong> vous pouvez confirmer à la fois l'état de la connexion Bluetooth et l'erreur dans les champs <strong x-id="1">État de la connexion et Erreur de Connexion : (3)</strong>. Les états <em x-id="3">Erreur Bluetooth</em> et <em x-id="3">RileyLink hors de portée</em> doivent être affichés. Démarrez une reconnexion manuelle du Bluetooth en appuyant sur le bouton <strong x-id="1">Actualiser (4)</strong> dans le coin inférieur droit.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1080,7 +1092,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   </li>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">OK (2)</strong> will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+      <strong x-id="1">OK (2)</strong> confirmera cette alerte et permettra à l'utilisateur d'essayer de ré-établir la connexion Bluetooth à nouveau.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1093,13 +1105,13 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="3">
   <li>
     <p spaces-before="0">
-      If the <strong x-id="1">Bluetooth connection</strong> does not re-establish, try manually turning <strong x-id="1">off</strong> and then back <strong x-id="1">on</strong> the Bluetooth function on your phone.
+      Si la <strong x-id="1">Connexion Bluetooth</strong> ne se rétablit pas, essayez de <strong x-id="1">désactiver</strong> manuellement le Bluetooth de votre téléphone, puis de le <strong x-id="1">réactiver</strong>.
     </p>
   </li>
   
   <li>
     <p spaces-before="0">
-      After a successful RileyLink Bluetooth reconnection the <strong x-id="1">Connection Status: (1)</strong> field should report <strong x-id="1">RileyLink ready</strong>. Félicitations, vous avez maintenant reconnecté votre périphérique de communication pod à AAPS !
+      Après avoir réussi la reconnexion Bluetooth du RileyLink, le champ <strong x-id="1">État de la connexion : (1)</strong> devrait signaler <strong x-id="1">RileyLink prêt</strong>. Félicitations, vous avez maintenant reconnecté votre périphérique de communication pod à AAPS !
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1120,7 +1132,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu, then press the <strong x-id="1">RileyLink stats (2)</strong> button to view your currently configured <strong x-id="1">RileyLink (3)</strong> and active pod <strong x-id="1">Device (4)</strong> settings.
+      Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et appuyez sur le bouton <strong x-id="1">GEST. POD (1)</strong> pour accéder au menu de <strong x-id="1">Gestion du Pod</strong> puis appuyez sur le bouton <strong x-id="1">Stats RileyLink (2)</strong> pour afficher les paramètres du <strong x-id="1">RileyLink (3)</strong> et du pod actif <strong x-id="1">Appareil (4)</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1141,19 +1153,19 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Address:</strong> MAC address of the selected pod communication device defined in the Omnipod Settings.
+      <strong x-id="1">Adresse :</strong> Adresse MAC du périphérique de communication pod sélectionné défini dans les paramètres Omnipod.
     </li>
     <li>
-      <strong x-id="1">Name:</strong> Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
+      <strong x-id="1">Nom :</strong> Nom d’identification Bluetooth du périphérique de communication pod sélectionné défini dans les paramètres Bluetooth de votre téléphone.
     </li>
     <li>
-      <strong x-id="1">Battery Level:</strong> Displays the current battery level of the connected pod communication device
+      <strong x-id="1">Niveau batterie :</strong> Affiche le niveau de batterie actuel du périphérique de communication pod connecté
     </li>
     <li>
-      <strong x-id="1">Connected Device:</strong> Model of the Omnipod pod currently communicating with the pod communication device
+      <strong x-id="1">Périphérique connecté :</strong> Modèle du pod Omnipod qui communique actuellement avec le périphérique de communication pod
     </li>
     <li>
-      <strong x-id="1">Connection Status</strong>: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
+      <strong x-id="1">État de la connexion :</strong> l'état actuel de la connexion Bluetooth entre le périphérique de communication pod et le téléphone qui exécute AAPS.
     </li>
     <li>
       <strong x-id="1">Erreur de Connexion :</strong> S'il y a une erreur Bluetooth avec le périphérique de communication pod, les détails seront affichés ici.
@@ -1189,7 +1201,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
       <strong x-id="1">Dernier contact appareil :</strong> Date et heure du dernier contact que le périphérique de communication pod a eu avec le pod.
     </li>
     <li>
-      <strong x-id="1">Refresh button</strong> manually refresh the settings on this page.
+      <strong x-id="1">Bouton Actualiser</strong> Actualiser manuellement les informations de cette page.
     </li>
   </ul>
 </blockquote>
@@ -1236,6 +1248,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     </li>
   </ul>
 </blockquote>
+
+<p spaces-before="0">
+  (OmnipodEros-omnipod-pod-tab)=
+</p>
 
 <h2 spaces-before="0">
   Onglet Omnipod (POD)
@@ -1364,22 +1380,22 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Reservoir:</strong> Displays over 50+U left when more than 50 units are left in the reservoir. Sous cette valeur, les unités exactes sont affichées en jaune.
+    <strong x-id="1">Réservoir :</strong> Affiche plus de 50+U quand plus de 50 unités sont dans le réservoir. Sous cette valeur, les unités exactes sont affichées en jaune.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Total delivered:</strong> Displays the total number of units of insulin delivered from the reservoir. <em x-id="3">Notez que c'est une approximation comme amorçage et le remplissage du pod n'est pas un processus exact.</em>
+    <strong x-id="1">Total injecté :</strong> Affiche le nombre total d'unités d'insuline injectées depuis le réservoir du pod actif. <em x-id="3">Notez que c'est une approximation comme amorçage et le remplissage du pod n'est pas un processus exact.</em>
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Errors:</strong> Displays the last error encountered. Review the <a href="#view-pod-history">Pod history</a>, <a href="#rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
+    <strong x-id="1">Erreurs :</strong> Affiche la dernière erreur rencontrée. Review the <a href="OmnipodEros-view-pod-history">Pod history</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Active pod alerts:</strong> Reserved for currently running alerts on the active pod. Normalement utilisé lorsque la date d'expiration du pod est au delà de 72 heures et que des alertes sonores natives sont en cours d'exécution.
+    <strong x-id="1">Alertes Pod actif :</strong> Réservées pour les alertes en cours sur le pod actif. Normalement utilisé lorsque la date d'expiration du pod est au delà de 72 heures et que des alertes sonores natives sont en cours d'exécution.
   </p>
 </li>
 </ul>
@@ -1407,7 +1423,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     </p>
     
     <p spaces-before="0">
-      See the <a href="#troubleshooting">Troubleshooting section</a> below for additional information.
+      See the <a href="OmnipodEros-troubleshooting">Troubleshooting section</a> below for additional information.
     </p>
   </blockquote>
 </li>
@@ -1659,7 +1675,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
           Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink > - Les registres de mémoire sont définis > - Les protocoles de communication sont définis > - La fréquence radio réglée est définie
         </li>
         <li>
-          See <a href="#reset-rileylink-config-notes">additional notes</a> at the end of this table
+          See <a href="OmnipodEros-reset-rileylink-config-notes">additional notes</a> at the end of this table
         </li>
       </ul>
     </blockquote>
@@ -1684,6 +1700,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </li>
 </ul>
 
+<p spaces-before="0">
+  (OmnipodEros-reset-rileylink-config-notes)=
+</p>
+
 <h4 spaces-before="0">
   <em x-id="3">Remarque concernant Réinit config. RileyLink</em>
 </h4>
@@ -1702,6 +1722,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     Ce bouton <strong x-id="1">NE DOIT PAS</strong> être appuyé lors du basculement entre les différents périphériques de communication du pod
   </li>
 </ul>
+
+<p spaces-before="0">
+  (OmnipodEros-omnipod-settings)=
+</p>
 
 <h2 spaces-before="0">
   Paramètres Omnipod
@@ -1724,7 +1748,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou les désactiver via un commutateur pour la plupart des entrées décrites ci-dessous :
+  The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
 </p>
 
 <p spaces-before="0">
@@ -1778,7 +1802,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Paramètre les bips de confirmation du pod pour l'injection et les modifications de bolus, basal, SMB et DBT.
+  Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 </p>
 
 <ul>
@@ -1792,7 +1816,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     <strong x-id="1">\*Bips SMB activés :</strong> Active ou désactive les bips de confirmation lorsqu'un SMB est injecté.
   </li>
   <li>
-    <strong x-id="1">TBR beeps enabled:</strong> Enable or disable confirmation beeps when a TBR is set or canceled.
+    <strong x-id="1">Bips DBT activés :</strong> Active ou désactive les bips de confirmation lorsqu'un DBT est défini ou annulé.
   </li>
 </ul>
 
@@ -1805,7 +1829,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Rejeter la notification ne rejettera PAS l'alerte SAUF SI Accepter automatiquement les alertes Pod est activé. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES\*</em>
+  <em x-id="3">Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES\*</em>
 </p>
 
 <ul>
@@ -1813,13 +1837,13 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     <strong x-id="1">\*Rappel d'expiration activé :</strong> Activer ou désactiver le rappel d'expiration du pod défini pour se déclencher lorsque le nombre défini d'heures avant l'arrêt est atteint.
   </li>
   <li>
-    <strong x-id="1">Hours before shutdown:</strong> Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
+    <strong x-id="1">Heures avant arrêt :</strong> Définit le nombre d'heures avant l'arrêt du pod actif, ce qui déclenchera ensuite l'alerte de rappel d'expiration.
   </li>
   <li>
     <strong x-id="1">\*Alerte Réservoir bas activée :</strong> Activer ou désactiver une alerte lorsque le nombre d'unités restantes dans le réservoir atteint la limite définie dans le champ "Nombre d'unités".
   </li>
   <li>
-    <strong x-id="1">Number of units:</strong> The number of units at which to trigger the pod low reservoir alert.
+    <strong x-id="1">Nombre d'unités :</strong> Défini le nombre d'unités à partir de laquelle l'alerte Réservoir bas est activée.
   </li>
   <li>
     <strong x-id="1">Accepter automatiquement les alertes Pod :</strong> Lorsqu'elles sont activées, une notification sera toujours publiée, cependant immédiatement après la pemière communication avec le pod après que l'alerte ait été émise, elle sera désormais automatiquement acceptée et l'alerte sera rejetée.
@@ -1835,12 +1859,12 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.</em>
+  <em x-id="3">NOTE: These are notifications only, no audible beep alerts are made.</em>
 </p>
 
 <ul>
   <li>
-    <strong x-id="1">Sound for uncertain TBR notifications enabled:</strong> Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
+    <strong x-id="1">Son pour les notifications DBT incertains activé :</strong> Activer ou désactiver ce paramètre pour déclencher une alerte audible et une notification visuelle lorsque AAPS n’est pas certain si un DBT a été défini avec succès.
   </li>
   <li>
     <strong x-id="1">\*Son pour les notifications SMB incertains activé :</strong> Activer ou désactiver ce paramètre pour déclencher une alerte audible et une notification visuelle lorsque AAPS n’est pas certain si un SMB a été correctement délivré.
@@ -2024,7 +2048,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  <strong x-id="1">Niveau d'insuline</strong>
+  <strong x-id="1">Insulin Level</strong>
 </p>
 
 <p spaces-before="0">
@@ -2079,6 +2103,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   </ul>
 </blockquote>
 
+<p spaces-before="0">
+  (OmnipodEros-troubleshooting)=
+</p>
+
 <h2 spaces-before="0">
   Résolution de problèmes
 </h2>
@@ -2088,7 +2116,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Les pods échouent occasionnellement en raison de problèmes variés, y compris des problèmes matériels avec le Pod lui-même. Il est préférable de ne pas les appeler dans Insulet, car l'utilisation d'AndroidAPS n'est pas approuvée. Une liste de codes défaut peut être trouvée <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">ici</a> pour aider à trouver les causes.
+  Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Une liste de codes défaut peut être trouvée <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">ici</a> pour aider à trouver les causes.
 </p>
 
 <h3 spaces-before="0">
@@ -2096,7 +2124,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout <em x-id="3">Envoi NS uniquement</em> dans la <strong x-id="1">Configuration</strong>➜<strong x-id="1">Général</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">roue crantée</strong>➜<strong x-id="1">Paramètres Avancés</strong> pour prévenir les éventuels échecs.
+  This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout <em x-id="3">Envoi NS uniquement</em> dans la <strong x-id="1">Configuration</strong>➜<strong x-id="1">Général</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">roue crantée</strong>➜<strong x-id="1">Paramètres Avancés</strong> pour prévenir les éventuels échecs.
 </p>
 
 <h3 spaces-before="0">
@@ -2145,7 +2173,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet <strong x-id="1">Aperçu (Accueil)</strong>, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. Un résumé des principales alertes que vous pouvez rencontrer est listé ci-dessous:
+  Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet <strong x-id="1">Aperçu (Accueil)</strong>, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. A summary of the main alerts that you may encounter is listed below:
 </p>
 
 <h4 spaces-before="0">
@@ -2207,6 +2235,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <h2 spaces-before="0">
   Bonnes pratiques
 </h2>
+
+<p spaces-before="0">
+  (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
+</p>
 
 <h3 spaces-before="0">
   Positionnement optimal Omnipod et RileyLink
