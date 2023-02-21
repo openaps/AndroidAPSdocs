@@ -17,7 +17,9 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 - Age information was moved to actions tab / menu.
 - BG check was moved to actions tab / menu.
 - Temporary target was moved to actions tab / menu.
-- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
+- Exercise is no longer available, but you can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
+
+(CPbefore26-carbs-bolus)=
 
 ## Carbs & bolus
 
@@ -44,7 +46,7 @@ Auf dieser Seite zeigen wir, wo die bisher über das Careportal verfügbaren Fun
 ```
 
 - CGM sensor insert can now be found in the actions tab / menu.
-- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](#carbs-bolus) on this page).
+- All other functions from this section have been removed. You can use the note field in the dialogue box when performing an action like giving bolus etc. (see screenshot in section [carbs & bolus](CPbefore26-carbs-bolus) on this page).
 
 ## Pumpe
 
