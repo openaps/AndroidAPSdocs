@@ -1,4 +1,4 @@
-# internal sandbox file 2 for testing
+# test için dahili sanal alan dosyası 2
 
 ```{admonition} no need to translate this
 :class: note
@@ -14,11 +14,11 @@ This is an internal sandbox file for the documentation team to test
     1. CROWDIN translation and
     2. Read The Docs deployment.
 
-You can dirctly jump from here to the first label in the sandbox1.md file - ["Jump"](./sandbox1.md#this-is-a-test).
+Buradan doğrudan sandbox1.md dosyasındaki ilk etikete atlayabilirsiniz - ["Atla"](./sandbox1.md#this-is-a-test).
 
-You can dirctly jump from here to the second label in this file - ["Jump"](./sandbox1.md#this-is-another-test).
+Buradan doğrudan bu dosyadaki ikinci etikete atlayabilirsiniz - ["Atla"](./sandbox1.md#this-is-another-test).
 
-Here you can jump to the first sandbox file - ["Jump"](./sandbox1.md).
+Bu linkten ilk sanal alan dosyasına atlayabilirsiniz - ["Atla"](./sandbox1.md).
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -29,4 +29,4 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 (this-is-a-test)=
 ## This is a test
 
-This is a test if labels must be unique.
+Etiketlerin benzersiz olması gerekiyorsa bu bir testtir.

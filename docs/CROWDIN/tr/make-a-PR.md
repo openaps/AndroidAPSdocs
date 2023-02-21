@@ -35,7 +35,7 @@ Bir noktada bir çekme isteği (PR) yapmanız önerilecektir. PR, çekme isteği
 
 3. Adım 2'deki seçeneklerden biri veya diğeri, düzenlemelerinizin kaydedileceği deponuzda yeni bir dal oluşturacaktır. Bu dosyada düzenlemelerinizi yapabilirsiniz.
 
-We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](make-a-PR-code-syntax).
+Dokümanlar sayfaları için markdown kullanıyoruz. Dosya ".md" son ekine sahiptir. Markdown özelliği sabit değildir ve şu anda markdown dosyalarımız için myst_parser kullanıyoruz. [Aşağıda açıklanan](make-a-PR-code-syntax) doğru sözdizimini kullanmaya dikkat edin.
 
 ![Şubeyi düzenle](./images/PR3.png)
 
@@ -55,103 +55,103 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 ![PR takibi](./images/PR7.png)
 
-Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
+Not: Çatalınız (fork) ve şubeniz (branch) hala kendi kişisel GitHub hesabınızda kalıyor olacak. PR'nizin birleştiğine dair bir bildirim aldıktan sonra, işiniz bittiyse şubenizi silebilirsiniz (Adım 8'in bildirim alanı, kapatıldığında veya birleştiğinde şubeyi silmek için bir bağlantı sağlayacaktır). Gelecekteki düzenlemeler için, bu prosedürü izlerseniz, düzenlemeler her zaman AndroidAPSdocs depolarının güncellenmiş bir sürümüyle başlayacaktır. Bir PR isteği başlatmak için başka bir yöntem kullanmayı seçerseniz (örneğin, başlangıç noktası olarak çatallı deponuzun ana dalından başlayarak düzenleme), önce bir "karşılaştırma" gerçekleştirerek ve çatalınızı en son güncellemenizden bu yana gerçekleşen tüm güncellemeleri birleştirerek deponuzun güncel olduğundan emin olmanız gerekir. İnsanlar depolarını güncellemeyi unutmaya meyilli olduğundan, "karşılaştırma" yapmaya alışana kadar yukarıda özetlenen PR sürecini kullanmanızı öneririz.
 
 (make-a-PR-code-syntax)=
 
 ## Sözdizimi kodları
 
-We are using markdown for the docs pages. The files have got the suffix ".md".
+Dokümanlar sayfaları için markdown kullanıyoruz. Dosyalar ".md" son ekine sahiptir.
 
 (make-a-PR-image-size)=
 
 ### Görüntü boyutu
 
-If using images please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
+Görüntüler kullanıyorsanız lütfen makul boyutları kullanın. Ekran görüntüleri **1050 piksel genişliğinde** olmalıdır.
 
-### Text format
+### Metin Formatı
 
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1: `# headline`
-* Headline 2: `## headline`
-* Headline 3: `### headline`
+* kalın: `**metin**`
+* italik: `*metin*`
+* Başlık 1: `# başlık`
+* Başlık 2: `## başlık`
+* Başlık 3: `### başlık`
 
-### ordered list
+### Sıralı Liste
 
-    1. first
-    1. second
-    1. third
+    1. birinci
+    1. ikinci
+    1. üçüncü
     
 
-1. first
-2. second
-3. third
+1. birinci
+2. saniye
+3. üçüncü
 
-### unordered list
+### sırasız liste
 
-    - one element
-    - another element
-    - and another element
+    - bir öğe
+    - başka bir öğe
+    - ve başka bir öğe
     
 
-* one element
-* another element
-* and another element
+* bir öğe
+* başka bir öğe
+* ve başka bir öğe
 
-### multi level list
+### çok seviyeli liste
 
-You can insert lists in lists by indenting the next level with 4 more spaces to the right than the one before.
+Bir sonraki düzeyi bir öncekinden 4 boşluk daha sağda girintileyerek listelere ilave liste ekleyebilirsiniz.
 
-    1. first
-    1. second
-    1. third
-      1. one element
-      1. another element
-      1. and another element
-    1. four
-    1. five
-    1. six
+    1. birinci
+    1. ikinci
+    1. üçüncü
+       1. bir öğe
+       1. başka bir öğe
+      1. va başka bir öğe
+    1. dört
+    1. beş
+    1. altı
     
 
-1. first
-2. second
-3. third 1. one element 1. another element 1. and another element
-4. four
-5. five
-6. six
+1. birinci
+2. saniye
+3. üçüncü 1. bir öğe 1. başka bir öğe 1. ve başka bir öğe
+4. dört
+5. beş
+6. altı
 
-### Images
+### Görseller
 
 * images: `![alt text](../images/file.png)`
 
-### Links
+### Bağlantılar
 
 * harici bağlantı: `[alt metin](www.url.tld)`
 * .md sayfasına dahili bağlantı: `[alt metin](../folder/file.md)`
-* internal link to headline: `[alt text](../folder/file.html#headline)`
+* başlığa dahili bağlantı: `[alt metin](../folder/file.html#headline)`
 
-### Internal links
+### Dahili bağlantılar
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+AndroidAPS dokümantasyonunda dahili bir bağlantı ayarlamak istiyorsanız, lütfen yalnızca **göreceli bağlantıları** kullanın. Yalnızca bu yöntem, bağlantının diğer dillerde de (Çekçe, Almanca...) çalışmasını sağlar.
 
-* `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
-* To set the link to an **anchor** (i.e. a headline) you let the file extension .md in place! 
+* `[text](../Usage/Test.md)`, bulunduğunuz bir dizinden /Usage alt dizinine dahili bir köprü oluşturacaktır. Hedef dosyanın sonu .md veya .rst olmalıdır (.html değil)
+* `[text](./Usage/Test.md)` bulunduğunuz yerden /Usage alt dizinine dahili bir köprü kurar. Hedef dosyanın sonu .md olmalıdır
+* Bağlantıyı bir **çapaya** (yani bir başlığa) ayarlamak için .md dosya uzantısını yerinde bırakın! 
   * `[text](../Usage/Test.md#anchor)`
 
-### Notes
+### Notlar
 
-    ```{admonition} Friendly Note
-    :class: note
+    ```{admonition} Dostça Not
+    :class: not
     
-    This is a note.
+    Bu bir not.
     
 
-    <br />```{admonition} Friendly Note
-    :class: note
+    <br />```{admonition} Dostça Not
+    :class: not
     
-    This is a note.
+    Bu bir not.
     
 
 ### Warnings
@@ -173,7 +173,7 @@ If you want to set an internal link within the AndroidAPS documentation, please 
 Dokümanların bazı bölümlerine görsel olarak yardımcı olacak görüntü ve fotoğraf eklemek de dahil çok sayıda düzenleme yapmayı planlıyorsanız (teşekkürler!), aşağıdaki yaklaşımı kullanmak isteyebilirsiniz:
 
 * Ekran görüntülerini kaydederken ekran görüntülerini açıklayıcı bir adla yeniden adlandırın - ancak GitHub'ın kafasını karıştıracağı için boşluk kullanmamaya çalışın. Bunun yerine alt çizgi kullanın. "Örnek toplu görüntüler upload.png" yerine Örnek_toplu_görüntüler_upload.png. 
-* Lütfen makul ölçüler kullanın. Screenshot images should be up to **1050 pixels wide**.
+* Lütfen makul ölçüler kullanın. Ekran görüntüleri **1050 piksel genişliğinde** olmalıdır.
 * Görüntüleri toplu şekilde aşağıdakileri adımları uygulayıp kolayca yükleyebilirsiniz:
   
   1. Görüntüler klasörüne gidin (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - ancak bunu yapabilmek için dokümanlar Görüntüler klasörünün çatalında/kopyasında olduğunuzdan emin olun ( URL'deki "openaps" ifadesini GitHub kullanıcı adınızla değiştirin)).

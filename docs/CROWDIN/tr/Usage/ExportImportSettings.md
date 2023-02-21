@@ -1,4 +1,4 @@
-# Export & import settings
+# Dışa aktarma & içe aktarma ayarları
 
 ## Ayarları ne zaman dışa aktarmalıyım?
 
@@ -18,20 +18,20 @@ Bir Windows 10 bilgisayarında şöyle görünür:
 
 Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bir parçasıdır:
 
-- [Automation](../Usage/Automation.md) events
-- [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](Config-Builder-local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](Objectives-objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](Preferences-nsclient)
+- [ Otomasyon ](../usuge/automation.md) olayları
+- [Konfigürasyon ayarları](../Configuration/Config-Builder.md)
+- [Yerel profil](Config-Builder-local-profile) ayarları
+- [ Görevler ](../usuge/objectives.md) ve [ sınav sonuçları ](objective-sjective-3-prove-your-nowledge) durumu
+- [Tercihler](../Configuration/Preferences.md) ["NS Client ayarları"](Preferences-nsclient) dahil
 
 ## Şifreli yedekleme formatı
 
-Settings backup is encrypted by a master password that can be set in [Preferences](Preferences-master-password) .
+Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bir ana parola ile şifrelenir.
 
 (ExportImportSettings-export-settings)=
 ## Dışa aktarma ayarları
 
-- Hamburger menu (top left corner of screen)
+- Hamburger menü (ekranın sol üst kısmında)
 - Bakım
 - Dışa aktarma ayarları
 
@@ -39,10 +39,10 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS dışa aktarma ayarları 1
 ```
 
-- Date and time of export will be added to the file name automatically and displayed together with the path.
-- Click 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
-- Successful export will be prompted at bottom of the screen.
+- Dışa aktarma tarihi ve saati dosya adına otomatik olarak eklenecek ve yol ile birlikte görüntülenecektir.
+- 'Tamam'ı tıklayın.
+- [Ana şifre ](preferences-master-password)'yi girin ve 'Tamam'ı tıklayın.
+- Ekranın alt kısmında başarılı dışa aktarma görünecektir.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS dışa aktarma ayarları 2
@@ -51,9 +51,9 @@ Settings backup is encrypted by a master password that can be set in [Preference
 (ExportImportSettings-import-settings)=
 ## Ayarları içe aktarın
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
+**Etkin bir POD oturumunda ayarları içe aktarmayın** - [Detaylı bilgi için Omnipod sayfasına bakın](OmnipodEros-import-settings-from-previous-aaps).
 
-- Hamburger menu (top left corner of screen)
+- Hamburger menü (ekranın sol üst kısmında)
 - Bakım
 - Ayarları içe aktarın
 
@@ -61,34 +61,34 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS içe aktarma ayarları 1
 ```
 
-- All files from folder AAPS/preferences/ on your phone will be shown in the list.
-- Select file.
-- Confirm import by clicking 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
+- Telefonunuzdaki AAPS/preferences/ klasöründeki tüm dosyalar listede gösterilecektir.
+- Dosyayı seçin.
+- 'Tamam'ı tıklayarak içe aktarmayı onaylayın.
+- [Ana şifre ](preferences-master-password)'yi girin ve 'Tamam'ı tıklayın.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS içe aktarma ayarları 2
 ```
 
-- Details on the preference file will be shown.
-- Last option to cancel import.
-- Click 'Import'.
-- Confirm message by clicking 'OK'.
-- AAPS will be restarted in order to activate imported preferences.
+- Aktarılacak dosyaya ilişkin ayrıntılar gösterilecektir.
+- İçe aktarmayı iptal etmek için son şansınız.
+- 'İçe Aktar'ı tıklayın.
+- 'Tamam'ı tıklayarak mesajı onaylayın.
+- İçe aktarılan tercihleri etkinleştirmek için AAPS yeniden başlatılacak.
 
 ### Dana RS kullanıcıları için not
 
 - Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz.
-- Please pair new phone and pump manually.
+- Lütfen yeni telefonu ve pompayı manuel olarak eşleştirin.
 
 ### Ayarları önceki sürümlerden içe aktarın (AAPS 2.7'den önce)
 
-- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-- You will find the "old" file on the bottom of the list in the import dialogue.
+- "Eski" ayarlar dosyası ('AndroidAPSPreferences' olarak adlandırılır - dosya uzantısı olmadan) akıllı telefonunuzun kök klasöründe olmalıdır (/storage/emulated/0).
+- "Eski" dosyayı yeni dışa aktarılan ayarlarla (AAPS/tercihler) aynı klasöre koymayın.
+- İçe aktarma iletişim kutusundaki listenin en altında "eski" dosyayı bulacaksınız.
 
 ## Ayarlar dosyasını transfer etme
 
-- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
-- If you experience problems with the transferred file try another way to transfer file.
+- Ayarlar dosyasını yeni bir telefona aktarmanın en iyi yolu USB kablosu veya bulut hizmetidir (örn. Google Drive).
+- Kılavuzları web'de bulabilirsiniz, [ Android yardım sayfaları ](https://support.google.com/android/answer/9064445?hl=en).
+- Transfer etmeyle ilgili sorun yaşıyorsanız, dosya transferinin başka bir yolunu deneyin.

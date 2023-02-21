@@ -49,7 +49,7 @@ AndroidAPS, OpenAPS ile aynı çekirdek algoritmayı ve işlevselliği kullanır
 
 ![Mor tahmin satırı örnekleri](../images/Prediction_lines.jpg)
 
-### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
+### İnsülin iletiminde gerekli ayarlamaları etkileyen farklı zaman dilimlerine ilişkin örnekler aşağıda verilmiştir:
 
 ### Scenario 1 - Zero Temp for safety
 

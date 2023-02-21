@@ -1,6 +1,6 @@
 # Bakım portalı (sonlandırıldı)
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. Ancak bakım portalı, pompaya herhangi bir komut vermiyor! Dolayısıyla, bu ekran kullanılarak bir bolus eklendiyse, bunu Nightscout kaydınıza not eder, pompaya bolus iletimi talimatı verilmez. Bu birçok yanlış anlaşılmaya neden oldu.
+Bakım portalı, Nightscout ekranınızda göreceğiniz fonksiyonları, kayıtlarınıza not eklemenizi sağlayan “+” sembolü altına kopyalamıştır. Ancak bakım portalı, pompaya herhangi bir komut vermiyor! Dolayısıyla, bu ekran kullanılarak bir bolus eklendiyse, bunu Nightscout kaydınıza not eder, pompaya bolus iletimi talimatı verilmez. Bu birçok yanlış anlaşılmaya neden oldu.
 
 Başlangıçta bakımportalı çevrimdışı destek eklemek için kullanılan kod, AAPS'in geliştirilmesiyle uyumlu değildi ve daha fazla kodlamayı engelliyordu. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 

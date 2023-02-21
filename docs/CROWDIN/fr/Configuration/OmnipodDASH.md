@@ -337,7 +337,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ### Niveau
 
-**Insulin Level**
+**Niveau d'insuline**
 
 Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left. The omnipod DASH overview tab will display as described the below:
 

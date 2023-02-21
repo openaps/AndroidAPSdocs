@@ -6,34 +6,34 @@
 
 ## Önemli notlar
 
-* Lütfen yeni bir sürüm çıktıktan sonra mümkün olan en kısa sürede güncelleyin. You will receive an [information on the AndroidAPS home screen](Releasenotes-release-notes) about the new version.
+* Lütfen yeni bir sürüm çıktıktan sonra mümkün olan en kısa sürede güncelleyin. Yeni sürüm hakkında [AndroidAPS ana ekranında bilgi](Releasenotes-release-notes) alacaksınız.
 * 2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. Git'e aşina değilseniz, güncellemenin en kolay yolu, AndroidAPS dizini kaldırmak ve [yeni bir klon](../Installing-AndroidAPS/Building-APK.md) oluşturmaktır.
 * Apk'yi oluşturmak için lütfen **[Android Studio Sürüm 2020.3.1 (Arctic Fox)](https://developer.android.com/studio/)** veya daha yenisini kullanın.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1.
-* Make sure you read the [Release Notes](../Installing-AndroidAPS/Releasenotes.md) for the current version
+* [Windows 10 32-bit sistemler](troubleshooting_androidstudio-unable-to-start-daemon-process) Android Studio 2020.3.1 tarafından desteklenmez.
+* Mevcut sürüm için [Sürüm Notlarını](../Installing-AndroidAPS/Releasenotes.md) okuduğunuzdan emin olun
 
 ## AndroidAPS sürümünüzü güncellemeye genel bakış
 
-1. [Export your settings](../Usage/ExportImportSettings-export-settings) from the existing AAPS version on your phone. İhtiyacınız olmayabilir, ancak üzülmektense kurtarmış olmak daha iyidir.
-2. [Update local copy](Update-to-new-version-update-your-local-copy) of the AndroidAPS sourcecode (Git->Fetch and Git -> Pull)
+1. Telefonunuzdaki mevcut AAPS sürümünden [ayarlarınızı dışa aktarın](../Usage/ExportImportSettings-export-settings). İhtiyacınız olmayabilir, ancak üzülmektense kurtarmış olmak daha iyidir.
+2. AndroidAPS kaynak kodunun [yerel kopyasını güncelleyin](Update-to-new-version-update-your-local-copy) (Git->Fetch and Git -> Pull)
 3. [İmzalı APK Derleyin](Update-to-new-version-build-the-signed-apk)
-4. [Transfer the built apk](Building-APK-transfer-apk-to-smartphone) to your phone and install it
-5. [Check the version](Update-to-new-version-check-aaps-version-on-phone) in AndroidAPS
-6. Depending on your [BG source](../Configuration/BG-Source.md) make sure to [identify receiver](xdrip-identify-receiver) in xDrip or use the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
+4. [Derlenmiş apk'yı](Building-APK-transfer-apk-to-smartphone) telefonunuza aktarın ve yükleyin
+5. AndroidAPS'de [sürümü kontrol edin](Update-to-new-version-check-aaps-version-on-phone)
+6. [KŞ kaynağınıza](../Configuration/BG-Source.md) bağlı olarak, xDrip'te [alıcıyı tanımladığınızdan](xdrip-identify-receiver) emin olun veya ['Kendi Dexcom Uygulamanızı oluşturun (BYODA)'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app).
 
 Sorun yaşamanız durumunda, [Android Studio'da sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) konusu için ayrı sayfaya bakın.
 
 ## 1. Ayarlarınızı dışa aktarın
 
-See the [Export & import settings](ExportImportSettings-export-settings) page if you don't remember how to do this.
+Bunu nasıl yapacağınızı hatırlamıyorsanız, [ayarları dışa & içe aktarma](ExportImportSettings-export-settings) sayfasına bakın.
 
 (Update-to-new-version-update-your-local-copy)=
 
 ## 2. Yerel kopyanızı güncelleyin
 
-2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. If you are not familiar with git the easiest way for update is remove directory with AndroidAPS on your disk and follow the instructions to do a [New clone](../Installing-AndroidAPS/Building-APK.md).
+2.7 sürümünden itibaren depo konumu <https://github.com/nightscout/AndroidAPS> olarak değiştirildi. Git'e aşina değilseniz, güncellemenin en kolay yolu, diskinizdeki AndroidAPS ile dizini kaldırmak ve [Yeni klon](../Installing-AndroidAPS/Building-APK.md) yapmak için talimatları takip etmektir.
 
-If you have already changed the URL or update from version 2.8.x, follow these steps:
+URL'yi zaten değiştirdiyseniz veya 2.8.x sürümünden güncelleme yaptıysanız, şu adımları izleyin:
 
 * Mevcut AndroidAPS projenizi Android Studio ile açın. Projenizi seçmeniz gerekebilir. AndroidAPS projesine (Çift) tıklayın.
     
@@ -67,30 +67,30 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 ## 3. İmzalı APK'yı Derleyin
 
-Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](Building-APK-generate-signed-apk).
+Kaynak kodunuz artık yayınlanan güncel sürümdür. [İmzalı apk derle bölümünde](Building-APK-generate-signed-apk) açıklandığı gibi bundan imzalı apk derlemenin zamanı geldi.
 
 ## 4. Apk dosyasını aktarma
 
-You need to transfer the apk to your phone so you can install it.
+Yükleyebilmeniz için apk'yı telefonunuza aktarmanız gerekir.
 
-See the instructions for [Transfer APK to smartphone](Building-APK-transfer-apk-to-smartphone)
+[APK'yi akıllı telefona aktarma](Building-APK-transfer-apk-to-smartphone) talimatlarına bakın
 
 ## 5. Apk dosyasını kurun
 
-Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+Telefonunuzda bilinmeyen kaynaklardan kuruluma izin vermelisiniz. Bunun nasıl yapılacağına ilişkin kılavuzlar internette bulunabilir (yani [burada](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) veya [burada](https://www.androidcentral.com/unknown-sources)). Not: Derlemeyi Android Studio'da aynı mevcut anahtar deposuyla tamamladıysanız, telefonunuzdaki mevcut uygulamayı kaldırmanız gerekmez. Apk'yi kurduğunuzda, güncellemeleri yüklemek için talimatları izleyin. Android Studio'da yeni bir anahtar deposu oluşturarak imzaladığınız apk senaryosu için, apk'yi yüklemeden önce eski uygulamayı silmeniz gerekecektir.
 
 (Update-to-new-version-check-aaps-version-on-phone)=
 
 ## 6. Telefondaki AAPS sürümünü kontrol edin
 
-After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
+Yeni apk'yı yükledikten sonra, sağ üstteki üç nokta menüsüne ve ardından Hakkında'ya tıklayarak telefonunuzdaki AAPS sürümünü kontrol edebilirsiniz. Mevcut sürümü görmelisiniz.
 
-![AAPS version installed](../images/Update_VersionCheck282.png)
+![Yüklü AAPS sürümü](../images/Update_VersionCheck282.png)
 
 # Sorun giderme
 
-If anything goes wrong, don't panic.
+Bir şeyler ters giderse, panik yapmayın.
 
-Take a breath!
+Bir Nefes Alın!
 
-Then see the separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio) if your problem is already documented!
+Ardından, sorununuz zaten belgelenmişse, [Android Studio sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio) sayfasına bakın!

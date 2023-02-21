@@ -7,9 +7,9 @@ Profil yardımcısı iki işlev sunar:
 
 ## Çocuklar için profil (18 yaşına kadar)
 
-**Important note:**
+**Önemli Not:**
 
-**Profile helper is intended to support you finding the initial profile for your kid. Even though it is based on data sets of two different hospitals always discuss with your medical team before using a new profile!**
+**Profil Yardımcısı, çocuğunuz için ilk profili bulmanıza yardımcı olmak için tasarlanmıştır. İki farklı hastanenin veri setlerine dayalı olsa bile, yeni bir profil kullanmadan önce her zaman tıbbi ekibinizle görüşün!**
 
 Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulması için çocuklar için iki farklı hastaneden veri seti sunar.
 
@@ -18,7 +18,7 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 ```
 
 1. Ekranın sağ üst tarafındaki üç noktalı menüden 'Profil yardımcısı'nı seçin.
-2. Adjust Default profile (based on hospital data set) by entering kids age and either TDD Total **or** weight.
+2. Çocukların yaşını ve GTD (günlük toplam doz) **veya** ağırlığını girerek Varsayılan profili (hastane veri setine göre) ayarlayın.
 3. Sağdaki 2 etiketli gri çubuğa tıklayarak ekranı değiştirin.
 4. 'Geçerli profil'e uzun basın ve DPV Varsayılan profilini seçin.
 
@@ -26,15 +26,15 @@ Profil yardımcısı, 18 yaşına kadar olan çocuğunuzun ilk profilini bulmas�
 :alt: Çocuk Profil Yardımcısı 2
 ```
 
-5. Adjust DPV Default profile (based on another hospital data set) by entering kids age, percentage of basal and either TDD Total **or** weight.
+5. Çocukların yaşını, bazal yüzdesini ve GTD Toplamı **veya** ağırlığını girerek DPV Varsayılan profilini (başka bir hastane veri kümesine göre) ayarlayın.
 6. Ekranın üstündeki 'PROFİLLERİ KARŞILAŞTIR' düğmesine basın.
 7. Ayarlanan iki profilin karşılaştırması görüntülenecektir.
 
-Once you are fine with the profile adjustments you can [clone the profile](profilehelper-clone-profile) as described below.
+Profil ayarlamalarını yaptıktan sonra, aşağıda açıklandığı gibi [profili kopyalayabilirsiniz](profilehelper-clone-profile).
 
 ## İki profili karşılaştırın
 
-You can use profile helper also to compare to different profiles or profile switches (percentage of one of your profiles used in a [profile switch](../Usage/Profiles.md) before).
+Profil yardımcısını farklı profiller veya profil değişimleri ile karşılaştırmak için de kullanabilirsiniz (önceden bir [profil değiştirme'de](../Usage/Profiles.md) kullanılan profillerinizin yüzdesi).
 
 ```{image} ../images/ProfileHelper1.png
 :alt: Profil Yardımcısı 1
@@ -58,7 +58,7 @@ You can use profile helper also to compare to different profiles or profile swit
 (profilehelper-clone-profile)=
 ## Profili Klonla
 
-If you use [local profiles](Config-Builder-local-profile) you can clone a profile / profile switch directly from profile helper.
+[Yerel profiller](Config-Builder-local-profile) kullanıyorsanız, doğrudan profil yardımcısından bir profil / profil anahtarını kopyalayabilirsiniz.
 
 ```{image} ../images/ProfileHelperClone.png
 :alt: Profil Yardımcısı profil Klonlama / profil değiştirme

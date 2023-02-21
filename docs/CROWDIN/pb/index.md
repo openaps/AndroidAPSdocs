@@ -2,11 +2,11 @@
 
 ![Image](images/modules-female.png)
 
-AndroidAPS is an open source app for people living with insulin-dependent diabetes that acts as an artificial pancreas system (APS) on Google Android smartphones. The main components are different openAPS software algorithms which aim to do what a living pancreas does: keeping blood sugar levels within healthy limits by using automated insulin dosing (AID). Additionally, you need at least a supported and FDA/CE approved insulin pump and continuous glucose meter.
+O AndroidAPS é um aplicativo de código aberto para pessoas que vivem com diabetes dependente de insulina, que atua como um sistema de pâncreas artificial (APS) em smartphones Google Android. Os principais componentes são diferentes algoritmos de software openAPS que visam fazer o que um pâncreas vivo faz: manter os níveis de açúcar no sangue dentro de limites saudáveis, usando dosagem automatizada de insulina (AID). Além disso, é necessário pelo menos uma bomba de insulina suportada e aprovada pela FDA/CE e um medidor contínuo de glicose.
 
-The app does *not* use self-learning artificial intelligence. Instead, the calculations of AndroidAPS are based on the individual dosage algorithm and carbohydrate intake the user manually puts into their treatments profile, but they are verified by the system for safety reasons.
+O aplicativo *não* usa inteligência artificial de autoaprendizagem. Em vez disso, os cálculos do AndroidAPS são baseados no algoritmo de dosagem individual e na ingestão de carboidratos que o usuário insere manualmente em seu perfil de tratamento, mas eles são verificados pelo sistema por razões de segurança.
 
-The app is not provided in Google Play - you have to build it from source code by yourself for legal reasons.
+O aplicativo não é fornecido no Google Play - você precisa construí-lo a partir do código-fonte por si mesmo por motivos legais.
 
 ```{admonition} Ask for help - Writing Docs
 :class: note

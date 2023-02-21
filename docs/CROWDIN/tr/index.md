@@ -11,9 +11,9 @@ Uygulama Google Play'de bulunmaz - yasal nedenlerle onu kaynak koddan kendiniz o
 ```{admonition} Ask for help - Writing Docs
 :class: not
 
-Lütfen utangaç olmayın, belgeleri oluştururken desteğe ihtiyacımız var.
+Lütfen utangaç olmayın, dokümantasyonu oluştururken desteğe ihtiyacımız var.
 
-Dokümantasyonu düzenlemek için bir çekme isteği oluşturmak nispeten kolaydır. Hiçbir şeyi bozamazsınz. Serbest bırakma prosedürleri var.
+Dokümantasyonu düzenlemek için bir çekme isteği oluşturmak nispeten kolaydır. Hiçbir şeyi bozamazsınız. Serbest bırakma prosedürleri var.
 
 Dokümanların PR (çekme isteği) yoluyla nasıl düzenleneceğini açıklayan 3 dakikalık bir videoyu [burada](https://www.youtube.com/watch?v=Vo4L6YYxWak) bulabilirsiniz.
 
@@ -41,7 +41,7 @@ Artık AndroidAPS'in kullandığı kavramları sağlam bir şekilde anladığın
 
 Bunu özellikle önemli bir alt bölüm olan [AndroidAPS Kullanımı](Getting-Started/Screenshots.md) takip eder. Uygulama içinde mevcut olan daha gelişmiş seçenekleri kullanmaya başlamak için yeterli deneyime sahip olana kadar, güvenli ve dikkatli bir şekilde kalibre edilmiş adım adım aşamalı bir süreç aracılığıyla AndroidAPS'in sunduğu özelliklerin tam kullanımına yavaş yavaş tanıştırılırsınız. Bu aşamaların her biri genellikle bir sonraki görev olarak adlandırılır. Siz/çocuğunuz, bir sonraki aşamadan mezun olmadan önce tüm farklı düzeylerde ve menü yapılandırmalarında gezinebilirsiniz. Bu Görevler, AndroidAPS'in özelliklerini kademeli olarak ortaya çıkaracak ve Açık Döngüden Kapalı Döngüye geçiş yapacak şekilde özel olarak tasarlanmıştır.
 
-Bu başlıktan sonra AndroidAPS kullanılırken yılda iki kez gerçekleşecek olan yaz saati uygulaması değişiklikleri sırasında zaman dilimlerinin kesişmesiyle nasıl başa çıkılacağı hakkında bilgileri içeren [Genel İpuçları](Usage/Timezone-traveling.md) adlı bir alt başlık vardır.
+Bu başlıktan sonra AndroidAPS kullanılırken yılda iki kez gerçekleşecek olan yaz saati uygulaması değişiklikleri sırasında zaman dilimlerinin kesişmesiyle nasıl başa çıkılacağı hakkında bilgileri içeren [Genel İpuçları](Usage/Timezone-traveling.md) içeren bir alt başlık vardır.
 
 AndroidAPS gibi açık kaynak kodlu yapay pankreas teknolojisine ilgi duyduğunu ifade eden veya bu tür bilgileri klinisyenleriyle paylaşmak isteyen hastalar için [klinisyenler](Resources/clinician-guide-to-AndroidAPS.md) alt başlığı mevcuttur.
 
