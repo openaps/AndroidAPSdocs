@@ -1316,7 +1316,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Time on Pod:</strong> Displays the current time on the active pod.
+    <strong x-id="1">Pod üzerindeki zaman:</strong> Aktif poddaki geçerli saati görüntüler.
   </p>
 </li>
 <li>
