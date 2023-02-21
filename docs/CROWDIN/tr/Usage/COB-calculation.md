@@ -12,7 +12,7 @@ Emilmeyen karbonhidratlar belirtilen süreden sonra kesilir.
 
 ### AAPS, Ağırlıklı Ortalama
 
-absorption is calculated to have `COB == 0` after specified time
+emilim, belirtilen süreden sonra `AKRB == 0` olarak hesaplanır
 
 ```{image} ../images/cob_aaps2_orange_II.png
 :alt: AAPS, WheitedAverage
@@ -27,7 +27,7 @@ AAPS, bir önceki öğünden AKRB ile bolus yapmak üzereyseniz, algoritma mevcu
 
 ### AndroidAPS, yanlış AKRB değerlerini nasıl tespit eder?
 
-Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
+Normalde AAPS, karbonhidrat emilimini KŞ sapmaları yoluyla tespit eder. Karbonhidratları girdiyseniz, ancak AAPS bunların KŞ sapmaları aracılığıyla tahmini emilimini göremezse, bunun yerine emilimi hesaplamak için [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) yöntemini kullanır. ('fallback' olarak adlandırılır). Bu yöntem, KŞ sapmalarını dikkate almadan yalnızca minimum karbonhidrat emilimini hesapladığı için yanlış AKRB değerlerine yol açabilir.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: Yanlış AKRB değerine ilişkin ipucu
@@ -37,18 +37,18 @@ Yukarıdaki ekran görüntüsünde, karbonhidrat emiliminin %41'i sapmalardan te
 
 ### Bu uyarı ile nasıl başa çıkılır?
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- Tedaviyi iptal etmeyi düşünün - Tamam yerine İptal'e basın.
+- Bolus sihirbazı ile AKRB'yi dikkate almadan (tiki kaldırıp hesaplamaya dahil etmeyerek) yaklaşan öğününüzü tekrar hesaplayın.
+- Düzeltme bolusuna ihtiyacınız olduğundan, eminseniz manuel olarak girin.
+- Her durumda aşırı doz almamaya dikkat edin!
 
 ### Algoritma neden AKRB'yi doğru algılamıyor?
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- Belki karbonhidratları fazla tahmin ederek girdiniz.
+- Bir önceki öğünden sonra aktivite / egzersiz yaptınız
+- I:C oranının ayarlanması gerekiyor
+- min_5m_carbimpact değeri yanlış (SMB ile 8, AMA ile 3 önerilir)
 
 ## Girilen karbonhidratların manuel olarak düzeltilmesi
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+Karbonhidratları gereğinden fazla veya az girdiyseniz, bunu [burada](Screenshots-carb-correction) açıklandığı gibi tedaviler sekmesi ve eylemler sekmesi aracılığıyla düzeltebilirsiniz.
