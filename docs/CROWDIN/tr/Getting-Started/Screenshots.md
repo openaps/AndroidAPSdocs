@@ -293,7 +293,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 ![İnsülin butonu](../images/Home2020_ButtonInsulin.png)
 
-* [Bolus hesaplayıcı](#bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
+* [Bolus hesaplayıcı](Screenshots-bolus-wizard) kullanmadan belirli miktarda insülin vermek için kullanılır.
 * [Yakında Öğün GH](Preferences-default-temp-targets) kutusunu işaretleyerek otomatik olarak yakında öğün hedefinizi başlatabilirsiniz.
 * Pompadan bolus yapmadan sadece insülin miktarını kaydetmek istiyorsanız "Bolusu sadece kayıt altına al" kutusunu işaretleyin.
 
@@ -310,7 +310,7 @@ Genellikle gerçek glikoz eğriniz bu çizgilerin ortasında veya durumunuza en 
 
 #### Hesap makinesi
 
-* Bolus Sihirbazı için [aşağıdaki bölüme](#bolus-wizard) bakın
+* Bolus Sihirbazı için [aşağıdaki bölüme](Screenshots-bolus-wizard) bakın
 
 #### Kalibrasyonlar
 
@@ -403,6 +403,8 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
    * Kapalı döngü otomatik olarak durdurulacak ve yayma bolus çalıştığı süre boyunca açık döngü moduna geçecektir.
    * Bu seçeneği kullanmadan önce [ayrıntıları](../Usage/Extended-Carbs.md) okuduğunuzdan emin olun.
 
+(Screenshots-careportal-section-n)=
+
 ### Bakım portalı - bölüm N
 
 * İçinde görüntülebilir bilgiler
@@ -427,7 +429,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ### Bakım portalı - bölüm O
 
-* [Bölüm N](#careportal-section-n)'de görüntülenen KŞ kontrolü, hazırlama/doldurma, sensör yerleştirme ve pompa pil değişimi gibi verilerin temel dayanağı olan butonlardır.
+* [Bölüm N](Screenshots-careportal-section-n)'de görüntülenen KŞ kontrolü, hazırlama/doldurma, sensör yerleştirme ve pompa pil değişimi gibi verilerin temel dayanağı olan butonlardır.
 * Hazırlama/Doldurma, pompa set değişimi, insülin kartuş değişimi ve sensör değişimini kaydetmenizi sağlar.
 * Bölüm O, Nightscout portalını yansıtır. Yani alıştırma, duyuru ve soru notların özel biçimleridir.
 
@@ -447,7 +449,7 @@ Yemek bolusu yapmak istediğinizde, normalde yapacağınız yer burasıdır.
 
 ![Geçmiş tarayıcı + GTD](../images/Home2021_Action_HB_TDD.png)
 
-(Screenshots-insulin-profile))=
+(Screenshots-insulin-profile)=
 
 ## İnsülin Profili
 
