@@ -26,12 +26,12 @@ Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bi
 
 ## Şifreli yedekleme formatı
 
-Settings backup is encrypted by a master password that can be set in [Preferences](Preferences-master-password) .
+Ayar yedeği, [tercihler ](preferences-master-password) içinde ayarlanabilen bir ana parola ile şifrelenir.
 
 (ExportImportSettings-export-settings)=
 ## Dışa aktarma ayarları
 
-- Hamburger menu (top left corner of screen)
+- Hamburger menü (ekranın sol üst kısmında)
 - Bakım
 - Dışa aktarma ayarları
 
@@ -39,10 +39,10 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS dışa aktarma ayarları 1
 ```
 
-- Date and time of export will be added to the file name automatically and displayed together with the path.
-- Click 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
-- Successful export will be prompted at bottom of the screen.
+- Dışa aktarma tarihi ve saati dosya adına otomatik olarak eklenecek ve yol ile birlikte görüntülenecektir.
+- 'Tamam'ı tıklayın.
+- [Ana şifre ](preferences-master-password)'yi girin ve 'Tamam'ı tıklayın.
+- Ekranın alt kısmında başarılı dışa aktarma görünecektir.
 
 ```{image} ../images/AAPS_ExportSettings2.png
 :alt: AndroidAPS dışa aktarma ayarları 2
@@ -51,9 +51,9 @@ Settings backup is encrypted by a master password that can be set in [Preference
 (ExportImportSettings-import-settings)=
 ## Ayarları içe aktarın
 
-**Do not import settings while on an active Pod session** - see [Omnipod page for details](OmnipodEros-import-settings-from-previous-aaps).
+**Etkin bir POD oturumunda ayarları içe aktarmayın** - [Detaylı bilgi için Omnipod sayfasına bakın](OmnipodEros-import-settings-from-previous-aaps).
 
-- Hamburger menu (top left corner of screen)
+- Hamburger menü (ekranın sol üst kısmında)
 - Bakım
 - Ayarları içe aktarın
 
@@ -61,10 +61,10 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS içe aktarma ayarları 1
 ```
 
-- All files from folder AAPS/preferences/ on your phone will be shown in the list.
-- Select file.
-- Confirm import by clicking 'OK'.
-- Enter [master password](Preferences-master-password) and click 'OK'.
+- Telefonunuzdaki AAPS/preferences/ klasöründeki tüm dosyalar listede gösterilecektir.
+- Dosyayı seçin.
+- 'Tamam'ı tıklayarak içe aktarmayı onaylayın.
+- [Ana şifre ](preferences-master-password)'yi girin ve 'Tamam'ı tıklayın.
 
 ```{image} ../images/AAPS_ImportSettings2.png
 :alt: AndroidAPS içe aktarma ayarları 2
