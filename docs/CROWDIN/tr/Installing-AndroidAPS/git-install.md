@@ -4,9 +4,9 @@
 
 ### 1. Git'i indir
 
-- **You have to be online all of the time as Android Studio downloads several updates!**
-- Herhangi bir git sürümü çalışması gerekir. For example [https://git-scm.com/download/win](https://git-scm.com/download/win).
-- Make sure to note down the installation path. Bir sonraki adımda ihtiyacınız olacak.
+- **Android Studio çeşitli güncellemeler indirdiği için her zaman çevrimiçi olmanız gerekir!**
+- Herhangi bir git sürümü çalışması gerekir. Örneğin [https://git-scm.com/download/win](https://git-scm.com/download/win).
+- Kurulum yerini not ettiğinizden emin olun. Bir sonraki adımda ihtiyacınız olacak.
 
 ```{admonition} make git.exe available via Windows PATH
 :class: note
