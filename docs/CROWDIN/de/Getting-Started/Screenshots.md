@@ -293,7 +293,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* Um eine bestimmte Menge Insulin zu geben, ohne den [Bolus Rechner](#bolus-rechner) zu verwenden.
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * Wenn das Insulin nicht durch die Pumpe abgegeben werden soll, sondern Du die Insulinmenge nur erfassen willst (z.B. Insulin mit Spritze gegeben), aktiviere das entsprechende Kästchen.
 
@@ -310,7 +310,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Bolus-Rechner
 
-* Siehe Bolus Wizard [Abschnitt unter](#bolus-rechner)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### Kalibrierungen
 
@@ -403,6 +403,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Der Closed Loop wird automatisch gestoppt und für die Laufzeit des verzögerten Bolus zum Open Loop gewechselt.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### Careporal - Abschnitt N
 
 * Zeigt Informationen zu
@@ -427,7 +429,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Careporal - Abschnitt O
 
-* BZ-Test, Katheterwechsel, CGM-Sensor setzen, Pumpenbatterie-Wechsel sind die Grundlage für die in [Abschnitt N](#careportal-abschnitt-n) angezeigten Daten.
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * Mit dem Button 'Katheterwechsel' kannst Du sowohl einen Katheter- (Schlauch) als auch einen Kanülenwechsel (Nadel) aufzeichnen.
 * Abschnitt O spiegelt das Careportal aus Nightscout wider. Bewegung, Ankündigung und Frage sind daher spezielle Formen der Notiz.
 
