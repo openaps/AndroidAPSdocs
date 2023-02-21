@@ -458,7 +458,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  Detailed steps on how to setup your pod communication device are listed below in the <a href="OmnipodEros-rileylink-setup">RileyLink Setup Section</a>.
+  Les étapes détaillées sur la façon de configurer votre appareil de communication pod sont listées ci-dessous dans la section <a href="OmnipodEros-rileylink-setup">Configuration RileyLink</a>.
 </p>
 
 <p spaces-before="0">
@@ -526,7 +526,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="OmnipodEros-activating-a-pod">Activating a Pod Section</a> below.
+  Si vous avez déjà appairé avec succès votre RileyLink dans l'assistant de configuration ou les étapes ci-dessus, alors procédez à <a href="OmnipodEros-activating-a-pod">l'activation d'un Pod</a> ci-dessous.
 </p>
 
 <p spaces-before="0">
@@ -546,7 +546,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
-       Ensure your RileyLink battery is charged and it is <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Une fois sélectionné, vous pouvez continuer à activer votre première session de pod. Utilisez le bouton retour de votre téléphone pour revenir à l'interface principale AAPS.
+       Assurez-vous que votre batterie RileyLink est chargée et qu'il est <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">positionné à proximité</a> (~30 cm de distance ou moins) de votre téléphone pour que AAPS l'identifie par son adresse MAC. Une fois sélectionné, vous pouvez continuer à activer votre première session de pod. Utilisez le bouton retour de votre téléphone pour revenir à l'interface principale AAPS.
      </p>
      
      <p spaces-before="0">
@@ -602,7 +602,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. During these procedures, make sure that your pod is</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+  <em x-id="3">RAPPEL : La communication avec le Pod pour l'activation de celui-ci se fait sur des périodes limitées pour des raisons de sécurité. Avant d'être appairé le signal radio du Pod est plus faible, mais après l'appairage, il fonctionnera à pleine puissance. Lors de ces procédures, assurez-vous que votre pod est</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">à proximité immédiate</a> (~30 cm de distance ou moins) mais pas au dessus ou juste à côté du RileyLink.\*
 </p>
 
 <ol start="1">
@@ -634,7 +634,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   
   <li>
     <p spaces-before="0">
-      Sur l'écran <strong x-id="1">Initialiser le Pod</strong> le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur <strong x-id="1">Aucune réponse du Pod</strong>. If this occurs, <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
+      Sur l'écran <strong x-id="1">Initialiser le Pod</strong> le pod commencera à amorcer (vous entendrez un clic suivi d'une série de tics pendant que le pod s'amorce). Si le RileyLink est hors de portée du pod en cours d'activation, vous recevrez un message d'erreur <strong x-id="1">Aucune réponse du Pod</strong>. Si cela se produit, <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">rapprochez le RileyLink</a> (~30 cm de distance ou moins) mais pas au dessus ni juste à côté du Pod et cliquez sur le bouton <strong x-id="1">Réessayer (1)</strong>.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -733,7 +733,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
       Cliquez sur le bouton Retour de votre téléphone pour retourner à l'écran de l'onglet <strong x-id="1">Omnipod (POD)</strong> qui affichera maintenant les informations du Pod pour votre session de pod actif, y compris le débit de basal actuel, le niveau du réservoir du pod, l'insuline injectée, les erreurs du pod et les alertes.
     </p>
     <p spaces-before="4">
-      For more details on the information displayed go to the <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
+      Pour plus de détails sur les informations affichées, allez dans l'onglet <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD)</a> de ce document.
     </p>
     <p spaces-before="4">
       {{ Activate_Pod_14 }} {{ Activate_Pod_15 }}
@@ -840,7 +840,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMARQUE : si vous ne voyez pas de bouton SUSPENDRE</em>, son affichage n'a pas été activé dans l'onglet Omnipod (POD). Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="OmnipodEros-omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
+  <em x-id="3">REMARQUE : si vous ne voyez pas de bouton SUSPENDRE</em>, son affichage n'a pas été activé dans l'onglet Omnipod (POD). Activez <strong x-id="1">Montrer le bouton Suspendre l'injection dans l'onglet Omnipod</strong> dans les paramètres <a href="OmnipodEros-omnipod-settings">Omnipod</a> sous <strong x-id="1">Autres</strong>.
 </p>
 
 <h4 spaces-before="0">
@@ -1390,7 +1390,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Erreurs :</strong> Affiche la dernière erreur rencontrée. Review the <a href="OmnipodEros-view-pod-history">Pod history</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
+    <strong x-id="1">Erreurs :</strong> Affiche la dernière erreur rencontrée. Consulter l'historique du <a href="OmnipodEros-view-pod-history">Pod</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">l'historique du RileyLink</a> et les fichiers log pour les erreurs passées et des informations plus détaillées.
   </p>
 </li>
 <li>
@@ -1423,7 +1423,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
     </p>
     
     <p spaces-before="0">
-      See the <a href="OmnipodEros-troubleshooting">Troubleshooting section</a> below for additional information.
+      Voir la section <a href="OmnipodEros-troubleshooting">Dépannage</a> ci-dessous pour plus d'informations.
     </p>
   </blockquote>
 </li>
@@ -1675,7 +1675,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
           Lorsque la communication est démarrée, des données spécifiques sont envoyées et placées dans le RileyLink > - Les registres de mémoire sont définis > - Les protocoles de communication sont définis > - La fréquence radio réglée est définie
         </li>
         <li>
-          See <a href="OmnipodEros-reset-rileylink-config-notes">additional notes</a> at the end of this table
+          Voir les <a href="OmnipodEros-reset-rileylink-config-notes">remarques additionnelles</a> à la fin de ce tableau
         </li>
       </ul>
     </blockquote>
