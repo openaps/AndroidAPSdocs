@@ -3,6 +3,7 @@
 AndroidAPS works with a number of insulin pumps.  The following list shows the currently supported devices and indicates if AndroidAPS communicates with the pump using your phones native Bluetooth function or if it requires a Rileylink Compatible device in brackets. 
 
 - [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)  (Bluetooth)
+- [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md)  (Bluetooth) (**new driver for Accu-Chek Combo starting with AndroidAPS v3.2**)
 - [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (Bluetooth)
 - [DanaR](../Configuration/DanaR-Insulin-Pump.md) (Bluetooth)
 - [DanaRS](../Configuration/DanaRS-Insulin-Pump.md) (Bluetooth)
