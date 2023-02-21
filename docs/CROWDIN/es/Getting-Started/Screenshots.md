@@ -293,7 +293,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* Permite administrar una cantidad de insulina sin usar el [Asistente de bolo (Calculadora)](#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * Si no quieres administrar el bolo con la bomba, pero quieres registrar una cantidad de insulina en la aplicación (p. ej. insulina administrada a boli), marca la casilla correspondiente.
 
@@ -310,7 +310,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Calculadora
 
-* Revisa la sección del "Asistente de bolo" [a continuación](#bolus-wizard)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### Calibraciones
 
@@ -403,6 +403,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * El lazo cerrado se detendrá automáticamente y cambiará a modo de lazo abierto, durante el tiempo que dure el bolo extendido.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### Sección N - Portal de cuidados
 
 * Muestra la siguiente información:
@@ -427,7 +429,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Sección O - Portal de cuidados
 
-* La medición de glucosa en sangre, el cebado/llenado de la cánula, la inserción del sensor y el cambio de batería de la bomba son la base de los datos que se muestran en la [Sección N](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * La opción de Cebar/Llenar permite registrar el cambio de lugar de la cánula y el cambio del cartucho de insulina.
 * La "Sección O" refleja el portal de cuidados de Nightscout. De esta manera, Ejercicio, Aviso y Pregunta representan formas especiales de notas.
 
