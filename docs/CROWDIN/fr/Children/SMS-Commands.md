@@ -3,7 +3,7 @@
 ## La sécurité avant tout
 
 - AAPS vous permet de controler le téléphone d’un enfant à distance via un SMS. Si vous activez le Communicateur SMS, rappelez-vous toujours que le téléphone configuré pour donner des commandes distantes pourrait être volé. Donc, toujours le protéger au minimum par un code PIN. Un mot de passe robuste ou une identification biométrique sont recommandés.
-- Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AAPS vous informera également par SMS si vos commandes distantes, comme un bolus ou un changement de profil, ont été effectuées. Il est conseillé de le configurer de sorte que les SMS de confirmation soient envoyés à au moins deux numéros de téléphone différents au cas où l'un des téléphones destinataires serait volé.
 - **Si vous faites un bolus au moyen de commandes SMS, vous devez entrer les glucides par Nightscout (NSClient, site Web ...) !** Si vous ne le faites pas, l'IA serait correct mais le GA serait lui trop faible pouvant conduire à ne pas effectuer de bolus de correction car AAPS estimerait que vous avez trop d'insuline active.
 - Depuis AndroidAPS version 2.7, une application d'authentification avec un mot de passe à usage unique basé sur l'heure doit être utilisé pour augmenter la sécurité lors de l'utilisation de commandes SMS.
@@ -18,6 +18,8 @@
 - Les bolus ne peuvent pas être donnés à partir de Nightscout, mais vous pouvez utiliser des commandes SMS.
 - Si vous utilisez un iPhone comme follower et ne pouvez donc pas utiliser NSClient, il y a des commandes SMS supplémentaires disponibles.
 - Dans les paramètres de votre téléphone android allez dans Applications > AndroidAPS > Autorisations et activez SMS
+
+(SMS-Commands-authorized-phone-numbers)=
 
 ### Numéros de tél autorisés
 
@@ -148,6 +150,8 @@ Un bolus à distance n'est pas possible dans les 15 minutes suivant le dernier b
 - PROFILE LIST \* Réponse : 1.\`Profil1\` 2.\`Profil2\`
 - PROFILE 1 \* Réponse : Pour changer le profil vers Profile1 100%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
 - PROFILE 2 30 \* Réponse : Pour changer le profil vers Profile2 30%, renvoyez le code depuis l'application Authenticator pour l'utilisateur suivie du code PIN
+
+(SMS-Commands-other)=
 
 ### Autres
 
