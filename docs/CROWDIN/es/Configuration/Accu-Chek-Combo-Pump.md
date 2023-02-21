@@ -29,7 +29,7 @@
 - Hay otro problema donde un reinicio no ayuda y debe ser presionado un botón de la bomba (que restablece el Bluetooth de la bomba) antes de que la bomba acepte nuevamente conexiones desde el teléfono. 
 - Muy poco se puede hacer para solucionar algunos de estos problemas en este momento. Así que si ve estos errores frecuentemente su única opción en este momento es conseguir otro teléfono que se sabe que funciona bien con AndroidAPS y la Combo (ver arriba).
 - La emisión de un bolo de la bomba no siempre se detectará a tiempo (se verifica cuando se conecta AAPS a la bomba), y puede tomar hasta 20 minutos en el peor de los casos. 
-- Los bolos en la bomba siempre se verifican antes de un TBR alto o un bolo emitido por AAPS, pero debido a las limitaciones, AAPS rechazará las TBR / Bolus, ya que se calculó bajo premisas falsas. (-> ¡No envíe bolos desde la bomba! Ver capítulo [Uso](#usage) abajo)
+- Los bolos en la bomba siempre se verifican antes de un TBR alto o un bolo emitido por AAPS, pero debido a las limitaciones, AAPS rechazará las TBR / Bolus, ya que se calculó bajo premisas falsas. (-> ¡No envíe bolos desde la bomba! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Debe evitarse establecer un TBR en la bomba, ya que el lazo cerrado asume el control de TBR. La detección de un nuevo TBR en la bomba puede demorar hasta 20 minutos y el efecto del TBR solo se tendrá en cuenta desde el momento en que se detecte, por lo que en el peor de los casos podría haber 20 minutos de un TBR no reflejada en el IOB del algoritmo. 
 
 ## Configuración
@@ -104,6 +104,8 @@ There are serveral possible reasons. Try the following steps:
 13. If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
 14. Reboot the phone.
 15. Now you can restart AAPS loop.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Uso
 
