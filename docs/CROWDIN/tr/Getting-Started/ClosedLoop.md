@@ -16,7 +16,7 @@ Otopilot çeşitli sensörlerden gelen sinyalleri alır, bir bilgisayar bunları
 
 Aynısı yapay bir pankreas kapalı döngü sistemi için de geçerlidir. Bütün işi yapmıyor, yine de şeker hastalığınızla ilgilenmeniz gerekiyor. Kapalı döngü sistemi, bir CGM/FGM'den alınan sensör verilerini bazal oran, insülin duyarlılık faktörü ve karbonhidrat oranı gibi diyabet yönetimi spesifikasyonlarınızla birleştirir. Buradan diyabetinizi hedef aralıkta tutmak ve sizi rahatlatmak için tedavi önerilerini hesaplar ve bu kalıcı küçük ayarlamaları uygular. Bu diyabetin "yanında" hayatınız için daha fazla zaman bırakır.
 
-İnsan gözetimi olmadan sadece otopilotun uçtuğu bir uçağa binmek istemediğiniz gibi, kapalı döngü sistemi diyabet yönetiminizde size yardımcı olur, ancak her zaman desteğinize ihtiyaç duyar! **Even with a closed loop you can't just forget your diabetes!**
+İnsan gözetimi olmadan sadece otopilotun uçtuğu bir uçağa binmek istemediğiniz gibi, kapalı döngü sistemi diyabet yönetiminizde size yardımcı olur, ancak her zaman desteğinize ihtiyaç duyar! **Kapalı bir döngüde bile diyabetinizi tamamen unutamazsınız!**
 
 Otopilot, pilotun özelliklerine olduğu kadar sensör değerlerine de bağlı olduğu gibi, bir kapalı döngü sistemi de sizi başarılı bir şekilde desteklemek için bazal oranlar, ISF ve karbonhidrat oranı gibi uygun girdilere ihtiyaç duyar.
 
