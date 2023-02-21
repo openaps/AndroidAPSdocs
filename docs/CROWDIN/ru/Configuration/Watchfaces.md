@@ -2,7 +2,7 @@
 
 Приложение AndroidAPS можно установить в смарт-часах на ** Wear OS**. Версия на часах позволяет:
 
-* **отображать данные на часах**: при помощи [пользовательских циферблатов](#aaps-watchfaces) или стандартных циферблатов с использованием [дополнений](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **контролировать AAPS на телефоне**: чтобы подать болюс, установить временную цель и т. д.
 
 ### Перед тем как купить часы...
@@ -39,17 +39,19 @@ AndroidAPS предусматривает возможность *управле
     * проверить и изменить профиль, CPP (Circadian Percentage Profile = time shift + percentage)
     * показать TDD (Общая суточная доза = болюс + базал в день)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## Циферблаты AAPS
 
-Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Убедитесь, что уведомления от AndroidAPS не заблокированы на часах. Подтверждение действия (например, болюс, временные цели) происходит через уведомления, которые нужно сдвинуть в сторону и нажать на галочку.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Чтобы быстрее попасть в меню AAPS, сделайте двойное нажатие на ГК. При двойном нажатии на кривую ГК можно изменить масштаб времени графика..
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Доступные циферблаты
 
-![Доступные циферблаты](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
@@ -103,6 +105,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * ** Вибрировать при болюсе ** (по умолчанию ` Вкл`):
 * ** Единицы для принятия действий ** (по умолчанию ` мг/дл `): если ** Вкл** то на основе ` мг/дл `, если ** Выкл ** то на основе ` ммоль/л `. Используется при установке временной цели ТТ с часов.
+
+(Watchfaces-watchface-settings)=
 
 ### Параметры циферблатов
 
@@ -317,7 +321,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
@@ -340,7 +344,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Есть несколько часовых циферблатов на выбор, в которых показывается средняя дельта СК, активный инсулин IOB, действующий временный базал и профили базы и график мониторинга.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Смарт-часы Pebble
 
