@@ -457,7 +457,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  Detailed steps on how to setup your pod communication device are listed below in the <a href="#rileylink-setup">RileyLink Setup Section</a>.
+  Detailed steps on how to setup your pod communication device are listed below in the <a href="OmnipodEros-rileylink-setup">RileyLink Setup Section</a>.
 </p>
 
 <p spaces-before="0">
@@ -474,7 +474,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> can be found below in the <a href="#omnipod-settings">Omnipod Settings section</a> of this document.
+    <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> can be found below in the <a href="OmnipodEros-omnipod-settings">Omnipod Settings section</a> of this document.
   </p>
   
   <p spaces-before="0">
@@ -516,12 +516,16 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   </p>
 </blockquote>
 
+<p spaces-before="0">
+  (OmnipodEros-rileylink-setup)=
+</p>
+
 <h3 spaces-before="0">
   RileyLink Kurulumu
 </h3>
 
 <p spaces-before="0">
-  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="#activating-a-pod">Activating a Pod Section</a> below.
+  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="OmnipodEros-activating-a-pod">Activating a Pod Section</a> below.
 </p>
 
 <p spaces-before="0">
@@ -541,7 +545,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
-       Ensure your RileyLink battery is charged and it is <a href="#optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
+       Ensure your RileyLink battery is charged and it is <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
      </p>
      
      <p spaces-before="0">
@@ -584,6 +588,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
  </li>
 </ol>
 
+<p spaces-before="0">
+  (OmnipodEros-activating-a-pod)=
+</p>
+
 <h3 spaces-before="0">
   Pod Etkinleştirme
 </h3>
@@ -593,7 +601,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. During these procedures, make sure that your pod is</em> <a href="#optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+  <em x-id="3">REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. During these procedures, make sure that your pod is</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
 </p>
 
 <ol start="1">
@@ -625,7 +633,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Pod'u Başlat</strong> ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, <a href="#optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
+      <strong x-id="1">Pod'u Başlat</strong> ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -724,7 +732,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
       Click on the back button on your phone to return to the <strong x-id="1">Omnipod (POD)</strong> tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
     </p>
     <p spaces-before="4">
-      For more details on the information displayed go to the <a href="#omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
+      For more details on the information displayed go to the <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
     </p>
     <p spaces-before="4">
       {{ Activate_Pod_14 }} {{ Activate_Pod_15 }}
@@ -831,7 +839,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see a SUSPEND button</em>, then it has not been enabled to display in the Omnipod (POD) tab. Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="#omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
+  <em x-id="3">NOTE - if you do not see a SUSPEND button</em>, then it has not been enabled to display in the Omnipod (POD) tab. Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="OmnipodEros-omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
 </p>
 
 <h4 spaces-before="0">
@@ -882,7 +890,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h4>
 
 <p spaces-before="0">
-  Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra insülin, aktif bazal profilden geçerli zamana dayalı olarak mevcut bazal oranı kullanarak normal iletimi sürdürecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
+  İletimi askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 </p>
 
 <ol start="1">
@@ -984,6 +992,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
    </p>
  </li>
 </ol>
+
+<p spaces-before="0">
+  (OmnipodEros-view-pod-history)=
+</p>
 
 <h3 spaces-before="0">
   Pod Geçmişini Görüntüle
@@ -1236,6 +1248,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   </ul>
 </blockquote>
 
+<p spaces-before="0">
+  (OmnipodEros-omnipod-pod-tab)=
+</p>
+
 <h2 spaces-before="0">
   Omnipod (POD) Sekmesi
 </h2>
@@ -1373,7 +1389,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Hatalar:</strong> Karşılaşılan son hatayı görüntüler. Review the <a href="#view-pod-history">Pod history</a>, <a href="#rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
+    <strong x-id="1">Hatalar:</strong> Karşılaşılan son hatayı görüntüler. Review the <a href="OmnipodEros-view-pod-history">Pod history</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
   </p>
 </li>
 <li>
@@ -1406,7 +1422,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
     </p>
     
     <p spaces-before="0">
-      See the <a href="#troubleshooting">Troubleshooting section</a> below for additional information.
+      See the <a href="OmnipodEros-troubleshooting">Troubleshooting section</a> below for additional information.
     </p>
   </blockquote>
 </li>
@@ -1658,7 +1674,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
           When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set
         </li>
         <li>
-          See <a href="#reset-rileylink-config-notes">additional notes</a> at the end of this table
+          See <a href="OmnipodEros-reset-rileylink-config-notes">additional notes</a> at the end of this table
         </li>
       </ul>
     </blockquote>
@@ -1683,6 +1699,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </li>
 </ul>
 
+<p spaces-before="0">
+  (OmnipodEros-reset-rileylink-config-notes)=
+</p>
+
 <h4 spaces-before="0">
   <em x-id="3">Reset RileyLink Config Notes</em>
 </h4>
@@ -1701,6 +1721,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
     This button <strong x-id="1">DOES NOT</strong> need to be pressed when switching between different pod communication devices
   </li>
 </ul>
+
+<p spaces-before="0">
+  (OmnipodEros-omnipod-settings)=
+</p>
 
 <h2 spaces-before="0">
   Omnipod Ayarları
@@ -2078,6 +2102,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   </ul>
 </blockquote>
 
+<p spaces-before="0">
+  (OmnipodEros-troubleshooting)=
+</p>
+
 <h2 spaces-before="0">
   Sorun giderme
 </h2>
@@ -2206,6 +2234,10 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 <h2 spaces-before="0">
   En İyi Uygulamalar
 </h2>
+
+<p spaces-before="0">
+  (OmnipodEros-optimal-omnipod-and-rileylink-positioning)=
+</p>
 
 <h3 spaces-before="0">
   En İyi Omnipod ve RileyLink Konumlandırılması
