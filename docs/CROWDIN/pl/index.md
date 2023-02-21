@@ -83,7 +83,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 (index-what-do-i-need)=
 
 ```{toctree}
-:caption: What do I need&#063;
+:caption: What do I need
 
 CGM/FGM choices <./Configuration/BG-Source.md>
 
