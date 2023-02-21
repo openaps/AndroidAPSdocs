@@ -1321,16 +1321,16 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <blockquote spaces-before="2">
     <ul>
       <li>
-        <em x-id="3">Moments ago</em> - less than 20 seconds ago.
+        <em x-id="3">À l'instant</em> - il y a moins de 20 secondes.
       </li>
       <li>
-        <em x-id="3">Less than a minute ago</em> - more than 20 seconds but less than 60 seconds ago.
+        <em x-id="3">Il y a moins d'une minute</em> - plus de 20 secondes mais moins de 60 secondes.
       </li>
       <li>
-        <em x-id="3">1 minute ago</em> - more than 60 seconds but less than 120 seconds (2 min)
+        <em x-id="3">il y a 1 minute</em> - plus de 60 secondes mais moins de 120 secondes (2 min)
       </li>
       <li>
-        <em x-id="3">XX minutes ago</em> - more than 2 minutes ago as defined by the value of XX
+        <em x-id="3">il y a XX minutes</em> - il y a plus de 2 minutes comme défini par la valeur de XX
       </li>
     </ul>
   </blockquote>
@@ -1343,12 +1343,12 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Base Basal rate:</strong> Displays the basal rate programmed for the current time from the basal rate profile.
+    <strong x-id="1">Débit de Basal :</strong> Affiche le débit Basal courant en ce moment, à partir du débit de basal du profil.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Temp basal rate:</strong> Displays the currently running Temporary Basal Rate in the following format
+    <strong x-id="1">Débit de Basal Temp. :</strong> Affiche le débit de basal Temporaire actuellement en cours d'exécution dans le format suivant
   </p>
 <blockquote spaces-before="2">
     <ul>
@@ -1356,7 +1356,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
         Unités/heure @ heure du DBT (minutes exécutées/minutes totales prévues du DBT)
       </li>
       <li>
-        <em x-id="3">Example:</em> 0.00U/h @18:25 ( 90/120 minutes)
+        <em x-id="3">Exemple :</em> 0.00U/h @18:25 (90/120 minutes)
       </li>
     </ul>
   </blockquote>
@@ -1414,7 +1414,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">POD MGMT:</strong>
+    <strong x-id="1">GEST. POD:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -2009,7 +2009,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
   </li>
   
   <li>
-    Dans la section <strong x-id="1">Careportal (1)</strong> les 3 champs suivants auront leur <strong x-id="1">age réinitialisés</strong> à 0 jours et 0 heures <strong x-id="1">après chaque changement de pod</strong> : <strong x-id="1">Insuline</strong> et <strong x-id="1">Canule</strong>. C'est dû à la façon dont la pompe Omnipod est construite et opérationnelle. The <strong x-id="1">pump battery</strong> and <strong x-id="1">insulin reservoir</strong> are self contained inside of each pod. Puisque le pod insère la canule directement dans la peau au niveau du site d'application pod, il n'y a pas de tubulure traditionnelle dans les pompes Omnipod. <em x-id="3">Therefore after a pod change the age of each of these values will automatically reset to zero.</em> <strong x-id="1">Pump battery age</strong> is not reported as the battery in the pod will always be more than the life of the pod (maximum 80 hours).
+    Dans la section <strong x-id="1">Careportal (1)</strong> les 3 champs suivants auront leur <strong x-id="1">age réinitialisés</strong> à 0 jours et 0 heures <strong x-id="1">après chaque changement de pod</strong> : <strong x-id="1">Insuline</strong> et <strong x-id="1">Canule</strong>. C'est dû à la façon dont la pompe Omnipod est construite et opérationnelle. La <strong x-id="1">pile de la pompe</strong> et le <strong x-id="1">réservoir d'insuline</strong> sont intégrés à l'intérieur de chaque pod. Puisque le pod insère la canule directement dans la peau au niveau du site d'application pod, il n'y a pas de tubulure traditionnelle dans les pompes Omnipod. <em x-id="3">Par conséquent, après un changement de pod, l'âge de chacune de ces valeurs sera automatiquement réinitialisé à zéro.</em> <strong x-id="1">L'âge de la pile pompe</strong> n'est pas indiqué car la durée de vie de la pile du pod sera toujours plus grande que celle du pod (maximum 80 heures).
   </li>
 </ol>
 
@@ -2040,10 +2040,10 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
       <strong x-id="1">En dessous de 50 unités</strong> - Affiche la quantité approximative d'insuline restante dans le réservoir.
     </li>
     <li>
-      <strong x-id="1">SMS</strong> - Returns value or 50+U for SMS responses
+      <strong x-id="1">SMS</strong> - Renvoie la valeur ou 50+U pour les réponses SMS
     </li>
     <li>
-      <strong x-id="1">Nightscout</strong> - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Les nouvelles versions afficheront la valeur de plus de 50+ si au-dessus de 50 unités.
+      <strong x-id="1">Nightscout</strong> - Envoie la valeur 50 vers Nightscout s'il y a plus de 50 unités (version 14,07 et plus).  Les nouvelles versions afficheront la valeur de plus de 50+ si au-dessus de 50 unités.
     </li>
   </ul>
 </blockquote>
@@ -2153,7 +2153,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h4>
 
 <p spaces-before="0">
-  Aucune session de Pod actif détectée. This alert can temporarily be dismissed by pressing <strong x-id="1">SNOOZE</strong> but it will keep triggering as long as a new pod has not been activated. Une fois activé, cette alerte disparait automatiquement.
+  Aucune session de Pod actif détectée. Cette alerte peut être temporairement rejetée en appuyant sur <strong x-id="1">REPORT ALARME</strong> mais elle se déclenchera tant qu'un nouveau pod n'a pas été activé. Une fois activé, cette alerte disparait automatiquement.
 </p>
 
 <h4 spaces-before="0">
@@ -2252,16 +2252,16 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 <ul>
   <li>
-    <strong x-id="1">Level 0:</strong> Read the relevant section of this documentation to ensure you understand how the functionality with which you are experiencing difficulty is supposed to work.
+    <strong x-id="1">Niveau 0 :</strong> Lisez la section correspondante de cette documentation pour vous assurer que vous comprenez comment la fonctionnalité avec laquelle vous avez des difficultés est censée fonctionner.
   </li>
   <li>
-    <strong x-id="1">Level 1:</strong> If you are still encountering problems that you are not able to resolve by using this document, then please go to the <em x-id="3">#androidaps</em> channel on <strong x-id="1">Discord</strong> by using <a href="https://discord.gg/4fQUWHZ4Mw">this invite link</a>.
+    <strong x-id="1">Niveau 1 :</strong> Si vous rencontrez toujours des problèmes que vous n'arrivez pas à résoudre en utilisant ce document, alors veuillez aller sur la chaine <em x-id="3">#androidaps</em> sur <a href="https://discord.gg/4fQUWHZ4Mw">ce lien d'invitation</a>.
   </li>
   <li>
     <strong x-id="1">Niveau 2 :</strong> Rechercher dans les problèmes existants pour voir si votre problème a déjà été signalé; si ce n'est pas le cas, veuillez créer une nouvelle <a href="https://github.com/nightscout/AndroidAPS/issues">fiche</a> et joignez vos <a href="../Usage/Accessing-logfiles.md">fichiers log</a>.
   </li>
   <li>
-    <strong x-id="1">Be patient - most of the members of our community consist of good-natured volunteers, and solving issues often requires time and patience from both users and developers.</strong>
+    <strong x-id="1">Soyez patient - la plupart des membres de notre communauté sont des bénévoles de bonne nature, et résoudre les problèmes nécessite souvent du temps et de la patience de la part des utilisateurs et des développeurs.</strong>
   </li>
 </ul>
 
