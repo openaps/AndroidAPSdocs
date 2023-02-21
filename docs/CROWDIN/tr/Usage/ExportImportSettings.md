@@ -1,4 +1,4 @@
-# Export & import settings
+# Dışa aktarma & içe aktarma ayarları
 
 ## Ayarları ne zaman dışa aktarmalıyım?
 
@@ -18,11 +18,11 @@ Bir Windows 10 bilgisayarında şöyle görünür:
 
 Diğerlerinin yanı sıra aşağıdaki bilgiler, dışa aktarılan ayarların bir parçasıdır:
 
-- [Automation](../Usage/Automation.md) events
-- [Config builder](../Configuration/Config-Builder.md) settings
-- [Local profile](Config-Builder-local-profile) settings
-- [Objectives](../Usage/Objectives.md) status incl. [exam results](Objectives-objective-3-prove-your-knowledge)
-- [Preferences](../Configuration/Preferences.md) incl. [NS Client settings](Preferences-nsclient)
+- [ Otomasyon ](../usuge/automation.md) olayları
+- [Konfigürasyon ayarları](../Configuration/Config-Builder.md)
+- [Yerel profil](Config-Builder-local-profile) ayarları
+- [ Görevler ](../usuge/objectives.md) ve [ sınav sonuçları ](objective-sjective-3-prove-your-nowledge) durumu
+- [Tercihler](../Configuration/Preferences.md) ["NS Client ayarları"](Preferences-nsclient) dahil
 
 ## Şifreli yedekleme formatı
 
@@ -70,25 +70,25 @@ Settings backup is encrypted by a master password that can be set in [Preference
 :alt: AndroidAPS içe aktarma ayarları 2
 ```
 
-- Details on the preference file will be shown.
-- Last option to cancel import.
-- Click 'Import'.
-- Confirm message by clicking 'OK'.
-- AAPS will be restarted in order to activate imported preferences.
+- Aktarılacak dosyaya ilişkin ayrıntılar gösterilecektir.
+- İçe aktarmayı iptal etmek için son şansınız.
+- 'İçe Aktar'ı tıklayın.
+- 'Tamam'ı tıklayarak mesajı onaylayın.
+- İçe aktarılan tercihleri etkinleştirmek için AAPS yeniden başlatılacak.
 
 ### Dana RS kullanıcıları için not
 
 - Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz.
-- Please pair new phone and pump manually.
+- Lütfen yeni telefonu ve pompayı manuel olarak eşleştirin.
 
 ### Ayarları önceki sürümlerden içe aktarın (AAPS 2.7'den önce)
 
-- The "old" settings file (called 'AndroidAPSPreferences' - without file extension) must be in root folder of your smartphone (/storage/emulated/0).
-- Do not put the "old" file in the same folder as the new exported settings (AAPS/preferences).
-- You will find the "old" file on the bottom of the list in the import dialogue.
+- "Eski" ayarlar dosyası ('AndroidAPSPreferences' olarak adlandırılır - dosya uzantısı olmadan) akıllı telefonunuzun kök klasöründe olmalıdır (/storage/emulated/0).
+- "Eski" dosyayı yeni dışa aktarılan ayarlarla (AAPS/tercihler) aynı klasöre koymayın.
+- İçe aktarma iletişim kutusundaki listenin en altında "eski" dosyayı bulacaksınız.
 
 ## Ayarlar dosyasını transfer etme
 
-- Best way to transfer settings file to a new phone is via USB cable or cloud service (i.e. Google Drive).
-- Manuals can be found on the web, i.e. [Android help pages](https://support.google.com/android/answer/9064445?hl=en).
-- If you experience problems with the transferred file try another way to transfer file.
+- Ayarlar dosyasını yeni bir telefona aktarmanın en iyi yolu USB kablosu veya bulut hizmetidir (örn. Google Drive).
+- Kılavuzları web'de bulabilirsiniz, [ Android yardım sayfaları ](https://support.google.com/android/answer/9064445?hl=en).
+- Transfer etmeyle ilgili sorun yaşıyorsanız, dosya transferinin başka bir yolunu deneyin.
