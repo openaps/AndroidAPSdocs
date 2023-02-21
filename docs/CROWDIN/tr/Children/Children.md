@@ -9,12 +9,12 @@ AndroidAPS, çocukların uzaktan izlenmesi için çeşitli seçenekler sunar ve 
 ## Fonksiyonlar
 
 - Çocuğun pompası, AndroidAPS kullanılarak çocuğun telefonu tarafından kontrol edilir.
-- Parents can remotely follow seeing all relevant data such as glucose levels, carbs on board, insulin on board etc. using **NSClient app** on their phone. Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
-- Parents can be alarmed by using **xDrip+ app in follower mode** on their phone.
-- Remote control of AndroidAPS using [SMS Commands](../Children/SMS-Commands.md) secured by two-factor authentication.
+- Ebeveynler, telefonlarında **NSClient uygulamasını** kullanarak KŞ seviyeleri, AKRB, AİNS gibi ilgili tüm verileri görerek uzaktan takip edebilirler. Ayarlar AndroidAPS ve NSClient uygulamasında aynı olmalıdır.
+- Ebeveynler, telefonlarında **xDrip+ uygulamasını takipçi modunda** kullanarak KŞ uyarılarını alabilirler.
+- [SMS Komutları](../Children/SMS-Commands.md) kullanılarak AndroidAPS'in uzaktan kontrolü, iki faktörlü kimlik doğrulama ile güvence altına alınmıştır.
 - Remote control through NSClient app is only recommended if your synchronization is working well (ie. you don’t see unwanted data changes like self modification of TT, TBR etc) see [release notes for Version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) for further details.
 
-## Tools and apps for remote monitoring
+## Uzaktan izleme için araçlar ve uygulamalar
 
 - [Nightscout](https://nightscout.github.io/) in web browser (mainly data display)
 - NSClient app is a stripped down version of AAPS capable of following somebody, making profile switches, setting TTs and entering carbs. There are 2 apps:  [NSClient & NSClient2 to download](https://github.com/nightscout/AndroidAPS/releases/). The only difference is the app name. This way you can install the app twice on the same phone, to be able to follow 2 different persons/nightscouts with it.
