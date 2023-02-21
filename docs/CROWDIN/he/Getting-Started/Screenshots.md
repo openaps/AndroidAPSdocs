@@ -293,7 +293,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* נועד לתת כמות מסוימת של אינסולין מבלי להשתמש ב[מחשבון בולוס](#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * אם אינכם רוצים להכניס בולוס דרך המשאבה אלא לרשום את כמות האינסולין (כלומר אינסולין שניתן באמצעות מזרק) סמנו את התיבה המתאימה.
 
@@ -310,7 +310,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### מחשבון
 
-* ראו אשף הבולוסים [מטה](#bolus-wizard)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### כיולים
 
@@ -403,6 +403,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * לולאה סגורה תיעצר אוטומטית ותעבור למצב לולאה פתוחה למשך זמן פעילות הבולוס הממושך.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### פורטל הטיפולים - חלק N
 
 * מידע אודות תצוגת
@@ -427,7 +429,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### פורטל הטיפולים - חלק O
 
-* בדיקת רמת סוכר, תיחול\מילוי, הכנסת חיישן והחלפת סוללת משאבה הם הבסיס לנתונים המוצגים ב[חלק O](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * תיחול\מילוי מאפשר לתעד את החלפת מיקום חיבור צינורית המשאבה ואת החלפת מכל האינסולין.
 * חלק O משקף את פורטל הטיפולים שבנייטסקאוט. לכן התעמלות, הכרזות ושאלות הן סוגים מיוחדים של הערות.
 
