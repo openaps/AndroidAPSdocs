@@ -29,7 +29,7 @@
 - Er is een ander probleem wanneer een herstart niet helpt, maar een knop op de pomp moet worden ingedrukt (hierdoor wordt de Bluetooth van de pomp gereset), voordat de pomp opnieuw verbindingen kan maken met de telefoon. 
 - Er is heel weinig dat kan worden gedaan om beide problemen op dit moment te verhelpen. Dus als je deze fouten vaak ziet, is je enige optie op dit moment om een andere telefoon te zoeken die goed werkt met AndroidAPS en de Combo (zie hierboven).
 - Het toedienen van een bolus vanaf de pomp zal niet altijd optijd gedetecteerd worden (word gecontroleerd als AAPS met de pomp verbindt) dit kan in het ergste geval tot wel 20 minuten duren. 
-- Voordat AAPS een commando voor een bolus of hoge TBR geeft, zal hij altijd de bolusgeschiedenis in de pomp controleren. Wanneer hij dan de handmatige bolus opmerkt, zal AAPS geen Bolus/TBR commando geven omdat deze was berekend met verkeerde aannames. (-> Niet bolussen vanaf de pomp! Zie hoofdstuk [Gebruik](#usage))
+- Voordat AAPS een commando voor een bolus of hoge TBR geeft, zal hij altijd de bolusgeschiedenis in de pomp controleren. Wanneer hij dan de handmatige bolus opmerkt, zal AAPS geen Bolus/TBR commando geven omdat deze was berekend met verkeerde aannames. (-> Niet bolussen vanaf de pomp! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Het instellen van een TBR op de pomp moet worden vermeden, aangezien AAPS de controle zou moeten houden over TBRs. Wanneer je dit wel zou doen, dan kan het tot 20 minuten duren voordat AAPS contact maakt met de pomp en de nieuwe TBR detecteert. De TBR zal alleen worden geregistreerd vanaf het moment dat hij wordt gedetecteerd, dus in het ergste geval zou er al twintig minuten lang een TBR zijn afgegeven die niet in de IOB wordt meegerekend. 
 
 ## Instellen
@@ -104,6 +104,8 @@ There are serveral possible reasons. Try the following steps:
 13. Als je de branch 'pairing' hebt gebruikt om de ruffy app te bouwen, installeer dan nu de versie van de 'combo' branch hier overheen. Zorg ervoor dat je dezelfde sleutels (key-store) hebt gebruikt bij het signeren van de twee versies van de app om alle instellingen en gegevens te kunnen behouden; hierin staan ook de koppelingsgegevens.
 14. Start de telefoon opnieuw op.
 15. Nu kan je de AAPS loop herstarten.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Gebruik
 
