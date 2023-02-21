@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Conectează transmițătorul G6 pentru prima dată
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Pentru transmițătoarele G6 fabricate după sfârșitul anului 2018 (a caror serie incepe cu 80 sau 81) foloseste versiunea [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ Pentru transmițătoarele a caror serie începe cu 8G, 8H sau 8J foloseste [nigh
    
    * Postarea 1: Transmitator Zile vechime: 151/Tensiune A: 297/Tensiune B: 260/Rezistenţa: 2391
    * Postarea 2: Transmitator Zile vechime: 249/Tensiune A: 275 (la momentul intreruperii functionarii)
+
+(xdrip-extend-transmitter-life)=
 
 ### Extindere durata de functionare a transmiţătorului
 
