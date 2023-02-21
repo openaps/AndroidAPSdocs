@@ -83,11 +83,11 @@ Docs updates & Änderungen <./Getting-Started/WikiUpdate.md>
 (index-what-do-i-need)=
 
 ```{toctree}
-:caption: Was brauche ich&#063;
+:caption: What do I need
 
-CGM/FGM Auswahl <./Configuration/BG-Source.md>
+CGM/FGM choices <./Configuration/BG-Source.md>
 
-Pumpenauswahl <./Getting-Started/Pump-Choices.md>
+Pump choices <./Getting-Started/Pump-Choices.md>
 
 Module <./Module/module.md>
 
