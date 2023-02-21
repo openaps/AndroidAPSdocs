@@ -2,30 +2,34 @@
 
 ![Данные AAPS CGM на Android Auto](../images/AndroidAuto_05.png)
 
+(Android-auto-androidaps-settings-for-android-auto)=
+
 ## Параметры AndroidAPS для Android Auto
 
-Использовать системные уведомления для предупреждений и уведомлений:
+Use system notifications for alerts and notifications:
 
 * Откройте меню 3 точки в правом верхнем углу экрана и выберите **Настройки** <unk> **Локальные оповещения** <unk> и активацию **Использовать системные уведомления для оповещений и уведомлений** 
 
-![Использовать системные уведомления для предупреждений и уведомлений](../images/AndroidAuto_01v2.png)
+![Use system notifications for alerts and notifications](../images/AndroidAuto_01v2.png)
+
+(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
 
 ## Настройки в Android Auto app на телефоне
 
-Так как AAPS не является официальным приложением Android Auto, уведомления нужно активировать в Android Auto.
+As AAPS is no official Android Auto app notifications have to be activated in Android Auto.
 
 * Откройте приложение Android Auto на вашем телефоне.
 * Нажмите на сэндвич-меню
 * Выберите Настройки
 * Прокрутите вниз до конца списка и нажмите на № версии 10 раз до тех пор, пока не появится сообщение "Developer mode enabled".
 
-![Включить режим разработчика](../images/AndroidAuto_02.png)
+![Enable developer mode](../images/AndroidAuto_02.png)
 
 * Откройте меню из трех точек в правом верхнем углу главного экрана
 * Выберите "Параметры разработчика"
 * Прокрутите вниз весь путь до конца списка и активируйте "Неизвестные источники"
 
-![Разрешить неизвестные источники](../images/AndroidAuto_03.png)
+![Enable unknown sources](../images/AndroidAuto_03.png)
 
 * Теперь можно выйти из режима разработчика. Чтобы сделать это, нажмите на три точки меню вверху справа.
 
@@ -33,7 +37,7 @@
 
 * Коснитесь значка колокольчика на нижней панели меню в Android Авто в вашем автомобиле
 
-![Значок звонка-Android Auto в автомобиле](../images/AndroidAuto_04.png)
+![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
 
 * Значения CGM будут показаны следующим образом:
 
@@ -41,4 +45,4 @@
 
 ## Устранение неполадок:
 
-* Если уведомление не показано, проверьте, даны ли разрешения [ показывать уведомления AAPS](#androidaps-settings-for-android-auto) в Android и имеет ли [ Android Auto права доступа к уведомлениям ](#settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).
