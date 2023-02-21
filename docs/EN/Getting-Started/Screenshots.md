@@ -276,7 +276,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* To give a certain amount of insulin without using [bolus calculator](#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * If you do not want to bolus through pump but record insulin amount (i.e. insulin given by syringe) check the corresponding box.
 
@@ -292,7 +292,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Notes will be uploaded to Nightscout - depending on your settings for [NS client](Preferences-nsclient).
 
 #### Calculator
-* See Bolus Wizard [section below](#bolus-wizard)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### Calibrations
 * Sends a calibration to xDrip+ or opens Dexcom calibration dialogue.
@@ -308,6 +308,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 * Details are setup in [preferences](Preferences-quick-wizard).
 
 (Screenshots-bolus-wizard)=
+
 ## Bolus Wizard
 
 ![Bolus wizard](../images/Home2020_BolusWizard_v2.png)
@@ -371,6 +372,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### Careportal - section N
 
 * Displays information on
@@ -393,7 +396,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Careportal - section O
 
-* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * Prime/Fill allows you to record pump site and insulin cartridge change.
 * Section O reflects the Nightscout careportal. So exercise, announcement and question are special forms of notes.
 

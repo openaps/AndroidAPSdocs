@@ -2,7 +2,7 @@
 
 You can install AndroidAPS app on your **Wear OS based** smartwatch.
 Watch version of AAPS allows you to:
-* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc.
 
 ### Before you buy watch...
@@ -41,6 +41,8 @@ The following functions can be triggered from the watch:
     * check loop status
     * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
     * show TDD (Total daily dose = bolus + basal per day)
+
+(Watchfaces-aaps-watchfaces)=
 
 ## AAPS Watchfaces
 
@@ -107,6 +109,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Vibrate on Bolus** (default `On`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
 
+(Watchfaces-watchface-settings)=
+
 ### Watchface settings
 
 * **Show Date** (default `Off`): note, date is not available on all watchfaces
@@ -158,6 +162,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 * **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
 
 (Watchfaces-complications)=
+
 ## Complications
 
 _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
@@ -325,7 +330,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
