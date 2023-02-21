@@ -846,7 +846,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et cliquez sur le bouton <strong x-id="1">SUSPENDRE (1)</strong>. The suspend command is sent from the RileyLink to the active pod and the <strong x-id="1">SUSPEND (3)</strong> button will become greyed out. The <strong x-id="1">Pod status (2)</strong> will display <strong x-id="1">SUSPEND DELIVERY</strong>.
+      Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et cliquez sur le bouton <strong x-id="1">SUSPENDRE (1)</strong>. La commande de suspension est envoyée depuis le RileyLink vers le pod actif et le bouton <strong x-id="1">SUSPENDRE (3)</strong> sera grisé. L'<strong x-id="1">État Pod (2)</strong> affichera <strong x-id="1">SUSPRENDRE L'INJECTION</strong>.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -857,7 +857,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">All insulin delivery has been suspended</strong>. Cliquez sur <strong x-id="1">OK</strong> pour confirmer et continuer.
+     Lorsque la commande de suspension est confirmée avec succès par le RileyLink, une boîte de dialogue de confirmation affiche le message <strong x-id="1">Toutes les injections d'insuline ont été suspendues.</strong>. Cliquez sur <strong x-id="1">OK</strong> pour confirmer et continuer.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -868,7 +868,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Votre pod actif a maintenant suspendu toute injection d'insuline. The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> to <strong x-id="1">Suspended</strong>. The <strong x-id="1">SUSPEND</strong> button will change to a new <strong x-id="1">Resume Delivery (2)</strong> button
+     Votre pod actif a maintenant suspendu toute injection d'insuline. L'onglet <strong x-id="1">Omnipod (POD)</strong> mettra à jour l' <strong x-id="1">état du Pod (1)</strong> vers <strong x-id="1">Suspendu</strong>. Le bouton <strong x-id="1">SUSPENDRE</strong> sera remplacer par un nouveau bouton <strong x-id="1">Reprendre l'injection (2)</strong>
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -889,7 +889,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and ensure the <strong x-id="1">Pod status (1)</strong> field displays <strong x-id="1">Suspended</strong>, then press the <strong x-id="1">Resume Delivery (2)</strong> button to start the process to instruct the current pod to resume normal insulin delivery. A message <strong x-id="1">RESUME DELIVERY</strong> will display in the <strong x-id="1">Pod status (3)</strong> field, signifying the RileyLink is actively sending the command to the suspended pod.
+      Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et assurez-vous que le champ <strong x-id="1">État Pod (1)</strong> affiche <strong x-id="1">Suspendu</strong>, puis appuyez sur le bouton <strong x-id="1">Reprendre l'injection (2)</strong> pour demander au pod actuel de reprendre l'injection normale d'insuline. Un message <strong x-id="1">REPRENDRE L'INJECTION</strong> s'affichera dans le champ <strong x-id="1">État Pod (3)</strong> indiquant que le RileyLink envoie activement la commande au pod suspendu.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -900,7 +900,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">Insulin delivery has been resumed</strong>. Cliquez sur <strong x-id="1">OK</strong> pour confirmer et continuer.
+     Lorsque la commande Reprendre l'injection est confirmée avec succès par le RileyLink, une boîte de dialogue de confirmation affiche le message <strong x-id="1">L'injection de l'insuline a été reprise</strong>. Cliquez sur <strong x-id="1">OK</strong> pour confirmer et continuer.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -911,7 +911,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> field to display <strong x-id="1">RUNNING,</strong> and the <strong x-id="1">Resume Delivery</strong> button will now display the <strong x-id="1">SUSPEND (2)</strong> button.
+     L'onglet <strong x-id="1">Omnipod (POD)</strong> mettra à jour le champ <strong x-id="1">État du pod (1)</strong> pour afficher <strong x-id="1">EN COURS D'EXÉCUTION</strong> et le bouton <strong x-id="1">Reprendre l'injection</strong> sera maintenant remplacé par le bouton <strong x-id="1">SUSPENDRE (2)</strong>.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -926,21 +926,21 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.</em>
+  <em x-id="3">REMARQUE - si vous ne voyez pas de bouton ACCEPTER ALERTES, c'est parce qu'il n'est affiché dans l'onglet Omnipod (POD) QUE si l'alerte d'expiration pod ou l'alerte de réservoir bas ont été déclenchées.</em>
 </p>
 
 <p spaces-before="0">
-  Le processus ci-dessous vous montrera comment accepter et arêter les bips du pod qui se produisent lorsque la durée d'activité du pod atteint le seuil d'alerte avant son expiration 72 heures (3 jours) après son activation. This warning time limit is defined in the <strong x-id="1">Hours before shutdown</strong> Omnipod alerts setting. La durée de vie maximale d'un pod est de 80 heures (3 jours 8 heures), cependant Insulet recommande de ne pas dépasser la limite de 72 heures (3 jours).
+  Le processus ci-dessous vous montrera comment accepter et arêter les bips du pod qui se produisent lorsque la durée d'activité du pod atteint le seuil d'alerte avant son expiration 72 heures (3 jours) après son activation. Ce délai d'avertissement est défini dans le paramètrage <strong x-id="1">Heures avant arrêt</strong> des alertes Omnipod. La durée de vie maximale d'un pod est de 80 heures (3 jours 8 heures), cependant Insulet recommande de ne pas dépasser la limite de 72 heures (3 jours).
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.</em>
+  <em x-id="3">REMARQUE - Si vous avez activé le paramètre "Accepter automatiquement les alertes Pod" dans les alertes Omnipod, cette alerte sera traitée automatiquement après la première occurrence et vous n'aurez PAS à l'arrêter manuellement.</em>
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      When the defined <strong x-id="1">Hours before shutdown</strong> warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and a pod change will soon be required. You can verify this on the <strong x-id="1">Omnipod (POD)</strong> tab, the <strong x-id="1">Pod expires: (1)</strong> field will show the exact time the pod will expire (72 hours after activation) and the text will turn <strong x-id="1">red</strong> after this time has passed, under the <strong x-id="1">Active Pod alerts (2)</strong> field where the status message <strong x-id="1">Pod will expire soon</strong> is displayed. This trigger will display the <strong x-id="1">ACK ALERTS (3)</strong> button. A <strong x-id="1">system notification (4)</strong> will also inform you of the upcoming pod expiration
+      Lorsque le délai d'avertissement défini dans <strong x-id="1">Heures avant l'arrêt</strong> est atteint, le pod émettra un bip d'avertissement pour vous informer qu'il approche de sa date d'expiration et qu'un changement de pod sera bientôt nécessaire. Vous pouvez le vérifier dans l'onglet <strong x-id="1">Omnipod (POD)</strong>, le champ <strong x-id="1">Pod expiré : (1)</strong> affichera l'heure exacte où le pod expirera (72 heures après l'activation) et le texte basculera en <strong x-id="1">rouge</strong> après ce délai, et dessous dans le champ <strong x-id="1">Alertes Pod actives (2)</strong> où le message de statut <strong x-id="1">Le Pod expire bientôt</strong> est affiché. Ceci déclenchera l'affichage du bouton <strong x-id="1">ACCEPTER ALERTES (3)</strong>. Une <strong x-id="1">notification système (4)</strong> vous informera également de l'expiration imminente du pod
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -951,7 +951,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">ACK ALERTS (2)</strong> button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the <strong x-id="1">Pod status (1)</strong> field with <strong x-id="1">ACKNOWLEDGE ALERTS</strong>.
+     Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> et appuyez sur le bouton <strong x-id="1">ACCEPTER ALERTES (2)</strong>. Le RileyLink envoie la commande au pod pour désactiver le bip d'avertissement d'expiration du pod et met à jour le champ <strong x-id="1">Etat pod (1)</strong> avec <strong x-id="1">VALIDER LES ALERTES</strong>.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -962,7 +962,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Upon <strong x-id="1">successful deactivation</strong> of the alerts, <strong x-id="1">2 beeps</strong> will be issued by the active pod and a confirmation dialog will display the message <strong x-id="1">Activate alerts have been acknowledged</strong>. Click the <strong x-id="1">OK</strong> button to confirm and dismiss the dialog.
+     Lors de la <strong x-id="1">désactivation réussie</strong> des alertes, <strong x-id="1">2 bips</strong> seront émis par le pod actif et une boîte de dialogue de confirmation affichera le message <strong x-id="1">Les alertes actives ont été acceptées.</strong>. Click the <strong x-id="1">OK</strong> button to confirm and dismiss the dialog.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -970,7 +970,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
      </p>
      
      <p spaces-before="0">
-       Si le RileyLink est hors de portée du pod alors que la commande d'acceptation des alertes est en cours de traitement, un message d'avertissement affichera 2 options. <strong x-id="1">Coupure son (1)</strong> fera taire cette alerte. <strong x-id="1">OK (2)</strong> will confirm this warning and allow the user to try to acknowledge alerts again.
+       Si le RileyLink est hors de portée du pod alors que la commande d'acceptation des alertes est en cours de traitement, un message d'avertissement affichera 2 options. <strong x-id="1">Coupure son (1)</strong> fera taire cette alerte. <strong x-id="1">OK (2)</strong> confirmera cette alerte et permettra à l'utilisateur d'essayer d'accepter à nouveau les alertes.
      </p>
      
      <p spaces-before="0">
@@ -981,7 +981,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab, under the <strong x-id="1">Active Pod alerts</strong> field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+     Allez dans l'onglet <strong x-id="1">Omnipod (POD)</strong> sous le champ <strong x-id="1">Alertes Pod actives</strong> le message d'avertissement n'est plus affiché et le pod actif n'émettra plus de bips d'avertissement d'expiration du pod.
    </p>
  </li>
 </ol>
@@ -999,7 +999,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE:</em> <strong x-id="1">Uncertain</strong> commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+  <em x-id="3">REMARQUE :</em> Les commandes <strong x-id="1">incertaines</strong> apparaîtront dans l'historique du pod, cependant en raison de leur nature, vous ne pouvez pas être sûr de leur exactitude.
 </p>
 
 <ol start="1">
