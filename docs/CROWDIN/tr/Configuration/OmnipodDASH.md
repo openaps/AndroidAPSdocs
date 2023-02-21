@@ -240,7 +240,7 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 * **Bluetooth Durumu:** Mevcut bağlantı durumunu görüntüler.
 * **Sıra Numarası:** Etkin POD'un sıra numarasını görüntüler.
 * **Firmware Versiyonu:** Etkin bağlantının firmware sürümünü görüntüler.
-* **Pod üzerindeki zaman:** Bölmedeki geçerli saati görüntüler.
+* **Pod üzerindeki zaman:** Pod üzerindeki geçerli saati görüntüler.
 * **Pod Sona Erme:** Pod'un süresinin dolacağı tarih ve saati görüntüler.
 * **Pod durumu:** Pod durumunu görüntüler.
 * **Son bağlantı:** Pod ile son iletişimin zamanını görüntüler.
