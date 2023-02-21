@@ -73,7 +73,7 @@
 
 * Druk OK om oude wachtwoord in te voeren.
 
-* Typ **oud wachtwoord** (Standaard wachtwoord zie [hierboven](#standaard-wachtwoord)) en druk op OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Voer oude wachtwoord in](../images/DanaRSPW_04_11PWenter.png)
 
