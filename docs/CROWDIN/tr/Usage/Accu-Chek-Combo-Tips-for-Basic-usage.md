@@ -27,7 +27,11 @@
 
 * **Düşük bellek** (veya **agresif güç tasarrufu** ayarları) olan telefonlarda, AndroidAPS genellikle kapatılır. Ana ekrandaki Bolus ve Hesap Makinesi düğmelerinin, sistem başlatılmakta olduğu için AAPS'yi açarken gösterilmemesinden anlayabilirsiniz. Bu başlangıçta "pompa ulaşılamaz alarmlarını" tetikleyebilir. Combo sekmesinin **Son Bağlantı** alanında, AndroidAPS'nin pompayla en son ne zaman iletişim kurduğunu kontrol edebilirsiniz. 
 
-![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png) ![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+
+![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+
+![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * Uygulama yeniden başlatıldığında bazal profil pompadan okunduğu için bu hata pompanın pilini daha hızlı tüketebilir.
 * Ayrıca pompa üzerindeki bir düğmeye basılana kadar pompanın gelen tüm bağlantıları reddetmesine neden olan hataya neden olma olasılığını da artırır. 
