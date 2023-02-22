@@ -52,7 +52,7 @@
 ![Bluetooth etkin](../images/combo/combo-tips-compo.png)
 
 * Pompa üzerindeki tuş kilidini serbest bırakın, pompayı durdurma moduna getirin, muhtemelen iptal edilmiş bir geçici bazal oranı onaylayın ve pili hızlı bir şekilde değiştirin.
-* When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
+* Eski sürücüyü kullanırken, pompanın üzerindeki saat, pil değişiminden sonra sıfırlandıysa, pompadaki tarih ve saati, AAPS çalıştıran telefonunuzdaki tarih/saat ile aynı olacak şekilde ayarlayın. (Yeni sürücü, pompanın tarihini ve saatini otomatik olarak günceller.)
 * Ardından ana ekranda **Askıya Alınan Döngü** simgesine basarken pompayı tekrar çalışma moduna getirin **Devam et** öğesini seçin.
 * AndroidAPS, bir sonraki kan şekeri değerinin gelmesiyle gerekli bir geçici bazal oranını yeniden ayarlayacaktır. 
 
@@ -79,7 +79,7 @@ Pil ömrünüz yukarıda belirtilen aralıklardan önemli ölçüde kısaysa, l�
 
 ## Gün ışığından yararlanma saati değişiklikleri
 
-**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
+**NOT**: Yeni sürücü, tarihi ve saati otomatik olarak ayarlar ve yaz saati uygulaması değişikliklerini kendi başına gerçekleştirir. Aşağıdaki adımların tümü yalnızca eski sürücü için geçerlidir.
 
 * Şu anda birleşik sürücü, pompanın zamanının otomatik olarak ayarlanmasını desteklememektedir.
 * Gün ışığından yararlanma saati değişikliği gecesinde, akıllı telefonun saati güncellenir, ancak pompanın saati değişmez. Bu sistemler arasında saat 3'te farklılık gösterdiği için bir alarma yol açar.
