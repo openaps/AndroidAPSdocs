@@ -6,9 +6,9 @@ Aynı sıklıktaki olaylar için her zaman aynı ayarları değiştirmeniz gerek
 
 Örneğin KŞ'niz çok düşük olduğunda, otomatik olarak yüksek bir geçici hedefe sahip olmaya karar verebilirsiniz. Veya fitness merkezinizdeyseniz, otomatik olarak geçici bir hedef alırsınız.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+Otomasyonu kullanmadan önce, manuel [geçici hedeflerden ](./temptarget.html) veya profil değişimlerinden emin olmalısınız.
 
-İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+İlk basit kuralınızı oluşturmadan önce otomasyonun nasıl çalıştığını gerçekten anladığınızdan emin olun. **Eylem yerine AAPS'nin önce yalnızca bir bildirim görüntülemesine izin verin.** Otomasyonun doğru zamanda tetiklendiğinden emin olduğunuzda, bildirimi gerçek eylemle değiştirin.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
 :alt: Otomasyon koşulu + eylem
@@ -21,7 +21,7 @@ Bir otomasyon kurmak için ona bir başlık vermeniz, en az bir koşul ve bir ey
 (Automation-important-note)=
 ### Önemli Not
 
-**Automation is still active when you disable loop!**
+**Döngüyü devre dışı bıraktığınızda otomasyon hala etkindir!**
 
 Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bıraktığınızdan emin olun. Bunu otomasyon kuralınızın adının solundaki kutunun işaretini kaldırarak yapabilirsiniz.
 
@@ -31,64 +31,64 @@ Bu nedenle, gerekirse bu durumlarda otomasyon kurallarını devre dışı bırak
 
 ### Otomasyon nerede bulunur
 
-Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
+[Konfigürasyon ayarlarındaki ayarlarınıza](Config-Builder-tab-or-hamburger-menu) bağlı olarak [Otomasyonu](Config-Builder#automation) ya hamburger menüsünde veya sekme olarak bulacaksınız.
 
 ### Genel
 
 Bazı sınırlar vardır:
 
-- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-- The profile percentage has to be between 70 % and 130%.
-- There is a 5 min. time limit between executions (and first execution).
+- Glikoz değeri 72 ile 270 mg/dl arasında veya 4 ile 15 mmol/l arasında olmalıdır.
+- Profil yüzdesi %70 ile %130 arasında olmalıdır.
+- Yürütmeler (ve ilk yürütme) arasında 5dk. zaman sınırı vardır.
 
-**Please be careful:**
+**Lütfen dikkatli olun:**
 
-- **less than -2 means: -3 and lower (-4,-10, etc)**
-- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+- **-2'den küçük şu anlama gelir: -3 ve altı (-4,-10, vb.)**
+- **-2'den büyük şu anlama gelir: -1 ve üstü (-1, 0, +10, vb.)**
 
 ### Şart
 
 Birkaç koşul arasından seçim yapabilirsiniz. Burada yalnızca birkaçından bahsedilmiştir, ancak çoğu kendi kendini açıklayıcı niteliktedir ve bu nedenle burada açıklanmamıştır:
 
-- connect conditions: you can have several conditions and can link them with
+- bağlantı koşulları: birkaç koşula sahip olabilirsiniz ve bunları aşağıdakilerle bağlayabilirsiniz
 
-  - "And"
-  - "Or"
-  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  - "Ve"
+  - "Veya"
+  - "Dışlamalı veya" (bu koşullardan yalnızca birinin geçerli olması durumunda, eylem(ler) in gerçekleşeceği anlamına gelir)
 
-- Time vs. recurring time
+- Zaman ve yinelenen zaman
 
-  - time =  single time event
-  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+  - zaman = tek seferlik olay
+  - yinelenen zaman = düzenli olarak gerçekleşen bir şey (yani haftada bir, her iş günü vb.)
 
-- location: in the config builder (Automation), you can select which location service you want to use:
+- konum: konfiguration oluşturucuda (Otomasyon), kullanmak istediğiniz konum hizmetini seçebilirsiniz:
 
-  - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Use network location: Location of your Wifi
+  - Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ettiğinde konum alır
+  - Ağ konumunu kullan: Wifi'nizin konumu
   - Use GPS location (Attention! Aşırı pil tüketimine neden olabilir!)
 
 ### Eylem
 
 Bir veya daha fazla eylem seçebilirsiniz:
 
-- start temp target
+- geçici hedefi başlat
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  - works only if there is no previous temp target
+  - 72 mg/dl ile 270 mg/dl (4 mmol/l ve 15 mmol/l) arasında olmalıdır
+  - yalnızca önceki geçici hedef yoksa çalışır
 
-- stop temp target
+- geçici hedefi durdur
 
-- notification
+- bildirim
 
-- profile percentage
+- profil yüzdesi
 
-  - must be between 70% and 130%
-  - works only if the previous percentage is 100%
+  - %70 ile %130 arasında olmalıdır
+  - yalnızca önceki yüzde %100 olduğunda çalışır
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Eyleminizi ekledikten sonra, varsayılan değerlere tıklayarak **varsayılan değerleri ihtiyacınız olanla **değiştirmeyi unutmayın.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
+:alt: Otomasyon varsayılanı ve ayarlanan değerler
 ```
 
 (Automation-sort-automation-rules)=
@@ -109,34 +109,34 @@ Bir otomasyon kuralını silmek için çöp kutusu simgesine tıklayın.
 ```
 
 (Automation-good-practice-caveats)=
-## Good practice & caveats
+## Alıştırma & uyarılar
 
-- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+- Otomasyonu kullanmaya başladığınızda veya yeni bir kural oluşturduğunuzda, önce kuralın iyi çalıştığından emin olana kadar sadece bir bildirim ekleyin.
 
-- Watch the rule results.
+- Kural sonuçlarını izleyin.
 
-- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+- Koşulları çok kolaylaştırmaya çalışmayın (yani: EĞER KŞ> 80 mg/dl VE KŞ< 180 mg/dl)
 
-  **Doubly important if action is a profile switch!**
+  **İşlem bir profil değiştirme ise iki kat önemlidir!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
+- Profil değiştirme yerine Geçici Hedefleri kullanmayı deneyin. Geçici Hedefleri, [Otoduyarlılık](Open-APS-features-autosens) 0'a sıfırlamaz.
 
-- Make sure Profile switches are made sparingly and preferably at a last resort.
+- Profil değiştirmeyi az miktarda ve tercihen son çare olarak yapıldığından emin olun.
 
-  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
+  - Profil değiştirme, [Otoduyarlılığı](Open-APS-features-autosens) en az 6 saat süreyle işe yaramaz hale getirir.
 
-- Profile switching will not reset the profile back to your base profile
+- Profil değiştirme, profili temel profilinize geri döndürmez
 
-  - You have to make another rule to set this back or do it manually!
-  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  - Geri döndürmek için başka bir kural yapmalı veya manuel olarak ayarlamalısın!
+  - Profil değiştirme sona ermezse veya temel profile dönüş olmazsa hipoglisemi riski artabilir.
 
 ## Örnekler
 
 Bunlar sadece otomasyon örnekleridir, tavsiye değildir. Gerçekte ne yaptığınızın veya neden ihtiyaç duyduğunuzun farkında olmadan onları uygulamayın.
 
-- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+- Coğrafi konum, wifi, zaman vb. kullanarak günlük aktiviteleriniz (okul, spor salonu, hafta sonu, iş günü gibi) için profil değiştirme.
+- Zamana, konuma, bluetooth cihazına bağlantıya dayalı etkinlikler için geçici hedef belirleme...
+- Zamana, konuma göre yakında yemek yeme geçici hedeflerinin belirlenmesi...
 
 ### Düşük Glikoz Geçici Hedefi
 
@@ -158,12 +158,12 @@ Bu örnek, hafta boyunca her gün aynı saatte işyerinde öğle yemeği yiyen b
 
 Otomasyonu yanlış kullanmadığınıza lütfen dikkat edin. Yanlış kullanım sağlığınızı tehlikeye atabilir. Yanlış kullanım örnekleri:
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+- Yalnızca yardım almak yerine algoritmayı geçersiz kılmaya çalışmak (yani bazal, IC vb. ayarlamak yerine profili değiştirmek)
+- Yiyecekleri telafi etmek için profil ayarlama
+- Süresiz profil ayarlama
+- Tek yön kuralları oluşturma (örn. bir şey yapın ama başka bir kuralla geri almayın)
+- Uzun süreli kurallar oluşturmak
 
 ## Alternatifler
 
-İleri düzey kullanıcılar için, IFTTT veya Automate adlı üçüncü taraf Android uygulamasını kullanarak görevleri otomatikleştirmenin başka olanakları da vardır. Some examples can be found [here](./automationwithapp.html).
+İleri düzey kullanıcılar için, IFTTT veya Automate adlı üçüncü taraf Android uygulamasını kullanarak görevleri otomatikleştirmenin başka olanakları da vardır. Bazı örnekleri [burada](./automationwithapp.html) bulabilirsiniz.
