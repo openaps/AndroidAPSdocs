@@ -284,7 +284,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Some xDrip+ information can be found <a href="../Configuration/xdrip.md">here</a>. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
+  Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri <a href="../Configuration/xdrip.md">burada</a> bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
 </p>
 
 <h2 spaces-before="0">
@@ -296,15 +296,15 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  You can keep on reading through the docs here, get in touch with other loopers online or offline, <a href="../Where-To-Go-For-Help/Background-reading.md">read</a> documentations or what other loopers write (even if you have to be careful, not everything is correct or good for you to reproduce).
+  Buradaki dokümanları okumaya devam edebilir, çevrimiçi veya çevrimdışı olarak diğer döngü kullanıcılarıyla iletişime geçebilir, <a href="../Where-To-Go-For-Help/Background-reading.md">bu linkteki</a> dokümanları veya diğer döngü kullanıcılarının yazdıklarını okuyabilirsiniz. (Yazılanlara rağmen dikkatli olmalısınız, her şey doğru olmayabilir veya sizin konfigürasyonunuz için uygun değildir).
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Done?</strong> If you have your AAPS components all together (congrats!) or at least enough to start in open loop mode, you should first read through the <a href="../Usage/Objectives.md">Objective description</a> before each new Objective and setup up your <a href="index-component-setup">hardware</a>.
+  <strong x-id="1">Bitti mi?</strong> AAPS bileşenleriniz tamamlandıysa (tebrikler!) En azından açık döngü modunda başlayabilirsiniz. Her yeni görev ve <a href="index-component-setup">donanım</a> kurulumundan önce ilk olarak <a href="../Usage/Objectives.md">Görev açıklamaları</a> bölümünü okumalısınız.
 </p>
 
 <p spaces-before="0">
-  % Image aliases resource for referencing images by name with more positioning flexibility
+  % Daha fazla konumlandırma esnekliği ile görüntülere ada göre referans vermek için görüntü takma adı kaynağı
 </p>
 
 <p spaces-before="0">

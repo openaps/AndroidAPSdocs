@@ -1,24 +1,24 @@
 # Tercihler
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak **tercihleri açın**.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt: Tercihleri açın
   ```
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Bu sekmeyi açıp Eklenti tercihleri'ne tıklayarak belirli bir sekmenin (ör. pompa sekmesi) tercihlerine doğrudan atlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
   :alt: Tercihler Eklentisini açın
   ```
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Alt menüler**, alt menü başlığının altındaki üçgene tıklanarak açılabilir.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Alt menüyü aç
   ```
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Sadece aradığınız metnin bir kısmını yazmaya başlayın.
+- Tercihler ekranının üst kısmındaki **filtre** ile belirli tercihlere hızlı bir şekilde erişebilirsiniz. Sadece aradığınız metnin bir kısmını yazmaya başlayın.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt: Tercihler filtresi
@@ -32,25 +32,25 @@
 (Preferences-general)=
 ## Genel
 
-**Units**
+**Ünite**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Kullanımınıza bağlı olarak birimleri mmol/l veya mg/dl olarak ayarlayın.
 
-**Language**
+**Dil**
 
-- New option to use phone's default language (recommended).
+- Telefonun varsayılan dilini kullanmak için yeni seçenek (önerilir).
 
-- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+- AAPS'yi standart telefon dilinizden farklı bir dilde istiyorsanız, birçok dil arasından seçim yapabilirsiniz.
 
-- If you use different languages you might sometimes see a language mix. Bunun nedeni, varsayılan Android dilini geçersiz kılmanın bazen çalışmadığı bir Android sorunudur.
+- Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Bunun nedeni, varsayılan Android dilini geçersiz kılmanın bazen çalışmadığı bir Android sorunudur.
 
   ```{image} ../images/Pref2020_General.png
-  :alt: Preferences > General
+  :alt: Tercihler > Genel
   ```
 
-**Patient name**
+**Hasta Adı**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Birden fazla kurulum arasında ayrım yapmanız gerekiyorsa kullanılabilir (örn. ailenizdeki 2 T1D çocuk için).
 
 (Preferences-protection)=
 ### Güvenlik
@@ -58,15 +58,15 @@
 (Preferences-master-password)=
 #### Ana parola
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- 2.7 sürümünden itibaren şifrelenmiş oldukları için [ayarları dışa aktarabilmek](../Usage/ExportImportSettings.md) için gereklidir. **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
-- Open Preferences (three-dot menu on top right of home screen)
+- Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 
-- Click triangle below "General"
+- "Genel" altındaki üçgeni tıklayın
 
-- Click "Master-Password"
+- "Ana-Parola" ya tıklayın
 
-- Enter password, confirm password and click ok.
+- Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
   ```{image} ../images/MasterPW.png
   :alt: Ana parola tanımlama
@@ -74,11 +74,11 @@
 
 #### Ayarların Güvenliği "Settings protection"
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
+- Ayarlarınızı bir parola veya telefonun biyometrik kimlik doğrulaması ile koruyun (ör. [çocuk AAPS kullanıyor](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Yalnızca [dışa aktarılan ayarların](../Usage/ExportImportSettings.md) güvenliğini sağlamak için ana parola kullanmak istiyorsanız, özel parola kullanılmalıdır.
 
-- If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
+- Özel bir parola kullanıyorsanız, parolayı [yukarıda](Preferences-master-password) açıklandığı gibi ayarlamak için "Parola ayarları" satırına tıklayın.
 
   ```{image} ../images/Pref2020_Protection.png
   :alt: Güvenlik
@@ -86,14 +86,14 @@
 
 #### Uygulama Güvenliği
 
-- If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+- Uygulama korumalıysa, AAPS'i açmak için şifre girmeniz veya telefonun biyometrik kimlik doğrulamasını kullanmanız gerekir.
+- Yanlış şifre girilirse uygulama hemen kapanır - ancak daha önce başarıyla açılmışsa arka planda çalışmaya devam eder.
 
 #### Bolus koruması
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
+- AAPS küçük bir çocuk tarafından kullanılıyorsa ve siz [SMS yoluyla bolus](../Children/SMS-Commands.md) gönderiyorsanız, bolus koruması yararlı olabilir.
 
-- In the example below you see the prompt for biometric protection. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
+- Aşağıdaki örnekte biyometrik koruma istemini görüyorsunuz. Biyometrik kimlik doğrulama çalışmazsa, beyaz kısmın üzerindeki boşluğa tıklayın ve ana parolayı girin.
 
   ```{image} ../images/Pref2020_PW.png
   :alt: Biyometrik koruma
@@ -102,15 +102,15 @@
 (Preferences-skin)=
 #### Görünüm
 
-- You can choose from four types of skins:
+- Dört çeşit görünüm arasından seçim yapabilirsiniz:
 
   ```{image} ../images/Pref2021_SkinWExample.png
   :alt: Görünüm seçimi + örnekler
   ```
 
-- 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+- 'Düşük çözünürlüklü görünüm', düşük çözünürlüklü ekranda daha fazla kullanılabilir alana sahip olmak için daha kısa etiket ve yaş/seviye satırı kaldırılmış olarak gelir.
 
-- Difference of other skins depend of phone's display orientation.
+- Diğer görünümlerin farkı, telefonun ekran yönüne bağlıdır.
 
 ##### Dikey oryantasyon
 
@@ -130,86 +130,86 @@
 (Preferences-overview)=
 ## Genel Bakış
 
-- In overview section you can define preferences for home screen.
+- Genel bakış bölümünde ana ekran için tercihleri tanımlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OverviewII.png
-  :alt: Preferences > Overview
+  :alt: Tercihler > Genel Bakış
   ```
 
 ### Ekranı açık tut
 
-- Useful while giving a presentation.
-- It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+- Sunum yaparken kullanışlıdır.
+- Çok fazla enerji tüketeceğinden telefonunuzu şarj cihazına takmanız tavsiye edilir.
 
 (Preferences-buttons)=
 ### Butonlar
 
-- Define which buttons are visible on the bottom of your home screen.
+- Ana ekranınızın altında hangi butonların görüneceğini tanımlayın.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+- Karbonhidrat ve insülin diyalogundaki üç artış butonu ile kolay giriş için miktar tanımlayabilirsiniz.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
+  :alt: Tercihler > Butonlar
   ```
 
 (Preferences-quick-wizard)=
 ### Hızlı Asistan
 
-- If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+- Sürekli yediğiniz yiyecekler için, karbonhidrat miktarını girdiğiniz ve neleri hesaplayacağınızı ayarladığınız hızlı asistan butonu oluşturarak, ana sayfaya ekleyip kullanabilirsiniz.
 
-- In setup you define during which time period the button will be visible on your home screen - just one button per period.
+- Oluştururken, butonun ana ekranınızda günün hangi saatlerinde görüneceğini belirleyebilirsiniz. - her periyot için bir buton görünür.
 
-- If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+- Hızlı sihirbaz düğmesini tıklarsanız AAPS, mevcut ayarlarınıza göre girdiğiniz karbonhidrat için bir bolus hesaplar ve önerir (ayarlanmışsa kan şekeri değerini veya aktif insülini de dikkate alarak).
 
-- The proposal has to be confirmed before insulin is delivered.
+- İnsülin verilmeden önce önerinin onaylanması gerekir.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button
+  :alt: Tercihler > Hızlı Asistan Butonu
   ```
 
 (Preferences-default-temp-targets)=
 ### Varsayılan Geçici hedefler
 
-- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
+- [Geçici hedefler (GH)](../Usage/temptarget.md), kan şekeri hedefinizi belirli bir süre için değiştirmenizi sağlar.
 
-- With setting of default TT you can easily change your target for activity, eating soon etc.
+- Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
-  :alt: Preferences > Default temp targets
+  :alt: Tercihler > Varsayılan geçici hedefler
   ```
 
 ### Standart insülin miktarlarını Hazırla/Doldur
 
-- If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
-- Pre-set values can be defined in this dialogue.
+- AAPS aracılığıyla boruyu doldurmak veya kanülü hazırlamak istiyorsanız, bunu [eylemler sekmesinden](Screenshots-action-tab) yapabilirsiniz.
+- Bu diyalogda önceden ayarlanmış (pompanıza göre) değerler tanımlanabilir.
 
 (Preferences-range-for-visualization)=
 ### Görselleştirme Aralığı
 
-- Define which part of the graph on the home screen shall be you target range and be filled with green background.
+- Ana ekrandaki grafiğin hangi bölümünün hedef aralığınız olacağını ve yeşil arka planla doldurulacağını tanımlayın.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
+  :alt: Tercihler > Görselleştirme aralığı
   ```
 
 ### Kısa sekme başlıkları
 
-- See more tab titles on screen.
+- Ekranda daha fazla sekme başlığı görmenizi sağlar.
 
-- For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+- Örneğin 'OpenAPS AMA' sekmesi 'OAPS' olur, 'GÖREVLER' 'GRV' olur vb.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
-  :alt: Preferences > Tabs
+  :alt: Tercihler > Sekmeler
   ```
 
 ### Tedavi diyaloglarında not alanını göster
 
-- Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+- Tedavilerinize kısa metin notları ekleme seçeneği sunar (bolus sihirbazı, karbonhidrat, insülin...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
-  :alt: Preferences > Notes in treatment dialogs
+  :alt: Tercihler > Tedavi diyaloglarındaki notlar
   ```
 
 (Preferences-status-lights)=
@@ -218,12 +218,12 @@
 - Durum ışıkları için görsel bir uyarı verir
 
   - Sensör yaşı
-  - Sensor battery level for certain smart readers (see [screenshots page](Screenshots-sensor-level-battery) for details).
+  - Belirli akıllı okuyucular için sensör pil düzeyi (ayrıntılar için [ekran görüntüleri sayfasına](Screenshots-sensor-level-battery) bakın).
   - İnsülin yaşı (rezervuarın kullanıldığı gün sayısı)
   - Rezervuar seviyesi (Ünite)
   - Kanül yaşı
-  - Pump battery age
-  - Pump battery level (%)
+  - Pompa pil yaşı
+  - Pompa pil seviyesi (%)
 
 - Eşik uyarısı aşılırsa değerler sarı renkte gösterilecektir.
 
@@ -473,17 +473,17 @@ Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarınd
 :alt: NSClient bağlantı ayarları
 ```
 
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific WiFi network you can enter its WiFi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Nightscout yüklemesini yalnızca Wi-Fi ile veya hatta belirli Wi-Fi SSID'leri ile sınırlayın.
+- Yalnızca belirli bir WiFi ağını kullanmak istiyorsanız, WiFi SSID'sini girebilirsiniz.
+- Birden çok SSID noktalı virgülle ayrılabilir.
+- Tüm SSID'leri silmek için alana boşluk girin.
 
 ### Alarm türleri
 
-- Alarm options allows you to select which default Nightscout alarms to use through the app.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
+- Alarm seçenekleri, uygulama aracılığıyla hangi varsayılan Nightscout alarmlarının kullanılacağını seçmenize olanak tanır.
+- Alarmların çalması için [Heroku değişkenlerinizde](https://nightscout.github.io/nightscout/setup_variables/#alarms) Acil Yüksek, Yüksek, Düşük ve Acil Düşük alarm değerlerini ayarlamanız gerekir.
+- Yalnızca Nightscout ile bağlantınız varken çalışırlar ve ebeveynler/bakıcılar için tasarlanmıştır.
+- Telefonunuzda CGM kaynağı varsa (ör. xDrip+ veya BYODA \[Kendi dexcom uygulamanızı oluşturun\]) bunun yerine bu alarmları kullanın.
 
 (Preferences-advanced-settings-nsclient)=
 ### Gelişmiş Ayarlar (NSClient)
@@ -492,28 +492,28 @@ Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarınd
 :alt: NS Client gelişmiş ayarlar
 ```
 
-- Most options in advanced settings are self-explanatory.
+- Gelişmiş ayarlardaki çoğu seçenek kendi açıklamasını içerir.
 
-- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+- *Yerel yayınları etkinleştir*, verilerinizi telefondaki xDrip+ gibi diğer uygulamalarla paylaşacaktır.
 
-  - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
+  - xDrip+ alarmlarını kullanmak için [AAPS'e geçmeniz](Config-Builder-bg-source) ve AAPS'de yerel yayını etkinleştirmeniz gerekir.
 
-- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
+- Autotune'u doğru kullanmak istiyorsanız *Her zaman bazal mutlak değerleri kullan* etkinleştirilmelidir. Autotune hakkında daha fazla ayrıntı için [OpenAPS dokümanlarına](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) bakın.
 
 ## SMS Kominikatör
 
-- Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
-- This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
-- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+- Seçenekler yalnızca [Konfigürasyon ayarlarında](Config-Builder-sms-communicator) SMS Kominikatör seçilirse görüntülenecektir.
+- Bu ayar, döngüyü askıya alma veya bolus yapma gibi uygulamanın izleyeceği talimatları hastanın telefonuna mesaj göndererek uygulamanın uzaktan kontrol edilmesini sağlar.
+- Daha fazla bilgi [SMS Komutları](../Children/SMS-Commands.md)nda açıklanmıştır.
+- Bir kimlik doğrulama uygulaması ve mesaj sonunda ek PIN kullanılarak ek güvenlik elde edilir.
 
 ## Otomasyon
 
 Hangi konum hizmetinin kullanılacağını seçin:
 
-- Use passive location: AAPS only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! Aşırı pil tüketimine neden olabilir!)
+- Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ederse konum alır
+- Ağ konumunu kullan: Wi-Fi'nizin konumu
+- GPS konumunu kullanın (Dikkat! Aşırı pil tüketimine neden olabilir!)
 
 ## Yerel uyarılar
 
@@ -521,7 +521,7 @@ Hangi konum hizmetinin kullanılacağını seçin:
 :alt: Yerel uyarılar
 ```
 
-- Settings should be self-explanatory.
+- Ayarlar açıklayıcı olmalıdır.
 
 ## Veri seçenekleri
 
@@ -529,7 +529,7 @@ Hangi konum hizmetinin kullanılacağını seçin:
 :alt: Veri seçenekleri
 ```
 
-- You can help develop AAPS further by sending crash reports to the developers.
+- Geliştiricilere kilitlenme raporları göndererek AAPS'nin daha da geliştirilmesine yardımcı olabilirsiniz.
 
 ## Bakım ayarları
 
@@ -537,14 +537,14 @@ Hangi konum hizmetinin kullanılacağını seçin:
 :alt: Bakım ayarları
 ```
 
-- Standard recipient of logs is <logs@androidaps.org>.
-- If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
+- Günlüklerin standart alıcısı <logs@androidaps.org>'dur.
+- *Dışa aktarılan ayarları şifrele*'yi seçerseniz, bunlar [ana parolanız](Preferences-master-password) ile şifrelenir. Bu durumda, ayarlar her dışa aktarıldığında veya içe aktarıldığında ana parola girilmelidir.
 
 ## Open Humans
 
-- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- Verilerinizi araştırma projelerine bağışlayarak topluluğa yardımcı olabilirsiniz! Ayrıntılar [Open Humans sayfasında](../Configuration/OpenHumans.md) açıklanmıştır.
 
-- In Preferences you can define when data shall be uploaded
+- Tercihler'de verilerin ne zaman yükleneceğini tanımlayabilirsiniz
 
-  - only if connected to WiFi
-  - only if charging
+  - yalnızca WiFi'ye bağlıysa
+  - sadece şarj olurken

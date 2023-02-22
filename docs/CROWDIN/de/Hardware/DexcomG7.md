@@ -37,15 +37,15 @@ After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### build a new signed APK from the dev branch
 
-To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AndroidAPS is necessary.
+To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AAPS is necessary.
 
 Therefore build a new signed APK from the official dev branch and install it on your mobile.
 
-For the configuration in AndroidAPS
+For the configuration in AAPS
 - Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
-The smoothing of glucose values can be activated and deactivated via Settings > Overview settings at 'Smoothing of incoming glucose values'.
+The smoothing of glucose values can be activated by enabling the "Average smoothing" or "Exponential Smoothing" plugin in the Config Builder. To disable select the "No Smoothing" option. "Exponential smoothing" is more aggressive and rewrites the newest Glucose Value but is good in dealing with heavy noise. "Average smoothing" is much like the back smoothing that was in BYODA G6 and only rewrites the past values but not the current value and therefore has a faster response time.
 
 Smoothing **MUST** be enabled for meaningful use of the G7 values.
 
@@ -53,4 +53,4 @@ Smoothing **MUST** be enabled for meaningful use of the G7 values.
 
 -   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
 - As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
-- In AndroidAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+- In AAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

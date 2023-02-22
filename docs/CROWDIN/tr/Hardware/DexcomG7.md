@@ -41,11 +41,11 @@ AAPS'de G7 Uygulamasından değerleri alabilmek ve alınan değerleri yumuşatma
 
 Bu nedenle, resmi geliştirici sürümü için imzalı yeni bir APK oluşturun ve cep telefonunuza yükleyin.
 
-AndroidAPS'deki yapılandırma için
+AAPS'deki yapılandırma için
 - Konfigürasyon ayarlarında 'BYODA'yı seçin - (şimdilik BYODA uygulaması olmasa bile!)
 - AAPS herhangi bir değer almazsa, başka bir KŞ kaynağına geçin ve ardından AAPS ile BYODA arasındaki veri alışverişini onaylama sorgusunu başlatmak için 'BYODA'ya geri dönün.
 
-Glikoz değerlerinin yumuşatılması, Ayarlar > ayarlara genel bakışta 'Gelen glikoz değerlerinin yumuşatılması' üzerinden etkinleştirilebilir ve devre dışı bırakılabilir.
+Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yumuşatma" veya "Üstsel yumuşatma" eklentisi etkinleştirilerek gerçekleştirilir. Devre dışı bırakmak için "Yumuşatma Yok" seçeneğini seçin. "Üstsel yumuşatma" daha agresiftir ve en yeni Glikoz Değerini yeniden yazar, ancak yoğun gürültüyle başa çıkmada iyidir. "Ortalama yumuşatma", BYODA G6'daki geri düzeltmeye çok benzer ve yalnızca geçmiş değerleri yeniden yazar fakat mevcut değer değildir ve bu nedenle daha hızlı yanıt süresine sahiptir.
 
 G7 değerlerinin anlamlı kullanımı için yumuşatma **ZORUNLU** olarak etkinleştirilmelidir.
 
@@ -53,4 +53,4 @@ G7 değerlerinin anlamlı kullanımı için yumuşatma **ZORUNLU** olarak etkinl
 
 -   Xdrip+'ı indirin ve kurun: [xdrip](https://github.com/NightscoutFoundation/xDrip)
 - Xdrip'te veri kaynağı olarak "Companion App" seçilmeli ve Gelişmiş Ayarlar altında > Bluetooth Ayarları> "Companion Bluetooth" etkinleştirilmelidir.
-- AndroidAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin. 
+- AAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin. 

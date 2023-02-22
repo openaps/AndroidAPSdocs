@@ -3,62 +3,62 @@
 ## Önce Güvenlik
 
 - AndroidAPS, çocuğunuzun telefonunu kısa mesaj yoluyla uzaktan kontrol etmenizi sağlar. Bu SMS kominikatörü etkinleştirirseniz, uzak komutlar verecek şekilde ayarlanmış telefonun çalınabileceğini unutmayın. Bu yüzden her zaman en azından bir PIN kodu ile telefonu koruyun. Güçlü bir parola veya biyometrik doğrulama önerilir.
-- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
+- Ayrıca, SMS komutları için [ikinci bir telefon numarasına](SMS-Commands-authorized-phone-numbers) izin verilmesi önerilir. Böylece komut gönderdiğiniz ana telefonunuzun kaybolması veya çalınması durumunda SMS iletişimini [geçici olarak devre dışı bırakmak](SMS-Commands-other) için ikinci numarayı kullanabilirsiniz.
 - AndroidAPS ayrıca bolus veya profil değişikliği gibi uzak komutlarınızın gerçekleşip gerçekleşmediğini kısa mesajla size bildirecektir. Alıcı telefonlardan birinin çalınması durumuna karşı en az iki farklı telefon numarasına onay metinleri gönderilecek şekilde ayarlamanız önerilir.
-- **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
-- As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
+- **SMS Komutları aracılığıyla bolus yaparsanız, Nightscout (NSClient, Web Sitesi...) ya da sms aracılığıyla karbonhidrat girmelisiniz!** Bunu yapmazsanız, aktif insülin çok düşük aktif karbonhidrat ile doğrulanır ve AAPS çok fazla aktif insülininiz olduğunu varsaydığından potansiyel olarak düzeltme bolusu yapılmamasına veya bazal iptaline yol açar.
+- AndroidAPS sürüm 2.7'den itibaren, SMS komutlarını kullanırken güvenliği artırmak için zamana dayalı tek seferlik parolaya sahip bir kimlik doğrulama uygulaması (google authenticator) kullanılmaktadır.
 
-## Setup SMS commands
+## SMS Komutları kurulumu
 
 ```{image} ../images/SMSCommandsSetup.png
-:alt: SMS Commands Setup
+:alt: SMS Komutları kurulumu
 ```
 
-- Most of the adjustments of temp targets, following AAPS etc. can be done on [NSClient app](../Children/Children.md) on an Android phone with an internet connection.
-- Boluses can't be given through Nightscout, but you can use SMS commands.
-- If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
-- In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+- AAPS takipçileri geçici hedef ayarlamalarının çoğunu, internet bağlantısı olan bir Android telefonda [NSClient uygulamasında](../Children/Children.md) yapılabilirler.
+- Boluslar Nightscout üzerinden verilemez, ancak SMS komutlarını kullanabilirsiniz.
+- Takipçi olarak bir iPhone kullanıyorsanız ve bu nedenle NSClient uygulamasını kullanamıyorsanız, ek SMS komutları mevcuttur.
+- Android telefon ayarınızda Uygulamalar > AndroidAPS > İzinler'e gidin ve SMS'i etkinleştirin
 
 (SMS-Commands-authorized-phone-numbers)=
 
-### Authorized phone numbers
+### Yetkili telefon numaraları
 
-- In AndroidAPS go to **Preferences > SMS Communicator** and enter the phone number(s) that you will allow SMS commands to come from (separated by semicolons - i.e. +6412345678;+6412345679)
+- AndroidAPS'de **Tercihler > SMS Kominikatör**'e gidin ve SMS komutlarının gelmesine izin vereceğiniz telefon numaralarını girin (noktalı virgülle ayrılmış - örn. +6412345678;+6412345679)
 
-- Enable 'Allow remote commands via SMS'.
+- 'SMS ile uzaktan komutlara izin ver' seçeneğini etkinleştirin.
 
-- If you want to use more than one number:
+- Birden fazla numara kullanmak istiyorsanız:
 
-  - Enter just one number.
+  - Bir telefon numarası girin.
 
-  - Make that single number work by sending and confirming a SMS command.
+  - Bir SMS komutu gönderip onaylayarak bu numaranın çalışmasını sağlayın.
 
-  - Enter additional number(s) separated by semicolon, no space.
+  - Ek numaraları noktalı virgülle ayırarak, boşluk bırakmadan girin.
 
     ```{image} ../images/SMSCommandsSetupSpace2.png
-    :alt: SMS Commands Setup multiple numbers
+    :alt: Farklı numaralara SMS Komutlarını ayarlamak
     ```
 
-### Minutes between bolus commands
+### Bolus komutları arasındaki süre
 
-- You can define the minimum delay between two boluses issued via SMS.
-- For safety reasons you have to add at least two authorized phone numbers to edit this value.
+- SMS ile verilen iki bolus arasındaki minimum gecikmeyi tanımlayabilirsiniz.
+- Güvenlik nedeniyle bu değeri düzenlemek için en az iki yetkili telefon numarası eklemelisiniz.
 
-### Additionally mandatory PIN at token end
+### Tek seferlik parola sonuna ilave zorunlu PIN
 
-- For safety reasons the reply code must be followed by a PIN.
+- Güvenlik nedeniyle, tek seferlik parolanın ardından bir PIN gelmelidir.
 
-- PIN rules:
+- PIN kuralları:
 
-  - 3 to 6 digits
-  - not same digits (i.e. 1111)
-  - not in a row (i.e. 1234)
+  - 3 to 6 rakam olmalı
+  - aynı rakamlar olmamalı (ör. 1111)
+  - art arda olmamalı (ör. 1234)
 
-### Authenticator setup
+### Authenticator kurulumu
 
-- Two-factor authentication is used to improve safety.
+- Güvenliği artırmak için iki faktörlü kimlik doğrulama kullanılır.
 
-- You can use any Authenticator app that supports RFC 6238 TOTP tokens. Popular free apps are:
+- RFC 6238 TOTP belirteçlerini destekleyen herhangi bir Kimlik Doğrulayıcı uygulamasını kullanabilirsiniz. Popüler ücretsiz uygulamalar şunlardır:
 
   - [Authy](https://authy.com/download/)
   - Google Authenticator - [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) / [iOS](https://apps.apple.com/de/app/google-authenticator/id388497605)
@@ -71,114 +71,114 @@
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
-  - Enter 4570512020
+  - Cevap olarak 4570512020 girilecektir
 
-- Giriş doğruysa kırmızı "YANLIŞ PIN" metni **otomatik olarak** yeşil bir "TAMAM" olarak değişecektir. **There is no button you can press!**
+- Giriş doğruysa kırmızı "YANLIŞ PIN" metni **otomatik olarak** yeşil bir "TAMAM" olarak değişecektir. ** Basabileceğiniz bir buton yok! **
 
 - Her iki telefondaki saat senkronize olmalıdır. En iyisi, ağdan otomatik olarak ayarlamaktır. Zaman farklılıkları kimlik doğrulama sorunlarına yol açabilir.
 
 - Kimlik doğrulayıcıları kaldırmak istiyorsanız "KİMLİK DOĞRULAYICILARI (OTP) SIFIRLA" düğmesini kullanın.  (Kimlik doğrulayıcıyı sıfırlayarak, önceden tanımlanmış TÜM doğrulayıcıları kaldırırsınız. Onları tekrar tanımlamanız gerekir)
 
-## Use SMS commands
+## SMS komutlarını kullanmak
 
-- Send a SMS to the phone with AndroidAPS running from your approved phone number(s) using any of the [commands](SMS-Commands-commands) below.
+- Aşağıdaki [komutlardan](SMS-Commands-commands) herhangi birini kullanarak onayladığınız telefon numaralarından AAPS çalışan ana telefona bir SMS gönderebilirsiniz.
 
-- The AAPS phone will respond to confirm success of command or status requested.
+- AAPS ana telefonu, istenen komutun veya durumun başarısını onaylamak için yanıt verecektir.
 
-- Confirm command by sending the code where necessary. Example:
+- Kodu göndererek komutu onaylayın. Example:
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
-  - Enter 4570512020
+  - Cevap olarak 4570512020 girilecektir
 
-**Hint**: It can be useful to have unlimited SMS on your phone plan (for each phone used) if a lot of SMS will be sent.
+**İpucu**: Çok fazla SMS gönderilecekse, telefon tarifenizde (kullanılan her telefon için) sınırsız SMS olması yararlı olabilir.
 
 (SMS-Commands-commands)=
-## Commands
+## Komutlar
 
-Commands must be sent in English, the response will be in your local language if the response string is already [translated](translations-translate-strings-for-androidaps-app).
+Komutlar İngilizce olarak gönderilmelidir, yanıt dizesi ise programınızın bu kısmı [tercüme edilmiş ](translations-translate-strings-for-androidaps-app) ise yerel dilinizde olacaktır.
 
 ```{image} ../images/SMSCommands.png
-:alt: SMS Commands Example
+:alt: Örnek SMS Komutları
 ```
 
 ### Döngü
 
-- LOOP STOP/DISABLE \* Response: Loop has been disabled
+- LOOP STOP/DISABLE \* Yanıt: Döngü devre dışı bırakıldı
 
-- LOOP START/ENABLE \* Response: Loop has been enabled
+- LOOP START/ENABLE \* Yanıt: Döngü etkinleştirildi
 
 - LOOP STATUS
 
-  - Response depends on actual status
+  - Yanıt, döngünün durumuna bağlıdır
 
-    - Loop is disabled
-    - Loop is enabled
-    - Suspended (10 min)
+    - Döngü devre dışı
+    - Döngü etkin
+    - Askıya alındı (10 dk)
 
-- LOOP SUSPEND 20 \* Response: Loop suspended for 20 minutes
+- LOOP SUSPEND 20 \* Yanıt: Döngü 20 dakika askıya alındı
 
-- LOOP RESUME \* Response: Loop resumed
+- LOOP RESUME \* Yanıt: Döngü devam ettirildi
 
-### CGM data
+### CGM (Sürekli glikoz ölçüm) verileri
 
-- BG \* Response: Last BG: 5.6 4min ago, Delta: -0,2 mmol, IOB: 0.20U (Bolus: 0.10U Basal: 0.10U)
-- CAL 5.6 \* Response: To send calibration 5.6 reply with code from Authenticator app for User followed by PIN \* Response after correct code was received: Calibration sent (**If xDrip is installed. Accepting calibrations must be enabled in xDrip+**)
+- BG \* Yanıt: Son KŞ: 5,6 4 dakika önce, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0,10U Bazal: 0,10U)
+- CAL 5.6 \* Yanıt: Kalibrasyon 5.6'yı göndermek için, Kullanıcı için Kimlik Doğrulayıcı uygulamasından gelen kod ve ardından PIN ile yanıt verin \* Doğru kod alındıktan sonra yanıt: Kalibrasyon gönderildi (**xDrip yüklüyse** **Kalibrasyonların kabul edilmesi xDrip+'ta etkinleştirilmelidir**)
 
-### Basal
+### Bazal
 
-- BASAL STOP/CANCEL \* Response: To stop temp basal reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 \* Response: To start basal 0.3U/h for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 0.3 20 \* Response: To start basal 0.3U/h for 20 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% \* Response: To start basal 30% for 30 min reply with code from Authenticator app for User followed by PIN
-- BASAL 30% 50 \* Response: To start basal 30% for 50 min reply with code from Authenticator app for User followed by PIN
+- BASAL STOP/CANCEL \* Yanıt: Geçici bazal yanıtı durdurmak için Kullanıcı için Kimlik Doğrulayıcı uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- BASAL 0.3 \* Yanıt: 30 dakika boyunca 0,3U/h bazal başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile yanıtlayın
+- BASAL 0.3 20 \* Yanıt: Bazalı 20dk. 0.3Ü/sa başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- BASAL 30% \* Yanıt: Bazalı 30dk. %30 başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- BASAL 30% 50 \* Yanıt: Bazalı 50dk. %30 başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 ### Bolus
 
-Remote bolus is not allowed within 15 min (this value is editable only if 2 phone numbers added) after last bolus command or remote commands! Therefore the response depends on the time that the last bolus was given.
+Son gerçekleşen bolus komutundan sonra 15 dakika için uzaktan bolusa izin verilmez! (bu değer yalnızca 2 telefon numarası eklendiğinde düzenlenebilir) Bu nedenle yanıt, son bolusun verildiği zamana bağlıdır.
 
-- BOLUS 1.2 \* Response A: To deliver bolus 1.2U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available. Try again later.
-- BOLUS 0.60 MEAL \* If you specify the optional parameter MEAL, this sets the Temp Target MEAL (default values are: 90 mg/dL, 5.0 mmol/l for 45 mins). \* Response A: To deliver meal bolus 0.60U reply with code from Authenticator app for User followed by PIN \* Response B: Remote bolus not available.
-- CARBS 5 \* Response: To enter 5g at 12:45 reply with code from Authenticator app for User followed by PIN
-- CARBS 5 17:35/5:35PM \* Response: To enter 5g at 17:35 reply with code from Authenticator app for User followed by PIN
-- EXTENDED STOP/CANCEL \* Response: To stop extended bolus reply with code from Authenticator app for User followed by PIN
-- EXTENDED 2 120 \* Response: To start extended bolus 2U for 120 min reply with code from Authenticator app for User followed by PIN
+- BOLUS 1.2 \* Yanıt A: Bolus 1,2U iletmek için, Kullanıcı için Kimlik Doğrulayıcı uygulamasından gelen kodu ve ardından PIN'i girin \* Yanıt B: Uzak bolus mevcut değil. Daha sonra tekrar deneyin.
+- BOLUS 0.60 MEAL \* İsteğe bağlı ÖĞÜN parametresi belirtirseniz, bu sms ÖĞÜN Geçici hedefini ayarlar (varsayılan değerler: 45 dakika için 90 mg/dL, 5.0 mmol/l). \* Yanıt A: 0,60U bolus iletmek için Authenticator uygulamasından gelen kodu ve ardından PIN ile cevaplayın \* Yanıt B: Uzak bolus mevcut değil.
+- CARBS 5 \* Yanıt: 12:45 te 5g karbonhidrat girmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- CARBS 5 17:35/5:35PM \* Yanıt: 17:35 te 5g karbonhidrat girmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- EXTENDED STOP/CANCEL \* Yanıt: Yayma bolusu durdurmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- EXTENDED 2 120 \* Yanıt: 2Ü 120 dk. yayma bolusu başlatmak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 ### Profil
 
-- PROFILE STATUS \* Response: Profile1
-- PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
-- PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
-- PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+- PROFILE STATUS \* Yanıt: Profil1
+- PROFILE LIST \* Yanıt: 1.\`Profil1\` 2.\`Profil2\`
+- PROFILE 1 \* Yanıt: %100 Profil1 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- PROFILE 2 30 \* Yanıt: %30 Profil2 değişimini için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
 
 (SMS-Commands-other)=
 
 ### Diğer
 
-- TREATMENTS REFRESH \* Response: Refresh treatments from NS
-- NSCLIENT RESTART \* Response: NSCLIENT RESTART 1 receivers
-- PUMP \* Response: Last conn: 1 min ago Temp: 0.00U/h @11:38 5/30min IOB: 0.5U Reserv: 34U Batt: 100
-- PUMP CONNECT \* Response: Pump reconnected
-- PUMP DISCONNECT *30* \* Response: To disconnect pump for *30* minutes reply with code from Authenticator app for User followed by PIN
-- SMS DISABLE/STOP \* Response: To disable the SMS Remote Service reply with code Any. Keep in mind that you'll able to reactivate it directly from the AAPS master smartphone only.
-- TARGET MEAL/ACTIVITY/HYPO \* Response: To set the Temp Target MEAL/ACTIVITY/HYPO reply with code from Authenticator app for User followed by PIN
-- TARGET STOP/CANCEL \* Response: To cancel Temp Target reply with code from Authenticator app for User followed by PIN
-- HELP \* Response: BG, LOOP, TREATMENTS, .....
-- HELP BOLUS \* Response: BOLUS 1.2 BOLUS 1.2 MEAL
+- TREATMENTS REFRESH \* Yanıt: Tedavileri NS'den yenile
+- NSCLIENT RESTART \* Yanıt: NSCLIENT tekrar başlatılıyor 1 alıcı
+- PUMP \* Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. AİNS: 0.5U Rezerv: 34Ü Pil: 100
+- PUMP CONNECT \* Yanıt: Pompa yeniden bağlandı
+- PUMP DISCONNECT *30* \* Yanıt: *30* dakika boyunca pompanın bağlantısını kesmek için Kullanıcı için Authenticator uygulamasından gelen kodu ve ardından PIN kodunu girerek yanıt verin
+- SMS DISABLE/STOP \* Yanıt: Herhangi ikisiyle SMS Uzak Hizmeti yanıtını devre dışı bırakın. Yalnızca AAPS ana akıllı telefondan üzerinden yeniden etkinleştirebileceğinizi unutmayın.
+- TARGET MEAL/ACTIVITY/HYPO \* Yanıt: Geçici Hedefi ÖĞÜN/AKTİVİTE/HİPO ayarlamak için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- TARGET STOP/CANCEL \* Yanıt: Geçici Hedefi iptal etmek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
+- HELP \* Yanıt: KŞ, DÖNGÜ, TEDAVİLER, .....
+- HELP BOLUS \* Yanıt: BOLUS 1.2 BOLUS 1.2 YEMEK
 
 (SMS-Commands-troubleshooting)=
 ## Sorun giderme
 
-### Multiple SMS
+### Çoklu SMS
 
-If you receive the same message over and over again (i.e. profile switch) you will probably have set up a circle with other apps. This could be xDrip+, for example. If so, please make sure that xDrip+ (or any other app) does not upload treatments to NS.
+Aynı mesajı tekrar tekrar alırsanız (ör. profil değiştirme), muhtemelen diğer uygulamalarla bir döngü oluşturmuştur. Örneğin bu program xDrip+ olabilir. Öyleyse, lütfen xDrip+'ın (veya başka bir uygulamanın) tedavileri NS'ye yüklemediğinden emin olun.
 
-If the other app is installed on multiple phones make sure to deactivate upload on all of them.
+Diğer uygulama birden fazla telefona yüklenmişse, hepsinde yüklemeyi devre dışı bıraktığınızdan emin olun.
 
-### SMS commands not working on Samsung phones
+### Samsung telefonlarda çalışmayan SMS komutları
 
-There was a report on SMS commands stopping after an update on Galaxy S10 phone. Could be solved by disabling 'send as chat message'.
+Galaxy S10 telefonundaki bir güncellemeden sonra SMS komutlarının çalışmadığına dair bir rapor mevcuttur. Telefon ayarlarından 'send as chat message' devre dışı bırakılarak çözülebilir.
 
 ```{image} ../images/SMSdisableChat.png
-:alt: Disable SMS as chat message
+:alt: SMS as chat message devre dışı
 ```
