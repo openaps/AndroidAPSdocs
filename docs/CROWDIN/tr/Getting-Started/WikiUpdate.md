@@ -20,80 +20,80 @@
 
 ## Kasım 2021
 
-- Best practices for calibrating a [libre 2 sensor](Libre2-best-practices-for-calibrating-a-libre-2-sensor)
-- [ISF](FAQ-impact) reformulation of impact
-- Update [troubleshooting Android stduio](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- Removed patched [Dexcom](../Hardware/DexcomG6.md) app as it is obsolete
+- Kalibre etmek için en iyi uygulamalar [libre 2 sensör](Libre2-best-practices-for-calibrating-a-libre-2-sensor)
+- [İDF](FAQ-impact) etkinin yeniden formüle edilmesi
+- Güncelleme [Android stduio sorun giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
+- Eski olduğu için [Dexcom](../Hardware/DexcomG6.md) yamalı uygulamasını kaldırma
 
 ## Ekim 2021
 
-- [Release notes](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
+- [Sürüm notları](../Installing-AndroidAPS/Releasenotes.md) AAPS 3.0 beta
 
 ## Eylül 2021
 
-- Recommended computer specification to [build AAPS app](Building-APK-recommended-specification-of-computer-for-building-apk-file)
+- [AAPS uyg. oluşturma](Building-APK-recommended-specification-of-computer-for-building-apk-file) için önerilen bilgisayar özellikleri
 
 ## Haziran 2021
 
-- [Watchface sideload](../Configuration/Watchfaces.md)
+- [Saat arayüz yüklemesi ](../Configuration/Watchfaces.md)
 
 ## Nisan 2021
 
-- List of [communication devices](module-additional-communication-device) for Omnipod and Medtronic pumps
-- AAPS predictions in [Nightscout](Nightscout-manual-nightscout-setup)
+- Omnipod ve Medtronic pompaları için [iletişim araçları](module-additional-communication-device) listesi
+- [Nightscout](Nightscout-manual-nightscout-setup)ta AAPS tahminleri
 
 ## Mart 2021
 
-- Dev communication moved from gitter to [discord](https://discord.gg/4fQUWHZ4Mw)
+- Geliştirici sürümü gitter'den [discord](https://discord.gg/4fQUWHZ4Mw)'a taşındı
 
 ## Şubat 2021
 
-- New navigation bar and [language switch](../changelanguage.md)
+- Yeni gezinme çubuğu ve [dil değiştirme](../changelanguage.md)
 
 ## Ocak 2021
 
-- [Action tab](Screenshots-action-tab) - more details on page 'AndroidAPS screens'
-- Dexcom G6 with [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
-- Libre smart reader [battery level](Screenshots-sensor-level-battery)
-- [Objectives](Objectives-objective-3-prove-your-knowledge) - new questions
-- Other [new AndroidAPS 2.8.0 functions](Releasenotes-version-2-8-0)
+- [Eylem sekmesi](Screenshots-action-tab) - 'AndroidAPS ekranları' sayfasında daha fazla ayrıntı
+- Dexcom G6 ile [Kendi Dexcom Uygulamanızı Oluşturun](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
+- Libre akıllı okuyucu [pil seviyesi](Screenshots-sensor-level-battery)
+- [Görevler](Objectives-objective-3-prove-your-knowledge) - yeni sorular
+- Diğer [yeni AndroidAPS 2.8.0 fonksiyonları](Releasenotes-version-2-8-0)
 
 ## Aralık 2020
 
-- [Libre 2](../Hardware/Libre2.md) - patched app does not work with US sensors
-- [OpenAPS hard-coded limits](Open-APS-features-overview-of-hard-coded-limits)
-- Sony Smartwatch 3 [Manual Installation of Google Play Service](../Usage/SonySW3.md)
+- [Libre 2](../Hardware/Libre2.md) - yamalı uygulama ABD sensörleriyle çalışmıyor
+- [OpenAPS sabit kodlu limitler](Open-APS-features-overview-of-hard-coded-limits)
+- Sony Smartwatch 3 [Google Play Hizmetinin Manuel Kurulumu](../Usage/SonySW3.md)
 
 ## Ekim 2020
 
-- Accu-Chek Combo - update [time adjustment daylight savings time](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
-- Accu-Chek Insight - Option to [upload absolute values](Accu-Chek-Insight-Pump-settings-in-aaps)
-- Logs - more details about [folder location](../Usage/Accessing-logfiles.md)
-- Omnipod Eros - status update
-- [SMS commands - time sync](../Children/SMS-Commands.md)
+- Accu-Chek Combo - güncelleme [gün ışığından yararlanma zaman ayarı](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
+- Accu-Chek Insight - [mutlak değerleri yükle seçeneği](Accu-Chek-Insight-Pump-settings-in-aaps)
+- Günlükler - [klasör konumu hakkında daha fazla ayrıntı](../Usage/Accessing-logfiles.md)
+- Omnipod Eros - durum güncellemesi
+- [SMS komutları - zaman senkr.](../Children/SMS-Commands.md)
 
 ## Eylül 2020
 
-- Major update for new AAPS version 2.7
-- For details see `release notes <Releasenotes-version-2-7-0>`
+- Yeni AAPS sürüm 2.7 için büyük güncelleme
+- Detaylar için `Sürüm notları <Sürüm notları-2-7-0>`
 
 ## Haziran 2020
 
-- [Libre 2](../Hardware/Libre2.md) - more details patched Libre Link app & use of bluetooth transmitters
-- [Time zone travelling](../Usage/Timezone-traveling.md) with Libre 2
+- [Libre 2](../Hardware/Libre2.md) - Yamalı Libre Link uygulaması & bluetooth vericilerinin kullanımı ile ilgili daha fazla ayrıntı
+- Libre 2 ile [Zaman dilimi seyahati](../Usage/Timezone-traveling.md)
 
 ## Mayıs 2020
 
-- [Extended bolus only for Dana + Insight pumps](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Insight deactivate vibration](Accu-Chek-Insight-Pump-vibration) (firmware 3.x only)
-- [Minimal request rate](Preferences-minimal-request-change) to reduce number of notifications in open loop mode
-- [Patched Libre Link app](Libre2-step-1-build-your-own-patched-librelink-app) - check if correctly patched
-- [Prediction lines](Screenshots-prediction-lines) - more details
+- [Dana + Insight pompaları için yayma bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Insight titreşimi devre dışı bırak](Accu-Chek-Insight-Pump-vibration) (sadece pompa sürümü 3.x için)
+- [Minimum istek oranı](Preferences-minimal-request-change) açık döngü modunda bildirim sayısını azaltmak için
+- [Yamalı Libre Link uyg.](Libre2-step-1-build-your-own-patched-librelink-app) - doğru şekilde yamalandığını kontrol edin
+- [Tahmin çizgileri](Screenshots-prediction-lines) - daha fazla detay
 
 ## Nisan 2020
 
-- [Backdate insulin](CPbefore26-carbs-bolus) (i.e. given by syringe)
-- [Android 6 support will be discontinued in next master version](../Module/module-phone)
+- [Geçmiş insülin](CPbefore26-carbs-bolus) (örn. kalemle verilen)
+- [Android 6 desteği bir sonraki ana sürümde sonlandırılacak](../Module/module-phone)
 
 ## Mart 2020
 
@@ -120,7 +120,7 @@
 
 ## Aralık 2019
 
-- [Android auto](../Usage/Android-auto.md) - setup with screenshots
+- [Android auto](../Usage/Android-auto.md) - ekran görüntüleri ile kurulum
 - [Accu-Chek Insight & Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
 - [Glimp](Config-Builder-bg-source) - version 4.15.57 and newer supported
 - [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details

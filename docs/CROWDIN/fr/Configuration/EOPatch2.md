@@ -1,30 +1,30 @@
-# EOPatch2 Instruction Manual
+# Manuel d'instruction EOPatch2
 
-**Planned but not commited for AndroidAPS 3.2 (next version)!**
+**Planifié mais non validé pour AAPS 3.2 (version suivante)!**
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+Le patch nécessite l'utilisation d'insuline de type U-100 à action rapide, comme NovoRapid ou Humalog. Utilisez une insuline à action rapide qui vous convient selon l’ordonnance de votre médecin et injectez le dosage prescrit.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+La plus petite dose d'insuline injectable avec le patch est de 0,05 U. Le profil BAS doit donc être fixé à une valeur minimale de 0,05 U/h ou plus et un intervalle de 0,05U/h, autrement il peut y avoir une erreur entre le montant total estimé de l'injection par le profil et le montant réel de l'injection par le patch. De même, le bolus doit également être réglé et injecté avec un volume minimal de 0,05 U.
 
-## Pump Setup
-1. On the AndroidAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Configuration de la Pompe
+1. Sur l'écran d'accueil AAPS, cliquez sur le menu hamburger en haut à gauche et allez dans la Configuration.
+1. Sélectionnez 'EOPatch2' dans la section Pompe.
+1. Appuyez sur la touche Retour pour revenir à l'écran d'accueil.
 
 
 ![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
 
 ## Paramètres
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+Sélectionnez EOPATCH2 en haut de l'écran d'accueil pour aller à l'onglet EOPATCH2.
 
 Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
 
 The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
 
-### Low reservoir Alerts
+### Alertes réservoir bas
 A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
 
-### Patch expiration Reminder
+### Rappel d'expiration du Patch
 This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
 
 ### Patch buzzer Reminder
@@ -51,7 +51,7 @@ Insert the syringe needle into the insulin inlet on the patch and then slowly pu
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
-### patch pairing
+### appairage du Patch
 The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
 
 [Warning]
@@ -88,7 +88,7 @@ When patching is complete, touch Start Safety Check. When the safety check is co
 ![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
+### Insertion de l'aiguille
 The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
 
 [Caution]
@@ -119,7 +119,7 @@ Select EOPATCH2 at the top of the home screen and click the RESUME button at the
 
 ## Alarms/Warnings
 
-### Alarm
+### Alarme
 
 Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
 
@@ -127,19 +127,19 @@ Alarms are issued for emergency situations of the highest priority and require i
 
 The different types of alarms are explained below.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarmes                          | Explanation                                                                                                                                                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Réservoir vide                   | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
+| Patch expired                    | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
+| Occlusion                        | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
+| Power on self-test failure       | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
+| Inappropriate temperature        | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
+| Erreur d'insertion de l'aiguille | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
+| Patch battery Error              | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
+| Patch activation Error           | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
+| Patch Error                      | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
 
-### Warning
+### Attention
 
 A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 
@@ -150,7 +150,7 @@ The different types of warnings are explained below.
 | Warnings                     | Explanation                                                                                                                           |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
+| Réservoir bas                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
 | Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
 | Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
 | Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |

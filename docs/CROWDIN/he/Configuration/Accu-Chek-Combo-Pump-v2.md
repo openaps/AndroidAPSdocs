@@ -75,7 +75,15 @@ It is very important to make sure that battery optimizations are turned off. AAP
 
 * In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
 
-  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png) ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png) ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png) ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png) ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
+
+  ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png)
+
+  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+
+  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
 
 * When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 

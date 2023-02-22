@@ -31,7 +31,7 @@ Un graphique de comparaison pour les différents appareils compatibles avec Rile
 
 The following settings should be configured on the pump in order for AndroidAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
+- **Activer le mode à distance sur la pompe** (Sur la pompe, appuyez sur Act puis allez dans Utilitaires -> Options à distance et sélectionnez Activé. Dans l'écran suivant, faites Ajouter un ID et ajoutez n'importe quel id aléatoire, tel que 1111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
 - **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
 - **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AndroidAPS will manage different profiles on your phone. No other patterns are required.
@@ -48,7 +48,7 @@ The following settings should be configured on the pump in order for AndroidAPS 
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Medtronic Settings](../images/Medtronic01a.png)
+![Paramètres Medtronic](../images/Medtronic01a.png)
 
 While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
 
@@ -68,7 +68,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
     - Lithium (vue étendue)
     - NiZn (vue étendue)
     - NiMH (vue Étendue)
-- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+- **Débogage Bolus/Traitements**: Sélectionnez On ou Off selon les exigences.
 
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
 - **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
@@ -77,7 +77,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 ## Onglet MEDTRONIC (MDT)
 
-![MDT Tab](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+![Onglet MDT](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
@@ -100,15 +100,15 @@ At the bottom of the screen there are three buttons:
 
 ## Historique pompe
 
-![Pump History Dialog](../images/Medtronic03.png)
+![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
-Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
 
 (MedtronicPump-rl-status-rileylink-status)=
 
 ## État RL (RileyLink État)
 
-![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
+![État RileyLink - Paramètres](../images/Medtronic04.png) ![État RileyLink - Historique](../images/Medtronic05.png)
 
 The RL Status dialog has two tabs:
 
@@ -134,7 +134,7 @@ In the event you need to troubleshoot your Medtronic pump function select the me
 
 ### MGC Medtronic 
 
-Medtronic CGM is currently NOT supported.
+La MGC Medtronic n'est actuellement PAS prise en charge.
 
 ### Utilisation manuelle de la pompe
 
@@ -144,7 +144,7 @@ You should avoid manually bolusing or setting TBRs on your pump. All such comman
 
 AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Cependant, voyager vers l'ouest peut entraîner des problèmes car vous êtes en train de revenir dans le temps, ce qui peut entraîner des données IOB incorrectes.
 
 The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
@@ -152,7 +152,7 @@ The issues seen when travelling west are known to the developers and work on a p
 
 The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+**Note de l'auteur :** Veuillez noter que le logiciel GNARL est encore expérimental et faiblement testé, il ne devrait pas être considéré comme aussi sûr à utiliser qu'un RileyLink.
 
 (MedtronicPump-faq)=
 
@@ -167,16 +167,16 @@ There are a number of options to try and resolve connectivity issues.
 - Use the "Wake Up and Tune" button in the ACT tab as detailed above.
 - Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
 - Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
+- D'autres utilisateurs ont trouvé que les étapes suivantes sont efficaces pour restaurer la connectivité quand d'autres méthodes ont échouées : 
     1. Restart the phone
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AndroidAPS and allow the connection to restore
 
 ### Comment déterminer la fréquence utilisée par ma pompe
 
-![Pump Model](../images/Medtronic06.png)
+![Modèle de Pompe](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Voici les valeurs possibles pour la fréquence :
 
 - NA - Amérique du Nord (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
 - CA - Canada (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
