@@ -97,34 +97,34 @@
 
 ## Mart 2020
 
-- [Build apk with Android Studio 3.6.1](../Installing-AndroidAPS/Building-APK.md)
-- [DanaRS with firmware v3](../Configuration/DanaRS-Insulin-Pump.md) **cannot currently be used with AndroidAPS!**
-- [Extended bolus and switch to open loop](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [Update apk with Android Studio 3.6.1](../Installing-AndroidAPS/Update-to-new-version.md)
+- [Android Studio 3.6.1 ile apk oluşturun](../Installing-AndroidAPS/Building-APK.md)
+- [Donanım sürümü v3 ile DanaRS](../Configuration/DanaRS-Insulin-Pump.md) **şu anda AndroidAPS ile kullanılamaz!**
+- [Yayma bolus ve açık döngüye geçiş](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [Apk'yı Android Studio 3.6.1 ile güncelleyin](../Installing-AndroidAPS/Update-to-new-version.md)
 
 ## Şubat 2020
 
-- [Automation caveats](Automation-good-practice-caveats)
-- [Autosens](Open-APS-features-autosens) - short explanation
-- [Careportal alternatives](../Usage/CPbefore26.md)
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
-- New [Local Profile plugin](Config-Builder-local-profile)
-- [Sample Setup](../Getting-Started/Sample-Setup.md) - update Dexcom G6
-- [Version 2.6.0](Releasenotes-version-2-6-0) - major new features
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Otomasyon uyarıları](Automation-good-practice-caveats)
+- [Otoduyarlılık](Open-APS-features-autosens) - kısa açıklama
+- [Bakım portalı alternatifleri](../Usage/CPbefore26.md)
+- [Yayma bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) özelliği - kapalı döngü devre dışı bırakılacak
+- Yeni [Yerel Profil eklentisi](Config-Builder-local-profile)
+- [Örnek Kurulum](../Getting-Started/Sample-Setup.md) - Dexcom G6 güncelleme
+- [Sürüm 2.6.0](Releasenotes-version-2-6-0) - önemli yeni özellikler
+- [Wear komplikasyonları](../Configuration/Watchfaces.md)
 
 ## Ocak 2020
 
-- [Manual carb correction](Screenshots-carb-correction) for faulty carb entries
-- [Image size](make-a-PR-image-size) when editing docs
+- Hatalı karbonhidrat girişleri için [manuel karbonhidrat düzeltmesi](Screenshots-carb-correction)
+- Dokümanları düzenlerken [Görüntü boyutu](make-a-PR-image-size)
 
 ## Aralık 2019
 
 - [Android auto](../Usage/Android-auto.md) - ekran görüntüleri ile kurulum
-- [Accu-Chek Insight & Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - workaround for usage
-- [Glimp](Config-Builder-bg-source) - version 4.15.57 and newer supported
-- [Watchfaces](../Configuration/Watchfaces.md) - major update, way more details
-- [Watchface complications](Watchfaces-complications) - use your favorite watchface with AAPS data
+- [Accu-Chek Insight & Autotune](Accu-Chek-Insight-Pump-settings-in-aaps) - kullanımı için geçici çözüm
+- [Glimp](Config-Builder-bg-source) - sürüm 4.15.57 ve daha yenisi için desteklenir
+- [Saat yüzleri](../Configuration/Watchfaces.md) - büyük güncelleme, çok daha fazla ayrıntı
+- [Saat yüzü komplikasyonları](Watch Faces-complications) - AAPS verileriyle en sevdiğiniz saat yüzünü kullanın
 
 ## Kasım 2019
 

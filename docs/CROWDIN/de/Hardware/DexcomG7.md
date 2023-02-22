@@ -3,13 +3,13 @@
 ```{admonition} Only available in dev branch
 :class: note
 
-This feature is only available in the in dev branch and not in master.
+Diese Funktion ist nur im dev Branch und nicht im Master verfügbar.
 
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
+Bitte beachte die Warnungen und folge den Anweisungen in [eine dev-Version erstellen](../Installing-AndroidAPS/Dev_branch.md).
 
 ```
 
-## Fundamental in advance
+## Grundlegendes im Voraus
 
 In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
 

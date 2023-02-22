@@ -1,55 +1,55 @@
 # Accu-Chek Combo
 
-These instructions are for setting up the Accu-Chek Combo pump using the new combov2 driver, which is available as part of AndroidAPS as of version 3.2. This driver is entirely separate from the old one.
+Diese Anweisungen sind zum Einrichten der Accu-Chek Combo Pumpe mit dem neuen Combo-Treiber, der als Teil von AAPS ab Version 3.2 verfügbar ist. Dieser Treiber ist völlig unabhängig vom alten Treiber.
 
 **Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
 
 ## Hard- und Softwareanforderungen
 
-* A Roche Accu-Chek Combo (any firmware, they all work).
+* Eine Roche Accu-Chek Combo (jede Firmware funktioniert).
 * Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. (Kunden von Roche können die Software beim Kundendienst anfordern.)
-* A compatible phone. Android 9 (Pie) or newer is a must. If using LineageOS, the minimum supported version is 16.1. Siehe [Versionshinweise](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) für Details.
-* The AndroidAPS app installed on your phone.
+* Ein kompatibles Telefon. Android 9 (Pie) oder neuer ist ein Muss. Bei Verwendung von LineageOS ist die minimale unterstützte Version 16.1. Siehe [Versionshinweise](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) für Details.
+* AndroidAPS muss auf Deinem Smartphone installiert sein.
 
-Some phones may work better than others, depending on their quality of Bluetooth support and whether or not they have additional, very aggressive power saving logic. Eine Liste gestester Telefone findet sich in der [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) Liste. Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
+Einige Telefone funktionieren vielleicht besser als andere je nach Qualität der Bluetooth-Unterstützung und ob sie eine zusätzliche, sehr aggressive Energiesparlogik haben oder nicht. Eine Liste gestester Telefone findet sich in der [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) Liste. Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
 
 (combov2-before-you-begin)=
-## Before you begin
+## Bevor du startest
 
-**SAFETY FIRST** - do not attempt this process in an environment where you cannot recover from an error. Keep your Smartpix / Realtyme device handy, along with the 360 Configuration Software. Plan on spending about an hour for setting everything up and checking that everything is working properly.
+**SICHERHEITEN** - Versuche diesen Prozess nicht in einer Umgebung, in der Du Dich nicht von einem Fehler erholen kannst. Halten Sie Ihr Smartpix / Realtyme Gerät bereit, zusammen mit der 360 Configuration Software. Plane ungefähr eine Stunde, um alles einzurichten und zu überprüfen, ob alles richtig funktioniert.
 
-Be aware of the following limitations:
+Beachte folgende Einschränkungen:
 
-* Extended bolus and multiwave bolus are currently not supported (you can use [Extended Carbs](../Usage/Extended-Carbs.rst) instead).
-* Only one basal profile (the first one) is supported.
-* The loop is disabled if the currently active profile on the pump isn't profile no. 1. This continues until profile no. 1 is made the active one; when that is done, the next time AAPS connects (either on its own after a while or because the user presses the Refresh button in the combov2 user interface), it will notice that profile no. 1 is the current one, and enable the loop again.
-* If the loop requests a running TBR to be cancelled, the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because actually cancelling a TBR causes an alert on the pump which causes a lot of vibrations, and these vibrations cannot be disabled.
+* Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir  [Extended Carbs](../Usage/Extended-Carbs.rst) als Alternative an.)
+* Nur ein basales Profil (das erste Profil) wird unterstützt.
+* Der Loop ist deaktiviert, wenn das aktuell aktive Profil der Pumpe nicht Profil Nr. 1 ist. Dies geht bis das Profilnr. 1 aktiviert wird; wenn das erledigt ist, wird beim nächsten Verbindungsaufbau von AAPS (entweder allein nach einer Weile oder weil der Benutzer den Refresh Button in der Combov2 Benutzeroberfläche drückt), erkennen, dass Profil Nr. 1 das aktuell ist und den Loop wieder aktivieren.
+* Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das liegt daran, dass das Abbrechen eines TBR eine Warnung auf die Pumpe verursacht, die viele Vibrationen verursacht, und diese Vibrationen können nicht deaktiviert werden.
 * Die Stabiltät der Bluetooth-Verbindung variiert je nach verwendetem Telefon stark, dies kann zu “pump unreachable”-Alarmen führen und verhindern, dass die Verbindung zur Pumpe hergestellt werden kann. Wenn dieses Verhalten auftritt, prüfe ob a) BT auf dem Telefon eingeschaltet ist b) “Aktualisieren” im Combo Tab von AAPS die Verbindung wieder herstellt. Versuche das Telefon neu starten, wenn die Schritte a) und b) nicht erfolgreich waren.
-* There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth stack), before the pump accepts connections from the phone again.
+* Es gibt ein anderes Problem, bei dem ein Neustart nicht hilft, sondern eine Taste auf der Pumpe gedrückt werden muss (welcher den Bluetooth-Stack der Pumpe zurücksetzt), bevor die Pumpe wieder Verbindungen vom Telefon annimmt.
 * Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird.
 
-If you have been using the old Combo driver that depends on the separate Ruffy app, and want to move to this new one, note that the pairing has to be done again - Ruffy and the new Combo driver are not able to share pairing information. Also, make sure that Ruffy is _not_ running. If in doubt, long-press the Ruffy app icon to bring up a context menu. In that menu, press on "App Info". In the UI that just opened up, press "Force stop". That way, it is ensured that an active Ruffy instance cannot interfere with the new driver.
+Wenn du den alten Combop-Treiber verwendet hast, der von der separaten Ruffy-App abhängig ist und zu dieser neuen wechseln möchtest Beachten Sie, dass die Paarung wieder durchgeführt werden muss - Ruffy und der neue Combopreiber können keine Paarinformationen teilen. Stelle bitte sicher, dass Ruffy _nicht_ läuft. Im Zweifelsfall drücke lange das Ruffy-App-Symbol, um ein Kontextmenü anzuzeigen. Klicke in diesem Menü auf "App-Info". In der gerade geöffneten Benutzeroberfläche drücke "Force Stop". Auf diese Weise wird sichergestellt, dass eine aktive Ruffy-Instanz den neuen Treiber nicht stören kann.
 
-Also, if you are migrating from the old driver, be aware that the new driver communicates a bolus command in an entirely different way to the Combo that is much faster, so don't be surprised when a bolus starts immediately regardless of the dosage. Furthermore, the general suggestions, tips and tricks etc. about dealing with Ruffy pairing and connection problems do not apply here, since this is an entirely new driver that shares no code with the old one.
+Außerdem, wenn Du von dem alten Treiber migrierst, beachte, dass der neue Treiber einen Bolus Befehl auf eine andere Weise zur Combo kommuniziert, welcher viel schneller bearbeitet wird, Sei also nicht zu überrascht, wenn ein Bolus sofort beginnt, unabhängig von der Dosierung. Außerdem gelten die allgemeinen Anregungen, Tipps und Tricks etc. über den Umgang mit dem Ruffy Paarungs- und Verbindungsproblemen hier nicht, da dies ein komplett neuer Treiber ist, der keinen Code mit dem alten Treiber teilt.
 
-## Phone setup
+## Telefon einrichten
 
-It is very important to make sure that battery optimizations are turned off. AAPS already auto-detects when it is subject to these optimizations, and requests in its UI that these be turned off. But, on modern Android phones, Bluetooth _itself_ is an app (a system app). And, usually, that "Bluetooth app" is run _with battery optimizations on by default_. As a result, Bluetooth can refuse to respond when the phone aims to save power because it kills off the Bluetooth app. This means that in that Bluetooth system app's settings, battery optimizations must be turned off as well. Unfortunately, how one can find that Bluetooth system app differs between phones. In stock Android, go to Settings -> Apps -> See all N apps (N = the number of apps on your phone). Then, open the menu to the top right corner, tap on "Show system" or "Show system apps" or "All apps". Now, in the newly expanded list of apps, look for a "Bluetooth" app. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet wird. AAPS erkennt automatisch, wenn es diesen Optimierungen unterliegt und fragt in seiner Benutzeroberfläche an, dass diese abgeschaltet werden. Aber auf modernen Android-Telefonen ist Bluetooth _selbst_ eine App (eine System-App). Und im Allgemeinen läuft die "Bluetooth app" mit _eingeschalteter Batterie Optimierung im Standard_. Infolgedessen kann Bluetooth es ablehnen, zu reagieren, wenn das Telefon darauf abzielt, Strom zu sparen, da es die Bluetooth-App einfach beendet. Das bedeutet, dass in den Einstellungen der Bluetooth-System-App auch die Batterieoptimierungen ausgeschaltet werden müssen. Unglücklicherweise kann man feststellen, dass die Bluetooth-System-App sich zwischen den Telefonen unterscheidet. In unverändertem Android gehe zu Einstellungen -> Apps -> Alle N-Apps anzeigen (N = Anzahl der Apps auf Ihrem Handy). Öffnen Sie dann das Menü in der oberen rechten Ecke, klicken Sie auf "System anzeigen" oder "System-Apps anzeigen" oder "Alle Apps". Jetzt in der erweiterten Liste der Apps nach einer "Bluetooth"-App suchen. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
 
 ## Combo setup
 
 * Configure the pump using the Accu-Chek 360 Configuration Software. Falls du die Software nicht hast wende dich an die Accu-Chek Hotline. Sie senden registrierten Benutzern normalerweise eine CD mit der 360º Konfigurations-Software und einen SmartPix USB-Infrarotempfänger. (Das Realtyme Gerät funktioniert auch falls du dieses besitzt.)
 
-  - **Required settings** (marked green in screenshots):
+  - **Erforderliche Einstellungen** (in Screenshots grün markiert):
 
      * Setze/Lasse das Benutzermenü auf “Standard”. Dadurch werden nur die benötigten Menüs/Aktionen auf der Pumpe angezeigt und solche versteckt, die nicht unterstützt werden (verzögerter Bolus, Multiwave Bolus, mehrere Basalprofile), die die Loop-Funktionalität einschränken würden, da der Loop nicht sicher laufen würde, wenn diese Aktionen Verwendung fänden.
-     * Verify the _Quick Info Text_ is set to "QUICK INFO" (without the quotes, found under _Insulin Pump Options_).
-     * Set TBR _Maximum Adjustment_ to 500%
-     * Disable _Signal End of Temporary Basal Rate_
-     * Set TBR _Duration increment_ to 15 min
+     * Stelle sicher, dass der _Quick Info Text_ auch wirklich “QUICK INFO” heißt (ohne Anführungszeichen, zu finden unter _Anzeige-/Kommunikationseinstellungen_).
+     * Stelle die _Maximale Anpassung_ der Temporären Basalrate auf 500%.
+     * Deaktiviere _Ende der temporären Basalrate signalisieren_.
+     * Setze die _Schrittweitendauer_ der Temporären Basalrate auf 15 min.
      * Bluetooth aktivieren
 
-  - **Recommended settings** (marked blue in screenshots)
+  - **Empfohlene Einstellungen** (in Screenshots blau markiert)
 
      * Stelle den Restmenge bei Alarm “Amp. fast leer” ein, wie es für dich passt.
      * Konfiguriere eine maximale Bolusmenge passend zu deiner Therapie, um dich gegen Fehler in der Software zu schützen.
@@ -116,7 +116,7 @@ The tab shows the following information when a pump was paired (items are listed
 
 1. _Driver state_: The driver can be in one of the following states:
    - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
+   - "Verbinden"
    - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
    - "Ready" : the driver is ready to accept commands from AAPS
    - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
@@ -183,7 +183,7 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 
 ## Things to be careful about when using the Combo
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. It is strongly advised NOT to use this system when the person using it is not able to fully understand the system.
+* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. Es wird dringend empfohlen, dieses System NICHT zu verwenden, wenn die Person, die es benutzt, nicht in der Lage ist, es vollständig zu verstehen.
 * Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
 * Gib keine TBR an der Pumpe ein und lösche dort auch keine. The loop assumes control of TBRs and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
 * Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](combov2-before-you-begin)).
