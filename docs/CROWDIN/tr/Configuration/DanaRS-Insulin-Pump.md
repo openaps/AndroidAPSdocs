@@ -73,7 +73,7 @@
 
 * Eski şifreyi girmek için Tamam'a basın.
 
-* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
+* **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](DanaRS-Insulin-Pump-default-password) bakın) ve "OK" Tamam'a basın
     
     ![DanaRS Eski parola girişi](../images/DanaRSPW_04_11PWenter.png)
 
