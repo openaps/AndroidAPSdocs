@@ -15,15 +15,17 @@ Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documenta
 
 ## Configuration matérielle et logicielle requise
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AndroidAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Téléphone :** Le pilote Medtronic devrait fonctionner avec n'importe quel téléphone Android prenant en charge les connexions Bluetooth. **IMPORTANT : Les implémentations Bluetooth des fabricants de téléphones peuvent varier de sorte que chaque modèle de téléphone peut varier. Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth. Cela peut affecter l'expérience utilisateur lorsque AAPS a besoin de se reconnecter à votre appareil Rileylink.**
+- **Périphérique compatible RileyLink :** Les téléphones Android ne peuvent pas communiquer avec les pompes Medtronic sans un appareil séparé pour gérer les communications. Cet appareil sera relié à votre téléphone via Bluetooth et à votre pompe via une connexion radio compatible. Le premier de ces appareils a été appelé un Rileylink mais un certain nombre d'autres options sont maintenant disponibles qui peuvent offrir des fonctionnalités supplémentaires.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink disponible sur [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink disponible sur [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (multiples options de modèles) disponible sur [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (quelques détails supplémentaires requis) disponible sur [github.com](https://github.com/ecc1/gnarl)
 
 Un graphique de comparaison pour les différents appareils compatibles avec Rileylink peut être trouvé sur [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+
+(configuration-of-the-pump)=
 
 ## Configuration de la pompe
 
@@ -46,13 +48,13 @@ The following settings should be configured on the pump in order for AndroidAPS 
 
 When configuring your Medtronic pump with the setup wizard it is possible that you will be prevented from completing setup because of Bluetooth issues (e.g. you cannot succesfully connect to the pump). Should this happen you should select the virtual pump option in order to complete the configuration and allow for further troubleshooting by using option 2.
 
-![Paramètres Medtronic](../images/Medtronic01a.png)
+![Medtronic Settings](../images/Medtronic01a.png)
 
 While setting up AndroidAPS to work with your medtronic pump you need to set following items: (see picture above)
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select): 
+- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump.md#faq) if you are unsure which option to select): 
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
@@ -75,7 +77,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 ## Onglet MEDTRONIC (MDT)
 
-![Onglet MDT](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
+![MDT Tab](../images/Medtronic02.png) When AndroidAPS is configured to use a Medtronic pump a MDT tab will be shown in the list of tabs at the top of the screen. This tab displays the current pump status information along with some Medtronic specific actions.
 
 - **RileyLink Status**: The current status of the connection between your phone and Rileylink compatible device. This should show as Connected at all times. Any other status may require user intervention. 
 - **RileyLink Battery**: The current battery level of your EmaLink or OrangeLink device. Dependent on selecting "Show battery level reported by OrangeLink/EmaLink/DiaLink device" in the Medtronic Pump Configuration menu.
@@ -91,18 +93,22 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 At the bottom of the screen there are three buttons:
 
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump.md#pump-history))
+- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump.md#rl-status-rileylink-status))
+
+(pump-history)=
 
 ## Historique pompe
 
-![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
+![Pump History Dialog](../images/Medtronic03.png)
 
-L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+Pump history is retrieved every 5 minutes and stored locally. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+
+(rl-status-rileylink-status)=
 
 ## État RL (RileyLink État)
 
-![État RileyLink - Paramètres](../images/Medtronic04.png) ![État RileyLink - Historique](../images/Medtronic05.png)
+![RileyLink Status - Settings](../images/Medtronic04.png) ![RileyLink Status - History](../images/Medtronic05.png)
 
 The RL Status dialog has two tabs:
 
@@ -128,7 +134,7 @@ In the event you need to troubleshoot your Medtronic pump function select the me
 
 ### MGC Medtronic 
 
-La MGC Medtronic n'est actuellement PAS prise en charge.
+Medtronic CGM is currently NOT supported.
 
 ### Utilisation manuelle de la pompe
 
@@ -146,9 +152,13 @@ The issues seen when travelling west are known to the developers and work on a p
 
 The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Note de l'auteur :** Veuillez noter que le logiciel GNARL est encore expérimental et légèrement testé, il ne devrait pas être considéré comme aussi sûr à utiliser qu'un RileyLink.
+**Note from author:** Please note that the GNARL software is still experimental and lightly tested, and should not be considered as safe to use as a RileyLink.
+
+(faq)=
 
 ## Questions fréquentes
+
+(what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### Que faire si je perds la connexion à RileyLink et/ou à la pompe ?
 
@@ -164,9 +174,9 @@ There are a number of options to try and resolve connectivity issues.
 
 ### Comment déterminer la fréquence utilisée par ma pompe
 
-![Modèle de Pompe](../images/Medtronic06.png)
+![Pump Model](../images/Medtronic06.png)
 
-On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Voici les valeurs possibles pour la fréquence :
+On the back of the pump you will find a line detailing your model number along with a special 3 letter code. The first two letters determine the frequency type and the last one determines color. Here are possible values for Frequency:
 
 - NA - Amérique du Nord (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")
 - CA - Canada (pour la fréquence, vous devez sélectionner "US & Canada (916 MHz)")

@@ -36,7 +36,7 @@
 * Dazu muss eine Datei mit dem Namen `PasswordReset` in das `/AAPS/extra` Verzeichnis Deines Telefon-Dateisystems hinzugefügt werden.
 * AndroidAPS neu starten.
 * Das neue Passwort wird durch die Seriennummer Deiner aktiven Pumpe gebildet.
-* Für DASH: Die Seriennummer ist auf dem Pod aufgedruckt.
+* For Dash: The serial number is always 4241.
 * Für den Omnipod EROS ist es die in der Registerkarte 'POD' als "Laufende Nummer" angegebene Zahl.
 
 ## Warnsignal neben BG
@@ -47,11 +47,11 @@ Beginnend mit Android 3.0 erhälst Du möglicherweise ein dreieckiges Warnsignal
 
   ![Gelbes BG-Warndreieck](../images/bg_warn_yellow.png)
 
-Details findest du auf der Seite [AAPS-Bildschirm](../Getting-Started/Screenshots#bg-warning-sign)
+For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
 
 
 ## Fehlermeldung: Daten aus verschiedenen Pumpen
 
    ![Fehlermeldung: Daten aus verschiedenen Pumpen](../images/Screen_DifferentPump.png)
 
-Um dieses Problem zu beheben, gehe zum Bildschirm [Konfiguration](../Configuration/Config-Builder#pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.
+To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Wechsel die Pumpe zu einer virtuellen Pumpe und zurück zu Deiner aktuellen Pumpe. Dadurch wird der Pumpenzustand zurückgesetzt.

@@ -2,7 +2,7 @@
 
 **This description is just for editing the English documentation. All new information must be added in English first. If you want to translate to other languages (thank you), please use [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](./make-a-PR#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
 
 ## General
 
@@ -34,8 +34,8 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 ![RTD io](./images/PR2.png)
 
 3. One or the other of the options in Step 2 will create a new branch in YOUR repository where your edits will be saved. Make your edits to the file.
-  
-  Be aware that we use different file extensions: .rst (ReStructuredText) and .md (Markdown) and the syntax varies a little bit between the two. Take care to use the correct syntax as [described below](./make-a-PR#code-syntax).
+
+We are using markdown for the docs pages. The file have got the suffix ".md".The Markdown specification is not fixed and we use at the moment the myst_parser for our markdown files. Take care to use the correct syntax as [described below](./make-a-PR.md#code-syntax).
 
 ![Edit branch](./images/PR3.png)
 
@@ -57,22 +57,19 @@ For our example we are going to make an edit to AndroidAPSdocs. This does NOT ne
 
 PS: Your fork and branch will still be sitting on your own personal GitHub account. After you get a notification that your PR has been merged, you can delete your branch if you are done with it (Step 8's notification area will provide a link to delete the branch once it has been closed or merged). For future edits, if you follow this procedure the edits will always start with an updated version of the AndroidAPSdocs repositories. If you choose to use another method to start a PR request (e.g., editing starting from your forked repo's master branch as the starting point), you will need to ensure your repo is up-to-date by performing a "compare" first and merging in any updates that have happened since you last updated your fork. Since people tend to forget to update their repos, we recommend using the PR process outlined above until you get familiar with performing "compares".
 
+(code-syntax)=
+
 ## Code syntax
 
-At the moment there are two languages used for docs pages:
+We are using markdown for the docs pages. The files have got the suffix ".md".
 
-* Markdown (.md) - the markup language originally used for docs pages
-* reStructuredText (.rst) - the new markup language
-
-We will change all docs pages in the medium term from reStructuredText to Markdown format bit by bit. In the meantime it is important that you use the correct syntax when formatting text or linking. If you are not sure just have a look at format / link codes on existing pages.
+(image-size)=
 
 ### Image size
 
-If using images please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+If using images please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
 
-### .md files
-
-#### Text format
+### Text format
 
 * bold: `**text**`
 * italic: `*text*`
@@ -80,80 +77,101 @@ If using images please use reasonable sizes. Screenshot images should be **250 p
 * Headline 2: `## headline`
 * Headline 3: `### headline`
 
-#### Images
+### ordered list
+
+    1. first
+    1. second
+    1. third
+    
+
+1. first
+2. second
+3. third
+
+### unordered list
+
+    - one element
+    - another element
+    - and another element
+    
+
+* one element
+* another element
+* and another element
+
+### multi level list
+
+You can insert lists in lists by indenting the nect level with 4 more spaces to the right than the one before.
+
+    1. first
+    1. second
+    1. third
+      1. one element
+      1. another element
+      1. and another element
+    1. four
+    1. five
+    1. six
+    
+
+1. first
+2. second
+3. third 1. one element 1. another element 1. and another element
+4. four
+5. five
+6. six
+
+### Images
 
 * images: `![alt text](../images/file.png)`
 
-#### Links
+### Links
 
 * external link: `[alt text](www.url.tld)`
 * internal link to .md page: `[alt text](../folder/file.md)`
-* internal link to .rst page: `[alt text](../folder/file.rst)`
-* internal link to headline: `[alt text](../folder/file#headline)`
-
-### .rst files
-
-#### Text format
-
-* bold: `**text**`
-* italic: `*text*`
-* Headline 1:
-  
-  `headline`  
-  `*****`
-
-* Headline 2:
-  
-  `headline`  
-  `=====`
-
-* Headline 3:
-  
-  `headline`  
-  `-----`
-
-#### Images
-
-* images:
-  
-  `.. image:: ../images/modules.png`  
-  `:alt: alt text`
-
-#### Links
-
-* external link: `` `alt text <www.url.tld>_` ``
-* internal link to .md page: `` `alt text <../folder/file.html>_` ``
-* internal link to .rst page: `` `alt text <../folder/file.html>_` ``
-* internal link to headline: `` `alt text <../folder/file.html#headline>_` ``
+* internal link to headline: `[alt text](../folder/file.html#headline)`
 
 ### Internal links
 
 If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
-#### In files with **.md** ending:
-
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
-* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md or .rst (not .html)
-* To set the link to an **anchor** (i.e. a headline) you have to omit the file extension 
-  * `[text](../Usage/Test#anchor)` instead of `[text](../Usage/Test.md#anchor)`
+* `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md
+* To set the link to an **anchor** (i.e. a headline) you let the file extension .md in place! 
+  * `[text](../Usage/Test.md#anchor)`
 
-#### In files with **.rst** ending:
+### Notes
 
-* `` `Text <../Usage/Test.hmtl>`_ `` will set a hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .html.
-  
-  Except you are in a toctree. Then you have to write it like this: `Text <../Usage/Test.md>` with .md or .rst (not .html).
+    :::{admonition} Friendly Note
+    :class: note
+    
+    This is a note.
+    :::
+    
 
-* `Text <./Usage/Test.md>` will set a hyperlink from where you are into /Usage.
+:::{admonition} Friendly Note :class: note
 
-* To set the link to an **anchor** (i.e. a headline) you have to add the anchor to the link 
-  * `[text](../Usage/Test.html#anchor)` instead of `[text](../Usage/Test#anchor)`
+This is a note. :::
 
-## Adding multiple images to documentation
+### Warnings
+
+    :::{admonition} Strong Warning
+    :class: warning
+    
+    This is a warning.
+    :::
+    
+
+:::{admonition} Strong Warning :class: warning
+
+This is a warning. :::
+
+## Adding multiple images to the documentation
 
 If you are planning to make a lot of edits, including adding images to help illustrate parts of the documentation (thank you!), you may want to take the following approach:
 
 * As you go and save screenshots, rename the screenshots to a descriptive name - but try not to use spaces as that confuses GitHub. Instead, use underscores. I.e. Example_batch_images_upload.png rather than "Example batch images upload.png". 
-* Please use reasonable sizes. Screenshot images should be **250 pixels wide**.
+* Please use reasonable sizes. Screenshot images should be up to **1050 pixels wide**.
 * You can upload images in batches easily by:
   
   1. Navigate to the images folder (https://github.com/openaps/AndroidAPSdocs/tree/master/docs/EN/images - but make sure you are in your fork/copy of the docs Images folder to be able to do this (replace "openaps" in the URL with your GitHub username)).
@@ -166,7 +184,7 @@ If you are planning to make a lot of edits, including adding images to help illu
   
   5. Now, you can look for the URL/relative path of each file and use that to refer to when adding images into a page in the documentation.
   
-  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
+  6. To see examples of how to add the images, you can look at the "raw" code of a page to see an example from a page that already has the images embedded successfully. Make sure you use the [correct code](./make-a-PR.html#code-syntax) for the page type you are on (.md or .rst). The main thing is to have a plain text description, followed by a link with a relative path to the image, like this:
     
     * For .md pages: `![Example of uploading images in batches](../images/Example_batch_images_upload.png)` (That code is exactly how the image below is embedded to be displayed.)
     * For .rst pages: `.. image:: ../images/Example_batch_images_upload.png`  

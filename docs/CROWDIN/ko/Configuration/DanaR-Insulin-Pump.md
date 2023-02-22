@@ -23,4 +23,4 @@
 
 ## 다나R 펌프 사용시 다른 시간대 국가로의 여행
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).

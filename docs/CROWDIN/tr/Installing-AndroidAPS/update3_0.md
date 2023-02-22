@@ -3,43 +3,43 @@
 * **Minimum Android sürümü artık 9.0'dır.**
 * **Veriler yeni veritabanına taşınmaz.**
 
-  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. You have to create new [profile switch](../Usage/Profiles) and start with zero IOB and COB.
+  Şikayet etmeyin, bu çok büyük bir değişiklik, bu yüzden mümkün değil. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. Yeni [profil ](../Usage/Profiles) oluşturmanız ve yeni Aktif İnsülin ve Aktif Karbonhidrat değerleri ile başlamanız gerekir.
 
-  Güncellemeyi dikkatlice planlayın!!! Best in situation without active insulin and carbs
+  Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
 
 * Yeni ve değiştirilen özelliklerle ilgili ayrıntılar için lütfen [Sürüm Notlarına](../Installing-AndroidAPS/Releasenotes) bakın.
 
 
-## Check automations
+## Otomasyonları kontrol edin
 
-* New restrictions were introduced. Check your automations, especially if your conditions are still valid.
-* If one of the conditions is missing, you need to add it again.
-* Red automations contain invalid actions, go and edit them and reset to valid values
+* Yeni kısıtlamalar getirildi. Özellikle şartlarınız hala geçerliyse otomasyonlarınızı kontrol edin.
+* Koşullardan biri eksikse, tekrar eklemeniz gerekir.
+* Kırmızı otomasyonlar geçersiz eylemler içeriyor, gidip bunları düzenleyin ve geçerli değerlere sıfırlayın
 
-  Example: A profile change to 140% was allowed earlier but is now restriced to 130%.
+  Örnek: Daha önce %140 olarak bir profil değişikliğine izin verildi, ancak şimdi %130 ile sınırlandırıldı.
 
-## Check your nsclient settings and set the synchronization complications
+## nsclient ayarlarınızı kontrol edin ve senkronizasyon komplikasyonlarını ayarlayın
 
-* The implementation of the nsclient plugin has changed completly.
-* Go to the nsclient tab and open the settings in the right-hand menu. A new preference "Synchronization" is available now.
-* You can now make a detailed selection about which items shall be synchronized with your Nightscout site.
+* nsclient eklentisinin uygulanması tamamen değişti.
+* nsclient sekmesine gidin ve sağdaki menüden ayarları açın. Artık yeni bir "Senkronizasyon" tercihi mevcuttur.
+* Artık Nightscout sitenizle hangi öğelerin senkronize edileceği konusunda ayrıntılı bir seçim yapabilirsiniz.
 
-## Nightscout profile cannot be pushed
-* The nightscout profile is gone, rest in peace!
-* To copy your current nightscout profile into a local profile, go to the treatments page (now to be opened in the right-hand menu).
-* Search for a profile switch with 100% and press clone.
-* A new local profile is added, valid from the current date.
-* To update profile from NS side use "Clone" (record!!, not profile) and save changes. You should see "Profile valid from:" set to currrent date.
+## Nightscout profili aktarılamıyor
+* Nightscout profili gitti, huzur içinde uyu!
+* Mevcut nightscout profilinizi yerel bir profile kopyalamak için tedaviler sayfasına gidin (şimdi sağdaki menüde açılacaktır).
+* %100 ile bir profil anahtarı arayın ve klonla'ya basın.
+* Geçerli tarihten itibaren geçerli olan yeni bir yerel profil eklenir.
+* Profili NS tarafından güncellemek için "Klonla" (kaydet!!, profil değil) kullanın ve değişiklikleri kaydedin. Geçerli tarihe ayarlanmış "Profil değeri:" görmelisiniz.
 
-## Reset master password
-* You can now reset your master password in case you have forgotten it.
-* You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
-* Restart AndroidAPS.
-* The new password will be the serial number of your active pump.
-* For Dash: The serial number is printed on the Pod.
-* For EROS it is also listed on the POD tab as "Sequence Number"
+## Ana parolayı sıfırla
+* Unutmanız durumunda artık ana şifrenizi sıfırlayabilirsiniz.
+* Telefonunuzun dosya sisteminde `/AAPS/extra` dizinine `PasswordReset` adlı bir dosya eklemeniz gerekiyor.
+* AndroidAPS'yi yeniden başlatın.
+* Yeni şifre, aktif pompanızın seri numarası olacaktır.
+* Dash için: Seri numarası her zaman 4241'dir.
+* EROS için ayrıca POD sekmesinde "Sıra Numarası" olarak listelenir
 
-## Warning signal beneath BG
+## KŞ'nin altındaki uyarı sinyali
 
 Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinyali alabilirsiniz.
 
@@ -47,11 +47,11 @@ Android 3.0'dan itibaren, ana ekranda KŞ değerinizin altında bir uyarı sinya
 
   ![Sarı KŞ uyarısı](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
 
 
-## Failure message: Data from different pump
+## Hata mesajı: Farklı pompadan gelen veriler
 
-   ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
+   ![Hata mesajı: Farklı pompadan gelen veriler](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Pompayı sanal pompa ile değiştirin ve daha sonra gerçek pompanıza geri dönün. Bu şekilde pompa durumu sıfırlanacaktır.

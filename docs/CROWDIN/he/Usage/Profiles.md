@@ -1,21 +1,23 @@
+(profile-switch)=
+
 # החלפת פרופיל
 
-הוראות על פרופילים באופן כללי ניתן למצוא ב[בונה התצורה - פרופיל](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
-בהפעלת AAPS ובחירת הפרופיל שלכם, תצטרכו לבצע "החלפת פרופיל" מבלי לספק משך זמן (הסבר בהמשך). על ידי כך AAPS מתחיל לעקוב אחר היסטוריית הפרופילים וכל שינוי חדש בפרופיל מצריך "החלפת פרופיל" גם כאשר אתם משנים את תוכן הפרופיל ב-NS. הפרופיל המעודכן נדחף ל-AAPS באופן מיידי, אך עליכם להחליף שוב את אותו פרופיל כדי להחיל את השינויים הללו.
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-מאחורי הקלעים, AAPS יוצר "תמונת מצב" של הפרופיל עם תאריך התחלה ומשך זמן ומשתמש בו במשך שנבחר.
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
 * משך 0 פירושו אינסופי. פרופיל כזה תקף עד "החלפת פרופיל" הבאה.
 * משך זמן של x דקות פירושו שימוש של x דקות בפרופיל זה. לאחר פרק זמן זה, הפרופיל חוזר ל"החלפת פרופיל" התקף הקודם.
 
-אם ערכתם את הפרופיל בלשונית "פרופיל מקומי", תוכלו להפעיל את הפרופיל שם, מה שמבצע החלפת פרופיל באותה הזדמנות.
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-כדי לבצע החלפת פרופיל, לחצו לחיצה ארוכה על שם הפרופיל ("Tuned 03/11" בתמונה מטה) במסך הבית של AndroidAPS.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-בתוך "החלפת הפרופיל" ניתן לבצע שני שינויים נוספים שבעבר היו חלק מפרופיל האחוזים הצירקדיים:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## אחוזים
 
@@ -27,6 +29,8 @@
 * שינוי זה יישלח למשאבה ואז יהיה ברירת המחדל של המינון הבזאלי.
 
 * אלגוריתם הלולאה (פתוחה או סגורה) ימשיך לעבוד על פי אחוז הפרופיל שנבחר. כך, למשל, ניתן להגדיר אחוז פרופילים נפרדים עבור שלבים שונים של מחזור ההורמונים.
+
+(time-shift)=
 
 ## היסט זמן
 
@@ -45,7 +49,9 @@
 
 ![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-מנגנון זה של צילום "תמונות" של הפרופיל מאפשר חישובים הרבה יותר מדויקים של העבר ומאפשר לעקוב אחר שינויים בפרופיל.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## פתרון בעיות בפרופיל
 
@@ -67,14 +73,14 @@
   
   ![Remove profile switch](../images/PSRemove.png)
 
-לחלופין, ניתן למחוק את החלפת הפרופיל ישירות ב-mLab כמתואר להלן.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### 'התקבלה החלפת פרופיל מ-NS אבל הפרופיל לא קיים מקומית' 
 
 * הפרופיל המבוקש לא סונכרן כהלכה מ-Nightscout.
 * מלאו אחר ההוראות מלמעלה כדי למחוק את החלפת הפרופיל
 
-לחלופין, ניתן למחוק את החלפת הפרופיל ישירות ב-mLab כמתואר להלן:
+Alternatively you can delete the profile switch directly in mLab:
 
 * עבור לאוסף ה-mlab
 * חפשו בטיפולים את חלפת פרופיל

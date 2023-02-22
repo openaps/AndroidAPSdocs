@@ -4,11 +4,13 @@
 
 Se změnou časového pásma v telefonu není žádný problém, protože tyto pumpy nepoužívají historii
 
+(danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **To znamená, že pokud prostě změníte časové pásmo na telefonu, historické záznamy se z pumpy načtou v jiném pásmu a zdvojí se.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-Abychom se tomu vyhnuli, existují dvě možnosti:
+To avoid this there are two possibilities:
 
 ### Možnost 1: Ponechat původní čas a posunout profil
 
@@ -24,13 +26,13 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 
 * Na telefonu v nastavení vypněte 'Automatická změna data a času' (ruční změna časového pásma)
 
-Když vystoupíte z letadla:
+When get out of plane:
 
 * vypněte pumpu
 * změňte časové pásmo na telefonu
@@ -40,21 +42,27 @@ Když vystoupíte z letadla:
 * zapněte telefon
 * nechejte telefon spojit se s pumpou a sladit se s jejím časem
 
+(insight)=
+
 ## Insight
 
-Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-Insight také zpracovává záznamy v historii o změnách času. Takže správný čas lze určit v AAPS navzdory změně času.
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Může ale způsobit nepřesnosti v celkových denních dávkách. Neměl by to však být problém.
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 # Úpravy letního času
 
-V závislosti na pumpě a CGM, může skok v čase způsobit problémy. S pumpou Combo apod. se historie načítá znovu a to by vedlo ke zdvojení položek. Úpravy proto prosím provádějte tehdy, když jste vzhůru, ne během noci.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Jestliže k bolusu používáte kalkulačku, prosím nepoužívejte COB a IOB, pokud nemáte jistotu, že jsou naprosto správné - raději je několik hodin po změně času nepoužívejte vůbec.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+
+(accu-chek-combo)=
 
 ## Accu-Chek Combo
 

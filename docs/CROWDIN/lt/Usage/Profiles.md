@@ -1,6 +1,8 @@
+(profile-switch)=
+
 # Profilio keitimas
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -15,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-Keisdami profilius, galite pasirinkti dvi papildomas parinktis, kurios anksčiau buvo Cirkadinio procento profilio dalis:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Procentais
 
@@ -28,9 +30,11 @@ Keisdami profilius, galite pasirinkti dvi papildomas parinktis, kurios anksčiau
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(time-shift)=
+
 ## Laiko perstūmimas
 
-![Profilio procentas ir laiko perstūmimas](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
@@ -43,15 +47,17 @@ Keisdami profilius, galite pasirinkti dvi papildomas parinktis, kurios anksčiau
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![Profilio pakeitimo laiko perstūmimo kryptys](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Šis profilio fiksavimo mechanizmas leidžia daug tikslesnius praeities skaičiavimus ir taip pat leidžia stebėti profilio pokyčius.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## Profilio klaidų šalinimas
 
 ### "Neteisingas profilis" / "Pagrindinis profilis nesutampa su valandomis"
 
-![Bazė nesutampa su valandomis](../images/BasalNotAlignedToHours2.png)
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
 * These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
   
@@ -67,14 +73,14 @@ Keisdami profilius, galite pasirinkti dvi papildomas parinktis, kurios anksčiau
   
   ![Remove profile switch](../images/PSRemove.png)
 
-Kaip alternatyvą, galite ištrinti profilio pakeitimą tiesiogiai mLab, kaip aprašyta toliau.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### „Profilio pakeitimas gautas iš NS, tačiau profilis neegzistuoja lokaliai“
 
 * The requested profile was not synced correctly from Nightscout.
 * Follow instructions from above to delete the profile switch
 
-Kaip alternatyvą, galite ištrinti profilio keitimą tiesiogiai mLab:
+Alternatively you can delete the profile switch directly in mLab:
 
 * Go to your mlab collection
 * Search in the treatments for profile switch

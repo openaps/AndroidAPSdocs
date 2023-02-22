@@ -2,6 +2,8 @@
 
 **Acesta aplicație face parte dintr-o soluție DIY (do-it-yourself/ o aplicație pe care o construiești singur) și nu este un produs finit; ea solicita implicarea utilizatorului: să citească, să învețe și să înțeleagă sistemul, de la construcție pana la modul de utilizare. Nu este un facut pentru a vă gestiona tratamentul diabetul in totalitate, dar vă permite să vă îmbunătățiți calitatea vieții alaturi de diabet, dacă sunteți dispus să acordați timpul necesar. Acordați-vă timp pentru a învăța sa-l intelegeti si folosi. You alone are responsible for what you do with it.**
 
+(hardware-requirements)=
+
 ## Cerințe hardware
 
 - O pompă de insulină Accu-Chek Combo (orice versiune de firmware, funcționează toate)
@@ -15,10 +17,10 @@
 
 ## Limitări
 
-- Bolusul extins și bolusul multiwave nu sunt suportate (vedeți [Carbohidrați extinși](../Usage/Extended-Carbs.rst) ca înlocuitor).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Doar un singur profil bazal este suportat.
 - Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - În prezent sunt suportate doar rate bazale în intervalul 0.05 până la 10 U/o. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Similar, când se reduce cu 50%, cea mai mică rată a bazalei trebuie să fie cel puțin 0.10U/o.
 - If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
 - Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
@@ -51,13 +53,13 @@
     - Activați opțiunea de blocare a tastelor pompei, pentru prevenirea bolusării folosind pompa, mai ales when the pump was used before and quick bolusing was a habit.
     - Stabiliți un interval minim de 5.5, respectiv 5 pentru timpul după care ecranul să se stingă automat sau meniurile să se stingă automat. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-![Captură de ecran al meniului setărilor de utilizator](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Captură de ecran a setărilor RBT](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Captură de ecran al setărilor de bolus](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Captură de ecran al setărilor cartușului de insulină](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Install AndroidAPS as described in the [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Make sure to read the wiki to understand how to setup AndroidAPS.
@@ -69,13 +71,15 @@
 - Before enabling the Combo plugin in AAPS make sure your profile is set up correctly and activated(!) and your basal profile is up to date as AAPS will sync the basal profile to the pump. Then activate the Combo plugin. Press the *Refresh* button on the Combo tab to initialize the pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Why pairing with the pump does not work with the app "ruffy"?
 
-There are serveral possible reasons. Încercați următorii pași:
+There are serveral possible reasons. Try the following steps:
 
 1. Introduceți o **baterie nouă și nefolosită** în pompă. Citiți secțiunea referitoare la baterii pentru mai multe detalii. Asigurați-vă că pompa se află foarte aproape de telefon.
 
-![Combo trebuie să fie poziționat foarte aproape de telefon](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Turn off or remove any other bluetooth devices so they will not be able to establish a connection to the phone while pairing is in progress. Any parallel bluetooth communication or prompt to establish connections might disturb the pairing process.
 

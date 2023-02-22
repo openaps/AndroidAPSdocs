@@ -1,27 +1,29 @@
-# Troubleshooting Android Studio
+(troubleshooting-android-studio)=
+# Android Studio'da Sorun Giderme
 
-## Lost keystore
+(lost-keystore)=
+## Kayıp keystore
 If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
 In case you cannot find your old keystore or its password anymore, proceed as follows:
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
-2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
-4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
-5. Uninstall previous AAPS version on your phone.
-6. Install new AAPS version on your phone.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
-8. Check your battery optimization options and disable them again.
+1. [Export settings](../Usage/ExportImportSettings.md#export-settings) on your phone.
+2. Ayarlar dosyasını telefonunuzdan harici bir konuma kopyalayın veya yükleyin (örn. bilgisayarınız, bulut depolama hizmetiniz...).
+4. [Güncelleme kılavuzunda](../Installing-AndroidAPS/Update-to-new-version) açıklandığı gibi yeni sürümün imzalı apk'sını oluşturun ve telefonunuza aktarın.
+5. Telefonunuzdaki önceki AAPS sürümünü kaldırın.
+6. Telefonunuza yeni AAPS sürümünü yükleyin.
+7. [Import settings](../Usage/ExportImportSettings.md#import-settings) to restore your objectives and configuration.
+8. Pil optimizasyon seçeneklerinizi kontrol edin ve tekrar devre dışı bırakın.
 
-   If you can't find them on your phone copy them from the external storage to your phone.
-8. Keep on looping.
+   Bunları telefonunuzda bulamazsanız, harici depolama biriminden telefonunuza kopyalayın.
+8. Döngü yapmaya devam edin.
 
-## Gradle Sync failed
+## Gradle Sync başarısız oldu
 Gradle Sync can fail to various reasons. Wen you get a message saying that gradle sync failed, open the "Build" tab (1) at the bottom of Android Studio and check what error message (2) is displayed.
 
-  ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
+  ![Gradle Başarısız](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
 * [Uncommitted changes](#uncommitted-changes)
@@ -36,103 +38,104 @@ If you receive a failure message like
 
 ![Gradle Uncommited Changes](../images/studioTroubleshooting/02_GradleUncommitedChanges.png)
 
-#### Step 1 - Check git installation
-  * Open the terminal tab (1) at the bottom of Android Studio and copy the following text and paste or type into the terminal.
+#### Adım 1 - Git kurulumunu kontrol edin
+  * Android Studio'nun altındaki terminal sekmesini (1) açın ve aşağıdaki metni kopyalayın ve terminale yapıştırın veya yazın.
     ```
     git --version
     ```
 
-    ![Gradle Git Version](../images/studioTroubleshooting/03_GitVersion.png)
+    ![Gradle Git Sürümü](../images/studioTroubleshooting/03_GitVersion.png)
 
-    Note: There is a space and two hyphens between git and version!
+    Not: Git ve version arasında bir boşluk ve iki tire vardır!
 
-  * You must receive a message saying what git version is installed, as you can see in the screenshot above. In this case, go to [Step 2](#step-2-check-for-uncommitted-changes).
+  * Yukarıdaki ekran görüntüsünde görebileceğiniz gibi, hangi git sürümünün kurulu olduğunu söyleyen bir mesaj almalısınız. Bu durumda, [2. Adım](#step-2-check-for-uncommitted-changes)'a gidin.
 
-  * In case you get an message saying
+  * Diyen bir mesaj alırsanız
     ```
     Git: command not found
     ```
-    your Git installation is not right.
+    git kurulumunuz doğru değil.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [Git kurulumunu kontrol et](../Installing-AndroidAPS/git-install.md#check-git-settings-in-android-studio)
 
-  * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
+  * windows'ta ve git yeni kurulduysa, kurulumdan sonra git'i global olarak kullanılabilir hale getirmek için bilgisayarınızı yeniden başlatmanız gerekir
 
-  * If Git is installed, you have restarted (if on windows), and git still couldn't found:
+  * Git kuruluysa, yeniden başlattınız (Windows'taysa) ve git hala bulunamadı mesajı alıyorsanız:
 
-  * Search your computer for a file "git.exe".
+  * Bilgisayarınızda "git.exe" dosyasını arayın.
 
-    Note for yourself, what directory it is in.
+    Hangi dizinde olduğunu kendiniz not edin.
 
-  * Go to the Environment variables in windows, select the variable "PATH" and click edit. Add the directory where you have found your git installation.
+  * Pencerelerde Ortam değişkenlerine gidin, "PATH" değişkenini seçin ve düzenle'ye tıklayın. Git kurulumunuzu bulduğunuz dizini ekleyin.
 
-  * Save and close.
+  * Kaydedin ve çıkın.
 
-  * Restart Android Studio.
+  * Android Studio tekrar başlatın.
 
-#### Step 2: Check for uncommitted changes.
+#### Adım 2: Taahhüt edilmemiş değişiklikleri kontrol edin.
 
-  * In Android Studio, oben the "Commit" Tab (1) on the left-hand side. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
-  * You can see either a "Default changeset" (2) or "Unversioned files" (3):
+  * Android Studio'da: soldaki "Commit" sekmesini (1) açın. ![Commit Tab: Uncommitted changes](../images/studioTroubleshooting/04_CommitTabWithChanges.png)
+  * Orada bir "Default changeset" (2) veya "Unversioned files" (3) görebilirsiniz:
 
-    * For "Default changeset", you probably updated gradle or changed some of the file contents by mistake.
+    * "Default changeset" için, muhtemelen gradle'ı güncellediniz veya dosya içeriklerinden bazılarını yanlışlıkla değiştirdiniz.
 
-    * Right click on "Default Changeset" and select "Rollback"
+    * "Default Changeset" üzerine sağ tıklayın ve "Rollback" ı seçin
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * The files are fetched again from the Git server. If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+    * Dosyalar tekrar Git sunucusundan alınır. Commit sekmesinde başka bir değişiklik yoksa, [3. Adım](#step-3-resync-gradle-again)'a gidin.
 
-  * If you can see "Unversioned Files", you might have stored files in your sourecode directory which should be better places somewhere else, e.g. your keystore file.
+  * "Unversioned Files"ı görüyorsanız, başka bir yerde daha iyi olması gereken dosyaları kaynak kod dizininizde saklamış olabilirsiniz, örn. keystore dosyanız.
 
-    * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
+    * Bu dosyayı bir kaydetme yerine taşımak veya kesmek ve yapıştırmak için bilgisayarınızdaki normal dosya gezgininizi kullanın.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+    * Dosyanın artık AndroidAPS dizininde saklanmadığından emin olmak için Android Studio'ya geri dönün ve Commit sekmesindeki Yenile düğmesine (4) tıklayın.
 
-      If there are no other changes in the commit tab, go to [Step 3](#step-3-resync-gradle-again).
+      Commit sekmesinde başka bir değişiklik yoksa, [3. Adım](#step-3-resync-gradle-again)'a gidin.
 
 
-#### Step 3: Resync Gradle (again)
+#### Adım 3 - Resync Gradle (tekrar)
 
 Follow the instructions at [Gradle Resync](#gradle-resync).
 
-### Android Gradle plugin requires Java 11 to run
+### Android Gradle eklentisinin çalışması için Java 11 gerekir
 
   You might experience this error message:
 
-  ![Android Gradle plugin requires Java 11 to run](../images/studioTroubleshooting/11_GradleJDK.png)
+  ![Android Gradle eklentisinin çalışması için Java 11 gerekir](../images/studioTroubleshooting/11_GradleJDK.png)
 
   Click on "Gradle Settings" (1) to go to open the gradle settings.
 
   If you don't have the link to the "Gradle Settings", open the Gradle settings manually by selecting the Gradle Tab on the right border (1), select the tools icon (2) and there the item 'Gradle Settings' (3).
 
-  ![Gradle Settings](../images/studioTroubleshooting/09_GradleSettings.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/09_GradleSettings.png)
 
   When you have opened the Gradle settings dialog, open the options (1) at "Gradle JDK" and selected the "Embedded JDK version" (2).
 
-  ![Gradle Settings](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
+  ![Gradle Ayarları](../images/studioTroubleshooting/12_GradleSettingsJDK.png)
 
   Press "OK" to save and close the settings dialog.
 
   *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
-  Now you need to trigger a [Gradle Resync](#gradle-resync)
+  Şimdi bir [Gradle Resync](#gradle-resync) tetiklemeniz gerekiyor
 
-### Could not resolve/No cached version
+### Çözülemedi/Önbelleğe alınmış sürüm yok
 
   You might get this error message:
 
     ![Could not resolve... No cached version](../images/studioTroubleshooting/08_NoCachedVersion.png)
 
-  * On the right side, open the Gradle tab (1).
+  * Sağ tarafta Gradle sekmesini (1) açın.
 
-    Make sure the button shown at (2) is *NOT* selected.
+    (2)'de gösterilen düğmenin Seçili *OLMADIĞINDAN* emin olun.
 
-    ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
+    ![Gradle Çevrimdışı Modu](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * Now you need to trigger a [Gradle Resync](#gradle-resync)
+  * Şimdi bir [Gradle Resync](#gradle-resync) tetiklemeniz gerekiyor
 
-### Unable to start daemon process
+(unable-to-start-daemon-process)=
+### Daemon işlemi başlatılamıyor
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
 
@@ -149,24 +152,24 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   If you don't see the a message anymore, you can still trigger this manually:
 
-  * Open the Gradle tab (1) on the right border of Android Studio.
+  * Android Studio'nun sağ kenarındaki Gradle sekmesini (1) açın.
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AndroidAPS (2)
+  * AndroidAPS'ye sağ tıklayın (2)
 
-  * Click on "Reload Gradle Project" (3)
+  * "Reload Gradle Project" üzerine tıklayın (3)
 
-## Generate Signed APK generated successfully with 0 build variants
+## 0 yapı varyantı ile başarıyla İmzalı APK oluşturuldu
 
 When you generate the signed apk, you might get the notification that generation was successfully but are told that 0 build variants where generated:
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
 
 
-## App was created with compiler/kotlin warnings
+## Uygulama, derleyici/kotlin uyarılarıyla oluşturuldu
 
 If your build completed successfully but you get compiler or kotlin warnings (indicated by a yellow or blue exclamation mark) then you can just ignore these warnings.
 
@@ -175,57 +178,57 @@ If your build completed successfully but you get compiler or kotlin warnings (in
 Your app was build successfully and can be transferred to phone!
 
 
-## Key was created with errors
+## Anahtar hatalarla oluşturuldu
 
 When creating a new keystore for building the signed APK, on Windows the following error message might appear
 
-![Key was created with errors](../images/AndroidStudio35SigningKeys.png)
+![Anahtar hatalarla oluşturuldu](../images/AndroidStudio35SigningKeys.png)
 
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
-## No CGM data is received by AndroidAPS
+## AndroidAPS tarafından hiçbir CGM verisi alınmadı
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* Yamalı Dexcom G6 uygulamasını kullanıyorsanız: Bu uygulama eski. Use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
 
 
-## App not installed
+## Uygulama yüklenmedi
 
 ![phone app note installed](../images/Update_AppNotInstalled.png)
 
-* Make sure you have transferred the “app-full-release.apk” file to your phone.
-* If "App not installed" is displayed on your phone follow these steps:
+* “app-full-release.apk” dosyasını telefonunuza aktardığınızdan emin olun.
+* Telefonunuzda "Uygulama yüklenmedi" mesajı görüntülenirse şu adımları izleyin:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
-2. Uninstall AAPS on your phone.
-3. Enable airplane mode & turn off bluetooth.
-4. Install new version (“app-full-release.apk”)
-5. [Import settings](../Usage/ExportImportSettings)
-6. Turn bluetooth back on and disable airplane mode
+1. [Ayarları dışa aktar](../Usage/ExportImportSettings) (telefonunuzda zaten yüklü olan AAPS sürümünde)
+2. Telefonunuzdaki AAPS'i kaldırın.
+3. Uçak modunu etkinleştir & bluetooth'u kapat.
+4. Yeni sürümü yükleyin (“app-full-release.apk”)
+5. [Ayarları içe aktarın](../Usage/ExportImportSettings)
+6. Bluetooth'u tekrar açın ve uçak modunu devre dışı bırakın
 
-## App installed but old version
+## Uygulama yüklendi ancak eski sürüm
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy)
 
-## None of the above worked
+## Yukarıdakilerin hiçbiri işe yaramadı
 
 If non of the above tips helped you might consider building the app from scratch:
 
-1. [Export settings](../Usage/ExportImportSettings) (in AAPS version already installed on your phone)
+1. [Ayarları dışa aktar](../Usage/ExportImportSettings) (telefonunuzda zaten yüklü olan AAPS sürümünde)
 
-2. Have your key password and key store password ready. In case you have forgotten passwords you can try to find them in project files as described [here](https://youtu.be/nS3wxnLgZOo).
+2. Anahtar parolanızı ve anahtar deposu parolanızı hazır bulundurun. Parolalarınızı unuttuysanız, bunları [burada](https://youtu.be/nS3wxnLgZOo) açıklandığı gibi proje dosyalarında bulmaya çalışabilirsiniz.
 
-    Or you just use a new keystore.
+    Veya yeni bir anahtar deposu kullanabilirsiniz.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
+3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code).
 
-4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
-5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
-6. You should check your battery optimization options and disable them again.
+4. APK'yı başarıyla oluşturduğunuz zaman, telefonunuzdaki mevcut uygulamayı silin, yeni apk'yı telefonunuza aktarın ve yükleyin.
+5. Hedeflerinizi ve ayarlarınızı geri yüklemek için tekrar [ayarları içe aktarın](../Usage/ExportImportSettings).
+6. Pil optimizasyon seçeneklerinizi kontrol etmeli ve tekrar devre dışı bırakmalısınız.
 
-## Worst case scenario
+## En kötü durum senaryosu
 
 In case even building the app from scratch does not solve your problem you might want to try to uninstall Android Studio completely. Some Users reported that this solved their problem.
 
@@ -233,4 +236,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#install-android-studio).

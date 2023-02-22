@@ -1,6 +1,0 @@
-Pentru utilizatorii de MM640G sau MM630G
-**************************************************
-
-* If not already set up then download `600SeriesAndroidUploader <https://pazaan.github.io/600SeriesAndroidUploader/>`_ and follow instructions on `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* În aplicația 600 Series Uploader mergeți la Settings > Send to xDrip+ și selectați ON (bifă).
-* Selectați MM640G în ConfigBuilder (setare în AndroidAPS).

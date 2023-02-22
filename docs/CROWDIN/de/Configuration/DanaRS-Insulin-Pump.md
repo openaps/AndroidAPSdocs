@@ -41,6 +41,8 @@
 * Stelle im Arztmenü auf der Pumpe (siehe Bedienungsanleitung der DanaRS) die Bolus-Schritte auf 0,05 IE/h.
 * Aktiviere verzögerten Bolus in der Pumpe.
 
+(default-password)=
+
 ### Standard-Passwort
 
 * Für die DanaRS mit Firmware v1 und v2 ist das Standard-Passwort 1234.
@@ -49,6 +51,8 @@
     * Öffne auf der Pumpe das Hauptmenü > Prüfen > Geräte Info. 
     * Nummer 3 ist das Produktionsdatum. 
     * Bei DanaRS v3 und Dana-i wird dieses Passwort nur verwendet, um die Tasten der Pumpe zu sperren. Es wird nicht für die Kommunikation verwendet und muss daher nicht in AndroidAPS eingegeben werden.
+
+(change-password-on-pump)=
 
 ## Passwort auf Pumpe ändern
 
@@ -67,7 +71,7 @@
 
 * Drücke OK, um das bisherige Passwort einzugeben.
 
-* Gib das **bisherige Passwort** (Standard-Passwort siehe [oben](#standard-passwort)) ein und drücke OK.
+* Gib das**bisherige Passwort** (Standard Passwort siehe [oben](#default-password)) ein und drücke OK
     
     ![DanaRS altes Kennwort eingeben](../images/DanaRSPW_04_11PWenter.png)
 
@@ -87,6 +91,8 @@
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Dana RS spezifische Fehler
 
 ### Fehler bei der Insulinabgabe
@@ -97,14 +103,14 @@ Falls die Verbindung zwischen AAPS und der Dana RS während der Insulinabgabe ab
 
 * In den meisten Fällen handelt es sich nur um ein Kommunikationsproblem und es wurde tatsächlich die korrekte Insulinmenge abgegeben.
 * Prüfe in der Historie der Dana RS (entweder direkt in der Pumpe oder über den Dana Tab > Pumpen-Speicher > Boli), ob die korrekte Bolusmenge abgegeben wurde.
-* Den Fehler kannst Du bei Bedarf im [Behandlungs-Tab](../Getting-Started/Screenshots#kohlenhydrat-korrektur) löschen.
+* Lösche den fehlerhaften Eintrag im[Behandlungen Tab](../Getting-Started/Screenshots.md#carb-correction), wenn Du magst.
 * Die tatsächlich abgegebene Insulinmenge wird bei der nächsten Verbindung zwischen AAPS und Dana RS ausgelesen. Um eine Verbindung manuell herzustellen, drücke das Bluetooth Icon auf dem Dana Tab oder warte einfach auf die nächste Verbindung.
 
 ## Wichtiger Hinweis beim Wechsel des Smartphones
 
-Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
+Falls Du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
-* [Exportiere die Einstellungen](../Usage/ExportImportSettings#export-settings) auf Deinem alten Smartphone
+* [Exportiere die Einstellungen](../Usage/ExportImportSettings.md#export-settings) auf Deinem alten Smartphone
 * Übertrage die Einstellungen vom alten auf das neue Smartphone.
 
 ### DanaRS v1
@@ -112,7 +118,7 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 * Verbinde die Dana RS **manuell** mit dem neuen Smartphone.
 * Da die Verbindungseinstellungen zusammen mit den anderen Einstellungen in AAPS importiert werden, "kennt" AAPS deine Pumpe bereits und startet daher keinen Bluetooth-Scan. Daher müssen das neue Smartphone und die Pumpe manuell verbunden werden.
 * Installiere AndroidAPS auf dem neuen Smartphone.
-* [Importiere die Einstellungen](../Usage/ExportImportSettings#importiere-die-einstellungen) auf Deinem neuen Smartphone
+* [Importiere die Einstellungen](../Usage/ExportImportSettings.md#import-settings) auf Deinem neuen Smartphone
 
 ### DanaRS v3, Dana-i
 
@@ -121,4 +127,4 @@ Falls du das Smartphone wechselst, sind die folgenden Schritte erforderlich:
 
 ## Mit der Dana RS Pumpe über Zeitzonen hinweg reisen
 
-Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg reisen](../Usage/Timezone-traveling#danarv2-danars).
+Für allgemeine Informationen siehe die Seite [Mit der Pumpe über Zeitzonen hinweg.](../Usage/Timezone-traveling.md#danarv2-danars).

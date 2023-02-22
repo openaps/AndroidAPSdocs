@@ -1,6 +1,8 @@
+(profile-switch)=
+
 # 프로파일 변경
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder.md#profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -15,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-"프로파일 변경" 메뉴 내에서 사용자가 프로파일 비율을 변경하게 되면 두가지 추가적인 변화를 선택할 수 있다.
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## 비율
 
@@ -28,9 +30,11 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(time-shift)=
+
 ## 시간 이동
 
-![프로파일 비율 변경과 시간 이동](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
@@ -43,15 +47,17 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![프로파일 변경 시간 시간 이동 안내](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-프로파일의 스냅샷을 이용하는 이런 메카니즘은 과거 보다 더 정확한 계산과 프로파일 변경 을 추적할 수 있게 해준다.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(troubleshooting-profile-errors)=
 
 ## 프로파일 에러 해결하기
 
 ### '유효하지 않은 프로파일'/'Basal 프로파일이 시간 단위로 세팅되지 않았다.'
 
-![Basal은 시간단위로 설정되지 않았다.](../images/BasalNotAlignedToHours2.png)
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
 * These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
   
@@ -67,14 +73,14 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
   
   ![Remove profile switch](../images/PSRemove.png)
 
-아래에 설명된 대로 mLab의 프로파일 변경에서 직접 삭제할 수도 있다.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### 'NS에서 프로파일 변경을 수신했지만 폰에는 존재하지 않는다'
 
 * The requested profile was not synced correctly from Nightscout.
 * Follow instructions from above to delete the profile switch
 
-mLab의 프로파일 변경에서 직접 삭제할 수도 있다.
+Alternatively you can delete the profile switch directly in mLab:
 
 * Go to your mlab collection
 * Search in the treatments for profile switch

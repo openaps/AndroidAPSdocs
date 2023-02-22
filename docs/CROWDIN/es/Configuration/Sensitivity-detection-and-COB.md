@@ -1,8 +1,10 @@
+(sensitivity-detection)=
+
 # Detección sensibilidad
 
 ## Algoritmo de sensibilidad
 
-Actualmente tenemos 3 modelos de detección de sensibilidad:
+Currently we have 3 sensitivity detection models:
 
 * Sensibilidad AAPS
 * Sensibilidad promedio ponderada
@@ -10,16 +12,16 @@ Actualmente tenemos 3 modelos de detección de sensibilidad:
 
 ### Sensibilidad AAPS
 
-La sensibilidad se calcula de la misma manera que Oref1, pero se puede especificar el tiempo del pasado. La absorción de los mínima de los carbohidratos se calcula a partir del tiempo máximo de absorción de los carbohidratos en las preferencias
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
 ### Sensibilidad promedio ponderada
 
-La sensibilidad se calcula como un promedio ponderado de las desviaciones. Puede especificar una hora en el pasado. Las desviaciones más recientes tienen un peso más alto. La absorción mínima de los carbohidratos se calcula a partir del tiempo máximo de absorción de los carbohidratos en las preferencias. Este algoritmo es más rápido para seguir los cambios de sensibilidad.
+Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
 ### Sensibilidad Oref1
 
-La sensibilidad se calcula a partir de los datos de 8h en el pasado o en el último cambio de sitio(cánula), si es menor a 8h. Las carbohidratos (si no se absorben) se anulan tras el tiempo especificado en las preferencias. Únicamente el algoritmo Oref1 soporta las comidas no anunciadas (UAM). Esto significa que los tiempos al detectar UAM se excluyen del cálculo de sensibilidad. Por lo tanto, si utiliza SMB con UAM, tiene que elegir el algoritmo Oref1 para trabajar correctamente. Para obtener más información, consulte la publicación [Documentación de OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## Carbohidratos simultáneos
 
-Hay diferencia significativa mientras se usa AAPS, Ponderado Average vs Oref1. Los plugins de Oref sólo esperan una comida a la vez, que va siendo absorbida. Esto significa que la segunda comida comienza a absorberse después de que la primer comida fue totalmente absorbida. AAPS + Promedio ponderado empieza a absorber inmediatamente cuando se especifican los carbohidratos. Si hay más de una comida a bordo, la absorción mínima de carbohidratos se ajustará según el tamaño de la comida y el tiempo máximo de absorción. The minimum absorption accordingly will be higher in comparison to Oref plugins.
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.

@@ -140,7 +140,7 @@
  <td><strong>eCarbs - פחמימות ממושכות</strong></td>
  <td>"פחמימות ממושכות" - פחמימות פרוסות על פני מספר שעות (הרבה שומן/חלבון)<br>בולוסים מושהים שאולי אתם מכירים מטיפול רגיל במשאבות אינם הגיוניים בשיטת הטיפול עם לולאה</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">דוגמה לשימוש פחמימות ממושכות</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM - חיישן סוכר פלאש</strong></td>
@@ -228,7 +228,7 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. AndroidAPS מאחסן שם את הנתונים. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'.</td>
+ <td>פרויקט בקוד פתוח לגישה, ניטור ודיווח על נתוני סוכר בדם. זהו מרכז הנתונים של כל נתוני הסוכרת שלך. זהו המקום בו AndroidAPS מאחסן את הנתונים. שימושי להורים שעוקבים אחר ניהול הסוכרת של ילדיהם או דיווח על הנתונים ההיסטוריים כדי לקבל את המצב בפועל של בקרת הסוכרת (HbA1c צפוי, זמן בטווח) או לחפש דפוסים בנתונים באמצעות תרשים אחוזונים וכו'..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>

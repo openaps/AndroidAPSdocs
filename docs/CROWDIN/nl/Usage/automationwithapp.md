@@ -1,6 +1,6 @@
 # Automatisering met Android Automate app
 
-**Dit artikel is geschreven voordat AndroidAPS versie 2.5 uitkwam. Er is vanaf AAPS versie 2.5 een functie voor [automatisering in AndroidAPS](./Automation.rst) zelf ingebouwd. Voor sommigen is automatisering via de Automate app misschien nog handig, je kunt er hier alles over lezen. Gebruik van de Automate app wordt alleen aangeraden voor gevorderde AndroidAPS gebruikers.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Aangezien AndroidAPS een hybride closed loop systeem is, is gebruikersinteractie soms noodzakelijk (bijv. de loop vertellen dat je gaat wandelen, dat je binnenkort eet, je op de bank ligt...). Allerlei handmatige invoer die je frequent doet, zou je kunnen automatiseren. Dit gaat via externe tools zoals Automate of IFTTT, als aanvulling op de AndroidAPS-functies.
 
@@ -32,7 +32,7 @@ In AndroidAPS Instellingen, ga naar NSClient en kies Verbindingsinstellingen. Zo
 
 In AndroidAPS Instellingen, ga naar NSClient en kies Geavanceerde Instellingen. Zorg ervoor dat 'Alleen NS upload (sync. gedeactiveerd)' en 'Geen upload naar NS' uit staan.
 
-Wees je bewust van eventuele [beveiligingsproblemen](../Installing-AndroidAPS/Nightscout#security-considerations) die zich zouden kunnen voordoen en wees voorzichtig als je een [Insight pomp](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) gebruikt.
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Nightscout downloadinstellingen](../images/automate-aaps2.jpg)
 

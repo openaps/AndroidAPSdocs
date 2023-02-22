@@ -1,6 +1,8 @@
+(i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Δυσκολεύομαι και δεν μπορώ να προχωρήσω... Τι να κάνω; Που μπορώ να απευθυνθώ;
 
-Το έργο αυτό βασίζεται σε εθελοντική εργασία, έτσι ώστε να ισχύουν ορισμένοι κανόνες για να αποφευχθεί η επιπλέον εργασία σε εκείνους που προσφέρουν τόσο ευγενικά τον χρόνο και τις δεξιότητές τους:
+This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * επίπεδο 1: Διαβάστε το Wiki - τώρα έχουμε μια λειτουργία αναζήτησης για να σας βοηθήσουμε!
 * επίπεδο 2: Αναζητήστε την ομάδα Facebook, αν δεν υπάρχει ήδη απάντηση, τότε ρωτήστε την ερώτησή σας στην ομάδα χρηστών [AndroidAPS Users Facebook.](https://www.facebook.com/groups/1900195340201874/)
@@ -12,7 +14,7 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Βεβαιωθείτε ότι έχετε γίνει μέλος στην ομάδα χρηστών του AndroidAPS στο Facebook!
 
-Συμμετοχή εδώ [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Υπάρχει επίσης μια ομάδα για τους χρήστες αντλιών Combo [AAPSCombo](https://www.facebook.com/groups/127507891261169/) οι οποίοι έχουν μια ελαφρώς πιο συγκεκριμένη ρύθμιση.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
 ## Other resources in English
 

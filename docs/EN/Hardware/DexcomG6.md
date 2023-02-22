@@ -47,7 +47,7 @@ published by Tim Street at
     cannot connect xDrip+ and Dexcom app with the transmitter at the
     same time!**
 -   If you need Clarity and want to profit from xDrip+ alarms use the
-    [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+    [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
     with local broadcast to xDrip+.
 -   If not already set up then download
     [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow
@@ -59,6 +59,7 @@ published by Tim Street at
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.md).
 
+(if-using-g6-with-build-your-own-dexcom-app)=
 ## If using G6 with Build Your Own Dexcom App
 
 -   As of December 2020 [Build Your Own Dexcom
@@ -117,7 +118,7 @@ published by Tim Street at
 ### General troubleshooting
 
 General Troubleshoothing for CGMs can be found
-[here](./GeneralCGMRecommendation#troubleshooting).
+[here](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### New transmitter with running sensor
 

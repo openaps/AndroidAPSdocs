@@ -7,7 +7,9 @@
 ## Svarbios pastabos
 
 * Please use **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** or newer to build the apk.
-* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Windows 10 32-bit systems](../Installing-AndroidAPS/troubleshooting_androidstudio.md#unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+
+(recommended-specification-of-computer-for-building-apk-file)=
 
 ## Recommended specification of computer for building apk file
 
@@ -60,14 +62,14 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 In general, the steps necessary to build the APK file:
 
-1. [Git diegimas](../Installing-AndroidAPS/git-install.rst)
-2. [Android Studio įdiegimas](../Installing-AndroidAPS/Building-APK#install-android-studio)
-3. [Nustatyti git kelią Android Studio parametruose](../Installing-AndroidAPS/Building-APK#set-git-path-in-preferences)
-4. [Atsisiųsti AndroidAPS kodą](../Installing-AndroidAPS/Building-APK#download-androidaps-code)
-5. [Atsisiųskite AndroidAPS SDK](../Installing-AndroidAPS/Building-APK#download-android-sdk)
-6. [Sukurti programą](../Installing-AndroidAPS/Building-APK#generate-signed-apk) (generuoti pasirašomą apk)
-7. [Perkelti apk failą į telefoną](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
-8. [Identifikuoti gavėją, jei naudojate xDrip+](..//Configuration/xdrip#identify-receiver)
+1. [Git diegimas](../Installing-AndroidAPS/git-install.md)
+2. [Android Studio įdiegimas](../Installing-AndroidAPS/Building-APK.md#install-android-studio)
+3. [Nustatyti git kelią Android Studio parametruose](../Installing-AndroidAPS/Building-APK.md#set-git-path-in-preferences)
+4. [Atsisiųsti AndroidAPS kodą](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code)
+5. [Atsisiųskite AndroidAPS SDK](../Installing-AndroidAPS/Building-APK.md#download-android-sdk)
+6. [Build the app](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk) (generate signed apk)
+7. [Perkelti apk failą į telefoną](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone)
+8. [Identifikuoti gavėją, jei naudojate xDrip+](..//Configuration/xdrip.md#identify-receiver)
 
 ## Žingsnis po žingsnio instrukcija
 
@@ -75,7 +77,9 @@ Detailed description of the steps necessary to build the APK file.
 
 ## Įdiegti git (jei neturite)
 
-Vykdykite instrukcijas pagal [git instaliavimo puslapį](../Installing-AndroidAPS/git-install.rst).
+Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
+
+(install-android-studio)=
 
 ## Android Studio įdiegimas
 
@@ -117,9 +121,11 @@ Wait while Android Studio downloads additional components and be patient. Once e
 
 ![Downloading components](../images/studioSetup/07_Downloading.png)
 
+(set-git-path-in-preferences)=
+
 ## Android Studio įveskite git kelią
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.rst) on your computer and you have restarted your computer after installing.
+Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
 
 On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
 
@@ -127,7 +133,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.rst).
+* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
 
 * Double-click "Version Control" (1) to open the sub-menu.
 
@@ -163,6 +169,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * Use homebrew to install git: ```$ brew install git```.
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Jei prireiks: Jos gali būti randamos čia: Android Studio - Preferences.
+
+(download-androidaps-code)=
 
 ## Atsisiųsti AndroidAPS kodą
 
@@ -210,6 +218,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     
     Don't worry, this will be solved soon!
 
+(download-android-sdk)=
+
 ## Atsisiųskite AndroidAPS SDK
 
 * In the menu, go to File (1) > Settings (2).
@@ -250,6 +260,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
     ![No gradle update](../images/studioSetup/37_GradleUpdateDeny.png)
 
 * Restart Android Studio before you continue.
+
+(generate-signed-apk)=
 
 ## Generuoti pasirašytą APK (Generate signed APK)
 
@@ -293,7 +305,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Enter (2) and confirm (3) the password for your key store. ![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
     
-    ***Note:*** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio#lost-keystore).
+    ***Note:*** Passwords for key store and key do not have to be very sophisticated. Make sure to remember those or make a note in a safe place. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](../Installing-AndroidAPS/troubleshooting_androidstudio.md#lost-keystore).
 
 * Enter an alias (4) for your key. Choose whatever you like.
 
@@ -338,6 +350,8 @@ Signing means that you indicate your app to be your own creation but in a digita
     ![APK failo vieta](../images/studioSetup/54_APKlocation.png)
 
 * "app-full-release.apk" (3) is the file you are looking for!
+
+(transfer-apk-to-smartphone)=
 
 ## Perkelkite APK į išmanųjį telefoną
 

@@ -6,7 +6,7 @@
 
 Использовать системные уведомления для предупреждений и уведомлений:
 
-* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
+* Откройте меню 3 точки в правом верхнем углу экрана и выберите **Настройки** <unk> **Локальные оповещения** <unk> и активацию **Использовать системные уведомления для оповещений и уведомлений** 
 
 ![Использовать системные уведомления для предупреждений и уведомлений](../images/AndroidAuto_01v2.png)
 

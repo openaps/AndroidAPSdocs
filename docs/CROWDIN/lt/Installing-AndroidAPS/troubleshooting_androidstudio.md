@@ -1,18 +1,20 @@
+(troubleshooting-android-studio)=
 # Android Studio trikčių diagnostika
 
+(lost-keystore)=
 ## Prarasta raktų saugykla
-Jei atnaujindami AndroidAPS naudojate tą pačią raktų saugyklą, savo išmaniajame telefone nereikia pašalinti ankstesnės AAPS versijos. Todėl raktų saugyklą rekomenduojama išsaugoti saugioje vietoje.
+If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
 In case you cannot find your old keystore or its password anymore, proceed as follows:
 
-1. [Export settings](../Usage/ExportImportSettings#export-settings) on your phone.
+1. [Export settings](../Usage/ExportImportSettings.md#export-settings) on your phone.
 2. Copy or upload the settings file from your phone to an external location (i.e. your computer, cloud storage service...).
 4. Generate signed apk of new version as described on the [Update guide](../Installing-AndroidAPS/Update-to-new-version) and transfer it to your phone.
 5. Pašalinkite ankstesnę AAPS versiją iš savo išmaniojo telefono.
 6. Įdiekite naują AAPS versiją į savo išmanųjį telefoną.
-7. [Import settings](../Usage/ExportImportSettings#import-settings) to restore your objectives and configuration.
+7. [Import settings](../Usage/ExportImportSettings.md#import-settings) to restore your objectives and configuration.
 8. Check your battery optimization options and disable them again.
 
    If you can't find them on your phone copy them from the external storage to your phone.
@@ -54,7 +56,7 @@ If you receive a failure message like
     ```
     your Git installation is not right.
 
-  * [Check git installation](../Installing-AndroidAPS/git-install#check-git-settings-in-android-studio)
+  * [Check git installation](../Installing-AndroidAPS/git-install.md#check-git-settings-in-android-studio)
 
   * if on Windows and git was just installed, you should restart your computer to make git globally available after the installation
 
@@ -132,6 +134,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   * Now you need to trigger a [Gradle Resync](#gradle-resync)
 
+(unable-to-start-daemon-process)=
 ### Unable to start daemon process
 
   If you see an error message like the one below you probably use a Windows 10 32-bit system. This is not supported by Android Studio 3.5.1 and above and unfortunately nothing the AAPS developer can do about.
@@ -163,7 +166,7 @@ When you generate the signed apk, you might get the notification that generation
 
 ![APK generated with 0 build variants](../images/studioTroubleshooting/14_BuildWith0Variants.png)
 
-This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)) and you will find the generated apk there!
+This is a false warning. Check the directory your selected as "Destination folder" for generation (step [Generate Signed APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)) and you will find the generated apk there!
 
 
 ## App was created with compiler/kotlin warnings
@@ -186,9 +189,9 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## No CGM data is received by AndroidAPS
 
-* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) app instead.
+* In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) app instead.
 
-* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+* In case you are using xDrip+: Identify receiver as described on [xDrip+ settings page](../Configuration/xdrip.md#identify-receiver).
 
 
 ## App not installed
@@ -207,7 +210,7 @@ This seems to be a bug with Android Studio 3.5.1 and its shipped Java environmen
 
 ## App installed but old version
 
-If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version#update-your-local-copy)
+If you built the app successfully, transferred it to your phone and installed it successfully but the version number stays the same then you might have missed to [update your local copy](../Installing-AndroidAPS/Update-to-new-version.md#update-your-local-copy)
 
 ## None of the above worked
 
@@ -219,7 +222,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     Or you just use a new keystore.
 
-3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK#download-androidaps-code).
+3. Build app from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#download-androidaps-code).
 
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.
@@ -233,4 +236,4 @@ In case even building the app from scratch does not solve your problem you might
 
 [https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10](https://stackoverflow.com/questions/39953495/how-to-completely-uninstall-android-studio-from-windowsv10).
 
-Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK#install-android-studio).
+Install Android Studio from scratch as described [here](../Installing-AndroidAPS/Building-APK.md#install-android-studio).

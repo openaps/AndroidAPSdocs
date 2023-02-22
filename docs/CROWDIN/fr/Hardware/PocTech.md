@@ -1,4 +1,4 @@
 # Pour les utilisateurs de PocTech CT-100
 
-- Install PocTech App
-- Select PocTech App in ConfigBuilder (setting in AndroidAPS)
+- Installer l'Application PocTech
+- Sélectionnez PocTech dans Configuration (Menu Hamburger dans AndroidAPS)

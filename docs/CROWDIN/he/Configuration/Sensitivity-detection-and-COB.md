@@ -1,8 +1,10 @@
+(sensitivity-detection)=
+
 # זיהוי רגישות
 
 ## אלגוריתם רגישות
 
-כיום קיימים 3 אלגוריתמים לזיהוי רגישות:
+Currently we have 3 sensitivity detection models:
 
 * רגישות AAPS
 * רגישות משוקללת ממוצעת
@@ -10,16 +12,16 @@
 
 ### רגישות AAPS
 
-הרגישות מחושבת באותו אופן כמו Oref1, אך ניתן לציין בכמה זמן אחורה להתחשב. ספיגת הפחמימות המינימלית מחושבת מתוך זמן ספיגת הפחמימות המרבי מתוך העדפות.
+Sensitivity is calculated the same way like Oref1 but you can specify time to the past. Minimal carbs absorption is calculated from max carbs absorption time from preferences
 
 ### רגישות משוקללת ממוצעת
 
-הרגישות מחושבת כממוצע משוקלל מסטיות. ניתן לציין בכמה זמן אחורה להתחשב. לסטיות חדשות יש משקל גבוה יותר. ספיגת הפחמימות המינימלית מחושבת מתוך זמן ספיגת הפחמימות המרבי מתוך העדפות. אלגוריתם זה הוא המהיר ביותר בתגובתו לשינויים ברגישות.
+Sensitivity is calculated as a weighted average from deviations. You can specify time to the past. Newer deviations have higher weight. Minimal carbs absorption is calculated from max carbs absorption time from preferences. This algorithm is fastest in following sensitivity changes.
 
 ### רגישות Oref1
 
-הרגישות מחושבת מנתוני 8 השעות האחרונות או מאז החלפת הצינורית האחרונה, אם עברו פחות משמונה שעות. פחמימות (אם לא נספגות) נמחקות לאחר הזמן שצוין בהעדפות. ארוחות לא מוכרזות (UAM) נתמכות רק באלגוריתם Oref1. משמעות הדבר היא שזמנים עם ארוחות לא מוכרזות שזוהו אינן נכללות בחישוב הרגישות. אז אם אתם משתמשים ב-SMB עם UAM, עליכם לבחור באלגוריתם Oref1 כדי לפעול כראוי. לקריאה נוספת קראו [תיעוד OpenAPS Oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
+Sensitivity is calculated from 8h data in the past or from last site change, if it is less than 8h ago. Carbs (if not absorbed) are cut after time specified in preferences. Only the Oref1 algorithm supports un-announced meals (UAM). This means that times with detected UAM are excluded from sensitivity calculation. So if you are using SMB with UAM, you have to choose Oref1 algorithm to work properly. For more information read [OpenAPS Oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html).
 
 ## ארוחות חופפות
 
-יש הבדל משמעותי בעת שימוש באלגוריתמי הרגישות AAPS ורגישות משוקללת ממוצעת לעומת Oref1. אלגוריתמי Oref מצפים שרק ארוחה אחת תתפרק בזמן נתון. כלומר הארוחה השנייה מתחילה לדעוך לאחר שהארוחה הראשונה דועכת לחלוטין. פחמימות באלגוריתמים AAPS וממוצע משוקלל מתחילות להתפרק מיד כשהן נרשמות. אם יש יותר מארוחה אחת, הדעיכה המינימלית של הפחמימות תותאם לגודל הארוחה ולזמן הספיגה המרבי. הספיגה המינימלית בהתאם תהיה גבוהה יותר בהשוואה לתוספי Oref.
+There is significant difference while using AAPS, WeightedAverage vs Oref1. Oref plugins expects only one meal decaying at time. It means 2nd meal starts decaying after 1st meal is completely decayed. AAPS+Weighted average starts decaying immediately when you enter the carbs. If there is more than one meal on board, the minimum carb decay will adjust according to meal size and max absorption time. The minimum absorption accordingly will be higher in comparison to Oref plugins.

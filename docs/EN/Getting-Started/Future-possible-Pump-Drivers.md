@@ -4,10 +4,20 @@ This is list of some Pumps floating around there, and status of support for them
 
 ## Pumps that are Loopable
 
+***
+
+### EOPatch2 ([Homepage](http://www.eoflow.com/eng/main/main.html))
+
+**Loop status:** Is a hot Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea). Without commitment look out for AndroidAPS 3.2.
+
+**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
+
+***
+
 ### Ypsomed Pump ([Homepage](https://www.ypsomed.com/en/diabetes-care-mylife.html))
 
 
-**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. By end of 2021, it is planned that company will release, new version nicknamed DOSE (1.6), which will allow setting bolus and TBR from their App. They plan to implement their own Loop in 2022, with their own application.
+**Loop status:** Version 1 - 1.5 (2Q/2018) are not Loop candidates. While they do have BT communication, communication is very limited and uni directional: Pump->App. In June 2022 (in Germany) company released, new version nicknamed DOSE (1.6), which allows setting bolus and TBR from their App. This pump is slowly getting available around Europe, but it will take some time to be available everywhere. Plan to implement their own Loop was cancelled and they decided to partner up with CamAPS (support already implemented) and use their loop solution.
 More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.html)
 
 **Hardware requirement for AAPS:** None. It's BT enabled.
@@ -34,15 +44,6 @@ More info see this [page](https://www.mylife-diabetescare.com/en/loop-program.ht
 
 ***
 
-### EOFLOW ([Homepage](http://www.eoflow.com/eng/main/main.html))
-
-**Loop status:** Is a Loop candidate. The remote control they use is actually modified Android device. (Pump is currently available only in Korea).
-
-**Hardware requirement for AAPS:** Probably none. It seems to be BT enabled.
-
-
-***
-
 ### Accu-Chek Solo ([Homepage](https://www.roche.com/media/releases/med-cor-2018-07-23.htm))
 
 **Loop status:** Is a Loop candidate. 
@@ -63,9 +64,11 @@ While in the past company has decided not to allow their pumps to be controlled 
 
 ***
 
-### Tandem: t:sport ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
+### Tandem: t:Mobi & t:slim X3 & t:Mobi Tubeless ([Homepage](https://www.tandemdiabetes.com/about-us/pipeline))
 
-**Loop status:** Is a Loop candidate. Pump hasn't been released yet, but FDA process is already running, so it should be out sooner, rather than later (in US). 
+**Loop status:** All 3 pumps will be Loop candidates. 
+
+They plan to release t:Mobi first (previously called t:sport) at end of 2022 or in 2023. Afterwards they will release t:slim X3 (2023 maybe) and after that t:Mobi Tubeless. t:mobi's will be controlable only over phone app, while X3 will look similar as X2, with some new nifty features (remote update of firmware, remote control over phone app, etc).  
 
 **Hardware requirement for AAPS:** None. It seems to be BT enabled.
 
@@ -78,7 +81,7 @@ While in the past company has decided not to allow their pumps to be controlled 
  ([see this article](https://www.tidepool.org/blog/tidepool-loop-medtronic-collaboration).
 
 
-### Willcare Insulin pump ([Homepage](http://en.shinmyungmedi.com))
+### Willcare Insulin pump ([Homepage](http://shinmyungmedi.com/en/))
 
 **Loop status:** At the moment its not Loop candidate, but we were contacted by their staff and they interested in extending their pump to be loopable (at the moment I think its missing only get/set profile commands). 
 

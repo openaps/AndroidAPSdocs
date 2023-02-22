@@ -4,11 +4,13 @@
 
 Nėra jokių problemų dėl laiko zonos keitimo telefone, nes pompa nenaudoja telefono istorijos
 
+(danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **Tai reiškia, kad jeigu Jūs tiesiog pakeisite laiko juostą telefone, duomenys bus nuskaitomi su skirtinga laiko juosta ir dubliuosis.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-Norint išvengti šito, yra du pasirinkimai:
+To avoid this there are two possibilities:
 
 ### Pasirinkimas Nr. 1: "Namų" laiko nustatymas ir laiko poslinkio nustatymas profilyje
 
@@ -24,13 +26,13 @@ Norint išvengti šito, yra du pasirinkimai:
    
    * pvz.: Viena -> Niujorkas: profilio perjungimas +6 valandos
    * pvz.: Viena -> Sidnėjus: profilio perjungimas -8 valandos
-* Tikriausiai tai nėra aktualu, jei naudojate [modifikuotą Libre Link programą](../Hardware/Libre2#time-zone-travelling). Ten reikia nustatyti automatinį laiko juostos keitimą, kad būtų galima paleisti naują Libre 2 jutiklį.
+* Probably not an option if using [patched LibreLink app](../Hardware/Libre2.md#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Pasirinkimas Nr. 2: Pompos istorijos ištrynimas
 
 * Išjunkite "Automatinį laiko ir datos" nustatymą telefone (rankinis laiko zonos pasirinkimas)
 
-Tuomet išlipdami iš lėktuvo:
+When get out of plane:
 
 * išjunkite pompą
 * pakeiskite laiko juostą telefone
@@ -40,21 +42,27 @@ Tuomet išlipdami iš lėktuvo:
 * įjunkite telefoną
 * leiskite telefonui prisijungti prie pompos ir suderinti laiką
 
+(insight)=
+
 ## Insight
 
-Tvarkyklė automatiškai koreguoja pompos laiką pagal telefoną. 
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-Insight pompa taip pat užfiksuoja atmintyje, kuriuo metu laikas pasikeitė ir nuo kurio (seno) laiko iki kurio (naujo) laiko. Taigi teisingas laikas AAPS yra nustatomas be laiko keitimo. 
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Tai gali įtakoti neatitikimus TDDs (paros suminė dozė). Bet tai neturėtų būti problema. 
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Taigi Insight pompos naudotojai neturėtų nerimauti dėl laiko juostų ir laiko keitimo. Yra tik viena išimtis: Insight pompa turi mažą vidinę bateriją, kurios energija skiriama laikui ir pan. kol Jūs keičiate "tikrąją" bateriją. Jeigu baterijos keitimas užtrunka, vidinė baterija išsikrauna, laikrodis nustatomas iš naujo, nes Jūsų bus paprašyta suvesti laiką ir datą vos tik įdėjus naują bateriją. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+
+(time-adjustment-daylight-savings-time-dst)=
 
 # Vasaros laiko nustatymas (VL)
 
-Priklausomai nuo pompos ir sensoriaus (NGJ) nustatymų, laiko pasikeitimas gali sukelti problemų. Pvz. su Combo, pompos istorija nuskaitoma dar kartą ir įrašai dubliuojasi. Taigi prašome pakeitimus daryti kol esate atsibudęs ir ne nakties metu.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Jeigu leidžiate bolusą naudodamiesi skaičiuokle, nenaudokite AAO ir AIO kol būsite įsitikinę, kad jie yra teisingi - geriausia būtų nenaudoti jų bent keletą valandų po VL persukimo.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+
+(accu-chek-combo)=
 
 ## Accu-Chek Combo
 

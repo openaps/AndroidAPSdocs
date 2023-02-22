@@ -36,7 +36,7 @@
 * You need to add a file named `PasswordReset` to the `/AAPS/extra` directory on your phones fileystem.
 * Restart AndroidAPS.
 * The new password will be the serial number of your active pump.
-* For Dash: The serial number is printed on the Pod.
+* For Dash: The serial number is always 4241.
 * For EROS it is also listed on the POD tab as "Sequence Number"
 
 ## Warning signal beneath BG
@@ -47,11 +47,11 @@ Beginning with Android 3.0, you might get a warning signal beneath your BG numbe
 
   ![Yellow BG warning](../images/bg_warn_yellow.png)
 
-For details see [AAPS screens page](../Getting-Started/Screenshots#bg-warning-sign)
+For details see [AAPS screens page](../Getting-Started/Screenshots.md#bg-warning-sign)
 
 
 ## Failure message: Data from different pump
 
    ![Failure message: Data from different pump](../images/Screen_DifferentPump.png)
 
-To resolve this issue go to [config builder](../Configuration/Config-Builder#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.
+To resolve this issue go to [config builder](../Configuration/Config-Builder.md#pump). Change pump to virtual pump and back to your actual pump. This will reset the pump state.

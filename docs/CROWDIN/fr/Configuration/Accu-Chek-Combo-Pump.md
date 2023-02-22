@@ -2,6 +2,8 @@
 
 **Ce logiciel est un système "Do it yourself" (faire soi-même), et ce n’est pas un produit fini destiné à la mise sur le marché. VOUS devez obligatoirement lire, apprendre et comprendre ce système, y compris la façon de l’utiliser. Ce logiciel ne fait pas toute la gestion de votre diabète pour vous, mais il peut améliorer votre diabète et votre qualité de vie si vous êtes prêt à y consacrer le temps nécessaire. Ne vous précipitez pas, mais laissez vous le temps d’apprendre. Attention, vous êtes le seul responsable de ce que vous faite avec ce système.**
 
+(hardware-requirements)=
+
 ## Configuration matérielle requise
 
 - Une pompe Roche Accu-Chek Combo (avec n’importe quel firmware, ils fonctionnent tous)
@@ -15,10 +17,10 @@
 
 ## Limitations
 
-- Les bolus étendus et les bolus mixtes ne sont pas pris en charge (voir [Glucides étendus](../Usage/Extended-Carbs.rst) à la place).
+- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 - Seulement un profil de basal est pris en charge.
 - Sélectionner un profil de basal autre que 'Basal1' sur la pompe, ou délivrer via la pompe des bolus 'carré' et 'mixte', interfère avec les DBT et force la boucle en mode 'AGB' pendant 6 heures car la boucle ne peut pas fonctionner en toute sécurité dans ces conditions.
-- Actuellement, il n'est pas possible de régler l'heure et la date de la pompe, donc [les changements d'heure](../Usage/Timezone-traveling#accu-chek-combo) doivent être effectués manuellement (vous pouvez désactiver la mise à jour automatique de l'heure du téléphone la veille au soir, puis changer l'heure le matin du téléphone et de la pompe pour éviter une alarme pendant la nuit).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling.md#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Actuellement, seuls les débits de basals de 0,05 à 10 U/h sont supportés. Ceci s'applique également lors de la modification du profil, par exemple, lorsqu'il augmente à 200%, le taux basal le plus élevé ne doit pas dépasser 5 U/h car il sera doublé. De même, en réduisant à 50%, le taux basal le plus bas doit être au moins 0,10 U/h.
 - Si la boucle demande l'annulation d'un DBT en cours, le Combo fixera un DBT de 90% ou 110% pendant 15 minutes à la place. C'est parce que l'annulation d'un DBT provoque une alerte sur la pompe qui cause beaucoup de vibrations.
 - Occasionnellement (tous les deux jours ou plus), AndroidAPS risque de ne pas annuler automatiquement une alerte 'TBR CANCELLED', donc l’utilisateur doit s’en occuper (en appuyant sur le bouton actualiser dans AndroidAPS afin de transférer l’alarme à AAPS, ou en confirmant l’alerte sur la pompe).
@@ -51,13 +53,13 @@
     - Activez le verrouillage des touches sur la pompe pour empêcher les bolus via la pompe, surtout si la pompe a déjà été utilisée et que vous aviez l'habitude d'utiliser les bolus rapides.
     - Définissez un délai d'affichage et de menu aux valeurs minimales respectivement de 5,5s et 5s. Cela permet à AAPS de récupérer plus rapidement de situations d’erreur et réduit la quantité de vibrations qui peuvent se produire pendant ces erreurs.
 
-![Capture d’écran de réglages du menu utilisateur](../images/combo/combo-menu-settings.png)
+![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
 
-![Capture d'écran des paramètres DBT](../images/combo/combo-tbr-settings.png)
+![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
 
-![Capture d'écran des paramètres de bolus](../images/combo/combo-bolus-settings.png)
+![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
 
-![Capture d'écran des paramètres de cartouche d'insuline](../images/combo/combo-insulin-settings.png)
+![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
 - Installez AndroidAPS comme décrit dans la page [wiki AndroidAPS](https://androidaps.readthedocs.io/)
 - Lisez bien le wiki pour comprendre comment configurer AndroidAPS.
@@ -69,35 +71,37 @@
 - Avant d'activer le plugin Combo dans AAPS, assurez-vous que votre profil est bien configuré et activé et que votre profil de basal est à jour car AAPS synchronisera le profil basal à la pompe. Ensuite, activez le plugin Combo. Appuyez sur le bouton *Actualiser* dans l'onglet Combo pour initialiser la pompe.
 - Pour vérifier votre configuration, avec la pompe **déconnectée**, utilisez AAPS pour définir un DBT de 500% pendant 15 min et faite un bolus. La pompe doit normalement avoir un DBT en cours et un bolus dans l'historique. AAPS doit aussi de son côté montrer le DBT actif et le bolus délivré.
 
-## Why pairing with the pump does not work with the app "ruffy"?
+(why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 
-Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
+## Pourquoi l'appairage avec la pompe ne fonctionne pas avec l'application "Ruffy"?
+
+There are serveral possible reasons. Try the following steps:
 
 1. Insérer une **pile neuve ou un accu complètement chargé** dans la pompe. Consultez la section "Considérations relatives à la pile" pour plus de détails. Assurez-vous que la pompe est très proche du smartphone.
 
-![Le Combo doit être proche du téléphone](../images/Combo_next_to_Phone.png)
+![Combo should be next to phone](../images/Combo_next_to_Phone.png)
 
 2. Désactivez ou supprimez tous les autres périphériques bluetooth afin qu'ils ne soient pas en mesure d'établir une connexion au téléphone pendant que l'appairage est en cours. Toute communication bluetooth parallèle ou demande de connexions peut perturber le processus d'appairage.
 
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
+3. Supprimez tous les appareils connectés dans le menu Bluetooth de la pompe : **RÉGLAGE BLUETOOTH / CONNEXION / SUPPR. APPAREIL** jusqu'à ce que **AUCUN APPAREIL LIÉ** soit affiché.
 
 4. Supprimer une pompe déjà connecté au téléphone via Bluetooth : dans Paramètres / Bluetooth, retirez l'appareil couplé "**SpiritCombo**"
 5. Assurez-vous que AAPS n'exécute pas la boucle en arrière-plan. Désactiver la boucle dans AAPS.
 6. Essayez d'utiliser la branche '**appairage**' du dépôt [MilosKozak/Ruffy](https://github.com/MilosKozak/ruffy/tree/pairing) pour établir la connexion 
 7. Maintenant, démarrez ruffy sur le téléphone. Vous pouvez appuyer sur Reset! et supprimez l'ancienne connexion. Puis appuyez sur **Connect!**.
 8. Dans le menu Bluetooth de la pompe, allez à **ADD DEVICE / ADD CONNECTION**. Appuyez sur **CONNECTER !** 
-    - The next three steps are timing-sensitive, so you might need to try different pauses/speed if pairing fails. Read the full sequence before trying it.
+    - Les trois étapes suivantes sont sensibles au timing, donc vous devrez essayer différentes pauses / vitesses si le jumelage échoue. Lisez la séquence complète avant de l'essayer.
 
-9. A présent, la pompe doit afficher le nom BT du téléphone à sélectionner pour l'appairage. Here it is importand to wait at least 5s before you hit the select button on Pump. Sinon, la Pompe n'enverra pas correctement la demande d'appairage au téléphone.
+9. A présent, la pompe doit afficher le nom BT du téléphone à sélectionner pour l'appairage. Ici, il est important d'attendre au moins 5s avant de cliquer sur le bouton de sélection sur la pompe. Sinon, la Pompe n'enverra pas correctement la demande d'appairage au téléphone.
     
-    - Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez faire le test avec 40s (paramètre d'origine). From experiance the time between pump is showing up in phone until select phone is around 5-10s. In many other cases pairing just times out without successfully pair. Later you should set it back to 5s, to meet AAPS Combo settings and speed up connections.
-    - If the pump does not show the phone as a pairing device at all, your phone's Bluetooth stack is probably not compatible with the pump. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. If possible, try another smartphone. You can find a list of already successfully used smartphones under \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
+    - Si le délai d'affichage de l'écran de la pompe Combo est défini sur 5s, vous pouvez faire le test avec 40s (paramètre d'origine). Par expérience la durée entre le moment où la pompe est affichée sur le téléphone et celui où le téléphone est sélectionné est d'environ 5-10s. Dans de nombreux autres cas, le couplage expire sans succès. Ultérieurement, vous devrez le redéfinir sur 5 s pour répondre aux paramètrage du combo dans AAPS et accélérer les connexions.
+    - Si la pompe n'affiche pas du tout le téléphone comme appareil de couplage, la puce Bluetooth de votre téléphone n'est probablement pas compatible avec la pompe. Vérifiez que vous exécutez une version de **LineageOS ≥ 14.1** ou **Android ≥ 8.1 (Oreo)**. Si possible, essayez un autre smartphone. Vous pouvez trouver la liste des téléphones déjà utilisés avec succès sous \[AAPS Phones\] (https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit#gid=698881435). 
 
-10. Sometimes the phone asks for a (typically 4 digit) bluetooth PIN number that is not related to the 10 digit PIN later shown on the pump. Usually, ruffy will set this PIN automatically, but due to timing issues, this does not always work. If a request for a Bluetooth pairing PIN appears on the phone before any code is shown on the pump, you need to enter **}gZ='GD?gj2r|B}>** as the PIN. This is easiest done if you copy this 16 character text into the clipboard before starting the pairing sequence and just paste it in the dialog at this step. See related [Github issue](https://github.com/MilosKozak/ruffy/issues/14) for details.
+10. Parfois, le téléphone demande un code PIN bluetooth (typiquement 4 chiffres) qui n'est pas lié au PIN à 10 chiffres affiché plus tard sur la pompe. Habituellement, Ruffy défini ce code PIN automatiquement, mais cela ne fonctionne pas toujours. Si une demande de code PIN d'appairage Bluetooth apparaît sur le téléphone avant qu'un code ne soit affiché sur la pompe, vous devez entrer **}gZ='GD? j2r|B}>** comme code PIN. C'est plus facile si vous copiez ce texte de 16 caractères dans le presse-papiers avant de commencer la séquence d'appairage et juste coller dans la boîte de dialogue à cette étape. Voir le [problème Github](https://github.com/MilosKozak/ruffy/issues/14) associé pour plus de détails.
 
-11. At next the pump should show up a 10 digit security code. And Ruffy shold show a screen to enter it. So enter the code in Ruffy and you should be ready to go.
-12. If pairing was not successful and you got a timeout on the pump, you will need to restart the process from scratch.
-13. If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
+11. Ensuite la pompe doit afficher un code de sécurité à 10 chiffres, et Ruffy affiche un écran pour le renseigner. Donc entrez le dans Ruffy et vous devriez être prêt.
+12. Si l'appairage a échoué et que vous avez obtenu un message hors délai sur la pompe, vous devrez redémarrer le processus de zéro.
+13. Si vous avez utilisé la branche 'appairage' pour construire l'application Ruffy, installez maintenant la version de version à partir de la branche 'combo' au-dessus de celle-ci. Assurez-vous que vous avez utilisé les mêmes clés lors de la signature des deux versions de l'application pour conserver tous les paramètres et les données, car elles contiennent aussi les propriétés de connexion.
 14. Redémarrer le téléphone.
 15. Maintenant, vous pouvez redémarrer la boucle AAPS.
 
@@ -105,8 +109,8 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 
 - Gardez à l'esprit qu'il ne s'agit pas d'un produit, en particulier au début, l'utilisateur doit surveiller et comprendre le système, ses limites et comment il peut échouer. Il est fortement conseillé de NE PAS utiliser ce système lorsque la personne n'est pas en mesure de bien le comprendre entièrement.
 - Lisez la documentation d'OpenAPS https://openaps.org pour comprendre l'algorithme de boucle sur lequel est basé AndroidAPS.
-- Read the online documentation to learn about and understand AndroidAPS https://androidaps.readthedocs.io/
-- Cette intégration utilise la même fonctionnalité que le lecteur fournit avec le Combo. Le lecteur permet de reproduire l'écran de la pompe et de transférer à la pompe les appuis sur les touches. La connexion à la pompe et la redirection des boutons est ce que fait l'application ruffy. A `scripter` component reads the screen and automates entering boluses, TBRs etc and making sure inputs are processed correctly. AAPS interagit ensuite avec l'automate pour appliquer les commandes de la boucle et pour administrer des bolus. Ce mode a quelques restrictions : il est relativement lent (mais suffisament rapide pour l'usage qu'on en fait), et quand on active un DBT ou un bolus, cela fait vibrer la pompe.
+- Lisez la documentation en ligne pour en savoir plus sur AndroidAPS https://androidaps.readthedocs.io/
+- Cette intégration utilise la même fonctionnalité que le lecteur fournit avec le Combo. Le lecteur permet de reproduire l'écran de la pompe et de transférer à la pompe les appuis sur les touches. La connexion à la pompe et la redirection des boutons est ce que fait l'application ruffy. Un `automate` lit les informations de l'écran et automatise la saisie des bolus, des DBTs, etc. et s'assure que les entrées sont traitées correctement. AAPS interagit ensuite avec l'automate pour appliquer les commandes de la boucle et pour administrer des bolus. Ce mode a quelques restrictions : il est relativement lent (mais suffisament rapide pour l'usage qu'on en fait), et quand on active un DBT ou un bolus, cela fait vibrer la pompe.
 - L'intégration de la Combo avec AndroidAPS est conçu en supposant que toutes les entrées sont faites via AndroidAPS. Les bolus entrés directement sur la pompe seront détectés par AAPS, mais cela peut prendre jusqu'à 20 min avant que AndroidAPS ne prenne connaissance d'un tel bolus. La lecture des bolus saisis directement sur la pompe est une fonction de sécurité mais n'est pas destinée à être utilisée régulièrement (la boucle doit également connaitre les glucides consommés qui ne peuvent pas être saisis sur la pompe, ce qui est une autre raison pour laquelle toutes les entrées doivent être faites dans AndroidAPS). 
 - Ne faites pas ou n'annulez pas de DBT sur la pompe. La boucle assure le contrôle des DBT et ne peut pas fonctionner de manière fiable autrement, car il n'est pas possible de déterminer l'heure exacte du début d'un DBT qui a été défini par l'utilisateur sur la pompe.
 - Le profil 1 de la pompe pour les débits de basal est lu au démarrage de l'application et est mis à jour par AAPS. Le débit de basal ne doit pas être modifié manuellement sur la pompe, mais il sera détecté et corrigé en tant que mesure de sécurité (il ne faut en revanche pas compter sur ces mesures de sécurité par défaut, elles sont simplement destinées à détecter des modifications non intentionnelles effectuées sur la pompe).

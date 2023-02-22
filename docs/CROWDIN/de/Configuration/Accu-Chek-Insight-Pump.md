@@ -50,11 +50,13 @@ Hinweis: AAPS schreibt Daten immer in das **erstes Basalratenprofil in der Pumpe
 
 Hinweis: Es besteht keine permanente Verbindung zwischen Pumpe und Smartphone. Eine Verbindung wird nur dann hergestellt, wenn es erforderlich ist (z.B. Setzen einer temporären Basalrate, Bolusabgabe, Auslesen der Pumpenhistorie...). Sonst würden die Akkus des Smartphones und die Batterien der Pumpe zu schnell leer.
 
+(settings-in-aaps)=
+
 ## Einstellungen in AndroidAPS
 
 **Hinweis: Es ist ab AAPS Version 2.7 nun wieder möglich, 'Verwende absolute statt prozentuale Basalwerte beim Upload zu Nightscout' mit der Insight zu aktivieren, um Autotune nutzen zu können.** Dies gilt auch dann, wenn die Synchronisation mit Nightscout aktiviert ist. (Gehe dazu in AAPS auf [Einstellungen > Nightscout-Client > Erweiterte Einstellungen](../Configuration/Preferences#erweiterte-einstellungen-nightscout-client).)
 
-![Screenshot of Insight Settings](../images/Insight_settings.png)
+![Screenshot der Insight Einstellungen](../images/Insight_settings.png)
 
 In den Insight-Einstellungen in AndroidAPS kannst Du die folgenden Optionen aktivieren:
 
@@ -112,6 +114,8 @@ Stelle die Alarme in der Pumpe wie folgt ein:
 
 So werden alle Alarme der Pumpe nur noch ohne Ton abgegeben, so dass AndroidAPS entscheiden kann, ob ein Alarm für Dich relevant ist. Wenn AndroidAPS einen Alarm nicht anerkennt, wird dessen Lautstärke steigen (zuerst Piepton, dann Vibration).
 
+(vibration)=
+
 ### Vibration
 
 Abhängig von der Version der Pumpen-Firmware kann die Insight jedes Mal kurz vibrieren, wenn ein Bolus abgegeben wird (z. B. Abgabe SMB oder TBR-Emulation mit erweitertem Bolus).
@@ -128,6 +132,8 @@ Die Batterielebensdauer bei der Insight im Loop liegt zwischen 10 und 14 Tagen, 
 
 Die Innenpumpe hat eine kleine interne Batterie, um wichtige Funktionen wie die Uhr am Laufen zu halten, während Du die herausnehmbare Batterie wechselst. Wenn der Batteriewechsel zu lange dauert, kann diese interne Batterie leer werden, die Uhr wird zurückgesetzt und Du wirst gebeten, Zeit und Datum nach dem Einlegen der neuen Batterie neu einzugeben. Falls dies geschieht, werden alle Einträge in AndroidAPS, die vor dem Batteriewechsel liegen, nicht mehr in Berechnungen aufgenommen, da die richtige Zeit nicht korrekt erkannt werden kann.
 
+(insight-specific-errors)=
+
 ## Insight spezifische Fehler
 
 ### Verzögerter Bolus
@@ -138,7 +144,7 @@ Bitte verwende nicht mehrere verzögerte Boli gleichzeitig, da dies zu Fehlern f
 
 Manchmal kann es passieren, dass die Insight Pumpe während des Verbindungsaufbaus nicht antwortet. In diesem Fall wird AAPS die folgende Nachricht anzeigen: "Zeitüberschreitung während des Handshakes - Bluetooth zurücksetzen".
 
-![Bluetooth zurücksetzen](../images/Insight_ResetBT.png)
+![Insight Reset Bluetooth](../images/Insight_ResetBT.png)
 
 Schalte dann Bluetooth auf Pumpe und Smartphone für etwa 10 Sekunden aus und schalte es dann wieder ein.
 

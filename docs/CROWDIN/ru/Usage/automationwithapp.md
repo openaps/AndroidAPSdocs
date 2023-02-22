@@ -1,6 +1,6 @@
 # Автоматизация при помощи стороннего приложения Android Automate
 
-**Эта статья была написана перед появлением AndroidAPS версии 2.5. В AndroidAPS 2.5. теперь есть [ модуль автоматизации ](./Automation.rst). Таким образом, это описание может быть полезно, но только для опытных пользователей.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Так как AndroidAPS-гибридная замкнутая система замкнутого цикла, необходимо некоторое взаимодействие с пользователем (например, подсказки алгоритму, что вы гуляли, ожидаете приема пищи, лежите на диване ...). Часто вводимые вручную пользовательские данные можно автоматизировать с помощью таких внешних инструментов, как Automate или IFTTT, что расширяет функциональность AndroidAPS.
 
@@ -32,7 +32,7 @@
 
 В AndroidAPS коснитесь 3-точечного меню в верхней правой части экране и перейдите в меню Параметры > NSClient > Дополнительные параметры > Снимите галочки с 'Только загрузка в NS (без синхронизации)' и 'Без загрузки в NS'.
 
-Будьте готовы к возможным [проблемам с безопасностью](../Installing-AndroidAPS/Nightscout#security-considerations) и с осторожностью применяйте для [помпы Insight](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps) .
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Настройки загрузок Nightscout](../images/automate-aaps2.jpg)
 

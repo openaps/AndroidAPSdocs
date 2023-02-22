@@ -17,19 +17,19 @@
  <td>AMA</td>
  <td>advance meal assist - zaawansowany algorytm obsługi węglowodanów</td>
  <td>MA/SMB</td>
- <td><a href="../Usage/Open-APS-features.html#advanced-meal-assist-ama">Wiki - AMA</a></td>
+ <td><a href="../Usage/Open-APS-features#advanced-meal-assist-ama">Wiki - AMA</a></td>
 <tr>
  <td>Android auto</td>
  <td>notyfikacje AAPS wyświetlana jest w samochodzie na kompatybilnych deskach rozdzielczych oraz systemach informacyjno-rozrywkowch</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Wiki - android auto</a></td>
+ <td><a href="../Usage/Android-auto.md">Wiki - android auto</a></td>
 </tr>
 </tr>
 <tr>
  <td>APK</td>
  <td>plik instalacyjny oprogramowania (pakiet systemu Android)</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Building-APK.html">Wiki - budowanie APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Building-APK.md">Wiki - budowanie APK</a></td>
 </tr>
 <tr>
  <td>Autosens</td>
@@ -47,7 +47,7 @@
  <td>BAT</td>
  <td>lampka stanu niski poziom baterii na ekranie głównym</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.md"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>BG</td>
@@ -65,7 +65,7 @@
 <td>Źródła danych o poziomie cukru we krwi (BG) - CGM/FGM</td>
  <td>źródło stężenia glukozy we krwi - miejsce z którego pochodzą dane o stężeniu glukozy we krwi</td>
  <td>CGM / FGM</td>
- <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - źródło BG</a></td>
+ <td><a href="../Configuration/Config-Builder#bg-source">Wiki - źródło BG</a></td>
 </tr>
 <tr>
  <td>Blukon Nightreader</td>
@@ -89,7 +89,7 @@
  <td>CAN</td>
  <td>status light overdue canula change on homescreen</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.md"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>CGM</td>
@@ -101,7 +101,7 @@
  <td>Zamknięta pętla/Closed Loop</td>
  <td>closed-loop systems make automatic adjustments to basal delivery, without needing user-approval, based on an algorithm</td>
  <td>Open loop</td>
- <td><a href="../Configuration/Config-Builder.html#closed-loop">Wiki closed loop</a></td>
+ <td><a href="../Configuration/Config-Builder#closed-loop">Wiki closed loop</a></td>
 </tr>
 <tr>
  <td>COB</td>
@@ -113,31 +113,31 @@
  <td>DIA</td>
  <td>duration of insulin action</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder#insulin">Wiki insulin types</a><br><a href="http://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td>DST</td>
  <td>daylight savings time</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Timezone-traveling.html#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
+ <td><a href="../Usage/Timezone-traveling#time-adjustment-daylight-savings-time-dst">Wiki DST</a></td>
 </tr>
 <tr>
  <td>eCarbs</td>
  <td>"extended carbs" - carbs split up over serveral hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.co.at/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td>FGM</td>
  <td>flash glucose monitor (Freestyle Libre)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/BG-Source.html?highlight=blukon#bg-source">Wiki - źródło BG</a></td>
+ <td><a href="../Configuration/BG-Source.md?highlight=blukon#bg-source">Wiki - źródło BG</a></td>
 </tr>
 <tr>
  <td>git</td>
  <td>version-control system for tracking changes in computer files and coordinating work on those files<br>-> neccessary for APK updates</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Update-to-new-version.html#master-branch">Wiki - update APK</a></td>
+ <td><a href="../Installing-AndroidAPS/Update-to-new-version#master-branch">Wiki - update APK</a></td>
 </tr>
 <tr>
  <td>Github</td>
@@ -178,26 +178,26 @@
 <tr>
  <td>LGS</td>
  <td>Low Glucose Suspend<br>AAPS will reduce basal if blood glucose is dropping. But if blood glucose is rising then it will only increase basal if the IOB is negative (from a previous LGS), otherwise basal rates will remain the same as your selected profile. You may temporarily experience spikes following treated hypos without the ability to increase basal on the rebound.</td>
- <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
+ <td><a href="../Usage/Objectives#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">objective 6</a></td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td>LineageOS</td>
  <td>free and open-source operating system for smartphones etc.<br>alternative OS for smartphones not running Android 8.1 (Oreo)<br>(when using Accu-Chek Combo)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Accu-Chek-Combo-Pump.html#hardware-requirements">Wiki - Combo pump</a></td>
+ <td><a href="../Configuration/Accu-Chek-Combo-Pump#hardware-requirements">Wiki - Combo pump</a></td>
 </tr>
 <tr>
  <td>Log files</td>
  <td>record of all AAPS actions (useful for trubbleshooting and debugging)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - log files</a></td>
+ <td><a href="../Usage/Accessing-logfiles#accessing-logfiles">Wiki - log files</a></td>
 </tr>
 <tr>
  <td>maxIOB</td>
  <td>safety feature - maximum total IOB AAPS can't go over</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.md#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>MiaoMiao</td>
@@ -209,7 +209,7 @@
  <td>min_5m_carbimpact</td>
  <td>saftey feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your bloods reactions</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder#absorption-settings">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Nightscout</td>
@@ -221,7 +221,7 @@
  <td>NS Client</td>
  <td>part of AAPS to connect to your Nightscout site</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td>Nightscout Reporter</td>
@@ -233,7 +233,7 @@
  <td>Cele (samouczek)</td>
  <td>learning program within AAPS guiding you step by step from open to closed loop</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Objectives.html">Wiki - objectives</a></td>
+ <td><a href="../Usage/Objectives.md">Wiki - objectives</a></td>
 </tr>
 <tr>
  <td>OpenAPS</td>
@@ -245,49 +245,49 @@
  <td>Otwarta pętla/Open Loop</td>
  <td>system will suggest recommended adjustments which have to be performed manually on the pump</td>
  <td>Zamknięta pętla/Closed Loop</td>
- <td><a href="../Configuration/Config-Builder.html#open-loop">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder#open-loop">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>Oref0 / Oref1</td>
  <td>sensitivity detection<br>"reference design implementation version 0/1" - the key algorithm behind OpenAPS</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Sensitivity-detection-and-COB.html#sensitivity-detection">Wiki - sensitivity detection</a></td>
+ <td><a href="../Configuration/Sensitivity-detection-and-COB#sensitivity-detection">Wiki - sensitivity detection</a></td>
 </tr>
 <tr>
  <td>Peak time</td>
  <td>time of maximum effect of insulin given</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - config builder</a></td>
+ <td><a href="../Configuration/Config-Builder#insulin">Wiki - config builder</a></td>
 </tr>
 <tr>
  <td>PH</td>
  <td>pump history (entry in treatments tab)</td>
  <td>&nbsp;</td>
- <td><a href="../Getting-Started/Screenshots.html#treatment">Screenshots</a></td>
+ <td><a href="../Getting-Started/Screenshots#treatment">Screenshots</a></td>
 </tr>
 <tr>
  <td>Prognozy/Predictions</td>
  <td>preditions for BG in the future based on different calculations</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#overview-tab">Wiki - predition lines</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes#overview-tab">Wiki - predition lines</a></td>
 </tr>
 <tr>
  <td>Profil</td>
  <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>can be defined locally or through Nightscout</td>
  <td>Nightscout</td>
- <td><a href="../Configuration/Config-Builder.html#profile">Wiki - profile</a></td>
+ <td><a href="../Configuration/Config-Builder#profile">Wiki - profile</a></td>
 </tr>
 <tr>
  <td>Zmiana profilu</td>
  <td>(temporary) change of profile used or percentual increase/decrease</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Profiles.html">Wiki - profile switch</a></td>
+ <td><a href="../Usage/Profiles.md">Wiki - profile switch</a></td>
 </tr>
 <tr>
  <td>RES</td>
  <td>status light overdue reservoir change on homescreen</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.md"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>RileyLink</td>
@@ -305,7 +305,7 @@
  <td>SEN</td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.html"> Zrzuty ekranu </a></td>
+ <td><a href="../Configuration/Preferences#overview">Preferencje</a><br> <a href="../Getting-Started/Screenshots.md"> Zrzuty ekranu </a></td>
 </tr>
 <tr>
  <td>Sensivity detection</td>
@@ -317,13 +317,13 @@
  <td>Sensor noise</td>
  <td>unstable CGM readings leading to "jumping" values</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.html#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
+ <td><a href="../Usage/Smoothing-Blood-Glucose-Data-in-xDrip#smoothing-blood-glucose-data">Wiki - sensor noise</a></td>
 </tr>
 <tr>
  <td>SMB</td>
  <td>super micro bolus<br>advanced feature for faster BG adjustment</td>
  <td>UAM</td>
- <td><a href="../Usage/Open-APS-features.html#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Super bolus</td>
@@ -353,13 +353,13 @@
  <td>TT</td>
  <td>temporary target<br>temporary increase/decrease of BG target (range)</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/temptarget.html#temp-targets">Wiki - temp targets</a></td>
+ <td><a href="../Usage/temptarget#temp-targets">Wiki - temp targets</a></td>
 </tr>
 <tr>
  <td>UAM</td>
  <td>unannounced meals - detection of significant increase in glucose levels due to meals, adrenaline or other influences and attempt to adjust this with SMB</td>
  <td>SMB</td>
- <td><a href="../Usage/Open-APS-features.html?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
+ <td><a href="../Usage/Open-APS-features.md?highlight=uam#super-micro-bolus-smb">Wiki - SMB</a></td>
 </tr>
 <tr>
  <td>Virtual pump</td>
@@ -371,7 +371,7 @@
  <td>Wallpaper</td>
  <td>AndroidAPS background image</td>
  <td></td>
- <td><a href="../Getting-Started/Phones.html#phone-background">see phones page</a></td>
+ <td><a href="../Getting-Started/Phones#phone-background">see phones page</a></td>
 </tr>
 <tr>
  <td>xDrip / xDrip+</td>

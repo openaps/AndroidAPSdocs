@@ -1,27 +1,33 @@
+(smoothing-blood-glucose-data)=
+
 # Kan şekeri verilerini yumuşatma
 
-KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yüksek veya düşük KŞ'ne sebep olabilir. Bu nedenle, sorun çözülene kadar döngüyü devre dışı bırakmak önemlidir. CGM'nize bağlı olarak, bu tür sorunlar CGM'in yapılandırmasından veya sensör/set sorunlarından kaynaklanabilir. Bunu çözmek için CGM sensörünüzü değiştirmeniz gerekebilir. 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir' gibi bazı özellikler yalnızca iyi filtrelemeli bir KŞ kaynağıyla kullanılabilir.
+KŞ verileri atlamalı/gürültülü ise, AAPS insülini yanlış dozlayarak yüksek veya düşük KŞ'ne sebep olabilir. Bu nedenle, sorun çözülene kadar döngüyü devre dışı bırakmak önemlidir. CGM'nize bağlı olarak, bu tür sorunlar CGM'in yapılandırmasından veya sensör/set sorunlarından kaynaklanabilir. Bunu çözmek için CGM sensörünüzü değiştirmeniz gerekebilir.
+
+Some CGM systems have internal algorithms to detect the noise level in the readings and AndroidAPS can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
 
 ## Dexcom sensörleri
 
 ### Kendi Dexcom Uygulamanızı Oluşturun (BYODA)
 
-[BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) kullanırken KŞ verileriniz sorunsuz ve tutarlıdır. Ayrıca Dexcom'un geri-yumuşatma özelliğinden yararlanabilirsiniz. SMB kullanımında herhangi bir kısıtlama yoktur.
+When using [BYODA](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
-### Dexcom G5 veya G6 ile xDrip+
+### xDrip+ with Dexcom G6 or Dexcom ONE
 
-Düzgün veri, yalnızca xDrip+ G5 'OB1 toplayıcısı yerel modda' kullanıyorsanız iletilir.
+Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
 
-### Dexcom G5 Uygulaması (yamalı)
+### Dexcom G6 or Dexcom ONE with xDrip+ Companion Mode
 
-Dexcom G5 Uygulamasını (yamalı) kullanırken BG verileriniz sorunsuz ve tutarlıdır. SMB kullanımında herhangi bir kısıtlama yoktur.
+The noise-level data is not shared with AAPS using this method. Therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled.
 
 ## Freestyle Libre sensörleri
 
-### Freestyle Libre ile xDrip+
+### xDrip+ with FreeStyle Libre
 
-Şimdiye kadar Freestyle Libre değerleri için veri kaynağınız olarak xDrip+ kullanırken, KŞ değerleri yeterince düzgün olmadığından SMB içinde 'SMB'yi her zaman etkinleştir' ve 'Karbonhidrattan sonra SMB'yi etkinleştir'i aktive edemezsiniz. Bunun dışında, verilerdeki gürültüyü azaltmaya yardımcı olmak için yapabileceğiniz birkaç şey var.
+None of the FreeStyle Libre systems (FSL1, FSL2, or FSL3) broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled for all setups using the FreeStyle Libre.
 
-**Pürüzsüz Sensör Gürültüsü.** xDrip Ayarları > xDrip Ekran Ayarları'nda, smooth sensor noise "Pürüzsüz Sensör Gürültüsü"nün açık olduğundan emin olun. Bu, gürültülü verilerde yumuşatma uygulamaya çalışır.
+In addition, many people have reported the FreeStyle Libre often produces noisy data. In xDrip+ there are a few options to help with this:
 
-**Pürüzsüz Sensör Gürültüsü (Ultra Duyarlı).** xDrip+'ta hala parazitli veriler görüyorsanız, Pürüzsüz Sensör Gürültüsü (Ultra Duyarlı) ayarını kullanarak daha agresif yumuşatma uygulayabilirsiniz. Bu, algılanan gürültünün çok düşük seviyelerinde bile yumuşatma uygulamaya çalışacaktır. Bunu yapmak için önce xDrip+'ta [mühendislik modunu](Enabling-Engineering-Mode-in-xDrip.md) etkinleştirin. Ardından Ayarlar > xDrip+ Ekran Ayarları'na gidin ve Pürüzsüz Sensör Gürültüsü'nü (Ultra Duyarlı) açın.
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).

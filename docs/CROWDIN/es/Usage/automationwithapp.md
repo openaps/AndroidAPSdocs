@@ -1,6 +1,6 @@
 # Automatización con la aplicación Automate de Android de terceros
 
-**Este artículo se ha escrito antes de AndroidAPS versión 2.5. Hay un plugin de automatización [en AndroidAPS](./Automation.rst) mismo con AndroidAPS versión 2.5. Para algunos, esto puede ser todavía útil, pero sólo debe ser utilizado por usuarios avanzados.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
 Como AndroidAPS es un sistema de lazo cerrado híbrido, es necesario una interacción de usuario (por ejemplo, decir al lazo que estás caminando, comiendo pronto, tirado en el sofá...). Las entradas de usuario manual frecuentes se pueden automatizar a través de herramientas externas como Automate o IFTTT para ampliar las funcionalidades recientes de AndroidAPS.
 
@@ -32,7 +32,7 @@ In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preference
 
 In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](../Installing-AndroidAPS/Nightscout.md#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
 
 ![Nightscout download preferences](../images/automate-aaps2.jpg)
 

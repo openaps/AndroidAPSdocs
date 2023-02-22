@@ -41,6 +41,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Activeer vertraagde bolussen op de pomp
 
+(default-password)=
+
 ### Standaard wachtwoord
 
 * Voor DanaRS met firmware v1 en v2 is het standaard wachtwoord 1234.
@@ -49,6 +51,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(change-password-on-pump)=
 
 ## Wachtwoord wijzigen op de pomp
 
@@ -87,6 +91,8 @@
     
     ![DanaRS Afsluiten](../images/DanaRSPW_07_Exit.png)
 
+(dana-rs-specific-errors)=
+
 ## Foutmeldingen specifiek voor de DanaRS
 
 ### Foutmelding tijdens toedienen insuline
@@ -97,14 +103,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * In de meeste gevallen krijg je deze foutmelding omdat de communicatie werd verbroken, en is gewoon de juiste hoeveelheid insuline gegeven. Controleer dit eerst voordat je een eventuele nieuwe bolus geeft.
 * Controleer in de geschiedenis van je pomp (op de pomp zelf, of in de app op het Dana tabblad > Historiek > Bolussen > VERNIEUW) of de juiste bolus werd gegeven.
-* Als je wilt verwijder je de foutmelding uit het [behandelingen tabblad](../Getting-Started/Screenshots#koolhydraten-correctie).
+* Delete error entry in [treatments tab](../Getting-Started/Screenshots.md#carb-correction) if you wish.
 * De werkelijke hoeveelheid insuline wordt uitgelezen uit de pomp en opgeslagen in de app tijdens de eerstvolgende keer dat ze verbinding maken. Om handmatig te laten verbinden, kun je op het Bluetooth-icoon drukken op het Dana tabblad. Of gewoon afwachten tot de app vanzelf weer verbinding maakt met de pomp.
 
 ## Een andere telefoon gebruiken
 
 When switching to a new phone the following steps are necessary:
 
-* [Exporteer instellingen](../Usage/ExportImportSettings#export-settings) op je oude telefoon
+* [Export settings](../Usage/ExportImportSettings.md#export-settings) on your old phone
 * Transfer settings from old to new phone
 
 ### DanaRS v1
@@ -112,7 +118,7 @@ When switching to a new phone the following steps are necessary:
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* [Import settings](../Usage/ExportImportSettings.md#import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
@@ -121,4 +127,4 @@ When switching to a new phone the following steps are necessary:
 
 ## Wisselen van tijdzone met de DanaRS
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling.md#danarv2-danars).
