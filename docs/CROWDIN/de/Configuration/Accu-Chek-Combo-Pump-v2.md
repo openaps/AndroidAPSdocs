@@ -34,11 +34,11 @@ Außerdem, wenn Du von dem alten Treiber migrierst, beachte, dass der neue Treib
 
 ## Telefon einrichten
 
-Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet wird. AAPS erkennt automatisch, wenn es diesen Optimierungen unterliegt und fragt in seiner Benutzeroberfläche an, dass diese abgeschaltet werden. Aber auf modernen Android-Telefonen ist Bluetooth _selbst_ eine App (eine System-App). Und im Allgemeinen läuft die "Bluetooth app" mit _eingeschalteter Batterie Optimierung im Standard_. Infolgedessen kann Bluetooth es ablehnen, zu reagieren, wenn das Telefon darauf abzielt, Strom zu sparen, da es die Bluetooth-App einfach beendet. Das bedeutet, dass in den Einstellungen der Bluetooth-System-App auch die Batterieoptimierungen ausgeschaltet werden müssen. Unglücklicherweise kann man feststellen, dass die Bluetooth-System-App sich zwischen den Telefonen unterscheidet. In unverändertem Android gehe zu Einstellungen -> Apps -> Alle N-Apps anzeigen (N = Anzahl der Apps auf Ihrem Handy). Öffnen Sie dann das Menü in der oberen rechten Ecke, klicken Sie auf "System anzeigen" oder "System-Apps anzeigen" oder "Alle Apps". Jetzt in der erweiterten Liste der Apps nach einer "Bluetooth"-App suchen. Select it, and on its "App info" UI, tap on "Battery". There, disable battery optimizations (sometimes called "battery usage").
+Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet wird. AAPS erkennt automatisch, wenn es diesen Optimierungen unterliegt und fragt in seiner Benutzeroberfläche an, dass diese abgeschaltet werden. Aber auf modernen Android-Telefonen ist Bluetooth _selbst_ eine App (eine System-App). Und im Allgemeinen läuft die "Bluetooth app" mit _eingeschalteter Batterie Optimierung im Standard_. Infolgedessen kann Bluetooth es ablehnen, zu reagieren, wenn das Telefon darauf abzielt, Strom zu sparen, da es die Bluetooth-App einfach beendet. Das bedeutet, dass in den Einstellungen der Bluetooth-System-App auch die Batterieoptimierungen ausgeschaltet werden müssen. Unglücklicherweise kann man feststellen, dass die Bluetooth-System-App sich zwischen den Telefonen unterscheidet. In unverändertem Android gehe zu Einstellungen -> Apps -> Alle N-Apps anzeigen (N = Anzahl der Apps auf Ihrem Handy). Öffnen Sie dann das Menü in der oberen rechten Ecke, klicken Sie auf "System anzeigen" oder "System-Apps anzeigen" oder "Alle Apps". Jetzt in der erweiterten Liste der Apps nach einer "Bluetooth"-App suchen. Wähle es aus und tippe auf "App-Informationen" und dann auf "Batterie". Dort deaktiviere die Batterieoptimierung (manchmal auch als "Batterieverbrauch" bezeichnet) .
 
-## Combo setup
+## Combo Setup
 
-* Configure the pump using the Accu-Chek 360 Configuration Software. Falls du die Software nicht hast wende dich an die Accu-Chek Hotline. Sie senden registrierten Benutzern normalerweise eine CD mit der 360º Konfigurations-Software und einen SmartPix USB-Infrarotempfänger. (Das Realtyme Gerät funktioniert auch falls du dieses besitzt.)
+* Konfiguriere die Pumpe mit der Accu-Chek 360 Konfigurationssoftware. Falls du die Software nicht hast wende dich an die Accu-Chek Hotline. Sie senden registrierten Benutzern normalerweise eine CD mit der 360º Konfigurations-Software und einen SmartPix USB-Infrarotempfänger. (Das Realtyme Gerät funktioniert auch falls du dieses besitzt.)
 
   - **Erforderliche Einstellungen** (in Screenshots grün markiert):
 
@@ -54,7 +54,7 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
      * Stelle den Restmenge bei Alarm “Amp. fast leer” ein, wie es für dich passt.
      * Konfiguriere eine maximale Bolusmenge passend zu deiner Therapie, um dich gegen Fehler in der Software zu schützen.
      * Lege gleichermaßen die maximale Dauer einer temporären Basalrate als Sicherheitsmaßnahme fest. Erlaube mindestens 3 Stunden, da die Option die Pumpe für 3 Stunden abzulegen, 0% über 3 Stunden setzt.
-     * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
+     * Aktiviere die Tastensperre an der Pumpe, um die Bolusabgabe über die Pumpe zu verhindern, insbesondere wenn die Pumpe vorher schon verwendet wurde und die schnelle Bolusabgabe eingerichtet war.
      * Stelle die Anzeigedauer und das Menü-Timeout auf das Minimum (5,5 bzw. 5). Das erlaubt AndroidAPS in Fehlerzuständen schneller wieder fortzusetzen und verringert die Anzahl an Vibrationen die während so einem Fehler auftreten können.
 
   ![Screenshot der Einstellungen des Benutzer-Menüs](../images/combo/combo-menu-settings.png)
@@ -65,13 +65,13 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
   ![Screenshot der Insulinreservoir Einstellungen](../images/combo/combo-insulin-settings.png)
 
-## Activating the driver and pairing it with the Combo
+## Aktivierung des Treibers und Kopplung mit der Combo
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* Wähle den Treiber "Accu-Chek Combo" im [Config-Builder](../Configuration/Config-Builder) aus. **Wichtig**: Es ist auch der alte Treiber, genannt "Accu-Chek Combo (Ruffy)", in dieser Liste. Wähle diesen _nicht_ aus.
 
   ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
 
-* Tap the cog-wheel to open the driver settings.
+* Tippe auf das Zahnrad, um die Treibereinstellungen zu öffnen.
 
 * In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
 
@@ -101,14 +101,14 @@ Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet 
 
 * On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
 
-## Notes about pairing
+## Notizen zum Pairing
 
 The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
 
 The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Accu-Chek Combo tab Inhalt
 
 The tab shows the following information when a pump was paired (items are listed from top to bottom):
 
@@ -140,7 +140,7 @@ At the very bottom, there is the "Refresh" button. This triggers an immediate pu
 
 ## Einstellungen
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+Diese Einstellungen sind für den Combotreiber verfügbar (Elemente sind von oben nach unten aufgeführt):
 
 ![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
 
@@ -154,7 +154,7 @@ These preferences are available for the combo driver (items are listed from top 
 Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Automatische Erkennung und automatische Eingabe von Akku- und Reservoir-Änderungen
 
 The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
 
@@ -163,7 +163,7 @@ This only works if the battery and reservoir are replaced when these levels are 
 These autodetections can be turned off in the Preferences UI.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Alarme (Warnungen und Fehler) und wie sie behandelt werden
 
 The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
 
@@ -181,7 +181,7 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 
 **IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
 
-## Things to be careful about when using the Combo
+## Dinge, auf die Du bei der Verwendung der Combo achten solltest
 
 * Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. Es wird dringend empfohlen, dieses System NICHT zu verwenden, wenn die Person, die es benutzt, nicht in der Lage ist, es vollständig zu verstehen.
 * Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
@@ -189,7 +189,7 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 * Don't press any buttons on the pump while AAPS communicates with the pump (the Bluetooth logo is shown on the pump while it is connected to AAPS). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](combov2-before-you-begin)).
 * Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](combov2-alerts) for a more detailed explanation why.
 
-## Checklist for when no connection can be established with the Combo
+## Checkliste für den Fall, dass keine Verbindung mit der Combo hergestellt werden kann
 
 The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
 
