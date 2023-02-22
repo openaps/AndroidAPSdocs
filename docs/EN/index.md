@@ -74,7 +74,7 @@ Safety first <./Getting-Started/Safety-first.md>
 
 What is a closed loop system <./Getting-Started/ClosedLoop.md>
 
-What is a closed loop system with AAPS <./Getting-Started/WhatisAAPS.md>
+What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
 
 Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
@@ -96,21 +96,21 @@ Module <./Module/module.md>
 ```{toctree}
 :caption: How to Install AAPS
 
-Building the APK <./Installing-AAPS/Building-APK.md>
+Building the APK <./Installing-AndroidAPS/Building-APK.md>
 
-Update to a new version or branch <./Installing-AAPS/Update-to-new-version.md>
+Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Hints and Checks after update to AAPS 3.0<./Installing-AAPS/update3_0.md>
+Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AAPS/update2_7.md>
+Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
-Install git <./Installing-AAPS/git-install.md>
+Install git <./Installing-AndroidAPS/git-install.md>
 
-Troubleshooting Android Studio <./Installing-AAPS/troubleshooting_androidstudio.md>
+Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
 
-Release notes <./Installing-AAPS/Releasenotes.md>
+Release notes <./Installing-AndroidAPS/Releasenotes.md>
 
-Dev branch <./Installing-AAPS/Dev_branch.md>
+Dev branch <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
@@ -127,7 +127,7 @@ Pump choices <./Getting-Started/Pump-Choices.md>
 
 Phones <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AAPS/Nightscout.md>
+Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
 
 Smartwatch  <./Hardware/Smartwatch.md>
 
@@ -236,7 +236,7 @@ Docs updates & changes <./Getting-Started/WikiUpdate.md>
 ```{toctree}
 :caption: For Clinicians
 
-For Clinicians <./Resources/clinician-guide-to-AAPS.md>
+For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
 ```
 
 ```{toctree}
