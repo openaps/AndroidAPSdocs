@@ -78,6 +78,8 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 ## Autotune settings
 
+(autotune-plugin-settings)=
+
 ### Autotune plugin settings
 
 ![Autotune default screen](../images/Autotune/Autotune_11.png)
@@ -100,6 +102,8 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
 ## Advanced feature
 
+(circadian-ic-or-isf-profile)=
+
 ### Circadian IC or ISF profile
 
 - If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadiant IC/ISF"
@@ -112,11 +116,13 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
 
   
 
+(run-autotune-with-an-automation-rule)=
+
 ## Run Autotune with an automation rule
 
 First step is to define correct trigger for an automation rule with Autotune:
 
-Note: for more information on how to set an automation rule, see [here](./Automation.rst).
+Note: for more information on how to set an automation rule, see [here](./Automation.md).
 
 - You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
 

@@ -160,6 +160,8 @@ Extended carbs <./Usage/Extended-Carbs.md>
 
 Automation <./Usage/Automation.md>
 
+Autotune (dev only) <./Usage/autotune.md>
+
 Careportal (discontinued) <./Usage/CPbefore26.md>
 
 Open Humans Uploader <./Configuration/OpenHumans.md>
