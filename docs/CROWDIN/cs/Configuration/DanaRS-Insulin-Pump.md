@@ -73,7 +73,7 @@
 
 * Stiskněte OK pro zadání starého hesla.
 
-* Zadejte **staré heslo** (Výchozí heslo viz [nahoře](#default-password)) a stiskněte tlačítko OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Zadejte staré heslo](../images/DanaRSPW_04_11PWenter.png)
 

@@ -73,7 +73,7 @@
 
 * Нажмите OK, чтобы ввести старый пароль.
 
-* Введите **старый пароль** (пароль по умолчанию см [выше](#default-password)) и нажмите OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![Ввод старого пароля](../images/DanaRSPW_04_11PWenter.png)
 

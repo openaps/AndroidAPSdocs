@@ -293,7 +293,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* Чтобы подать определенное количество инсулина без использования [калькулятора болюса ](#bolus-wizard).
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * Если не хотите подавать болюс с помпы, а только отметить количество инсулина (например, поданного шприц-ручкой), отметьте соответствующий флажок.
 
@@ -310,7 +310,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Калькулятор
 
-* Смотрите раздел мастер болюса Bolus Wizard [ниже](#bolus-wizard)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### Калибровки
 
@@ -403,6 +403,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * Closed loop will automatically be stopped and switched to open loop mode for the time running extended bolus.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### Портал терапии-раздел N
 
 * Displays information on
@@ -427,7 +429,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Портал терапии-раздел О
 
-* Контроль ГК, заполнение инфузионного набора, установка сенсора и замена батареи помпы - основные данные в [разделе N](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * Кнопка Заполнение инфузионного набора позволяет регистрировать смену места катетера помпы, а также замену картриджа инсулина.
 * Раздел O отражает состояние портала терапии сайта Nightscout. Так что упражнения, объявление и вопрос являются специальными формами заметок.
 

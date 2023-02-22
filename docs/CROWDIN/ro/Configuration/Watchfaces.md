@@ -2,7 +2,7 @@
 
 Puteţi instala aplicaţia AndroidAPS pe ceasuri **cu Wear OS**. Versiunea de ceas a AAPS vă permite să:
 
-* **afișează datele pe ceas**: utilizând [fețe de ceas personalizate](#aaps-watchfaces) sau pe fețele de ceas standard utilizând [auxiliare](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **controlează AAPS pe telefon**: la bolusare, la stabilirea unei ținte temporare etc.
 
 ### Înainte de a cumpăra ceas...
@@ -39,17 +39,19 @@ Următoarele funcţii pot fi activate de la ceas:
     * verificare şi modificare profil, CPP (Profil Circadian procentual = shift time + procentaj)
     * arată TDD (Doza totală zilnică = bolus + bazală pe zi)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## Fețe de ceas AAPS
 
-Există mai multe fețe de ceas din care puteți alege, fețe ce afișează deviația medie, IOB, RBT-ul activ și profilurile bazale + graficul citirilor de glicemie.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Asigurați-vă că notificările din AndroidAPS nu sunt blocate pe ceas. Confirmarea acțiunii (e.f. bolus, țintă temporară) este solicitată printr-o notificare, ce va trebui aruncată de pe ecran și bifată.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Pentru a ajunge mai rapid la meniul AAPS, apăsați de două ori rapid pe valoarea glicemiei. Cu o apăsare dublă pe curba glicemiei, puteți schimba scala timpului..
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Fețe de ceas disponibile
 
-![Fețe de ceas disponibile](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
@@ -103,6 +105,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Vibrare la Bolus** (implicit `On`):
 * **Unități pentru Acțiuni** (implicit `mg/dl`): dacă este **On** unitatea de măsură este `mg/dl`, dacă este **Off** unitatea de măsură folosită este `mmol/l`. Folosit la setarea unui TT din ceas.
+
+(Watchfaces-watchface-settings)=
 
 ### Setări fețe de ceas
 
@@ -317,7 +321,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
@@ -340,7 +344,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Există mai multe fețe de ceas din care puteți alege, fețe ce afișează deviația medie, IOB, RBT-ul activ și profilurile bazale + graficul citirilor de glicemie.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 

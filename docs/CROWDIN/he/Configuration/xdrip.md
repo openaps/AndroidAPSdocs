@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### חיבור משדר G6 בפעם הראשונה 
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 עבור משדרי G6 המיוצרים לאחר סתיו/סוף 2018 (כלומר מספר סידורי שמתחיל ב-80 או 81) תוכלו להשתמש ב[גרסת המאסטר](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ To learn more about the details and reasons for these recommendations read the [
    
    * פרסום 1: ימי משדר: 151 / מתח A: 297 / מתח B: 260 / התנגדות: 2391 
    * פרסום 2: ימי משדר: 249 / מתח A: 275 (בזמן הכישלון)
+
+(xdrip-extend-transmitter-life)=
 
 ### הארכת חיי המשדר
 

@@ -3,7 +3,7 @@
 ## Sicherheitshinweise
 
 - AndroidAPS erlaubt es Dir, das Smartphone eines Kindes über SMS-Nachricht aus der Ferne zu steuern. Wenn Du diesen SMS-Kommunikator aktivierst, denke immer daran, dass das Telefon, das für Remote-Befehle eingerichtet ist, gestohlen werden kann. Schütze dieses mit einem zumindest mit einem sicheren PIN-Code. Es wird ein starkes Passwort oder biometrischer Schutz empfohlen.
-- Außerdem ist es empfehlenswert, eine [zweite Telefonnummer](#erlaubte-telefonnummern) für SMS Kommandos einzurichten. Dann kannst Du die zweite Nummer nutzen, um den SMS-Kommunikator [vorübergehend zu deaktivieren](#andere), falls Dein Smartphone verloren geht oder gestohlen wird.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS gibt Rückmeldung per SMS, wenn Deine Remote-Kommandos, wie z.B. ein Bolus oder eine Profiländerung, ausgeführt wurden. Es ist ratsam, dies so einzustellen, dass Bestätigungstexte an mindestens zwei verschiedene Telefonnummern gesendet werden, falls eines der Empfangstelefone gestohlen wird.
 - **Wenn Du einen Bolus über SMS-Kommandos abgibst, musst Du die Kohlenhydrate über Nightscout (NSClient, Webseite...) eingeben!** Wenn Du das unterlässt, ist zwar das IOB korrekt, aber die COB sind zu gering. Dies kann dazu führen, dass notwendige Korrekturboli nicht abgegeben werden, da AAPS davon ausgeht, dass Du zu viel aktives Insulin hast.
 - Ab AndroidAPS Version 2.7 muss eine Authentifizierungs-App mit einem zeitbasierten Einmalpasswort verwendet werden, um die Sicherheit bei der Verwendung von SMS-Kommandos zu erhöhen.
@@ -18,6 +18,8 @@
 - Boli können nicht über Nightscout abgegeben werden, aber Du kannst dafür SMS-Kommandos verwenden.
 - Falls Du als Follower ein iPhone verwendest und daher die NSClient-App nicht nutzen kannst, gibt es weitere SMS-Kommandos.
 - Gehe dazu in den Systemeinstellungen deines Android-Telefons zu Apps > AndroidAPS > Berechtigungen und aktiviere dort SMS.
+
+(SMS-Commands-authorized-phone-numbers)=
 
 ### Erlaubte Telefonnummern
 
@@ -148,6 +150,8 @@ Ein Bolus via SMS ist innerhalb von 15 Minuten nach der letzten Bolusgabe in AAP
 - PROFILE LIST \* Antwort: 1. \` Profil1 \` 2. \` Profil2 \`
 - PROFILE 1 \* Antwort: Um zum Profil 1 mit 100% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
 - PROFILE 2 30 \* Antwort: Um zum Profil 2 mit 30% zu wechseln, antworte mit dem Code der Authenticator-App gefolgt von Deinem PIN.
+
+(SMS-Commands-other)=
 
 ### Andere
 

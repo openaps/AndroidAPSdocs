@@ -2,30 +2,34 @@
 
 ![נתוני סוכר של AAPS ב-Android Auto](../images/AndroidAuto_05.png)
 
+(Android-auto-androidaps-settings-for-android-auto)=
+
 ## הגדרות AndroidAPS עבור Android Auto
 
-שימוש בהודעות מערכת עבור התראות ודיווחים:
+Use system notifications for alerts and notifications:
 
 * פתחו את תפריט 3 הנקודות בפינה הימנית העליונה של מסך הבית ובחרו **העדפות** > **התראות מקומיות** > והפעלת **שימוש בהודעות מערכת עבור התראות ודיווחים** 
 
-![שימוש בהודעות מערכת עבור התראות ודיווחים](../images/AndroidAuto_01v2.png)
+![Use system notifications for alerts and notifications](../images/AndroidAuto_01v2.png)
+
+(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
 
 ## הגדרות באפליקציית Android Auto בטלפון
 
-מכיוון ש-AAPS אינה אפליקציית אנדרואיד אוטו רשמית, הודעות מהאפליקציה צריכות להיות מאופשרות ע"י המשתמש באנדרואיד אוטו.
+As AAPS is no official Android Auto app notifications have to be activated in Android Auto.
 
 * פתחו את אפליקציית Android Auto במכשירכם.
 * לחצו על תפריט ההמבורגר
 * בחרו הגדרות
 * גללו מטה עד לתחתית הרשימה והקישו על מס' גרסה 10 פעמים עד שתוצג ההודעה "מצב מפתח מופעל".
 
-![הפעל מצב מפתח](../images/AndroidAuto_02.png)
+![Enable developer mode](../images/AndroidAuto_02.png)
 
 * לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה
 * בחר "אפשרויות מפתחים"
 * גללו מטה עד לתחתית הרשימה והפעילו את "מקורות לא ידועים"
 
-![אפשר מקורות לא ידועים](../images/AndroidAuto_03.png)
+![Enable unknown sources](../images/AndroidAuto_03.png)
 
 * כעת תוכלו לצאת ממצב מפתח אם תרצו. הקישו על לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה כדי לעשות זאת.
 
@@ -33,7 +37,7 @@
 
 * הקישו על סמל הפעמון בשורת התפריטים התחתונה ב-Android Auto במכונית
 
-![סמל פעמון - אנדרואיד אוטו ברכב](../images/AndroidAuto_04.png)
+![Bell icon - Android Auto in car](../images/AndroidAuto_04.png)
 
 * ערכי הסוכר יוצגו באופן הבא:
 
@@ -41,4 +45,4 @@
 
 ## פתרון בעיות:
 
-* אם אינכם רואים את ההתראה, בדקו אם [אפשרתם לאפליקציות להציג התראות](#androidaps-settings-for-android-auto) ב-Android ואם [ל-Android Auto יש זכויות גישה להתראות](#settings-in-android-auto-app-on-your-phone).
+* If you don't see the notification, check if you [allowed AAPS to show notifications](Android-auto-androidaps-settings-for-android-auto) in Android and if [Android Auto has access rights to notifications](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).

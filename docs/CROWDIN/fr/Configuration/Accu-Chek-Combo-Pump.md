@@ -29,7 +29,7 @@
 - Il y a une autre solution si le redémarrage du téléphone n'a pas aidé. Il s'agit de presser un bouton sur la pompe (pour réinitialiser le Bluetooth de la pompe) afin que celle-ci accepte de nouveau les connexions du téléphone. 
 - A ce stade, il n’y a plus de solution pour remédier à la perte de connections. Donc, si vous voyez souvent ces erreurs, votre seule option est d'acquérir un autre téléphone connu pour fonctionner correctement avec AndroidAPS et le Combo (voir ci-dessus).
 - Un bolus délivré à partir de la pompe ne sera pas toujours détecté immédiatement (il faut vérifier à chaque fois qu'AndroidAPS est bien connecté à la pompe), et cela peut prendre jusqu'à 20 minutes dans le pire des cas. 
-- Les bolus sur la pompe sont toujours vérifiés avant un DBT élevé ou un bolus délivré par AAPS, mais en raison des limitations, AAPS refusera ensuite de délivrer le DBT/Bolus comme il a été calculé sous de fausses prédictions. (-> La solution est de ne pas délivrer de bolus via la pompe! Voir le chapitre [Utilisation](#utilisation) ci-dessous)
+- Les bolus sur la pompe sont toujours vérifiés avant un DBT élevé ou un bolus délivré par AAPS, mais en raison des limitations, AAPS refusera ensuite de délivrer le DBT/Bolus comme il a été calculé sous de fausses prédictions. (-> La solution est de ne pas délivrer de bolus via la pompe! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Le paramétrage d'un DBT sur la pompe doit être évité puisque la boucle assure le contrôle des DBT. La détection d'un nouveau DBT sur la pompe peut prendre jusqu'à 20 minutes et l'effet du DBT est seulement comptabilisé à l’instant où il est détecté, donc dans le pire des cas, il peut y avoir 20 minutes d’un DBT qui n’est pas pris en compte dans l’IA. 
 
 ## Paramètres
@@ -104,6 +104,8 @@ Il y a plusieurs raisons possibles. Essayez les étapes suivantes :
 13. Si vous avez utilisé la branche 'appairage' pour construire l'application Ruffy, installez maintenant la version de version à partir de la branche 'combo' au-dessus de celle-ci. Assurez-vous que vous avez utilisé les mêmes clés lors de la signature des deux versions de l'application pour conserver tous les paramètres et les données, car elles contiennent aussi les propriétés de connexion.
 14. Redémarrer le téléphone.
 15. Maintenant, vous pouvez redémarrer la boucle AAPS.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Utilisation
 

@@ -3,7 +3,7 @@
 ## Safety First
 
 - AndroidAPS allows you to control a child's phone remotely via text message. Jei įgalinate šį SMS komunikatorių, visada prisiminkite, kad telefonas, duodantis nuotolinio valdymo komandas, gali būti pavogtas. Todėl visada jį apsaugokite bent PIN kodu. A strong password or biometrics are recommended.
-- Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. Patartina tai nustatyti taip, kad patvirtinimo tekstai būtų siunčiami bent dviem skirtingais telefono numeriais, jei pavogtas vienas iš priimančių telefonų.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
@@ -18,6 +18,8 @@
 - Boluses can't be given through Nightscout, but you can use SMS commands.
 - If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
 - In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+
+(SMS-Commands-authorized-phone-numbers)=
 
 ### Authorized phone numbers
 
@@ -148,6 +150,8 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
 - PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 - PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+
+(SMS-Commands-other)=
 
 ### Kiti
 

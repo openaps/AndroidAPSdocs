@@ -293,7 +293,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 ![Insulin button](../images/Home2020_ButtonInsulin.png)
 
-* Permet d'entrer une certaine quantité d'insuline sans utiliser l'[Assistant bolus](#assistant-bolus).
+* To give a certain amount of insulin without using [bolus calculator](Screenshots-bolus-wizard).
 * By checking the box you can automatically start your [eating soon temp target](Preferences-default-temp-targets).
 * Si vous ne voulez pas injecter de bolus avec la pompe mais juste enregistrer la quantité d'insuline (par ex. pour de l'insuline injectée avec un stylo ou une seringue), cochez la case correspondante.
 
@@ -310,7 +310,7 @@ Usually your real glucose curve ends up in the middle of these lines, or close t
 
 #### Assistant
 
-* Voir la section [de l'assistant de Bolus ci-dessous](#assistant-bolus)
+* See Bolus Wizard [section below](Screenshots-bolus-wizard)
 
 #### Étalonnages
 
@@ -403,6 +403,8 @@ When you want to make a meal bolus this is where you will normally make it from.
    * La boucle fermée sera automatiquement arrêtée et basculera en mode boucle ouverte pour la durée du bolus étendu.
    * Make sure to read the [details](../Usage/Extended-Carbs.md) before using this option.
 
+(Screenshots-careportal-section-n)=
+
 ### Careportal - section N
 
 * Afficher les informations
@@ -427,7 +429,7 @@ When you want to make a meal bolus this is where you will normally make it from.
 
 ### Careportal - section O
 
-* Contrôle glycémie, Amorcer/Remplir, Insertion capteur MGC et Changement pile pompe sont les données d'entrées des informations affichées dans la [section N](#careportal-section-n).
+* BG check, prime/fill, sensor insert and pump battery change are the base for the data displayed in [section N](Screenshots-careportal-section-n).
 * Amocer/Remplir vous permet d'enregistrer le changement de site et de la cartouche d'insuline de la pompe.
 * La section O vous permet de renseigner les infos Careportal de Nightscout. Ainsi, Activité physique, Notification et Question sont des formes spéciales de Remarques ou Notes.
 

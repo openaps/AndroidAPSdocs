@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Prijungti G6 siųstuvą pirmą kartą
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Naudojantis G6 siųstuvais, kurie tiekiami po 2018 m. rudens/pabaigos (pvz., serijos nr. prasideda 80 arba 81), jums reikia bent [xDrip+ pagrindinės](https://jamorham.github.io/#xdrip-plus) programos versijos.
 
@@ -156,6 +156,8 @@ Jei jūsų Dexcom G6 siųstuvo serijos nr. pradedant nuo 8G, 8H ar 8J, naudokite
    
    * Pranešimas 1: Veikimo laikas: 151 dienos / Įtampa A: 297 / Įtampa B: 260 / Varža: 2391
    * Pranešimas 2: Veikimo laikas: 249 dienos / Įtampa A: 275 (klaidos metu)
+
+(xdrip-extend-transmitter-life)=
 
 ### Pailginkite siųstuvo veikimo laiką
 

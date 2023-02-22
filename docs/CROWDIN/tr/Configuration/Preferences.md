@@ -449,7 +449,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
 - [Accu Chek Combo Pompa](../Configuration/Accu-Chek-Combo-Pump.md)
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pump](../Configuration/MedtronicPump.md)
+- [Medtronic Pompa](../Configuration/MedtronicPump.md)
 
 Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
 

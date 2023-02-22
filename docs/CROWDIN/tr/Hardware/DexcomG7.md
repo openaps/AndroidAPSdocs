@@ -1,56 +1,56 @@
 # Dexcom G7
 
 ```{admonition} Only available in dev branch
-:class: note
+:class: not
 
-This feature is only available in the in dev branch and not in master.
+Bu özellik yalnızca dev (geliştirici) sürümünde mevcuttur, master'da mevcut değildir.
 
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
+Lütfen uyarılara dikkat edin ve [dev sürümü oluşturma](../Installing-AndroidAPS/Dev_branch.md) bölümündeki talimatları izleyin.
 
 ```
 
-## Fundamental in advance
+## Önce Temel
 
-In spring 2022, the Dexcom G7 received its CE certificate and was sold at the end of October '22.
+2022 baharında Dexcom G7 CE sertifikasını aldı ve '22 Ekim'in sonunda satılmaya başladı.
 
-Noteworthy is the fact that the G7 system, compared to the G6, does not smooth the values, neither in the app, nor in the reader. More details about this [here](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and-follow-app). Consequently, the values have to be smoothed to be able to use them sensibly in AAPS.
+G7 sisteminin G6 ile karşılaştırıldığında ne uygulamada ne de okuyucuda değerleri düzgünleştirmemesi dikkat çekicidir. Bununla ilgili daha fazla ayrıntıya [buradan](https://www.dexcom.com/en-us/faqs/why-does-past-cgm-data-look-different-from-past-data-on-receiver-and -follow-app) ulaşabilirsiniz. Sonuç olarak, AAPS'de mantıklı bir şekilde kullanabilmek için değerlerin yumuşatılması gerekir.
 
-There are **two** possibilities (as of 02/'23).
+**iki** olasılık vardır (02/'23 itibarıyla).
 
 ![DexcomG7.md](../images/DexcomG7.png)
 
-## 1.  Patched Dexcom G7 App
+## 1.  Yamalı Dexcom G7 Uygulaması
 
-### Install a new patched (!) G7 app and start the sensor
+### Yeni yamalı (!) bir G7 uygulaması kurun ve sensörü başlatın
 
-A patched Dexcom G7 app gives acess to the Dexcom G7 data. This is not the BYODA app as this app can not receive G7 data at the moment.
+Yamalı bir Dexcom G7 uygulaması, Dexcom G7 verilerine erişim sağlar. Bu uygulama şu anda G7 verilerini alamadığından, BYODA uygulaması değildir.
 
-Uninstall the original Dexcom app if you used it before (A running sensor session can be continued - note the sensor code before removal of the app!)
+Daha önce kullandıysanız orijinal Dexcom uygulamasını kaldırın (Çalışmakta olan bir sensör oturumuna devam edilebilir - uygulamayı kaldırmadan önce sensör kodunu not edin!)
 
-Download and install the patched.apk [here](https://github.com/authorgambel/g7/releases).
+patched.apk dosyasını [buradan](https://github.com/authorgambel/g7/releases) indirip yükleyin.
 
-Enter sensor code in the patched app.
+Yamalı uygulamada sensör kodunu girin.
 
-Follow the general recommendations for CGM hygiene and sensor placement found [here](../Hardware/GeneralCGMRecommendation.md).
+[Burada](../Hardware/GeneralCGMRecommendation.md) bulunan CGM hijyeni ve sensör yerleşimi için genel önerileri uygulayın.
 
-After the warm-up phase, the values are displayed as usual in the G7 app.
+Isınma aşamasından sonra, değerler her zamanki gibi G7 uygulamasında görüntülenir.
 
-### build a new signed APK from the dev branch
+### geliştirici (dev) sürümünde yeni bir imzalı APK oluşturun
 
-To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AndroidAPS is necessary.
+AAPS'de G7 Uygulamasından değerleri alabilmek ve alınan değerleri yumuşatmak için bir değişiklik gereklidir.
 
-Therefore build a new signed APK from the official dev branch and install it on your mobile.
+Bu nedenle, resmi geliştirici sürümü için imzalı yeni bir APK oluşturun ve cep telefonunuza yükleyin.
 
-For the configuration in AndroidAPS
-- Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
-- If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
+AndroidAPS'deki yapılandırma için
+- Konfigürasyon ayarlarında 'BYODA'yı seçin - (şimdilik BYODA uygulaması olmasa bile!)
+- AAPS herhangi bir değer almazsa, başka bir KŞ kaynağına geçin ve ardından AAPS ile BYODA arasındaki veri alışverişini onaylama sorgusunu başlatmak için 'BYODA'ya geri dönün.
 
-The smoothing of glucose values can be activated and deactivated via Settings > Overview settings at 'Smoothing of incoming glucose values'.
+Glikoz değerlerinin yumuşatılması, Ayarlar > ayarlara genel bakışta 'Gelen glikoz değerlerinin yumuşatılması' üzerinden etkinleştirilebilir ve devre dışı bırakılabilir.
 
-Smoothing **MUST** be enabled for meaningful use of the G7 values.
+G7 değerlerinin anlamlı kullanımı için yumuşatma **ZORUNLU** olarak etkinleştirilmelidir.
 
-## 2. Xdrip+ (companion mode)
+## 2. Xdrip+ (tamamlayıcı mod)
 
--   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip)
-- As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
-- In AndroidAPS select  > Configuration > BG source > xDrip+. Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 
+-   Xdrip+'ı indirin ve kurun: [xdrip](https://github.com/NightscoutFoundation/xDrip)
+- Xdrip'te veri kaynağı olarak "Companion App" seçilmeli ve Gelişmiş Ayarlar altında > Bluetooth Ayarları> "Companion Bluetooth" etkinleştirilmelidir.
+- AndroidAPS'de > Yapılandırma > KŞ kaynağı > xDrip+. Ayarları [xDrip+ ayarları](../Configuration/xdrip.md) sayfasındaki açıklamalara göre düzenleyin. 

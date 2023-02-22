@@ -47,7 +47,7 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 ## Version 3.2.0
 
-Release date: XX-XX-2023
+Yayınlanma tarihi: XX-XX-2023
 
 ### Önemli ipuçları
 

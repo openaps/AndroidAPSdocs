@@ -110,7 +110,7 @@ Last not least, you must not take SGLT-2 inhibitors (gliflozins) as they incalcu
     <a href="../Configuration/Accu-Chek-Combo-Pump.md">Accu-Chek Combo</a> (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
   </li>
   <li>
-    <a href="../Configuration/Accu-Chek-Insight-Pump.md">Accu-Check Insight</a>
+    <a href="../Configuration/Accu-Chek-Insight-Pump.md">Accu-Chek Insight</a>
   </li>
   <li>
     <a href="../Configuration/DanaR-Insulin-Pump.md">DanaR</a>

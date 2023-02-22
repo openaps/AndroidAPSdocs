@@ -100,7 +100,7 @@ Bu önerilerin ayrıntıları ve nedenleri hakkında daha fazla bilgi edinmek i�
 
 ### G6 vericisine ilk kez bağlanma
 
-**İkinci ve sonraki vericiler için aşağıdaki [Verici ömrünü uzatma](#extend-transmitter-life) konusuna bakın.**
+**İkinci ve sonraki vericiler için aşağıdaki [Verici ömrünü uzatma](xdrip-extend-transmitter-life) konusuna bakın.**
 
 2018 sonbaharı/sonundan sonra üretilen G6 vericileri için (yani seri no. 80 veya 81 ile başlayanlar) [master "ana sürüm"](https://jamorham.github.io/#xdrip-plus) kullanabilirsiniz.
 
@@ -156,6 +156,8 @@ Dexcom G6 vericinizin seri numarası 8G, 8H veya 8J ile başlıyorsa [2019/07/28
    
    * Gönderi 1: Verici günleri: 151 / Voltaj A: 297 / Voltaj B: 260 / Direnç: 2391
    * Gönderi 2: Verici günleri: 249 / Voltaj A: 275 (hata anında)
+
+(xdrip-extend-transmitter-life)=
 
 ### Verici ömrünü uzatın
 
