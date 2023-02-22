@@ -25,11 +25,11 @@
 
 ## Ana parola tanımlama
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
+- 2.7 sürümünden itibaren şifrelenmiş oldukları için [ayarları dışa aktarabilmek](../Usage/ExportImportSettings.md) için gereklidir.
 - Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- "Genel" altındaki üçgeni tıklayın
+- "Ana-Parola" ya tıklayın
+- Parolayı girin, onaylayın ve Tamam'a tıklayın.
 
 ```{image} ../images/MasterPW.png
 :alt: Ana parola tanımlama
