@@ -163,11 +163,11 @@
 - [Nightscout security](Nightscout-security-considerations)
 - [Profile timeshift](Profiles-time-shift) (more details)
 - [Uzaktan İzleme](../Children/Children.md)
-- [What is a closed loop system?](../Getting-Started/ClosedLoop.md)
+- [Kapalı Döngü Sistemi Nedir?](../Getting-Started/ClosedLoop.md)
 
 ## Ağustos 2019
 
-- Dexcom G6 patched app region
-- [Dexcom G6 new transmitter](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
-- [What do I need?](index-what-do-i-need) - new structure & additional information
-- New structure
+- Dexcom G6 yamalı uygulama bölgesi
+- [Dexcom G6 yeni verici](xdrip-connect-g6-transmitter-for-the-first-time) ("firefly" / 8G...)
+- [Neye ihtiyacım var?](index-what-do-i-need) - yeni yapım & Ek Bilgiler
+- Yeni yapım
