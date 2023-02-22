@@ -8,7 +8,7 @@
 ![DanaR pompa](../images/danar1.png)
 
 * Ana Menü > Ayarlar > Keşif'e gidin
-* Telefon ayarlarında Bluetooth'a gidin, yakındaki cihazları tarayın, DanaR serinumaranızı seçin ve şifrenizi girin (Eşleştirme şifresi 0000'dır). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
+* In phone settings go to Bluetooth, scan for nearby devices, select your DanaR serial number and input your password (Pairing password is 0000). Taramada DanaR görünmüyorsa telefonu yeniden başlatın ve DanaR pilini çıkarın, değiştirin ve bu iki adımı yeniden deneyin.
 
 * AndroidAPS'de Konfigürasyon ayarlarına gidin ve sahip olduğunuz DanaR pompa türünü seçin (DanaR, DanaR Korean, DanaRv2)
 
