@@ -65,7 +65,7 @@ Birkaç koşul arasından seçim yapabilirsiniz. Burada yalnızca birkaçından 
 
   - Pasif konum kullan: AAPS, yalnızca diğer uygulamalar talep ettiğinde konum alır
   - Ağ konumunu kullan: Wifi'nizin konumu
-  - Use GPS location (Attention! Aşırı pil tüketimine neden olabilir!)
+  - GPS konumunu kullanın (Dikkat! Aşırı pil tüketimine neden olabilir!)
 
 ### Eylem
 
