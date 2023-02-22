@@ -4,7 +4,7 @@ You can find troubleshooting info on many pages in the wiki. This page is a coll
 
 Additional useful information might also be available in the [FAQ](../Getting-Started/FAQ.html).
 
-## AndroidAPS app
+## AAPS app
 
 ### Building & updating
 

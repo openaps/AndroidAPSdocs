@@ -10,7 +10,7 @@ For hints how to format text (headline, bold...) and set links please see the ["
 For any questions, feedback or new ideas you can contact the documentation team via [discord](https://discord.gg/4fQUWHZ4Mw). 
 Doing a PR isn't difficult, but we can help you editing the documentation.
 
-At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AndroidAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
+At some point it will be suggested that you make a PR. PR is short for pull request, and it is a way of adding or editing information stored in GitHub.  It's actually not too hard to do one and it is a great way to contribute. This documentation is here because people like you made PRs.  Don't worry about making a mistake or somehow editing the wrong documents.  There is always a review process before changes are merged into the "formal" AAPS documentation repository.  You can't mess up the originals through any accidents in the PR process.  The general process is:
 
 * Make edits and improvements to code or documentation by editing the existing content.
 * Double-check that your edits look good to you.
@@ -52,7 +52,7 @@ We are using markdown for the docs pages. The file have got the suffix ".md".The
 
 ![create pull request](./images/PR6.png)
 
-7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AndroidAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
+7. That completes the opening of a pull request, PR. GitHub assigns the PR a number, located after the title and a hash mark. Return to this page to check for feedback (or, if you have GitHub notifications emailed to you, you will get emails notifying you of any activity on the PR). The edit will now be in a list of PR's that the team will review and potentially give feedback on before committing to the main documentation for AAPS! If you want to check on the progress of the PR, you can click on the bell logo in the upper right corner of your GitHub account and see all your PRs.
 
 ![PR tracking](./images/PR7.png)
 
@@ -138,7 +138,7 @@ You can insert lists in lists by indenting the next level with 4 more spaces to 
 
 ### Internal links
 
-If you want to set an internal link within the AndroidAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
+If you want to set an internal link within the AAPS documentation, please only use **relative links**. Only this will make the link work in the other languages (Czech, German...) as well.
 
 * `[text](../Usage/Test.md)` will set an internal hyperlink one directory up from where you are and then into the subdirectory /Usage. Ending of the target file must be .md or .rst (not .html)
 * `[text](./Usage/Test.md)` will set an internal hyperlink from where you are into /Usage. Ending of the target file must be .md

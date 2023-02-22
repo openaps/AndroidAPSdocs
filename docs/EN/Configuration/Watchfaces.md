@@ -1,6 +1,6 @@
 # AAPS on Wear OS smartwatch
 
-You can install AndroidAPS app on your **Wear OS based** smartwatch.
+You can install AAPS app on your **Wear OS based** smartwatch.
 Watch version of AAPS allows you to:
 * **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **control AAPS on phone**: to bolus, set a temporary target etc.
@@ -20,15 +20,15 @@ From March 2021 you need to sideload AAPS onto the watch, it is no longer access
 a) download the apk to your mobile
 b) setup the Android Debugger on the wear
 c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile.
-Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+Once you have selected AAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
 
 ### Setup on the Phone
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
+Within AAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
 
 ## Controlling AAPS from Watch
 
-AndroidAPS is designed to be _controlled_ by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AAPS is designed to be _controlled_ by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
 
 The following functions can be triggered from the watch:
 * set a temporary target
@@ -48,7 +48,7 @@ The following functions can be triggered from the watch:
 
 There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.  
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Ensure notifications from AAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
 To get faster to the AAPS menu, do a double tap on your BG.
 With a double tap onto the BG curve you can change the time scale..
@@ -57,8 +57,8 @@ With a double tap onto the BG curve you can change the time scale..
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-(Watchfaces-new-watchface-as-of-androidaps-2-8)=
-### New watchface as of AndroidAPS 2.8
+(Watchfaces-new-watchface-as-of-AAPS-2-8)=
+### New watchface as of AAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
@@ -66,7 +66,7 @@ With a double tap onto the BG curve you can change the time scale..
 
 ## AAPSv2 watchface - Legend
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Legend AAPSv2 watchface](../images/Watchface_Legend.png)
 
 A - time since last loop run
 
@@ -167,7 +167,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 _Complication_ is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+AAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
 
 Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
 
@@ -190,7 +190,7 @@ When configuring complications on watchface, Wear OS will present and filter the
 
 ### Complications provided by AAPS
 
-AndroidAPS provides following complications:
+AAPS provides following complications:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
@@ -347,7 +347,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 ### Sony Smartwatch 3
 
 * The Sony Smartwach 3 is one of the most popular watches to be used with AAPS.
-* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AndroidAPS 2.7 and above.
+* Unfortunately Google dropped support for wear OS 1.5 devices in fall 2020. This leads to problems when using Sony SW3 with AAPS 2.7 and above.
 * A possible workaround can be found on this [troubleshooting page](../Usage/SonySW3.md).
 
 ## View Nightscout data
@@ -355,4 +355,4 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 If you are using another looping system and want to _view_ your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease".  There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
-Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to _view_ looping data (if uploaded to Nightscout), but you will not be able to interact with AndroidAPS through the watch.  You can choose fields to display such as IOB and currently active temp basal rate and predictions.  If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AndroidAPS then send either SMS or pushover notification.
+Pebble users can use the [Urchin watchface](https://github.com/mddub/urchin-cgm) to _view_ looping data (if uploaded to Nightscout), but you will not be able to interact with AAPS through the watch.  You can choose fields to display such as IOB and currently active temp basal rate and predictions.  If open looping you can use [IFTTT](https://ifttt.com/) to create an applet that says if Notification received from AAPS then send either SMS or pushover notification.

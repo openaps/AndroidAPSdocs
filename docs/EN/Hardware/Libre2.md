@@ -175,7 +175,7 @@ The blood sugar values are received on the smartphone by the xDrip+ App.
     later) from xDrip+ please set [Settings > Interapp Settings >
     Identify Receiver
     "info.nightscout.androidaps"](xdrip-identify-receiver)
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+
+-   If you want to be able to use AAPS to calibrate then in xDrip+
     go to Settings > Interapp Compatibility > Accept Calibrations and
     select ON. You may also want to review the options in Settings >
     Less Common Settings > Advanced Calibration Settings.
@@ -198,10 +198,10 @@ After a sensor change xDrip+ will automatically detect the new sensor
 and will delete all calibration data. You may check you bloody BG after
 activation and make a new initial calibration.
 
-## Step 4: Configure AndroidAPS (for looping only)
+## Step 4: Configure AAPS (for looping only)
 
--   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
--   If AndroidAPS does not receive BG values when phone is in airplane
+-   In AAPS go to Config Builder > BG Source and check 'xDrip+'
+-   If AAPS does not receive BG values when phone is in airplane
     mode, use 'Identify receiver' as describe on [xDrip+ settings
     page](xdrip-identify-receiver).
 

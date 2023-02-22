@@ -11,7 +11,7 @@ Internally AAPS creates snapshot of profile with start date and duration and is 
 
 If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AAPS.
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
@@ -77,5 +77,5 @@ Alternatively you can delete the profile switch directly in mLab:
 ![mlab](../images/mLabDeletePS.png)
 
 ### 'DIA 3hr too short'
-* Error message will appear if your duration of insulin action in your profile is listed at a value that AndroidAPS doesn't believe will be accurate.  
+* Error message will appear if your duration of insulin action in your profile is listed at a value that AAPS doesn't believe will be accurate.
 * Read about [selecting the right DIA](https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/), and edit it in your profile then do a [Profile Switch](../Usage/Profiles) to continue.

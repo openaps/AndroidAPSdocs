@@ -4,11 +4,11 @@ Depending on your settings you can open Config Builder through a tab at the top 
 
 ![Open config builder](../images/ConfBuild_Open_AAPS30.png)
 
-Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AndroidAPS.  In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
+Config Builder (Conf) is the tab where you turn the modular features on and off.  The boxes on the left-hand side (A) allow you to select which one to use, the boxes on the right-hand side (C) allow you to view these as a tab (E) in AAPS.  In case the right box is not activated you can reach the function by using the hamburger menu (D) on the top left of the screen.
 
 Where there are additional settings available within the module, you can click on the cog wheel (B) which will take you to the specific settings within preferences.
 
-**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AndroidAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
+**First configuration:** Since AAPS 2.0 a Setup wizard guides you through the process of setting up AAPS. Push 3-dots-menu on the upper right-hand side of the screen (F) and select 'Setup Wizard' to use it.
 
 ![Config Builder boxes and cog wheel](../images/ConfBuild_ConfigBuilder_AAPS30.png)
 
@@ -90,7 +90,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 * The DIA is not the same for each person. That's why you have to test it for yourself. 
 * But it must always be at least 5 hours.
-* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AndroidAPS uses minimum 5h as DIA.
+* For a lot of people using ultra-rapid insulins like Fiasp there is practically no noticeable effect after 3-4 hours any more, even if 0.0xx units are available as a rule then. This residual amount can still be noticeable during sports, for example. Therefore, AAPS uses minimum 5h as DIA.
 * You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
 
 ### Insulin type differences
@@ -197,7 +197,7 @@ Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-
 ### Open Loop
 * AAPS continuously evaluates all available data (IOB, COB, BG...) and makes treatment suggestions on how to adjust your therapy if necessary. 
 * The suggestions will not be executed automatically (as in closed loop) have to be entered manually into the pump or by using a button in case you are using a compatible pump (Dana R/RS or Accu Chek Combo). 
-* This option is for getting to know how AndroidAPS works or if you are using an unsupported pump.
+* This option is for getting to know how AAPS works or if you are using an unsupported pump.
 
 (Config-Builder-closed-loop)=
 ### Closed Loop
@@ -218,7 +218,7 @@ Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-
 * This defines the relative change required to trigger a notification.
 
 ## Objectives (learning program)
-AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+AAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
 
 You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
 
@@ -263,10 +263,10 @@ Choose default temp-targets (duration and target). Preset values are:
 Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
 
 #### Range of visualization
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+Choose the high and low marks for the BG-graph on AAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
 
 #### Shorten tab titles
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+Choose wether the tab titles in AAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
 
 #### Show notes field in treatment dialogs
 Choose if you want to have a notes field when entering treatments or not.
@@ -289,12 +289,12 @@ User defined automation tasks ('if-then-else'). Please [read on here](../Usage/A
 
 (Config-Builder-sms-communicator)=
 ### SMS Communicator
-Allows remote caregivers to control some AndroidAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
+Allows remote caregivers to control some AAPS features via SMS, see [SMS Commands](../Children/SMS-Commands.md) for more setup information.
 
 ### Food
 Displays the food presets defined in the Nightscout food database, see [Nightscout Readme](https://github.com/nightscout/cgm-remote-monitor#food-custom-foods) for more setup information.
 
-Note: Entries cannot be used in the AndroidAPS calculator. (View only)
+Note: Entries cannot be used in the AAPS calculator. (View only)
 
 (Config-Builder-wear)=
 ### Wear
@@ -313,7 +313,7 @@ Might be helpful if watch was not connected for some time and you want to push t
 Display loop information on your xDrip+ watchface (if you are not using AAPS/[AAPSv2 watchface](../Configuration/Watchfaces.md)
 
 ### NSClient
-* Setup sync of your AndroidAPS data with Nightscout.
+* Setup sync of your AAPS data with Nightscout.
 * Settings in [preferences](Preferences-nsclient) can be opened by clicking the cog wheel.
 
 ### Maintenance

@@ -7,7 +7,7 @@ There is no issue with changing timezone in phone because pump doesn't use histo
 (Timezone-traveling-danarv2-danars)=
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
+These pumps need a special care because AAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
 To avoid this there are two possibilities:
 
@@ -61,7 +61,7 @@ If you bolus with the calculator please don't use COB and IOB unless you made su
 (Timezone-traveling-accu-chek-combo)=
 ## Accu-Chek Combo
 
-AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
+AAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 
 ### Actions to take before the clock change
 1. Switch OFF any setting that automatically sets the timezone, so you can force the time change when you want to. How you can do this will depend on your smartphone and Android version.
@@ -74,7 +74,7 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
    * A list of these countries is available [https://greenwichmeantime.com/countries](https://greenwichmeantime.com/countries/)
    * For Central European Time (CET) this could be "Brazzaville" (Kongo). Change your phone's timezone to Kongo.
 
-3. In AndroidAPS refresh your pump.
+3. In AAPS refresh your pump.
 4. Check the Treatments tab... If you see any duplicate treatments:
 
    * DON'T press "delete treatments in the future"
@@ -86,8 +86,8 @@ AndroidAPS will issue an alarm if the time between pump and phone differs too mu
 A good time to make this switch would be with low IOB. E.g. an hour before a meal such as breakfast, (any recent boluses in the pump history will have been small SMB corrections. Your COB and IOB should both be close to zero.)
 
 1. Change the Android timezone back to your current location and re-enable automatic timezone.
-2. AndroidAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
-3. On the AndroidAPS “Combo” screen, press Refresh.
+2. AAPS will soon start alerting you that the Combo’s clock doesn’t match. So update the pump’s clock manually via the pump’s screen and buttons.
+3. On the AAPS “Combo” screen, press Refresh.
 4. Then go to the Treatments screen, and look for any events in the future. There shouldn’t be many.
 
    * DON'T press "delete treatments in the future"
@@ -102,6 +102,6 @@ A good time to make this switch would be with low IOB. E.g. an hour before a mea
 
 ## Other pumps
 
-* This feature is available since AndroidAPS version 2.2.
+* This feature is available since AAPS version 2.2.
 * To prevent difficulties the Loop will be deactivated for 3 hours AFTER the DST switch. This is done for safety reasons (IOB too high due to duplicated bolus prior to DST change).
 * You will receive a notification on the main screen prior to DST change that loop will be disabled temporarily. This message will appear without beep, vibration or anything.
