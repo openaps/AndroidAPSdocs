@@ -399,23 +399,23 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  <strong x-id="1">SAFETY FIRST</strong> - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+  <strong x-id="1">ÖNCE GÜVENLİK</strong> - bir hatadan kurtulamayacağınız bir ortamda bu işlemi denemeyin (ekstra pod, insülin ve telefon cihazları olmazsa olmazdır).
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your Omnipod PDM will no longer work after the AAPS Omnipod driver activates your pod</strong>. Önceden Omnipod Eros Podunuz'a komutlar göndermek için Omnipod PDM'nizi kullanıyordunuz. Bir Omnipod Eros podu, yalnızca tek bir cihazın kendisine iletişim göndermesine izin verir. Podu başarıyla etkinleştiren cihaz, o andan itibaren onunla iletişim kurmasına izin verilen tek cihazdır. This means that once you activate an Omnipod Eros pod with your RileyLink through the AAPS Omnipod driver, <strong x-id="1">you will no longer be able to use your PDM with your pod</strong>. RileyLink'li AAPS Omnipod sürücüsü artık bir nevi yeni PDM'niz olur. <em x-id="3">This does NOT mean you should throw away your PDM, it is recommended to keep it around as a backup, and for emergencies with AAPS is not working correctly.</em>
+  <strong x-id="1">Omnipod PDM'niz, AAPS Omnipod sürücüsü podunuzu etkinleştirdikten sonra artık çalışmayacaktır</strong>. Önceden Omnipod Eros Podunuz'a komutlar göndermek için Omnipod PDM'nizi kullanıyordunuz. Bir Omnipod Eros podu, yalnızca tek bir cihazın kendisine iletişim göndermesine izin verir. Podu başarıyla etkinleştiren cihaz, o andan itibaren onunla iletişim kurmasına izin verilen tek cihazdır. Bu AAPS Omnipod sürücüsü aracılığıyla RileyLink'inizle bir Omnipod Eros podunu etkinleştirdiğinizde, <strong x-id="1"> artık PDM'niz ile podunuzu kullanamayacağınız anlamına gelir</strong>. RileyLink'li AAPS Omnipod sürücüsü artık bir nevi yeni PDM'niz olur. <em x-id="3">Bu, PDM'nizi çöpe atmanız gerektiği anlamına GELMEZ, yedek olarak saklamanız şiddetle önerilir ve AAPS düzgün çalışmadığı acil durumlar için gereklidir.</em>
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.</strong> The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+  <strong x-id="1">Birden çok RileyLink yapılandırabilirsiniz, ancak bir seferde yalnızca bir seçili RileyLink bir podla iletişim kurabilir.</strong> AAPS Omnipod sürücüsü, RileyLink yapılandırmasına birden çok RileyLink ekleme özelliğini destekler, ancak iletişim göndermek ve almak için kullanılmak üzere bir seferde yalnızca bir RileyLink seçilebilir.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Your pod will not shut off when the RileyLink is out of range.</strong> When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Bir podu etkinleştirdikten sonra, AAPS'de tanımlanan bazal profil yeni poda programlanacaktır. Pod ile teması kaybederseniz, bu bazal profile geri dönecektir. RileyLink menzile girip bağlantıyı yeniden kurana kadar yeni komutlar veremezsiniz.
+  <strong x-id="1">RileyLink kapsama alanı dışındayken podunuz kapanmaz.</strong> RileyLink'iniz kapsama alanı dışında olduğunda veya sinyalin aktif podunuz ile iletişim kurması engellendiğinde, podunuz bazal insülin iletmeye devam edecektir. Bir podu etkinleştirdikten sonra, AAPS'de tanımlanan bazal profil yeni poda programlanacaktır. Pod ile teması kaybederseniz, bu bazal profile geri dönecektir. RileyLink menzile girip bağlantıyı yeniden kurana kadar yeni komutlar veremezsiniz.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">30 min Basal Rate Profiles are NOT supported in AndroidAPS.</strong> If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 ünitelik bir bazal oranınız varsa, bu çalışmayacaktır.  Bu 1,1 ünite bazal oranını 9:00-11:00 veya 10:00-12:00 zaman aralığına güncellemeniz gerekecektir.  30 dakikalık bazal oran profili artışları Omnipod donanımının kendisi tarafından desteklense de, AndroidAPS şu anda algoritmaları ile bunları hesaba katamamaktadır.
+  <strong x-id="1">30 dakikalık Bazal Oran Profilleri AAPS'de DESTEKLENMEZ.</strong> AAPS'de yeniyseniz ve bazal oran profilinizi ilk kez oluşturuyorsanız, lütfen saatlik bazal oran profilinizi ayarlayın ve yarım saatlik bazal oranların desteklenmediğini unutmayın. Örneğin, 09:30'da başlayan ve 11:30'da biten 2 saatlik bir süresi olan 1,1 ünitelik bir bazal oranınız varsa, bu çalışmayacaktır.  Bu 1,1 ünite bazal oranını 9:00-11:00 veya 10:00-12:00 zaman aralığına güncellemeniz gerekecektir.  30 dakikalık bazal oran profili artışları Omnipod donanımının kendisi tarafından desteklense de, AndroidAPS şu anda algoritmaları ile bunları hesaba katamamaktadır.
 </p>
 
 <h2 spaces-before="0">
@@ -423,7 +423,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  You can enable the Omnipod driver in AAPS in <strong x-id="1">two ways</strong>:
+  Dash sürücüsünü AAPS'de <strong x-id="1">iki şekilde</strong> etkinleştirebilirsiniz:
 </p>
 
 <h3 spaces-before="0">
@@ -1368,7 +1368,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 <blockquote spaces-before="2">
     <ul>
       <li>
-        Units / hour @ time TBR was issued (minutes run / total minutes TBR will be run)
+        Ünite / saat @ GBO'nın verildiği zaman (çalışma dakikası / GBO'nın çalıştırılacağı toplam dakika)
       </li>
       <li>
         <em x-id="3">Örnek:</em> 0,00Ü/s @18:25 ( 90/120 dakika)
@@ -1463,7 +1463,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">SET TIME:</strong>
+    <strong x-id="1">SAATİ AYARLA:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1493,7 +1493,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">RESUME DELIVERY:</strong>
+    <strong x-id="1">İLETİME DEVAM ET:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -2266,7 +2266,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note: If after optimally positioning the pod and RileyLink communication fails, this may be due to a low battery which decreases the transmission range of the RileyLink antenna. To avoid this issue make sure the RileyLink is properly charged or connected directly to a charging cable during this process.</em>
+  <em x-id="3">Not: Pod en uygun şekilde yerleştirdikten sonra ve RileyLink iletişimi başarısız olursa, bunun nedeni, RileyLink anteninin iletim menzilini azaltan düşük pil seviyesi olabilir. Bu sorunu önlemek için, bu işlem sırasında RileyLink'in doğru şekilde şarj edildiğinden veya doğrudan bir şarj kablosuna bağlandığından emin olun.</em>
 </p>
 
 <p spaces-before="0">
