@@ -1,3 +1,5 @@
+(Troubleshooting-NSClient-troubleshooting-nsclient)=
+
 # Troubleshooting NSClient
 
 NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.

@@ -47,18 +47,19 @@ published by Tim Street at
     cannot connect xDrip+ and Dexcom app with the transmitter at the
     same time!**
 -   If you need Clarity and want to profit from xDrip+ alarms use the
-    [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+    [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app)
     with local broadcast to xDrip+.
 -   If not already set up then download
     [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow
     instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Adjust settings in xDrip+ according to [xDrip+ settings
     page](../Configuration/xdrip.md)
 -   If AAPS does not receive BG values when phone is in airplane mode
     use 'Identify receiver' as describe on [xDrip+ settings
     page](../Configuration/xdrip.md).
 
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## If using G6 with Build Your Own Dexcom App
 
 -   As of December 2020 [Build Your Own Dexcom
@@ -75,7 +76,7 @@ published by Tim Street at
 -   After short time BYODA should pick-up transmitter signal. (If not
     you will have to stop sensor and start new one.)
 
-### Settings for AndroidAPS
+### Settings for AAPS
 
 -   Select 'Dexcom App (patched)' in config builder.
 -   If you don't receive any values select any other data source, then
@@ -90,6 +91,8 @@ published by Tim Street at
     receive values. This will not affect your current sensor controlled
     by Build Your Own Dexcom App.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Troubleshooting G6
 
 ### Dexcom G6 specific troubleshooting
@@ -117,7 +120,7 @@ published by Tim Street at
 ### General troubleshooting
 
 General Troubleshoothing for CGMs can be found
-[here](./GeneralCGMRecommendation#troubleshooting).
+[here](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### New transmitter with running sensor
 

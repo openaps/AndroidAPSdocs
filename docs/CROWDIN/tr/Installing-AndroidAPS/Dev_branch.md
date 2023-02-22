@@ -1,7 +1,7 @@
-## Development branch
+## Geliştirici Sürümü
 
 <font color="#FF0000"><strong>Dikkat:</strong></font>
-Development branch yalnızca AndroidAPS'in daha da geliştirilmesi içindir. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
+Geliştirici sürümü yalnızca AndroidAPS'in daha da geliştirilmesi içindir. <font color="#FF0000"><strong>Tedavi amaçlı döngü için değil</strong></font> test etmek için ayrı bir telefonda kullanılmalıdır!
 
 Kullanılacak en kararlı AndroidAPS sürümü, [Master branch](https://github.com/nightscout/AndroidAPS/tree/master) sürümüdür. Tedavi amaçlı döngü için Master branch sürümünü kullanmanız önerilir.
 
@@ -11,4 +11,4 @@ Bununla birlikte, Dev branch, hangi özelliklerin test edildiğini görmek ve ha
 
 Dev branch kullanırken bir hata bulursanız veya yanlış bir şey olduğunu düşünüyorsanız, aynı sorunla karşılaşan herhangi birinin olup olmadığını kontrol etmek için [sorunlar sekmesini](https://github.com/nightscout/AndroidAPS/issues) görüntüleyin. Eğer yoksa kendiniz ekleyebilirsiniz. Burada ne kadar çok bilgi paylaşırsanız o kadar iyi olur (unutmayın, [günlük dosyalarınızı](../Usage/Accessing-logfiles.md) paylaşmanız gerekebilir. Yeni özellikler ayrıca [discord](https://discord.gg/4fQUWHZ4Mw)'da tartışılabilir.
 
-A dev version has an expiration date. This seems inconvenient when using it satisfactorily, but serves a purpose. When a single dev version doing the rounds, it is easier to keep track of bugs that people are reporting. The developers do not want to be in a position where there are three versions of dev in the wild where bugs are fixed in some and not others, and people continue to report the fixed ones.
+Bir geliştirme sürümünün bir son kullanma tarihi vardır. Bu, versiyonun tatmin eden bir kullanımı olduğunda rahatsız edici görünüyor, ancak bir amaca hizmet ediyor. Tek bir geliştirici sürümü kullanılırken, insanların bildirdiği hataları takip etmek daha kolaydır. Geliştiriciler, bazılarında hataların giderildiği, diğerlerinin giderilmediği aynı zamanda insanların hata raporlarını bildirmeye devam ettikleri üç sürümünün olduğu karmaşık bir konumda olmak istemiyorlar.

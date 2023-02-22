@@ -21,12 +21,13 @@ To learn more about the details and reasons for these recommendations read the [
 
 -   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
 -   При использовании xDrip+ в качестве приемника сначала удалите приложение Dexcom. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 -   If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow instructions on [xDrip+ settings page](../Configuration/xdrip.md).
 -   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
 -   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
 -   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
 
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## При использовании G6 с созданием собственного Dexcom приложения
 
 -   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
@@ -47,6 +48,8 @@ To learn more about the details and reasons for these recommendations read the [
 -   Select '640G/Eversense' as data source.
 -   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Устранение неполадок с G6
 
 ### Устранение неполадок, связанных с dexcom G6
@@ -65,7 +68,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Устранение неполадок - общее
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### Установка нового трансмиттера на работающий сенсор
 

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
+ <td>AndroidAPS, Android uygulamasının adıdır - AAPS kısaltmasıdır - APS, yapay pankreas sistemi için kullanılan bir kısaltmadır</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,7 +29,7 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
+ <td>Android Auto, motorlu araçlarda bilgi-eğlence sistemi ile bir Android akıllı telefonun işlevlerini kullanmak için Google LLC tarafından geliştirilen bir sistemdir. Android aracılığıyla Auto AndroidAPS, uyumlu ve yapılandırılmış bilgi-eğlence sisteminize mesaj gönderebilir.</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
@@ -48,19 +48,19 @@
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>cloud computing platform to host Nightscout web app</td>
+ <td>Nightscout web uygulamasını barındıracak bulut bilgi işlem platformu</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
 <tr>
  <td><strong>PİL</strong></td>
- <td>status light low battery on homescreen</td>
+ <td>ana ekranda düşük pil durumu göstergesi</td>
  <td>Kanül / Rezervuar / Sensör</td>
  <td><a href="../Configuration/Preferences.html#overview">Tercihler</a><br><a href="../Getting-Started/Screenshots.html">Ekran görüntüleri</a></td>
 </tr>
 <tr>
  <td><strong>KŞ</strong></td>
- <td>blood glucose</td>
+ <td>kan şekeri</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -72,31 +72,31 @@
 </tr>
 <tr>
 <td><strong>KŞ Kaynağı</strong></td>
- <td>The blod glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
+ <td>Kan şekeri kaynağı, kan şekeri değerlerinizin geldiği kaynaktır. BYODA, xDrip+ vb. gibi bir tür entegrasyon yazılımı aracılığıyla taktığınız bir CGM veya FGM sisteminden gelirler.</td>
  <td>CGM / FGM (Sürekli ve Anlık Glikoz Takip sistemleri)</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Viki - KŞ kaynağı</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
- <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile activley very near to the sensor. The Blucon Nightreader closed this gap. Newer versions work in other ways! Please inform yourself about the actual state before buying something.</td>
+ <td>Freestyle Libre'nin ilk sürümleri yalnızca NFC üzerinden iletişim kurabiliyordu, bu da hastanın cep telefonunu aktif olarak sensöre çok yakın tutması gerektiği anlamına geliyor. Blucon Nightreader bu boşluğu kapattı. Daha yeni sürümler başka şekillerde çalışır! Lütfen bir şey satın almadan önce gerçek durum hakkında kendinizi bilgilendirin.</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>The abbrevation stand for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
- <td>IC / ISF</td>
+ <td>Kısaltma, bazal oran anlamına gelir. KŞ'yi sabit bir seviyede tutmak için belirli bir zaman bloğundaki insülin miktarıdır.</td>
+ <td>KIO / İDF</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>BYODA</strong></td>
- <td>Build your own Dexcom App - it's a special way to generate your own Dexcom App for reading out the sensor data</td>
+ <td>Kendi Dexcom Uygulamanızı oluşturun - sensör verilerini okumak için kendi Dexcom Uygulamanızı oluşturmanın özel bir yolu</td>
  <td>&nbsp;</td>
  <td><a href="../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
 </tr>
 <tr>
  <td><strong>KYAŞ</strong></td>
- <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>kanül yaşı - işlemler sekmesine / menüsüne bilgi girilmişse AndroidAPS'nin ana ekranında ve Nightscout'ta görüntülenir</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -119,9 +119,9 @@
  <td><a href="../Configuration/Config-Builder.html#closed-loop">Viki kapalı döngü</a></td>
 </tr>
 <tr>
- <td><strong>COB Aktif Karbonhidrat</strong></td>
- <td>carbs on board - Carbs on board is the amount of carbohydrates currently available for digestion.</td>
- <td>IOB Aktif İnsülin</td>
+ <td><strong>AKRB Aktif Karbonhidrat</strong></td>
+ <td>aktif karbonhidrat - Aktif karbonhidrat, sindirim için halihazırda mevcut olan karbonhidrat miktarıdır.</td>
+ <td>AİNS</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AndrdoidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
+ <td>git bizim bağlamımızda burada, oluşturma işlemi için esas olarak Github'dan AndrdoidAPS kaynaklarını indirme aracıdır. Özellikle ekipler için bilgisayar dosyalarındaki değişiklikleri izlemek ve bu dosyalar üzerindeki çalışmaları koordine etmek için sürüm kontrol sistemidir.<br>-> APK güncellemeleri için gereklidir</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Viki - APK güncellemesi</a></td>
 </tr>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>cloud computing platform to host Nightscout web app</td>
+ <td>Nightscout web uygulamasını barındıracak bulut bilgi işlem platformu</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -179,7 +179,7 @@
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>IOB Aktif İnsülin</strong></td>
+ <td><strong>AİNS</strong></td>
  <td>aktif insülin - vücudunuzda aktif insülin miktarı</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
@@ -192,7 +192,7 @@
 </tr>
 <tr>
  <td><strong>LGS</strong></td>
- <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca IOB negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
+ <td>Düşük Glikoz Süspansiyonu<br>AAPS, kan şekeri düşüyorsa bazal değeri düşürür. Ancak kan şekeri yükseliyorsa, yalnızca AİNS negatifse (önceki bir LGS'den) bazal artacaktır, aksi takdirde bazal oranlar seçtiğiniz profille aynı kalacaktır. Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.</td>
  <td><a href="../Usage/Objectives.html#objective-6-starting-to-close-the-loop-with-low-glucose-suspend">görev 6</a></td>
  <td>&nbsp;</td>
 </tr>
@@ -210,7 +210,7 @@
 </tr>
 <tr>
  <td><strong>makIOB</strong></td>
- <td>güvenlik özelliği -AAPS maksimum toplam IOB (aktif insülini) geçemez</td>
+ <td>güvenlik özelliği -AAPS maksimum toplam AİNS (aktif insülini) geçemez</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - makIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Viki - SMB</a></td>
 </tr>
@@ -228,21 +228,21 @@
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. AndroidAPS is storing there the data. It's available e.g. for parents follwing their childs diabetes management or reporting of the historically data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentil chart etc..</td>
+ <td>CGM verilerine erişmek ve raporlamak için açık kaynak projesi. Tüm diyabet verileriniz için merkezi veri merkezidir. AndroidAPS orada verileri depoluyor. Çocuklarının diyabet yönetimini izleyen ebeveynler için veya diyabet kontrolünün gerçek durumunu (beklenen HbA1c, aralıktaki süre) elde etmek veya yüzdelik çizelgesi vb. yoluyla verilerdeki kalıpları aramak için geçmiş verilerin raporlanması için kullanılabilir..</td>
  <td>NightScout raporları</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
  <td><strong>NightScout raporları</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
+ <td>Nightscout web uygulaması verilerinden PDF raporları oluşturmak için diğer döngü kullanıcılarından araç, ör. diyabet ekibinizle toplantılar için.</td>
  <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Raporları</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
 <tr>
- <td><strong>NS Client</strong></td>
- <td>part of AAPS to connect to your Nightscout site</td>
+ <td><strong>NS Client (Nightscout İstemcisi)</strong></td>
+ <td>Nightscout sitenize bağlanmak için AAPS'in bir parçası</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Viki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Görevler</strong></td>
@@ -258,7 +258,7 @@
 </tr>
 <tr>
  <td><strong>Açık Döngü</strong></td>
- <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
+ <td>sistem, uygulamada manuel olarak onaylanması gereken önerilen ayarlamaları önerecektir</td>
  <td>Kapalı Döngü</td>
  <td><a href="../Configuration/Config-Builder.html#open-loop">Viki - Konfigürasyon ayarları</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>PG</strong></td>
- <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
+ <td>pompa geçmişi - buna AndroidAPS ana ekranının sağ tarafında bulunan 3 noktalı menüde bulunan tedavilerden erişebilirsiniz</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#treatment">Ekran görüntüleri</a></td>
 </tr>
@@ -288,7 +288,7 @@
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
- <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
+ <td>temel tedavi ayarları (bazal oran, İES, KİO, İDF, KŞ hedefi)<br>AndroidAPS v3 yalnızca yerel profilleri destekler, ancak Nightscout profilleri AndroidAPS'ye kopyalanabilir (senkronize edilebilir)</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profile">Viki - profil</a></td>
 </tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>SYAŞ</strong></td>
- <td>sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
+ <td>sensör yaşı - işlemler sekmesine / menüsüne bilgi girilmişse AndroidAPS'nin ana ekranında ve Nightscout'ta görüntülenir</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -349,24 +349,24 @@
 <tr>
  <td><strong>(TBB) Toplam Temel Bazal</strong></td>
  <td>toplam temel bazal (24 saat içindeki bazal oranın toplamı)</td>
- <td>TBR / TDD</td>
+ <td>GBO / GTD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>GBO</strong></td>
  <td>geçici bazal oranı</td>
- <td>TBB / TDD</td>
+ <td>TTB / GTD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>GTD</strong></td>
  <td>günlük toplam doz (Günlük bolus + bazal)</td>
- <td>TBB / TBR</td>
+ <td>TBB / GBO</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>TT (Geçici Hedef)</strong></td>
- <td>temporary target<br>temporary increase/decrease of BG target (range) e.g. for eating or sport activities</td>
+ <td>geçici hedef<br>KŞ hedefinde (aralık) geçici artış/düşüş ör. yemek veya spor aktiviteleri için</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#temp-targets">Viki - geçici hedefler</a></td>
 </tr>

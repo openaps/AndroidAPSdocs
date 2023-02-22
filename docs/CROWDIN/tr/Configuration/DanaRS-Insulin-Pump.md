@@ -8,6 +8,8 @@
 
 * DanaRS/i pompasında uygulama tarafından "BASAL A" kullanılır. Mevcut verilerin üzerine yazılır.
 
+(DanaRS-Insulin-Pump-pairing-pump)=
+
 ## Pompa eşleştirme
 
 * AndroidAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
@@ -41,6 +43,8 @@
 * Doktorlar menüsünü kullanarak pompadaki bolus adımını 0,05 Ü/s olarak ayarlayın (pompa kullanım kılavuzuna bakın).
 * Pompada yayma bolusları etkinleştir
 
+(DanaRS-Insulin-Pump-default-password)=
+
 ### Varsayılan parola
 
 * Pompa yazılımı v1 ve v2'ye sahip DanaRS için varsayılan parola 1234'tür.
@@ -49,6 +53,8 @@
     * Ana menüde Pompa > gözden geçir > bilgi açın. 
     * 3. numara üretim tarihidir. 
     * v3/i için bu şifre sadece pompada menüyü kilitlemek için kullanılır. İletişim veya AndroidAPS'e girmek için gerekli değildir.
+
+(DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Pompa şifresi değiştirme
 
@@ -67,7 +73,7 @@
 
 * Eski şifreyi girmek için Tamam'a basın.
 
-* **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](#default-password) bakın) ve "OK" Tamam'a basın
+* **Eski şifreyi** girin (Varsayılan şifre için [yukarıya](DanaRS-Insulin-Pump-default-password) bakın) ve "OK" Tamam'a basın
     
     ![DanaRS Eski parola girişi](../images/DanaRSPW_04_11PWenter.png)
 
@@ -87,6 +93,8 @@
     
     ![DanaRS Çıkış](../images/DanaRSPW_07_Exit.png)
 
+(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
+
 ## Dana RS'e özgü hatalar
 
 ### İnsülin iletimi sırasında hata
@@ -97,14 +105,14 @@ Bolus insülin iletimi sırasında AAPS ile Dana RS arasındaki bağlantının k
 
 * Çoğu durumda bu sadece bir iletişim sorunudur ve doğru miktarda insülin verilir.
 * Doğru bolus verilip verilmediğini pompa geçmişinden (pompada veya Dana sekmesi > pompa geçmişi > boluslar aracılığıyla) kontrol edin.
-* İsterseniz [tedaviler sekmesinde](../Getting-Started/Screenshots#carb-correction) hatalı girişi silin.
+* İsterseniz [tedaviler sekmesinde](Screenshots-carb-correction) hatalı girişi silin.
 * Bir sonraki pompa bağlantısında gerçek miktar okunur ve kaydedilir. Bunu yaptırmak için dana sekmesindeki BT simgesine basın veya bir sonraki bağlantı için bekleyin.
 
 ## Telefon değiştirirken özel not
 
 Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 
-* Eski telefonunuzdaki [Ayarları dışa aktarın](../Usage/ExportImportSettings#export-settings)
+* Eski telefonunuzdaki [Ayarları dışa aktarın](ExportImportSettings-export-settings)
 * Ayarları eski telefondan yeni telefona aktarın
 
 ### DanaRS v1
@@ -112,13 +120,13 @@ Yeni bir telefona geçerken aşağıdaki adımları yapmanız gerekir:
 * Dana RS'i yeni telefonla **manuel olarak eşleştirin**
 * Pompa bağlantı ayarları da içe aktarıldığından, yeni telefonunuzdaki AAPS pompayı zaten "bilir" ve bu nedenle bir bluetooth taraması başlatmaz. Bu nedenle yeni telefon ve pompa manuel olarak eşleştirilmelidir.
 * AndroidAPS'i yeni telefona yükleyin.
-* Yeni telefonunuzda [Ayarları içe aktarın](../Usage/ExportImportSettings#import-settings)
+* Yeni telefonunuzda [Ayarları içe aktarın](ExportImportSettings-import-settings)
 
 ### DanaRS v3, Dana-i
 
-* [Yukarıda](#pairing-pump) açıklanan şekilde eşleştirme prosedürünü başlatın.
+* [Yukarıda](DanaRS-Insulin-Pump-pairing-pump) açıklanan şekilde eşleştirme prosedürünü başlatın.
 * Bazen, Dana-i/RS sekmesindeki BT simgesine uzun tıklayarak AndroidAPS'deki eşleştirme bilgilerinin temizlenmesi gerekebilir.
 
 ## Dana RS pompasıyla seyahat edenler için saat dilimi
 
-Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#danarv2-danars) bölümüne bakın.
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](Timezone-traveling-danarv2-danars) bölümüne bakın.

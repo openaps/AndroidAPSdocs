@@ -12,7 +12,7 @@
 
 Remarque : AAPS écrira toujours les données dans le **premier profil débit de base de la pompe**.
 
-* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](../Module/module#telephone) quelle version d'Android est nécessaire pour exécuter AndroidAPS.)
+* Un téléphone Android (en pratique n'importe quelle version d'Android devrait marcher avec l'Insight, mais vérifiez sur la page [Composants](module-phone) quelle version d'Android est nécessaire pour exécuter AAPS.)
 * L'application AndroidAPS installée sur votre téléphone
 
 ## Paramètres
@@ -50,13 +50,15 @@ Remarque : AAPS écrira toujours les données dans le **premier profil débit de
 
 Remarque : Il n'y aura pas de connexion permanente entre la pompe et le téléphone. Une connexion ne sera établie que si c'est nécessaire (par ex. pour fixer un débit de basal temporaire, un bolus, ou lire l'historique de la pompe...). Sinon, la batterie du téléphone et de la pompe se videraient beaucoup trop rapidement.
 
+(Accu-Chek-Insight-Pump-settings-in-aaps)=
+
 ## Paramètres dans AAPS
 
-**Note : il est maintenant possible (uniquement avec AAPS v2.7.0 et ultérieures) d'utiliser « Utiliser toulours les valeurs absolues du basal » si vous voulez utiliser Autotune avec la pompe Insight, même si la 'syncro est activée' avec Nightscout.** (Dans AAPS, allez dans [Préférences > NSClient > Paramètres avancés](../Configuration/Preferences#parametres-avances-nsclient)).
+**Note : il est maintenant possible (uniquement avec AAPS v2.7.0 et ultérieures) d'utiliser « Utiliser toulours les valeurs absolues du basal » si vous voulez utiliser Autotune avec la pompe Insight, même si la 'syncro est activée' avec Nightscout.** (Dans AAPS, allez dans [Préférences > NSClient > Paramètres avancés](Preferences-advanced-settings-nsclient)).
 
 ![Copie d'écran paramètres Insight](../images/Insight_settings.png)
 
-Dans les paramètres Insight d'AndroidAPS, vous pouvez activer les options suivantes :
+Dans les paramètres Insight d'AAPS, vous pouvez activer les options suivantes :
 
 * "Enreg. changement de réservoir": ajoute automatiquement le changement de réservoire quand vous effectuez "Remplir tubulure" sur la pompe.
 
@@ -110,15 +112,17 @@ Configurez les alarmes dans la pompe comme suit :
 * Menu > Réglages > Réglages pompe > Réglages Mode > Silencieux > Volume > 0 (suppimez toutes les barres)
 * Menu > Modes > Type de signal > Silencieux
 
-Ceci supprimera toutes les alarmes de la pompe, permettant à AndroidAPS de décider si une alarme est pertinente pour vous. Si AndroidAPS ne reconnaît pas une alarme, son volume augmentera (d'abord bip, puis vibration).
+Ceci supprimera toutes les alarmes de la pompe, permettant à AAPS de décider si une alarme est pertinente pour vous. Si AAPS ne reconnaît pas une alarme, son volume augmentera (d'abord bip, puis vibration).
+
+(Accu-Chek-Insight-Pump-vibration)=
 
 ### Vibration
 
-Selon la version de firmware de votre pompe Insight, elle vibrera brièvement à chaque fois qu'un bolus est délivré (par exemple quand AndroidAPS délivre un SMB ou une émulation DBT effectuée avec un bolus étendu).
+Selon la version de firmware de votre pompe Insight, elle vibrera brièvement à chaque fois qu'un bolus est délivré (par exemple quand AAPS délivre un SMB ou une émulation DBT effectuée avec un bolus étendu).
 
 * Firmware 1.x : Aucune vibration par conception.
 * Firmware 2.x : Les vibrations ne peuvent pas être désactivées.
-* Firmware 3.x : Il n'y a pas de vibration quand AndroidAPS injecte un bolus. (Au minimum avec la [version 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x : Il n'y a pas de vibration quand AndroidAPS injecte un bolus. (Au minimum avec la [version 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 La version du firmware se trouve dans le menu Appairage de Insight / Version du logiciel.
 
@@ -126,7 +130,9 @@ La version du firmware se trouve dans le menu Appairage de Insight / Version du 
 
 La durée de vie de la pile de l'Insight, lorsque vous bouclez, est comprise entre 10 et 14 jours, et au maximum 20 jours. L'utilisateur qui a déclaré cela utilise des piles Energizer ultimate lithium.
 
-La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer un nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AndroidAPS avant le changement de pile ne seront plus intégrées dans les calculs car le temps réel ne peut pas être identifié correctement.
+La pompe Insight dispose d'une petite batterie interne pour garder les fonctions essentielles comme l'horloge en cours d'exécution pendant que vous changez la pile. Si le changement de la pile prend trop de temps, cette batterie interne peut manquer d'énergie, l'heure sera remise à zéro, et il vous sera demandé d'entrer à nouveau la date et l'heure après avoir mis la nouvelle pile. Si cela se produit, toutes les entrées mémorisées dans AAPS avant le changement de pile ne seront plus intégrées dans les calculs car l'heure réelle ne peut pas être identifiée correctement.
+
+(Accu-Chek-Insight-Pump-insight-specific-errors)=
 
 ## Erreurs spécifiques à Insight
 
@@ -144,4 +150,4 @@ Dans ce cas, désactivez le bluetooth sur la pompe ET sur le smartphone pendant 
 
 ## Voyager avec différents fuseaux horaires avec une pompe Insight
 
-Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](../Usage/Timezone-traveling#insight).
+Pour plus d'informations sur les voyages avec différents fuseaux horaires, voir la section [Voyager avec différents fuseaux horaires avec une pompe](Timezone-traveling-insight).

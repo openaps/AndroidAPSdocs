@@ -1,3 +1,5 @@
+(Troubleshooting-NSClient-troubleshooting-nsclient)=
+
 # Resolución de problemas de NSClient
 
 NSClient relies on stable communication with Nightscout. An unstable connection leads to synchronization errors and high data usage.
@@ -6,7 +8,7 @@ If nobody is following you on Nightscout you can choose to pause NSClient to sav
 
 * How to detect an unstable connection?
 
-Vaya a la pestaña NSClient en AAPS y vea el registro. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
+Go to NSClient tab in AAPS and watch the log. The expected behavior is to receive a PING every ~30s and almost no reconnection messages. If you see many reconnections, then there is a problem.
 
 Since AndroidAPS version 2.0, when such behavior is detected, NSClient is paused for 15 minutes and the message "NSClient malfunction" is displayed on the main Overview screen.
 

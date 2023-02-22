@@ -2,13 +2,17 @@
 
 ![Android Auto'da AAPS CGM verileri](../images/AndroidAuto_05.png)
 
+(Android-auto-androidaps-settings-for-android-auto)=
+
 ## Android Auto için AndroidAPS ayarları
 
 Uyarılar ve bildirimler için sistem bildirimlerini kullan:
 
-* Open 3-dot-menu on top right of home screen and selecting **Preferences** ➜ **Local Alerts** ➜ and activating **Use system notifications for alerts and notifications** 
+* Ana ekranın sağ üst köşesindeki 3 noktalı menüyü açın ve **Tercihler** ➜ **Yerel Uyarılar** ➜ öğesini seçin ve **Uyarılar ve bildirimler için sistem bildirimlerini kullan**'ı etkinleştirin 
 
 ![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01v2.png)
+
+(Android-auto-androidaps-settings-in-android-auto-app-on-your-phone)=
 
 ## Telefonunuzdaki Android Auto uygulamasındaki ayarlar
 
@@ -41,4 +45,4 @@ AAPS resmi bir Android Auto uygulaması olmadığı için bildirimlerin Android 
 
 ## Sorun giderme:
 
-* Bildirimleri görmüyorsanız, [AAPS'in bildirimleri göstermesine izin verdiğinizi](#androidaps-settings-for-android-auto) ve android için de [Android Auto'nun bildirimlere erişim hakları olduğunu kontrol edin](#settings- in-android-auto-app-on-your-phone).
+* Bildirimleri görmüyorsanız, [AAPS'in bildirimleri göstermesine izin verdiğinizi](Android-auto-androidaps-settings-for-android-auto) ve android için de [Android Auto'nun bildirimlere erişim hakları olduğunu kontrol edin](Android-auto-androidaps-settings-in-android-auto-app-on-your-phone).

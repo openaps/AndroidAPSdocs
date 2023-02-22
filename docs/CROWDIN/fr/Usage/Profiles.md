@@ -1,21 +1,23 @@
+(Profiles-profile-switch)=
+
 # Changement de profil
 
-La documentation sur les profils en général peut être trouvée sur [Générateur de configuration - Profil](../Configuration/Config-Builder#profil).
+Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
-Lors du démarrage d'AAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau pour commencer à utiliser ces changements.
+On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
-En interne, AAPS crée une capture instantanée du profil avec la date et la durée et l’utilise dans la période sélectionnée.
+Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
 
 * La durée zéro signifie infinie. Ce profil est actif jusqu'à ce qu'il y ait un nouveau "Changement de Profil".
 * La durée de x minutes signifie x minutes d'utilisation de ce profil. Après cette durée, le profil est basculé vers le précédent "Changement de profil" valide.
 
-Si vous avez modifié votre profil dans l'onglet "Profil local", vous pouvez y activer le profil, ce qui permet également de faire un changement de profil implicite.
+If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
 
-Pour effectuer un changement de profil, faites un appui long sur le nom de votre profil ("Tuned 03/11" dans l'image ci-dessous) dans la page d'accueil d'AndroidAPS.
+To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
 
-![Faire un changement de profil](../images/ProfileSwitch_HowTo.png)
+![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-Dans le "Changement de profil", vous pouvez choisir deux paramètres supplémentaires qui font partie du profil circadien :
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Pourcentage
 
@@ -28,9 +30,11 @@ Dans le "Changement de profil", vous pouvez choisir deux paramètres supplément
 
 * L'algorithme de la boucle (ouvert ou fermé) continuera de fonctionner au dessus du profil au pourcentage sélectionné. Ainsi, par exemple, des pourcentages différents peuvent être mis en place sur un profil pour différentes étapes du cycle hormonal.
 
+(Profiles-time-shift)=
+
 ## Décalage horaire
 
-![Changement de profil avec pourcentage et décalage horaire](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * Cela permet de tout décaler (sur 24 heures tournantes) du nombre d'heures renseigné. 
 * Par exemple, lorsque vous travaillez de nuit, vous décalez de combien d'heures plus tard/plus tôt vos heures de couché ou de réveil.
@@ -43,15 +47,17 @@ Dans le "Changement de profil", vous pouvez choisir deux paramètres supplément
     * 22:00 **-10 h** -> 12:00
     * Les paramètres à partir de 22:00 seront utilisés à la place des paramètres normalement utilisés à 12:00 en raison du décalage horaire négatif.
 
-![Changement de profil et sens du décalage horaire](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Ce mécanisme de prise de photos du profil permet des calculs beaucoup plus précis du passé et la possibilité de suivre les changements de profil.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Dépannage des erreurs de profil
 
 ### 'Profil incorrect' / 'Valeurs des débits de basal non alignées sur des heures'
 
-![Débits de basal non alignés sur les heures](../images/BasalNotAlignedToHours2.png)
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
 * Ces messages d'erreur s'affichent si vous avez des débits de basal ou des ratio G/I qui ne sont pas sur des heures. (Les pompes DanaR et DanaRS ne prennent pas en charge les changements d'une demi-heure par exemple.)
   
@@ -67,14 +73,14 @@ Ce mécanisme de prise de photos du profil permet des calculs beaucoup plus pré
   
   ![Supprimer un changement de profil](../images/PSRemove.png)
 
-Vous pouvez également supprimer le sélecteur de profil directement dans mLab comme décrit ci-dessous.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### 'Changement de profil reçu de NS mais le profil n'existe pas localement'
 
 * Le profil demandé n'a pas été correctement synchronisé depuis Nightscout.
 * Suivez les instructions ci-dessus pour effacer le changement de profil
 
-Vous pouvez également supprimer le changement de profil directement dans mLab :
+Alternatively you can delete the profile switch directly in mLab:
 
 * Allez dans votre collection mLab
 * Recherches le changement de profil dans les traitements

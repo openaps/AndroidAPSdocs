@@ -1,31 +1,35 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## שיקולי ביטחון
 
-מעבר לדיווח, ניתן להשתמש ב-Nightscout גם כדי לשלוט ב-AAPS. לדוגמה אפשר להגדיר ערכי מטרה זמניים ולהכריז על פחמימות עתידיות. מידע זה ייקלט על ידי AAPS ויטופל בהתאם. לכן כדאי לחשוב על אבטחת אתר ה-Nightscout שלכם.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### הגדרות Nightscout
 
-אפשר למנוע גישה ציבורית לאתר ה-Nightscout באמצעות [תפקידי אימות](https://nightscout.github.io/nightscout/security).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### הגדרות AndroidAPS
 
-יש פונקציית העלאה ל-NS בלבד (ללא סנכרון) בהגדרות AAPS. כך AAPS לא יקלוט שינויים שנעשו ב-Nightscout כגון ערכי מטרה זמניים או פחמימות עתידיות.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * הקישו על תפריט 3 נקודות בפינה הימנית העליונה במסך הבית של ה-AAPS שלך.
 * בחרו "העדפות".
 * גללו מטה והקישו על "הגדרות מתקדמות".
 * הפעילו "העלאה בלבד ל-NS"
 
-![העלאה בלבד ל-Nightscout](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### הגדרות אבטחה נוספות
 
-דאגו לעדכן את הטלפון שלכם כמתואר ב[בטיחות קודמת לכול](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## הגדרה ידנית של Nightscout
 
-ההנחה היא שכבר יש לכם אתר Nightscout, אם לא ביקרתם בדף [Nightscout](http://nightscout.github.io/nightscout/new_user/) לקבלת הנחיות מלאות על ההגדרה, ההוראות שלהלן הן הגדרות שתצטרכו להוסיף לאתר ה-Nightscout שלכם. אתר ה-Nightscout צריך להיות גרסה 10 לפחות (מוצג כ-0.10...) לכן וודאו שאתם משתמשים ב[גרסה האחרונה](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) אחרת תקבלו הודעת שגיאה באפליקציית AAPS.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * גלשו ל-https://herokuapp.com/
 
@@ -49,9 +53,9 @@
 
 ## הגדרה חצי אוטומטית של Nightscout
 
-הלופר מרטין שיפטן הציע הגדרת Nightscout חצי אוטומטית במשך שנים רבות ללא תשלום. ככל שמספר המשתמשים גדל כך גם העלות ולכן הוא נאלץ להתחיל לבקש עמלה קטנה החל מאוקטובר 2021 - החל מ-4,17 אירו לחודש.
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**יתרונות**
+**Benefits**
 
 * אפשר יכול להתקין את Nightscout בכמה לחיצות ולהשתמש בו ישירות. 
 * צמצום העבודה הידנית בעזרת הניהול האוטומטי של מרטין.
@@ -61,4 +65,4 @@
 
 <https://ns.10be.de/en/index.html>
 
-ישנה החלופה <https://t1pal.com/> - החל מ-$11.99 לחודש.
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

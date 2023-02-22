@@ -4,11 +4,13 @@
 
 Se změnou časového pásma v telefonu není žádný problém, protože tyto pumpy nepoužívají historii
 
+(Timezone-traveling-danarv2-danars)=
+
 ## DanaRv2, DanaRS
 
-These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **To znamená, že pokud prostě změníte časové pásmo na telefonu, historické záznamy se z pumpy načtou v jiném pásmu a zdvojí se.**
+These pumps need a special care because AndroidAPS is using history from the pump but the records in pump don't have timezone stamp. **That means if you simple change timezone in phone, records will be read with different timezone and will be doubled.**
 
-Abychom se tomu vyhnuli, existují dvě možnosti:
+To avoid this there are two possibilities:
 
 ### Možnost 1: Ponechat původní čas a posunout profil
 
@@ -24,13 +26,13 @@ Abychom se tomu vyhnuli, existují dvě možnosti:
    
    * např. Vídeň -> New York: posun času +6 hodin
    * např. Vídeň -> Sydney: posun času -8 hodin
-* Probably not an option if using [patched LibreLink app](../Hardware/Libre2#time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
 
 ### Možnost 2: Vymazat historii pumpy
 
 * Na telefonu v nastavení vypněte 'Automatická změna data a času' (ruční změna časového pásma)
 
-Když vystoupíte z letadla:
+When get out of plane:
 
 * vypněte pumpu
 * změňte časové pásmo na telefonu
@@ -40,23 +42,39 @@ Když vystoupíte z letadla:
 * zapněte telefon
 * nechejte telefon spojit se s pumpou a sladit se s jejím časem
 
+(Timezone-traveling-insight)=
+
 ## Insight
 
-Ovladač automaticky upravuje čas v pumpě podle času v telefonu.
+The driver automatically adjusts the time of the pump to the time of the phone.
 
-Insight také zpracovává záznamy v historii o změnách času. Takže správný čas lze určit v AAPS navzdory změně času.
+The Insight also records the history entries in which moment time was changed and from which (old) time to which (new) time. So the correct time can be determined in AAPS despite the time change.
 
-Může ale způsobit nepřesnosti v celkových denních dávkách. Neměl by to však být problém.
+It may cause inaccuracies in the TDDs. But it shouldn't be a problem.
 
-Uživatel pumpy Insight se tedy nemusí obávat změn časového pásma a změn času. K tomuto pravidlu existuje jedna výjimka: pumpa Insight má malou vnitřní baterii k napájení času atd. zatímco měníte "skutečnou" baterii. Pokud výměna baterie trvá příliš dlouho, tato interní baterie se může vybít, hodiny se resetují a vy budete vyzváni, abyste po vložení nové baterie opětovně nastavili čas. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+So the Insight user doesn't have to worry about timezone changes and time changes. There is one exception to this rule: The Insight pump has a small internal battery to power time etc. while you are changing the "real" battery. If changing battery takes to long this internal battery runs out of energy, the clock is reset and you are asked to enter time and date after inserting a new battery. In this case all entries prior to the battery change are skipped in calculation in AAPS as the correct time cannot be identified properly.
+
+## Accu-Chek Combo
+
+The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AndroidAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+
+Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+
+The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+
+(Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 # Úpravy letního času
 
-V závislosti na pumpě a CGM, může skok v čase způsobit problémy. S pumpou Combo apod. se historie načítá znovu a to by vedlo ke zdvojení položek. Úpravy proto prosím provádějte tehdy, když jste vzhůru, ne během noci.
+Depending on pump and CGM setup, jumps in time can lead to problems. With the Combo e.g. the pump history gets read again and it would lead to duplicate entries. So please do the adjustment while awake and not during the night.
 
-Jestliže k bolusu používáte kalkulačku, prosím nepoužívejte COB a IOB, pokud nemáte jistotu, že jsou naprosto správné - raději je několik hodin po změně času nepoužívejte vůbec.
+If you bolus with the calculator please don't use COB and IOB unless you made sure they are absolutely correct - better don't use them for a couple of hours after DST switch.
+
+(Timezone-traveling-accu-chek-combo)=
 
 ## Accu-Chek Combo
+
+**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
 
 AndroidAPS will issue an alarm if the time between pump and phone differs too much. In case of DST time adjustment, this would be in the middle of the night. To prevent this and enjoy your sleep instead, follow these steps so that you can force the time change at a time convenient to yourself:
 

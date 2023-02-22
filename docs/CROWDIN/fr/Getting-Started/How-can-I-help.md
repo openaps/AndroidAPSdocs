@@ -19,11 +19,17 @@ Excellent, c'est une chose très appréciée et une bonne façon de contribuer !
 
 ## Je parle plusieurs langues et je veux traduire l'application ou la documentation
 
+If you are translating something for the first time, please start with translating the strings for the app, as this is easier and you will get results faster.
+
+You are welcome to start as a translator for the documentation in parallel or later.
+
+You can check the state of translations for the languages app and documentation [here](../Administration/stateTranslations.md).
+
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Il suffit de vous inscrire à CROWDIN, de cliquer sur votre langue, d'attendre l'autorisation de l'admin et d'aller de l'avant !
+Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
 
 ## Y a-t-il d'autres façons d'aider ?
 
-Les compétences requises incluent la conception graphique, le retour d'expérience, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans discord & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.
+Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.

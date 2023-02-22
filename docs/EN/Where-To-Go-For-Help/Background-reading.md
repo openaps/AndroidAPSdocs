@@ -32,8 +32,6 @@ Before you build your rig, you're going to have to do a lot of reading in order 
 
 [https://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/](https://www.diabettech.com/artificial-pancreas/looping-do-i-choose-openaps-or-loop-either-way-wearenotwaiting/)
 
-[https://www.healthline.com/diabetesmine/dana-rs-insulin-pump-embraces-wearenotwaiting](https://www.healthline.com/diabetesmine/dana-rs-insulin-pump-embraces-wearenotwaiting)
-
 [https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html](https://btvnovinite.bg/video/bulgaria/dnes-e-svetovnijat-den-za-borba-s-diabeta.html)
 
 ## Stuff on YouTube

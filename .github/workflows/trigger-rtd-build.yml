@@ -51,3 +51,11 @@ jobs:
       uses: wei/curl@v1
       with:
         args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_RU }}" https://readthedocs.org/api/v2/webhook/androidaps-ru/145190/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_HE }}" https://readthedocs.org/api/v2/webhook/androidaps-he/209583/
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: -X POST -d "branches=${{ steps.extract_branch.outputs.branch }}" -d "token=${{ secrets.RTD_WEBHOOK_KEY_TR }}" https://readthedocs.org/api/v2/webhook/androidaps-tr/209052/
