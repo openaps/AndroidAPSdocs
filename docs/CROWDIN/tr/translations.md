@@ -3,7 +3,7 @@
 * For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
 * For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
 
-* Dokümanlar ekibine katılma isteği gönderin. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
 ```{admonition} Time for Approval :class: note
 
@@ -95,10 +95,10 @@ It's the proofreaders job to have a special look on this!
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
+    ![Doküman redaksiyon modu](./images/translation_WikiProofreadingmode.png)
     
     çevrilmiş metinleri onaylayabilirler
     
-    ![approve text](./images/translations-proofreading.png)
+    ![metni onayla](./images/translations-proofreading.png)
 
 * When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
