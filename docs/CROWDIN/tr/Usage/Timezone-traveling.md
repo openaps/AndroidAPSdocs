@@ -54,6 +54,14 @@ GTD'larda yanlışlıklara neden olabilir. Ama sorun olmamalı.
 
 Böylece Insight kullanıcısının saat dilimi değişiklikleri ve saat değişiklikleri konusunda endişelenmesine gerek kalmaz. Bu kuralın bir istisnası vardır: Insight pompasının esas pilini değiştirirken zaman vb. bilgileri hafızasında tutması için küçük bir dahili pili vardır. Pilin değiştirilmesi uzun sürerse bu dahili pilin enerjisi biterse saat sıfırlanır ve yeni pil taktıktan sonra saat ve tarih girmeniz istenir. Bu durumda, pil değişimi öncesindeki tüm girişler, doğru zaman tam olarak tanımlanamadığı için AAPS'deki hesaplamada atlanır.
 
+## Accu-Chek Combo
+
+[Yeni Combo sürücüsü](../Configuration/Accu-Chek-Combo-Pump-v2.md), pompanın saatini telefonun saatine göre otomatik olarak ayarlar. Combo, saat dilimlerini depolayamaz, yalnızca yerel saati depolayabilir. Dolayısıyla yeni sürücü pompaya bunu programlar. Ek olarak, pompanın yerel saatini saat dilimi farkı olan tam bir zaman damgasına dönüştürebilmek için yerel AndroidAPS tercihlerinde saat dilimini saklar. Kullanıcının herhangi bir şey yapmasına gerek yoktur; Combo'daki saat, telefonun geçerli saatinden çok fazla saparsa, pompanın saati otomatik olarak ayarlanır.
+
+Bununla birlikte, yalnızca genellikle yavaş olan uzak terminal modunda yapılabildiğinden, bunun biraz zaman aldığını unutmayın. Bu aşılamayan bir Combo sınırlamasıdır.
+
+Ruffy tabanlı eski sürücü, zamanı otomatik olarak ayarlamaz. Kullanıcının bunu manuel olarak yapması gerekir. Değişikliğin nedeninin saat dilimi / gün ışığından yararlanma olması durumunda bunu güvenli bir şekilde yapmak için gerekli adımlar için aşağıya bakın.
+
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
 # Yaz saati uygulamasında (DST) zaman ayarı
@@ -65,6 +73,8 @@ AKRB ve AİNS'in kesinlikle doğru olduğundan emin olana kadar bolus hesaplayı
 (Timezone-traveling-accu-chek-combo)=
 
 ## Accu-Chek Combo
+
+**NOT**: Yukarıda bahsedildiği gibi, bu bölüm yalnızca Ruffy tabanlı eski sürücü için geçerlidir. Yeni sürücü tarih, saat ve DST'yi otomatik olarak ayarlar.
 
 Pompa ve telefon arasındaki süre çok farklıysa AndroidAPS bir alarm verir. Ne yazık ki, DST zaman değişikliği gece yarısında olacaktır. Bunu önlemek ve bunun yerine uykunuzun tadını çıkarmamak için kendinize daha uygun bir zamanda saat değişikliğini yapmaya zorlamak için şu adımları izleyin:
 

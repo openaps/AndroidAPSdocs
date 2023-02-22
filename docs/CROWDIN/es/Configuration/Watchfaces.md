@@ -2,7 +2,7 @@
 
 Puede instalar la aplicación AndroidAPS en su reloj **basado en Wear OS**. La versión de AAPS para reloj le permite:
 
-* **muestra datos en el reloj**: proporcionando [pantallas personalizadas](#aaps-watchfaces) o en pantalla estándar con el uso de compilaciones [complicaciones](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **control de AAPS en el teléfono**: para bolo, establecer un objetivo temporal, etc.
 
 ### Antes de comprar un reloj...
@@ -38,6 +38,8 @@ The following functions can be triggered from the watch:
     * comprobar estado del lazo
     * comprobar y cambiar perfil, CPP (Perfil en Porcentaje circadiano= turno de tiempo + porcentaje)
     * mostrar TDD (dosis diaria total = bolos + basal por día)
+
+(Watchfaces-aaps-watchfaces)=
 
 ## Esferas de AAPS
 
@@ -103,6 +105,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Vibrate on Bolus** (default `On`):
 * **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+
+(Watchfaces-watchface-settings)=
 
 ### Watchface settings
 
@@ -317,7 +321,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.

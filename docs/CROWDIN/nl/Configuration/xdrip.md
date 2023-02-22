@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### G6-zender voor de eerste keer verbinden
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) kunt je de [master](https://jamorham.github.io/#xdrip-plus) versie gebruiken.
 
@@ -156,6 +156,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    
    * Gebruiker 1: Transmitter days (Zender dagen): 151 / Voltage A: 297 / Voltage B: 260 / Resistance (Weerstand): 2391
    * Gebruiker 2: Transmitter days (Zender dagen): 249 / Voltage A: 275 (op het moment van stoppen)
+
+(xdrip-extend-transmitter-life)=
 
 ### Zender resetten
 

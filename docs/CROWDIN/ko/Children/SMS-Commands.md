@@ -3,7 +3,7 @@
 ## Safety First
 
 - AndroidAPS allows you to control a child's phone remotely via text message. SMS 통신기를 활성화 했다면, 원격 명령어를 사용하기 위해 설정된 폰(부모폰)을 도난 맞을 수도 있다는 사실에 항상 유념하셔야 합니다. 따라서 최소한 PIN 코드 이상의 보안으로 폰을 보호하십시오. A strong password or biometrics are recommended.
-- Additionally it is recommended to allow a [second phone number](#authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](#other) SMS communicator in case your main remote phone gets lost or stolen.
+- Additionally it is recommended to allow a [second phone number](SMS-Commands-authorized-phone-numbers) for SMS commands. So you can use second number to [temporary disable](SMS-Commands-other) SMS communicator in case your main remote phone gets lost or stolen.
 - AndroidAPS will also inform you by text message if your remote commands, such as a bolus or a profile change, have been carried out. 수신 폰 중 하나가 도난 당할 경우를 대비하여, 적어도 2개 이상의 다른 폰에 확인 문자 메시지가 전송되도록 설정하는 것을 권장합니다.
 - **If you bolus through SMS Commands you must enter carbs through Nightscout (NSClient, Website...)!** If you fail to do so IOB would be correct with too low COB potentially leading to not performed correction bolus as AAPS assumes that you have too much active insulin.
 - As of AndroidAPS version 2.7 an authenticator app with a time-based one-time password must be used to increase safety when using SMS commands.
@@ -18,6 +18,8 @@
 - Boluses can't be given through Nightscout, but you can use SMS commands.
 - If you use an iPhone as a follower and therefore cannot use NSClient app, there are additional SMS commands available.
 - In your android phone setting go to Applications > AndroidAPS > Permissions and enable SMS
+
+(SMS-Commands-authorized-phone-numbers)=
 
 ### Authorized phone numbers
 
@@ -148,6 +150,8 @@ Remote bolus is not allowed within 15 min (this value is editable only if 2 phon
 - PROFILE LIST \* Response: 1.\`Profile1\` 2.\`Profile2\`
 - PROFILE 1 \* Response: To switch profile to Profile1 100% reply with code from Authenticator app for User followed by PIN
 - PROFILE 2 30 \* Response: To switch profile to Profile2 30% reply with code from Authenticator app for User followed by PIN
+
+(SMS-Commands-other)=
 
 ### 기타
 

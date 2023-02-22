@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Connecter l'émetteur G6 pour la première fois
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    
    * Affichage 1 : Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Affichage 2 : Transmitter days: 249 / Voltage A: 275 (at time of failure)
+
+(xdrip-extend-transmitter-life)=
 
 ### Étendre la durée de vie de l'émetteur
 

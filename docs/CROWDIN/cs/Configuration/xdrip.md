@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### První připojení vysílače G6
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající znaky 80 nebo 81) můžete použít verzi [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    
    * První případ: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Druhý případ: Transmitter days: 249 / Voltage A: 275 (v okamžiku selhání)
+
+(xdrip-extend-transmitter-life)=
 
 ### Prodloužení životnosti vysílače
 

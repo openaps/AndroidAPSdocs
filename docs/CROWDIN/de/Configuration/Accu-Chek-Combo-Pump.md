@@ -29,7 +29,7 @@
 - Wenn alles oben genannte nicht hilft, kann es nötig sein, auf der Pumpe einen beliebigen Knopf zu drücken (dadurch wird BT auf der Pumpe gestoppt und neu gestartet). 
 - Derzeit ist nicht absehbar, dass dieses Verhalten verhindert werden kann. Wenn diese Fehler öfter auftreten, dann besteht die derzeit einzige Lösung in der Verwendung eines Telefons, von dem bekannt ist, dass es zuverlässig mit der Combo unter AAPS zusammenarbeitet (siehe oben).
 - Ein direkt auf der Pumpe programmierter Bolus wird nicht immer rechtzeitig erkannt und die Erkennung kann im schlimmsten Fall bis zu 20 Minuten dauern. 
-- Der Bolus an der Pumpe wird immer überprüft, bevor eine hohe TBR oder ein Bolus von AAPS programmiert wird, aber aufgrund der Einschränkungen verweigert AAPS das Setzen des TBR / Bolus, da sie unter falschen Voraussetzungen berechnet wurden. (-> Bolus nicht direkt von der Pumpe abgeben! Siehe Kapitel [Nutzung](#nutzung) unten.
+- Der Bolus an der Pumpe wird immer überprüft, bevor eine hohe TBR oder ein Bolus von AAPS programmiert wird, aber aufgrund der Einschränkungen verweigert AAPS das Setzen des TBR / Bolus, da sie unter falschen Voraussetzungen berechnet wurden. (-> Bolus nicht direkt von der Pumpe abgeben! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird. 
 
 ## Einrichtung
@@ -104,6 +104,8 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 13. Wenn Sie den 'Pairing'- Branch benutzt haben, um die Ruffy App zu bauen, installieren Sie nun die Build Version aus dem 'combo'- Branch darüber. Stellen Sie sicher, dass Sie die gleichen Schlüssel beim Signieren der beiden Versionen der App verwendet haben, um alle Einstellungen und Daten beibehalten zu können da sie auch die Verbindungs-Eigenschaften enthalten.
 14. Starte das Smartphone neu.
 15. Jetzt kannst Du die AAPS Loop neu starten.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Nutzung
 

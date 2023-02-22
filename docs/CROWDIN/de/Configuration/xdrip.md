@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### G6 Transmitter das erste Mal verbinden
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 G6 Transmitter, die nach Herbst / Ende 2018 (z.B. Seriennummer beginnt mit 80 oder 81) hergestellt wurden, benötigen mindestens die [xDrip+ master](https://jamorham.github.io/#xdrip-plus) version.
 
@@ -156,6 +156,8 @@ Falls die Seriennummer Deines G6 Transmitters mit 8G, 8H oder 8J beginnt, verwen
    
    * Posting 1: Laufzeit: 151 Tage / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Posting 2: Laufzeit: 249 Tage / Voltage A: 275 (bei Auftritt des Fehlers)
+
+(xdrip-extend-transmitter-life)=
 
 ### Transmitterlaufzeit verlängern
 

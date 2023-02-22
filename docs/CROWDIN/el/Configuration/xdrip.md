@@ -100,7 +100,7 @@ To learn more about the details and reasons for these recommendations read the [
 
 ### Συνδέστε το πομπό G6 για πρώτη φορά
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Για τους πομπούς G6 που κατασκευάστηκαν μετά το πέρας / τέλος του 2018 (δηλ. με σειριακό αριθμό. starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -156,6 +156,8 @@ To learn more about the details and reasons for these recommendations read the [
    
    * Posting 1: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Posting 2: Transmitter days: 249 / Voltage A: 275 (at time of failure)
+
+(xdrip-extend-transmitter-life)=
 
 ### Επέκταση της διάρκειας ζωής του πομπού
 

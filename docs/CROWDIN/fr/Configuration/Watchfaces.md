@@ -2,7 +2,7 @@
 
 Vous pouvez installer l'application AndroidAPS sur votre montre connectée **Wear OS**. La version montre de AAPS vous permet de:
 
-* **afficher les données sur votre montre** : en fournissant des [cadrans personnalisés](#cadrans-aaps) ou dans des cadrans standards avec l'utilisation de [complications](#complications)
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **contrôler AAPS du téléphone** : pour faire un bolus, définir une cible temporaire, etc.
 
 ### Avant d'acheter la montre...
@@ -39,17 +39,19 @@ Les fonctions suivantes peuvent être déclenchées à partir de la montre :
     * vérifier et modifier le profil (décalage horaire + pourcentage)
     * montrer la DTQ (Dose Totale Quotidienne = bolus + basale par jour)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## Cadrans AAPS
 
-Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-Vérifiez que les notifications d'AndroidAPS ne sont pas bloquées sur la montre. La confirmation de l'action (par ex. bolus, cible temporaire) est envoyée par une notification que vous devrez glisser et cocher.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-Pour accéder plus rapidement au menu AAPS, appuyez deux fois sur votre Gly. Avec un double appui sur la courbe Gly vous pouvez changer l'échelle de temps.
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## Cadrans disponibles
 
-![Cadrans disponibles](../images/Watchface_Types.png)
+![Available watchfaces](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
@@ -103,6 +105,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Vibrer sur Bolus** (par défaut `Oui`):
 * **Unités des Actions** (par défaut `mg/dl`) : si **On** l'unité des actions est `mg/dl`, si **Off** l'unité est `mmol/l`. Utilisé lors de la définition d'une CT à partir de la montre.
+
+(Watchfaces-watchface-settings)=
 
 ### Paramètres cadran
 
@@ -317,7 +321,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * Il est préférable d'utiliser des cadrans qui limitent la quantité de données affichées en mode inactif/veille.
 * Soyez conscient lorsque vous utilisez d'autres Complications, comme les widgets météo de tiers - ou d'autres encore - qui utilisent des données provenant de sources externes.
 * Commencez par des cadrans plus simples. Ajoutez une complication à la fois et observez comment elle affecte la durée de vie de la batterie.
-* Essayez d'utiliser le thème **Sombre** pour les montres AAPS, et [**Séparateur invisible**](#parametres-cadran). Sur les montres OLED, cela limitera la quantité de pixels allumés et limitera la consommation.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). Sur les montres OLED, cela limitera la quantité de pixels allumés et limitera la consommation.
 * Vérifiez ce qui fonctionne le mieux sur votre montre : les cadrans AAPS standards ou d'autres cadrans avec les Complications AAPS.
 * Observez sur quelques jours, avec différents profils d'activités. La plupart des montres activent l'affichage sur le regard, des mouvements de poignet et d'autres déclencheurs liés à l'utilisation.
 * Vérifiez les paramètres du système global qui affectent les performances : notifications, durée du rétro éclairage, affichage actif quand le GPS est activé.
@@ -340,7 +344,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Afficher les données Nightscout
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Il y a plusieurs cadrans à choisir qui incluent le delta moyen, l'IA, le débit temporaire de basal actuel et les profils de basal + le graphique de lecture MGC.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 

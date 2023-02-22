@@ -26,12 +26,13 @@ Gradle Sync can fail to various reasons. Wen you get a message saying that gradl
   ![Gradle Failed](../images/studioTroubleshooting/07_GradleSyncFailed2.png)
 
 These are the usual gradle sync failures:
-* [שינויים שלא הוגשו](#uncommitted-changes)
-* [אין גרסה שמור של ... זמינה](#could-not-resolve-no-cached-version)
-* [Android Gradle דורש Java 11 כדי לפעול](#android-gradle-plugin-requires-java-11-to-run)
+* [שינויים שלא הוגשו](troubleshooting_androidstudio-uncommitted-changes)
+* [אין גרסה שמור של ... זמינה](troubleshooting_androidstudio-could-not-resolve-no-cached-version)
+* [Android Gradle דורש Java 11 כדי לפעול](troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)
 
-*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](#gradle-resync) again.
+*Important*: After you have followed the instructions for your specific problem, you need to trigger the [gradle sync](troubleshooting_androidstudio-gradle-resync) again.
 
+(troubleshooting_androidstudio-uncommitted-changes)=
 ### שינויים שלא הוגשו
 
 If you receive a failure message like
@@ -48,7 +49,7 @@ If you receive a failure message like
 
     הערה: יש רווח ושני מקפים בין git ל-version!
 
-  * עליכם לקבל הודעה שאומרת איזו גרסת git מותקנת, כפי שניתן לראות בצילום המסך למעלה. במקרה זה, עברו אל [שלב 2](#step-2-check-for-uncommitted-changes).
+  * עליכם לקבל הודעה שאומרת איזו גרסת git מותקנת, כפי שניתן לראות בצילום המסך למעלה. In this case, go to [Step 2](troubleshooting_androidstudio-step-2-check-for-uncommitted-changes).
 
   * למקרה שתקבלו את ההודעה
     ```
@@ -83,7 +84,7 @@ If you receive a failure message like
 
       ![Commit Tab: Rollback changes](../images/studioTroubleshooting/05_CommitTabRollback.png)
 
-    * הקבצים נשלפים שוב משרת ה-Git. אם אין שינויים אחרים בלשונית ה-commit, עברו אל [שלב 3](#step-3-resync-gradle-again).
+    * הקבצים נשלפים שוב משרת ה-Git. If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
   * אם אתם יכולים לראות "Unversioned Files", ייתכן שאחסנתם קבצים בספריית sourecode שלך שצריכה להיות במקומות אחרים, למשל קובץ מאגר המפתחות שלך.
 
@@ -91,12 +92,16 @@ If you receive a failure message like
 
     * חזרו ל-Android Studio ולחצו על כפתור רענן (4) בלשונית Commit כדי לוודא שהקובץ אינו מאוחסן יותר בספריית AndroidAPS.
 
-      אם אין שינויים אחרים בלשונית ה-commit, עברו אל [שלב 3](#step-3-resync-gradle-again).
+      If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
+
+(troubleshooting_androidstudio-step-3-gradle-resync)=
 
 #### שלב 3: סנכרן מחדש את Gradle (שוב)
 
-Follow the instructions at [Gradle Resync](#gradle-resync).
+Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync).
+
+(troubleshooting_androidstudio-android-gradle-plugin-requires-java-11-to-run)=
 
 ### Android Gradle דורש Java 11 כדי לפעול
 
@@ -118,7 +123,9 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
   *Important*: If you don't see the setting "Gradle JDK", you might have not updated Android Studio. Make sure you are using Android Studio 2021.1.1 Bumblebee) or newer.
 
-  עכשיו עליכם להפעיל [Gradle Resync](#gradle-resync)
+  Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
+
+(troubleshooting_androidstudio-could-not-resolve-no-cached-version)=
 
 ### Could not resolve/No cached version
 
@@ -132,7 +139,7 @@ Follow the instructions at [Gradle Resync](#gradle-resync).
 
     ![Gradle Offline Mode](../images/studioTroubleshooting/10_GradleOfflineMode.png)
 
-  * עכשיו עליכם להפעיל [Gradle Resync](#gradle-resync)
+  * Now you need to trigger a [Gradle Resync](troubleshooting_androidstudio-step-3-gradle-resync)
 
 (troubleshooting_androidstudio-unable-to-start-daemon-process)=
 ### לא ניתן להפעיל את תהליך daemon

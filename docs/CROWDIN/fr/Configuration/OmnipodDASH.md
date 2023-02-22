@@ -63,7 +63,7 @@ Sur le coin en haut à gauche dans le ** menu hamburger** sélectionnez **Config
 
 La sélection de la **case à cocher (4)** à côté de la **Roue crantée des Paramètres (3)** permettra d'afficher le menu DASH sous la forme d'un onglet dans l'interface AAPS intitulée **DASH**. Cocher cette case facilitera votre accès aux commandes DASH lorsque vous utilisez AAPS.
 
-**REMARQUE :** Un moyen plus rapide d'accéder aux [**réglages du DASH**](#parametres-dash) peut être trouvé ci-dessous dans la section Paramètres du DASH de ce document.
+**NOTE:** A faster way to access the [**Dash settings**](DanaRS-Insulin-Pump-dash-settings) can be found below in the Dash settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -81,6 +81,8 @@ Veuillez **glisser vers la gauche** vers l'onglet **DASH** où vous serez en mes
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Gestion du Pod (activer, désactiver, jouer le bip de test et l'historique du Pod)
 
+(OmnipodDASH-activate-pod)=
+
 ### Activer le Pod
 
 1. Naviguez vers l'onglet **DASH** et cliquez sur le bouton **POD MGMT (1)** , puis cliquez sur **Activer Pod (2)**.
@@ -91,9 +93,9 @@ Veuillez **glisser vers la gauche** vers l'onglet **DASH** où vous serez en mes
 
 ![Activate_Pod_3](../images/DASH_images/Activate_Pod/Activate_Pod_3.png)    ![Activate_Pod_4](../images/DASH_images/Activate_Pod/Activate_Pod_4.jpg)
 
-Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proximité de l'autre et cliquez sur le bouton **Suivant**.
+Ensure that the new pod and the phone running AAPS are within close proximity of each other and click the **Next** button.
 
-**NOTE**: Au cas où vous obtiendrez le message d'erreur ci-dessous (ce qui peut se produire), ne paniquez pas. Cliquez sur le bouton **Réessayer**. Dans la plupart des cas, l'activation se poursuivra avec succès.
+**NOTE**: Just in case you get the below error message (this can happen), do not panic. Click on the **Retry** button. In most situations activation will continue successfully.
 
 ![Activate_Pod_3](../images/DASH_images/Activate_pod_error.png)
 
@@ -127,18 +129,20 @@ Assurez-vous que le nouveau pod et le téléphone exécutant AAPS sont à proxim
 
     Cliquez sur le bouton Retour de votre téléphone pour retourner à l'onglet **DASH** qui affichera maintenant les informations du Pod pour votre session active de pod, y compris le débit de basal actuel, le niveau du réservoir de pod, l'insuline délivrée, les erreurs de pod et les alertes.
 
-    Pour plus de détails sur les informations affichées, allez dans la section [**de l'onglet DASH**](#onglet-dash) de ce document.
+    For more details on the information displayed go to the [**DASH Tab**](OmnipodDASH-dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
-Il est recommandé d'exporter les paramètres APRES l'activation du pod. Faites cela à chaque changement de pod et une fois par mois, copiez le fichier exporté sur votre lecteur Internet. voir le [**Doc paramètres d'exportation**](../Usage/ExportImportSettings.html?highlight=exporting#export-import-des-parametres).
+It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
+
+(OmnipodDASH-deactivate-pod)=
 
 ### Désactiver Pod
 
-Dans des circonstances normales, la durée de vie prévue d'un pod est de trois jours (72 heures) et de 8 heures supplémentaires après l'avertissement d'expiration du pod pour un total de 80 heures d'utilisation du pod.
+Under normal circumstances, the expected lifetime of a pod is three days (72 hours) and an additional 8 hours after the pod expiration warning for a total of 80 hours of pod usage.
 
-Pour désactiver un pod (soit après son expiration soit à cause d'une erreur du pod) :
+To deactivate a pod (either from expiration or from a pod failure):
 
 1. Allez à l'onglet **DASH** , cliquez sur le bouton **POD MGMT (1)** , sur l'écran de **Gestion du pod** cliquez sur le bouton **Désactiver Pod (2)**.
 
@@ -160,11 +164,13 @@ Pour désactiver un pod (soit après son expiration soit à cause d'une erreur d
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
+(OmnipodDASH-resuming-insulin-delivery)=
+
 ### Reprendre l'injection d'insuline
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](OmnipodDASH) in the troubleshooting section for more details.
 
-Utilisez cette commande pour demander au pod actif, actuellement suspendu, de reprendre l'injection d'insuline. Une fois la commande exécutée avec succès, l'insuline sera à nouveau injectée normalement avec le débit de basal défini dans le profil actif pour l'heure actuelle. Le pod acceptera à nouveau les commandes pour les bolus, DBT, et SMB.
+Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 
 1. Allez à l'onglet **DASH** et assurez-vous que le champ **statut du pod (1)** affiche **SUSPENDU**, puis appuyez sur le bouton **REPRENDRE LA LIVRAISON (2)** pour démarrer le processus pour indiquer au pod actuel de reprendre la distribution normale d'insuline. Un message **REPRENDRE LA LIVRAISON** s'affichera dans le champ **Statut du pod (3)**.
 
@@ -182,7 +188,7 @@ Utilisez cette commande pour demander au pod actif, actuellement suspendu, de re
 
 *NOTE - The SILENCE ALERTS button is only available on the **DASH** tab when the pod expiration or low reservoir alert has been triggered. If the SILENCE ALERTS button is not visible and you hear beep sounds from the pod, try to 'Refresh pod status'.*
 
-Le processus ci-dessous vous montrera comment accepter et arêter les bips du pod qui se produisent lorsque la durée d'activité du pod atteint le seuil d'alerte avant son expiration 72 heures (3 jours) après son activation. This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
+The process below will show you how to acknowledge and dismiss pod beeps when the active pod time reaches the warning time limit before the pod expiration of 72 hours (3 days). This warning time limit is defined in the **Hours before shutdown** Dash alerts setting. The maximum life of a pod is 80 hours (3 days 8 hours), however Insulet recommends not exceeding the 72 hours (3 days) limit.
 
 1. When the defined **Hours before shutdown** warning time limit is reached, the pod will issue warning beeps to inform you that it is approaching its expiration time and pod change will be required soon. You can verify this on the **DASH** tab, the **Pod expires: (1)** field will show the exact time the pod will expire (72 hours after activation), and the text will turn **red** after this time has passed. Under the **Active Pod alerts (2)** field the status message **Pod will expire soon** is displayed. This also will trigger displaying the **SILENCE ALERTS (3)** button.
 
@@ -199,9 +205,11 @@ Le processus ci-dessous vous montrera comment accepter et arêter les bips du po
 
 4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
+(OmnipodDASH-view-pod-history)=
+
 ### Voir l'historique du Pod
 
-Cette section vous montre comment revoir l'historique du pod actif et filtrer selon les catégories d'action. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
+This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
 
 This feature is helpful in verifying boluses, TBRs and basal commands that were sent to the pod. The remaining categories are useful for troubleshooting issues and determining the order of events that occurred leading up to a failure.
 
@@ -215,6 +223,8 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
+
+(OmnipodDASH-dash-tab)=
 
 ## Onglet DASH
 
@@ -249,13 +259,13 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 * **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-* **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
+* **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodDASH-view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
 
 ### Boutons
 
 
-![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Envoie une commande d'actualisation au pod actif pour mettre à jour la communication.
+![Refresh_Icon](../images/DASH_images/Refresh_LOGO.png) : Sends a refresh command to the active pod to update communication.
 
    * A utiliser pour actualiser l'état du pod et rejeter les champs qui contiennent le texte (incertain).
    * See the Troubleshooting section below for additional information.
@@ -273,10 +283,12 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 1 - [**Activate Pod**](OmnipodDASH-activate-pod) : Primes and activates a new pod.
+* 2 - [**Deactivate Pod**](OmnipodDASH-deactivate-pod) : Deactivates the currently active pod.
 * 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 4 - [**Pod history**](OmnipodDASH-view-pod-history) : Displays the active pod activity history.
+
+(DanaRS-Insulin-Pump-dash-settings)=
 
 ## Paramètres Dash
 
@@ -288,7 +300,7 @@ The Dash driver settings are configurable from the top-left hand corner **hambur
 
 ![Dash_settings_3](../images/DASH_images/Dash_settings/Dash_settings_3.png)
 
-Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou les désactiver via un commutateur pour la plupart des entrées décrites ci-dessous :
+The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
 
 ![Dash_settings_4](../images/DASH_images/Dash_settings/Dash_settings_4.jpg)
 
@@ -296,7 +308,7 @@ Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou l
 
 ### Bips de confirmation
 
-Paramètre les bips de confirmation du pod pour l'injection et les modifications de bolus, basal, SMB et DBT.
+Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
 
 * **Bolus beeps enabled:** Enable or disable confirmation beeps when a bolus is delivered.
 * **Basal beeps enabled:** Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
@@ -307,7 +319,7 @@ Paramètre les bips de confirmation du pod pour l'injection et les modifications
 
 Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the defined threshold units.
 
-*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Rejeter la notification ne rejettera PAS l'alerte SAUF SI Accepter automatiquement les alertes Pod est activé. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
+*Note an AAPS notification will ALWAYS be issued for any alert after the initial communication with the pod since the alert was triggered. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. To MANUALLY dismiss the alert you must visit the **DASH** tab and press the **Silence ALERTS button**.*
 
 * **Expiration reminder enabled:** Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
 * **Hours before shutdown:** Defines the number hours before the active pod shutdown occurs, which will then trigger the expiration reminder alert.
@@ -318,7 +330,7 @@ Provides AAPS alerts for pod expiration, shutdown, low reservoir based on the de
 
 Provides AAPS notifications and audible phone alerts when it is uncertain if TBR, SMB, or bolus, and delivery suspended events were successful.
 
-*REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.*
+*NOTE: These are notifications only, no audible beep alerts are made.*
 
 * **Sound for uncertain TBR notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPs is uncertain if a TBR was successfully set.
 * **Sound for uncertain SMB notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
@@ -337,7 +349,7 @@ This tab is well documented in the main AAPS documentation but there are a few i
 
 ### Niveau
 
-**Niveau d'insuline**
+**Insulin Level**
 
 Insulin level displayed is the amount reported by Omnipod DASH. However, the pod only reports the actual insulin reservoir level when it is below 50 units. Until then “Above 50 units” will be displayed. The amount reported is not exact: when the pod reports ‘empty’ in most cases the reservoir will still have some additional units of insulin left. The omnipod DASH overview tab will display as described the below:
 
@@ -350,6 +362,8 @@ Additional note:
 
 ## Résolution de problèmes
 
+(OmnipodDASH-delivery-suspended)=
+
 ### Delivery suspended
 
   * There is no suspend button anymore. If you want to "suspend" the pod, you can set a zero TBR for x minutes.
@@ -358,7 +372,7 @@ Additional note:
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
      - AAPS will try to set the new basal profile every 15 minutes.
      - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - The [**Resume delivery**](OmnipodDASH-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
   * For unconfirmed commands, "refresh pod status" should confirm/deny them.
 
@@ -366,11 +380,11 @@ Additional note:
 
 ### Erreurs Pod
 
-Les pods échouent occasionnellement en raison de problèmes variés, y compris des problèmes matériels avec le Pod lui-même. Il est préférable de ne pas les appeler dans Insulet, car l'utilisation d'AndroidAPS n'est pas approuvée. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
+Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. A list of fault codes can be [**found here**](https://github.com/openaps/openomni/wiki/Fault-event-codes) to help determine the cause.
 
 ### Empêcher l'erreur 49 échecs du pod
 
-Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
+This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. This is when the driver and Pod disagree on the actual state. The Pod (out of a build-in safety measure) then reacts with an unrecoverable error code 49 (0x31) ending up with what is know as a “screamer”: the long irritating beep that can only be stopped by punching a hole at the appropriate location at the back of the Pod. The exact origin of a “49 pod failure” often is hard to trace. In situations that are suspected for this failure to occur (for instance on application crashes, running a development version or re-installation).
 
 ### Alertes Pompe hors de portée
 
@@ -437,7 +451,7 @@ In most cases there is no need to uninstall. You can do an “in-place” instal
 
 ### Alertes Pilote Omnipod
 
-Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Un résumé des principales alertes que vous pouvez rencontrer est listé ci-dessous:
+Please note that the Omnipod Dash driver presents a variety of unique alerts on the **Overview tab**, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. A summary of the main alerts that you may encounter is listed below:
 
 * No active Pod No active Pod session detected. This alert can temporarily be dismissed by pressing **SNOOZE** but it will keep triggering as long as a new pod has not been activated. Once activated this alert is automatically be silenced.
 * Pod suspended Informational alert that Pod has been suspended.

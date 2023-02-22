@@ -96,7 +96,7 @@ Here are examples how to find them on specific android phones.
 * [DanaRS](DanaRS-Insulin-Pump-dana-rs-specific-errors)
 * [Accu-Chek Combo general](Accu-Chek-Combo-Tips-for-Basic-usage)
 * [Accu-Chek Combo + Ruffy](Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)
-* [Pompa Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
+* [Accu-Chek Insight](Accu-Chek-Insight-Pump-insight-specific-errors)
 * [Medtronic + RileyLink](MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)
 
 ## Telefony

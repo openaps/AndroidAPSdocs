@@ -29,7 +29,7 @@
 - Jei paleidimas iš naujo nepadeda, turi būti paspaustas pompos mygtukas, kuris iš naujo atkuria pompos Bluetooth. Tada pompa vėl atnaujins ryšį su telefonu. 
 - Šiuo metu kitų sprendimų ryšio problemoms nėra. Taigi, jei dažnai matote tas klaidas, jūsų vienintelė galimybė yra įsigyti kitą telefoną, kuris, kaip tvirtina kiti vartotojai, gerai veikia su AndroidAPS ir Combo (žr. Aukščiau).
 - Boluso suleidimas tiesiai iš pompos gali būti ne iš karto matomas programoje (tikrinama kaskart, kai AAPS prisijungia prie pompos) ir gali blogiausiu atveju užtrukti iki 20 min. 
-- Tokie bolusai visada tikrinami prieš nustatant aukštą laikiną bazę arba bolusuojant per AAPS, taigi AAPS gali atsisakyti nustatyti laikiną bazę ar suleisti bolusą, nes jis galėjo būti apskaičiuotas pagal neteisingas prielaidas. (-> neleiskite boluso tiesiogiai per pompą! Žr. skyrių [Naudojimas](#usage))
+- Tokie bolusai visada tikrinami prieš nustatant aukštą laikiną bazę arba bolusuojant per AAPS, taigi AAPS gali atsisakyti nustatyti laikiną bazę ar suleisti bolusą, nes jis galėjo būti apskaičiuotas pagal neteisingas prielaidas. (-> neleiskite boluso tiesiogiai per pompą! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Nenustatinėkite laikinų bazių pompoje, nes jas kontroliuoja Ciklas. Aptikti naują laikiną bazę pompoje gali užtrukti iki 20 minučių, ir jos efektas bus skaičiuojamas tik nuo aptikimo momento, todėl gali nutikti, kad 20 min trukmės laikina bazė neatsispindės AIO. 
 
 ## Sąranka
@@ -104,6 +104,8 @@ There are serveral possible reasons. Try the following steps:
 13. If you have used the 'Pairing' branch to build the ruffy app, now install the version build from the 'combo' branch on top of it. Make sure that you have used the same keys when signing the two versions of the app to be able to keep all setting and data, as they also contain the connection properties.
 14. Reboot the phone.
 15. Now you can restart AAPS loop.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Naudojimas
 

@@ -73,7 +73,7 @@
 
 * Appuyez sur OK pour saisir l'ancien mot de passe.
 
-* Entrez **l'ancien mot de passe** (mot de passe par défaut voir [au-dessus](#mot-de-passe-par-defaut)) et appuyez sur OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Entrez l'ancien mot de passe](../images/DanaRSPW_04_11PWenter.png)
 

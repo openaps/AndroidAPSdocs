@@ -2,7 +2,7 @@
 
 ** Deze beschrijving is alleen bedoeld om de Engelstalige versie van de wiki te verbeteren. Wijzigingen moeten altijd eerst in de Engelse versie worden gedaan omdat dit de 'brontekst' is van waaruit de andere talen worden vertaald. De instructie voor het maken van wijzigingen is in het Engels omdat we ervan uitgaan dat je die taal machtig bent als je een wijziging eraan wilt doorvoeren;) Mocht dat een probleem zijn, vraag dan in de Looped-NL-BE Facebook groep om hulp. Als je de wiki naar andere talen wilt vertalen (waarvoor dank!), dan gebruik je [crowdin](https://crowdin.com/project/androidapsdocs).**
 
-For hints how to format text (headline, bold...) and set links please see the ["code syntax"](#code-syntax) section of this page.
+For hints how to format text (headline, bold...) and set links please see the ["code syntax"](make-a-PR-code-syntax) section of this page.
 
 ## Algemeen
 

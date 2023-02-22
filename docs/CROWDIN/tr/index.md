@@ -54,9 +54,9 @@ Son olarak, [Nasıl yardımcı olurum?](make-a-PR.md) alt başlığında, doküm
 
 Dokümantasyon İngilizce olarak yazılmış ve farklı dillere çevrilmiştir. a) uygulamanın ve b) dokümantasyonun çevirisiyle ilgili yardıma ihtiyacımız var.
 
-Çeviri süreci burada [here](translations.md) açıklanmıştır.
+Çeviri süreci [burada](translations.md) açıklanmıştır.
 
-Uygulama ve dokümantasyon için dil başına çevirilerin durumu burada [here](./Administration/stateTranslations.md) bulunabilir.
+Uygulama ve dokümantasyon için dil başına çevirilerin durumu [burada](./Administration/stateTranslations.md) bulunabilir.
 
 ```
 

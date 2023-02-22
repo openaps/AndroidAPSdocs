@@ -2,7 +2,7 @@
 
 אתם יכולים להתקין AndroidAPS בשעון החכם שלכם המבוסס **Wear Os**. גרסת השעון של AAPS מאפשר לכם:
 
-* **להציג מידע בשעונכם**: באמצעות מבחר של [תצוגות מותאמות אישית](#aaps-watchfaces) או תצוגות סטנדרטיות בשימוש של [סיבוכים](#complications).
+* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
 * **לשלוט על AAPS מהשעון**: להזריק בולוס, לקבוע ערך מטרה זמני וכו'.
 
 ### לפני קניית שעון...
@@ -39,13 +39,15 @@ AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear.
     * בדיקה והחלפת פרופיל, CPP (פרופיל אחוזים צירקדיים = היסט זמן + אחוז)
     * הצגת תצרוכת האינסולין הכללית (TDD=סיכום יומי של הבולוסים יחד עם המינונים הבזאליים)
 
+(Watchfaces-aaps-watchfaces)=
+
 ## תצוגות שעונים של AAPS
 
-ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
+There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
-וודאו שהתראות מ-AndroidAPS לא חסומות בשעון. אישור של פעולה (כגון זריקת בולוס, יעד זמני וכו') תבוצע דרך התראות שתצטרכו להחליק ולאשר.
+Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
 
-כדי להציג את התפריט של AAPS במהירות, הקישו פעמיים על קריאת גלוקוז הדם במסך. עם הקשה כפולה בעקומת הגלוקוז בדם, אתם יכולים לשנות את קנה מידת הזמן בתצוגה..
+To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
 
 ## תצוגות שעון זמינות
 
@@ -103,6 +105,8 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * ** רטט בזמן בולוס** (ברירת מחדל `On`):
 * **יחידות לפעולות** (ברירת מחדל `mg/dl`): אם **On** יחידות לפעולות `mg/dl`, אם **Off** היחידה היא `mmol/l`. בשימוש כאשר מוגדר יעד זמני (TT) מהשעון.
+
+(Watchfaces-watchface-settings)=
 
 ### הגדרות תצוגת פני השעון
 
@@ -317,7 +321,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 * It is better to use watchfaces that limit the amount of rendered data in inactive / dimmed mode.
 * Be aware when mixing other Complications, like third party weather widgets, or other - utilizing data from external sources.
 * Start with simpler watchfaces. Add one complication at the time and observe how they affect battery life.
-* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](#watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
+* Try to use **Dark** theme for AAPS watchfaces, and [**Matching divider**](Watchfaces-watchface-settings). On OLED devices it will limit the amount of pixels lit and limit burnout.
 * Check what performs better on your watch: AAPS stock watchfaces or other watchfaces with AAPS Complications.
 * Observe over a few days, with different activity profiles. Most watches activate the display on glancing, movement and other usage-related triggers.
 * Check your global system settings that affect performance: notifications, backlight/active display timeout, when GPS is activated.
@@ -340,7 +344,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
 
 # Pebble
 

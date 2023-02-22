@@ -73,7 +73,7 @@
 
 * Apăsaţi OK pentru a introduce parola veche.
 
-* Introduceţi **parola veche** (Parolă implicită vedeţi [mai sus](#default-password)) şi apăsaţi OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
