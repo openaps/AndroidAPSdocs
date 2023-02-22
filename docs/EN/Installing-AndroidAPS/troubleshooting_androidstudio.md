@@ -3,7 +3,7 @@
 
 (troubleshooting_androidstudio-lost-keystore)=
 ## Lost keystore
-If you use the same keystore when updating AndroidAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
+If you use the same keystore when updating AAPS you do not have to uninstall the previous version on your smartphone. That's why it is recommended to store the keystore in a save place.
 
 If you try to install the apk, signed with a different keystore than before, you will get an error message that the installation failed!
 
@@ -93,7 +93,7 @@ If you receive a failure message like
 
     * Use your regular file explorer on your computer to move or cut and paste that file to a save place.
 
-    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AndroidAPS directory anymore.
+    * Go back to Android Studio and click the Refresh button (4) within the Commit tab to make sure the file is not stored in the AAPS directory anymore.
 
       If there are no other changes in the commit tab, go to [Step 3](troubleshooting_androidstudio-step-3-gradle-resync).
 
@@ -167,7 +167,7 @@ Follow the instructions at [Gradle Resync](troubleshooting_androidstudio-step-3-
 
     ![Gradle Reload](../images/studioTroubleshooting/06_GradleResyncManually.png)
 
-  * Right-click on AndroidAPS (2)
+  * Right-click on AAPS (2)
 
   * Click on "Reload Gradle Project" (3)
 
@@ -198,7 +198,7 @@ When creating a new keystore for building the signed APK, on Windows the followi
 This seems to be a bug with Android Studio 3.5.1 and its shipped Java environment in Windows. The key is created correctly but a recommendation is falsely displayed as an error. This can currently be ignored.
 
 
-## No CGM data is received by AndroidAPS
+## No CGM data is received by AAPS
 
 * In case you are using patched Dexcom G6 app: This app is outdated. Use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) app instead.
 
@@ -233,7 +233,7 @@ If non of the above tips helped you might consider building the app from scratch
 
     Or you just use a new keystore.
 
-3. Build app from scratch as described [here](Building-APK-download-androidaps-code).
+3. Build app from scratch as described [here](Building-APK-download-AAPS-code).
 
 4. When you have build the APK successfully delete the exiting app on your phone, transfer the new apk to your phone and install.
 5. [Import settings](../Usage/ExportImportSettings) again to restore your objectives and settings.

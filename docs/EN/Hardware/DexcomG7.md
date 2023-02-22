@@ -37,11 +37,11 @@ After the warm-up phase, the values are displayed as usual in the G7 app.
 
 ### build a new signed APK from the dev branch
 
-To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AndroidAPS is necessary.
+To be able to receive the values from the G7 App in AAPS and to smooth the received values, a change in AAPS is necessary.
 
 Therefore build a new signed APK from the official dev branch and install it on your mobile.
 
-For the configuration in AndroidAPS
+For the configuration in AAPS
 - Select 'BYODA' in the configuration generator - even if it is not the BYODA app!
 - If AAPS does not receive any values, switch to another BG source and then back to 'BYODA' to invoke the query for approving data exchange between AAPS and BYODA.
 
@@ -53,5 +53,5 @@ Smoothing **MUST** be enabled for meaningful use of the G7 values.
 
 -   Download and install Xdrip+: [xdrip](https://github.com/NightscoutFoundation/xDrip) 
 - As data source in Xdrip "Companion App" must be selected and under Advanced Settings > Bluetooth Settings > "Companion Bluetooth" must be enabled.
-- In AndroidAPS select  > Configuration > BG source > xDrip+.
+- In AAPS select  > Configuration > BG source > xDrip+.
 Adjust the xDrip+ settings according to the explanations on the xDrip+ settings page  [xDrip+ settings](../Configuration/xdrip.md) 

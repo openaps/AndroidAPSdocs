@@ -305,9 +305,9 @@ substitutions:
     ```
 ---
 
-# AndroidAPS Omnipod Insulin Pump Driver Documentation
+# AAPS Omnipod Insulin Pump Driver Documentation
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AndroidAPS (AAPS) as of version 2.8.
+These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). The Omnipod driver is available as part of AAPS (AAPS) as of version 2.8.
 
 **This software is part of a DIY artificial pancreas solution and is not a product but requires YOU to read, learn, and understand the system, including how to use it. You alone are responsible for what you do with it.**
 
@@ -320,7 +320,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 - **Pod Communication Device**
 
-> Component that bridges communication from your AndroidAPS enabled phone to Eros generation pods.
+> Component that bridges communication from your AAPS enabled phone to Eros generation pods.
 >
 > > - {{ OrangeLink }}  [OrangeLink Website](https://getrileylink.org/product/orangelink)
 > > - {{ RileyLink }} [433MHz RileyLink](https://getrileylink.org/product/rileylink433)
@@ -330,13 +330,13 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 - {{ Android_Phone }}  **Mobile Phone Device**
 
-> Component that will operate AndroidAPS and send control commands to the Pod communication device.
+> Component that will operate AAPS and send control commands to the Pod communication device.
 >
 > > - Supported [Omnipod driver Android phone](https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit) with a version of AAPS 2.8 and related [components setup](index-component-setup)
 
 - {{ Omnipod_Pod }}  **Insulin Delivery Device**
 
-> Component that will interpret commands received from the Pod communication device originating from your AndroidAPS enable phone.
+> Component that will interpret commands received from the Pod communication device originating from your AAPS enable phone.
 >
 > > - A new Omnipod pod (Eros generation - **NOT DASH**)
 
@@ -352,7 +352,7 @@ These instructions will assume that you are starting a new pod session; if this 
 
 **Your pod will not shut off when the RileyLink is out of range.** When your RileyLink is out of range or the signal is blocked from communicating with the active pod, your pod will continue to deliver basal insulin. Upon activating a pod, the basal profile defined in AAPS will be programmed into the new pod. Should you lose contact with the pod, it will revert to this basal profile. You will not be able to issue new commands until the RileyLink comes back in range and re-establishes the connection.
 
-**30 min Basal Rate Profiles are NOT supported in AndroidAPS.** If you are new to AndroidAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AndroidAPS is not able to take them into account with its algorithms currently.
+**30 min Basal Rate Profiles are NOT supported in AAPS.** If you are new to AAPS and are setting up your basal rate profile for the first time please be aware that basal rates starting on a half hour are not supported and you will need to adjust your basal rate profile to start on the hour. For example, if you have a basal rate of say 1.1 units which starts at 09:30 and has a duration of 2 hours ending at 11:30, this will not work.  You will need to update this 1.1 unit basal rate to a time range of either 9:00-11:00 or 10:00-12:00.  Even though the 30 min basal rate profile increments are supported by the Omnipod hardware itself, AAPS is not able to take them into account with its algorithms currently.
 
 ## Enabling the Omnipod Driver in AAPS
 
@@ -360,7 +360,7 @@ You can enable the Omnipod driver in AAPS in **two ways**:
 
 ### Option 1: The Setup Wizard
 
-After installing a new version of AndroidAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
+After installing a new version of AAPS, the **Setup Wizard** will start automatically.  This will also occur during in place upgrades.  If you already have exported your settings from a previous installation you can exit the Setup Wizard and import your old settings.  For new installations proceed below.
 
 Via the **AAPS Setup Wizard (2)** located at the top right-hand corner **three-dot menu (1)** and proceeding through the wizard menus until you arrive at the **Pump** screen. Then select the **Omnipod radio button (3)** .
 

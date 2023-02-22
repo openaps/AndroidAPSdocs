@@ -1,9 +1,9 @@
-# How to translate strings for the AndroidAPS app or the documentation
+# How to translate strings for the AAPS app or the documentation
 
 * For the the strings used in the app go to [https://crowdin.com/project/androidaps](https://crowdin.com/project/androidaps) and login using your GitHub account
 * For the documentation please visit [https://crowdin.com/project/androidapsdocs](https://crowdin.com/project/androidapsdocs) and login using your GitHub account
 
-* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AndroidAPS users).
+* Send a join request to the docs team. To do so click on the flag of the desired language and then the button "Join" on the top right corner of the next page. Please specify language, give some information about you and your AAPS experience and if you want to be a translator or proofreader (only people skilled in translating + advanced AAPS users).
 
 ```{admonition} Time for Approval
 :class: note
@@ -16,8 +16,8 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
 
 ## Translation of the app
 
-(translations-translate-strings-for-androidaps-app)=
-### Translate strings for AndroidAPS app
+(translations-translate-strings-for-AAPS-app)=
+### Translate strings for AAPS app
 
 * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
 
@@ -32,7 +32,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
    ![Translation app](./images/translations-translate.png)
 
 
-### Proofread strings for AndroidAPS app
+### Proofread strings for AAPS app
 
 * Proofreaders start by selecting "Proofread" when starting from the language home screen.
 
@@ -43,7 +43,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
   
    ![approve text](./images/translations-proofreading.png)
 
-When a proofreader approves a translation it will be added to the next version of AndroidAPS.
+When a proofreader approves a translation it will be added to the next version of AAPS.
 
 (translations-translation-of-the-documentation)=
 ## Translation of the documentation

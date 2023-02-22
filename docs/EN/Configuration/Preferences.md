@@ -452,7 +452,7 @@ The options here will vary depending on which pump driver you have selected in [
 - [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pump](../Configuration/MedtronicPump.md)
 
-If using AndroidAPS to open loop then make sure you have selected Virtual Pump in config builder.
+If using AAPS to open loop then make sure you have selected Virtual Pump in config builder.
 
 (Preferences-nsclient)=
 ## NSClient
@@ -462,7 +462,7 @@ If using AndroidAPS to open loop then make sure you have selected Virtual Pump i
 ```
 
 - Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AndroidAPS.
+- This enables data to be read and written between both the Nightscout website and AAPS.
 - Double check for typos here if you are stuck in Objective 1.
 - **Make sure that the URL is WITHOUT /api/v1/ at the end.**
 - *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).

@@ -1,13 +1,13 @@
 # EOPatch2 Instruction Manual
 
-**Planned but not commited for AndroidAPS 3.2 (next version)!**
+**Planned but not commited for AAPS 3.2 (next version)!**
 
 The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
 
 The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
 
 ## Pump Setup
-1. On the AndroidAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
+1. On the AAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
 1. Select 'EOPatch2' in the Pump section.
 1. Press the Back key to return to the home screen.
 

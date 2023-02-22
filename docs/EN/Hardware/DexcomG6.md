@@ -52,7 +52,7 @@ published by Tim Street at
 -   If not already set up then download
     [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow
     instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   Adjust settings in xDrip+ according to [xDrip+ settings
     page](../Configuration/xdrip.md)
 -   If AAPS does not receive BG values when phone is in airplane mode
@@ -76,7 +76,7 @@ published by Tim Street at
 -   After short time BYODA should pick-up transmitter signal. (If not
     you will have to stop sensor and start new one.)
 
-### Settings for AndroidAPS
+### Settings for AAPS
 
 -   Select 'Dexcom App (patched)' in config builder.
 -   If you don't receive any values select any other data source, then

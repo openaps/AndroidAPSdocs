@@ -9,7 +9,7 @@ Besides reporting Nightscout can also be used to control AAPS. I.e. you can set 
 
 You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
-### AndroidAPS settings
+### AAPS settings
 
 There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs. 
 

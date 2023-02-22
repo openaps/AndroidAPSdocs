@@ -2,7 +2,7 @@
 
 ## Build yourself instead of download
 
-**AndroidAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others!
+**AAPS is not available as download due to regulation for medical devices. It is legal to build the app for your own use, but you must not give a copy to others!
 See [FAQ page](../Getting-Started/FAQ.md) for details.**
 
 ## Important notes
@@ -53,7 +53,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 ---
 ### This article is divided into two parts.
 * In the overview part there is an explanation on what steps are necessary to build the APK file.
-* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AndroidAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
+* In the step by step walkthrough part you will find the screenshots of a concrete installation. Because the versions of Android Studio - the software development environment which we will use to build the APK - will change very quickly this will be not identical to your installation but it should give you a good starting point. Android Studio also runs on Windows, Mac OS X and Linux and there might be small differences in some aspects between each platform. If you find that something important is wrong or missing, please inform the facebook group "AAPS users" or in the Discord chat [Android APS](https://discord.gg/4fQUWHZ4Mw) so that we can have a look at this.
 
 ## Overview
 
@@ -62,7 +62,7 @@ In general, the steps necessary to build the APK file:
 1. [Install git](../Installing-AndroidAPS/git-install.md)
 2. [Install Android Studio](Building-APK-install-android-studio)
 3. [Set git path in Android Studio preferences](Building-APK-set-git-path-in-preferences)
-4. [Download AndroidAPS code](Building-APK-download-androidaps-code)
+4. [Download AAPS code](Building-APK-download-AAPS-code)
 5. [Download Android SDK](Building-APK-download-android-sdk)
 6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
 7. [Transfer apk file to your phone](Building-APK-transfer-apk-to-smartphone)
@@ -171,8 +171,8 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 * For details on installing git see the [official git documentation](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
 * If you install git via homebrew there is no need to change any preferences. Just in case: They can be found here: Android Studio - Preferences.
 
-(Building-APK-download-androidaps-code)=
-## Download AndroidAPS code
+(Building-APK-download-AAPS-code)=
+## Download AAPS code
 
 * On the Android Studio welcome screen select "Projects" (1) on the left and then "Get from VCS" (2).
 
@@ -190,7 +190,7 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
       ```
       https://github.com/nightscout/AndroidAPS
       ```
-      to the main AndroidAPS repository into the URL textbox (3).
+      to the main AAPS repository into the URL textbox (3).
     - Choose the directory where you want to save the cloned code (4).
 
       ![Clone Git](../images/studioSetup/21_CloneURL.png)
@@ -286,7 +286,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
    ![APK instead of bundle](../images/studioSetup/43_Apk.png)
 
-* Make sure that module is set to "AndroidAPS.app" (1).
+* Make sure that module is set to "AAPS.app" (1).
 * Click "Create new..." (2) to start creating your key store.
 
    **_Note:_** A key store in this case is nothing more than a file in which the information for signing is stored. It is encrypted and the information is secured with passwords.
@@ -324,7 +324,7 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 * Click "OK" (9) when you are done.
 
-* Make sure the box to remember passwords is checked (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AndroidAPS version).
+* Make sure the box to remember passwords is checked (1). So you don't have to enter them again next time you build the apk (i.e. when updating to a new AAPS version).
 * Click "Next" (2).
 
    ![Remember passwords](../images/studioSetup/48_KeystoreSave.png)
