@@ -1,22 +1,22 @@
-# Docs updates & changes
+# Doküman güncellemeleri & değişiklikleri
 
 ## Şubat 2022
 
-- [BG quality warning sign](Screenshots-bg-warning-sign) @tanja
-- [Medtronic pump update](../Configuration/MedtronicPump.md) @dottedfingertips
-- [Necessary checks after update to AndroidAPS 3.0](../Installing-AndroidAPS/update3_0.md) @tanja
+- [KŞ kalite uyarı işareti](Screenshots-bg-warning-sign) @tanja
+- [Medtronic pompa güncellemesi](../Configuration/MedtronicPump.md) @dottedfingertips
+- [AndroidAPS 3.0 güncellemesinden sonra gerekli kontroller](../Installing-AndroidAPS/update3_0.md) @tanja
 - [Omnipod Dash](../Configuration/OmnipodDASH.md) @Freloner @ robertrub @vanelsberg
-- Update docs for AAPS 3.0 (partly) @xJoe
-- [Wear OS for AAPS 3.0](../Configuration/Watchfaces.md) @peterleimbach
+- AAPS 3.0 için dokümanları güncelleyin (kısmen) @xJoe
+- [AAPS 3.0 için Wear OS](../Configuration/Watchfaces.md) @peterleimbach
 
 ## Ocak 2022
 
-- [Troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - update @tanja
+- [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.md) - güncelleme @tanja
 
 ## Aralık 2021
 
-- [Building the APK](../Installing-AndroidAPS/Building-APK.md) - update Android Studio Arctic Fox | 2020.3.1 @tanja
-- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) information added @MilosKozak
+- [APK oluşturma](../Installing-AndroidAPS/Building-APK.md) - Android Studio Arctic Fox | 2020.3.1 güncellemesi @tanja
+- [Dana-i](../Configuration/DanaRS-Insulin-Pump.md) bilgi eklendi @MilosKozak
 
 ## Kasım 2021
 
@@ -128,40 +128,40 @@
 
 ## Kasım 2019
 
-- [Automation - deactivate when disabling loop](Automation-important-note)
-- [Dexcom G6 replace transmitter update](xdrip-replace-transmitter)
-- [Extended bolus - why they do not work in a loop context](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
-- [FAQ - sports](FAQ-sports)
-- [Homescreen - lines on graph](Screenshots-section-f-main-graph)
-- [Insight - Disable absolute values in NS Client](Accu-Chek-Insight-Pump-settings-in-aaps)
-- [Medtronic pump - possible double entries](../Configuration/MedtronicPump.md)
-- [New Freestyle Libre 2 tutorial](../Hardware/Libre2.md)
-- [Profile switch with percentage - example](../Usage/Profiles.md)
-- [SMS commands update](../Children/SMS-Commands.md)
+- [Otomasyon - döngü devre dışı bırakıldığında etkisiz yap](Automation-important-note)
+- [Dexcom G6 verici güncellemesini değiştirin](xdrip-replace-transmitter)
+- [Yayma bolus - neden bir döngü bağlamında çalışmazlar?](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only)
+- [SSS - spor](FAQ-sports)
+- [Ana ekran - grafikteki çizgiler](Screenshots-section-f-main-graph)
+- [Insight - NS Client mutlak değerleri devre dışı bırakın](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [Medtronic pompa - olası çift girişler](../Configuration/MedtronicPump.md)
+- [Yeni Freestyle Libre 2 öğreticisi](../Hardware/Libre2.md)
+- [Yüzde ile profil değiştirme - örnek](../Usage/Profiles.md)
+- [SMS komutları güncelleme](../Children/SMS-Commands.md)
 - [Android Studio'da Sorun Giderme](../Installing-AndroidAPS/troubleshooting_androidstudio.md)
-- [Troubleshooting - link collection](../Usage/troubleshooting.md)
-- Update - quick walk-through for experienced users
-- Docs - update [edit](make-a-PR-code-syntax) and [translation](translations#translation-of-the-documentation).
+- [Sorun giderme - bağlantı toplama](../Usage/troubleshooting.md)
+- Güncelleme - deneyimli kullanıcılar için hızlı gözden geçirme
+- Dokmn. - güncelleme [düzenleme](make-a-PR-code-syntax) ve [çeviri](translations#translation-of-the-documentation).
 
 ## Ekim 2019
 
-- [AAPS version 2.5](Releasenotes-version-2-5-0) updates (especially on [update page](Update-to-new-version.md))
-- [AccuChek Insight - log options](Accu-Chek-Insight-Pump-settings-in-aaps)
-- [COB calculation on separate page](../Usage/COB-calculation.md)
-- [COB - wrong COB value detection](COB-calculation-detection-of-wrong-cob-values)
+- [AAPS sürüm 2.5](Releasenotes-version-2-5-0) güncelleme (özellikle [güncelleme sayfası](Update-to-new-version.md))
+- [AccuChek Insight - günlük seçenekleri](Accu-Chek-Insight-Pump-settings-in-aaps)
+- [AKRB ayrı sayfada hesaplama](../Usage/COB-calculation.md)
+- [AKRB - yanlış AKRB değeri tespiti](COB-calculation-detection-of-wrong-cob-values)
 - [Dexcom G6'ya özel sorun giderme](DexcomG6-dexcom-g6-specific-troubleshooting)
-- [Objectives update version 2.5](../Usage/Objectives.md)
-- [Preferences update](../Configuration/Preferences.md)
-- [SGLT-2 inhibitors - do not use when looping](module-no-use-of-sglt-2-inhibitors)
-- [SMS Commands Troubleshooting](SMS-Commands-troubleshooting)
-- [xDrip - update G6 transmitter replacement](xdrip-replace-transmitter)
+- [Görevler güncellemesi sürüm 2.5](../Usage/Objectives.md)
+- [Tercihler güncellemesi](../Configuration/Preferences.md)
+- [SGLT-2 inhibitörleri - döngü yaparken kullanmayın](module-no-use-of-sglt-2-inhibitors)
+- [SMS Komutları Sorun Giderme](SMS-Commands-troubleshooting)
+- [xDrip - G6 verici değişimini güncelleyin](xdrip-replace-transmitter)
 
 ## Eylül 2019
 
 - [Automate](../Usage/Automation.md)
-- [Bolus calculator](Screenshots-wrong-cob-detection) - slow carb absorption
-- [Nightscout security](Nightscout-security-considerations)
-- [Profile timeshift](Profiles-time-shift) (more details)
+- [Bolus hesaplayıcı](Screenshots-wrong-cob-detection) - yavaş karb emilimi
+- [Nightscout güvenliği](Nightscout-security-considerations)
+- [Profil zaman değiştirme](Profiles-time-shift) (daha fazla detay)
 - [Uzaktan İzleme](../Children/Children.md)
 - [Kapalı Döngü Sistemi Nedir?](../Getting-Started/ClosedLoop.md)
 
