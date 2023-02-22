@@ -84,11 +84,11 @@ However there is a variant of the patched app supporting LibreView with enabled 
 De glucosewaarden komen op de smartphone binnen op de xDrip+ app.
 
 -   If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
--   In xDrip+ select "Libre2 (patched App)" as data source
+-   In xDrip+ select "Libre2 patched" or "Libre 2 (patched App)" as data source
 -   If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Dit logt extra foutmeldingen voor het oplossen van problemen, de meesten van ons zullen dit niet nodig hebben.
 -   In xDrip+ go to Settings > Interapp Compatibility > Broadcast Data Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept Treatments and select OFF.
--   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](../Configuration/xdrip#identify-receiver)
+-   to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set [Settings > Interapp Settings > Identify Receiver "info.nightscout.androidaps"](xdrip-identify-receiver)
 -   If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings > Interapp Compatibility > Accept Calibrations and select ON. You may also want to review the options in Settings > Less Common Settings > Advanced Calibration Settings.
 
 ![xDrip+ LibreLink logging](../images/Libre2_Tags.png)
@@ -104,27 +104,28 @@ After a sensor change xDrip+ will automatically detect the new sensor and will d
 ## Stap 4: AndroidAPS configureren (alleen voor loopen)
 
 -   In AndroidAPS go to Config Builder > BG Source and check 'xDrip+'
--   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip#identify-receiver).
+-   If AndroidAPS does not receive BG values when phone is in airplane mode, use 'Identify receiver' as describe on [xDrip+ settings page](xdrip-identify-receiver).
 
 Until now, using Libre 2 as BG source you cannot activate ‘Enable SMB always’ and ‘Enable SMB after carbs’ within SMB algorithm. The BG values of Libre 2 are not smooth enough to use it safely. See [Smoothing blood glucose data](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md) for more details.
 
+(Libre2-experiences-and-troubleshooting)=
 ## Problemen oplossen en andere tips
 
 ### Verbinding
 
-De verbindig is buitengewoon goed. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
+The connectivity is extraordinarily good. With the exception of Huawei mobile phones, all current smartphones seem to work well. The reconnect rate in case of connection loss is phenomenal. The connection can break off if the mobile phone is in the pocket opposite the sensor or if you are outdoors. When I am gardening, I use to wear my phone on the sensor side of my body. In rooms, where Bluetooth spreads over reflections, no problems should occur. If you have connectivity problems please test another phone. It may also help to set the sensor with the internal BT antenna pointing down. The slit on the applicator must be pointing down when setting the sensor.
 
 ### Value smoothing & raw values
 
-Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. Dit is verplicht om te loopen. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
+Technically, the current blood sugar value is transmitted to xDrip+ every minute. A weighted average filter calculates a smoothed value over the last 25 minutes. This is mandatory for looping. The curves look smooth and the loop results are great. The raw values on which the alarms are based jitter a little more, but correspond to the values that the reader also displays. In addition, the raw values can be displayed in the xDrip+ graph in order to be able to react in time to rapid changes. Please switch on Less Common Settings \> Advanced Settings for Libre2 \> "show Raw values" and "show Sensors Infos". Then the raw values are additionally displayed as small white dots and additional sensor info is available in the system menu.
 
-De ruwe waarden zijn zeer nuttig wanneer de glucosewaarde snel verandert. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
+The raw values are very helpful when the blood sugar is moving fast. Even if the dots are jumpier you would detect the tendency much better as using the smoothed line to make proper therapy decisions.
 
 ![xDrip+ advanced settings Libre 2 & raw values](../images/Libre2_RawValues.png)
 
 ### Sensor looptijd
 
-De sensor looptijd is gesteld op 14 dagen. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 \> "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
+The sensor runtime is fixed to 14 days. The 12 extra hours of Libre1 no longer exist. xDrip+ shows additional sensor information after enabling Advanced Settings for Libre2 \> "show Sensors Infos" in the system menu like the starting time. The remaining sensor time can also be seen in the patched LibreLink app. Either in the main screen as remaining days display or as the sensor start time in the three-point menu->Help->Event log under "New sensor found".
 
 ![Libre 2 start time](../images/Libre2_Starttime.png)
 
@@ -132,9 +133,9 @@ De sensor looptijd is gesteld op 14 dagen. The 12 extra hours of Libre1 no longe
 
 A sensor exchange takes place on-the-fly: Set new sensor shortly before activation. As soon as xDrip+ receives no more data from the old sensor, start the new sensor with the patched app. After one hour new values should appear automatically in xDrip+.
 
-If not, please check the phone settings and proceed as with the first start. Er is geen tijdsbeperking voor het maken van de verbinding. Je hebt alle tijd om het lijstje met instellingen nog een tweede (of derde) keer na te lopen. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. dus maak je geen zorgen als het niet in één (of meerdere) pogingen lukt. In most cases you accidentally changed one setting which causes now problems.
+If not, please check the phone settings and proceed as with the first start. You have no time limit. Try to find the correct settings. No need to immediately replace the sensor before you tried different combinations. The sensors are robust and try permanently to establish a connection. Please take your time. In most cases you accidentally changed one setting which causes now problems.
 
-Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! Het is niet nodig om de sensor te starten in xDrip+.
+Once successful please select "Sensor Stop" and "Delete calibration only" in xDrip. This indicates for xDrip+ that a new sensor is releasing blood sugar levels and the old calibrations are no longer valid and therefore have to be deleted. No real interaction is done with the Libre2 sensor here! You do not need to start the sensor in xDrip+.
 
 ![xDrip+ missing data when changing Libre 2 sensor](../images/Libre2_GapNewSensor.png)
 
@@ -144,30 +145,32 @@ You can calibrate the Libre2 with an offset of -40 mg/dl to +20 mg/dL \[-2,2 mmo
 
 ### Plausibiliteitscheck
 
-The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Deze veiligheidschecks zijn helaas erg strak afgesteld, waardoor een sensor er helemaal mee stopt als je hem scant vlak nadat hij een beetje heeft bewogen op je arm. I have completely stopped scanning and haven't had a failure since then.
+The Libre2 sensors contain plausibility checks to detect bad sensor values. As soon as the sensor moves on the arm or is lifted slightly, the values may start to fluctuate. The Libre2 sensor will then shut down for safety reasons. Unfortunately, when scanning with the App, additional checks are made. The app can deactivate the sensor even though the sensor is OK. Currently the internal test is too strict. I have completely stopped scanning and haven't had a failure since then.
 
 ### Wisselen van tijdzone
 
 In other [time zones](../Usage/Timezone-traveling.md) there are two strategies for looping:
 
+Either
+
 1.  leave the smartphone time unchanged and shift the basal profile (smartphone in flight mode) or
 2.  delete the pump history and change the smartphone time to local time.
 
-Methode 1. is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. is dan geen optie. Please check before, if you are somewhere else, you can run otherwise fast into problems.
+Method 1. is great as long as you don't have to set a new Libre2 sensor on-site. If in doubt, choose method 2., especially if the trip takes longer. If you set a new sensor, the automatic time zone must be set, so method 1. would be disturbed. Please check before, if you are somewhere else, you can run otherwise fast into problems.
 
 ### Ervaringen
 
-Van alle beschikbare glucosesensoren is de Libre2 een van de kleinste. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturb the internal levelling mechanism.
+Altogether it is one of the smallest CGM systems on the market. Small, no transmitter necessary and mostly very accurate values without fluctuations. After approx. 12 hours running-in phase with deviations of up to 30 mg/dl (1,7 mmol/l)the deviations are typical smaller than 10 mg/dl (0,6 mmol/l). Best results at the rear orbital arm, other setting points with caution! No need to set a new sensor one day ahead for soaking. That would disturb the internal levelling mechanism.
 
-There seem to be bad sensors from time to time, which are far away from the blood values. Dan functioneert de sensor niet goed en dit herstelt zich niet meer. These should be immediately replaced.
+There seem to be bad sensors from time to time, which are far away from the blood values. It stays that way. These should be immediately replaced.
 
-If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Meestal zie je dan dat jouw glucosegrafiek een sprong maakt in xDrip+. Or the difference to the bloody values change. Vervang de sensor dan onmiddellijk! The results are inaccurate now.
+If the sensor moved a little bit on the skin or is lifted somehow this can cause bad results. The filament which sits in the tissue is a little bit pulled out of the tissue and will measure different results then. Mostly probably you will see jumping values in xDrip+. Or the difference to the bloody values change. Please replace the sensor immediately! The results are inaccurate now.
 
 ## Libre2 met Bluetooth apparaatje en OOP
 
 Bluetooth transmitter can be used with the Libre2 with the latest xDrip+ nightlys and the Libre2 OOP app. You can receive blood sugar readings every 5 minutes as well as with the Libre1. Please refer to the miaomiao website to find a description. This will also work with the Bubble device and in the future with other transmitter devices. The blucon should work but has not been tested yet.
 
-De Bluetooth apparaatjes die met Libre1 werken, kunnen niet zonder meer worden gebruikt met Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
+Old Libre1 transmitter devices cannot be used with the Libre2 OOP. They need to be replaced with a newer version or have a firmware upgrade for proper operation. MM1 with newest firmware is unfortunately not working yet - searching for root cause is currently ongoing.
 
 The Libre2 OOP is creating the same BG readings as with the original reader or the LibreLink app via NFC scan. AAPS with Libre2 do a 25 minutes smoothing to avoid certain jumps. OOP generates readings every 5 minutes with the average of the last 5 minutes. Therefore the BG readings are not that smooth but match the original reader device and faster follow the "real" BG readings. If you try to loop with OOP please enable all smoothing settings in xDrip+.
 
@@ -182,7 +185,7 @@ Even if the patched LibreLink app approach is smart there may be some reasons to
 
 Remark: The transmitter can be used in parallel to the LibreLink app. It doesn't disturb the patched LibreLink app operation.
 
-Opmerking #2: het OOP-algoritme kan nog niet worden gekalibreerd. This will be changed in the future.
+Remark #2: The OOP algorithm cannot be calibrated yet. This will be changed in the future.
 
 # Best practices for calibrating a libre 2 sensor
 

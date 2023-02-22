@@ -1,11 +1,13 @@
 # AccuChek Combo Tips voor eenvoudig gebruik
 
+**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. The old driver is also referred to as the "Ruffy-based driver". Some parts of this document only apply to the old driver. These will be annotated accordingly.
+
 ## Hoe zorgen voor een soepele werking
 
 * Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
 * Zorg er voor dat de pompbatterij altijd zo vol als mogelijk is. Zie de batterij sectie voor tips met betrekking tot de batterij.
-* Het is het beste om **de app-ruffy** niet te gebruiken terwijl het systeem in gebruik is. Als de app opnieuw wordt gestart, kan de verbinding met de pomp worden verbroken. Zodra de pomp is aangesloten op ruffy, is er geen noodzaak om opnieuw te verbinden. Zelfs na een herstart van de telefoon wordt de verbinding automatisch opnieuw tot stand gebracht. Verplaats de app indien mogelijk naar een ongebruikt scherm of in een map van de smartphone zodat je deze niet per ongeluk opent.
-* Als je de app ruffy tijdens het loopen onbedoeld opent, dan is het het beste om de smartphone direct opnieuw te starten.
+* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. Als de app opnieuw wordt gestart, kan de verbinding met de pomp worden verbroken. Zodra de pomp is aangesloten op ruffy, is er geen noodzaak om opnieuw te verbinden. Zelfs na een herstart van de telefoon wordt de verbinding automatisch opnieuw tot stand gebracht. Verplaats de app indien mogelijk naar een ongebruikt scherm of in een map van de smartphone zodat je deze niet per ongeluk opent.
+* (Only applies to the old driver) If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
 * Waar mogelijk moet de pomp alleen via de AndroidAPS-app worden gebruikt worden Om dit te vergemakkelijken, activeer het sleutelvergrendeling op de pomp: **PUMP SETTINGS / KEY LOCK / ON**. Alleen bij het vervangen van de batterij of reservoir, is nodig om de pomp toetsen te gebruiken. ![Keylock](../images/combo/combo-tips-keylock.png)
 
 ## Pomp niet bereikbaar. Wat te doen?
@@ -17,15 +19,19 @@
 
 ### Restore reachability of the pump
 
-* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **UPDATE** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
-* If that does not help, reboot your smartphone. After the restart, AndroidAPS and ruffy will be reactivated and a new connection will be established with the pump.
+* When AndroidAPS reports a **pump unreachable** alarm, first release the keylock and **press any key on the pump** (e.g. "down" button). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AndroidAPS. Mostly then the communication works again.
+* If that does not help, reboot your smartphone. After the restart, AndroidAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
 * The tests with different smartphones have shown that certain smartphones trigger the "pump unreachable" error more often than others. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
 
 ### Root causes and consequences of frequent communication errors
 
 * On phones with **low memory** (or **aggressive power-saving** settings), AndroidAPS is often shut down. You can tell by the fact that the Bolus and Calculator buttons on the Home screen are not shown when opening AAPS because the system is initializing. This can trigger "pump unreachable alarms" at startup. In the **Last Connection** field of the Combo tab, you can check when AndroidAPS last communicated with the pump. 
 
-![Pomp niet beschikbaar](../images/combo/combo-tips-pump-unreachable.png) ![No connection to pump](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+
+![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+
+![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * This error can drain the pump's battery faster because the basal profile is read from the pump when the app is restarted.
 * It also increases the likelihood of causing the error that causes the pump to reject all incoming connections until a button on the pump is pressed. 
@@ -46,9 +52,11 @@
 ![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
+* When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Battery type and causes of short battery life
 
@@ -62,14 +70,16 @@ Ranges for typical life time of the different battery types are as follows:
 * **Power One Alkaline** (Varta) from the servcie pack: 2 to 4 weeks
 * **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
+* (Only applies to the old driver) Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * There are some variants of the screw-on battery cap of the Combo pump, which partially short circuit the batteries and drain them quickly. The caps without this problem can be recognized by the golden metal contacts.
 * If the pump clock does not "survive" a short battery change, it is likely that the capacitor is broken which keeps the clock running during a brief power outage. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
 * The smart phone hardware and software (Android operating system and bluetooth stack) also impact the battery lifetime of the pump, even though the exact factors are not completely known yet. If you have the opportunity, try another smartphone and compare battery lifetimes.
 
 ## Daylight saving time changes
+
+**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
 
 * Currently the combo driver does not support automatic adjustment of the pump's time.
 * During the night of a daylight saving time change, the time of the smartphone is updated, but the time of the pump remains unchanged. This leads to an alarm due to deviating times between the systems at 3 am.

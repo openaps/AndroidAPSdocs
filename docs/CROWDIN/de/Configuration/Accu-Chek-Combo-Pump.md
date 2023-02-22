@@ -1,12 +1,14 @@
 # Accu-Chek Combo
 
-**Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
+**Die Software ist Teil einer DIY-Lösung (Do It Yourself = Eigenbau) und kein kommerzielles Produkt. Daher bist DU gefordert. DU musst lesen, lernen und verstehen, was das System macht und wie du es bedienst. Das System wird Dir nicht alle Schwierigkeiten Deiner Diabetestherapie abnehmen, aber wenn Du willens bist, die nötige Zeit zu investieren, dann kann es die Ergebnisse Deiner Therapie verbessern und die Lebensqualität erhöhen. Überstürze nichts. Nimm dir Zeit zum Lernen. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst. Du bist ganz alleine dafür verantwortlich, was Du mit dem System machst.**
+
+(Accu-Chek-Combo-Pump-hardware-requirements)=
 
 ## Benötigte Hardware
 
 - Eine Roche Accu-Chek Combo (jede Firmware funktioniert)
 - Einen Smartpix oder Realtyme Adapter und die Accu-Chek 360°-Konfigurationssoftware um die Pumpe zu konfigurieren. (Kunden von Roche können die Software beim Kundendienst anfordern.)
-- Ein kompatibles Telefon: Ein Android Telefon mit LineageOS 14.1 (früher CyanogenMod) oder mindestens Android 8.1 (Oreo). Ab AndroidAPS 3.0 ist Android 9 obligatorisch. Siehe [Versionshinweise](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-und-aaps-version) für Details.
+- Ein kompatibles Telefon: Ein Android Telefon mit LineageOS 14.1 (früher CyanogenMod) oder mindestens Android 8.1 (Oreo). Ab AndroidAPS 3.0 ist Android 9 obligatorisch. Siehe [Versionshinweise](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) für Details.
 - Bei LineageOS muss es eine neuere Version (nicht vor Juni 2017) sein, da erst zu diesem Zeitpunkt die für die Combo-Unterstützung notwendige Änderung hinzugefügt wurde. 
 - Eine Liste gestester Telefone findet sich in der [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) Liste.
 - Die Liste ist nicht abschließend und spiegelt nur die persönliche Erfahrung der Benutzer wieder. Bitte trage Deine Erfahrung in die Liste ein und hilf damit anderen. Die ganzen DIY-Projekte funktionieren nur, wenn jeder etwas zurückgibt.
@@ -15,10 +17,10 @@
 
 ## Einschränkungen
 
-- Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.rst) als Alternative an.)
+- Verzögerter Bolus und Multiwave-Bolus werden nicht unterstützt. (Schaue dir [Extended Carbs](../Usage/Extended-Carbs.md) als Alternative an.)
 - Es wird nur ein Basalprofil unterstützt.
 - Das Setzen mehrerer Basalprofile oder die Abgabe eines verzögerten Bolus oder eines Multiwave-Bolus an der Pumpe stört das Konzept von temporären Basalraten und setzt den Loop für 6 Stunden in einen “low glucose suspend mode”, da unter diesen Umständen keine sichere Funktion des Closed Loops gewährleistet ist.
-- Derzeit kann man Zeit und Datum auf der Pumpe nicht über das Telefon einstellen, [Sommer-/Winterzeit-Umstellungen](../Usage/Timezone-traveling#accu-chek-combo) oder Umstellungen andere Zeitzonen müssen daher händisch vorgenommen werden (automatisches einstellen der Uhr des Telefons am Vorabend abstellen erst wieder einstellen, wenn die Uhrzeit auf der Pumpe angepasst wurde).
+- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 - Basalraten werden nur im Bereich von 0,05 bis 10 IE/h unterstützt. Dies gilt auch für Anpassungen des Profiles, welche es erlauben, die Basalrate zu verdoppeln oder zu halbieren. Auch in diesem Fall müssen die Grenzwerte eingehalten werden, so dass die Basalrate maximal 5 IE/h sein darf (da nach Verdoppelung 10 IE/h) bzw. minimal 0,1 iE/h (da nach Halbierung 0,05 iE/h).
 - Wenn der Loop eine laufende Basalrate abbrechen will, wird stattdessen die Basalrate für 15 min. auf 90% oder 110% gesetzt. Das ist nötig, weil das Abbrechen der Basalrate auf der Combo Pumpe einen Alarm (W6 TBR Abbruch) auslöst, der durch starke Vibrationen mitgeteilt wird.
 - Manchmal kann es vorkommen, dass AAPS einen W6 TBR Abbruch Alarm nicht selbst quittiert, dann muss der Benutzer die Warnung selbst bestätigen, entweder durch Bestätigen des Alarms auf der Pumpe oder durch den Aktualisiere-Button im Combo Tab die Warnung an AAPS übergeben, damit AAPS die Warnung bestätigen kann.
@@ -27,7 +29,7 @@
 - Wenn alles oben genannte nicht hilft, kann es nötig sein, auf der Pumpe einen beliebigen Knopf zu drücken (dadurch wird BT auf der Pumpe gestoppt und neu gestartet). 
 - Derzeit ist nicht absehbar, dass dieses Verhalten verhindert werden kann. Wenn diese Fehler öfter auftreten, dann besteht die derzeit einzige Lösung in der Verwendung eines Telefons, von dem bekannt ist, dass es zuverlässig mit der Combo unter AAPS zusammenarbeitet (siehe oben).
 - Ein direkt auf der Pumpe programmierter Bolus wird nicht immer rechtzeitig erkannt und die Erkennung kann im schlimmsten Fall bis zu 20 Minuten dauern. 
-- Der Bolus an der Pumpe wird immer überprüft, bevor eine hohe TBR oder ein Bolus von AAPS programmiert wird, aber aufgrund der Einschränkungen verweigert AAPS das Setzen des TBR / Bolus, da sie unter falschen Voraussetzungen berechnet wurden. (-> Bolus nicht direkt von der Pumpe abgeben! Siehe Kapitel [Nutzung](#nutzung) unten.
+- Der Bolus an der Pumpe wird immer überprüft, bevor eine hohe TBR oder ein Bolus von AAPS programmiert wird, aber aufgrund der Einschränkungen verweigert AAPS das Setzen des TBR / Bolus, da sie unter falschen Voraussetzungen berechnet wurden. (-> Bolus nicht direkt von der Pumpe abgeben! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Das Setzen einer TBR direkt auf der Pumpe ist im Closed Loop Betrieb nicht nötig und sollte möglichst nicht vorgenommen werden. Das Erkennen einer manuell gesetzten Basalrate kann bis zu 20 Minuten dauern und wird bei der Berechnung auch erst ab dem Zeitpunkt berücksichtigt, zu dem die TBR von AAPS eingelesen wird. Das führt dazu, dass die im Körper befindliche Insulinmenge (IOB) falsch berechnet wird. 
 
 ## Einrichtung
@@ -69,6 +71,8 @@
 - Bevor das Combo-Plugin in AndroidAPS aktiviert wird, muss sichergestellt sein, dass das Basalratenprofil korrekt in AndroidAPS eingestellt ist und aktiviert wurde(!), da AndroidAPS das in der Pumpe programmierte Profil mit den eigenen Einstellungen überschreibt. Wenn das Basalratenprofil also korrekt in AAPS eingestellt ist, kann das Combo-Plugin aktiviert werden. Drücke nun den *Aktualisieren* Button im Combo Tab um die Pumpe zu initialisieren.
 - **Trenne die Pumpe** um die Konfiguration zu prüfen, setze mit AAPS eine TBR von 500% für 15 Min. und gib einen Bolus ab. Die Pumpe sollte nun die TBR anzeigen und einen Bolus-Eintrag in der Historie haben. AAPS sollte ebenfalls die TBR und den Bolus anzeigen.
 
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Warum funktioniert die Kopplung mit der Pumpe nicht mit der App "ruffy"?
 
 Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
@@ -100,6 +104,8 @@ Es sind verschiedene Gründe möglich. Versuche die folgenden Schritte:
 13. Wenn Sie den 'Pairing'- Branch benutzt haben, um die Ruffy App zu bauen, installieren Sie nun die Build Version aus dem 'combo'- Branch darüber. Stellen Sie sicher, dass Sie die gleichen Schlüssel beim Signieren der beiden Versionen der App verwendet haben, um alle Einstellungen und Daten beibehalten zu können da sie auch die Verbindungs-Eigenschaften enthalten.
 14. Starte das Smartphone neu.
 15. Jetzt kannst Du die AAPS Loop neu starten.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Nutzung
 

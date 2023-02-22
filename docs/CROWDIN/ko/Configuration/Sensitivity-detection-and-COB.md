@@ -1,3 +1,5 @@
+(Sensitivity-detection-and-COB-sensitivity-detection)=
+
 # 민감도 감지
 
 ## 민감도 알고리즘

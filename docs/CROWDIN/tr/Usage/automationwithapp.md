@@ -1,126 +1,126 @@
-# Automation with third party Android Automate App
+# Üçüncü taraf Android Automate Uygulaması ile otomasyon
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.rst) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
 
-As AndroidAPS is a hybrid closed loop system, some user interaction is necessary though (e.g. tell the loop that you are walking, eating soon, lying on the sofa...). Frequent manual user inputs can be automated via external tools like Automate or IFTTT to extend the recent AndroidAPS functionality.
+AndroidAPS hibrit bir kapalı döngü sistemi olduğundan, yine de bazı kullanıcı etkileşimi gereklidir (örneğin, döngüye yürüdüğünüzü, birazdan yemek yediğinizi, koltukta uzandığınızı söyleyin...). En son AndroidAPS işlevselliğini genişletmek için sık manuel kullanıcı girişleri, Otomatikleştirme veya IFTTT gibi harici araçlar aracılığıyla otomatikleştirilebilir.
 
-## Android Automate App
+## Android Otomatikleştirme Uygulaması
 
-The free Android™ application Automate lets you automate various tasks on your smartphone. Create your automations with flowcharts, make your device automatically change settings like Bluetooth, Wi-Fi, NFC or perform actions like sending SMS, e-mail, based on your location, the time of day, or any other “event trigger”. You can automate almost everything on your device, Automate even support plug-ins made for Tasker and Locale.
+Ücretsiz Android™ uygulaması Automate, akıllı telefonunuzdaki çeşitli görevleri otomatikleştirmenize olanak sağlar. Akış şemaları ile otomasyonlarınızı oluşturun, cihazınızın Bluetooth, Wi-Fi, NFC gibi ayarları otomatik olarak değiştirmesini sağlayın veya bulunduğunuz yere, günün saatine veya diğer herhangi bir “olay tetikleyicisine” göre SMS, e-posta gönderme gibi işlemleri gerçekleştirin. Cihazınızdaki hemen hemen her şeyi otomatikleştirebilirsiniz, Tasker ve Locale için yapılmış eklentileri bile destekler.
 
-Using this tool you can easily create workflows to auto-treat your diabetes based on several conditions according to the principle of 'if this... and this... not this..., then do that... and that...'. There are thousands of possibilities you can configure.
+Bu aracı kullanarak diyabetinizi çeşitli koşullara göre otomatik olarak tedavi etmek için iş akışlarını 'eğer bu (if this..) şeklinde kolayca oluşturabilirsiniz... ve bu... bunu değil... o zaman şunu yap... ve şu...'. Konfigüre edebileceğiniz binlerce olasılık vardır.
 
-Until now it is **necessary to loop via Nightscout Profile**, as Automate executes the commands via HTTP-request directly in your nightscout website that subsequently syncs it to your AndroidAPS app.
+Şimdiye kadar **Nightscout Profili üzerinden döngü yapmak gerekliydi**, Automate, komutları HTTP isteği aracılığıyla doğrudan nightscout web sitenizde yürütür ve ardından onu AndroidAPS uygulamanızla eşitler.
 
-**Offline looping (direct communication between Automate and AndroidAPS app) is not supported yet**, but technologically possible. Maybe there will be a solution in future. If you have figured out a way to do this, please add it to this documentation or contact a developer.
+**Çevrimdışı döngü (Automate ve AndroidAPS uygulaması arasında doğrudan iletişim) henüz desteklenmemektedir**, ancak teknolojik olarak mümkündür. Belki ileride bir çözüm bulunur. Bunu yapmanın bir yolunu bulduysanız, lütfen bunu bu belgelere ekleyin veya bir geliştiriciyle iletişime geçin.
 
-### Basic requirements
+### Temel gereksinimler
 
-#### Automate App
+#### Automate Uygulaması
 
-Download Android Automate in Google Play Store or at <https://llamalab.com/automate/> and install it on your smartphone where AndroidAPS runs.
+Android Automate'i Google Play Store'dan veya <https://llamalab.com/automate/> adresinden indirin ve AndroidAPS'nin çalıştığı akıllı telefonunuza yükleyin.
 
-In Automate, tap on hamburger menu on the upper left of the screen > Settings > Check 'Run on system startup'. This will automatically run your workflows on system startup.
+Otomatikleştir'de, ekranın sol üst kısmındaki hamburger menüsüne dokunun > Ayarlar > 'Sistem başlangıcında çalıştır' seçeneğini işaretleyin. Bu sistem başlangıcında iş akışlarınızı otomatik olarak çalıştıracaktır.
 
-![Automate HTTP request](../images/automate-app2.png)
+![Automate HTTP isteği](../images/automate-app2.png)
 
 #### AndroidAPS
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Connection settings > Uncheck 'Use WiFi connection only' and 'Only if charging' as the automated treating does only work when AndroidAPS has an actual nightscout connection.
+AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Bağlantı ayarları > 'Yalnızca WiFi bağlantısını kullan' ve 'Yalnızca şarj oluyorsa' seçeneklerinin işaretini kaldırın, çünkü otomatik tedavi yalnızca AndroidAPS gerçek bir nightcout bağlantısı olduğunda çalışır.
 
-![Nightscout connection preferences](../images/automate-aaps1.jpg)
+![Nightscout bağlantı tercihleri](../images/automate-aaps1.jpg)
 
-In AndroidAPS, tap on 3 dots menu on the upper right screen and go to Preferences > NSClient > Advanced Settings > Uncheck 'NS upload only (disabled sync)' and 'No upload to NS'.
+AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Gelişmiş Ayarlar > 'Yalnızca NS yükle (senkronizasyon devre dışı)' ve 'NS'ye yükleme yok' seçeneğinin işaretini kaldırın.
 
-Be aware of the [security issues](../Installing-AndroidAPS/Nightscout#security-considerations) that might occure and be very careful if you are using an [Insight pump](../Configuration/Accu-Chek-Insight-Pump#settings-in-aaps).
+Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
 
-![Nightscout download preferences](../images/automate-aaps2.jpg)
+![Nightscout indirme tercihleri](../images/automate-aaps2.jpg)
 
-### Workflow examples
+### İş akışı örnekleri
 
-#### Example 1: If activity (e.g. walking or running) is detected, then set a high TT. And if activity ends, then wait 20 minutes and then cancel TT
+#### Örnek 1: Aktivite (örneğin yürüme veya koşma) algılanırsa, yüksek bir GH ayarlayın. Ve aktivite biterse, 20 dakika bekleyin ve ardından GH'i iptal edin
 
-This workflow will listen to the smartphone sensors (pedometer, gravity sensor...) that detect the activity behavior. If there is recent activity like walking, running or riding a bicycle present, then Automate will set a user specified high temporary target for the user specified time. If activity ends, your smartphone will detect this, wait for 20 minutes and then set the target back to normal profile value.
+Bu iş akışı, aktivite davranışını algılayan akıllı telefon sensörlerini (pedometre, yerçekimi sensörü...) dinleyecektir. Yürüme, koşma veya bisiklete binme gibi yakın zamanda bir etkinlik mevcutsa, Otomatikleştirme, kullanıcı tarafından belirlenen süre için kullanıcı tarafından belirlenen yüksek bir geçici hedef belirleyecektir. Aktivite sona ererse, akıllı telefonunuz bunu algılar, 20 dakika bekleyin ve ardından hedefi normal profil değerine geri ayarlayın.
 
-Download the Automate script <https://llamalab.com/automate/community/flows/27808>.
+Otomatikleştirme komut dosyasını <https://llamalab.com/automate/community/flows/27808> indirin.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+İş akışını isteklerinize göre aşağıdaki gibi özelleştirin:
 
 ![Automate sling](../images/automate-app6.png)
 
-1. = Set high TT
-2. = Go back to normal target 20 minutes after the end of activity
+1. = Yüksek GH ayarla
+2. = Aktivitenin bitiminden 20 dakika sonra normal hedefe geri dönün
 
 1 ![Automate sling](../images/automate-app1.png)
 
 2 ![Automate sling](../images/automate-app5.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+İstek URL'si: /api/v1/treats.json ile biten NS-URL'niz (ör. https://my-cgm.herokuapp.com/api/v1/treats.json)
 
-Request content:
+İçerik talebi:
 
-* targetTop / targetBottom: The high TT value (top and bottom should be the same value)
-* duration: The duration of the high TT (after time it will fallback to regular profile target unless activity goes on). 
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* targetTop / targetBottom: Yüksek GH değeri (üst ve alt aynı değer olmalıdır)
+* süre: Yüksek GH'inin süresi (bir süre sonra etkinlik devam etmedikçe normal profil hedefine geri döner). 
+* secret: API SHA1 hash'ınız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
 
-Save: Tap on 'Done' and on the hook
+Kaydet: 'Bitti'ye ve kancaya dokunun
 
-Start sling: Tap on Play button
+Askıyı başlat: Oynat düğmesine dokunun
 
-#### Example 2: If xDrip+ alerts a BG high alarm, then set a low TT for ... dakika.
+#### Örnek 2: xDrip+ bir KŞ yüksek alarmı uyarırsa, o zaman ... için düşük bir GH ayarlayın. dakika.
 
-This workflow will listen to the xDrip+ notification channel. If there is triggered a user specified xDrip+ high BG alert, then Automate will set a user specified low temporary target for the user specified time. After time, another possibly alert will extend the duration of the low TT.
+Bu iş akışı, xDrip+ bildirim kanalını dinleyecektir. Kullanıcı tarafından belirlenen bir xDrip+ yüksek KŞ uyarısı tetiklenirse, Otomatikleştirme, kullanıcı tarafından belirlenen süre için kullanıcı tarafından belirlenen bir düşük geçici hedef ayarlar. Bir süre sonra, başka bir olası uyarı, düşük GH'in süresini uzatacaktır.
 
 ##### xDrip+
 
-First, you must add a BG high alert in xDrip+ as follows:
+İlk olarak, xDrip+'a aşağıdaki gibi bir KŞ yüksek uyarısı eklemelisiniz:
 
-![xDrip+ alert settings](../images/automate-xdrip1.png)
+![xDrip+ uyarı ayarları](../images/automate-xdrip1.png)
 
-Alert name: (Pay attention on it!) This name is essential for firing the trigger. It should be unmistakable and not similar to other alert names. Example: '180alarm' should not exist next to '80alarm'.
+Uyarı adı: (Dikkat edin!) Bu ad, tetikleyiciyi ateşlemek için gereklidir. Açık olmalı ve diğer uyarı adlarına benzememelidir. Örnek: '80alarm' yanında '180alarm' bulunmamalıdır.
 
-Threshold: BG value that should fire the high alert.
+Eşik: Yüksek alarmı tetiklemesi gereken KŞ değeri.
 
-Default Snooze: Insert the duration you are planning to set for your low TT here, as the alert will come up again and maybe extend the duration of the low TT.
+Varsayılan Erteleme: Düşük GH'iniz için ayarlamayı planladığınız süreyi buraya girin, çünkü uyarı tekrar gelir ve belki de düşük GH'in süresini uzatır.
 
-![xDrip+ alert settings](../images/automate-xdrip2.png)
+![xDrip+ uyarı ayarları](../images/automate-xdrip2.png)
 
 ##### Automate
 
-Secondly, download the Automate script <https://llamalab.com/automate/community/flows/27809>.
+İkinci olarak, Automate komut dosyasını <https://llamalab.com/automate/community/flows/27809> indirin.
 
-Edit the sling by tapping on the edit pencil > Flowchart
+Düzenleme kalemine dokunarak askıyı düzenleyin > Akış çizelgesi
 
 ![Automate sling](../images/automate-app3.png)
 
-Customize the workflow according to your wishes as follows:
+İş akışını isteklerinize göre aşağıdaki gibi özelleştirin:
 
-Within the 'Notification posted?' trigger, you have to set the 'TITLE' to the name of your xDrip+ alert that should fire the trigger and add a * variable before and after that name.
+'Bildirim yayınlandı mı?' tetikleyiciyi başlatmak için 'TITLE' öğesini, tetikleyiciyi tetiklemesi gereken xDrip+ uyarınızın adına ayarlamanız ve bu addan önce ve sonra bir * değişkeni eklemeniz gerekir.
 
 ![Automate sling](../images/automate-app7.png)
 
 ![Automate sling](../images/automate-app4.png)
 
-Request URL: Your NS-URL with ending /api/v1/treatments.json (e.g. https://my-cgm.herokuapp.com/api/v1/treatments.json)
+İstek URL'si: /api/v1/treats.json ile biten NS-URL'niz (ör. https://my-cgm.herokuapp.com/api/v1/treats.json)
 
-Request content:
+İçerik talebi:
 
-* targetTop / targetBottom: The low TT value (top and bottom should be the same value)
-* duration: The duration of the low TT (after time it will fallback to regular profile target). It is recommended that you use the same duration as in xDrip+ alert 'Standard snooze'
-* secret: Your API SHA1 hash. It is NOT your api key! You can convert your API key to SHA1 format at <http://www.sha1-online.com/>
+* targetTop / targetBottom: Düşük GH değeri (üst ve alt aynı değer olmalıdır)
+* süre: Düşük GH'in süresi (bir süre sonra normal profil hedefine geri döner). xDrip+ uyarısı 'Standart erteleme' ile aynı süreyi kullanmanız önerilir
+* secret: API SHA1 karmanız. Bu sizin API anahtarınız DEĞİLDİR! API anahtarınızı <http://www.sha1-online.com/> adresinde SHA1 biçimine dönüştürebilirsiniz
 
-Save: Tap on 'Done' and on the hook
+Kaydet: 'Bitti'ye ve kancaya dokunun
 
-Start sling: Tap on Play button
+Askıyı başlat: Oynat düğmesine dokunun
 
-#### Example 3: To be added by you!!!
+#### Örnek 3: Sizin tarafınızdan eklenecek!!!
 
-Please add further workflows by uploading .flo file to Automate community (under the keyword 'Nightscout') and describe it here by doing [Pull Request on AndroidAPSdocs repository](../make-a-PR.md).
+Lütfen .flo dosyasını Automate topluluğuna yükleyerek ('Nightscout' anahtar kelimesi altında) başka iş akışları ekleyin ve bunu [AndroidAPSdocs deposunda Çekme İsteği](../make-a-PR.md) yaparak burada açıklayın.
 
-## If this, then that (IFTTT)
+## Eğer buysa, o zaman (IFTTT)
 
-Feel free to add a Howto by PR...
+PR ile bir Howto eklemekten çekinmeyin...

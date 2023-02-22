@@ -1,6 +1,8 @@
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Užstrigau; Ką daryti? Ko galiu paklausti?
 
-Šis projektas grindžiamas savanorišku darbu, todėl egzistuoja tam tikros taisyklės, kad būtų išvengta papildomo darbo tiems, kurie yra tokie malonūs, kad atiduoda savo laiką ir įgūdžius:
+This project is based on volunteer work so some rules apply to avoid extra work to those who so kindly donate their time and skills:
 
 * 1 žingsnis: perskaitykite „Wiki“ - dabar mes turime paieškos funkciją, kuri jums padės!
 * 2 etapas: ieškokite Facebook grupėje; jei ten dar nebuvo atsakyta į jūsų klausimą, paklauskite [AndroidAPS Users Facebook group](https://www.facebook.com/groups/1900195340201874/)
@@ -12,7 +14,7 @@ For support on CGM sources please use the Facebook groups or discord channels fo
 
 ## Prisijunkite prie AndroidAPS users grupės Facebook!
 
-Prisijunkite prie pagrindinės [AndroidAPS Facebook grupės](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. Taip pat yra grupė, skirta Combo pompos naudotojams [AAPSCombo (anglų k.)](https://www.facebook.com/groups/127507891261169/), tiems, kurie turi šiek tiek konkretesnę sąranką.
+Join the main [AndroidAPS Facebook group](https://www.facebook.com/groups/1900195340201874/). You can post here any questions about the algorithm, any setup problems you are having with Android Studio and building the APK, any queries about use of the app and tips for how to get best use out of it. There is also a group for Combo pump users [AAPSCombo](https://www.facebook.com/groups/127507891261169/) which have a slightly more specific setup.
 
 ## Other resources in English
 

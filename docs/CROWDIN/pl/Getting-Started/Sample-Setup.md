@@ -31,7 +31,7 @@ Niemniej jednak, dane są automatycznie przesyłane do Nightscout "w chmurze" po
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.rst)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. Opcjonalnie: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ To do this perform the following steps on your smartphone:
 1. Jeśli oryginalny aplikacji Dexcom jest już zainstalowana: 
     * Zastopuj sensor
     * Uninstall app via Menu > Settings > Apps > Dexcom G6 Mobile > Uninstall
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
@@ -92,12 +92,12 @@ To do this perform the following steps on your smartphone:
 
 ## Instalacja AndroidAPS
 
-1. Postępuj zgodnie z instrukcjami [jak zbudować plik APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Przenieś](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) przygotowany plik APK do telefonu
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. [Skonfigurować AndroidAPS](../Configuration/Config-Builder.md) zgodie z własnymi potrzebami używając Asystenta ustawień lub ręcznie
 4. W tej przykładowej konfiguracji używamy (m.in.)
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Ustawienia > Inter-app settings > Accept Calibrations > `ON`
     * Menu > Start sensor (is only "pro forma" and has nothing to do with the running G6 sensor. ,jes ont wymagany gydż w innym przypadku regularnie będzie wyświetlany informacja o błędzie). 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Przykład ustawienia alarmu
 

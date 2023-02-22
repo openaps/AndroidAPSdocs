@@ -1,11 +1,13 @@
 # Accu-Chek Combo Tips for basic usage
 
+**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. The old driver is also referred to as the "Ruffy-based driver". Some parts of this document only apply to the old driver. These will be annotated accordingly.
+
 ## Πώς να εξασφαλίσετε ομαλές λειτουργίες
 
 * Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
 * Πάντα βεβαιωθείτε ότι η μπαταρία της αντλίας είναι όσο το δυνατόν πληρέστερη. Ανατρέξτε στο τμήμα της μπαταρίας για συμβουλές σχετικά με την μπαταρία.
-* Είναι καλύτερο** να μην αγγίξετε την εφαρμογή ruffy **όταν το σύστημα εκτελείται. Εάν ξαναρχίσει η εφαρμογή, η σύνδεση με την αντλία μπορεί να διακοπεί. Μόλις η αντλία είναι συνδεδεμένη με το ruffy, δεν υπάρχει ανάγκη επανασύνδεσης. Ακόμα και μετά την επανεκκίνηση του τηλεφώνου, η σύνδεση επαναφέρεται αυτόματα. Αν είναι δυνατόν, μετακινήστε την εφαρμογή σε οθόνη που δεν χρησιμοποιείται ή σε φάκελο στο smartphone σας, ώστε να μην την ανοίξετε τυχαία.
-* Αν ανοίξετε ακούσια την εφαρμογή κατά τη διάρκεια του κυκλώματος, είναι καλύτερο να επανεκινήσετε αμέσως το smartphone.
+* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. Εάν ξαναρχίσει η εφαρμογή, η σύνδεση με την αντλία μπορεί να διακοπεί. Μόλις η αντλία είναι συνδεδεμένη με το ruffy, δεν υπάρχει ανάγκη επανασύνδεσης. Ακόμα και μετά την επανεκκίνηση του τηλεφώνου, η σύνδεση επαναφέρεται αυτόματα. Αν είναι δυνατόν, μετακινήστε την εφαρμογή σε οθόνη που δεν χρησιμοποιείται ή σε φάκελο στο smartphone σας, ώστε να μην την ανοίξετε τυχαία.
+* (Only applies to the old driver) If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
 * Όποτε είναι δυνατόν, ενεργοποιήστε την αντλία μόνο μέσω της εφαρμογής AndroidAPS. Για να το διευκολύνετε, ενεργοποιήστε το κλείδωμα πλήκτρων στην αντλία κάτω από τα ** ΡΥΘΜΙΣΕΙΣ ΑΝΤΛΙΑΣ / ΚΛΕΙΔΩΜΑ ΠΛΗΚΤΡΩΝ/ ΕΝΕΡΓΟ **. Μόνο όταν αλλάζετε την μπαταρία ή την κασέτα, είναι απαραίτητο να χρησιμοποιήσετε τα πλήκτρα της αντλίας. ![Κλείδωμα](../images/combo/combo-tips-keylock.png)
 
 ## Η αντλία δεν είναι προσβάσιμη. Τι να κάνετε;
@@ -17,15 +19,19 @@
 
 ### Επαναφέρετε την προσβασιμότητα της αντλίας
 
-* Όταν το AndroidAPS αναφέρει ένα συναγερμό ** αντλία μη προσβάσιμη **, απενεργοποιήστε το κλείδωμα κουπιών και ** πατήστε οποιοδήποτε πλήκτρο στην αντλία ** (π.χ. κάτω κουμπί). Μόλις η οθόνη της αντλίας είναι απενεργοποιημένη, πατήστε ** Ανανέωση ** στην καρτέλα ** Combo Tab ** στο AndroidAPS. Τότε συνήθως η επικοινωνία επανέρχεται.
-* Εάν αυτό δεν σας βοηθήσει, επανεκκινήστε το smartphone σας. Μετά την επανεκκίνηση, το AndroidAPS και το ruffy θα επανενεργοποιηθούν και θα δημιουργηθεί νέα σύνδεση με την αντλία.
+* Όταν το AndroidAPS αναφέρει ένα συναγερμό ** αντλία μη προσβάσιμη **, απενεργοποιήστε το κλείδωμα κουπιών και ** πατήστε οποιοδήποτε πλήκτρο στην αντλία ** (π.χ. κάτω κουμπί). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AndroidAPS. Τότε συνήθως η επικοινωνία επανέρχεται.
+* Εάν αυτό δεν σας βοηθήσει, επανεκκινήστε το smartphone σας. After the restart, AndroidAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
 * Οι δοκιμές με διαφορετικά smartphones έδειξαν ότι ορισμένα smartphones ενεργοποιούν πιο συχνά το σφάλμα "μη ανιχνεύσιμη αντλία" από άλλα. [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) lists successfully tested smartphones. 
 
 ### Αιτίες και συνέπειες των συχνών σφαλμάτων επικοινωνίας
 
 * Στα τηλέφωνα με ** χαμηλή μνήμη ** (ή ** επιθετικής εξοικονόμησης ενέργειας **ρύθμιση), το AndroidAPS συχνά τερματίζεται. Μπορείτε να το δείτε από το γεγονός ότι τα Bolus και η αριθμομηχανή στην Αρχική οθόνη δεν εμφανίζονται όταν ανοίξετε το AAPS επειδή αρχικοποιείται το σύστημα. Αυτό μπορεί να προκαλέσει "συναγερμούς απρόσιτης αντλίας " κατά την εκκίνηση. Στο πεδίο ** Τελευταία σύνδεση ** της καρτέλας Combo, μπορείτε να ελέγξετε πότε το AndroidAPS τελευταία επικοινωνούσε με την αντλία. 
 
-![Αντλία απρόσιτη](../images/combo/combo-tips-pump-unreachable.png) ![Δεν υπάρχει σύνδεση με την αντλία](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+
+![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+
+![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * Αυτό το σφάλμα μπορεί να εξαντλήση την μπαταρία της αντλίας γρηγορότερα, επειδή το βασικό προφίλ διαβάζεται από την αντλία όταν ξαναρχίσει η εφαρμογή.
 * Αυξάνει επίσης την πιθανότητα να προκαλέσει το σφάλμα που προκαλεί την απόρριψη της αντλίας από όλες τις εισερχόμενες συνδέσεις μέχρι να πιεστεί ένα κουμπί στην αντλία. 
@@ -43,12 +49,14 @@
 * Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
 * Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
 
-![Η δυνατότητα Bluetooth είναι ενεργοποιημένη](../images/combo/combo-tips-compo.png)
+![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
 * Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
+* When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
 * Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
 * AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Τύπος μπαταρίας και αιτίες βραχείας διάρκειας ζωής της μπαταρίας
 
@@ -56,20 +64,22 @@
 
 ![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Το εύρος για το τυπικό χρόνο ζωής των διαφορετικών τύπων μπαταριών είναι οι εξής:
+Ranges for typical life time of the different battery types are as follows:
 
 * **Energizer Ultimate Lithium**: 4 έως 7 εβδομάδες
 * **Power One Alkaline** (Varta) από το πακέτο υπηρεσιών: 2 έως 4 εβδομάδες
 * **Eneloop rechargeable** batteries (BK-3MCCE): 1 to 3 weeks
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
+* (Only applies to the old driver) Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
 * Υπάρχουν ορισμένες παραλλαγές του καπακιού μπαταρίας της αντλίας Combo, το οποίο βραχυκυκλώνει εν μέρει τις μπαταρίες και τις αποστραγγίζει γρήγορα. Τα καπάκια χωρίς αυτό το πρόβλημα μπορούν να αναγνωριστούν από τις χρυσές μεταλλικές επαφές.
 * Εάν το ρολόι της αντλίας δεν «επιβιώσει» από μια μικρή αλλαγή μπαταρίας, είναι πιθανό να σπάσει ο πυκνωτής ο οποίος κρατάει το ρολόι σε λειτουργία κατά τη διάρκεια μιας σύντομης διακοπής ρεύματος. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
 * Το υλικό και το λογισμικό smartphone (λειτουργικό σύστημα Android και στοίβα bluetooth) επηρεάζουν επίσης τη διάρκεια ζωής της μπαταρίας της αντλίας, παρόλο που οι ακριβείς παράγοντες δεν είναι ακόμη πλήρως γνωστοί. Εάν έχετε την ευκαιρία, δοκιμάστε ένα άλλο smartphone και συγκρίνετε τη διάρκεια ζωής της μπαταρίας.
 
 ## Οι αλλαγές θερινής ώρας
+
+**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
 
 * Επί του παρόντος, ο συνδυασμός προγραμμάτων οδήγησης δεν υποστηρίζει την αυτόματη ρύθμιση του χρόνου της αντλίας.
 * Κατά τη διάρκεια της νύχτας μιας αλλαγής θερινής ώρας, ο χρόνος του smartphone ενημερώνεται, αλλά ο χρόνος της αντλίας παραμένει αμετάβλητος. Αυτό οδηγεί σε συναγερμό λόγω των αποκλίσεων μεταξύ των συστημάτων στις 3 π. μ.
@@ -77,7 +87,7 @@ If your battery life is signifcantly shorter than the ranges given above, please
 
 ## Εκτεταμένο bolus, πολλαπλό bolus
 
-Ο αλγόριθμος OpenAPS δεν υποστηρίζει έναν παράλληλο εκτεταμένο bolus ή πολλαπλό bolus. But a similar treatment can be achieved by the following alternatives:
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
 * Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
 * Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
@@ -85,15 +95,15 @@ If your battery life is signifcantly shorter than the ranges given above, please
 
 * If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
 
-![Απενεργοποιημένο κύκλωμα μετά από πολλαπλό bolus](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Συναγερμοί κατά την χορήγηση bolus
 
 * If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
 * The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Εδώ πρέπει να αποφευχθούν οι δυσδιάκριτες καταχωρήσεις.
 
-![Διπλό bolus](../images/combo/combo-tips-doppelbolus.png)
+![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Αυτός ο μηχανισμός είναι επίσης υπεύθυνος για μια δεύτερη αιτία του σφάλματος: Εάν κατά τη χρήση του υπολογισμού των bolus χορηγηθεί ένα άλλο bolus μέσω της αντλίας με τον τρόπο αυτό αλλάζει το ιστορικό των bolus, η βάση του υπολογισμού του bolus είναι λάθος και το bolus ακυρώνετε. 
 
-![Ακυρωμένο bolus](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/combo/combo-tips-history-changed.png)

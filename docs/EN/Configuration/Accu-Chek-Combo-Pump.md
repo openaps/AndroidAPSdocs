@@ -2,11 +2,12 @@
 
 **This software is part of a DIY solution and is not a product, but requires YOU to read, learn and understand the system including how to use it. It is not something that does all your diabetes management for you, but allows you to improve your diabetes and your quality of life if you're willing to put in the time required. Don't rush into it, but allow yourself time to learn. You alone are responsible for what you do with it.**
 
+(Accu-Chek-Combo-Pump-hardware-requirements)=
 ## Hardware requirements
 
 * A Roche Accu-Chek Combo (any firmware, they all work)
 * A Smartpix or Realtyme device together with the 360 Configuration Software to configure the pump. (Roche sends out Smartpix devices and the configuration software free of charge to their customers upon request.)
-* A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AndroidAPS 3.0 Android 9 is mandatory. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
+* A compatible phone: An Android phone with a phone running LineageOS 14.1 (formerly CyanogenMod) or at least Android 8.1 (Oreo). As of AAPS 3.0 Android 9 is mandatory. See [release notes](https://androidaps.readthedocs.io/en/latest/Installing-AndroidAPS/Releasenotes.html#android-version-and-aaps-version) for details.
 * With LineageOS 14.1 it has to be a recent version from at least June 2017 since the change needed to pair the Combo pump was only introduced at that time. 
 * A list of phones can be found in the [AAPS Phones](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) document.
 * Please be aware that this is not complete list and reflects personal user experience. You are encouraged to also enter your experience and thereby help others (these projects are all about paying it forward).
@@ -15,19 +16,19 @@
 
 ## Limitations
 
-* Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.rst) instead).
+* Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
 * Only one basal profile is supported.
 * Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
-* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](../Usage/Timezone-traveling#accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+* It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
 * Currently only basal rates in the range of 0.05 to 10 U/h are supported. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Similarly, when reducing to 50%, the lowest basal rate must be at least 0.10 U/h.
 * If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
 * Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
 * Bluetooth connection stability varies with different phones, causing "pump unreachable" alerts, where no connection to the pump is established anymore. 
 * If that error occurs, make sure Bluetooth is enabled, press the Refresh button in the Combo tab to see if this was caused by an intermitted issue and if still no connection is established, reboot the phone which should usually fix this. 
 * There is another issue were a restart doesn't help but a button on the pump must be pressed (which resets the pump's Bluetooth), before the pump accepts connections from the phone again. 
-* There is very little that can be done to remedy either of those issues at this point. So if you see those errors frequently your only option at this time is to get another phone that's known to work well with AndroidAPS and the Combo (see above).
+* There is very little that can be done to remedy either of those issues at this point. So if you see those errors frequently your only option at this time is to get another phone that's known to work well with AAPS and the Combo (see above).
 * Issuing a bolus from the pump will not always be detected in time (checked for whenever AAPS connects to the pump), and might take up to 20 minutes in the worst case. 
-* Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter [Usage](#usage) below)
+* Boluses on the pump are always checked before a high TBR or a bolus issued by AAPS but due to the limitations AAPS will then refuse to issue the TBR/Bolus as it was calculated under false premises. (-> Don't bolus from the Pump! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 * Setting a TBR on the pump is to be avoided since the loop assumes control of TBRs. Detecting a new TBR on the pump might take up to 20 minutes and the TBR's effect will only be accounted from the moment it is detected, so in the worst case there might be 20 minutes of a TBR that is not reflected in IOB. 
 
 ## Setup
@@ -59,9 +60,9 @@
 
 ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
 
-- Install AndroidAPS as described in the [AndroidAPS wiki](https://androidaps.readthedocs.io/)
-- Make sure to read the wiki to understand how to setup AndroidAPS.
-- Select the MDI plugin in AndroidAPS, not the Combo plugin at this point to avoid the Combo
+- Install AAPS as described in the [AAPS wiki](https://androidaps.readthedocs.io/)
+- Make sure to read the wiki to understand how to setup AAPS.
+- Select the MDI plugin in AAPS, not the Combo plugin at this point to avoid the Combo
   plugin from interfering with ruffy during the pairing process.
 - Clone ruffy via git from [MilosKozak/ruffy](https://github.com/MilosKozak/ruffy). At the moment, the primary branch is the `combo` branch, in case of problems you might also try the 'pairing' branch (see below).
 - Build and install ruffy and use it to pair the pump. If it doesn't work after multiple attempts, switch to the `pairing` branch, pair the pump and then switch back the original branch.
@@ -81,6 +82,7 @@
   pump.
 - To verify your setup, with the pump **disconnected**, use AAPS to set a TBR of 500% for 15 min and issue a bolus. The pump should now have a TBR running and the bolus in the history. AAPS should also show the active TBR and delivered bolus.
 
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
 ## Why pairing with the pump does not work with the app "ruffy"?
 There are serveral possible reasons. Try the following steps:
 
@@ -118,14 +120,16 @@ There are serveral possible reasons. Try the following steps:
 14.  Reboot the phone.
 15.  Now you can restart AAPS loop.
 
+(Accu-Chek-Combo-Pump)=
+
 ## Usage
 
 - Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system,
   its limitations and how it can fail. It is strongly advised NOT to use this system when the person
   using it is not able to fully understand the system.
-- Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AndroidAPS
+- Read the OpenAPS documentation https://openaps.org to understand the loop algorithm AAPS
   is based upon.
-- Read the online documentation to learn about and understand AndroidAPS https://androidaps.readthedocs.io/
+- Read the online documentation to learn about and understand AAPS https://androidaps.readthedocs.io/
 - This integration uses the same functionality which the meter provides that comes with the Combo.
   The meter allows to mirror the pump screen and forwards button presses to the pump. The connection
   to the pump and this forwarding is what the ruffy app does. A `scripter` component reads the screen
@@ -133,12 +137,12 @@ There are serveral possible reasons. Try the following steps:
   AAPS then interacts with the scripter to apply loop commands and to administer boluses.
   This mode has some restrictions: it's comparatively slow (but well fast enough for what it is used for),
   and setting a TBR or giving a bolus causes the pump to vibrate.
-- The integration of the Combo with AndroidAPS is designed with the assumption that all inputs are
-  made via AndroidAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take
-  up to 20 min before AndroidAPS becomes aware of such a bolus. Reading boluses delivered directly on
+- The integration of the Combo with AAPS is designed with the assumption that all inputs are
+  made via AAPS. Boluses entered on the pump directly will be detected by AAPS, but it can take
+  up to 20 min before AAPS becomes aware of such a bolus. Reading boluses delivered directly on
   the pump is a safety feature and not meant to be regularly used (the loop requires knowledge of carbs
   consumed, which can't be entered on the pump, which is another reason why all inputs should be done
-  in AndroidAPS). 
+  in AAPS).
 - Don't set or cancel a TBR on the pump. The loop assumes control of TBR and cannot work reliably otherwise, since it's not possible to determine the start time of a TBR that was set by the user on the pump.
 - The pump's first basal rate profile is read on application start and is updated by AAPS.
   The basal rate should not be manually changed on the pump, but will be detected and corrected as a safety

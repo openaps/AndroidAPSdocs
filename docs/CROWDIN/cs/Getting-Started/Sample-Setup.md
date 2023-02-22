@@ -31,7 +31,7 @@ Nicméně, data se automaticky nahrají do Nightscoutu, jakmile je navázáno da
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternativy: viz seznam možných [zdrojů glykémie](../Configuration/BG-Source.rst)
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. Volitelné: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ To do this perform the following steps on your smartphone:
 1. Je-li původní Dexcom aplikace již nainstalována: 
     * Zastavte senzor
     * Odinstalujte aplikaci přes Nabídka > Nastavení > Aplikace > Dexcom G6 Mobile > odinstalovat
-2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app)
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Start modified Dexcom G6 app, activate/calibrate the sensor according to the given instructions and wait until the warm-up phase is finished.
 4. Once the modified Dexcom app shows actual glucose value, setup the warnings (hamburger menu on top left side of the screen) as follows: 
     * Urgent low `55mg/dl` / `3.1mmol/l` (cannot be disabled)
@@ -92,12 +92,12 @@ To do this perform the following steps on your smartphone:
 
 ## Nainstalujte AndroidAPS
 
-1. Postupujte podle pokynů k [Vytvoření APK](../Installing-AndroidAPS/Building-APK#generate-signed-apk)
-2. [Nahrajte](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone) vygenerované APK do telefonu
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. [Nakonfigurujte AndroidAPS ](../Configuration/Config-Builder.md) podle svých potřeb pomocí průvodce nastavením nebo ručně
 4. V tomto vzorovém nastavení jsme (mimo jiné) použili
 
-* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
 ![G5 Settings](../images/SampleSetupG5Settings.png)
 
@@ -117,7 +117,7 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Nastavení > Komunikace mezi aplikacemi > Přijímat kalibrace > `ZAP`
     * Menu > Spustit senzor (je pouze „pro forma“ a nemá nic společného s běžícím senzorem G6. (To je nezbytné, jinak se bude pravidelně objevovat chybová zpráva.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Příklad nastavení výstrahy
 

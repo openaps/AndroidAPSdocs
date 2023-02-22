@@ -2,70 +2,73 @@
 
 ## Grundsätzliches vorab
 
--   Follow general CGM hygiene and setting sensor recommendation [here](../Hardware/GeneralCGMRecommendation.md).
--   For G6 transmitters manufactured after fall/end of 2018 please make sure to use one of the [latest nightly built xDrip+ versions](https://github.com/NightscoutFoundation/xDrip/releases). Those transmitters have a new firmware and latest stable version of xDrip+ (2019/01/10) cannot deal with it.
+-   Beachte die allgemeinen Empfehlungen zur CGM Hygiene und zum Setzen des Sensors, die Du [hier](../Hardware/GeneralCGMRecommendation.md) findest.
+-   Nutze für G6 Transmitter, die nach Mitte / Ende 2018 hergestellt wurden,  eine der aktuellen [latest nightly built xDrip+ Versionen](https://github.com/NightscoutFoundation/xDrip/releases). Diese Transmitter haben eine neue Firmware und die letzte stabile Version von xDrip+ vom 10.01.2019 kann mit diesen noch nicht korrekt umgehen.
 
 ## Allgemeine Hinweise zum Closed Loop mit dem Dexcom G6
 
-What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
+Die Nutzung des G6 kann vielleicht etwas komplexer sein, als zunächst vermutet. Mache Dir die folgenden Punkte bewusst, um das System sicher zu nutzen:
 
--   If you are using the native data with the calibration code in xDrip+ or Spike, the safest thing to do is not allow preemptive restarts of the sensor.
--   If you must use preemptive restarts, then make sure you insert at a time of day where you can observe the change and calibrate if necessary.
--   If you are restarting sensors, either do it without the factory calibration for safest results on days 11 and 12, or ensure you are ready to calibrate and keep an eye on variation.
--   Pre-soaking of the G6 with factory calibration is likely to give variation in results. If you do pre-soak, then to get best results, you will probably need to calibrate the sensor.
--   If you aren’t being observant about the changes that may be taking place, it may be better to revert to non-factory-calibrated mode and use the system like a G5.
+-   Wenn Du mit nativen Daten und dem Kalibrierungscode in xDrip+ oder Spike arbeitest, ist es am sichersten, auf den "preemptive" Neustart des Sensors zu verzichten.
+-   Falls Du den "preemptive restart" verwendest, stelle sicher, dass dieser zu einer Tageszeit erfolgt, zu der Du die Änderungen verfolgen und ggf. durch eine Kalibrierung eingreifen kannst.
+-   Falls Du Sensoren verlängerst, verzichte aus Sicherheitsgründen entweder auf die Werkskalibrierung an Tag 11 und 12 oder stelle sicher, dass Du die Abweichungen im Auge hast und evtl. durch Kalibrierung korrigieren kannst.
+-   Das sogenannte "Pre-soaking" (Sensor früher ohne Transmitter setzen, damit er sich an die Gewebsflüssigkeit "gewöhnt") mit Werkskalibrierung führt wahrscheinlich zu Abweichungen in den Glukosewerten. Falls Du mit "pre-soaking" arbeitest, wirst Du wahrscheinlich bessere Ergebnisse erzielen, wenn Du den Sensor kalibrierst.
+-   Wenn Du nicht auf die Abweichungen, die stattfinden können, achten willst, wäre es evtl. besser bei der Verlängerung auf die Werkskalibrierung zu verzichten und das System wie den G5 (mit "Pflichtkalibrierung") zu nutzen.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Mehr zu den Details und Gründen für diese Empfehlungen findest Du im [kompletten Artikel](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) (englisch) von Tim Street auf seiner Seite [www.diabettech.com](https://www.diabettech.com).
 
 ## Dexcom G6 mit xDrip+
 
--   The Dexcom G6 transmitter can simultaneously be connected to the Dexcom receiver (or alternatively the t:slim pump) and one app on your phone.
--   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **You cannot connect xDrip+ and Dexcom app with the transmitter at the same time!**
--   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
--   If not already set up then download [xDrip+](https://github.com/NightscoutFoundation/xDrip) and follow instructions on [xDrip+ settings page](../Configuration/xdrip.md).
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
--   Adjust settings in xDrip+ according to [xDrip+ settings page](../Configuration/xdrip.md)
--   If AAPS does not receive BG values when phone is in airplane mode use 'Identify receiver' as describe on [xDrip+ settings page](../Configuration/xdrip.md).
+-   Der Dexcom G6-Transmitter kann gleichzeitig mit einem Dexcom-Empfänger (oder alternativ mit der t:slim-Pumpe) und einer App auf dem Handy verbunden werden.
+-   Wenn Du xDrip+ zum Empfang der CGM-Daten verwendest, deinstalliere zuerst die Dexcom App. **Du kannst xDrip+ und die Dexcom App nicht gleichzeitig mit dem Transmitter verbinden!**
+-   If you need Clarity and want to profit from xDrip+ alarms use the [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+-   Falls Du xDrip noch nicht eingerichtet hast, dann lade es Dir herunter [xdrip](https://github.com/NightscoutFoundation/xDrip) und richte es entsprechend der Dokumentation unter[G5](../Configuration/xdrip.md)  ein.
+-   Wähle in AndroidAPS > Konfiguration > BZ-Quelle > xDrip+.
+-   Passe die Einstellungen xDrip+ entsprechend den Erläuterungen auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) an.
+-   Falls AAPS im Flugmodus keine BZ-Werte von xdrip+ bekommt, nutze "Identify receiver" wie auf der [Seite xDrip+ Einstellungen](../Configuration/xdrip.md) beschrieben.
 
+(DexcomG6-if-using-g6-with-build-your-own-dexcom-app)=
 ## G6 mit Build Your Own Dexcom App
 
--   As of December 2020 [Build Your Own Dexcom App](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) (BYODA) also supports local broadcast to AAPS and/or xDrip+ (not for G5 sensors!)
--   This app lets you use your Dexcom G6 with any Android smartphone.
--   Uninstall the original Dexcom app or patched Dexcom app if you used one of those previously.
--   Install downloaded apk
--   Enter sensor code and transmitter serial no. in patched app.
+-   Seit Dezember 2020 unterstützt die [BYODA - "Erstelle deine eigene Dexcom App"](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0) auch die lokale Datenweitergabe an AAPS und/oder xDrip+ (nicht für G5 Sensoren!).
+-   Mit dieser App kannst du den Dexcom G6 mit jedem Android Smartphone verwenden.
+-   Deinstalliere die ursprüngliche Dexcom-App oder die gepatchte Dexcom-App, wenn du diese zuvor verwendet hast.
+-   Installiere die heruntergeladene APK.
+-   Sensorcode und Seriennummer des Senders in der gepatchten App eingeben.
 -   In phone settings go to apps > Dexcom G6 > permissions > additional permissions and press 'Access Dexcom app'.
--   After short time BYODA should pick-up transmitter signal. (If not you will have to stop sensor and start new one.)
+-   Innerhalb kurzer Zeit sollte BYODA das Transmitter-Signal aufnehmen. (Falls nicht, musst du den Sensor stoppen und einen neuen Sensor starten.)
 
 ### Einstellungen für AndroidAPS
 
--   Select 'Dexcom App (patched)' in config builder.
--   If you don't receive any values select any other data source, then re-select 'Dexcom App (patched)' to trigger the demand for permissions to establish the connection between AAPS and BYODA-broadcast.
+-   Wähle 'gepatchte Dexcom App' im Konfigurationsgenerator.
+-   Falls AAPS keine Werte erhält, wechsle auf eine andere BZ-Quelle und dann wieder zurück zur 'gepatchte Dexcom App', um die Abfrage für die Genehmigung des Datenaustauschs zwischen AAPS und BYODA aufzurufen.
 
 ### Einstellungen für xDrip+
 
--   Select '640G/Eversense' as data source.
--   Command 'start sensor' must be performed in xDrip+ in order to receive values. This will not affect your current sensor controlled by Build Your Own Dexcom App.
+-   Wähle '640G/Eversense' als Datenquelle.
+-   Führe den Befehl 'Sensor starten' in xDrip+ aus, damit Werte empfangen werden. Dies hat keinen Einfluss auf den laufenden Sensor, der ggf. von der BYODA App kontroliert wird.
 
+
+(DexcomG6-troubleshooting-g6)=
 ## Problembehandlung G6
 
 ### Dexcom G6-spezifische Problembehandlung
 
--   Transmitters with serial no. starting with 80 or 81 need at least last stable xDrip+ version from May 2019 or a newer nightly build.
--   Transmitters with serial no. starting with 8G need at least nightly build from July 25th, 2019 or newer.
--   xDrip+ and Dexcom app cannot be connected with the transmitter at the same time.
--   Wait at least 15 min. between stopping and starting a sensor.
--   Do not rewind back time of insertion. Answer question "Did you insert it today?" always with "Yes, today".
--   Do not enable "restart sensors" while setting a new sensor
--   Do not start new sensor before the following information is shown in Classic Status Page -> G5/G6 status -> PhoneServiceState:
-    -   Transmitter serial starting with 80 or 81: "Got data hh:mm" (i.e. "Got data 19:04")
-    -   Transmitter serial starting with 8G or 8H: "Got glucose hh:mm" (i.e. "Got glucose 19:04") or "Got no raw hh:mm" (i.e. "Got now raw 19:04")
+-   Transmitter, deren Seriennummer mit 80 oder 81 beginnen, benötigen mindestens die letzte stabile xDrip+ Version ab Mai 2019 oder einen neueren Nightly-Build.
+-   Transmitter, deren Seriennummer mit 8G beginnt, benötigen mind. die Nightly Build vom 25. Juli 2019 oder ein neueres Nightly Build.
+-   xDrip+ und Dexcom App können nicht gleichzeitig mit dem Transmitter verbunden werden.
+-   Warte mindestens 15 Min. zwischen dem Stop und dem Start eines Sensors.
+-   Datiere die Setzzeit nicht zurück. Beantworte daher die Frage, ob Du den Sensor heute eingesetzt hast, immer mit Ja.
+-   Beim Starten eines Sensors darf "restart sensors" nicht aktiviert sein.
+-   Neuen Sensor nicht starten, bevor die folgenden Informationen in der klassische Statusseite angezeigt werden -> G5/G6 Status -> TelefonServiceZustand:
+    -   Transmitter Seriennummer beginnt mit 80 oder 81: "Got data hh:mm" (z.B. "Got data 19:04")
+    -   Transmitter Seriennummer beginnt mit 8G oder 8H: "Got glucose hh:mm" (z.B. "Got glucose 19:04") oder "Got no raw hh:mm" (z.B. "Got now raw 19:04")
 
 ![xDrip+ PhoneServiceState](../images/xDrip_Dexcom_PhoneServiceState.png)
 
 ### Allgemeine Problembehandlung
 
-General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation#troubleshooting).
+General Troubleshoothing for CGMs can be found [here](./GeneralCGMRecommendation.html#troubleshooting).
 
 ### Neuer Transmitter bei laufendem Sensor
 

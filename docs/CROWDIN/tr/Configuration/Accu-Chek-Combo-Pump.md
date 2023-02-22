@@ -2,6 +2,8 @@
 
 **Bu yazılım bir DIY (Kendin Yap) çözümünün parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Tüm diyabet yönetimini sizin için yapan bir şey değildir, ancak gerekli zamanı ayırmaya istekliyseniz diyabetinizi ve yaşam kalitenizi iyileştirmenize izin verir. Acele etmeyin, ancak öğrenmek için kendinize zaman tanıyın. Yazılımla yaptıklarınızdan yalnızca siz sorumlusunuz.**
 
+(Accu-Chek-Combo-Pump-hardware-requirements)=
+
 ## Donanım Gereksinimleri
 
 - Roche Accu-Chek Combo pompa(tüm pompa yazılımlarında çalışır)
@@ -15,10 +17,10 @@
 
 ## Sınırlamalar
 
-- Yayma bolus ve çoklu yayma bolus desteklenmez (bunun yerine [Yayma Karbonhidratlar](../Usage/Extended-Carbs.rst)'a bakın).
+- Yayma bolus ve çoklu yayma bolus desteklenmez (bunun yerine [Yayma Karbonhidratlar](../Usage/Extended-Carbs.md)'a bakın).
 - Yalnızca bir bazal profil desteklenir.
 - Pompada birden farklı bir bazal profil ayarlamak veya pompadan yayma bolus veya çoklu yayma boluslar iletmek, TBR'leri (geçici bazal oranları) etkiler ve döngü bu koşullar altında güvenli bir şekilde çalışamayacağından döngüyü 6 saat boyunca yalnızca düşük askıya alma moduna zorlar.
-- Şu anda pompada saat ve tarihi ayarlamak mümkün değildir, bu nedenle [yaz saati değişiklikleri](../Usage/Timezone-traveling#accu-chek-combo) manuel olarak yapılmalıdır. (Gece alarm vermemesi için, akşam telefonun otomatik saat güncellemesini devre dışı bırakabilir, pompa saati ile birlikte sabah tekrar değiştirebilirsiniz).
+- Şu anda pompada saat ve tarihi ayarlamak mümkün değildir, bu nedenle [yaz saati değişiklikleri](Timezone-traveling-accu-chek-combo) manuel olarak yapılmalıdır. (Gece alarm vermemesi için, akşam telefonun otomatik saat güncellemesini devre dışı bırakabilir, pompa saati ile birlikte sabah tekrar değiştirebilirsiniz).
 - Şu anda sadece 0,05 ila 10 Ü/st aralığındaki bazal oranlar desteklenmektedir. Bu aynı zamanda bir profili değiştirirken de geçerlidir, örn. %200'e çıkarken, en yüksek bazal oran iki katına çıkacağı için 5 Ü/s'i geçmemelidir. Benzer şekilde, %50'ye indirildiğinde, en düşük bazal oranı en az 0,10 Ü/s olmalıdır.
 - Döngü, çalışan bir GBO'nin iptal edilmesini isterse, Combo bunun yerine 15 dakika için %90 veya %110'luk bir GBO ayarlayacaktır. Bunun nedeni, bir GBO'nın iptal edilmesinin pompada çok fazla titreşime neden olacak bir uyarıya neden olmasıdır.
 - Ara sıra (birkaç günde bir) AAPS, kullanıcının daha sonra ilgilenmesi gereken bir GBO İPTAL EDİLDİ uyarısını otomatik olarak iptal etmede başarısız olabilir (uyarıyı AAPS'e aktarmak için AAPS'deki yenile düğmesine basabilir veya pompadaki uyarıyı onaylayabilirsiniz).
@@ -27,7 +29,7 @@
 - Yeniden başlatmanın yardımcı olamayacağı başka bir sorun, pompa telefondan tekrar bağlantıları kabul etmeden önce pompadaki bir butona (pompanın Bluetooth'unu sıfırlar) basılması gerektiğidir. 
 - Bu noktada bu sorunlardan herhangi birini giderebilmek için yapılabilecek çok az şey var. Bu nedenle, bu hataları sık sık görüyorsanız, şu anda tek seçeneğiniz AndroidAPS ve Combo ile iyi çalıştığı bilinen başka bir telefon almaktır (yukarıya bakın).
 - Pompadan bolus verilmesi her zaman zamanında algılanmayacaktır (AAPS pompaya her bağlandığında kontrol eder) ve en kötü durumda 20 dakika kadar sürebilir. 
-- Pompadaki boluslar her zaman yüksek bir GBO'dan veya AAPS tarafından verilen bir bolustan önce kontrol edilir, ancak sınırlamalar nedeniyle AAPS, yanlış öncüller altında hesaplandığı için GBO/Bolus vermeyi reddedecektir. (-> Pompadan bolus vermeyin! Aşağıdaki [Kullanım](#usage) bölümüne bakın)
+- Pompadaki boluslar her zaman yüksek bir GBO'dan veya AAPS tarafından verilen bir bolustan önce kontrol edilir, ancak sınırlamalar nedeniyle AAPS, yanlış öncüller altında hesaplandığı için GBO/Bolus vermeyi reddedecektir. (-> Pompadan bolus vermeyin! See chapter [Usage](Accu-Chek-Combo-Pump-usage) below)
 - Döngü GBO'ların kontrolünü üstlendiğinden, pompada herhangi bir GBO ayarlamaktan kaçınılmalıdır. Pompada yeni bir GBO'nın algılanması 20 dakika kadar sürebilir ve GBO'nın etkisi yalnızca algılandığı andan itibaren hesaba katılır, bu nedenle en kötü durumda, Aktif İnsüline yansıtılmayan 20 dakikalık bir GBO olabilir. 
 
 ## Kurulum
@@ -69,6 +71,8 @@
 - AAPS'de Combo eklentisini etkinleştirmeden önce profilinizin doğru ayarlandığından ve etkinleştirildiğinden(!) ve AAPS bazal profili pompayla senkronize edeceğinden bazal profilinizin güncel olduğundan emin olun. Ardından Combo eklentisini etkinleştirin. Pompayı başlatmak için Combo sekmesindeki *Yenile* düğmesine basın.
 - Pompa **bağlantısı kesilmiş** durumdayken kurulumunuzu doğrulamak için, 15 dakika boyunca %500'lük bir GBO ayarlamak için AAPS'yi kullanın ve bolus verin. Pompanın şimdi çalışan bir GBO'su ve geçmişte bolus olması gerekir. AAPS ayrıca aktif GBO'yu ve iletilen bolusu göstermelidir.
 
+(Accu-Chek-Combo-Pump-why-pairing-with-the-pump-does-not-work-with-the-app-ruffy)=
+
 ## Pompayla eşleştirme neden "ruffy" uygulamasıyla çalışmıyor?
 
 Bunun birkaç olası nedeni olabilir. Aşağıdaki adımları deneyin:
@@ -100,6 +104,8 @@ Bunun birkaç olası nedeni olabilir. Aşağıdaki adımları deneyin:
 13. Ruffy uygulamasını oluşturmak için ''Pairing' dalını kullandıysanız, şimdi bunun üzerine 'combo' dalından sürüm derlemesini yükleyin. Tüm ayarları ve verileri saklayabilmek için uygulamanın iki sürümünü imzalarken aynı anahtarları kullandığınızdan emin olun, çünkü bunlar bağlantı özelliklerini de içerir.
 14. Telefonu yeniden başlatın.
 15. AAPS programını yeniden başlatabilirsiniz.
+
+(Accu-Chek-Combo-Pump)=
 
 ## Kullanım
 

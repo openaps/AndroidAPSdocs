@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>Stavový indikátor nízké baterie na domovské obrazovce</td>
  <td>CAN / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>BG</strong></td>
@@ -72,19 +72,19 @@
 </tr>
 <tr>
 <td><strong>Zdroj glykémie (BG source)</strong></td>
- <td>The blod glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
+ <td>The blood glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
  <td>CGM / FGM</td>
  <td><a href="../Configuration/Config-Builder.html#bg-source">Wiki - Zdroj glykémie</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
- <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile activley very near to the sensor. The Blucon Nightreader closed this gap. Newer versions work in other ways! Please inform yourself about the actual state before buying something.</td>
+ <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile actively very near to the sensor. The Blucon Nightreader closed this gap. Newer versions work in other ways! Please inform yourself about the actual state before buying something.</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
  <td><strong>BR</strong></td>
- <td>The abbrevation stand for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
+ <td>The abbrevation stands for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
  <td>IC / ISF</td>
  <td>&nbsp;</td>
 </tr>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>ukazatel stáří kanyly na domácí stránce</td>
  <td>BAT / RES / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>CGM</strong></td>
@@ -128,7 +128,7 @@
  <td><strong>Doba působnosti inzulínu</strong></td>
  <td>Doba působnosti inzulinu (duration of insulin action)</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki - Typy inzulinů</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>DST</strong></td>
@@ -138,9 +138,9 @@
 </tr>
 <tr>
  <td><strong>eCarbs</strong></td>
- <td>„rozložené sacharidy“ (extended carbs) - sacharidy rozložené na několik hodin (např. jídla s vysokým obsahem tuků/proteinů)<br>rozložený bolus, který můžete znát z léčby pomocí běžné inzulinové pumpy, nedává při používání smyčky příliš velký smysl</td>
+ <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Příklad použití funkce eCarbs</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
 </tr>
 <tr>
  <td><strong>FGM</strong></td>
@@ -150,7 +150,7 @@
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>git in our context here is the tool to mainly download the AndrdoidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
+ <td>git in our context here is the tool to mainly download the AndroidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - aktualizace APK</a></td>
 </tr>
@@ -180,7 +180,7 @@
 </tr>
 <tr>
  <td><strong>IOB</strong></td>
- <td>Aktivní inzulin (insulin on board) - aktivní inzulin, který máte v těle</td>
+ <td>insulin on board -  Units of insulin currently active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -204,7 +204,7 @@
 </tr>
 <tr>
  <td><strong>Soubory protokolů</strong></td>
- <td>Soubory protokolů (Log files) Záznamy veškerých akcí systému AAPS (užitečné při řešení potíží a ladění)</td>
+ <td>record of all AAPS actions (useful for troubleshooting and debugging)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#accessing-logfiles">Wiki - Soubory protokolů</a></td>
 </tr>
@@ -222,19 +222,19 @@
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>Bezpečnostní funkce - výchozí hodnota vstřebávání sacharidů používaná v případě, kdy nelze absorpci vypočítat dynamicky na základě reakcí glykémie</td>
+ <td>safety feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your BG reactions</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#absorption-settings">Wiki - Konfigurace</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. AndroidAPS is storing there the data. It's available e.g. for parents follwing their childs diabetes management or reporting of the historically data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentil chart etc..</td>
+ <td>open source project to access and report CGM data. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout Reporter</strong></td>
- <td>Tool from fellow looper to generate PDFs reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
+ <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
  <td>Nightscout</td>
  <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a><br><a href="https://www.facebook.com/nightrep/">NS Reporter @ Facebook</a></td>
 </tr>
@@ -252,7 +252,7 @@
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>Otevřený systém umělé slinivky (Open Artificial Pancreas System)<br>APS běží na malých počítačích (např. Raspberry Pi)<br>Systém AAPS využívá některé funkce OpenAPS</td>
+ <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pi)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Dokumentace k OpenAPS</a></td>
 </tr>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>Stavový indikátor na domovské obrazovce upozorňující na starý zásobník</td>
  <td>BAT / CAN / SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>status light sensor change on homescreen</td>
  <td>BAT / CAN / RES</td>
- <td><a href="../Configuration/Preferences.html#overview">Nastavení</a><br><a href="../Getting-Started/Screenshots.html">Snímky obrazovky</a></td>
+ <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
 </tr>
 <tr>
  <td><strong>Sensivity detection</strong></td>

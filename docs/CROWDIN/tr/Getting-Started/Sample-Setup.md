@@ -31,7 +31,7 @@ Bununla birlikte, bir veri bağlantısı kurulduğunda veriler otomatik olarak "
 
 3. [Dexcom G6](https://dexcom.com)
     
-    * Alternatifler: olası [KŞ kaynaklarının](../Configuration/BG-Source.rst) listesine bakın
+    * Alternatives: see list of possible [BG sources](../Configuration/BG-Source.md)
 
 4. İsteğe bağlı: Sony Smartwatch 3 (SWR50)
     
@@ -80,7 +80,7 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 1. Orijinal Dexcom uygulaması zaten yüklüyse: 
     * Sensörü durdurun
     * Menü > Ayarlar > Uygulamalar > Dexcom G6 Mobile > Kaldır yoluyla uygulamayı kaldırın
-2. [BYODA Dexcom uygulamasını](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) indirin ve yükleyin
+2. Download and install the [BYODA Dexcom ap](../Hardware/DexcomG6.md#if-using-g6-with-build-your-own-dexcom-app)
 3. Değiştirilmiş Dexcom G6 uygulamasını başlatın, sensörü verilen talimatlara göre etkinleştirin/kalibre edin ve ısınma aşaması bitene kadar bekleyin.
 4. Değiştirilen Dexcom uygulaması glikoz değerini gösterdiğinde, uyarıları (ekranın sol üst tarafındaki hamburger menüsü) aşağıdaki gibi ayarlayın: 
     * Acil düşük `55mg/dl` / `3.1mmol/l` (devre dışı bırakılamaz)
@@ -92,20 +92,20 @@ Bunu yapmak için akıllı telefonunuzda aşağıdaki adımları uygulayın:
 
 ## AndroidAPS'i yükleyin
 
-1. [APK'yı oluşturmak](../Installing-AndroidAPS/Building-APK#generate-signed-apk) için talimatları izleyin
-2. Oluşturulan APK'yı telefonunuza [aktarın](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+1. Follow the instructions to [build the APK](../Installing-AndroidAPS/Building-APK.md#generate-signed-apk)
+2. [Transfer](../Installing-AndroidAPS/Building-APK.md#transfer-apk-to-smartphone) the generated APK to your phone
 3. Kurulum yardımcısını kullanarak veya manuel olarak ihtiyaçlarınıza göre [AndroidAPS'i yapılandırın](../Configuration/Config-Builder.md)
 4. Bu örnek kurulumda yardımcıyı kullandık
 
-* KŞ kaynağı: `Dexcom G6 Uygulaması (yamalı)` -- çarkı tıklayın ve `KŞ verilerini NS'ye yükle` ve `KŞ verilerini xDrip+'a gönder`'i etkinleştirin (bkz. [KŞ kaynağı](../Configuration/BG-Source.rst))
+* BG source: `Dexcom G6 App (patched)` -- click cock-wheel and activate `Upload BG data to NS` and `Send BG data to xDrip+` (see [BG source](../Configuration/BG-Source.md))
 
-![G5 Settings](../images/SampleSetupG5Settings.png)
+![G5 Ayarları](../images/SampleSetupG5Settings.png)
 
 * NS İstemcisi etkinleştirildi (bkz. [Nightscout kurulumu](../Installing-AndroidAPS/Nightscout.md))
 
 ## xDrip+'ı yükleyin
 
-xDrip+ is another mature open source app that offers countless possibilities. In this setup, contrary to what the developers first wrote the app for, xDrip+ is not used to collect glucose data from the Dexcom G6, but only to output alarms and to display the current glucose value including the curve on the Android home screen in the widget. With xDrip+ the alarms can be set much more individually than with the Dexcom software, AAPS or Nightscout (no limitation in the selection of sounds, different alarms depending on day/night time etc.).
+xDrip+, sayısız olasılık sunan başka bir olgun açık kaynak uygulamasıdır. Bu kurulumda, geliştiricilerin uygulamayı ilk yazdıklarının aksine, xDrip+ bu yöntemle Dexcom G6'dan glikoz verilerini toplamak için değil, yalnızca alarmlar vermek ve widget'taki Android ana ekranında mevcut glikoz değerini ve eğrisini görüntülemek için kullanılır. XDrip+ ile alarmlar, Dexcom yazılımı, AAPS veya Nightscout'tan çok daha fazla bireysel olarak ayarlanabilir (ses seçiminde herhangi bir sınırlama yoktur, gündüz/gece saatine bağlı olarak farklı alarmlar vb.).
 
 1. Akıllı telefonunuzla xDrip+'ın en son kararlı APK sürümünü indirin <https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk> - Google Play Store'daki sürümü değil!
 2. İndirilen APK dosyasını seçerek xDrip+'ı yükleyin.
@@ -117,29 +117,29 @@ xDrip+ is another mature open source app that offers countless possibilities. In
     * Ayarlar > Uygulamalar arası ayarlar > Kalibrasyonları Kabul Et > `AÇIK`
     * Menü > Sensörü Başlat (Formalitedir ve çalışan G6 sensörüyle bir ilgisi yoktur. Bu gereklidir, aksi takdirde düzenli olarak bir hata mesajı görünecektir.) 
 
-For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.rst).
+For more information about xDrip+, see here [BG source page](../Configuration/BG-Source.md).
 
 ### Alarm kurulum örneği
 
-The "Urgent low alarm" (below 55 mg/dl resp. 3,1 mmol) is a standard alarm from the modified Dexcom app that cannot be disabled.
+"Acil düşük alarmı" (55 mg/dl - 3,1mmol altında), değiştirilmiş Dexcom uygulamasından devre dışı bırakılamayan standart bir alarmdır.
 
-![xDrip alarms](../images/SampleSetupxDripWarning.png)
+![xDrip alarmları](../images/SampleSetupxDripWarning.png)
 
-Tip for meetings / church visits / cinema etc..:
+Toplantılar / ibadethaneler / sinema vb. için ipucu:
 
-If "Do not disturb" mode is activated in the Samsung Galaxy S7 (Menu > Settings > Sounds and vibration > Do not disturb: slider to right side (= active)), the phone only vibrates during urgent low alarm and does not issue an acoustic warning. For the other alarms set up via xDrip+ you can select whether the silent mode should be ignored (acoustic sound played) or not.
+Samsung Galaxy S7'de "Rahatsız etmeyin" modu etkinleştirilirse (Menü > Ayarlar > Sesler ve titreşim > Rahatsız etmeyin: sağa kaydırarark (= etkin)), telefon yalnızca acil düşük alarmı sırasında titrer ve herhangi bir akustik uyarı vermez. xDrip+ aracılığıyla kurulan diğer alarmlar için sessiz modun göz ardı edilip edilmeyeceğini (akustik sesin çalınıp çalınmayacağını) seçebilirsiniz.
 
 ## Güç tasarrufu seçeneğini devre dışı bırakma
 
-On your Samsung Galaxy S7 go to Menu > Settings > Device Maintenance > Battery > Unmonitored Apps > + Add apps: Select the apps AndroidAPS, Dexcom G6 Mobile, xDrip+ and Android Wear (if smartwatch is used) one after the other
+Samsung Galaxy S7 cihazınızda Menü > Ayarlar > Cihaz Bakımı > Pil > İzlenmeyen Uygulamalar > + Uygulama ekle seçeneğine gidin: AndroidAPS, Dexcom G6 Mobile, xDrip+ ve Android Wear (akıllı saat kullanılıyorsa) uygulamalarını arka arkaya seçin
 
 ## İsteğe bağlı: Sony Smartwatch 3'ü (SWR50) kurun
 
-With an Android Wear smartwatch life with diabetes can be made even more inconspicuous. The watch can be used to display the current glucose level, the status of the loop etc. on the wrist. Saat AndroidAPS'i kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak). To do this, double tap the CGM value of the AAPSv2 watchface. The SWR50 usually runs for a full day until the battery needs to be recharged (same charger as the Samsung Galaxy S7: microUSB).
+Bir Android Wear akıllı saat ile diyabetli yaşam daha da göze çarpmayan bir hale getirilebilir. Saat, bileğinizde mevcut glikoz seviyesini, döngünün durumunu vb. görüntülemek için kullanılabilir. Saat AndroidAPS'i kontrol etmek için bile kullanılabilir (örn. gizlice bir yemek bolusu ayarlamak). Bunu yapmak için AAPSv2 saat arayüzünün CGM değerine iki kez dokunun. SWR50 genellikle pil yeniden şarj edilene kadar tam gün çalışır (Samsung Galaxy S7 ile aynı şarj cihazı: microUSB).
 
 ![Akıllı saat](../images/SampleSetupSmartwatch.png)
 
-Details about the information displayed on the watchface can be found [here](../Configuration/Watchfaces.md).
+Saat arayüzünde görüntülenen bilgilerle ilgili ayrıntılar [burada](../Configuration/Watchfaces.md) bulunabilir.
 
 * Google Play Store aracılığıyla akıllı telefonunuza "Android Wear" uygulamasını yükleyin ve oradaki talimatlara göre akıllı saati bağlayın.
 * AAPS'de hamburger menüsü (sol üst köşe) > Konfigürasyon ayarları > Genel (listenin altında) > Wear > sol tarafta etkinleştir'i ve ayar çarkını seçin > Saat ayarları'nı tıklayın ve `Saat tarafından kontrol`'ü etkinleştirin
@@ -148,4 +148,4 @@ Details about the information displayed on the watchface can be found [here](../
 
 ## Pompa Ayarları
 
-see [Dana RS pump](../Configuration/DanaRS-Insulin-Pump.md)
+[Dana RS pompasına](../Configuration/DanaRS-Insulin-Pump.md) bakın

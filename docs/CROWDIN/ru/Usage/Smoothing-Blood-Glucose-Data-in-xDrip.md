@@ -1,27 +1,33 @@
+(Smoothing-Blood-Glucose-Data-in-xDrip-smoothing-blood-glucose-data)=
+
 # Сглаживание данных о глюкозе в крови
 
-Если данные гликемии скачкообразны/зашумлены, AAPS может дозировать инсулин неправильно, что приведет к высокой или низкой ГК. По этой причине необходимо отключить цикл до устранения неполадки. В зависимости от типа мониторинга такие проблемы могут быть обусловлены проблемами конфигурации или сенсора/места установки. Для устранения этой проблемы может потребоваться заменить сенсор мониторинга. Некоторые функции, такие как "Всегда включать микроболюсы SMB" и "Активировать микроболюсы после приема углеводов", можно использовать только с хорошо фильтруемым источником данных ГК.
+If BG data is jumpy/noisy, AAPS may dose insulin incorrectly resulting in high or low BG. For this reason it’s important to disable the loop until the problem is resolved. Depending on your CGM such issues may be due to the CGM’s configuration or sensor problems/site issues. You may need to replace your CGM sensor to resolve this.
+
+Some CGM systems have internal algorithms to detect the noise level in the readings and AndroidAPS can use this information to avoid giving SMBs if the BG data is too unreliable. However, some CGMs do not transmit this data and for these BG sources 'Enable SMB always' and 'Enable SMB after carbs' are disabled for safety reasons.
 
 ## Сенсоры Dexcom
 
 ### Создайте свое собственное приложение Dexcom
 
-При использовании самостоятельно собранного приложения Dexcom [BYODA](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) данные ГК поступают ровно и последовательно. К тому же алгоритм допускает обратное сглаживание. При использовании микроболюсов SMB нет ограничений.
+When using [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) your BG data is smooth and consistent. Furthermore you can take advantage of Dexcom back-smoothing. There are no restrictions in using SMBs, because the noise-level data is shared with AAPS.
 
-### xDrip + с Dexcom G5 или G6 
+### xDrip+ with Dexcom G6 or Dexcom ONE
 
-Достаточно ровные данные идут только в том случае, если в xDrip + выбран G5 Ob1 коллектор в нативном режиме'.
+Noise-level data and smooth BG readings are only shared with AAPS if you use xDrip+ [native mode](https://navid200.github.io/xDrip/docs/Native-Algorithm). Using native mode, there are no restrictions in using SMBs.
 
-### Приложение Dexcom G5 (модифицированное)
+### Dexcom G6 or Dexcom ONE with xDrip+ Companion Mode
 
-При использовании приложения Dexcom G5 (модифицированного) данные гликемии идут плавно и последовательно. При использовании микроболюсов SMB нет ограничений.
+The noise-level data is not shared with AAPS using this method. Therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled.
 
 ## Сенсоры Freestyle Libre
 
-### xDrip + с Freestyle Libre
+### xDrip+ with FreeStyle Libre
 
-При использовании xDrip + и Freestyle Libre в качестве источника данных пока что нельзя активировать 'Всегда включать микроболюсы SMB' и 'Включать микроболюсы SMB после приема углеводов' так как значения ГК недостаточно ровные. Наряду с этим, есть пара вещей, которые можно сделать, чтобы снизить уровень шума в данных.
+None of the FreeStyle Libre systems (FSL1, FSL2, or FSL3) broadcast any information about the level of noise detected in the readings, and therefore 'Enable SMB always' and 'Enable SMB after carbs' are disabled for all setups using the FreeStyle Libre.
 
-** Сглаживание шумов сенсора. ** В параметрах xDrip + Settings > xDrip + Display Settings убедитесь, что включено сглаживание шумов сенсора. Это приведет к попыткам сглаживать зашумленные данные.
+In addition, many people have reported the FreeStyle Libre often produces noisy data. In xDrip+ there are a few options to help with this:
 
-** Сглаживать шумы сенсора (сверхчуствительный режим). ** Если данные в xDrip + все же зашумлены, можно применить более агрессивное сглаживание с помощью параметра Сглаживать шумы. Это приведет к применению сглаживания даже при очень низких уровнях обнаруженного шума. Для этого сначала [активируйте режим разработчика](Enabling-Engineering-Mode-in-xDrip.md) в xDrip +. Затем перейдите к параметрам > xDrip + Настройки экрана и включите Сглаживание шумов сенсора (сверхчувствительное).
+**Smooth Sensor Noise.** In xDrip+ Settings > xDrip+ Display Settings ensure that Smooth Sensor Noise is turned on. This attempts to apply smoothing to noisy data.
+
+**Smooth Sensor Noise (Ultrasensitive).** If you are still seeing noisy data in xDrip+ you can apply more aggressive smoothing using the Smooth Sensor Noise (Ultrasensitive) setting. This will attempt to apply smoothing even on very low levels of detected noise. To do this, first enable [engineering mode](Enabling-Engineering-Mode-in-xDrip.md) in xDrip+. Then navigate to Settings > xDrip+ Display Settings and turn on Smooth Sensor Noise (Ultrasensitive).

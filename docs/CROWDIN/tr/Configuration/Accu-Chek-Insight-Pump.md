@@ -12,7 +12,7 @@
 
 Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
-* Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](../Module/module#phone) sayfasında kontrol edin.)
+* Bir Android telefon (Temelde her Android sürümü Insight ile çalışır, ancak AndroidAPS'yi çalıştırmak için hangi Android sürümünün gerekli olduğunu [Modül](module-phone) sayfasında kontrol edin.)
 * Telefonunuzda yüklü olan AndroidAPS uygulaması
 
 ## Kurulum
@@ -50,9 +50,11 @@ Not: AAPS, verileri her zaman **pompadaki ilk bazal oran profiline** yazar.
 
 Not: Pompa ile telefon arasında kalıcı bir bağlantı olmayacaktır. Yalnızca gerektiği zaman bir bağlantı kurulacaktır (yani geçici bazal hızın ayarlanması, bolus verilmesi, pompa geçmişinin okunması...). Aksi takdirde telefonun ve pompanın pili çok hızlı bitecektir.
 
+(Accu-Chek-Insight-Pump-settings-in-aaps)=
+
 ## AAPS ayarları
 
-**Not : Nightscout ile 'senkronizasyon etkinleştirilmiş' olsa bile, Insight pompasıyla Otomatik Ayar kullanmak istiyorsanız 'Her zaman bazal mutlak değerleri kullan' seçeneğini kullanmak artık (yalnızca AAPS v2.7.0 ve üzeri sürümlerde) mümkündür.** (AAPS'de [Tercihler > NSClient > Gelişmiş Ayarlar](../Configuration/Preferences#advanced-settings-nsclient)'a gidin).
+**Not : Nightscout ile 'senkronizasyon etkinleştirilmiş' olsa bile, Insight pompasıyla Otomatik Ayar kullanmak istiyorsanız 'Her zaman bazal mutlak değerleri kullan' seçeneğini kullanmak artık (yalnızca AAPS v2.7.0 ve üzeri sürümlerde) mümkündür.** (AAPS'de [Tercihler > NSClient > Gelişmiş Ayarlar](Preferences-advanced-settings-nsclient)'a gidin).
 
 ![Screenshot of Insight Settings](../images/Insight_settings.png)
 
@@ -112,13 +114,15 @@ Pompadaki alarmları aşağıdaki gibi yapılandırın:
 
 Bu, pompadan gelen tüm alarmları susturarak AndroidAPS'in bir alarmın sizinle ilgili olup olmadığına karar vermesine olanak tanır. AndroidAPS bir alarmı kabul etmezse, ses seviyesi artacaktır (önce bip, sonra titreşim).
 
+(Accu-Chek-Insight-Pump-vibration)=
+
 ### Titreşim
 
 Pompanızın donanım yazılımı sürümüne bağlı olarak, Insight her bolus verildiğinde kısa bir süre titrer (örneğin, AndroidAPS bir SMB yayınladığında veya GBO emülasyonu yayma bir bolus gönderdiğinde).
 
 * Firmware 1.x: Tasarımda titreşim yok.
 * Firmware 2.x: Titreşim devre dışı bırakılamaz.
-* Firmware 3.x: AndroidAPS, bolus'u sessizce gönderir. (minimum [versiyon 2.6.1.4](../Installing-AndroidAPS/Releasenotes#version-2-6-1-4))
+* Firmware 3.x: AndroidAPS, bolus'u sessizce gönderir. (minimum [versiyon 2.6.1.4](Releasenotes-version-2-6-1-4))
 
 Donanım yazılımı sürümünü menüde bulabilirsiniz.
 
@@ -128,9 +132,11 @@ Döngü sırasında Insight için pil ömrü 10 ila 14 gün maks. 20 gündür. E
 
 Insight pompası, çıkarılabilir pili değiştirirken saat gibi temel işlevleri çalışır durumda tutmak için küçük bir dahili pile sahiptir. Pilin değiştirilmesi çok uzun sürerse, bu dahili pilin gücü tükenebilir. Saat sıfırlanırsa yeni bir pil taktıktan sonra yeni bir saat ve tarih girmeniz istenecektir. Böyle bir durumda, pil değişimi öncesindeki AndroidAPS'deki tüm girişler, doğru zaman doğru bir şekilde tanımlanamayacağından artık hesaplamalara dahil edilmeyecektir.
 
+(Accu-Chek-Insight-Pump-insight-specific-errors)=
+
 ## Spesifik Insight hataları
 
-### Extended bolus
+### Yayma Bolus
 
 Aynı anda birden fazla yayma bolus hatalara neden olabileceğinden, bir seferde yalnızca bir yayma bolus kullanın.
 
@@ -144,4 +150,4 @@ Bu durumda, pomp ve akıllı telefondaki bluetooth'u yaklaşık 10 saniye kapat�
 
 ## Insight pompasıyla zaman dilimlerini geçme
 
-Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](../Usage/Timezone-traveling#insight) bölümüne bakın.
+Saat dilimleri arasında seyahat hakkında bilgi için [Pompayla seyahat ederken saat dilimleri](Timezone-traveling-insight) bölümüne bakın.

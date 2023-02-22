@@ -1,3 +1,5 @@
+(Troubleshooting-NSClient-troubleshooting-nsclient)=
+
 # NSClient'te Sorun Giderme
 
 NSClient, Nightscout ile istikrarlı iletişime güvenir. Kararsız bir bağlantı, senkronizasyon hatalarına ve yüksek veri kullanımına yol açar.

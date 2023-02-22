@@ -43,7 +43,7 @@ Long press on the graph to change the time scale. You can choose 6, 8, 12, 18 or
 
 The extended lines show the predicted BG calculations and trends - if you have it selected.
 
-* **Orange** line: [COB](../Usage/COB-calculation.rst) (colour is used generally to represent COB and carbs)
+* **Orange** line: [COB](../Usage/COB-calculation.md) (colour is used generally to represent COB and carbs)
 * **Dark blue** line: IOB (colour is used generally to represent IOB and insulin)
 * **Light blue** line: zero-temp (predicted BG if temporary basal rate at 0% would be set)
 * **Dark yellow** line: [UAM](../Configuration/Sensitivity-detection-and-COB#sensitivity-oref1) (un-announced meals)

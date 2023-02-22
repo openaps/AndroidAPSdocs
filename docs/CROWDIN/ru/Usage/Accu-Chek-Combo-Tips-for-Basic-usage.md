@@ -1,11 +1,13 @@
-# Советы по базовому применению Accu-Chek Combo
+# Советы для пользователей Accu-Chek Combo
+
+**NOTE:** Starting with AAPS version 3.2, a [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) (referred to as "combov2" sometimes) has been added. The old driver is also referred to as the "Ruffy-based driver". Some parts of this document only apply to the old driver. These will be annotated accordingly.
 
 ## Как обеспечить бесперебойную работу
 
-* Always **carry the smartphone with you**, leave it next to your bed at night. As your pump may lay behind or under you body while you sleep, a higher position (on a shelf or board) works best.
+* Всегда ** носите смартфон с собой **, оставляя его рядом с кроватью ночью. Так как помпа может оказаться за или под вами во время сна, лучше всего оставлять ее где-то повыше (на полке).
 * Всегда убеждайтесь, что батарея помпы максимально заряжена. Информацию о батарее смотрите в разделе подсказок по использованию батареи.
-* Лучше всего ** не трогать приложению ruffy ** во время работы системы. Если приложение запускается заново, соединение с помпой может прерваться. Как только помпа соединится с ruffy, нет необходимости в повторном подключении. Даже после перезапуска телефона соединение восстанавливается автоматически. По возможности переместите приложение на неиспользуемый экран или папку на смартфоне, чтобы случайно его не открыть.
-* Если вы непреднамеренно откроете приложение во время работы цикла, лучше сразу же перезапустить смартфон.
+* (Only applies to the old driver) It is best to **not touch the app ruffy** while the system is running. Если приложение запускается заново, соединение с помпой может прерваться. Как только помпа соединится с ruffy, нет необходимости в повторном подключении. Даже после перезапуска телефона соединение восстанавливается автоматически. По возможности переместите приложение на неиспользуемый экран или папку на смартфоне, чтобы случайно его не открыть.
+* (Only applies to the old driver) If you unintentionally open the app ruffy during looping, it's best to restart the smartphone right away.
 * Всякий раз, когда это возможно, управляйте помпой с помощью приложения AndroidAPS. Для этого активируйте блокировку кнопок на помпе в ** PUMP SETTINGS/KEY LOCK/ON **. Кнопками помпы следует пользоваться только при замене батареи или картриджа. ![Блокировка кнопок](../images/combo/combo-tips-keylock.png)
 
 ## Помпа недоступна. Что делать?
@@ -17,22 +19,26 @@
 
 ### Восстановление доступности помпы
 
-* Когда AndroidAPS сообщает о том, что **помпа недоступна** разблокируйте кнопки помпы и ** нажмите на любую кнопку ** (например, "вниз"). Как только меню помпы отключится, нажмите кнопку ** ОБНОВИТЬ** на вкладке ** СOMBO ** в AndroidAPS. В большинстве случаев связь с помпой восстанавливается.
-* Если это не поможет, перезагрузите смартфон. После перезапуска, AndroidAPS и ruffy будут реактивированы, и с помпой будет установлено новое соединение.
+* Когда AndroidAPS сообщает о том, что **помпа недоступна** разблокируйте кнопки помпы и ** нажмите на любую кнопку ** (например, "вниз"). As soon as the pump display has turned off, press **Refresh** on the **Combo Tab** in AndroidAPS. В большинстве случаев связь с помпой восстанавливается.
+* Если это не поможет, перезагрузите смартфон. After the restart, AndroidAPS will be reactivated and a new connection will be established with the pump. If you are using the old driver, ruffy will be reactivated as well.
 * Тесты с разными телефонами показали, что некоторые из них запускают ошибку "помпа недоступна" чаще, чем другие. В разделе [ Телефоны для AAPS ](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit) перечислены успешно проверенные смартфоны. 
 
 ### Причины и последствия частых ошибок связи
 
 * На телефонах с ** небольшой памятью ** (или ** агрессивными параметрами экономии заряда батареи **) AndroidAPS часто отключается. Это можно определить по тому, что кнопки Bolus и Calculator не присутствуют на главном экране при запуске AAPS, так как система инициализируется. Это может привести к оповещениям "помпа недоступна" при запуске. В поле ** недавнее соединение ** на вкладке Combo можно проверить, когда AndroidAPS последний раз обменивался данными с помпой. 
 
-![Помпа недоступна](../images/combo/combo-tips-pump-unreachable.png) ![Нет соединения с помпой](../images/combo/combo-tips-no-connection-to-pump.png)
+![Pump unreachable](../images/combo/combo-tips-pump-unreachable.png)
+
+![No connection to pump (as shown in the old driver's tab)](../images/combo/combo-tips-no-connection-to-pump.png)
+
+![No connection to pump (as shown in the new driver's tab)](../images/combo/combov2-tips-no-connection-to-pump.png)
 
 * Эта ошибка может ускорить понижение заряда батареи помпы, так как профиль базала считывается из помпы при перезапуске приложения.
 * Кроме того, это увеличивает вероятность возникновения ошибки, которая заставляет помпу отклонять все входящие соединения до тех пор, пока на помпе не будет нажата кнопка. 
 
 ## Отмена временной базальной скорости не выполнена
 
-* Иногда AndroidAPS не может автоматически отменить оповещение ** Временная скорость базала TBR ОТМЕНЕНА **. Then you have to either press **UPDATE** in the AndroidAPS **Combo tab** or the alarm on the pump will need to be confirmed.
+* Иногда AndroidAPS не может автоматически отменить оповещение ** Временная скорость базала TBR ОТМЕНЕНА **. В этом случае необходимо нажать кнопку ** ОБНОВИТЬ ** на вкладке **COMBO** или подтвердить получение сигнала на помпе.
 
 ## Особенности работы батареи помпы
 
@@ -40,60 +46,64 @@
 
 * После сигнала оповещения ** низкий заряд батареи ** батарея должна быть заменена как можно скорее, чтобы всегда иметь достаточно энергии для надежной связи Bluetooth со смартфоном, даже на большом удалении от помпы.
 * Даже после оповещения ** низкий заряд батареи ** батарея может прослужить еще значительное время. Тем не менее, рекомендуется всегда иметь с собой свежую батарею после оповещения "низкий заряд".
-* Before changing the battery, press on the **Loop** symbol on the main screen and select **Suspend loop for 1h**. 
-* Wait for the pump to communicate with the pump and the bluetooth logo on the pump has faded.
+* Перед заменой батареи, нажмите на символ **Цикл** на главном экране и выберите **приостановить цикл на 1ч**. 
+* Подождите, пока помпа завершит обмен с телефоном и исчезнет логотип Bluetooth на помпе.
 
-![Bluetooth включен](../images/combo/combo-tips-compo.png)
+![Bluetooth enabled](../images/combo/combo-tips-compo.png)
 
-* Release the key lock on the pump, put the pump into stop mode, confirm a possibly canceled temporary basal rate, and change the battery quickly.
-* If the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS.
-* Then put the pump back in run mode select **Resume** when pressing on the **Suspended Loop** icon on the main screen.
-* AndroidAPS will re-set a necessary temporary basal rate with the arrival of the next blood sugar value. 
+* Разблокируйте кнопки на помпе, переведите ее в режим остановки, подтвердите возможно отмененный временный базал, и замените батарею.
+* When using the old driver, if the clock on the pump did not survive the battery chenge, re-set the date and time on the pump to exactly the date/time on your phone running AAPS. (The new driver automatically updates the pump's date and time.)
+* Затем переведите помпу в рабочий режим и выберите ** Возобновить ** при длинном нажатии на ** Приостановлено ** на главном экране.
+* AndroidAPS возобновит подачу необходимого временного базала с получением следующего значения ГК. 
+
+(Accu-Chek-Combo-Tips-for-Basic-usage-battery-type-and-causes-of-short-battery-life)=
 
 ### Типы батарей и причины их короткой жизни
 
-* As intensive Bluetooth communication consumes a lot of energy, only use **high-quality batteries** like Energizer Ultimate Lithium, the "power one"s from the "large" Accu-Chek service pack, or if you are going for a rechargeable battery, use Eneloop batteries. 
+* Поскольку интенсивная связь Bluetooth потребляет много энергии, пользуйтесь только ** высококачественными батареями **, такими как Energizer Ultimate Lithium, Power One" из "большого" сервисного набора Accu-Chek, или, если вы собираетесь пользоваться перезаряжаемым аккумулятором, используйте аккумуляторы Eneloop. 
 
-![Энерджайзер](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
+![Energizer](../images/combo/combo-tips-energizer.jpg) ![OnePower](../images/combo/combo-tips-power-one.png)
 
-Диапазоны времени жизни различных типов батарей:
+Ranges for typical life time of the different battery types are as follows:
 
 * **Energizer Ultimate Lithium**: от 4 до 7 недель
 * ** Power One Alkaline ** (Varta) из сервисного набора: 2-4 недели
 * Перезаряжаемые батареи ** Eenlook ** (BK-3MCCE): от 1 до 3 недель
 
-If your battery life is signifcantly shorter than the ranges given above, please check the following possible causes:
+If your battery life is significantly shorter than the ranges given above, please check the following possible causes:
 
-* Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Make sure you are on the newest version if you have issues with a short battery lifetime.
+* (Only applies to the old driver) Versions of the [ruffy App](https://github.com/MilosKozak/ruffy) after vMarch 2018 significantly improved pump battery lifetime. Убедитесь, что у вас самая свежая версия ruffy, если есть проблемы с коротким сроком жизни батареи.
 * Есть некоторые варианты закручивающегося колпачка батарейного отсека помпы Combo, которые частично замыкают батарейку и быстро ее истощают. Колпачки без этой проблемы можно узнать по золотым металлическим контактам.
-* Если часы помпы не "выдерживают" быстрой замены батареи, то, скорее всего, сломался конденсатор, который поддерживает работу часов во время краткочного отключения питания. In this case, a replacement of the pump by Roche might help, which is not a problem during the warranty period. 
+* Если часы помпы не "выдерживают" быстрой замены батареи, то, скорее всего, сломался конденсатор, который поддерживает работу часов во время краткочного отключения питания. В этом случае поможет только замена помпы Roche, что не является проблемой в течение гарантийного срока. 
 * Аппаратное и программное обеспечение смартфона (операционная система Android и модуль Bluetooth) также влияют на время работы батареи помпы, хотя точные факторы пока неясны. Если у вас есть возможность, попробуйте другой телефон и сравните время жизни батареи.
 
 ## Переход на летнее время
 
+**NOTE**: The new driver automatically sets date and time and handles daylight saving time changes on its own. The steps below all only apply to the old driver.
+
 * В настоящее время драйвер combo не поддерживает автоматическую корректировку времени помпы.
 * В течение ночи перехода на летнее/зимнее время смартфон обновляется, но время на часах помпы остается неизменным. Это приводит к срабатыванию оповещения из-за разницы времени между системами в 3 часа утра.
-* If you do not want to be awakened at night, **deactivate the automatic daylight saving time changeover on the mobile phone** in the evening before the time changeover and adjust the times manually the next morning. A good way to deal with daylight saving time changes is to switch to a different time zone located on the same longitude you are located at but closer to the equator, where usually no daylight saving time is observed. Example: For Central Europe on Summer Time (CEST/GMT+2), you could switch to the time zone of Zimbabwe on your phone the night before the switch to winter time and then switch back to Central European Time CET/GMT+1 the next morning while changing the clock on your pump at the same time. The other way aroud, switch to the time zone of Nigeria while on Winter Time CET/GMT+1 and go back to Central European Summer Time (CEST/GMT+2) the morning after the switch to summer time and change the pump time accordingly. Look at https://www.timeanddate.com/time/map/ to find a suitable country.
+* Если вы не хотите просыпаться ночью, ** деактивируйте автоматический переход на летнее время на мобильном телефоне ** вечером перед переходом и скорректируйте время вручную на следующее утро. Хороший способ решения вопроса о перееходе времени - переключиться на другой часовой пояс, расположенный на вашей же долготе, но ближе к экватору, где обычно не применяют переход на летнее/зимнее время. Пример: Для Центральной Европы летнее время (CEST/GMT+2), в ночь перед переходом на зимнее время можно переключиться на часовой пояс Зимбабве, а затем на следующее утро вернуться к центральноевропейскому времени CET/GMT+1 при одновременной смене времени на помпе. И наоборот, можно в зимнее время переключиться на часовой пояс Нигерии CET/GMT+1 и после перехода на летнее время вернуться к центральноевропейскому летнему времени (CEST/GMT+2), соответственно изменив время на помпе. Чтобы найти подходящую страну, смотрите здесь https://www.timeanddate.com/time/map/,.
 
 ## Пролонгированный болюс, многоволновый болюс
 
-Алгоритм OpenAPS не поддерживает параллельное выполнение пролонгированного болюса или многоволнового болюса. But a similar treatment can be achieved by the following alternatives:
+The OpenAPS algorithm does not support a parallel extended bolus or multiwave bolus. But a similar treatment can be achieved by the following alternatives:
 
-* Use **e-Carbs** when entering carbs or using the Calculator by entering the carbs of the full meal and the duration you expect the carbs to arrive as glucose in you blood. The system will then calculate small carbs equally distributed over the whole duration which will cause th algorithm to provide equivalent insulin dosing while still permanently checking the overall rise/decrease of the blood glucose level. For a multiwave bolus approach, you can also combine a smaller immeadiate bolus with e-carbs. 
-* Before eating, on the **Actions tab** in AndroidAPS set as a temporary **Eating Soon** goal with target glucose 80 for several hours. The duration should be based on the interval you would chosse for an extended bolus. This will keep your target lower than usual and therefore increase the amout of insulin delivered.
-* Then use the **CALCULATOR** to enter the full carbs of the meal, but do not directly apply the values suggested by the bolus calculator. If a multiwave-like bolus is to be delivered, correct the insulin dosage down. Depending on the meal, the algorithm now has to deliver additional SMBs or higher temporary basal rates to counteract the increase in blood sugar. Here, the safety limitation of the basal rate (Max IE / h, Maximum basal IOB) should be very carefully experimented with and, if necessary, temporarily changed.
+* Используйте **e-Carbs** при занесении углеводов или использовании калькулятора путем ввода всех углеводов целого блюда и расчетного времени их поступления в кровь в виде глюкозы. Затем система вычислит мелкие углеводы, равномерно распределенные на всю продолжительность, что приведет к тому, что алгоритм обеспечит эквивалентную дозировку инсулина, при этом постоянно проверяя общее увеличение/снижение уровня глюкозы в крови. При использовании многоволнового болюса можно комбинировать меньший болюс, поданный немедленно, с растянутыми углеводами e-carbs. 
+* Перед едой на вкладке **Действия** в AndroidAPS установить временную цель **Ожидаемый прием пищи** ГК 80 (4,5) на несколько часов. Продолжительность должна основываться на интервале, который вы выбрали бы для пролонгированного болюса. Это будет держать цель ниже, чем обычно, и поэтому увеличит количество поданного инсулина.
+* Затем воспользуйтесь **Калькулятором** и введите общее количество принимаемых углеводов, но непосредственно не применяйте значения, предлагаемые калькулятором болюса. Если предполагается болюс двойной волны, снизьте дозировку инсулина. Чтобы противодействовать росту ГК, в зависимости от пищи, алгоритм обеспечит дополнительные микроболюсы SMB или более высокую временную скорость базала. В данном случае ограничение безопасности для базала должно быть тщательно изучено и, при необходимости, временно изменено.
 
-* If you are tempted to just use the extended or multiwave bolus directly on the pump, AndroidAPS will penalize you with disabling the closed loop for the next six hours to ensure that no excess insulin dosage is calculated.
+* Если вы соблазнились просто использовать пролонгированный или многоволновый болюс непосредственно на помпе, AndroidAPS накажет вас отключением замкнутого цикла на следующие шесть часов, чтобы убедиться, что отсутствует избыток подачи инсулина.
 
-![Отключение цикла после многоволнового болюса](../images/combo/combo-tips-multiwave-bolus.png)
+![Disabled loop after multiwave bolus](../images/combo/combo-tips-multiwave-bolus.png)
 
 ## Сигналы оповещений при подаче болюса
 
-* If AndroidAPS detects that an identical bolus has been successfully delivered at the same minute, bolus delivery will be prevented with identical numer of insulin units. If your really want to bolus the same inuslin twice in short succession, just wait two more minutes and then deliver the bolus again. If the fist bolus has been interruped or was not delivered for other reasons, you can immediately re-submit the bolus since AAPS 2.0.
-* The alarm is a safety mechanism that reads the pump's bolus history before submitting a new bolus to correctly calculate insulin on board (IOB), even when a bolus is delivered directly from the pump. Он не позволяет неразличимые записи.
+* Если AndroidAPS обнаружит, что идентичные болюсы были успешно поданы в одну и ту же минуту, то подача болюса с одним и тем же количеством единиц инсулина будет предотвращена. Если вы действительно хотите подать одинаковое количество инсулина за короткий промежуток времени, просто подождите еще две минуты, а затем снова подайте болюс. Если первый болюс был прерван или не был подан по другим причинам, вы можете сразу же повторно дать болюс (начиная с версии AAPS 2.0.).
+* Такое оповещение есть механизм безопасности, который считывает историю помпы, прежде чем подавать новый болюс, чтобы правильно вычислить активный инсулин IOB, даже когда болюс подается непосредственно с помпы. Он не позволяет неразличимые записи.
 
-![Двойной болюс](../images/combo/combo-tips-doppelbolus.png)
+![Double bolus](../images/combo/combo-tips-doppelbolus.png)
 
 * Этот механизм также предотвращает другую причину ошибок: если во время использования калькулятора болюса с помпы подается другой болюс и тем самым меняется история болюсов, то основа расчета болюса становится неверной, и болюс отменяется. 
 
-![Отмена болюса](../images/combo/combo-tips-history-changed.png)
+![Canceled bolus](../images/combo/combo-tips-history-changed.png)

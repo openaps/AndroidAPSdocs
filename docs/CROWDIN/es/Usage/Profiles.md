@@ -1,6 +1,8 @@
+(Profiles-profile-switch)=
+
 # Cambio de perfil
 
-Documentation about profiles in general can be found at [Config Builder - profile](../Configuration/Config-Builder#profile).
+Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
 On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
 
@@ -15,7 +17,7 @@ To do a profile switch long-press on the name of your profile ("Tuned 03/11" in 
 
 ![Do profile switch](../images/ProfileSwitch_HowTo.png)
 
-Dentro del "cambio de perfil", puede elegir dos cambios adicionales que se utilizaron para formar parte del perfil de porcentaje de circuito:
+Within the "profile switch" you can choose two additional changes which used to be part of the Circadian Percentage Profile:
 
 ## Porcentaje
 
@@ -28,9 +30,11 @@ Dentro del "cambio de perfil", puede elegir dos cambios adicionales que se utili
 
 * The loop algorithm (open or closed) will continue to work on top of the selected percentage profile. So, for example separate percentage profiles can be set up for different stages of the hormone cycle.
 
+(Profiles-time-shift)=
+
 ## Cambio de tiempo
 
-![Ejemplo porcentaje de cambio de perfil y fecha/hora](../images/ProfileSwitchTimeShift2.png)
+![Profile switch percentage and timeshift](../images/ProfileSwitchTimeShift2.png)
 
 * This moves everything round the clock by the number of hours entered. 
 * So, for example, when working night shifts change the number of hours to how much later/earlier you go to bed or wake up.
@@ -43,15 +47,17 @@ Dentro del "cambio de perfil", puede elegir dos cambios adicionales que se utili
     * 22:00 **-10 h** -> 12:00
     * Settings from 22:00 (10 pm) will be used instead of the settings normally used at 12:00 because of the negative time shift.
 
-![Cambio de perfil indicaciones para la fecha/hora](../images/ProfileSwitch_PlusMinus2.png)
+![Profile switch timeshift directions](../images/ProfileSwitch_PlusMinus2.png)
 
-Este mecanismo de toma de instantáneas del perfil permite realizar cálculos mucho más precisos del pasado y la posibilidad de realizar un seguimiento de los cambios de perfil.
+This mechanism of taking snapshots of the profile allows a much more precise calculations of the past and the possibility to track profile changes.
+
+(Profiles-troubleshooting-profile-errors)=
 
 ## Resolución de errores de perfil
 
 ### 'Perfil no válido' / 'Perfil basal no alineado con horas'
 
-![Basal no alineado a la hora](../images/BasalNotAlignedToHours2.png)
+![Basal not aligned to the hour](../images/BasalNotAlignedToHours2.png)
 
 * These error messages will appear if you have any basal rates or I:C rates not on the hour. (DanaR and DanaRS pumps do not support changes on the half hour for example.)
   
@@ -67,14 +73,14 @@ Este mecanismo de toma de instantáneas del perfil permite realizar cálculos mu
   
   ![Remove profile switch](../images/PSRemove.png)
 
-De forma alternativa, puede suprimir el conmutador de perfil directamente en el mLab, tal como se describe a continuación.
+Alternatively you can delete the profile switch directly in mLab as described below.
 
 ### 'Recibió el perfil de cambiar de SN, pero el perfil no existe localmente'
 
 * The requested profile was not synced correctly from Nightscout.
 * Follow instructions from above to delete the profile switch
 
-De forma alternativa, puede suprimir el cambio de perfil directamente en el mLab:
+Alternatively you can delete the profile switch directly in mLab:
 
 * Go to your mlab collection
 * Search in the treatments for profile switch

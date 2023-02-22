@@ -1,3 +1,5 @@
+(Accessing-logfiles-accessing-logfiles)=
+
 # Accès aux fichiers log
 
 * Connecter le téléphone à un ordinateur en mode de transfert de fichiers

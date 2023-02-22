@@ -1,8 +1,10 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Saugumo svarba
 
-Be ataskaitų, Nightscout taip pat gali būti naudojamas kontroliuoti AAPS. T.y. galite nustatyti laikinus tikslus ar pridėti būsimus angliavandenius. Ši informacija bus įkelta į AAPS ir ši veiks atitinkamai. Todėl yra verta pagalvoti kaip apsaugoti savo Nightscout svetainę.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Nightscout parametrai
 
@@ -10,22 +12,24 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### AndroidAPS parametrai
 
-Taip pat NS turi tik įkėlimo (ne sinchronizavimo) funkciją AAPS nustatymuose. Ją pasirinkus, AAPS neįkels pakeitimų, atliktų Nightscout, tokių kaip laikini tikslai ar būsimi angliavandeniai.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Bakstelėkite 3-taškų meniu viršutiniame dešiniajame kampe savo AAPS pradžios ekrane.
 * Pasirinkite "Nustatymai".
 * Slinkite žemyn ir bakstelėkite "Išplėstiniai nustatymai".
 * Aktyvuokite "Įkelti tik į NS"
 
-![Įkelti tik į Nightscout](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Tolimesni saugumo nustatymai
 
-Nuolat atnaujinkite savo telefoną, kaip aprašyta [Pirmiausia saugumas](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Rankinis Nightscout diegimas
 
-Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightscout](http://nightscout.github.io/nightscout/new_user/) puslapyje gauti visas diegimo instrukcijas, instrukcijos žemiau reikalingos pridėti nustatymus į jūsų Nightscout puslapį. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Eikite į https://herokuapp.com/
 
@@ -51,7 +55,7 @@ Manoma, kad jūs jau turite Nightscout svetainę, jei ne, apsilankykite [Nightsc
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Privalumai**
+**Benefits**
 
 * Galite įdiegti Nightscout keliais paspaudimais ir iškart naudoti. 
 * Sumažinti rankų darbą, nes Martin bando automatizuoti administravimą.
