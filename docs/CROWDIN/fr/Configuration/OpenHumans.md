@@ -24,7 +24,7 @@ Les informations secrètes ou privées telles que votre URL Nightscout ou votre 
 
 ## Paramètres
 
-1. Create your account on [Open Humans](https://www.openhumans.org) if not already done. Vous pouvez réutiliser vos comptes Google ou Facebook existants si vous le souhaitez.
+1. Créez votre compte sur [Open Humans](https://www.openhumans.org) si ce n'est pas déjà fait. Vous pouvez réutiliser vos comptes Google ou Facebook existants si vous le souhaitez.
 2. Activez le plugin “Open Humans” dans le [Générateur de configuration](../Configuration/Config-Builder.md).
 3. Ouvrez son réglage en utilisant le bouton roue crantée. Vous pouvez restreindre le téléversement au périodes où le téléphone utilise le Wi-Fi et/ou est en charge.
 4. Ouvrez le Plugin Open Humans (dans l'onglet OH ou via le menu hamburger) et cliquez sur 'CONNEXION'.
@@ -67,7 +67,7 @@ Le projet "OPEN" rassemble un consortium international et intersectoriel de pati
 
 En septembre 2020, le projet 'OPEN' a lancé une [enquête](https://survey.open-diabetes.eu/) incluant l'option de donner des données que vous avez téléchargées sur Open Humans. Un [tutoriel](https://open-diabetes.eu/en/open-survey/survey-tutorials/) sur comment faire don de vos données au projet 'OPEN' est disponible sur leur site et dans le cadre de l'enquête.
 
-### [OpenAPS Data Commons](https://www.openhumans.org/activity/openaps-data-commons/)
+### [Données communes OpenAPS](https://www.openhumans.org/activity/openaps-data-commons/)
 
 OpenAPS Data Commons a été créé pour permettre facilement de partager les jeux de données de la communauté DIYAPS pour la recherche. Les données sont partagées à la fois avec des chercheurs traditionnels qui créeront des études de recherche traditionnelles et avec des groupes ou des individus de la communauté qui souhaitent examiner les données dans le cadre de leurs propres projets de recherche. OpenAPS Data Commons utilise la plateforme "Open Humans" pour permettre aux gens de télécharger et de partager facilement leurs données depuis les DIYAPS, y compris AndroidAPS, Loop et OpenAPS.
 
@@ -90,4 +90,4 @@ Voir aussi les [Conditions d'utilisation Open Humans](https://www.openhumans.org
 Open Humans s'occupe de la protection de votre vie privée en vous assignant un identifiant numérique pour chaque projet. Cela permet aux projets de vous reconnaître mais pas vous identifier. L'ID de l'application téléchargé par AndroidAPS est similaire et ne sert qu'à administrer les données. Plus d'informations peuvent être trouvées ici :
 
 - [Règles d'utilisation des données Open Humans](https://www.openhumans.org/data-use/)
-- [Open Humans GDPR](https://www.openhumans.org/gdpr/)
+- [Open Humans et GDPR](https://www.openhumans.org/gdpr/)
