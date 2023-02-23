@@ -252,7 +252,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Instructions are  <a href="../Installing-AndroidAPS/Building-APK.md">here</a>.
+  Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Talimatları  <a href="../Installing-AndroidAPS/Building-APK.md">burada</a> bulabilirsiniz.
 </p>
 
 <h2 spaces-before="0">
@@ -264,11 +264,11 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Some other watches can be patched to work as a standalone receiver as well (see <a href="https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5">this documentation</a> for more details).
+  Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için <a href="https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5">bu belgelere</a> bakın).
 </p>
 
 <p spaces-before="0">
-  Users are creating a <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">list of tested phones and watches</a>. There are different watchfaces for use with AndroidAPS, which you can find <a href="../Configuration/Watchfaces.md">here</a>.
+  Kullanıcılar bir <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">test edilmiş telefonlar ve saatler listesi</a> oluşturuyor. AndroidAPS ile kullanım için <a href="../Configuration/Watchfaces.md">burada</a> bulabileceğiniz farklı saat arayüzleri vardır.
 </p>
 
 <p spaces-before="0">
@@ -284,7 +284,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri <a href="../Configuration/xdrip.md">burada</a> bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
+  KŞ Kaynağı olarak xDrip+ Uygulamasına ihtiyacınız olmasa bile, onu alarmlar veya iyi bir kan şekeri ekranı için kullanabilirsiniz. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri <a href="../Configuration/xdrip.md">burada</a> bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
 </p>
 
 <h2 spaces-before="0">
