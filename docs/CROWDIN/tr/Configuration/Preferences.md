@@ -424,9 +424,9 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 - The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-- Standard value for AMA is 5, for SMB it's 8.
+- AMA için standart değer 5, SMB için 8'dir.
 
-- The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+- Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
   :alt: AKRB grafiği
@@ -434,7 +434,7 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ### Maksimum besin emilim süresi
 
-- If you often eat high fat or protein meals you will need to increase your meal absorption time.
+- Sık sık yüksek yağlı veya proteinli yemekler yiyorsanız, yemek emilim sürenizi artırmanız gerekecektir.
 
 ### Gelişmiş ayarlar - otoduyarlılık oranı
 
@@ -443,12 +443,12 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ## Pompa Ayarları
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
+Buradaki seçenekler [Konfigürasyon ayarları](Config-Builder-pump) içinde seçtiğiniz pompa sürücüsüne bağlı olarak değişecektir.  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [DanaR Insulin Pompası](../Configuration/DanaR-Insulin-Pump.md)
+- [DanaRS Insulin Pompası](../Configuration/DanaRS-Insulin-Pump.md)
 - [Accu Chek Combo Pompa](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Accu-Chek Insight pompası](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pompa](../Configuration/MedtronicPump.md)
 
 Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
@@ -460,12 +460,12 @@ Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarınd
 :alt: NSClient
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AndroidAPS.
-- Double check for typos here if you are stuck in Objective 1.
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
-- If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
+- *Nightscout URL'nizi* (ör. <https://yourwebsitename.herokuapp.com>) ve *API parolanızı* (Heroku değişkenlerinde kaydedilmiş 12 karakterlik bir şifre) ayarlayın.
+- Bu, verilerin hem Nightscout web sitesi hem de AndroidAPS arasında okunmasını ve yazılmasını sağlar.
+- Hedef 1'de takılıp kalırsanız, burada yazım hatalarını iki kez kontrol edin.
+- **URL'nin sonunda /api/v1/ OLMADAN olduğundan emin olun.**
+- *NS'de Uyg. günlüğünün başlatılması* uygulama her başlatıldığında Nightscout bakım portalına girişlerinize bir not kaydeder.  Uygulamanın günde bir defadan fazla başlatılması gerekmez. Bundan daha sık olması bir sorun olduğunu gösterir (örneğin. pil optimizasyonu AAPS için devre dışı bırakılmamıştır).
+- Etkinleştirilirse, [yerel profildeki](Config-Builder-local-profile) değişiklikler Nightscout sitenize yüklenir.
 
 ### Bağlantı Ayarları
 
