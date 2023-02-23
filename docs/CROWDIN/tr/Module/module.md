@@ -15,12 +15,12 @@
     
     <pre><code class="&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;">
 
-# Component Overview
+# Bileşene Genel Bakış
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
+AndroidAPS yalnızca (kendin-yap) bir uygulama değildir, kapalı döngü sisteminizin birkaç modülünden yalnızca biridir. Bileşenlere karar vermeden önce, [bileşen kurulumuna](index-component-setup) da bir göz atmak iyi bir fikir olacaktır.
 
 ```{image} ../images/modules.png
-:alt: Components overview
+:alt: Bileşenlere genel bakış
 </code></pre>
     
     <pre><code class="{note}">** Önemli güvenlik bildirimi **
@@ -50,16 +50,16 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 
 <ul>
   <li>
-    BR (Basal rates)
+    BO (Bazal oranları)
   </li>
   <li>
-    ISF (insulin sensitivity factor) is your blood glucose unit per one unit insulin
+    İDF (insülin duyarlılık faktörü) insülin başına düşen kan şekeri biriminizdir
   </li>
   <li>
-    CR (carb ratio) is grams carbohydrate per one unit insulin
+    KO (Karbonhidrat Oranı) bir ünite insülin başına düşen gram karbonhidrattır
   </li>
   <li>
-    DIA (duration of insulin acting).
+    İES (insülin etki süresi).
   </li>
 </ul>
 
