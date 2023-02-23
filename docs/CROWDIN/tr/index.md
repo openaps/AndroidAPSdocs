@@ -165,6 +165,8 @@ Yayma karbonhidratlar <./Usage/Extended-Carbs.md>
 
 Otomasyon <./Usage/Automation.md>
 
+Otoduyarlılık (yaln. gel. modda) <./Usage/autune.md>
+
 Bakımportalı (devam etmiyor) <./Usage/CPbefore26.md>
 
 Open Humans Yükleyici <./Configuration/OpenHumans.md>
