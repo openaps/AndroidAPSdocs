@@ -443,12 +443,12 @@ Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistem
 
 ## Pompa Ayarları
 
-The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
+Buradaki seçenekler [Konfigürasyon ayarları](Config-Builder-pump) içinde seçtiğiniz pompa sürücüsüne bağlı olarak değişecektir.  Pompanızı pompayla ilgili talimatlara göre eşleştirin ve ayarlayın:
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [DanaR Insulin Pompası](../Configuration/DanaR-Insulin-Pump.md)
+- [DanaRS Insulin Pompası](../Configuration/DanaRS-Insulin-Pump.md)
 - [Accu Chek Combo Pompa](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Accu-Chek Insight pompası](../Configuration/Accu-Chek-Insight-Pump.md)
 - [Medtronic Pompa](../Configuration/MedtronicPump.md)
 
 Döngüyü açmak için AndroidAPS kullanıyorsanız, Konfigürasyon ayarlarında Sanal Pompa'yı seçtiğinizden emin olun.
