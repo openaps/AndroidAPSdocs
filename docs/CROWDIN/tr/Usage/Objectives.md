@@ -2,27 +2,27 @@
 
 AndroidAPS, güvenli döngü özellikleri ve ayarlarında size yol göstermek için tamamlanması gereken bir dizi Görevlere sahiptir.  Yukarıdaki bölümlerde ayrıntıları verilen her şeyi doğru bir şekilde yapılandırdığınızdan ve sisteminizin ne yaptığını ve neden ona güvenebileceğinizi anladığınızdan emin olurlar.
 
-If you are **upgrading phones** then you can [export your settings](../Usage/ExportImportSettings.md) to keep your progress through the objectives. Not only will your progress through the objectives be saved, but also your safety settings such as max bolus etc.  If you do not export and import your settings then you will need to start the objectives from the beginning again.  It is a good idea to [backup your settings](../Usage/ExportImportSettings.html) frequently just in case.
+**Telefonları yükseltiyorsanız** görevlerde ilerlemenizi sürdürmek için [ayarlarınızı dışa aktarabilirsiniz](../Usage/ExportImportSettings.md). Yalnızca hedeflerdeki ilerlemeniz değil, aynı zamanda maksimum bolus gibi güvenlik ayarlarınız da kaydedilecektir. Ayarlarınızı dışa ve içe aktarmazsanız, görevlere baştan başlamanız gerekecektir.  Her ihtimale karşı sık sık [ayarlarınızı yedeklemeniz](../Usage/ExportImportSettings.html) iyi bir fikirdir.
 
-If you want to go back in objectives see [explanation below](Objectives-go-back-in-objectives).
+Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-back-in-objectives) bakın.
 
 ## Görev 1: Görselleştirme ve izleme ayarları, bazal ve oranlarını analize etme
 
-- Select the right blood glucose source for your setup.  See [BG Source](../Configuration/BG-Source.md) for more information.
-- Select the right Pump in ConfigBuilder (select Virtual Pump if you are using a pump model with no AndroidAPS driver for looping) to ensure your pump status can communicate with AndroidAPS.
-- If using DanaR pump then ensure you have followed [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md) instructions to ensure the link between pump and AndroidAPS.
-- Follow instructions in [Nightscout](../Installing-AndroidAPS/Nightscout.md) page to ensure Nightscout can receive and display this data.
-- Note that URL in NSClient must be **WITHOUT /api/v1/** at the end - see [NSClient settings in Preferences](Preferences-nsclient).
+- Kurulumunuz için doğru kan şekeri kaynağını seçin.  Daha fazla bilgi için [KŞ Kaynağı](../Configuration/BG-Source.md)na bakın.
+- Pompa durumunuzun AndroidAPS ile iletişim kurabilmesini sağlamak için Konfigürasyon Ayarlarında doğru Pompayı seçin (döngü için AndroidAPS sürücüsü olmayan bir pompa modeli kullanıyorsanız Sanal Pompa'yı seçin).
+- DanaR pompa kullanıyorsanız, pompa ile AndroidAPS arasındaki bağlantıyı sağlamak için [DanaR İnsülin Pompası](../Configuration/DanaR-Insulin-Pump.md) talimatlarını uyguladığınızdan emin olun.
+- Nightscout'un bu verileri alabilmesi ve görüntüleyebilmesi için [Nightscout](../Installing-AndroidAPS/Nightscout.md) sayfasındaki talimatları izleyin.
+- NSClientteki URL'nin sonunda **/api/v1/ OLMADAN** yazılması gerektiğini unutmayın - [Tercihler'deki NSClient ayarları](Preferences-nsclient)'na bakın.
 
-*You may need to wait for the next blood glucose reading to arrive before AndroidAPS will recognise it.*
+*AndroidAPS'in tanıması için bir sonraki kan şekeri ölçümünün gelmesini beklemeniz gerekebilir.*
 
 ## Görev 2: AndroidAPS'yi nasıl kontrol edeceğinizi öğrenin
 
-- Perform several actions in AndroidAPS as described in this objective.
+- Bu görevde açıklandığı gibi AndroidAPS'de çeşitli eylemler gerçekleştirin.
 
-- Click on the orange text "Not completed yet" to access the to-dos.
+- Tek tek görevlere ulaşmak için turuncu renkli "Henüz tamamlanmadı" metnine tıklayın.
 
-- Links will be provided to guide you in case you are not familiar with a specific action yet.
+- Henüz belirli bir eyleme aşina değilseniz, size rehberlik edecek bağlantılar sağlanacaktır.
 
   ```{image} ../images/Objective2_V2_5.png
   :alt: Screenshot Görev 2
@@ -31,21 +31,21 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 (Objectives-objective-3-prove-your-knowledge)=
 ## Görev 3: Bilginizi kanıtlayın
 
-- Pass a multiple-choice exam testing your AndroidAPS knowledge.
+- Çeşitli AndroidAPS ve kapalı döngü konularında çok seçmeli soruları yanıtlayın.
 
-- Click on the orange text "Not completed yet" to access the page with the question and answering options.
+- Soru ve cevap seçeneklerinin bulunduğu sayfaya erişmek için turuncu renkli "Henüz tamamlanmadı" yazısına tıklayın.
 
   ```{image} ../images/Objective3_V2_5.png
   :alt: Screenshot Görev 3
   ```
 
-- Links will be provided to guide you in case you are unsure about the correct answers yet.
+- Henüz doğru cevaplardan emin değilseniz, size rehberlik edecek bağlantılar sağlanacaktır.
 
-- The questions for objective 3 have been completely rewritten by native speakers as of AAPS 2.8. Yenileri aynı temel konuları ve birkaç yeni konuyu kapsar.
+- Görev 3 için sorular, AAPS 2.8'den itibaren anadili İngilizce olan kişiler tarafından tamamen yeniden yazılmıştır. Yenileri aynı temel konuları ve birkaç yeni konuyu kapsar.
 
-- These new questions will lead to some not answered questions even though you have successfully completed objective 3 in previous versions.
+- Bu yeni sorular, önceki sürümlerde 3. görev başarıyla tamamlamış olsanız bile, bazı cevaplanmayan sorulara yol açacaktır.
 
-- Unanswered questions will affect you only if you start a new objective. Başka bir deyişle: Tüm görevleri zaten tamamladıysanız, daha sonra AAPS işlevlerini kaybetmeden bekleyebilir ve yeni soruları yanıtlayabilirsiniz.
+- Cevaplanmamış sorular, yalnızca yeni bir göreve başlarsanız sizi etkileyecektir. Başka bir deyişle: Tüm görevleri zaten tamamladıysanız, daha sonra AAPS işlevlerini kaybetmeden bekleyebilir ve yeni soruları yanıtlayabilirsiniz.
 
 ## Görev 4: Bir Açık döngüye başlamak
 
@@ -101,7 +101,7 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 :alt: Uyarı işareti
 ```
 
-### Closed loop will not correct high BG values in objective 6 as it is limited to low glucose suspend. High BG values have to be corrected manually by you!
+### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek KŞ değerlerini düzeltmeyecektir. Yüksek KŞ değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
 - Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
 - You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
@@ -145,14 +145,14 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 
 - You must read the [SMB chapter in this wiki](Open-APS-features-super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
 - Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxAİNS artık yalnızca eklenmiş bazal değil, tüm AİNS'leri içeriyor. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir.
+- absorpsiyon ayarlarındaki min_5m_carbimpact varsayılanı, AMA'dan SMB'ye giderken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir.
 
 (Objectives-objective-10-automation)=
 ## Görev 10: Otomasyon
 
-- You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
-- Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
-- Completing previous objectives will not effect other objectives you have already finished. Tüm tamamlanmış görevler korunacaktır!
+- [Otomasyon](../Usage/Automation.md)u kullanabilmek için 10. göreve başlamanız gerekir.
+- [Görevler-görev-3-bilgini-kanıtla](Objectives#objective-3-prove-your-knowledge) sınavı dahil tüm görevleri tamamladığınızdan emin olun.
+- Önceki görevleri tamamlamak, halihazırda tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 (Objectives-go-back-in-objectives)=
 ## Görevlere geri dön
@@ -165,4 +165,4 @@ Herhangi bir nedenle görevlere geri dönmek istiyorsanız, bunu "Komple tamamla
 
 ## 3.0 sürümünden önceki Android APS'deki görevler
 
-Android APS 3.0 yayınlandığında bir hedef kaldırıldı.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found [here](../Usage/Objectives_old.md).
+Android APS 3.0 yayınlandığında bir hedef kaldırıldı.  Android APS sürüm 2.8.2.1'in eski Android yazılımı (yani sürüm 9'dan önceki) kullanıcıları [burada](../Usage/Objectives_old.md) bulunabilecek daha eski bir görev seti kullanıyor olacak.
