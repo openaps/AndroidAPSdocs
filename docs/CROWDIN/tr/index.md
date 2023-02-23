@@ -74,7 +74,7 @@ Dili değiştir <./changelanguage.md>
 
 Kapalı döngü sistemi nedir? <./Getting-Started/ClosedLoop.md>
 
-AAPS ile kapalı döngü sistemi nedir? <./Getting-Started/WhatisAndroidAPS.md> 
+AAPS ile kapalı döngü sistemi nedir? <./Getting-Started/WhatisAndroidAPS.md>
 
 Doküman güncellemeleri & değişiklikler <./Getting-Started/WikiUpdate.md>
 
