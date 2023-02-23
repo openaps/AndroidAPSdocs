@@ -49,40 +49,40 @@ Görevlere geri dönmek istiyorsanız [aşağıdaki açıklamaya](Objectives-go-
 
 ## Görev 4: Bir Açık döngüye başlamak
 
-- Select Open Loop either from Preferences, or by pressing and holding the Loop button in top left of the home screen.
-- Work through the [Preferences](../Configuration/Preferences.md) to set up for you.
-- Manually enact at least 20 of the temporary basal rate suggestions over a period of 7 days; input them to your pump and confirm in AndroidAPS that you have accepted them.  Bu verilerin AndroidAPS ve Nightscout'ta gösterildiğinden emin olun.
-- Enable [temp targets](../Usage/temptarget.md) if necessary. Bir hipodan sonra yükselen kan şekeri nedeniyle sistemin çok güçlü düzeltme yapmasını önlemek için hipo geçici hedeflerini kullanın.
+- Tercihler'den veya ana ekranın sol üst köşesindeki Döngü düğmesini basılı tutarak Döngü Aç'ı seçin.
+- Ayarlarınız için [Tercihler](../Configuration/Preferences.md) üzerinde çalışın.
+- 7 günlük bir süre boyunca geçici bazal oran önerilerinin en az 20'sini manuel olarak yürürlüğe koyun; bunları pompanıza girin ve AndroidAPS'de kabul ettiğinizi onaylayın.  Bu verilerin AndroidAPS ve Nightscout'ta gösterildiğinden emin olun.
+- Gerekirse [geçici hedefleri](../Usage/temptarget.md) etkinleştirin. Bir hipodan sonra yükselen kan şekeri nedeniyle sistemin çok güçlü düzeltme yapmasını önlemek için hipo geçici hedeflerini kullanın.
 
 ### Bildirim sayısını azaltın
 
-- To reduce the Number of decisions to be made while in Open Loop set wide target range like 90 - 150 mg/dl or 5,0 - 8,5 mmol/l.
+- Açık Döngüdeyken alınacak karar sayısını azaltmak için 90 - 150 mg/dl veya 5,0 - 8,5 mmol/l gibi geniş bir hedef aralığı belirleyin.
 
-- You might even want to wider upper limit (or disable Open Loop) at night.
+- Hatta geceleri üst sınırı genişletmek (veya Açık Döngüyü devre dışı bırakmak) isteyebilirsiniz.
 
-- In Preferences you can set a minimum percentage for suggestion of basal rate change.
+- Tercihler'de bazal oran değişikliği önerisi için bir minimum yüzde belirleyebilirsiniz.
 
   ```{image} ../images/OpenLoop_MinimalRequestChange2.png
   :alt: Açık Döngü minimum istek değişikliği
   ```
 
-- Also, you do not need to act every 5 minutes on all suggestions...
+- Ayrıca her öneriye her 5 dakikada bir cevap vermek zorunda da değilsiniz...
 
 ## Görev 5: Geçici bazal önerileri de dahil olmak üzere açık döngünüzü anlamak
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- [Temel mantığı belirleme](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) ve [AndroidAPS /Nightscout ana ekranındaki tahmin satırına](Screenshots-prediction-lines) hem de OpenAPS sekmenizdeki hesaplamalardan elde edilen çıktıların özetine bakarak geçici bazal önerilerinin arkasındaki düşünceyi anlamaya başlayın.
 
 Hesaplamalardan ve ayarlardan emin olana kadar hedefinizi normalden daha yükseğe koymak isteyeceksiniz.  Sistem izin verdiğince
 
-- a low target to be a minimum of 4 mmol (72 mg/dl) or maximum of 10 mmol (180 mg/dl)
-- a high target to be a minimum of 5 mmol (90 mg/dl) and maximum of 15 mmol (225 mg/dl)
-- a temporary target as a single value can be anywhere in the range of 4 mmol to 15 mmol (72 mg/dl to 225 mg/dl)
+- düşük hedef için minimum 4 mmol (72 mg/dl) veya maksimum 10 mmol (180 mg/dl) olacak şekilde
+- yüksek hedef için minimum 5 mmol (90 mg/dl) veya maksimum 15 mmol (225 mg/dl) olacak şekilde
+- tek bir değer olacak şekilde geçici bir hedef, 4 mmol ila 15 mmol (72 mg/dl ila 225 mg/dl) aralığında herhangi bir yerde olabilir
 
-Hedef hesaplamaların dayandığı değerdir ve kan şekeri değerlerinizi içinde tutmayı amaçladığınız değerle aynı değildir.  If your target is very wide (say, 3 or more mmol \[50 mg/dl or more\] wide), you will often find little AAPS action. Bunun nedeni, kan şekerinin eninde sonunda bu geniş aralıkta bir yerde olacağı tahmin edilmesidir ve bu nedenle çok fazla dalgalı geçici bazal hız önerilmemektedir.
+Hedef hesaplamaların dayandığı değerdir ve kan şekeri değerlerinizi içinde tutmayı amaçladığınız değerle aynı değildir.  Hedefiniz çok genişse (diyelim ki 3 veya daha fazla mmol \[50 mg/dl veya daha fazla\]), genellikle çok az AAPS etkisi bulacaksınız. Bunun nedeni, kan şekerinin eninde sonunda bu geniş aralıkta bir yerde olacağı tahmin edilmesidir ve bu nedenle çok fazla dalgalı geçici bazal hız önerilmemektedir.
 
-You may want to experiment with adjusting your targets to be a closer together range (say, 1 or less mmol \[20 mg/dl or less\] wide) and observe how the behavior of your system changes as a result.
+Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol \[20 mg/dl veya daha az\]) olacak şekilde ayarlamayı deneyebilir ve sonuç olarak sisteminizin davranışının nasıl değiştiğini gözlemleyebilirsiniz.
 
-You can view a wider range (green lines) on the graph for the values you aim to keep your blood glucose within by entering different values in [Preferences](../Configuration/Preferences.md) > Range for Visualisation.
+[Tercihler](../Configuration/Preferences.md)'de > Görselleştirme Aralığına farklı değerler girerek kan şekerinizi içinde tutmayı amaçladığınız değerler için grafik üzerinde daha geniş bir aralık (yeşil çizgiler) görüntüleyebilirsiniz.
 
 ```{image} ../images/sign_stop.png
 :alt: Dur işareti
@@ -138,13 +138,13 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
 - Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
 
-*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+Henüz yapmadıysanız *Döngünüzü* [bu forma](https://bit.ly/nowlooping) *AndroidAPS'yi DIY döngü yazılımınız olarak kaydetmeyi unutmayın*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Görev 9: Süper mikro bolus (SMB) gibi gündüz kullanımı için ek oref1 özelliklerinin etkinleştirilmesi
 
-- You must read the [SMB chapter in this wiki](Open-APS-features-super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-- Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxAİNS artık yalnızca eklenmiş bazal değil, tüm AİNS'leri içeriyor. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
+- SMB'nin nasıl çalıştığını, özellikle de sıfır-geçici ardındaki fikri anlamak için [bu wiki'deki SMB bölümünü](Open-APS-features-super-micro-bolus-smb) ve [openAPSdocs'taki oref1 bölümünü](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) okumalısınız.
+- Daha sonra, SMB'lerin düzgün çalışmasını sağlamak için [maxAİNS'i artırmanız](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) gerekir. maxAİNS artık yalnızca eklenmiş bazal değil, tüm AİNS'leri içeriyor. Yani bir öğün için 8 Ü bolus verilirse ve maksAİNS 7 Ü ise, AİNS 7 Ü'nin altına düşene kadar hiçbir SMB iletilmez. İyi bir başlangıç maksAİNS = ortalama yemek bolusu + 3x maks günlük bazaldir (maks günlük bazal = günün herhangi bir zaman diliminde maksimum saatlik değer - bir örnek için [Görev 7'ye](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) bakın)
 - absorpsiyon ayarlarındaki min_5m_carbimpact varsayılanı, AMA'dan SMB'ye giderken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir.
 
 (Objectives-objective-10-automation)=
