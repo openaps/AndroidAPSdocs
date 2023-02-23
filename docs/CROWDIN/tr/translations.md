@@ -19,29 +19,29 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
     * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
     
-       ![Click translate all](./images/translations-click-translate-all.png)
+       ![Tümünü çevir'e tıklayın](./images/translations-click-translate-all.png)
     
-    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
+    * Tek bir dosyayı çevirmek istiyorsanız, lütfen dosyayı arama iletişim kutusundan veya ağaç yapısından arayın ve o dosyadaki dizeler üzerinde çeviri çalışmasını başlatmak için dosya adına tıklayın.
     
-       ![Click strings.xml](./images/translations-click-strings.png)
+       ![Dizeleri tıklayın.xml](./images/translations-click-strings.png)
     
-    * Translate sentences on left side by adding new translated text or use & edit suggestion 
+    * Yeni çevrilmiş metin ekleyerek sol taraftaki cümleleri çevirin veya & öneriyi düzenle
     
-       ![Translation app](./images/translations-translate.png)
-    
-    
-    ### Proofread strings for AndroidAPS app
-    
-    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
-    
-       ![Proofreading mode app](./images/translations-proofreading-mode.png) 
+        ![Çeviri uygulaması](./images/translations-translate.png)
     
     
-      and approve translated texts 
+    ### AndroidAPS uygulaması için redaksiyon dizeleri
     
-       ![approve text](./images/translations-proofreading.png)
+    * Redaktörler, ana dil ekranından başlarken "redaksiyon" seçeneğini seçerek başlar.
     
-    When a proofreader approves a translation it will be added to the next version of AndroidAPS.
+       ![Redaksiyon modu uygulaması](./images/translations-proofreading-mode.png)
+    
+    
+       ve çevrilmiş metinleri onaylayın
+    
+        ![metni onayla](./images/translations-proofreading.png)
+    
+    Redaktör bir çeviriyi onayladığında, çeviri AndroidAPS'nin bir sonraki sürümüne eklenecektir.
     
     (translations-translation-of-the-documentation)=
     ## Translation of the documentation
@@ -53,30 +53,30 @@ Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlam
     
     * Translate sentences by sentence
     
-        1. The yellow text is the text you are working at the moment.
+        1. Sarı metin, şu anda üzerinde çalıştığınız metindir.
     
-        1. The green text is already translated. You don't need to do this again.
+        1. Yeşil metin zaten çevrilmiştir. Tekrar yapmana gerek yok.
     
-        1. The red text is the remaining text which have to be translated.
+        1. Kırmızı metin, çevrilmesi gereken metindir.
     
-        1. This is the source text you are working on at the moment
+        1. Bu, şu anda üzerinde çalıştığınız kaynak metindir.
     
-        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+         1. Bu, hazırladığınız çeviridir. Yukarıdaki metni kopyalayabilir veya aşağıdaki önerilerden birini seçebilirsiniz.
     
-        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
-        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+        1. Bunlar bir çeviri önerisidir. Özellikle Crowdin'in bunu ne kadar uyumlu olarak değerlendirdiğini veya geçmişte olup olmadığını ve metin düzenlemeleriyle ortaya çıkıp içerik değişikliği yapılıp yapılmadığını görebilirsiniz.
+        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. Daha sonra son kontrol için redaktöre terfi ettirilecektir.
     
-    ![Translation docs](./images/translation_WikiTranslate.png)
+    ![Çeviri dok.ları](./images/translation_WikiTranslate.png)
     
-    * A translated page will not be published in docs before 
+    * Çevrilmiş bir sayfa dokümanlarda yayınlanmadan önce
     
-        1. the translation is proofread
+         1. çeviri redaksiyonu
     
-        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+         1. Crowdin ve Github arasındaki senkronizasyon (saatte bir) tamamlanır ve bu da Github için bir PR (çekme isteği) oluşturur.
     
-        1. the PR in Github was approved.
+        1. Github'daki PR onaylanır.
     
-    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    Genel olarak bu 1 - 3 güne ihtiyaç duyar ancak tatil günlerinde biraz daha uzun sürebilir.
     
     ### Bağlantılı çeviriler
     
