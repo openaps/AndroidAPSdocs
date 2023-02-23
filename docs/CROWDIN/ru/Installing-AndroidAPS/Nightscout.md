@@ -1,31 +1,35 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Вопросы безопасности
 
-Помимо отчетов Nightscout можно также использовать для управления AAPS. Например, вы можете задать временные цели или добавить будущие углеводы. Эта информация будет подхвачена в AAPS, которая будет выполнять соответствующие действия. Поэтому стоит задуматься над тем, как обеспечить безопасность веб-сайта Nightcut.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Настройки Nightscout
 
-Можно запретить общий доступ к сайту Nightscout с помощью [ идентификационных ролей ](https://nightscout.github.io/nightscout/security).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### Настройки системы AndroidAPS
 
-В параметрах AAPS есть функция только загрузки NS (без синхронизации). При этом AAPS не отбирает изменения, внесенные в Nightscout, такие как временные цели или будущие углеводы.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Коснитесь 3-точечного меню в правом верхнем углу на домашней странице AAPS.
 * Выберите "Параметры".
 * Прокрутите страницу вниз и выберите "Дополнительные параметры".
 * Активируйте "только загрузку NS"
 
-![Только выгрузка в Nightscout](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Дополнительные параметры защиты
 
-Регулярно обновляйте программное обеспечение телефона, как описано в разделе [ безопасность прежде всего](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Установка Nightscout вручную
 
-Предполагается, что у вас уже есть сайт Nightscout, если же нет - зайдите на страницу [ Nightscout ](http://nightscout.github.io/nightscout/new_user/) для получения полных инструкций по настройке; приведенные ниже инструкции описывают параметры, которые также потребуется добавить на сайт Nightscout. Сайт Nightscut должен быть по крайней мере версии 10 (отображается как 0.10...), поэтому убедитесь, что вы запускаете [ последнюю версию ](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version); в противном случае появится сообщение об ошибке в приложении AAPS. Некоторые люди находят, что алгоритмы ИПЖ требуют больше трафика, чем квоты Azure, поэтому Heroku предпочтительнее.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Перейдите на https://herokuapp.com/
 
@@ -49,9 +53,9 @@
 
 ## Полуавтоматизированная установка Nightscout
 
-Один из участников проекта Martin Schiftan на протяжении многих лет бесплатно предлагал полуавтоматическую установку Nightscout. По мере увеличения числа пользователей ему пришлось взимать небольшую плату с октября 2021года - 4.17 евро в месяц.
+Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Преимущества**
+**Benefits**
 
 * Можно установить Nightscout в несколько щелчков и сразу же начать им пользоваться. 
 * Сокращение ручной работы поскольку Martin пытается автоматизировать администрирование.
@@ -61,4 +65,4 @@
 
 <https://ns.10be.de/en/index.html>
 
-Альтернативой будет <https://t1pal.com/> - $11,99 в месяц.
+An alternative would be <https://t1pal.com/> - starting at $11,99 per month.

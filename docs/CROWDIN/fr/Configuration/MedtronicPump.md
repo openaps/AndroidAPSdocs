@@ -15,21 +15,23 @@ Vous pouvez trouver comment vérifier le firmware de la pompe dans la [documenta
 
 ## Configuration matérielle et logicielle requise
 
-- **Phone:** The Medtronic driver should work with any android phone that supports Bluetooth connections. **IMPORTANT: Phone manufacturers Bluetooth implementations can vary so how each phone model behaves can vary. For example, some phones will handle enabling/disabling Bluetooth differently. This can impact the user experience when AndroidAPS needs to reconnect to your Rileylink type device.**
-- **RileyLink Compatible Device:** Android phones cannot communicate to Medtronic pumps without a seperate device to handle communications. This device will link with your phone via Bluetooth and with your pump via a compatible radio connection. The first such device was called a Rileylink but a number of other options are now available which can offer additional functionality.
+- **Téléphone :** Le pilote Medtronic devrait fonctionner avec n'importe quel téléphone Android prenant en charge les connexions Bluetooth. **IMPORTANT : Les implémentations Bluetooth des fabricants de téléphones peuvent varier de sorte que chaque modèle de téléphone peut varier. Par exemple, certains téléphones géreront différemment l'activation/la désactivation du Bluetooth. Cela peut affecter l'expérience utilisateur lorsque AAPS a besoin de se reconnecter à votre appareil Rileylink.**
+- **Périphérique compatible RileyLink :** Les téléphones Android ne peuvent pas communiquer avec les pompes Medtronic sans un appareil séparé pour gérer les communications. Cet appareil sera relié à votre téléphone via Bluetooth et à votre pompe via une connexion radio compatible. Le premier de ces appareils a été appelé un Rileylink mais un certain nombre d'autres options sont maintenant disponibles qui peuvent offrir des fonctionnalités supplémentaires.
     
-    - Rileylink available at [getrileylink.org](https://getrileylink.org/product/rileylink916)
-    - Orangelink available at [getrileylink.org](https://getrileylink.org/product/orangelink)
-    - Emalink (multiple model options) available at [github.com](https://github.com/sks01/EmaLink)
-    - Gnarl (some additional DIY required) details available at [github.com](https://github.com/ecc1/gnarl)
+    - Rileylink disponible sur [getrileylink.org](https://getrileylink.org/product/rileylink916)
+    - Orangelink disponible sur [getrileylink.org](https://getrileylink.org/product/orangelink)
+    - Emalink (multiples options de modèles) disponible sur [github.com](https://github.com/sks01/EmaLink)
+    - Gnarl (quelques détails supplémentaires requis) disponible sur [github.com](https://github.com/ecc1/gnarl)
 
 Un graphique de comparaison pour les différents appareils compatibles avec Rileylink peut être trouvé sur [getrileylink.org](https://getrileylink.org/rileylink-compatible-hardware-comparison-chart)
+
+(MedtronicPump-configuration-of-the-pump)=
 
 ## Configuration de la pompe
 
 The following settings should be configured on the pump in order for AndroidAPS to remotely send commands. The steps necessary to make each change on a Medtronic 715 are shown in brackets for each setting. The exact steps may vary based on pump type and/or firmware version.
 
-- **Enable remote mode on Pump** (On the pump press Act and go to Utilities -> Remote Options, Select On, and on next screen do Add ID and add any random id such as 111111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
+- **Activer le mode à distance sur la pompe** (Sur la pompe, appuyez sur Act puis allez dans Utilitaires -> Options à distance et sélectionnez Activé. Dans l'écran suivant, faites Ajouter un ID et ajoutez n'importe quel id aléatoire, tel que 1111). At least one ID must be on the Remote ID list in order for the pump to expect remote communication.
 - **Set Max Basal** (On the pump press Act and got to Basal and then select Max Basal Rate) As an example setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
 - **Set Max Bolus** (On the pump press Act and to to Bolus and then select Max Bolus) This is the largest bolus that the pump will accept. The maximum value permitted by the pump is 25.
 - **Set profile to Standard**. (On the pump press Act and go to Basal and then Select Patterns) The pump will only need one profile as AndroidAPS will manage different profiles on your phone. No other patterns are required.
@@ -52,7 +54,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 
 - **Pump Serial Number**: Displayed on the back of your pump and starts with SN. You should only enter the 6 numbers shown without any alpabetic characters (e.g. 123456).
 - **Pump Type**: The model pump you are using (e.g. 522). 
-- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](../Configuration/MedtronicPump#faq) if you are unsure which option to select): 
+- **Pump Frequency**: There are two options based on where your pump was originally distributed. Please check the [FAQ](MedtronicPump-faq) if you are unsure which option to select): 
     - pour les US & le Canada, la fréquence utilisée est 916 Mhz
     - pour le reste du monde, la fréquence utilisée est de 868 Mhz
 - **Max Basal on Pump (U/h)**: This needs to match the setting set on your pump (see Configuration of the pump above). Again this setting must be carefully selected as it will determine how much AndroidAPS can deliver via your basal rate. This will effectively set the maximum temporary basal rate. As an example, setting this value to four times your maximum standard basal rate would allow a 400% Temporary Basal Rate. The maximum value permitted by the pump is 34.9 units per hour.
@@ -66,7 +68,7 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
     - Lithium (vue étendue)
     - NiZn (vue étendue)
     - NiMH (vue Étendue)
-- **Bolus/Treatments Debugging**: Select On or Off depending on requirements.
+- **Débogage Bolus/Traitements**: Sélectionnez On ou Off selon les exigences.
 
 - **RileyLink Configuration**: This option allows you to find and pair your Rileylink compatible device. Selecting this will show any nearby Rileylink compatible devices and the signal strength.
 - **Use Scanning** Activates Bluetooth scanning before connecting with your Rileylink Compatible devices. This should improve the reliability of your connection to the device.
@@ -91,14 +93,18 @@ While setting up AndroidAPS to work with your medtronic pump you need to set fol
 At the bottom of the screen there are three buttons:
 
 - **Refresh** is for refreshing the current status of the pump. This should only be used if the connection was lost for a sustained period as this will require a full data refresh (retrieve history, get/set time, get profile, get battery status, etc).
-- **Pump History**: Shows pump history (see [below](../Configuration/MedtronicPump#pump-history))
-- **RL Stats**: Show RL Stats (see [below](../Configuration/MedtronicPump#rl-status-rileylink-status))
+- **Pump History**: Shows pump history (see [below](MedtronicPump-pump-history))
+- **RL Stats**: Show RL Stats (see [below](MedtronicPump-rl-status-rileylink-status))
+
+(MedtronicPump-pump-history)=
 
 ## Historique pompe
 
 ![Boîte de dialogue Historique pompe](../images/Medtronic03.png)
 
 L'historique de la pompe est récupéré toutes les 5 minutes et stocké localement. Only the previous 24 hours worth of history is stored. The allows for a convinient way to see pump behaviour should that be required. The only items stored are those relevenant to AndroidAPS and will not inlcude a configuration function that has no relevance.
+
+(MedtronicPump-rl-status-rileylink-status)=
 
 ## État RL (RileyLink État)
 
@@ -138,7 +144,7 @@ You should avoid manually bolusing or setting TBRs on your pump. All such comman
 
 AndroidAPS will automatically detect Timezone changes and will update the Pump's time when your phone switches to the new time.
 
-Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Travelling west however can result in issues as you are effectively going back in time which can result in incorrect IOB data.
+Travelling east means you are going to be adding hours to the current time (ex. from GMT+0 to GMT+2) will not result in any issues as there will be no overlap (e.g. it won't be possible to have the same hour twice). Cependant, voyager vers l'ouest peut entraîner des problèmes car vous êtes en train de revenir dans le temps, ce qui peut entraîner des données IOB incorrectes.
 
 The issues seen when travelling west are known to the developers and work on a possible solution is ongoing. See https://github.com/andyrozman/RileyLinkAAPS/issues/145 for more detail. For now, please be aware that this issue may occur and carefully monitor when changing time zones.
 
@@ -146,9 +152,13 @@ The issues seen when travelling west are known to the developers and work on a p
 
 The GNARL code fully supports all of the functions used by the Medtronic driver in AndroidAPS which means it is fully compatible. It is important to note that this will require addtional work as you will have to source compatible hardware and then load the GNARL code on to the device.
 
-**Note de l'auteur :** Veuillez noter que le logiciel GNARL est encore expérimental et légèrement testé, il ne devrait pas être considéré comme aussi sûr à utiliser qu'un RileyLink.
+**Note de l'auteur :** Veuillez noter que le logiciel GNARL est encore expérimental et faiblement testé, il ne devrait pas être considéré comme aussi sûr à utiliser qu'un RileyLink.
+
+(MedtronicPump-faq)=
 
 ## Questions fréquentes
+
+(MedtronicPump-what-to-do-if-i-loose-connection-to-rileylink-and-or-pump)=
 
 ### Que faire si je perds la connexion à RileyLink et/ou à la pompe ?
 
@@ -157,7 +167,7 @@ There are a number of options to try and resolve connectivity issues.
 - Use the "Wake Up and Tune" button in the ACT tab as detailed above.
 - Disable Bluetooth on your phone, wait 10 seconds and then enable it again. This will force the Rileylink device to reconnect to the phone.
 - Reset the Rileylink device. You must then use the "Reset Rileylink Config" button in the ACT tab.
-- Other users have found the following steps to be effective in restoring connectivity when other methods have not: 
+- D'autres utilisateurs ont trouvé que les étapes suivantes sont efficaces pour restaurer la connectivité quand d'autres méthodes ont échouées : 
     1. Restart the phone
     2. *While* the phone is restarting restart the Rileylink device
     3. Open AndroidAPS and allow the connection to restore

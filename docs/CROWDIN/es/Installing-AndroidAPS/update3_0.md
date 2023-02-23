@@ -36,7 +36,7 @@
 * Es necesario añadir un fichero llamado `PasswordReset` en el directorio `/AAPS/extra` de tu teléfono.
 * Reiniciar AndroidAPS.
 * La nueva contraseña será el número de serie de la bomba de insulina que esté activa.
-* Para Dash: El número de serie está impreso en el Pod.
+* For Dash: The serial number is always 4241.
 * Para Eros, aparece en la pestaña del Pod, como "Número de sequencia".
 
 ## Señal de advertencia debajo de la lectura de glucosa
@@ -47,11 +47,11 @@ Desde la versión de AndroidAPS 3.0, puede aparecer una señal de advertencia de
 
   ![Triángulo de adverntencia de glucosa en amarillo](../images/bg_warn_yellow.png)
 
-Para obtener más información sobre esa advertencia, accede a la [Página de pantallas de AAPS](../Getting-Started/Screenshots#bg-warning-sign)
+For details see [AAPS screens page](Screenshots-bg-warning-sign)
 
 
 ## Mensaje de error: Los datos son de bombas diferentes
 
    ![Mensaje de error: Los datos son de bombas diferentes](../images/Screen_DifferentPump.png)
 
-Para solucionar este problema, ve a la página  [Tabla de configuraciones](../Configuration/Config-Builder#pump). Cambia a Bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.
+To resolve this issue go to [config builder](Config-Builder-pump). Cambia a Bomba virtual y después vuelve a seleccionar la casilla de tu bomba actual. Eso restablecerá el estado de la bomba.

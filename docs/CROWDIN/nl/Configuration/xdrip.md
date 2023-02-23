@@ -42,10 +42,12 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Basis Instellingen 3](../images/xDrip_Basic3.png)
 
+(xdrip-identify-receiver)=
+
 ### Identificeer ontvanger (Identify receiver)
 
-* Als je problemen hebt met de 'local broadcast' (AAPS ontvangt geen BG waarden van xDrip+), ga dan naar Instellingen > Inter-app instellingen > Identify receiver en voer in: `info.nightscout.androidaps`
-* Let op: Auto-correct past soms de beginletter aan naar een hoofdletter. Zorg dat er **alleen kleine letters** worden gebruikt bij het intypen van `info.nightscout.androidaps` Staat er toch een hoofdletter, dan zal AAPS nog steeds geen BG waardes ontvangen van xDrip+.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Let op: Auto-correct past soms de beginletter aan naar een hoofdletter. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip + Basic Inter-app Instellingen Ontvanger identificeren](../images/xDrip_InterApp_NS.png)
 
@@ -53,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * De Dexcom G6 zender kan gelijktijdig worden gekoppeld aan de Dexcom ontvanger (of als alternatief de t:slim pomp) en een app op je telefoon.
 * Als je jouw Dexcom wilt koppelen aan de xDrip+ app dan zul je dus eerst de Dexcom app moeten verwijderen (of: pas het zender-nummer in de Dexcom app aan naar een onzingetal zodat Dexcom niet probeert aan de zender te koppelen). **Je kunt de xDrip+ app en de Dexcom app niet gelijktijdig koppelen aan een zender.**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### xDrip+ versie afhankelijk van G6-zendernummer
 
@@ -84,7 +86,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht lijkt. Om de G6 veilig te gebruiken, moet je rekening houden met het volgende:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Wanneer je het "Native" algoritme gebruikt in combinatie met de kalibratiecode in xDrip of Spike, is het veiligste om de optie "Pre-emptive restart" (voortijdige herstart) niet te gebruiken.
 * Als je er wel voor kiest om Pre-emptive restarts te gebruiken, zorg dan dat je de sensor start op een moment van de dag dat je tijd kunt vrijmaken om te zien wat er gebeurt tijdens de herstart. Zodat je kunt kalibreren als je ziet dat dat nodig is (je ziet een 'sprong' in je glucosegrafiek). 
@@ -94,9 +96,11 @@ Het gebruik van de is G6 misschien wat complexer dan het op het eerste gezicht l
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
+(xdrip-connect-g6-transmitter-for-the-first-time)=
+
 ### G6-zender voor de eerste keer verbinden
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 Voor G6-zenders met een productie datum na het najaar van 2018 (d.w.z. serie nr. beginnend met 80 of 81) kunt je de [master](https://jamorham.github.io/#xdrip-plus) versie gebruiken.
 
@@ -141,6 +145,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    
    ![xDrip+ Dexcom zender 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(xdrip-transmitter-battery-status)=
+
 ### Zender Batterij Status
 
 * Via het Hamburgermenu > System Status kun je de status van de zender batterij (Transmitter battery) zien.
@@ -151,11 +157,13 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    * Gebruiker 1: Transmitter days (Zender dagen): 151 / Voltage A: 297 / Voltage B: 260 / Resistance (Weerstand): 2391
    * Gebruiker 2: Transmitter days (Zender dagen): 249 / Voltage A: 275 (op het moment van stoppen)
 
+(xdrip-extend-transmitter-life)=
+
 ### Zender resetten
 
-* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen. Hetzelfde geldt voor zenders met serienummer beginnend met 81 en firmware 1.6.5.**27** (zie xDrip + System Status-G5/G6 status zoals weergegeven in [screenshot hierboven](../Configuration/xdrip#transmitter-battery-status)).
+* Een zender kun je resetten zodat de teller van het aantal dagen dat hij in gebruik is, weer op nul komt te staan. Dan gaat hij langer mee dan de maximaal 100 dagen die Dexcom garandeert (na de 100 dagen is de zenderbatterij meestal nog niet leeg, maar hij is geprogrammeerd om te stoppen). Tot nu toe kan een zender niet gereset worden waarvan het serienummer begint met 8G, 8H of 8J. Onderstaande instructies werken dus helaas niet voor deze zenders, wel voor oudere modellen. Hetzelfde geldt voor zenders met serienummer starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * Het wordt aangeraden om de zender te resetten vóórdat hij 100 dagen in gebruik is. Dit om problemen met het starten van sensoren te voorkomen.
-* Het gebruik van de zenders waarvan het serienummer begint met 81 en firmware 1.6.5.**27** na dag 100 is alleen mogelijk als ['engineering mode'](../Usage/Enabling-Engineering-Mode-in-xDrip) is ingeschakeld en 'native modus' uitgeschakeld is (hamburger menu-> instellingen-> G5/G6 foutopsporingsinstellingen-> native algoritme) omdat een zender hard reset NIET mogelijk is.
+* Het gebruik van de zenders waarvan het serienummer starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * De actieve sensor sessie zal worden gestopt bij het resetten van de zender. Dat betekent dat je daarna weer de 2 uur opwarm-fase zult moeten uitzitten. Plan je zender reset dus gelijktijdig met een sensorwissel, of doe het op een moment dat het geen probleem is om 2 uur geen gegevens te hebben.
 * Stop de sensor handmatig via het hamburger menu.
 * Schakel de `engineering mode` in: 
@@ -174,6 +182,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor begint met 8G, 
    ![xDrip+ Hard Reset mogelijk mislukt](../images/xDrip_HardResetMaybeFailed.png)
 
 * Transmitter days (ouderdom zender, in dagen) zal worden ingesteld op 0 nadat je succesvol de zender hebt gereset en weer een sensor hebt gestart.
+
+(xdrip-replace-transmitter)=
 
 ### Zender vervangen
 
@@ -275,13 +285,15 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
    * Als je het xDrip+ algoritme gebruikt, kun je een tijdstip ingeven van meer dan 2 uur geleden om de opwarmtijd over te slaan. Metingen kunnen daardoor zeer onbetrouwbaar worden. Daarom wordt dit niet aanbevolen.
 * Voer Sensor code in (die staat op de papieren achterkant van de sensorverpakking) 
    * Bewaar deze code voor als je hem later nog nodig hebt (bijv. nieuwe start van de sensor nadat de zender moest worden verwijderd)
-   * De code kun je ook terugvinden in de [xDrip+ logs](../Configuration/xdrip#retrieve-sensor-code): Klik op 3 stipjes in rechterbovenhoek van xDrip+ homescreen en kies `View Events Log`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Als je de G6 in "Native mode" gebruikt, hoef je geen kalibratie in te voeren. xDrip+ zal de automatisch waardes gaan weergeven na de 2 uur opwarmtijd.
 * Zet de originele Dexcom ontvanger (indien je die gebruikt) niet terug aan voordat xDrip+ de eerste meetwaardes toont.
    
    ![xDrip+ Start Dexcom Sensor 1](../images/xDrip_Dexcom_SensorStart01.png)
    
    ![xDrip+ Start Dexcom Sensor 2](../images/xDrip_Dexcom_SensorStart02.png)
+
+(xdrip-retrieve-sensor-code)=
 
 ### Sensorcode terugvinden
 
@@ -296,6 +308,8 @@ Als je een Dexcom G6 gebruikt en het serienummer van jouw sensor is starting wit
 * Selecteer `View Events Log` en zoek naar "code". Gebruik eventueel de zoekfunctie (via het vergrootglas-icoontje).
    
    ![xDrip+ Haal Dexcom Sensor Code op](../images/xDrip_Dexcom_SensorCode.png)
+
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Probleemoplossing Dexcom G5/G6 en xDrip+
 
@@ -343,7 +357,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Batterijniveau van opzetapparaatje voor FSL
 
 * Het batterijniveau van opzetapparaatjes zoals MiaoMiao 2 kan in AAPS worden weergegeven.
-* Meer info vind je op de [screenshots pagina](../Getting-Started/Screenshots#sensorniveau-batterij).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Verbind Libre opzetapparaatje & start sensor
 

@@ -16,6 +16,7 @@ Sensörü ayarlarken, kanamayı önlemek için aplikatöre çok fazla bastırmam
 
 Sensör yerleştirildikten sonra, verici sensör üzerindeki tutucusuna takılabilir. Dikkat! Önce sensörün kare tarafını yerleştirip ardından yuvarlak tarafa bastırın.
 
+(GeneralCGMRecommendation-troubleshooting)=
 ## Sorun giderme
 
 ### Bağlantı problemleri
@@ -36,4 +37,4 @@ Gürültü engelleme ayarlarını xdrip'te (Ayarlar - Gelişmiş Ayarlar - Gür�
 
 ![Negatif sensör yaşı](../images/Troubleshooting_SensorAge.png)
 
-Bu mesaj [eylem sekmesi / menüsü](../Configuration/Config-Builder#actions) "CGM Sensör yerleştir" butonu ile çift giriş varsa veya yanlış tarih ile sensör girişi yapılmışsa çıkar. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.
+Bu mesaj [eylem sekmesi / menüsü](Config-Builder-actions) "CGM Sensör yerleştir" butonu ile çift giriş varsa veya yanlış tarih ile sensör girişi yapılmışsa çıkar. Tedaviler sekmesine gidin ve \> bakımportalında yanlış girişi silin.

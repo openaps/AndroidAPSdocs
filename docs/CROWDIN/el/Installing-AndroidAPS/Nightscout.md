@@ -1,8 +1,10 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Ζητήματα ασφάλειας
 
-Εκτός από την αναφορά Nightscout μπορεί επίσης να χρησιμοποιηθεί για τον έλεγχο AAPS. Π.χ. μπορείτε να ορίσετε στοχευμένους στόχους ή να προσθέσετε μελλοντικούς υδατάνθρακες. Η πληροφορία αυτή θα πρέπει να διαβαστεί από AAPS και θα ενεργήσει αναλόγως. Ως εκ τούτου αξίζει να σκεφτείτε την εξασφάλιση της ιστοσελίδας σας Nightscout.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Ρυθμίσεις Nightscout
 
@@ -10,18 +12,20 @@ You can deny public access to your Nightscout site by using [authentication role
 
 ### Ρυθμίσεις AndroidAPS
 
-Υπάρχει μια λειτουργία φόρτωσης NS μόνο (χωρίς συγχρονισμό) στις ρυθμίσεις AAPS. Με τον τρόπο αυτό, το AAPS δεν θα πάρει τις αλλαγές που έγιναν στο Nightscout, όπως οι στόχοι ρυθμού ή μελλοντικοί υδατάνθρακες.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Πατήστε 3-dot μενού στην επάνω δεξιά γωνία της αρχική οθόνης AAPS.
 * Επιλέξτε Προτιμήσεις".
 * Μετακινηθείτε προς τα κάτω και αγγίξτε "ρυθμίσεις για Προχωρημένους".
 * Ενεργοποιήστε το "NS ανεβάστε μόνο
 
-![Nightscout ανεβάστε μόνο](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Περαιτέρω ρυθμίσεις ασφαλείας
 
-Κρατήστε το τηλέφωνό σας ενημερωμένο, όπως περιγράφεται στην [ασφάλεια](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Εγχειρίδιο εγκατάστασης Nightscout
 
@@ -51,7 +55,7 @@ It is assumed you already have a Nightscout site, if not visit the [Nightscout](
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Οφέλη**
+**Benefits**
 
 * Μπορείτε να εγκαταστήσετε το Nightscout με μερικά κλικ και να το χρησιμοποιήσετε απευθείας. 
 * Μείωση της χειρωνακτικής εργασίας καθώς ο Martin προσπαθεί να αυτοματοποιήσει τη διαδικασία.

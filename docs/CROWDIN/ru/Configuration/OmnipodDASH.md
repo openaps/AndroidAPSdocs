@@ -26,7 +26,7 @@ These are the specifications of the **Omnipod DASH** and what differentiates it 
    -  Not all phone hardware and Android versions are guaranteed to work. Please check [**DASH Tested phones**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) or just try with your phone and tell us the result (phone reference and geographical region, Android version, worked / some difficulties / did not work).
    - **Important note: There have been multiple cases of permanent, non-recoverable connection losses when using older pods with firmware version 3.XX.X. Be careful when using these old pods with AndroidAPS, especially with other Bluetooth devices connected!**  
      Be aware that AAPS Omnipod Dash driver Connects with the Dash POD via Bluetooth every time it sends a command, and it disconnects right after. The Bluetooth connections might be disturbed by other devices linked to the phone that is running AAPS, like earbuds etc... (which might cause, in rare occasions, connection issue or pod errors/loss on activation or afterwards in some phone models), or be disturbed by it.
-   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.html#) instructions.
+   -  **Version 3.0 or newer of AndroidAPS built and installed** using the [**Build APK**](../Installing-AndroidAPS/Building-APK.md) instructions.
 * [**Continuous Glucose Monitor (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 These instructions will assume that you are starting a new pod session; if this is not the case, please be patient and begin this process on your following pod change.
@@ -63,7 +63,7 @@ On the top-left hand corner **hamburger menu** select **Config Builder (1)**\ �
 
 Selecting the **checkbox (4)** next to the **Settings Gear (3)** will allow the Dash menu to be displayed as a tab in the AAPS interface titled **DASH**. Checking this box will facilitate your access to the DASH commands when using AAPS.
 
-**NOTE:** A faster way to access the [**Dash settings**](#dash-settings) can be found below in the Dash settings section of this document.
+**NOTE:** A faster way to access the [**Dash settings**](DanaRS-Insulin-Pump-dash-settings) can be found below in the Dash settings section of this document.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -80,6 +80,8 @@ Please **swipe left** to the **DASH** tab where you will be able to manage all p
 ![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Refresh Pod connectivity and status, be able to silence pod alarms when the pod beeps
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Management (Activate, Deactivate, Play test beep, and Pod history)
+
+(OmnipodDASH-activate-pod)=
 
 ### Activate Pod
 
@@ -127,12 +129,14 @@ Ensure that the new pod and the phone running AAPS are within close proximity of
 
     Click on the back button on your phone to return to the **DASH** tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
 
-    For more details on the information displayed go to the [**DASH Tab**](#dash-tab) section of this document.
+    For more details on the information displayed go to the [**DASH Tab**](OmnipodDASH-dash-tab) section of this document.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 It is good practice to export settings AFTER activating the pod. Do this at each pod change and once a month, copy the exported file to your internet drive. see [**Export settings Doc**](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
+
+(OmnipodDASH-deactivate-pod)=
 
 ### Deactivate Pod
 
@@ -160,9 +164,11 @@ To deactivate a pod (either from expiration or from a pod failure):
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
+(OmnipodDASH-resuming-insulin-delivery)=
+
 ### Resuming Insulin Delivery
 
-**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](#delivery-suspended) in the troubleshooting section for more details.
+**Note**: During profile switches, dash must suspend delivery before setting the new basal profile. If communication fails between the two commands, then delivery can be suspended. Read [**Delivery suspended**](OmnipodDASH) in the troubleshooting section for more details.
 
 Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
 
@@ -199,6 +205,8 @@ The process below will show you how to acknowledge and dismiss pod beeps when th
 
 4. Go to the **DASH** tab. Under the **Active Pod alerts** field, the warning message is no longer displayed, and the active pod will no longer issue pod expiration warning beeps.
 
+(OmnipodDASH-view-pod-history)=
+
 ### View Pod History
 
 This section shows you how to review your active pod history and filter by different action categories. The pod history tool allows you to view the actions and results committed to your currently active pod during its three days (72 - 80 hours) life.
@@ -215,6 +223,8 @@ This feature is helpful in verifying boluses, TBRs and basal commands that were 
 
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
+
+(OmnipodDASH-dash-tab)=
 
 ## DASH Tab
 
@@ -249,7 +259,7 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 * **Reservoir:** Displays over 50+U left when more than 50 units are left in the reservoir. Below 50 U, the exact units are displayed.
 * **Total delivered:** Displays the total number of units of insulin delivered from the reservoir. This includes insulin used for activating and priming.
-* **Errors:** Displays the last error encountered. Review the [Pod history](#view-pod-history) and log files for past errors and more detailed information.
+* **Errors:** Displays the last error encountered. Review the [Pod history](OmnipodDASH-view-pod-history) and log files for past errors and more detailed information.
 *  **Active pod alerts:** Reserved for currently running alerts on the active pod.
 
 ### Buttons
@@ -273,10 +283,12 @@ Below is an explanation of the layout and meaning of the icons and status fields
 
 Below is the meaning of the icons on the **Pod Management** menu accessed by pressing **POD MGMT (0)** button from the **DASH** tab. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Activate Pod**](#activate-pod) : Primes and activates a new pod.
-* 2 - [**Deactivate Pod**](#deactivate-pod) : Deactivates the currently active pod.
+* 1 - [**Activate Pod**](OmnipodDASH-activate-pod) : Primes and activates a new pod.
+* 2 - [**Deactivate Pod**](OmnipodDASH-deactivate-pod) : Deactivates the currently active pod.
 * 3 - **Play Test Beep** : Plays a single test beep on the pod when pressed.
-* 4 - [**Pod history**](#view-pod-history) : Displays the active pod activity history.
+* 4 - [**Pod history**](OmnipodDASH-view-pod-history) : Displays the active pod activity history.
+
+(DanaRS-Insulin-Pump-dash-settings)=
 
 ## Dash Settings
 
@@ -325,10 +337,6 @@ Provides AAPS notifications and audible phone alerts when it is uncertain if TBR
 * **Sound for uncertain bolus notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
 * **Sound when delivery suspended notifications enabled:** Enable or disable this setting to trigger an audible alert and visual notification when suspend delivery was successfully delivered.
 
-### Другое
-
-* **\*DST/Time zone detect on enabled:** allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
-
 ## Actions (ACT) Tab
 
 This tab is well documented in the main AAPS documentation but there are a few items on this tab that are specific to how the Omnipod Dash pod differs from tube based pumps, especially after the processes of applying a new pod.
@@ -352,7 +360,9 @@ Additional note:
   * **SMS** - Returns value or 50+U for SMS responses
   * **Nightscout** - Uploads value of 50 when over 50 units to Nightscout (version 14.07 and older).  Newer versions will report a value of 50+ when over 50 units.
 
-## Устранение неполадок
+## Troubleshooting
+
+(OmnipodDASH-delivery-suspended)=
 
 ### Delivery suspended
 
@@ -362,7 +372,7 @@ Additional note:
      - There might be notification that one of the commands is unconfirmed: this depends on when the failure happened.
      - AAPS will try to set the new basal profile every 15 minutes.
      - AAPS will show a notification informing that the delivery is suspended every 15min, if the delivery is still suspended (resume delivery failed).
-     - The [**Resume delivery**](#resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
+     - The [**Resume delivery**](OmnipodDASH-resuming-insulin-delivery) button will be active if the user chooses to resume delivery manually.
      - If AAPS fail to resume delivery on its own (this happens if the Pod is unreachable, sound is muted, etc), the pod will start beeping 4 time every minute for 3 minutes, then repeated every 15 minutes if delivery is still suspended for more than 20minutes.
   * For unconfirmed commands, "refresh pod status" should confirm/deny them.
 

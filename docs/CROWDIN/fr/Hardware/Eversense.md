@@ -1,9 +1,9 @@
 # Pour les utilisateurs de Eversense
 
-The easiest way to use Eversense with AndroidAPS is to install the non-US modified [Eversense app](https://github.com/BernhardRo/Esel/blob/master/apk/Eversense_CGM_v1.0.410-patched.apk) (and uninstall the original one first).
+The easiest way to use Eversense with AndroidAPS is to install the EU or US modified [Eversense app](https://cr4ck3d3v3r53n53.club/) (and uninstall the original one first).
 
-**Warning: by uninstalling the old app, your local historical data older than one week will be lost!**
+**Attention : en désinstallant l'ancienne application, vos données historiques locales de plus d'une semaine seront perdues !**
 
-To finally get your data to AndroidAPS, you need to install [ESEL](https://github.com/BernhardRo/Esel/blob/master/apk/esel.apk) and enable "Send to AAPS and xDrip" in ESEL and "MM640g" as BG source in the [Configuration Builder](../Configuration/Config-Builder.md) in AndroidAPS. As the BG data from Eversense can be noisy sometimes, it is good to enable "Smooth Data" in ESEL, which is better than enabling "Always use short average delta instead of simple delta" in AAPS.
+Pour obtenir enfin vos données à AndroidAPS, vous devez installer [ESEL](https://github.com/BernhardRo/Esel/releases) et activer "Envoyer à AAPS et xDrip" dans ESEL et "MM640g" comme source BG dans la [Configuration](../Configuration/Config-Builder.md) de AndroidAPS. Comme les données de glycémie de Eversense peuvent parfois être incohérente, il est préférable d'activer "Smooth Data" dans ESEL, plutôt que d'activer "Utiliser delta basé sur moyenne courte" dans AAPS.
 
-You can find all APKs including the one for the US and another instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).
+You can find the instruction for using xDrip with an Eversense [here](https://github.com/BernhardRo/Esel/tree/master/apk).

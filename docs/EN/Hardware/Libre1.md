@@ -33,11 +33,11 @@ details.
     Locally and select ON.
 -   In xDrip+ go to Settings > Interapp Compatibility > Accept
     Treatments and select OFF.
--   If you want to be able to use AndroidAPS to calibrate then in xDrip+
+-   If you want to be able to use AAPS to calibrate then in xDrip+
     go to Settings > Interapp Compatibility > Accept Calibrations and
     select ON. You may also want to review the options in Settings >
     Less Common Settings > Advanced Calibration Settings.
--   Select xDrip+ in ConfigBuilder (setting in AndroidAPS).
+-   Select xDrip+ in ConfigBuilder (setting in AAPS).
 -   For settings in xDrip+ with screenshots see [xDrip+ settings
     page](../Configuration/xdrip.md). There is a part for basic xDrip+
     settings and for Freestyle Libre xDrip+ settings.
@@ -51,4 +51,4 @@ details.
     supported.
 -   If not already set up then download Glimp and follow instructions on
     [Nightscout](https://nightscout.github.io/uploader/setup/#glimp).
--   Select Glimp in ConfigBuilder (setting in AndroidAPS).
+-   Select Glimp in ConfigBuilder (setting in AAPS).

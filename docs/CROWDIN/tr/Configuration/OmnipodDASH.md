@@ -26,7 +26,7 @@ Bu talimatlar **Omnipod DASH** nesil pompayı yapılandırmak içindir **(Omnipo
    -  Tüm telefon donanımları ve Android sürümlerinin çalışması garanti edilmez. Lütfen [**DASH Test Edilen telefonları**](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY) kontrol edin veya sadece telefonunuzla deneyin ve sonucu bize bildirin (telefon referansı ve coğrafi bölge, Android sürümü, "çalıştı / bazı zorluklar mevcut / çalışmadı" şeklinde).
    - **Önemli not: Yazılım sürümü 3.XX.X olan pod ile birlikte kullanırken birçok kalıcı, kurtarılamaz bağlantı kaybı vakası olmuştur. Bu eski yazılımlı podları AndroidAPS ile kullanırken özellikle diğer bluetooth cihazları telefonunuza bağlı ise dikkatli olun!**  
      AAPS Omnipod Dash sürücüsünün her komut gönderdiğinde Bluetooth aracılığıyla Dash POD'a bağlandığını ve hemen ardından bağlantısının kesildiğini unutmayın. Bluetooth bağlantıları AAPS çalıştıran telefona bağlı olan kulaklık vb. diğer cihazlar tarafından bozulabilir, (bazı telefon modellerinde ender durumlarda bağlantı sorununa veya etkinleştirme sırasında veya sonrasında pod hatalarına/kaybına neden olabilir) veya etkilenebilir.
-   -  [**APK Derle**](../Installing-AndroidAPS/Building-APK.html#) talimatları kullanılarak **AndroidAPS'nin 3.0 veya daha yeni sürümü derleyin ve yükleyin**.
+   -  [**APK Derle**](../Installing-AndroidAPS/Building-APK.md) talimatları kullanılarak **AndroidAPS'nin 3.0 veya daha yeni sürümü derleyin ve yükleyin**.
 * [**Sürekli Glikoz İzleme (CGM)**](https://androidaps.readthedocs.io/en/latest/Configuration/BG-Source.html)
 
 Bu talimatlar, yeni bir pod oturumu başlattığınızı varsayacaktır; durum böyle değilse, lütfen sabırlı olun ve bir sonraki pod değişikliğinizde bu işleme başlayın.
@@ -63,7 +63,7 @@ Sol üst köşede **hamburger menüsü** seçilip **Konfigürasyon ayarları (1)
 
 **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar. Bu kutuyu işaretlemek, AAPS kullanırken DASH komutlarına erişiminizi kolaylaştıracaktır.
 
-**NOT:** [**Dash ayarlarına**](#dash-settings) erişmenin daha hızlı bir yolunu, aşağıda bu dokümantasyonun Dash ayarları kısmında bulabilirsiniz.
+**NOT:** [**Dash ayarlarına**](DanaRS-Insulin-Pump-dash-settings) erişmenin daha hızlı bir yolunu, aşağıda bu dokümantasyonun Dash ayarları kısmında bulabilirsiniz.
 
 ![Enable_Dash_3](../images/DASH_images/Enable_Dash/Enable_Dash_3.png)
 
@@ -80,6 +80,8 @@ Lütfen **sola kaydırıp** tüm pod işlevlerini yönetebileceğiniz **DASH** s
 ![Refresh_LOGO](../images/DASH_images/Refresh_LOGO.png) Pod bağlantısını ve durumunu yenileyin, pod bip sesleri pod alarmlarında susturabilir.
 
 ![POD_MGMT_LOGO](../images/DASH_images/POD_MGMT_LOGO.png) Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal ve Pod geçmişi)
+
+(OmnipodDASH-activate-pod)=
 
 ### Pod Etkinleştirme
 
@@ -127,12 +129,14 @@ Yeni podun ve AAPS yüklü telefonun birbirine yakın olduğundan emin olun ve *
 
     **DASH** sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
 
-    Görüntülenen bilgilerle ilgili daha fazla ayrıntı için bu dokümantasyonun [**DASH Sekmesi**](#dash-tab) bölümüne gidin.
+    Görüntülenen bilgilerle ilgili daha fazla ayrıntı için bu dokümantasyonun [**DASH Sekmesi**](OmnipodDASH-dash-tab) bölümüne gidin.
 
 ![Activate_Pod_14](../images/DASH_images/Activate_Pod/Activate_Pod_14.png)    ![Activate_Pod_15](../images/DASH_images/Activate_Pod/Activate_Pod_15.jpg)
 
 Podu etkinleştirdikten SONRA ayarları dışa aktarmak akıllıca olacaktır. Bunu her pod değişikliğinde yapın ve ayda bir dışa aktarılan dosyayı internet sürücünüze (cloud) kopyalayın. [**Dışarı aktarma ayarları dokümantasyonuna bakabilirsiniz **](https://androidaps.readthedocs.io/en/latest/Usage/ExportImportSettings.html?highlight=exporting#export-import-settings).
 
+
+(OmnipodDASH-deactivate-pod)=
 
 ### Pod'u Devre Dışı Bırakma
 
@@ -160,11 +164,13 @@ Bir Podu devre dışı bırakmak (süre sonundan veya bir pod hatasından dolay�
 
 ![Deactivate_Pod_7](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_7.png) ![Deactivate_Pod_8](../images/DASH_images/Deactivate_Pod/Deactivate_Pod_8.jpg)
 
+(OmnipodDASH-resuming-insulin-delivery)=
+
 ### İnsülin İletimini Sürdür
 
-**Not**: Profil geçişleri sırasında dash, yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](#delivery-suspended) konusunu okuyun.
+**Not**: Profil geçişleri sırasında dash, yeni bazal profili ayarlamadan önce iletimi askıya almalıdır. İki komut arasında iletişim başarısız olursa, iletim askıya alınabilir. Daha fazla ayrıntı için sorun giderme bölümündeki [**İletim askıya alındı**](OmnipodDASH) konusunu okuyun.
 
-Aktif şu anda askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra insülin, aktif bazal profilden geçerli zamana dayalı olarak mevcut bazal oranı kullanarak normal iletimi sürdürecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
+İletimi askıya alınmış Pod'unuzun insülin iletimini yeniden başlatma talimatı vermek için bu komutu kullanın. Komut başarıyla işlendikten sonra, aktif bazal profildeki geçerli zamana dayalı mevcut bazal oranı kullanılarak normal insülin iletimi sürdürülecektir. Pod bolus, GBO ve SMB için komutları tekrar kabul edecektir.
 
 1. **DASH** sekmesine gidin ve **Pod durumu (1)** satırında **ASKIYA ALINDI** mesajının görünmesi gerekir, ardından mevcut podun normal insülin iletimini sürdürmesi talimatını vermek için **İLETİME DEVAM ET (2)** butonuna basın. **Pod Durumu (3)** satırında **İleme Devam Et** mesajı görüntülenir.
 
@@ -199,6 +205,8 @@ Aşağıdaki süreç, aktif 72 saatlik (3 gün) pod süresi sona ermeden önce u
 
 4. **DASH** sekmesine gidin. **Etkin Pod Alarmları** satırında, uyarı mesajı artık görüntülenmez ve etkin pod artık sona erme uyarısı bip sesi vermez.
 
+(OmnipodDASH-view-pod-history)=
+
 ### Pod Geçmişini Görüntüle
 
 Bu bölüm, aktif pod geçmişinizi nasıl gözden geçireceğinizi ve farklı eylem kategorilerine göre nasıl filtreleyeceğinizi gösterir. Pod geçmişi aracı, üç günlük (72 - 80 saat) ömrü boyunca şu anda etkin olan pod'unuza yönelik eylemleri ve sonuçları görüntülemenize olanak tanır.
@@ -216,6 +224,8 @@ Bu özellik, pod'a gönderilen bolusların, GBO'larin ve bazal komutların doğr
 
 ![Pod_history_3](../images/DASH_images/Pod_History/Pod_history_3.jpg) ![Pod_history_4](../images/DASH_images/Pod_History/Pod_history_4.jpg)
 
+(OmnipodDASH-dash-tab)=
+
 ## DASH Sekmesi
 
 Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum satırlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
@@ -230,7 +240,7 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 * **Bluetooth Durumu:** Mevcut bağlantı durumunu görüntüler.
 * **Sıra Numarası:** Etkin POD'un sıra numarasını görüntüler.
 * **Firmware Versiyonu:** Etkin bağlantının firmware sürümünü görüntüler.
-* **Pod üzerindeki zaman:** Bölmedeki geçerli saati görüntüler.
+* **Pod üzerindeki zaman:** Pod üzerindeki geçerli saati görüntüler.
 * **Pod Sona Erme:** Pod'un süresinin dolacağı tarih ve saati görüntüler.
 * **Pod durumu:** Pod durumunu görüntüler.
 * **Son bağlantı:** Pod ile son iletişimin zamanını görüntüler.
@@ -249,7 +259,7 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 
 * **Rezervuar:** Rezervuarda 50 üniteden fazla insülin olduğuda 50+Ü'den fazla kalanı gösterir. 50 Ü'nin altında, tam birimler görüntülenir.
 * **Toplam iletilen:** Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. Bu miktar etkinleştirme ve hazırlama için kullanılan insülini de içerir.
-* **Hatalar:** Karşılaşılan son hatayı görüntüler. Geçmiş hatalar ve daha ayrıntılı bilgiler için [Pod geçmişini](#view-pod-history) ve günlük dosyalarını inceleyin.
+* **Hatalar:** Karşılaşılan son hatayı görüntüler. Geçmiş hatalar ve daha ayrıntılı bilgiler için [Pod geçmişini](OmnipodDASH-view-pod-history) ve günlük dosyalarını inceleyin.
 *  **Etkin pod alarmları:** Etkin pod alarmlarını gösteren satırdır.
 
 ### Butonlar
@@ -273,14 +283,16 @@ Aşağıda, ana AAPS arayüzündeki **DASH** sekmesindeki simgelerin ve durum sa
 
 Aşağıda, **DASH** sekmesindeki **POD YNTM (0)** butonuna basılarak erişilen **Pod Yönetimi** menüsündeki butonların anlamları verilmiştir. ![DASH_Tab_2](../images/DASH_images/DASH_Tab/DASH_Tab_2.png) ![DASH_Tab_3](../images/DASH_images/DASH_Tab/DASH_Tab_3.png)
 
-* 1 - [**Pod Etkinleştir**](#activate-pod) : Yeni bir pod'u hazırlar ve etkinleştirir.
-* 2 - [**Pod'u Devre Dışı Bırak**](#deactivate-pod) : Şu anda etkin olan pod'u devre dışı bırakır.
+* 1 - [**Pod Etkinleştir**](OmnipodDASH-activate-pod) : Yeni bir pod'u hazırlar ve etkinleştirir.
+* 2 - [**Pod'u Devre Dışı Bırak**](OmnipodDASH-deactivate-pod) : Şu anda etkin olan pod'u devre dışı bırakır.
 * 3 - **Test Bip Sesi Çal** : Basıldığında pod'dan test bip sesi çalar.
-* 4 - [**Pod geçmişi**](#view-pod-history) : Pod etkinlik geçmişini görüntüler.
+* 4 - [**Pod geçmişi**](OmnipodDASH-view-pod-history) : Pod etkinlik geçmişini görüntüler.
+
+(DanaRS-Insulin-Pump-dash-settings)=
 
 ## Dash Ayarları
 
-Dash sürücüsü ayarları, sol üst köşedeki **hamburger menüsüne** basılıp **Konfigürasyon ayarları (1)**\ ➜\ **Pompa**\ ➜\ **Dash**\ ➜\ **Dişli Çark (3)**, **Dash** başlıklı **radyo düğmesi (2)** seçerek yapılandırılabilir. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
+Dash sürücüsü ayarları, sol üst köşedeki **hamburger menüsüne** basılıp **Konfigürasyon ayarları (1)**\ ➜\ **Pompa**\ ➜\ **Dash**\ ➜\ **Dişli Çark (3)**, **Dash** başlıklı **radyo butonu (2)** seçerek yapılandırılabilir. **Dişli çark (3)**'ın yanındaki **onay kutusu (4)**'nun seçilmesi, Dash menüsünün AAPS arayüzünde **DASH** başlıklı bir sekme olarak görüntülenmesini sağlar.
 
 ![Dash_settings_1](../images/DASH_images/Dash_settings/Dash_settings_1.png) ![Dash_settings_2](../images/DASH_images/Dash_settings/Dash_settings_2.png)
 
@@ -325,10 +337,6 @@ GBO, SMB, bolus veya teslimatı askıya alınan başarılı olayları için AAPS
 * **Belirsiz bolus bildirimleri için sesi etkinleştir:** AAPS'nin bir bolusun başarıyla iletildiğinden emin olmadığı durumlarda sesli uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
 * **İletimin askıya alındığı bildirimi etkinleştirildiğinde sesle uyar:** İletimi askıya alma başarıyla tamamlandığında sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
 
-### Diğer
-
-* **\*DST/Saat dilimi algılamayı etkinleştir:**, telefon DST'nin gözlemlendiği bir alanda kullanılıyorsa, saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
-
 ## Eylemler (EYLEM) Sekmesi
 
 Bu sekme, ana AAPS dokümantasyonunda detaylı bir şekilde anlatılmıştır. Ancak bu sekmede, özellikle yeni bir pod uygulandıktan sonra, Omnipod Dash podunun hortum tabanlı pompalardan farklılıklarına dair birkaç detay verilecektir.
@@ -350,9 +358,11 @@ Görüntülenen insülin seviyesi, Omnipod DASH tarafından bildirilen miktardı
 
 Ek not:
   * **SMS** - SMS yanıtlarında insülin seviyesi 50+Ü veya değer görünür.
-  * **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümlerde 50 üniteden fazla olduğunda 50+ değerini bildirir.
+  * **Nightscout** - Nightscout'a (sürüm 14.07 ve daha eski) 50 üniteden fazla olduğunda 50 değerini yükler.  Daha yeni sürümler, 50 ünite üzerinde olduğunda 50+ değerini bildirir.
 
 ## Sorun giderme
+
+(OmnipodDASH-delivery-suspended)=
 
 ### İletimi askıya alma
 
@@ -362,7 +372,7 @@ Ek not:
      - Komutlardan birinin onaylanmadığına dair bir bildirim olabilir: bu, hatanın ne zaman gerçekleştiğine bağlıdır.
      - AAPS, her 15 dakikada bir yeni bazal profili ayarlamaya çalışacaktır.
      - APPS, iletim hala askıya alınmışsa iletimin her 15 dakikada bir askıya alındığını bildiren bir bildirim gösterecektir. (iletim devam ettirilemedi)
-     - [**İletime devam et**](#resuming-insulin-delivery) butonu etkin olacak ve kullanıcı iletimi manuel olarak sürdürmeyi seçebilecektir.
+     - [**İletime devam et**](OmnipodDASH-resuming-insulin-delivery) butonu etkin olacak ve kullanıcı iletimi manuel olarak sürdürmeyi seçebilecektir.
      - AAPS kendi kendine iletimi sürdüremezse (bu, Pod'a ulaşılamıyorsa, ses kapatılmışsa vb. olabilir), pod 3 dakika için her dakikada bir 4 kez bip sesi çıkarmaya başlar, ardından iletim 20 dakikadan daha uzun süre askıda kalırsa bu her 15 dakikada bir tekrarlanır.
   * Onaylanmamış komutlar için "pod durumunu yenile" komutu, bunları onaylamalı/reddetmelidir.
 
@@ -445,9 +455,9 @@ Omnipod Dash sürücüsü **Giriş sekmesinde** çeşitli uyarılar sunmakla bir
 
 * Etkin pod yok Etkin Pod oturumu algılanmadı. (pod not activated) Bu uyarı, **ERTELE**'ye basılarak geçici olarak kapatılabilir, ancak yeni bir pod etkinleştirilmedikçe tetiklenmeye devam edecektir. Pod etkinleştirildiğinde bu uyarı otomatik olarak kapatılır.
 * Pod askıya alındı Pod'un askıya alındığına dair bilgi uyarısı.
-* Bazal profil ayarlanamadı : İletim askıya alınabilir! Lütfen Dash sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse iletimi devam ettirin.. Pod bazal profili ayarının başarısız olduğuna ve Dash sekmesinde *Yenile*'ye basmanız gerektiğine dair bilgi uyarısı.
+* Bazal profil ayarlanamadı : İletim askıya alınabilir! Lütfen Omnipod sekmesindeki Pod durumunu manuel olarak güncelleyin ve gerekirse teslimi devam ettirin.. Pod bazal profili ayarının başarısız olduğuna ve Dash sekmesinde *Yenile*'ye basmanız gerektiğine dair bilgi uyarısı.
 * SMB bolusunun başarılı olup olmadığı doğrulanamıyor. Bolus'un başarılı olmadığından eminseniz, SMB girişini Tedaviler'den manuel olarak kaldırmalısınız. SMB bolus komutunun başarısının doğrulanamadığına dair uyarı, SMB bolusunun başarılı olup olmadığını görmek için DASH sekmesindeki *Son bolus* alanını doğrulamanız ve iletilmedi ise tedaviler sekmesinden girişi kaldırmanız gerekir.
-* "Bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
+* "Görev bolus/GBO/SMB"nin tamamlanıp tamamlanmadığı belirsizse, lütfen başarılı olup olmadığını manuel olarak doğrulayın.
 
 ## Omnipod DASH sürücüsü için nereden yardım alınabilir?
 

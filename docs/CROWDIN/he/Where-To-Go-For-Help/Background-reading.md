@@ -1,8 +1,8 @@
-# Useful resources to read before you start
+# חומרים שימושיים לקריאה לפני שמתחילים
 
 Before you build your rig, you're going to have to do a lot of reading in order to understand how everything works and to get the best out of it. We've put together a list of places you can go to get you started and hopefully answer a lot of your questions.
 
-## Further reading
+## קריאה נוספת
 
 [OpenAPS.org #wearenotwaiting - https://openaps.org/](https://openaps.org/)
 

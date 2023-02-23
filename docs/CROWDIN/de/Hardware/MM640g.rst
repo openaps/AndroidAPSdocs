@@ -1,6 +1,0 @@
-Für Minimed 640G / 630G Nutzer
-**************************************************
-
-* Lade `600SeriesAndroidUploaer <https://pazaan.github.io/600SeriesAndroidUploader/>`_ herunter und folge den Anleitungen auf `Nightscout <http://www.nightscout.info/wiki/welcome/nightscout-and-medtronic-640g>`_.
-* Im 600 Series Uploader gehe zu Settings > Send to xdrip+ und wähle ON (ankreuzen).
-* Wähle MM640g im Konfigurations-Generator (Einstellung in AndroidAPS).

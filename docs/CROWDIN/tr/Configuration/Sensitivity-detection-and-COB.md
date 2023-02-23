@@ -1,3 +1,5 @@
+(Sensitivity-detection-and-COB-sensitivity-detection)=
+
 # Duyarlılık algılama
 
 ## Duyarlılık algoritması

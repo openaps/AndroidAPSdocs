@@ -1,16 +1,16 @@
 # Paramètres xDrip+
 
-(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
+(Pour plus d'informations concernant xDrip+, veuillez vous référer à https://xdrip.readthedocs.io/en/latest/)
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+S'il n'est pas déjà configuré, téléchargez [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Cette documentation est pour xDrip+ pour Android.** Il y a une application "xDrip pour iOS" qui n'a rien à voir avec l'original xDrip+ pour Android.
 
-Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
-Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J utilisez l'une des [dernières "Nightly build"](https://github.com/NightscoutFoundation/xDrip/releases).
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Si votre téléphone tourne Android 10 et que vous avez des difficultés avec la version master de xDrip+ essayez la[ build 2019/12/31 ou plus récente ](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Paramètres de base pour tous les systèmes MGC & MGF
 
@@ -42,10 +42,12 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Paramètres de base 3](../images/xDrip_Basic3.png)
 
+(xdrip-identify-receiver)=
+
 ### Identifier le récepteur
 
-* Si vous avez des problèmes de diffusion locale (AAPS ne recevant pas les valeurs Gly de xDrip +) allez dans Paramètres > Inter-app settings > Identify receiver et entrez `info.nightscout.androidaps`.
-* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **ne devez utiliser que des minuscules** pour taper `info.nightscout.androidaps`. Un I majuscule empêcherait AAPS de recevoir les valeurs de Gly de xDrip+.
+* Si vous rencontrez des problèmes avec la diffusion locale (AAPS ne recevant pas les valeurs de glycémie de xDrip+) allez dans Réglages > Réglages Inter-app > Identifier le récepteur et entrez `info.nightscout.androidaps` pour AndroidAPS (si vous utilisez la version PumpControl , veuillez entrer `info.nightscout.aapspumpcontrol` à la place!!).
+* Attention: La correction automatique a parfois tendance à changer la lettre i en majuscules. Vous **devez utiliser uniquement des lettres minuscules** en tapant `info.nightscout.androidaps` (ou `info.nightscout.aapspumpcontrol` pour PumpControl). Un I majuscule empêcherait l'apoplication de recevoir les valeurs de Gly de xDrip+.
    
    ![xDrip+ Paramètres interapp basiques Identifier le récepteur](../images/xDrip_InterApp_NS.png)
 
@@ -53,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * L'émetteur Dexcom G6 peut être connecté simultanément au récepteur Dexcom (ou alternativement à la pompe t:slim) et à une application sur votre téléphone.
 * Lorsque vous utilisez xDrip+ comme récepteur, désinstallez d'abord l'application Dexcom. **Vous ne pouvez pas connecter xDrip + et l'application Dexcom avec l'émetteur en même temps !**
-* Si vous avez besoin de Clarity et que vous voulez profiter des alarmes xDrip+, utilisez [BYODA](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom) avec la diffusion locale vers xDrip+.
+* Si vous avez besoin de Clarity et que vous voulez profiter des alarmes xDrip+, utilisez [BYODA](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) avec la diffusion locale vers xDrip+.
 
 ### Version de XDrip+ en fonction du numéro de série de l'émetteur G6.
 
@@ -78,11 +80,11 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 ### Redémarrages préventifs non recommandés
 
-**With Dexcom transmitters who's serial no. is starting with 8G, 8H or 8J preemptive restarts do not work and might kill the sensor completely!**
+**Pour les émetteurs Dexcom dont le numéro de série commence par 8G, 8H ou 8J le redémarrage préventif ne fonctionnent pas et pourrait tuer complètement le capteur !**
 
-The automatic extension of Dexcom sensors (`preemptive restarts`) is not recommended as this might lead to “jumps” in BG values on day 9 after restart.
+L'extension automatique des détecteurs Dexcom (`redémarrage préventif`) n'est pas recommandée car cela peut entraîner des "sauts" dans les valeurs Gly le 9ème jour après le redémarrage.
 
-![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
+![Saut xDrip+ après un redémarrage préventif](../images/xDrip_Dexcom_PreemptiveJump.png)
 
 Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus complexe qu’on pourrait le penser au premier abord. Pour l'utiliser en toute sécurité, il y a quelques points à prendre en compte :
 
@@ -92,11 +94,13 @@ Ce qui est clair, c’est que l’utilisation du G6 est peut-être un peu plus c
 * La pré-installation du G6 avec un étalonnage d'usine peut entraîner des variations dans les résultats. Si vous faites une pré-installation, alors pour obtenir les meilleurs résultats, vous devrez probablement calibrer le capteur.
 * Si vous n'êtes pas attentif aux changements qui peuvent avoir lieu, il peut être préférable de revenir dans un mode "non calibré en usine" et d'utiliser le système comme un G5.
 
-To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
+Pour en savoir plus sur les détails et les raisons de ces recommandations, consultez [l'article complet](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) publié par Tim Street sur [www.diabettech.com](https://www.diabettech.com).
+
+(xdrip-connect-g6-transmitter-for-the-first-time)=
 
 ### Connecter l'émetteur G6 pour la première fois
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**Pour le deuxième transmetteur et les suivants, voir [Étendre la durée de vie de l'émetteur](xdrip-extend-transmitter-life) ci-dessous.**
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -127,7 +131,7 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    
    -> En bas de l'écran, `Warm Up x,x hours left` doit être affiché après quelques minutes.
 
--> If your transmitter serial no. does not start with 8G, 8H or 8J and there is no time specification after a few minutes stop and restart the sensor.
+-> Si le numéro de série de l'émetteur ne commence pas par 8G, 8H ou 8J et qu'il n'y a pas de temps renseigné après plusieurs minutes, arrêtez et redémarrez le capteur.
 
 * Redémarrer le transmetteur (état du système - si pas de remplacement du capteur)
 * Ne rallumez pas le récepteur Dexcom d'origine (si utilisé) avant que xDrip+ affiche les premières lectures.
@@ -141,6 +145,8 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    
    ![xDrip+ Transmetteur Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(xdrip-transmitter-battery-status)=
+
 ### Etat de la batterie de l'émetteur
 
 * L'état de la batterie peut être contrôlé dans l'état du système (menu Hamburger en haut à gauche sur l'écran d'accueil)
@@ -151,11 +157,13 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
    * Affichage 1 : Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Affichage 2 : Transmitter days: 249 / Voltage A: 275 (at time of failure)
 
+(xdrip-extend-transmitter-life)=
+
 ### Étendre la durée de vie de l'émetteur
 
-* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série commence par 81 avec le firmware 1.6.5.**27** (voir Etat du système - Statut G5/G6 dans la [copie d'écran](../Configuration/xdrip#etat-de-la-batterie-de-l-emetteur) ci-dessus).
+* Pour l'instant la durée de vie des émetteurs dont le numéro de série commence par 8G, 8H ou 8J ne peut pas être étendue. Même chose pour les émetteurs dont le numéro de série commence par 81 avec le firmware 1.6.5.**27** (voir Etat du système - Statut G5/G6 dans la [copie d'écran](xdrip-transmitter-battery-status) ci-dessus).
 * Pour éviter les difficultés de démarrage de capteurs il est fortement recommandé d'étendre la durée de vie de l'émetteur avant le jour 100 de la première utilisation.
-* L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le ["mode ingénierie"](../Usage/Enabling-Engineering-Mode-in-xDrip) est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
+* L'utilisation d'émetteurs dont le numéro de série commence par 81 et avec un firmware 1.6.5.**27** est possible au delà de 100 jour uniquement si le ["mode ingénierie"](nabling-Engineering-Mode-in-xDrip) est activé et le 'mode natif' est désactivé (menu hamburger -> paramètres -> G5/G6 debug settings -> native algorithm) car un reset hard de l'émetteur n'est PAS possible.
 * La session en cours du capteur sera stoppée lors de l'extension de la durée de vie de l'émetteur. Donc étendre la durée de vie avant un changement de capteur, ou soyez conscient qu'il y aura une nouvelle phase de démarrage du capteur d'une durée de 2h.
 * Arrêtez le capteur manuellement via le menu hamburger.
 * Basculez dans le mode `engineering` : 
@@ -175,11 +183,13 @@ Si le numéro de série de votre émetteur Dexcom G6 commence par 6G, 8H ou 8J, 
 
 * Le nombre de jours du transmetteur doit être à 0 après l'extension réussie de l'émetteur et le démarrage du capteur.
 
+(xdrip-replace-transmitter)=
+
 ### Remplacement du transmetteur
 
 Pour les émetteurs G6 fabriqués après l’automne/fin 2018 (c.a.d. N° de série commençant par 80 ou 81) vous pouvez utiliser la version [master](https://jamorham.github.io/#xdrip-plus).
 
-Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 8Juse one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Si le numéro de série de votre émetteur Dexcom G6 commence par 8G, 8H ou 8J, utilisez une des dernière [pre-release](https://github.com/NightscoutFoundation/xDrip/releases) de xDrip+.
 
 * Désactivez le récepteur Dexcom d'origine (s'il est utilisé).
 * Arrêtez le capteur (uniquement en cas de remplacement)
@@ -275,13 +285,15 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
    * Si vous utilisez l'algorithme xDrip+, vous pouvez définir une heure d'insertion antérieure de 2 heures pour éviter le temps de démarrage. Les glycémies peuvent être très irrégulière. Par conséquent, ce n'est pas recommandé.
 * Entrez le code du capteur (sur la protection du capteur) 
    * Conserver le code pour un usage ultérieur (par ex. pour redémarrer le transmetteur s'il a dû être retiré)
-   * Le Code peut également être trouvé dans [les journaux xDrip+](../Configuration/xdrip#recuperez-le-code-du-capteur) : Cliquez sur les 3 points du menu sur xDrip+ sur l'écran d'accueil et choisissez `Afficher le journal d'événements`.
+   * Le Code peut également être trouvé dans [les journaux xDrip+](xdrip-retrieve-sensor-code) : Cliquez sur les 3 points du menu sur xDrip+ sur l'écran d'accueil et choisissez `Afficher le journal d'événements`.
 * Aucune calibration n'est nécessaire si vous utilisez le G6 en "mode natif". xDrip+ affichera automatiquement les glycémies après les 2 heures de démarrage.
 * Ne rallumez pas le récepteur Dexcom d'origine (s'il est utilisé) avant que xDrip+ n'affiche les premières lectures.
    
    ![xDrip+ Démarrage Capteur Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
    ![xDrip+ Démarrage Capteur Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
+
+(xdrip-retrieve-sensor-code)=
 
 ### Récupérez le code du capteur
 
@@ -297,6 +309,8 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
    
    ![xDrip+ Récupérer Code Capteur Dexcom](../images/xDrip_Dexcom_SensorCode.png)
 
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
+
 ## Dépannage Dexcom G5/G6 et xDrip+
 
 ### Problème de connexion du transmetteur
@@ -310,7 +324,7 @@ Si le numéro de série de votre émetteur Dexcom G6 is starting with 8G, 8H or 
 
 ### Problème lors du démarrage du nouveau capteur
 
-Please note that the following method might likely not work if your Dexcom G6 transmitter's serial no. is starting with 8G, 8H or 8J.
+Veuillez noter que la méthode suivante risque de ne pas fonctionner si le numéro de série de votre transmetteur Dexcom G6 commence par 8G, 8H ou 8J.
 
 * Le capteur natif est indiqué comme "FAILED: Sensor Failed Start"
 * Arrêter le capteur
@@ -320,7 +334,7 @@ Please note that the following method might likely not work if your Dexcom G6 tr
 * Arrêter le capteur
 * Démarrez le capteur avec le code "réel" (imprimé sur la protection adhésive)
 
-Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on). Only in the xDrip+ logs you can detect at an early stage whether xdrip+ has stopped a sensor. Latest status is not always shown correctly on bottom of startscreen.
+Vérifiez dans les journaux xDrip+ si xDrip+ commence à compter "Durée : 1 minute" (et ainsi de suite). Ce n'est que dans les journaux xDrip+ que vous pouvez détecter à un stade précoce si xdrip+ a arrêté un capteur. Le dernier état n'est pas toujours affiché correctement en bas de l'écran de démarrage.
 
 ## xDrip+ & Freestyle Libre
 
@@ -343,12 +357,12 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Niveau de batterie du transmetteur Freestyle Libre
 
 * Le niveau de batterie de certains transmetteurs comme le MiaoMiao 2 est affiché dans AAPS.
-* Les détails peuvent être trouvés sur la page [Écrans AndroidAPS](../Getting-Started/Screenshots#niveau-du-capteur-batterie).
+* Les détails peuvent être trouvés sur la page [Écrans AAPS](Screenshots-sensor-level-battery).
 
 ### Connectez l'émetteur du Freestyle Libre & démarrez le capteur
 
-![xDrip+ Start Libre Transmitter & Sensor 1](../images/xDrip_Libre_Transmitter01.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 1](../images/xDrip_Libre_Transmitter01.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 2](../images/xDrip_Libre_Transmitter02.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 2](../images/xDrip_Libre_Transmitter02.png)
 
-![xDrip+ Start Libre Transmitter & Sensor 3](../images/xDrip_Libre_Transmitter03.png)
+![xDrip+ Démarrer Transmetteur Libre & Capteur 3](../images/xDrip_Libre_Transmitter03.png)

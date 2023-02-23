@@ -8,6 +8,8 @@
 
 * In DanaRS/i pump "BASAL A" is used by the app. Existing data gets overwritten.
 
+(DanaRS-Insulin-Pump-pairing-pump)=
+
 ## Pairing pump
 
 * On AndroidAPS homescreen click hamburger menu on the top left corner and go to Config Builder.
@@ -41,6 +43,8 @@
 * Set bolus step on pump to 0.05 U/h using Doctors menu (see pump user guide).
 * Activați bolusurile extinse în pompă
 
+(DanaRS-Insulin-Pump-default-password)=
+
 ### Parola implicită
 
 * Pentru DanaRS cu firmware v1 şi v2 parola implicită este 1234.
@@ -49,6 +53,8 @@
     * Open main menu on pump > review > information. 
     * Number 3 is production date. 
     * For v3/i this password is used only for locking menu on pump. It's not used for communication and it's not necessary to enter it in AndroidAPS.
+
+(DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Schimbă parola pe pompă
 
@@ -67,7 +73,7 @@
 
 * Apăsaţi OK pentru a introduce parola veche.
 
-* Introduceţi **parola veche** (Parolă implicită vedeţi [mai sus](#default-password)) şi apăsaţi OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Introduceţi parola veche](../images/DanaRSPW_04_11PWenter.png)
 
@@ -87,6 +93,8 @@
     
     ![DanaRS Exit](../images/DanaRSPW_07_Exit.png)
 
+(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
+
 ## Dana RS specific errors
 
 ### Eroare în timpul administrării insulinei
@@ -97,14 +105,14 @@ In case the connection between AAPS and Dana RS is lost during bolus insulin del
 
 * In most cases this is just a communication issue and the correct amount of insulin is delivered.
 * Check in pump history (either on the pump or through Dana tab > pump history > boluses) if correct bolus is given.
-* Delete error entry in [treatments tab](../Getting-Started/Screenshots#carb-correction) if you wish.
+* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
 * Real amount is read and recorded on next connect. To force this press BT icon on dana tab or just wait for next connect.
 
 ## Special note when switching phone
 
 When switching to a new phone the following steps are necessary:
 
-* [Export settings](../Usage/ExportImportSettings#export-settings) on your old phone
+* [Export settings](ExportImportSettings-export-settings) on your old phone
 * Transfer settings from old to new phone
 
 ### DanaRS v1
@@ -112,13 +120,13 @@ When switching to a new phone the following steps are necessary:
 * **Manually pair** Dana RS with the new phone
 * As pump connection settings are also imported AAPS on your new phone will already "know" the pump and therefore not start a bluetooth scan. Therefore new phone and pump must be paired manually.
 * Install AndroidAPS on the new phone.
-* [Import settings](../Usage/ExportImportSettings#import-settings) on your new phone
+* [Import settings](ExportImportSettings-import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
-* Start pairing procedure like decribed [above](#pairing-pump).
+* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
 * Sometimes it may be necessary to clear pairing information in AndroidAPS by long-click BT icon on Dana-i/RS tab.
 
 ## Timezone traveling with Dana RS pump
 
-For information on traveling across time zones see section [Timezone traveling with pumps](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).

@@ -1,16 +1,16 @@
 # xDrip+ nastavení
 
-(For additional information regarding xDrip+, please refer to https://xdrip.readthedocs.io/en/latest/)
+(Další informace týkající se xDrip+ se podívejte se na https://xdrip.readthedocs.io/en/latest/)
 
-If not already set up then download [xDrip+](https://jamorham.github.io/#xdrip-plus).
+Pokud ho ještě nemáte nastaven, stáhněte si [xDrip+](https://jamorham.github.io/#xdrip-plus).
 
-**This documentation is for xDrip+ for Android only.** There is an app "xDrip for iOS" that has nothing to do with the original xDrip+ for Android.
+**Teto dokumentace je určena výhradně pro aplikaci xDrip+ pro Android.** Existuje aplikace „xDrip for iOS“, která však s původní aplikací xDrip+ pro Android nemá nic společného.
 
-S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla starting with 80 or 81) you can use the [master](https://jamorham.github.io/#xdrip-plus) version.
+S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla znaky 80 nebo 81) můžete použít verzi [master](https://jamorham.github.io/#xdrip-plus).
 
-Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G..., 8H... or 8J... use one of the [latest nightly builds](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H nebo 8J... použijte jednu z [nejnovějších nightly builds](https://github.com/NightscoutFoundation/xDrip/releases) verzí.
 
-If your phone runs Android 10 and you have difficulties with xDrip+ master try [nightly build 2019/12/31 or later](https://github.com/NightscoutFoundation/xDrip/releases).
+Pokud váš telefon používá systém Android 10 a máte potíže s aplikací xDrip+ ve verzi master, vyzkoušejte verzi [nightly build 2019/12/31 nebo novější](https://github.com/NightscoutFoundation/xDrip/releases).
 
 ## Základní nastavení pro všechny CGM & FGM systémy
 
@@ -42,10 +42,12 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
    
    ![xDrip+ Základní nastavení 3](../images/xDrip_Basic3.png)
 
+(xdrip-identify-receiver)=
+
 ### Identify receiver
 
-* Jestliže se setkáte s problémy s místním odesíláním (AAPS nepřijímá hodnoty glykémie z xDripu+), přejděte do Nastavení > Komunikace mezi aplikacemi > Identify receiver a zadejte `info.nightscout.androidaps`.
-* Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. Text `info.nightscout.androidaps` **musí být napsaný pouze malými písmeny**. Velká písmena způsobí, že z xDripu+ nebudou přijímané hodnoty glykémie.
+* If you discover problems with local broadcast (AAPS not receiving BG values from xDrip+) go to Settings > Inter-app settings > Identify receiver and enter `info.nightscout.androidaps` for AndroidAPS build (if you are using PumpControl build, please enter `info.nightscout.aapspumpcontrol` instead!!).
+* Pozor: automatické opravy textu v androidu mají tendenci měnit velikost prvního písmene. You **must use only lowercase letters** when typing `info.nightscout.androidaps` (or `info.nightscout.aapspumpcontrol` for PumpControl). Capital I would prevent the App from receiving BG values from xDrip+.
    
    ![xDrip+ Základní nastavení komunikace mezi aplikacemi Identify receiver](../images/xDrip_InterApp_NS.png)
 
@@ -53,7 +55,7 @@ If your phone runs Android 10 and you have difficulties with xDrip+ master try [
 
 * Vysílač Dexcom G6 může být připojen současně k přijímači Dexcom (nebo pumpě t:slim) a zároveň k vašemu telefonu.
 * Pokud používáte xDrip+ jako přijímač, nejprve odinstalujte aplikaci Dexcom. **K vysílači se nelze připojit prostřednictvím obou aplikací xDrip+ a Dexcom současně!**
-* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
+* If you need Clarity and want to profit from xDrip+ alarms use the [Build Your Own Dexcom App](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) with local broadcast to xDrip+.
 
 ### Verze xDripu+ závisí na výrobním čísle vysílače G6.
 
@@ -84,7 +86,7 @@ The automatic extension of Dexcom sensors (`preemptive restarts`) is not recomme
 
 ![xDrip+ Jump after Preemptive Restart](../images/xDrip_Dexcom_PreemptiveJump.png)
 
-Použití G6 může být o něco složitější, než se na první pohled zdá. Abyste ho mohli používat bezpečně, je třeba vědět o několika skutečnostech:
+What’s clear is that using the G6 is perhaps a little more complex than it as first suggests. To use it safely, there are a few points to be aware of:
 
 * Pokud používáte nativní data s kalibračním algoritmem aplikace xDrip+ nebo Spike, nejbezpečnější postup je zakázat preemptivní restartování senzoru.
 * Pokud musíte preemptivní restarty používat, pak se ujistěte, že senzor zavádíte v takovou denní dobu, kdy můžete sledovat změny a v případě potřeby provést kalibraci. 
@@ -94,9 +96,11 @@ Použití G6 může být o něco složitější, než se na první pohled zdá. 
 
 To learn more about the details and reasons for these recommendations read the [complete article](https://www.diabettech.com/artificial-pancreas/diy-looping-and-cgm/) published by Tim Street at [www.diabettech.com](https://www.diabettech.com).
 
+(xdrip-connect-g6-transmitter-for-the-first-time)=
+
 ### První připojení vysílače G6
 
-**For second and following transmitters see [Extend transmitter life](#extend-transmitter-life) below.**
+**For second and following transmitters see [Extend transmitter life](xdrip-extend-transmitter-life) below.**
 
 S vysílači pro G6 vyrobenými na podzim 2018 (např. výrobní čísla začínající znaky 80 nebo 81) můžete použít verzi [master](https://jamorham.github.io/#xdrip-plus).
 
@@ -141,6 +145,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    
    ![xDrip+ Vysílač Dexcom 4](../images/xDrip_Dexcom_Transmitter04.png)
 
+(xdrip-transmitter-battery-status)=
+
 ### Stav baterie vysílače
 
 * Stav baterie je zobrazen v system status (Hamburger menu levý horní roh domácí obrazovky)
@@ -151,11 +157,13 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    * První případ: Transmitter days: 151 / Voltage A: 297 / Voltage B: 260 / Resistance: 2391
    * Druhý případ: Transmitter days: 249 / Voltage A: 275 (v okamžiku selhání)
 
+(xdrip-extend-transmitter-life)=
+
 ### Prodloužení životnosti vysílače
 
-* Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem začíná číslem 81 a firmwarem 1.6.5. ** 27 ** (viz xDrip+ Stav systému - G5/G6, [viz screenshot výše](../Configuration/xdrip#transmitter-battery-status)).
+* Prozatím nelze prodloužit životnost vysílačů, jejichž seriové číslo začíná znaky 8G, 8H nebo 8J. To samé platí pro vysílače se sériovým číslem starting with 81 and firmware 1.6.5.**27** (see xDrip+ System Status - G5/G6 status as shown in [screenshot above](xdrip-transmitter-battery-status)).
 * V zájmu prevence potíží se spouštěním senzorů je důrazně doporučeno prodlužovat životnost vysílače před 100 dny prvního použití.
-* Používání vysílačů se sériovým číslem začínajícím na 81 a firmwarem 1.6.5.**27** po 100 dnech je možné pouze při zaputém [engineering mode](../Usage/Enabling-Engineering-Mode-in-xDrip) a deaktivovaném 'nativním režimu' (hamburger menu -> Nastavení -> Nastavení ladění pro G5/G6 -> Native Algorithm), protože NELZE provést hard reset vysílače.
+* Používání vysílačů se sériovým číslem starting with 81 and firmware 1.6.5.**27** beyond day 100 is only possible if [engineering mode](nabling-Engineering-Mode-in-xDrip) is turned on and 'native mode' is deactivated (hamburger menu -> settings -> G5/G6 debug settings -> native algorithm) because a transmitter hard reset is NOT possible.
 * Během prodlužování životnosti vysílače bude přerušena aktuální relace senzoru. Mějte to na paměti a naplánujte prodloužení životnosti vysílače současně s výměnou senzoru. Nebo se připravte na 2h zahřívání senzoru.
 * Zastavte senzor ručně nebo prostřednictvím hamburger menu.
 * Přepněte do `engineering mode`: 
@@ -174,6 +182,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 začíná znaky 8G nebo 8H 
    ![xDrip+ Hard Reset možná selhal](../images/xDrip_HardResetMaybeFailed.png)
 
 * Po úspěšném prodloužení vysílače a startu senzoru by se měla hodnota Transmitter days resetovat na 0.
+
+(xdrip-replace-transmitter)=
 
 ### Výměna vysílače
 
@@ -275,13 +285,15 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
    * Používáte-li algoritmus xDrip+ , můžete nastavit dobu před 2 hodinami a tak se vyhnout zahřívání senzoru. Získaná data ale mohou být velmi nepředvídatelná. Proto se to nedoporučuje.
 * Vložte kód senzoru (je na odlepovací fólii obalu senzoru) 
    * Kód senzoru si ponechejte pro pozdější použití (např. nový start senzoru po výměně vysílače)
-   * Kód senzoru můžete najít i v [log souborech xDrip+](../Configuration/xdrip#retrieve-sensor-code): klikněte na 3 tečky na hlavní straně a vyberte `Zobrazit logy`.
+   * Code can also be found in [xDrip+ logs](xdrip-retrieve-sensor-code): Click 3-dots-menu on xDrip+ homescreen and choose `View Event Logs`.
 * Pokud používáte G6 v „nativním módu“, není potřeba žádná kalibrace. Po 2 hodinovém zahřívání senzoru začne xDrip+ zobrazovat nové hodnoty.
 * Před prvním načtením dat do xDrip+ nezapínejte originální Dexcom přijímač (pokud ho používáte).
    
    ![xDrip+ Spustit senzor Dexcom 1](../images/xDrip_Dexcom_SensorStart01.png)
    
    ![xDrip+ Spustit senzor Dexcom 2](../images/xDrip_Dexcom_SensorStart02.png)
+
+(xdrip-retrieve-sensor-code)=
 
 ### Získání kódu senzoru
 
@@ -296,6 +308,8 @@ Pokud výrobní číslo vašeho vysílače Dexcom G6 is starting with 8G, 8H or 
 * Vyberte `Zobrazit logy` a hledejte kód senzoru
    
    ![xDrip+ Získat kód senzoru Dexcom](../images/xDrip_Dexcom_SensorCode.png)
+
+(xdrip-troubleshooting-dexcom-g5-g6-and-xdrip)=
 
 ## Odstraňování potíží s Dexcom G5/G6 a xDrip+
 
@@ -343,7 +357,7 @@ Check in xDrip+ logs if xDrip+ starts counting "Duration: 1 minute" (and so on).
 ### Úroveň baterie čtečky Libre
 
 * Úroveň baterie chytrých čteček jako MiaoMiao 2 může být zobrazena v AAPS.
-* Podrobnosti naleznete na [stránce se screenshoty](../Getting-Started/Screenshots#sensor-level-battery).
+* Details can be found on [screenshots page](Screenshots-sensor-level-battery).
 
 ### Připojte vysílač Libre a spusťte senzor
 

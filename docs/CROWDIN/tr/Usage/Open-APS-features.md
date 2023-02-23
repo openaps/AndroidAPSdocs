@@ -1,18 +1,22 @@
-# OpenAPS features
+# OpenAPS özellikleri
 
-## Autosens
+(Open-APS-features-autosens)=
 
-* Autosens is a algorithm which looks at blood glucose deviations (positive/negative/neutral).
-* It will try and figure out how sensitive/resistant you are based on these deviations.
-* The oref implementation in **OpenAPS** runs off a combination of 24 and 8 hours worth of data. It uses either one which is more sensitive.
-* In versions prior to AAPS 2.7 user had to choose between 8 or 24 hours manually.
-* From AAPS 2.7 on Autosens in AAPS will switch between a 24 and 8 hours window for calculating sensitivity. Hangisinin daha hassas olduğunu kendi seçecektir. 
-* If users have come from oref1 they will probably notice the system may be less dynamic to changes, due to the varying of either 24 or 8 hours of sensitivity.
-* Changing a cannula or changing a profile will reset Autosens ratio back to 100% (a percentual profile switch with duration won't reset autosens).
-* Autosens adjusts your basal and ISF (i.e.: mimicking what a Profile shift does).
-* If continuously eating carbs over an extended period, autosens will be less effective during that period as carbs are excluded from BG delta calculations.
+## Otoduyarlılık
 
-## Super Micro Bolus (SMB)
+* Otoduyarlılık, kan şekeri sapmalarına (pozitif/negatif/nötr) bakan bir algoritmadır.
+* Bu sapmalara dayanarak sizin ne kadar hassas/dirençli olduğunuzu anlamaya çalışacaktır.
+* **OpenAPS**'deki oref uygulaması, 24 ve 8 saatlik veri kombinasyonunu çalıştırır. Hangisi hassas ise onu kullanır.
+* AAPS 2.7'den önceki sürümlerde, kullanıcının manuel olarak 8 veya 24 saat arasında seçim yapması gerekiyordu.
+* AAPS 2.7'den itibaren AAPS'deki Autosens, duyarlılığı hesaplamak için 24 ve 8 saatlik bir pencere arasında geçiş yapacaktır. Hangisinin daha hassas olduğunu kendi seçecektir. 
+* Kullanıcılar oref1'den geldiyse, 24 veya 8 saatlik hassasiyetin değişmesi nedeniyle muhtemelen sistemin değişikliklere karşı daha az dinamik olabileceğini fark edeceklerdir.
+* Bir kanül değiştirme veya bir profilin değiştirilmesi, Otoduyarlılık oranını tekrar %100'e sıfırlayacaktır (süreli yüzdelik bir profil değişimi, otomatik algılamayı sıfırlamaz).
+* Otoduyarlılık, bazal ve İDF'nizi ayarlar (yani, bir Profil kaydırmanın yaptığını taklit eder).
+* Uzun bir süre boyunca sürekli olarak karbonhidrat tüketilirse, karbonhidratlar KŞ delta hesaplamalarına dahil edilmediğinden, otoduyarlılık bu süre boyunca daha az etkili olacaktır.
+
+(Open-APS-features-super-micro-bolus-smb)=
+
+## Süper Mikro Bolus (SMB)
 
 SMB, the shortform of 'super micro bolus', is the latest OpenAPS feature (from 2018) within the Oref1 algorithm. In contrast to AMA, SMB does not use temporary basal rates to control glucose levels, but mainly **small super microboluses**. In situations where AMA would add 1.0 IU insulin using a temporary basal rate, SMB delivers several super microboluses in small steps at **5 minute intervals**, e.g. 0.4 IU, 0.3 IU, 0.2 IU and 0.1 IU. At the same time (for safety reasons) the actual basal rate is set to 0 IU/h for a certain period to prevent overdose (**'zero-temping'**). This allows the system adjust the blood glucose faster than with the temporary basal rate increase in AMA.
 
@@ -20,25 +24,27 @@ Thanks to SMB, it can basically be sufficient for low-carb meals to inform the s
 
 The SMB feature contains some safety mechanisms:
 
-1. The largest single SMB dose can only be the smallest value off:
+1. En büyük tek SMB dozu, sadece aşağıdakilerin en küçük değeri olabilir:
     
-    * value corresponding to the current basal rate (as adjusted by autosens) for the duration set in "Max minutes of basal to limit SMB to", e.g. basal quantity for the next 30 minutes, or
-    * half the amount of insulin currently required, or
-    * the remaining portion of your maxIOB value in the settings.
+    * "SMB'yi sınırlamak için maksimum bazal dakika" içinde ayarlanan süre için geçerli bazal oranına (otoduyarlılık tarafından ayarlanan) karşılık gelen değer, örn. sonraki 30 dakika için bazal miktar veya
+    * şu anda gerekli olan insülin miktarının yarısı veya
+    * ayarlarda maxIOB değerinizin kalan kısmı.
 
-2. Probably you will often notice low temporary basal rates (called 'low temps') or temporary basal rates at 0 U/h (called 'zero-temps'). This is by design for security reasons and has no negative effects if the profile is set correctly. The IOB curve is more meaningful than the course of the temporary basal rates.
+2. Muhtemelen genellikle düşük geçici bazal oranları ("düşük geçici" olarak adlandırılır) veya 0 Ü/s'de geçici bazal oranları ("sıfır-geçici bazal " olarak adlandırılır) fark edeceksiniz. Bu güvenlik nedenleriyle tasarım gereğidir ve profil doğru ayarlanmışsa olumsuz bir etkisi yoktur. AİNS eğrisi, geçici bazal oranların seyrinden daha anlamlıdır.
 
-3. Additional calculations to predict the course of glucose, e.g. by UAM (un-announced meals). Even without manual carbohydrate input from the user, UAM can automatically detect a significant increase in glucose levels due to meals, adrenaline or other influences and try to adjust this with SMB. To be on the safe side this also works the other way round and can stop the SMB earlier if an unexpectedly rapid drop in glucose occurs. That's why UAM should always be active at SMB.
+3. Glikozun seyrini tahmin etmek için ek hesaplamalar, örn. UAM tarafından (bildirilmemiş öğünler). Kullanıcıdan manuel karbonhidrat girişi olmasa bile UAM, yemekler, adrenalin veya diğer etkiler nedeniyle glikoz seviyelerinde önemli bir artışı otomatik olarak algılayabilir ve bunu SMB ile ayarlamaya çalışabilir. Güvenilir olması için bu aynı zamanda tam tersi şekilde çalışır ve glikozda beklenmedik bir şekilde hızlı bir düşüş meydana gelirse SMB'yi daha erken durdurabilir. Bu nedenle UAM, SMB'de her zaman aktif olmalıdır.
 
-**You must have started [objective 9](../Usage/Objectives#objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) to use SMB.**
+**SMB'yi kullanmak için [görev 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)'a başlamış olmalısınız.**
 
 See also: [OpenAPS documentation for oref1 SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) and [Tim's info on SMB](https://www.diabettech.com/artificial-pancreas/understanding-smb-and-oref1/).
 
-### Max U/h a temp basal can be set to (OpenAPS “max-basal”)
+(Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal)=
+
+### Maks Ü/s geçici bazal (OpenAPS “maks-bazal”) nasıl ayarlanabilir
 
 This safety setting determines the maximum temporary basal rate the insulin pump may deliver. The value should be the same in the pump and in AAPS and should be at least 3 times the highest single basal rate set.
 
-Örnek kullanım:
+Example:
 
 Your basal profile’s highest basal rate during the day is 1.00 U/h. Then a max-basal value of at least 3 U/h is recommended.
 
@@ -46,68 +52,76 @@ But you cannot choose any value. AAPS limits the value as a 'hard limit' accordi
 
 AndroidAPS limits the value as follows:
 
-* Child: 2
-* Teenager: 5
-* Adult: 10
-* Insulin-resistant adult: 12
-* Pregnant: 25
+* Çocuk: 2
+* Genç: 5
+* Yetişkin: 10
+* İnsüline dirençli yetişkin: 12
+* Hamile: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximum total IOB OpenAPS can’t go over (OpenAPS "max-iob")
+(Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob)=
+
+### OpenAPS Maksimum toplam Aktif insülin'i geçemez (OpenAPS "maks-ains")
 
 This value determines which maxIOB has to be considered by AAPS running in closed loop mode. If the current IOB (e.g. after a meal bolus) is above the defined value, the loop stops dosing insulin until the IOB limit is below the given value.
 
 Using the OpenAPS SMB, max-IOB is calculated differently than in OpenAPS AMA. In AMA, maxIOB was just a safety-parameter for basal IOB, while in SMB-mode, it also includes bolus IOB. A good start is
 
-    maxIOB = average mealbolus + 3x max daily basal
+    maksIAİNS= ortalama öğün yemeği + 3x maksimum günlük bazal olacaktır
     
 
-Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](../Usage/Open-APS-features#max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
+Be careful and patient and only change the settings step by step. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is higher than in [AMA](Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-* Child: 3
-* Teenager: 7
-* Adult: 12
-* Insulin resistant adult: 25
-* Pregnant: 40
+* Çocuk: 3
+* Genç: 7
+* Yetişkin: 12
+* İnsüline dirençli yetişkin: 25
+* Hamile: 40
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](Open-APS-features-overview-of-hard-coded-limits).*
 
 See also [OpenAPS documentation for SMB](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html#understanding-super-micro-bolus-smb).
 
-### Enable AMA Autosens
+### AMA Otoduyarlılığı Etkinleştirme
 
 Here, you can choose if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) 'autosens' or not.
 
-### Enable SMB
+(Open-APS-features-enable-smb)=
+
+### SMB (Super Mikro Bolus) etkinleştir
 
 Here you can enable or completely disable SMB feature.
 
-### Enable SMB with COB
+### SMB'yi AKRB ile etkinleştir
 
 SMB is working when there is COB active.
 
-### Enable SMB with temp targets
+### Geçici hedeflerle SMB'yi etkinleştir
 
 SMB is working when there is a low or high temporary target active (eating soon, activity, hypo, custom)
 
-### Enable SMB with high temp targets
+### Yüksek geçici hedeflerle SMB'yi etkinleştir
 
 SMB is working when there is a high temporary target active (activity, hypo). This option can limit other SMB Settings, i.e. if ‘SMB with temp targets’ is enabled and ‘SMB with high temp targets’ is deactivated, SMB just works with low and not with high temp targets. It is the same for enabled SMB with COB: if 'SMB with high temp target' is deactivated, there is no SMB with high temp target even if COB is active.
 
-### Enable SMB always
+(Open-APS-features-enable-smb-always)=
 
-SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
+### SMB'yi her zaman etkinleştir
+
+SMB is working always (independent of COB, temp targets or boluses). For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5/G6 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, ‘SMB always’ is deactivated until xDrip+ has a better noise smoothing plugin. You can find more [here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Enable SMB after carbs
+### Yemeklerden sonra SMB'yi etkinleştir
 
-SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](../Hardware/DexcomG6#if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
+SMB is working for 6h after carbohydrates , even if COB is at 0. For safety reasons, this option is just possibly for BG sources with a nice filtering system for noisy data. For now, it just works with a Dexcom G5 or G6, if using the ['Build your own Dexcom App'](DexcomG6-if-using-g6-with-build-your-own-dexcom-app) or “native mode” in xDrip+. If a BG value has a too large deviation, the G5 doesn’t send it and waits for the next value in 5 minutes.
 
 For other CGM/FGM like Freestyle Libre, 'Enable SMB after carbs' is deactivated until xDrip+ has a better noise smoothing plugin. You can find [more information here](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md).
 
-### Max minutes of basal to limit SMB to
+(Open-APS-features-max-minutes-of-basal-to-limit-smb-to)=
+
+### SMB'yi sınırlamak için maksimum bazal dakika
 
 This is an important safety setting. This value determines how much SMB can be given based on the amount of basal insulin in a given time, when it is covered by COBs.
 
@@ -117,21 +131,21 @@ It is recommended not to set the value higher than 90 minutes, as this would lea
 
 Default value: 30 min.
 
-### Enable UAM
+### UAM etkinleştir
 
 With this option enabled, the SMB algorithm can recognize unannounced meals. This is helpful, if you forget to tell AndroidAPS about your carbs or estimate your carbs wrong and the amount of entered carbs is wrong or if a meal with lots of fat and protein has a longer duration than expected. Without any carb entry, UAM can recognize fast glucose increasements caused by carbs, adrenaline, etc, and tries to adjust it with SMBs. This also works the opposite way: if there is a fast glucose decreasement, it can stop SMBs earlier.
 
 **Therefore, UAM should always be activated when using SMB.**
 
-### High temp-target raises sensitivity
+### Yüksek geçici hedefler duyarlılığı artırır
 
 If you have this option enabled, the insulin sensitivity will be increased while having a temporary target over 100 mg/dl or 5.6 mmol/l. This means, the ISF will rise while IC and basal will decrease.
 
-### Low temp-target lowers sensitivity
+### Düşük geçici hedefler duyarlılığı azaltır
 
 If you have this option enabled, the insulin sensitivity will be decreased while having a temporary target lower than 100 mg/dl or 5.6 mmol/l. This means, the ISF will decrease while IC and basal will rise.
 
-### Advanced Settings
+### Gelişmiş Ayarlar
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -145,13 +159,17 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 * * *
 
-## Advanced Meal Assist (AMA)
+(Open-APS-features-advanced-meal-assist-ama)=
+
+## Gelişmiş Yemek Yardımı (AMA)
 
 AMA, the short form of "advanced meal assist" is an OpenAPS feature from 2017 (oref0). OpenAPS Advanced Meal Assist (AMA) allows the system to high-temp more quickly after a meal bolus if you enter carbs reliably.
 
 You can find more information in the [OpenAPS documentation](https://newer-docs.readthedocs.io/en/latest/docs/walkthrough/phase-4/advanced-features.html#advanced-meal-assist-or-ama).
 
-### Max U/hr a Temp Basal can be set to (OpenAPS "max-basal")
+(Open-APS-features-max-u-hr-a-temp-basal-can-be-set-to-openaps-max-basal)=
+
+### Maks Ü/s geçici bazal (OpenAPS “maks-bazal”) nasıl ayarlanabilir
 
 This safety setting helps AndroidAPS from ever being capable of giving a dangerously high basal rate and limits the temp basal rate to x U/h. It is advised to set this to something sensible. A good recommendation is to take the highest basal rate in your profile and multiply it by 4 and at least 3. For example, if the highest basal rate in your profile is 1.0 U/h you could multiply that by 4 to get a value of 4 U/h and set the 4 as your safety parameter.
 
@@ -159,37 +177,37 @@ You cannot chose any value: For safety reason, there is a 'hard limit', which de
 
 The hardcoded parameters in AndroidAPS are:
 
-* Child: 2
-* Teenager: 5
-* Adult: 10
-* Insulin resistant adult: 12
-* Pregnant: 25
+* Çocuk: 2
+* Genç: 5
+* Yetişkin: 10
+* İnsüline dirençli yetişkin: 12
+* Hamile: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](Open-APS-features-overview-of-hard-coded-limits).*
 
-### Maximum basal IOB OpenAPS can deliver \[U\] (OpenAPS "max-iob")
+### OpenAPS'in gönderebileceği maksimum bazal AİNS \[U\] (OpenAPS "maks-AİNS")
 
 This parameter limits the maximum of basal IOB where AndroidAPS still works. If the IOB is higher, it stops giving additional basal insulin until the basal IOB is under the limit.
 
 The default value is 2, but you should be rise this parameter slowly to see how much it affects you and which value fits best. It is different for anyone and also depends on the average total daily dose (TDD). For safety reason, there is a limit, which depends on the patient age . The 'hard limit' for maxIOB is lower in AMA than in SMB.
 
-* Child: 3
-* Teenager: 5
-* Adult: 7
-* Insulin resistant adult: 12
-* Pregnant: 25
+* Çocuk: 3
+* Genç: 5
+* Yetişkin: 7
+* İnsüline dirençli yetişkin: 12
+* Hamile: 25
 
-*See also [overview of hard-coded limits](../Usage/Open-APS-features#overview-of-hard-coded-limits).*
+*See also [overview of hard-coded limits](Open-APS-features-overview-of-hard-coded-limits).*
 
-### Enable AMA Autosens
+### AMA Otoduyarlılığı Etkinleştirme
 
 Here, you can chose, if you want to use the [sensitivity detection](../Configuration/Sensitivity-detection-and-COB.md) autosens or not.
 
-### Autosens adjust temp targets too
+### Otoduyarlılık geçici hedefleri de ayarlar
 
 If you have this option enabled, autosens can adjust targets (next to basal and ISF), too. This lets AndroidAPS work more 'aggressive' or not. The actual target might be reached faster with this.
 
-### Advanced Settings
+### Gelişmiş Ayarlar
 
 **Always use short average delta instead of simple data** If you enable this feature, AndroidAPS uses the short average delta/blood glucose from the last 15 minutes, which is usually the average of the last three values. This helps AndroidAPS to work more steady with noisy data sources like xDrip+ and Libre.
 
@@ -205,23 +223,25 @@ Default value: 4 (shouldn’t be changed unless you really need to and know, wha
 
 Default value: 2
 
-## Overview of hard-coded limits
+(Open-APS-features-overview-of-hard-coded-limits)=
+
+## Kodlanmış limitlere genel bakış
 
 <table border="1">
   
 <thead>
   <tr>
     <th width="200"></th>
-    <th width="75">Child</th>
-    <th width="75">Teenager</th>
-    <th width="75">Adult</th>
-    <th width="75">Insulin resistant adult</th>
-    <th width="75">Pregnant</th>
+    <th width="75">Çocuk</th>
+    <th width="75">Genç</th>
+    <th width="75">Yetişkin</th>
+    <th width="75">Yetişkin İnsülin direnci</th>
+    <th width="75">Hamile</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td>MAXBOLUS</td>
+    <td>MAKSBOLUS</td>
     <td>5,0</td>
     <td>10,0</td>
     <td>17,0</td>
@@ -229,7 +249,7 @@ Default value: 2
     <td>60,0</td>
   </tr>
   <tr>
-    <td>MINDIA</td>
+    <td>MİNİES</td>
     <td>5,0</td>
     <td>5,0</td>
     <td>5,0</td>
@@ -237,7 +257,7 @@ Default value: 2
     <td>5,0</td>
   </tr>
   <tr>
-    <td>MAXDIA</td>
+    <td>MAKSİES</td>
     <td>7,0</td>
     <td>7,0</td>
     <td>7,0</td>
@@ -245,7 +265,7 @@ Default value: 2
     <td>10,0</td>
   </tr>
   <tr>
-    <td>MINIC</td>
+    <td>MİNIC</td>
     <td>2,0</td>
     <td>2,0</td>
     <td>2,0</td>
@@ -253,7 +273,7 @@ Default value: 2
     <td>0,3</td>
   </tr>
   <tr>
-    <td>MAXIC</td>
+    <td>MAKSIC</td>
     <td>100,0</td>
     <td>100,0</td>
     <td>100,0</td>
@@ -261,7 +281,7 @@ Default value: 2
     <td>100,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_AMA</td>
+    <td>MAKSAİNS_AMA</td>
     <td>3,0</td>
     <td>5,0</td>
     <td>7,0</td>
@@ -269,7 +289,7 @@ Default value: 2
     <td>25,0</td>
   </tr>
   <tr>
-    <td>MAXIOB_SMB</td>
+    <td>MAKSAİNS_SMB</td>
     <td>7,0</td>
     <td>13,0</td>
     <td>22,0</td>
@@ -277,7 +297,7 @@ Default value: 2
     <td>70,0</td>
   </tr>
   <tr>
-    <td>MAXBASAL</td>
+    <td>MAKSBAZAL</td>
     <td>2,0</td>
     <td>5,0</td>
     <td>10,0</td>

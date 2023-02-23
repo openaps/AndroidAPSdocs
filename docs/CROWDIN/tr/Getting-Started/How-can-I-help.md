@@ -19,6 +19,12 @@ Harika, bu çok takdir edilen bir şey ve ona katkıda bulunmanın iyi bir yolu!
 
 ## Birden çok dil konuşuyorum ve uygulamayı veya belgeleri çevirmek istiyorum
 
+Bir şeyi ilk kez çeviriyorsanız, lütfen uygulamayı çevirerek başlayın, çünkü bu şekilde daha kolay ve daha hızlı sonuç alacaksınız.
+
+Paralelinde veya daha sonra dokümantasyon çevirisine başlayabilirsiniz.
+
+Diğer diller için uygulama ve dokümantasyon çevirilerinin durumunu [buradan](../Administration/stateTranslations.md) kontrol edebilirsiniz.
+
 * **Uygulamayı** başka dillere çevirmek istiyorsanız (teşekkür ederim), lütfen [crowdin](https://crowdin.com/project/androidaps) kullanın.
 * **Dokümantasyonu** başka dillere çevirmek istiyorsanız (teşekkürler), lütfen [crowdin](https://crowdin.com/project/androidapsdocs) kullanın. 
 

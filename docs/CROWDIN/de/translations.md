@@ -1,97 +1,104 @@
-# App oder Dokumentation übersetzen
+# Wie man Zeichenketten für die AndroidAPS-App oder die Dokumentation übersetzt
 
-* Gehe zu <https://crowdin.com/project/androidaps> oder <https://crowdin.com/project/androidapsdocs> und melde Dich mit Deinem Github Konto an.
+* Für die Zeichenketten, die in der App verwendet werden, gehe zu <https://crowdin.com/project/androidaps> und melden Dich mit Deinem GitHub Konto an
+* Für die Dokumentation besuche bitte <https://crowdin.com/project/androidapsdocs> und melde Dich mit Deinem GitHub Account an
 
 * Sende Deinen Beitrittswunsch an das Docs-Team. Klicke dazu auf die Fahne der gewünschten Sprache und dann auf der nächsten Seite rechts oben auf den Button "Join". Gib die gewünschte(n) Sprach(n) an, ein paar Infos zu Dir und Deiner AAPS Erfahrung und auch ob Du als Übersetzter oder Lektor (nur Personen mit Übersetzungs- und längerer AAPS-Erfahrung ) unterstützen möchtest.
 
-* Wenn wir dich freigeschalten haben, klicke auf die entsprechende Landesflagge.![Sprachenübersicht Crowdin](./images/translation_flags2019.png)
+```{admonition} Time for Approval :class: note
 
-## Texte für die AndroidAPS App übersetzen
+Die Genehmigung ist ein manueller Schritt. Als gemeinnützige Organisation stellen wir keine SLAs zur Verfügung, aber im Allgemeinen erfolgt die Genehmigung in < 1 Tag. Falls nicht, kontaktiere bitte das Doc Team über Facebook oder Discord.
 
-* Klicke auf strings.xml
+    <br />* When we approve you, click the flag
+       ![When we approve you, click the flag](./images/translation_flags.png)
     
-    ![Klicke auf strings.xml](./images/translations-click-strings.png)
-
-* Übersetze Sätze auf der linken Seite, indem du übersetzten Text hinzufügst oder verwende & edit suggestion
+    ## Translation of the app
     
-    ![Übersetzen der App](./images/translations-translate.png)
-
-* Lektoren müssen zum Proofreading-Modus wechseln
+    (translations-translate-strings-for-androidaps-app)=
+    ### Translate strings for AndroidAPS app
     
-    ![Lektorenmodus App](./images/translations-proofreading-mode.png)
+    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
     
-    und übersetzte Texte freigeben.
+       ![Click translate all](./images/translations-click-translate-all.png)
     
-    ![Übersetzung freigeben](./images/translations-proofreading.png)
-
-Wenn ein Lektor eine Übersetzung freigibt, wird sie in der nächsten Version von AndroidAPS hinzugefügt. Am Anfang wäre es gut, auch die vorhandenen Übersetzungen, die noch nicht genehmigt sind, durchzuschauen und zu korrigieren oder zu genehmigen, wenn sie korrekt sind.
-
-## Docs-Seiten übersetzen
-
-* Klicke auf den Namen der Docs-Seite, die Du übersetzen willst.
+    * If you want to translate an individual file please search for the file via search dialog or tree structure and click on the filename to start the translation work on strings in that file.
     
-    ![Seite 'docs' anklicken](./images/translation_WikiPage.png)
-
-* Übersetze Satz für Satz:
+       ![Click strings.xml](./images/translations-click-strings.png)
     
-    1 Noch nicht übersetzter Text wird auf der linken Seite mit rotem Hintergrund angezeigt.
+    * Translate sentences on left side by adding new translated text or use & edit suggestion 
     
-    2 Du kannst einen Übersetzungsvorschlag in das Bearbeitungsfeld kopieren, indem Du darauf klickst.
+       ![Translation app](./images/translations-translate.png)
     
-    3 Passe den Vorschlag ggf. an oder übersetze selbst.
     
-    4 Klicke auf 'save'.
+    ### Proofread strings for AndroidAPS app
     
-    ![Übersetzung Docs](./images/translation_WikiTranslate.png)
-
-* Eine übersetzte Seite wird nicht in den Docs veröffentlicht, bevor die Übersetzung korrekturgelesen wurde.
-
-### Links zu Überschriften übersetzen
-
-* Wenn ein interner Link nur auf eine bestimmte Seite (z.B. ../Usage/Profiles.html) verweist, muss er nicht übersetzt werden.
-* Interne Links zu einer Überschrift (z.B. ..//Usage/Profiles.html#percentage) müssen hingegeben übersetzt werden, da der Text der Überschrift in der Übersetzung meist vom englischen Original abweicht.
-* Wenn Du eine Überschrift übersetzt, kannst Du daraus den Anker-Teil des Links (der Teil hinter # - z.B. #percentage) in dem Du alle Buchstaben klein schreibst, sprachenspezifische Zeichen (z.B. ä, ö, ü) in Standardzeichen umwandelst (z.B. a, o, u), Leerzeichen durch ein Minuszeichen ersetzt und alle Satzzeichen weglässt.
+    * Proofreaders start by selecting "Proofread" when starting from the language home screen.
     
-    Hier einige Beispiele:
+       ![Proofreading mode app](./images/translations-proofreading-mode.png) 
     
-    * Was ist ein Closed Loop System mit AndroidAPS? \---> #was-ist-ein-closed-loop-system-mit-androidaps
-    * Docs Updates & Änderungen \---> #docs-updates-anderungen
-    * AAPS-.apk Datei \---> #aaps-apk-datei
-
-* Prüfe den Link, ob er wie beabsichtigt funktioniert. Wenn es ein Link zu einer neu übersetzten Überschrift ist, musst Du abwarten, bis diese im Wiki erscheint, um dies zu testen. Vergiss nicht, Dir ggf. eine Erinnerung in Deinem Kalender oder Deiner ToDo App einzutragen.
-
-#### Link-Übersetzung in Markdown-Dateien (.md)
-
-Momentan werden in den Docs zwei [Markup Sprachen](./make-a-PR#code-syntax) verwendet. Während bei Seiten, die mit reStructuredText Syntax (.rst) geschrieben wurden, die Linkadressen in Crowdin immer angezeigt werden, muss dies für Seiten mit Markdown Syntax (.md) ggf. erst aktiviert werden.
-
-* * *
-
-**Achte darauf, dass beim Text innerhalb der HTML-Tags am Anfang und Ende kein Leerzeichen steht!**
-
-![Crodwin-HTML-Tag ohne Leerzeichen](./images/Crowdin_HTMLtag.png)
-
-* * *
-
-Wenn bei Dir Links so in Crowdin angezeigt werden:
-
-![Crowdin - keine Anzeige der Linkadressen](./images/CrowdinShowURL1.png)
-
-Klicke auf das Zahnrad, um die Einstellungen zu öffnen, wähle "Show" aus und klicke dann auf "Save".
-
-![Crowdin - Anzeige der Linkadressen einschalten](./images/CrowdinShowURL2.png)
-
-Links werden dann im Standard-HTML-Format angezeigt und können wie [oben](./translations#links-zu-uberschriften-ubersetzen) beschrieben übersetzt werden.
-
-![Crowdin - Anzeige der Linkadressen](./images/CrowdinShowURL3.png)
-
-## Korrekturlesen
-
-* Lektoren müssen zum Proofreading-Modus wechseln
     
-    ![Proofreading mode docs](./images/translation_WikiProofreading.png)
+      and approve translated texts 
     
-    und übersetzte Texte freigeben.
+       ![approve text](./images/translations-proofreading.png)
     
-    ![Übersetzung freigeben](./images/translations-proofreading.png)
+    When a proofreader approves a translation it will be added to the next version of AndroidAPS.
+    
+    (translations-translation-of-the-documentation)=
+    ## Translation of the documentation
+    
+    * Click the name of the docs page you want to translate
+    
+    ![Click docs page](./images/translation_WikiPage.png)
+    
+    
+    * Translate sentences by sentence
+    
+        1. The yellow text is the text you are working at the moment.
+    
+        1. The green text is already translated. You don't need to do this again.
+    
+        1. The red text is the remaining text which have to be translated.
+    
+        1. This is the source text you are working on at the moment
+    
+        1. This is the translation you are preparing. You can copy the text from above or select one of the suggestions below.
+    
+        1. These are the suggestion for a translation. Especially you can see how much Crowdin rates this as a fit or if it was already just in the past and come up through text rearrangements but not content change.
+        1. Press the "save" button to save a proposal for the translation. It will then promoted to a proofreader for final check.
+    
+    ![Translation docs](./images/translation_WikiTranslate.png)
+    
+    * A translated page will not be published in docs before 
+    
+        1. the translation is proofread
+    
+        1. the sync run between Crowdin and Github finished (once an hour) which creates an PR for Github.
+    
+        1. the PR in Github was approved.
+    
+    In general this needs 1 - 3 days but might during holiday take a little bit longer.
+    
+    ### Translating links
+    
+    ```{admonition} Links are not translated anymore
+    :class: note
+    
+    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    
+    
 
-* Wenn ein Lektor eine Übersetzung freigibt, wird sie in das nächste 'Docs Build' aufgenommen. Um den Prozess zu beschleunigen, kannst Du das Docs-Team über neue Übersetzungen informieren.
+You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+
+It's the proofreaders job to have a special look on this!
+
+### Proofreading
+
+* Proofreaders have to switch to Proofreading mode
+    
+    ![Proofreading mode docs](./images/translation_WikiProofreadingmode.png)
+    
+    and approve translated texts
+    
+    ![approve text](./images/translations-proofreading.png)
+
+* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.

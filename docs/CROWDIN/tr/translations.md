@@ -1,97 +1,104 @@
-# AndroidAPS ve dokümantasyon nasıl çevrilir
+# AndroidAPS uygulaması veya dokümantasyon için dizeler (strings) nasıl çevrilir?
 
-* <https://crowdin.com/project/androidaps> veya <https://crowdin.com/project/androidapsdocs> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
+* Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
+* Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
 * Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-* Sizi onayladığımızda bayrağa tıklayın ![Sizi onayladığımızda, bayrağa tıklayın](./images/translation_flags2019.png)
+```{admonition} Onay Zamanı :class: not
 
-## AndroidAPS uygulaması için dizeleri (strings) çevir
+Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlamıyoruz ancak genel olarak onay < 1 gün içinde yapılacaktır. Aksi taktirde lütfen Facebook veya Discord aracılığıyla doküman ekibiyle iletişime geçin.
 
-* strings.xml üzerine tıkla
+    <br />* When we approve you, click the flag
+       ![When we approve you, click the flag](./images/translation_flags.png)
     
-    ![strings.xml üzerine tıkla](./images/translations-click-strings.png)
-
-* Sol taraftaki cümleleri, yeni çevrilmiş metin ekleyerek veya & öneriyi düzenleyerek çevirebilirsiniz
+    ## Translation of the app
     
-    ![Uygulamayı çevirme](./images/translations-translate.png)
+    (translations-translate-strings-for-androidaps-app)=
+    ### Translate strings for AndroidAPS app
+    
+    * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
+    
+       ![Tümünü çevir'e tıklayın](./images/translations-click-translate-all.png)
+    
+    * Tek bir dosyayı çevirmek istiyorsanız, lütfen dosyayı arama iletişim kutusundan veya ağaç yapısından arayın ve o dosyadaki dizeler üzerinde çeviri çalışmasını başlatmak için dosya adına tıklayın.
+    
+       ![Dizeleri tıklayın.xml](./images/translations-click-strings.png)
+    
+    * Yeni çevrilmiş metin ekleyerek sol taraftaki cümleleri çevirin veya & öneriyi düzenle
+    
+        ![Çeviri uygulaması](./images/translations-translate.png)
+    
+    
+    ### AndroidAPS uygulaması için redaksiyon dizeleri
+    
+    * Redaktörler, ana dil ekranından başlarken "redaksiyon" seçeneğini seçerek başlar.
+    
+       ![Redaksiyon modu uygulaması](./images/translations-proofreading-mode.png)
+    
+    
+       ve çevrilmiş metinleri onaylayın
+    
+        ![metni onayla](./images/translations-proofreading.png)
+    
+    Redaktör bir çeviriyi onayladığında, çeviri AndroidAPS'nin bir sonraki sürümüne eklenecektir.
+    
+    (translations-translation-of-the-documentation)=
+    ## Translation of the documentation
+    
+    * Click the name of the docs page you want to translate
+    
+    ![Click docs page](./images/translation_WikiPage.png)
+    
+    
+    * Translate sentences by sentence
+    
+        1. Sarı metin, şu anda üzerinde çalıştığınız metindir.
+    
+        1. Yeşil metin zaten çevrilmiştir. Tekrar yapmana gerek yok.
+    
+        1. Kırmızı metin, çevrilmesi gereken metindir.
+    
+        1. Bu, şu anda üzerinde çalıştığınız kaynak metindir.
+    
+         1. Bu, hazırladığınız çeviridir. Yukarıdaki metni kopyalayabilir veya aşağıdaki önerilerden birini seçebilirsiniz.
+    
+        1. Bunlar bir çeviri önerisidir. Özellikle Crowdin'in bunu ne kadar uyumlu olarak değerlendirdiğini veya geçmişte olup olmadığını ve metin düzenlemeleriyle ortaya çıkıp içerik değişikliği yapılıp yapılmadığını görebilirsiniz.
+        1. Bir çeviri önerisini kaydetmek için "kaydet" düğmesine basın. Daha sonra son kontrol için redaktöre terfi ettirilecektir.
+    
+    ![Çeviri dok.ları](./images/translation_WikiTranslate.png)
+    
+    * Çevrilmiş bir sayfa dokümanlarda yayınlanmadan önce
+    
+         1. çeviri redaksiyonu
+    
+         1. Crowdin ve Github arasındaki senkronizasyon (saatte bir) tamamlanır ve bu da Github için bir PR (çekme isteği) oluşturur.
+    
+        1. Github'daki PR onaylanır.
+    
+    Genel olarak bu 1 - 3 güne ihtiyaç duyar ancak tatil günlerinde biraz daha uzun sürebilir.
+    
+    ### Bağlantılı çeviriler
+    
+    ```{admonition} Bağlantılar artık çevrilmiyor
+    :class: not
+    
+    Bağlantılar artık çevrilmiyor. Geçmişte burada bir başlığımız vardı ama bu, Markdown'a ve myst_parser'a geçiş yoluyla gitti, biz açıkça ingilizce metinde etiketler oluşturuyoruz ve bu etiketleri başlık altında dillere yayıyoruz.
+    
+    
+
+Bağlantıyı temsil eden metni çeviriyorsunuz. Lütfen bir çift `<0></0>` etiketiyle temsil edilen veya bir paragrafta başka bir sayı varsa bağlantıyı **kaldırmamaya** dikkat etmelisiniz.
+
+Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
+
+### Redaksiyon
 
 * Redaktörler redaksiyon moduna geçerek
     
-    ![Uygulama redaksiyon modu](./images/translations-proofreading-mode.png)
+    ![Doküman redaksiyon modu](./images/translation_WikiProofreadingmode.png)
     
     çevrilmiş metinleri onaylayabilirler
     
     ![metni onayla](./images/translations-proofreading.png)
 
-Redaktör bir çeviriyi onayladığında, AndroidAPS'in sonraki sürümüne eklenecektir. Diğer çevirilere başlamadan, henüz onaylanmayan mevcut çevirileri de gözden geçirip, yanlış olup olmadığını kontrol etmek veya doğruysa onaylamak ileride karışıklığı önler ve zaman kazanmanıza yardımcı olur.
-
-## Dokümantasyon sayfalarını çevirme
-
-* Çevirmek istediğiniz doküman sayfasının adını tıklayın
-    
-    ![Dokümanlar sayfasını tıkla](./images/translation_WikiPage.png)
-
-* Cümle cümle çevirin
-    
-    1 Çevrilmemiş metin sol tarafta kırmızı arka plan ile gösterilir.
-    
-    2 Altta çeviri tekliflerini tıklayarak düzenleme alanına bir teklif kopyalayabilirsiniz.
-    
-    3 Teklifi düzenleyin veya çeviriyi kendiniz yazın.
-    
-    4 Kaydet'e tıklayın
-    
-    ![Dokümanları çevirme](./images/translation_WikiTranslate.png)
-
-* Çevrilmiş bir sayfa, redaksiyondan önce dokümantasyonda yayınlanmayacaktır.
-
-### Başlık bağlantılarını çevir
-
-* Dahili bir bağlantı yalnızca belirli bir sayfaya yönlendirdiğinde (yani ../Usage/Profiles.html) çeviri gerekli değildir.
-* Belirli bir başlığa (ör. ..//Usage/Profiles.html#percentage) verilen dahili bağlantılar, diğer dildeki başlık İngilizce olduğu için çevrilmelidir.
-* Bir başlığı çevirecekseniz, (# işaretinden sonraki kısım, ör. #percentage) tüm harfleri küçük harfe çevirerek, özel karakterleri standart karakterlere dönüştürerek, boşlukları - (eksi işareti) ile değiştirerek ve noktalama işaretlerini atlayarak bunu bir bağlantı metnine dönüştürebilirsiniz.
-    
-    İşte bazı örnekler:
-    
-    * Kapalı Döngü Sistemi AndroidAPS ile uyumlu muydu? \---> #androidaps-ile-kapali-döngü-sistemi-nedir
-    * Doküman Güncellemeleri & değişiklikler \---> #doküman-güncellemeleri-değişiklikler
-    * AAPS-.apk tarih \---> #aaps-apk-tarih
-
-* Bağlantınızın istendiği gibi çalışıp çalışmadığını kontrol edin. Yeni çevrilmiş bir başlığa bağlantı veriyorsa, doğru bağlantı sözdizimini kontrol edebilmek için bir sonraki derlemeye kadar beklemeniz gerekebilir. Bu durumda takvim / yapılacaklar uygulamanızda bir hatırlatma yapmayı unutmayın.
-
-#### Markdown dosyalarında (.md) bağlantı çevirisi
-
-Şu anda dokümanlarda iki [işaretleme dili](./make-a-PR#code-syntax) kullanılmaktadır. reStructuredText sözdiziminde (.rst) yazılan dosyalar Crowdin'de her zaman bağlantı adresini gösterirken, markdown sözdizimindeki (.md) dosyalarda bağlantı adresini çevirmek için HTML etiketi görüntülemeyi etkinleştirmeniz gerekebilir.
-
-* * *
-
-**HTML etiketlerinin başında veya sonunda boşluk karakteri kullanmadığınızdan emin olun!**
-
-![Crowdin - Boşluk karakteri olmayan HTML etiketi](./images/Crowdin_HTMLtag.png)
-
-* * *
-
-Crowdin'de bağlantılar bu şekilde görüntüleniyorsa
-
-![Crowdin - HTML etiketi görüntülenmiyor](./images/CrowdinShowURL1.png)
-
-ayarları açmak için dişli çarka tıklayın, "Göster"i seçin ve "Kaydet"e tıklayın.
-
-![Crowdin - HTML etiketini göster](./images/CrowdinShowURL2.png)
-
-Bağlantılar daha sonra standart HTML biçiminde gösterilir ve [yukarıda](./translations#translate-headline-links) belirtilen kurallar dikkate alınarak çevrilebilir.
-
-![Crowdin - HTML etiketi görüntüleme](./images/CrowdinShowURL3.png)
-
-## Redaksiyon
-
-* Redaktörler redaksiyon moduna geçerek
-    
-    ![Doküman redaksiyon modu](./images/translation_WikiProofreading.png)
-    
-    çevrilmiş metinleri onaylayabilirler
-    
-    ![metni onayla](./images/translations-proofreading.png)
-
-* Redaktör bir çeviriyi onayladığında, sonraki doküman derlemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
+* Redaktör bir çeviriyi onayladığında, sabit bir takvim olmamakla birlikte, tatil günleri dışında yaklaşık haftada bir kez gerçekleşecek bir sonraki doküman güncellemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.

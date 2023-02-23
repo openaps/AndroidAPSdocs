@@ -2,17 +2,17 @@
 
 Tato stránka je určena lékařům, kteří projevili zájem o open source technologie umělé slinivky, jako je AndroidAPS, nebo pro pacienty, kteří chtějí sdílet tyto informace se svým lékařem.
 
-Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. Další podrobnosti o všech těchto tématech získáte v [kompletní online dokumentaci k AndroidAPS](../index.rst). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
+Tato příručka obsahuje souhrnné informace o DIY uzavřené smyčce a zejména o tom, jak systém AndroidAPS funguje. For more details on all of these topics, please view the [comprehensive AndroidAPS documentation online](../index.md). Máte-li otázky, zeptejte se prosím svého pacienta na další podrobnosti nebo se s dotazem obraťte na komunitu. (Jestliže nepoužíváte sociální sítě (např. [Twitter](https://twitter.com/kozakmilos) nebo Facebook), obraťte se prostřednictvím e-mailu přímo na vývojáře (developers@AndroidAPS.org). [Pod tímto odkazem rovněž najdete nejnovější studie a jejich výsledky a související data](https://openaps.org/outcomes/).
 
-### Kroky nutné pro sestavení DIY uzavřené smyčky:
+## The steps for building a DIY Closed Loop:
 
 Chcete-li začít používat systém AndroidAPS, je třeba provést následující kroky:
 
-* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.rst).
+* Find a [compatible pump](../Hardware/pumps.md), a [compatible Android device](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing), and a [compatible CGM source](../Configuration/BG-Source.md).
 * [Stáhněte si zdrojový kód AndroidAPS a sestavte si software](../Installing-AndroidAPS/Building-APK.md).
-* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](../index#configuration).
+* [Configure the software to talk to their diabetes devices and specify settings and safety preferences](index-configuration).
 
-### Jak DIY uzavřená smyčka funguje
+## How A DIY Closed Loop Works
 
 Pacient bez systému uzavřené smyčky získává data ze své pumpy a CGM a podle toho se rozhoduje, co udělá a jaká opatření přijme.
 
@@ -20,7 +20,7 @@ S automatickým podáváním inzulínu systém provede totéž: shromažďuje da
 
 Je-li zařízení se systémem AndroidAPS poškozeno nebo mimo dosah pumpy, pumpa přejde zpět k naprogramované bazální dávce (jako standardní běžná pumpa), jakmile skončí poslední dočasný bazál.
 
-### Jak se získávají data:
+## How data is gathered:
 
 Systém AndroidAPS vyžaduje zařízení se systémem Android, na kterém je spuštěna speciální aplikace, která provádí potřebné výpočty, toto zařízení pak prostřednictvím technologie bluetooth komunikuje s podporovanou pumpou. AndroidAPS může prostřednictvím Wi-Fi nebo mobilních dat komunikovat také s dalšími zařízeními nebo s cloudem, odkud může získávat další data nebo jejichž prostřednictvím může informovat pacienta, pečující osoby a rodinné příslušníky o tom, co právě provádí a proč tak činí.
 
@@ -33,7 +33,7 @@ Když zařízení získá tato data, spustí se algoritmus a provádí rozhodov�
 
 Systém také bude shromažďovat veškeré informace o bolusech, zkonzumovaných sacharidech a nastavení dočasných cílů z pumpy nebo z Nightscoutu, aby je použil pro výpočet potřebného množství inzulinu.
 
-### Jak aplikace ví, co má dělat?
+## How does it know what to do?
 
 Tento open source software je navržen tak, aby zařízení dokázalo dělat to, co pacienti musejí dělat ručně (v manuálním režimu), aby si spočítali potřebné množství inzulinu. V prvé řadě shromažďuje údaje ze všech pomocných zařízení a z cloudu, připravuje údaje a provádí výpočty, provádí predikce různých scénářů, jak se bude glykémie vyvíjet v následujících hodinách, a vypočte potřebné úpravy, aby se glykémie udržela v cílovém rozmezí nebo se do něho po určité době vrátila. Následně odešle nezbytná nastavení do pumpy. Poté znovu přečte a zpracuje veškerá dostupná data a celý proces se opakuje znovu a znovu.
 
@@ -41,41 +41,41 @@ Vzhledem k tomu, že nejdůležitějším vstupním parametrem je hodnota glyké
 
 Systém AndroidAPS je navržen tak, aby transparentně sledoval všechny vstupní údaje, které shromažďuje, a zobrazoval výsledná doporučení i přijatá opatření. Kdykoli se proto lze podívat do protokolů a snadno odpovědět na otázku „proč to právě teď dělá to a to?“
 
-### Příklady rozhodování algoritmu AndroidAPS:
+## Examples of AndroidAPS algorithm decision making:
 
-AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS používá k rozlišení těchto [křivek predikce](../Installing-AndroidAPS/Releasenotes#overview-tab) různé barvy. V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
+AndroidAPS používá stejný základní algoritmus a funkce jako OpenAPS. Algoritmus vytváří několik predikcí (na základě nastavení a aktuální situace), které představují různé scénáře toho, co se může stát v budoucnosti. V Nightscoutu jsou tyto predikce zobrazeny jako „fialové křivky“. AndroidAPS uses different colors to separate these [prediction lines](Releasenotes-overview-tab). V protokolech najdete informace o tom, která z těchto křivek predikce a kdy byla použita pro danou akci.
 
-#### Zde jsou příklady fialových křivek predikce a toho, jak se mohou lišit:
+### Here are examples of the purple prediction lines, and how they might differ:
 
 ![Příklady fialové křivky predikce](../images/Prediction_lines.jpg)
 
-#### Zde jsou příklady různých časových úseků, které mají vliv na potřebné úpravy dávkování inzulinu:
+### Here are examples of different time frames that influence the needed adjustments to insulin delivery:
 
-#### Scénář 1 – Nulový dočasný bazál kvůli bezpečnosti
+### Scenario 1 - Zero Temp for safety
 
 V tomto příkladu glykémie v krátkodobém horizontu stoupá, avšak předpověď říká, že po delší době bude glykémie nízká. Ve skutečnosti je předpovídáno, že se dostane pod cílovou hodnotu *i* pod nastavený bezpečnostní limit. Aby se předešlo hypoglykémii, AndroidAPS nastaví nulový bazál (dočasný bazál na 0 %), dokud hodnota eventualBG (v kterémkoli okamžiku) nebude nad bezpečnostním limitem.
 
 ![Příklad dávkování 1](../images/Dosing_scenario_1.jpg)
 
-#### Scénář 2 – Nulový dočasný bazál kvůli bezpečnosti
+### Scenario 2 - Zero temp for safety
 
 V tomto příkladu je předpovídáno, že v krátkodobém horizontu bude glykemie nízká, ale nakonec se může dostat nad cílovou hodnotu. Vzhledem k tomu, že krátkodobá předpověď je pod bezpečnostním limitem, AndroidAPS spustí nulový bazál, dokud se všechny body na křivce predikce nedostanou nad bezpečnostní limit.
 
 ![Příklad dávkování 2](../images/Dosing_scenario_2.jpg)
 
-#### Scénář 3 – Je třeba zvýšit množství inzulinu
+### Scenario 3 - More insulin needed
 
 V tomto případě ukazuje krátkodobá předpověď pokles pod cílovou hodnotu. Předpokládá se však, že nebude pod bezpečnostním limitem. Hodnota konečné glykémie je nad cílovou hodnotou. Proto AndroidAPS nebude přidávat inzulin, který by přispěl k poklesu glykémie v krátkodobém horizontu (nepřidá inzulin tak, aby šla predikce pod bezpečnostní limit). Následně – až to bude bezpečné – podle nejnižší předpovídané hodnoty výsledné glykémie posoudí, zda bude nutné přidat inzulin, aby se výsledná předpovídaná glykémie dostala zpět na cílovou hodnotu. *(V závislosti na nastavení, potřebném množství inzulinu a jeho časování může být tento přídavek inzulinu dodán v podobě dočasných bazálů nebo SMB (super mikro bolusů)).*
 
 ![Příklad dávkování 3](../images/Dosing_scenario_3.jpg)
 
-#### Scénář 4 – Nulový dočasný bazál kvůli bezpečnosti
+### Scenario 4 - Low temping for safety
 
 V tomto příkladu AndroidAPS vidí, že glykémie výrazně převyšuje cílovou hodnotu. Avšak vzhledem k době působnosti inzulínu je již v těle dost inzulínu, aby se glykémie nakonec dostala do cílového rozsahu. Předpověď ve skutečnosti říká, že výsledná glykémie se nakonec může dostat pod cílovou hodnotu. Proto systém AndroidAPS nevydá další inzulin, aby nepřispíval k nízké glykémii v delším časovém horizontu. Přestože je glykémie vysoká/stoupá, bude v tomto případě dočasný bazál snížen.
 
 ![Příklad dávkování 4](../images/Dosing_scenario_4.jpg)
 
-### Optimalizace nastavení a provádění změn
+## Optimizing settings and making changes
 
 Jakožto pro lékaře, kteří nemají zkušenosti s AndroidAPS nebo DIY uzavřenými smyčkami, pro vás může obtížné pomoci pacientovi optimalizovat jeho nastavení nebo provádět změny, které by zlepšily jeho výsledky. V komunitě máme řadu nástrojů a [příruček](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/optimize-your-settings.html), které pomohou vašim pacientům provádět drobné, vyzkoušené změny, jež pomohou zlepšit jejich nastavení.
 
@@ -85,11 +85,11 @@ Jedním z nejmocnějších nástrojů pro provádění změn nastavení je nást
 
 Navíc návyky pacientů (získané při ruční kompenzaci diabetu) mají často vliv na výsledky, dokonce i s DIY uzavřenou smyčkou. Například pokud existuje předpověď, že glykémie bude klesat a AndroidAPS včas sníží dávku inzulinu, pak stačí pouze velmi malé množství sacharidů (např. 3–4 g), aby se glykémie vrátila z 3,9 mmol do normálu. V mnoha případech se však pacient rozhodne řešit nízkou glykémii větším množstvím sacharidů (např. dodržuje pravidlo 15), což v důsledku povede k výraznějšímu vzestupu glykémie jednak kvůli většímu množství přijaté glukózy, jednak kvůli již snížené dávce inzulinu s ohledem na předpovídaný pokles glykémie.
 
-### OpenAPS
+## OpenAPS
 
 **Tato příručka byla převzata z [Příručky k OpenAPS pro lékaře](https://openaps.readthedocs.io/en/latest/docs/Resources/clinician-guide-to-OpenAPS.html).** OpenAPS je systém vyvinutý tak, aby běžel na malém přenosném počítači (který se obecně označuje jako „rig“). AndroidAPS používá mnoho funkcí implementovaných v systému OpenAPS a sdílí s ním velkou část logiky a algoritmů, což je důvod, proč je tato příručka velmi podobná původní příručce. Mnoho informací o OpenAPS lze snadno přizpůsobit AndroidAPS, přičemž hlavním rozdílem je hardwarová platforma, na které jsou jednotlivé části softwaru spuštěny.
 
-### Shrnutí
+## Summary
 
 Tento text je stručným přehledem toho, jak funguje AndroidAPS. Chcete-li se dozvědět více informací, zeptejte se svého pacienta, obraťte se na komunitu nebo si přečtěte kompletní dokumentaci k AndroidAPS, která je k dispozici online.
 

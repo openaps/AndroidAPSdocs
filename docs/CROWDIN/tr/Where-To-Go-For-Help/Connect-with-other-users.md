@@ -1,3 +1,5 @@
+(Connect-with-other-users-i-m-getting-stuck-what-do-i-do-who-can-i-ask)=
+
 # Sıkışıp kaldim; Ne yapabilirim? Kime sorabilirim?
 
 Bu proje gönüllü çalışmaya dayanmaktadır, bu nedenle zamanlarını ve becerilerini bu kadar nazikçe bağışlayanlara fazladan çalışmadan kaçınmak için bazı kurallar uygulanır:

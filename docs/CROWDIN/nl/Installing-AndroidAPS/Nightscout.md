@@ -1,31 +1,35 @@
 # Nightscout
 
+(Nightscout-security-considerations)=
+
 ## Veiligheidsoverwegingen
 
-Nightscout kan naast informatie en rapporten weergeven, ook worden gebruikt om AAPS aan te sturen. Dat wil zeggen dat je via Nightscout tijdelijke streefdoelen kunt instellen of toekomstige koolhydraten kunt invoeren. Deze informatie zal worden opgepikt door AAPS en zal worden meegenomen in de keuzes die het algortime maakt. Daarom is het verstandig om jouw Nightscout website te beveiligen.
+Besides reporting Nightscout can also be used to control AAPS. I.e. you can set temp targets or add future carbs. This information will be picked up by AAPS and it will act correspondingly. Therefore it is worth thinking about securing your Nightscout website.
 
 ### Nightscout instellingen
 
-Je kunt openbare toegang tot jouw Nightscout-site blokkeren met behulp van de [authentication roles](https://nightscout.github.io/nightscout/security) (verificatierollen).
+You can deny public access to your Nightscout site by using [authentication roles](https://nightscout.github.io/nightscout/security).
 
 ### AndroidAPS instellingen
 
-Er is een Alleen NS upload (geen synchronisatie) functie in de AAPS instellingen. Wanneer deze is ingeschakeld, zullen aanpassingen die zijn gemaakt in Nightscout, zoals tijdelijke streefdoelen of toekomstige koolhydraten, niet worden doorgegeven aan AAPS.
+There is an NS upload only (no sync) function in AAPS settings. By doing so AAPS will not pick up changes done in Nightscout such as temp targets or future carbs.
 
 * Tik op 3 stipjes in de rechterbovenhoek van AAPS overzicht scherm.
 * Selecteer "Instellingen".
 * Scroll naar beneden en kies "Geavanceerde instellingen".
 * Activeer "Alleen NS-upload".
 
-![Alleen NS upload](../images/NSsafety.png)
+![Nightscout upload only](../images/NSsafety.png)
 
 ### Aanvullende veiligheidsmaatregelen
 
-Houd jouw telefoon up-to-date zoals beschreven bij [Allereerst de veiligheid](../Getting-Started/Safety-first.rst).
+Keep your phone up to date as described in [safety first](../Getting-Started/Safety-first.md).
+
+(Nightscout-manual-nightscout-setup)=
 
 ## Nightscout aanmaken
 
-We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat eerst nog doen (een makkelijke manier om dat te doen is via ns.10be.de en staat onderaan deze pagina beschreven). Een andere manier om Nightscout aan te maken staat beschreven op de [Nightscout](http://nightscout.github.io/nightscout/new_user/) website. Vraag zo nodig hulp in de facebook groep "CGM in the cloud Nederlands". Voor sommige mensen verbruikt Azure meer data dan hun gratis versie toelaat, dus raden we aan om Heroku te gebruiken. Wanneer je jouw Nightscout site eenmaal hebt aangemaakt, kun je verdergaan met onderstaande instructies. Dit zijn specifieke instellingen voor jouw Nightscout site zodat je hem kunt koppelen aan AndroidAPS. Jouw Nightscout site moet ten minste versie 10 zijn (wordt weergegeven als 0.10...), dus controleer of je werkt met de [nieuwste versie](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) anders krijg je een foutmelding op je AAPS app.
+It is assumed you already have a Nightscout site, if not visit the [Nightscout](http://nightscout.github.io/nightscout/new_user/) page for full instructions on set up, the instructions below are then settings you will also need to add to your Nightscout site. Your Nightscout site needs to be at least version 10 (displayed as 0.10...), so please check you are running the [latest version](https://nightscout.github.io/update/update/#updating-your-site-to-the-latest-version) otherwise you will get an error message on your AAPS app. Some people find looping uses more than the azure free quota allowed, so heroku is the preferred choice.
 
 * Ga naar https://herokuapp.com/
 
@@ -51,7 +55,7 @@ We gaan er vanuit dat je al een Nightscout site hebt, zo niet dan moet je dat ee
 
 Fellow looper Martin Schiftan offered a semi-automated Nightscout setup for many years free of charge. As number of users increased so did cost and therefore he had to start asking a small fee starting October 2021 - starting at €4,17 per month.
 
-**Voordelen van deze methode**
+**Benefits**
 
 * Je kunt hiermee Nightscout met een paar klikken installeren en meteen gebruiken. 
 * Je hoeft minder dingen zelf in te stellen omdat Martin dat al voor jou gedaan heeft.

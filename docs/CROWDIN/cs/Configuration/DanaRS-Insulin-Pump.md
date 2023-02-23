@@ -8,6 +8,8 @@
 
 * V pumpě DanaRS/i je aplikací používán "BAZÁL A". Stávající data budou přepsána.
 
+(DanaRS-Insulin-Pump-pairing-pump)=
+
 ## Párování pumpy
 
 * Na domovské obrazovce AndroidAPS klikněte na hamburger menu v levém horním rohu a přejděte do Konfigurace.
@@ -41,6 +43,8 @@
 * Nastavte krok bolusu na 0.05 U/h pomocí lékařského menu (viz uživatelská příručka pumpy).
 * Na pumpě povolte rozšířené bolusy
 
+(DanaRS-Insulin-Pump-default-password)=
+
 ### Výchozí heslo
 
 * DanaRS s firmwarem v1 a v2 má výchozí heslo 1234.
@@ -49,6 +53,8 @@
     * Otevřete hlavní menu na pumpě > Přehled > Informace. 
     * Číslo 3 je datum výroby. 
     * Pro v3/i se toto heslo používá pouze pro uzamčení nabídky na pumpě. Nepoužívá se pro komunikaci a není nutné jej zadat v AndroidAPS.
+
+(DanaRS-Insulin-Pump-change-password-on-pump)=
 
 ## Změna hesla pumpy
 
@@ -67,7 +73,7 @@
 
 * Stiskněte OK pro zadání starého hesla.
 
-* Zadejte **staré heslo** (Výchozí heslo viz [nahoře](#default-password)) a stiskněte tlačítko OK
+* Enter **old password** (Default password see [above](DanaRS-Insulin-Pump-default-password)) and press OK
     
     ![DanaRS Zadejte staré heslo](../images/DanaRSPW_04_11PWenter.png)
 
@@ -87,24 +93,26 @@
     
     ![Ukončit DanaRS](../images/DanaRSPW_07_Exit.png)
 
+(DanaRS-Insulin-Pump-dana-rs-specific-errors)=
+
 ## Specifické chyby Dana RS
 
 ### Chyba během vydávání inzulinu
 
-V případě, že dojde k přerušení spojení mezi AAPS a pumpou Dana RS v průběhu vydávání bolusu (např. odejdete mimo dosah telefonu, zatímco pumpa Dana RS vydává inzulin), zobrazí se následující zpráva a zazní akustická výstraha.
+In case the connection between AAPS and Dana RS is lost during bolus insulin delivery (i.e. you walk away from phone while Dana RS is pumping insulin) you will see the following message and hear an alarm sound.
 
-![Oznámení chyby podávání inzulínu](../images/DanaRS_Error_bolus.png)
+![Alarm insulin delivery](../images/DanaRS_Error_bolus.png)
 
 * Ve většině případů se jedná pouze o problém s komunikací, který se netýká vydaného inzulinu (je vydáno správné množství).
 * Podívejte se do historie pumpy (buď v pumpě, nebo na kartě Dana > Historie pumpy > Bolusy), zda byl vydán správný bolus.
-* Pokud chcete, odstraňte chybový záznam v záložce [ošetření](../Getting-Started/Screenshots#carb-correction).
+* Delete error entry in [treatments tab](Screenshots-carb-correction) if you wish.
 * Skutečně vydaný bolus se načte a zaznamená při příštím připojení. Chcete-li vynutit připojení okamžitě, klikněte na ikonu BT na kartě Dana, nebo prostě počkejte na příští připojení.
 
 ## Zvláštní poznámka, pokud měníte telefon
 
-Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kroky:
+When switching to a new phone the following steps are necessary:
 
-* [Exportujte nastavení](../Usage/ExportImportSettings#export-settings) na svém starém telefonu
+* [Export settings](ExportImportSettings-export-settings) on your old phone
 * Přesuňte nastavení ze starého do nového telefonu
 
 ### DanaRS v1
@@ -112,13 +120,13 @@ Pokud měníte telefon za nový, je nezbytné, abyste provedli následující kr
 * **Ručně spárujte** Danu RS s novým telefonem
 * Vzhledem k tomu, že nastavení týkající se připojení pumpy jsou také importována, AAPS na vašem novém telefonu již pumpu „zná“, a proto nezahájí skenování bluetooth. Proto je třeba nový telefon a pumpu spárovat ručně.
 * Nainstalujte AndroidAPS v novém telefonu.
-* [Importujte nastavení](../Usage/ExportImportSettings#import-settings) v novém telefonu
+* [Import settings](ExportImportSettings-import-settings) on your new phone
 
 ### DanaRS v3, Dana-i
 
-* Zahajte proces párování, jak je popsáno [výše](#pairing-pump).
+* Start pairing procedure like decribed [above](DanaRS-Insulin-Pump-pairing-pump).
 * Někdy může být nutné vymazat informace o párování v AndroidAPS dlouhým kliknutím na ikonu BT na kartě Dana-i/RS.
 
 ## Cestování mezi časovými pásmy s pumpou Dana RS
 
-Více informací o cestování přes více časových pásem najdete v části [Cestování s pumpou mezi časovými pásmy](../Usage/Timezone-traveling#danarv2-danars).
+For information on traveling across time zones see section [Timezone traveling with pumps](Timezone-traveling-danarv2-danars).
