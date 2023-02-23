@@ -1,13 +1,13 @@
-# AndroidAPS uygulaması veya dokümantasyon için diziler (strings) nasıl çevrilir?
+# AndroidAPS uygulaması veya dokümantasyon için dizeler (strings) nasıl çevrilir?
 
-* For the the strings used in the app go to <https://crowdin.com/project/androidaps> and login using your GitHub account
-* For the documentation please visit <https://crowdin.com/project/androidapsdocs> and login using your GitHub account
+* Uygulamada kullanılan dizeler için <https://crowdin.com/project/androidaps> adresine gidin ve GitHub hesabınızı kullanarak giriş yapın
+* Dokümantasyon için lütfen <https://crowdin.com/project/androidapsdocs> adresini ziyaret edin ve GitHub hesabınızı kullanarak giriş yapın
 
 * Dokümanlar ekibine katılma isteği gönderin. Bunu yapmak için istediğiniz dilin bayrağına ve ardından sonraki sayfanın sağ üst köşesindeki "join" katıl düğmesine tıklayın. Lütfen dili belirtin ve çevirmen veya redaktör olmak istiyorsanız (yalnızca çeviri konusunda yetenekli kişiler + ileri düzey AndroidAPS kullanıcıları) AAPS deneyiminiz ve kendiniz hakkında biraz bilgi verin.
 
-```{admonition} Time for Approval :class: note
+```{admonition} Onay Zamanı :class: not
 
-The approval is a manual step. As non profit organization we don't provide SLAs but in general the approval will be done in < 1 day. If not please contact the Doc team via Facebook or Discord.
+Onay manuel bir adımdır. Kâr amacı gütmeyen kuruluş olarak SLA'lar sağlamıyoruz ancak genel olarak onay < 1 gün içinde yapılacaktır. Aksi taktirde lütfen Facebook veya Discord aracılığıyla doküman ekibiyle iletişime geçin.
 
     <br />* When we approve you, click the flag
        ![When we approve you, click the flag](./images/translation_flags.png)
@@ -17,7 +17,7 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     (translations-translate-strings-for-androidaps-app)=
     ### Translate strings for AndroidAPS app
     
-    * If you have no preference for strings you translate just select the "Translate All" button to start. It will show you the strings which need translation.
+    * If you have no preference for strings you translate just select the "Translate All" button to start. Size çevrilmesi gereken dizeleri gösterecektir.
     
        ![Click translate all](./images/translations-click-translate-all.png)
     
@@ -78,20 +78,20 @@ The approval is a manual step. As non profit organization we don't provide SLAs 
     
     In general this needs 1 - 3 days but might during holiday take a little bit longer.
     
-    ### Translating links
+    ### Bağlantılı çeviriler
     
-    ```{admonition} Links are not translated anymore
-    :class: note
+    ```{admonition} Bağlantılar artık çevrilmiyor
+    :class: not
     
-    Links are not translated anymore. In the past we had a topic here but this is gone as through migraton to Markdown and the myst_parser we explicitly create labels in the english text and propagate these labels under the hood to the languages.
+    Bağlantılar artık çevrilmiyor. Geçmişte burada bir başlığımız vardı ama bu, Markdown'a ve myst_parser'a geçiş yoluyla gitti, biz açıkça ingilizce metinde etiketler oluşturuyoruz ve bu etiketleri başlık altında dillere yayıyoruz.
     
     
 
-You are translating the text which represents the link. Please you have to be carefull **not** to remove the link which is represented by a pair of `<0></0>` tags or if their are more in one paragraph other numbers.
+Bağlantıyı temsil eden metni çeviriyorsunuz. Lütfen bir çift `<0></0>` etiketiyle temsil edilen veya bir paragrafta başka bir sayı varsa bağlantıyı **kaldırmamaya** dikkat etmelisiniz.
 
-It's the proofreaders job to have a special look on this!
+Bu bağlantılar ve karakter çiftleri için dokümanı kontrol edip göz atmak redaktörlerin işidir!
 
-### Proofreading
+### Redaksiyon
 
 * Redaktörler redaksiyon moduna geçerek
     
@@ -101,4 +101,4 @@ It's the proofreaders job to have a special look on this!
     
     ![metni onayla](./images/translations-proofreading.png)
 
-* When a proofreader approves a translation it will be added to the next docs build which happens in no fixed schedule on demand but around once a week except during hollidays. To speed up the process you can inform docs team about new translations.
+* Redaktör bir çeviriyi onayladığında, sabit bir takvim olmamakla birlikte, tatil günleri dışında yaklaşık haftada bir kez gerçekleşecek bir sonraki doküman güncellemesine eklenecektir. Süreci hızlandırmak için dokümantasyon ekibini yeni çeviriler hakkında bilgilendirebilirsiniz.
