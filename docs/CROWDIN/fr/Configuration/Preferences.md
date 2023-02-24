@@ -513,7 +513,7 @@ Sélectionnez le service de localisation à utiliser :
 
 - Use passive location: AAPS only takes locations if other apps are requesting it
 - Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! Peut entrainer une consommation excessive de la batterie !)
+- Utiliser la localisition GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
 
 ## Alertes locales
 
