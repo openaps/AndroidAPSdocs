@@ -103,10 +103,10 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
 ### Kapalı döngü, düşük glikoz duraklatma ile sınırlı olduğundan, görev 6'daki yüksek KŞ değerlerini düzeltmeyecektir. Yüksek KŞ değerleri sizin tarafınızdan manuel olarak düzeltilmelidir!
 
-- Prerequisite: You need a good profile (basal, ISF, IC) already working in AndroidAPS to start with Loop in Low Glucose Suspend mode. Otherwise you can run in a hypo which you have to manually correct. This will help you a lot to avoid having to treat a low glucose over a period of 5 days. **If you are still having frequent or severe low glucose episodes then consider refining your DIA, basal, ISF and carb ratios and do NOT start objective 6 at this time.**
-- You don't have to change your settings now. During objective 6, the maxIOB setting is internally set to zero automatically. **This override will be reversed when moving to objective 7.**
-- The system will override your maxIOB settings to zero, which means if blood glucose is dropping it can reduce basal for you. If blood glucose is rising then it will only increase basal if the basal IOB is negative from a previous Low Glucose Suspend. Otherwise basal rates will remain the same as your selected profile. **That means that you have to manually handle high values with insulin corrections.**
-- If your basal IOB is negative (see screenshot below) a TBR > 100% can be issued also in objective 6.
+- Ön koşul: Döngü ile Düşük Glikoz Askıya Alma modunda başlamak için AndroidAPS'de çalışan iyi bir profile (bazal, İDF, Kİ) ihtiyacınız var. Aksi takdirde, kendinizi manuel olarak düzeltmeniz gereken bir hipoda bulabilirsiniz. Bu seçenek, hipodan 5 gün boyunca kaçınmanıza yardımcı olacaktır. **Hala sık veya şiddetli düşük glikoz atakları yaşıyorsanız, İES, bazal, İDF ve karbonhidrat oranlarınızı iyileştirmeyi, düzeltmeyi düşünün ve şu anda 6. görevle BAŞLAMAYIN.**
+- Ayarlarınızı şimdi değiştirmenize gerek yok. Görev 6 sırasında maxAİNS ayarı dahili olarak otomatik sıfıra ayarlanır. **Bu geçersiz kılma, görev 7'ye geçildiğinde tersine çevrilecektir.**
+- Sistem, maxAİNS ayarınızı sıfır olarak geçersiz kılar; bu, kan şekerinin düşmesi durumunda sizin için bazalı düşürebileceği anlamına gelir. Kan şekeri yükseliyorsa, yalnızca bazal AİNS önceki bir Düşük Glikoz Askıya Alma işlemine göre negatifse bazal artacaktır. Aksi takdirde, bazal oranlar seçtiğiniz profille aynı kalacaktır. **Bu, yüksek KŞ değerleriyle insülin düzeltmeleri yaparak manuel başa çıkmanız gerektiği anlamına gelir.**
+- Bazal AİNS negatifse (aşağıdaki ekran görüntüsüne bakın) Görev 6'da da bir GBO > %100 verilebilir.
 
 ```{image} ../images/Objective6_negIOB.png
 :alt: Örnek negatif AİNS
