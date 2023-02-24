@@ -114,7 +114,7 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 
 - Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
 - Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
-- Watch how temporary basals are active by viewing the blue basal text on the homescreen or the blue basal render on the homescreen graph.
+- Ana ekrandaki mavi bazal metnini veya ana ekran grafiğindeki mavi bazal oluşumunu görüntüleyerek geçici bazalların aktivitesini izleyin.
 - Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
