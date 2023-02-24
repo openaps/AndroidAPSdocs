@@ -1,6 +1,6 @@
 # Automatisation avec une application Android Automate tierce
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Cet article a été écrit avant la version 2.5 d'AndroidAPS. Il existe un plug-in d'automatisation [dans AndroidAPS](./Automation.md) lui-même à partir de la version 2.5. Pour certains, ceci peut être encore utile, mais ne doit être utilisé que par les utilisateurs avancés.**
 
 Comme AndroidAPS est un système à boucle fermée hybride, une certaine interaction avec l'utilisateur est nécessaire (par ex. dites à la boucle si vous marchez, mangez bientôt, restez couché sur le canapé...). Les entrées manuelles fréquentes peuvent être automatisées via des outils externes tels que Automate ou IFTTT pour étendre la fonctionnalité récente d'AndroidAPS.
 
@@ -32,7 +32,7 @@ Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran e
 
 Dans AndroidAPS appuyez sur le menu trois points en haut à droite de l'écran et accédez à Paramètres > NSClient > Paramètres avancés > Décochez 'Remonter uniquement vers NS (sync désactivée)' et 'Pas de téléchargement vers NS'.
 
-Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
+Soyez conscient des [problèmes de sécurité](Nightscout-security-considerations) qui pourraient se produire et soyez très prudent si vous utilisez une [pompe Insight](Accu-Chek-Insight-Pump-settings-in-aaps).
 
 ![Paramètres de téléchargement Nighscout](../images/automate-aaps2.jpg)
 
