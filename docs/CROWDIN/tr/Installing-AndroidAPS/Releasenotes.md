@@ -52,32 +52,32 @@ Yayınlanma tarihi: XX-XX-2023
 ### Önemli ipuçları
 
 - NS 15 gereklidir. Şu anda NS ana deposunun "dev" şubesi
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+- NS v3 eklentisinde websockets kullanırken, NS UI (artı düğmesi) aracılığıyla girilen işlemler ve v1 API kullanan diğer uygulamalar AAPS'e gönderilmez. Bu, NS'nin gelecekteki sürümünde düzeltilecektir.
+- v3 eklentisindeki websockets, v1 eklentisine benzer şekilde çalışır. AAPS, etkinleştirilmiş web yuvaları olmadan, NS'den düzenli olarak indirmeleri planlar ve bu, NS kalıcı olarak bağlı olmadığı için daha düşük güç tüketir. Bu da karşı tarafta, veri alışverişinde gecikmeler anlamına gelir.
+- Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
+- Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
+- xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. AAPS'den xDrip'te KŞ almak için "xDrip+ Sync Follower" kaynağı seçilmelidir.
 
 
 ### Değişiklikler
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- new 125k+ lines of code, changed 150k lines
+- EOPatch2 / GlucomenDay pompa sürücüsü @jungsomyeonggithub @MilosKozak
+- ComboV2 pompa sürücüsü (Ruffy'ye gerek yok) @dv1
+- Glunovo CGM desteği @christinadamianou
+- G7 desteği @MilosKozak @rICTx-T1D @khskekec
+- NSClient v3 eklentisi @MilosKozak
+- Tidepool desteği @MilosKozak
+- Yumuşatma eklentisi @MilosKozak @justmara, Tsunami projesinden esinlenmiştir, @jbr7rr
+- 3.1 sürümündeki tonlarca sorun düzeltildi
+- daha fazla yere not eklenmesine izin verme @Sergey Zorchenko
+- UI düzeltmeleri @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
+- yeni SMS komutları LOOP LGS/CLOSED @pzadroga
+- wear çevirileri @Andries-Smit
+- xdrip iletişimi @MilosKozak ayrı modülüne taşındı
+- dahili değişiklikler: güncellenmiş kütüphane sürümleri, rx3 geçişi, yeni modül yapısı @MilosKozak
+- Diaconn sürücü düzeltmeleri @miyeongkim
+- AAPSClient ana telefon elektriğe takılıysa bilgi verir @MilosKozak
+- 125 binden fazla yeni kod satırı, 150 bin satır değiştirildi
 
 ## Sürüm 3.1.0
 
@@ -86,26 +86,26 @@ Yayınlanma tarihi: 19-07-2022
 (Releasenotes-important-hints-3-1-0)=
 ### Önemli ipuçları
 
-- after update uninstall Wear app and install new version
-- Omnipod users: update on pod change !!!
+- güncellemeden sonra Wear uygulamasını kaldırın ve yeni sürümü yükleyin
+- Omnipod kullanıcıları: pod değişikliğinde güncelleme !!!
 
 ### Değişiklikler
 
-- fixed issues from 3.0 version
-- fix application freezing @MilosKozak
-- fixed DASH driver @avereha
-- fixed Dana drivers @MilosKozak
-- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
+- 3.0 sürümündeki sorunlar düzeltildi
+- uygulama donması düzeltildi @MilosKozak
+- DASH sürücüsü düzeltildi @avereha
+- Dana sürücüsü düzeltildi @MilosKozak
+- büyük kullanıcı arayüzü iyileştirmesi, temizleme ve birleştirme, malzeme tasarımına geçiş, stiller, beyaz tema, yeni simgeler. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
-- Wear code refactored. Artık geriye dönük uyumlu değil @MilosKozak
-- a11y improvements @Andries-Smit
-- new protection option PIN @Andries-Smit
-- allow graph scale from menu @MilosKozak
-- more statistics available @MilosKozak
-- MDI plugin removed in favor of VirtualPump
-- new automation action: StopProcessing (following rules)
+- Aidex CGM desteği @andyrozman @markvader (Sadece pompa kontrolü)
+- `Wear OS saat kutucukları <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, çevirileri @Andries-Smit
+- Wear kodu yeniden düzenlendi. Artık geriye dönük uyumlu değil @MilosKozak
+- a11y iyileştirmeleri @Andries-Smit
+- yeni koruma seçeneği PIN @Andries-Smit
+- menüde grafik ölçeğine izin verme @MilosKozak
+- daha fazla istatistik seçeneği @MilosKozak
+- VirtualPump lehine MDI eklentisi kaldırıldı
+- yeni otomasyon eylemi: StopProcessing (kurallara göre)
 
 ## Sürüm 3.0.0
 
@@ -115,79 +115,79 @@ Yayınlanma tarihi: 31-01-2022
 ### Önemli ipuçları
 
 - **Minimum Android sürümü artık 9.0'dır.**
-- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
-- Use the same version of AAPS and NSClient
+- **Veriler yeni veritabanına taşınmaz.** Şikayet etmeyin, bu çok büyük bir değişikliktir, bundan dolayı mümkün değildir. Böylece güncellemeden sonra Aktif İnsülin, Aktif Karbonhidrat, tedaviler vb. temizlenecektir. Yeni [profil ](../Usage/Profiles.md) oluşturmanız ve yeni Aktif İnsülin ve Aktif Karbonhidrat değerleri ile başlamanız gerekir. Güncellemeyi dikkatlice planlayın!!! Aktif insülin ve aktif karbonhidratın olmadığı bir an en iyi seçenek olacaktır.
+- AAPS ve NSClient'in aynı sürümünü kullanın
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
+**3.0'a güncelledikten sonra** [burada](../Installing-AndroidAPS/update3_0.md) açıklandığı gibi ayarları kontrol ettiğinizden ve düzenlediğinizden emin olun.
 
 ### Hazırlık adımları
 
-**At least two days before update:**
+**Güncellemeden en az iki gün önce:**
 
-- disable Dexcom bridge in Nightscout
-- if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
-- if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+- Nightscout'ta Dexcom bridge'ı devre dışı bırakın
+- Toplayıcı olarak G5/G6 ve xDrip kullanıyorsanız, xDrip'i 14 Ocak 2022'den daha yeni bir sürüme güncellemeniz gerekir
+- G5/G6 kullanıyorsanız, toplayıcı olarak BYODA'ya geçiş yapıyorsanız, geri yumuşatmadan "back-smoothing" yararlanmanız önerilir (xDrip'i başka amaçlar için de kullanabilirsiniz, xDrip BYODA'dan veri alabilir)
 
 ### Değişiklikler
 
-- 100k lines changed, 105k new lines of code
+- 100k satır değişti, 105k satır yeni kod
 
-- [Omnipod DASH support](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
+- [Omnipod DASH desteği](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
 
-- [Dana-i support](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Dana-i desteği](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 support](../Configuration/DiaconnG8.md)
+- [DiaconnG8 desteği](../Configuration/DiaconnG8.md)
 
-- Glunovo support
+- Glunovo desteği
 
-- Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+- Dahili veritabanı Room'a yükseltildi @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 
-- Lot of code rewritten to Kotlin @MilosKozak
+- Kotlin'e yeniden yazılan birçok kod @MilosKozak
 
-- New internal interface for pump drivers
+- Pompa sürücüleri için yeni dahili arayüz
 
-- NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+- NSClient, daha iyi senkronizasyon ve daha ayrıntılı özelleştirme için yeniden yazıldı @MilosKozak
 
-  - Record deletion from NS is not allowed (only invalidation through NSClient)
-  - Record modification from NS is not allowed
-  - Sync setting available without engineering mode (for parents)
-  - Ability to resync data
+  - NS'den kayıt silmeye izin verilmez (yalnızca NSClient aracılığıyla geçersiz kılma)
+  - NS'den kayıt değişikliğine izin verilmez
+  - Mühendislik modu olmadan kullanılabilen senkronizasyon ayarı (ebeveynler için)
+  - Verileri yeniden senkronize etme yeteneği
 
-- Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+- Profil anahtarı davranış değişikliği. Artık Profil Anahtarı *(kullanıcının istediği bir şey)* ve Profil değişikliği *(değişim pompa tarafından yapıldığında)* arasında ayrım yapılıyor @MilosKozak @Tebbe
 
-- You can start activity temporary target during creation of profile switch @MilosKozak
+- Profil anahtarının oluşturulması sırasında aktivite geçici hedefi başlatabilirsiniz @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfili gitti, sadece yerel profil kullanılabilir. Yerel profil [NS ile senkronize edilebilir](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](update3_0-reset-master-password) @MilosKozak
+- Unutulan [ana şifre sıfırlama prosedürü](update3_0-reset-master-password) @MilosKozak
 
-- User actions tracing @Philoul
+- Kullanıcı eylemleri izleme @Philoul
 
-- New automation TempTargetValue trigger @Philoul
+- Yeni otomasyon TempTargetValue tetikleyicisi @Philoul
 
-- New automation Careportal action @Philoul
+- Yeni otomasyon Bakım Portalı eylemi @Philoul
 
-- Add Bolus reminder in Carbs Dialog @Philoul
+- Karbonhidrat İletişim Kutusuna Bolus hatırlatıcısı ekleyin @Philoul
 
-- Bolus Wizard improvement
+- Bolus Sihirbazı iyileştirmesi
 
-- UI improvements @MilosKozak
+- UI (Kullanıcı arayüzü) iyileştirmeleri @MilosKozak
 
-- New user buttons for automations @MilosKozak
+- Otomasyonlar için yeni kullanıcı butonları @MilosKozak
 
-- New automation layout @MilosKozak
+- Yeni otomasyon düzeni @MilosKozak
 
-- History browser updated and fixed @MilosKozak
+- Geçmiş tarayıcısı güncellendi ve düzeltildi @MilosKozak
 
-- Objective9 removed @MilosKozak
+- Görev 9 kaldırıldı @MilosKozak
 
-- Fixed bug associated to unstable CGM data @MilosKozak
+- Kararsız CGM verileriyle ilişkili hata giderildi @MilosKozak
 
-- DanaR and DanaRS communication improvement @MilosKozak
+- DanaR ve DanaRS iletişim iyileştirmesi @MilosKozak
 
-- CircleCI integration @MilosKozak
+- CircleCI entegrasyonu @MilosKozak
 
-- Files location change:
+- Dosya konumu değişikliği:
 
   - /AAPS/extra (engineering mode)
   - /AAPS/logs /AAPS/exports
@@ -197,33 +197,33 @@ Yayınlanma tarihi: 31-01-2022
 
 Yayınlanma tarihi: 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) below.
+- Lütfen ayrıca aşağıdaki [2.8.1.1 sürümü için önemli ipuçlarına](Releasenotes-important-hints-2-8-1-1) bakın.
 
 ### Değişiklikler
 
-- stability improvements
-- more tweaking for Android 8+
-- improved icons
-- watch improvements
-- NSClient fixes
-- Bolus advisor now works with Pumpcontrol and NSClient
+- kararlılık iyileştirmeleri
+- Android 8+ için daha fazla ince ayar
+- geliştirilmiş simgeler
+- akıllı saat iyileştirmeleri
+- NSClient düzeltmeleri
+- Bolus danışmanı artık Pumpcontrol ve NSClient ile çalışıyor
 
 ## Sürüm 2.8.1.1
 
 Yayınlanma tarihi: 12-01-2021
 
-(important-hints-2-8-1-1)
+(important-hints-2-8-1-1)=
 ### Önemli ipuçları
 
-- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
-- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
-- ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-- NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+- **NS_UPLOAD_ONLY** seçeneği, tüm 2.8.1 kullanıcıları için zorunlu olarak AÇIK duruma getirildi.
+- GH, karbonhidrat veya profil değişimi için NSClient kullanıyorsanız, AAPS'de bunu kapatmanız gerekir, ancak **yalnızca senkronizasyonunuz iyi çalışıyorsa** (yani, GH, GBO vb.'nin kendi kendini değiştirmesi gibi istenmeyen veri değişikliklerini görmezsiniz).
+- DİKKAT: Başka uygulama tanıtıcı tedavileriniz varsa bunu YAPMAYIN (xDrip yayın/yükleme/eşitleme... gibi)
+- NS_UPLOAD_ONLY, yalnızca mühendislik modu etkinleştirildiğinde kapatılabilir.
 
 ### Majör değişiklikler
 
-- RileyLink, Omnipod and MDT pump improvements and fixes
-- forced NS_UPLOAD_ONLY
+- RileyLink, Omnipod ve MDT pompa iyileştirmeleri ve düzeltmeleri
+- NS_UPLOAD_ONLY zorunlu
 - fix for SMB & Dexcom app
 - watchface fixes
 - crash reporting improved
@@ -410,7 +410,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 - Automation: [allow sorting](Automation-sort-automation-rules)
 
-- Automation: fixed bug when automation was running with disabled loop
+- Otomasyon: devre dışı bırakılmış döngüde çalışan otomasyon hatası düzeltildi
 
 - New status line for Combo
 
@@ -430,7 +430,7 @@ Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newe
 
 Yayınlanma tarihi: 31-10-2019
 
-Please note the [important notes](Releasenotes-important-notes-2-5-0) and [limitations](Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Lütfen [sürüm 2.5.0](Releasenotes-version-2-5-0) için listelenen [önemli notlara](Releasenotes-important-notes-2-5-0) ve [sınırlamalara](Releasenotes-is-this-update-for-me-currently-is-not-supported) dikkat edin. \* Ağ durumu alıcısında birçok kişinin çökmesine neden olan bir hata düzeltildi (kritik değil ama yeniden hesaplamada çok fazla enerji israfına neden oluyor). \* Güncelleme bildirimini tetiklemeden küçük güncellemelerin yapılmasına izin verecek yeni sürüm.
 
 (Releasenotes-version-2-5-0)=
 ## Sürüm 2.5.0
