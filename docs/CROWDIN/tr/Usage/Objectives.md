@@ -112,8 +112,8 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 :alt: Örnek negatif AİNS
 ```
 
-- Set your target range slightly higher than you usually aim for, just to be safe and have a bit more scurity buffer.
-- Enable 'Low Glucose Suspend' mode either by by pressing and holding the Loop icon at the top right corner of the home screen and selecting the Loop - LGS mode icon.
+- Güvende olmak ve daha fazla koruma tamponuna sahip olmak için hedef aralığınızı genellikle biraz daha yüksek tutun.
+- Ana ekranın sağ üst köşesindeki Döngü simgesini basılı tutarak ve Döngü - LGS modu simgesini seçerek 'Düşük Glikoz Askıya Alma' modunu etkinleştirin.
 - Ana ekrandaki mavi bazal metnini veya ana ekran grafiğindeki mavi bazal oluşumunu görüntüleyerek geçici bazalların aktivitesini izleyin.
 - Bazal artırma yeteneği olmadan tedavi edilen hipoları takiben geçici olarak ani artışlar yaşayabilirsiniz.
 
