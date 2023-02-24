@@ -67,68 +67,70 @@ Changer de langue <./changelanguage.md>
 ```
 
 ```{toctree}
-:caption: Getting started
+:caption: Pour commencer
 
-Safety first <./Getting-Started/Safety-first.md>
+Sécurité avant tout <./Getting-Started/Safety-first.md>
 
-What is a closed loop system <./Getting-Started/ClosedLoop.md>
+Qu'est-ce qu'un système en boucle fermée <./Getting-Started/ClosedLoop.md>
 
-What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
+Qu'est-ce qu'une boucle fermée avec AndroidAPS <./Getting-Started/WhatisAndroidAPS.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
+Choix de pompes <./Getting-Started/Pump-Choices.md>
+
+Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.md>
 
 ```
 
 (index-what-do-i-need)=
 
 ```{toctree}
-:caption: What do I need
+:caption: Que dois-je faire
 
-CGM/FGM choices <./Configuration/BG-Source.md>
+Choix MGC/MGF <./Configuration/BG-Source.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Choix de pompe <./Getting-Started/Pump-Choices.md>
 
 Module <./Module/module.md>
 
 ```
 
 ```{toctree}
-:caption: How to Install AAPS
+:caption: Comment installer AndroidAPS
 
-Building the APK <./Installing-AndroidAPS/Building-APK.md>
+Construire l'APK <./Installing-AndroidAPS/Building-APK.md>
 
-Update to a new version or branch <./Installing-AndroidAPS/Update-to-new-version.md>
+Télécharger la nouvelle version ou branche <./Installing-AndroidAPS/Update-to-new-version.md>
 
-Hints and Checks after update to AAPS 3.0<./Installing-AndroidAPS/update3_0.md>
+Vérifications à faire après la mise à jour vers AAPS 3.0 <./Installing-AndroidAPS/update3_0.md>
 
-Checks after update to AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
+Vérifications à faire après la mise à jour vers AAPS 2.7 <./Installing-AndroidAPS/update2_7.md>
 
-Install git <./Installing-AndroidAPS/git-install.md>
+Installer git <./Installing-AndroidAPS/git-install.md>
 
-Troubleshooting Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
+Dépannage d'Android Studio <./Installing-AndroidAPS/troubleshooting_androidstudio.md>
 
-Release notes <./Installing-AndroidAPS/Releasenotes.md>
+Notes de versions <./Installing-AndroidAPS/Releasenotes.md>
 
-Dev branch <./Installing-AndroidAPS/Dev_branch.md>
+Branches de développement <./Installing-AndroidAPS/Dev_branch.md>
 
 ```
 
 (index-component-setup)=
 
 ```{toctree}
-:caption: Component Setup
+:caption: Configuration des composants
 
-CGM/FGM <./Configuration/BG-Source.md>
+MGC/MGF <./Configuration/BG-Source.md>
 
-xDrip Settings <./Configuration/xdrip.md>
+Paramètres xDrip <./Configuration/xdrip.md>
 
-Pump choices <./Getting-Started/Pump-Choices.md>
+Pompes à insuline <./Hardware/pumps.md>
 
-Phones <./Hardware/Phoneconfig.md>
+Smartphones <./Hardware/Phoneconfig.md>
 
-Nightscout setup <./Installing-AndroidAPS/Nightscout.md>
+Paramètres Nightscout <./Installing-AndroidAPS/Nightscout.md>
 
-Smartwatch  <./Hardware/Smartwatch.md>
+Montres connectées  <./Hardware/Smartwatch.md>
 
 ```
 
@@ -137,77 +139,74 @@ Smartwatch  <./Hardware/Smartwatch.md>
 ```{toctree}
 :caption: Configuration
 
-Config builder <./Configuration/Config-Builder.md>
+Configuration <./Configuration/Config-Builder.md>
 
-Preferences <./Configuration/Preferences.md>
+Préférences <./Configuration/Preferences.md>
 
 ```
 
 ```{toctree}
-:caption: AAPS Usage
+:caption: Utilisation d'AndroidAPS
 
-AAPS screens <./Getting-Started/Screenshots.md>
+Les écrans d'AndroidAPS <./Getting-Started/Screenshots.md>
 
-Objectives <./Usage/Objectives.md>
+Objectifs <./Usage/Objectives.rst>
+Fonctionnalités d'OpenAPS <./Usage/Open-APS-features.md>
 
-OpenAPS features <./Usage/Open-APS-features.md>
+Calcul des GA <./Usage/COB-calculation.md>
 
-COB calculation <./Usage/COB-calculation.md>
+Estimation de la Sensibilité <./Configuration/Sensitivity-detection-and-COB.md>
 
-Sensitivity detection <./Configuration/Sensitivity-detection-and-COB.md>
+Changement de profil <./Usage/Profiles.md>
 
-Profile switch <./Usage/Profiles.md>
+Cibles Temporaires <./Usage/temptarget.md>
 
-Temp-targets <./Usage/temptarget.md>
+Glucides étendus <./Usage/Extended-Carbs.md>
 
-Extended carbs <./Usage/Extended-Carbs.md>
+Automatisation <./Usage/Automation.md>
 
-Automation <./Usage/Automation.md>
+Careportal (supprimé) <./Usage/CPbefore26.md>
 
-Autotune (dev only) <./Usage/autotune.md>
+Téléversement Open Humans <../Configuration/OpenHumans.md>
 
-Careportal (discontinued) <./Usage/CPbefore26.md>
-
-Open Humans Uploader <./Configuration/OpenHumans.md>
-
-Automation with 3rd party apps <./Usage/automationwithapp.md>
+Automatisation avec des applications tierces <./Usage/automationwithapp.md>
 
 Android auto <./Usage/Android-auto.md>
 
 ```
 
 ```{toctree}
-:caption: General Hints
+:caption: "Conseils g\xE9n\xE9raux"
 
-Crossing timezones with pumps <./Usage/Timezone-traveling.md>
+Fuseaux horaires <./Usage/Timezone-traveling.md>
 
-Accessing logfiles <./Usage/Accessing-logfiles.md>
+Acces aux fichiers journaux <./Usage/Accessing-logfiles.md>
 
-Accu-Chek Combo tips for basic usage <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
+Conseils d'utilisation de l'Accu-Chek Combo <./Usage/Accu-Chek-Combo-Tips-for-Basic-usage.md>
 
-Export/Import Settings <./Usage/ExportImportSettings.md>
+Export/Import des paramètres <./Usage/ExportImportSettings.md>
 
-xDrip engineering mode <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
-
-```
-
-```{toctree}
-:caption: AAPS for children
-
-Remote monitoring <./Children/Children.md>
-
-SMS commands <./Children/SMS-Commands.md>
-
-Profile helper <./Configuration/profilehelper.md>
+Mode ingénierie xDrip <./Usage/Enabling-Engineering-Mode-in-xDrip.md>
 
 ```
 
 ```{toctree}
-:caption: Troubleshooting
+:caption: AAPS pour les enfants
 
-Troubleshooting <./Usage/troubleshooting.md>
+Surveillance à distance <./Children/Children.md>
 
-Nightscout client <./Usage/Troubleshooting-NSClient.md>
+Commandes SMS <./Children/SMS-Commands.md>
+
+Assistant de profil <./Configuration/profilehelper.md>
+
+```
+
+```{toctree}
+:caption: Dépannage
+
+Dépannage <./Usage/troubleshooting.md>
+
+Client Nightscout <./Usage/Troubleshooting-NSClient.md>
 
 ```
 
@@ -218,54 +217,54 @@ FAQ <./Getting-Started/FAQ.md>
 ```
 
 ```{toctree}
-:caption: Glossary
+:caption: Glossaire
 
-Glossary <./Getting-Started/Glossary.md>
+Glossaire <./Getting-Started/Glossary.md>
 ```
 
 ```{toctree}
-:caption: Where to go for help
+:caption: Où chercher de l'aide
 
-Useful resources to read before you start <./Where-To-Go-For-Help/Background-reading.md>
+Ressources utiles à lire avant de commencer <./Where-To-Go-For-Help/Background-reading.md>
 
-Where to go for help <./Where-To-Go-For-Help/Connect-with-other-users.md>
+Où chercher de l'aide <./Where-To-Go-For-Help/Connect-with-other-users.md>
 
-Docs updates & changes <./Getting-Started/WikiUpdate.md>
-
-```
-
-```{toctree}
-:caption: For Clinicians
-
-For Clinicians <./Resources/clinician-guide-to-AndroidAPS.md>
-```
-
-```{toctree}
-:caption: How to help
-
-How to help <./Getting-Started/How-can-I-help.md>
-
-How to translate the app and docs <./translations.md>
-
-State of translations <./Administration/stateTranslations.md>
-
-How to edit the docs <./make-a-PR.md>
+Wiki mises à jour et modifications <./Getting-Started/WikiUpdate.md>
 
 ```
 
 ```{toctree}
-:caption: Sandbox
+:caption: Pour les professionnels de santé
 
-Sandbox <./Sandbox/sandbox1.md>
+Pour les professionnels de santé <./Ressources/clinician-guide-to-AndroidAPS.md>
+```
+
+```{toctree}
+:caption: Comment aider
+
+Comment aider <./Getting-Started/How-can-I-help.md>
+
+Comment traduire l'application et la documentation <./translations.md>
+
+État des traductions <./Administration/stateTranslations.md>
+
+Comment éditer la documentation <./make-a-PR.md>
+
+```
+
+```{toctree}
+:caption: Bac à sable
+
+Bac à sable <./Sandbox/sandbox1.md>
 ```
 
 ```{note}
-**Disclaimer And Warning**
+**Avertissement**
 
-- All information, thought, and code described here is intended for informational and educational purposes only. Nightscout ne fait actuellement aucune tentative de conformité à la confidentialité HIPAA. Use Nightscout and AAPS at your own risk, and do not use the information or code to make medical decisions.
+- Toutes les informations, pensées et codes décrits ici sont destinés à des fins d'information et d'éducation uniquement. Nightscout ne fait actuellement aucune tentative de conformité à la confidentialité HIPAA. Utilisez Nightscout et AAPS à vos propres risques et n'utilisez pas les informations ni le code pour prendre des décisions médicales.
 - L'utilisation du code de github.com est sans garantie ni support formel d'aucune sorte. Veuillez consulter la LICENCE de ce référentiel pour plus de détails.
 - Tous les noms de produits et de sociétés, marques commerciales, marques de service, marques déposées,  sont la propriété de leurs détenteurs respectifs. Leur utilisation est à titre informatif et n'implique aucune affiliation avec eux ni aucune approbation de leur part.
 
-Please note - this project has no association with and is not endorsed by: [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) or [Medtronic](<https://www.medtronic.com/>)
+A noter - ce projet n'a aucun lien avec, et n'est pas approuvé par : [SOOIL](<https://www.sooil.com/eng/>), [Dexcom](<https://www.dexcom.com/>), [Accu-Chek, Roche Diabetes Care](<https://www.accu-chek.com/>) ou [Medtronic](<https://www.medtronic.com/>)
 
 ```
