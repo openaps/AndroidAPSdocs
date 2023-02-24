@@ -120,23 +120,23 @@ Hedeflerinizi birbirine daha yakın bir aralık (diyelim ki 1 veya daha az mmol 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
 ## Görev 7: Kapalı döngüyü ayarlamak, maksimum AİNS'i 0'ın üzerine çıkarmak ve KŞ hedeflerini kademeli olarak düşürmek
 
-- Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
+- [Tercihler](../Configuration/Preferences.md)'den veya ana ekranın sağ üst köşesindeki Döngü simgesine basılı tutarak 1 gün için 'Kapalı Döngü'yü seçin.
 
-- Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- 'Maksimum toplam AİNS OpenAPS'i aşamaz' (OpenAPS'de 'max-iob' olarak adlandırılır) değerinizi 0'ın üzerine çıkarın. Varsayılan öneri "ortalama yemek bolusu + 3x maksimum günlük bazal" (SMB algoritması için) veya "3x maksimum günlük bazal" (eski AMA algoritması için) şeklindedir. Ancak ayarların sizde nasıl tepki verdiğini anlayana kadar bu değeri yavaş yavaş yükseltmelisiniz.( maks günlük bazal = günün herhangi bir zaman diliminde maksimum saatlik değer).
 
-  Bu öneri bir başlangıç noktası olarak görülmelidir. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
+  Bu öneri bir başlangıç noktası olarak görülmelidir. 3x'e ayarladıysanız ve sizi sert ve hızlı şekilde düşürüyorsa, o sayıyı düşürün. Eğer çok dirençliyseniz, her seferinde çok az yükseltin.
 
   ```{image} ../images/MaxDailyBasal2.png
   :alt: maks günlük bazal
   ```
 
-- Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+- Döngü modellerinize ne kadar AİNS uyduğundan emin olduktan sonra hedeflerinizi istediğiniz seviyeye indirin.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 ## Görev 8: Gerekirse bazalleri ve oranları ayarlayın ve ardından otoduyarlılığı etkinleştirin
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+- Bazallarınızın doğruluğunu kontrol etmek veya geleneksel bir bazal testi yapmak için [otoayarı](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) bir defaya mahsus olarak kullanabilirsiniz.
+- 7 gün boyunca [otoduyarlılık](../Usage/Open-APS-features.md) özelliğini etkinleştirin ve ana ekran grafiğindeki beyaz çizginin egzersiz veya hormonlar vb. AndroidAPS'in bazalları ve/veya hedefleri buna göre nasıl ayarladığını OpenAPS raporu sekmesinden takip edin.
 
 Henüz yapmadıysanız *Döngünüzü* [bu forma](https://bit.ly/nowlooping) *AndroidAPS'yi DIY döngü yazılımınız olarak kaydetmeyi unutmayın*
 
