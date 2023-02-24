@@ -6,7 +6,7 @@
 No need to translate this.
 ```
 
-"The number 43 is, in The Hitchhiker's Guide to the Galaxy by Douglas Adams, the "Answer to the Ultimate Question of Life, the Universe, and Everything," calculated by an enormous supercomputer named Deep Thought over a period of 7.5 million years." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
+« Le numéro 43 est, dans le Guide de l'assassin à la galaxie de Douglas Adams, la « Réponse à la question ultime de la vie », l'Univers, et Tout," calculé par un énorme superordinateur nommé Deep Thought sur une période de 7. millions d'années." - [Wikipedia](https://en.wikipedia.org/wiki/42_(number)).
 
 Ceci est un fichier sandbox interne pour que l'équipe de documentation puisse tester
 
