@@ -37,13 +37,13 @@ Daha eski Android'e sahip kullanıcıların AAPS'nin eski sürümünü kullanmas
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- AAPS **2.8.2.1** sürümünü kullanın
+- AAPS Kodunu <https://github.com/nightscout/AndroidAPS> 2.8.2.1 şubesinden indirin
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- AAPS **2.6.2** sürümünü kullanın
+- AAPS kodunu <https://github.com/nightscout/AndroidAPS> 2.6.2 şubesinden indirin
 
 ## Sürüm 3.2.0
 
@@ -441,10 +441,10 @@ Yayınlanma tarihi: 26-10-2019
 
 ### Önemli notlar
 
-- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.html).
-- If you are using xDrip [identify receiver](xdrip-identify-receiver) must be set.
-- If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
-- Glimp is supported from version 4.15.57 and newer.
+- [Apk'yı oluşturmak](../Installing-AndroidAPS/Building-APK.md) veya [güncellemek](../Installing-AndroidAPS/Update-to-new-version.html) için lütfen [Android Studio Sürüm 3.5.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
+- xDrip kullanıyorsanız [alıcıyı tanımlayın](xdrip-identify-receiver) ayarlı olmalıdır.
+- Yamalı Dexcom uygulamasıyla Dexcom G6 kullanıyorsanız, [2.4 klasöründeki ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4) sürümüne ihtiyacınız olacaktır.
+- Glimp, 4.15.57 ve daha yeni sürümlerde desteklenmektedir.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
 ### Bu güncelleme benim için mi? Şu anda DESTEKLENMİYOR
@@ -458,17 +458,17 @@ Yayınlanma tarihi: 26-10-2019
 
 - Dahili TargetSDK 28 (Android 9) olarak değiştirilmesi, jetpack desteği
 - RxJava2, Okhttp3, Retrofit desteği
-- Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-- New [Automation plugin](../Usage/Automation.md)
-- Allow to [bolus only part](Preferences-advanced-settings-overview) from bolus wizard calculation
-- Rendering insulin activity
-- Adjusting IOB predictions by autosens result
-- New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- Signature verifier
-- Allow to bypass objectives for OpenAPS users
-- New [objectives](../Usage/Objectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-- Fixed bug in Dana\* drivers where false time difference was reported
-- Fixed bug in [SMS communicator](../Children/SMS-Commands.md)
+- Eski [Medtronic pompaları](../Configuration/MedtronicPump.md) desteği (RileyLink gerekir)
+- Yeni [Otomasyon eklentisi](../Usage/Automation.md)
+- Bolus sihirbazı hesaplamasından [yalnızca bolus kısmına](Preferences-advanced-settings-overview) izin ver
+- İnsülin aktivitesi oluşturma
+- AİNS tahminlerini otoduyarlılık sonucuna göre ayarlama
+- Yamalı Dexcom apk'leri için yeni destek ([2.4 klasörü ](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+- İmza doğrulayıcı
+- OpenAPS kullanıcıları için hedeflerin atlanmasına izin ver
+- Yeni [görevler](../Usage/Objectives.md) - sınav, başvuru yönetimi (En az "Açık döngüden başlama" görevine başladıysanız önceki sürümlerde sınav isteğe bağlıdır.)
+- Dana sürücülerinde yanlış zaman farkının bildirildiği hata düzeltildi
+- [SMS Kominikatör](../Children/SMS-Commands.md)'deki hata düzeltildi
 
 ## Sürüm 2.3
 
