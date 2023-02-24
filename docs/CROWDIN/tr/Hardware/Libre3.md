@@ -173,7 +173,7 @@ Bir sensör değişikliğinden sonra xDrip+ yeni sensörü otomatik olarak algı
 - In AndroidAPS go to Config Builder -> BG Source and check "xDrip+"
 - If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
 
-Until now, using Libre 3 as BG source you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB algorithm. The BG values of Libre 3 are not smooth enough to use it safely.
+Until now, using Libre 3 as BG source you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB algorithm. Libre 3'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir.
 
 ### Switch back to the Libre app from Juggluco
 
@@ -191,11 +191,11 @@ It is possible to switch back from Juggluco to the Libre 3 app as receiver. The 
 #### Necessary settings for a successful sensor start
 
 - NFC etkin / BT etkin
-- Storage and location permission enabled
-- Location service enabled
-- Automatic time and time zone setting
+- Depolama ve konum izni etkin
+- Konum hizmeti etkin
+- Otomatik saat ve saat dilimi ayarı
 
-Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. It is not about the location permission of the app, which must be set as well!
+Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. Bu, aynı zamanda ayarlanması gereken uygulamanın konum izni ile ilgili değildir!
 
 #### Sorun Giderme Libre3'de okuma yok
 
