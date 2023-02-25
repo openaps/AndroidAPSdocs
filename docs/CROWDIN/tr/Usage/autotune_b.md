@@ -14,30 +14,30 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
   - Not: Her yeni profil seçiminde, önceki sonuçlar kaldırılacak ve Gün Ayar parametreleri varsayılan değere ayarlanacaktır.
 - Ayar günleri, profilinizi ayarlamak için hesaplamada kullanılan gün sayısını içermektedir. Minimum değer 1 gün ve maksimum değer 30 gündür. Doğru yinelemeli ve sorunsuz sonuçlar elde etmek için bu sayı çok küçük olmamalıdır (her hesaplama için 7 günden fazla)
   - Not: Ayar günleri parametresini her değiştirdiğinizde, önceki sonuçlar kaldırılacaktır
-- Last Run il a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
-- Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
-  - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorythm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
-- Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DAI, IC, ISF, basal and target)
-  - Note: Autotune will only tune your IC (single value), ISF (single value) and basal (with circadian variation). Units, DAI and target will remain unchanged in output profile.
+- Son Çalıştırma, en son geçerli hesaplamanızı kurtaran bir bağlantıdır. Otoayarı o gün başlatmadıysanız veya yukarıdaki hesaplama parametresinin değiştirilmesiyle önceki sonuçlar kaldırıldıysa, en son başarılı çalıştırmanın parametrelerini ve sonuçlarını kurtarabilirsiniz.
+- Uyarı size örneğin seçilen profil hakkında bazı bilgiler gösterir (birkaç Kİ değeriniz veya birkaç İDF değeriniz varsa)
+  - Not: Otomatik ayar hesaplaması yalnızca tek bir Kİ ve tek bir İDF değeriyle çalışır. Şu anda bir sirkadiyen Kİ veya sirkadiyen İDF'yi ayarlamak için mevcut bir OtoAyar algoritması yoktur. Giriş profilinizin birkaç değeri varsa, profilinizi ayarlamak için dikkate alınan ortalama değeri uyarı bölümünde görebilirsiniz.
+- Giriş Profilini Kontrol Et düğmesi, profilinizi (Ünite, İES, Kİ, İDF, bazal ve hedef) hızlı bir şekilde doğrulamanıza izin vermek için Profil Görüntüleyiciyi açar.
+  - Not: OtoAyar, yalnızca Kİ (tek değer), İDF (tek değer) ve bazal (sirkadiyen varyasyonlu) ayarlarınızı yapacaktır. Üniteler, İES ve hedef, çıktı profilinde değişmeden kalacaktır.
 
-- "Run Autotune" will launch Autotune calculation with selected profile and the number of Tune days
-  - Note: Autotune calculation can take a long time. Once launched, you can switch to another view (home, ...) and come back later in Autotune plugin to see results
+- "OtoAyarı Çalıştır", seçili profil ve ayarlama gün sayısı ile OtoAyar hesaplamasını başlatır
+  - Not: Otomatik ayar hesaplaması uzun sürebilir. Başlatıldıktan sonra, başka bir görünüme (ev, ...) geçebilir ve sonuçları görmek için daha sonra otoayar eklentisinde geri dönebilirsiniz
 
 ![Autotune Run start](../images/Autotune/Autotune_2b.png)
 
-- Then during the run you will see intermediate results below
+- Ardından çalıştırma sırasında aşağıda ara sonuçları göreceksiniz
 
-  - Note: During run, settings are locked, so you cannot change anymore selected input profile or the number of day. You will have to wait the end of current calculation if you want to launch another run with other parameters.
+  - Not: Çalıştırma sırasında ayarlar kilitlenir, bu nedenle artık seçilen giriş profilini veya gün sayısını değiştiremezsiniz. Diğer parametrelerle başka bir çalıştırma başlatmak istiyorsanız mevcut hesaplamanın bitmesini beklemeniz gerekecektir.
 
   ![Autotune during run](../images/Autotune/Autotune_3b.png)
 
-- When Autotune calculation is finished, you will see the result (Tuned profile) and four buttons below.
+- OtoAyar hesaplaması bittiğinde, sonucu (Ayarlanmış profil) ve aşağıda dört buton göreceksiniz.
 
 ![Autotune Result](../images/Autotune/Autotune_4b.png)
 
-- It's important to always compare input profile (column "Profile"), output profile (column "Tuned") and the percentage of variation for each value (Column "%").
+- Girdi profilini ("Profil" sütunu), çıktı profilini ("Ayar" sütunu) ve her değer için varyasyon yüzdesini ("%" Sütunu) her zaman karşılaştırmak önemlidir.
 
-- For basal rates, you also have the number of "missing days". You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Bazal oranlar için "kayıp gün" sayısına da sahipsiniz. You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
 
 - The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
 
