@@ -8,7 +8,7 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 ## Otoayar kullanıcı arabirimi
 
-![Autotune default screen](../images/Autotune/Autotune_1.png)
+![Otoayar varsayılan ekranı](../images/Autotune/Autotune_1.png)
 
 - Ayarlamak istediğiniz giriş profilini Profil açılır menüsünden seçebilirsiniz (varsayılan olarak mevcut etkin profiliniz seçilidir)
   - Not: Her yeni profil seçiminde, önceki sonuçlar kaldırılacak ve Gün Ayar parametreleri varsayılan değere ayarlanacaktır.
@@ -23,66 +23,66 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 - "OtoAyarı Çalıştır", seçili profil ve ayarlama gün sayısı ile OtoAyar hesaplamasını başlatır
   - Not: Otomatik ayar hesaplaması uzun sürebilir. Başlatıldıktan sonra, başka bir görünüme (ev, ...) geçebilir ve sonuçları görmek için daha sonra otoayar eklentisinde geri dönebilirsiniz
 
-![Autotune Run start](../images/Autotune/Autotune_2.png)
+![Otoayar Çalışmayı başlat](../images/Autotune/Autotune_2.png)
 
 - Ardından çalıştırma sırasında aşağıda ara sonuçları göreceksiniz
 
   - Not: Çalıştırma sırasında ayarlar kilitlenir, bu nedenle artık seçilen giriş profilini veya gün sayısını değiştiremezsiniz. Diğer parametrelerle başka bir çalıştırma başlatmak istiyorsanız mevcut hesaplamanın bitmesini beklemeniz gerekecektir.
 
-  ![Autotune during run](../images/Autotune/Autotune_3.png)
+  ![Otoayar çalışıyor](../images/Autotune/Autotune_3.png)
 
 - OtoAyar hesaplaması bittiğinde, sonucu (Ayarlanmış profil) ve aşağıda dört buton göreceksiniz.
 
-![Autotune Result](../images/Autotune/Autotune_4.png)
+![Otoayar Sonucu](../images/Autotune/Autotune_4.png)
 
 - Girdi profilini ("Profil" sütunu), çıktı profilini ("Ayar" sütunu) ve her değer için varyasyon yüzdesini ("%" Sütunu) her zaman karşılaştırmak önemlidir.
 
-- Bazal oranlar için "kayıp gün" sayısına da sahipsiniz. You have missing days when Autotune don't have enough data categorized as "Basal" to tune basal rate for this period (for example after each meal when you have carbs absorption). This number should be as low as possible especially when basal is important (for example during the night or at the end of the afternoon)
+- Bazal oranlar için "kayıp gün" sayısına da sahipsiniz. Otoayarın bu dönemde bazal oranı ayarlamak için "Bazal" olarak kategorize edilmiş yeterli veriye sahip olmadığı durumlarda (örneğin, her yemekten sonra karbonhidrat emilimi durumunda) eksik günleriniz olacaktır. Bu sayı, özellikle bazal önemli olduğunda (örneğin gece veya öğleden sonra) mümkün olduğunca düşük olmalıdır.
 
-- The "Compare profiles" button open the profile comparator view. Input profile is in blue, and output profile (named "Tuned") is in red.
+- "Profilleri karşılaştır" butonu, profil karşılaştırıcı görünümünü açar. Giriş profili mavi ve çıkış profili ("Ayarlanmış" olarak adlandırılır) kırmızıdır.
 
-  - Note: in the example below input profile has circadian variation for IC and ISF, but output calculated profile has a single value. If it's important for you to get a circadian output profile see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+  - Not: Aşağıdaki örnekte, giriş profilinin Kİ ve İDF için sirkadiyen değişimi vardır, ancak hesaplanan çıktı profilinin tek bir değeri vardır. Bir sirkadiyen çıktı profili almanız sizin için önemliyse aşağıdaki [Sirkadiyen Kİ veya İDF profiline](#circadian-ic-or-isf-profile) bakın.
 
-  ![Autotune Compare profiles](../images/Autotune/Autotune_5.png)
+  ![Otoayar profil karşılaştırma](../images/Autotune/Autotune_5.png)
 
-- If you trust results (low percentage of variation between input profile and output profile), you can click on "Activate profile" button and then click on OK to validated.
+- Sonuçlara güveniyorsanız, (giriş profili ile çıktı profili arasında düşük yüzdeli farklılık) "Profili etkinleştir" düğmesine tıklayabilir ve ardından doğrulamak için Tamam'a tıklayabilirsiniz.
 
-  - Activate Tuned profile will automatically create a new profile "Tuned" in your Local profile plugin.
-  - If you already have a profile named "Tuned" in your local profile plugin, then this profile will be updated with calculated Autotune profile before the activation
+  - Ayarlanmış profili etkinleştirin, Yerel profil eklentinizde otomatik olarak yeni bir "Ayarlanmış" profil oluşturacaktır.
+  - Yerel profil eklentinizde zaten "Ayarlanmış" (Tuned) adlı bir profiliniz varsa, bu profil aktivasyondan önce hesaplanan Otoayar profiliyle güncellenecektir.
 
-  ![Autotune Activate profile](../images/Autotune/Autotune_6.png)
+  ![Otoayar profil etkinleştirme](../images/Autotune/Autotune_6.png)
 
-- If you think Tuned profile must be adjusted (for example if you think some variation are too important), then you can click on "Copy to local profile" button
+- Ayarlanmış profilin gerektiğini düşünüyorsanız (örneğin, bazı varyasyonların çok önemli olduğunu düşünüyorsanız), "Yerel profile kopyala" düğmesine tıklayabilirsiniz.
 
-  - A new profile with the prefix "Tuned" and the date and time of the run will be created in local profile plugin
+  - Yerel profil eklentisinde "Ayarlanmış" ön ekine ve çalıştırmanın tarih ve saatine sahip yeni bir profil oluşturulacak
 
-![Autotune Copy to local profile](../images/Autotune/Autotune_7.png)
+![Otoayar yerel profile kopyalama](../images/Autotune/Autotune_7.png)
 
-- You can then select local profile to edit the Tuned profile (it will be selected by default when you open Local profile plugin)
+- Ardından, Ayarlanmış profilini düzenlemek için yerel profili seçebilirsiniz (Yerel profil eklentisini açtığınızda varsayılan olarak seçilecektir)
 
-  - the values in local profile will but rounded in the user interface to your pump capabilities
+  - yerel profildeki değerler ancak kullanıcı arabiriminde pompa kapasitenize yuvarlanır
 
-  ![Autotune local profile update](../images/Autotune/Autotune_8.png)
+  ![Otoayar yerel profil güncelleme](../images/Autotune/Autotune_8.png)
 
-- If you want to replace your input profile with Autotune result, click on "Update input profile" button and validate the Popup with OK
+- Giriş profilinizi Otoayar sonuçlarıyla değiştirmek isterseniz, "Giriş profilini güncelle" düğmesine tıklayın ve açılan pencereyi Tamam ile onaylayın
 
-  - Note: if you click on "Activate profile" after "Update input profile", then you will activate your updated profile and not the default "Tuned" profile?
+  - Not: "Giriş profilini güncelle"den sonra "Profili etkinleştir"e tıklarsanız, varsayılan "Ayarlanmış" profili değil, güncellenmiş profilinizi etkinleştirirsiniz.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_9.png)
+  ![Otoayar giriş profilini güncelleme](../images/Autotune/Autotune_9.png)
 
-- If you have updated your input profile, then the "Update input profile" button is replaced by "Revert input profile" button (see screenshot below). You can that way immediatly see if your current input profile in Local profile plugin already include the result of last run or not. You also have the possibility to recover you input profile without autotune result with this button
+- Giriş profilinizi güncellediyseniz, "Giriş profilini güncelle" butonunun yerini "Giriş profilini geri al" butonu alır (aşağıdaki ekran görüntüsüne bakın). Bu şekilde, Yerel profil eklentisindeki mevcut giriş profilinizin zaten son çalıştırmanın sonucunu içerip içermediğini hemen görebilirsiniz. Ayrıca, bu buton ile otoayar sonucu olmadan giriş profilinizi kurtarma olanağına da sahipsiniz.
 
-  ![Autotune Update input profile](../images/Autotune/Autotune_10.png)
+  ![Otoayar giriş profilini güncelleme](../images/Autotune/Autotune_10.png)
 
 
 
-## Autotune settings
+## OtoAyar ayarları
 
 (autotune-plugin-settings)=
 
-### Autotune plugin settings
+### Otoayar eklenti ayarları
 
-![Autotune default screen](../images/Autotune/Autotune_11.png)
+![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
 
 - Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
   - **Be Carefull, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
@@ -96,7 +96,7 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 - Autotune also uses Max autosens ratio and Min autotsens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
 
-  ![Autotune default screen](../images/Autotune/Autotune_12.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_12.png)
 
 
 
@@ -112,7 +112,7 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 - See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
 
-  ![Autotune default screen](../images/Autotune/Autotune_13.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_13.png)
 
 
 
@@ -126,19 +126,19 @@ Note: for more information on how to set an automation rule, see [here](./Automa
 
 - You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
 
-  ![Autotune default screen](../images/Autotune/Autotune_16.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_16.png)
 
 - It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
 
-  ![Autotune default screen](../images/Autotune/Autotune_17.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_17.png)
 
 - Then you can select "Run Autotune" Action in the list
 
-  ![Autotune default screen](../images/Autotune/Autotune_18.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_18.png)
 
 - You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
 
-  ![Autotune default screen](../images/Autotune/Autotune_19.png)
+  ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_19.png)
 
 - After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
 
@@ -166,7 +166,7 @@ We advise to not use Autotune in the following cases:
   - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
 
 - Karbonhidrat emiliminiz çok yavaş: Karbonhidrat emiliminizin çoğu min_5m_carbimpact parametresi ile hesaplanıyorsa (bu periyotları AKRB eğrisinin üst kısmında küçük bir turuncu nokta ile görebilirsiniz), AKRB hesaplaması yanlış olabilir ve yanlış sonuçlara yol açabilir.
-  - We you practice sport, you are generally more sensitive and your BG doesn't rise a lot, so during or after an exercice, it's usual to see some periods with slow carbs. But if you have too often unexpected slow carb absorption, then you may need a profile adjustment (higher value of IC) or a min_5m_carbimpact a bit to high.
-- You have a "very bad days", for example stuck several hours in hyperglycemia with a huge amount of insulin to be able to go down within the range, or after a sensor change you got long periods of wrong BG values.
-- If the percentage of modification is too important
-  - You can try to increase the number of days to get smoother results
+  - Spor yapıyorsanız, genellikle daha hassassınız ve kan şekeriniz çok fazla yükselmez, bu nedenle egzersiz sırasında veya sonrasında, yavaş karbonhidratlı bazı dönemler görmek normaldir. Ancak çok sık beklenmedik yavaş karbonhidrat emiliminiz varsa, o zaman bir profil ayarlamasına (daha yüksek Kİ değeri) veya biraz yüksek bir min_5m_carbimpact'e ihtiyacınız olabilir.
+- "Çok kötü günler" geçiriyorsunuz, örneğin, aralığın içine inebilmek için yüksek miktarda insülinle birkaç saat hiperglisemide kalmışsınız veya bir sensör değişikliğinden sonra uzun süre yanlış kan şekeri değerleriniz olmuş.
+- Değişiklik yüzdesi çok önemliyse
+  - Daha sorunsuz sonuçlar almak için gün sayısını artırmayı deneyebilirsiniz.
