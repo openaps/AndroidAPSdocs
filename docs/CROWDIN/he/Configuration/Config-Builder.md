@@ -14,11 +14,11 @@
 
 (Config-Builder-tab-or-hamburger-menu)=
 
-## Tab or hamburger menu
+## לשונית או תפריט המבורגר
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+באמצעות תיבת הסימון מתחת סמל העין תוכלו לבחור כיצד לפתוח את המסך של אותה תכונה.
 
-![Tab or hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
+![לשונית או תפריט המבורגר](../images/ConfBuild_TabOrHH_AAPS30.png)
 
 (Config-Builder-profile)=
 
@@ -27,29 +27,29 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 * בחרו את סוג הפרופיל הבזאלי בו תרצו להשתמש. ראו עמוד [פרופילים](../Usage/Profiles.md) למידע נוסף על ההתקנה.
 * החל מ-AAPS 3.0, קיים רק פרופיל מקומי.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+למרות זאת, ניתן לסנכרן פרופיל נייטסקאוט עם הפרופיל המקומי. לשם כך, חשוב לשכפל את כל מסד הנתונים, הכולל מספר פרופילים בעורך הפרופילים בנייטסקאוט. ראו את ההוראות מטה. זה יוכל להיות שימושי אם נוח לכם לעשות שינויים גדולים בפרופיל דרך ממשק של האתר, לדוגמה העתקת הגדרות מטבלת אקסל.
 
 (Config-Builder-local-profile)=
 
 ### פרופיל מקומי
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+הפרופיל המקומי משתמש בפרופיל הבזאלי שהוזן ידנית לטלפון. עם בחירת הפרופיל, תופיע לשונית חדשה ב-AAPS, שם תוכלו לשנות את פרטי הפרופיל הנקראים מהמשאבה במידת הצורך. בפעם הבאה שתשנו פרופיל, הפרטים החדשים יישלחו למשאבה בפרופיל 1. הפרופיל הזה מומלץ מכיוון שאינו מסתמך על חיבור לאינטרנט.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
+הפרופילים המקומיים שלכם הם חלק מ[ההגדרות המיוצאות](../Usage/ExportImportSettings.md). לכן, הכינו לעצמכם גיבוי במקום בטוח.
 
 ![Local Profile settings](../images/LocalProfile_Settings.png)
 
-Buttons:
+מקשים:
 
 * פלוס ירוק: הוסף
 * X אדום: מחק
 * חץ כחול: שכפל
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+כשאתם מבצעים שינויים בפרופיל, וודאו כי הנכם עובדים על הפרופיל הנכון. לא תמיד הפרופיל הפעיל כרגע יופיע בלשונית הפרופילים. לדוגמא, אם ביצעתם החלפת פרופיל דרך במסך הבית, יתכן שהוא יהיה שונה מהפרופיל המופיע בלשונית הפרופיל המקומי, משום שאין קשר ביניהם.
 
-#### Clone profile switch
+#### החלפה לפרופיל משוכפל
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+ניתן בקלות ליצור פרופיל מקומי חדש מהפרופיל המוחלף\זמני. במקרה זה שינוי היסט הזמן והאחוזים יוחלו על הפרופיל המקומי החדש.
 
 1. לחצו על תפריט 3 נקודות (⋮) בפינה שמאלית עליונה.
 2. בחרו "טיפולים".
@@ -57,32 +57,32 @@ You can easily create a new local profile from a profile switch. In this case ti
 4. בחרו את הפרופיל הרצוי ולחצו על "שכפול".
 5. ניתן לערוך את הפרופיל המקומי החדש בלשונית "פרופיל מקומי" או דרך תפריט ההמבורגר.
 
-![Clone profile switch](../images/LocalProfile_ClonePS_AAPS30.png)
+![החלפה לפרופיל משוכפל](../images/LocalProfile_ClonePS_AAPS30.png)
 
 (Config-Builder-upload-local-profiles-to-nightscout)=
 
 #### העלאת פרופילים מקומיים לנייטסקאוט
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
+ניתן גם להעלות את הפרופילים המקומיים לנייטסקאוט. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
 
 ![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### שינוי הפרופיל בעורך הפרופיל של נייטסקאוט
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
+ניתן לסנכרן שינויים בפרופיל בנייטסקאוט אל הפרופיל המקומי. ניתן למצוא את ההגדרות ב[העדפות NSClient](Preferences-nsclient).
 
-It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+זה הכרחי לשכפל את כלל מסד הנתונים הפעיל ולא רק פרופיל אחד עם החץ הכחול! התאריך העדכני נרשם עם מסד הנתונים החדש וניתן להפעילו בלשונית "פרופיל מקומי".
 
 ![Clone database records](../images/Nightscout_Profile_Editor.PNG)
 
-### עוזר פרופילים
+### עוזר הפרופילים
 
-Profile helper offers two functions:
+עוזר הפרופילים מציע שתי פונקציות:
 
 1. הרכבת פרופיל עבור ילדים
 2. השוואת פרופילים או החלפות פרופילים כדי לשכפל פרופיל חדש
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+פרטים נוספים ניתן לקרוא בדף הייעודי [דף עוזר הפרופילים](../Configuration/profilehelper.md).
 
 (Config-Builder-insulin)=
 
@@ -102,13 +102,13 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * ה-DIA (משך זמן פעילות האינסולין) משתנה מאדם לאדם. משום כך, עליכם לבדוק את הנתון הזה באופן אישי. 
 * אבל ה-DIA תמיד חייב להיות לפחות 5 שעות.
 * אצל אנשים רבים המשתמשים באינסולין מהיר במיוחד, כמו Fiasp, כמעט ואי אפשר לזהות השפעה כלשהי לאחר שעברו 3-4 שעות, גם אם בעיקרון עדיין נותרו 0.0xx יחידות. הכמות שנותרה בכל זאת עשויה להיות מורגשת בזמן פעילות גופנית, למשל. לכן, AndroidAPS מקפיד על מינימום 5 שעות לזמן פעילות האינסולין.
-* You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
+* ניתן לקרוא עוד מידע בנושא בעמוד [זה](Screenshots-insulin-profile), על פרופילי האינסולין.
 
 ### הבדלים בסוגי אינסולין שונים
 
 * באינסולין מסוג Rapid-Acting, Ultra-Rapid, ו-Lyumjev, ה-DIA הוא הנתון היחיד שתוכלו להגדיר בעצמכם. משך הזמן עד השיא הינו קבוע. 
 * שיא חופשי מאפשר לכם להגדיר הן את ה-DIA והן את משך הזמן עד השיא, ומומלץ לשימוש רק על ידי משתמשים מתקדמים המבינים את משמעות ההשלכות של ההגדרות הללו. 
-* The [insulin curve graph](Screenshots-insulin-profile) helps you to understand the different curves.
+* [גרף עקומת האינסולין](Screenshots-insulin-profile) מסייע לכם להבין את העקומות השונות.
 * ניתן לצפות בו על ידי סימון "V" במשבצת כדי שיופיע כלשונית, או לחילופין למצוא אותו בתוך תפריט ההמבורגר.
 
 #### Oref אינסולין מהיר
@@ -167,7 +167,7 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## משאבה
 
-Select the pump you are using.
+בחרו את המשאבה בה אתם משתמשים.
 
 ![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
 
