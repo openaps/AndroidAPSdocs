@@ -82,31 +82,31 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_11.png)
 
-- Automation Switch Profile (default Off): see [Run Autotune with an automation rule](#run-autotune-with-an-automation-rule) below. If you change this setting to On, the input profile will automatically be updated by the Tuned profile, and it will be activated.
-  - **Be Carefull, you must trust and verified during several following days that after an update and activation of Tuned profile without modification, it improves your loop**
+- Otomasyon ile Profil değiştirme (varsayılan Kapalı): aşağıdaki [Otoayarı bir otomasyon kuralıyla çalıştırma](#run-autotune-with-an-automation-rule) bölümüne bakın. Bu ayarı Açık olarak değiştirirseniz, giriş profili Ayarlanmış profil tarafından otomatik olarak güncellenecek ve etkinleştirilecektir.
+  - **Dikkatli Olun, Ayarlanmış profilin güncellenmesi ve etkinleştirilmesinden sonra döngünüzü iyileştirdiğine güvenmeli ve takip eden birkaç gün boyunca bunu doğrulamalısınız.**
 
-- Categorize UAM as basal (default On): This setting is for the users using AndroidAPS without any carbs entered (Full UAM). It will prevent (when Off) to categorize UAM as basal.
-  - Note: if you have at least one hour of Carbs absorption detected during one day, then all data categorized as "UAM" will be categorized as basal, whatever this setting (On or Off)
-- Number of days of data (default 5): You can define default value with this setting. Each time your select a new profile in Autotune plugin, Tune days parameter will be replaced by this default value
-- Apply average result in circadian IC/ISF (default Off): see [Circadian IC or ISF profile](#circadian-ic-or-isf-profile) below.
+- UAM'ı bazal olarak kategorize et (varsayılan Açık): Bu ayar, herhangi bir karbonhidrat girmeden AndroidAPS kullanan kullanıcılar içindir (Tam UAM). (Kapalı olduğunda) UAM'ın bazal olarak kategorize edilmesini önleyecektir.
+  - Not: Bir gün boyunca tespit edilen en az bir saatlik karbonhidrat emiliminiz varsa, bu ayar ne olursa olsun (Açık veya Kapalı) "UAM" olarak sınıflandırılan tüm veriler bazal olarak kategorize edilir.
+- Veri gün sayısı (varsayılan 5): Bu ayar ile varsayılan değer tanımlayabilirsiniz. Otoayar eklentisinde her yeni profil seçtiğinizde, Ayar günleri parametresi bu varsayılan değerle değiştirilecektir.
+- Ortalama sonucu sirkadiyen Kİ/İDF olarak uygulayın (varsayılan Kapalı): aşağıdaki [Sirkadiyen Kİ veya İDF profiline](#circadian-ic-or-isf-profile) bakın.
 
 ### Diğer ayarlar
 
-- Autotune also uses Max autosens ratio and Min autotsens ratio to limit variation. You can see and adjust these values in Config Builder > Sensitivity detection plugin > Settings > Advanced Settings
+- Otoayar, varyasyonu sınırlandırmak için Maks. otoduyarlılık oranı ve Min. otoduyarlılık oranı da kullanır. Bu değerleri; Konfigürasyon ayarları > Hassasiyet algılama eklentisi > Ayarlar > Gelişmiş Ayarlarda görebilir ve ayarlayabilirsiniz.
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_12.png)
 
 
 
-## Advanced feature
+## Gelişmiş özellik
 
-### Circadian IC or ISF profile
+### Sirkadiyen Kİ veya İDF profili
 
-- If you have important variation of IC and/or you ISF in your profile, and you fully trust in your circadian time and variation, then you can set "Apply average result in circadiant IC/ISF"
+- Profilinizde önemli Kİ ve/veya İDF varyasyonlarınız varsa ve sirkadiyen zamanınıza ve varyasyonunuza tamamen güveniyorsanız, "Sirkadiyen İK/İDF'de ortalama sonucu uygula" ayarını yapabilirsiniz.
 
-  - Note that Autotune calculation will always be done with a single value, and circadian variation will not be tuned by Autotune. This setting only apply average variation calculated for IC and/or ISF on your circadian values
+  - Otoayar hesaplamasının her zaman tek bir değerle yapılacağını ve sirkadiyen varyasyonun Otoayar tarafından ayarlanmayacağına dikkat edin. Bu ayar yalnızca sirkadiyen değerlerinizde Kİ ve/veya İDF için hesaplanan ortalama değişimi uygular.
 
-- See on screenshot below Tuned profile with Apply average variation Off (on the left) and On (on the right)
+- Ortalama varyasyonu uygula Kapalı (solda) ve Açık (sağda) ile Ayarlanmış profilin altındaki ekran görüntüsüne bakın
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_13.png)
 
