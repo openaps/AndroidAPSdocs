@@ -15,17 +15,17 @@ EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünite
 ![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
 
 ## Ayarlar
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+EOPATCH2 sekmesine gitmek için ana ekranın üst kısmındaki EOPATCH2'yi seçin.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Sağ üst köşedeki üç noktaya tıklayarak EOPatch2 Tercihleri menüsünü seçin.
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+EOPatch2 Tercihler menüsü, 3 tür bildirim ayarlamak için bir menü sunar.
 
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+### Düşük rezervuar Uyarısı
+EOPatch2 kullanırken rezervuarda kalan insülin miktarı ayarlanan değere veya altına ulaştığında bir uyarı verir. 5 ünitelik artışlarla 10 ila 50Ü arasında ayarlanabilir.
 
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
+### Pompa Süre Sonu Hatırlatıcısı
+Bu, mevcut pompanın sona ermesinden önce kalan süreyi size bildirmek için bir hatırlatmadır. 1 saatlik artışlarla 1 ila 24 saat arasında ayarlanabilir. İlk ayar değeri 4 saattir.
 
 ### Patch buzzer Reminder
 This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
@@ -51,14 +51,14 @@ Insert the syringe needle into the insulin inlet on the patch and then slowly pu
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### pompa eşleştirme
+Patch eşleştirme ekranı görüntülenecek ve eşleştirme otomatik olarak denenecektir. İletişim başarılı olursa, Bluetooth eşleştirme isteği bildirimi görünür. Tamam'a tıklayın ve Bluetooth eşleştirme talebi bildirimi, kimlik doğrulama koduyla birlikte ikinci kez göründüğünde tekrar Tamam'ı seçin.
 
 [Warning]
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+- Eşleştirme için patch ve akıllı telefon birbirinden 30 cm uzakta olmalıdır.
+- Patch önyüklemesi tamamlandıktan sonra, eşleştirme tamamlanana kadar patch her 3 dakikada bir bip sesi çıkaracaktır.
+- Patch başladıktan sonra, patch uygulamasının 60 dakika içinde uygulama üzerinden tamamlanması gerekir. Uygulama 60 dakika içinde tamamlanamıyorsa patch atılmalıdır.
 
 ![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
 
@@ -129,12 +129,12 @@ The different types of alarms are explained below.
 
 | Alarms                     | Explanation                                                                                                                                                                                                         |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
+| Rezervuar boş              | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
 | Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
+| Tıkanma                    | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
 | Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
 | Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
+| İğne yerleştirme Hatası    | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
 | Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
 | Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
 | Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
