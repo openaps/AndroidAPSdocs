@@ -2082,22 +2082,22 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">RileyLink hardware is NOT capable of reporting battery level</strong>
+      <strong x-id="1">RileyLink donanımı, pil seviyesini bildirme özelliğine sahip değildir</strong>
     </li>
     <li>
-      <strong x-id="1">"Show battery level reported by OrangeLink/EmaLink/DiaLink" Setting MUST be enabled in the Omnipod settings to report battery level values</strong>
+      <strong x-id="1">Pil seviyesi değerlerini bildirmek için Omnipod ayarlarında "OrangeLink/EmaLink/DiaLink tarafından bildirilen pil seviyesini göster" Ayarı MUTLAKA etkinleştirilmelidir</strong>
     </li>
     <li>
-      <strong x-id="1">Battery level reporting ONLY works for OrangeLink, EmaLink and DiaLink Devices</strong>
+      <strong x-id="1">Pil seviyesi raporlaması YALNIZCA OrangeLink, EmaLink ve DiaLink Cihazları için geçerlidir</strong>
     </li>
     <li>
-      <strong x-id="1">Battery Level reporting MAY work for other devices (excluding RileyLink)</strong>
+      <strong x-id="1">Pil Düzeyi raporlaması diğer cihazlarda da çalışabilir (RileyLink hariç)</strong>
     </li>
     <li>
-      <strong x-id="1">SMS</strong> - Returns current battery level as a response when an actual level exists, a value of n/a will not be returned
+      <strong x-id="1">SMS</strong> - Gerçek bir seviye mevcut olduğunda yanıt olarak mevcut pil seviyesini döndürür, n/a değeri döndürülmez
     </li>
     <li>
-      <strong x-id="1">Nightscout</strong> - Battery level is reported when an actual level exists, a value of n/a will not be reported
+      <strong x-id="1">Nightscout</strong> - Gerçek bir seviye mevcut olduğunda pil seviyesi rapor edilir, n/a değeri rapor edilmez
     </li>
   </ul>
 </blockquote>
