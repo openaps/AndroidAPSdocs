@@ -7,7 +7,7 @@
 ## הערות חשובות
 
 * נא להשתמש ב-**[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** או חדש יותר כדי לבנות את ה-apk.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [מערכות Windows 10 של 32 ביט](troubleshooting_androidstudio-unable-to-start-daemon-process) אינן נתמכות על ידי Android Studio 2020.3.1
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+זכרו שגם **מעבד 64 ביט (סיביות) וגם מערכת הפעלה של 64 ביט הם תנאי חובה.** אם המערכת שלכם לא עומדת בתנאי זה, עליכם לשנות את החומרה או התוכנה הבעייתיים או את המערכת כולה. **מומלץ מאוד להשתמש ב-SSD (Solid State Disk) במקום HDD (כונן קשיח) כי זמן בניית קובץ ה-APK של התקנת AAPS יתקצר משמעותית.** זוהי המלצה ולא דרישה. עם זאת, אין מניעה להשתמש בדיסק קשיח כאשר אתם בונים קובץ apk אך לשים לב שתהליך הבנייה עשוי להימשך זמן רב, אם כי לאחר התחלתה, תוכלו להשאיר אותה פועלת ללא השגחה עד להשלמתה.
 
 * * *
 
@@ -60,30 +60,30 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 ## סקירה כללית
 
-In general, the steps necessary to build the APK file:
+באופן כללי, השלבים של בניית קובץ ה-APK הם:
 
 1. [התקנת Git](../Installing-AndroidAPS/git-install.md)
 2. [התקנת Android Studio](Building-APK-install-android-studio)
 3. [הגדרת נתיב של Git בהעדפות Android Studio](Building-APK-set-git-path-in-preferences)
 4. [הורדת הקוד של AndroidAPS](Building-APK-download-androidaps-code)
 5. [הורדת Android SDK](Building-APK-download-android-sdk)
-6. [Build the app](Building-APK-generate-signed-apk) (generate signed apk)
+6. [בניית האפליקציה](Building-APK-generate-signed-apk) (יצירת apk חתום)
 7. [העברת קובץ ה-apk לטלפון](Building-APK-transfer-apk-to-smartphone)
 8. [הגדרת זיהוי מקלט אם משתמשים ב-xDrip](xdrip-identify-receiver)
 
 ## מדריך שלב אחר שלב
 
-Detailed description of the steps necessary to build the APK file.
+תיאור מפורט של השלבים הדרושים לבניית קובץ ה-APK.
 
 ## התקינו git (אם לא מותקן כבר)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
+עקבו אחר המדריך ב[דף התקנת של git](../Installing-AndroidAPS/git-install.md).
 
 (Building-APK-install-android-studio)=
 
 ## התקנת Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+צילומי המסך הבאים נלקחו מגרסת Android Studio Arctic Fox | 2020.3.1. המסכים עשויים להשתנות בגרסאות עתידיות של Android Studio. אף על פי כן, אתם צפויים להיות מסוגלים למצוא את דרככם. אפשר [לקבל עזרה מהקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
 One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
 
