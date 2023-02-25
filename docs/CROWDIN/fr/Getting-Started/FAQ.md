@@ -454,13 +454,13 @@ Critical is that pump "state" (which includes it's MAC address) in AAPS and DASH
 
 ## Procedure I follow in this:
 
-1) Suspend the DASH pump. This makes sure there are no running or queued commands active when DASH loses connection 2) Put the phone into airplane mode to disable BT (as well as WiFi and Mobile data). This way it is guaranteed AAPS and DASH can not communicate. 3) Export settings (which includes the DASH state) 4) Copy the settings file just exported from the phone (as it is in airplane mode and we do not want to change that, easiest way is using USB cable) 5) Copy the settings file to the alternate phone. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
+1) Suspend the DASH pump. Cela assure qu'il n'y a pas de commandes en cours d'exécution ou en file d'attente actives lorsque DASH perd la connexion 2) Mettez le téléphone en mode avion pour désactiver le BT (ainsi que le WiFi et les données mobiles). This way it is guaranteed AAPS and DASH can not communicate. 3) Exporter les paramètres (ce qui inclut l'état de DASH) 4) Copier le fichier de paramètres juste exporté depuis le téléphone (comme il est en mode avion et nous ne voulons pas changer cela, la façon la plus simple est d'utiliser le câble USB) 5) Copiez le fichier de paramètres sur le téléphone alternatif. 6) Import settings on the alternate phones AAPS. 7) Check the DASH tab to verify it is seeing the Pod. 8) Un-suspend the Pod. 9) Check the DASH tab and confirm it is communicating with the Pod (use the refresh button)
 
 Congratulations: you did it!
 
 *Wait!* You still have the main phone thinking it can reconnect to the same DASH:
 
-1) On the main phone choose "deactivate". This is safe because the phone has no way of communicating with DASH to actually deactivated the Pod (it is still in airplane mode) 2) Deactivation will result in a communications error - this is expected. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
+1) On the main phone choose "deactivate". Ceci est sûr car le téléphone n'a aucun moyen de communiquer avec DASH pour désactiver le Pod (il est toujours en mode avion) 2) La désactivation entraînera une erreur de communication - c'est normal. 3) Just hit "retry" a couple of times until AAPS offers the option to "Discard" the Pod.
 
 When Discarded, verify AAPS is reporting "No Active Pod". You can now safely disable airplane mode again.
 
