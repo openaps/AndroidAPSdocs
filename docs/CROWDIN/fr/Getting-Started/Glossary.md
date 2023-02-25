@@ -56,7 +56,7 @@
  <td><strong>BAT</strong></td>
  <td>alerte de batterie faible de la pompe sur l'écran d'accueil</td>
  <td>CAN / INS / RES /SEN</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Préférences</a><br><a href="../Getting-Started/Screenshots.html">Copies d'écran</a></td>
 </tr>
 <tr>
  <td><strong>Gly</strong></td>
@@ -104,7 +104,7 @@
  <td><strong>CAN</strong></td>
  <td>alerte de changement de la canule sur l'écran d'accueil</td>
  <td>INS / RES / SEN / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Préférences</a><br><a href="../Getting-Started/Screenshots.html">Copies d'écran</a></td>
 </tr>
 <tr>
  <td><strong>MGC</strong></td>
@@ -128,7 +128,7 @@
  <td><strong>DAI</strong></td>
  <td>Durée d'Action de l'Insuline</td>
  <td>&nbsp;</td>
- <td><a href="../Configuration/Config-Builder.html#insulin">Wiki insulin types</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
+ <td><a href="../Configuration/Config-Builder.html#insulin">Docs - types d'insulines</a><br><a href="https://www.diabettech.com/insulin/why-we-are-regularly-wrong-in-the-duration-of-insulin-action-dia-times-we-use-and-why-it-matters/">DIABETTECH - DIA</a></td>
 </tr>
 <tr>
  <td><strong>heure d'été</strong></td>
@@ -140,7 +140,7 @@
  <td><strong>eGLUC</strong></td>
  <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
- <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Wiki - eCarbs</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">eCarbs use case</a></td>
+ <td><a href="../Usage/Extended-Carbs.html#extended-carbs-ecarbs">Docs - eGLUC</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
 </tr>
 <tr>
  <td><strong>MGF</strong></td>
@@ -212,7 +212,7 @@
  <td><strong>maxIA (maxIOB)</strong></td>
  <td>fonction de sécurité - niveau d'insuline active maximal que AAPS ne peut pas dépasser</td>
  <td>&nbsp;</td>
- <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - maxIOB</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Wiki - SMB</a></td>
+ <td><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Docs - maxIA</a><br><a href="../Installing-AndroidAPS/Releasenotes.html#settings-to-adjust-when-switching-from-ama-to-smb">Docs - SMB</a></td>
 </tr>
 <tr>
  <td><strong>MiaoMiao</strong></td>
@@ -302,7 +302,7 @@
  <td><strong>RES</strong></td>
  <td>alerte de changement de réservoir sur l'écran d'accueil</td>
  <td>CAN / INS / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Préférences</a><br><a href="../Getting-Started/Screenshots.html">Copies d'écran</a></td>
 </tr>
 <tr>
  <td><strong>RileyLink</strong></td>
@@ -320,7 +320,7 @@
  <td><strong>SEN</strong></td>
  <td>alerte de changement de capteur sur l'écran d'accueil</td>
  <td>CAN / INS / RES / BAT</td>
- <td><a href="../Configuration/Preferences.html#overview">Preferences</a><br><a href="../Getting-Started/Screenshots.html">Screenshots</a></td>
+ <td><a href="../Configuration/Preferences.html#overview"> Préférences</a><br><a href="../Getting-Started/Screenshots.html">Copies d'écran</a></td>
 </tr>
 <tr>
  <td><strong>Détection de sensibilité</strong></td>
