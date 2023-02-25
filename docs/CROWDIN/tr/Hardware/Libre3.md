@@ -175,7 +175,7 @@ Bir sensör değişikliğinden sonra xDrip+ yeni sensörü otomatik olarak algı
 
 Until now, using Libre 3 as BG source you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB algorithm. Libre 3'in KŞ değerleri, bu seçenekleri güvenle kullanmak için yeterince düzgün değildir.
 
-### Switch back to the Libre app from Juggluco
+### Juggluco'dan Libre uygulamasına geri dönün
 
 It is possible to switch back from Juggluco to the Libre 3 app as receiver. The following steps are necessary:
 
@@ -188,7 +188,7 @@ It is possible to switch back from Juggluco to the Libre 3 app as receiver. The 
 (Libre3-experiences-and-troubleshooting)=
 ### Deneyimler ve Sorun Giderme
 
-#### Necessary settings for a successful sensor start
+#### Başarılı sensör başlatma için zorunlu ayarlar
 
 - NFC etkin / BT etkin
 - Depolama ve konum izni etkin
@@ -199,29 +199,29 @@ Konum hizmetinin merkezi bir ayar olduğunu lütfen unutmayın. Bu, aynı zamand
 
 #### Sorun Giderme Libre3'de okuma yok
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone not set - please change the settings accordingly
-- Bluetooth is switched off - please switch on¨
-- Make sure the Libre 3 sensor is not connected to any other device.
+- Android konum hizmeti verilmedi - lütfen sistem ayarlarında etkinleştirin
+- Otomatik saat ve saat dilimi ayarlanmadı - lütfen ayarları uygun şekilde değiştirin
+- Bluetooth kapalı - lütfen açın¨
+- Libre 3 sensörünün başka bir cihaza bağlı olmadığından emin olun.
 
-#### Troubleshooting Juggluco no readings
+#### Sorun Giderme; Juggluco KŞ değeri okumuyor
 
-- Check if the Libre 3 app is stopped.
-- Rescan the Libre 3 sensor within the Juggluco app
-- Make sure the sensor has been activated with the current Libreview account
-- Check if a sensor number is visible in Juggluco
-- The sensor is usually connected to the smartphone within 3 minutes, but it can also take longer.
-- If the Bluetooth connection cannot be established, try restarting the smartphone.
-- Make sure the Libre 3 sensor is not connected to any other device.
+- Libre 3 uygulamasının durup durmadığını kontrol edin.
+- Juggluco uygulamasında Libre 3 sensörünü yeniden tarayın
+- Sensörün mevcut Libreview hesabıyla etkinleştirildiğinden emin olun
+- Juggluco'da bir sensör numarasının görünüp görünmediğini kontrol edin
+- Sensör genellikle 3 dakika içinde akıllı telefona bağlanır, ancak daha uzun da sürebilir.
+- Bluetooth bağlantısı kurulamazsa, akıllı telefonu yeniden başlatmayı deneyin.
+- Libre 3 sensörünün başka bir cihaza bağlı olmadığından emin olun.
 
-#### Troubleshooting Blood sugar readings not uploading to Libreview
+#### Kan şekeri ölçümlerinin Libreview'e yüklenmemesiyle ilgili sorun giderme
 
-- Check your internet connection
-- Make sure Juggluco is receiving blood sugar readings
-- Ensure the "Send to Libreview" checkbox is checked within Juggluco->Settings->Libreview
+- İnternet bağlantını kontrol et
+- Juggluco'nun kan şekeri okumaları aldığından emin olun
+- Juggluco->Ayarlar->Libreview içinde "Libreview'e Gönder" onay kutusunun işaretlendiğinden emin olun
 
 #### Daha fazla yardım
 
-Original instructions: [jkaltes website](http://jkaltes.byethost16.com/Juggluco/libre3/)
+Orijinal talimatlar: [jkaltes web sitesi](http://jkaltes.byethost16.com/Juggluco/libre3/)
 
-Additional Github repo: [Github link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Ek Github deposu: [Github bağlantısı](https://github.com/maheini/FreeStyle-Libre-3-patch)
