@@ -118,52 +118,52 @@ Otoayar eklentisi, AAPS içindeki OpenAPS otoayar algoritmasının uygulanmasıd
 
 (run-autotune-with-an-automation-rule)=
 
-## Run Autotune with an automation rule
+## Otomasyon kuralı ile Otoayar çalıştırma
 
-First step is to define correct trigger for an automation rule with Autotune:
+İlk adım, otomasyon kuralı için doğru tetikleyiciyi Otoayar tanımlamaktır:
 
-Note: for more information on how to set an automation rule, see [here](./Automation.md).
+Not: Bir otomasyon kuralının nasıl ayarlanacağı hakkında daha fazla bilgi için [buraya](./Automation.md) bakın.
 
-- You should select Recurring time trigger: only run Autotune once per day, and autotune is designed to be runned daily (each new run you shift one day later and quickly profile modification should be tiny)
+- Yinelenen Zaman Tetikleyicisi'ni seçmelisiniz: sadece günde bir kez otomatik olarak çalıştırın ve Otoayar günlük olarak çalıştırılacak şekilde tasarlanmıştır (bir gün sonraki her yeni çalışma için profil modifikasyonu minik olmalıdır)
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_16.png)
 
-- It's better at the beginning to run Autotune during the day to be able to check results. If you want to run Autotune during the night, you have to select in the trigger 4AM or later to include current day in next Autotune Calculation.
+- Sonuçları kontrol edebilmek için Otoayarı gün boyunca çalıştırmak daha iyidir. Gece boyunca Otoayarı çalıştırmak istiyorsanız, bir sonraki Otoayar hesaplamasına şu anki gün de dahil tetikleme için saat 4 veya daha sonrasını seçmeniz gerekir.
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_17.png)
 
-- Then you can select "Run Autotune" Action in the list
+- Ardından listede "Otoayarı Çalıştır" eylemini seçebilirsiniz
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_18.png)
 
-- You can then select Autotune Action to adjust parameters for your run. Default parameters are "Active Profile", default Tune days value defined in Autotune Plugin preferences, and All days are selected.
+- Ardından, çalıştırmanız için gerekli parametreleri ayarlamak için Otoayar eylemini seçebilirsiniz. Varsayılan parametreler "Aktif Profil", Otoayar eklentisi tercihlerinde tanımlanan varsayılan ayar günleri değeridir ve tüm günler seçilir.
 
   ![Otoayar varsayılan ekranı](../images/Autotune/Autotune_19.png)
 
-- After a few days, if you fully trust Autotune results and percentage of modification is low, you can modify [Autotune settings](#autotune-plugin-settings) "Automation Switch Profile" to enabled to automatically update and activate profile tuned after calculation.
+- Birkaç gün sonra, Otoayar sonuçlarına tam olarak güveniyorsanız ve değişiklik yüzdesi düşükse, [ Otoayar Ayarları ](#autotune-plugin-settings) "Profili değiştirme Otomasyonu" modifiye edilerek hesaplamadan sonra ayarlanan profil otomatik olarak güncellenebilir ve etkinleştirebilir.
 
-## Tips and trick's
+## Ipuçları ve Püf noktaları
 
-Autotune works with information existing in your database, so if you just installed AAPS on a new phone, you will have to wait several days before being able to launch Autotune with enough days to get relevant results;
+Otoayar, veritabanınızda bulunan bilgilerle çalışır, bu nedenle AAPS yeni bir telefona henüz yüklendiyse, ilgili sonuçları almak için yeterli günle Otoayarı başlatmadan önce birkaç gün beklemeniz gerekecektir;
 
-Autotune is just an help, it's important to regularly check if you agree with calculated profile. If you have any doubt, change Autotune settings (for example the number of days) or copy results in local profile and adjust profile before using it.
+Otoayar sadece bir yardımdır, hesaplanan profille hemfikir olup olmadığınızı düzenli olarak kontrol etmek önemlidir. Herhangi bir şüpheniz varsa, Otoayar (örneğin gün sayısını) ayarlarını değiştirin veya yerel profildeki sonuçları kopyalayın ve kullanmadan önce profili ayarlayın.
 
-Always use Autotune several days manually to check results before applyling them. And it's only when you fully trust Autotune results, and when variation becomes tiny between previous profile and calculated profile than you start to use Automation (Never before)
+Her zaman Otoayarı birkaç gün manuel olarak kullanın ve uygulamadan önce sonuçları kontrol edin. Ve yalnızca, Otoayar sonuçlarına tam olarak güvendiğinizde ve önceki profil ile hesaplanan profil arasında değerler, otomasyonu kullanmaya başladığınızdan bu yana küçükse kullanın. (Daha önce değil)
 
-- Autotune can work very well for some users and not for others, so **If you don't trust Autotune result, don't use it**
+- Otoayar, bazı kullanıcılar için çok iyi çalışabilir ve bazıları için çalışmaz, bu nedenle ** Otoayara güvenmiyorsanız, kullanmayın **
 
-It's also important to analyse Autotune results to understand (or try to understand) why Autotune propose these modifications
+Otoayarın neden bu değişiklikleri önerdiğini anlamak (veya anlamaya çalışmak) için otoayar sonuçlarını analiz etmek de önemlidir.
 
-- you can have a whole increase or decrease of the strength of your profile (for example increase of total basal associated to decrease of ISF and IC values). it could be associated to several following days with autosens correction above 100% (more agressivity required) or below 100% (you are more sensitive)
-- Sometimes Autotune propose a different balance between basal rates and IC/ISF (for ex lower basal and more aggressive IC/ISF)
+- Profil direncinizin bir artışı veya azalması olabilir (örneğin, İDF ve Kİ değerlerinin azalmasıyla ilişkili toplam bazal artışı). Otoduyarlılık % 100'ün üzerinde (daha fazla agresif) veya% 100'ün altında (daha hassassınız) sonraki birkaç gün ile ilişkilendirilebilir.
+- Bazen Otoayar, bazal oranlar ve Kİ/İDF arasında farklı bir denge önerir (önceki düşük bazal ve daha agresif Kİ/İDF için)
 
-We advise to not use Autotune in the following cases:
+Aşağıdaki durumlarda Otoayar kullanmayı tavsiye etmiyoruz:
 
-- You don't enter all your carbs
-  - If you don't enter carbs correction for an hypoglycemia, Autotune will see an unexcepted increase of your BG value and will increase your basal rates the ' hours earlier, it could be the opposite of what you need to avoid hypo, especially if it's in the middle of the night. That's why it's important to enter all carabs especially correction for hypo.
-- You have a lot of period with UAM detected during the day.
-  - Do you have entered all your carbs and correctly estimated your Carbs ?
-  - All UAM periods (except if you enter no carbs during a day and categorized UAM as basal is disabled), all your UAM periods will be categorized as basal, this can increase a lot your basal (much more than necessary)
+- Tüm karbonhidratları girmiyorsanız
+  - Bir hipoglisemideki karbonhidrat düzeltmesini girmezseniz, Otoayar, KŞ değerinizde anlaşılmaz bir artış görecek ve saatlerce bazal oranlarınızı arttıracaktır. Özellikle de gece yarısı hipodan kaçınmanız gerekirken tam tersi olabilir. Bu yüzden tüm karbonhidraları, özellikle hipo için yapılan düzeltmeleri girmek önemlidir.
+- Gün boyunca UAM tespit edilen çok fazla periyot varsa.
+  - Tüm karbonhidratlarınızı girdiniz ve karbonhidratlarınızı doğru tahmin ettiniz mi?
+  - Tüm UAM dönemleri (bir gün boyunca karbonhidrat girmezseniz ve bazal devre dışı bırakıldığı için UAM kategorize edilmezse) bazal olarak kategorize edilir ve bu bazalınızı çok artırabilir (gerekenden çok daha fazla)
 
 - Karbonhidrat emiliminiz çok yavaş: Karbonhidrat emiliminizin çoğu min_5m_carbimpact parametresi ile hesaplanıyorsa (bu periyotları AKRB eğrisinin üst kısmında küçük bir turuncu nokta ile görebilirsiniz), AKRB hesaplaması yanlış olabilir ve yanlış sonuçlara yol açabilir.
   - Spor yapıyorsanız, genellikle daha hassassınız ve kan şekeriniz çok fazla yükselmez, bu nedenle egzersiz sırasında veya sonrasında, yavaş karbonhidratlı bazı dönemler görmek normaldir. Ancak çok sık beklenmedik yavaş karbonhidrat emiliminiz varsa, o zaman bir profil ayarlamasına (daha yüksek Kİ değeri) veya biraz yüksek bir min_5m_carbimpact'e ihtiyacınız olabilir.
