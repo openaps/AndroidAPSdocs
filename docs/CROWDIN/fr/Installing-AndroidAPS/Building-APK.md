@@ -83,57 +83,57 @@ Follow the manual on the [git installation page](../Installing-AndroidAPS/git-in
 
 ## Installer Android Studio
 
-The following screenshots have been taken from Android Studio Version Arctic Fox | 2020.3.1. Screens can change in future versions of Android Studio. But you should be able to find your way through. [Help from the community](../Where-To-Go-For-Help/Connect-with-other-users.md) is provided.
+Les captures d'écran suivantes ont été prises à partir de Android Studio Version Arctic Fox | 2020.3.1. Les écrans peuvent changer dans les versions futures d'Android Studio. Mais vous devriez y arriver. Vous pouvez demande de [l'aide auprès de la commauté](../Where-To-Go-For-Help/Connect-with-other-users.md).
 
-One of the most important things when installing Android Studio: **Be patient!** During installation and setup Android Studio is downloading a lot of stuff which will take its time.
+Une des choses les plus importantes lors de l'installation d'Android Studio : **Soyez patient !** Au cours de l'installation et de la configuration, Android Studio télécharge beaucoup de choses ce qui prendra du temps.
 
-Download [Android Studio from here](https://developer.android.com/studio/install.html) and install it on your computer.
+Téléchargez [Android Studio ici](https://developer.android.com/studio/install.html) et installez le sur votre ordinateur.
 
-On first start you will find the setup wizard:
+Au premier démarrage, vous trouverez l'assistant d'installation :
 
-Select "Do not import settings" as you have not used it before.
+Sélectionnez "Do not import settings" car vous n'avez pas eu d'utilisation préalable.
 
-![Do not import settings](../images/studioSetup/01_ImportSettings.png)
+![Ne pas importer les paramètres](../images/studioSetup/01_ImportSettings.png)
 
-Decide whether you want to share data with Google or not.
+Décidez si vous voulez partager les données avec Google ou non.
 
-![Share data with Google](../images/studioSetup/02_DataSharing.png)
+![Partager des données avec Google](../images/studioSetup/02_DataSharing.png)
 
-On the following screen click "Next".
+Dans l'écran suivant, cliquez sur "Next".
 
-![Welcome screen](../images/studioSetup/03_Welcome.png)
+![Écran d'accueil](../images/studioSetup/03_Welcome.png)
 
-Select "Standard" installation and click "Next".
+Sélectionnez l'installation "Standard" et cliquez sur "Next".
 
-![Standard installation](../images/studioSetup/04_InstallType.png)
+![Installation standard](../images/studioSetup/04_InstallType.png)
 
-Select the theme for the user interface you like. (In this manual we used "Light".) Then click "Next".
+Sélectionnez le thème de l'interface utilisateur que vous souhaitez (dans ce manuel, nous avons utilisé "Light"). Cliquez ensuite sur "Next".
 
 > ***Remarque :*** Ce n'est que le modèle de couleurs. Vous pouvez choisir n'importe quel type (par ex. "Darcula" pour le mode sombre). Cette sélection n'a aucune influence sur la construction de l'APK, mais les captures d'écran suivantes peuvent être différentes.
 
-![UI color scheme](../images/studioSetup/05_UITheme.png)
+![Couleur de l'interface](../images/studioSetup/05_UITheme.png)
 
-Click "Finish" on the "Verify Settings" dialog.
+Cliquez sur "Finish" dans la boite de dialogue "Verify Settings".
 
-![Verify settings](../images/studioSetup/06_Verify.png)
+![Vérifiez les paramètres](../images/studioSetup/06_Verify.png)
 
-Wait while Android Studio downloads additional components and be patient. Once everything is downloaded button "Finish" turns blue. Click the button now.
+Attendez qu'Android Studio télécharge des composants supplémentaires et soyez patient. Une fois que tout est téléchargé, le bouton "Finish" devient bleu. Cliquez sur le bouton maintenant.
 
-![Downloading components](../images/studioSetup/07_Downloading.png)
+![Téléchargement des composants](../images/studioSetup/07_Downloading.png)
 
 (Building-APK-set-git-path-in-preferences)=
 
 ## Définir le chemin de git dans les préférences
 
-Make sure [git is installed](../Installing-AndroidAPS/git-install.md) on your computer and you have restarted your computer after installing.
+Assurez-vous que [git est installé](../Installing-AndroidAPS/git-install.md) sur votre ordinateur et que vous avez redémarré votre ordinateur après l'installation.
 
-On the Android Studio welcome screen click "Customize" (1) on the left and then select the link "All settings..." (2):
+Sur l'écran d'accueil d'Android Studio cliquez sur "Customize" (1) à gauche, puis sélectionnez le lien "All settings..." (2):
 
-![Android Studio settings from welcome screen](../images/studioSetup/10_WizardSettings.png)
+![Paramètres Android Studio à partir de l'écran d'accueil](../images/studioSetup/10_WizardSettings.png)
 
 ### Windows
 
-* As windows user, make sure you have restarted your computer after [installing Git](../Installing-AndroidAPS/git-install.md).
+* En tant qu'utilisateur de Windows, assurez-vous que vous avez redémarré votre ordinateur après [avoir installé Git](../Installing-AndroidAPS/git-install.md).
 
 * Double-cliquez sur "Version Control" (1) pour ouvrir le sous-menu.
 
@@ -265,13 +265,13 @@ On the Android Studio welcome screen click "Customize" (1) on the left and then 
 
 ## Générer un APK signé
 
-Signing means that you indicate your app to be your own creation but in a digital way as a kind of digital fingerprint within the app itself. That is necessary because Android has a rule that it only accepts signed code to run for security reasons. For more information on this topic, follow [this link](https://developer.android.com/studio/publish/app-signing.html#generate-key).
+Signer signifie que vous signez votre application générée mais d'une façon numérique comme une sorte d'empreinte digitale intégrée dans l'application elle-même. C'est nécessaire car Android a une règle qui impose de n'accepter que du code signé pour des raisons de sécurité. Pour plus d'informations sur ce sujet, suivez [ce lien](https://developer.android.com/studio/publish/app-signing.html#generate-key).
 
 * Après le démarrage d'Android Studio, attendez que toutes les tâches en arrière-plan soient terminées.
     
     ![Wait for background tasks](../images/studioSetup/40_BackgroundTasks.png)
     
-    * ***Warning:*** If errors occur, do not continue with the following steps. \ Consult the [troubleshooting section](../Installing-AndroidAPS/troubleshooting_androidstudio) for known problems!
+    * ***Avertissement :*** Si des erreurs se produisent, ne continuez pas avec les étapes suivantes. \ Consulter la [section dépannage](../Installing-AndroidAPS/troubleshooting_androidstudio) pour les problèmes connus !
     
     ![Gradle Sync Error](../images/studioSetup/41_GradleSyncError.png)
 
@@ -299,11 +299,11 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Créer le fichier de clés](../images/studioSetup/46_KeystorePath.png)
     
-    ***Warning: Do not save in same folder as project. You must use a different directory!*** A good location would be your home folder.
+    ***Warning: Do not save in same folder as project. Vous devez utiliser un dossier différent !*** Un bon emplacement peut être votre répertoire d'accueil.
 
 * Type a file name for your key store (2) and confirm with "OK" (3).
 
-* Enter (2) and confirm (3) the password for your key store. ![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
+* Entrez (2) et confirmez (3) le mot de passe de votre fichier de clés.![Select key store path](../images/studioSetup/47_KeystoreDialog.png)
     
     ***Note:*** Passwords for key store and key do not have to be very sophisticated. Assurez vous de bien vous en souvenir ou notez le dans un endroit sûr. In case you will not remember your passwords in the future, see [troubleshooting for lost key store](troubleshooting_androidstudio-lost-keystore).
 
@@ -343,7 +343,7 @@ Signing means that you indicate your app to be your own creation but in a digita
     
     ![Locate build](../images/studioSetup/52_BuildLocate.png)
     
-    * If the notification is gone, you can always open the "Event log" and select the same link there. ![Génération réussie - journal des événements](../images/studioSetup/53_EventLog.png)
+    * Si la notification est supprimée, vous pouvez toujours ouvrir le "Journal des événements" et sélectionner le même lien ici.![Génération réussie - journal des événements](../images/studioSetup/53_EventLog.png)
 
 * Your file manager/explorer will open. Navigate to the directory "full" (1) > "release" (2).
     
@@ -355,10 +355,10 @@ Signing means that you indicate your app to be your own creation but in a digita
 
 ## Transférer le fichier APK sur le smartphone
 
-Easiest way to transfer app-full-release.apk to your phone is via [USB cable or Google Drive](https://support.google.com/android/answer/9064445?hl=en). Please note that transfer by mail might cause difficulties and is not the preferred way.
+La façon la plus facile de transférer le fichier app-full-release.apk dans votre téléphone est via [un câble USB ou Google Drive](https://support.google.com/android/answer/9064445?hl=en). Veuilez noter que le transfert par email peut entraîner des difficultés et n'est pas la méthode conseillée.
 
-On your phone you have to allow installation from unknown sources. Manuals how to do this can be found on the internet (i.e. [here](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) or [here](https://www.androidcentral.com/unknown-sources)).
+Sur votre téléphone, vous devez autoriser l'installation à partir de sources inconnues. Les explications peuvent être trouvées sur internet (par ex. [ici](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) ou [ici](https://www.androidcentral.com/unknown-sources)).
 
 ## Résolution de problèmes
 
-See separate page [troubleshooting Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
+Voir la page spécifique [dépannage Android Studio](../Installing-AndroidAPS/troubleshooting_androidstudio).
