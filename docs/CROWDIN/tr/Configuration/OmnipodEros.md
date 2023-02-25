@@ -1152,25 +1152,25 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Address:</strong> MAC address of the selected pod communication device defined in the Omnipod Settings.
+      <strong x-id="1">Adres:</strong> Omnipod Ayarlarında tanımlanan seçili pod iletişim cihazının MAC adresi.
     </li>
     <li>
-      <strong x-id="1">Name:</strong> Bluetooth identification name of the selected pod communication device defined in your phone's Bluetooth settings.
+      <strong x-id="1">İsim:</strong> Telefonunuzun Bluetooth ayarlarında tanımlanan seçili pod iletişim cihazının Bluetooth tanımlama adı.
     </li>
     <li>
-      <strong x-id="1">Battery Level:</strong> Displays the current battery level of the connected pod communication device
+      <strong x-id="1">Pil Seviyesi:</strong> Bağlı pod iletişim cihazının mevcut pil seviyesini gösterir
     </li>
     <li>
-      <strong x-id="1">Connected Device:</strong> Model of the Omnipod pod currently communicating with the pod communication device
+      <strong x-id="1">Bağlı Cihaz:</strong> Şu anda pod iletişim cihazıyla iletişim kuran Omnipod pod modeli
     </li>
     <li>
-      <strong x-id="1">Connection Status</strong>: The current status of the Bluetooth connection between the pod communication device and the phone running AAPS.
+      <strong x-id="1">Bağlantı Durumu</strong>: Pod iletişim cihazı ile AAPS çalıştıran telefon arasındaki Bluetooth bağlantısının mevcut durumu.
     </li>
     <li>
-      <strong x-id="1">Connection Error:</strong> If there is an error with the pod communication device Bluetooth connection details will be displayed here.
+      <strong x-id="1">Bağlantı Hatası:</strong> Pod iletişim cihazı ile ilgili bir hata varsa Bluetooth bağlantı detayları burada görüntülenecektir.
     </li>
     <li>
-      <strong x-id="1">Firmware Version:</strong> Current firmware version installed on the actively connected pod communication device.
+      <strong x-id="1">Pod yazılımı:</strong> Aktif olarak bağlı pod iletişim cihazında kurulu mevcut yazılım sürümüdür.
     </li>
   </ul>
 </blockquote>
@@ -1257,11 +1257,11 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  Below is an explanation of the layout and meaning of the icons and status fields on the <strong x-id="1">Omnipod (POD)</strong> tab in the main AAPS interface.
+  Aşağıda, ana AAPS arayüzündeki <strong x-id="1">Omnipod (POD)</strong> sekmesindeki simgelerin ve durum satırlarının düzeninin ve anlamının bir açıklaması bulunmaktadır.
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE: If any message in the Omnipod (POD) tab status fields report (uncertain) then you will need to press the Refresh button to clear it and refresh the pod status.</em>
+  <em x-id="3">NOT: Omnipod (POD) sekmesi durum alanlarındaki herhangi bir mesaj raporlanırsa (belirsiz), o zaman bunu temizlemek ve bölme durumunu yenilemek için Yenile düğmesine basmanız gerekir.</em>
 </p>
 
 <blockquote spaces-before="0">
@@ -1311,7 +1311,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Firmware Version:</strong> Displays the firmware version of the active pod.
+    <strong x-id="1">Yyazılımı Sürümü:</strong> Etkin podun donanım yazılımı sürümünü görüntüler.
   </p>
 </li>
 <li>
@@ -1384,7 +1384,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Toplam iletilen:</strong> Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. <em x-id="3">Note this is an approximation as priming and filling the pod is not an exact process.</em>
+    <strong x-id="1">Toplam iletilen:</strong> Rezervuardan iletilen toplam insülin ünite miktarını görüntüler. <em x-id="3">Pod mutlak kesinlikle hazırlanıp ve doldurulmadığı için bunun bir tahmin olduğunu unutmayın.</em>
   </p>
 </li>
 <li>
@@ -1406,7 +1406,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">REFRESH:</strong>
+      <strong x-id="1">YENİLE:</strong>
     </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1429,7 +1429,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">POD MGMT:</strong>
+    <strong x-id="1">POD YNTM:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1444,7 +1444,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">ACK ALERTS:</strong>
+    <strong x-id="1">BİLGİ UYARILARI:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
