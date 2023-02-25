@@ -2,14 +2,14 @@
 
 **AndroidAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+EOPatch, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünitedir. Bu nedenle, bazal Profili minimum 0,05 Ü/sa veya 0,05 Ü/saatin katları olacak şekilde daha yüksek bir değere ayarlanmalıdır. Aksi taktirde Profildeki tahmini toplam infüzyon miktarı ile pompadaki gerçek infüzyon miktarı arasında bir hata olabilir. Aynı şekilde, bolus da minimum infuzyon miktarı 0,05 Ü olarak ayarlanmalıdır.
 
-## Pump Setup
-1. On the AndroidAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Pompa Kurulumu
+1. AndroidAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
+1. Pompa bölümünde 'EOPatch2'yi seçin.
+1. Ana ekrana dönmek için Geri tuşuna basın.
 
 
 ![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
