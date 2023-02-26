@@ -27,21 +27,21 @@ EOPatch2 kullanırken rezervuarda kalan insülin miktarı ayarlanan değere veya
 ### Pompa Süre Sonu Hatırlatıcısı
 Bu, mevcut pompanın sona ermesinden önce kalan süreyi size bildirmek için bir hatırlatmadır. 1 saatlik artışlarla 1 ila 24 saat arasında ayarlanabilir. İlk ayar değeri 4 saattir.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Pompa sesli Hatırlatıcılar
+Bu, bazal enjeksiyon dışındaki enjeksiyonlar için bir hatırlatma işlevidir. (Yayma) bir bolus enjeksiyonu veya geçici bir bazal enjeksiyonu kullanıyorsanız, patch, enjeksiyon başladığında ve enjeksiyon tamamlandığında bir uyarı sesi çıkarır. İlk ayar değeri Kapalı'dır.
 
 ![Bild3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Pompa Bağlantısı
 
-### Move to patch connection screen
+### Patch bağlantı ekranına git
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Ana ekranın üst kısmındaki EOPATCH2'yi seçin ve sol alttaki PATCH ETKİNLEŞTİRME butonuna tıklayın.
 
 ![Bild4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Pompa Bağlantısı
+Şırınga iğnesini flasterdeki insülin girişine sokun ve ardından insülini enjekte etmek için pistonu yavaşça itin. 80Ü'dan fazla İnsülin doldurulduğunda, patch bir açılış sesi verir ve açılır. Zil sesini onayladıktan sonra, ekrandaki EŞLEŞTİRMEYİ BAŞLAT düğmesine tıklayın.
 
 [Warning]
 
