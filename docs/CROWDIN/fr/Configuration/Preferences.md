@@ -325,7 +325,7 @@ Selon vos paramètres dans le [Générateur de configuration](../Configuration/C
 
 - Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
 - La valeur est definie en Unités d'insuline par heure (U/h).
-- It is advised to set this to something sensible. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
+- Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
 - Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 - See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
@@ -506,14 +506,14 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 - Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
 - Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.
 - De plus amples informations sont décrites dans [Commandes SMS](../Children/SMS-Commands.md).
-- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+- Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code PIN supplémentaire à la fin du jeton.
 
 ## Automatisation
 
 Sélectionnez le service de localisation à utiliser :
 
-- Use passive location: AAPS only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
+- Utiliser la localisation passive : AAPS ne prend la localisation que si d'autres applications la demandent
+- Utiliser la localisation par le réseau : Localisation de votre Wifi
 - Utiliser la localisition GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
 
 ## Alertes locales
@@ -522,7 +522,7 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Alertes locales
 ```
 
-- Settings should be self-explanatory.
+- Les paramètres doivent être explicites.
 
 ## Choix de données
 
@@ -530,7 +530,7 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Choix de données
 ```
 
-- You can help develop AAPS further by sending crash reports to the developers.
+- Vous pouvez aider davantage au développement d'AAPS en envoyant des rapports de plantage aux développeurs.
 
 ## Paramètres de maintenance
 
@@ -538,14 +538,14 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Paramètres de maintenance
 ```
 
-- Standard recipient of logs is <logs@androidaps.org>.
+- Le destinataire standard des journaux est <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
 
 ## Open Humans
 
-- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la [page Open Humans](../Configuration/OpenHumans.md).
 
-- In Preferences you can define when data shall be uploaded
+- Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
 
-  - only if connected to WiFi
-  - only if charging
+  - uniquement si connecté au WiFi
+  - uniquement si en charge
