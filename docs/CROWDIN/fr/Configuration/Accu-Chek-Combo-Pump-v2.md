@@ -43,7 +43,7 @@ It is very important to make sure that battery optimizations are turned off. AAP
   - **Paramètres requis** (marqués en vert dans les captures d'écran) :
 
      * Choisissez ou laissez la configuration du menu sur "Standard", cela affichera uniquement les menus et actions pris en charge sur la pompe, et masquera ceux qui ne sont pas supportés par AAPS (bolus duo/carré, débits de base multiples) et qui entraînent une limitation du fonctionnement de la boucle lors de leurs utilisation, et donc ne permet pas une exécution sécurisée de la boucle.
-     * Vérifiez le _Quick Info Text_ est défini à "QUICK INFO" (sans les guillemets, trouvés sous _Insulin Pump Options_).
+     * Vérifiez le _Quick Info Text_ est défini à "QUICK INFO" (sans les guillemets, trouvés sous _Options de la pompe à insuline_).
      * Paramétrez le DBT _Maximum Adjustment_ à 500%
      * Désactivez _Signal End of Temporary Basal Rate_
      * Paramétrez le DBT _Duration increment_ à 15min
