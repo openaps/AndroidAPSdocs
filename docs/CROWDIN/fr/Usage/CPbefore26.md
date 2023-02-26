@@ -1,6 +1,6 @@
 # Careportal (arrêté)
 
-Careportal replicated the functions you will find on your Nightscout screen under the “+” symbol which allows you to add notes to your records. Mais Careportal n'envoyait aucune commande vers la pompe ! Donc, si vous ajoutiez un bolus à l'aide de cet écran, cela ajoutait simplement une information dans Nightscout, la pompe ne recevait pas de demande de bolus. Cela a provoqué de nombreuses incompréhensions.
+Careportal reproduit les fonctions que vous pouvez trouver dans Nightscout sous le symbole “+” et vous permet d'ajouter des remarques à vos enregistrements. Mais Careportal n'envoyait aucune commande vers la pompe ! Donc, si vous ajoutiez un bolus à l'aide de cet écran, cela ajoutait simplement une information dans Nightscout, la pompe ne recevait pas de demande de bolus. Cela a provoqué de nombreuses incompréhensions.
 
 Le code utilisé à l'origine pour ajouter le support hors ligne de Careportal n'a pas été harmonisé avec le développement de AAPS et était vraiment bloquant pour les développements supplémentaires. **Therefore, decision was made to remove careportal in AAPS version 2.6.**
 
