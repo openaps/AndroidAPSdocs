@@ -393,11 +393,11 @@ With some phones, there are Bluetooth disconnects from the Links (RL/OL/EmaL...)
 
 Some also have non responsive Links (AAPS says that they are connected but the Links can't reach or command the pump.)
 
-The easiest way to get all these parts working together is : 1/ Delete Link from AAPS 2/ Power off Link 3/ AAPS 3 dot menu, quit AAPS 4/ Long press AAPS icon, Android menu, info on app AAPS, Force stop AAPS and then Delete cache memory (Do not delete main memory !) 4bis/ Rarely some phones may need a reboot here. You can try without reboot. 5/Power on Link 6/Start AAPS 7/Pod tab, 3 dot menu, search and connect Link
+La façon la plus simple de faire travailler toutes ces pièces ensemble est de : 1/ Supprimer le lien depuis AAPS 2/ Éteindre le lien 3/ Sélectionner le menu 3 points AAPS pour quitter AAPS 4/ Faire un appui long sur l'icône AAPS, menu Android, infos sur l'application AAPS, Forcer l'arrêt AAPS, puis Supprimer la mémoire cache (Ne pas supprimer la mémoire principale !) 4bis/ Rarement certains téléphones peuvent avoir besoin d'un redémarrage ici. You can try without reboot. 5/ Allumer le smartphone 6/ Démarrer AAPS 7/ Sélectionner l'onglet Pod, menu à 3 points, recherche et connexion
 
 ## Erreur de compilation : file name too long
 
-While trying to build I get an error stating the file name is too long. Possible solutions: Move your sources to a directory closer to the root directory of your drive (e.g. "c:\src\AndroidAPS-EROS").
+While trying to build I get an error stating the file name is too long. Solutions possibles : Déplacez vos sources vers un répertoire plus proche du répertoire racine de votre disque (par exemple "c:\src\AAPS-EROS").
 
 From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
 
