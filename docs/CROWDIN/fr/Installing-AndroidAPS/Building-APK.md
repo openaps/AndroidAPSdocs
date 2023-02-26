@@ -7,7 +7,7 @@
 ## Remarques importantes
 
 * Utilisez **[Android Studio Version 2020.3.1](https://developer.android.com/studio/)** ou une version plus récente pour construire l'apk.
-* [Windows 10 32-bit systems](troubleshooting_androidstudio-unable-to-start-daemon-process) are not supported by Android Studio 2020.3.1
+* [Les systèmes d'exploitation Windows 10 32 bits](troubleshooting_androidstudio-unable-to-start-daemon-process) ne sont pas pris en charge par Android Studio 2020.3.1
 
 (Building-APK-recommended-specification-of-computer-for-building-apk-file)=
 
@@ -49,7 +49,7 @@
 </tbody>
 </table>
 
-Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.** If your system DOES NOT meet this condition, you have to change affected hardware or software or the whole system. **It is strongly recommended to use SSD (Solid State Disk) instead of HDD (Hard Disk Drive) because it will take less time when you are building the APS installation apk file.** Recommended is just recommended and it is not a mandatory. However, you may still use a HDD when you are building apk file but note that the building process can take a long time to complete, although once started, you can leave it running unattended.
+Veuillez garder à l'esprit que et **CPU 64 bits et un système d'exploitation 64 bits sont des conditions obligatoires.** Si votre système ne répond pas à cette condition, vous devez modifier le matériel ou le logiciel affecté ou tout le système. **Il est fortement recommandé d'utiliser un SSD (Solid State Disk) au lieu d'un HDD (Hard Disk Drive) car cela prend moins de temps lorsque vous construisez le fichier apk d'installation d'AAPS.** Recommandé signifie que c'est juste conseillé mais que ce n'est pas obligatoire. Cependant, vous pouvez toujours utiliser un disque dur lorsque vous construisez un fichier apk, mais notez que le processus de construction peut prendre beaucoup de temps à s'exécuter, si bien qu'une fois démarré, vous pouvez le laisser fonctionner sans surveillance.
 
 * * *
 
@@ -60,7 +60,7 @@ Please be in mind that both **64 bit CPU and 64 bit OS are mandatory condition.*
 
 ## Aperçu
 
-In general, the steps necessary to build the APK file:
+En général, les étapes nécessaires pour construire le fichier APK sont :
 
 1. [Installer Git](../Installing-AndroidAPS/git-install.md)
 2. [Installer Android Studio](Building-APK-install-android-studio)
@@ -73,11 +73,11 @@ In general, the steps necessary to build the APK file:
 
 ## Démarche pas à pas
 
-Detailed description of the steps necessary to build the APK file.
+Description détaillée des étapes nécessaires à la construction du fichier APK.
 
 ## Installer git (si vous ne l'avez pas)
 
-Follow the manual on the [git installation page](../Installing-AndroidAPS/git-install.md).
+Suivez la documentation sur la [page d'installation de git](../Installing-AndroidAPS/git-install.md).
 
 (Building-APK-install-android-studio)=
 
