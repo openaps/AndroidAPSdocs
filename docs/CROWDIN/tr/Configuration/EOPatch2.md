@@ -2,7 +2,7 @@
 
 **AndroidAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
 
-EOPatch, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
+EOPatch pompası, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
 
 EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünitedir. Bu nedenle, bazal Profili minimum 0,05 Ü/sa veya 0,05 Ü/saatin katları olacak şekilde daha yüksek bir değere ayarlanmalıdır. Aksi taktirde Profildeki tahmini toplam infüzyon miktarı ile pompadaki gerçek infüzyon miktarı arasında bir hata olabilir. Aynı şekilde, bolus da minimum infuzyon miktarı 0,05 Ü olarak ayarlanmalıdır.
 
@@ -45,9 +45,9 @@ Ana ekranın üst kısmındaki EOPATCH2'yi seçin ve sol alttaki PATCH ETKİNLE�
 
 [Warning]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- Talimat verilene kadar iğne hareket kolunu çevirmeyin. Aksi takdirde enjeksiyon veya güvenlik kontrollerinde ciddi sorunlara neden olabilir.
+- Patch rezervuarına enjekte edilebilecek insülin miktarı 80~200Ü'dir. Başlangıçta Patch rezervuarına 80Ü'den daha az insülin enjekte ederseniz Patch çalışmayacaktır.
+- Konulacak insülini buzdolabından önceden alın ve 15-30 dakika oda sıcaklığında bekletin. Enjekte edilecek insülinin sıcaklığı en az 10°C olmalıdır.
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
@@ -63,43 +63,43 @@ Patch eşleştirme ekranı görüntülenecek ve eşleştirme otomatik olarak den
 ![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
 
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+### Patch hazırlığı
+Patch yapışkan bandını çıkardıktan sonra iğnenin dışarı çıkıp çıkmadığını kontrol edin. Patch ile ilgili herhangi bir sorun yoksa, İLERİ'ye tıklayın.
 
 ![Bild9](../images/EOPatch/Bild9.png)
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+### Patch yerleştirme
+İnsülin, deri altı yağ içeren ancak az sayıda sinir veya kan damarı olan bir noktaya enjekte edilmelidir, bu nedenle Patch takma yeri olarak karın, kol veya uyluğun kullanılması önerilir. Bir Patch infüzyon bölgesi seçin ve konumu dezenfekte ettikten sonra pompayı yerleştirin.
 
 [Warning]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Pompanın cilde tamamen yapışması için pompa bandının vücuda yapıştırılan tarafını eşit şekilde düzleştirdiğinizden emin olun.
+- Pompa tamamen yapışmazsa, pompa ile cilt arasına hava girebilir ve bu da pompanın yapışma gücünü ve su geçirmezlik etkisini zayıflatabilir.
 
 ![Bild10](../images/EOPatch/Bild10.png)
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+### Güvenlik Kontrolü
+Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunun. Güvenlik kontrolü tamamlandığında, pompa bir kez bip sesi çıkaracaktır.
 
 [Warning]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Güvenli kullanım için, güvenlik kontrolü tamamlanana kadar iğne hareket kolunu çevirmeyin.
 
 ![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
 ### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+İğne, pompanın çevresinden tutularak ve iğne hareket kolu kolun yukarı yönünde 100°'den fazla döndürülerek sokulur. İğne doğru şekilde takıldığında bir uyarı sesi duyulur. Kolu serbest bırakmak için iğne hareket kolunu saat yönünde daha fazla çevirin. İLERİ'YE basın.
 
 [Caution]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Zil çalmadan bir sonraki adıma geçerseniz, bir iğne yerleştirme hatası uyarısı görünecektir.
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+## Pompanın çıkarılması
+İnsülin seviyesinin düşük olması, kullanım süresinin dolması ve kusurlu olması durumunda pompa (EOPatch) değiştirilmelidir. Her pompa için önerilen kullanım süresi, pompayı başlattıktan sonra 84 saattir.
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+### Pompanın çıkarılması
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve alttaki POMPAYI AYIR/DEĞİŞTİR butonuna tıklayın. Bir sonraki ekranda, POMPAYI ÇIKAR butonuna tıklayın. Bir kez daha onaylamak için bir iletişim kutusu görünür ve POMPAYI ÇIKAR butonunu seçerseniz, imha işlemi tamamlanır.
 
 ![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
 
@@ -125,19 +125,19 @@ Alarms are issued for emergency situations of the highest priority and require i
 
 ![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
 
-The different types of alarms are explained below.
+Farklı alarm türleri aşağıda açıklanmıştır.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rezervuar boş              | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Tıkanma                    | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| İğne yerleştirme Hatası    | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarmlar                         | Explanation                                                                                                                                                                                                         |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rezervuar boş                    | Patch rezervuarında insülin bittiğinde belirir.                                                                                                                                                                     |
+| Patch süresi doldu               | Patch kullanım süresi dolduğunda ve başka insülin enjeksiyonu mümkün olmadığında belirir.                                                                                                                           |
+| Tıkanma                          | Patch insülin girişi tıkalı göründüğünde ortaya çıkar.                                                                                                                                                              |
+| Açılma kendi kendine test hatası | Patch, önyükleme sonrası kendi kendini sınama işlemi sırasında beklenmeyen bir hata bulduğunda belirir.                                                                                                             |
+| Inappropriate temperature        | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
+| İğne yerleştirme Hatası          | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
+| Patch battery Error              | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
+| Patch activation Error           | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
+| Patch Error                      | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
 
 ### Warning
 
