@@ -399,11 +399,11 @@ La façon la plus simple de faire travailler toutes ces pièces ensemble est de 
 
 While trying to build I get an error stating the file name is too long. Solutions possibles : Déplacez vos sources vers un répertoire plus proche du répertoire racine de votre disque (par exemple "c:\src\AAPS-EROS").
 
-From Android Studio: Make sure "Gradle" is done syncing and indexing after opening the project and pulling from GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
+Depuis Android Studio : Assurez-vous que la synchronisation et l'indexage "Gradle" sont terminés après avoir ouvert le projet et effectué un Pull depuis GitHub. Execute a Build->Clean Project before doing a Rebuild Project. Execute File->Invalidate Caches and Restart Android Studio.
 
 ## Alerte : Version Dev. La boucle fermée est désactivée
 
-AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. Closed loop is disabled".
+AndroidAPS is not running in "developer mode". AAPS shows the following message: "running dev version. La boucle fermée est désactivée".
 
 Assurez-vous qu'AAPS fonctionne en mode développeur : Placez un fichier nommé "engineering_mode" dans le dossier "AAPS/extra". Any file will do as long as it is properly named. Make sure to restart AndroidAPS for it to find the file and go into "developer mode".
 
