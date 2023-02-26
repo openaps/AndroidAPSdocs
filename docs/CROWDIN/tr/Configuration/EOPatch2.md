@@ -88,7 +88,7 @@ Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunu
 ![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
+### İğneyi yerleştirme
 İğne, pompanın çevresinden tutularak ve iğne hareket kolu kolun yukarı yönünde 100°'den fazla döndürülerek sokulur. İğne doğru şekilde takıldığında bir uyarı sesi duyulur. Kolu serbest bırakmak için iğne hareket kolunu saat yönünde daha fazla çevirin. İLERİ'YE basın.
 
 [Caution]
@@ -104,55 +104,55 @@ Ana ekranın üst kısmında EOPATCH2'yi seçin ve alttaki POMPAYI AYIR/DEĞİŞ
 ![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
 
 ## İnsülin İletimini Askıya Alma ve Devam Ettirme
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+İnsülin iletiminin askıya alınması aynı zamanda hem Yayma bolusu hem de geçici bazalı iptal eder. İnsülin iletimine devam edilirken, iptal edilen yayma bolus ve geçici bazal devam ettirilmeyecektir. Ve insülin iletimi askıya alındığında, pompa her 15 dakikada bir ses verecektir.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+### İnsülin iletiminin askıya alınması
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki ASKIYA AL butonuna tıklayın. Onay kutusunda ONAYLA'yı seçtiğinizde, bir zaman seçim kutusu görünür. Süreyi seçtikten sonra ONAYLA düğmesini seçerseniz, insülin iletimi ayarlanan süre boyunca askıya alınacaktır.
 
 ![Bild17](../images/EOPatch/Bild17.png) ![Bild18](../images/EOPatch/Bild18.png) ![Bild19](../images/EOPatch/Bild19.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### İnsülin iletimini devam ettirme
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki DEVAM ET butonuna tıklayın. Onay iletişim kutusunda ONAYLA öğesi seçildiğinde insülin iletimi devam edecektir.
 
 ![Bild20](../images/EOPatch/Bild20.png) ![Bild21](../images/EOPatch/Bild21.png)
 
-## Alarms/Warnings
+## Alarmlar/Uyarılar
 
 ### Alarm
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+Alarmlar, en yüksek önceliğe sahip acil durumlar için verilir ve acil müdahale gerektirir. Alarm sinyali, onaylanana kadar kaybolmaz veya zaman aşımına uğramaz. Kullanılan pompa ile ilgili bir sorun olduğunda bir alarm verilir, bu nedenle kullanılan pompanın çıkarılması ve yeni bir pompa ile değiştirilmesi gereken durumlar olabilir. Uyarı bir iletişim kutusu olarak görüntülenir ve işlem tamamlanana kadar başka bir ekrana geçiş mümkün değildir.
 
 ![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
 
 Farklı alarm türleri aşağıda açıklanmıştır.
 
-| Alarmlar                         | Explanation                                                                                                                                                                                                         |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Rezervuar boş                    | Patch rezervuarında insülin bittiğinde belirir.                                                                                                                                                                     |
-| Patch süresi doldu               | Patch kullanım süresi dolduğunda ve başka insülin enjeksiyonu mümkün olmadığında belirir.                                                                                                                           |
-| Tıkanma                          | Patch insülin girişi tıkalı göründüğünde ortaya çıkar.                                                                                                                                                              |
-| Açılma kendi kendine test hatası | Patch, önyükleme sonrası kendi kendini sınama işlemi sırasında beklenmeyen bir hata bulduğunda belirir.                                                                                                             |
-| Inappropriate temperature        | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| İğne yerleştirme Hatası          | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error              | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error           | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                      | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarmlar                         | Açıklama                                                                                                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rezervuar boş                    | Patch rezervuarında insülin bittiğinde belirir.                                                                                                                                                               |
+| Patch süresi doldu               | Patch kullanım süresi dolduğunda ve başka insülin enjeksiyonu mümkün olmadığında belirir.                                                                                                                     |
+| Tıkanma                          | Patch insülin girişi tıkalı göründüğünde ortaya çıkar.                                                                                                                                                        |
+| Açılma kendi kendine test hatası | Patch, önyükleme sonrası kendi kendini sınama işlemi sırasında beklenmeyen bir hata bulduğunda belirir.                                                                                                       |
+| Uygun olmayan sıcaklık           | Pompa hazırlığı ve kullanımı sırasında, pompa normal çalışma sıcaklığı aralığının dışında olduğunda belirir. Bu alarmla başa çıkmak için pompa uygun çalışma sıcaklığı (4,4 ila 37°C) arasına getirilmelidir. |
+| İğne yerleştirme Hatası          | Pompa uygulama işlemi sırasında iğne girişi normal olmadığında belirir. Pompanın iğne giriş kenarı ile iğne etkinleştirme düğmesinin düz bir çizgide olduğunu kontrol edin.                                   |
+| Pompa pil hatası                 | Pompanın dahili pili bitip kapanmadan hemen önce belirir.                                                                                                                                                     |
+| Pompa etkinleştirme Hatası       | Uygulama, pompa önyüklendikten sonraki 60 dakika içinde pompa hazırlık işlemini tamamlayamadığı zaman gerçekleşir.                                                                                            |
+| Pompa Hatası                     | Pompa, etkinleştirilirken ve kullanılırken beklenmeyen bir hatayla karşılaştığında belirir.                                                                                                                   |
 
-### Warning
+### Uyarı
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+Orta veya düşük öncelikli bir durumda bir uyarı oluşur. Bir uyarı oluştuğunda, Genel Bakış ekranında bir bildirim olarak görüntülenir.
 
 ![Bild24](../images/EOPatch/Bild24.png)
 
-The different types of warnings are explained below.
+Farklı uyarı türleri aşağıda açıklanmıştır.
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+| Uyarılar                     | Açıklama                                                                                                                                     |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| İnsülin askıya alma sonu     | İnsülin infüzyon süspansiyonu tamamlandıktan sonra kullanıcı tarafından ayarlanan süre geçtiğinde gerçekleşir.                               |
+| Düşük rezervuar              | Pompada kalan insülin miktarı programda ayarlanan miktarın altına düştüğünde belirir.                                                        |
+| Pompa çalışma ömrü sona erdi | Pompa kullanım süresi bittiğinde belirir.                                                                                                    |
+| Pompa yakında sona erecek    | Pompa süresi sona ermeden 1 saat önce belirir.                                                                                               |
+| Eksik Pompa aktivasyonu      | Eşleştirme tamamlandıktan sonraki aşamada pompa etkinleştirme sırasında yaşanan kesinti nedeniyle 3 dakikadan fazla zaman geçtiğinde oluşur. |
+| Pompa pili zayıf             | Pompanın pili azaldığında belirir.                                                                                                           |
 
