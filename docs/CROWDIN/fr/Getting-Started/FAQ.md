@@ -360,24 +360,24 @@ Vous pouvez montrer vos rapports Nightscout (https://YOUR-NS-SITE.com/report) ou
 
 ## AAPS s’arrête tous les jours autour de la même heure.
 
-Stop Google Play Protect. Check for "cleaning" apps (ie CCleaner etc) and uninstall them. AAPS / 3 dots menu / About / follow the link "Keep app running in the background" to stop all battery optimizations.
+Arrêter la protection Google Play. Vérifiez que les applications "nettoyant" (par ex. CCleaner, etc.) et désinstallez-les. AAPS / Menu 3 points / À propos / Suivre le lien "Garder l'application en cours d'exécution en arrière-plan" pour arrêter toutes les optimisations de batterie.
 
 ## Comment organiser mes sauvegardes ?
 
-Export settings very regularly: after each pod change, after modifying your profile, when you have validated an objective, if you change your pump… Even if nothing changes, export once a month. Keep several old export files.
+Exporter les paramètres très régulièrement : après chaque changement de pod, après modification de votre profil, lorsque vous avez terminé et validé un objectif, si vous changez votre pompe… Même si rien ne change, exportez une fois par mois. Conserver plusieurs anciens fichiers d'exportation.
 
-Copy on an internet drive (Dropbox, Google etc) : all the apks you used to install apps on your phone (AAPS, xDrip, BYODA, Patched LibreLink…) as well as the exported setting files from all your apps.
+Copiez sur un lecteur internet (Dropbox, Google etc) : toutes les apks que vous avez utilisés pour installer des applications sur votre téléphone (AAPS, xDrip, BYODA, Patched LibreLink…) ainsi que les fichiers de configuration exportés de toutes vos applications.
 
 ## J'ai des problèmes, des erreurs lors de la construction de l'application.
 
-Please
+Veuillez
 
-- check [Troubleshooting Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) for typical errors and
+- vérifier [Dépannage d'Android Studio](troubleshooting_androidstudio-troubleshooting-android-studio) pour les erreurs typiques et
 - suivre les conseils pour un accompagnement [pas à pas](https://docs.google.com/document/d/1oc7aG0qrIMvK57unMqPEOoLt-J8UT1mxTKdTAxm8-po).
 
 ## Je suis coincé sur un objectif et j'ai besoin d'aide.
 
-Screen capture the question and answers. Post-it on the Discord AAPS channel. Don't forget to tell which options you choose (or not) and why. You'll get hints and help but you'll need to find the answers.
+Effectuez une capure d'écran avec la question et les réponses. Postez les sur la chaine AAPS sur Discord. N'oubliez pas de préciser quelles options vous choisissez (ou pas) et pourquoi. Vous obtiendrez des conseils et de l'aide, mais vous devrez trouver les réponses vous-même.
 
 ## Comment réinitialiser le mot de passe dans AAPS v2.8.x ?
 
@@ -385,7 +385,7 @@ Open the hamburger menu, start the Configuration wizard and enter new password w
 
 ## Comment réinitialiser le mot de passe dans AAPS v3.x ?
 
-If you forgot your password: Close AAPS. Put an empty file named PasswordReset (without any extensions) in phone_main_memory/AAPS/extra directory. Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
+Si vous avez oublié votre mot de passe : Fermez AAPS. Mettez un fichier vide nommé PasswordReset (sans aucune extension) dans le répertoire phone_main_memory/AAPS/extra . Restart AAPS. The new AAPS password is the serial number of your pump. The serial for the Omnipod DASH pod is 4241. You can change the password via 3 dots menu, configuration wizard, unlock parameters.
 
 ## My link/pump/pod is unresponsive (RL/OL/EmaLink…)
 
