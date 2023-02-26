@@ -154,7 +154,7 @@ AndroidAPS dokümantasyonunda dahili bir bağlantı ayarlamak istiyorsanız, lü
     Bu bir not.
     
 
-### Warnings
+### Uyarılar
 
     ```{admonition} Güçlü Uyarı
     :class: uyarı
