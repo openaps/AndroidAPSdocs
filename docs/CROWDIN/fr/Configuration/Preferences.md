@@ -1,56 +1,57 @@
 # Préférences
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt: Ouvrir les préférences
   ```
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
   :alt: Ouvrir les préférences du plugin
   ```
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Ouvrir le sous-menu
   ```
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Il suffit de taper une partie du texte que vous cherchez.
+- Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt: Filtre des préferences
   ```
 
 ```{contents}
-:backlinks: entry
-:depth: 2
+contenus::
+   :backlinks: entrée
+   :depth: 2
 ```
 
 (Preferences-general)=
 ## Généralités
 
-**Units**
+**Unités**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Définissez les unités mmol/l ou mg/dl selon vos préférences.
 
 **Langue**
 
-- New option to use phone's default language (recommended).
+- Nouvelle option pour utiliser la langue par défaut du téléphone (recommandé).
 
-- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+- Si vous voulez AAPS dans une autre langue que la langue du téléphone, vous pouvez choisir parmi une large variété.
 
-- If you use different languages you might sometimes see a language mix. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
+- Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
   ```{image} ../images/Pref2020_General.png
   :alt: Preferences > General
   ```
 
-**Patient name**
+**Nom du patient**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Peut être utilisé si vous devez différencier plusieurs configurations (par ex. deux enfants DT1 de votre famille).
 
 (Preferences-protection)=
 ### Protection
@@ -58,15 +59,15 @@
 (Preferences-master-password)=
 #### Mot de passe principal
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
-- Open Preferences (three-dot menu on top right of home screen)
+- Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
-- Click triangle below "General"
+- Cliquez sur le triangle sous " Général "
 
-- Click "Master-Password"
+- Cliquez sur " Mot de passe principal "
 
-- Enter password, confirm password and click ok.
+- Entrez le mot de passe, confirmez le et cliquez sur OK.
 
   ```{image} ../images/MasterPW.png
   :alt: Définir le mot de passe principal
@@ -74,9 +75,9 @@
 
 #### Protection des paramètres
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
+- Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre [enfant utilise AAPS](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser [les paramètres exportés](../Usage/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
