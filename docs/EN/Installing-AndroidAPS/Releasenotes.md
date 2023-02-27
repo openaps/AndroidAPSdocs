@@ -67,7 +67,7 @@ Release date: XX-XX-2023
 - G7 support @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
+- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - fixed tons of issues from 3.1 version
 - allow add notes on more places @Sergey Zorchenko
 - UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
