@@ -138,21 +138,21 @@ Vous pouvez afficher une plage plus large (lignes vertes) sur le graphique pour 
 - Vous pouvez utiliser [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) pour vérifier que votre basale reste précise ou faire un test de basal traditionnel.
 - Activez [autosens](../Usage/Open-APS-features.md) sur une période de 7 jours et regardez la ligne blanche dans le graphique de l'écran d'accueil qui montre comment la sensibilité à l'insuline augmente ou diminue selon l'exercice physique, le cycle hormonal etc, et gardez un oeil sur l'onglet OpenAPS qui indique comment AndroidAPS ajuste les basales et/ou les cibles en conséquence.
 
-*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+N'oubliez pas d'enregistrer votre Bouclage dans \`ce formulaire \<https://bit.ly/nowlooping>\`\_ \*en indiquant AndroidAPS comme votre type de logiciel de boucle DIY, si vous ne l'avez pas déjà fait.
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## Objectif 9 : Activation de fonctionnalités supplémentaires pour l'utilisation en journée, telles que la fonction SMB
 
-- You must read the [SMB chapter in this wiki](Open-APS-features-super-micro-bolus-smb) and [chapter oref1 in openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) to understand how SMB works, especially what's the idea behind zero-temping.
-- Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
+- Vous devez lire le [chapitre SMB dans ce wiki](Open-APS-features-super-micro-bolus-smb) et le [chapitre oref1 dans la documentation openAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) pour comprendre comment les SMB fonctionnent, en particulier ce qu'il y a derrière le zéro-temp.
+- Puis vous devez [augmenter le maxIA](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) pour que les SMB marchent correctement. maxIA inclu maintenant toutes les IA, pas seulement la basale ajoutée. Autrement dit, si vous faites un bolus de 8 U pour un repas et que maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA redescende en dessous de 7 U. Un bon début est maxIA = bolus moyen des repas + 3 x basale max quotidienne (basale max quotidienne = débit horaire max de basale sur n'importe quelle période de la journée - voir [Objectif 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) pour une illustration)
+- la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement.
 
 (Objectives-objective-10-automation)=
 ## Objectif 10: Automatisation
 
-- You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
-- Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
-- Completing previous objectives will not effect other objectives you have already finished. Vous conserverez tous les objectifs terminés !
+- Vous devez commencer l'objectif 10 pour pouvoir utiliser l'[Automatisation](../Usage/Automation.md).
+- Assurez-vous d'avoir complété tous les objectifs, y compris l'examen [Objectif 3 prouver ses connaissances](Objectives#objective-3-prove-your-knowledge).
+- Compléter les objectifs précédents n’affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 (Objectives-go-back-in-objectives)=
 ## Retour arrière dans les Objectifs
@@ -165,4 +165,4 @@ Si vous voulez revenir en arrière sur les objectifs terminés pour quelque rais
 
 ## Objectifs dans Android APS avant la version 3.0
 
-Un objectif a été supprimé lors de la sortie d'Android APS 3.0.  Users of Android APS version 2.8.2.1 who are on older Android software (i.e. earlier than version 9) will be using an older set of objectives which can be found [here](../Usage/Objectives_old.md).
+Un objectif a été supprimé lors de la sortie d'Android APS 3.0.  Les utilisateurs d'AAPS version 2.8.2.1 qui sont sur des version d'Android plus anciens (par ex. antérieur à la version 9) utiliseront un jeu d'objectifs plus ancien qui peut être trouvé [ici](../Usage/Objectives_old.md).
