@@ -67,13 +67,13 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
 ## Sürücüyü etkinleştirme ve Combo ile eşleştirme
 
-* Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
+* [Konfigürasyon ayarlarında](../Configuration/Config-Builder)'da "Accu-Chek Combo" sürücüsünü seçin. **Önemli**: Listede "Accu-Chek Combo (Ruffy)" adlı eski sürücü de mevcuttur. Bunu _seçmeyin_.
 
   ![Combo'nun Konfigürasyon ayaraları ekran görüntüsü](../images/combo/combov2-config-builder.png)
 
-* Tap the cog-wheel to open the driver settings.
+* Sürücü ayarlarını açmak için dişli tekerleğe dokunun.
 
-* In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
+* Ayarlar arayüzünde, ekranın üst kısmındaki 'Pompa ile eşleştir' butonuna dokunun. Combo eşleştirme arayüzü açılır. Eşleştirmeyi başlatmak için ekranda gösterilen talimatları izleyin. Android, telefonu diğer Bluetooth cihazlarına görünür kılmak için izin istediğinde "izin ver"e basın. Sonunda Combo, ekranında 10 haneli özel bir eşleştirme PIN'i gösterecek ve sürücü bunu isteyecektir. Bu PIN'i ilgili alana girin.
 
   ![Combo Eşleştirme UI 1 ekran görüntüsü](../images/combo/combov2-pairing-screen-1.png)
 
@@ -85,7 +85,7 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
   ![Combo Eşleştirme UI 4 ekran görüntüsü](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* Sürücü Combo'da gösterilen 10 haneli PIN'i istediğinde ve kod yanlış girildiğinde şu gösterilir: ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
 * Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
 
@@ -116,7 +116,7 @@ The tab shows the following information when a pump was paired (items are listed
 
 1. _Driver state_: The driver can be in one of the following states:
    - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
-   - "Connecting"
+   - "Bağlanıyor"
    - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
    - "Ready" : the driver is ready to accept commands from AAPS
    - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
@@ -181,13 +181,13 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 
 **IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
 
-## Things to be careful about when using the Combo
+## Combo kullanırken dikkat edilmesi gerekenler
 
-* Keep in mind that this is not a product, esp. in the beginning the user needs to monitor and understand the system, its limitations and how it can fail. Kullanan kişi sistemi tam olarak anlayamamışsa bu sistemi KULLANMAMANIZ şiddetle tavsiye edilir.
-* Due to the way the Combo's remote control functionality works, several operations (especially setting a basal profile) are slow compared to other pumps. This is an unfortunate limitation of the Combo that cannot be overcome.
+* Özellikle bu sürücünün bir ürün olmadığını unutmayın. Başlarken, kullanıcının sistemi, sınırlamalarını ve başarısız olabileceğini izlemesi ve anlaması gerekir. Kullanan kişi sistemi tam olarak anlayamamışsa bu sistemi KULLANMAMANIZ şiddetle tavsiye edilir.
+* Combo'nun uzaktan kumanda işlevselliğinin çalışma şekli nedeniyle, bazı işlemler (özellikle bazal profili ayarlamak) diğer pompalara kıyasla yavaştır. Bu, Combo'nun üstesinden gelinemeyecek talihsiz bir sınırlamasıdır.
 * Pompa üzerinden bir GBO (geçici bazal oran) ayarlamayın veya iptal etmeyin. Döngü, GBO'nun kontrolünü programda üstlenir. Aksi takdirde kullanıcı tarafından pompada ayarlanan bir GBO'nun başlangıç zamanını belirlemek mümkün olmadığından güvenilir şekilde çalışamaz.
-* AAPS pompa ile iletişim kurarken pompa üzerinde herhangi bir düğmeye basmayın (AAPS bağlandığında pompada Bluetooth logosu görünür). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](combov2-before-you-begin)).
-* Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](combov2-alerts) for a more detailed explanation why.
+* AAPS pompa ile iletişim kurarken pompa üzerinde herhangi bir düğmeye basmayın (AAPS bağlandığında pompada Bluetooth logosu görünür). Bunu yapmak, Bluetooth bağlantısını kesecektir. Bunu yalnızca bağlantı kurmayla ilgili sorunlar varsa yapın (yukarıdaki ["Başlamadan önce" bölümüne](combov2-before-you-begin) bakın).
+* Pompa bolus yaparken herhangi bir butona basmayın. Özellikle uyarıları pompa butonlarına basarak kapatmaya çalışmayın. Sebebiyle ilgili daha ayrıntılı bir açıklama için [uyarılar hakkındaki bölüme](combov2-alerts) bakın.
 
 ## Combo ile bağlantı kurulamadığında kontrol listesi
 
