@@ -308,5 +308,5 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Donanım ve Yazılım Gereksinimleri
 </p>
