@@ -69,33 +69,33 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
 * Select the "Accu-Chek Combo" driver in the [Config builder](../Configuration/Config-Builder). **Important**: There is the old driver, called "Accu-Chek Combo (Ruffy)", in that list as well. Do _not_ select that one.
 
-  ![Screenshot of Config Builder Combo](../images/combo/combov2-config-builder.png)
+  ![Combo'nun Konfigürasyon ayaraları ekran görüntüsü](../images/combo/combov2-config-builder.png)
 
 * Tap the cog-wheel to open the driver settings.
 
 * In the settings user interface, tap on the button 'Pair with pump' at the top of the screen. This opens the Combo pairing user interface. Follow the instructions shown on screen to start pairing. When Android asks for permission to make the phone visible to other Bluetooth devices, press "allow". Eventually, the Combo will show a custom 10-digit pairing PIN on its screen, and the driver will request it. Enter that PIN in the corresponding field.
 
-  ![Screenshot of Combo Pairing UI 1](../images/combo/combov2-pairing-screen-1.png)
+  ![Combo Eşleştirme UI 1 ekran görüntüsü](../images/combo/combov2-pairing-screen-1.png)
 
-  ![Screenshot of Combo Pairing UI 2](../images/combo/combov2-pairing-screen-2.png)
+  ![Combo Eşleştirme UI 2 ekran görüntüsü](../images/combo/combov2-pairing-screen-2.png)
 
-  ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-3.png)
+  ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-3.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-4.png)
+  ![Combo Eşleştirme UI 4 ekran görüntüsü](../images/combo/combov2-pairing-screen-4.png)
 
-  ![Screenshot of Combo Pairing UI 4](../images/combo/combov2-pairing-screen-5.png)
+  ![Combo Eşleştirme UI 4 ekran görüntüsü](../images/combo/combov2-pairing-screen-5.png)
 
-* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Screenshot of Combo Pairing UI 3](../images/combo/combov2-pairing-screen-incorrect-pin.png)
+* When the driver asks for the 10-digit PIN that is shown on the Combo, and the code is entered incorrectly, this is shown: ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
 * Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
 
   The Accu-Chek Combo tab looks like this after successfully pairing:
 
-  ![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+  ![Eşleştirilmiş Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-with-pairing.png)
 
   if however there is no pairing with the Combo, the tab looks like this instead:
 
-  ![Screenshot of Accu-Chek Combo tab without pairing](../images/combo/combov2-tab-without-pairing.png)
+  ![Eşleştirme olmadan Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-without-pairing.png)
 
 * To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. Pompanın şimdi çalışan bir GBO'su ve geçmişte bolus olması gerekir. AAPS ayrıca aktif GBO'yu ve iletilen bolusu göstermelidir.
 
@@ -112,7 +112,7 @@ The consequence of this is that pairing will never be 100% without problems, tho
 
 The tab shows the following information when a pump was paired (items are listed from top to bottom):
 
-![Screenshot of Accu-Chek Combo tab with pairing](../images/combo/combov2-tab-with-pairing.png)
+![Eşleştirilmiş Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-with-pairing.png)
 
 1. _Driver state_: The driver can be in one of the following states:
    - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
@@ -142,7 +142,7 @@ At the very bottom, there is the "Refresh" button. This triggers an immediate pu
 
 These preferences are available for the combo driver (items are listed from top to bottom):
 
-![Screenshot of Accu-Chek Combo preferences](../images/combo/combov2-preferences.png)
+![Accu-Chek Combo tercihlerinin ekran görüntüsü](../images/combo/combov2-preferences.png)
 
 1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
 2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
@@ -189,11 +189,11 @@ Alerts that happen while the driver is not connected to the Combo will not be no
 * AAPS pompa ile iletişim kurarken pompa üzerinde herhangi bir düğmeye basmayın (AAPS bağlandığında pompada Bluetooth logosu görünür). Doing that will interrupt the Bluetooth connection. Only do that if there are problems with establishing a connection (see [the "Before you begin" section above](combov2-before-you-begin)).
 * Don't press any buttons while the pump is bolusing. In particular, don't try to dismiss alerts by pressing buttons. See [the section about alerts](combov2-alerts) for a more detailed explanation why.
 
-## Checklist for when no connection can be established with the Combo
+## Combo ile bağlantı kurulamadığında kontrol listesi
 
-The driver does its best to connect to the Combo, and uses a couple of tricks to maximize reliability. Still, sometimes, connections aren't established. Here are some steps to take for trying to remedy this situation.
+Sürücü, Combo'ya bağlanmak için elinden gelenin en iyisini yapıyor ve güvenilirliği en üst düzeye çıkarmak için birkaç numara kullanıyor. Yine de bazen bağlantı kurulamayabilir. İşte bu durumu düzeltmek için atmanız gereken bazı adımlar.
 
-1. Press a button on the Combo. Sometimes, the Combo's Bluetooth stack becomes non-responsive, and does not accept connections anymore. By pressing a button on the Combo and making the LCD show something, the Bluetooth stack is reset. Most of the time, this is the only step that's needed to fix the connection issues.
-2. Restart the phone. This may be needed if there is an issue with the phone's Bluetooth stack itself.
-3. If the Combo's battery cap is old, consider replacing it. Old battery caps can cause issues with the Combo's power supply, which affect Bluetooth.
-4. If connection attempts still keep failing, consider unpairing and then re-pairing the pump.
+1. Combo'da bir düğmeye basın. Bazen, Combo'nun Bluetooth aygıtı yanıt vermemeye başlar ve artık bağlantıları kabul etmez. Combo üzerindeki bir düğmeye basıp LCD'nin bir şey göstermesini sağlayarak, Bluetooth aygıtı sıfırlanır. Çoğu zaman bağlantı sorunlarını çözmek için gereken tek adım budur.
+2. Telefonunuzu yeniden başlatın. Telefonun Bluetooth bağlantısıyla ilgili bir sorun varsa bu gerekli olabilir.
+3. Combo'nun pil kapağı eskiyse değiştirmeyi düşünün. Eski pil kapakları, Combo'nun güç kaynağında Bluetooth'u etkileyen sorunlara neden olabilir.
+4. Bağlantı denemeleri hala başarısız oluyorsa, eşleştirmeyi kaldırıp ardından pompayı yeniden eşleştirmeyi deneyebilirsiniz.
