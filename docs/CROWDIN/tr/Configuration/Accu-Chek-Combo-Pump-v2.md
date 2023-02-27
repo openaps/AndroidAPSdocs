@@ -87,99 +87,99 @@ Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, 
 
 * Sürücü Combo'da gösterilen 10 haneli PIN'i istediğinde ve kod yanlış girildiğinde şu gösterilir: ![Combo Eşleştirme UI 3 ekran görüntüsü](../images/combo/combov2-pairing-screen-incorrect-pin.png)
 
-* Once pairing is done, the pairing user interface is closed by pressing the OK button in the screen that states that pairing succeeded. After it is closed, you return to the driver settings user interface. The 'Pair with pump' button should now be greyed out and disabled.
+* Eşleştirme yapıldıktan sonra, eşleştirmenin başarılı olduğunu belirten ekrandaki Tamam butonuna basılarak eşleştirme arayüzü kapatılır. Kapatıldıktan sonra, sürücü ayarları arayüzüne dönersiniz. 'Pompa ile eşleştir' butonu artık grileşmeli ve devre dışı kalmalıdır.
 
-  The Accu-Chek Combo tab looks like this after successfully pairing:
+  Başarılı bir şekilde eşleştirmeden sonra Accu-Chek Combo sekmesi şöyle görünür:
 
   ![Eşleştirilmiş Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-with-pairing.png)
 
-  if however there is no pairing with the Combo, the tab looks like this instead:
+  Ancak Combo ile eşleştirme yoksa, sekme şöyle görünür:
 
   ![Eşleştirme olmadan Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-without-pairing.png)
 
-* To verify your setup (with the pump **disconnected** from any cannula to be safe!) use AAPS to set a TBR of 500% for 15 min and issue a bolus. Pompanın şimdi çalışan bir GBO'su ve geçmişte bolus olması gerekir. AAPS ayrıca aktif GBO'yu ve iletilen bolusu göstermelidir.
+* Kurulumunuzu doğrulamak için (güvenli olması için pompanın herhangi bir kanülden **bağlantısı kesilerek**!) AAPS'i kullanarak 15 dakika boyunca %500'lük bir GBO ayarlayın ve bir bolus verin. Pompanın şimdi çalışan bir GBO'su ve geçmişte bolus olması gerekir. AAPS ayrıca aktif GBO'yu ve iletilen bolusu göstermelidir.
 
-* On the Combo, it is recommended to enable the key lock to prevent bolusing from the pump, esp. when the pump was used before and using the "quick bolus" feature was a habit.
+* Combo'da pompada özellikle bolusu önlemek için tuş kilidinin etkinleştirilmesi önerilir. Özellikle pompa daha önce manuel kullanıldığında ve hızlı bolus verme bir alışkanlık olduğunda.
 
-## Notes about pairing
+## Eşleştirme hakkında notlar
 
-The Accu-Chek Combo was developed before Bluetooth 4.0 was released, and just one year after the very first Android version was released. This is why its way of pairing with other devices is not 100% compatible with how it is done in Android today. To fully overcome this, AAPS would need system level permissions, which are only available for system apps. These are installed by the phone makers into the phone - users cannot install system apps.
+Accu-Chek Combo, Bluetooth 4.0 piyasaya sürülmeden önce ve ilk Android sürümünün piyasaya sürülmesinden sadece bir yıl sonra geliştirildi. Bu nedenle, diğer cihazlarla eşleştirme yöntemi, bugün Android'de yapıldığı şekliyle %100 uyumlu değildir. Bunun üstesinden gelmek için AAPS'in yalnızca sistem uygulamaları için mevcut olan sistem düzeyinde izinlere ihtiyacı olacaktır. Bunlar, telefon üreticileri tarafından telefona yüklenir - kullanıcılar sistem uygulamalarını yükleyemez.
 
-The consequence of this is that pairing will never be 100% without problems, though it is greatly improved in this new driver. In particular, during pairing, Android's Bluetooth PIN dialog can briefly show up and automatically go away. But sometimes, it stays on screen, and asks for a 4-digit PIN. (This is not to be confused with the 10-digit Combo pairing PIN.) Do not enter anything, just press cancel. If pairing does not continue, follow the instructions on screen to retry the pairing attempt.
+Bunun sonucunda, bu yeni sürücüde büyük ölçüde geliştirilmiş olmasına rağmen, eşleştirme hiçbir zaman %100 sorunsuz olmayacaktır. Özellikle eşleştirme sırasında, Android'in Bluetooth PIN iletişim kutusu kısa bir süreliğine görünebilir ve otomatik olarak kaybolabilir. Ancak bazen ekranda kalıyor ve 4 haneli bir PIN istiyor. (Bu, 10 haneli Combo eşleştirme PIN'i ile karıştırılmamalıdır.) Hiçbir şey girmeyin, sadece iptal düğmesine basın. Eşleştirme devam etmezse, eşleştirme girişimini yeniden denemek için ekrandaki talimatları izleyin.
 
 (combov2-tab-contents)=
-## Accu-Chek Combo tab contents
+## Accu-Chek Combo sekmesi içerikleri
 
-The tab shows the following information when a pump was paired (items are listed from top to bottom):
+Sekme, bir pompa eşlendiğinde aşağıdaki bilgileri gösterir (öğeler yukarıdan aşağıya doğru listelenir):
 
 ![Eşleştirilmiş Accu-Chek Combo sekmesinin ekran görüntüsü](../images/combo/combov2-tab-with-pairing.png)
 
-1. _Driver state_: The driver can be in one of the following states:
-   - "Disconnected" : There is no Bluetooth connection; the driver is in this state most of the time, and only connects to the pump when needed - this saves power
+1. _Sürücü durumu_: Sürücü aşağıdaki durumlardan birinde olabilir:
+   - "Bağlantı Kesildi" : Bluetooth bağlantısı yok; sürücü çoğu zaman bu durumdadır ve yalnızca gerektiğinde pompaya bağlanır - bu güç tasarrufu sağlar
    - "Bağlanıyor"
-   - "Checking pump" : the pump is connected, but the driver is currently performing safety checks to ensure that everything is OK and up to date
-   - "Ready" : the driver is ready to accept commands from AAPS
-   - "Suspended" : the pump is suspended (shown as "stopped" in the Combo)
-   - "Executing command" : an AAPS command is being executed
-   - "Error" : an error occurred; the connection was terminated, any ongoing command was aborted
-2. _Last connection_: How many minutes ago did the driver successfully connect to the Combo; if this goes beyond 30 minutes, this item is shown with a red color
-3. _Current activity_: Additional detail about what the pump is currently doing; this is also where a thin progress bar can show a command's execution progress, like setting a basal profile
-4. _Battery_: Battery level; the Combo only indicates "full", "low", "empty" battery, and does not offer anything more accurate (like a percentage), so only these three levels are shown here
-5. _Reservoir_: How many IU are currently in the Combo's reservoir
-6. _Last bolus_: How many minutes ago the last bolus was delivered; if none was delivered yet after AAPS was started, this is empty
-7. _Temp basal_: Details about the currently active temporary basal; if none is currently active, this is empty
-8. _Base basal rate_: Currently active base basal rate ("base" means the basal rate without any active TBR influencing the basal rate factor)
-9. _Serial number_: Combo serial number as indicated by the pump (this corresponds to the serial number shown on the back of the Combo)
-10. _Bluetooth address_: The Combo's 6-byte Bluetooth address, shown in the `XX:XX:XX:XX:XX:XX` format
+   - "Pompa kontrol ediliyor" : pompa bağlı, ancak sürücü şu anda her şeyin yolunda ve güncel olduğundan emin olmak için güvenlik kontrolleri yapıyor
+   - "Hazır" : sürücü, AAPS'den gelen komutları kabul etmeye hazır
+   - "Askıya alındı" : pompa askıya alınır (Combo'da "durduruldu" olarak gösterilir)
+   - "Komut yürütülüyor": bir AAPS komutu yürütülüyor
+   - "Hata" : bir hata oluştu; bağlantı sonlandırıldı, devam eden herhangi bir komut iptal edildi
+2. _Son bağlantı_: Sürücü kaç dakika önce Combo'ya başarıyla bağlandı; bu 30 dakikayı aşarsa, bu öğe kırmızı renkle gösterilir
+3. _Mevcut aktivite_: Pompanın şu anda ne yaptığıyla ilgili ek ayrıntılar; Burası aynı zamanda ince bir ilerleme çubuğunun, bir temel profil ayarlamak gibi bir komutun yürütme ilerlemesini gösterebileceği yerdir.
+4. _Pil_: Pil seviyesi; Combo yalnızca "dolu", "düşük", "boş" pili gösterir ve daha net bir şey sunmaz (yüzde gibi), dolayısıyla burada yalnızca bu üç seviye gösterilir
+5. _Rezervuar_: Combo'nun rezervuarındaki insülin miktarı (Ü)
+6. _Son bolus_: Son bolusun kaç dakika önce iletildiği; AAPS başlatıldıktan sonra henüz teslim edilmediyse bu boştur
+7. _Geçici bazal_: Şu anda etkin olan geçici bazal ile ilgili ayrıntılar; hiçbiri şu anda aktif değilse burası boştur
+8. _Temel bazal oran_: Şu anda etkin olan bazal oran (Herhangi bir GBO olmaksızın "temel" bazal programınız anlamına gelir)
+9. _Seri numarası_: Pompa tarafından belirtilen combo seri numarası (bu, Combo'nun arkasında gösterilen seri numarasına karşılık gelir)
+10. _Bluetooth adresi_: Combo'nun `XX:XX:XX:XX:XX:XX` biçiminde gösterilen 6 baytlık Bluetooth adresi
 
-The Combo can be operated through Bluetooth in the _remote-terminal_ mode or in the _command_ mode. The remote-terminal mode corresponds to the "remote control mode" on the Combo's meter, which mimics the pump's LCD and four buttons. Some commands have to be performed in this mode by the driver, since they have no counterpart in the command mode. That latter mode is much faster, but, as said, limited in scope. When the remote-terminal mode is active, the current remote-terminal screen is shown in the field that is located just above the Combo drawing at the bottom. When the driver switches to the command mode however, that field is left blank.
+Combo, Bluetooth aracılığıyla _uzak terminal_ modunda veya _komut_ modunda çalıştırılabilir. Uzak terminal modu, pompanın LCD ekranını ve dört düğmeyi taklit eden Combo sayacındaki "uzaktan kumanda modu"na karşılık gelir. Komut modunda karşılıkları olmadığı için bazı komutların sürücü tarafından bu modda gerçekleştirilmesi gerekir. Bu ikinci mod çok daha hızlıdır, ancak söylendiği gibi kapsamı sınırlıdır. Uzak terminal modu aktif olduğunda, alttaki Combo çiziminin hemen üzerinde bulunan alanda mevcut uzak terminal ekranı gösterilir. Ancak sürücü komut moduna geçtiğinde bu alan boştur.
 
-(The user does not influence this; the driver fully decides on its own what mode to use. This is merely a note for users to know why sometimes they can see Combo frames in that field.)
+(Kullanıcı bundan etkilenmez; sürücü hangi modun kullanılacağına tamamen kendi karar verir. Bu, kullanıcıların neden bazen o alanda Combo çiziminde çerçeveler gördüğünü bilmeleri için bir nottur.)
 
-At the very bottom, there is the "Refresh" button. This triggers an immediate pump status update. It also is used to let AAPS know that a previously discovered error is now fixed and that AAPS can check again that everything is OK (more on that below in [the section about alerts](combov2-alerts)).
+En altta "Yenile" düğmesi var. Bu anında pompa durumu güncellemesini tetikler. Ayrıca, AAPS'in daha önce keşfedilen bir hatanın artık düzeltildiğini ve AAPS'in her şeyin yolunda olduğunu tekrar kontrol edebileceğini bilmesini sağlamak için kullanılır (aşağıda [uyarılarla ilgili bölümde](combov2-alerts) bu konuda daha fazla bilgi bulabilirsiniz).
 
 ## Tercihler
 
-These preferences are available for the combo driver (items are listed from top to bottom):
+Bu tercihler combo sürücüsü için mevcuttur (öğeler yukarıdan aşağıya doğru listelenmiştir):
 
 ![Accu-Chek Combo tercihlerinin ekran görüntüsü](../images/combo/combov2-preferences.png)
 
-1. _Pair with pump_: This is a button that can be pressed to pair with a Combo. It is disabled if a pump is already paired.
-2. _Unpair pump_: Unpairs a paired Combo; the polar opposite of item no. 1. It is disabled if no pump is paired.
-3. _Discovery duration (in seconds)_: When pairing, the drivers makes the phone discoverable by the pump. This controls how long that discoverability lasts. By default, the maximum (300 seconds = 5 minutes) is selected. Android does not allow for discoverability to last indefinitely, so a duration has to be chosen.
-4. _Autodetect and automatically enter insulin reservoir change_: If enabled, the "reservoir change" action that is normally done by the user through the "prime/fill" button in the Action tab. This is explained [in further detail below](combov2-autodetections).
-5. _Autodetect and automatically enter battery change_: If enabled, the "battery change" action that is normally done by the user through the "pump battery change" button in the Action tab. This is explained [in further detail below](combov2-autodetections).
-6. _Enable verbose Combo logging_: This greatly expands the amount of logging done by the driver. **CAUTION**: Do not enable this unless asked to by a developer. Otherwise, this can add a lot of noise to AndroidAPS logs and lessen their usefulness.
+1. _Pompa ile eşleştir_: Bu Combo pompası ile eşleştirmek için basılabilen bir butondur. Bir pompa zaten eşleştirilmişse devre dışı bırakılır.
+2. _Pompa eşleştirmesini kaldır_: Eşleştirilmiş bir pompanın eşlemesini kaldırır. Hiçbir pompa eşleştirilmemişse devre dışı bırakılır.
+3. _Keşif süresi (saniye olarak)_: Eşleştirme sırasında, sürücüler telefonun pompa tarafından bulunabilir olmasını sağlar. Bu keşfedilebilirliğin ne kadar süreceğini kontrol eder. Varsayılan olarak maksimum (300 saniye = 5 dakika) seçilidir. Android, keşfedilebilirliğin süresiz olarak devam etmesine izin vermez, bu nedenle bir süre seçilmelidir.
+4. _İnsülin rezervuarı değişikliğini otomatik olarak algıla ve otomatik olarak gir_: Etkinleştirilirse, normalde "rezervuar değişikliği" işlemi kullanıcı tarafından Eylem sekmesindeki "hazırla/doldur" butonuyla yapılır. Bu [aşağıda daha ayrıntılı olarak](combov2-autodetections) açıklanmaktadır.
+5. _Pil değişikliğini otomatik olarak algıla ve otomatik olarak gir_: Etkinleştirilirse, normalde "pil değiştirme" işlemi kullanıcı tarafından Eylem sekmesindeki "pompa pili değiştirme" butonu aracılığıyla gerçekleştirilir. Bu [aşağıda daha ayrıntılı olarak](combov2-autodetections) açıklanmaktadır.
+6. _Ayrıntılı combo günlük kaydını etkinleştir_: Sürücü tarafından yapılan günlük kaydını büyük ölçüde artırır. **DİKKAT**: Bir geliştirici tarafından istenmedikçe bunu etkinleştirmeyin. Aksi takdirde, AndroidAPS günlüklerine çok fazla gürültü ekleyebilir ve bunların kullanışlılığını azaltabilir.
 
-Most users only ever use the top two items, the _Pair with pump_ and _Unpair pump_ buttons.
+Çoğu kullanıcı yalnızca en üstteki iki öğe, _Pompa ile eşleştir_ ve _Pompa eşleştirmesini kaldır_ butonlarını kullanır.
 
 (combov2-autodetections)=
-## Autodetecting and automatically entering battery and reservoir changes
+## Pil ve rezervuar değişikliklerini otomatik algılama ve otomatik olarak girme
 
-The driver is capable of detecting battery and reservoir changes by keeping track of the battery and reservoir levels. If the battery level was reported by the Combo as low the last time the pump status was updated, and now, during the new pump status update, the battery level shows up as normal, then the driver concludes that the user must have replaced the battery. The same logic is used for the reservoir level: If it now is higher than before, this is interpreted as a reservoir change.
+Sürücü, pil ve rezervuar seviyelerini takip ederek akü ve rezervuar değişikliklerini tespit edebilir. Pompa durumu son güncellendiğinde pil seviyesi Combo tarafından düşük olarak bildirildiyse ve yeni pompa durumu güncellemesi sırasında pil seviyesi normal görünüyorsa, sürücü kullanıcının pili değiştirmiş olması gerektiği sonucuna varır. Rezervuar seviyesi için de aynı mantık kullanılır: Şimdi öncekinden daha yüksekse, bu rezervuar değişikliği olarak yorumlanır.
 
-This only works if the battery and reservoir are replaced when these levels are reported as low _and_ the battery and reservoir are sufficiently filled.
+Bu yalnızca, pil ve rezervuar seviyelerinin düşük olarak bildirildiği durumlardan sonra değişim yapılıp _ve_ batarya ve rezervuarın da yeterince dolu olduğu durumlarda çalışır.
 
-These autodetections can be turned off in the Preferences UI.
+Bu otomatik algılamalar, Tercihler arayüzünde kapatılabilir.
 
 (combov2-alerts)=
-## Alerts (warnings and errors) and how they are handled
+## Alarmlar (uyarılar ve hatalar) ve bunların nasıl işlendiği
 
-The Combo shows alerts as remote-terminal screens. Warnings are shown with a "Wx" code (x is a digit), along with by a short description. One example is "W7", "TBR OVER". Errors are similar, but show up with an "Ex" code instead.
+Combo uyarıları uzak terminal ekranları olarak gösterilir. Uyarılar, kısa bir açıklama ile birlikte bir "Wx" kodu (x bir rakamdır) ile gösterilir. Bir örnek "W7", "GBO OVER". Hatalar benzerdir ancak bunun yerine bir "Ex" koduyla gösterilir.
 
-Certain warnings are automatically dismissed by the driver. These are:
+Belirli uyarılar sürücü tarafından otomatik olarak reddedilir. Bunlar:
 
-- W1 "reservoir low" : the driver turns this into a "low reservoir" warning that is shown on the AAPS main tab
-- W2 "battery low" : the driver turns this into a "low battery" warning that is shown on the AAPS main tab
-- W3, W6, W7, W8 : these are all purely informational for the user, so it is safe for the driver to auto-dismiss them
+- W1 "rezervuar düşük" : sürücü bunu AAPS ana sekmesinde gösterilen bir "düşük rezervuar" uyarısına dönüştürür
+- W2 "pil zayıf" : sürücü bunu AAPS ana sekmesinde gösterilen bir "düşük pil" uyarısına dönüştürür
+- W3, W6, W7, W8 : bunların tümü kullanıcı için tamamen bilgi amaçlıdır, bu nedenle sürücünün bunları otomatik olarak reddetmesi güvenlidir
 
-Diğer uyarılar otomatik olarak _yok sayılmaz_. Ayrıca, hatalar _asla_ otomatik olarak reddedilmez. Both of these are handled the same way: They cause the driver to produce an alert dialog on top of the AAPS UI, and also cause it to abort any ongoing command execution. The driver then switches to the "error" state (see [the Accu-Chek Combo tab contents description above](combov2-tab-contents)). This state does not allow for any command execution. The user has to handle the error on the pump; for example, an occlusion error may require replacing the cannula. Once the user took care of the error, normal operation can be resumed by pressing the "Refresh" button on the Accu-Chek Combo tab. The driver then connects to the Combo and updates its status, checking for whether an error is still shown on screen etc. Also, the driver auto-refreshes the pump status after a while, so manually pressing that button is not mandatory.
+Diğer uyarılar otomatik olarak _yok sayılmaz_. Ayrıca, hatalar _asla_ otomatik olarak reddedilmez. Bunların her ikisi de aynı şekilde ele alınır: Sürücünün AAPS Kullanıcı Arabirimi üzerinde bir uyarı iletişim kutusu oluşturmasına ve ayrıca devam eden herhangi bir komut yürütmeyi iptal etmesine neden olurlar. Sürücü daha sonra "hata" durumuna geçer (bkz. [yukarıdaki Accu-Chek Combo sekmesi içeriği açıklaması](combov2-tab-contents)). Bu durum, herhangi bir komut yürütülmesine izin vermez. Kullanıcının pompadaki hatayı halletmesi gerekir; örneğin, bir tıkanma hatası sebebiyle kanülün değiştirilmesini gerekebilir. Kullanıcı hatayı giderdikten sonra, Accu-Chek Combo sekmesindeki "Yenile" düğmesine basarak normal çalışmaya devam edilebilir. Sürücü daha sonra Combo'ya bağlanır ve durumunu günceller, ekranda hala bir hata gösterilip gösterilmediğini vb. kontrol eder. Ayrıca, sürücü bir süre sonra pompa durumunu otomatik olarak yeniler, bu nedenle bu butona manuel olarak basmak zorunlu değildir.
 
-Bolusing is a special case. It is done in the Combo's command mode, which does not report mid-bolus that an alert appeared. As a consequence, the driver cannot automatically dismiss warnings _during_ a bolus. This means that unfortunately, the pump will be beeping until the bolus is finished. The most common mid-bolus alert typically is W1 "reservoir low". **Don't** dismiss Comnbo warnings on the pump itself manually during a bolus. You risk interrupting the bolus. The driver will take care of the warning once the bolus is over.
+Bolus özel bir durumdur. Bir uyarının göründüğünü bolus ortasında rapor etmeyen Combo'nun komut modunda yapılır. Sonuç olarak, sürücü bir bolus _sırasında_ uyarıları otomatik olarak kapatamaz. Bu ne yazık ki, bolus bitene kadar pompanın bip sesi çıkaracağı anlamına gelir. En yaygın bolus ortası uyarısı tipik olarak W1 "rezervuar düşük" uyarısıdır. Bir bolus sırasında pompanın kendisindeki Combo uyarılarını manuel olarak **kapatmayın**. Bolusu kesintiye uğratma riskiniz vardır. Bolus bittiğinde sürücü uyarıyı dikkate alacaktır.
 
-Alerts that happen while the driver is not connected to the Combo will not be noticed by the driver. The Combo has no way of automatically pushing that alert to the phone; it is always the phone that has to initiate the connection. As a consequence, the alert will persist until the driver connects to the pump. Users can press the "Refresh" button to trigger a connection and let the driver handle the alert right then and there (instead of waiting until AAPS itself decides to initiate a connection).
+Sürücü Combo'ya bağlı değilken meydana gelen uyarılar, sürücü tarafından fark edilmeyecektir. Combo'nun bu uyarıyı otomatik olarak telefona göndermesinin bir yolu yoktur; bağlantıyı her zaman telefonun başlatması gerekir. Sonuç olarak, sürücü pompaya bağlanana kadar uyarı devam eder. Kullanıcılar bir bağlantıyı tetiklemek için "Yenile" düğmesine basabilir ve sürücünün uyarıyı hemen halletmesine izin verebilir. (AAPS'in bir bağlantı başlatmasını beklemek yerine)
 
-**IMPORTANT**: If an error occurs, or a warning shows up that isn't one of those that are automatically dismissed, the driver enters the error state. In that state, the loop **WILL BE BLOCKED** until the pump status is refreshed! It is unblocked after the pump status is updated (either by manual "Refresh" button press or by the driver's eventual auto-update) and no error is shown anymore.
+**ÖNEMLİ**: Bir hata oluşursa veya otomatik olarak kapatılanlardan biri olmayan bir alarm görüntülenirse, sürücü hata durumuna geçer. Bu durumda, pompa durumu yenilenene kadar döngü **DEVRE DIŞI OLACAKTIR**! Pompa durumu güncellendikten sonra (manuel olarak "Yenile" düğmesine basarak veya sürücünün otomatik güncellemesiyle) bloke kaldırılır ve artık hiçbir hata gösterilmez.
 
 ## Combo kullanırken dikkat edilmesi gerekenler
 
