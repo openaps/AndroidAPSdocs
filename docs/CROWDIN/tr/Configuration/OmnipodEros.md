@@ -431,11 +431,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  After installing a new version of AndroidAPS, the <strong x-id="1">Setup Wizard</strong> will start automatically.  Bu aynı zamanda sürüm yükseltme sırasında da ortaya çıkacaktır.  Ayarlarınızı önceki bir kurulumdan kaydettiyseniz (dışarı aktarma), Kurulum Sihirbazından çıkıp eski ayarlarınızı içeri aktarabilirsiniz.  Yeni kurulumlar için aşağıdan ilerleyin.
+  AndroidAPS'nin yeni bir sürümünü yükledikten sonra <strong x-id="1">Kurulum Sihirbazı</strong> otomatik olarak başlayacaktır.  Bu aynı zamanda sürüm yükseltme sırasında da ortaya çıkacaktır.  Ayarlarınızı önceki bir kurulumdan kaydettiyseniz (dışarı aktarma), Kurulum Sihirbazından çıkıp eski ayarlarınızı içeri aktarabilirsiniz.  Yeni kurulumlar için aşağıdan ilerleyin.
 </p>
 
 <p spaces-before="0">
-  Via the <strong x-id="1">AAPS Setup Wizard (2)</strong> located at the top right-hand corner <strong x-id="1">three-dot menu (1)</strong> and proceeding through the wizard menus until you arrive at the <strong x-id="1">Pump</strong> screen. Then select the <strong x-id="1">Omnipod radio button (3)</strong> .
+  Sağ üst köşede <strong x-id="1">üç noktalı menü (1)</strong> bulunan <strong x-id="1">AAPS Kurulum Sihirbazı (2)</strong> aracılığıyla <strong x-id="1">Pompa</strong> ekranına gelene kadar sihirbaz menülerinde ilerleyin. Then select the <strong x-id="1">Omnipod radio button (3)</strong> .
 </p>
 
 <blockquote spaces-before="0">
@@ -503,7 +503,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h2>
 
 <p spaces-before="0">
-  Please <strong x-id="1">swipe left</strong> to the <strong x-id="1">Omnipod (POD)</strong> tab where you will be able to manage all pod and RileyLink functions (some of these functions are not enabled or visible without an active pod session):
+  Lütfen <strong x-id="1">sola kaydırıp</strong> tüm pod ve RileyLink işlevlerini yönetebileceğiniz <strong x-id="1">Omnipod (POD)</strong> sekmesine ulaşın.(bu işlevlerden bazıları etkin bir pod oturumu olmadan etkinleştirilmez veya görünmez):
 </p>
 
 <blockquote spaces-before="0">
@@ -525,11 +525,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  If you already successfully paired your RileyLink in the Setup Wizard or steps above, then proceed to the <a href="OmnipodEros-activating-a-pod">Activating a Pod Section</a> below.
+  RileyLink'inizi Kurulum Sihirbazında veya yukarıdaki adımlarda zaten başarılı bir şekilde eşleştirdiyseniz, aşağıdaki <a href="OmnipodEros-activating-a-pod">Bir Pod Bölümünü Etkinleştirme</a> bölümüne ilerleyin.
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Note: A good visual indicator that the RileyLink is not connected is that the Insulin and Calculator buttons on the HOME tab will be missing. This will also occur for about the first 30 seconds after AAPS starts, as it is actively connecting to the RileyLink.</em>
+  <em x-id="3">Not: RileyLink'in bağlı olmadığının göstergesi, GİRİŞ sekmesindeki İnsülin ve Hesap Makinesi düğmelerinin eksik olmasıdır. Bu, RileyLink'e aktif olarak bağlanıp, AAPS başladıktan sonraki ilk 30 saniye boyunca da böyle olacaktır.</em>
 </p>
 
 <ol start="1">
@@ -2253,12 +2253,12 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <em x-id="3">(Fig 1. Graphical plot of helical spiral antenna in an omnidirectional pattern</em>)
+    <em x-id="3">(Şek 1. Çok yönlü bir düzende sarmal sarmal antenin grafik çizimi</em>)
   </p>
 </blockquote>
 
 <p spaces-before="0">
-  Because of both safety and security concerns, pod <em x-id="3">activation</em> has to be done at a range <em x-id="3">closer (~30 cm away or less)</em> than other operations such as giving a bolus, setting a TBR or simply refreshing the pod status. RileyLink anteninden sinyal iletiminin doğası gereği, podun doğrudan RileyLink'in üzerine veya hemen yanına yerleştirilmesi ÖNERİLMEZ.
+  Hem güvenlik hem de emniyet endişeleri nedeniyle pod <em x-id="3">aktivasyonu</em>, bolus verme, bir GBO ayarlama veya sadece bölme durumunu yenilemek gibi diğer işlemlerden <em x-id="3">daha yakın (~30 cm veya daha kısa)</em> bir mesafede yapılmalıdır. RileyLink anteninden sinyal iletiminin doğası gereği, podun doğrudan RileyLink'in üzerine veya hemen yanına yerleştirilmesi ÖNERİLMEZ.
 </p>
 
 <p spaces-before="0">
@@ -2289,7 +2289,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <strong x-id="1">Seviye 1:</strong> Bu dokümantasyonu kullanmanıza rağmen hâlâ çözemediğiniz sorunlarla karşılaşıyorsanız, lütfen <a href="https://discord.gg/4fQUWHZ4Mw">bu davet bağlantısını</a> kullanarak <strong x-id="1">Discord</strong>'da <em x-id="3"> #androidaps</em> kanalına gidin.
   </li>
   <li>
-    <strong x-id="1">Level 2:</strong> Search existing issues to see if your issue has already been reported; if not, please create a new <a href="https://github.com/nightscout/AndroidAPS/issues">issue</a> and attach your <a href="../Usage/Accessing-logfiles.md">log files</a>.
+    <strong x-id="1">Seviye 2:</strong> Sorununuzun bildirilip bildirilmediğini görmek için mevcut sorunları arayın; değilse, lütfen yeni bir <a href="https://github.com/nightscout/AndroidAPS/issues">sorun</a> oluşturun ve <a href="../Usage/Accessing-logfiles.md">günlük dosyalarınızı</a> ekleyin.
   </li>
   <li>
     <strong x-id="1">Sabırlı olun - topluluğumuzun üyelerinin çoğu iyi huylu gönüllülerden oluşur ve sorunları çözmek genellikle hem kullanıcılar hem de geliştiriciler için zaman ve sabır gerektirir.</strong>
@@ -2297,93 +2297,93 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </ul>
 
 <p spaces-before="0">
-  % Omnipod image aliases resource for referencing images by name with more positioning flexibility
+  % Omnipod görüntü takma adları, daha fazla konumlandırma esnekliği ile görüntülere ada göre referans vermek için kaynak
 </p>
 
 <p spaces-before="0">
-  % Interface Icons
+  % Arayüz simgeleri
 </p>
 
 <p spaces-before="0">
-  % Omnipod (POD) Overview Tab
+  % Omnipod (POD) Genel Bakış Sekmesi
 </p>
 
 <p spaces-before="0">
-  % Pod Management Tab
+  % Pod Yönetimi Sekmesi
 </p>
 
 <p spaces-before="0">
-  % Instructional Section Images
+  % Eğitici Bölüm Görselleri
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Donanım ve Yazılım Gereksinimleri
 </p>
 
 <p spaces-before="0">
-  % Acknowledge Alerts
+  % Bilgilendirme Uyarıları
 </p>
 
 <p spaces-before="0">
-  % Actions Tab
+  % Eylemler Sekmesi
 </p>
 
 <p spaces-before="0">
-  % Activate Pod
+  % Pod Etkinleştir
 </p>
 
 <p spaces-before="0">
-  % Deactivate Pod
+  % Pod'u Devre Dışı Bırak
 </p>
 
 <p spaces-before="0">
-  % Enabling the Omnipod Driver in AAPS
+  % AAPS'de Omnipod Sürücüsünü Etkinleştirme
 </p>
 
 <p spaces-before="0">
-  % Optimally Positioning the RileyLink and Omnipod pod
+  % RileyLink ve Omnipod podunu Optimal Olarak Konumlandırma
 </p>
 
 <p spaces-before="0">
-  % Omnipod Settings
+  % Omnipod Ayarları
 </p>
 
 <p spaces-before="0">
-  % Omnipod Tab
+  % Omnipod Sekmesi
 </p>
 
 <p spaces-before="0">
-  % Pod History
+  % Pod Geçmişi
 </p>
 
 <p spaces-before="0">
-  % Resume Insulin Delivery
+  % İnsülin İletimine Devam et
 </p>
 
 <p spaces-before="0">
-  % RileyLink Bluetooth Reset
+  % RileyLink Bluetooth Sıfırla
 </p>
 
 <p spaces-before="0">
-  % RileyLink Setup
+  % RileyLink Kurulumu
 </p>
 
 <p spaces-before="0">
-  % RileyLink Setup Add Device
+  % RileyLink Kurulumu Aygıt Ekle
 </p>
 
 <p spaces-before="0">
-  % RileyLink Setup Remove Device
+  % RileyLink Kurulumu Aygıt Kaldır
 </p>
 
 <p spaces-before="0">
-  % RileyLink Statistics History
+  % RileyLink İstatistik Geçmişi
 </p>
 
 <p spaces-before="0">
-  % RileyLink Statistics Settings
+  % RileyLink İstatistik Ayarları
 </p>
 
 <p spaces-before="0">
-  % Suspend Insulin Delivery
+  % İnsülin İletimini Askıya Al
 </p>
