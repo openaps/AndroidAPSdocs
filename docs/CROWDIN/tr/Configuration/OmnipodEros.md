@@ -303,14 +303,14 @@
     
     <pre><code class="&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;">
 
-# AndroidAPS Omnipod Insulin Pump Driver Documentation
+# AndroidAPS Omnipod İnsülin Pompası Sürücü dokümantasyonu
 
-These instructions are for configuring the Omnipod Eros generation pump (**NOT Omnipod Dash**). Omnipod sürücüsü, 2.8 sürümünden itibaren AndroidAPS'nin (AAPS) bir eklentisi olarak mevcuttur.
+Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash DEĞİL**). Omnipod sürücüsü, 2.8 sürümünden itibaren AndroidAPS'nin (AAPS) bir eklentisi olarak mevcuttur.
 
-**Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. You alone are responsible for what you do with it.**
+**Bu yazılım bir DIY (Kendin Yap) yapay pankreas çözümünün bir parçasıdır ve bir ürün değildir, ancak nasıl kullanılacağı da dahil olmak üzere sistemi okumanızı, öğrenmenizi ve anlamanızı gerektirir. Onunla ne yaptığınızdan yalnızca siz sorumlusunuz.**
 
 ```{contents}
-:backlinks: entry
+:backlinks: giriş
 :depth: 2
 </code></pre>
 
@@ -320,7 +320,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <ul>
   <li>
-    <strong x-id="1">Pod Communication Device</strong>
+    <strong x-id="1">Pod İletişim Cihazı</strong>
   </li>
 </ul>
 
@@ -332,19 +332,19 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   <blockquote spaces-before="0">
     <ul>
       <li>
-        {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Website</a>
+        {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Websitesi</a>
       </li>
       <li>
         {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
       </li>
       <li>
-        {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+        {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Websitesi</a> - <a href="mailto:getemalink@gmail.com">İletişim Bilgileri</a>
       </li>
       <li>
-        {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+        {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">İletişim bilgileri</a>
       </li>
       <li>
-        {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+        {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Websitesi</a> - <a href="https://jameswedding.substack.com/">İletişim Bilgileri</a> - Test edilmedi
       </li>
     </ul>
   </blockquote>
@@ -352,7 +352,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <ul>
   <li>
-    {{ Android_Phone }}  <strong x-id="1">Mobile Phone Device</strong>
+    {{ Android_Phone }}  <strong x-id="1">Cep Telefonu Cihazı</strong>
   </li>
 </ul>
 
@@ -364,7 +364,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   <blockquote spaces-before="0">
     <ul>
       <li>
-        Supported <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Omnipod driver Android phone</a> with a version of AAPS 2.8 and related <a href="index-component-setup">components setup</a>
+        AAPS 2.8 sürümü ve ilgili <a href="index-component-setup">bileşen kurulumu</a> ile desteklenen <a href="https://docs.google.com/spreadsheets/d/1eNtXAWwrdVtDvsvXaR_72wgT9ICjZPNEBq8DbitCv_4/edit">Omnipod sürücüsü Android telefonlar</a>
       </li>
     </ul>
   </blockquote>
@@ -372,7 +372,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 
 <ul>
   <li>
-    {{ Omnipod_Pod }}  <strong x-id="1">Insulin Delivery Device</strong>
+    {{ Omnipod_Pod }}  <strong x-id="1">İnsülin İletim Cihazı</strong>
   </li>
 </ul>
 
@@ -384,7 +384,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
   <blockquote spaces-before="0">
     <ul>
       <li>
-        A new Omnipod pod (Eros generation - <strong x-id="1">NOT DASH</strong>)
+        Yeni bir Omnipod podu (Eros - <strong x-id="1">DASH DEĞİL</strong>)
       </li>
     </ul>
   </blockquote>
