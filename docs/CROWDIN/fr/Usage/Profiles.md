@@ -4,14 +4,14 @@
 
 Documentation about profiles in general can be found at [Config Builder - profile](Config-Builder-profile).
 
-On starting your AAPS and selecting your profile, you will need to do a "Profile switch" event with zero duration (explained later). By doing this AAPS starts tracking history of profiles and every new profile change requires another "Profile switch" even when you change content of the profile in NS. Updated profile is pushed to AAPS immediately, but you need to switch the same profile again to start using these changes.
+Lors du démarrage d'AAPS et de la sélection de votre profil, vous devrez faire un événement « Changement de profil » avec une durée nulle (ceci est expliqué plus tard). En faisant cela, AAPS commence à suivre l'historique des profils et chaque modification du profil nécessite de faire un "Changement de profil" même lorsque vous modifiez le contenu du profil dans NS. Le profil mis à jour est poussé vers AAPS immédiatement, mais vous devez faire le changement de profil à nouveau pour commencer à utiliser ces changements.
 
-Internally AAPS creates snapshot of profile with start date and duration and is using it within selected period.
+En interne, AAPS crée une capture instantanée du profil avec la date et la durée et l’utilise dans la période sélectionnée.
 
 * La durée zéro signifie infinie. Ce profil est actif jusqu'à ce qu'il y ait un nouveau "Changement de Profil".
 * La durée de x minutes signifie x minutes d'utilisation de ce profil. Après cette durée, le profil est basculé vers le précédent "Changement de profil" valide.
 
-If you edited your profile inside the "local profile" tab you can activate the profile there which makes an implicit profile switch too.
+Si vous avez modifié votre profil dans l'onglet "Profil local", vous pouvez y activer le profil, ce qui permet également de faire un changement de profil implicite.
 
 To do a profile switch long-press on the name of your profile ("Tuned 03/11" in the picture below) on the homescreen of AndroidAPS.
 
