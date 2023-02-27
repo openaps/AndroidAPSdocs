@@ -9,11 +9,11 @@ Mais le besoin de prendre en charge de tels repas existe toujours. C'est pourquo
 
 Les eGlucides sont des glucides qui sont actifs pendant plusieurs heures. Pour les repas standard avec plus de glucides que de graisse/protéines, entrer les glucides à l'avance (et réduire le bolus initial si nécessaire) est généralement suffisant pour éviter d'injecter trop tôt de l'insuline.  Mais pour les repas à absorption plus lente où l'entrée de la totalité des glucides au début entraîne trop d'IA injectée par les SMB, les eGlucides peuvent être utilisés pour simuler plus précisément comment les glucides (et tous les équivalents de glucides que vous entrez pour les autres macronutriments) sont absorbés et influencent la glycémie. Grâce à cette information, la boucle peut gérer les glucides en administrant les SMB de façon plus progressive, ce qui peut être assimilé à un bolus prolongé dynamique (cela devrait également fonctionner sans les SMB, mais probablement moins efficacement).
 
-**Note:** eCarbs aren't limited to fatty / protein heavy meals: they can be also be used to help in any situation where there are influences that increase the blood sugar, e.g. other medication like corticosteroids.
+**Remarque :** Les eGlucides ne sont pas limités aux repas lourds en graisses/protéines : ils peuvent également être utilisés pour aider dans toutes les situations où il y a des influences qui augmentent les glycémies, par ex.
 
 ## Mécanique d'utilisation d'eGlucides
 
-To enter eCarbs, set a duration in the *Carbs* dialog on the overview tab, the total carbs and optionally a time shift (*numbers below are just examples, you will need to try your own values to arrive at satisfactory glucose response for your use-cases*):
+Pour entrer des eGlucides, définissez une durée dans la boîte de dialogue *Glucides* dans l'onglet Aperçu, le total des glucides et optionnellement un décalage horaire (les *nombres ci-dessous ne sont que des exemples, vous devrez essayer vos propres valeurs pour arriver à une glycémie satisfaisante pour vos cas d'utilisation*) :
 
 ```{image} ../images/eCarbs_Dialog.png
 :alt: Entrer les glucides
@@ -33,13 +33,13 @@ Les glucides qui se seront pris en compte plus tard sont en orange foncé dans l
 
 ______________________________________________________________________
 
-A way to handle fat and protein with that feature is described here: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
+Une façon de gérer les graisses et les protéines avec cette fonctionnalité est décrite ici: [https://adriansloop.blogspot.com/2018/04/page-margin-0.html](https://adriansloop.blogspot.com/2018/04/page-margin-0.html)
 
 ______________________________________________________________________
 
 ## Configuration recommandée, exemple de scénario, et notes importantes
 
-The recommended setup is to use the OpenAPS SMB APS plugin, with SMBs enabled as well as the *Enable SMB with COB* preference being enabled.
+La configuration recommandée est d'utiliser le plug-in OpenAPS SMB, avec les SMB activés ainsi que le paramètre *Activer SMB avec les glucides* activé.
 
 A scenario e.g. for a Pizza might be to give a (partial) bolus up front via the *calculator* and then use the *carbs* button to enter the remaining carbs for a duration of 4-6 hours, starting after 1 or 2 hours.
 
