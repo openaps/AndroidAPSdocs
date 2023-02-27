@@ -12,7 +12,7 @@ Les glucides non absorbés sont coupés après un certain temps
 
 ### AAPS, Moyenne pondérée
 
-absorption is calculated to have `COB == 0` after specified time
+l'absorption est calculée pour avoir `GA == 0` après la durée spécifiée
 
 ```{image} ../images/cob_aaps2_orange_II.png
 :alt: AAPS, Moyenne pondérée
@@ -27,7 +27,7 @@ AAPS vous avertit si vous êtes sur le point de faire un bolus avec des GA d'un 
 
 ### Comment AndroidAPS détecte-t-il les mauvaises valeurs de GA ?
 
-Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. In case you entered carbs but AAPS cannot see their estimated absorption through BG deviations, it will use the [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) method to calculate the absorption instead (so called 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
+Normalement, AAPS détecte l'absorption des glucides par des écarts de glycémie. Si vous avez entré des glucides, mais que AAPS ne peut pas voir leur absorption estimée via les variations de GLY, il utilisera la méthode [min_5m_carbimpact](../Configuration/Config-Builder.md?highlight=min_5m_carbimpact#absorption-settings) pour calculer l'absorption à la place (appelée 'fallback'). Comme cette méthode ne calcule que l'absorption minimale de glucides sans tenir compte des écarts de GLY, elle peut conduire à des valeurs de GA incorrectes.
 
 ```{image} ../images/Calculator_SlowCarbAbsorption.png
 :alt: soupçon de GA erronés
@@ -37,18 +37,18 @@ Dans la capture d'écran ci-dessus, 41% du temps l'absorption de glucides a ét�
 
 ### Comment gérer cet avertissement ?
 
-- Consider to cancel the treatment - press Cancel instead of OK.
-- Calculate your upcoming meal again with bolus wizard leaving COB unticked.
-- In case you are sure you need a correction bolus, enter it manually.
-- In any case be careful not to overdose!
+- Envisagez d'annuler le traitement, appuyez sur Annuler au lieu de OK.
+- Calculez à nouveau votre prochain repas avec l'assistant de bolus laissant GA non coché.
+- Si vous êtes sûr que vous avez besoin d'un bolus de correction, renseignez le manuellement.
+- Dans tous les cas, faites attention à ne pas surdoser !
 
 ### Pourquoi l'algorithme ne détecte-on pas correctement les GA ?
 
-- Maybe you overestimated carbs when entering them.
-- Activity / exercise after your previous meal
-- I:C needs adjustment
-- Value for min_5m_carbimpact is wrong (recommended is 8 with SMB, 3 with AMA)
+- Peut-être que vous avez surestimé glucides lorsque vous les avez saisis.
+- Vous avez fait de l'exercice après votre repas précédent
+- le ratio G/I doit être ajusté
+- La valeur de min_5m_carbimpact est incorrecte (8 est recommandée avec SMB, 3 avec AMA)
 
 ## Correction manuelle des glucides
 
-If you over- or underestimated carbs you can correct this though treatments tab and actions tab / menu as described [here](Screenshots-carb-correction).
+Si vous avez sur-estimé ou sous-estimé les glucides, vous pouvez corriger cela via les onglets / menus Traitements et Actions comme c'est décrit [ici](Screenshots-carb-correction).
