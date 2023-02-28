@@ -626,14 +626,14 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
       </p>
       
       <p spaces-before="0">
-        Ensure the new pod and RileyLink are within close proximity of each other (~30cm or less) and click the <strong x-id="1">Next</strong> button.
+        Yeni pod ve RileyLink'in birbirine yakın (~30cm veya daha az) olduğundan emin olun ve <strong x-id="1">İleri</strong> butonunu tıklayın.
       </p>
     </blockquote>
   </li>
   
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Pod'u Başlat</strong> ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">move the RileyLink closer</a> (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry (1)</strong> button.
+      <strong x-id="1">Pod'u Başlat</strong> ekranında, pod hazırlanmaya başlar (pod kendini hazırlarken bir tıklama ve ardından bir dizi tıkırtı sesi duyarsınız). RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa <strong x-id="1">Pod yanıt vermiyor</strong> hata mesajı alırsınız. Böyle bir durumda, podun üstüne veya çok yakınına gelmeden <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">RileyLink'i yaklaştırın</a> (~30 cm veya daha az uzağa) ve <strong x-id="1">Yeniden Dene (1)</strong> butonunu tıklayın.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -644,7 +644,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   
   <li>
     <p spaces-before="0">
-      Upon successful priming a green checkmark will be shown and the <strong x-id="1">Next</strong> button will become enabled. Pod hazırlama işlemini tamamlamak ve <strong x-id="1">Pod Ekle</strong> ekranını görüntülemek için <strong x-id="1">İleri</strong> butonunu tıklayın.
+      Başarılı kullanıma hazırlamanın ardından yeşil bir onay işareti gösterilecek ve <strong x-id="1">İleri</strong> butonu etkinleştirilecektir. Pod hazırlama işlemini tamamlamak ve <strong x-id="1">Pod Ekle</strong> ekranını görüntülemek için <strong x-id="1">İleri</strong> butonunu tıklayın.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -666,7 +666,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Pod Ekle</strong> iletişim kutusu şimdi görünecektir. <strong x-id="1">ONLY click on the OK button if you are ready to deploy the cannula</strong>.
+      <strong x-id="1">Pod Ekle</strong> iletişim kutusu şimdi görünecektir. <strong x-id="1">YALNIZCA kanülü yerleştirmeye hazırsanız Tamam butonuna tıklayın</strong>.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
@@ -677,15 +677,15 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   
   <li>
     <p spaces-before="0">
-      After pressing <strong x-id="1">OK</strong>, it may take some time before the Omnipod responds and inserts the cannula (1-2 minutes maximum), so be patient.
+      <strong x-id="1">Tamam</strong>'a bastıktan sonra, Omnipod'un yanıt vermesi ve kanülü yerleştirmesi biraz zaman alabilir (maksimum 1-2 dakika), bu nedenle sabırlı olun.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
-        If RileyLink is out of range of the pod being activated, you will receive an error message <strong x-id="1">No response from Pod</strong>. If this occurs, move the RileyLink closer (~30 cm away or less) to but not on top of or right next to the Pod and click the <strong x-id="1">Retry</strong> button.
+        RileyLink etkinleştirilmekte olan podun kapsama alanı dışındaysa <strong x-id="1">Pod yanıt vermiyor</strong> hata mesajı alırsınız. Böyle bir durumda, RileyLink'i podun üstüne veya hemen yanına değil, yakınına (~30 cm veya daha yakın) getirin ve <strong x-id="1">Yeniden Dene</strong> butonuna tıklayın.
       </p>
       
       <p spaces-before="0">
-        If the RileyLink is out of Bluetooth range or does not have an active connection to the phone, you will receive an error message <strong x-id="1">No response from RileyLink</strong>. If this occurs, move the RileyLink closer to the phone and click the <strong x-id="1">Retry</strong> button.
+        RileyLink, Bluetooth kapsama alanı dışındaysa veya telefonla etkin bir bağlantısı yoksa <strong x-id="1">RileyLink yanıt vermiyor</strong> hata mesajı alırsınız. Böyle bir durumda, RileyLink'i telefona yaklaştırın ve <strong x-id="1">Yeniden Dene</strong> butonunu tıklayın.
       </p>
       
       <p spaces-before="0">
@@ -726,13 +726,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   
   <li>
     <p spaces-before="0">
-      The <strong x-id="1">Pod management</strong> menu screen should now display with the <strong x-id="1">Activate Pod (1)</strong> button <em x-id="3">disabled</em> and the <strong x-id="1">Deactivate Pod (2)</strong> button <em x-id="3">enabled</em>. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
+      <strong x-id="1">Pod yönetimi</strong> menüsünde şimdi <strong x-id="1">Pod Etkinleştir (1)</strong> butonu <em x-id"3"=>devre dışı</em> olmalı ve <strong x-id="1">Pod'u Devre Dışı Bırak (2)</strong> butonu <em x-id="3">aktif olmalıdır.</em>. Bunun nedeni, bir podun artık etkin olması ve o anda etkin olan podu devre dışı bırakmadan ek bir pod etkinleştirememenizdendir.
     </p>
     <p spaces-before="4">
-      Click on the back button on your phone to return to the <strong x-id="1">Omnipod (POD)</strong> tab screen which will now display Pod information for your active pod session, including current basal rate, pod reservoir level, insulin delivered, pod errors and alerts.
+      <strong x-id="1">Omnipod(POD)</strong> sekme ekranına dönmek için telefonunuzdaki geri düğmesini tıklayın. Şimdi aktif pod oturumunuz için mevcut bazal oran, pod rezervuar seviyesi, iletilen insülin, pod hataları ve uyarılar dahil Pod bilgileri görüntülenecektir.
     </p>
     <p spaces-before="4">
-      For more details on the information displayed go to the <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD) Tab</a> section of this document.
+      Görüntülenen bilgiler hakkında daha fazla ayrıntı için bu dokümanın <a href="OmnipodEros-omnipod-pod-tab">Omnipod (POD) Sekmesi</a> bölümüne gidin.
     </p>
     <p spaces-before="4">
       {{ Activate_Pod_14 }} {{ Activate_Pod_15 }}
@@ -2221,10 +2221,10 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <ul>
   <li>
-    <strong x-id="1">Boluses</strong> - Uncertain boluses cannot be automatically verified. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. <em x-id="3">By default alerts beeps are enabled for this notification type as the user will manually need to verify them.</em>
+    <strong x-id="1">Bolus</strong> - Belirsiz boluslar otomatik olarak doğrulanamaz. Bildirim, bir sonraki bolusa kadar kalacak ancak manuel Pod yenilemesi mesajı silecektir. <em x-id="3">Varsayılan olarak, kullanıcının manuel olarak onaylaması gerektiğinden, bu tür bir bildirim için uyarı bip sesleri etkinleştirilir.</em>
   </li>
   <li>
-    <strong x-id="1">TBRs, Pod Statuses, Profile Switches, Time Changes</strong> - a manual pod refresh will clear the message. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
+    <strong x-id="1">GBO'lar, Pod Durumları, Profil Anahtarları, Zaman Değişiklikleri</strong> - manuel bir pod güncellemesi mesajı siler. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
   </li>
   <li>
     <strong x-id="1">Pod Time Deviation -</strong> When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. Pod ile telefon arasındaki zaman sapması 5 dakikadan fazlaysa, AAPS, HANDLE TIME CHANGE "ZAMAN DEĞİŞİKLİĞİ İŞLE mesajıyla Pod'un Pod durumu altında Askıya alınmış durumda olduğunu bildirir. An additional <strong x-id="1">Set Time</strong> icon will appear at the bottom of the Omnipod (POD) tab. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
