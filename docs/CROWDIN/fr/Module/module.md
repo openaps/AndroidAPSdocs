@@ -15,9 +15,9 @@
     
     <pre><code class="&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;">
 
-# Component Overview
+# Vue d'ensemble des composants
 
-AndroidAPS is not just a (self-built) application, it is just one of several modules of your closed loop system. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
+AAPS n'est pas seulement une application (faite vous même), c'est juste un des modules fonctionnels de votre système de boucle fermée. Before deciding for components, it would be a good idea to have a look at the [component setup](index-component-setup), too.
 
 ```{image} ../images/modules.png
 :alt: Components overview
