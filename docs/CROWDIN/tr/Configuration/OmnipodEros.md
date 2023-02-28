@@ -755,7 +755,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab, click on the <strong x-id="1">POD MGMT (1)</strong> button, on the <strong x-id="1">Pod management</strong> screen click on the <strong x-id="1">Deactivate Pod (2)</strong> button.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin, <strong x-id="1">POD YNTM (1)</strong> butonunu tıklayın, <strong x-id="1">pod yönetimi</strong> ekranında <strong x-id="1">Pod'u Devre Dışı Bırak (2)</strong> butonunu tıklayın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -766,7 +766,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">Deactivate Pod</strong> screen, first, make sure the RileyLink is in close proximity to the pod but not on top of or right next to the pod, then click on the <strong x-id="1">Next</strong> button to begin the process of deactivating the pod.
+     <strong x-id="1">Podu Devre Dışı Bırak</strong> ekranında, önce RileyLink'in poda yakın olduğundan, ama podun üstünde veya hemen yanında olmadığından emin olun, ardından işlemi başlatmak için <strong x-id="1">İleri</strong> butonunu tıklayarak podu devre dışı bırakın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -777,7 +777,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     The <strong x-id="1">Deactivating Pod</strong> screen will appear, and you will receive a confirmation beep from the pod that deactivation was successful.
+     <strong x-id="1">Pod Devre Dışı Bırakılıyor</strong> ekranı görünecek ve podun devre dışı bırakmanın başarılı olduğuna dair bir onay bip sesi alacaksınız.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -785,7 +785,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
      </p>
      
      <p spaces-before="0">
-       <strong x-id="1">IF deactivation fails</strong> and you do not receive a confirmation beep, you may receive a <strong x-id="1">No response from RileyLink</strong> or <strong x-id="1">No response from Pod message</strong>. Please click on the <strong x-id="1">Retry (1)</strong> button to attempt deactivation again. If deactivation continues to fail, please click on the <strong x-id="1">Discard Pod (2)</strong> button to discard the Pod. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz. If your Pod has a screaming alarm, you may need to manually silence it (using a pin or a paperclip) as the <strong x-id="1">Discard Pod (2)</strong> button will not silence it.
+       <strong x-id="1">Devre dışı bırakma başarısız olursa</strong> ve bir onay bip sesi almazsanız, <strong x-id="1">RileyLink cevap vermiyor</strong> veya <strong x-id="1">Pod mesajından yanıt yok</strong> bildirimlerini alabilirsiniz. Devre dışı bırakmayı tekrar denemek için lütfen <strong x-id="1">Yeniden Dene (1)</strong> butonunu tıklayın. Devre dışı bırakma işlemi başarısız olmaya devam ederse, lütfen <strong x-id="1">Podu çıkar (2)</strong> butonunu tıklayarak Pod'u iptal edin. Etkin oturum devre dışı bırakıldığı için artık podunuzu çıkartabilirsiniz. Pod'unuzda çığlık atan bir alarm varsa, <strong x-id="1">Podu çıkar (2)</strong> butonu onu susturmayacağından manuel olarak (bir iğne veya ataç kullanarak) susturmanız gerekebilir.
      </p>
      
      <blockquote spaces-before="3">
@@ -809,7 +809,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Click on the green button to return to the <strong x-id="1">Pod management</strong> screen.
+     <strong x-id="1">Pod yönetimi</strong> ekranına dönmek için yeşil butonu tıklayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -820,7 +820,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     You are now returned to the <strong x-id="1">Pod management</strong> menu press the back button on your phone to return to the <strong x-id="1">Omnipod (POD)</strong> tab. Verify that the <strong x-id="1">RileyLink Status:</strong> field reports <strong x-id="1">Connected</strong> and the <strong x-id="1">Pod status:</strong> field displays a <strong x-id="1">No active Pod</strong> message.
+     Artık <strong x-id="1">Pod yönetimi</strong> menüsüne döndünüz, <strong x-id="1">Omnipod (POD)</strong> sekmesine dönmek için telefonunuzdaki geri düğmesine basın. <strong x-id="1">RileyLink Durumu:</strong> alanının <strong x-id="1">Bağlandı</strong> olarak bildirdiğini ve <strong x-id="1">Pod durumu:</strong> alanının <strong x-id="1">Etkin Pod Yok</strong> mesajı görüntülediğini doğrulayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -839,11 +839,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see a SUSPEND button</em>, then it has not been enabled to display in the Omnipod (POD) tab. Enable the <strong x-id="1">Show Suspend Delivery button in Omnipod tab</strong> setting in the <a href="OmnipodEros-omnipod-settings">Omnipod settings</a> under <strong x-id="1">Other</strong>.
+  <em x-id="3">NOT - bir ASKIYA AL butonu</em> görmüyorsanız, Omnipod (POD) sekmesinde görüntülenmesi etkinleştirilmemiştir. <strong x-id="1">Diğer</strong> altındaki <a href="OmnipodEros-omnipod-settings">Omnipod ayarlarında</a> <strong x-id="1">Omnipod sekmesinde Teslimatı Askıya Al butonunu göster</strong> ayarını etkinleştirin.
 </p>
 
 <h4 spaces-before="0">
-  İnsülin İletimini Askıya Alma Durdurma
+  İnsülin İletiminin Askıya Alınması
 </h4>
 
 <p spaces-before="0">
@@ -2115,7 +2115,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. A list of fault codes can be found <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">here</a> to help determine the cause.
+  Pod'larda, kendisiyle ilgili donanım sorunları da dahil olmak üzere çeşitli sorunlar nedeniyle ara sıra hatalar olabiliyor. AAPS onaylanmış bir kullanım şekli olmadığından, bunları Insulet'e bildirmemek en iyi seçenektir. Nedeni belirlemeye yardımcı olması için <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">burada</a> hata kodlarının bir listesi bulunmaktadır.
 </p>
 
 <h3 spaces-before="0">
@@ -2123,7 +2123,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. We recommend users to switch to the Nightscout client to <em x-id="3">upload only (Disable sync)</em> under the <strong x-id="1">Config Builder</strong>➜<strong x-id="1">General</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">cog wheel</strong>➜<strong x-id="1">Advanced Settings</strong> to prevent possible failures.
+  Bu hata bir komut için yanlış bir pod durumu veya bir insülin iletim komutu sırasındaki bir hata ile ilgilidir. Nightscout client kullanıcılarının, olası arızaları önlemek için <strong x-id="1">Konfigürasyon ayarları</strong>➜<strong x-id="1">Genel</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">dişli çark</strong>➜<strong x-id="1">Gelişmiş Ayarlar</strong> altında <em x-id="3">yalnızca yükleme (Senkronizasyonu devre dışı bırak)</em> seçeneğini etkinleştirmelerini öneririz.
 </p>
 
 <h3 spaces-before="0">
@@ -2131,7 +2131,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  It is recommended that pump unreachable alerts be configured to <strong x-id="1">120 minutes</strong> by going to the top right-hand side three-dot menu, selecting <strong x-id="1">Preferences</strong>➜<strong x-id="1">Local Alerts</strong>➜<strong x-id="1">Pump unreachable threshold \[min\]</strong> and setting this to <strong x-id="1">120</strong>.
+  Pompa ulaşılamaz uyarılarının sağ üst taraftaki üç noktalı menüye giderek,<strong x-id="1">Tercihler</strong>➜<strong x-id="1">Yerel Uyarılar</strong>➜<strong x-id="1">Pompa Ulaşılamaz eşiği \[min\]</strong> seçip bu seçeneğin <strong x-id="1">120</strong> olarak ayarlanması önerilir.
 </p>
 
 <p spaces-before="0">
@@ -2142,7 +2142,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip olduğunu lütfen unutmayın. Sonuç olarak, aktif bir Pod'u kaybedebilirsiniz. It is therefore strongly recommended that you <strong x-id="1">do not import settings while on an active Pod session</strong>.
+  Ayarları içe aktarmanın, eski bir Pod durumunu içe aktarma olanağına sahip olduğunu lütfen unutmayın. Sonuç olarak, aktif bir Pod'u kaybedebilirsiniz. Bu nedenle dolayı <strong x-id="1">etkin bir Pod oturumu sırasında ayarları içe aktarmamanız</strong> şiddetle tavsiye edilir.
 </p>
 
 <ol start="1">
@@ -2172,7 +2172,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  please note that the Omnipod driver presents a variety of unique alerts on the <strong x-id="1">Overview tab</strong>, most of them are informational and can be dismissed while some provide the user with an action to take to resolve the cause of the triggered alert. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
+  Omnipod ürücüsü <strong x-id="1">Giriş sekmesinde</strong> çeşitli uyarılar sunmakla birlikte bunların çoğu bilgi amaçlıdır ve kapatılabilirken, bazıları da kullanıcıya tetiklenen uyarının nedenini çözmek için bir eylemde bulunmasını sağlar. Karşılaşabileceğiniz başlıca uyarıların bir özeti aşağıda listelenmiştir:
 </p>
 
 <h4 spaces-before="0">
@@ -2204,7 +2204,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h4>
 
 <p spaces-before="0">
-  Alert that the SMB bolus success could not be verified, you will need to verify the <em x-id="3">Last bolus</em> field on the Omnipod tab to see if SMB bolus succeeded and if not remove the entry from the Treatments tab.
+  SMB bolus başarısının doğrulanamadığı konusunda uyarı; SMB bolusunun başarılı olup olmadığını görmek için Omnipod sekmesindeki <em x-id="3">Son bolus</em> alanını doğrulamanız ve başarısız olmuşsa Tedaviler sekmesinden girişi kaldırmanız gerekir.
 </p>
 
 <h4 spaces-before="0">
@@ -2212,7 +2212,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h4>
 
 <p spaces-before="0">
-  Due to the way that the RileyLink and Omnipod communicate, situations can occur where it is <em x-id="3">uncertain</em> if a command was successfully processed. Kullanıcıyı bu belirsizlik hakkında bilgilendirme önemlidir.
+  RileyLink ve Omnipod'un iletişim kurma biçimi nedeniyle, bir komutun başarıyla işlenip işlenmediğinin <em x-id="3">belirsiz</em> olduğu durumlar ortaya çıkabilir. Kullanıcıyı bu belirsizlik hakkında bilgilendirme önemlidir.
 </p>
 
 <p spaces-before="0">
@@ -2227,7 +2227,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <strong x-id="1">GBO'lar, Pod Durumları, Profil Anahtarları, Zaman Değişiklikleri</strong> - manuel bir pod güncellemesi mesajı siler. Bu bildirim türü için varsayılan uyarı bip sesleri devre dışıdır.
   </li>
   <li>
-    <strong x-id="1">Pod Time Deviation -</strong> When the time on the pod and the time your phone deviates too much then it is difficult for AAPS loop to function and make accurate predictions and dosage recommendations. Pod ile telefon arasındaki zaman sapması 5 dakikadan fazlaysa, AAPS, HANDLE TIME CHANGE "ZAMAN DEĞİŞİKLİĞİ İŞLE mesajıyla Pod'un Pod durumu altında Askıya alınmış durumda olduğunu bildirir. An additional <strong x-id="1">Set Time</strong> icon will appear at the bottom of the Omnipod (POD) tab. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
+    <strong x-id="1">Pod Zaman Sapması -</strong> Pod zamanı ile telefonunuzun zamanı çok fazla saptığında, AAPS döngünün çalışması ve doğru tahminler ve dozaj önerileri yapması zordur. Pod ile telefon arasındaki zaman sapması 5 dakikadan fazlaysa, AAPS, HANDLE TIME CHANGE "ZAMAN DEĞİŞİKLİĞİ İŞLE" mesajıyla Pod'un Pod durumu altında Askıya alınmış durumda olduğunu bildirir. Omnipod (POD) sekmesinin altında ek bir <strong x-id="1">Saati Ayarla</strong> simgesi görünecektir. Saati Ayarla'yı tıklamak, Pod saati telefondaki saatle senkronize eder ve ardından normal pod işlemlerine devam etmek için 'RESUME DELIVERY' TESLİME DEVAM ET düğmesine tıklayabilirsiniz.
   </li>
 </ul>
 
