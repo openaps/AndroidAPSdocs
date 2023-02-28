@@ -57,6 +57,7 @@ Release date: XX-XX-2023
 - If you are using xdrip as cgm source you must select it again after update due to internal changes
 - Tidepool can be used as a replacement of NS to pass first objective
 - If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 
 
 ### Changes
