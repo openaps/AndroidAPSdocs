@@ -57,12 +57,14 @@ Yayınlanma tarihi: XX-XX-2023
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
 - xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. AAPS'den xDrip'te KŞ almak için "xDrip+ Sync Follower" kaynağı seçilmelidir.
+- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 
 
 ### Değişiklikler
 
 - EOPatch2 / GlucomenDay pompa sürücüsü @jungsomyeonggithub @MilosKozak
 - ComboV2 pompa sürücüsü (Ruffy'ye gerek yok) @dv1
+- Korean DanaI support @MilosKozak
 - Glunovo CGM desteği @christinadamianou
 - G7 desteği @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 eklentisi @MilosKozak
