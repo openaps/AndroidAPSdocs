@@ -26,7 +26,7 @@ Pour éviter cela, il y a deux possibilités :
    
    * par ex. Vienne -> New York : Changement de profil +6 heures
    * par ex. Vienne -> Sydney : Changement de profil -8 heures
-* Probably not an option if using [patched LibreLink app](Libre2-time-zone-travelling) as automatic time zone must be set to start a new Libre 2 sensor.
+* Probablement pas une option si vous utilisez [l'application LibreLink patchée](Libre2-time-zone-travelling) car la Date et heure automatique doit être activé pour démarrer un nouveau capteur Libre 2.
 
 ### Option 2: Supprimer l'historique de la pompe
 
@@ -56,11 +56,11 @@ L'utilisateur Insight n'a donc pas à s'inquiéter des changements de fuseau hor
 
 ## Accu-Chek Combo
 
-The [new Combo driver](../Configuration/Accu-Chek-Combo-Pump-v2.md) automatically adjusts the time of the pump to the time of the phone. The Combo cannot store timezones, only local time, which is precisely what the new driver programs into the pump. In addition, it stores the timezone in the local AndroidAPS preferences to be able to convert the pump's localtime to a full timestamp that has a timezone offset. The user does not have to do anything; if the time on the Combo deviates too much from the phone's current time, the pump's time is automatically adjusted.
+Le [nouveau pilote Combo](../Configuration/Accu-Chek-Combo-Pump-v2.md) ajuste automatiquement l'heure de la pompe à l'heure du téléphone. Le Combo ne peut pas stocker les fuseaux horaires, seulement les heures locales, ce qui est précisément ce que le nouveau pilote programme dans la pompe. De plus, il stocke le fuseau horaire dans les préférences locales d'AAPS pour être en mesure de convertir l'heure locale de la pompe en un horodatage complet qui a un décalage de fuseau horaire. L'utilisateur n'a rien à faire; si l'heure sur le Combo s'écarte trop de l'heure actuelle du téléphone, l'heure de la pompe est automatiquement ajustée.
 
-Note that this takes some time, however, since it can only be done in the remote-terminal mode, which is generally slow. This is a Combo limitation that cannot be overcome.
+Notez toutefois que cela prend du temps, car cela ne peut être fait qu'en mode terminal distant, ce qui est généralement lent. Il s'agit d'une limitation Combo qui ne peut pas être contournée.
 
-The old, Ruffy-based driver does not adjust the time automatically. The user has to do that manually. See below for the steps necessary to do that safely in case the timezone / daylight savings is the reason for the change.
+L'ancien pilote basé sur Ruffy n'ajuste pas l'heure automatiquement. L'utilisateur doit le faire manuellement. Voir ci-dessous les étapes nécessaires pour le faire en toute sécurité en cas de changement de fuseau horaire ou de changement d'heure été / hivers.
 
 (Timezone-traveling-time-adjustment-daylight-savings-time-dst)=
 
@@ -74,7 +74,7 @@ Si vous faites un bolus avec la calculatrice, veuillez désactiver les GA et IA 
 
 ## Accu-Chek Combo
 
-**NOTE**: As mentioned above, this secton is only valid for the old, Ruffy-based driver. The new driver adjusts date and time and DST automatically.
+**REMARQUE** : Comme mentionné ci-dessus, cette secton n'est valide que pour l'ancien pilote basé sur Ruffy. Le nouveau pilote ajuste automatiquement la date et l'heure.
 
 AAPS émettra une alarme si l'heure entre la pompe et le téléphone est très différente. En cas de changement d'heure (été ou hiver), cela arrive au milieu de la nuit. Pour éviter cela et profiter de votre sommeil, suivez ces étapes pour que vous puissiez forcer le changement de temps à une heure convenable pour vous-même :
 
