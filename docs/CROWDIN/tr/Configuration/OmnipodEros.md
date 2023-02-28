@@ -541,11 +541,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   
   <li>
     <p spaces-before="0">
-      After selecting the Omnipod driver, identify and select your RileyLink from <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Gear Icon (Settings) (2)</strong> ➜<strong x-id="1">RileyLink Configuration (3)</strong> by pressing the <strong x-id="1">Not Set</strong> or <strong x-id="1">MAC Address (if present)</strong> text.
+      Omnipod sürücüsünü seçtikten sonra <strong x-id="1">Konfigürasyon ayarları (1)</strong> ➜<strong x-id="1">Pompa</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Dişli Çark (Ayarlar) (2) </strong>➜<strong x-id="1">RileyLink Yapılandırması (3)</strong> <strong x-id="1">Ayarlanmadı</strong> veya <strong x-id="1">MAC Adresi (varsa)</strong> metnine basarak RileyLink'inizi belirleyin ve seçin.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
-       Ensure your RileyLink battery is charged and it is <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">positioned in close proximity</a> (~30 cm away or less) to your phone for AAPS to identify it by its MAC address. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
+       AAPS'in telefonunuzu MAC adresiyle tanımlaması için, RileyLink pilinizin şarjlı olduğundan ve telefonunuzun <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">yakın bir mesafede</a> (~30 cm veya daha kısa mesafede) olduğundan emin olun. Seçildikten sonra, ilk pod oturumunuzu etkinleştirmek için ilerleyebilirsiniz. Ana AAPS arayüzüne dönmek için telefonunuzdaki geri düğmesini kullanın.
      </p>
      
      <p spaces-before="0">
@@ -556,7 +556,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Selection</strong> screen press the <strong x-id="1">Scan (4)</strong> button to initiate a bluetooth scan. <strong x-id="1">Select your RileyLink (5)</strong>  from the list of available Bluetooth devices.
+     Bir bluetooth taraması başlatmak için <strong x-id="1">RileyLink Seçimi</strong> ekranında <strong x-id="1">Tara (4)</strong> düğmesine basın. Kullanılabilir Bluetooth cihazları listesinden <strong x-id="1">RileyLink'inizi (5) seçin</strong>.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -567,7 +567,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     After successful selection you are returned to the Omnipod Settings page listing your <strong x-id="1">currently selected RileyLink's MAC Address (6).</strong>
+     Başarılı bir seçimden sonra, <strong x-id="1">seçtiğiniz RileyLink'in MAC Adresini (6)</strong> listeleyen Omnipod Ayarları sayfasına geri dönersiniz.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -578,7 +578,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Verify that in the <strong x-id="1">Omnipod (POD)</strong> tab that the <strong x-id="1">RileyLink Status (1)</strong> appears as <strong x-id="1">Connected.</strong> The <strong x-id="1">Pod status (2)</strong> field should show <strong x-id="1">No active Pod</strong>; if not, please attempt the previous step or exit AAPS to see if this refreshes the connection.
+     <strong x-id="1">Omnipod (POD)</strong> sekmesinde, <strong x-id="1">RileyLink Durumu (1)</strong> öğesinin <strong x-id="1">Bağlı</strong> olarak göründüğünü doğrulayın. <strong x-id="1">Pod durumu (2) </strong> alanında <strong x-id="1">Etkin Pod Yok</strong> gösterilmelidir. Değilse, lütfen önceki adımı deneyin veya bunun bağlantıyı yenileyip yenilemediğini görmek için AAPS'den çıkın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -601,13 +601,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">REMINDER: Pod communication occurs at limited ranges for pod activation pairing due to security safety measures. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. During these procedures, make sure that your pod is</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">within close proximity</a> (~30 cm away or less) but not on top of or right next to the RileyLink.\*
+  <em x-id="3">HATIRLATICI: Güvenlik güvenlik önlemleri nedeniyle, pod aktivasyon eşleştirmesi için pod iletişimi sınırlı mesafede gerçekleşir. Eşleştirmeden önce Pod'un radyo sinyali daha zayıftır, ancak eşleştirildikten sonra tam sinyal gücünde çalışacaktır. Bu prosedürler sırasında podunuzun</em> <a href="OmnipodEros-optimal-omnipod-and-rileylink-positioning">yakın mesafede</a> (~30 cm veya daha az uzaklıkta) olduğundan, ancak RileyLink'in üstünde veya hemen yanında olmadığından emin olun.\*
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Navigate to the <strong x-id="1">Omnipod (POD)</strong> tab and click on the <strong x-id="1">POD MGMT (1)</strong> button, and then click on <strong x-id="1">Activate Pod (2)</strong>.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">POD YNTM (1)</strong> butonuna ve ardından <strong x-id="1">Podu Etkinleştir(2)</strong>'i tıklayın.
     </p>
 <blockquote spaces-before="4">
       <p spaces-before="0">
