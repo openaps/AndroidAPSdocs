@@ -435,7 +435,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  Sağ üst köşede <strong x-id="1">üç noktalı menü (1)</strong> bulunan <strong x-id="1">AAPS Kurulum Sihirbazı (2)</strong> aracılığıyla <strong x-id="1">Pompa</strong> ekranına gelene kadar sihirbaz menülerinde ilerleyin. Then select the <strong x-id="1">Omnipod radio button (3)</strong> .
+  Sağ üst köşede <strong x-id="1">üç noktalı menü (1)</strong> bulunan <strong x-id="1">AAPS Kurulum Sihirbazı (2)</strong> aracılığıyla <strong x-id="1">Pompa</strong> ekranına gelene kadar sihirbaz menülerinde ilerleyin. Ardından <strong x-id="1">Omnipod radyo butonunu (3)</strong> seçin.
 </p>
 
 <blockquote spaces-before="0">
@@ -445,23 +445,23 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </blockquote>
 
 <p spaces-before="0">
-  On the same screen, below the pump selection, the <strong x-id="1">Omnipod Driver Settings</strong> are displayed, under the <strong x-id="1">RileyLink Configuration</strong> add your RileyLink device by pressing the <strong x-id="1">Not Set</strong> text.
+  Aynı ekranda, pompa seçiminin altında <strong x-id="1">Omnipod Sürücü Ayarları</strong> görüntülenir, <strong x-id="1">RileyLink Yapılandırması</strong> altında <strong x-id="1">Ayarlanmadı</strong> metnine basarak RileyLink cihazınızı ekleyin metin.
 </p>
 
 <p spaces-before="0">
-  On the <strong x-id="1">RileyLink Selection</strong> screen press the <strong x-id="1">Scan</strong> button and select your RileyLink by scanning for all available Bluetooth devices and selecting your RileyLink from the list. Doğru seçildiğinde, seçtiğiniz RileyLink ve mac adresinin de bulunduğu Omnipod sürücü ayarlarının görüntülendiği pompa sürücüsü seçim ekranına dönersiniz.
+  <strong x-id="1">RileyLink Seçimi</strong> ekranında <strong x-id="1">Tara</strong> düğmesine basın ve mevcut tüm Bluetooth cihazlarını tarayarak ve listeden RileyLink cihazınızı bulup seçin. Doğru seçildiğinde, seçtiğiniz RileyLink ve mac adresinin de bulunduğu Omnipod sürücü ayarlarının görüntülendiği pompa sürücüsü seçim ekranına dönersiniz.
 </p>
 
 <p spaces-before="0">
-  Press the <strong x-id="1">Next</strong> button to proceed with the rest of the <strong x-id="1">Setup Wizard.</strong>  It can take up to one minute for the selected RileyLink to initialize and the <strong x-id="1">Next</strong> button to become active.
+  <strong x-id="1">Kurulum Sihirbazı</strong>'nın geri kalanına devam etmek için <strong x-id="1">İleri</strong> düğmesine basın. Seçilen RileyLink'in başlatılması bir dakika kadar sürebilir ve <strong x-id="1">İleri</strong> > butonuna basarak aktif hale getirin.
 </p>
 
 <p spaces-before="0">
-  Detailed steps on how to setup your pod communication device are listed below in the <a href="OmnipodEros-rileylink-setup">RileyLink Setup Section</a>.
+  Pod iletişim cihazınızı nasıl kuracağınıza ilişkin ayrıntılı adımlar, aşağıda <a href="OmnipodEros-rileylink-setup">RileyLink Kurulum Bölümünde</a> listelenmiştir.
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">OR</strong>
+  <strong x-id="1">VEYA</strong>
 </p>
 
 <h3 spaces-before="0">
@@ -469,12 +469,12 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Via the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder (1)</strong> ➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong> by selecting the <strong x-id="1">radio button (2)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (4)</strong> next to the <strong x-id="1">Settings Gear (3)</strong> will display the Omnipod menu as a tab in the AAPS interface titled <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  Sol üst köşedeki <strong x-id="1">hamburger menüsü</strong> aracılığıyla <strong x-id="1">Konfigürasyon ayarları(1)</strong> ➜<strong x-id="1">Pompa</strong>➜<strong x-id="1">Omnipod</strong> altındaki <strong x-id="1">Omnipod</strong> başlığındaki <strong x-id="1">radyo düğmesi (2)</strong>. <strong x-id="1">Ayar Dişlisi (3)</strong>'ün yanındaki <strong x-id="1">onay kutusu (4)</strong> seçildiğinde, Omnipod menüsü AAPS arayüzünde <strong x-id="1">POD</strong> başlıklı bir sekme olarak görüntülenir. Bu dokümanda <strong x-id="1">Omnipod (POD)</strong> sekmesi olarak anılır.
 </p>
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> can be found below in the <a href="OmnipodEros-omnipod-settings">Omnipod Settings section</a> of this document.
+    <strong x-id="1">NOT:</strong> <strong x-id="1">Omnipod ayarlarına</strong> erişmenin daha hızlı bir yolu, aşağıda bu dokümanın <a href="OmnipodEros-omnipod-settings">Omnipod Ayarları bölümünde</a> bulunabilir.
   </p>
   
   <p spaces-before="0">
@@ -487,11 +487,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">Note: If you have exited the Setup Wizard early without selecting your RileyLink, the Omnipod Driver is enabled but you will still need to select your RileyLink.  You may see the Omnipod (POD) tab appear as it does below</em>
+  <em x-id="3">Not: Kurulum Sihirbazından RileyLink'inizi seçmeden erken çıktıysanız, Omnipod Sürücüsü etkinleştirilir ancak yine de RileyLink'inizi seçmeniz gerekir.  Omnipod (POD) sekmesi aşağıdaki gibi görünecektir</em>
 </p>
 
 <p spaces-before="0">
-  To verify that you have enabled the Omnipod driver in AAPS <strong x-id="1">swipe to the left</strong> from the <strong x-id="1">Overview</strong> tab, where you will now see an <strong x-id="1">Omnipod</strong> or <strong x-id="1">POD</strong> tab.
+  AAPS'de Omnipod sürücüsünü etkinleştirdiğinizi doğrulamak için <strong x-id="1">Genel Bakış</strong> sekmesinde <strong x-id="1">sola kaydırdığınızda</strong> bir <strong x-id="1">Omnipod</strong> veya <strong x-id="1">POD</strong> sekmesi göreceksiniz.
 </p>
 
 <p spaces-before="0">
@@ -508,11 +508,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <blockquote spaces-before="0">
   <p spaces-before="0">
-    {{ refresh_pod_status }} Refresh Pod connectivity and status
+    {{ refresh_pod_status }} Pod bağlantısını ve durumunu yenileyin
   </p>
   
   <p spaces-before="0">
-    {{ pod_management }} Pod Management (Activate, Deactivate, Play test beep, RileyLink Stats and Pod history)
+    {{ pod_management }} Pod Yönetimi (Etkinleştir, Devre Dışı Bırak, Test bip sesini çal, RileyLink İstatistikleri ve Pod geçmişi)
   </p>
 </blockquote>
 
@@ -1731,7 +1731,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h2>
 
 <p spaces-before="0">
-  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. This is referred to in this documentation as the <strong x-id="1">Omnipod (POD)</strong> tab.
+  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. Bu dokümanda <strong x-id="1">Omnipod (POD)</strong> sekmesi olarak anılır.
 </p>
 
 <p spaces-before="0">
