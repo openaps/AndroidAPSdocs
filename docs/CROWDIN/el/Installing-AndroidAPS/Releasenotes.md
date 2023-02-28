@@ -13,9 +13,9 @@ You will receive the following information as soon as a new update is available:
 
 Αν δεν ενημερώσετε για άλλες 30 ημέρες (90 ημέρες από την ημερομηνία νέας κυκλοφορίας), το AAPS θα μεταβεί σε ανοιχτό κύκλωμα.
 
-Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. Οι νέες εκδόσεις του AndroidAPS δεν παρέχουν μόνο νέες λειτουργίες αλλά και σημαντικές διορθώσεις ασφαλείας. Therefore it is necessary that every user updates a.s.a.p.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
+Σας παρακαλούμε να καταλάβετε ότι αυτή η αλλαγή δεν έχει σκοπό να σας δυσκολέψει, αλλά γίνετε για λόγους ασφαλείας. New versions of AAPS do not only provide new features but also important safety fixes. Therefore it is necessary that every user updates a.s.a.p.. Δυστυχώς υπάρχουν ακόμα αναφορές σφαλμάτων από πολύ παλιές εκδόσεις, γι 'αυτό προσπαθείστε να βελτιώσετε την ασφάλεια για κάθε χρήστη και ολόκληρη την κοινότητα του DIY. Ευχαριστώ για την κατανόηση.
 
-```{admonition} First version of AndroidAPS
+```{admonition} First version of AAPS
 :class: note
 
 The first test version started already in 2015. In 2016 has beend the first released version.
@@ -67,7 +67,7 @@ Release date: XX-XX-2023
 - G7 support @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 plugin @MilosKozak
 - Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak @justmara inpired by Tsunami project, @jbr7rr
+- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - fixed tons of issues from 3.1 version
 - allow add notes on more places @Sergey Zorchenko
 - UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
@@ -243,14 +243,14 @@ Release date: 01-01-2021
 
 - **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 - [Objectives have changed.](Objectives-objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Σημαντικά νέα χαρακτηριστικά
 
 - [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](Preferences-bolus-advisor) & [eating reminder](Screenshots-eating-reminder) @MilosKozak
-- [New watchface](Watchfaces-new-watchface-as-of-androidaps-2-8) @rICTx-T1D
+- [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 - New [Low Ressolution Skin](Preferences-skin)
@@ -536,7 +536,7 @@ Release date: 03-11-2018
 
 - oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
-- Setup wizard: guides you through the process of setting up AndroidAPS
+- Setup wizard: guides you through the process of setting up AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Settings to adjust when switching from AMA to SMB
@@ -547,7 +547,7 @@ Release date: 03-11-2018
 
 - min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
 
-- Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
+- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Εάν η κατασκευή σας αποτύχει με σφάλμα σχετικά με τη διαμόρφωση "κατά παραγγελία", μπορείτε να κάνετε τα εξής:
 
   - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
   - In the left pane, click Build, Execution, Deployment > Compiler.
