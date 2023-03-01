@@ -57,13 +57,13 @@ It is very important to make sure that battery optimizations are turned off. AAP
      * Enable key lock on the pump to prevent bolusing from the pump, esp. when the pump was used before and quick bolusing was a habit.
      * Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-  ![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+  ![Screenshot z nastavení uživatelského menu](../images/combo/combo-menu-settings.png)
 
-  ![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+  ![Screenshot nastavení dočasného bazálu](../images/combo/combo-tbr-settings.png)
 
-  ![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+  ![Screenshot nastavení bolusu](../images/combo/combo-bolus-settings.png)
 
-  ![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+  ![Screenshot nastavení zásobníku](../images/combo/combo-insulin-settings.png)
 
 ## Activating the driver and pairing it with the Combo
 
