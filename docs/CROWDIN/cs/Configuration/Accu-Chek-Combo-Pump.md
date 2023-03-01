@@ -17,10 +17,10 @@
 
 ## Omezení
 
-- Extended bolus and multiwave bolus are not supported (see [Extended Carbs](../Usage/Extended-Carbs.md) instead).
+- Rozložené bolusy a kombinované bolusy nejsou podporovány (podívejte se na [Extended Carbs](../Usage/Extended-Carbs.md)).
 - Je podporován pouze jeden bazální profil.
 - Setting a basal profile other than 1 on the pump or delivering extended boluses or multiwave boluses from the pump interferes with TBRs and forces the loop into low-suspend only mode for 6 hours as the the loop can't run safely under these conditions.
-- It's currently not possible to set the time and date on the pump, so [daylight saving time changes](Timezone-traveling-accu-chek-combo) have to be performed manually (you may disable the phone's automatic clock update in the evening and change it back in the morning together with the pump clock to avoid an alarm during the night).
+- Aktuálně není možné nastavit čas a datum na pumpě, stejně jako [změny času](Timezone-traveling-accu-chek-combo), které musí být zadány ručně (můžete večer deaktivovat automatickou aktualizaci času a ráno ji znovu povolit společně s časem na pumpě, abyste předešli alarmům v průběhu noci).
 - Aktuální rozsah bazálních dávek je od 0,05 do 10 U/h. This also applies when modifying a profile, e.g. when increasing to 200%, the highest basal rate must not exceed 5 U/h since it will be doubled. Obdobně platí, že při snížení na 50% musí být nejnižší bazální dávka 0,10 U/h.
 - If the loop requests a running TBR to be cancelled the Combo will set a TBR of 90% or 110% for 15 minutes instead. This is because cancelling a TBR causes an alert on the pump which causes a lot of vibrations.
 - Occasionally (every couple of days or so) AAPS might fail to automatically cancel a TBR CANCELLED alert, which the user then needs to deal with (by pressing the refresh button in AAPS to transfer the warning to AAPS or confirming the alert on the pump).
@@ -53,13 +53,13 @@
     - Aktivujte zámek tlačítek na pumpě, abyste předešli nechtěnému vydání bolusů z pumpy, when the pump was used before and quick bolusing was a habit.
     - Nastavte čas zhasnutí displeje na 5,5 s a čas opuštění menu na 5 s. This allows the AAPS to recover more quickly from error situations and reduces the amount of vibrations that can occur during such errors
 
-![Screenshot of user menu settings](../images/combo/combo-menu-settings.png)
+![Screenshot z nastavení uživatelského menu](../images/combo/combo-menu-settings.png)
 
-![Screenshot of TBR settings](../images/combo/combo-tbr-settings.png)
+![Screenshot nastavení dočasného bazálu](../images/combo/combo-tbr-settings.png)
 
-![Screenshot of bolus settings](../images/combo/combo-bolus-settings.png)
+![Screenshot nastavení bolusu](../images/combo/combo-bolus-settings.png)
 
-![Screenshot of insulin cartridge settings](../images/combo/combo-insulin-settings.png)
+![Screenshot nastavení zásobníku](../images/combo/combo-insulin-settings.png)
 
 - Nainstalujte AndroidAPS tak, jak je popsáno v [AndroidAPS wiki](https://androidaps.readthedocs.io/)
 - Přečtěte si dokumentaci, abyste pochopili, jak nastavit AndroidAPS.
@@ -75,15 +75,15 @@
 
 ## Why pairing with the pump does not work with the app "ruffy"?
 
-There are serveral possible reasons. Try the following steps:
+Má to několik možných důvodů. Vyzkoušejte tyto kroky:
 
 1. Vložte ** novou nebo nabitou baterii ** do pumpy. Podívejte se na podrobnosti do návodu do části Baterie. Ujistěte se, že pumpa je velmi blízko telefonu.
 
-![Combo should be next to phone](../images/Combo_next_to_Phone.png)
+![Combo by mělo být vedle telefonu](../images/Combo_next_to_Phone.png)
 
 2. Vypněte nebo odstraňte jakékoliv jiné Bluetooth zařízení, abyste eliminovali možné rušení při párování. Jakákoliv paralelní komunikace s rozhraním Bluetooth nebo výzva k vytvoření připojení může narušit proces párování.
 
-3. Delete already connected devices in the Bluetooth menu of the pump: **BLUETOOTH SETTINGS / CONNECTION / REMOVE** until **NO DEVICE** is shown.
+3. Odstraňte již připojená zařízení v nabídce Bluetooth na pumpě: **NASTAVENÍ BLUETOOTH / PŘIPOJENÍ / ODEBRAT**, dokud nebude zobrazeno **ŽÁDNÉ ZAŘÍZENÍ**.
 
 4. Delete a pump already connected to the phone via Bluetooth: Under Settings / Bluetooth, remove the paired device "**SpiritCombo**"
 5. Ujistěte se, že na pozadí není spuštěna smyčka aplikace AAPS. Deaktivuje smyčku v AAPS.
