@@ -1,26 +1,26 @@
 (Releasenotes-release-notes)=
 # Notes de Version
 
-Please follow the instructions in the [update manual](../Installing-AndroidAPS/Update-to-new-version.md). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
+Veuillez suivre les instructions de la page [Mise à jour vers une nouvelle version](../Installing-AndroidAPS/Update-to-new-version.md). Vous pouvez également trouver une section de dépannage répondant aux difficultés les plus courantes lors de la mise à jour dans la page du manuel de mise à jour.
 
 Vous recevrez les informations suivantes dès qu'une nouvelle mise à jour sera disponible :
 
 ```{image} ../images/AAPS_LoopDisable90days.png
-:alt: Update info
+:alt: Information de mise à jour
 ```
 
-Ensuite, vous avez 60 jours pour mettre à jour. If you do not update within these 60 days AAPS will fall back to LGS (low glucose suspend - see [glossary](../Getting-Started/Glossary.md)) as in [objective 6](../Usage/Objectives.html).
+Ensuite, vous avez 60 jours pour mettre à jour. Si vous ne faites pas de mise à jour au cours de ces 60 jours, AAPS retournera en mode AGB (Arrêt Glycémie Basse - cf. [glossaire](../Getting-Started/Glossary.md)) comme dans [l'objective 6](../Usage/Objectives.html).
 
 Si vous ne mettez pas à jour pendant 30 jours supplémentaires (90 jours à partir de la nouvelle date de sortie), AAPS passe à Boucle Ouverte.
 
-Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. New versions of AAPS do not only provide new features but also important safety fixes. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
+Veuillez comprendre que cette modification n'a pas pour but de vous corriger mais est due à des raisons de sécurité. Les nouvelles versions d'AAPS fournissent non seulement de nouvelles fonctionnalités, mais aussi d'importants correctifs de sécurité. Il est donc nécessaire que chaque utilisateur mette à jour a.s.a.p.. Malheureusement, il y a toujours des remontés de bug provenant de très anciennes versions, donc il s'agit d'une tentative d'améliorer la sécurité pour chaque utilisateur et toute la communauté DIY. Merci pour votre compréhension.
 
 ```{admonition} First version of AAPS
 :class: note
 
-The first test version started already in 2015. In 2016 has beend the first released version.
+La première version de test a déjà commencé en 2015. La première version a été publiée en 2016.
 
-The chronology of these releases is not available at the moment but as this questions is asked severeal times we document it here.
+La chronologie de ces versions n'est pas disponible pour le moment, mais comme cette question est posée plusieurs fois, nous la documenterons ici.
 
 ```
 
@@ -32,54 +32,54 @@ Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utilis
 
 ### Android 9 et supérieur
 
-- Use latest AAPS version
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS>
+- Utiliser la dernière version d'AAPS
+- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS>
 
 ### Android 8
 
-- Use AAPS version **2.8.2.1**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.8.2.1
+- Utiliser la version **2.8.2.1** d'AAPS
+- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS> branche 2.8.2.1
 
 ### Android 7
 
-- Use AAPS version **2.6.2**
-- Download AAPS Code from <https://github.com/nightscout/AndroidAPS> branch 2.6.2
+- Utiliser la version **2.6.2** d'AAPS
+- Téléchargez le code AAPS depuis <https://github.com/nightscout/AndroidAPS> branche 2.6.2
 
 ## Version 3.2.0
 
-Release date: XX-XX-2023
+Date de sortie : XX-XX-2023
 
 ### Conseils importants
 
-- NS 15 is required. At the moment "dev" branch of NS main repository
-- While using websockets in NS v3 plugin treatments entered through NS UI (plus button) and other applications using v1 API are not sent to AAPS. This will be fixed in future release of NS.
-- Websockets in v3 plugin works similiar way to v1 plugin. Without websockets enabled AAPS schedules regularly downloads from NS which should lead to lower power consumption because NS is not permanently connected. On the oposite side it means delays in exchanging data.
-- If you are using xdrip as cgm source you must select it again after update due to internal changes
-- Tidepool can be used as a replacement of NS to pass first objective
-- If you send to xDrip+ you must configure xDrip synchronization plugin. In order to receive BGs from AAPS in xDrip it must be selected source "xDrip+ Sync Follower"
+- NS 15 est requis. Pour le moment la branche "dev" du dépôt principal NS
+- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS.
+- Les Websockets avec le plugin v3 fonctionnent de manière similiaire au plugin v1. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. D'un autre côté, cela signifie des retards dans l'échange de données.
+- Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
+- Tidepool peut être utilisé à la place de NS pour passer le premier objectif
+- Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. Afin de transférer les glycémies d'AAPS vers xDrip, il doit être sélectionné comme source "xDrip+ Sync Follower"
 - If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 
 
 ### Modifications
 
-- EOPatch2 / GlucomenDay pump driver @jungsomyeonggithub @MilosKozak
-- ComboV2 pump driver (no need of Ruffy) @dv1
+- EOPatch2 / GlucomenDay pilote pompe @jungsomyeonggithub @MilosKozak
+- Pilote pompe ComboV2 (pas besoin de Ruffy) @dv1
 - Korean DanaI support @MilosKozak
-- Glunovo CGM support @christinadamianou
-- G7 support @MilosKozak @rICTx-T1D @khskekec
-- NSClient v3 plugin @MilosKozak
-- Tidepool support @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
-- fixed tons of issues from 3.1 version
-- allow add notes on more places @Sergey Zorchenko
-- UI fixes @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
-- new SMS commands LOOP LGS/CLOSED @pzadroga
-- wear translations @Andries-Smit
-- xdrip communication moved to separate module @MilosKozak
-- internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
-- Diaconn driver fixes @miyeongkim
-- AAPSClient provides info if main phone is plugged in electricity @MilosKozak
-- new 125k+ lines of code, changed 150k lines
+- Support du MGC Glunovo @christinadamianou
+- Support G7 @MilosKozak @rICTx-T1D @khskekec
+- Plugin NSClient v3 @MilosKozak
+- Support Tidepool @MilosKozak
+- Plugin Lissage @MilosKozak, @justmara, Lissage Exponentiel @nichi (Tsunami), Lissage moyen @jbr7rr
+- Correction de tonnes de problèmes de la version 3.1
+- Ajout des notes dans plus de dialogues @Sergey Zorchenko
+- Correction de l'Interface Utilisateur @MilosKozak @osodebailar @Andries-Smit @yodax @philoul @dv1 @paravoid
+- Nouvelles commandes SMS LOOP LGS/CLOSED @pzadroga
+- Traductions wear @Andries-Smit
+- Communication xdrip déplacée vers un plugin séparé @MilosKozak
+- Changements internes : mise à jour des versions de libs, migration rx3, nouvelle structure de modules @MilosKozak
+- Corrections dans le Pilote Diaconn @miyeongkim
+- AAPSClient transmet les informations si le téléphone principal est branché @MilosKozak
+- + de 125k nouvelles lignes de code, 150k lignes changées
 
 ## Version 3.1.0
 
@@ -88,26 +88,26 @@ Date de sortie : 19-07-2022
 (Releasenotes-important-hints-3-1-0)=
 ### Conseils importants
 
-- after update uninstall Wear app and install new version
-- Omnipod users: update on pod change !!!
+- après la mise à jour désinstallez l'application Wear et installez la nouvelle version
+- Utilisateurs d'Omnipod : faites la mise à jour lors d'un changement de pod !!!
 
 ### Modifications
 
-- fixed issues from 3.0 version
-- fix application freezing @MilosKozak
-- fixed DASH driver @avereha
-- fixed Dana drivers @MilosKozak
-- huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
+- correction des problèmes de la version 3.0
+- correction du blocage de l'application @MilosKozak
+- correction du driver DASH @avereha
+- correction du driver Dana @MilosKozak
+- Amélioration énorme de l'interface UI, nettoyage et standardisation, migration vers "material design", styles, thème blanc, nouvelles icônes. @Andries-Smit @MilosKozak @osodebailar @Philoul
 - widget @MilosKozak
-- Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
-- Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, translations @Andries-Smit
-- Wear code refactored. Plus compatible avec les versions précédentes @MilosKozak
-- a11y improvements @Andries-Smit
-- new protection option PIN @Andries-Smit
-- allow graph scale from menu @MilosKozak
-- more statistics available @MilosKozak
-- MDI plugin removed in favor of VirtualPump
-- new automation action: StopProcessing (following rules)
+- support MGC Aidex @andyrozman @markvader (seulement Pumpcontrol)
+- Montre `les tuiles de Wear OS <../Configuration/Configuration/Watchfaces.mdl#wear-os-tiles>`, traductions @Andries-Smit
+- code Wear refactorisé. Plus compatible avec les versions précédentes @MilosKozak
+- améliorations a11y @Andries-Smith
+- nouvelle option de protection par code PIN @Andries-Smit
+- modification de l'échelle graphique possible à partir du menu @MilosKozak
+- plus de statistiques disponibles @MilosKozak
+- Plugin MIQ supprimé en faveur de la pompe virtuelle
+- nouvelle action d'automatisation : Arrêter le traitement (règles suivantes)
 
 ## Version 3.0.0
 
@@ -117,81 +117,81 @@ Date de sortie : 31-01-2022
 ### Conseils importants
 
 - **La version minimale d'Android est maintenant 9.0.**
-- **Data is not migrated to new database.** Do not complain, it's so huge change so it's simply not possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront effacés. You have to create new [profile switch](../Usage/Profiles.md) and start with zero IOB and COB. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
-- Use the same version of AAPS and NSClient
+- **Les données ne sont pas migrées vers la nouvelle base de données.** Ne vous plaignez pas, c'est un changement si énorme que ce n'est tout simplement pas possible. Ainsi après la mise à jour de l'IA, GA, traitements, etc seront effacés. Vous devez créer un nouveau [changement de profil](../Usage/Profiles.md) et commencer avec zéro IA et GA. Planifiez la mise à jour avec soin !!! C'est mieux si vous le faites sans insuline et glucides actifs
+- Utiliser la même version d'AAPS et de NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** [here](../Installing-AndroidAPS/update3_0.md).
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 3.0 comme c'est décrit** [ici](../Installing-AndroidAPS/update3_0.md).
 
 ### Etapes de préparation
 
-**At least two days before update:**
+**Au moins deux jours avant la mise à jour :**
 
-- disable Dexcom bridge in Nightscout
-- if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
-- if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+- Désactivez Dexcom Bridge dans Nightscout
+- si vous utilisez G5/G6 et xDrip en tant que collecteur, vous devez mettre à jour xDrip vers une version "nocturne" plus récente que le 14 janvier 2022
+- si vous utilisez G5/G6 et allez basculer vers BYODA car elle est recommandée pour tirer parti du lissage à postérioiri (vous pouvez toujours utiliser xDrip à d'autres fins, xDrip peut recevoir des données de BYODA)
 
 ### Modifications
 
-- 100k lines changed, 105k new lines of code
+- 100k lignes changées, 105k nouvelles lignes de code
 
-- [Omnipod DASH support](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
+- [Support de l'Omnipod DASH](../Configuration/OmnipodDASH.md) @AdrianLxM @avereha @bartsopers @vanelsberg
 
-- [Dana-i support](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
+- [Support de Dana-i](../Configuration/DanaRS-Insulin-Pump.md) @MilosKozak
 
-- [DiaconnG8 support](../Configuration/DiaconnG8.md)
+- [Support de la DiaconnG8](../Configuration/DiaconnG8.md)
 
-- Glunovo support
+- Support de Glunovo
 
-- Internal database upgraded to Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
+- Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 
-- Lot of code rewritten to Kotlin @MilosKozak
+- Beaucoup de code réécrit en Kotlin @MilosKozak
 
-- New internal interface for pump drivers
+- Nouvelle interface interne pour les pilotes des pompes
 
-- NSClient rewritten for better synchronization and more detailed customization @MilosKozak
+- NSClient réécrit pour une meilleure synchronisation et une personnalisation plus détaillée @MilosKozak
 
-  - Record deletion from NS is not allowed (only invalidation through NSClient)
-  - Record modification from NS is not allowed
-  - Sync setting available without engineering mode (for parents)
-  - Ability to resync data
+  - La suppression des enregistrements de NS n'est pas autorisée (uniquement l'invalidation via NSClient)
+  - La modification des enregistrements à partir de NS n'est pas autorisée
+  - Paramètres de synchronisation disponibles sans le mode ingénierie (pour les parents)
+  - Possibilité de resynchroniser les données
 
-- Profile switch behavior change. Now is distinguished between Profile Switch *(something that user wants)* and Profile change *(when change is executed by pump)* @MilosKozak @Tebbe
+- Changement de comportement du changement de profil. Maintenant, on fait la différence entre le Changement de profil *(demandé par l'utilisateur)* et le changement de profil *(une fois exécuté par pompe)* @MilosKozak @Tebbe
 
-- You can start activity temporary target during creation of profile switch @MilosKozak
+- Vous pouvez démarrer la cible temporaire Activité lors de la création du changement de profil @MilosKozak
 
-- NSProfile is gone, just local profile can be used. Local profile can be [synced to NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
+- NSProfile est supprimé, seul le Profil local peut être utilisé. Le profil local peut être [synchronisé avec NS](update3_0-nightscout-profile-cannot-be-pushed). @MilosKozak.
 
-- Forgotten [master password reset procedure](update3_0-reset-master-password) @MilosKozak
+- Procédure de [réinitialisation du mot de passe principal](update3_0-reset-master-password) en cas d'oubli @MilosKozak
 
-- User actions tracing @Philoul
+- Enregisrement des Actions utilisateur @Philoul
 
-- New automation TempTargetValue trigger @Philoul
+- Nouveau déclencheur d'automatisation sur la valeur des Cibles Temp. @Philoul
 
-- New automation Careportal action @Philoul
+- Nouvelle action d'automatisation Careportal @Philoul
 
-- Add Bolus reminder in Carbs Dialog @Philoul
+- Ajout un rappel bolus dans le dialogue Glucides @Philoul
 
-- Bolus Wizard improvement
+- Amélioration de l'Assistant Bolus
 
-- UI improvements @MilosKozak
+- Améliorations de l'interface utilisateur @MilosKozak
 
-- New user buttons for automations @MilosKozak
+- Nouveaux boutons Action utilisateur pour l'automatisation @MilosKozak
 
-- New automation layout @MilosKozak
+- Nouvelle mise en page de l'automatisation @MilosKozak
 
-- History browser updated and fixed @MilosKozak
+- Historique mis à jour et corrigé @MilosKozak
 
-- Objective9 removed @MilosKozak
+- Objective9 supprimé @MilosKozak
 
-- Fixed bug associated to unstable CGM data @MilosKozak
+- Correction d'un bug associé aux données instables de la MGC @MilosKozak
 
-- DanaR and DanaRS communication improvement @MilosKozak
+- Amélioration de la communication DanaR et DanaRS @MilosKozak
 
-- CircleCI integration @MilosKozak
+- Intégration de CircleCI @MilosKozak
 
-- Files location change:
+- Changement d'emplacement des fichiers:
 
-  - /AAPS/extra (engineering mode)
+  - /AAPS/extra (mode ingénierie)
   - /AAPS/logs /AAPS/exports
   - /AAPS/preferences
 
@@ -199,42 +199,42 @@ Date de sortie : 31-01-2022
 
 Date de sortie : 23-01-2021
 
-- Please see also [important hints for version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) below.
+- Veuillez voir aussi les [conseils importants pour la version 2.8.1.1](Releasenotes-important-hints-2-8-1-1) ci-dessous.
 
 ### Modifications
 
-- stability improvements
-- more tweaking for Android 8+
-- improved icons
-- watch improvements
-- NSClient fixes
-- Bolus advisor now works with Pumpcontrol and NSClient
+- améliorations de la stabilité
+- plus de réglages pour Android 8+
+- amélioration des icônes
+- amélioration de la montre
+- Corrections NSClient
+- Le conseiller Bolus fonctionne maintenant avec les versions Pumpcontrol et NSClient
 
 ## Version 2.8.1.1
 
 Date de sortie : 12-01-2021
 
-(important-hints-2-8-1-1)
+(conseils-importants-2-8-1-1)
 ### Conseils importants
 
-- Option **NS_UPLOAD_ONLY** has been forced ON for all 2.8.1 users.
-- If you use NSClient to enter TT, carbs or profile switches you must turn it off in AAPS but **only in case your synchronization is working well** (ie. you don't see unwanted data changes like self modification of TT, TBR etc).
-- ATTENTION: DO NOT do this if you have any other app handle treatments ( like xDrip broadcast/upload/sync...).
-- NS_UPLOAD_ONLY can only be turned off if engineering mode is enabled.
+- L'option **NS_UPLOAD_ONLY** a été forcée à ON pour tous les utilisateurs de la version 2.8.1.
+- Si vous utilisez NSClient pour entrer les CT, les glucides ou les changements de profil, vous devez le désactiver dans AAPS mais **seulement dans le cas où votre synchronisation fonctionne bien** (càd. vous ne voyez pas de changements de données indésirables tels que la modification automatique de CT, DBT etc.).
+- ATTENTION : NE PAS le faire si vous avez une autre application qui gère les traitements (comme xDrip broadcast/upload/sync...).
+- NS_UPLOAD_ONLY ne peut être désactivé que si le mode ingénierie est activé.
 
 ### Changements majeurs
 
-- RileyLink, Omnipod and MDT pump improvements and fixes
-- forced NS_UPLOAD_ONLY
-- fix for SMB & Dexcom app
+- RileyLink, Omnipod et la pompe MDT améliorations et corrections
+- NS_UPLOAD_ONLY forcé
+- correction pour SMB & appli. Dexcom
 - watchface fixes
-- crash reporting improved
-- gradle reverted to allow direct watchface instalation
-- automation fixes
-- RS driver improvement
-- various crashes fixed
-- UI fixes and improvements
-- new translations
+- rapport de plantage amélioré
+- gradle restauré pour permettre l'installation directe des cadrans de montres
+- corrections de l'automatisation
+- amélioration du driver RS
+- divers plantages corrigés
+- corrections de bugs et améliorations de l'Interface Utilisateur
+- nouvelles traductions
 
 (Releasenotes-version-2-8-0)=
 ## Version 2.8.0
@@ -243,28 +243,28 @@ Date de sortie : 01-01-2021
 
 ### Conseils importants
 
-- **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
-- [Objectives have changed.](Objectives-objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
-- Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
+- **La version minimale d'Android est 8.0 maintenant.** Pour les anciennes versions d'Android, vous pouvez toujours utiliser la version 2.6.1.4 de l'ancien dépôt.
+- [Les objectifs ont changé.](Objectives-objective-3-prove-your-knowledge) **Finissez les objectifs non terminés avant la mise à jour.**
+- Le dossier github est toujours sur <https://github.com/nightscout/AndroidAPS>. Si vous n'êtes pas familié avec git le plus simple pour faire la mise à jour est de supprimer le répertoire avec AAPS et de faire un [nouveau clone](../Installing-AndroidAPS/Building-APK.md).
+- Utilisez [Android Studio 4.1.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
-- [bolus advisor](Preferences-bolus-advisor) & [eating reminder](Screenshots-eating-reminder) @MilosKozak
-- [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
-- Dana RS connection improvements @MilosKozak
-- Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
+- [Support de l'Omnipod Eros](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda et merci spécial à @ps2 @itsmojo, et à toutes les autres personnes impliquées dans le développement du driver pour Omnipod ainsi que @jlucasvt de GetRileyLink.org
+- [Assistant bolus](Preferences-bolus-advisor) & [Rappel repas](Screenshots-eating-reminder) @MilosKozak
+- [Nouveau cadran](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- Améliorations de la connexion Dana RS @MilosKozak
+- Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
 - New [Low Ressolution Skin](Preferences-skin)
 - New ["Pregnant" patient type](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
-- New NSClient tablet layout @MilosKozak
-- NSClient transfer insulin, senstivity and display settings directly from main AAPS @MilosKozak
-- [Preferences filter](../Configuration/Preferences.md) @Brian Quinion
-- New pump icons @Rig22 @@teleriddler @osodebailar
+- Nouvelle présentation tablette de NSClient @MilosKozak
+- NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
+- [Filtre des préférences](../Configuration/Preferences.md) @Brian Quinion
+- Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
 - New [insulin type Lyumjev](Config-Builder-lyumjev)
-- SetupWizard improvements @MilosKozak
-- Security improvements @dlvoy
-- Various improvements and fixes @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
+- Améliorations de l'assistant de configuration @MilosKozak
+- Améliorations de la sécurité @dlvoy
+- Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
 
 (Releasenotes-version-2-7-0)=
 ## Version 2.7.0
@@ -278,24 +278,24 @@ You need at least start [objective 11 (in later versions objective 10!)](Objecti
 ### Nouvelles fonctionnalités majeures
 
 - internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
-- using modules for Dana pumps @MilosKozak
-- [new layout, layout selection](../Getting-Started/Screenshots.md) @MilosKozak
+- utilisation de modules pour les pompes Dana @MilosKozak
+- [nouvelle mise en page, selection de thème](../Getting-Started/Screenshots.md) @MilosKozak
 - new [status lights layout](Preferences-status-lights) @MilosKozak
 - [multiple graphs support](Screenshots-section-f-main-graph) @MilosKozak
-- [Profile helper](../Configuration/profilehelper.md) @MilosKozak
+- [Assistant Profil](../Configuration/profilehelper.md) @MilosKozak
 - visualization of [dynamic target adjustment](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
-- new [preferences layout](../Configuration/Preferences.md) @MilosKozak
-- SMB algorithm update @Tornado-Tim
+- nouvelle [mise en page des préférences](../Configuration/Preferences.md) @MilosKozak
+- Mise à jour de l'algorithme SMB @Tornado-Tim
 - [Low glucose suspend mode](Preferences-aps-mode) @Tornado-Tim
 - [carbs required notifications](Preferences-carb-required-notification) @twain47 @Tornado-Tim
 - removed Careportal (moved to Actions) @MilosKozak
-- [new encrypted backup format](../Usage/ExportImportSettings.md) @dlvoy
-- [new SMS TOTP authentication](../Children/SMS-Commands.md) @dlvoy
+- [nouveau format chiffré des sauvegardes](../Usage/ExportImportSettings.md) @dlvoy
+- [nouvelle authentication SMS TOTP](../Children/SMS-Commands.md) @dlvoy
 - [new SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) commands @Lexsus
-- better support for tiny basals on Dana pumps @Mackwe
-- small Insight fixes @TebbeUbben @MilosKozak
+- meilleure prise en charge des petits débits de basale sur les pompes Dana @Mackwe
+- petits correctifs Insight @TebbeUbben @MilosKozak
 - ["Default language" option](Preferences-general) @MilosKozak
-- vector icons @Philoul
+- icônes vectorielles @Philoul
 - [set neutral temps for MDT pump](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
 - History browser improvements @MilosKozak
 - removed OpenAPS MA algorithm @Tornado-Tim
