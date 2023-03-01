@@ -57,14 +57,14 @@ Date de sortie : XX-XX-2023
 - Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
 - Tidepool peut être utilisé à la place de NS pour passer le premier objectif
 - Si vous envoyez à xDrip+, vous devez configurer le plugin de synchronisation xDrip. Afin de transférer les glycémies d'AAPS vers xDrip, il doit être sélectionné comme source "xDrip+ Sync Follower"
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
+- Si vous voulez basculer vers le pilote ComboV2, Ruffy doit être désinstallé et la pompe doit être à nouveau appairée à AAPS
 
 
 ### Modifications
 
 - EOPatch2 / GlucomenDay pilote pompe @jungsomyeonggithub @MilosKozak
 - Pilote pompe ComboV2 (pas besoin de Ruffy) @dv1
-- Korean DanaI support @MilosKozak
+- * Support de DanaI coréenne @MilosKozak
 - Support du MGC Glunovo @christinadamianou
 - Support G7 @MilosKozak @rICTx-T1D @khskekec
 - Plugin NSClient v3 @MilosKozak
@@ -227,7 +227,7 @@ Date de sortie : 12-01-2021
 - RileyLink, Omnipod et la pompe MDT améliorations et corrections
 - NS_UPLOAD_ONLY forcé
 - correction pour SMB & appli. Dexcom
-- watchface fixes
+- Correctif Cadran wear
 - rapport de plantage amélioré
 - gradle restauré pour permettre l'installation directe des cadrans de montres
 - corrections de l'automatisation
@@ -255,13 +255,13 @@ Date de sortie : 01-01-2021
 - [Nouveau cadran](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Améliorations de la connexion Dana RS @MilosKozak
 - Suppression de "Valeurs MGC inchangées" pour les SMB pour l'application native Dexcom
-- New [Low Ressolution Skin](Preferences-skin)
-- New ["Pregnant" patient type](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
+- Nouveau thème [Basse résolution](Preferences-skin)
+- Nouveau type de patient ["Grossesse"](Open-APS-features-overview-of-hard-coded-limits) @Brian Quinion
 - Nouvelle présentation tablette de NSClient @MilosKozak
 - NSClient transfert des paramètres insuline, sensibilité et les paramètres d'affichage directement à partir de l'écran principal AAPS @MilosKozak
 - [Filtre des préférences](../Configuration/Preferences.md) @Brian Quinion
 - Nouvelles icônes de pompe @Rig22 @teleriddler @osodebailar
-- New [insulin type Lyumjev](Config-Builder-lyumjev)
+- Nouveau [type d'insuline Lyumjev](Config-Builder-lyumjev)
 - Améliorations de l'assistant de configuration @MilosKozak
 - Améliorations de la sécurité @dlvoy
 - Améliorations diverses et correctifs @AdrianLxM @Philoul @swissalpine  @MilosKozak @Brian Quinion
@@ -271,168 +271,168 @@ Date de sortie : 01-01-2021
 
 Date de sortie : 24-09-2020
 
-**Make sure to check and adjust settings after updating to 2.7 as described** [here](../Installing-AndroidAPS/update2_7.md).
+**Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit ici** [ici](../Installing-AndroidAPS/update2_7.md).
 
-You need at least start [objective 11 (in later versions objective 10!)](Objectives-objective-10-automation) in order to continue using [Automation feature](../Usage/Automation.md) (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in [objective 3](Objectives-objective-3-prove-your-knowledge) yet, you will have to complete the exam before you can start [objective 11](Objectives-objective-10-automation). Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'[objectif 10 (objectif 11 dans les anciennes versions)](Objectives-objective-10-automation) afin de continuer à utiliser la [fonction d'automatisation](../Usage/Automation.md) (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 10 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'[objectif 3](Objectives-objective-3-prove-your-knowledge) , vous devrez terminer l'examen avant de pouvoir commencer l'[objectif 10](Objectives-objective-10-automation). Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 ### Nouvelles fonctionnalités majeures
 
-- internal use of dependency injection, updates libraries, code rewritten to kotlin @MilosKozak @AdrianLxM
+- utilisation interne de l'injection de dépendance, bibliothèques mises à jour, code réécrit en kotlin @MilosKozak @AdrianLxM
 - utilisation de modules pour les pompes Dana @MilosKozak
 - [nouvelle mise en page, selection de thème](../Getting-Started/Screenshots.md) @MilosKozak
-- new [status lights layout](Preferences-status-lights) @MilosKozak
-- [multiple graphs support](Screenshots-section-f-main-graph) @MilosKozak
+- nouvelle [mise en page des voyants d'états](Preferences-status-lights) @MilosKozak
+- [support de graphiques multiples](Screenshots-section-f-main-graph) @MilosKozak
 - [Assistant Profil](../Configuration/profilehelper.md) @MilosKozak
-- visualization of [dynamic target adjustment](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
+- visualisation du [réglage dynamique de la cible](Screenshots-visualization-of-dynamic-target-adjustment) @Tornado-Tim
 - nouvelle [mise en page des préférences](../Configuration/Preferences.md) @MilosKozak
 - Mise à jour de l'algorithme SMB @Tornado-Tim
-- [Low glucose suspend mode](Preferences-aps-mode) @Tornado-Tim
-- [carbs required notifications](Preferences-carb-required-notification) @twain47 @Tornado-Tim
-- removed Careportal (moved to Actions) @MilosKozak
+- [Mode Arrêt Glycémie Basse](Preferences-aps-mode) @Tornado-Tim
+- [notifications glucides requis](Preferences-carb-required-notification) @twain47 @Tornado-Tim
+- Careportal supprimé (déplacé vers Actions) @MilosKozak
 - [nouveau format chiffré des sauvegardes](../Usage/ExportImportSettings.md) @dlvoy
 - [nouvelle authentication SMS TOTP](../Children/SMS-Commands.md) @dlvoy
-- [new SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) commands @Lexsus
+- [nouvelles commandes SMS PUMP CONNECT, DISCONNECT](SMS-Commands-commands) @Lexsus
 - meilleure prise en charge des petits débits de basale sur les pompes Dana @Mackwe
 - petits correctifs Insight @TebbeUbben @MilosKozak
-- ["Default language" option](Preferences-general) @MilosKozak
+- option ["Langue par défaut"](Preferences-general) @MilosKozak
 - icônes vectorielles @Philoul
-- [set neutral temps for MDT pump](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
-- History browser improvements @MilosKozak
-- removed OpenAPS MA algorithm @Tornado-Tim
-- removed Oref0 sensitivity @Tornado-Tim
-- [Biometric or password protection](Preferences-protection) for settings, bolus @MilosKozak
-- [new automation trigger](../Usage/Automation.md) @PoweRGbg
-- [Open Humans uploader](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
-- New documentation @Achim
+- [définir une basal temp neutre pour les pompes MDT](MedtronicPump-configuration-of-the-pump) @Tornado-Tim
+- amélioration de l'Historique @MilosKozak
+- suppression de l'algorithme OpenAPS MA @Tornado-Tim
+- suppression de la sensibilité Oref0 @Tornado-Tim
+- [protection biométrique ou par mot de passe](Preferences-protection) pour les paramètres, bolus @MilosKozak
+- [nouveau déclencheur d'automatisation](../Usage/Automation.md) @PoweRGbg
+- [Téléversement Open Humans](../Configuration/OpenHumans.md) @TebbeUbben @AdrianLxM
+- Nouvelle documentation @Achim
 
 (Releasenotes-version-2-6-1-4)=
 ## Version 2.6.1.4
 
 Date de sortie : 04-05-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Insight: Disable vibration on bolus for firmware version 3 - second attempt
-- Otherwise is equal to 2.6.1.3. La mise à jour est facultative.
+- Insight: Désactivation de la vibration sur bolus pour le firmware version 3 - Deuxième tentative
+- Sinon, identique à 2.6.1.3. La mise à jour est facultative.
 
 ## Version 2.6.1.3
 
 Date de sortie : 03-05-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Insight: Disable vibration on bolus for firmware version 3
-- Otherwise is equal to 2.6.1.2. La mise à jour est facultative.
+- Insight: Désactivation de la vibration sur bolus pour le firmware version 3
+- Sinon, identique à 2.6.1.2. La mise à jour est facultative.
 
 ## Version 2.6.1.2
 
 Date de sortie : 19-04-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Fix crashing in Insight service
-- Otherwise is equal to 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
+- Correction du plantage dans le service Insight
+- Sinon, identique à 2.6.1.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
 ## Version 2.6.1.1
 
 Date de sortie : 06-04-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Resolves SMS CARBS command issue while using Combo pump
-- Otherwise is equal to 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
+- Résout le problème de commande SMS CARBS avec la pompe Combo
+- Sinon, identique à 2.6.1. Si vous n'êtes pas affecté par ce bug, vous n'avez pas besoin de mettre à niveau.
 
 ## Version 2.6.1
 
 Date de sortie : 21-03-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Allow to enter only `https://` in NSClient settings
-- Fixed [BGI](../Getting-Started/Glossary.md) displaying bug on watches
-- Fixed small UI bugs
-- Fixed Insight crashes
-- Fixed future carbs with Combo pump
-- Fixed [LocalProfile -> NS sync](Config-Builder-upload-local-profiles-to-nightscout)
-- Insight alerts improvements
-- Improved detection of boluses from pump history
-- Fixed NSClient connection settings (wifi, charging)
-- Fixed sending of calibrations to xDrip
+- Permet de ne rentrer que `https://` dans les paramètres NSClient
+- Correction bug d'affichage [Impact Glycémique](../Getting-Started/Glossary.md) sur les montres
+- Correction de petits bugs de l'interface utilisateur
+- Correction plantages Insight
+- Correction glucides futurs avec pompe Combo
+- Correction [Profil Local -> NS sync](Config-Builder-upload-local-profiles-to-nightscout)
+- Amélioration des alertes Insight
+- Amélioration de la détection des bolus depuis l'historique de la pompe
+- Correction des paramètres de connexion NSClient (wifi, en charge)
+- Correction de l'envoi des calibrations vers xDrip
 
 (Releasenotes-version-2-6-0)=
 ## Version 2.6.0
 
 Date de sortie : 29-02-2020
 
-Please use [Android Studio 3.6.1](https://developer.android.com/studio/) or newer to build the apk.
+Utilisez [Android Studio 3.6.1](https://developer.android.com/studio/) ou une version plus récente pour construire l'apk.
 
 ### Nouvelles fonctionnalités majeures
 
-- Small design changes (startpage...)
+- Petites modifications de l'affichage (page d'accueil...)
 
-- Careportal tab / menu removed - more details [here](../Usage/CPbefore26.md)
+- Onglet/Menu Careportal supprimé - plus de détails [ici](../Usage/CPbefore26.md)
 
-- New [Local Profile plugin](Config-Builder-local-profile)
+- Nouveau [Plugin Profil Local](Config-Builder-local-profile)
 
-  - Local profile can hold more than 1 profile
-  - Profiles can be cloned and edited
-  - Ability of upload profiles to NS
-  - Old profile switches can be cloned to new profile in LocalProfile (timeshift and percentage is applied)
-  - Veritical NumberPicker for targets
+  - Le profil local peut contenir plusieurs profils
+  - Les profils peuvent être dupliqués et modifiés
+  - Possibilité de télécharger les profils vers NS
+  - Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
+  - Sélecteur pour les cibles temps
 
-- SimpleProfile is removed
+- Le Profil Simple est supprimé
 
-- [Extended bolus](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) feature - closed loop will be disabled
+- [Bolus étendu](Extended-Carbs-extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only) - la boucle fermée sera désactivée
 
-- MDT plugin: Fixed bug with duplicated entries
+- Plugin MDT : Correction du bug entrées dupliquées
 
-- Units are not specified in profile but it's global setting
+- Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 
-- Added new settings to startup wizard
+- Ajout de nouveaux paramètres à l'assistant de démarrage
 
-- Different UI and internal improvements
+- Diverses améliorations internes et de l'interface
 
-- [Wear complications](../Configuration/Watchfaces.md)
+- [Complications Montre](../Configuration/Watchfaces.md)
 
-- New [SMS commands](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
+- Nouvelles [commandes SMS](../Children/SMS-Commands.md) BOLUS-MEAL, SMS, CARBS, TARGET, HELP
 
-- Fixed language support
+- Correction de la prise en charge des langues
 
-- Objectives: [Allow to go back](Objectives-go-back-in-objectives), Time fetching dialog
+- Objectifs : [Possibilité de faire un retour arrière](Objectives-go-back-in-objectives), fenêtre de navigation entre objectifs
 
-- Automation: [allow sorting](Automation-sort-automation-rules)
+- Automatisation : [Possibilité de trier](Automation-sort-automation-rules)
 
-- Automation: fixed bug when automation was running with disabled loop
+- Automatisation : correction de bug quand l'automatisation fonctionnait avec une boucle désactivée
 
-- New status line for Combo
+- Nouvelle ligne d'état pour la Combo
 
-- GlucoseStatus improvement
+- Amélioration de l'état des Glucides
 
-- Fixed TempTarget NS sync
+- Correction synchronisation Cibles Temp avect NS
 
-- New statistics activity
+- Nouvelle activité Statistiques
 
-- Allow Extended bolus in open loop mode
+- Bolus étendus autorisés en mode boucle ouverte
 
-- Android 10 alarm support
+- Support des alarmes Android 10
 
-- Tons on new translations
+- Des tonnes de nouvelles traductions
 
 ## Version 2.5.1
 
 Date de sortie : 31-10-2019
 
-Please note the [important notes](Releasenotes-important-notes-2-5-0) and [limitations](Releasenotes-is-this-update-for-me-currently-is-not-supported) listed for [version 2.5.0](Releasenotes-version-2-5-0). \* Fixed a bug in the network state receiver that lead to crashes with many (not critical but would waste a lot of energy re-calculating things). \* New versioning that will allow to do minor updates without triggering the update-notification.
+Veuillez lire les [Remarques importantes](Releasenotes-important-notes-2-5-0) et [limitations](Releasenotes-is-this-update-for-me-currently-is-not-supported) listées pour la [version 2.5.0](Releasenotes-version-2-5-0). \* Correction d'un bug dans le statut du réseau qui entraînait des plantages fréquent (pas critique mais gaspillerait beaucoup d'énergie). \* Nouvelle gestion des versions qui permettra de faire des mises à jour mineures sans déclencher la notification de mise à jour.
 
 (Releasenotes-version-2-5-0)=
 ## Version 2.5.0
@@ -443,34 +443,34 @@ Date de sortie : 26-10-2019
 
 ### Remarques importantes
 
-- Please use [Android Studio Version 3.5.1](https://developer.android.com/studio/) or newer to [build the apk](../Installing-AndroidAPS/Building-APK.md) or [update](../Installing-AndroidAPS/Update-to-new-version.html).
-- If you are using xDrip [identify receiver](xdrip-identify-receiver) must be set.
-- If you are using Dexcom G6 with the patched Dexcom app you will need the version from the [2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
-- Glimp is supported from version 4.15.57 and newer.
+- Veuillez utiliser [Android Studio Version 3.5.1](https://developer.android.com/studio/) ou plus récent pour [construire l'apk](../Installing-AndroidAPS/Building-APK.md) ou le [mettre à jour](../Installing-AndroidAPS/Update-to-new-version.html).
+- Si vous utilisez xDrip [identify receiver](xdrip-identify-receiver) doit être défini.
+- Si vous utilisez le Dexcom G6 avec l'application Dexcom patchée, vous aurez besoin de la version présente dans le [dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4).
+- Glimp est pris en charge à partir de la version 4.15.57 et plus récente.
 
 (Releasenotes-is-this-update-for-me-currently-is-not-supported)=
 ### Cette mise à jour est-elle pour moi? N'est actuellement PAS pris en charge
 
-- Android 5 and lower
+- Android 5 and inférieurs
 - Poctech
 - 600SeriesUploader
-- Patched Dexcom from 2.3 directory
+- Dexcom patchés présents dans le répertoire 2.3
 
 ### Nouvelles fonctionnalités majeures
 
-- Internal change of targetSDK to 28 (Android 9), jetpack support
-- RxJava2, Okhttp3, Retrofit support
-- Old [Medtronic pumps](../Configuration/MedtronicPump.md) support (RileyLink need)
-- New [Automation plugin](../Usage/Automation.md)
-- Allow to [bolus only part](Preferences-advanced-settings-overview) from bolus wizard calculation
-- Rendering insulin activity
-- Adjusting IOB predictions by autosens result
-- New support for patched Dexcom apks ([2.4 folder](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
-- Signature verifier
-- Allow to bypass objectives for OpenAPS users
-- New [objectives](../Usage/Objectives.md) - exam, application handling (If you started at least objective "Starting on an open loop" in previous versions exam is optional.)
-- Fixed bug in Dana\* drivers where false time difference was reported
-- Fixed bug in [SMS communicator](../Children/SMS-Commands.md)
+- Changement interne de targetSDK à 28 (Android 9), prise en charge de jetpack
+- Prise en charge de RxJava2, Okhttp3, Retrofit
+- Support des anciennes [pompes Medtronic](../Configuration/MedtronicPump.md) (besoin de RileyLink)
+- Nouveau [plugin d'Automatisation](../Usage/Automation.md)
+- Autoriser [uniquement la partie bolus](Preferences-advanced-settings-overview) à partir de l'assistant bolus (calculatrice)
+- Affichage de l'activité de l'insuline
+- Ajustement des prévisions de l'IA par le résultat autosens
+- Nouveau support pour les apk des applications Dexcom patchées ([dossier 2.4](https://github.com/dexcomapp/dexcomapp/tree/master/2.4))
+- Vérificateur de signature
+- Autorisation de contourner les objectifs pour les utilisateurs d'OpenAPS
+- Nouveau [objectifs](../Usage/Objectives.md) - examen de connaissance de l'application (Si vous avez au minimum démarré l'objectif "Démarrer une boucle ouverte" dans les versions précédentes, l'examen est optionnel.)
+- Correction d'un bug dans les pilotes Dana\*, où une différence de temps erronée a été signalée
+- Correction d'un bug dans le [communicateur SMS](../Children/SMS-Commands.md)
 
 ## Version 2.3
 
@@ -478,15 +478,15 @@ Date de sortie : 25-04-2019
 
 ### Nouvelles fonctionnalités majeures
 
-- Important safety fix for Insight (really important if you use Insight!)
-- Fix History-Browser
-- Fix delta calculations
-- Language updates
-- Check for GIT and warn on gradle upgrade
-- More automatic testing
-- Fixing potential crash in AlarmSound Service (thanks @lee-b !)
-- Fix broadcast of BG data (works independently of SMS permission now!)
-- New Version-Checker
+- Correctif de sécurité important pour Insight (vraiment important si vous utilisez Insight !)
+- Correctif du Navigateur-Historique
+- Correction des Calculs Delta
+- Mises à jour des langues
+- Vérification de GIT et avertissement de la mise à niveau gradle
+- Plus de tests automatiques
+- Correction d'un crash potentiel dans le service d'Alarm Sonore (merci @lee-b !)
+- Correction de la diffusion de données Gly (fonctionne indépendamment des droits SMS maintenant !)
+- Nouveau vérificateur de version
 
 ## Version 2.2.2
 
@@ -494,10 +494,10 @@ Date de sortie : 07-04-2019
 
 ### Nouvelles fonctionnalités majeures
 
-- Autosens fix: deactivate TT raises/lowers target
-- New translations
-- Insight driver fixes
-- SMS plugin fix
+- Correctif Autosens : désactiver CT réhausse/diminue la cible
+- Nouvelles traductions
+- Correctifs du pilote Insight
+- Correctif plugin SMS
 
 ## Version 2.2
 
@@ -505,11 +505,11 @@ Date de sortie : 29-03-2019
 
 ### Nouvelles fonctionnalités majeures
 
-- [DST fix](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
-- Wear Update
-- [SMS plugin](../Children/SMS-Commands.md) update
-- Go back in objectives.
-- Stop loop if phone disk is full
+- [Correction Changement d'heure](Timezone-traveling-time-adjustment-daylight-savings-time-dst)
+- Correctif Wear
+- Mise à jour du plugin [SMS](../Children/SMS-Commands.md)
+- Retour arrière dans les Objectifs.
+- Arrêt de la boucle si le téléphone est plein
 
 ## Version 2.1
 
@@ -517,18 +517,18 @@ Date de sortie : 03-03-2019
 
 ### Nouvelles fonctionnalités majeures
 
-- [Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) support (by Tebbe Ubben and JamOrHam)
-- Status lights on main screen (Nico Schmitz)
-- Daylight saving time helper (Roumen Georgiev)
-- Fix processing profile names comming from NS (Johannes Mockenhaupt)
-- Fix UI blocking (Johannes Mockenhaupt)
-- Support for updated G5 app (Tebbe Ubben and Milos Kozak)
-- G6, Poctech, Tomato, Eversense BG source support (Tebbe Ubben and Milos Kozak)
-- Fixed disabling SMB from preferences (Johannes Mockenhaupt)
+- Support de l'[Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md) (par Tebbe Ubben et JamOrHam)
+- Voyants d'état sur l'écran principal (Nico Schmitz)
+- Aide sur les changements d'heure (Roumen Georgiev)
+- Correctif des nom de profil venant de NS (Johannes Mockenhaupt)
+- Correctifs Interface utilisateur (Johannes Mockenhaupt)
+- Support de la mise à jour G5 (Tebbe Ubben et Milos Kozak)
+- Support des sources de GLY G6, Poctech, Tomato, Eversense (Tebbe Ubben et Milos Kozak)
+- Correctifs désactivation des SMB à partir des préférences (Johannes Mockenhaupt)
 
 ### Divers
 
-- If you are using non default `smbmaxminutes` value you have to setup this value again
+- Si vous n'utilisez pas la valeur par défaut de `smbmaxminutes` vous devez configurer à nouveau cette valeur
 
 ## Version 2.0
 
@@ -536,55 +536,55 @@ Date de sortie : 03-11-2018
 
 ### Nouvelles fonctionnalités majeures
 
-- oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
-- [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
-- Setup wizard: guides you through the process of setting up AAPS
+- Support de oref1/SMB ([documentation oref1](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Assurez-vous de bien lire la documentation pour savoir ce que vous pouvez attendre des SMB, comment il fonctionne, ce qu'il peut faire et comment l'utiliser pour qu'il marche en douceur.
+- Support de la pompe [Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
+- Assistant de configuration : vous guide dans le processus de configuration d'AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Paramètres à ajuster lors du passage d'AMA à SMB
 
-- Objective 10 must be started for SMBs to be enabled (SMB tab generally shows what restrictions apply)
+- L'objectif 10 doit être démarré pour pouvoir activer les SMB (l'onglet SMB montre généralement les restrictions appliquées)
 
-- maxIOB now includes \_all\_ IOB, not just added basal. En d'autres termes, s'il y a eu un bolus de 8 U pour un repas et maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA repasse en dessous de 7 U.
+- maxIA inclu maintenant \_tous\_ les IA, plus seulement la basal ajoutée. En d'autres termes, s'il y a eu un bolus de 8 U pour un repas et maxIA est à 7 U, aucun SMB ne sera délivré jusqu'à ce que l'IA repasse en dessous de 7 U.
 
-- min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement
+- la valeur par défaut de min_5m_carbimpact est passée de 3 à 8 entre AMA et SMB. Si vous passez de AMA vers SMB, vous devez la modifier manuellement
 
-- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
+- Remarque lors de la construction de l'apk d'AAPS 2.0 : Configuration on demand n'est pas supporté par la version actuelle du plugin Android Gradle ! Si votre construction échoue avec une erreur concernant la "configuration sur demande", faites les actions suivantes :
 
-  - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
-  - In the left pane, click Build, Execution, Deployment > Compiler.
-  - Uncheck the Configure on demand checkbox.
-  - Click Apply or OK.
+  - Ouvrez la fenêtre Préférences en cliquant sur File > Settings (sur Mac, Android Studio > Preferences).
+  - Dans le panneau de gauche, cliquez sur Build, Execution, Deployment > Compiler.
+  - Décochez la case Configure on demand.
+  - Cliquez sur Appliquer ou OK.
 
 (Releasenotes-overview-tab)=
 ### Onglet Aperçu (Accueil)
 
-- Top ribbon gives access to suspend/disable loop, view/adjust profile and to start/stop temporary targets (TTs). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
-- Treatment buttons: old treatment button still available, but hidden by default. La visibilité des boutons peut maintenant être configurée. New insulin button, new carbs button (including [eCarbs/extended carbs](../Usage/Extended-Carbs.md))
-- [Colored prediction lines](../Getting-Started/Screenshots-prediction-lines)
-- Option to show a notes field in insulin/carbs/calculator/prime+fill dialogs, which are uploaded to NS
-- Updated prime/fill dialog allows priming and creating careportal entries for site change and cartridge change
+- Le ruban du haut donne accès à Suspendre/Désactiver la boucle, consulter/changer le profil et démarrer/arrêter les cibles temp. (CT). Les CT utilisent des paramètres par défauts configurés dans les préférences. La nouvelle option CT Hypo est une cible temp. haute pour empêcher la boucle de corriger trop agressivement les glucides de secours.
+- Boutons de traitement : l'ancien bouton de traitement est encore disponible, mais masqué par défaut. La visibilité des boutons peut maintenant être configurée. Ajout de deux nouveaux boutons insuline et glucides (qui inclut [eGluc/glucides étendus](../Usage/Extended-Carbs.md))
+- [Lignes de prédiction colorées](../Getting-Started/Screenshots-prediction-lines)
+- Option pour afficher un champ de notes dans les boites de dialogue insuline/glucides/calculatrice et amorcer+remplir, qui sont téléchargées dans NS
+- Mise à jour de la boîte de dialogue amorcer/remplir qui permet l'amorçage et créé une entrée Careportal pour le changement de site et le changement de cartouche
 
 ### Montre
 
-- Separate build variant dropped, included in regular full build now. Pour utiliser des commandes bolus à partir de la montre, activez ce paramètre sur le téléphone
-- Wizard now only asks for carbs (and percentage if enabled in watch settings). Les paramètres pris en comptes dans le calcul peuvent être configurés dans les paramètres du téléphone
-- confirmations and info dialogs now work on wear 2.0 as well
-- Added eCarbs menu entry
+- Variante séparée de compilation supprimée, incluse maintenant dans la version complète standard. Pour utiliser des commandes bolus à partir de la montre, activez ce paramètre sur le téléphone
+- L'assistant ne demande maintenant que les glucides (et le pourcentage s'il est activé dans les paramètres de la montre). Les paramètres pris en comptes dans le calcul peuvent être configurés dans les paramètres du téléphone
+- les confirmations et boîtes de dialogue fonctionnent maintenant sous wear OS 2.0
+- Ajout des eGlucides dans le menu
 
 ### Nouveaux plugins
 
-- PocTech app as BG source
-- Dexcom patched app as BG source
-- oref1 sensitivity plugin
+- Application PocTech en tant que source GLY
+- Application Dexcom patchée en tant que source GLY
+- plugin de sensibilité oref1
 
 ### Divers
 
-- App now uses drawer to show all plugins; plugins selected as visible in config builder are shown as tabs on top (favourites)
-- Overhaul for config builder and objectives tabs, adding descriptions
-- New app icon
-- Lots of improvements and bugfixes
-- Nightscout-independent alerts if pump is unreachable for a longer time (e.g. depleted pump battery) and missed BG readings (see *Local alerts* in settings)
-- Option to keep screen on
-- Option to show notification as Android notification
-- Advanced filtering (allowing to always enable SMB and 6h after meals) supported with patched Dexcom app or xDrip with G5 native mode as BG source.
+- L'application utilise maintenant des tiroirs pour afficher tous les plugins; les plugins sélectionnés comme visibles dans le générateur de configuration sont affichés en tant qu'onglet en haut de l'écran (favoris)
+- Remplacement des onglets de la Configuration et des objectifs, ajout de descriptions
+- Nouvelle icône d'application
+- Beaucoup d'améliorations et de correctifs
+- Alerte indépendante de Nightscout si la pompe est injoignable pendant une durée longue (par ex. si la pile de la pompe est à plat) et pour des lectures de GLY manquées (voir *Alertes locales* dans les paramètres)
+- Option pour garder l'écran allumé
+- Option pour afficher les notifications AAPS comme des notifications Android
+- Filtrage avancé (permettant de toujours activer SMB et pendant 6h après les repas) pris en charge avec l'application Dexcom patchée ou xDrip+ avec le mode natif G5 en tant que source GLY.
