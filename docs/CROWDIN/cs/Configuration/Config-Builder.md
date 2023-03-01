@@ -16,7 +16,7 @@ Pokud má modul další dodatečná nastavení, dostanete se k nim kliknutím na
 
 ## Záložka nebo hamburger menu
 
-With the checkbox under the eye symbol you can decide how to open the corresponding program section.
+Pomocí zaškrtávacího políčka pod symbolem oka se můžete rozhodnout, jak chcete otevírat odpovídající sekci programu.
 
 ![Záložka nebo hamburger menu](../images/ConfBuild_TabOrHH_AAPS30.png)
 
@@ -27,29 +27,29 @@ With the checkbox under the eye symbol you can decide how to open the correspond
 * Vyberte bazální profil, který chcete použít. Viz stránka [Profily](../Usage/Profiles.md) pro další informace o nastavení.
 * Od AAPS 3.0 je k dispozici pouze lokální profil.
 
-However, it is possible to synchronise a Nightscout profile into a local profile. To do this, however, it is important to clone the whole database record consisting of several profiles in the Nightscout editor. Please see the instructions below. This can be helpful if major changes to a more extensive profile can be entered more easily via the web interface, e.g. to manually copy data from a spreadsheet.
+Nicméně i nadále je možné synchronizovat Nightscout profil do lokálního profilu. Za tímto účelem je však důležité naklonovat celý záznam sestávající z několika profilů v Nightscoutu. Podívejte se prosím na níže uvedené pokyny. Zadání změny prostřednictvím webového rozhraní může být užitečné v případě, že se jedná o velmi rozsáhlé změny profilu, např. ruční zkopírování dat z tabulky.
 
 (Config-Builder-local-profile)=
 
 ### Místní profil
 
-Local profile uses the basal profile manually entered in phone. As soon as it is selected, a new tab appears in AAPS, where you can change the profile data read out from the pump if necessary. With the next profile switch they are then written to the pump in profile 1. This profile is recommended as it does not rely on internet connectivity.
+Místní profil používá bazální profil zapsaný přímo do telefonu. Po jeho vybrání se v AAPS objeví nová záložka, kde si můžete profil upravovat. Ten je pak v případě potřeby načten pumpou. Při přepnutí profilu je uložen do pumpy jako profil 1. Tento profil je doporučen, protože nevyžaduje připojení k internetu.
 
-Your local profiles are part of [exported settings](../Usage/ExportImportSettings.md). So make sure to have a backup in a safe place.
+Vaše místní profily jsou součástí [exportovaného nastavení](../Usage/ExportImportSettings.md). Proto se ujistěte, že máte zálohu bezpečně uloženou.
 
-![Local Profile settings](../images/LocalProfile_Settings.png)
+![Nastavení Místního profilu](../images/LocalProfile_Settings.png)
 
-Buttons:
+Tlačítka:
 
 * zelené plus: přidat
 * červené X: odstranit
 * modrá šipka: kopírovat
 
-If you make any changes to your profile, make sure, you are editing the correct profile. In profile tab there is not always shown the actual profile being used - e.g. if you made a profile switch by using the profile tab on homescreen it may differ from the profile actually shown in profile tab as there is no connection between these.
+Děláte-li v profilu nějaké změny, ujistěte se, že upravujete správný profil. Na záložce profilu nemusí být pokaždé zobrazen aktuální profil. Například když na domovské obrazovce přepnete přes záložku profilu na jiný profil, může pak být aktuální profil odlišný od toho, který je zobrazen v záložce profil, protože mezi nimi není žádné spojení.
 
 #### Klonování přepnutí profilu
 
-You can easily create a new local profile from a profile switch. In this case timeshift and percentage will be applied to the new local profile.
+Z přepnutí profilu můžete snadno vytvořit nový místní profil. Posun času a procentuální změna budou v takovém případě přeneseny do nového místního profilu.
 
 1. Klikněte na 3 tečky v pravém horním rohu.
 2. Vyberte „Ošetření“.
@@ -63,32 +63,32 @@ You can easily create a new local profile from a profile switch. In this case ti
 
 #### Nahrávání místních profilů do Nighscoutu
 
-Local profiles can also be uploaded to Nightscout. The settings can be found in [NSClient preferences](Preferences-nsclient).
+Místní profily lze také nahrát do Nightscoutu. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
 
-![Upload local profile to NS](../images/LocalProfile_UploadNS_AASP30.png)
+![Nahrávání místního profilu do Nighscoutu](../images/LocalProfile_UploadNS_AASP30.png)
 
 #### Změna profilu v Nightscout editoru profilu
 
-You can synchronoze changes to the profile in the Nighscout profile editor to local profiles. The settings can be found in [NSClient preferences](Preferences-nsclient).
+Změny provedené v Nightscout editoru profilu můžete synchronizovat do místního profilu. Nastavení najdete v [nastavení NSClientu](Preferences-nsclient).
 
-It is necessary to clone the actual active entire Nightscout database records for the profiles and not just a profile with the blue arrow! The new database records then carries the current date and can be activated via the tab "local profile".
+Je nezbytné naklonovat všechny aktuální aktivní záznamy v databázi Nightscout, a ne pouze profil s modrou šipkou! Nové databázové záznamy pak obsahují aktuální datum a lze je aktivovat pomocí záložky "místní profil".
 
-![Clone database records](../images/Nightscout_Profile_Editor.PNG)
+![Klonovat databázové záznamy](../images/Nightscout_Profile_Editor.PNG)
 
 ### Pomocník s profilem
 
-Profile helper offers two functions:
+Pomocník s profilem nabízí dvě funkce:
 
 1. Najít profil pro děti
 2. Porovnání dvou profilů nebo přepnutí profilů za účelem naklonování nového profilu
 
-Details are explained on the separate [profile helper page](../Configuration/profilehelper.md).
+Podrobnosti jsou vysvětleny na stránce nápovědy [pomocník s profilem](../Configuration/profilehelper.md).
 
 (Config-Builder-insulin)=
 
 ## Inzulín
 
-![Insulin type](../images/ConfBuild_Insulin_AAPS30.png)
+![Typ inzulínu](../images/ConfBuild_Insulin_AAPS30.png)
 
 * Vyberte typ inzulínové křivky, kterou používáte.
 * Všechny varianty „Rychle působící Oref“, „Ultra rychlý Oref“, „Lyumjev“ a „Volitelný vrchol Oref“ mají exponenciální tvar. Více informací najdete v [dokumentaci k OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/understanding-insulin-on-board-calculations.html#understanding-the-new-iob-curves-based-on-exponential-activity-curves). 
@@ -102,18 +102,18 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 * Hodnota DIA není u každého člověka stejná. Proto si ji musíte vyzkoušet sami na sobě. 
 * Vždy to však musí být alespoň 5 hodin.
 * Pro velké množství lidí nemá ultra-rychlý inzulin jako Fiasp po 3–4 hodinách prakticky žádné znatelné účinky, i když fakticky zbývá cca 0,0xx jednotky. Nicméně i toto zbytkové množství může mít vliv například při sportu. Proto AndroidAPS používá jako minimální hodnotu DIA 5 h.
-* You can read more about that in the Insulin Profile section of [this](Screenshots-insulin-profile) page.
+* Další informace o tom si můžete přečíst v části Inzulinový profil na [ této ](Screenshots-insulin-profile) stránce.
 
 ### Rozdíly v typu inzulínu
 
 * Pro „Rychle působící“ a „Ultra rychlý“ a „Lyumjev“ inzulín je DIA jediná proměnná, kterou si můžete upravovat. Doba maximální účinnosti je fixní. 
 * „Volitelný vrchol“ umožňuje nastavit obě proměnné – DIA i dobu maximální účinnosti inzulínu. Tato volba je určena pouze pro pokročilé uživatele, kteří znají důsledky nastavených hodnot. 
-* The [insulin curve graph](Screenshots-insulin-profile) helps you to understand the different curves.
+* Graf [ Křivka inzulínu ](Screenshots-insulin-profile) pomáhá pochopit různé křivky.
 * Zaškrtnutím čtverečku vedle názvu si je můžete prohlédnout v záložce. Další možnost jejich zobrazení je přes hamburgerové menu.
 
 #### Rychle působící - Oref
 
-![Insulin type Rapid-Acting Oref](../images/ConfBuild_Insulin_RAO.png)
+![Typ inzulinu Rychle působící – Oref](../images/ConfBuild_Insulin_RAO.png)
 
 * doporučeno pro Humalog, Novolog a Novorapid
 * DIA = alespoň 5 h
@@ -121,7 +121,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 #### Ultra rychlý - Oref
 
-![Insulin type Ultra-Rapid Oref](../images/ConfBuild_Insulin_URO.png)
+![Typ inzulinu Ultra rychlý – Oref](../images/ConfBuild_Insulin_URO.png)
 
 * doporučeno pro FIASP
 * DIA = alespoň 5 h
@@ -131,7 +131,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 #### Lyumjev
 
-![Insulin type Lyumjev](../images/ConfBuild_Insulin_L.png)
+![Typ inzulinu Lyumjev](../images/ConfBuild_Insulin_L.png)
 
 * speciální inzulínový profil pro Lyumjev
 * DIA = alespoň 5 h
@@ -139,7 +139,7 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 #### Volitelný vrchol Oref
 
-![Insulin type Free Peak Oref](../images/ConfBuild_Insulin_FPO.png)
+![Typ inzulinu Volitelný vrchol – Oref](../images/ConfBuild_Insulin_FPO.png)
 
 * V profilu „Volitelný vrchol 0ref“ můžete ručně zadat dobu max. účinku inzulínu. Chcete-li tak učinit, klikněte pro přístup k rozšířenému nastavení na ozubené kolečko.
 * Pokud není v profilu zadána vyšší hodnota, je DIA je automaticky nastaveno na 5 h.
@@ -149,12 +149,12 @@ Details are explained on the separate [profile helper page](../Configuration/pro
 
 ## Zdroj glykémií
 
-Select the blood glucose source you are using - see [BG Source](BG-Source.md) page for more setup information.
+Vyberte jaký zdroj glykémií používáte. Viz stránka [Zdroj glykémie](BG-Source.md) pro další informace o nastavení.
 
-![Config Builder BG source](../images/ConfBuild_BGSource_AAPS30.png)
+![Konfigurace zdroje glykémie](../images/ConfBuild_BGSource_AAPS30.png)
 
 * [Sestav si vlastní Dexcom aplikaci (BYODA)](https://docs.google.com/forms/d/e/1FAIpQLScD76G0Y-BlL4tZljaFkjlwuqhT83QlFM5v6ZEfO7gCU98iJQ/viewform?fbzx=2196386787609383750&fbclid=IwAR2aL8Cps1s6W8apUVK-gOqgGpA-McMPJj9Y8emf_P0-_gAsmJs6QwAY-o0).
-* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) - Cannot be used as receiver for Dexcom G6 as of AAPS 3.0 (see [release notes](Releasenotes-important-hints-3-0-0) for details.
+* [xDrip+](https://xdrip-plus-updates.appspot.com/stable/xdrip-plus-latest.apk) – od AndroidAPS verze 3.0 již nelze použít jako zdroj glykémií z Dexcom G6 (detaily viz [poznámky k vydání](Releasenotes-important-hints-3-0-0).
 * [MM640g](https://github.com/pazaan/600SeriesAndroidUploader/releases)
 * [Glimp](https://play.google.com/store/apps/details?id=it.ct.glicemia&hl=de) - jsou podporovány pouze verze 4.15.57 a novější
 * [Poctech](https://www.poctechcorp.com/en/contents/268/5682.html)
@@ -167,9 +167,9 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## Pumpa
 
-Select the pump you are using.
+Vyberte, kterou pumpu používáte.
 
-![Config Builder Pump selection](../images/ConfBuild_Pump_AAPS30.png)
+![Konfigurace – výběr pumpy](../images/ConfBuild_Pump_AAPS30.png)
 
 * [Dana R](DanaR-Insulin-Pump.md)
 * DanaR Korea (pro korejskou verzi pumpy DanaR)
@@ -191,7 +191,7 @@ Select the pump you are using.
 
 ## Detekce citlivosti
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+Vyberte variantu detekce citlivosti. Další detaily o různých modelech si můžete [přečíst zde](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
 
