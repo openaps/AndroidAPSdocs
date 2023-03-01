@@ -853,7 +853,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and click on the <strong x-id="1">SUSPEND (1)</strong> button. The suspend command is sent from the RileyLink to the active pod and the <strong x-id="1">SUSPEND (3)</strong> button will become greyed out. The <strong x-id="1">Pod status (2)</strong> will display <strong x-id="1">SUSPEND DELIVERY</strong>.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">ASKIYA AL (1)</strong> butonunu tıklayın. Askıya alma komutu, RileyLink'ten aktif poda gönderilir ve <strong x-id="1">ASKIYA AL (3)</strong> butonu grileşir. <strong x-id="1">Pod durumu (2)</strong>, <strong x-id="1">İLETİM DURDURULDU</strong> olarak görüntülenecektir.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -864,7 +864,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     When the suspend command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">All insulin delivery has been suspended</strong>. Onaylamak ve devam etmek için <strong x-id="1">Tamam</strong>'ı tıklayın.
+     Askıya alma komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusu <strong x-id="1">Tüm insülin iletimi askıya alındı</strong> mesajını görüntüler. Onaylamak ve devam etmek için <strong x-id="1">Tamam</strong>'ı tıklayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -875,7 +875,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Aktif Pod'unuz şimdi tüm insülin iletimini askıya aldı. The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> to <strong x-id="1">Suspended</strong>. The <strong x-id="1">SUSPEND</strong> button will change to a new <strong x-id="1">Resume Delivery (2)</strong> button
+     Aktif Pod'unuz şimdi tüm insülin iletimini askıya aldı. <strong x-id="1">Omnipod (POD)</strong> sekmesi, <strong x-id="1">Pod durumunu (1)</strong> <strong x-id="1">Askıya alındı</strong> olarak güncelleyecektir. <strong x-id="1">ASKIYA AL</strong> butonu, <strong x-id="1">İletime Devam Et (2)</strong> butonu olarak değişecektir.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -896,7 +896,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and ensure the <strong x-id="1">Pod status (1)</strong> field displays <strong x-id="1">Suspended</strong>, then press the <strong x-id="1">Resume Delivery (2)</strong> button to start the process to instruct the current pod to resume normal insulin delivery. A message <strong x-id="1">RESUME DELIVERY</strong> will display in the <strong x-id="1">Pod status (3)</strong> field, signifying the RileyLink is actively sending the command to the suspended pod.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">Pod durumu (1)</strong> satırında <strong x-id="1">ASKIYA ALINDI</strong> mesajının görünmesi gerekir, ardından mevcut podun normal insülin iletimini sürdürmesi talimatını vermek için <strong x-id="1">İLETİME DEVAM ET (2)</strong> butonuna basın. <strong x-id="1">Pod durumu (3)</strong> alanında, RileyLink'in aktif olarak askıya alınan pod'a komutu gönderdiğini belirten bir <strong x-id="1">İLETİME DEVAM ET</strong> mesajı görüntülenecektir.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -907,7 +907,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     When the Resume delivery command is successfully confirmed by the RileyLink a confirmation dialog will display the message <strong x-id="1">Insulin delivery has been resumed</strong>. Onaylamak ve devam etmek için <strong x-id="1">Tamam</strong>'ı tıklayın.
+     İletime devam et komutu RileyLink tarafından başarıyla onaylandığında, bir onay iletişim kutusunda <strong x-id="1">İnsülin iletimi devam ettirildi</strong> mesajı görüntülenecektir. Onaylamak ve devam etmek için <strong x-id="1">Tamam</strong>'ı tıklayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -918,7 +918,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     The <strong x-id="1">Omnipod (POD)</strong> tab will update the <strong x-id="1">Pod status (1)</strong> field to display <strong x-id="1">RUNNING,</strong> and the <strong x-id="1">Resume Delivery</strong> button will now display the <strong x-id="1">SUSPEND (2)</strong> button.
+     <strong x-id="1">Omnipod (POD)</strong> sekmesi, <strong x-id="1">Pod durumu (1)</strong> alanını <strong x-id="1">ÇALIŞIYOR</strong> olarak güncelleyecek ve <strong x-id="1">İletimi Sürdür</strong> butonu şimdi <strong x-id="1">ASKIYA AL (2)</strong> butonu olarak görünecektir.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -933,15 +933,15 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - if you do not see an ACK ALERTS button, it is because it is conditionally displayed on the Omnipod (POD) tab ONLY when the pod expiration or low reservoir alert has been triggered.</em>
+  <em x-id="3">NOT - bir BİLGİ UYARILARI düğmesi görmüyorsanız, bunun nedeni SADECE pod sona erme veya düşük rezervuar uyarısı tetiklendiğinde Omnipod (POD) sekmesinde koşullu olarak görüntülenmesidir.</em>
 </p>
 
 <p spaces-before="0">
-  Aşağıdaki süreç, etkin pod süresi 72 saatlik (3 gün) pod sona ermeden önce uyarı süresi sınırına ulaştığında meydana gelen pod bip seslerini nasıl onaylayacağınızı ve kapatacağınızı göstermektedir. This warning time limit is defined in the <strong x-id="1">Hours before shutdown</strong> Omnipod alerts setting. Bir pod'un maksimum ömrü 80 saattir (3 gün 8 saat), ancak Insulet 72 saat (3 gün) sınırının aşılmamasını önermektedir.
+  Aşağıdaki süreç, etkin pod süresi 72 saatlik (3 gün) pod sona ermeden önce uyarı süresi sınırına ulaştığında meydana gelen pod bip seslerini nasıl onaylayacağınızı ve kapatacağınızı göstermektedir. Bu uyarı süresi sınırı, Omnipod uyarıları ayarında <strong x-id="1">Kapanmadan kaç saat önce</strong> olarak tanımlanır. Bir pod'un maksimum ömrü 80 saattir (3 gün 8 saat), ancak Insulet 72 saat (3 gün) sınırının aşılmamasını önermektedir.
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE - If you have enabled the "Automatically acknowledge Pod alerts" setting in Omnipod Alerts, this alert will be handled automatically after the first occurrence and you will NOT need to manually dismiss the alert.</em>
+  <em x-id="3">NOT - Omnipod Uyarılarında "Pod uyarılarını otomatik olarak onayla" ayarını etkinleştirdiyseniz, bu uyarı ilk kez meydana geldikten sonra otomatik olarak işlenir ve uyarıyı manuel olarak kapatmanız GEREKMEZ.</em>
 </p>
 
 <ol start="1">
@@ -2032,7 +2032,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
   </li>
   
   <li>
-    Under the <strong x-id="1">Careportal (1)</strong> section the following 3 fields will have their <strong x-id="1">age reset</strong> to 0 days and 0 hours <strong x-id="1">after each pod change</strong>: <strong x-id="1">Insulin</strong> and <strong x-id="1">Cannula</strong>. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. <strong x-id="1">Pompa pili</strong> ve <strong x-id="1">insülin rezervuarı</strong>, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. <em x-id="3">Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.</em> <strong x-id="1">Pompa pil yaşı</strong> pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
+    <strong x-id="1">Bakımportalı (1)</strong> bölümünün altında <strong x-id="1">İnsülin</strong> ve <strong x-id="1">Kanül</strong> alanları her pod değişikliğinden sonra <strong x-id="1">yaşlarını 0 gün ve 0 saat </strong> olacak şekilde sıfırlayacaktır. Bu Omnipod pompasının çalışma şekli nedeniyle böyle yapılmaktadır. <strong x-id="1">Pompa pili</strong> ve <strong x-id="1">insülin rezervuarı</strong>, her pod içinde yer almaktadır. Pod, kanülü doğrudan pod uygulama bölgesinde deriye yerleştirdiği için, Omnipod pompalarında hortum kullanılmaz. <em x-id="3">Bu nedenle, bir pod değişikliğinden sonra bu değerlerin her birinin yaşı otomatik olarak sıfırlanır.</em> <strong x-id="1">Pompa pil yaşı</strong> pod pili her zaman kendi ömründen daha fazla olacağı için (maksimum 80 saat) rapor edilmez.
   </li>
 </ol>
 
@@ -2057,10 +2057,10 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Above 50 Units</strong> - Reports a value of 50+U when more than 50 units are currently in the reservoir.
+      <strong x-id="1">50 Ünitenin Üzerinde</strong> - Şu an rezervuarda 50 üniteden fazla insülin olduğunda 50+Ü değeri bildirilir.
     </li>
     <li>
-      <strong x-id="1">Below 50 Units</strong> - Reports an approximate calculated value of insulin remaining in the reservoir.
+      <strong x-id="1">50 Ünitenin Altında</strong> - Rezervuarda kalan insülinin yaklaşık hesaplanmış değerini bildirir.
     </li>
     <li>
       <strong x-id="1">SMS</strong> - SMS yanıtlarında insülin seviyesi 50+Ü veya değer görünür.
@@ -2072,7 +2072,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </blockquote>
 
 <p spaces-before="0">
-  <strong x-id="1">Battery Level</strong>
+  <strong x-id="1">Pil seviyesi</strong>
 </p>
 
 <p spaces-before="0">
