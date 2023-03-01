@@ -14,7 +14,7 @@ Autotune plugin is an implementation of OpenAPS autotune algorythm within AAPS.
   - Note: each time you select a new profile, previous results will be removed and Tune days parameter will be set to default value
 - Then Tune days is to select the number of days used in calculation to tune your profile. The minimum value is 1 day and the maximum value 30 days. This number should not be too small to get correct iterative and smooth results (above 7 days for each calculation)
   - Note: each time you change Tune days parameter, previous results will be removed
-- Last Run il a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
+- Last Run is a link that recover your latest valid calculation. If you didn't launch Autotune on current day, or if previous results was removed with a modification of calculation parameter above, then you can recover parameters and results of the latest successfull run.
 - Warning show you for example some information about selected profile (if you have several IC values or several ISF values)
   - Note: Autotune calculation works with only a single IC and a single ISF value. There is currently no existing Autotune algorythm to tune a circadian IC or circadian ISF. If your input profile  has several values, you can see in warning section the average value taken into account to tune your profile.
 - Check Input Profile button open the Profile Viewer to allow you a quick verification of your profile (Units, DAI, IC, ISF, basal and target)
