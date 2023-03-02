@@ -969,7 +969,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Upon <strong x-id="1">successful deactivation</strong> of the alerts, <strong x-id="1">2 beeps</strong> will be issued by the active pod and a confirmation dialog will display the message <strong x-id="1">Activate alerts have been acknowledged</strong>. İletişim kutusunu onaylamak ve kapatmak için <strong x-id="1">Tamam</strong> butonunu tıklayın.
+     Uyarıların <strong x-id="1">başarıyla devre dışı bırakılması</strong> üzerine, etkin pod tarafından <strong x-id="1">2 bip</strong> sesi verilir ve bir onay iletişim kutusunda <strong x-id="1">Etkin alarmlar susturuldu.</strong> mesajı görüntülenir. İletişim kutusunu onaylamak ve kapatmak için <strong x-id="1">Tamam</strong> butonunu tıklayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -977,7 +977,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
      </p>
      
      <p spaces-before="0">
-       RileyLink, onay uyarıları komutu işlenirken pod'un menzili dışındaysa, bir uyarı mesajı 2 seçenek görüntüleyecektir. <strong x-id="1">Mute (1)</strong> will silence this current warning. <strong x-id="1">OK (2)</strong> will confirm this warning and allow the user to try to acknowledge alerts again.
+       RileyLink, onay uyarıları komutu işlenirken pod'un menzili dışındaysa, bir uyarı mesajı 2 seçenek görüntüleyecektir. <strong x-id="1">Sessiz (1)</strong> bu mevcut uyarıyı susturur. <strong x-id="1">Tamam (2)</strong>, bu uyarıyı onaylar ve kullanıcının uyarıları yeniden onaylamasına izin verir.
      </p>
      
      <p spaces-before="0">
@@ -988,7 +988,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab, under the <strong x-id="1">Active Pod alerts</strong> field, the warning message is no longer displayed and the active pod will no longer issue pod expiration warning beeps.
+     <strong x-id="1">Omnipod (POD)</strong> ana sekmesine gidin, <strong x-id="1">Aktif Pod uyarıları</strong> alanı altında, uyarı mesajı artık görüntülenmez ve aktif pod artık pod sona erme uyarı bip sesleri vermez.
    </p>
  </li>
 </ol>
@@ -1010,13 +1010,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE:</em> <strong x-id="1">Uncertain</strong> commands will appear in the pod history, however due to their nature you cannot ensure their accuracy.
+  <em x-id="3">NOT:</em> <strong x-id="1">Belirsiz</strong> komutlar pod geçmişinde görünür, ancak yapıları gereği doğruluklarından emin olamazsınız.
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu and then press the <strong x-id="1">Pod history (2)</strong> button to access the pod history screen.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">POD YNTM (1)</strong> butonuna basarak <strong x-id="1">Pod Yönetimi</strong> menüsüne gidin ve ardından pod geçmişi ekranına erişmek için <strong x-id="1">Pod geçmişi (2)</strong> butonuna basın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1027,7 +1027,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">Pod history</strong> screen, the default category of <strong x-id="1">All (1)</strong> is displayed showing the <strong x-id="1">Date and Time (2)</strong> of all pod <strong x-id="1">Actions (3)</strong> and <strong x-id="1">Results (4)</strong> in reverse chronological order. Use your phone’s <strong x-id="1">back button 2 times</strong> to return to the <strong x-id="1">Omnipod (POD)</strong> tab in the main AAPS interface.
+     <strong x-id="1">Pod geçmişi </strong> ekranında, <strong x-id="1">All (1)</strong> (Tümü) varsayılan kategorisi ile tüm pod <strong x-id="1">Eylemleri (3)</strong> ve <strong x-id="1">Sonuçları (4)</strong> <strong x-id="1">Tarih ve Saat (2)</strong> ters kronolojik sırada görüntülenir. Ana AAPS arayüzünde <strong x-id="1">Omnipod (POD)</strong> sekmesine dönmek için telefonunuzun <strong x-id="1">geri butonunu 2 kez</strong> kullanın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1042,15 +1042,15 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Bu bölüm, aktif pod ve RileyLink ayarlarının yanı sıra her birinin iletişim geçmişinin nasıl gözden geçirileceğini gösterir. This feature, once accessed, is split into two sections: <strong x-id="1">Settings</strong> and <strong x-id="1">History</strong>.
+  Bu bölüm, aktif pod ve RileyLink ayarlarının yanı sıra her birinin iletişim geçmişinin nasıl gözden geçirileceğini gösterir. Bu özellik bir kez erişildiğinde iki bölüme ayrılır: <strong x-id="1">Ayarlar</strong> ve <strong x-id="1">Geçmiş</strong>.
 </p>
 
 <p spaces-before="0">
-  The primary use of this feature is when your pod communication device is out of the Bluetooth range of your phone after a period of time and the <strong x-id="1">RileyLink status</strong> reports <strong x-id="1">RileyLink unreachable</strong>. The <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab will manually attempt to re-establish Bluetooth communication with the currently configured RileyLink in the Omnipod settings.
+  Bu özelliğin birincil kullanımı, pod iletişim cihazınızın bir süre sonra telefonunuzun Bluetooth kapsama alanı dışında kalması ve <strong x-id="1">RileyLink durumunun</strong> <strong x-id="1">RileyLink'e ulaşılamadığını</strong> bildirmesidir. <strong x-id="1">Omnipod (POD)</strong> ana sekmesindeki <strong x-id="1">REFRESH</strong> butonu, Omnipod ayarlarında halihazırda yapılandırılmış RileyLink ile Bluetooth iletişimini manuel olarak yeniden kurmaya çalışır.
 </p>
 
 <p spaces-before="0">
-  In the event the <strong x-id="1">REFRESH</strong> button on the main <strong x-id="1">Omnipod (POD)</strong> tab does not restore the connection to the pod communication device, please follow the additional steps below for a manual reconnection.
+  <strong x-id="1">Omnipod (POD)</strong> ana sekmesindeki <strong x-id="1">YENİLE</strong> butonunun pod iletişim cihazına olan bağlantıyı geri yüklememesi durumunda, manuel yeniden bağlantı için lütfen aşağıdaki ek adımları izleyin.
 </p>
 
 <h4 spaces-before="0">
@@ -1060,7 +1060,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      From the <strong x-id="1">Omnipod (POD)</strong> tab when the <strong x-id="1">RileyLink Status: (1)</strong> reports <strong x-id="1">RileyLink unreachable</strong> press the <strong x-id="1">POD MGMT (2)</strong> button to navigate to the <strong x-id="1">Pod Management</strong> menu. On the <strong x-id="1">Pod Management</strong> menu you will see a notification appear actively searching for a RileyLink connection, press the <strong x-id="1">RileyLink stats (3)</strong> button to access the <strong x-id="1">RileyLink settings</strong> screen.
+      <strong x-id="1">Omnipod (POD)</strong> sekmesinde <strong x-id="1">RileyLink Durumu: (1)</strong> <strong x-id="1">RileyLink'e ulaşılamıyor</strong> bildirdiğinde, <strong x-id="1">Pod Yönetimi</strong> menüsüne gitmek için <strong x-id="1">POD YNTM (2)</strong> butonuna basın. <strong x-id="1">Pod Yönetimi</strong> menüsünde, aktif olarak bir RileyLink bağlantısı arayan bir bildirimin göründüğünü göreceksiniz, <strong x-id="1">RileyLink ayarları</strong> ekranına erişmek için <strong x-id="1">RileyLink istatistikleri (3)</strong> butonuna basın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1071,7 +1071,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Settings (1)</strong> screen under the <strong x-id="1">RileyLink (2)</strong> section you can confirm both the Bluetooth connection status and error in the <strong x-id="1">Connection Status and Error: (3)</strong> fields. A <em x-id="3">Bluetooth Error</em> and <em x-id="3">RileyLink unreachable</em> status should be shown. Start the manual Bluetooth reconnection by pressing the <strong x-id="1">refresh (4)</strong> button in the lower right corner.
+     <strong x-id="1">RileyLink (2)</strong> bölümünün altındaki <strong x-id="1">RileyLink Ayarları (1)</strong> ekranında, <strong x-id="1">Bağlantı Durumu ve Hata: (3)</strong> alanlarında hem Bluetooth bağlantı durumunu hem de hatayı onaylayabilirsiniz. Bir <em x-id="3">Bluetooth Hatası</em> ve <em x-id="3">RileyLink ulaşılamaz</em> durumu görünmelidir. Sağ alt köşedeki <strong x-id="1">yenile (4)</strong> butonuna basarak manuel olarak Bluetooth'a yeniden bağlanmasını sağlayın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1087,11 +1087,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <ul>
   <li>
-    <strong x-id="1">Mute (1)</strong> will silence this current warning.
+    <strong x-id="1">Sessiz (1)</strong> bu mevcut uyarıyı susturur.
   </li>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">OK (2)</strong> will confirm this warning and allow the user to try to re-establish the Bluetooth connection again.
+      <strong x-id="1">Tamam (2)</strong> bu uyarıyı onaylar ve kullanıcının Bluetooth bağlantısını yeniden kurmayı denemesine izin verir.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1104,13 +1104,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="3">
   <li>
     <p spaces-before="0">
-      If the <strong x-id="1">Bluetooth connection</strong> does not re-establish, try manually turning <strong x-id="1">off</strong> and then back <strong x-id="1">on</strong> the Bluetooth function on your phone.
+      <strong x-id="1">Bluetooth bağlantısı</strong> yeniden kurulmazsa, telefonunuzdaki Bluetooth işlevini manuel olarak <strong x-id="1">kapatmayı</strong> ve ardından tekrar <strong x-id="1">açmayı</strong> deneyin.
     </p>
   </li>
   
   <li>
     <p spaces-before="0">
-      After a successful RileyLink Bluetooth reconnection the <strong x-id="1">Connection Status: (1)</strong> field should report <strong x-id="1">RileyLink ready</strong>. Tebrikler, artık yapılandırılmış pod iletişim cihazınızı (örn. RileyLink) AAPS'ye yeniden bağladınız!
+      Başarılı bir RileyLink Bluetooth yeniden bağlantısından sonra, <strong x-id="1">Bağlantı Durumu: (1)</strong> alanı <strong x-id="1">RileyLink hazır</strong> olarak görünmelidir. Tebrikler, artık yapılandırılmış pod iletişim cihazınızı (örn. RileyLink) AAPS'ye yeniden bağladınız!
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1131,7 +1131,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod management</strong> menu, then press the <strong x-id="1">RileyLink stats (2)</strong> button to view your currently configured <strong x-id="1">RileyLink (3)</strong> and active pod <strong x-id="1">Device (4)</strong> settings.
+      <strong x-id="1">Pod yönetimi</strong> menüsüne erişmek için <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">POD YNTM (1)</strong> butonuna basın. Ardından yapılandırılmış <strong x-id="1">RileyLink (3)</strong> ve etkin pod <strong x-id="1">Cihaz (4)</strong> ayarlarınızı görüntülemek için <strong x-id="1">RileyLink istatistikleri (2)</strong> butonuna basın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1182,25 +1182,25 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Device Type:</strong> The type of device communicating with the pod communication device (Omnipod pod pump)
+      <strong x-id="1">Cihaz Ti̇pi:</strong> Pod iletişim cihazıyla iletişim kuran aygıtın türü (Omnipod pod pompası)
     </li>
     <li>
-      <strong x-id="1">Device Model:</strong> The model of the active device connected to the pod communication device (the current model name of the Omnipod pod, which is Eros)
+      <strong x-id="1">Cihaz Modeli:</strong> Pod iletişim cihazına bağlı aktif cihazın modeli (Omnipod podunun mevcut model adı, yani Eros)
     </li>
     <li>
-      <strong x-id="1">Pump Serial Number:</strong> Serial number of the currently activated pod
+      <strong x-id="1">Pompa Seri Numarası:</strong> Şu anda etkinleştirilmiş olan podun seri numarası
     </li>
     <li>
-      <strong x-id="1">Pump Frequency:</strong> Communication radio frequency the pod communication device has tuned to enable communication between itself and the pod.
+      <strong x-id="1">Pompa Frekansı:</strong> Pod iletişim cihazının kendisi ile pod arasında iletişimi sağlamak için ayarladığı iletişim radyo frekansı.
     </li>
     <li>
-      <strong x-id="1">Last Used frequency:</strong> Last known radio frequency the pod used to communicate with the pod communication device.
+      <strong x-id="1">Son Kullanılan frekans:</strong> podun, pod iletişim cihazıyla iletişim kurmak için kullandığı bilinen son radyo frekansı.
     </li>
     <li>
-      <strong x-id="1">Last Device Contact:</strong> Date and time of the last contact the pod made with the pod communication device.
+      <strong x-id="1">Son Cihaz İletişimi:</strong> Pod ile pod iletişim cihazı (örn. RilyLink) arasında yapılan son iletişimin tarihi ve saati.
     </li>
     <li>
-      <strong x-id="1">Refresh button</strong> manually refresh the settings on this page.
+      <strong x-id="1">Yenile butonu</strong> bu sayfadaki ayarları manuel olarak yeniler.
     </li>
   </ul>
 </blockquote>
@@ -1216,7 +1216,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">POD MGMT (1)</strong> button to access the <strong x-id="1">Pod Management</strong> menu, then press the <strong x-id="1">Pod History (2)</strong> button to view the <strong x-id="1">Settings</strong> and <strong x-id="1">History</strong> screen. Click on the <strong x-id="1">HISTORY (3)</strong> text to display the entire history of the RileyLink and currently active pod session.
+      <strong x-id="1">Pod Yönetimi</strong> menüsüne erişmek için <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">POD YNTM (1)</strong> butonuna basın, ardından <strong x-id="1">Ayarlar</strong> ve <strong x-id="1">Geçmiş</strong> ekranını görüntülemek için <strong x-id="1">Pod Geçmişi (2)</strong> butonuna basın. RileyLink'in tüm geçmişini ve şu anda etkin olan pod oturumunu görüntülemek için <strong x-id="1">GEÇMİŞ (3)</strong> metnine tıklayın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1237,13 +1237,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <blockquote spaces-before="0">
   <ul>
     <li>
-      <strong x-id="1">Date & Time</strong>: In reverse chronological order the timestamp of each event.
+      <strong x-id="1">Tarih & Zaman</strong>: Ters kronolojik sırayla her olayın zaman damgası.
     </li>
     <li>
-      <strong x-id="1">Device:</strong> The device to which the current action or state is referring.
+      <strong x-id="1">Cihaz:</strong> Mevcut eylemin veya durumun atıfta bulunduğu cihaz.
     </li>
     <li>
-      <strong x-id="1">State or Action:</strong> The current state or action performed by the device.
+      <strong x-id="1">Durum veya Eylem:</strong> Cihaz tarafından gerçekleştirilen mevcut durum veya eylem.
     </li>
   </ul>
 </blockquote>
@@ -1277,18 +1277,18 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">RileyLink Status:</strong> Displays the current connection status of the RileyLink
+      <strong x-id="1">RileyLink Durumu:</strong> RileyLink'in mevcut bağlantı durumunu görüntüler
     </p>
 <blockquote spaces-before="2">
     <ul>
       <li>
-        <em x-id="3">RileyLink Unreachable</em> - pod communication device is either not within Bluetooth range of the phone, powered off or has a failure preventing Bluetooth communication.
+        <em x-id="3">RileyLink Ulaşılamıyor</em> Pod iletişim cihazı, telefonun Bluetooth kapsama alanında değil, kapalı veya Bluetooth iletişimini engelleyen bir arıza var.
       </li>
       <li>
-        <em x-id="3">RileyLink Ready</em> - pod communication device is powered on and actively initializing the Bluetooth connection
+        <em x-id="3">RileyLink Hazır</em> Pod iletişim cihazı açık ve Bluetooth bağlantısını aktif olarak başlatıyor
       </li>
       <li>
-        <em x-id="3">Connected</em> - pod communication device is powered on, connected and actively able to communicate via Bluetooth.
+        <em x-id="3">Bağlı</em> Pod iletişim cihazı açık, bağlı ve Bluetooth aracılığıyla aktif olarak iletişim kurabiliyor.
       </li>
     </ul>
   </blockquote>
@@ -1296,17 +1296,17 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod address:</strong> Displays the current address in which the active pod is referenced
+    <strong x-id="1">Pod adresi:</strong> Etkin pod'un referans aldığı mevcut adresi görüntüler
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">LOT:</strong> Displays the LOT number of the active pod
+    <strong x-id="1">LOT:</strong> Etkin podun LOT numarasını görüntüler
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">TID:</strong> Displays the serial number of the pod.
+    <strong x-id="1">TID:</strong> Podun seri numarasını görüntüler.
   </p>
 </li>
 <li>
@@ -1321,17 +1321,17 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod expires:</strong> Displays the date and time when the active pod will expire.
+    <strong x-id="1">Pod Sona Erme:</strong> Pod'un süresinin dolacağı tarih ve saati görüntüler.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod status:</strong> Displays the status of the active pod.
+    <strong x-id="1">Pod durumu:</strong> Aktif podun durumunu görüntüler.
   </p>
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Last connection:</strong> Displays the last time communication with the active pod was achieved.
+    <strong x-id="1">Son bağlantı:</strong> Etkin Pod'la en son iletişimin sağlandığı zamanı görüntüler.
   </p>
 <blockquote spaces-before="2">
     <ul>
@@ -1353,7 +1353,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Last bolus:</strong> Displays the dosage of the last bolus sent to the active pod and how long ago it was issued in parenthesis.
+    <strong x-id="1">Son bolus:</strong> Etkin poda gönderilen son bolusun miktarını ve ne kadar süre önce verildiğini parantez içinde görüntüler.
   </p>
 </li>
 <li>
@@ -1389,7 +1389,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </li>
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Hatalar:</strong> Karşılaşılan son hatayı görüntüler. Review the <a href="OmnipodEros-view-pod-history">Pod history</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">RileyLink history</a> and log files for past errors and more detailed information.
+    <strong x-id="1">Hatalar:</strong> Karşılaşılan son hatayı görüntüler. Geçmiş hatalar ve daha ayrıntılı bilgiler için <a href="OmnipodEros-view-pod-history">Pod geçmişini</a>, <a href="OmnipodEros-rileylink-and-active-pod-history">RileyLink geçmişini</a> ve günlük dosyalarını inceleyin.
   </p>
 </li>
 <li>
@@ -1422,7 +1422,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     </p>
     
     <p spaces-before="0">
-      See the <a href="OmnipodEros-troubleshooting">Troubleshooting section</a> below for additional information.
+      Ek bilgi için aşağıdaki <a href="OmnipodEros-troubleshooting">Sorun giderme bölümüne</a> bakın.
     </p>
   </blockquote>
 </li>
@@ -1452,11 +1452,11 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     </p>
     
     <p spaces-before="0">
-      Bu düğmeye basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır.
+      Bu butona basıldığında, pod sona erme biplerini ve bildirimlerini devre dışı bırakır.
     </p>
     
     <p spaces-before="0">
-      Button is displayed only when pod time is past expiration warning time Upon successful dismissal, this icon will no longer appear.
+      Buton, yalnızca pod süresi sona erme uyarı süresini geçtiğinde görüntülenir Bildirimler devre dışı kaldıktan sonra, bu simge artık görünmeyecek.
     </p>
   </blockquote>
 </li>
@@ -1514,7 +1514,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h3>
 
 <p spaces-before="0">
-  Below is an explanation of the layout and meaning of the icons on the <strong x-id="1">Pod Management</strong> menu accessed from the <strong x-id="1">Omnipod (POD)</strong> tab.
+  Aşağıda, <strong x-id="1">Omnipod (POD)</strong> sekmesinden erişilen <strong x-id="1">Pod Yönetimi</strong> menüsündeki simgelerin düzeni ve anlamının bir açıklaması bulunmaktadır.
 </p>
 
 <blockquote spaces-before="0">
@@ -1568,7 +1568,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Play test beep</strong>
+    <strong x-id="1">Test bip sesi çal</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1583,7 +1583,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Discard pod</strong>
+    <strong x-id="1">Pod'u çıkart</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1601,13 +1601,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <blockquote spaces-before="2">
       <ul>
         <li>
-          A <strong x-id="1">pod is not fully paired</strong> and thus ignores deactivate commands.
+          Bir <strong x-id="1">pod tam olarak eşlenmemiş</strong> ve dolayısıyla devre dışı bırakma komutları yok sayar.
         </li>
         <li>
-          A <strong x-id="1">pod is stuck</strong> during the pairing process between steps
+          Eşleştirme adımları arasındaki işlemler sırasında bir <strong x-id="1">pod takıldı</strong> ise
         </li>
         <li>
-          A <strong x-id="1">pod simply does not pair at all.</strong>
+          <strong x-id="1">Pod hiç bir şekilde eşleşmiyorsa.</strong>
         </li>
       </ul>
     </blockquote>
@@ -1616,7 +1616,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Pod history</strong>
+    <strong x-id="1">Pod geçmişi</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1631,7 +1631,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">RileyLink stats:</strong>
+    <strong x-id="1">RileyLink istatistikleri:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1645,10 +1645,10 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <blockquote spaces-before="2">
       <ul>
         <li>
-          <strong x-id="1">Settings</strong> - displays RileyLink and active pod settings information
+          <strong x-id="1">Ayarlar</strong> - RileyLink ve aktif pod ayarları bilgilerini görüntüler
         </li>
         <li>
-          <strong x-id="1">History</strong> - displays RileyLink and Pod communication history
+          <strong x-id="1">Geçmiş</strong> - RileyLink ve Pod iletişim geçmişini görüntüler
         </li>
       </ul>
     </blockquote>
@@ -1657,7 +1657,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Reset RileyLink Config</strong>
+    <strong x-id="1">RileyLink Yapılandırmasını Sıfırla</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1671,10 +1671,10 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <blockquote spaces-before="2">
       <ul>
         <li>
-          When communication is started, specific data is sent to and set in the RileyLink > - Memory Registers are set > - Communication Protocols are set > - Tuned Radio Frequency is set
+          İletişim başladığında, belirli veriler RileyLink'e gönderilir ve burada ayarlanır > - Bellek Kayıtları ayarlandı > - İletişim Protokolleri ayarlandı > - Ayarlı Radyo Frekansı ayarlandı
         </li>
         <li>
-          See <a href="OmnipodEros-reset-rileylink-config-notes">additional notes</a> at the end of this table
+          Bu tablonun sonundaki <a href="OmnipodEros-reset-rileylink-config-notes">ek notlara</a> bakın
         </li>
       </ul>
     </blockquote>
@@ -1683,7 +1683,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Read pulse log:</strong>
+    <strong x-id="1">Sinyal günlüğünü oku:</strong>
   </p>
 <blockquote spaces-before="2">
     <p spaces-before="0">
@@ -1704,21 +1704,21 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <h4 spaces-before="0">
-  <em x-id="3">Reset RileyLink Config Notes</em>
+  <em x-id="3">RileyLink Yapılandırma Sıfırlama Notları</em>
 </h4>
 
 <ul>
   <li>
-    The primary usage of this feature is when the currently active pod communication device is not responding and communication is in a stuck state.
+    Bu özelliğin birincil kullanımı, o anda etkin olan pod iletişim cihazının yanıt vermediği ve iletişimin takılı kaldığı durumlardır.
   </li>
   <li>
-    If the pod communication device is turned off and then back on, the <strong x-id="1">Reset RileyLink Config</strong> button needs to be pressed, so that it sets these communication parameters in the pod communication device configuration.
+    Pod iletişim cihazı (örn. RileyLink) kapatılıp tekrar açılırsa, pod iletişim cihazı konfigürasyonunda bu iletişim parametrelerini ayarlaması için <strong x-id="1">RileyLink Ayarlarını Sıfırla</strong> butonuna basılması gerekir.
   </li>
   <li>
-    If this is NOT done then AAPS will need to be restarted after the pod communication device is power cycled.
+    Bu YAPILMAYACAK OLURSA, pod iletişim cihazı kapatıldıktan sonra AAPS'nin yeniden başlatılması gerekecektir.
   </li>
   <li>
-    This button <strong x-id="1">DOES NOT</strong> need to be pressed when switching between different pod communication devices
+    Farklı pod iletişim cihazları arasında geçiş yaparken bu butona basılması <strong x-id="1">GEREKMEZ</strong>
   </li>
 </ul>
 
@@ -1755,7 +1755,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE: An asterisk (\*) denotes the default for a setting is enabled.</em>
+  <em x-id="3">NOT: Yıldız işareti (\*), bir ayarın varsayılan olarak etkin olduğunu belirtir.</em>
 </p>
 
 <h3 spaces-before="0">
@@ -1828,7 +1828,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. To MANUALLY dismiss the alert you must visit the Omnipod (POD) tab and press the ACK ALERTS button.</em>
+  <em x-id="3">Herhangi bir alarm tetiklendikten sonra pod ile her iletişimde tetiklenen alarm için bir AAPS bildiriminin alınacağını unutmayın. Gelen uyarıyı kapatmak, "Pod uyarılarını otomatik olarak sustur" etkin değilse, bildirimin tekrar gelmesini ENGELLEMEZ. Uyarıyı MANUEL OLARAK kapatmak için Omnipod (POD) sekmesini ziyaret etmeli ve BİLGİ UYARILARI düğmesine basmalısınız.</em>
 </p>
 
 <ul>
