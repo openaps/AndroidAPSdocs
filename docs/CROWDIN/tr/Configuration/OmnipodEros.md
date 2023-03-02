@@ -947,7 +947,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Tanımlanan <strong x-id="1">Kapanmadan kaç saat önce?</strong> uyarı süresi sınırına ulaşıldığında, pod sona erme zamanına yaklaştığını size bildirmek için uyarı bip sesleri çıkaracak ve yakında pod değişikliği gerekecektir. Bunu <strong x-id="1">Omnipod (POD)</strong> sekmesinde doğrulayabilirsiniz, <strong x-id="1">Pod'un süresi doluyor: (1)</strong> alanı, pod süresinin tam olarak ne zaman biteceğini (etkinleştirmeden 72 saat sonra) gösterecek ve metin <strong x-id="1"> kırmızıya</strong> dönecektir. Bu süre geçtikten sonra, <strong x-id="1">Aktif Pod uyarıları (2)</strong> alanının altında, <strong x-id="1">Pod'un süresi yakında dolacak</strong> durum mesajı görüntülenecektir. Bu aynı zamanda <strong x-id="1">ALARMLARI ONAYLA (3)</strong> butonunun görüntülenmesini de tetikler. A <strong x-id="1">system notification (4)</strong> will also inform you of the upcoming pod expiration
+      Tanımlanan <strong x-id="1">Kapanmadan kaç saat önce?</strong> uyarı süresi sınırına ulaşıldığında, pod sona erme zamanına yaklaştığını size bildirmek için uyarı bip sesleri çıkaracak ve yakında pod değişikliği gerekecektir. Bunu <strong x-id="1">Omnipod (POD)</strong> sekmesinde doğrulayabilirsiniz, <strong x-id="1">Pod'un süresi doluyor: (1)</strong> alanı, pod süresinin tam olarak ne zaman biteceğini (etkinleştirmeden 72 saat sonra) gösterecek ve metin <strong x-id="1"> kırmızıya</strong> dönecektir. Bu süre geçtikten sonra, <strong x-id="1">Aktif Pod uyarıları (2)</strong> alanının altında, <strong x-id="1">Pod'un süresi yakında dolacak</strong> durum mesajı görüntülenecektir. Bu aynı zamanda <strong x-id="1">ALARMLARI ONAYLA (3)</strong> butonunun görüntülenmesini de tetikler. Bir <strong x-id="1">sistem bildirimi (4)</strong> ayrıca size yaklaşan pod sona erme tarihi hakkında bilgi verecektir
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -958,7 +958,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Go to the <strong x-id="1">Omnipod (POD)</strong> tab and press the <strong x-id="1">ACK ALERTS (2)</strong> button (acknowledge alerts). The RileyLink sends the command to the pod to deactivate the pod expiration warning beeps and updates the <strong x-id="1">Pod status (1)</strong> field with <strong x-id="1">ACKNOWLEDGE ALERTS</strong>.
+     <strong x-id="1">Omnipod (POD)</strong> sekmesine gidin ve <strong x-id="1">ALARMLARI ONAYLA (2)</strong> butonuna basın (alarmları onaylayın). Rileylink, pod sona erme uyarı bip seslerini devre dışı bırakmak için pod'a komutu gönderir ve <strong x-id="1">Pod durumu (1)</strong> satırını <strong x-id="1">ALARMLARI ONAYLA</strong> olarak günceller.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
