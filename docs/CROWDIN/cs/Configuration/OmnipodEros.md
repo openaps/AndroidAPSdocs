@@ -399,7 +399,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  <strong x-id="1">SAFETY FIRST</strong> - do not attempt this process in an environment where you cannot recover from an error (extra pods, insulin, charged RileyLink, and phone devices are must-haves).
+  <strong x-id="1">BEZPEČNOST PŘEDEVŠÍM</strong> - nepokoušejte se používat zařízení v prostředí, ve kterém nedokážete snadno opravit případné chyby (dodatečné pody, inzulín, musíte mít k dispozici možnost nabití RileyLink a telefonu).
 </p>
 
 <p spaces-before="0">
@@ -407,7 +407,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">You can configure multiple RileyLinks, but only one selected RileyLink at a time can communicate with a pod.</strong> The AAPS Omnipod driver supports the ability to add multiple RileyLinks in the RileyLink configuration, however, only one RileyLink at a time can be selected to be used for sending and receiving communication.
+  <strong x-id="1">Můžete nakonfigurovat několik zařízení RileyLink, ale v každém okamžiku může být připojen k pumpě pouze jedno.</strong> AAPS ovladač pro Omnipod umožňuje mít uložených více zařízení RileyLink současně, nicméně pouze jeden RileyLink může být použit pro aktuální komunikaci.
 </p>
 
 <p spaces-before="0">
@@ -423,7 +423,7 @@ These instructions are for configuring the Omnipod Eros generation pump (**NOT O
 </h2>
 
 <p spaces-before="0">
-  You can enable the Omnipod driver in AAPS in <strong x-id="1">two ways</strong>:
+  V AAPS můžete nastavit ovládání Omnipod pumpy <strong x-id="1">dvěma způsoby</strong>:
 </p>
 
 <h3 spaces-before="0">
