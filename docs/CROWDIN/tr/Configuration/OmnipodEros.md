@@ -1731,7 +1731,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </h2>
 
 <p spaces-before="0">
-  The Omnipod driver settings are configurable from the top-left hand corner <strong x-id="1">hamburger menu</strong> under <strong x-id="1">Config Builder</strong>➜<strong x-id="1">Pump</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Settings Gear (2)</strong> by selecting the <strong x-id="1">radio button (1)</strong> titled <strong x-id="1">Omnipod</strong>. Selecting the <strong x-id="1">checkbox (3)</strong> next to the <strong x-id="1">Settings Gear (2)</strong> will allow the Omnipod menu to be displayed as a tab in the AAPS interface titled <strong x-id="1">OMNIPOD</strong> or <strong x-id="1">POD</strong>. Bu dokümanda <strong x-id="1">Omnipod (POD)</strong> sekmesi olarak anılır.
+  Omnipod sürücü ayarları, sol üst köşedeki <strong x-id="1">hamburger menüsü</strong> altında <strong x-id="1">Konfigürasyon ayarları</strong>➜<strong x-id="1">Pompa</strong>➜<strong x-id="1">Omnipod</strong>➜<strong x-id="1">Dişli çark (ayarlar) (2)</strong> içerisinde <strong x-id="1">Omnipod</strong> başlıklı <strong x-id="1">radyo butonu(1)</strong> seçilerek yapılabilir. <strong x-id="1">Dişli çark (2)</strong>'ın yanındaki <strong x-id="1">onay kutusu (3)</strong>'ün seçilmesi, Omnipod menüsünün AAPS arayüzünde <strong x-id="1">OMNIPOD</strong> veya <strong x-id="1">POD</strong> başlıklı bir sekme olarak görüntülenmesini sağlar. Bu dokümanda <strong x-id="1">Omnipod (POD)</strong> sekmesi olarak anılır.
 </p>
 
 <p spaces-before="0">
@@ -1739,7 +1739,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">NOTE:</strong> A faster way to access the <strong x-id="1">Omnipod settings</strong> is by accessing the <strong x-id="1">3 dot menu (1)</strong> in the upper right hand corner of the <strong x-id="1">Omnipod (POD)</strong> tab and selecting <strong x-id="1">Omnipod preferences (2)</strong> from the dropdown menu.
+  <strong x-id="1">NOT:</strong> <strong x-id="1">Omnipod ayarlarına</strong> daha hızlı erişmenin bir yolu da, <strong x-id="1">Omnipod (POD)</strong> sekmesinde iken sağ üst köşesindeki <strong x-id="1">3 noktalı menü (1)</strong> ye basıp açılan menüden <strong x-id="1">Omnipod tercihler'ini (2)</strong> seçmektir.
 </p>
 
 <p spaces-before="0">
@@ -1769,21 +1769,21 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ul>
   <li>
     <p spaces-before="0">
-      <strong x-id="1">Show battery level reported by OrangeLink/EmaLink/DiaLink:</strong> Reports the actual battery level of the OrangeLink/EmaLink/Dialink. It is <strong x-id="1">strongly recommended</strong> that all OrangeLink/EmaLink/DiaLink users enable this setting.
+      <strong x-id="1">OrangeLink/EmaLink/DiaLink tarafından bildirilen pil seviyesini göster:</strong> OrangeLink/EmaLink/Dialink'in gerçek pil seviyesini bildirir. Tüm OrangeLink/EmaLink/DiaLink kullanıcılarının bu ayarı etkinleştirmesi <strong x-id="1">şiddetle önerilir</strong>.
     </p>
 <blockquote spaces-before="2">
     <ul>
       <li>
-        DOES NOT work with the original RileyLink.
+        Orijinal RileyLink ile ÇALIŞMAZ.
       </li>
       <li>
-        May not work with RileyLink alternatives.
+        RileyLink alternatifleriyle çalışmayabilir.
       </li>
       <li>
-        Enabled - Reports the current battery level for supported pod communication devices.
+        Etkin - Desteklenen pod iletişim cihazları için mevcut pil seviyesini raporlar.
       </li>
       <li>
-        Disabled - Reports a value of n/a.
+        Devre Dışı - n/a değerini gösterir.
       </li>
     </ul>
   </blockquote>
@@ -1791,7 +1791,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <li>
   <p spaces-before="0">
-    <strong x-id="1">Enable battery change logging in Actions:</strong> In the Actions menu, the battery change button is enabled IF you have enabled this setting AND the battery reporting setting above.  Bazı pod iletişim cihazları artık değiştirilebilen normal pilleri kullanmaya imkan sağlarlar.  Bu seçenek, bunu not etmenize ve pil yaşı zamanlayıcılarını sıfırlamanıza olanak tanır.
+    <strong x-id="1">Eylemlerde pil değişikliği kaydını etkinleştir:</strong> Eylemler menüsünde, bu ayarı VE yukarıdaki pil raporlama ayarını etkinleştirdiyseniz pil değiştirme düğmesi etkinleştirilir.  Bazı pod iletişim cihazları artık değiştirilebilen normal pilleri kullanmaya imkan sağlarlar.  Bu seçenek, bunu not etmenize ve pil yaşı zamanlayıcılarını sıfırlamanıza olanak tanır.
   </p>
 </li>
 </ul>
@@ -1806,13 +1806,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <ul>
   <li>
-    <strong x-id="1">\*Bolus beeps enabled:</strong> Enable or disable confirmation beeps when a bolus is delivered.
+    <strong x-id="1">\*Bolus bip seslerini etkinleştir:</strong> Bolus iletildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
-    <strong x-id="1">\*Basal beeps enabled:</strong> Enable or disable confirmation beeps when a new basal rate is set, active basal rate is canceled or current basal rate is changed.
+    <strong x-id="1">\*Bazal bip seslerini etkinleştir:</strong> Yeni bir bazal oran ayarlandığında, aktif bazal oran iptal edildiğinde veya mevcut bazal oran değiştirildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
-    <strong x-id="1">\*SMB beeps enabled:</strong> Enable or disable confirmation beeps when a SMB is delivered.
+    <strong x-id="1">\*SMB bip seslerini etkinleştir:</strong> Bir SMB teslim edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
     <strong x-id="1">GBO (TBR) bip seslerini etkinleştir:</strong> Bir GBO ayarlandığında veya iptal edildiğinde onay biplerini etkinleştirin veya devre dışı bırakın.
@@ -1833,19 +1833,19 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <ul>
   <li>
-    <strong x-id="1">\*Expiration reminder enabled:</strong> Enable or disable the pod expiration reminder set to trigger when the defined number of hours before shutdown is reached.
+    <strong x-id="1">\*Süre sonu hatırlatıcısını etkinleştir:</strong> Kapanmadan önce tanımlanan saat süresine ulaşıldığında tetiklenecek şekilde pod sona erme hatırlatıcısını etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
     <strong x-id="1">Kapanmadan kaç saat önce:</strong> Etkin pod kapanmadan önceki saat süresini tanımlar, bu daha sonra pod süre sonu hatırlatıcısı alarmını tetikler.
   </li>
   <li>
-    <strong x-id="1">\*Low reservoir alert enabled:</strong> Enable or disable an alert when the pod's remaining units low reservoir limit is reached as defined in the Number of units field.
+    <strong x-id="1">\*Düşük rezervuar uyarısını etkinleştir:</strong> Pod, ünite satırında belirlenen alt rezervuar sınırına ulaştığında bir alarm etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
     <strong x-id="1">Ünite:</strong> Pod düşük rezervuar alarmının tetikleneceği ünite sayısı.
   </li>
   <li>
-    <strong x-id="1">Automatically acknowledge Pod alerts:</strong> When enabled a notification will still be issued however immediately after the first pod communication contact since the alert was issued it will now be automatically acknowledged and the alert will be dismissed.
+    <strong x-id="1">Pod uyarılarını otomatik olarak kabul et:</strong> Etkinleştirildiğinde, yine de bir bildirim verilecektir, ancak uyarının verilmesinden bu yana ilk pod iletişim temasından hemen sonra, artık otomatik olarak onaylanacak ve uyarı reddedilecektir.
   </li>
 </ul>
 
@@ -1866,10 +1866,10 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
     <strong x-id="1">Belirsiz GBO (TBR) bildirimleri için sesi etkinleştir:</strong> Bir Geçici Bazal Oranının başarılı bir şekilde ayarlanıp ayarlanmadığı AAPS tarafından belirsiz olduğunda sesli bir uyarı ve görsel bildirim tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
-    <strong x-id="1">\*Sound for uncertain SMB notifications enabled:</strong> Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if an SMB was successfully delivered.
+    <strong x-id="1">\*Belirsiz SMB bildirimleri için sesi etkinleştir:</strong> Bir SMB'nin başarıyla teslim edilip edilmediğinden AAPS emin olmadığında sesli bir uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
   </li>
   <li>
-    <strong x-id="1">\*Sound for uncertain bolus notifications enabled:</strong> Enable or disable this setting to trigger an audible alert and visual notification when AAPS is uncertain if a bolus was successfully delivered.
+    <strong x-id="1">\*Belirsiz bolus bildirimleri için sesi etkinleştir:</strong> AAPS'nin bir bolusun başarıyla iletildiğinden emin olmadığı durumlarda sesli uyarı ve görsel bildirimi tetiklemek için bu ayarı etkinleştirin veya devre dışı bırakın.
   </li>
 </ul>
 
@@ -1883,16 +1883,16 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 
 <ul>
   <li>
-    <strong x-id="1">Show Suspend Delivery button in Omnipod tab:</strong> Hide or display the suspend delivery button in the <strong x-id="1">Omnipod (POD)</strong> tab.
+    <strong x-id="1">Omnipod sekmesinde İletimi Askıya Al butonunu göster:</strong> <strong x-id="1">Omnipod (POD)</strong> sekmesinde iletimi askıya al butonunu gizleyin veya görüntüleyin.
   </li>
   <li>
-    <strong x-id="1">Show Pulse log button in Pod Management menu:</strong> Hide or display the pulse log button in the <strong x-id="1">Pod Management</strong> menu.
+    <strong x-id="1">Pod Yönetimi menüsünde Nabız günlüğü butonunu göster:</strong> <strong x-id="1">Pod Yönetimi</strong> menüsünde nabız günlüğü butonunu gizleyin veya görüntüleyin.
   </li>
   <li>
-    <strong x-id="1">Show RileyLink Stats button in Pod Management menu:</strong> Hide or display the RileyLink Stats button in the <strong x-id="1">Pod Management</strong> menu.
+    <strong x-id="1">Pod Yönetimi menüsünde RileyLink İstatistikleri butonunu göster:</strong> <strong x-id="1">Pod Yönetimi</strong> menüsünde RileyLink İstatistikleri butonunu gizleyin veya görüntüleyin.
   </li>
   <li>
-    <strong x-id="1">\*DST/Time zone detect on enabled:</strong> allows for time zone changes to be automatically detected if the phone is used in an area where DST is observed.
+    <strong x-id="1">\*DST/Saat dilimi algılamayı etkinleştir:</strong>, telefon DST'nin gözlemlendiği bir alanda kullanılıyorsa, saat dilimi değişikliklerinin otomatik olarak algılanmasını sağlar.
   </li>
 </ul>
 
@@ -1905,13 +1905,13 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 </p>
 
 <p spaces-before="0">
-  The following steps will show how to <strong x-id="1">Remove</strong> and existing pod communication device (RileyLink) as well as <strong x-id="1">Add</strong> a new pod communication device.  Executing both <strong x-id="1">Remove</strong> and <strong x-id="1">Add</strong> steps will switch your device.
+  Aşağıdaki adımlar, Mevcut pod iletişim cihazını (RileyLink) <strong x-id="1">Kaldır</strong>'manın yanı sıra yeni bir pod iletişim cihazının <strong x-id="1">Eklemesini</strong> gösterecektir.  Hem <strong x-id="1">Kaldır</strong> hem de <strong x-id="1">Ekle</strong> adımlarını uyguladığınızda cihazınız değişir.
 </p>
 
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Access the <strong x-id="1">RileyLink Selection</strong> menu by selecting the <strong x-id="1">3 dot menu (1)</strong> in the upper right hand corner of the <strong x-id="1">Omnipod (POD)</strong> tab and selecting <strong x-id="1">Omnipod preferences (2)</strong> from the dropdown menu. On the <strong x-id="1">Omnipod Settings</strong> menu under <strong x-id="1">RileyLink Configuration (3)</strong> press the <strong x-id="1">Not Set</strong> (if no device is selected) or <strong x-id="1">MAC Address</strong> (if a device is present) text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      <strong x-id="1">RileyLink Seçimi</strong> menüsüne erişmek için <strong x-id="1">Omnipod (POD)</strong> sekmesinin sağ üst köşesindeki <strong x-id="1">3 noktalı menüyü (1)</strong> seçerek, açılır menüden <strong x-id="1">Omnipod tercihleri (2)</strong> ni seçin. <strong x-id="1">Omnipod Ayarları</strong> menüsünde <strong x-id="1">RileyLink Yapılandırması (3)</strong> altındaki <strong x-id="1">Ayarlanmadı</strong> (herhangi bir cihaz seçilmemişse) veya <strong x-id="1">MAC Adresi</strong> (bir cihaz varsa) metnine basın. <strong x-id="1">RileyLink Seçimi</strong> menüsünü açın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
