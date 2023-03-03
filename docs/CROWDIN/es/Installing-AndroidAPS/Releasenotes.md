@@ -50,7 +50,7 @@ Fecha de lanzamiento: XX-XX-2023
 ### Notas importantes
 
 - NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
-- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS.
+- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly.
 - Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos.
 - Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
