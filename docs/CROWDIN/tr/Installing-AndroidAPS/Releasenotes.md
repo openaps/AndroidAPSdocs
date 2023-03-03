@@ -13,7 +13,7 @@ O zaman güncellemek için 60 gününüz var. Bu 60 gün içinde güncelleme yap
 
 30 gün daha güncelleme yapmazsanız (yeni yayın tarihinden 90 gün sonra) AAPS, Açık Döngüye geçecektir.
 
-Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. New versions of AAPS do not only provide new features but also important safety fixes. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Ne yazık ki hala çok eski sürümlerden hata raporları var. Bu nedenle bu uyarı, her bir kullanıcı ve genel DIY topluluğu için güvenliği artırma girişimidir. Anlayışınız için teşekkür ederiz.
+Lütfen bu değişikliğin sizi rahatsız etmeyi amaçlamadığını, ancak güvenlik nedenlerinden kaynaklandığını anlayın. AAPS'nin yeni sürümleri yalnızca yeni özellikler sağlamakla kalmaz, aynı zamanda önemli güvenlik düzeltmeleri de sağlar. Bu nedenle, her kullanıcının mümkün olan en kısa sürede güncelleme yapması gerekir.. Ne yazık ki hala çok eski sürümlerden hata raporları var. Bu nedenle bu uyarı, her bir kullanıcı ve genel DIY topluluğu için güvenliği artırma girişimidir. Anlayışınız için teşekkür ederiz.
 
 ```{admonition} First version of AAPS
 :class: not
@@ -57,19 +57,19 @@ Yayınlanma tarihi: XX-XX-2023
 - Cgm kaynağı olarak xdrip kullanıyorsanız, dahili değişiklikler nedeniyle güncellemeden sonra tekrar seçmelisiniz.
 - Tidepool, ilk görevi geçmek için NS yerine kullanılabilir
 - xDrip+'a gönderirseniz, xDrip senkronizasyon eklentisini yapılandırmanız gerekir. AAPS'den xDrip'te KŞ almak için "xDrip+ Sync Follower" kaynağı seçilmelidir.
-- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
+- ComboV2 sürücüsüne geçmek istiyorsanız, Ruffy'nin kaldırılması ve pompanın AAPS ile yeniden eşleştirilmesi gerekir.
 
 
 ### Değişiklikler
 
 - EOPatch2 / GlucomenDay pompa sürücüsü @jungsomyeonggithub @MilosKozak
 - ComboV2 pompa sürücüsü (Ruffy'ye gerek yok) @dv1
-- Korean DanaI support @MilosKozak
+- Kore DanaI desteği @MilosKozak
 - Glunovo CGM desteği @christinadamianou
 - G7 desteği @MilosKozak @rICTx-T1D @khskekec
 - NSClient v3 eklentisi @MilosKozak
 - Tidepool desteği @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- Yumuşatma eklentisi @MilosKozak, @justmara, Üstel yumuşatma @nichi (Tsunami), Ortalama yumuşatma @jbr7rr
 - 3.1 sürümündeki tonlarca sorun düzeltildi
 - daha fazla yere not eklenmesine izin verme @Sergey Zorchenko
 - UI düzeltmeleri @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
@@ -245,14 +245,14 @@ Yayınlanma tarihi: 01-01-2021
 
 - **Minimum Android sürümü şu anda 8.0'dır.** Daha eski Android sürümleri için eski depodan 2.6.1.4'ü kullanmaya devam edebilirsiniz.
 - [Görevler değişti.](Objectives-objective-3-prove-your-knowledge) **Tamamlanmayan görevleri güncellemeden önce tamamlayın.**
-- Depo konumu hâlâ <https://github.com/nightscout/AndroidAPS>'de. If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+- Depo konumu hâlâ <https://github.com/nightscout/AndroidAPS>'de. Git'e aşina değilseniz, güncellemenin en kolay yolu, AAPS dizini kaldırmak ve [yeni bir klon](../Installing-AndroidAPS/Building-APK.md) oluşturmaktır.
 - Apk'yi oluşturmak için lütfen [Android Studio sürüm 4.1.1](https://developer.android.com/studio/) veya daha yenisini kullanın.
 
 ### Başlıca yeni özellikler
 
 - [Omnipod Eros desteği](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda ve @ps2 @itsmojo'ya özel teşekkür Omnipod için Loop sürücüsüne katılan diğer herkese ve GetRileyLink.org'dan @jlucasvt' a
 - [bolus danışmanı](Preferences-bolus-advisor) & [yemek hatırlatıcısı](Screenshots-eating-reminder) @MilosKozak
-- [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
+- [Yeni saat arayüzü](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS bağlantı iyileştirmeleri @MilosKozak
 - Dexcom yerel uygulaması için SMB'deki "Değiştirilmemiş CGM değerleri" davranışı kaldırıldı
 - Yeni [Düşük Çözünürlüklü Dış Görünüm](Preferences-skin)
@@ -538,7 +538,7 @@ Yayınlanma tarihi: 03-11-2018
 
 - oref1/SMB desteği ([oref1 dokümantasyonu](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) SMB'den ne bekleyeceğinizi, nasıl davranacağını, neyi başarabileceğini ve sorunsuz çalışabilmesi için nasıl kullanacağını öğrenmek için dokümantasyonu mutlaka okuyun.
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pompa desteği
-- Setup wizard: guides you through the process of setting up AAPS
+- Kurulum sihirbazı: AAPS'i kurma sürecinde size rehberlik eder
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
 ### AMA'dan SMB'ye geçerken yapılacak ayarlar
@@ -549,7 +549,7 @@ Yayınlanma tarihi: 03-11-2018
 
 - min_5m_carbimpact varsayılanı, AMA'dan SMB'ye geçerken 3'ten 8'e değiştirildi. AMA'dan SMB'ye yükseltme yapıyorsanız, bunu manuel olarak değiştirmeniz gerekir
 
-- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
+- AAPS 2.0 apk oluştururken dikkat edin: İsteğe bağlı yapılandırma, Android Gradle eklentisinin mevcut sürümü tarafından desteklenmiyor! Derlemeniz "isteğe bağlı yapılandırma" ile ilgili bir hatayla başarısız olursa, aşağıdakileri yapabilirsiniz:
 
   - Dosya > Ayarlar'a tıklayarak Tercihler penceresini açın. (Mac'te, Android Studio > Tercihler).
   - Sol bölmede, "Build, Execution, Deployment > Compiler" Oluştur, Yürüt, Dağıt > Derleyici'ye tıklayın.
