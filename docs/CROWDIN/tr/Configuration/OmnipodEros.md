@@ -1932,7 +1932,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">MAC Address (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      <strong x-id="1">RileyLink Yapılandırması</strong> altında, <strong x-id="1">RileyLink Seçimi</strong> menüsünü açmak için <strong x-id="1">MAC Adresi (1)</strong> metnine basın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1943,7 +1943,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     On the <strong x-id="1">RileyLink Selection</strong> menu the press <strong x-id="1">Remove (2)</strong> button to remove <strong x-id="1">your currently selected RileyLink (3)</strong>
+     <strong x-id="1">RileyLink Seçimi</strong> menüsünde, <strong x-id="1">Seçtiğiniz RileyLink'i (3)</strong> kaldırmak için <strong x-id="1">Kaldır (2)</strong> butonuna basın
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1954,7 +1954,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     At the confirmation prompt press <strong x-id="1">Yes (4)</strong> to confirm the removal of your device.
+     Onay isteminde, cihazınızın kaldırılmasını onaylamak için <strong x-id="1">Evet (4)</strong>'e basın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1965,7 +1965,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     You are returned to the <strong x-id="1">Omnipod Setting</strong> menu where under <strong x-id="1">RileyLink Configuration</strong> you will now see the device is <strong x-id="1">Not Set (5)</strong>.  Tebrikler, seçtiğiniz pod iletişim cihazını başarıyla kaldırdınız.
+     <strong x-id="1">RileyLink Yapılandırması</strong> altında <strong x-id="1">Omnipod Ayarı</strong> menüsüne geri dönerek cihazın <strong x-id="1">Ayarlanmadı (5)</strong> olduğunu görürsünüz.  Tebrikler, seçtiğiniz pod iletişim cihazını başarıyla kaldırdınız.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1986,7 +1986,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
 <ol start="1">
   <li>
     <p spaces-before="0">
-      Under <strong x-id="1">RileyLink Configuration</strong> press the <strong x-id="1">Not Set (1)</strong> text to open the <strong x-id="1">RileyLink Selection</strong> menu.
+      <strong x-id="1">RileyLink Seçimi</strong> menüsünü açmak için <strong x-id="1">RileyLink Yapılandırması</strong> altında <strong x-id="1">Ayarlanmadı (1)</strong> metnine basın.
     </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1997,7 +1997,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Press the <strong x-id="1">Scan (2)</strong> button to start scanning for all available Bluetooth devices.
+     Mevcut tüm Bluetooth cihazlarını taramaya başlamak için <strong x-id="1">Tara (2)</strong> butonuna basın.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -2008,7 +2008,7 @@ Bu talimatlar, Omnipod Eros pompasını yapılandırmak içindir (**Omnipod Dash
  
  <li>
    <p spaces-before="0">
-     Select <strong x-id="1">your RileyLink (3)</strong> from the list of available devices and you will be returned to the <strong x-id="1">Omnipod Settings</strong> menu displaying the <strong x-id="1">MAC Address (4)</strong> of your newly selected device.  Tebrikler, pod iletişim cihazınızı başarıyla seçtiniz.
+     Mevcut cihazlar listesinden <strong x-id="1">RileyLink'inizi (3)</strong> seçerek yeni seçtiğiniz cihazınızın <strong x-id="1">MAC Adresini (4)</strong> görüntüleyen <strong x-id="1">Omnipod Ayarları</strong> menüsüne geri dönersiniz.  Tebrikler, pod iletişim cihazınızı başarıyla seçtiniz.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
