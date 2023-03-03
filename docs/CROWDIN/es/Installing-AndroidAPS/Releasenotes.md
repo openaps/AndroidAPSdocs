@@ -13,9 +13,9 @@ Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 dí
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AndroidAPS no sólo proporcionan nuevas características, sino también importantes arreglos de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. New versions of AAPS do not only provide new features but also important safety fixes. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
-```{admonition} First version of AndroidAPS
+```{admonition} First version of AAPS
 La primera versión de prueba comenzó en 2015. En 2016 se publicó la primera versión.
 
 La cronología de estos lanzamientos no está disponible en este momento, pero como es una pregunta recurrente, lo documentamos aquí.
@@ -50,22 +50,24 @@ Fecha de lanzamiento: XX-XX-2023
 ### Notas importantes
 
 - NS 15 es necesario. Por el momento, en la rama "dev" del repositorio principal de NS.
-- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS.
+- Al utilizar websockets en el plugin NS v3,  los tratamientos introducidos a través de NS UI (botón más) y otras aplicaciones que utilizan la API v1, no se envían a AAPS. Esto se solucionará en futuras versiones de NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
 - Websockets en el plugin v3 funciona de forma similar al plugin v1. Sin websockets habilitados, AAPS programa regularmente descargas desde NS, lo que debería reducir el consumo de batería, porque NS no está permanentemente conectado. En el lado opuesto, supone retrasos en el intercambio de datos.
 - Si está utilizando xDrip+ como fuente de datos de glucosa, debes seleccionarlo de nuevo después de la actualización, debido a cambios internos.
 - Tidepool puede utilizarse como sustituto de NS para superar el primer objetivo.
 - Si envías datos a xDrip+, debes configurar el plugin de sincronización de xDrip+. Para recibir BGs de AAPS en xDrip, debe estar seleccionada la fuente de datos hardware "xDrip+ Sync Follower".
+- If you want to switch to ComboV2 driver, Ruffy must be uninstalled and pump paired again to AAPS
 
 
 ### Cambios
 
 - Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
 - Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
+- Korean DanaI support @MilosKozak
 - Soporte al MCG Glunovo @christinadamianou
 - Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
 - Plugin NSClient v3 @MilosKozak
 - Soporte para Tidepool @MilosKozak
-- Plugin de suavizado de datos de glucosa @MilosKozak @justmara inspirado en el proyecto Tsunami, @jbr7rr
+- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
 - Corregidos muchos problemas de la versión 3.1
 - Permitir añadir notas desde más lugares @Sergey Zorchenko
 - Correcciones en la interfaz de usuario (UI) @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
@@ -241,14 +243,14 @@ Fecha de lanzamiento: 01-01-2021
 
 - **Minimum Android version is 8.0 now.** For older Android versions you can still use 2.6.1.4 from old repo.
 - [Objectives have changed.](Objectives-objective-3-prove-your-knowledge) **Finish not completed objectives before update.**
-- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AndroidAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
+- Repository location still on <https://github.com/nightscout/AndroidAPS> . If you are not familiar with git the easiest way for update is remove directory with AAPS and do a [new clone](../Installing-AndroidAPS/Building-APK.md).
 - Please use [Android Studio 4.1.1](https://developer.android.com/studio/) or newer to build the apk.
 
 ### Nuevas características importantes
 
 - [Omnipod Eros support](../Configuration/OmnipodEros.md) @bartsopers @andyrozman @ktomy @samspycher @TeleRiddler @vanelsberg @eurenda and special thanks to @ps2 @itsmojo, everybody else involved in the Loop driver for Omnipod and @jlucasvt from GetRileyLink.org
 - [bolus advisor](Preferences-bolus-advisor) & [eating reminder](Screenshots-eating-reminder) @MilosKozak
-- [New watchface](Watchfaces-new-watchface-as-of-androidaps-2-8) @rICTx-T1D
+- [New watchface](Watchfaces-new-watchface-as-of-AAPS-2-8) @rICTx-T1D
 - Dana RS connection improvements @MilosKozak
 - Removed "Unchanged CGM values" behavior in SMB for Dexcom native app
 - New [Low Ressolution Skin](Preferences-skin)
@@ -534,7 +536,7 @@ Fecha de lanzamiento: 03-11-2018
 
 - oref1/SMB support ([oref1 documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html)) Be sure to read the documentation to know what to expect of SMB, how it will behave, what it can achieve and how to use it so it can operate smoothly.
 - [\_Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md) pump support
-- Setup wizard: guides you through the process of setting up AndroidAPS
+- Setup wizard: guides you through the process of setting up AAPS
 
 (Releasenotes-settings-to-adjust-when-switching-from-ama-to-smb)=
 ### Valores para ajustar cuando se cambia de AMA a SMB
@@ -545,7 +547,7 @@ Fecha de lanzamiento: 03-11-2018
 
 - min_5m_carbimpact default has changed from 3 to 8 going from AMA to SMB. If you are upgrading from AMA to SMB, you have to change it manually
 
-- Note when building AndroidAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
+- Note when building AAPS 2.0 apk: Configuration on demand is not supported by the current version of the Android Gradle plugin! Si la compilación falla con un error en la configuración personalizada, puede realizar lo siguiente:
 
   - Open the Preferences window by clicking File > Settings (on Mac, Android Studio > Preferences).
   - In the left pane, click Build, Execution, Deployment > Compiler.

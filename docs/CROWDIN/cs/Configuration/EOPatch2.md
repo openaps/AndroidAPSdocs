@@ -134,12 +134,12 @@ The different types of alarms are explained below.
 | Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
 | Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
 | Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
+| Chyba vložení jehly        | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
 | Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
 | Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
 | Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
 
-### Warning
+### Varování
 
 A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
 
@@ -150,7 +150,7 @@ The different types of warnings are explained below.
 | Warnings                     | Explanation                                                                                                                           |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
+| Nízký stav zásobníku         | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
 | Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
 | Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
 | Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |

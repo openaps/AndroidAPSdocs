@@ -1,158 +1,158 @@
-# EOPatch2 Instruction Manual
+# EOPatch2 Kullanım Kılavuzu
 
-**Planned but not commited for AndroidAPS 3.2 (next version)!**
+**AndroidAPS 3.2 (sonraki sürüm) için planlandı ancak taahhüt edilmedi!**
 
-The patch requires the use of rapid-acting U-100 type insulin, such as NovoRapid or Humalog. Use a rapid-acting insulin that is suitable for you according to your doctor’s prescription and inject the prescribed dosage.
+EOPatch pompası, NovoRapid veya Humalog gibi hızlı etkili U-100 tipi insülin kullanımını gerektirir. Doktorunuzun reçetesine göre sizin için uygun olan hızlı etkili bir insülin kullanın ve reçete edilen dozu enjekte edin.
 
-The smallest injectable dose of insulin when using the patch is 0.05 U. The Profile BAS should therefore be set at a minimum value of 0.05 U/hr or more and an interval of 0.05 U/hr, as otherwise there may be an error between the estimated total infusion amount in the Profile and the actual infusion amount in the patch. Likewise, the bolus must also be set and infused with a minimum infusion volume of 0.05 U.
+EOpatch kullanılırken en küçük enjekte edilebilir insülin dozu 0,05 ünitedir. Bu nedenle, bazal Profili minimum 0,05 Ü/sa veya 0,05 Ü/saatin katları olacak şekilde daha yüksek bir değere ayarlanmalıdır. Aksi taktirde Profildeki tahmini toplam infüzyon miktarı ile pompadaki gerçek infüzyon miktarı arasında bir hata olabilir. Aynı şekilde, bolus da minimum infuzyon miktarı 0,05 Ü olarak ayarlanmalıdır.
 
-## Pump Setup
-1. On the AndroidAPS home screen, click the hamburger menu in the upper left corner and go to Config Builder.
-1. Select 'EOPatch2' in the Pump section.
-1. Press the Back key to return to the home screen.
+## Pompa Kurulumu
+1. AndroidAPS ana ekranında sol üst köşedeki hamburger menüsüne tıklayın ve Konfigürasyon ayarları'na gidin.
+1. Pompa bölümünde 'EOPatch2'yi seçin.
+1. Ana ekrana dönmek için Geri tuşuna basın.
 
 
 ![Bild1](../images/EOPatch/Bild1.png) ![Bild2](../images/EOPatch/Bild2.png)
 
 ## Ayarlar
-Select EOPATCH2 at the top of the home screen to go to the EOPATCH2 tab.
+EOPATCH2 sekmesine gitmek için ana ekranın üst kısmındaki EOPATCH2'yi seçin.
 
-Select the EOPatch2 Preferences menu by clicking the three dots in the upper right corner.
+Sağ üst köşedeki üç noktaya tıklayarak EOPatch2 Tercihleri menüsünü seçin.
 
-The EOPatch2 Preferences menu offers a menu to set 3 types of notifications.
+EOPatch2 Tercihler menüsü, 3 tür bildirim ayarlamak için bir menü sunar.
 
-### Low reservoir Alerts
-A warning appears when the amount of insulin remaining in the reservoir reaches the set value or less while using the patch. It can be set from 10 to 50U in 5U increments.
+### Düşük rezervuar Uyarısı
+EOPatch2 kullanırken rezervuarda kalan insülin miktarı ayarlanan değere veya altına ulaştığında bir uyarı verir. 5 ünitelik artışlarla 10 ila 50Ü arasında ayarlanabilir.
 
-### Patch expiration Reminder
-This is a reminder to notify you of the time remaining before the current patch expires. It can be set from 1 to 24 hours in 1 hour increments. The initial setting value is 4 hours.
+### Pompa Süre Sonu Hatırlatıcısı
+Bu, mevcut pompanın sona ermesinden önce kalan süreyi size bildirmek için bir hatırlatmadır. 1 saatlik artışlarla 1 ila 24 saat arasında ayarlanabilir. İlk ayar değeri 4 saattir.
 
-### Patch buzzer Reminder
-This is a reminder function for injections other than basal injection. If you are using an (extended) bolus injection or a temporary basal injection, the patch will make a buzzer sound when the injection starts and when the injection is complete. The initial setting value is Off.
+### Pompa sesli Hatırlatıcılar
+Bu, bazal enjeksiyon dışındaki enjeksiyonlar için bir hatırlatma işlevidir. (Yayma) bir bolus enjeksiyonu veya geçici bir bazal enjeksiyonu kullanıyorsanız, patch, enjeksiyon başladığında ve enjeksiyon tamamlandığında bir uyarı sesi çıkarır. İlk ayar değeri Kapalı'dır.
 
 ![Bild3](../images/EOPatch/Bild3.png)
 
-## Connecting the Patch
+## Pompa Bağlantısı
 
-### Move to patch connection screen
+### Patch bağlantı ekranına git
 
-Select EOPATCH2 at the top of the home screen and click the ACTIVATE PATCH button at the bottom left.
+Ana ekranın üst kısmındaki EOPATCH2'yi seçin ve sol alttaki PATCH ETKİNLEŞTİRME butonuna tıklayın.
 
 ![Bild4](../images/EOPatch/Bild4.png)
 
-### Connecting the patch
-Insert the syringe needle into the insulin inlet on the patch and then slowly push the piston to inject the insulin. When insulin is filled with more than 80U, the patch makes a booting sound (1 buzzer) and boots. After confirming the buzzer sound, click the START PAIRING button on the screen.
+### Pompa Bağlantısı
+Şırınga iğnesini flasterdeki insülin girişine sokun ve ardından insülini enjekte etmek için pistonu yavaşça itin. 80Ü'dan fazla İnsülin doldurulduğunda, patch bir açılış sesi verir ve açılır. Zil sesini onayladıktan sonra, ekrandaki EŞLEŞTİRMEYİ BAŞLAT düğmesine tıklayın.
 
 [Warning]
 
-- Do not turn the needle action lever until instructed. It can cause serious problems during injection or safety checks otherwise.
-- The amount of insulin that can be injected into the patch is 80~200U. If you inject less than 80U into the patch initially, the patch will not work.
-- Take the insulin to be put into the patch from the refrigerator and leave it at room temperature for 15 to 30 minutes beforehand. The temperature of the insulin to be injected must be at least 10°C.
+- Talimat verilene kadar iğne hareket kolunu çevirmeyin. Aksi takdirde enjeksiyon veya güvenlik kontrollerinde ciddi sorunlara neden olabilir.
+- Patch rezervuarına enjekte edilebilecek insülin miktarı 80~200Ü'dir. Başlangıçta Patch rezervuarına 80Ü'den daha az insülin enjekte ederseniz Patch çalışmayacaktır.
+- Konulacak insülini buzdolabından önceden alın ve 15-30 dakika oda sıcaklığında bekletin. Enjekte edilecek insülinin sıcaklığı en az 10°C olmalıdır.
 
 ![Bild5](../images/EOPatch/Bild5.png)
 
-### patch pairing
-The Patch pairing screen will be displayed, and pairing will be attempted automatically. If communication is successful, the Bluetooth pairing request notification appears. Click OK and when the Bluetooth pairing request notification appears a second time with the authentication code, select OK again.
+### pompa eşleştirme
+Patch eşleştirme ekranı görüntülenecek ve eşleştirme otomatik olarak denenecektir. İletişim başarılı olursa, Bluetooth eşleştirme isteği bildirimi görünür. Tamam'a tıklayın ve Bluetooth eşleştirme talebi bildirimi, kimlik doğrulama koduyla birlikte ikinci kez göründüğünde tekrar Tamam'ı seçin.
 
 [Warning]
 
-- For pairing, the patch and the smartphone must be located within 30 cm of each other.
-- After the patch booting is completed, the patch will beep every 3 minutes until the pairing is complete.
-- After booting the patch, the patch application must be completed via the app within 60 minutes. If the application cannot be completed within 60 minutes, the patch should be discarded.
+- Eşleştirme için patch ve akıllı telefon birbirinden 30 cm uzakta olmalıdır.
+- Patch önyüklemesi tamamlandıktan sonra, eşleştirme tamamlanana kadar patch her 3 dakikada bir bip sesi çıkaracaktır.
+- Patch başladıktan sonra, patch uygulamasının 60 dakika içinde uygulama üzerinden tamamlanması gerekir. Uygulama 60 dakika içinde tamamlanamıyorsa patch atılmalıdır.
 
 ![Bild6](../images/EOPatch/Bild6.png) ![Bild7](../images/EOPatch/Bild7.png) ![Bild8](../images/EOPatch/Bild8.png)
 
 
-### patch preparation
-After removing the adhesive tape of the patch, check if the needle is sticking out. If there are no problems with the patch, click NEXT.
+### Patch hazırlığı
+Patch yapışkan bandını çıkardıktan sonra iğnenin dışarı çıkıp çıkmadığını kontrol edin. Patch ile ilgili herhangi bir sorun yoksa, İLERİ'ye tıklayın.
 
 ![Bild9](../images/EOPatch/Bild9.png)
 
-### Patch attachment
-Insulin should be injected in a spot with subcutaneous fat but few nerves or blood vessels, so it is recommended to use the abdomen, arm, or thigh for the patch attachment site. Choose a patch attachment site and apply the patch after disinfecting the location.
+### Patch yerleştirme
+İnsülin, deri altı yağ içeren ancak az sayıda sinir veya kan damarı olan bir noktaya enjekte edilmelidir, bu nedenle Patch takma yeri olarak karın, kol veya uyluğun kullanılması önerilir. Bir Patch infüzyon bölgesi seçin ve konumu dezenfekte ettikten sonra pompayı yerleştirin.
 
 [Warning]
 
-- Make sure to straighten the side of the patch tape attached to the body evenly, so that the patch adheres completely to the skin.
-- If the patch does not stick completely, air may enter between the patch and the skin, which can weaken the adhesive strength and waterproof effect of the patch.
+- Pompanın cilde tamamen yapışması için pompa bandının vücuda yapıştırılan tarafını eşit şekilde düzleştirdiğinizden emin olun.
+- Pompa tamamen yapışmazsa, pompa ile cilt arasına hava girebilir ve bu da pompanın yapışma gücünü ve su geçirmezlik etkisini zayıflatabilir.
 
 ![Bild10](../images/EOPatch/Bild10.png)
 
-### Safety Check
-When patching is complete, touch Start Safety Check. When the safety check is completed, the patch will beep once.
+### Güvenlik Kontrolü
+Yerleştirme işlemi tamamlandığında, Güvenlik Kontrolünü Başlat'a dokunun. Güvenlik kontrolü tamamlandığında, pompa bir kez bip sesi çıkaracaktır.
 
 [Warning]
 
-- For safe use, do not turn the needle action lever until the safety check has been completed.
+- Güvenli kullanım için, güvenlik kontrolü tamamlanana kadar iğne hareket kolunu çevirmeyin.
 
 ![Bild11](../images/EOPatch/Bild11.png) ![Bild12](../images/EOPatch/Bild12.png)
 
 
-### Inserting the needle
-The needle is inserted by holding around the patch and turning the needle action lever more than 100° in the upward direction of the lever. There is a buzzer sound when the needle is inserted correctly. Turn the needle action lever further clockwise to release the lever. Click NEXT.
+### İğneyi yerleştirme
+İğne, pompanın çevresinden tutularak ve iğne hareket kolu kolun yukarı yönünde 100°'den fazla döndürülerek sokulur. İğne doğru şekilde takıldığında bir uyarı sesi duyulur. Kolu serbest bırakmak için iğne hareket kolunu saat yönünde daha fazla çevirin. İLERİ'YE basın.
 
 [Caution]
 
-- If you go to the next step without the buzzer sounding, a needle insertion error warning will appear.
+- Zil çalmadan bir sonraki adıma geçerseniz, bir iğne yerleştirme hatası uyarısı görünecektir.
 
-## Discarding the patch
-Patches must be replaced in the case of low insulin levels, usage expiration, and defects. The recommended usage period for each patch is 84 hours after booting the patch.
+## Pompanın çıkarılması
+İnsülin seviyesinin düşük olması, kullanım süresinin dolması ve kusurlu olması durumunda pompa (EOPatch) değiştirilmelidir. Her pompa için önerilen kullanım süresi, pompayı başlattıktan sonra 84 saattir.
 
-### Discarding the patch
-Select EOPATCH2 at the top of the home screen and click the DISCARD/CHANGE PATCH button at the bottom. On the next screen, click the DISCARD PATCH button. A dialog box appears to confirm once more and if you select the DISCARD PATCH button, the disposal is completed.
+### Pompanın çıkarılması
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve alttaki POMPAYI AYIR/DEĞİŞTİR butonuna tıklayın. Bir sonraki ekranda, POMPAYI ÇIKAR butonuna tıklayın. Bir kez daha onaylamak için bir iletişim kutusu görünür ve POMPAYI ÇIKAR butonunu seçerseniz, imha işlemi tamamlanır.
 
 ![Bild13](../images/EOPatch/Bild13.png) ![Bild14](../images/EOPatch/Bild14.png) ![Bild15](../images/EOPatch/Bild15.png) ![Bild16](../images/EOPatch/Bild16.png)
 
 ## İnsülin İletimini Askıya Alma ve Devam Ettirme
-Suspending insulin delivery also cancels both extended bolus and temporary basal. When resuming insulin delivery, the canceled extended bolus and temporary basal will not be resumed. And when insulin delivery is suspended, the patch will give a sound every 15 minutes.
+İnsülin iletiminin askıya alınması aynı zamanda hem Yayma bolusu hem de geçici bazalı iptal eder. İnsülin iletimine devam edilirken, iptal edilen yayma bolus ve geçici bazal devam ettirilmeyecektir. Ve insülin iletimi askıya alındığında, pompa her 15 dakikada bir ses verecektir.
 
-### Suspending insulin delivery
-Select EOPATCH2 at the top of the home screen and click the SUSPEND button at the bottom right. When you select CONFIRM in the confirmation box, a time selection box appears. If you select the CONFIRM button after selecting the time, the insulin delivery will be suspended for the set amount of time.
+### İnsülin iletiminin askıya alınması
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki ASKIYA AL butonuna tıklayın. Onay kutusunda ONAYLA'yı seçtiğinizde, bir zaman seçim kutusu görünür. Süreyi seçtikten sonra ONAYLA düğmesini seçerseniz, insülin iletimi ayarlanan süre boyunca askıya alınacaktır.
 
 ![Bild17](../images/EOPatch/Bild17.png) ![Bild18](../images/EOPatch/Bild18.png) ![Bild19](../images/EOPatch/Bild19.png)
 
 
-### Resuming insulin delivery
-Select EOPATCH2 at the top of the home screen and click the RESUME button at the bottom right. Insulin delivery will resume by selecting CONFIRM in the confirmation dialog box.
+### İnsülin iletimini devam ettirme
+Ana ekranın üst kısmında EOPATCH2'yi seçin ve sağ alttaki DEVAM ET butonuna tıklayın. Onay iletişim kutusunda ONAYLA öğesi seçildiğinde insülin iletimi devam edecektir.
 
 ![Bild20](../images/EOPatch/Bild20.png) ![Bild21](../images/EOPatch/Bild21.png)
 
-## Alarms/Warnings
+## Alarmlar/Uyarılar
 
 ### Alarm
 
-Alarms are issued for emergency situations of the highest priority and require immediate action. The alarm signal does not disappear or time out until it is acknowledged. An alarm occurs when there is a problem with the patch being used, so there may be cases where the patch in use needs to be discarded and replaced with a new patch. The warning is displayed as a dialog box and switching to another screen is not possible until processing is completed.
+Alarmlar, en yüksek önceliğe sahip acil durumlar için verilir ve acil müdahale gerektirir. Alarm sinyali, onaylanana kadar kaybolmaz veya zaman aşımına uğramaz. Kullanılan pompa ile ilgili bir sorun olduğunda bir alarm verilir, bu nedenle kullanılan pompanın çıkarılması ve yeni bir pompa ile değiştirilmesi gereken durumlar olabilir. Uyarı bir iletişim kutusu olarak görüntülenir ve işlem tamamlanana kadar başka bir ekrana geçiş mümkün değildir.
 
 ![Bild22](../images/EOPatch/Bild22.png) ![Bild23](../images/EOPatch/Bild23.png)
 
-The different types of alarms are explained below.
+Farklı alarm türleri aşağıda açıklanmıştır.
 
-| Alarms                     | Explanation                                                                                                                                                                                                         |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Empty reservoir            | Occurs when the patch’s reservoir runs out of insulin.                                                                                                                                                              |
-| Patch expired              | Occurs when the patch usage time has expired, and no further insulin injections are possible.                                                                                                                       |
-| Occlusion                  | Occurs when it appears that the patch's insulin inlet is clogged.                                                                                                                                                   |
-| Power on self-test failure | Occurs when the patch finds an unexpected error during the post-boot self-test process.                                                                                                                             |
-| Inappropriate temperature  | Occurs when the patch is outside the normal operating temperature range during patch application and use. To deal with this alarm, move the patch to an  appropriate operating temperature (4.4 to 37°C) condition. |
-| Needle insertion Error     | Occurs when needle insertion is not normal during the patch application process. Check that the needle insertion edge of the patch and the needle activation button are in a straight line.                         |
-| Patch battery Error        | Occurs just before the patch’s internal battery runs out and powers off.                                                                                                                                            |
-| Patch activation Error     | Occurs when the app fails to complete the patching process within 60 minutes after the patch is booted.                                                                                                             |
-| Patch Error                | Occurs when the patch encounters an unexpected error while applying and using the patch.                                                                                                                            |
+| Alarmlar                         | Açıklama                                                                                                                                                                                                      |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Rezervuar boş                    | Patch rezervuarında insülin bittiğinde belirir.                                                                                                                                                               |
+| Patch süresi doldu               | Patch kullanım süresi dolduğunda ve başka insülin enjeksiyonu mümkün olmadığında belirir.                                                                                                                     |
+| Tıkanma                          | Patch insülin girişi tıkalı göründüğünde ortaya çıkar.                                                                                                                                                        |
+| Açılma kendi kendine test hatası | Patch, önyükleme sonrası kendi kendini sınama işlemi sırasında beklenmeyen bir hata bulduğunda belirir.                                                                                                       |
+| Uygun olmayan sıcaklık           | Pompa hazırlığı ve kullanımı sırasında, pompa normal çalışma sıcaklığı aralığının dışında olduğunda belirir. Bu alarmla başa çıkmak için pompa uygun çalışma sıcaklığı (4,4 ila 37°C) arasına getirilmelidir. |
+| İğne yerleştirme Hatası          | Pompa uygulama işlemi sırasında iğne girişi normal olmadığında belirir. Pompanın iğne giriş kenarı ile iğne etkinleştirme düğmesinin düz bir çizgide olduğunu kontrol edin.                                   |
+| Pompa pil hatası                 | Pompanın dahili pili bitip kapanmadan hemen önce belirir.                                                                                                                                                     |
+| Pompa etkinleştirme Hatası       | Uygulama, pompa önyüklendikten sonraki 60 dakika içinde pompa hazırlık işlemini tamamlayamadığı zaman gerçekleşir.                                                                                            |
+| Pompa Hatası                     | Pompa, etkinleştirilirken ve kullanılırken beklenmeyen bir hatayla karşılaştığında belirir.                                                                                                                   |
 
-### Warning
+### Uyarı
 
-A warning occurs in a medium or low-priority situation. When a warning occurs, it is displayed as a notification in the Overview screen.
+Orta veya düşük öncelikli bir durumda bir uyarı oluşur. Bir uyarı oluştuğunda, Genel Bakış ekranında bir bildirim olarak görüntülenir.
 
 ![Bild24](../images/EOPatch/Bild24.png)
 
-The different types of warnings are explained below.
+Farklı uyarı türleri aşağıda açıklanmıştır.
 
-| Warnings                     | Explanation                                                                                                                           |
-| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| End of insulin suspend       | Occurs when the time set by the user has elapsed after the insulin infusion suspension has been completed.                            |
-| Low reservoir                | Occurs when the remaining amount of insulin in the patch is below the set amount.                                                     |
-| Patch operating life expired | Occurs when the patch usage period is over.                                                                                           |
-| Patch will expire soon       | Occurs 1 hour before the patch must be discarded.                                                                                     |
-| Incomplete Patch activation  | Occurs when more than 3 minutes have elapsed due to an interruption during patch application in the stage after pairing is completed. |
-| Patch battery low            | Occurs when the patch's battery is low.                                                                                               |
+| Uyarılar                     | Açıklama                                                                                                                                     |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| İnsülin askıya alma sonu     | İnsülin infüzyon süspansiyonu tamamlandıktan sonra kullanıcı tarafından ayarlanan süre geçtiğinde gerçekleşir.                               |
+| Düşük rezervuar              | Pompada kalan insülin miktarı programda ayarlanan miktarın altına düştüğünde belirir.                                                        |
+| Pompa çalışma ömrü sona erdi | Pompa kullanım süresi bittiğinde belirir.                                                                                                    |
+| Pompa yakında sona erecek    | Pompa süresi sona ermeden 1 saat önce belirir.                                                                                               |
+| Eksik Pompa aktivasyonu      | Eşleştirme tamamlandıktan sonraki aşamada pompa etkinleştirme sırasında yaşanan kesinti nedeniyle 3 dakikadan fazla zaman geçtiğinde oluşur. |
+| Pompa pili zayıf             | Pompanın pili azaldığında belirir.                                                                                                           |
 

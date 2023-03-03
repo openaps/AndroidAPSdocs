@@ -6,9 +6,9 @@ Pour des évènements identiques et fréquents, vous devrez peut-être toujours 
 
 Par ex. lorsque votre Gly est trop faible, vous pouvez décider d'avoir automatiquement une cible temporaire haute. Ou si vous êtes à votre centre de fitness, vous activez automatiquement une cible temp.
 
-Before using Automation, you should be confident with manual [temp targets](./temptarget.html) or profile switches.
+Avant d'utiliser l'automatisation, vous devriez être confiant avec les [cibles temporaires](./temptarget.html) ou les changements de profil.
 
-Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Instead of action, let AAPS first display only a notification.** When you are sure automation is triggered at the right time, replace notification by real action.
+Assurez-vous de bien comprendre comment l'automatisation fonctionne avant de configurer votre première règle simple. **Au lieu de l'action, laisser AAPS n'afficher qu'une notification.** Quand vous êtes sûr que l'automatisation est déclenchée au bon moment, remplacez la notification par une action réelle.
 
 ```{image} ../images/Automation_ConditionAction_RC3.png
 :alt: Condition d'Automation + action
@@ -21,7 +21,7 @@ Pour mettre en place une automatisation, vous devez lui donner un titre, sélect
 (Automation-important-note)=
 ### Remarque importante
 
-**Automation is still active when you disable loop!**
+**L'automatisation est toujours active lorsque vous désactivez la boucle !**
 
 Veillez donc à désactiver les règles d'automatisation pendant ces moments si nécessaire. Vous pouvez le faire en décochant la case à gauche du nom de votre règle d'automatisation.
 
@@ -31,64 +31,64 @@ Veillez donc à désactiver les règles d'automatisation pendant ces moments si 
 
 ### Où trouver l'automatisation
 
-Depending on your [settings in config builder](Config-Builder-tab-or-hamburger-menu) you will either find [Automation](Config-Builder#automation) in hamburger menu or as a tab.
+Selon vos [paramètres dans le Générateur de configuration](Config-Builder-tab-or-hamburger-menu) vous trouverez soit [Automatisation](Config-Builder#automation) dans le menu hamburger soit comme un onglet.
 
 ### Généralités
 
 Il y a des limites :
 
-- The glucose value has to be between 72 and 270 mg/dl or 4 and 15 mmol/l.
-- The profile percentage has to be between 70 % and 130%.
-- There is a 5 min. time limit between executions (and first execution).
+- La glycémie doit être comprise entre 72 et 270 mg/dl ou 4 et 15 mmol/l.
+- Le pourcentage du profil doit être compris entre 70% et 130%.
+- Il y a une durée limite de 5 min. entre les exécutions (et la première exécution).
 
-**Please be careful:**
+**Soyez prudent :**
 
-- **less than -2 means: -3 and lower (-4,-10, etc)**
-- **more than -2 means: -1 and higher (-1, 0, +10, etc)**
+- **inférieur à -2 signifie : -3 et inférieur (-4, -10, etc)**
+- **supérieur à -2 signifie : -1 et supérieur (0, 1, +10, etc)**
 
 ### Condition
 
 Vous pouvez choisir entre plusieurs conditions. Voici quelques explications, mais la plupart d'entre elles devraient être faciles à comprendre et elles ne sont pas toutes décrites ici :
 
-- connect conditions: you can have several conditions and can link them with
+- conditions de connexion : vous pouvez avoir plusieurs conditions et les lier avec
 
-  - "And"
-  - "Or"
-  - "Exclusive or" (which means that if one - and only one of the - conditions applies, the action(s) will happen)
+  - "Et"
+  - "Ou"
+  - "Ou exclusif" (qui signifie que si uniquement une - et une seule - des conditions s'applique, alors la ou les action(s) se produiront)
 
-- Time vs. recurring time
+- Temps vs. Période répétitive
 
-  - time =  single time event
-  - recurring time = something that happens regularly (i.e. once a week, every working day etc.)
+  - Temps = événement unique
+  - Période répétitive = quelque chose qui arrive régulièrement (par ex. une fois par semaine, chaque jour ouvrable, etc)
 
-- location: in the config builder (Automation), you can select which location service you want to use:
+- Localisation : dans la configuration (Automatisation), vous pouvez choisir le service de localisation que vous souhaitez utiliser :
 
-  - Use passive location: AAPS only takes locations when other apps are requesting it
-  - Use network location: Location of your Wifi
-  - Use GPS location (Attention! Peut entrainer une consommation excessive de la batterie !)
+  - Utiliser la localisation passive : AAPS ne prend la localisation que lorsque d'autres applications la demandent
+  - Utiliser la localisation par le réseau : Localisation de votre Wifi
+  - Utiliser la localisition GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
 
 ### Action
 
 Vous pouvez choisir une ou plusieurs actions :
 
-- start temp target
+- démarrer la cible temp
 
-  - must be between 72 mg/dl and 270 mg/dl (4 mmol/l and 15 mmol/l)
-  - works only if there is no previous temp target
+  - doit être comprise entre 72 mg/dl et 270 mg/dl (4 mmol/l et 15 mmol/l)
+  - ne fonctionne que s'il n'y a pas de cible temporaire en cours
 
-- stop temp target
+- arrêter la cible temp
 
 - notification
 
-- profile percentage
+- pourcentage du profil
 
-  - must be between 70% and 130%
-  - works only if the previous percentage is 100%
+  - doit être comprise entre 70% et 130%
+  - ne fonctionne que si le pourcentage précédent est de 100%
 
-After adding your action, **don't forget to change the default values** to what you need by clicking in the default values.
+Après avoir ajouté votre action, **n'oubliez pas de modifier les valeurs par défaut** pour répondre à vos besoins en cliquant sur les valeurs par défaut.
 
 ```{image} ../images/Automation_Default_V2_5.png
-:alt: Automation default vs. set values
+:alt: Automatisation defaut vs. choisir valeur
 ```
 
 (Automation-sort-automation-rules)=
@@ -109,34 +109,34 @@ Pour supprimer une règle d'automatisation, cliquez sur l'icône Corbeille.
 ```
 
 (Automation-good-practice-caveats)=
-## Good practice & caveats
+## Bonnes pratiques et avertissements
 
-- When you start using automation or create a new rule, first add a notification only until you are sure the rule is working well.
+- Lorsque vous commencez à utiliser l'automatisation ou que vous créez une nouvelle règle, commencez par ajouter une notification jusqu'à ce que vous soyez certain que la règle fonctionne correctement.
 
-- Watch the rule results.
+- Observez les résultats de la règle.
 
-- Don't try to make conditions too easy (i.e.: IF bg > 80 mg/dl AND bg \< 180 mg/dl)
+- N'essayez pas de mettre des conditions trop faciles (par ex.: SI Glycémie > 80 mg/dl ET Glycémie \< 180 mg/dl)
 
-  **Doubly important if action is a profile switch!**
+  **C'est doublement important si l'action est un changement de profil!**
 
-- Try to use Temp Targets instead of Profile Switches. Temp Targets do not reset [Autosens](Open-APS-features-autosens) back to 0.
+- Essayez de privilégier l'utilisation de Cibles Temp. plutôt que des Changements de Profil. Les Cibles temporaires ne réinitialisent pas [Autosens](Open-APS-features-autosens) à 0.
 
-- Make sure Profile switches are made sparingly and preferably at a last resort.
+- Assurez-vous que les changements de profil sont faits avec parcimonie et de préférence en dernier recours.
 
-  - Profile switching renders [Autosens](Open-APS-features-autosens) useless for a min of 6 hours.
+  - Les changements de profil rendent [Autosens](Open-APS-features-autosens) inutilisable pendant au minimum 6 heures.
 
-- Profile switching will not reset the profile back to your base profile
+- Un changement de profil ne remettra pas le profil standard initial
 
-  - You have to make another rule to set this back or do it manually!
-  - Increased risk of hypoglycemia if profile switch does not expire or reset back to base profile.
+  - Vous devez faire une autre règle pour remettre le profil initial ou le faire manuellement !
+  - Il y a un risque d'hypoglycémie plus élevé si le changement de profil n'expire pas ou si le profil standard n'est pas remis en place.
 
 ## Exemples
 
 Ce ne sont que des exemplesde configuration, pas des conseils. Ne les reproduisez pas sans savoir ce que vous faites réellement ou pourquoi vous en avez besoin.
 
-- Switching profiles for your daily activities (like school, gym, weekend, workday...) using geolocation, wifi, time etc.
-- Setting temp target for activities based on time, location, connection to a bluetooth device...
-- Setting eating soon temp targets based on time, location...
+- Changement de profil pour vos activités quotidiennes (comme à l'école, gymnastique, week-end, journée de travail...) utilisant la géolocalisation, le wifi, l'heure, etc.
+- Définition d'une cible temporaire pour les activités en fonction du temps, de l'emplacement, de la connexion à un périphérique Bluetooth ...
+- Définition d'une cible temporaire repas imminent basée sur l'heure et la localisation...
 
 ### Cible temp. Glycémie basse
 
@@ -158,12 +158,12 @@ Cet exemple est pour quelqu'un qui déjeune au travail tous les jours à la mêm
 
 Veuillez noter que si vous n'utilisez pas correctement l'automatisation, cela pourrait entraîner des difficultés et même être dangereux pour votre santé. Des exemples d'utilisation incorrecte sont :
 
-- Trying to override algorithm at all instead of help only (i.e. by changing profile instead of tunning basal, IC etc.)
-- Setting profile to compensate food
-- Setting profile without duration
-- Creating one way rules (i.e. do something but don't undo it by another rule)
-- Creating long term rules
+- Essayer de contourner l'algorithme au lieu de l'utiliser simplement comme une aide (par ex. en changeant de profil au lieu d'ajuster le débit de basal, le G/I etc.)
+- Régler le profil pour compenser la nourriture
+- Mettre un profil sans durée
+- Créer des règles à sens unique (par ex. faire quelque chose, mais ne pas annuler par une autre règle)
+- Créer des règles à long terme
 
 ## Alternatives
 
-Pour les utilisateurs avancés, il existe d'autres possibilités pour automatiser les tâches à l'aide de IFTTT ou d'une application Android tierce appelée Automate. Some examples can be found [here](./automationwithapp.html).
+Pour les utilisateurs avancés, il existe d'autres possibilités pour automatiser les tâches à l'aide de IFTTT ou d'une application Android tierce appelée Automate. Quelques exemples sont disponibles [ici](./automationwithapp.html).

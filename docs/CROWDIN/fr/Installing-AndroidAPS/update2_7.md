@@ -25,11 +25,11 @@
 
 ## Définir le mot de passe principal
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7.
+- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7.
 - Open Preferences (three-dot-menu on top right of home screen)
-- Click triangle below "General"
-- Click "Master-Password"
-- Enter password, confirm password and click ok.
+- Cliquez sur le triangle sous " Général "
+- Cliquez sur " Mot de passe principal "
+- Entrez le mot de passe, confirmez le et cliquez sur OK.
 
 ```{image} ../images/MasterPW.png
 :alt: Définir le mot de passe principal

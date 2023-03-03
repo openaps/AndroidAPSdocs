@@ -1,56 +1,57 @@
 # Préférences
 
-- **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+- **Ouvrez les préférences** en cliquant sur le menu trois points en haut à droite de l'écran.
 
   ```{image} ../images/Pref2020_Open2.png
   :alt: Ouvrir les préférences
   ```
 
-- You can jump directly to preferences for a certain tab (i.e. pump tab) by opening this tab and clicking Plugin preferences.
+- Vous pouvez accéder directement aux préférences d'un certain onglet (par ex. onglet pompe) en sélectionnant cet onglet et en cliquant sur Préférences du plugin.
 
   ```{image} ../images/Pref2020_OpenPlugin2.png
   :alt: Ouvrir les préférences du plugin
   ```
 
-- **Sub-menus** can be opened by clicking the triangle below the sub-menu title.
+- **Les sous-menus** peuvent être ouverts en cliquant sur le triangle situé sous le titre du sous-menu.
 
   ```{image} ../images/Pref2020_Submenu2.png
   :alt: Ouvrir le sous-menu
   ```
 
-- With the **filter** on top of the preferences screen you can quickly access certain preferences. Il suffit de taper une partie du texte que vous cherchez.
+- Avec le **filtre** en haut de l'écran des préférences, vous pouvez accéder rapidement à certaines préférences. Il suffit de taper une partie du texte que vous cherchez.
 
   ```{image} ../images/Pref2021_Filter.png
   :alt: Filtre des préferences
   ```
 
 ```{contents}
-:backlinks: entry
-:depth: 2
+contenus::
+   :backlinks: entrée
+   :depth: 2
 ```
 
 (Preferences-general)=
 ## Généralités
 
-**Units**
+**Unités**
 
-- Set units to mmol/l or mg/dl depending on your preferences.
+- Définissez les unités mmol/l ou mg/dl selon vos préférences.
 
 **Langue**
 
-- New option to use phone's default language (recommended).
+- Nouvelle option pour utiliser la langue par défaut du téléphone (recommandé).
 
-- In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
+- Si vous voulez AAPS dans une autre langue que la langue du téléphone, vous pouvez choisir parmi une large variété.
 
-- If you use different languages you might sometimes see a language mix. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
+- Si vous utilisez des langues différentes, vous pouvez parfois voir un mélange de langues. Cela est dû à un problème Android, le remplacement de la langue par défaut d'Android parfois ne fonctionne pas.
 
   ```{image} ../images/Pref2020_General.png
   :alt: Preferences > General
   ```
 
-**Patient name**
+**Nom du patient**
 
-- Can be used if you have to differentiate between multiple setups (i.e. two T1D kids in your family).
+- Peut être utilisé si vous devez différencier plusieurs configurations (par ex. deux enfants DT1 de votre famille).
 
 (Preferences-protection)=
 ### Protection
@@ -58,15 +59,15 @@
 (Preferences-master-password)=
 #### Mot de passe principal
 
-- Necessary to be able to [export settings](../Usage/ExportImportSettings.md) as they are encrypted as of version 2.7. **Biometric protection may not work on OnePlus phones. This is a known issue of OnePlus on some phones.**
+- Nécessaire pour pouvoir [exporter les paramètres](../Usage/ExportImportSettings.md) car ils sont chiffrés depuis la version 2.7. **La protection biométrique ne fonctionne pas sur les téléphones OnePlus. Ceci est un problème connu de OnePlus sur certains téléphones.**
 
-- Open Preferences (three-dot menu on top right of home screen)
+- Ouvrez les préférences (menu trois points en haut à droite de l'écran d'accueil)
 
-- Click triangle below "General"
+- Cliquez sur le triangle sous " Général "
 
-- Click "Master-Password"
+- Cliquez sur " Mot de passe principal "
 
-- Enter password, confirm password and click ok.
+- Entrez le mot de passe, confirmez le et cliquez sur OK.
 
   ```{image} ../images/MasterPW.png
   :alt: Définir le mot de passe principal
@@ -74,9 +75,9 @@
 
 #### Protection des paramètres
 
-- Protect your settings with a password or phone's biometric authentication (i.e. [child is using AAPS](../Children/Children.md)).
+- Protégez vos paramètres avec un mot de passe ou l'authentification biométrique du téléphone (par ex. si votre [enfant utilise AAPS](../Children/Children.md)).
 
-- Custom password should be used if you want to use master password just for securing [exported settings](../Usage/ExportImportSettings.md).
+- Le mot de passe personnalisé doit être utilisé si vous voulez juste utiliser le mot de passe principal pour sécuriser [les paramètres exportés](../Usage/ExportImportSettings.md).
 
 - If you are using a custom password click on line "Settings password" to set password as described [above](Preferences-master-password).
 
@@ -86,14 +87,14 @@
 
 #### Protection de l'Application
 
-- If app is protected you must enter password or use phone's biometric authentication to open AAPS.
-- App will shut down immediately if wrong password is entered - but still run in the background if it was previously opened successfully.
+- Si l'application est protégée, vous devez entrer un mot de passe ou utiliser l'authentification biométrique du téléphone pour ouvrir AAPS.
+- L'application s'arrêtera immédiatement si un mot de passe erroné est entré, mais s'exécute toujours en arrière-plan si elle a déjà été ouverte avec succès.
 
 #### Protection des bolus
 
-- Bolus protection might be useful if AAPS is used by a small child and you [bolus via SMS](../Children/SMS-Commands.md).
+- La protection des bolus peut être utile si AAPS est utilisé par un petit enfant et que vous effectuez les [bolus par SMS](../Children/SMS-Commands.md).
 
-- In the example below you see the prompt for biometric protection. Si l'authentification biométrique ne fonctionne pas, cliquez dans la zone au-dessus de l'invite blanche et entrez le mot de passe principal.
+- Dans l'exemple ci-dessous, vous voyez l'invite de protection biométrique. Si l'authentification biométrique ne fonctionne pas, cliquez dans la zone au-dessus de l'invite blanche et entrez le mot de passe principal.
 
   ```{image} ../images/Pref2020_PW.png
   :alt: Protection biométrique
@@ -102,26 +103,26 @@
 (Preferences-skin)=
 #### Thème
 
-- You can choose from four types of skins:
+- Vous pouvez choisir parmi quatre thèmes :
 
   ```{image} ../images/Pref2021_SkinWExample.png
   :alt: Sélection du theme + exemples
   ```
 
-- 'Low resolution skin' comes with shorter label and age/level removed to have more available space on very low resolution screen.
+- Le thème 'Basse résolution' a des étiquettes plus courte et "âge/niveau" ont été enlevé dans la zone Careportal de l'onglet Action pour avoir plus d'espace disponible sur un écran de très basse résolution.
 
-- Difference of other skins depend of phone's display orientation.
+- La différence entre les autres thèmes dépend de l'orientation du téléphone.
 
 ##### Orientation portrait
 
-- **Original Skin** and **Buttons are always displayed on bottom of screen** are identical
-- **Large Display** has an increased size of all graphs compared to other skins
+- **Thème d'origine** et **Les boutons sont toujours affichés en bas de l'écran** sont identiques
+- **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
 ##### Orientation paysage
 
-- Using **Original Skin** and **Large Display**, you have to scroll down to see buttons at the bottom of the screen
+- En utilisant **Thème d'origine** et **Grand écran**, vous devez défiler vers le bas pour voir les boutons en bas de l'écran
 
-- **Large Display** has an increased size of all graphs compared to other skins
+- **Grand écran** a une taille de graphiques augmentée comparé aux autres thèmes
 
   ```{image} ../images/Screenshots_Skins.png
   :alt: Thèmes selon l'orientation du téléphone
@@ -130,7 +131,7 @@
 (Preferences-overview)=
 ## Aperçu
 
-- In overview section you can define preferences for home screen.
+- Dans la section Aperçu, vous pouvez définir les préférences de l'écran d'accueil.
 
   ```{image} ../images/Pref2020_OverviewII.png
   :alt: Preferences > Overview
@@ -138,43 +139,43 @@
 
 ### Garder l'écran allumé
 
-- Useful while giving a presentation.
-- It will consume a lot of energy, so it is wise to have your phone plugged into a charger.
+- Utile lors d'une présentation.
+- Cela consomme beaucoup d'énergie, il est donc prudent de brancher votre téléphone sur un chargeur.
 
 (Preferences-buttons)=
 ### Boutons
 
-- Define which buttons are visible on the bottom of your home screen.
+- Définissez quels boutons sont visibles en bas de votre écran d'accueil.
 
-- With the increment figure you can define amount for the three buttons in carb and insulin dialogue for easy entry.
+- Avec les paramètres incrément, vous pouvez définir les quantités pour les trois boutons des boîtes de dialogue glucides et insuline pour une entrée facile.
 
   ```{image} ../images/Pref2020_OV_Buttons.png
-  :alt: Preferences > Buttons
+  :alt: Préférences > Boutons
   ```
 
 (Preferences-quick-wizard)=
 ### Assistant Rapide
 
-- If you have a frequent snack or meal, you can use the quick wizard button to easily enter amount of carbs and set calculation basics.
+- Si vous avez une collation ou un repas fréquent, vous pouvez utiliser le bouton Assistant Rapide pour entrer facilement la quantité de glucides et définir les règles de calcul.
 
-- In setup you define during which time period the button will be visible on your home screen - just one button per period.
+- Dans le paramétrage, vous définissez au cours de quelle période le bouton sera visible sur votre écran d'accueil - ne définissez qu'un bouton par période.
 
-- If you click the quick wizard button AAPS will calculate and propose a bolus for those carbs based on your current ratios (considering blood glucose value or insulin on board if set up).
+- Si vous cliquez sur le bouton Assistant Rapide, AAPS calculera et proposera un bolus pour ces glucides en fonction de vos valeurs actuelles (glycémie ou insuline active si configurées).
 
-- The proposal has to be confirmed before insulin is delivered.
+- La proposition doit être confirmée avant l'injection de l'insuline.
 
   ```{image} ../images/Pref2020_OV_QuickWizard.png
-  :alt: Preferences > Quick Wizard Button
+  :alt: Préférences > Bouton Assistant rapide
   ```
 
 (Preferences-default-temp-targets)=
 ### Cibles Temporaires par défaut
 
-- [Temp targets (TT)](../Usage/temptarget.md) allow you to define change your blood glucose target for a certain time period.
+- Les [Cibles Temporaires (CT)](../Usage/temptarget.md) vous permettent de définir une nouvelle cible de glycémie pour une certaine durée.
 
-- With setting of default TT you can easily change your target for activity, eating soon etc.
+- Avec la configuration de CT par défaut, vous pouvez facilement changer vos cibles d'activité, de repas imminent, etc.
 
-- Press long on your target in the top right corner on the home screen or use the shortcuts in the orange “Carbs” button at the bottom.
+- Faites un appui long sur votre cible dans le coin supérieur droit de l'écran d'accueil ou utilisez les raccourcis dans le bouton orange « Glucides » en bas.
 
   ```{image} ../images/Pref2020_OV_DefaultTT.png
   :alt: Preferences > Default temp targets
@@ -183,22 +184,22 @@
 ### Insuline par défaut pour Amorcer/Remplir
 
 - If you want to fill tube or prime cannula through AAPS you can do this through [actions tab](Screenshots-action-tab).
-- Pre-set values can be defined in this dialogue.
+- Les valeurs prédéfinies peuvent être configurées dans cette boite de dialogue.
 
 (Preferences-range-for-visualization)=
 ### Fourchette de visualisation
 
-- Define which part of the graph on the home screen shall be you target range and be filled with green background.
+- Définissez quelle partie du graphique sur l'écran d'accueil doit être votre plage cible et sera remplie avec fond vert.
 
   ```{image} ../images/Pref2020_OV_Range2.png
-  :alt: Preferences > Range for visualization
+  :alt: Préférences > Fourchette de visualisation
   ```
 
 ### Raccourcir les titres des onglets
 
-- See more tab titles on screen.
+- Permet de voir plus de onglets à l'écran.
 
-- For example the 'OpenAPS AMA' tab becomes 'OAPS', 'OBJECTIVES' becomes 'OBJ' etc.
+- Par exemple, l'onglet "OpenAPS AMA" devient "OAPS", "Objectifs" devient "OBJ" etc.
 
   ```{image} ../images/Pref2020_OV_Tabs.png
   :alt: Preferences > Tabs
@@ -206,7 +207,7 @@
 
 ### Afficher les notes dans les boîtes de dialogue
 
-- Gives you the option to add short text notes to your treatments (bolus wizard, carbs, insulin...)
+- Vous permet d'ajouter des textes courts de notes à vos traitements (assistant bolus, glucides, insuline...)
 
   ```{image} ../images/Pref2020_OV_Notes.png
   :alt: Preferences > Notes in treatment dialogs
@@ -222,14 +223,14 @@
   - Âge de l'insuline (jours d'utilisation du réservoir)
   - Niveau du réservoir (unités)
   - Âge de la canule
-  - Pump battery age
-  - Pump battery level (%)
+  - Âge Pile Pompe
+  - Âge Pile Pompe (%)
 
 - Si le seuil d'alerte est dépassé, les valeurs seront affichées en jaune.
 
 - Si le seuil critique est dépassé, les valeurs seront affichées en rouge.
 
-- In versions prior to AAPS 2.7 settings for status lights had to be made in Nightscout settings.
+- Dans les versions antérieures à AAPS 2.7 le paramètrage des seuils pour les voyants d'état être effectué dans Nightscout.
 
   ```{image} ../images/Pref2020_OV_StatusLights2.png
   :alt: Preferences > Status Lights
@@ -244,17 +245,17 @@
 
 #### Injecter cette partie de Bolus calculée par l’assistant
 
-- General setting to deliver only part of bolus wizard result.
-- Only the set percentage (must be between 10 and 100) of the calculated bolus is delivered when using bolus wizard.
-- The percentage is shown in bolus wizard.
+- Paramètre général permettant de ne livrer qu'une partie du résultat de l'assistant de bolus.
+- Seul le pourcentage défini (doit être compris entre 10 et 100) du bolus calculé est délivré lors de l'utilisation de l'assistant bolus.
+- Le pourcentage est affiché dans l'assistant de bolus.
 
 #### Assistant bolus
 
 - If you run [Bolus wizard](Screenshots-bolus-wizard) and your glucose value is above 10 mmol (180 mg/dl) a correction bolus will be offered.
 
-- If correction bolus is accepted **no carbs** will be recorded.
+- Si le bolus de correction est accepté, **aucun glucide** ne sera enregistré.
 
-- An alarm will be started when glucose value is in good level to start eating.
+- Une alarme sera déclenchée lorsque la glycémie est au bon niveau pour commencer à manger.
 
 - You have to enter [Bolus wizard](Screenshots-bolus-wizard) again and enter the amount of carbs you want to eat.
 
@@ -265,99 +266,99 @@
 (Preferences-superbolus)=
 #### Superbolus
 
-- Option to enable superbolus in bolus wizard.
-- [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) is a concept to "borrow" some insulin from basal rate in the next two hours to prevent spikes.
+- Activer les Superbolus dans l'Assistant.
+- le principe des [Superbolus](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus/) est "d'emprunter" de l'insuline du débit de basal dans les deux prochaines heures pour éviter les pics.
 
 ## Traitements de sécurité
 
-### Patient type
+### Type de patient
 
-- Safety limits are set based on the age you select in this setting.
-- If you start hitting these hard limits (like max bolus) it's time to move one step up.
-- It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example).
-- If you want to know the actual numbers for these hard-coded safety limits, scroll to the algorithm feature you are using on [this page](../Usage/Open-APS-features.md).
+- Les limites de sécurité sont établies en fonction de l'âge sélectionné dans ce paramètre.
+- Si vous commencez à atteindre ces limites restrictives (comme le Maximum Bolus), il est temps de changer d’un cran.
+- C’est une mauvaise idée de selectionner un âge supérieur a l'âge réel car cela peut conduire à un surdosage lorsque l'on entre une valeur incorrecte dans la boîte de dialogue de l’insuline (en oubliant le point décimal ou la virgule par exemple).
+- Si vous voulez connaître les valeurs réelles de ces limites de sécurité codées en dur, faites défiler jusqu'à l'algorithme que vous utilisez sur [cette page](../Usage/Open-APS-features.md).
 
-### Max allowed bolus \[U\]
+### Maximum Bolus autorisé \[U\]
 
-- Defines maximum amount of bolus insulin that AAPS is allowed to deliver at once.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of bolus insulin that you are ever likely to need for a meal or correction dose.
-- This restriction is also applied to the results of the bolus calculator.
+- Défini la quantité maximale d’insuline que AAPS est autorisé à administrer en une fois lors d'un bolus.
+- Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
+- Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale d’insuline de bolus que vous êtes susceptible d’avoir besoin pour un repas ou pour une dose de correction.
+- Cette restriction s’applique également aux résultats de l'assistant bolus.
 
-### Max allowed carbs \[g\]
+### Maximum de Glucides autorisé \[g\]
 
-- Defines the maximum amount of carbs that AAPS bolus calculator is allowed to dose for.
-- This setting exists as a safety limit to prevent the delivery of a massive bolus due to accidental input or user error.
-- It is recommended to set this to a sensible amount that corresponds roughly to the maximum amount of carbs that you are ever likely to need for a meal.
+- Défini la quantité maximale de glucides que l'assistant bolus de AAPS est autorisée à utiliser.
+- Ce paramètre existe comme une limite de sécurité pour empêcher l'administration d’un bolus trop important dû à une saisie accidentelle ou une erreur de l’utilisateur.
+- Il est recommandé de définir cette valeur à un montant raisonnable qui correspond approximativement à la quantité maximale de glucides que vous êtes susceptible d’avoir dans d'un repas.
 
 ## Boucle
 
 (Preferences-aps-mode)=
 ### Mode APS
 
-- Toggle between open and closed looping as well as low glucose suspend (LGS)
-- **Open looping** means TBR suggestions are made based on your data and appear as a notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
-- **Closed looping** means TBR suggestions are automatically sent to your pump without confirmation or input from you.
+- Basculer entre les boucles ouvertes et fermées ainsi que le mode arrêt glycémie basses (AGB)
+- **Boucle ouverte** signifie que les suggestions DBT sont faites en fonction de vos données et apparaissent comme une notification. Après confirmation manuelle, la commande d'injection de l'insuline sera transférée à la pompe. Ce n'est que si vous utilisez la pompe virtuelle que vous devez la saisir manuellement.
+- **La Boucle fermée** signifie que les suggestions DBT (Débit de Basal Temporaire) sont automatiquement envoyées à votre pompe sans confirmation ou entrée de votre part.
 - **Low glucose suspend** is similar to closed looping, but overrides the maxIOB setting to zero. This means that if blood glucose is dropping it can reduce the basal rate, but if blood glucose is rising then it will only increase the basal rate if the basal IOB is negative (e.g. from a previous Low Glucose Suspend).
 
 (Preferences-minimal-request-change)=
-### Minimal request change \[%\]
+### Changement minimum \[%\]
 
 - Lorsque vous utilisez le mode boucle ouverte, vous recevrez des notifications chaque fois que le programme AAPS vous recommande d'ajuster le débit de basal.
-- To reduce number of notifications you can either use a wider BG target range or increase percentage of the minimal request rate.
+- Pour réduire le nombre de notifications, vous pouvez utiliser une plage cible de glycémie plus étendue ou augmenter le pourcentage de changement minimal.
 - Ce paramètre défini le changement relatif minimum qui déclenchera une notification.
 
 (Preferences-advanced-meal-assist-ama-or-super-micro-bolus-smb)=
 ## Assistance Améliorée Repas (AAR ou AMA) ou Super Micro Bolus (SMB)
 
-Depending on your settings in [config builder](../Configuration/Config-Builder.md) you can choose between two algorithms:
+Selon vos paramètres dans le [Générateur de configuration](../Configuration/Config-Builder.md) vous pouvez choisir entre deux algorithmes :
 
 - [Advanced meal assist (OpenAPS AMA)](Open-APS-features-advanced-meal-assist-ama) - state of the algorithm in 2017
 - [Super Micro Bolus (OpenAPS SMB)](Open-APS-features-super-micro-bolus-smb) - most recent algorithm for advanced users
 
 ### Paramètres OpenAPS AMA
 
-- Allows the system to high-temp more quickly after a meal bolus IF you enter carbs reliably.
-- More details about the settings and Autosens can be found in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+- Permet au système de reagir plus rapidement après un bolus de repas SI vous entrez les Glucides de manière fiable.
+- Plus de détail sur les paramètres et l'Autosens peuvent être trouvés dans la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
 #### Débit max en U/h pour une Temp Basal
 
-- Exists as a safety limit to prevent AAPS from ever being capable of giving a dangerously high basal rate.
-- The value is measured in units per hour (U/h).
-- It is advised to set this to something sensible. A good recommendation is to take the **highest basal rate** in your profile and **multiply it by 4**.
-- For example, if the highest basal rate in your profile was 0.5 U/h you could multiply that by 4 to get a value of 2 U/h.
+- Existe comme une limite de sécurité pour empêcher AAPS d'etre capable d'administrer un dosage de Basal dangereusement élevé.
+- La valeur est definie en Unités d'insuline par heure (U/h).
+- Il est conseillé de definir cette valuer de facon raisonnable et sensée. Une bonne recommandation est de prendre le **débit de basal le plus élevé** de votre profil et de le **multiplier par 4**.
+- Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 4 pour obtenir la valeur de 2 U/h.
 - See also [detailed feature description](Open-APS-features-max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal).
 
-#### Maximum basal IOB OpenAPS can deliver \[U\]
+#### L'IA basal maximum que OpenAPS peut délivrer \[U\]
 
-- Amount of additional basal insulin (in units) allowed to accumulate in your body, on top of your normal basal profile.
-- Once this value is reached, AAPS will stop giving additional basal insulin until your basal Insulin on Board (IOB) has decayed to within this range again.
-- This value **does not consider bolus IOB**, only basal.
-- This value is calculated and monitored independently of your normal basal rate. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
+- Une quantité d'insuline basale supplémentaire (en unités) a pu s'accumuler dans votre corps, en plus de votre profil basal normal.
+- Une fois cette valeur atteinte, AAPS cessera de délivrer de l'insuline basale supplémentaire jusqu'à ce que votre Insuline basale Active (IA) aie diminuée et soit de nouveau dans cette plage.
+- Cette valeur **ne prend pas en compte pas l'Insuline Active IA des bolus**, mais seulement la basale.
+- Cette valeur est calculée et surveillée indépendamment de votre débit de basal normal. Ce n'est que l'insuline basale additionnelle en plus du débit normal qui est pris en compte.
 
-When you begin looping, **it is advised to set Max Basal IOB to 0** for a period of time, while you are getting used to the system. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie. C'est une étape importante pour :
+Lorsque vous commencez à boucler, **il est conseillé de mettre l'IA basal Max à 0** pour une période de temps, pendant que vous vous habituez au système. Cela empêche AAPS de donner de l'insuline basale supplémentaire. Pendant ce temps, AAPS sera toujours en mesure de limiter ou de désactiver votre insuline basale pour prévenir l'hypoglycémie. C'est une étape importante pour :
 
-- Have a period of time to safely get used to the AAPS system and monitor how it works.
-- Take the opportunity to perfect your basal profile and Insulin Sensitivity Factor (ISF).
-- See how AAPS limits your basal insulin to prevent hypoglycaemia.
+- Avoir un certain temps pour s'habituer en toute sécurité au système AAPS et surveiller son fonctionnement.
+- Profiter de l'occasion pour parfaire votre profil basal et votre Sensibilité à l'Insulin (SI).
+- Voir comment AAPS limite votre insuline basale pour prévenir l'hypoglycémie.
 
-Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. The recommended guideline for this is to take the **highest basal rate** in your profile and **multiply it by 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
+Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commencer à vous donner de l'insuline basale supplémentaire, en augmentant la valeur de l'IA basal Max. Une bonne recommandation est de prendre le **débit de basal maximum** de votre profil et de le **multiplier par 3**. Par exemple, si le dosage basal le plus élevé de votre profil est de 0,5 U/h, vous pourriez le multiplier par 3 pour obtenir la valeur de 1,5 U/h.
 
-- You can start conservatively with this value and increase it slowly over time.
-- These are guidelines only; everyone's body is different. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
+- Vous pouvez commencer prudemment avec cette valeur et l'augmenter lentement avec le temps.
+- Ce ne sont que des lignes directrices; chacun a un corps différent. Vous trouverez peut-être que vous avez besoin plus ou moins que ce qui est recommandé ici, mais commencez toujours prudemment et ajustez lentement.
 
-**Note: As a safety feature, Max Basal IOB is hard-limited to 7u.**
+**Remarque : En tant que fonction de sécurité, l'IA Max Basal est limitée à 7 U.**
 
 #### Autosens
 
 - [Autosens](Open-APS-features-autosens) looks at blood glucose deviations (positive/negative/neutral).
-- It will try and figure out how sensitive/resistant you are based on these deviations and adjust basal rate and ISF based on these deviations.
-- If you select "Autosens adjust target, too" the algorithm will also modify your glucose target.
+- Il essaiera de comprendre à quel point vous êtes sensible/résistant en fonction de ces écarts et ajustera le débit basal et la SI en fonction de ces écarts.
+- Si vous sélectionnez "Autosens ajuste aussi les cibles" l'algorithme modifiera également votre cible de glycémie.
 
 #### Paramètres avancés (OpenAPS AMA)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
+- Si vous voulez quand même les changer, lisez en détail la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) et assurez-vous de bien comprendre ce que vous faites.
 
 (Preferences-openaps-smb-settings)=
 ### Paramètres OpenAPS SMB
@@ -370,11 +371,11 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 - Details on the different enable options are described in [OpenAPS feature section](Open-APS-features-enable-smb).
 
-- *How frequently SMBs will be given in min* is a restriction for SMB to be delivered only every 4 min by default. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
+- *La fréquence à laquelle les SMB seront donnés en min* est une restriction pour que le SMB ne soit distribué que toutes les 4 minutes par défaut. Cette valeur empêche le système d'émettre trop souvent des SMB (par exemple dans le cas où une cible temporaire a été définie). Vous ne devriez pas modifier ce paramètre sauf si vous en connaissez exactement les conséquences.
 
 - If 'Sensitivity raises target' or 'Resistance lowers target' is enabled [Autosens](Open-APS-features-autosens) will modify your glucose target according to your blood glucose deviations.
 
-- If target is modified it will be displayed with a green background on your home screen.
+- Si la cible est modifiée, elle sera affichée avec un fond vert sur votre écran d'accueil.
 
   ```{image} ../images/Home2020_DynamicTargetAdjustment.png
   :alt: Cible modifiée par Autosens
@@ -383,15 +384,15 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 (Preferences-carb-required-notification)=
 #### Notification glucides requis
 
-- This feature is only available if SMB algorithm is selected.
+- Cette fonctionnalité n'est disponible que si l'algorithme SMB est sélectionné.
 
-- Eating of additional carbs will be suggested when the reference design detects that it requires carbs.
+- Il sera suggéré de manger des glucides supplémentaires quand l'algorithme détecte que des glucides sont requis.
 
-- In this case you will receive a notification which can be snoozed for 5, 15 or 30 minutes.
+- Dans ce cas, vous recevrez une notification qui peut être reportée pendant 5, 15 ou 30 minutes.
 
-- Additionally the required carbs will be displayed in the COB section on your home screen.
+- De plus, les glucides requis seront affichés dans la section GA sur votre écran d'accueil.
 
-- A threshold can be defined - minimum amount of carbs needed to trigger a notification.
+- Un seuil peut être défini - Glucides minimum requis pour suggestion.
 
 - Les notifications Glucides requis peuvent être envoyées sur Nightscout si vous le souhaitez, dans ce cas une annonce sera affichée et diffusée.
 
@@ -401,8 +402,8 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 #### Paramètres avancés (OpenAPS SMB)
 
-- Normally you do not have to change the settings in this dialogue!
-- If you want to change them anyway make sure to read about details in [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) and to understand what you are doing.
+- Normalement, vous n'avez pas à modifier les paramètres dans cette boîte de dialogue !
+- Si vous voulez quand même les changer, lisez en détail la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html#) et assurez-vous de bien comprendre ce que vous faites.
 
 ## Paramètres d’absorption
 
@@ -412,21 +413,21 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ### min_5m_carbimpact
 
-- The algorithm uses BGI (blood glucose impact) to determine when carbs are absorbed.
+- L'algorithme utilise l'IGly (impact glycémique) pour déterminer quand les glucides sont absorbés.
 
-- The value is only used during gaps in CGM readings or when physical activity “uses up” all the blood glucose rise that would otherwise cause AAPS to decay COB.
+- La valeur n'est utilisée que pendant les lacunes dans les lectures MGC ou lorsque l'activité physique "consomme" l'augmentation de la glycémie qui autrement aurai permis la décomposition des GA par AAPS.
 
-- At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. De base, c'est une sécurité intégrée.
+- Parfois, lorsque l'absorption de glucides ne peut pas être déterminée de façon dynamique en fonction des glycémies, AAPS intègre une décomposition par défaut à vos glucides. De base, c'est une sécurité intégrée.
 
-- To put it simply: The algorithm "knows" how your BGs *should* behave when affected by the current dose of insulin etc.
+- Pour le dire simplement: L'algorithme "sait" comment vos glycémies *devraient* se comporter quand elles sont affectées par la dose actuelle d'insuline, etc.
 
-- Whenever there is a positive deviation from the expected behaviour, some carbs are absorbed/decayed. Gros changement = beaucoup de glucides, etc.
+- Chaque fois qu'il y a un écart positif par rapport au comportement attendu, certains glucides sont absorbés/décomposés. Gros changement = beaucoup de glucides, etc.
 
-- The min_5m_carbimpact does define the default carb absorption impact per 5 minutes. For more details see [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
+- Le min_5m_carbimpact définit l'impact par défaut de l'absorption des glucides par 5 minutes. Pour plus de détails, voir la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min-5m-carbimpact).
 
-- Standard value for AMA is 5, for SMB it's 8.
+- La valeur standard pour AMA est de 5, pour SMB c'est 8.
 
-- The COB graph on the home screen indicates when min_5m_impact is being used by putting an orange circle at the top.
+- Le graphique GA sur l'écran d'accueil indique quand min_5m_impact est utilisé en plaçant un cercle orange en haut.
 
   ```{image} ../images/Pref2020_min_5m_carbimpact.png
   :alt: Graphique GA
@@ -434,22 +435,22 @@ Lorsque vous vous sentez à l'aise, vous pouvez autoriser le système à commenc
 
 ### Durée max d’absorption d'un repas
 
-- If you often eat high fat or protein meals you will need to increase your meal absorption time.
+- Si vous mangez souvent des repas riches en matières grasses ou en protéines, vous devrez augmenter votre temps d'absorption des repas.
 
 ### Paramètres avancés - Ratio autosens
 
 - Define min. and max. [autosens](Open-APS-features-autosens) ratio.
-- Normally standard values (max. 1.2 and min. 0.7) should not be changed.
+- Normalement les valeurs standards (max. 1,2 et min. 0,7) ne devrait pas être modifiées.
 
 ## Paramètres de la pompe
 
 The options here will vary depending on which pump driver you have selected in [Config Builder](Config-Builder-pump).  Appairez et réglez votre pompe selon les instructions relatives à la pompe :
 
-- [DanaR Insulin Pump](../Configuration/DanaR-Insulin-Pump.md)
-- [DanaRS Insulin Pump](../Configuration/DanaRS-Insulin-Pump.md)
+- [Pompe à Insuline DanaR](../Configuration/DanaR-Insulin-Pump.md)
+- [Pompe à Insuline DanaRS](../Configuration/DanaRS-Insulin-Pump.md)
 - [Pompe Accu-Chek Combo](../Configuration/Accu-Chek-Combo-Pump.md)
-- [Accu Chek Insight Pump](../Configuration/Accu-Chek-Insight-Pump.md)
-- [Medtronic Pump](../Configuration/MedtronicPump.md)
+- [Pompe Accu-Chek Insight](../Configuration/Accu-Chek-Insight-Pump.md)
+- [Pompe Medtronic](../Configuration/MedtronicPump.md)
 
 Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sélectionné Pompe virtuelle Pump dans le Générateur de configuration.
 
@@ -460,11 +461,11 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 :alt: NSClient
 ```
 
-- Set your *Nightscout URL* (i.e. <https://yourwebsitename.herokuapp.com>) and the *API secret* (a 12 character password recorded in your Heroku variables).
-- This enables data to be read and written between both the Nightscout website and AndroidAPS.
-- Double check for typos here if you are stuck in Objective 1.
-- **Make sure that the URL is WITHOUT /api/v1/ at the end.**
-- *Log app start to NS* will record a note in your Nightscout careportal entries every time the app is started.  The app should not be needing to start more than once a day; more frequently than this suggests a problem (i.e. battery optimization not disabled for AAPS).
+- Définissez votre *URL Nightscout* (par ex. <https://yourwebsitename.herokuapp.com>) et l'*API secret* (un mot de passe de 12 caractères enregistré dans vos variables Heroku).
+- Cela permet de lire et d'écrire des données entre le site Nightscout et AAPS.
+- Vérifiez deux fois les fautes de frappe ici si vous êtes coincé dans l'objectif 1.
+- **Vérifiez bien que l'URL est SANS /api/v1/ à la fin.**
+- *Log app start to NS* enregistre une note dans Careportal Nightscout à chaque démarrage de l'application.  L'application ne devrait pas avoir besoin de démarrer plus d'une fois par jour; si c'est plus souvent, cela suggère un problème (par ex. l'optimisation de la batterie n'est pas désactivée pour AAPS).
 - If activated changes in [local profile](Config-Builder-local-profile) are uploaded to your Nightscout site.
 
 ### Paramètres de connexion
@@ -473,17 +474,17 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 :alt: Paramètres de connexion NSClient
 ```
 
-- Restrict Nightscout upload to Wi-Fi only or even to certain Wi-Fi SSIDs.
-- If you want to use only a specific WiFi network you can enter its WiFi SSID.
-- Multiple SSIDs can be separated by semicolon.
-- To delete all SSIDs enter a blank space in the field.
+- Restreignez le téléchargement de Nightscout au Wi-Fi seulement ou même à certains SSID Wi-Fi.
+- Si vous souhaitez utiliser uniquement un réseau WiFi spécifique, vous pouvez entrer son SSID.
+- Plusieurs SSID peuvent être séparés par un point-virgule.
+- Pour supprimer tous les SSID, entrez un espace dans la zone.
 
 ### Options d'alarme
 
-- Alarm options allows you to select which default Nightscout alarms to use through the app.
-- For the alarms to sound you need to set the Urgent High, High, Low and Urgent Low alarm values in your [Heroku variables](https://nightscout.github.io/nightscout/setup_variables/#alarms).
-- They will only work whilst you have a connection to Nightscout and are intended for parent/carers.
-- If you have the CGM source on your phone (i.e. xDrip+ or BYODA \[Build your own dexcom app\]) then use those alarms instead.
+- Les options d'alarme vous permettent de sélectionner les alarmes Nightscout par défaut à utiliser via l'application.
+- Pour que les alarmes sonnent, vous devez définir les valeurs de seuil des alarmes Urgent High, High, Low et Urgent Low dans vos [variables Heroku](https://nightscout.github.io/nightscout/setup_variables/#alarms).
+- Elles ne fonctionneront que si vous avez une connexion avec Nightscout et sont destinées aux parents/aidants.
+- Si vous avez la source MGC sur votre téléphone (par ex. xDrip+ ou BYODA \[Construisez votre propre application dexcom\]) puis utilisez ces alarmes à la place.
 
 (Preferences-advanced-settings-nsclient)=
 ### Paramètres avancés (NSClient)
@@ -492,28 +493,28 @@ Si vous utilisez AndroidAPS pour une boucle ouverte, vérifiez que vous avez sé
 :alt: Paramètres avancés NSClient
 ```
 
-- Most options in advanced settings are self-explanatory.
+- La plupart des options dans les paramètres avancés sont explicites.
 
-- *Enable local broadcasts* will share your data to other apps on the phone such as xDrip+.
+- *Activer les transmissions locales* partagera vos données vers d'autres applications sur le téléphone, telles que xDrip+.
 
   - You need to [go through AAPS](Config-Builder-bg-source) and enable local broadcast in AAPS to use xDrip+ alarms.
 
-- *Always use basal absolute values* must be activated if you want to use Autotune properly. See [OpenAPS documentation](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) for more details on Autotune.
+- *Utiliser toujours les valeurs absolues du basal* doit être activé si vous souhaitez utiliser Autotune correctement. Voir la [documentation OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/understanding-autotune.html) pour plus de détails sur Autotune.
 
 ## Communicateur SMS
 
 - Options will only be displayed if SMS communicator is selected in [Config Builder](Config-Builder-sms-communicator).
-- This setting allows remote control of the app by texting instructions to the patient's phone which the app will follow such as suspending loop, or bolusing.
-- Further information is described in [SMS Commands](../Children/SMS-Commands.md).
-- Additional safety is obtained through use of an authenticator app and additional PIN at token end.
+- Ce paramètre permet de contrôler à distance de l'application en envoyant des instructions au téléphone du patient que l'application appliquera comme Suspendre la boucle ou un bolus.
+- De plus amples informations sont décrites dans [Commandes SMS](../Children/SMS-Commands.md).
+- Une sécurité supplémentaire est obtenue grâce à l'utilisation d'une application authentificateur et d'un code PIN supplémentaire à la fin du jeton.
 
 ## Automatisation
 
 Sélectionnez le service de localisation à utiliser :
 
-- Use passive location: AAPS only takes locations if other apps are requesting it
-- Use network location: Location of your Wi-Fi
-- Use GPS location (Attention! Peut entrainer une consommation excessive de la batterie !)
+- Utiliser la localisation passive : AAPS ne prend la localisation que si d'autres applications la demandent
+- Utiliser la localisation par le réseau : Localisation de votre Wifi
+- Utiliser la localisition GPS (Attention ! Peut entrainer une consommation excessive de la batterie !)
 
 ## Alertes locales
 
@@ -521,7 +522,7 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Alertes locales
 ```
 
-- Settings should be self-explanatory.
+- Les paramètres doivent être explicites.
 
 ## Choix de données
 
@@ -529,7 +530,7 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Choix de données
 ```
 
-- You can help develop AAPS further by sending crash reports to the developers.
+- Vous pouvez aider davantage au développement d'AAPS en envoyant des rapports de plantage aux développeurs.
 
 ## Paramètres de maintenance
 
@@ -537,14 +538,14 @@ Sélectionnez le service de localisation à utiliser :
 :alt: Paramètres de maintenance
 ```
 
-- Standard recipient of logs is <logs@androidaps.org>.
+- Le destinataire standard des journaux est <logs@androidaps.org>.
 - If you select *Encrypt exported settings* these are encrypted with your [master password](Preferences-master-password). Dans ce cas, le mot de passe principal doit être entré à chaque fois que les paramètres sont exportés ou importés.
 
 ## Open Humans
 
-- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Details are described on the [Open Humans page](../Configuration/OpenHumans.md).
+- Vous pouvez aider la communauté en faisant don de vos données à des projets de recherche ! Les détails sont décrits sur la [page Open Humans](../Configuration/OpenHumans.md).
 
-- In Preferences you can define when data shall be uploaded
+- Dans les préférences, vous pouvez définir quand les données doivent être téléchargées
 
-  - only if connected to WiFi
-  - only if charging
+  - uniquement si connecté au WiFi
+  - uniquement si en charge

@@ -28,8 +28,8 @@ You can check the state of translations for the languages app and documentation 
 * Si vous voulez traduire **l'application** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidaps).
 * Si vous voulez traduire la **documentation** dans d'autres langues (merci), utilisez [crowdin](https://crowdin.com/project/androidapsdocs). 
 
-Just sign up to CROWDIN, click your language, wait for admin authorization and go ahead!
+Il suffit de vous inscrire à CROWDIN, de cliquer sur votre langue, d'attendre l'autorisation de l'admin et d'aller de l'avant !
 
 ## Y a-t-il d'autres façons d'aider ?
 
-Skills needed include graphic design, UX design, translators, wiki editors or simply paying it forward by answering the simple questions in discord & Facebook to allow developers the time and space to focus on the harder stuff.
+Les compétences requises incluent la conception graphique, l'expérience utilisateur, les traductions, les pages wiki ou simplement aider en répondant à des questions simples dans discord & Facebook pour donner aux développeurs le temps et l’espace nécessaires pour se concentrer sur les choses les plus difficiles.

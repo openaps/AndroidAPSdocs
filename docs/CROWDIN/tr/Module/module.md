@@ -82,19 +82,19 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  AndroidAPS'nin mevcut sürümü, Google Android 8.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 8.1 önerilir, ancak optimal olarak Android 9 veya 10'u seçin. Users are strongly encouraged to keep their build of AndroidAPS up to date for safety reason, however for users unable to use a device with a minimum version of Android 8.0, AndroidAPS version 2.6.1.4, suitable for older Android versions, remains available from the <a href="https://github.com/miloskozak/androidaps">old repository.</a>
+  AndroidAPS'nin mevcut sürümü, Google Android 8.0 veya üzeri bir Android akıllı telefon gerektirir. Bu nedenle, yeni bir telefon düşünüyorsanız, minimum Android 8.1 önerilir, ancak optimal olarak Android 9 veya 10'u seçin. Kullanıcıların, güvenlik nedeniyle AndroidAPS yapılarını güncel tutmaları şiddetle tavsiye edilir, ancak minimum Android 8.0 sürümüne sahip bir cihazı olmayan kullanıcılar için, daha eski Android sürümleri için uygun olan AndroidAPS sürüm 2.6.1.4, <a href="https://github.com/miloskozak/androidaps">eski depo.</a>
 </p>
 
 <p spaces-before="0">
-  Users are creating a <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">list of tested phones and watches</a>
+  Kullanıcılar bir <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">test edilmiş telefonlar ve saatler listesi</a> oluşturuyor
 </p>
 
 <p spaces-before="0">
-  To record a phone or watch that isn't already listed in the spreadsheet then please fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">form</a>.
+  Tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">formu</a> doldurun.
 </p>
 
 <p spaces-before="0">
-  Any problems with the spreadsheet please send an email to <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a>, any donations of phone/watch models that still need testing please send an email to <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a>.
+  E-tabloyla ilgili herhangi bir sorun olursa lütfen <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a> adresine bir e-posta gönderin, hala test edilmesi gereken telefon/saat modeli bağışları için lütfen <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a> adresine bir e-posta gönderin.
 </p>
 
 <h3 spaces-before="0">
@@ -102,12 +102,12 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  AndroidAPS <strong x-id="1">currently</strong> works with
+  AndroidAPS <strong x-id="1">şu an için</strong> şu pompalarla çalışır;
 </p>
 
 <ul>
   <li>
-    <a href="../Configuration/Accu-Chek-Combo-Pump.md">Accu-Chek Combo</a> (additionally needed: Ruffy app, LineageOS or Android 8.1 on your phone)
+    <a href="../Configuration/Accu-Chek-Combo-Pump.md">Accu-Chek Combo</a> (ek olarak: telefonunuzda Ruffy uygulaması, LineageOS veya Android 8.1 yüklü olması gerekir)
   </li>
   <li>
     <a href="../Configuration/Accu-Chek-Insight-Pump.md">Accu-Chek Insight</a>
@@ -119,10 +119,10 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
     <a href="../Configuration/DanaRS-Insulin-Pump.md">Dana-i/RS</a>
   </li>
   <li>
-    <a href="../Configuration/MedtronicPump.md">some old Medtronic pumps</a> from upcoming version 2.4 (<a href="module-additional-communication-device">additional communication device</a> needed)
+    2.4 sürümünden <a href="../Configuration/MedtronicPump.md">eski bazı Medtronic pompaları</a> (<a href="module-additional-communication-device">ek iletişim cihazı</a> gerekli)
   </li>
   <li>
-    <a href="../Configuration/OmnipodEros.md">Omnipod Eros</a> (<a href="module-additional-communication-device">additional communication device</a> needed)
+    <a href="../Configuration/OmnipodEros.md">Omnipod Eros</a> (<a href="module-additional-communication-device">ek iletişim cihazı</a> gerekli)
   </li>
   <li>
     <a href="../Configuration/OmnipodDASH.md">Omnipod DASH</a>
@@ -134,7 +134,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  <strong x-id="1">Other pumps</strong> that may have the potential to work with AndroidAPS are listed on the <a href="../Getting-Started/Future-possible-Pump-Drivers.md">Future (possible) Pumps</a> page.
+  AndroidAPS ile çalışma potansiyeline sahip olabilecek <strong x-id="1">diğer pompalar</strong>, <a href="../Getting-Started/Future-possible-Pump-Drivers.md">Gelecekteki (olası) Pompalar</a> sayfasında listelenmiştir.
 </p>
 
 <p spaces-before="0">
@@ -150,24 +150,24 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 
 <ul>
   <li>
-    {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Website</a>
+    {{ OrangeLink }}  <a href="https://getrileylink.org/product/orangelink">OrangeLink Websitesi</a>
   </li>
   <li>
     {{ RileyLink }} <a href="https://getrileylink.org/product/rileylink433">433MHz RileyLink</a>
   </li>
   <li>
-    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Website</a> - <a href="mailto:getemalink@gmail.com">Contact Info</a>
+    {{ EmaLink }}  <a href="https://github.com/sks01/EmaLink">Emalink Websitesi</a> - <a href="mailto:getemalink@gmail.com">İletişim Bilgileri</a>
   </li>
   <li>
-    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">Contact Info</a>
+    {{ DiaLink }}  DiaLink - <a href="mailto:Boshetyn@ukr.net">İletişim bilgileri</a>
   </li>
   <li>
-    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Website</a> - <a href="https://jameswedding.substack.com/">Contact Info</a> - Untested
+    {{ LoopLink }}  <a href="https://www.getlooplink.org/">LoopLink Websitesi</a> - <a href="https://jameswedding.substack.com/">İletişim Bilgileri</a> - Test edilmedi
   </li>
 </ul>
 
 <p spaces-before="0">
-  <strong x-id="1">So what's the best pump for looping with AndroidAPS?</strong>
+  <strong x-id="1">Peki AndroidAPS ile döngü için en iyi pompa hangisi?</strong>
 </p>
 
 <p spaces-before="0">
@@ -175,27 +175,27 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  The advantages of the DanaR/RS and Dana-i vs. the Combo as the pump of choice however are:
+  Bununla birlikte, tercih edilen pompa olarak DanaR/RS ve Dana-i'nin Combo'ya karşı avantajları şunlardır:
 </p>
 
 <ul>
   <li>
-    The Dana pumps connect to almost any phone with Android >= 5.1 without the need to flash lineage. If your phone breaks you usually can find easily any phone that works with the Dana pumps as quick replacement... not so easy with the Combo. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
+    Dana pompaları, Android >= 5.1 sürümüne sahip hemen hemen her telefona flash lineage gerekmeden bağlanır. Telefonunuz bozulursa, genellikle Dana pompalarıyla çalışan herhangi bir telefonu kolayca hızlı bir şekilde değiştirebilirsiniz... Bu Combo ile o kadar kolay değil. (Bu, Android 8.1 daha popüler hale geldiğinde değişebilir)
   </li>
   <li>
-    Initial pairing is simpler with the Dana-i/RS. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
+    Dana-i/RS ile ilk eşleştirme daha kolaydır. Ancak bunu genellikle yalnızca bir kez yaparsınız, bu nedenle yalnızca yeni bir özelliği farklı pompalarla test etmek istediğinizde etki eder.
   </li>
   <li>
-    So far the Combo works with screen parsing. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Still there is much more time you need to be connected so more time where the BT connection might break, which isn't so easy if you walk away from your phone whilst bolusing & cooking.
+    Şimdiye kadar Combo, ekran ayrıştırma ile çalışıyor. Genel olarak harika çalışıyor ama yavaş. Döngü için bu çok önemli değil çünkü her şey arka planda çalışıyor. Yine de bağlantınız uzun zaman alabilir, bu nedenle BT bağlantısının kopabileceği yerlerde bağlantı için daha fazla zamana ihtiyaç var, bu da bolus yaparken veya yemek yerken telefonunuzdan uzaklaşırsanız o kadar kolay değil.
   </li>
   <li>
-    The Combo vibrates on the end of TBRs, the DanaR vibrates (or beeps) on SMB. Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir.  Dana-i/RS, ne bip sesi çıkaracak ne de titreyecek şekilde yapılandırılabilir.
+    Combo, GBO'larin sonunda titrer, DanaR, SMB'de titrer (veya bip sesi çıkarır). Gece saatlerinde GBO'ları SMB'lerden daha fazla kullanmanız muhtemeldir.  Dana-i/RS, ne bip sesi çıkaracak ne de titreyecek şekilde yapılandırılabilir.
   </li>
   <li>
-    Reading the history on the Dana-i/RS in a few seconds with carbs makes it possible to switch phones easily while offline and continue looping as soon a soon as some CGM values are in.
+    Dana-i/RS'deki geçmişi birkaç saniyede karbonhidratla okumak, çevrimdışıyken telefonları kolayca değiştirmeyi ve bazı CGM değerleri girer girmez döngüye devam etmeyi mümkün kılar.
   </li>
   <li>
-    All pumps AndroidAPS can talk with are waterproof on delivery. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
+    AndroidAPS'nin konuşabileceği tüm pompalar iletim sırasında su geçirmezdir. Sızdırmaz pil bölmesi ve rezervuar doldurma sistemi sayesinde yalnızca Dana pompaları "garanti kapsamında su geçirmezdir".
   </li>
 </ul>
 
@@ -204,30 +204,30 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Bu, AndroidAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. For further details, look <a href="../Configuration/BG-Source.md">here</a>. Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
+  Bu, AndroidAPS ile uyumlu tüm CGM'lere/FGM'lere kısa bir genel bakıştır. Daha fazla ayrıntı için <a href="../Configuration/BG-Source.md">buraya</a> bakın. Kısa bir ipucu: glikoz verilerinizi xDrip+ uygulamasında veya Nightscout web sitesinde görüntüleyebiliyorsanız, AAPS'de KŞ kaynağı olarak xDrip+'ı (veya web bağlantılı Nightscout'u) seçebilirsiniz.
 </p>
 
 <ul>
   <li>
-    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA is recommended as of version 3.0 (see <a href="Releasenotes-important-hints-3-0-0">release notes</a> for details). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
+    <a href="../Hardware/DexcomG6.md">Dexcom G6</a>: BOYDA, 3.0 sürümünden itibaren önerilir (ayrıntılar için <a href="Releasenotes-important-hints-3-0-0">sürüm notlarına</a> bakın). xDrip+ en az 2022.01.14 veya daha yeni sürüm olmalıdır
   </li>
   <li>
-    <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: It works with xDrip+ app or patched Dexcom app
+    <a href="../Hardware/DexcomG5.md">Dexcom G5</a>: xDrip+ uygulamasıyla veya yamalı Dexcom uygulamasıyla çalışır
   </li>
   <li>
-    <a href="../Hardware/DexcomG4.md">Dexcom G4</a>: These sensors are quite old, but you can find instructions on how to use them with xDrip+ app
+    <a href="../Hardware/DexcomG4.md">Dexcom G4</a>: Bu sensörler oldukça eskidir, ancak bunların nasıl kullanılacağına ilişkin talimatları xDrip+ uygulamasıyla bulabilirsiniz
   </li>
   <li>
-    <a href="../Hardware/Libre2.md">Libre 2</a>: It works with xDrip+ (no transmitter needed), but you have to build your own patched app.
+    <a href="../Hardware/Libre2.md">Libre 2</a>: xDrip+ ile çalışır (verici gerekmez), ancak kendi yamalı uygulamanızı oluşturmanız gerekir.
   </li>
   <li>
-    <a href="../Hardware/Libre1.md">Libre 1</a>: You need a transmitter like Bluecon or MiaoMiao for it (build or buy) and xDrip+ app
+    <a href="../Hardware/Libre1.md">Libre 1</a>: Bunun için (inşa et veya satın al) Bluecon veya MiaoMiao gibi bir vericiye ve xDrip+ uygulamasına ihtiyacınız var
   </li>
   <li>
-    <a href="../Hardware/Eversense.md">Eversense</a>: It works so far only in combination with ESEL app and a patched Eversense-App (works not with Dana RS and LineageOS, but DanaRS and Android or Combo and Lineage OS work fine)
+    <a href="../Hardware/Eversense.md">Eversense</a>: Şimdiye kadar yalnızca ESEL uygulaması ve yamalı bir Eversense-Uygulaması ile birlikte çalışır (Dana RS ve LineageOS ile çalışmaz ancak DanaRS ve Android veya Combo ve Lineage OS ile çalışır)
   </li>
   <li>
-    <a href="../Hardware/MM640g.md">Enlite (MM640G/MM630G)</a>: quite complicated with a lot of extra stuff
+    <a href="../Hardware/MM640g.md">Enlite (MM640G/MM630G)</a>: pek çok ekstra öğe gerekir ve oldukça karmaşıktır
   </li>
 </ul>
 
@@ -236,7 +236,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Nightscout, CGM verilerinizi ve AndroidAPS verilerinizi kaydedip görüntüleyebilen ve raporlar oluşturan açık kaynaklı bir web uygulamasıdır. You can find more information on the <a href="http://nightscout.github.io/">website of the Nightscout project</a>. You can create your own <a href="https://nightscout.github.io/nightscout/new_user/">Nightscout website</a>, use the semi-automated Nightscout setup on <a href="https://ns.10be.de/en/index.html">zehn.be</a> or host it on your own server (this is for IT experts).
+  Nightscout, CGM verilerinizi ve AndroidAPS verilerinizi kaydedip görüntüleyebilen ve raporlar oluşturan açık kaynaklı bir web uygulamasıdır. <a href="http://nightscout.github.io/">Nightscout projesinin web sitesinde</a> daha fazla bilgi bulabilirsiniz. Kendi <a href="https://nightscout.github.io/nightscout/new_user/">Nightscout web sitenizi</a> oluşturabilir, <a href="https://ns.10be.de/en/index.html">zehn.be</a>'deki yarı otomatik Nightscout kurulumunu kullanabilir veya kendi sunucunuzda barındırabilirsiniz. (bu, BT uzmanları içindir)
 </p>
 
 <p spaces-before="0">
@@ -244,7 +244,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  Additional information on how to configure Nightscout for use with AndroidAPS can be found <a href="../Installing-AndroidAPS/Nightscout.md">here</a>.
+  Nightscout'un AndroidAPS ile kullanım için nasıl yapılandırılacağına ilişkin ek bilgiler <a href="../Installing-AndroidAPS/Nightscout.md">burada</a> bulunabilir.
 </p>
 
 <h3 spaces-before="0">
@@ -252,7 +252,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Instructions are  <a href="../Installing-AndroidAPS/Building-APK.md">here</a>.
+  Sistemin temel bileşeni. Uygulamayı yüklemeden önce, apk dosyasını (bir Android Uygulaması için dosya adı uzantısıdır) oluşturmanız gerekir. Talimatları  <a href="../Installing-AndroidAPS/Building-APK.md">burada</a> bulabilirsiniz.
 </p>
 
 <h2 spaces-before="0">
@@ -264,19 +264,19 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Some other watches can be patched to work as a standalone receiver as well (see <a href="https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5">this documentation</a> for more details).
+  Android Wear 1.x ve sonraki sürümlere sahip herhangi bir akıllı saati seçebilirsiniz. Çoğu looper, telefon kapsama alanı dışındayken bile Dexcom G5/G5'ten okuma alabilen tek saat olduğu için Sony Smartwatch 3 (SWR50) takar. Diğer bazı saatler de bağımsız bir alıcı olarak çalışacak şekilde yamalanabilir (daha fazla ayrıntı için <a href="https://github.com/NightscoutFoundation/xDrip/wiki/Patching-Android-Wear-devices-for-use-with-the-G5">bu belgelere</a> bakın).
 </p>
 
 <p spaces-before="0">
-  Users are creating a <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">list of tested phones and watches</a>. There are different watchfaces for use with AndroidAPS, which you can find <a href="../Configuration/Watchfaces.md">here</a>.
+  Kullanıcılar bir <a href="https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing">test edilmiş telefonlar ve saatler listesi</a> oluşturuyor. AndroidAPS ile kullanım için <a href="../Configuration/Watchfaces.md">burada</a> bulabileceğiniz farklı saat arayüzleri vardır.
 </p>
 
 <p spaces-before="0">
-  To record a phone or watch that isn't already listed in the spreadsheet then please fill in the <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">form</a>.
+  Tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen <a href="https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform">formu</a> doldurun.
 </p>
 
 <p spaces-before="0">
-  Any problems with the spreadsheet please send an email to <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a>, any donations of phone/watch models that still need testing please send an email to <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a>.
+  E-tabloyla ilgili herhangi bir sorun olursa lütfen <a href="mailto:hardware@androidaps.org">hardware@androidaps.org</a> adresine bir e-posta gönderin, hala test edilmesi gereken telefon/saat modeli bağışları için lütfen <a href="mailto:hardware@androidaps.org">donations@androidaps.org</a> adresine bir e-posta gönderin.
 </p>
 
 <h3 spaces-before="0">
@@ -284,7 +284,7 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </h3>
 
 <p spaces-before="0">
-  Even if you don't need to have the xDrip+ App as BG Source, you can still use it for i.e. alarms or a good blood glucose display. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri <a href="../Configuration/xdrip.md">burada</a> bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
+  KŞ Kaynağı olarak xDrip+ Uygulamasına ihtiyacınız olmasa bile, onu alarmlar veya iyi bir kan şekeri ekranı için kullanabilirsiniz. İstediğiniz kadar alarmınız olabilir, alarmın ne zaman aktif olacağını belirleyebilir, sessiz modu geçersiz kılabilirsiniz vb. Bazı xDrip+ bilgileri <a href="../Configuration/xdrip.md">burada</a> bulunabilir. İlerlemesi oldukça hızlı olduğu için bu uygulamanın belgelerinin her zaman güncel olmadığını lütfen unutmayın.
 </p>
 
 <h2 spaces-before="0">
@@ -308,5 +308,5 @@ Son olarak, SGLT-2 inhibitörlerini (gliflozinler) kan şekeri düzeylerini inan
 </p>
 
 <p spaces-before="0">
-  % Hardware and Software Requirements
+  % Donanım ve Yazılım Gereksinimleri
 </p>

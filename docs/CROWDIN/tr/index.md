@@ -68,15 +68,15 @@ Dili değiştir <./changelanguage.md>
 ```
 
 ```{toctree}
-:caption: Başlarken
+:caption: Getting started
 
-Önce güvenlik <./Getting-Started/Safety-first.md>
+Safety first <./Getting-Started/Safety-first.md>
 
-Kapalı döngü sistemi nedir? <./Getting-Started/ClosedLoop.md>
+What is a closed loop system <./Getting-Started/ClosedLoop.md>
 
-AAPS ile kapalı döngü sistemi nedir? <./Getting-Started/WhatisAndroidAPS.md> 
+What is a closed loop system with AAPS <./Getting-Started/WhatisAndroidAPS.md>
 
-Doküman güncellemeleri & değişiklikler <./Getting-Started/WikiUpdate.md>
+Docs updates & changes <./Getting-Started/WikiUpdate.md>
 
 ```
 

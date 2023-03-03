@@ -750,7 +750,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  To deactivate a pod (either from expiration or from a pod failure):
+  Pour désactiver un pod (soit après son expiration soit à cause d'une erreur du pod) :
 </p>
 
 <ol start="1">
@@ -891,7 +891,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h4>
 
 <p spaces-before="0">
-  Use this command to instruct the active, currently suspended pod to resume insulin delivery. After the command is successfully processed, insulin will resume normal delivery using the current basal rate based on the current time from the active basal profile. The pod will again accept commands for bolus, TBR, and SMB.
+  Utilisez cette commande pour demander au pod actif, actuellement suspendu, de reprendre l'injection d'insuline. Une fois la commande exécutée avec succès, l'insuline sera à nouveau injectée normalement avec le débit de basal défini dans le profil actif pour l'heure actuelle. Le pod acceptera à nouveau les commandes pour les bolus, DBT, et SMB.
 </p>
 
 <ol start="1">
@@ -970,7 +970,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
  
  <li>
    <p spaces-before="0">
-     Lors de la <strong x-id="1">désactivation réussie</strong> des alertes, <strong x-id="1">2 bips</strong> seront émis par le pod actif et une boîte de dialogue de confirmation affichera le message <strong x-id="1">Les alertes actives ont été acceptées.</strong>. Click the <strong x-id="1">OK</strong> button to confirm and dismiss the dialog.
+     Lors de la <strong x-id="1">désactivation réussie</strong> des alertes, <strong x-id="1">2 bips</strong> seront émis par le pod actif et une boîte de dialogue de confirmation affichera le message <strong x-id="1">Les alertes actives ont été acceptées.</strong>. Cliquez sur le bouton <strong x-id="1">OK</strong> pour confirmer et fermer la boîte de dialogue.
    </p>
 <blockquote spaces-before="3">
      <p spaces-before="0">
@@ -1003,7 +1003,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  This section shows you how to review your active pod history and filter by different action categories. L'outil historique du pod vous permet de visualiser les actions et résultats effectués dans votre pod actuellement actif pendant sa durée de vie de trois jours (72 à 80 heures).
+  Cette section vous montre comment revoir l'historique du pod actif et filtrer selon les catégories d'action. L'outil historique du pod vous permet de visualiser les actions et résultats effectués dans votre pod actuellement actif pendant sa durée de vie de trois jours (72 à 80 heures).
 </p>
 
 <p spaces-before="0">
@@ -1748,7 +1748,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  The settings groups are listed below; you can enable or disable via a toggle switch for most entries described below:
+  Les groupes de paramètres sont listés ci-dessous; vous pouvez les activer ou les désactiver via un commutateur pour la plupart des entrées décrites ci-dessous :
 </p>
 
 <p spaces-before="0">
@@ -1802,7 +1802,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Provides confirmation beeps from the pod for bolus, basal, SMB, and TBR delivery and changes.
+  Paramètre les bips de confirmation du pod pour l'injection et les modifications de bolus, basal, SMB et DBT.
 </p>
 
 <ul>
@@ -1829,7 +1829,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Dismissing the notification will NOT dismiss the alert UNLESS automatically acknowledge Pod alerts is enabled. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES\*</em>
+  <em x-id="3">Notez qu'une notification AAPS sera TOUJOURS émise pour toute alerte après une première communication avec le pod qui a déclenchée l'alerte. Rejeter la notification ne rejettera PAS l'alerte SAUF SI Accepter automatiquement les alertes Pod est activé. Pour rejeter MANUELLEMENT l'alerte, vous devez aller dans l'onglet Omnipod (POD) et appuyez sur le bouton ACCEPTER ALERTES\*</em>
 </p>
 
 <ul>
@@ -1859,7 +1859,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </p>
 
 <p spaces-before="0">
-  <em x-id="3">NOTE: These are notifications only, no audible beep alerts are made.</em>
+  <em x-id="3">REMARQUE : Ce ne sont que des notifications, aucune alerte sonores n'est faite.</em>
 </p>
 
 <ul>
@@ -2029,7 +2029,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 
 <ol start="1">
   <li>
-    Go to the <strong x-id="1">Actions (ACT)</strong> tab in the main AAPS interface.
+    Allez dans l'onglet <strong x-id="1">Actions (ACT)</strong> dans l'interface principale AAPS.
   </li>
   
   <li>
@@ -2048,7 +2048,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  <strong x-id="1">Insulin Level</strong>
+  <strong x-id="1">Niveau d'insuline</strong>
 </p>
 
 <p spaces-before="0">
@@ -2116,7 +2116,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Pods fail occasionally due to a variety of issues, including hardware issues with the Pod itself. It is best practice not to call these into Insulet, since AAPS is not an approved use case. Une liste de codes défaut peut être trouvée <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">ici</a> pour aider à trouver les causes.
+  Les pods échouent occasionnellement en raison de problèmes variés, y compris des problèmes matériels avec le Pod lui-même. Il est préférable de ne pas les appeler dans Insulet, car l'utilisation d'AAPS n'est pas approuvée. Une liste de codes défaut peut être trouvée <a href="https://github.com/openaps/openomni/wiki/Fault-event-codes">ici</a> pour aider à trouver les causes.
 </p>
 
 <h3 spaces-before="0">
@@ -2124,7 +2124,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  This failure is related to an incorrect pod state for a command or an error during an insulin delivery command. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout <em x-id="3">Envoi NS uniquement</em> dans la <strong x-id="1">Configuration</strong>➜<strong x-id="1">Général</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">roue crantée</strong>➜<strong x-id="1">Paramètres Avancés</strong> pour prévenir les éventuels échecs.
+  Cet échec est lié à un état du pod incorrect pour une commande ou à une erreur lors d'une commande d'injection d'insuline. Il est vivement recommandé aux utilisateurs d'activer dans le client Nightscout <em x-id="3">Envoi NS uniquement</em> dans la <strong x-id="1">Configuration</strong>➜<strong x-id="1">Général</strong>➜<strong x-id="1">NSClient</strong>➜<strong x-id="1">roue crantée</strong>➜<strong x-id="1">Paramètres Avancés</strong> pour prévenir les éventuels échecs.
 </p>
 
 <h3 spaces-before="0">
@@ -2173,7 +2173,7 @@ Ces instructions permettent de configurer la pompe Omnipod Eros (**PAS Omnipod D
 </h3>
 
 <p spaces-before="0">
-  Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet <strong x-id="1">Aperçu (Accueil)</strong>, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. A summary of the main alerts that you may encounter is listed below:
+  Veuillez noter que le pilote Omnipod présente une variété d'alertes uniques dans l'onglet <strong x-id="1">Aperçu (Accueil)</strong>, la plupart d'entre elles sont juste une information et peuvent être rejetées tandis que certaines indiquent à l'utilisateur une action à faire pour traiter la cause de l'alerte déclenchée. Un résumé des principales alertes que vous pouvez rencontrer est listé ci-dessous:
 </p>
 
 <h4 spaces-before="0">

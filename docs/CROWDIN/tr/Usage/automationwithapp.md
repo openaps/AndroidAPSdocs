@@ -1,6 +1,6 @@
 # Üçüncü taraf Android Automate Uygulaması ile otomasyon
 
-**This article has been written before AndroidAPS version 2.5. There is an [automation plugin in AndroidAPS](./Automation.md) itself with AndroidAPS version 2.5. For some, this here might be still useful, but should only be used by advanced users.**
+**Bu makale AndroidAPS sürüm 2.5'ten önce yazılmıştır. AndroidAPS sürüm 2.5 ile [AndroidAPS içinde bir otomasyon eklentisi](./Automation.md) vardır. Bazıları için burası hala yararlı olabilir, ancak yalnızca ileri düzey kullanıcılar tarafından kullanılmalıdır.**
 
 AndroidAPS hibrit bir kapalı döngü sistemi olduğundan, yine de bazı kullanıcı etkileşimi gereklidir (örneğin, döngüye yürüdüğünüzü, birazdan yemek yediğinizi, koltukta uzandığınızı söyleyin...). En son AndroidAPS işlevselliğini genişletmek için sık manuel kullanıcı girişleri, Otomatikleştirme veya IFTTT gibi harici araçlar aracılığıyla otomatikleştirilebilir.
 
@@ -32,7 +32,7 @@ AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSC
 
 AndroidAPS'de, sağ üst ekrandaki 3 nokta menüsüne dokunun ve Tercihler > NSClient > Gelişmiş Ayarlar > 'Yalnızca NS yükle (senkronizasyon devre dışı)' ve 'NS'ye yükleme yok' seçeneğinin işaretini kaldırın.
 
-Be aware of the [security issues](Nightscout-security-considerations) that might occure and be very careful if you are using an [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps).
+Oluşabilecek [güvenlik sorunlarının](Nightscout-security-considerations) farkında olun ve bir [Insight pump](Accu-Chek-Insight-Pump-settings-in-aaps) kullanıyorsanız çok dikkatli olun.
 
 ![Nightscout indirme tercihleri](../images/automate-aaps2.jpg)
 

@@ -1,8 +1,8 @@
-# CGMS Configuration
+# הגדרת מקור נתוני הסוכר
 
 * [כללי](../Hardware/GeneralCGMRecommendation.md)
-* [Data Smoothing](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
-* [xDrip+Settings](./xdrip.md)
+* [החלקת נתונים](../Usage/Smoothing-Blood-Glucose-Data-in-xDrip.md)
+* [הגדרות xDrip+](./xdrip.md)
 * [Dexcom G6](../Hardware/DexcomG6.md)
 * [Dexcom G5](../Hardware/DexcomG5.md)
 * [Dexcom G4](../Hardware/DexcomG4.md)
@@ -12,4 +12,4 @@
 * [Eversense](../Hardware/Eversense.md)
 * [MM640g/MM630g](../Hardware/MM640g.md)
 * [PocTech](../Hardware/PocTech.md)
-* [Nightscout as BG Source](../Hardware/CgmNightscoutUpload.md)
+* [Nightscout כמקור נתונים](../Hardware/CgmNightscoutUpload.md)

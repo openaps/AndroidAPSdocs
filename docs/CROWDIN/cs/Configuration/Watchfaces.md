@@ -2,7 +2,7 @@
 
 Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**. AAPS na hodinkách umožňuje:
 
-* **display data on your watch**: by providing [custom watchfaces](Watchfaces-aaps-watchfaces) or in standard watchfaces with use of [complications](Watchfaces-complications)
+* **zobrazovat různé informace**: pomocí [vlastních ciferníků](Watchfaces-aaps-watchfaces) nebo standardních ciferníků s možností používat různé [komplikace](Watchfaces-complications)
 * **ovládat AAPS na telefonu z hodinek**: vydání bolusu, nastavení dočasného cíle atd.
 
 ### Dříve než si koupíte hodinky…
@@ -10,7 +10,7 @@ Aplikaci AndroidAPS lze nainstalovat na chytré hodinky se systémem **Wear OS**
 * Některé funkce, jako např. *komplikace*, vyžadují Wear OS verze 2.0 nebo vyšší
 * Google od verze 2.x přejmenoval *Android Wear 1.x* na *Wear OS*, takže pokud bude někde uvedeno *Android Wear*, zřejmě se jedná o starší verzi systému 1.x
 * Jestliže je v popisu hodinek uvedeno, že jsou kompatibilní se systémy *Android* a *iOS*, **neznamená to**, že hodinky používají systém *Wear OS* - stejně tak se může jednat o nějaký jiný typ OS upraveného daným výrobcem, **který není kompatibilní s aplikací AAPS pro hodinky!**
-* Check [list of tested phones and watches](Phones-list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* Podívejte se na [seznam otestovaných telefonů a hodinek](Phones-list-of-tested-phones), a pokud jste na pochybách, zda budou vaše hodinky podporované, [zeptejte se komunity](../Where-To-Go-For-Help/Connect-with-other-users.md)
 
 ### Sestavení verze AAPS pro Wear OS
 
@@ -20,7 +20,7 @@ Od března 2021 již není možné AAPS pro hodinky stáhnout z Google Play Stor
 
 ### Nastavení na telefonu
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](Config-Builder-wear).
+V aplikaci AndroidAPS musíte na kartě „Konfigurace“ [povolit modul Wear](Config-Builder-wear).
 
 ## Ovládání AAPS z hodinek
 
@@ -29,7 +29,7 @@ AndroidAPS je navržený, aby ho bylo možné *ovládat* hodinkami Android Wear.
 Z hodinek lze ovládat následující funkce:
 
 * nastavovat dočasné cíle
-* use the bolus calculator (calculation variables can be defined in [settings](Config-Builder-wear) on the phone)
+* používat kalkulátor (nastavení kalkulátoru můžete definovat v [nastaveni](Config-Builder-wear) v telefonu)
 * zadávat eSacharidy
 * podávat bolus (inzulín + sacharidy)
 * měnit nastavení hodinek
@@ -43,51 +43,51 @@ Z hodinek lze ovládat následující funkce:
 
 ## Ciferníky AAPS
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+Na výběr je několik ciferníků, které zahrnují průměrnou změnu glykémie, IOB, právě aktivní dočasnou bazální dávku a bazální profil + graf glykémií přečtených ze senzoru.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+Ujistěte se, že notifikace od AndroidAPS nejsou na hodinkách blokované. Potvrzování akcí (např. bolusu, dočasného cíle) přichází skrze notifikace, které je nutné odsunout (swipe) a potvrdit klepnutím (tick).
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+Abyste se rychleji dostali do menu AAPS, dvakrát klepněte na hodnotu vaši glykémie. Dvojitým klepnutím na graf glykémie změníte časový rozsah grafu.
 
 ## Dostupné ciferníky
 
-![Available watchfaces](../images/Watchface_Types.png)
+![Dostupné ciferníky](../images/Watchface_Types.png)
 
 (Watchfaces-new-watchface-as-of-androidaps-2-8)=
 
 ### Nový watchface od AndroidAPS 2.8
 
-![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
+![Ciferník Digital Style](../images/Watchface_DigitalStyle.png)
 
 * Barvy, čáry a kruhy lze konfigurovat v nabídce nastavení pod ozubeným kolečkem v nabídce pro výběr ciferníku.
 
 ## Ciferník AAPSv2 – Popis
 
-![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
+![Popis ciferníku AndroidAPSv2](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - čas od posledního spuštění smyčky
 
-B - CGM reading
+B - hodnota glykémie
 
-C - minutes since last CGM reading
+C - minuty od posledního čtení hodnoty glykémie
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - porovnání změny od posledního čtení (v mmol nebo mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - průměrná změna hodnoty glykémie za posledních 15 minut
 
-F - phone battery
+F - stav baterie telefonu
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - hodnota bazální dávky (zobrazená v U/h, pokud je zvolena standardní hodnota, nebo v %, pokud je aktivní dočasný bazál)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+G - ukazatel BGI (blood glucose interaction), neboli jak moc „by měla“ glykémie růst nebo klesat pouze na základě aktivity inzulínu
 
-I - carbs (carbs on board | e-carbs in the future)
+I - sacharidy (zbývající sacharidy I rozložené sacharidy v budoucnosti)
 
-J - insulin on board (from bolus | from basal)
+J - zbývající inzulín (z bolusu I bazálu)
 
 ## Vstup do hlavní nabídky AAPS
 
-To access main menu of AAPS you can use on of following options:
+Chcete-li získat přístup k hlavní nabídce AAPS, máte následující možnosti:
 
 * poklepejte na hodnotu glykémie
 * vyberte ikonu AAPS v nabídce aplikací na hodinách
@@ -95,11 +95,11 @@ To access main menu of AAPS you can use on of following options:
 
 ## Nastavení (na hodinkách)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+Chcete-li získat přístup k nastavení ciferníku, vstupte do hlavní nabídky AAPS na hodinkách, potáhněte prstem nahoru a vyberte možnost „Nastavení“.
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+Symbol plné hvězdy znamená, že možnost je povolená (**Zap**), symbol hvězdy bez výplně znamená, že možnost je zakázaná (**Vyp**):
 
-![Settings on/off](../images/Watchface_Settings_On_Off.png)
+![Nastavení zap/vyp](../images/Watchface_Settings_On_Off.png)
 
 ### Doplňkové parametry AAPS
 
@@ -131,7 +131,7 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 * **Metoda zadávání**: Pomocí tohoto parametru můžete zvolit pozici tlačítek "+" a "-" při zadávání hodnot pro AAPS (dočasný cíl, inzulin, sacharidy...)
 
-![Input design options](../images/Watchface_InputDesign.png)
+![Možnosti metod zadávání](../images/Watchface_InputDesign.png)
 
 ### Parametry konkrétních ciferníků
 
@@ -163,17 +163,17 @@ Filled star is for enabled state (**On**), and hollow star icon indicates that s
 
 ## Komplikace
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*Komplikace* je termín pocházející z tradičního hodinářství. Obvykle se jím označuje jakákoli funkce přidaná navíc k hlavnímu ciferníku – například datumové okénko nebo další malý ciferník (datum, den v týdnu, fáze měsíce apod.). Systém Wear OS 2.0 používá tento pojem analogicky. Uživatelé si mohou do ciferníků, které použití komplikací umožňují, přidávat vlastní data, např. informace o počasí, oznámení, fitness trackery a další.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+Aplikace AndroidAPS pro Wear OS nabízí podporu komplikací od verze `2.6` a umožňují nakonfigurovat jakýkoli ciferník třetí strany, který podporuje komplikace, aby zobrazoval informace z AAPS (glykémie a její trend, IOB, COB atd.).
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+Komplikace slouží rovněž jako **zkratky** k různým funkcím AAPS. Klepnutím na komplikace můžete otevřít příslušné nabídky a dialogová okna AAPS (v závislosti na typu komplikace a nastavení).
 
-![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
+![Komplikace_Pro_Ciferníky](../images/Watchface_Complications_On_Watchfaces.png)
 
 ### Typy komplikací
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+Aplikace AAPS pro Wear OS poskytuje v závislosti na nastavených formátech pouze nezpracovaná (raw) data. Aplikace třetích stran se musí samy rozhodnout, jak vykreslit komplikace včetně jejich rozvržení, okrajů, barvy a písma. Z mnoha typů Wear OS komplikací, které jsou k dispozici, AAPS využívá:
 
 * `SHORT TEXT` - Obsahuje dva řádky textu, každý o délce 7 znaků, někdy se označuje jako hodnota a popisek. Obvykle se vykreslí uvnitř kroužku nebo malého ováleného pole – pod sebou nebo vedle sebe. Je to prostorově velmi omezená komplikace. AAPS se snaží odstranit zbytečné znaky tak, aby se do zobrazení vešly: zaokrouhlením hodnot, odstraněním úvodních a koncových nul z hodnot atd.
 * ` DLOUHÝ TEXT `-Obsahuje dva řádky textu, každý o 20 znacích. Obvykle se vykreslují uvnitř obdélníku nebo dlouhého oválného pole pod sebou. Používá se pro další podrobnosti a text.
@@ -182,15 +182,15 @@ AAPS Wear OS app provides only raw data, according to predefined formats. It is 
 
 ### Nastavení komplikací
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+Chcete-li přidat komplikaci, dlouze přidržte ikonu ozubeného kola níže. Záleží, jak se konkrétní ciferník konfiguruje – buď klepněte na zástupné symboly nebo vstupte do nabídky nastavení ciferníku pro komplikace. Komplikace AAPS jsou seskupeny pod položkou nabídky AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+Při konfiguraci komplikací na ciferníku Wear OS zobrazí a filtruje seznam komplikací, které lze zobrazit ve vybraném místě pro komplikace na ciferníku. Nelze-li na seznamu nalézt konkrétní komplikace, je to pravděpodobně kvůli jejich typu, který nelze pro dané místo použít.
 
 ### Komplikace AAPS
 
-AndroidAPS provides following complications:
+AndroidAPS nabízí následující komplikace:
 
-![AAPS_Complications_List](../images/Watchface_Complications_List.png)
+![Seznam_AAPS_Komplikací](../images/Watchface_Complications_List.png)
 
 * **BR, CoB & IoB** (`KRÁTKÝ TEXT`, otevře *Menu*): zobrazuje *hodnotu bazálu* na prvním řádku a *aktuální množství sacharidů* a *aktivní množství inzulínu* na druhém řádku.
 * **Glykémie** (`KRÁTKÝ TEXT`, otevře *Menu*): znázorňuje *glykémii* , *trendovou* šipku na prvním řádku a *čas odečtu* a *hodnotu změny glykémie* na druhém řádku.
@@ -203,7 +203,7 @@ AndroidAPS provides following complications:
 * **Ikona IoB** (`KRÁTKÝ TEXT`, otevře *Bolus*): Zobrazuje *aktivní inzulín* jako statickou ikonu.
 * **Baterie Uploaderu/Telefonu** (`HODNOTA ROZSAHU`, otevře *Status*): Znázorňuje nabití baterie v procentech na AAPS telefonu (uploader), jak je uvedeno v AAPS. Zobrazí se jako jako procentuální ukazatel s ikonou baterie znázorňující hodnotu. Toto není zobrazováno v reálném čase, ale když se změní jiné důležité hodnoty AAPS (obvykle: každých ~5 minut s novým odečtem </em>glykémie</0> ).
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+Navíc existují tři druhy komplikací </code>VELKÝ OBRÁZEK</0> **Tmavá tapeta**, **Šedá tapeta** a**Světlá tapeta**, zobrazující statickou tapetu AAPS.
 
 ### Nastavení související s komplikacemi
 
@@ -305,11 +305,11 @@ Note: not all displays can handle always-on very well. It can cause screen burn-
 
 ### Tipy pro lepší chod a delší výdrž baterie
 
-Wear OS watches are very power-constrained devices. The size of the watch case limits the capacity of the included battery. Even with recent advancements both on hardware and software side, Wear OS watches still require daily charging.
+Wear OS hodinky jsou zařízení s velmi omezenou výdrží baterie. Velikost hodinek omezuje kapacitu vestavěné baterie. Navzdory nedávnému vylepšení na straně hardwaru i softwaru hodinky Wear OS stále vyžadují denní nabíjení.
 
-If an experienced battery span is shorter than a day (from dusk to dawn), here are some tips to troubleshoot the issues.
+Pokud je výdrž baterie hodinek kratší než jeden den (od rána do večera), existuje pár tipů, jak se s tím vypořádat.
 
-Main battery-demanding areas are:
+Baterii nejvíce vybíjejí:
 
 * Aktivní displej se zapnutým podsvícením (LED), nebo max. intenzita (OLED)
 * Vykreslování na obrazovce
@@ -344,7 +344,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## Zobrazení dat z Nightscoutu
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". Na výběr je několik ciferníků, které zahrnují průměrnou změnu glykémie, IOB, právě aktivní dočasnou bazální dávku a bazální profil + graf glykémií přečtených ze senzoru.
 
 # Pebble
 
