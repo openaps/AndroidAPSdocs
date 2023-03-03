@@ -67,7 +67,7 @@
 
 - Seçtiğiniz kimlik doğrulama uygulamasını takipçi telefonunuza yükleyin ve AAPS'de gösterilen QR kodunu tarayın.
 
-- Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Example:
+- Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Örnek kullanım:
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
@@ -85,7 +85,7 @@
 
 - AAPS ana telefonu, istenen komutun veya durumun başarısını onaylamak için yanıt verecektir.
 
-- Kodu göndererek komutu onaylayın. Example:
+- Kodu göndererek komutu onaylayın. Örnek kullanım:
 
   - Zorunlu PIN'iniz 2020
   - Kimlik doğrulama uygulamasındaki TOTP kodu 457051
