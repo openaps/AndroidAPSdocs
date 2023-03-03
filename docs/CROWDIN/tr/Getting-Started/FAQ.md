@@ -42,7 +42,7 @@ Ayarları bolus yapmak veya değiştirmek için android wear uygulamasını kull
 
 (FAQ-disconnect-pump)=
 
-### Disconnect pump
+### Pompayı ayırın
 
 Duş almak, banyo yapmak, yüzmek, spor yapmak veya diğer etkinlikler için pompanızı çıkarırsanız, AndroidAPS'ye AİNS'i doğru tutmak için insülin verilmediğini bildirmelisiniz.
 
@@ -135,7 +135,7 @@ Bu genellikle çok düşük ayarlandığından dikkatli olun. Çok düşük ayar
 
 **Daha yüksek İDF** (örn. 35 yerine 45), insülinin birim başına KŞ'nizi daha fazla düşürdüğü anlamına gelir. Bu **daha az insülin** ile döngüden daha az agresif/daha zayıf bir düzeltmeye yol açar. İDF çok yüksekse, bu yüksek KŞ'lere yol açabilir.
 
-**Example:**
+**Örnek kullanım:**
 
 - KŞ 190 mg/dl (10,5 mmol) ve hedef 100 mg/dl (5,6 mmol). 
 - Yani 90 mg/dl (= 190 - 110) düzeltmesi istiyorsunuz.
@@ -164,7 +164,7 @@ Bazalın doğru olduğunu varsayarak, AİNS'in sıfır olduğunu ve aralıkta ol
 > 
 > IC kullanırken insülin miktarı sabittir ve karbonhidrat miktarı değişkendir. ("Bir ünite insülin kaç gram karbonhidratı karşılayabilir?")
 > 
-> Example:
+> Örnek kullanım:
 > 
 > Ekmek birim faktörü (BU = 12g karbonhidrat): 2,4 U/BU -> Bir ünite ekmek yediğinizde 2,4 ünite insüline ihtiyacınız var.
 > 
