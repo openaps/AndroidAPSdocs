@@ -47,7 +47,7 @@ AAPS'deki yapılandırma için
 
 Glikoz değerlerinin yumuşatılması, Konfigürasyon ayarlarında "Ortalama yumuşatma" veya "Üstsel yumuşatma" eklentisi etkinleştirilerek gerçekleştirilir. Devre dışı bırakmak için "Yumuşatma Yok" seçeneğini seçin. "Üstsel yumuşatma" daha agresiftir ve en yeni Glikoz Değerini yeniden yazar, ancak yoğun gürültüyle başa çıkmada iyidir. "Ortalama yumuşatma", BYODA G6'daki geri düzeltmeye çok benzer ve yalnızca geçmiş değerleri yeniden yazar fakat mevcut değer değildir ve bu nedenle daha hızlı yanıt süresine sahiptir.
 
-G7 değerlerinin anlamlı kullanımı için yumuşatma **ZORUNLU** olarak etkinleştirilmelidir.
+**Exponential Smoothing** **MUST** be enabled for meaningful use of the G7 values.
 
 ## 2. Xdrip+ (tamamlayıcı mod)
 
