@@ -80,34 +80,34 @@ S'il y a une autre demande, vous pouvez la confirmer avec "OK".
 
 Maintenant téléchargez & installez l'application Juggluco depuis [ici (lien)](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) ou [ici (miroir)](http://jkaltes.byethost16.com/Juggluco/download.html) (version 4.0.1 ou supérieure). Avec l'aide de cette application, les glycémies peuvent être envoyées directement à Xdrip et AAPS. Pour cela, le capteur actif (qui est enregistré sur Libreview) est utilisé dans Juggluco. Ceci explique aussi pourquoi un compte Libreview est obligatoire.
 
-Après avoir installé Juggluco, plusieurs messages peuvent apparaître. Allow Juggluco to find, locate and connect nearby devices.
+Après avoir installé Juggluco, plusieurs messages peuvent apparaître. Permettre à Juggluco de trouver, localiser et connecter les appareils à proximité.
 
 ```{image} ../images/libre3/17.jpg
-:alt: Allow Juggluco connections
+:alt: Autoriser les connexions Juggluco
 ```
 
-A request to deactivate the battery optimization may appear as well. Tap "Allow". This is important to keep the app running in the background.
+Une demande de désactivation de l'optimisation de la batterie peut également apparaître. Appuyez sur "Autoriser". Ceci est important pour garder l'application en tâche de fond.
 
 ```{image} ../images/libre3/18.jpg
-:alt: Disable Juggluco battery optimization
+:alt: Désactiver l'optimisation de la batterie Juggluco
 ```
 
-Tap OK when Juggluco is introduced.
+Appuyez sur OK lorsque Juggluco est installée.
 
 ```{image} ../images/libre3/19.jpg
-:alt: Disable Juggluco battery optimization
+:alt: Désactiver l'optimisation de la batterie Juggluco
 ```
 
-Now you will see the Juggluco home screen. Click onto the empty space within the upper left half. You can see the approximate position here.
+Maintenant vous verrez l'écran d'accueil de Juggluco. Cliquez sur l'espace vide dans la moitié supérieure gauche. Vous pouvez voir la position approximative ici.
 
 ```{image} ../images/libre3/20.jpg
-:alt: Open Juggluco Menu
+:alt: Ouvrir le menu Juggluco
 ```
 
-This menu will open. Here you can select "Settings".
+Ce menu va s'ouvrir. Ici vous pouvez sélectionner "Settings".
 
 ```{image} ../images/libre3/21.jpg
-:alt: Juggluco Menu
+:alt: menu Juggluco
 ```
 
 Cette page sera alors affichée. Dans la sélection "1.", vous avez deux options :
@@ -135,26 +135,26 @@ Si tout s'est bien passé, un numéro à plusieurs chiffres devrait maintenant �
 :alt: Vérifier Libreview
 ```
 
-Maintenant il est temps de redémarrer le capteur! Go back to the Juggluco home screen and scan your previously activated sensor. The sensor will start and may enter a 60 minute warm-up period again. After the 60 minutes, the readings should be visible on the Juggluco home screen.
+Maintenant il est temps de redémarrer le capteur! Retournez à l'écran d'accueil de Juggluco et scannez votre capteur précédemment activé. Le capteur démarrera et pourra entrer à nouveau dans une période de préchauffage de 60 minutes. Après les 60 minutes, les lectures devraient être visibles sur l'écran d'accueil de Juggluco.
 
 ```{image} ../images/libre3/25.jpg
 :alt: Vérifier Libreview
 ```
 
-Done, that's it! If the readings are not visible, you can find more information in the "Experiences and troubleshooting" section.
+C'est fait, et c'est tout! Si les lectures ne sont pas visibles, vous pouvez trouver plus d'informations dans la section "Expériences et dépannage".
 
-### Step 4: Set up xDrip
+### Étape 4 : Configurez xDrip
 
 Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 
-- If not already set up then download xDrip+ app and install one of the latest nightly builds from [here](https://github.com/NightscoutFoundation/xDrip/releases).
-- In xDrip+ select "Libre2 patched" or "Libre 2 (patched app)" as data source
-- disable battery optimization and allow background activity for xDrip+ app
-- If necessary, enter "BgReading:d,xdrip libre_receiver:v" under Less Common Settings->Extra Logging Settings->Extra tags for logging. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
+- Si ce n'est pas déjà configuré, alors téléchargez l'application xDrip+ et installez une des dernières pre-release à partir d'[ici](https://github.com/NightscoutFoundation/xDrip/releases).
+- Dans xDrip+ sélectionnez "Libre2 (patched App)" comme source de données
+- désactivez l'optimisation de la batterie et autorisez l'activité en arrière-plan pour l'application xDrip+
+- Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Paramètres de logs supplémentaires -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
 - In xDrip+ go to Settings -> Interapp Compatibility -> Broadcast Data Locally and select ON.
-- In xDrip+ go to Settings -> Interapp Compatibility -> Accept Treatments and select OFF.
-- to enable AAPS to receive blood sugar levels (version 2.5.x and later) from xDrip+ please set Settings -> Interapp Settings -> Identify Receiver "info.nightscout.androidaps".
-- If you want to be able to use AndroidAPS to calibrate then in xDrip+ go to Settings -> Interapp Compatibility -> Accept Calibrations and select ON. You may also want to review the options in Settings -> Less Common Settings -> Advanced Calibration Settings.
+- Dans xDrip allez dans Paramètres > Paramètres Inter-applications > Accepter les traitements et sélectionnez OFF.
+- pour permettre à AAPS de recevoir les glycémies (version 2.5.x et supérieures) de la part de xDrip+ veuillez renseigner dans Paramètres -> Paramètres Inter-applications -> Identifier le récepteur "info.nightscout.androidaps"
+- Si vous voulez pouvoir utiliser AAPS pour calibrer, alors dans xDrip, allez dans Paramètres -> Paramètres Inter-applications -> Accepter les Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres -> Paramètres moins courants -> Paramètres Avancés de Calibration.
 
 ```{image} ../images/Libre2_Tags.png
 :alt: xDrip+ journaux LibreLink
@@ -202,7 +202,7 @@ Veuillez noter que l'activation du service de localisation est primordial. It is
 - Android location service is not granted - please enable it in the system settings
 - automatic time and time zone not set - please change the settings accordingly
 - Bluetooth is switched off - please switch on¨
-- Make sure the Libre 3 sensor is not connected to any other device.
+- Assurez-vous que le capteur Libre 3 n'est connecté à aucun autre appareil.
 
 #### Troubleshooting Juggluco no readings
 
@@ -212,16 +212,16 @@ Veuillez noter que l'activation du service de localisation est primordial. It is
 - Check if a sensor number is visible in Juggluco
 - The sensor is usually connected to the smartphone within 3 minutes, but it can also take longer.
 - If the Bluetooth connection cannot be established, try restarting the smartphone.
-- Make sure the Libre 3 sensor is not connected to any other device.
+- Assurez-vous que le capteur Libre 3 n'est connecté à aucun autre appareil.
 
 #### Troubleshooting Blood sugar readings not uploading to Libreview
 
-- Check your internet connection
-- Make sure Juggluco is receiving blood sugar readings
-- Ensure the "Send to Libreview" checkbox is checked within Juggluco->Settings->Libreview
+- Vérifiez votre connexion Internet
+- Assurez-vous que Juggluco reçoit des glycémies
+- Assurez-vous que la case "Send to Libreview" est cochée dans Juggluco->Settings->Libreview
 
 #### Aide supplémentaire
 
-Original instructions: [jkaltes website](http://jkaltes.byethost16.com/Juggluco/libre3/)
+Instructions d'origine : [site web jkaltes](http://jkaltes.byethost16.com/Juggluco/libre3/)
 
-Additional Github repo: [Github link](https://github.com/maheini/FreeStyle-Libre-3-patch)
+Dépôt Github Supplémentaire : [Lien Github](https://github.com/maheini/FreeStyle-Libre-3-patch)
