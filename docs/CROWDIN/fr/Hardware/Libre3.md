@@ -151,7 +151,7 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 - Dans xDrip+ sélectionnez "Libre2 (patched App)" comme source de données
 - désactivez l'optimisation de la batterie et autorisez l'activité en arrière-plan pour l'application xDrip+
 - Si nécessaire, entrez "BgReading:d,xdrip libre_receiver:v" dans Paramètres moins courants -> Paramètres de logs supplémentaires -> Balises supplémentaires pour le log. Cela permettra de consigner des messages d'erreur supplémentaires pour le dépannage.
-- In xDrip+ go to Settings -> Interapp Compatibility -> Broadcast Data Locally and select ON.
+- Dans xDrip allez dans Paramètres -> Paramètres Inter-applications -> Diffusion Locale et sélectionnez ON.
 - Dans xDrip allez dans Paramètres > Paramètres Inter-applications > Accepter les traitements et sélectionnez OFF.
 - pour permettre à AAPS de recevoir les glycémies (version 2.5.x et supérieures) de la part de xDrip+ veuillez renseigner dans Paramètres -> Paramètres Inter-applications -> Identifier le récepteur "info.nightscout.androidaps"
 - Si vous voulez pouvoir utiliser AAPS pour calibrer, alors dans xDrip, allez dans Paramètres -> Paramètres Inter-applications -> Accepter les Calibrations et sélectionnez ON. Vous pouvez également consulter les options dans Paramètres -> Paramètres moins courants -> Paramètres Avancés de Calibration.
@@ -162,59 +162,59 @@ Les glycémies sont reçues sur le smartphone par l'application xDrip+.
 
 ### Étape 5 : Démarrez le capteur dans xDrip
 
-Dans xDrip+ démarrez le capteur avec "Start Sensor" et "not today". It is not necessary to hold the mobile phone onto the sensor. In fact "Start Sensor" will not physically start any Libre 3 sensor or interact with them in any case. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Skipped values, e.g. because you were too far away from your phone, will not be backfilled.
+Dans xDrip+ démarrez le capteur avec "Start Sensor" et "not today". Il n'est pas nécessaire de tenir le téléphone mobile sur le capteur. En fait, "Start Sensor" ne démarrera aucun capteur Libre 3 ou n'interagit en aucun cas avec eux. Il s'agit simplement d'indiquer à xDrip+ qu'un nouveau capteur envoie des glycémies. Si possible, entrez deux valeurs de glycémie capillaire pour l'étalonnage initial. Maintenant, les glycémies doivent être affichées dans xDrip+ toutes les 5 minutes. Les valeur manquées, par ex. si vous étiez trop loin de votre téléphone, ne seront pas actualisées à postériori.
 
-Wait at least 15-20 minutes if there is still no data.
+Attendez au moins 15-20 minutes s'il n'y a toujours pas de données.
 
 Après un changement de capteur, xDrip+ détectera automatiquement le nouveau capteur et supprimera toutes les données d'étalonnage. Vous pouvez vérifier la glycémie capillaire après l'activation et effectuer un nouvel étalonnage initial.
 
-### Step 6: Configure AndroidAPS
+### Étape 6 : Configurer AAPS
 
-- In AndroidAPS go to Config Builder -> BG Source and check "xDrip+"
-- If AndroidAPS does not receive BG values when phone is in airplane mode, use "Identify receiver"
+- Dans AAPS allez dans la Configuration -> Source des glycémies et cochez 'xDrip+'
+- Si AAPS ne reçoit pas de GLY quand le téléphone est en mode avion, utilisez "Identify receiver"
 
-Until now, using Libre 3 as BG source you cannot activate 'Enable SMB always' and 'Enable SMB after carbs' within SMB algorithm. The BG values of Libre 3 are not smooth enough to use it safely.
+Jusqu'à présent, en utilisant Libre 3 comme source Gly, vous ne pouvez pas activer les fonctions 'Activer SMB toujours' et 'Activer SMB après les glucides' dans l'algorithme SMB. Les valeurs de GLY du Libre 3 ne sont pas assez lisses pour l'utiliser en toute sécurité.
 
-### Switch back to the Libre app from Juggluco
+### Revenir à l'application Libre à partir de Juggluco
 
-It is possible to switch back from Juggluco to the Libre 3 app as receiver. The following steps are necessary:
+Il est possible de revenir de Juggluco à l'application Libre 3 en tant que récepteur. Les étapes suivantes sont nécessaires:
 
-1. Reinstall Libre 3 app (Or clear data in settings)
-2. Set up the Libre 3 app with the Libreview account with which the sensor was activated.
-3. Stop the Juggluco app in the settings, similar to the Libre 3 app in the instructions.
-4. In the Libre 3 menu, click "Start Sensor", select "Yes", "Next" and scan your sensor.
-5. The 60-minute warm-up phase should then begin. This is necessary after every change and cannot be skipped.
+1. Réinstallez l'application Libre 3 (Ou effacez les données dans les paramètres)
+2. Configurez l'application Libre 3 avec le compte Libreview avec lequel le capteur a été activé.
+3. Arrêtez l'application Juggluco dans les paramètres, comme l'application Libre 3 dans les instructions.
+4. Dans le menu Libre 3, cliquez sur "Démarrer le capteur", sélectionnez "Oui", "Suivant" et scannez votre capteur.
+5. La phase de préchauffage de 60 minutes devrait alors commencer. Ceci est nécessaire après chaque changement et ne peut pas être ignoré.
 
 (Libre3-experiences-and-troubleshooting)=
 ### Astuces et Dépannages
 
-#### Necessary settings for a successful sensor start
+#### Paramètres obligatoires pour réussir le démarrage du capteur :
 
 - NFC activé / BT activé
-- Storage and location permission enabled
-- Location service enabled
-- Automatic time and time zone setting
+- Autorisation d'accès au stockage et à la localisation activées
+- Service de localisation activé
+- Réglage automatique de l'heure et du fuseau horaire
 
-Veuillez noter que l'activation du service de localisation est primordial. It is not about the location permission of the app, which must be set as well!
+Veuillez noter que l'activation du service de localisation est primordial. Il ne s'agit pas de l'autorisation d'application qui doit être également définie !
 
 #### Dépannage Libre3 sans lectures
 
-- Android location service is not granted - please enable it in the system settings
-- automatic time and time zone not set - please change the settings accordingly
-- Bluetooth is switched off - please switch on¨
+- le service de localisation Android n'est pas autorisé - veuillez l'activer dans les paramètres système
+- le réglage automatique de l'heure et du fuseau horaire n'est pas activé - veuillez modifier les paramètres en conséquence
+- le Bluetooth est éteint - veuillez l'activer
 - Assurez-vous que le capteur Libre 3 n'est connecté à aucun autre appareil.
 
-#### Troubleshooting Juggluco no readings
+#### Dépannage Juggluco sans glycémies
 
-- Check if the Libre 3 app is stopped.
-- Rescan the Libre 3 sensor within the Juggluco app
-- Make sure the sensor has been activated with the current Libreview account
-- Check if a sensor number is visible in Juggluco
-- The sensor is usually connected to the smartphone within 3 minutes, but it can also take longer.
-- If the Bluetooth connection cannot be established, try restarting the smartphone.
+- Vérifiez si l'application Libre 3 est arrêtée.
+- Rescanner le capteur Libre 3 dans l'application Juggluco
+- Assurez-vous que le capteur a été activé avec le compte Libreview actuel
+- Vérifiez si un numéro de capteur est visible dans Juggluco
+- Le capteur est généralement connecté au smartphone en 3 minutes, mais cela peut prendre plus de temps.
+- Si la connexion Bluetooth ne peut pas être établie, essayez de redémarrer le smartphone.
 - Assurez-vous que le capteur Libre 3 n'est connecté à aucun autre appareil.
 
-#### Troubleshooting Blood sugar readings not uploading to Libreview
+#### Dépannage des glycémies qui ne sont pas envoyées à Libreview
 
 - Vérifiez votre connexion Internet
 - Assurez-vous que Juggluco reçoit des glycémies
