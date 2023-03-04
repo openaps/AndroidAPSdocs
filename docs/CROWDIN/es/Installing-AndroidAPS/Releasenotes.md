@@ -13,7 +13,7 @@ Entonces tienes 60 días para actualizar. Si no actualiza dentro de estos 60 dí
 
 Si no se actualiza durante otros 30 días (90 días a partir de la fecha de la nueva versión), AAPS cambiará a Lazo Abierto.
 
-Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. New versions of AAPS do not only provide new features but also important safety fixes. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
+Por favor, entienda que este cambio no tiene la intención de molestarlo, sino que se debe a razones de seguridad. Las nuevas versiones de AAPS no sólo proporcionan nuevas características, sino también importantes correcciones de seguridad. Por lo tanto, es necesario actualizar lo antes posible. Desafortunadamente, todavía hay informes de error de versiones muy antiguas, por lo que esto es un intento de mejorar la seguridad para cada usuario y toda la comunidad de DIY. Gracias por tu comprensión.
 
 ```{admonition} First version of AAPS
 La primera versión de prueba comenzó en 2015. En 2016 se publicó la primera versión.
