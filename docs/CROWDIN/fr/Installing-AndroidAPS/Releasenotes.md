@@ -52,7 +52,7 @@ Date de sortie : XX-XX-2023
 ### Conseils importants
 
 - NS 15 est requis. Pour le moment la branche "dev" du dépôt principal NS
-- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Always use the same client (v1 or v3) in AAPS and AAPSClient until NS fully switch to v3 internaly. The same is valid for AAPS and AAPSClient itself.
+- Lors de l'utilisation de websockets dans le plugin NS v3, les traitements entrés par l'interface utilisateur NS (bouton plus) et d'autres applications utilisant l'API v1 ne sont pas envoyées à AAPS. Cela sera corrigé dans la prochaine version de NS. Toujours utiliser le même client (v1 ou v3) dans AAPS et AAPSClient jusqu'à ce que NS passe entièrement à v3 en interne. Il en va de même pour AAPS et AAPSClient.
 - Les Websockets avec le plugin v3 fonctionnent de manière similiaire au plugin v1. Sans websockets activés,  AAPS télécharge régulièrement à partir de NS, ce qui devrait réduire la consommation d'énergie parce que NS n'est pas connecté de façon permanente. D'un autre côté, cela signifie des retards dans l'échange de données.
 - Si vous utilisez xdrip comme source MGC, vous devez le sélectionner à nouveau après la mise à jour en raison de changements internes
 - Tidepool peut être utilisé à la place de NS pour passer le premier objectif
