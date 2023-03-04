@@ -1,86 +1,86 @@
 # Freestyle Libre 3
 
-Le système Freestyle Libre 3 peut automatiquement signaler des niveaux de glycémie dangereux. The Libre3 sensor sends the current blood glucose value to a receiver (reader or smartphone) every minute. Le récepteur déclenche une alarme si nécessaire. With the help of the Juggluco app, the sensor can be taken over after the start and connected to Xdrip+, AndroidAPS or Libreview. In this way, the blood sugar values can be transmitted directly. It is even possible to receive historical data from the sensor's memory (two hours of minutely glucose and two weeks of once per 5 minute historical data) to be sent to Juggluco.
+Le système Freestyle Libre 3 peut automatiquement signaler des niveaux de glycémie dangereux. Le capteur Libre3 envoie la glycémie actuelle à un récepteur (lecteur ou smartphone) toutes les minutes. Le récepteur déclenche une alarme si nécessaire. Avec l'application Juggluco, le capteur peut être pris en charge après le démarrage et connecté à Xdrip+, AAPS ou Libreview. De cette façon, les valeurs de glycémie peuvent être transmises directement. Il est même possible de recevoir des données historiques de la mémoire du capteur (deux heures de glycémies détaillées et deux semaines pour les données d'historiques toutes les 5 minutes) à envoyer à Juggluco.
 
-The sensor can be calibrated in the range of -40 mg/dl to +20 mg/dl (-2.2 mmol/l to +1.1 mmol/l) to compensate for differences between the bloody reading and the sensor readings.
+Le capteur peut être étalonné de -40 mg/dl à +20 mg/dl (-2,2 mmol/l à +1,1 mmol/l) pour ajuster les différences entre les glycémies capillaires et les lectures des capteurs.
 
-## Current restrictions
+## Limitations actuelle
 
-- If you have a rooted system, you have to hide it. You can find instructions here: [Link](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3).
+- Si vous avez un système rooté, vous devez le cacher. Vous pouvez trouver les instructions [ici](https://www.reddit.com/r/Freestylelibre/comments/s22vlr/comment/hw2p4th/?utm_source=share&utm_medium=web2x&context=3).
 
-  (There are several apps to find out if the smartphone is rooted, one of them is e.g. [Root Checker App](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck))
+  (Il y a plusieurs applications pour savoir si le smartphone est rooté, l'une d'elles est par exemple [Root Checker App](https://play.google.com/store/apps/details?id=com.joeykrim.rootcheck))
 
-- The Juggluco app only supports English, Dutch and Italian languages.
+- L'application Juggluco ne prend en charge que les langues anglaise, néerlandaise et italienne.
 
-### Step 1: Download and set up the Libre3 app
+### Étape 1 : Téléchargez et configurez l'application Libre 3
 
-Install the Libre 3 app from the Playstore and open it. On the home screen, click Sign In. Registration with your Libreview account is mandatory - if you don't have one yet, you can create one.
+Installez l'application Libre 3 depuis le Playstore et ouvrez-la. Sur l'écran d'accueil, cliquez sur Se connecter. L'inscription à votre compte Libreview est obligatoire - si vous n'en avez pas encore un, vous pouvez en créer un.
 
 ```{image} ../images/libre3/1.jpg
-:alt: Libre3 start screen
+:alt: Libre3 écran d'accueil
 ```
 
 ```{image} ../images/libre3/2.jpg
-:alt: Libreview login
+:alt: Compte LibreView
 ```
 
-You must then accept Abbott's Terms of Service. The last one is optional and can also be rejected.
+Vous devez ensuite accepter les conditions d'utilisation d'Abbott. Le dernier est facultatif et peut également être rejeté.
 
 ```{image} ../images/libre3/4.jpg
-:alt: Libre 3 Term
+:alt: Condition Libre 3
 ```
 
 ```{image} ../images/libre3/5.jpg
-:alt: Libre 3 Term
+:alt: Condition Libre 3
 ```
 
 ```{image} ../images/libre3/6.jpg
-:alt: Libre 3 Term
+:alt: Condition Libre 3
 ```
 
-Adjust the app step by step according to your needs. If you see this message about disabling battery optimization, tap "Allow".
+Ajustez l'application étape par étape en fonction de vos besoins. Si vous voyez ce message sur la désactivation de l'optimisation de la batterie, appuyez sur "Autoriser".
 
 ```{image} ../images/libre3/10.jpg
-:alt: Libre 3 battery optimization
+:alt: Optimisation de la batterie Libre 3
 ```
 
-After setting up the Libre 3 app, you can already activate your first sensor. To do this, scan the sensor as shown and wait for the sensor to warm up within the next 60 minutes.
+Après avoir configuré l'application Libre 3, vous pouvez déjà activer votre premier capteur. Pour ce faire, scannez le capteur comme indiqué et attendez 60 minutes que le capteur démarre.
 
 ```{image} ../images/libre3/12.jpg
-:alt: Enable Libre 3 Sensor
+:alt: Activer le capteur Libre 3
 ```
 
-### Step 2: Stop Libre 3 app
+### Étape 2 : Arrêter l'application Libre 3
 
-After the sensor has started successfully and the first sensor reading is visible, you can continue. Now open the settings and select the menu option for "Apps".
+Une fois le capteur démarré avec succès et la première lecture du capteur est visible, vous pouvez continuer. Maintenant, ouvrez les paramètres et sélectionnez l'option de menu "Applications".
 
 ```{image} ../images/libre3/13.jpg
-:alt: App settings
+:alt: Paramètres de l'application
 ```
 
-You then search for the Libre 3 app. Once you have found it, tap on it.
+Vous recherchez ensuite l'application Libre 3. Une fois que vous l'avez trouvé, appuyez dessus.
 
 ```{image} ../images/libre3/14.jpg
-:alt: Libre 3 app settings
+:alt: Paramètres de l'application Libre 3
 ```
 
-Now tap "Stop" or "Force stop". The exact button may vary depending on the Android version.
+Tapez maintenant sur "Arrêter" ou "Forcer l'arrêt". Le bouton exact peut varier en fonction de la version Android.
 
 ```{image} ../images/libre3/15.jpg
-:alt: Exit Libre 3
+:alt: Quitter Libre 3
 ```
 
-If there is another request, you can confirm it with "OK".
+S'il y a une autre demande, vous pouvez la confirmer avec "OK".
 
 ```{image} ../images/libre3/16.jpg
-:alt: Exit Libre 3
+:alt: Quitter Libre 3
 ```
 
-### Step 3: Install & set up Juggluco
+### Étape 3: Installez & configurez Juggluco
 
-Now download & install the Juggluco App from [here (link)](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) or [here (mirror)](http://jkaltes.byethost16.com/Juggluco/download.html) (version 4.0.1 or higher). With the help of this app, the blood sugar readings can be sent directly to Xdrip and AndroidAPS. For this purpose, the active sensor (which is registered on Libreview) is used within Juggluco. This also explains why a Libreview account is mandatory.
+Maintenant téléchargez & installez l'application Juggluco depuis [ici (lien)](https://github.com/maheini/FreeStyle-Libre-3-patch/raw/main/Juggluco-solution/versions/latest/Juggluco.apk) ou [ici (miroir)](http://jkaltes.byethost16.com/Juggluco/download.html) (version 4.0.1 ou supérieure). Avec l'aide de cette application, les glycémies peuvent être envoyées directement à Xdrip et AAPS. Pour cela, le capteur actif (qui est enregistré sur Libreview) est utilisé dans Juggluco. Ceci explique aussi pourquoi un compte Libreview est obligatoire.
 
-After installing Juggluco, several messages may appear. Allow Juggluco to find, locate and connect nearby devices.
+Après avoir installé Juggluco, plusieurs messages peuvent apparaître. Allow Juggluco to find, locate and connect nearby devices.
 
 ```{image} ../images/libre3/17.jpg
 :alt: Allow Juggluco connections
@@ -110,35 +110,35 @@ This menu will open. Here you can select "Settings".
 :alt: Juggluco Menu
 ```
 
-This page will then show up. In the selection "1." you have two options:
+Cette page sera alors affichée. Dans la sélection "1.", vous avez deux options :
 
-1. "Send to xDrip" -> With this setting, the blood sugar readings are sent to xDrip. Select "Libre2 patched" or "Libre 2 (patched app)" as the recipient within xDrip.
-2. "xDrip broadcast" -> With this setting, the minutely blood sugar reading are sent directly to AndroidAPS. The blood glucose source must be set to "xDrip+" within AndroidAPS.
+1. "Send to xDrip" -> Avec ce paramètre, les lectures de glycémie sont envoyées à xDrip. Sélectionnez "Libre2 patched" ou "Libre 2 (patched app)" comme destinataire dans xDrip.
+2. "xDrip broadcast" -> Avec ce paramètre, la lecture de la glycémie est envoyée directement à AAPS. La source de glycémie doit être définie à "xDrip+" dans AAPS.
 
-To start the sensor, choose "2." the "Libreview" checkbox.
+Pour démarrer le capteur, choisissez "2." la case à cocher "Libreview".
 
 ```{image} ../images/libre3/22.jpg
-:alt: Juggluco Settings
+:alt: Paramètres Juggluco
 ```
 
-In the next screen you have to enter your login data for Libreview. It must be the account with which the sensor was activated. Then click on "Get Account ID".
+Dans l'écran suivant, vous devez entrer vos données de connexion pour Libreview. Ce doit être le compte avec lequel le capteur a été activé. Cliquez ensuite sur "Get Account ID".
 
 ```{image} ../images/libre3/23.jpg
-:alt: Connect Libreview
+:alt: Connexion Libreview
 ```
 
-If everything went well, a multi-digit number should now be visible below the "Resend data" button. This process may take some time - if the number still doesn't appear, check your internet connection and try the previous steps again.
+Si tout s'est bien passé, un numéro à plusieurs chiffres devrait maintenant être visible sous le bouton "Resend data". Ce processus peut prendre un certain temps - si le numéro n'apparaît toujours pas, vérifiez votre connexion internet et recommencez les étapes précédentes.
 
-**Note:** If you want to upload blood sugar readings to Libreview, you can check the "Send to Libreview" checkbox.
+**Remarque :** Si vous voulez télécharger des glycémies dans Libreview, vous pouvez cocher la case "Send to Libreview".
 
 ```{image} ../images/libre3/24.jpg
-:alt: Check Libreview
+:alt: Vérifier Libreview
 ```
 
-Now it's time to restart the sensor! Go back to the Juggluco home screen and scan your previously activated sensor. The sensor will start and may enter a 60 minute warm-up period again. After the 60 minutes, the readings should be visible on the Juggluco home screen.
+Maintenant il est temps de redémarrer le capteur! Go back to the Juggluco home screen and scan your previously activated sensor. The sensor will start and may enter a 60 minute warm-up period again. After the 60 minutes, the readings should be visible on the Juggluco home screen.
 
 ```{image} ../images/libre3/25.jpg
-:alt: Check Libreview
+:alt: Vérifier Libreview
 ```
 
 Done, that's it! If the readings are not visible, you can find more information in the "Experiences and troubleshooting" section.
