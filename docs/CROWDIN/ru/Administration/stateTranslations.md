@@ -1,4 +1,4 @@
-# state of translation for app and the documentation
+# состояние перевода приложения и документации
 
 The state is once per hour updated and reflects only the state in Crowdin.
 
