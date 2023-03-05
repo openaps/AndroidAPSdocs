@@ -191,24 +191,24 @@ Select the blood glucose source you are using - see [BG Source](BG-Source.md) pa
 
 ## זיהוי רגישות
 
-Select the type of sensitivity detection. For more details of different designs please [read on here](../Configuration/Sensitivity-detection-and-COB.md). This will analyze historical data on the go and make adjustments if it recognizes that you are reacting more sensitively (or conversely, more resistant) to insulin than usual. More details about the Sensitivity algorithm can be read in the [OpenAPS docs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
+בחרו את סוג זיהוי הרגישות. [לחצו כאן](../Configuration/Sensitivity-detection-and-COB.md) למידע נוסף על האפשרויות השונות. פונקציה זו תנתח את המידע ההיסטורי בשעת מעשה ותבצע התאמות במידה ותזהה כי הנכם מגיבים לאינסולין ברגישות יתר מהרגיל (או להיפך, אינכם מגיבים מספיק). מידע נוסף על אלגוריתם הרגישות ניתן למצוא ב[מסמכי OpenAPS](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autosens.html).
 
-You can view your sensitivity on the homescreen by selecting SEN and watching the white line. Note, you need to be in [Objective 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) in order to let Sensitivity Detection/[Autosens](Open-APS-features-autosens) automatically adjust the amount of insulin delivered. Before reaching that objective, the Autosens percentage / the line in your graph is displayed for information only.
+תוכלו לראות את רמת הרגישות שלכם בעמוד הבית, על ידי בחירה ברגישות ומעקב אחרי העקום הלבן בגרף. שימו לב: עליכם להגיע ל[משימה 8](Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens) לפני שזיהוי הרגישות/[Autosens](Open-APS-features-autosens) יוכל להתאים אוטומטית את מתן האינסולין. עד שתגיעו לשלב זה במשימות, אחוזי ה-Autosens והעקום הלבן בגרף מוצגים כמידע בלבד.
 
 (Config-Builder-absorption-settings)=
 
 ### הגדרות ספיגה
 
-If you use Oref1 with SMB you must change **min_5m_carbimpact** to 8. The value is only used during gaps in CGM readings or when physical activity "uses up" all the blood glucose rise that would otherwise cause AAPS to decay COB. At times when [carb absorption](../Usage/COB-calculation.md) can't be dynamically worked out based on your bloods reactions it inserts a default decay to your carbs. Basically, it is a failsafe.
+אם אתם משתמשים ב-Oref1 עם SMB, חובה לשנות את **min_5m_carbimpact** ל-8. ערך זה יימצא בשימוש רק בזמן שיש הפסקה בקבלת נתוני סוכר מהחיישן או כשפעילות גופנית "מנצלת" את כל העלייה בסוכר שבה AAPS משתמש כדי לחשב דעיכת פחמימות פעילות. בזמנים בהם לא ניתן לזהות את [ספיגת הפחמימות](../Usage/COB-calculation.md) באופן דינאמי בהתבסס על תגובות הדם שלכם, התוכנה תזין אוטומטית דעיכה של הפחמימות כברירת מחדל. למעשה, זהו אמצעי אל כשל.
 
 (Config-Builder-aps)=
 
 ## APS
 
-Select the desired APS algorithm for therapy adjustments. You can view the active detail of the chosen algorithm in the OpenAPS(OAPS) tab.
+בחר את אלגוריתם ה-APS הרצוי להתאמות טיפוליות. ניתן לצפות בפרטי הפעילות של האלגוריתם הנבחר בלשונית ה-OpenASP(OAPS).
 
 * OpenAPS AMA ("עוזר ארוחות מתקדם", אלגוריתם מ-2017) במילים פשוטות, לאחר הזרקת בולוס ארוחה, האלגוריתם יכול לתקן מהר עם בזאלי זמני גבוה אם הזנתם את כמות הפחמימות במדוייק.
-* [OpenAPS SMB](../Usage/Open-APS-features.md) (super micro bolus, most recent algorithm for advanced users) Note you need to be in [Objective 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) in order to use OpenAPS SMB and min_5m_carbimpact must be set to 8 in Config builder > Sensitivity detection > Sensitivity Oref1 settings.
+* [OpenAPS SMB](../Usage/Open-APS-features.md) (סופר מיקרו בולוס, האלגוריתם העדכני ביותר למשתמשים מתקדמים) שימו לב: יש להגיע ל[משימה 9](Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb) לפני שתוכלו להשתמש ב-OpenAPS SMB, ועל ה-min_5m_carbimpact להיות מוגדר כ-8 בהגדרות של בונה התצורה > זיהוי רגישות > הגדרות רגישות Oref1.
 
 ## לולאה
 
@@ -230,7 +230,7 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 * AAPS מנתח ללא הרף את כל הנתונים הזמינים (IOB - אינסולין פעיל בגוף, COB - פחמימות פעילות, BG - רמת הסוכר...) ומתאים אוטומטית את הטיפול במידת הצורך (ללא צורך בהתערבות המשתמש) על מנת להגיע לערך או טווח המטרה שנקבע (על ידי מתן בולוס, שינוי בזאלי זמני, השהיית מתן האינסולין למניעת היפו, וכדו'). 
 * הלולאה הסגורה פועלת במסגרת אינספור מגבלות בטיחות, אותן תוכלו להגדיר באופן אישי.
-* Closed Loop is only possible if you are in [Objective 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) or higher and use a supported pump.
+* ניתן להשתמש בלולאה הסגורה רק לאחר שהגעתם ל[משימה 6](Objectives-objective-6-starting-to-close-the-loop-with-low-glucose-suspend) ומעלה ואתם משתמשים במשאבה נתמכת.
 * שימו לב: במצב לולאה סגורה מומלץ להגדיר מטרה יחידה במקום טווח מטרה (לדוגמא, 100 mg/dl במקום 90-125 mg/dl).
 
 ### השהייה בזמן רמת גלוקוז נמוכה (LGS)
@@ -248,29 +248,29 @@ Select the desired APS algorithm for therapy adjustments. You can view the activ
 
 ## משימות (הלומדה)
 
-AndroidAPS has a leraning program (objectives) that you have to fulfill step by step. This should guide you safely through setting up a closed loop system. It guarantees that you have set everything up correctly and understand what the system does exactly. This is the only way you can trust the system.
+ל-AndroidAPS לומדה מובנית הבנויה ממשימות שאותן עליכם לבצע, צעד אחר צעד. היא תדריך אותכם בבטחה במהלך הקמת הלולאה הסגורה. היא מבטיחה שאתם תגדירו הכל כראוי ושאתם מבינים מה היא עושה. זוהי הדרך היחידה שלכם לבטוח בפעילותה.
 
-You should [export your settings](../Usage/ExportImportSettings.md) (including progress of the objectives) on a regularly basis. In case you have to replace your smartphone later (new purchase, display damage etc.) you can simply import those settings.
+עליכם [לייצא את הגדרותיכם](../Usage/ExportImportSettings.md) (זה כולל את התקדמותכם במשימות) בקביעות. במקרה בו תחליפו את הטלפון (בגלל קניית חדש, נזק וכו') תוכלו לייבא את ההגדרות.
 
-See [Objectives](../Usage/Objectives.md) page for more information.
+ראו עמוד [משימות](../Usage/Objectives.md) למידע נוסף.
 
 ## טיפולים
 
-If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
+בלשונית טיפולים, תוכלו לראות את הטיפולים שהועלו לנייטסקאוט. אם ברצונכם לערוך או למחוק ערך (למשל, אכלתם פחות פחמימות ממה שציפיתם) בחרו "הסר" והזינו את הערך החדש (שנו את הזמן במידת הצורך) באמצעות כפתור ה[פחמימות במסך הבית](Screenshots-carb-correction).
 
 ## כללי
 
 ### סקירה כללית
 
-Displays the current state of your loop and buttons for most common actions (see [section The Homescreen](../Getting-Started/Screenshots.md) for details). Settings can be accessed by clicking the cog wheel.
+מציג את המצב הנוכחי של הלולאה והכפתורים עבור הפעולות הנפוצות ביותר (ראו [מסך הבית](../Getting-Started/Screenshots.md) לפרטים). ניתן לגשת להגדרות על ידי לחיצה על גלגל השיניים.
 
 #### השאר את המסך דולק
 
-Option 'Keep screen on' will force Android to keep the screen on at all times. This is useful for presentations etc. But it consumes a lot of battery power. Therefore, it is recommended to connect the smartphone to a charger cable.
+האפשרות 'שמור מסך מופעל' תאלץ את אנדרואיד להשאיר את המסך דולק כל הזמן. זה שימושי להדגמות וכו'. אבל הוא צורך הרבה סוללה. לכן, מומלץ לחבר את הסמארטפון למטען.
 
 #### מקשים
 
-Define which Buttons are shown on the home screen.
+הגדירו אילו כפתורים מוצגים במסך הראשי.
 
 * טיפולים
 * מחשבון
@@ -279,19 +279,19 @@ Define which Buttons are shown on the home screen.
 * סנסור (פותח את xDrip או את מקור נתוני הסוכר)
 * כיול
 
-Furthermore, you can set shortcuts for insulin and carb increments and decide whether the notes field should be shown in treatment dialogues.
+בנוסף, ניתן להגדיר קיצורי דרך לתוספות אינסולין ופחמימות ולהחליט אם יש להציג את שדה ההערות בדיאלוגים של הטיפולים.
 
 #### הגדרות אשף מהיר
 
-Create a button for a certain standard meal (carbs and calculation method for the bolus) which will be displayed on the home screen. Use for standard meals frequently eaten. If different times are specified for the different meals you will always have the appropriate standard meal button on the home screen, depending on the time of day.
+אפשר ליצור כפתור לארוחה סטנדרטית מסוימת (פחמימות ושיטת חישוב לבולוס) שיוצג במסך הבית. השתמשו בכפתור זה לארוחות סטנדרטיות הנאכלות בתדירות גבוהה. אם צוינו זמנים שונים לארוחות השונות תמיד יהיה לכם כפתור הארוחה הסטנדרטי המתאים במסך הבית, בהתאם לשעה ביום.
 
-Note: Button will not be visible if outside the specified time range or if you have enough IOB to cover the carbs defined in the QuickWizard button.
+הערה: הכפתור לא יהיה גלוי אם הוא מחוץ לטווח הזמן שצוין או אם יש כרגע מספיק אינסולין פעיל כדי לכסות את הפחמימות המוגדרות בלחצן אשף מהיר.
 
 ![QuickWizard button](../images/ConfBuild_QuickWizard.png)
 
 #### ברירות מחדל ערכי מטרה
 
-Choose default temp-targets (duration and target). Preset values are:
+בחרו ערכי מטרה זמניים (משך וערך מטרה). ברירות המחדל הן:
 
 * אוכלים בקרוב: מטרה 72 mg/dl למשך 45 דקות
 * פעילות: מטרה 140 mg/dl למשך 90 דקות
@@ -299,27 +299,27 @@ Choose default temp-targets (duration and target). Preset values are:
 
 #### מילוי\תיחול כמויות סטנדרטיות של אינסולין
 
-Choose the default amounts of the three buttons in fill/prime dialogue, depending on the length of your catheter.
+בחרו את כמויות ברירת המחדל של שלושת הכפתורים בדיאלוג מילוי\תיחול, בהתאם לאורך הקנולה שלכם.
 
 #### טווח הצגה
 
-Choose the high and low marks for the BG-graph on AndroidAPS overview and smart watch. It is only the visualization, not the target range for your BG. Example: 70 - 180 mg/dl or 3.9 - 10 mmol/l
+בחרו את הספים הגבוהים והנמוכים עבור הגרף הראשי במסך הבית של AndroidAPS והשעון החכם. אפשרות זו היא רק להצגה נוחה, אין זה טווח המטרה עצמו. דוגמה: 70-180 מ"ג/ד"ל
 
 #### קצר את כותרות הלשוניות
 
-Choose wether the tab titles in AndroidAPS are long (e.g. ACTIONS, LOCAL PROFILE, AUTOMATION) or short (e.g. ACT, LP, AUTO)
+בחרו אם להציג את כותרות הלשוניות שב-AndroidAPS בשלמותן (למשל ACTIONS, LOCAL PROFILE, AUTOMATION) או בקיצור (למשל ACT, LP, AUTO)
 
 #### הצגת שדות הערות בתיבות דו-שיח של טיפול
 
-Choose if you want to have a notes field when entering treatments or not.
+בחרו אם ברצונכם לכתוב בשדה הערות בעת הזנת טיפולים.
 
 #### אורות חיווי
 
-Choose if you want to have [status lights](Preferences-status-lights) on overview for cannula age, insulin age, sensor age, battery age, reservoir level or battery level. When warning level is reached, the color of the status light will switch to yellow. Critical age will show up in red.
+בחרו אם ברצונכם לראות [אורות חיווי](Preferences-status-lights) בסקירה הכללית לגבי גיל הצינורית, גיל אינסולין, גיל החיישן, גיל הסוללה, רמת המכל ורמת הסוללה. כאשר מגיעה רמת האזהרה, צבע נורית המצב יעבור לצהוב. גיל קריטי יוצג באדום.
 
 #### הגדרות מתקדמות
 
-**Deliver this part of bolus wizard result**: When using SMB, many people do not meal-bolus 100% of needed insulin, but only a part of it (e.g. 75 %) and let the SMB with UAM (unattended meal detection) do the rest. In this setting, you can choose a default value for the percenteage the bolus wizard should calculate with. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
+**ספק את חלק זה מתוצאת אשף הבולוס[%]**: בעת שימוש ב-SMB, אנשים רבים אינם מזריקים את כל האינסולין הדרוש בבת אחת, אלא רק חלק ממנו (למשל 75%) ונותנים ל-SMB עם UAM (זיהוי ארוחות לא מוכרזות) לעשות את השאר. בהגדרה זו, באפשרותכם לבחור ערך ברירת מחדל עבור אחוז הבולוס שמוזרק מתוך חישוב בולוס הארוחה במחשבון. If this setting is 75 % and you had to bolus 10u, the bolus wizard will propose a meal bolus of only 7.5 units.
 
 **Enable super bolus functionality in wizard** (It is different from *super micro bolus*!): Use with caution and do not enable until you learn what it really does. בעיקרון, המינון הבזאלי לשעתיים הקרובות מתווסף לבולוס ומופעל מינון בזאלי זמני 0 למשך שעתיים. **AAPS looping functions will be disabled - so use with care! If you use SMB AAPS looping functions will be disabled according to your settings in ["Max minutes of basal to limit SMB to"](Open-APS-features-max-minutes-of-basal-to-limit-smb-to), if you do not use SMB looping functions will be disabled for two hours.** Details on super bolus can be found [here](https://www.diabetesnet.com/diabetes-technology/blue-skying/super-bolus).
 
