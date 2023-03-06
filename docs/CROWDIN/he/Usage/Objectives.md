@@ -70,7 +70,7 @@ If you want to go back in objectives see [explanation below](Objectives-go-back-
 
 ## משימה 5: העמקת הבנת הלולאה הפתוחה, לרבות המינונים הבזאליים הזמניים וההמלצות
 
-- Start to understand the thinking behind the temp basal recommendations by looking at the [determine basal logic](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html) and both the [forecast line in AndroidAPS homescreen](Screenshots-prediction-lines)/Nightscout and the summary of outputs from the calculations in your OpenAPS tab.
+- התחילו לנסות להבין את המחשבה שמאחורי המלצת המינון הבזאלי הזמני ע"י קריאת [לוגיקת קביעת מינון בזאלי](https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/Understand-determine-basal.html), את [עקום התחזית במסך הבית](Screenshots-prediction-lines) או בנייטסקאוט ואת סיכום הפלטים של החישובים המופיעים בלשונית OpenAPS.
 
 רצוי שתקבעו ערכי מטרה גבוהים מהרגיל עד אשר תבטחו בהגדרות ובחישובי הלופ.  המערכת מאפשרת
 
@@ -118,41 +118,41 @@ You can view a wider range (green lines) on the graph for the values you aim to 
 - ייתכן שתחוו קפיצות בסוכר לאחר טיפול בהיפוגליקמיות באופן זמני בגלל שאין עליה במינון הבזאלי לאחר היציאה מהיפוגליקמיה.
 
 (Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)=
-## Objective 7: Tuning the closed loop, raising maxIOB above 0 and gradually lowering BG targets
+## משימה 7: כוונון לולאה סגורה, העלאת האינסולין הפעיל המרבי מ-0 והורדה מדורגת של ערכי המטרה
 
 - Select 'Closed Loop' either from [Preferences](../Configuration/Preferences.md) or by pressing and holding the Loop icon at the top right corner of the home screen, over a period of 1 day.
 
-- Raise your 'Maximum total IOB OpenAPS can’t go over' (in OpenAPS called 'max-iob') above 0. The default recommendation is "average mealbolus + 3x max daily basal" (for the SMB algorithm) or "3x max daily basal" (for the older AMA algorithm) but you should slowly work up to this until you know your settings work for you (max daily basal = the maximum hourly value in any time segment of the day).
+- העלו את 'מינון אינסולין פעיל מרבי ממנו OpenAPS לא יחרוג' (נקרא גם 'max-IOB' ב-OpenAPS) ליותר מ-0 במשך יממה אחת. המלצת ברירת המחדל היא X3 המינון הבזאלי המקסימלי (עבור אלגוריתם AMA הישן, שנמצא בשימוש של משתמשים חדשים) או X3 המינון הבזאלי המקסימלי + בולוס ארוחה ממוצע (עבור אלגוריתם SMB). עליכם להתקדם אל ערך זה באופן מדורג עד שהגדרה זו עובדת היטב. מינון בזאלי מקסימלי = המינון הבזאלי המרבי שניתן בכל שעה שהיא ביממה.
 
-  המלצה זו היא נקודת התחלה. If you set to the 3x and you are seeing moves that push you too hard and fast then lower that number. If you are very resistant, raise it very little at a time.
+  המלצה זו היא נקודת התחלה. אם הגדרתם X3 בזאלי מרבי ואתם חווים תגובות חריפות ומהירות ברמת הסוכר, הורידו את ערך. אם יש לכם תנגודת גבוהה, הגדילו את הערך בעדינות ובאופן מדורג.
 
   ```{image} ../images/MaxDailyBasal2.png
   :alt: max daily basal
   ```
 
-- Once confident on how much IOB suits your looping patterns, then reduce your targets to your desired level.
+- כאשר תרגישו שערך האינסולין הפעיל מתאים לפעולת הלופ שלכם, הורידו את ערכי מטרה שלכם כרצונכם.
 
 (Objectives-objective-8-adjust-basals-and-ratios-if-needed-and-then-enable-autosens)=
 ## משימה 8: התאמת המינון בזאלי והיחסים במקרה הצורך ולאחר מכן הפעלת Autosens
 
-- You can use [autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) as a one off to check your basals remain accurate or do a traditional basal test.
-- Enable [autosens](../Usage/Open-APS-features.md) over a period of 7 days and watch the white line on the homescreen graph show how your sensitivity to insulin may be rising or falling as a result of exercise or hormones etc. and keep an eye in the OpenAPS report tab how AndroidAPS is adjusting the basals and/or targets accordingly.
+- תוכלו להשתמש ב-[autotune](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/autotune.html) באופן חד פעמי לבדיקת השינוי במינון הבזאלי או שתעשו בדיקת בזאלי מסורתית.
+- * הפעילו [autosens](../Usage/Open-APS-features.md) במשך 7 ימים וצפו בהתנהגות עקום הרגישות הלבן בגרף במסך הבית (גרף משני) כתוצאה משינויים הורמונליים, פעילות גופנית וכו'.
 
-*Don’t forget to record your looping in* [this form](https://bit.ly/nowlooping) *logging AndroidAPS as your type of DIY loop software, if you have not already done so.*
+*אל תשכחו לרשום את עצמכם* [בטופס הזה](https://bit.ly/nowlooping) *לרישום סוג הלופ שלכם כ-AndroidAPS אם טרם עשיתם זאת.*
 
 (Objectives-objective-9-enabling-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb)=
 ## משימה 9: אפשרו פונקציות oref1 כגון סופר מיקרובולוס (SMB), בשעות היום
 
 - חובה עליכם לקרוא את [הפרק על SMB באתר הויקי](Open-APS-features-super-micro-bolus-smb) ואת [פרק oref1 באתר openAPSdocs](https://openaps.readthedocs.io/en/latest/docs/Customize-Iterate/oref1.html) כדי להבין כיצד SMB פועל ובמיוחד כיצד פועל איפוס בזאלי זמני.
-- Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק בזאלי. That is, if given a bolus of 8 U for a meal and maxIOB is 7 U, no SMBs will be delivered until IOB drops below 7 U. A good start is maxIOB = average mealbolus + 3x max daily basal (max daily basal = the maximum hourly value in any time segment of the day - see [objective 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets) for an illustration)
-- min_5m_carbimpact default in absorption settings has changed from 3 to 8 going from AMA to SMB. אם אתם עוברים מ-AMA ל-SMB, עליכם לעדכן זאת ידנית.
+- Then you ought to [rise maxIOB](Open-APS-features-maximum-total-iob-openaps-cant-go-over-openaps-max-iob) to get SMBs working fine. מעכשיו, האינסולין הפעיל המרבי כולל את כל האינסולין המוזרק, לא רק בזאלי. כלומר, אם תתנו בולוס בגודל 8 יחידות על ארוחה והאינסולין הפעיל המרבי הוא 7 יחידות, הלופ לא יזריק SMB לפני שהאינסולין שבגוף ירד אל מתחת ל-7 יחידות. אפשר להעריך את ערך האינסולין הפעיל המרבי עם החישוב: בולוס ארוחה ממוצע + X3 ערך הבזאלי המרבי שיש ביממה - ראו איור ב[משימה 7](Objectives-objective-7-tuning-the-closed-loop-raising-max-iob-above-0-and-gradually-lowering-bg-targets)
+- ערך ברירת המחדל של min_5m_carbimpact בהגדרות הספיגה השתנו מ-3 ל-8 במעבר מ-AMA ל-SMB. אם אתם עוברים מ-AMA ל-SMB, עליכם לעדכן זאת ידנית.
 
 (Objectives-objective-10-automation)=
 ## משימה 10: אוטומציות
 
 - You have to start objective 10 to be able to use [Automation](../Usage/Automation.md).
 - Make sure you have completed all objectives including exam [Objectives-objective-3-prove-your-knowledge](Objectives#objective-3-prove-your-knowledge).
-- Completing previous objectives will not effect other objectives you have already finished. המשימות שכבר הושלמו יישמרו כך!
+- סיום משימות קודמות לא ישפיע על משימות שאותן כבר השלמתם. המשימות שכבר הושלמו יישמרו כך!
 
 (Objectives-go-back-in-objectives)=
 ## חזרה על משימות
