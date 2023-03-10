@@ -77,6 +77,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
 - AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
+- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
 
 ## Versión 3.1.0
