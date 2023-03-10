@@ -79,6 +79,7 @@ Date de sortie : XX-XX-2023
 - Changements internes : mise à jour des versions de libs, migration rx3, nouvelle structure de modules @MilosKozak
 - Corrections dans le Pilote Diaconn @miyeongkim
 - AAPSClient transmet les informations si le téléphone principal est branché @MilosKozak
+- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - + de 125k nouvelles lignes de code, 150k lignes changées
 
 ## Version 3.1.0
