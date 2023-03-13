@@ -79,7 +79,7 @@ Yayınlanma tarihi: XX-XX-2023
 - dahili değişiklikler: güncellenmiş kütüphane sürümleri, rx3 geçişi, yeni modül yapısı @MilosKozak
 - Diaconn sürücü düzeltmeleri @miyeongkim
 - AAPSClient ana telefon elektriğe takılıysa bilgi verir @MilosKozak
-- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
+- Bolus sihirbazında değişiklik. CGM mevcut değilse, yüzde göz ardı edilir (yani %100 kullanılır)
 - 125 binden fazla yeni kod satırı, 150 bin satır değiştirildi
 
 ## Sürüm 3.1.0
