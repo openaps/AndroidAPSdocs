@@ -32,6 +32,33 @@ Ayrı Ruffy uygulamasına bağlı olan eski Combo sürücüsünü kullanıyorsan
 
 Ayrıca, eski sürücüden geçiş yapıyorsanız, yeni sürücünün bir bolus komutunu Combo'dan tamamen farklı ve çok daha hızlı bir şekilde ilettiğinin farkında olun, bu nedenle dozaj ne olursa olsun bir bolus hemen başladığında şaşırmayın. Ayrıca, Ruffy eşleştirme ve bağlantı sorunlarıyla ilgili genel öneriler, ipuçları ve püf noktaları vb. burada geçerli değildir, çünkü bu eskisiyle hiçbir kodu ortak olmayan tamamen yeni bir sürücüdür.
 
+This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+
+* İngilizce
+* İspanyolca
+* Fransızca
+* İtalyanca
+* Rusça
+* Türkçe
+* Polonyaca
+* Çekçe
+* Macarca
+* Slovakça
+* Romence
+* Hırvatça
+* Flemenkçe
+* Yunanca
+* Finnish
+* Norveçce
+* Portekizce
+* İsveççe
+* Danca
+* Almanca
+* Slovenian
+* Litvanyaca
+
+**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+
 ## Telefon Kurulumu
 
 Pil optimizasyonlarının kapalı olduğundan emin olmak çok önemlidir. AAPS, bu optimizasyonlara ne zaman tabi olduğunu zaten otomatik olarak algılar ve kullanıcı arayüzünde bunların kapatılmasını ister. Ancak, modern Android telefonlarda Bluetooth _kendisi_ bir uygulamadır (bir sistem uygulaması). Ve genellikle, bu "Bluetooth uygulaması" _varsayılan olarak pil optimizasyonları açıkken_ çalışır. Sonuç olarak Bluetooth, telefon güç tasarrufu yapmayı amaçladığında Bluetooth uygulamasını kapattığı için yanıt vermeyi reddedebilir. Bu, söz konusu Bluetooth sistem uygulamasının ayarlarında pil optimizasyonlarının da kapatılması gerektiği anlamına gelir. Ne yazık ki, Bluetooth sistem uygulamasının nasıl bulunabileceği telefonlar arasında farklılık gösteriyor. Stok Android'de Ayarlar -> Uygulamalar -> Tüm N uygulamayı görün (N = telefonunuzdaki uygulama sayısı). Ardından, sağ üst köşedeki menüyü açın, "Sistemi göster" veya "Sistem uygulamalarını göster" veya "Tüm uygulamalar" üzerine dokunun. Şimdi, yeni genişletilmiş uygulama listesinde bir "Bluetooth" uygulaması arayın. Onu seçin ve "Uygulama bilgisi" kullanıcı arayüzünde "Pil" üzerine dokunun. Burada, pil optimizasyonlarını devre dışı bırakın (bazen "pil kullanımı" olarak adlandırılır).

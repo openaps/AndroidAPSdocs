@@ -32,6 +32,33 @@ Wenn du den alten Combop-Treiber verwendet hast, der von der separaten Ruffy-App
 
 Außerdem, wenn Du von dem alten Treiber migrierst, beachte, dass der neue Treiber einen Bolus Befehl auf eine andere Weise zur Combo kommuniziert, welcher viel schneller bearbeitet wird, Sei also nicht zu überrascht, wenn ein Bolus sofort beginnt, unabhängig von der Dosierung. Außerdem gelten die allgemeinen Anregungen, Tipps und Tricks etc. über den Umgang mit dem Ruffy Paarungs- und Verbindungsproblemen hier nicht, da dies ein komplett neuer Treiber ist, der keinen Code mit dem alten Treiber teilt.
 
+This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+
+* English
+* Spanish
+* Französisch
+* Italienisch
+* Russisch
+* Türkisch
+* Polnisch
+* Tschechisch
+* Ungarisch
+* Slovakisch
+* Rumänisch
+* Kroatisch
+* Dutch
+* Greek
+* Finnish
+* Norwegisch
+* Portugiesisch
+* Schwedisch
+* Dänisch
+* German
+* Slovenian
+* Lithuanian
+
+**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+
 ## Telefon einrichten
 
 Es ist sehr wichtig sicherzustellen, dass die Batterieoptimierung ausgeschaltet wird. AAPS erkennt automatisch, wenn es diesen Optimierungen unterliegt und fragt in seiner Benutzeroberfläche an, dass diese abgeschaltet werden. Aber auf modernen Android-Telefonen ist Bluetooth _selbst_ eine App (eine System-App). Und im Allgemeinen läuft die "Bluetooth app" mit _eingeschalteter Batterie Optimierung im Standard_. Infolgedessen kann Bluetooth es ablehnen, zu reagieren, wenn das Telefon darauf abzielt, Strom zu sparen, da es die Bluetooth-App einfach beendet. Das bedeutet, dass in den Einstellungen der Bluetooth-System-App auch die Batterieoptimierungen ausgeschaltet werden müssen. Unglücklicherweise kann man feststellen, dass die Bluetooth-System-App sich zwischen den Telefonen unterscheidet. In unverändertem Android gehe zu Einstellungen -> Apps -> Alle N-Apps anzeigen (N = Anzahl der Apps auf Ihrem Handy). Öffnen Sie dann das Menü in der oberen rechten Ecke, klicken Sie auf "System anzeigen" oder "System-Apps anzeigen" oder "Alle Apps". Jetzt in der erweiterten Liste der Apps nach einer "Bluetooth"-App suchen. Wähle es aus und tippe auf "App-Informationen" und dann auf "Batterie". Dort deaktiviere die Batterieoptimierung (manchmal auch als "Batterieverbrauch" bezeichnet) .
