@@ -79,6 +79,7 @@ Release date: XX-XX-2023
 - internal changes: updated libs versions, rx3 migration, new modules structure @MilosKozak
 - Diaconn driver fixes @miyeongkim
 - AAPSClient provides info if main phone is plugged in electricity @MilosKozak
+- Change in BolusWizard. If CGM is not available percentage is ignored (ie 100% is used)
 - new 125k+ lines of code, changed 150k lines
 
 ## Version 3.1.0

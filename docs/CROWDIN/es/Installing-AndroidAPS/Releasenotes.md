@@ -62,12 +62,12 @@ Fecha de lanzamiento: XX-XX-2023
 
 - Controlador de bomba EOPatch2 / Glucomen Day Pump @jungsomyeonggithub @MilosKozak
 - Controlador de bomba Accu-Chek Combo V2 (sin necesidad de Ruffy) @dv1
-- Korean DanaI support @MilosKozak
+- Controlador de bomba Korean DanaI @MilosKozak
 - Soporte al MCG Glunovo @christinadamianou
 - Soporte a Dexcom G7 @MilosKozak @rICTx-T1D @khskekec
 - Plugin NSClient v3 @MilosKozak
 - Soporte para Tidepool @MilosKozak
-- Smoothing plugin @MilosKozak, @justmara, Exponential smoothing @nichi (Tsunami), Average smoothing @jbr7rr
+- Pulgin de suavizado @MilosKozak, @justmara, Suavizado Exponencial @nichi (Tsunami), Suavizado Promedio @jbr7rr
 - Corregidos muchos problemas de la versión 3.1
 - Permitir añadir notas desde más lugares @Sergey Zorchenko
 - Correcciones en la interfaz de usuario (UI) @MilosKozak @osodebailar @Andries-Smit @yodax @philhoul @dv1 @paravoid
@@ -77,6 +77,7 @@ Fecha de lanzamiento: XX-XX-2023
 - Cambios internos: actualización de versiones de librerías, migración a rx3, nueva estructura de módulos @MilosKozak
 - Correcciones en el controlador de Diaconn @miyeongkim
 - AAPSClient proporciona información si el teléfono principal está conectado a la electricidad @MilosKozak
+- Cambio en asistente de bolo. Si el MCG no está disponible, se ignora el porcentaje (es decir, se utiliza el 100%)
 - Más de 125k+ nuevas líneas de código y más de 150k líneas modificadas
 
 ## Versión 3.1.0
