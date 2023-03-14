@@ -32,6 +32,33 @@ Si vous avez utilisé l'ancien pilote Combo qui dépend de l'application distinc
 
 De plus, si vous migrez depuis l'ancien pilote, soyez conscient que le nouveau pilote communique une commande bolus d'une manière complètement différente de celle du Combo qui est beaucoup plus rapide, donc ne soyez pas surpris quand un bolus commence immédiatement quel que soit le dosage. De plus, les suggestions générales, les trucs et astuces etc. ne s'applique pas ici à la gestion de l'appairage Ruffy et des problèmes de connexion car il s'agit d'un pilote entièrement nouveau qui ne partage aucun code avec l'ancien.
 
+This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+
+* Anglais
+* Espagnol
+* Français
+* Italien
+* Russe
+* Turque
+* Polonais
+* Tchèque
+* Hongrois
+* Slovaque
+* Roumain
+* Croate
+* Hollandais
+* Grec
+* Finnish
+* Norvégien
+* Portugais
+* Suédois
+* Danois
+* Allemand
+* Slovenian
+* Lithuanien
+
+**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+
 ## Configuration du téléphone
 
 Il est très important de s'assurer que les optimisations de batterie sont désactivées. AAPS détecte déjà automatiquement quand il est soumis à ces optimisations, et demande dans son interface utilisateur que celles-ci soient désactivées. Mais, sur les téléphones Android modernes, le Bluetooth _lui-même_ est une application (une application système). Et, généralement, cette "application Bluetooth" est exécutée _avec des optimisations de batterie activées_ par défaut. Par conséquent, Bluetooth peut refuser de répondre lorsque le téléphone cherche à économiser de l'énergie parce qu'il tue l'application Bluetooth. Cela signifie que dans les paramètres de cette application système Bluetooth, les optimisations de batterie doivent également être désactivées. Malheureusement, l'application système Bluetooth diffère d'un téléphone à l'autre. Dans Android, allez dans Réglages -> Applications -> Voir toutes les N applications (N = le nombre d'applications sur votre téléphone). Ensuite, ouvrez le menu en haut à droite, appuyez sur "Afficher le système" ou "Afficher les applications système" ou "Toutes les applications". Maintenant, dans la liste des applications nouvellement développées, recherchez une application « Bluetooth ». Sélectionnez-la, et sur son interface "App info", appuyez sur "Batterie". Là, désactivez les optimisations de batterie (parfois appelées "utilisation de la batterie").
