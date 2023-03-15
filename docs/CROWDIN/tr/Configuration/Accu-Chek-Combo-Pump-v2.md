@@ -32,7 +32,7 @@ Ayrı Ruffy uygulamasına bağlı olan eski Combo sürücüsünü kullanıyorsan
 
 Ayrıca, eski sürücüden geçiş yapıyorsanız, yeni sürücünün bir bolus komutunu Combo'dan tamamen farklı ve çok daha hızlı bir şekilde ilettiğinin farkında olun, bu nedenle dozaj ne olursa olsun bir bolus hemen başladığında şaşırmayın. Ayrıca, Ruffy eşleştirme ve bağlantı sorunlarıyla ilgili genel öneriler, ipuçları ve püf noktaları vb. burada geçerli değildir, çünkü bu eskisiyle hiçbir kodu ortak olmayan tamamen yeni bir sürücüdür.
 
-This new driver is currently written to support the following languages on the Combo. (This is unrelated to the language in AAPS - it is the language shown on the Combo's LCD itself.)
+Bu yeni sürücü şu anda Combo'da aşağıdaki dilleri desteklemek için yazılmıştır. (Bunun AAPS program dili ile ilgisi yoktur - Combo pompanızın LCD ekranında gösterilen dildir.)
 
 * İngilizce
 * İspanyolca
@@ -48,16 +48,16 @@ This new driver is currently written to support the following languages on the C
 * Hırvatça
 * Flemenkçe
 * Yunanca
-* Finnish
+* Fince
 * Norveçce
 * Portekizce
 * İsveççe
 * Danca
 * Almanca
-* Slovenian
+* Slovakça
 * Litvanyaca
 
-**Important**: If your pump is set to a language that is not part of this list, please contact the developers, and set the pump's language to one in this list. Otherwise, the driver won't work properly.
+**Önemli**: Pompanız bu listede olmayan bir dile ayarlanmışsa, lütfen geliştiricilerle iletişime geçin ve pompanın dilini bu listedeki bir dile ayarlayın. Aksi takdirde, sürücü düzgün çalışmayacaktır.
 
 ## Telefon Kurulumu
 
