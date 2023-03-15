@@ -258,7 +258,7 @@ See [Objectives](../Usage/Objectives.md) page for more information.
 
 If you view the Treatments (Treat) tab, you can see the treatments that have been uploaded to nightscout. Should you wish to edit or delete an entry (e.g. you ate less carbs than you expected) then select 'Remove' and enter the new value (change the time if necessary) through the [carbs button on the home screen](Screenshots-carb-correction).
 
-## Algemeen
+## General
 
 ### Overzicht
 
