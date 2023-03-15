@@ -3,9 +3,9 @@
 ```{admonition} Only available in dev branch
 :class: note
 
-This feature is only available in the in dev branch and not in master.
+Cette fonctionnalité n'est disponible que dans la branche de développement et pas dans master.
 
-Please be aware of the warnings and follow the instructions in [building a dev version](../Installing-AndroidAPS/Dev_branch.md).
+Veuillez prendre note des avertissements et suivre les instructions dans la [construction d'une version de développement](../Installing-AndroidAPS/Dev_branch.md).
 
 ```
 
