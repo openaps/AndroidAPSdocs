@@ -9,7 +9,7 @@ L'application n'utilise *pas* d'auto-apprentissage par de l'intelligence artific
 L'application n'est pas fournie dans Google Play - vous devez la compiler vous même à partir du code source pour des raisons juridiques.
 
 ```{admonition} Ask for help - Writing Docs
-:class: remarque
+:class: note
 Ne soyez pas timide, nous avons un *besoin urgent* d'aide pour créer la documentation.
 
 Un pull request pour éditer la documentation est relativement simple à créer. Vous ne pouvez rien casser. Il y a des procédures pour la publication.
